@@ -35,10 +35,15 @@
   "selection_reason": "不可逆なトークン削除ではなく、プロンプトごとのattention幾何からオンラインSVDの低ランク基底を求め、全トークンを残したままKV特徴次元を圧縮する。accumulating/streamingの2方式とattention-awareな基底選択を提示。一次要旨はLongBench等で密なキャッシュと同程度の性能を保ちながらKVメモリを最大50%削減と報告。LLM推論メモリ最適化に直接該当するためaccept。",
   "semantic_scholar_id": "df5b82211f4b447b2335e3daace6e4b55f7a4da3",
   "source_url": "https://arxiv.org/abs/2610.06927",
-  "status": "ready",
+  "status": "superseded",
   "title": "AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:49:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.06927-attsvd-prompt-adaptive-low-rank-kv-cache-compression-via-attention-guide.md",
+  "represented_canonical_id": "arXiv:2610.06927",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

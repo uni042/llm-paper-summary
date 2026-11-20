@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（384本）
+## 自動生成の論文一覧（385本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -427,6 +427,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号（投機的復号）は、小さな草稿モデルが複数の候補トークンを先読みし、大きな対象モデルがそれらをまとめて検証することで、対象モデルの呼出し回数を減らす手法である。品質と平均受理長の評価はあるが、元モデルの出力分布との数学的同値性や、GPUでのエンドツーエンド実測速度向上は示されていない。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Trajectory-Retrieval Speculative Decoding: When Does a Model's Own History Help?](2026-2610.07350-trajectory-retrieval-speculative-decoding-when-does-a-model-s-own-histor.md)**  
+  実装：[✓](https://github.com/YUYANG0915/tlr) ・ リポジトリ内被引用：0  
+  生成中の自軌跡に軌跡固有の再利用があるかを対照実験で切り分け、履歴の近似一致候補を直近の検証成否で出し入れしながら小型ドラフトと統合し、検証予算内での追加受理と実機スループットを高める適応型の検索付き投機的デコード。
 
 - **2026-10 · [Trajectory-Level Speculation with Semantic Verification for Tool-Using Agents](2026-2610.21463-trajectory-level-speculation-with-semantic-verification-for-tool-using-a.md)**  
   実装：[✓](https://github.com/LARK-AI-Lab/SpecAgent) ・ リポジトリ内被引用：0  
@@ -1074,6 +1078,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：4  
   投機的復号の速度はドラフトの受理率だけでは決まらない。ドラフト事前学習、層数、対象モデルの検証幅を別々に測り、GPUのメモリ帯域と演算能力の境界に合わせて検証候補を絞る設計を示す。
 
+- **2025-04 · [Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding](2025-2504.00030-token-driven-gammatune-adaptive-calibration-for-enhanced-speculative-dec.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  投機的復号では小型ドラフトモデルが先の複数トークンを提案し、大型ターゲットモデルがまとめて検証する。〔原著§3–4〕 SpecBenchの4組のターゲット/ドラフトモデルをH100 80GBで評価した結果、固定長SpecDecodeを基準にした平均処理率はGammaTuneが1.15±0.05倍、GammaTune+が1.16±0.03倍である。
+
 - **2025-11 · [Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding](2025-2511.01695-collaborative-large-language-model-inference-via-resource-aware-parallel.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   投機的復号（投機的復号）は、小さなドラフトモデルが複数トークンを先に生成し、大きなターゲットモデルがまとめて検証することで、出力品質を維持しながら生成の待機時間を短縮することを目指す。
@@ -1101,10 +1109,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-05 · [Semi-Clairvoyant Scheduling of Speculative Decoding Requests to Minimize LLM Inference Latency](2025-2505.17074-semi-clairvoyant-scheduling-of-speculative-decoding-requests-to-minimize.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   これは単一リクエストの生成方法の最適化だが、複数リクエストが同じGPUを共有するときには別の問題が残る。従来のスケジューラは、プロンプトから予測した出力長を仕事量の代理変数として使うことが多い。公式会議録は、NVIDIA L20 48GBで3種類のワークロードを用いた評価において、平均推論遅延を既存手法より約39%削減したと報告する。
-
-- **2025-04 · [Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding](2025-2504.00030-token-driven-gammatune-adaptive-calibration-for-enhanced-speculative-dec.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  投機的復号では小型ドラフトモデルが先の複数トークンを提案し、大型ターゲットモデルがまとめて検証する。〔原著§3–4〕 SpecBenchの4組のターゲット/ドラフトモデルをH100 80GBで評価した結果、固定長SpecDecodeを基準にした平均処理率はGammaTuneが1.15±0.05倍、GammaTune+が1.16±0.03倍である。
 
 - **2025-11 · [Global Resolution: Optimal Multi-Draft Speculative Sampling via Convex Minimization](2025-2511.15898-global-resolution-optimal-multi-draft-speculative-sampling-via-convex-mi.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1289,11 +1293,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：472  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：473  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：393  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：394  
   EAGLEは、対象LLMの上位層特徴量と直前に標本化したトークンを小型デコーダへ与えて未来特徴量を予測し、元の言語モデル出力ヘッドと木構造検証で重み読出し回数を減らす。
 
 - **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
@@ -1317,7 +1321,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号（投機的復号）は、安価な下書きモデルが複数の将来トークンを予測し、元の大きな言語モデルが候補をまとめて検証することで、1回の高価な順伝播で複数トークンを確定させる。単一要求のVicuna 7B/13B/33Bで通常の自己回帰生成に対しそれぞれ2.70/2.50/2.53倍、Medusaに対し1.27/1.27/1.31倍の処理率を報告する。
 
 - **2024-02 · [Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md)**  
-  実装：[✓](https://github.com/Infini-AI-Lab/Sequoia) ・ リポジトリ内被引用：83  
+  実装：[✓](https://github.com/Infini-AI-Lab/Sequoia) ・ リポジトリ内被引用：84  
   自己回帰型の大規模言語モデル（LLM）は、1 トークンを確定するたびに大きな対象モデルを1回実行するため、生成の逐次依存が遅延の下限になる。また、標本化温度が変わるとドラフト分布と対象分布の重なり方が変わり、固定的な木構造・検証方式は性能が不安定になる。
 
 - **2024-08 · [MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](2025-2408.11049-magicdec-breaking-the-latency-throughput-tradeoff-for-long-context-gener.md)**  
@@ -1329,7 +1333,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   長文脈のKVキャッシュ読込を減らす近似的な中間検証と、完全KVによる厳密な最終検証を分離することで、長系列の投機的復号を高速化する。
 
 - **2024-05 · [SpecDec++: Boosting Speculative Decoding via Adaptive Candidate Lengths](2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md)**  
-  実装：[✓](https://github.com/Kaffaljidhmah2/SpecDec_pp) ・ リポジトリ内被引用：66  
+  実装：[✓](https://github.com/Kaffaljidhmah2/SpecDec_pp) ・ リポジトリ内被引用：67  
   SpecDec++は、大きな対象モデルの出力分布を保持する投機的復号（投機的復号）において、小さなドラフトモデルが何トークン先まで候補を作ってから対象モデルに検証させるかを、生成の途中で動的に決める手法である。
 
 - **2024-08 · [PEARL: Parallel Speculative Decoding with Adaptive Draft Length](2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md)**  
@@ -1364,13 +1368,13 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/apple/ml-recurrent-drafter) ・ リポジトリ内被引用：39  
   軽量再帰型の下書きモデル、ビーム探索、動的な共有接頭辞除去、対象モデルからの知識蒸留を組み合わせる。受理トークン数が多くても処理率が上がるとは限らないことを、実測の正負両結果から検証する。
 
+- **2024-05 · [Dynamic Speculation Lookahead Accelerates Speculative Decoding of Large Language Models](2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：36  
+  投機的復号（投機的復号）は、安価な下書きモデルが将来トークンを自己回帰的に生成し、対象モデルが複数候補を一括検証することで推論時間を短縮する。
+
 - **2024-06 · [SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md)**  
   実装：[✓](https://github.com/yandex-research/specexec) ・ リポジトリ内被引用：35  
   RAMオフロードでは「対象モデルを1トークン通す時間」と「数百〜数千トークンをまとめて通す時間」の差が小さくなる。SpecExecはその余剰バッチ幅で将来分布を事前計算し、70B級モデルを消費者GPUでも数トークン/sで対話可能にする。
-
-- **2024-05 · [Dynamic Speculation Lookahead Accelerates Speculative Decoding of Large Language Models](2024-2405.04304-dynamic-speculation-lookahead-accelerates-speculative-decoding-of-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：35  
-  投機的復号（投機的復号）は、安価な下書きモデルが将来トークンを自己回帰的に生成し、対象モデルが複数候補を一括検証することで推論時間を短縮する。
 
 - **2024-01 · [Multi-Candidate Speculative Decoding](2024-2401.06706-multi-candidate-speculative-decoding.md)**  
   実装：[✓](https://github.com/NJUNLP/MCSD) ・ リポジトリ内被引用：35  
@@ -1511,11 +1515,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：505  
+  実装：✓ ・ リポジトリ内被引用：506  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
-  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：218  
+  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：219  
   SpecInferは、小型モデル群が先に作る複数候補を共通接頭辞の木へまとめ、対象LLMを1回で木構造検証することで、逐次デコードの対象重み読出しとGPU間通信を減らし、複数トークンを確定する。
 
 - **2023-09 · [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](2023-2309.08168-draft-verify.md)**  

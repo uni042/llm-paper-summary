@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
-  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：17  
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
@@ -176,6 +176,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   大規模言語モデル（LLM）や画像言語モデル（MLLM）の重み・活性化を4ビットへ量子化すれば、メモリ帯域と計算資源の負担を軽くできる可能性がある。マルチモーダル5課題の総合回復率はBF16比96.43%で、同条件のFlatQuant94.79%、GPTQ94.64%を上回る。
 
+- **2026-02 · [ScaleBITS: Scalable Bitwidth Search for Hardware-Aligned Mixed-Precision LLMs](2026-2602.17698-scalebits-scalable-bitwidth-search-for-hardware-aligned-mixed-precision-.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  大規模言語モデル（LLM）の重みを4ビット未満に量子化すると、同じ平均ビット数でも、どの重みを低精度にするかによって予測品質が大きく変わる。第三に、行列積のタイルと整合する64×128重みブロックへ整数ビット幅を割り当て、勾配に基づく一括更新と受理判定で全モデルの平均容量予算へ近づける。
+
 - **2026-02 · [EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models](2026-2602.17196-entropyprune-matrix-entropy-guided-visual-token-pruning-for-multimodal-l.md)**  
   実装：[✓](https://github.com/YahongWang1/EntropyPrune) ・ リポジトリ内被引用：3  
   既存の視覚トークン枝刈り（visual トークン 枝刈り）は重要そうなトークンを残すが、どの層で削除するかを経験的に固定するものが多く、異なるモデル・画像で最適な位置が変わる理由を説明しにくい。
@@ -227,10 +231,6 @@
 - **2026-03 · [Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression](2026-2603.18426-prune-then-quantize-or-quantize-then-prune-understanding-the-impact-of-c.md)**  
   実装：[✓](https://github.com/snudatalab/PQQP) ・ リポジトリ内被引用：2  
   本論文は、大規模言語モデル（LLM）を枝刈り（枝刈り）と量子化（量子化）の両方で圧縮する場合、どちらを先に適用すべきかを、圧縮率とモデル品質の関係から分析した研究である。枝刈り率5～30%、量子化4～8ビットを含む条件で、単独適用時の圧縮強度の差が大きいほど順序による品質差が大きくなる傾向を確認した。
-
-- **2026-02 · [ScaleBITS: Scalable Bitwidth Search for Hardware-Aligned Mixed-Precision LLMs](2026-2602.17698-scalebits-scalable-bitwidth-search-for-hardware-aligned-mixed-precision-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  大規模言語モデル（LLM）の重みを4ビット未満に量子化すると、同じ平均ビット数でも、どの重みを低精度にするかによって予測品質が大きく変わる。第三に、行列積のタイルと整合する64×128重みブロックへ整数ビット幅を割り当て、勾配に基づく一括更新と受理判定で全モデルの平均容量予算へ近づける。
 
 - **2026-02 · [Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models](2026-2602.07804-pruning-as-a-cooperative-game-surrogate-assisted-layer-contribution-esti.md)**  
   実装：[✓](https://github.com/920927/Pruning_As_A_Cooperative_Game) ・ リポジトリ内被引用：2  
@@ -359,6 +359,10 @@
 - **2026-05 · [TileQ: Efficient Low-Rank Quantization of Mixture-of-Experts with 2D Tiling](2026-2605.09281-tileq-efficient-low-rank-quantization-of-mixture-of-experts-with-2d-tili.md)**  
   実装：[✓](https://anonymous.4open.science/r/TileQ-BE20) ・ リポジトリ内被引用：1  
   TileQは、混合専門家モデル（Mixture-of-Experts; MoE）の推論用重みを低ビット量子化する際、量子化誤差を修復する低ランク行列そのものが大量の専門家ごとに増殖する問題を扱う。
+
+- **2026-05 · [The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces](2026-2605.27965-the-shape-of-overthinking-backtracking-bursts-in-long-reasoning-traces.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  行単位に分割した推論文へ、別の注釈実行で「継続・停滞・後戻り・終了」の確信度を割り当て、後戻りの強度に閾値を設ける。固定2000語の打切りでは残存軌跡の正解率がAIME2024で10.0%、AIME2025で6.7%になるのに対し、接頭部分の後戻り特徴で選別すると73.5%・64.5%となり、それぞれ21.7%・27.0%の軌跡を終了対象にできる。
 
 - **2026-05 · [The Path Matters: Learning a Token-Commitment Policy for Diffusion Language Models](2026-2605.24697-the-path-matters-learning-a-token-commitment-policy-for-diffusion-langua.md)**  
   実装：[✓](https://github.com/BobSun98/TraceLock) ・ リポジトリ内被引用：1  
@@ -1529,10 +1533,6 @@
 - **2026-05 · [Theory-optimal Quantization Based on Flatness](2026-2605.18800-theory-optimal-quantization-based-on-flatness.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低bitの重み・活性化量子化でoutlierが量子化誤差を拡大する問題を、行列の二方向の分布平坦化として捉える。LLaMA3-70BのW2A4KV16でFlatQuant比C4 PPLを19.64から16.39に改善し、A100のプリフィルで最大3.44倍の高速化を報告。
-
-- **2026-05 · [The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces](2026-2605.27965-the-shape-of-overthinking-backtracking-bursts-in-long-reasoning-traces.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  行単位に分割した推論文へ、別の注釈実行で「継続・停滞・後戻り・終了」の確信度を割り当て、後戻りの強度に閾値を設ける。固定2000語の打切りでは残存軌跡の正解率がAIME2024で10.0%、AIME2025で6.7%になるのに対し、接頭部分の後戻り特徴で選別すると73.5%・64.5%となり、それぞれ21.7%・27.0%の軌跡を終了対象にできる。
 
 - **2026-05 · [The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management](2026-2605.23071-the-efficiency-frontier-a-unified-framework-for-cost-performance-optimiz.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

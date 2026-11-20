@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（150本）
+## 自動生成の論文一覧（151本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -101,6 +101,10 @@
 - **2026-10 · [PACE: Pareto-Adaptive Compression for Efficient Native MLLMs](2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ネイティブ型マルチモーダルモデルの視覚トークンを、高さと幅へ分けた重要度とパレート最適な段階別保持率で圧縮し、保持率25パーセントでもほぼ無損失のまま計算量を2.0倍分減らした研究。
+
+- **2026-10 · [Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking](2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  音声対話を完全オフラインで動かすモジュール式スタックと安価な部品表を提示し、2層の実機で量子化形式を比べ、4ビット形式が大きさと品質の釣り合いで最適であることを実測で示した研究。
 
 - **2026-10 · [ixi-sLM: On-Device sLM for AI Call Agent Service](2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

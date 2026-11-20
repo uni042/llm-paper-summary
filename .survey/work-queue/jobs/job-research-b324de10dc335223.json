@@ -35,10 +35,15 @@
   "selection_reason": "prefillの大規模GEMMとdecodeの小規模GEMVの実行形状に合わせてsystolic arrayのMinimum Efficient Unitを空間/時間方向へ変形し、phaseごとにprefillの両側量子化とdecodeの重みのみ量子化を切り替えるDynaCoreを提案する。runtimeはbatchに応じてMEUを選択する。著者要旨は実serving traceで量子化方式と再構成accelerator比TTFTを3.50/2.97倍、TPOTを36.55/8.02倍改善と報告。推論向けhardware/runtime協調としてaccept。",
   "semantic_scholar_id": "afde09b5f9973ee376406f6ac8a6b0f3584d28eb",
   "source_url": "https://arxiv.org/abs/2610.07443",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Shape-Adaptive Architecture with Disaggregated Quantization for Efficient LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:49:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.07443-a-shape-adaptive-architecture-with-disaggregated-quantization-for-effici.md",
+  "represented_canonical_id": "arXiv:2610.07443",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

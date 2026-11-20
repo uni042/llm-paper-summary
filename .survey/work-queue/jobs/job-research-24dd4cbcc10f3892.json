@@ -35,10 +35,15 @@
   "selection_reason": "GPUで扱いやすい2次元weight tileを精度配分・圧縮格納・実行の共通単位にし、チャネル内の量子化感度差を活かす。prefill/decode両フェーズのgradient重み付き出力摂動で混合精度を較正し、同じpacked weightをINT8計算向けphase別kernelで再利用する。著者要旨は3B～14Bの4モデル・3GPU・最大64K contextでBF16比最大2.50倍の生成速度を報告。量子化とGPU実行形状の共同設計としてaccept。",
   "semantic_scholar_id": "f143d50c78b138c62e5869ec8bc1b91e88919242",
   "source_url": "https://arxiv.org/abs/2610.07457",
-  "status": "ready",
+  "status": "superseded",
   "title": "AlignQuant: Tile-Aligned Mixed-Precision Quantization for Efficient LLM Generation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:49:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-g.md",
+  "represented_canonical_id": "arXiv:2610.07457",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

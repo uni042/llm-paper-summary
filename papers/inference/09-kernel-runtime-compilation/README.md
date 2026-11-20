@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（267本）
+## 自動生成の論文一覧（268本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -225,6 +225,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking](2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-at.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意マスクの利用者向け仕様をオフラインコンパイラで区間表現へ変換し、端点の事前計算によりカーネル内の可視判定を軽くすることで、表現力と実行効率を両立させる注意実行基盤。
+
+- **2026-10 · [AlignQuant: Tile-Aligned Mixed-Precision Quantization for Efficient LLM Generation](2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-g.md)**  
+  実装：[✓](https://github.com/HanzhiZhang-Ulrica/AlignQuant) ・ リポジトリ内被引用：0  
+  重みの二次元タイルを精度配分・詰め込み保存・GPU実行の共通単位とし、プリフィルとデコード両方の損失感度で各タイルの4ビット／8ビットを決めて、1つの詰め込みモデルを段階専用カーネルで直接実行する混合精度量子化。
 
 - **2026-10 · [AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill](2026-2610.05774-adaspark-adaptive-dspark-with-online-learning-for-tree-verification-and-.md)**  
   実装：[✓](https://github.com/zeraix/imparo) ・ リポジトリ内被引用：0  

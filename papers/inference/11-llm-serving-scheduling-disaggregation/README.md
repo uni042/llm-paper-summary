@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（569本）
+## 自動生成の論文一覧（570本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -633,6 +633,10 @@
 - **2026-10 · [Accelerated Dataflow: scaling inference in streaming data analytics with efficiency](2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ストリーミング処理へ推論を埋め込み、接頭辞を意識した振り分けと推論エンジンの完了率に基づくオートスケーリングで、ジーピーユー時間を51.1パーセント削減し、フリンク比でピーク尾遅延を84.9パーセント下げた研究。
+
+- **2026-10 · [A Shape-Adaptive Architecture with Disaggregated Quantization for Efficient LLM Serving](2026-2610.07443-a-shape-adaptive-architecture-with-disaggregated-quantization-for-effici.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  シストリックアレイのタイル形状を空間・時間の3次元でバッチ形状へ適応させ、プリフィルとデコードで量子化を使い分けることで、デコードの利用率崩壊とフェーズ間の精度方式の不一致を同時に解くアクセラレータ。
 
 - **2026-09 · [Unlocking Software-defined GPU Fabric Scheduling in the LLM Era](2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1959,7 +1963,7 @@
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：111  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：112  
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
@@ -2221,7 +2225,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：198  
+  実装：✓ ・ リポジトリ内被引用：199  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  

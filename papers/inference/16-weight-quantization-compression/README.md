@@ -126,6 +126,10 @@
   実装：[✓](https://github.com/zhangsq-nju/EdgeRazor) ・ リポジトリ内被引用：1  
   対象は単なる事後量子化ではなく、量子化した生徒モデルを教師モデルで監督して再学習する混合精度量子化対応蒸留（Mixed-Precision Quantization-Aware Distillation; MPQAD）である。
 
+- **2026-02 · [SFMP: Fine-Grained, Hardware-Friendly and Search-Free Mixed-Precision Quantization for Large Language Models](2026-2602.01027-sfmp-fine-grained-hardware-friendly-and-search-free-mixed-precision-quan.md)**  
+  実装：[✓](https://github.com/Nkniexin/SFMP) ・ リポジトリ内被引用：1  
+  重み量子化は、大規模言語モデル（LLM）の重みを16ビットなどの高精度形式から2～4ビット程度の表現へ圧縮し、GPUメモリ使用量を削減する。
+
 - **2026-01 · [HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs](2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md)**  
   実装：[✓](https://github.com/hestia2026/Hestia) ・ リポジトリ内被引用：1  
   重みを{-1,0,+1}の三値に制限する1.58ビット級の量子化は、重み保存量や乗算器への要求を減らせる可能性がある。
@@ -340,10 +344,6 @@
   実装：[✓](https://github.com/Tencent/AngelSlim) ・ リポジトリ内被引用：0  
   量子化の目的を重み再構成から、学習後微調整の更新の方向の保存へ変える方式。データなしでスケールを探索し、微調整で得た振る舞いを保ったままFP8へ圧縮する。
 
-- **2026-02 · [SFMP: Fine-Grained, Hardware-Friendly and Search-Free Mixed-Precision Quantization for Large Language Models](2026-2602.01027-sfmp-fine-grained-hardware-friendly-and-search-free-mixed-precision-quan.md)**  
-  実装：[✓](https://github.com/Nkniexin/SFMP) ・ リポジトリ内被引用：0  
-  重み量子化は、大規模言語モデル（LLM）の重みを16ビットなどの高精度形式から2～4ビット程度の表現へ圧縮し、GPUメモリ使用量を削減する。
-
 - **2026-02 · [LittleBit-2: Maximizing the Spectral Energy Gain in Sub-1-Bit LLMs via Latent Geometry Alignment](2026-2603.00042-littlebit-2-maximizing-the-spectral-energy-gain-in-sub-1-bit-llms-via-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LittleBit-2は、学習済み大規模言語モデル（LLM）の重み行列を低ランクの二値因子に分解するLittleBit方式を改良し、二値化の直前に潜在空間を回転して量子化誤差を小さくする研究である。
@@ -422,6 +422,10 @@
   実装：[✓](https://github.com/ironartisan/DLP) ・ リポジトリ内被引用：6  
   DLP（動的 Layerwise 枝刈り、動的層別刈り込み）は、重みのどれを削るかだけでなく、各層に何割の重みを残すかを決めるためのモデル圧縮方式である。ただし同じ70%の疎化率でも、重要な層を一律に70%削ると、あまり重要でない層を多く削る場合より予測品質が大きく損なわれる。
 
+- **2025-01 · [BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference](2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md)**  
+  実装：[✓](https://code.stanford.edu/tambe-lab/blockdialect) ・ リポジトリ内被引用：6  
+  著者らは、符号1ビットと値索引3ビットという4ビット格納形式を保ちつつ、16種類の表現可能値集合を用意するDialectFP4を提案する。LLaMA3-8Bで注意行列積まで含めて量子化した場合、最良のブロック混合設定では7課題平均正答率69.00%、比較対象のMXFP4-16は58.22%、全精度FP16は74.45%である（原著Table 1）。
+
 - **2025-09 · [Quant-dLLM: Post-Training Extreme Low-Bit Quantization for Diffusion Large Language Models](2025-2510.03274-quant-dllm-post-training-extreme-low-bit-quantization-for-diffusion-larg.md)**  
   実装：[✓](https://github.com/ZTA2785/Quant-dLLM) ・ リポジトリ内被引用：5  
   本研究は、拡散型大規模言語モデル（diffusion large language モデル、以下dLLM）の重みを、追加の勾配学習なしに平均2ビットへ圧縮しながら、生成・推論課題の正答率を維持する手法を提案する。
@@ -433,10 +437,6 @@
 - **2025-02 · [LO-BCQ: Locally Optimal Block Clustered Quantization for 4-bit (W4A4) LLM Inference](2025-2502.05376-lo-bcq-locally-optimal-block-clustered-quantization-for-4-bit-w4a4-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   主題は、大規模言語モデルの重みと活性値の両方を4ビット程度へ量子化し、再学習を行わずに推論品質を保つ事後量子化（Post-学習 量子化; PTQ）である。代表例としてLlama2-7Bの5つの言語理解課題平均では、BF16の65.65%に対し、実効4.5ビットのLO-BCQは64.68%となり、0.97ポイント低下した。
-
-- **2025-01 · [BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference](2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md)**  
-  実装：[✓](https://code.stanford.edu/tambe-lab/blockdialect) ・ リポジトリ内被引用：5  
-  著者らは、符号1ビットと値索引3ビットという4ビット格納形式を保ちつつ、16種類の表現可能値集合を用意するDialectFP4を提案する。LLaMA3-8Bで注意行列積まで含めて量子化した場合、最良のブロック混合設定では7課題平均正答率69.00%、比較対象のMXFP4-16は58.22%、全精度FP16は74.45%である（原著Table 1）。
 
 - **2025-05 · [ICQuant: Index Coding enables Low-bit LLM Quantization](2025-2505.00850-icquant-index-coding-enables-low-bit-llm-quantization.md)**  
   実装：[✓](https://github.com/Avery-xl/ICQuant) ・ リポジトリ内被引用：4  
@@ -544,13 +544,13 @@
   実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：204  
   QuIP#は、学習済みの大規模言語モデルを再学習せずに2〜4ビット/重みへ圧縮する事後学習量子化（Post-学習 量子化、PTQ）である。試作推論実装はRTX 4090上で70Bの2ビット重みを32.74トークン/秒で生成し、実効メモリ帯域利用率56.84%を記録した（表5）。
 
+- **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
+  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：133  
+  QServeは、クラウド型の大規模言語モデル（LLM）サービングにおいて、重みを4ビットへ量子化してもGPU上の実行速度が期待ほど上がらない問題を、量子化アルゴリズムと推論カーネルの協調設計によって解く研究である。論文はこの量子化解除の費用が20〜90%に達する条件を示し、ビット数を減らすだけではサービング処理率を改善できないことを説明する。
+
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
   実装：[✓](https://github.com/microsoft/TransformerCompression) ・ リポジトリ内被引用：133  
   SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
-
-- **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
-  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：132  
-  QServeは、クラウド型の大規模言語モデル（LLM）サービングにおいて、重みを4ビットへ量子化してもGPU上の実行速度が期待ほど上がらない問題を、量子化アルゴリズムと推論カーネルの協調設計によって解く研究である。論文はこの量子化解除の費用が20〜90%に達する条件を示し、ビット数を減らすだけではサービング処理率を改善できないことを説明する。
 
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
   実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：124  
@@ -561,7 +561,7 @@
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
-  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：80  
+  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：81  
   活性値認識型特異値分解（活性値-aware Singular Value Decomposition、ASVD）は、大規模言語モデル（LLM）の線形重みを追加学習なしで低ランク行列へ置き換える圧縮方式である。LLaMA-7BとLLaMA-2-7B/13Bで重み容量を10～30%削減する実験を行い、活性値を考慮しないSVDより大幅に良い困惑度を報告する。
 
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
@@ -569,7 +569,7 @@
   狙いは、学習済みFP16/BF16モデルを後から近似する事後学習量子化ではなく、モデル自体を極低bit表現へ適応させ、品質を維持したまま重み転送・行列積・メモリ容量の支配項を小さくすることにある。
 
 - **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
-  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：75  
+  実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：76  
   層ごとの学習可能アフィン変換を小さなクロネッカー積へ分解し量子化と融合して、LLaMA-3-70BのW4A4で精度低下1%未満とプリフィル最大2.3倍高速化を両立する。
 
 - **2024-02 · [BiLLM: Pushing the Limit of Post-Training Quantization for LLMs](2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md)**  
@@ -584,13 +584,13 @@
   実装：[✓](https://github.com/xuyuzhuang11/OneBit) ・ リポジトリ内被引用：54  
   OneBitは、学習済み大規模言語モデル（LLM）の重みを極端に低いビット数で保存する際に生じる精度劣化を、線形層の表現形式そのものを変更することで緩和する研究である。査読版の表3では、LLaMA-7Bの重み保存量が13.5 GBから1.3 GBへ、LLaMA-13Bでは26.0 GBから2.2 GBへ減る。
 
+- **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：53  
+  要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
+
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：52  
   複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
-
-- **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：52  
-  要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
 
 - **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  
   実装：[✓](https://github.com/DD-DuDa/BitDistiller) ・ リポジトリ内被引用：40  
@@ -691,7 +691,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：337  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：338  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
@@ -699,7 +699,7 @@
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
-  実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：264  
+  実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：265  
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
@@ -707,11 +707,11 @@
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md)**  
-  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：202  
+  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：203  
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 - **2023-06 · [SqueezeLLM: Dense-and-Sparse Quantization](2023-2306.07629-squeezellm-dense-and-sparse-quantization.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：195  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：196  
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
@@ -777,7 +777,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：712  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：715  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  

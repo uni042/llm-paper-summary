@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "20ef07c37460587aff1080338e0b0dafd95c5f4e",
+  "base_commit": "72675f4185d6a2f274ee62a509d53def56f29dfd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -560,10 +560,15 @@
     "2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-protocol-for-agentic-llm-serving.json",
     "2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.json",
     "2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-llm-serving.json",
+    "2026-2610.06927-attsvd-prompt-adaptive-low-rank-kv-cache-compression-via-attention-guided-svd.json",
+    "2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-stack-quantization-and-benchmarking.json",
     "2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-decoding.json",
     "2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.json",
     "2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.json",
     "2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.json",
+    "2026-2610.07350-trajectory-retrieval-speculative-decoding-when-does-a-models-own-history-help.json",
+    "2026-2610.07443-a-shape-adaptive-architecture-with-disaggregated-quantization-for-efficient-llm-serving.json",
+    "2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-generation.json",
     "2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buys-and-when-you-can-tell.json",
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
     "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
@@ -43995,6 +44000,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.06927": {
+      "order": [
+        "2026-11-20T09:42:16+00:00",
+        "2026-2610.06927-attsvd-prompt-adaptive-low-rank-kv-cache-compression-via-attention-guided-svd.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07026": {
+      "order": [
+        "2026-11-20T09:43:37+00:00",
+        "2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-stack-quantization-and-benchmarking.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07350": {
+      "order": [
+        "2026-11-20T09:44:58+00:00",
+        "2026-2610.07350-trajectory-retrieval-speculative-decoding-when-does-a-models-own-history-help.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07443": {
+      "order": [
+        "2026-11-20T09:46:20+00:00",
+        "2026-2610.07443-a-shape-adaptive-architecture-with-disaggregated-quantization-for-efficient-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07457": {
+      "order": [
+        "2026-11-20T09:47:41+00:00",
+        "2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54734,6 +54784,21 @@
     "arxiv:2608.20397": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-rout.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-rout.md"
+    ],
+    "arxiv:2610.06927": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.06927-attsvd-prompt-adaptive-low-rank-kv-cache-compression-via-attention-guide.md"
+    ],
+    "arxiv:2610.07026": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-s.md"
+    ],
+    "arxiv:2610.07350": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.07350-trajectory-retrieval-speculative-decoding-when-does-a-model-s-own-histor.md"
+    ],
+    "arxiv:2610.07443": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.07443-a-shape-adaptive-architecture-with-disaggregated-quantization-for-effici.md"
+    ],
+    "arxiv:2610.07457": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-g.md"
     ]
   }
 }

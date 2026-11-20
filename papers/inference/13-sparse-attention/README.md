@@ -73,7 +73,7 @@
   FlashPrefillは、長文脈の大規模言語モデル（LLM）が入力全体を一度に処理するプリフィル段階を高速化する、動的な疎注意（sparse 注意機構）の方式である。原著のQwen3-30B-A3B-Instruct-2507を用いた注意演算子比較では、密なFlashAttentionに対して4Kで1.71倍、256Kで27.78倍の高速化を報告する。
 
 - **2026-02 · [ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference](2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-contex.md)**  
-  実装：[✓](https://github.com/CURRENTF/ResidualKV) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/CURRENTF/ResidualKV) ・ リポジトリ内被引用：6  
   遠く離れた類似トークンを参照として引き、残差だけを小さく符号化して保存するKVキャッシュ圧縮で、捨てずに保存率を13から16パーセントまで下げ、選ばれたトークンだけを復元して計算も3割に抑えた。
 
 - **2026-02 · [Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs](2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-for-long-context-llms.md)**  
