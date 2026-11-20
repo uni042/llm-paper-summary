@@ -35,10 +35,15 @@
   "selection_reason": "局所窓・先頭block・対数間隔の過去blockを組み合わせるdyadic疎注意。Qwen3-0.6Bの28層中8層を置換し、32Kで全体TTFT15.3%短縮。層単体10.91倍だが残りdense層により全体計算量は二次のまま。",
   "semantic_scholar_id": "ea8d456714c4a9332777bd535e87fd37d7505568",
   "source_url": "https://arxiv.org/abs/2608.20427",
-  "status": "ready",
+  "status": "superseded",
   "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:31:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context.md",
+  "represented_canonical_id": "arXiv:2608.20427",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -18,6 +18,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：✓ ・ リポジトリ内被引用：2  
   本研究はMoEルータを追加学習し、GPU内キャッシュの再利用を促す時間・時空間ルータを作る。必要時だけ限定的に先読みし、専門家重みの転送量と待ち時間を減らす。
 
+- **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  OD-MoEは、GPUメモリが小さい複数のエッジ装置を協調させて混合専門家モデル（Mixture-of-Experts; MoE）を実行するための分散推論方式である。著者らの10ノード実験では、Mixtral-8x7Bの復号速度が平均3.6925トークン/秒となり、全専門家をGPUへ保持する比較方式の4.8900トークン/秒の75.51%に相当する。
+
 - **2026-06 · [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)**  
   実装：[✓](https://github.com/wei390/SpecPrefetch) ・ リポジトリ内被引用：1  
   SpecPrefetchは、混合専門家モデル（Mixture of エキスパート、MoE）の重みをGPUにすべて置けない環境で、必要な専門家をストレージから読み込む待ち時間を短縮する研究である。提案方式は、一つ前の層の状態から次層で使いそうな専門家を軽量な予測器で推定し、現在層の計算と専門家の非同期転送を重ねる。
@@ -33,10 +37,6 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 - **2026-03 · [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   不要な専門家をCPU側に退避し、必要時だけGPUへ読み込む方式は容量を節約するが、CPU・GPU間の転送が推論遅延を支配する。
-
-- **2025-12 · [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  OD-MoEは、GPUメモリが小さい複数のエッジ装置を協調させて混合専門家モデル（Mixture-of-Experts; MoE）を実行するための分散推論方式である。著者らの10ノード実験では、Mixtral-8x7Bの復号速度が平均3.6925トークン/秒となり、全専門家をGPUへ保持する比較方式の4.8900トークン/秒の75.51%に相当する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "95a96ca9f30a67bc893ffbdb2fe61f0f55a3fd51",
+  "base_commit": "9fd9c2dc4d479e159681eccf7ea6f6cd75ea02e0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -318,15 +318,20 @@
     "2026-2608.01665-allocation-before-ranking-decoupled-token-compression-for-omnillms.json",
     "2026-2608.01718-lacache-robust-semantic-caching-for-llm-serving.json",
     "2026-2608.01847-focus-fp4-optimization-via-coupled-relaxation-and-dual-granularity-scaling.json",
+    "2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-edge-llm-inference.json",
     "2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus-retrieval-via-o-1-ssm-state-injection.json",
     "2026-2608.02947-atflash-per-rope-wavelength-attention-windows-for-compute-memory-efficient-llm-inference.json",
+    "2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.json",
     "2026-2608.03812-omnipack-unified-token-compression-for-efficient-omni-modal-large-language-models.json",
     "2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.json",
     "2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.json",
+    "2026-2608.06630-the-sparsity-whisperer.json",
     "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
+    "2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceleration.json",
+    "2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context-transformers.json",
     "2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruning-of-large-language-models.json",
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
     "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
@@ -42336,6 +42341,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.02341": {
+      "order": [
+        "2026-11-20T04:25:59+00:00",
+        "2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-edge-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.03112": {
+      "order": [
+        "2026-11-20T04:26:55+00:00",
+        "2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.06630": {
+      "order": [
+        "2026-11-20T04:27:50+00:00",
+        "2026-2608.06630-the-sparsity-whisperer.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.17336": {
+      "order": [
+        "2026-11-20T04:28:46+00:00",
+        "2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.20427": {
+      "order": [
+        "2026-11-20T04:29:42+00:00",
+        "2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52457,6 +52507,21 @@
     "arxiv:2608.01655": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model.md"
+    ],
+    "arxiv:2608.02341": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-.md"
+    ],
+    "arxiv:2608.03112": [
+      "papers/inference/99-other-inference-systems/2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.md"
+    ],
+    "arxiv:2608.06630": [
+      "papers/inference/99-other-inference-systems/2026-2608.06630-the-sparsity-whisperer.md"
+    ],
+    "arxiv:2608.17336": [
+      "papers/inference/13-sparse-attention/2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceler.md"
+    ],
+    "arxiv:2608.20427": [
+      "papers/inference/13-sparse-attention/2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context.md"
     ]
   }
 }

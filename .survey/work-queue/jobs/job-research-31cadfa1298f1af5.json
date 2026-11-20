@@ -35,10 +35,15 @@
   "selection_reason": "長文脈prefillの注意行列をGPUタイル単位でFP16/INT8へ振り分け、共通のonline-softmax状態へ統合するTileMixを提案。ビットマスクで精度ルーティングを保持し、密なトークン接続とGQA・可変長バッチ・INT8 KVに対応。推論注意カーネルの精度・速度交換条件を直接扱う。",
   "semantic_scholar_id": "07f1586b25da74042beb7add74047468240c1065",
   "source_url": "https://arxiv.org/abs/2608.17336",
-  "status": "ready",
+  "status": "superseded",
   "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:31:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceler.md",
+  "represented_canonical_id": "arXiv:2608.17336",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

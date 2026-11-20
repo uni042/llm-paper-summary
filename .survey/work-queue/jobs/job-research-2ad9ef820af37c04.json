@@ -35,10 +35,15 @@
   "selection_reason": "エッジ端末間のMoE分散推論で主ノードからexpert workerへembeddingを配信する一対多通信を、逐次unicastからUDP broadcastへ変更する。timeout再送と順不同結果回収を備え、有線8ノードでNCCL/TCP比1.4倍の速度向上を実測。無線ではIEEE 802.11のbroadcast 54Mbps上限が律速であることをNS-3で分析し、LLM分散推論の通信系に直接寄与する。",
   "semantic_scholar_id": "e2d98e3a72b39fbc39b843697feca9d1c7cd388f",
   "source_url": "https://arxiv.org/abs/2608.02341",
-  "status": "ready",
+  "status": "superseded",
   "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:31:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-.md",
+  "represented_canonical_id": "arXiv:2608.02341",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

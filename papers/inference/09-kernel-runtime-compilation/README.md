@@ -68,6 +68,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/SJTU-IPADS/MetaAttention) ・ リポジトリ内被引用：3  
   MetaAttentionは、異なる注意機構をハードウェアごとに手作業で実装する費用を削減しながら、専用実装に近い実行性能を得るためのカーネル生成基盤である。両者は著者・基本設計・最大10.4倍という結果が対応する一方、本稿で詳細な数値・実験条件を確認したのは公開プレプリント版である。
 
+- **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
+  実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：2  
+  Blackwell世代のGPUは4ビット浮動小数点（FP4）の行列積を高速に処理できるため、注意計算を16ビット浮動小数点（FP16）からFP4へ落とせば演算とメモリ転送を軽くできる。ThriftAttentionは、全ての問い合わせ・鍵の組を捨てず、重要なブロックだけFP16へ戻す方式である。
+
 - **2026-05 · [Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference](2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Ada-MKはLLMデコードをPTX命令水準の依存グラフへ分解し、共有メモリ配置とワープ役割をオフライン探索して分岐のないメガカーネルを生成し、L20でTensorRT-LLM比最大23.6%高速化する。
@@ -123,10 +127,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [ViBE: Co-Optimizing Workload Skew and Hardware Variability for MoE Serving](2026-2606.00735-vibe-co-optimizing-workload-skew-and-hardware-variability-for-moe-servin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture of エキスパート; MoE）の分散推論では、入力トークンに応じて選択される専門家（専門家）が偏る。専門家並列（専門家 parallelism; EP）では各GPUが担当する専門家を処理した後に同期するため、あるGPUの処理が遅いと層全体が待たされる。したがってトークン数が等しくても実行時間は等しくならない。
-
-- **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
-  実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：1  
-  Blackwell世代のGPUは4ビット浮動小数点（FP4）の行列積を高速に処理できるため、注意計算を16ビット浮動小数点（FP16）からFP4へ落とせば演算とメモリ転送を軽くできる。ThriftAttentionは、全ての問い合わせ・鍵の組を捨てず、重要なブロックだけFP16へ戻す方式である。
 
 - **2026-04 · [Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels](2026-2604.14825-nautilus-an-auto-scheduling-tensor-compiler-for-efficient-tiled-gpu-kern.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -593,7 +593,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：191  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：192  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -601,7 +601,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：46  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
@@ -859,16 +859,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：27  
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
+
+- **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
+  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：25  
+  一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
   実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：25  
   Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
-
-- **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：24  
-  一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-06 · [FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion](2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md)**  
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：24  
@@ -965,7 +965,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：575  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：576  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -1003,7 +1003,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：799  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：800  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1051本）
+## 自動生成の論文一覧（1053本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -263,6 +263,10 @@
 - **2025-12 · [AdmTree: Compressing Lengthy Context with Adaptive Semantic Trees](2025-2512.04550-admtree-compressing-lengthy-context-with-adaptive-semantic-trees.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   AdmTreeは、長い文書を大規模言語モデル（LLM）へ入力する際、入力トークンを短い潜在表現へ圧縮しつつ、局所的な事実と文書全体の意味を両立して保持する方式である。LongBenchの評価では、Llama-2-7Bを基盤にしたAdmTreeの平均得点は44.1で、活性値 Beaconの40.1を上回った。
+
+- **2026-11 · [The Sparsity Whisperer](2026-2608.06630-the-sparsity-whisperer.md)**  
+  実装：[✓](https://github.com/Shavit-Lab/Whisper) ・ リポジトリ内被引用：1  
+  枝刈りで守るべきものを活性値の大きさから入力対の出力差へ広げ、層単位・ニューロン単位・二階再構成の三方式で、高いスパース率ほどスパースジーピーティーやワンダに対する改善が広がることを示す。
 
 - **2026-09 · [Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison](2026-2609.28029-tensor-decomposition-of-transformer-key-value-caches-spectral-structure-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -793,6 +797,10 @@
 - **2026-10 · [Decoupled Contrastive Decoding via Expert-Aligned Drafting](2026-2608.12913-decoupled-contrastive-decoding-via-expert-aligned-drafting.md)**  
   実装：[✓](https://github.com/chadlzx/dcd) ・ リポジトリ内被引用：0  
   重要なのは「対比分布を軽量器で近似すること」ではなく、ドラフト器を検証の正しさから分離することにある。
+
+- **2026-10 · [Content-Aware Adaptive Token Pruning for Video-Language Models](2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚トークンの相関の固有値の減衰率から動画ごとの冗長度を測って保持率を動画ごとに決める学習不要の枝刈りで、平均保持率10パーセントでも固定保持率より動画説明の正解率を7.48ポイント高く保ち、言語モデルの演算量を約95.5パーセント減らす。
 
 - **2026-10 · [Bifocal: Training-Free Mixed Granularity Visual Token Pruning for Multimodal LLMs](2026-2610.18399-bifocal-training-free-mixed-granularity-visual-token-pruning-for-multimo.md)**  
   実装：[✓](https://github.com/EIT-NLP/Bifocal) ・ リポジトリ内被引用：0  
@@ -4173,7 +4181,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：268  
+  実装：✓ ・ リポジトリ内被引用：270  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
