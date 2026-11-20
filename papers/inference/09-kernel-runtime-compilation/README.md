@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（253本）
+## 自動生成の論文一覧（254本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -261,6 +261,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   例えばQwen2.5-14Bの非圧縮キャッシュは1トークン当たり192 KiBを占め、8,000トークンの系列32本を同時に保持すると約48 GiBに達する。Qwen2.5-14Bの16K文脈では、提案法による4倍圧縮とSnapKVによる8分の1トークン保持を組み合わせ、復号時KV容量を32分の1にして質問応答精度0.531を得た。
+
+- **2026-09 · [Hardware-Native Joint Sparse-Quantization for Trillion-Scale Mixture-of-Experts](2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパート重みの疎性パターン選択を連続緩和で量子化と同時に学習し、対になった4対8のNVFP4表現へ圧縮して、スパーステンソルコア向けのグループ化した疎行列積で実行する、兆級MoE向けの共設計圧縮枠組み。
 
 - **2026-09 · [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -597,7 +601,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：193  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：194  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  

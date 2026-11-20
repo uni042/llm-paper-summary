@@ -35,10 +35,15 @@
   "selection_reason": "反応的で可逆なKV常駐WakeKV。ヘッドの分類を生成前に固定する既存圧縮に対し、多くのヘッドが生成中に読み方を変えることを測り、冷えたヘッドの状態を破棄せずCPUの貯留へ移して戻せる常駐方針。推論メモリ機構そのもの。",
   "semantic_scholar_id": "17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
   "source_url": "https://arxiv.org/abs/2610.02713",
-  "status": "ready",
+  "status": "superseded",
   "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:23:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.02713-wakekv-reactive-reversible-kv-residency-for-heads-that-change-their-mind.md",
+  "represented_canonical_id": "arXiv:2610.02713",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

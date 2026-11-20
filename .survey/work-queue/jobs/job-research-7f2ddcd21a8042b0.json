@@ -35,10 +35,15 @@
   "selection_reason": "長推論向けペイロード配慮型KVキャッシュ排除AvoKV-E。生成跡がKVのボトルネックになる長出力推論で、排除法がキーの読まれ方だけを見て値ペイロードの大きさを見落とす問題に対し、適格性を遅らせてペイロードを配慮する訓練不要の方針。推論メモリ機構そのもの。",
   "semantic_scholar_id": "2a83d53801cfb63f873c30ede84bd8714f7170bf",
   "source_url": "https://arxiv.org/abs/2610.03007",
-  "status": "ready",
+  "status": "superseded",
   "title": "AvoKV-E: Payload-Aware KV Cache Eviction for Long Reasoning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:23:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.md",
+  "represented_canonical_id": "arXiv:2610.03007",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

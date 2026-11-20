@@ -35,10 +35,15 @@
   "selection_reason": "低精度ドラフトを高精度ターゲット重み表現に内包し、残差で高精度を復元。KVキャッシュにも拡張。7B～8Bの評価で平均受理率95.2%、FP16自己回帰比1.48～1.61倍のE2E高速化を著者報告。投機的復号とメモリ効率化に直接関連。",
   "semantic_scholar_id": "4a33096d4683c166c23c75086f16352a450be61a",
   "source_url": "https://arxiv.org/abs/2610.02800",
-  "status": "ready",
+  "status": "superseded",
   "title": "BitNest: Bit-Nested Speculative Decoding for Memory-Efficient LLM Inference Acceleration",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:23:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.02800-bitnest-bit-nested-speculative-decoding-for-memory-efficient-llm-inferen.md",
+  "represented_canonical_id": "arXiv:2610.02800",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

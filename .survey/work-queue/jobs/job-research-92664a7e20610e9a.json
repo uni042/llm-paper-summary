@@ -35,10 +35,15 @@
   "selection_reason": "prefill/decode分離とagentの多ターンを含むLLM serving loopを、ハードウェアprofile不要のiSTAGE分析トレースとstateful閉ループsimulatorで再現する。vLLM互換interfaceで既存benchmarkを変更せず実行できる。著者要旨はInferenceXのthroughput/latency曲線を平均誤差3.6%、LMBenchmark多ターン性能を9.9%誤差で予測したと報告。分散推論システム設計の直接的な性能モデルとしてaccept。",
   "semantic_scholar_id": "42eaec5ebcb8e43b3cf9c0ba10d4026f9fa87eb2",
   "source_url": "https://arxiv.org/abs/2610.02732",
-  "status": "ready",
+  "status": "superseded",
   "title": "ServeTwin: A Benchmark-Validated Simulator for Distributed LLM Architecture Exploration",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:23:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.02732-servetwin-a-benchmark-validated-simulator-for-distributed-llm-architectu.md",
+  "represented_canonical_id": "arXiv:2610.02732",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

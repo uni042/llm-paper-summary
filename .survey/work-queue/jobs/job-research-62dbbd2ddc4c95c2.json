@@ -35,10 +35,15 @@
   "selection_reason": "MoE推論ではexpert重みの容量とメモリ帯域が律速になる一方、低ビット量子化と半構造化疎性を単純に併用すると品質が低下し、疎なexpertをまとめて実行するGPUカーネルも不足する。本論文のmoesqはGumbel-Softmaxによる疎パターンの連続緩和とrouter重み付きexpert出力再構成でNVFP4・paired 4:8に適合する重みを求め、Blackwell Sparse Tensor Core向けのgrouped sparse GEMMで実行する。30B〜1T規模のMoEで精度と推論実行を評価し、NVIDIA B200上でカーネル最大1.65倍、サービングスループット最大1.18倍、INT4 Marlin比のエンドツーエンド遅延最大4.03倍短縮を報告する。推論向け圧縮と実行カーネルの直接的貢献があるためaccept。",
   "semantic_scholar_id": "ec2f241aa96918204e290faa372081b36a3e9130",
   "source_url": "https://arxiv.org/abs/2610.02241",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hardware-Native Joint Sparse-Quantization for Trillion-Scale Mixture-of-Experts",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:23:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-.md",
+  "represented_canonical_id": "arXiv:2610.02241",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
