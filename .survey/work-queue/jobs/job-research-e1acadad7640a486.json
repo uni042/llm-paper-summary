@@ -35,10 +35,15 @@
   "selection_reason": "超長文脈でdraft側の全履歴attention費用が増えて投機復号の利益が失われる問題に対し、target hidden stateから長期情報を受け取るdraftは自身の長い履歴を必ずしも保持しなくてよいと主張する。既存の短文脈draftを凍結し、draft attention cacheの上限固定とRoPE位置の訓練範囲への再基準化を推論時だけ適用する。著者要旨は3組のtarget/draft・5コーパスで4K～200万tokenまで短文脈時のspeedupを維持すると報告。KV管理と投機復号の直接的方式としてaccept。",
   "semantic_scholar_id": "782d599ee6fae9db8aecb53bbe98e22afcd5f558",
   "source_url": "https://arxiv.org/abs/2610.20865",
-  "status": "ready",
+  "status": "superseded",
   "title": "Long-Context Drafting Does Not Require Long-Context Drafters",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:26:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.md",
+  "represented_canonical_id": "arXiv:2610.20865",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

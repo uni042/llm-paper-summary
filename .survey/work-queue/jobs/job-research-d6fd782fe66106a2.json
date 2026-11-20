@@ -35,10 +35,15 @@
   "selection_reason": "MoE混合精度量子化ではexpertの重要度順位だけでは誤差重みの絶対的な強さを決められない。NatScaleは勾配ベース重要度を情報理論的なcontrast目標にpower変換で較正し、expertのgate/up/down構成別出力誤差と重みスペクトルなどを組み合わせて容量制約下の精度を選ぶ。3モデル・9条件で5方式よりnative-to-quantized KL divergenceとtop-token一致が良好と報告し、MoE推論量子化の技術貢献としてaccept。",
   "semantic_scholar_id": "f9899d78a48ee21a2fd49bbafad19cf6eca26331",
   "source_url": "https://arxiv.org/abs/2610.20353",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:26:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/06-moe-quantization-compression/2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quan.md",
+  "represented_canonical_id": "arXiv:2610.20353",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d8195b78bf8acbf89e4c7649c367165f14c87c87",
+  "base_commit": "eb00785ffb254342fe1e9462c4bb387c13106378",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -653,7 +653,12 @@
     "2026-2610.19605-pn-mix-pair-norm-guided-mixed-precision-key-cache-quantization-for-efficient-long-output-llm-inference.json",
     "2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-large-language-models.json",
     "2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.json",
+    "2026-2610.20136-seeing-at-the-edge-energy-characterization-of-vision-language-model-inference-on-edge-platforms.json",
+    "2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quantization.json",
+    "2026-2610.20392-fold-position-free-far-memory-with-local-order-for-long-context-speculative-decoding.json",
     "2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hybrid-linear-attention-large-language-models.json",
+    "2026-2610.20637-expanding-attention-taylor-series-route-to-linear-time-transformers.json",
+    "2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.json",
     "2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.json",
     "2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multiplier-free-llm-inference.json",
     "2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.json",
@@ -44495,6 +44500,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.20136": {
+      "order": [
+        "2026-11-20T11:21:51+00:00",
+        "2026-2610.20136-seeing-at-the-edge-energy-characterization-of-vision-language-model-inference-on-edge-platforms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.20353": {
+      "order": [
+        "2026-11-20T11:22:41+00:00",
+        "2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.20392": {
+      "order": [
+        "2026-11-20T11:23:29+00:00",
+        "2026-2610.20392-fold-position-free-far-memory-with-local-order-for-long-context-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.20637": {
+      "order": [
+        "2026-11-20T11:24:18+00:00",
+        "2026-2610.20637-expanding-attention-taylor-series-route-to-linear-time-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.20865": {
+      "order": [
+        "2026-11-20T11:25:06+00:00",
+        "2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55434,6 +55484,21 @@
     "arxiv:2610.19822": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.md"
+    ],
+    "arxiv:2610.20136": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2610.20136-seeing-at-the-edge-energy-characterization-of-vision-language-model-infe.md"
+    ],
+    "arxiv:2610.20353": [
+      "papers/inference/06-moe-quantization-compression/2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quan.md"
+    ],
+    "arxiv:2610.20392": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.20392-fold-position-free-far-memory-with-local-order-for-long-context-speculat.md"
+    ],
+    "arxiv:2610.20637": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.20637-expanding-attention-a-taylor-series-route-to-linear-time-transformers-wi.md"
+    ],
+    "arxiv:2610.20865": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.md"
     ]
   }
 }

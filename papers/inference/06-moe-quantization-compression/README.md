@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（28本）
+## 自動生成の論文一覧（29本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -14,13 +14,13 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
+- **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
+  実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：3  
+  総パラメータ数が大きいモデルをGPUメモリへ載せるためには量子化が有効だが、すべての専門家を同じビット幅へ圧縮すると、特に1〜2ビットという極低精度で品質が大きく崩れる。
+
 - **2026-07 · [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   PagedWeightは、専門家混合（Mixture-of-Experts、MoE）モデルのサービングで、専門家重みと鍵・値（KV）キャッシュが同じGPUメモリを奪い合う問題を、重み側の動的な精度変更で緩和するシステムである。
-
-- **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
-  実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：2  
-  総パラメータ数が大きいモデルをGPUメモリへ載せるためには量子化が有効だが、すべての専門家を同じビット幅へ圧縮すると、特に1〜2ビットという極低精度で品質が大きく崩れる。
 
 - **2026-07 · [Half the Experts, All the Code: One-Shot Domain Pruning of Mixture-of-Experts LLMs for Coding](2026-2607.16721-half-the-experts-all-the-code-one-shot-domain-pruning-of-mixture-of-expe.md)**  
   実装：[✓](https://github.com/anik-jha/moep) ・ リポジトリ内被引用：1  
@@ -31,6 +31,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   ConMoEは、混合専門家モデル（Mixture-of-Experts; MoE）の推論に必要な専門家重みを、学習後の追加学習なしで縮小するための方式である。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization](2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門家感度の順位ではなく開き具合をジェフリーズ発散の目標へ較正し、3射影の共同誤差と構造事前情報で混合精度のビット配分を決めるMoE量子化枠組み。
 
 - **2026-09 · [When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models](2026-2609.04453-expert-pruning-over-dispersed-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "短文脈で学習した投機drafterの長文脈劣化に対し、近傍の正確な位置を維持し遠方tokenを同一位置のfar memoryとして扱うtraining-free FOLDを提案。遠方memory内attentionを鋭くし、局所窓との相対重みを別制御する。一次要旨は6 target-drafter組、最大256K tokenのbenchmarkで最良条件の自回帰比speedupを2.08倍から4.22倍へ伸ばしたと報告。長文脈LLMの投機復号の直接的改善としてaccept。",
   "semantic_scholar_id": "229844c33c53be3410bb4ab56f78d3049b8847a2",
   "source_url": "https://arxiv.org/abs/2610.20392",
-  "status": "ready",
+  "status": "superseded",
   "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:26:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.20392-fold-position-free-far-memory-with-local-order-for-long-context-speculat.md",
+  "represented_canonical_id": "arXiv:2610.20392",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

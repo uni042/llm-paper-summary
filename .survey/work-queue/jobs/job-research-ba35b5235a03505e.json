@@ -35,10 +35,15 @@
   "selection_reason": "Qwen2-VL-2Bとtext-only siblingをRaspberry Pi5/Hailo-10H NPUおよびJetson Orin Nano Superで動かし、request固定energyと出力token数に比例するenergyを分離計測する。一次要旨はPiのNPU offloadで生成token当たりenergyを約3分の1に削減し、Jetson GPUとPi NPUの有利不利が出力約40 tokenで逆転すると報告。端末内VLM/LLM推論のenergy・thermal・latencyの実測比較としてaccept。",
   "semantic_scholar_id": "64895dce4c3ce5829f06a99220b82e54e81de893",
   "source_url": "https://arxiv.org/abs/2610.20136",
-  "status": "ready",
+  "status": "superseded",
   "title": "Seeing at the Edge: Energy Characterization of Vision-Language Model Inference on Edge Platforms",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:26:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2610.20136-seeing-at-the-edge-energy-characterization-of-vision-language-model-infe.md",
+  "represented_canonical_id": "arXiv:2610.20136",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

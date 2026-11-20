@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（91本）
+## 自動生成の論文一覧（92本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -53,6 +53,10 @@
 - **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
+
+- **2026-10 · [Seeing at the Edge: Energy Characterization of Vision-Language Model Inference on Edge Platforms](2026-2610.20136-seeing-at-the-edge-energy-characterization-of-vision-language-model-infe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PiとJetsonの4つの実行経路で視覚言語モデルのシステム全体エネルギーを測り、固定費と出力比例分へ分解して、NPUとGPUの有利さが出力長で逆転することを示した計測研究。
 
 - **2026-10 · [HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models](2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-mod.md)**  
   実装：[✓](https://github.com/tuhh-ncps/hydrallm) ・ リポジトリ内被引用：0  
@@ -343,7 +347,7 @@
   本論文は、LLM向けの移動体エッジ知能をMEI4LLMと呼び、その設計空間を通信・計算・記憶の三資源で整理する。
 
 - **2024-03 · [MELTing point: Mobile Evaluation of Language Transformers](2024-2403.12844-melting-point-mobile-evaluation-of-language-transformers.md)**  
-  実装：[✓](https://github.com/brave-experiments/MELT-public) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/brave-experiments/MELT-public) ・ リポジトリ内被引用：12  
   モデル読込み中の操作不能、端末の発熱、連続実行での動作周波数低下、バッテリー消費、量子化による回答品質の劣化も重要である。原著の評価条件では4ビットモデルの生成スループットが3ビットモデルより平均24.77%高かった。
 
 - **2024-01 · [BlockFFN: Towards End-Side Acceleration-Friendly Mixture-of-Experts with Chunk-Level Activation Sparsity](2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "softmax注意の指数核をTaylor展開し、有限個のテンソル冪内積へ分解して履歴を固定個数のrecurrent stateへ畳み込む。各tokenでrank-one更新、chunk間加算が可能なためprefill並列scanと文脈長に依存しないdecodeを狙う。要旨ではN=8192で20.8倍、N=65536のdecodeで76倍を報告する一方、高次展開は状態幅が組合せ的に増加する。推論attention計算量の直接削減としてaccept。",
   "semantic_scholar_id": "ecd7d3f965bde6839247afda372140cf66ad982d",
   "source_url": "https://arxiv.org/abs/2610.20637",
-  "status": "ready",
+  "status": "superseded",
   "title": "Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:26:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.20637-expanding-attention-a-taylor-series-route-to-linear-time-transformers-wi.md",
+  "represented_canonical_id": "arXiv:2610.20637",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

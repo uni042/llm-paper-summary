@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（558本）
+## 自動生成の論文一覧（559本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -714,6 +714,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Few Bits, One Law: Toward W2A4KV2](2026-2610.09202-few-bits-one-law-toward-w2a4kv2.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定回転とエネルギー正規化で重み・活性値・KVキャッシュを正準座標へそろえ、凍結したガウス参照コードブックを使い回しながら共同で量子化認識学習するCanonQにより、W2A4KV2でパープレキシティを最大14.28倍下げた研究。
+
+- **2026-10 · [Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States](2026-2610.20637-expanding-attention-a-taylor-series-route-to-linear-time-transformers-wi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の指数カーネルをテイラー展開で打ち切りテンソル冪へ分解し、文脈長に依らない固定個数の再帰状態で線形時間の注意を構成する方式と、次数・状態幅・正規化のトレードオフの実測。
 
 - **2026-10 · [Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing](2026-2610.22172-efficient-kv-cache-migration-for-geo-distributed-llm-inference-in-collab.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1976,7 +1980,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：375  
+  実装：✓ ・ リポジトリ内被引用：377  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
