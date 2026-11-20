@@ -43,7 +43,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   並列投機ドラフタで、受理接頭辞長への位置別寄与から交差エントロピー重みを毎例動的に計算し、固定位置減衰より受理長と実測高速化を改善する。
 
 - **2025-12 · [Speculative Decoding: Performance or Illusion?](2026-2601.11580-speculative-decoding-performance-or-illusion.md)**  
-  実装：[✓](https://github.com/orgs/SpecDecode-Bench/repositories) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/orgs/SpecDecode-Bench/repositories) ・ リポジトリ内被引用：15  
   実運用向けvLLMで主要投機的復号を横断評価し、検証支配・バッチ依存・受理変動と理論上限との差を定量化。
 
 - **2026-03 · [Speculative Speculative Decoding](2026-2603.03251-speculative-speculative-decoding.md)**  
@@ -86,6 +86,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：7  
   動的剪定は投機木を速くするが、剪定した枝の中に本来受理できる候補があれば平均受理長が落ちる。Graftは剪定で空いた候補枠を捨てず、対象モデルの過去検証から得た安価な検索候補で「接ぎ木」する。対象モデルが一度に検証するノード総数は増やさず、ドラフト計算だけを安い検索へ置換する。
 
+- **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
+  実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：6  
+  ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
+
 - **2026-08 · [Verification-Aware Training for Speculative Decoding](2026-2608.30135-verification-aware-training-for-speculative-decoding.md)**  
   実装：[✓](https://github.com/naver-ai/VAT) ・ リポジトリ内被引用：6  
   投機的復号（投機的復号）は、軽量な草案モデルが先の複数トークンを提案し、大きな目標モデルが一度の前向き計算でそれらを検証することで自己回帰生成の遅延を減らす。NVIDIA A100 80GB上で、EAGLE-3と拡散型のDFlash、目標モデルQwen3-4B、Qwen3-8B、Llama-3.1-8Bを組み合わせ、数学・コード・会話の八課題で評価した。
@@ -105,10 +109,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios](2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md)**  
   実装：[✓](https://github.com/lshAlgorithm/MoE-SpAc) ・ リポジトリ内被引用：6  
   MoE-SpAcは、投機的復号で先に見える専門家需要を集計し、VRAMに残す専門家・先読みする重み・CPUで計算する専門家を制約付きで同時に配置して、端末の転送待ちを減らす。
-
-- **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
-  実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：5  
-  ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
 
 - **2026-09 · [DFlow: Enabling Verifier Information Flow in Block Diffusion Speculative Decoding](2026-2609.06498-dflow-verifier-information-flow-block-diffusion.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -142,6 +142,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：5  
   AgentInferは、長い推論と外部ツール呼出しを繰り返すLLMエージェントの効率を、単一の生成呼出しのトークン/秒ではなく、目的を達成するまでの総所要時間・総トークン消費・タスク成功率で評価し、推論アーキテクチャと提供システムを共同設計する枠組みである。
 
+- **2026-09 · [WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models](2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-lan.md)**  
+  実装：[✓](https://github.com/summerbro-hhj/wavefront-decoding) ・ リポジトリ内被引用：4  
+  ループ型モデルで、位置ごとに深さの違う状態を1回の重み共有ブロック呼び出しに束ねて草案と検証を同時並行化する学習不要の復号で、自己回帰生成の最大4.81倍の高速化を示した。
+
 - **2026-08 · [DARTree: Speculative Diffusion Decoding with Autoregressive Draft Trees](2026-2608.13524-dartree-speculative-diffusion-decoding-with-autoregressive-draft-trees.md)**  
   実装：[✓](https://github.com/VILA-Lab/DARTree) ・ リポジトリ内被引用：4  
   投機的復号では軽量な提案器が複数の候補トークンを作り、大きな目標モデルがまとめて検証する。Qwen3-4B、温度0、GSM8Kでは平均受理長12.97トークン、同一環境で測定した通常自己回帰復号に対して9.73倍の復号速度向上を報告する。
@@ -174,9 +178,9 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/mandt-lab/ptp) ・ リポジトリ内被引用：4  
   投機的復号（投機的復号）は小さなモデルに先読みさせて大きなモデルでまとめて検証するが、草案モデル自身が1トークンずつ順次生成する費用は残る。Vicuna-7Bを教師として学習したPTPは、RTX A6000単体でSpecBenchの6種類の文章生成課題において、通常の自己回帰生成比で平均2.40倍の実時間高速化を報告した。
 
-- **2026-09 · [WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models](2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-lan.md)**  
-  実装：[✓](https://github.com/summerbro-hhj/wavefront-decoding) ・ リポジトリ内被引用：3  
-  ループ型モデルで、位置ごとに深さの違う状態を1回の重み共有ブロック呼び出しに束ねて草案と検証を同時並行化する学習不要の復号で、自己回帰生成の最大4.81倍の高速化を示した。
+- **2026-09 · [Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers](2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculation-for-lo.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  クエリとキーは浅い再帰で成熟するがバリューは遅れるという非対称性を使い、浅い下書きが検証済み接頭辞の全深さ表現を読む方式と持ち越し並列精錬で、ループ型モデルの生成を4.00から6.96倍高速化した研究である。
 
 - **2026-08 · [S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices](2026-2608.15018-s2-moe-self-speculative-decoding-edge.md)**  
   実装：[✓](https://github.com/angerybob/S2-MoE) ・ リポジトリ内被引用：3  
@@ -237,10 +241,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models](2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   浅いループの状態で複数トークン先まで下書きし、中間ループの食い違い検出で見込みのない分岐の計算を止める無損失な投機的復号で、自己回帰比最大7.82倍を実測した。
-
-- **2026-09 · [Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers](2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculation-for-lo.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  クエリとキーは浅い再帰で成熟するがバリューは遅れるという非対称性を使い、浅い下書きが検証済み接頭辞の全深さ表現を読む方式と持ち越し並列精錬で、ループ型モデルの生成を4.00から6.96倍高速化した研究である。
 
 - **2026-08 · [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md)**  
   実装：[✓](https://github.com/labscommunity/pipeline-sharded-inference-paper) ・ リポジトリ内被引用：2  
@@ -1381,7 +1381,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：494  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：495  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
@@ -1401,7 +1401,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：105  
+  実装：✓ ・ リポジトリ内被引用：106  
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
 - **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
@@ -1545,7 +1545,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   二つのモデルを別々のGPUへ配置しても、この実行順序を変えなければGPUを同時に使い切れない。平均トークン時間は、自己回帰生成に対してHumanEvalで1.57倍、MT-Benchで1.31倍、RefactorChatで1.96倍の高速化となった。
 
 - **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
-  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：10  
   制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
 
 - **2024-11 · [Draft on the Fly: Adaptive Self-Speculative Decoding using Cosine Similarity](2024-2410.01028-draft-on-the-fly-adaptive-self-speculative-decoding-using-cosine-similar.md)**  

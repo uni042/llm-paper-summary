@@ -34,20 +34,20 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System](2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md)**  
-  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：27  
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
 
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：12  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
 
+- **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
+
 - **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
   実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：12  
   エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
-
-- **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
 
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -77,13 +77,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   複数の言語モデルエージェントが計画、検索、コード生成、試験などを繰り返す処理では、一つの利用者要求が多段階の作業へ分かれ、途中結果によって分岐や再試行が発生する。個々の言語モデルの生成速度だけを改善しても、外部ツールの待機、複数エージェントの依存関係、GPUメモリに残る鍵・値キャッシュ、資源の偏りによって、要求全体の終了時間が長くなる。
 
+- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
+
 - **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   AVOは進化的プログラム探索の変異演算子を固定的なLLM生成呼出しから、過去の実装、ハードウェア資料、実行・性能測定へ自律的にアクセスしてコードの修正・検証を反復するエージェントへ置き換える。NVIDIA B200上のBF16注意カーネルを7日間自律改善し、40の成功版を記録。
-
-- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
 - **2026-07 · [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md)**  
   実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：2  
@@ -322,7 +322,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：59  
+  実装：✓ ・ リポジトリ内被引用：60  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  

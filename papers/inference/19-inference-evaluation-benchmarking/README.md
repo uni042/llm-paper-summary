@@ -44,6 +44,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
 
+- **2026-08 · [Sliding-window beats linear attention](2026-2608.28444-sliding-window-beats-linear-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
+
 - **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   復号済みトークンを候補と確定へ分け、候補を信頼度の高い文脈だけで検証して検証文脈の汚染を断つ取消可能復号で、Saber比2.71倍の高速化と品質改善を両立した。
@@ -245,10 +249,6 @@
 - **2026-08 · [Thinking Hard, Not Smart: Reasoning Models Fail to Ration Test-Time Compute Across Questions](2026-2608.07968-thinking-hard-not-smart-reasoning-models-fail-to-ration-test-time-comput.md)**  
   実装：[✓](https://github.com/Fcr09/thinking-hard-not-smart) ・ リポジトリ内被引用：0  
   長い思考を許す推論言語モデルは、一問ごとの数学・コード問題で精度を高められる。しかし現実の計算資源は有限であり、複数の依頼を同時に処理する場合には「どの問題へ何トークン使うか」「いつ諦めて別の問題へ進むか」という別の判断が必要になる。この論文は新しい高速化カーネルや推論サービング基盤を提案するものではない。
-
-- **2026-08 · [Sliding-window beats linear attention](2026-2608.28444-sliding-window-beats-linear-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
 
 - **2026-08 · [SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing](2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branc.md)**  
   実装：[✓](https://github.com/Bl1nding/SABER) ・ リポジトリ内被引用：0  
@@ -453,7 +453,7 @@
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
-  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：33  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
@@ -610,13 +610,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   演算の疎性が、専門家重みを高帯域メモリから読み出す量の削減につながらなくなる。Lynxはこの矛盾を、モデルの重みを恒久的に枝刈りするのでなく、現在のバッチのルーター出力を再配置することで緩和する。通常の同居配置で出力トークン間隔の中央値を1.09～1.30倍短縮し、精度変化を概ね1ポイント以内に抑える。
 
+- **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  Hopper世代のGPUは第4世代テンソル Core、8ビット浮動小数点（FP8）、ワープグループ行列積（wgmma）、動的計画法命令（DPX）、テンソルメモリアクセラレータ（TMA）、分散共有メモリ（DSM）を備える。しかし仕様表のピーク演算量や帯域だけでは、行列形状、オペランド配置、電力、精度変換、カーネル起動の費用を含む実性能は分からない。
+
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
   実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：12  
   多段階推論では、単一の思考連鎖（Chain-of-Thought、CoT）だけで回答すると、途中の偶然の誤りがそのまま最終回答に伝わる。自己整合性（自己整合性、SC）は同一問題から複数の思考連鎖を独立に標本化し、最終回答を多数決してこの変動を抑える。しかしSCは難しい問題にも簡単な問題にも、事前に決めた最大標本数を一律に使う。
-
-- **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  Hopper世代のGPUは第4世代テンソル Core、8ビット浮動小数点（FP8）、ワープグループ行列積（wgmma）、動的計画法命令（DPX）、テンソルメモリアクセラレータ（TMA）、分散共有メモリ（DSM）を備える。しかし仕様表のピーク演算量や帯域だけでは、行列形状、オペランド配置、電力、精度変換、カーネル起動の費用を含む実性能は分からない。
 
 - **2024-06 · [Measuring and Improving the Energy Efficiency of Large Language Models Inference](2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md)**  
   実装：[✓](https://github.com/maufadel/EnergyMeter) ・ リポジトリ内被引用：10  
@@ -665,6 +665,6 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：124  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：126  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

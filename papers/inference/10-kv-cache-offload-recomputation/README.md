@@ -359,20 +359,20 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：164  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：165  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
   実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：51  
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
+- **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：27  
+  RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
+
 - **2025-04 · [OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs](2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md)**  
   実装：[✓](https://github.com/antgroup/OmniKV) ・ リポジトリ内被引用：27  
   OmniKVは、長文脈の大規模言語モデルで、鍵・値キャッシュ（KVキャッシュ）をGPUにすべて置くと容量不足になる一方、CPUに退避した全量を各層で読み直すと転送が律速になる問題を扱う。単一A100 80GB、128K文脈で退避なしの復号は毎秒21.0トークン、完全注意比1.68倍である。
-
-- **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
-  RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
 
 - **2025-03 · [KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse](2025-2503.16525-kvshare.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
@@ -535,6 +535,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：151  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：152  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 <!-- survey:auto:end -->

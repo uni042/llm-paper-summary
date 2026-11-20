@@ -49,7 +49,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実LLMサーバ制御コードをそのまま走らせ、GPU計算だけ仮想時間へ置換して5%未満の誤差と約5〜17倍の評価高速化を狙うGPU不要エミュレータ。
 
 - **2026-01 · [ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management](2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   ScaleSimは、多数の大規模言語モデル利用エージェントを同時に動かすシミュレーションにおいて、GPUメモリ上のエージェント固有状態を、次にどのエージェントが言語モデルを呼び出すかというアプリケーション側の予測に基づいて管理する配信システムである。
 
 - **2026-06 · [KernelSight-LM: A Kernel-Level LLM Inference Simulator](2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md)**  
@@ -413,6 +413,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 9年前（2017-12〜2018-11）
 
 - **2017-12 · [Ray: A Distributed Framework for Emerging AI Applications](2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md)**  
-  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：27  
   Rayは、強化学習で頻繁に現れる「多数の環境を並列に動かす」「学習器で方策を更新する」「更新した方策を低遅延で実行する」という異質な仕事を、別々の分散基盤へ切り分けずに一つの実行系へ載せるための研究である。提案の中核は、状態を持たない遠隔関数を「タスク」、状態を保持する遠隔オブジェクトを「アクター」として同じ動的依存グラフへ埋め込むことである。
 <!-- survey:auto:end -->

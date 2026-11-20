@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：35  
+  実装：✓ ・ リポジトリ内被引用：37  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference](2026-2505.24095-skywalker-cross-region-load-balancer.md)**  
@@ -37,7 +37,7 @@
   GreenLLMは、プリフィルとデコードの負荷を入力長・出力TPS・P95トークン間時間から観測し、各段階のSLO内でGPU周波数を別々に選ぶ二重帰還制御により、過剰な高周波数動作とエネルギーを減らす。
 
 - **2026-01 · [Concur: Proactive Agent-Level Admission Control for Efficient Agentic Batch Inference](2026-2601.22705-concur-agentic-admission-control.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   非同期エージェントのKV接頭辞がLRU追い出しと再計算を繰り返す中盤スラッシングを、KV使用率・ヒット率を混雑信号にしたエージェント単位の加算増加・乗算減少型受入れ制御で未然に抑える方式。
 
 - **2026-03 · [Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving](2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md)**  
@@ -96,6 +96,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   エージェントの全ワークフローを単位にKV保持・セッション親和性・公平性を共同制御し、64基A100でタスク完了時間を幾何平均1.64倍短縮する。
 
+- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
+  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：6  
+  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
+
 - **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
   実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：6  
   fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
@@ -112,9 +116,9 @@
   実装：[✓](https://github.com/Echoscd/Load-Balancing-Release) ・ リポジトリ内被引用：6  
   同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。
 
-- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
-  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：5  
-  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
+- **2026-06 · [SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering](2026-2607.00151-smoothagent-lookahead-context-engineering.md)**  
+  実装：[✓](https://github.com/PanZaifeng/SmoothAgent) ・ リポジトリ内被引用：5  
+  文脈要約・オフロード・分離を前倒し実行し変換後KVを先に作るlookahead ランタイム。SGLangのSLO-aware スケジューラと組み合わせ、長時間agentの変換点TTFTを最大11.9倍改善。
 
 - **2026-04 · [Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions](2026-2604.00499-scheduling-llm-inference-with-uncertainty-aware-output-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -143,10 +147,6 @@
 - **2026-07 · [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   外部APIや検索を待つ拡張LLMで、停止・再開状態、出力長・外部呼出し時間、KV保持・退避・再計算費用を観測して要求順位と反復トークン予算を変え、先頭待ちとGPUメモリ圧迫を減らすスケジューラ。
-
-- **2026-06 · [SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering](2026-2607.00151-smoothagent-lookahead-context-engineering.md)**  
-  実装：[✓](https://github.com/PanZaifeng/SmoothAgent) ・ リポジトリ内被引用：4  
-  文脈要約・オフロード・分離を前倒し実行し変換後KVを先に作るlookahead ランタイム。SGLangのSLO-aware スケジューラと組み合わせ、長時間agentの変換点TTFTを最大11.9倍改善。
 
 - **2026-05 · [STAR: Decode-Phase Rescheduling for LLM Inference](2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1361,7 +1361,7 @@
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-02 · [Autellix: An Efficient Serving Engine for LLM Agents as General Programs](2025-2502.13965-autellix-agent-program-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：62  
+  実装：✓ ・ リポジトリ内被引用：63  
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -1369,7 +1369,7 @@
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
-  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：55  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
@@ -1384,6 +1384,10 @@
   実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：37  
   長文LLMでは、プリフィルでは系列長に対して二乗で増える注意計算、デコードでは過去KVを毎トークン読み直すメモリ帯域が別々の律速になる。LServeは両者をブロック疎注意（block-sparse 注意機構）という共通の実行形式へ落とし、オフラインで決めるストリーミングヘッドと、実行時に選ぶ重要KVページを同じカーネル群で処理する。
 
+- **2025-08 · [Strata: Hierarchical Context Caching for Long Context Language Model Serving](2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md)**  
+  実装：✓ ・ リポジトリ内被引用：34  
+  GPUに載りきらない接頭辞KVをCPUやSSDへ置くだけでは、復帰時の小ページ転送とロード待ちが性能を支配する。StrataはGPU支援転送、階層別メモリ配置、I/Oを資源として扱う要求スケジューリングを一体化する。
+
 - **2025-01 · [AdaServe: Accelerating Multi-SLO LLM Serving with SLO-Customized Speculative Decoding](2025-2501.12162-adaserve-multi-slo-speculative-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：34  
   GPU検証予算を各リクエストのSLO達成用トークンへ優先配分し、残余をスループット向上へ回す投機的デコード配信で、SLO違反を最大4.3倍削減する。
@@ -1391,10 +1395,6 @@
 - **2025-10 · [Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market](2025-3731569.3764815-aegaeon-gpu-pooling.md)**  
   実装：✓ ・ リポジトリ内被引用：33  
   トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。
-
-- **2025-08 · [Strata: Hierarchical Context Caching for Long Context Language Model Serving](2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md)**  
-  実装：✓ ・ リポジトリ内被引用：33  
-  GPUに載りきらない接頭辞KVをCPUやSSDへ置くだけでは、復帰時の小ページ転送とロード待ちが性能を支配する。StrataはGPU支援転送、階層別メモリ配置、I/Oを資源として扱う要求スケジューリングを一体化する。
 
 - **2025-04 · [SLOs-Serve: Optimized Serving of Multi-SLO LLMs](2025-2504.08784-slos-serve-multi-slo-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：31  
@@ -1648,6 +1648,10 @@
   実装：[✓](https://github.com/MLSysU/TD-Pipe) ・ リポジトリ内被引用：7  
   PCIeのみで接続されたGPUのパイプライン並列推論において、プリフィルとデコードを時間分離し、予測型KVメモリ管理と負荷移送で遊休時間を削減する。
 
+- **2025-05 · [MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing](2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md)**  
+  実装：[✓](https://github.com/ds2-lab/MorphServe) ・ リポジトリ内被引用：7  
+  負荷ピーク時だけ低影響層を低ビット版へ非同期交換し、空いたGPUメモリをKVキャッシュへ振り替えることで、平均SLO違反を92.45%削減しP95初回トークン遅延を2.2〜3.9倍改善する。
+
 - **2024-12 · [METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation](2024-2412.10543-metis-fast-quality-aware-rag-systems-with-configuration-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   検索数を増やすと根拠が集まりやすい反面、入力長が増え、最初のトークン生成までの処理やGPUメモリ占有が大きくなる。METISは、質問ごとに必要な検索件数、文章片の統合方法、中間要約長を変えることと、同時にGPUで処理する要求を選ぶことを、一つの制御器で行う。
@@ -1671,10 +1675,6 @@
 - **2025-07 · [BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving](2025-2507.17120-bucketserve-dynamic-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   系列長バケットを負荷に応じて分割・統合し、KV容量から安全なバッチ数を動的計算して、パディング・OOM・SLO違反を抑えるLLMサービング方式。
-
-- **2025-05 · [MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing](2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md)**  
-  実装：[✓](https://github.com/ds2-lab/MorphServe) ・ リポジトリ内被引用：6  
-  負荷ピーク時だけ低影響層を低ビット版へ非同期交換し、空いたGPUメモリをKVキャッシュへ振り替えることで、平均SLO違反を92.45%削減しP95初回トークン遅延を2.2〜3.9倍改善する。
 
 - **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
   実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：6  
@@ -1991,15 +1991,15 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：785  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：789  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：700  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：701  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：548  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：549  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2007,7 +2007,7 @@
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：201  
+  実装：✓ ・ リポジトリ内被引用：202  
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
@@ -2027,7 +2027,7 @@
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
-  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：104  
   複数の言語モデル呼出しから成るアプリケーションの入力・出力の関係を、意味変数という抽象化で推論提供側へ公開する。これにより要求間の依存関係、同一接頭部の再利用、アプリケーション全体の完了時間を考慮した要求配置を可能にする。単一要求の速度ではなく、複数要求を組み合わせた作業の完了時間を最適化する研究である。
 
 - **2024-08 · [NanoFlow: Towards Optimal Large Language Model Serving Throughput](2024-2408.12757-nanoflow.md)**  
@@ -2062,20 +2062,20 @@
   実装：[✓](https://github.com/James-QiuHaoran/LLM-serving-with-proxy-models) ・ リポジトリ内被引用：67  
   SSJFはBERT-base代理モデルでLLMの出力長を予測して短い要求を先に処理し、FCFS比で平均完了時間を30.5〜39.6%削減する。
 
+- **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：67  
+  Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
+
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
   実装：✓ ・ リポジトリ内被引用：66  
   注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。
-
-- **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：66  
-  Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：64  
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
 
 - **2024-02 · [INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference](2024-2402.01869-infercept-intercept-aware-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：62  
+  実装：✓ ・ リポジトリ内被引用：63  
   外部ツールや人間応答を待つ間に生成が中断される拡張LLMで、KVキャッシュをGPUに保持する、CPUへ退避する、破棄して再計算するという三つの選択肢を、GPUメモリの時間積で表した浪費量を基準に要求ごとに切り替える推論基盤。
 
 - **2023-12 · [Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems](2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md)**  
@@ -2098,13 +2098,13 @@
   実装：✓ ・ リポジトリ内被引用：41  
   提案は、理想的なトークン消費時系列と実際の消費時系列の差から体感品質（Quality of Experience、QoE）を定義し、各要求に今GPU時間を割り当てた場合のQoE改善量を予測してトークン単位で実行要求を入れ替えるもの。
 
+- **2024-11 · [Marconi: Prefix Caching for the Era of Hybrid LLMs](2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md)**  
+  実装：[✓](https://github.com/ruipeterpan/marconi) ・ リポジトリ内被引用：40  
+  言語モデルの接頭辞キャッシュ（Prefix Caching）は、複数要求が共有するシステム指示や会話履歴の前半部分について、過去に計算した内部状態を再利用して初回トークン生成までの時間を短縮する。主要評価では、拡張vLLMに対するトークン命中率がLMSysで平均4.5倍、ShareGPTで7.3倍、SWEBenchで34.4倍となる。
+
 - **2024-06 · [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md)**  
   実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：39  
   異種GPUとネットワークを容量付き有向グラフへ写像し、最大流を目的に層配置をMILPで決め、最大流比率に沿って要求ごとの経路を選ぶことで、固定パイプラインの遊休GPUと通信混雑を減らすLLMサービング方式。
-
-- **2024-11 · [Marconi: Prefix Caching for the Era of Hybrid LLMs](2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md)**  
-  実装：[✓](https://github.com/ruipeterpan/marconi) ・ リポジトリ内被引用：38  
-  言語モデルの接頭辞キャッシュ（Prefix Caching）は、複数要求が共有するシステム指示や会話履歴の前半部分について、過去に計算した内部状態を再利用して初回トークン生成までの時間を短縮する。主要評価では、拡張vLLMに対するトークン命中率がLMSysで平均4.5倍、ShareGPTで7.3倍、SWEBenchで34.4倍となる。
 
 - **2024-04 · [Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity](2024-2404.14527-m-lange-cost-efficient-large-language-model-serving-by-exploiting-gpu-he.md)**  
   実装：✓ ・ リポジトリ内被引用：36  
@@ -2146,13 +2146,13 @@
   実装：✓ ・ リポジトリ内被引用：19  
   本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
 
+- **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
+
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
   実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：18  
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
-
-- **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
 
 - **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
   実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：17  
@@ -2277,7 +2277,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1778  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1783  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2327,7 +2327,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：705  
+  実装：✓ ・ リポジトリ内被引用：707  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

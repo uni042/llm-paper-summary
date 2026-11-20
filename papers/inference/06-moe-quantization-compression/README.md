@@ -102,13 +102,13 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture of エキスパート、MoE）は、トークンごとに一部の専門家だけを実行することで、総パラメータ数の大きさと実行計算量を切り離す。Mixtral-8x7Bでは、PMQにより16ビット版96.80GBの重みを平均2.05ビット・13.41GBへ圧縮する。
 
+- **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
+  実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：1  
+  各専門家に共通する重みを、最適輸送（optimal transport）で整列させたWasserstein重心専門家として共有し、専門家ごとの差分行列だけを圧縮する。
+
 - **2025-11 · [Exploiting the Experts: Unauthorized Compression in MoE-LLMs](2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   疎な実行によって計算量を抑えられる反面、特定課題で頻繁に使われるエキスパートを見分け、不要な部分を除いた小型派生モデルを作れる可能性がある。Mixtral-8x7Bを用いたGLUE分類では、全エキスパートを用いた平均精度86.1%に対し、各層で上位2エキスパートだけを保持すると78.9%、上位1のみでは71.4%となる。
-
-- **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
-  実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：0  
-  各専門家に共通する重みを、最適輸送（optimal transport）で整列させたWasserstein重心専門家として共有し、専門家ごとの差分行列だけを圧縮する。
 
 ### 3年前（2023-12〜2024-11）
 
