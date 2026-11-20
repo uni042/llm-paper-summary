@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（593本）
+## 自動生成の論文一覧（594本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -886,6 +886,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Folding Attention Biases into Keys Makes Compacted KV Caches Run on Standard Kernels](2026-2610.36520-folding-attention-biases-into-keys-makes-compacted-kv-caches-run-on-stan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   圧縮KVキャッシュのロジットバイアスを、ヘッドごとに閉形式で求めた1方向へのキー移動で吸収し、標準カーネルと未改変vLLMでそのまま動く通常キャッシュへ変換する手法。
+
+- **2026-10 · [FlatCake: A Flat KVCache Storage Architecture for LLM Serving](2026-2610.38355-flatcake-a-flat-kvcache-storage-architecture-for-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DRAMとSSDを階層でなく対等な媒体として扱い、KVブロックを生成時に最終媒体へ直接置いて移動させず、セッション連続・層優先の配置と直接読み込みで復元を連続化することで、階層型KV保存のヒット率崩壊とTTFT悪化を防ぐ方式。
 
 - **2026-10 · [Few Bits, One Law: Toward W2A4KV2](2026-2610.09202-few-bits-one-law-toward-w2a4kv2.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "複数エージェントの長文脈prefillをCPUへ逃がす場合、既存CPU attentionは階層キャッシュの活用とスレッド分配が不十分である。CACPUは複数階層のcache blockingとカーネル内部のtask dispatchを組み合わせた因果注意計算を実装する。PyTorch SDPA、FlexAttention、SGLang attentionに対し最大2.01倍のカーネル高速化、SGLang統合時にLlama-3.1-8BのTTFT最大1.74倍短縮を報告するためaccept。",
   "semantic_scholar_id": "9111174c6ecae9090da398d33227de077daa33ba",
   "source_url": "https://arxiv.org/abs/2610.38809",
-  "status": "ready",
+  "status": "superseded",
   "title": "Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:36:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.38809-causal-attention-on-cpu-a-cache-aware-and-load-balanced-scheduling-kerne.md",
+  "represented_canonical_id": "arXiv:2610.38809",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "LLM提供向けフラットKVキャッシュ保存アーキテクチャFlatCake。DRAMを中間キャッシュとする階層管理が、再利用の二峰性と大規模エージェントセッションで破綻する問題に対し、保存を平坦化してSSD読み出しを高速化する。推論基盤の保存機構そのもの。",
   "semantic_scholar_id": "287620f6f8134df71b7ce763fe1ab1f5bbcd4565",
   "source_url": "https://arxiv.org/abs/2610.38355",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlatCake: A Flat KVCache Storage Architecture for LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:36:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.38355-flatcake-a-flat-kvcache-storage-architecture-for-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.38355",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（275本）
+## 自動生成の論文一覧（276本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -33,7 +33,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：34  
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
@@ -261,6 +261,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling](2026-2610.07742-cleave-scaling-tensor-program-optimization-via-decoupled-algebraic-searc.md)**  
   実装：[✓](https://github.com/nyu-systems/cleave) ・ リポジトリ内被引用：0  
   形状を記号化して代数変換の探索をスケジューリングから分離し、反復タイリングと水平融合で複数リダクションを含むグラフを自動で融合カーネル化するコンパイラ。手書き注意カーネル級の最適化を自動生成する。
+
+- **2026-10 · [Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill](2026-2610.38809-causal-attention-on-cpu-a-cache-aware-and-load-balanced-scheduling-kerne.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CPUのL3とL2キャッシュへ注意のループ構造を合わせ、因果マスクで生じるスレッド間の負荷不均衡を費用優先の共有キューで均すことで、長文脈プリフィルのCPU注意カーネルを最大2.01倍速くしTTFTを最大1.74倍改善する方式。
 
 - **2026-10 · [BiLoCo: Binary Low-Rank Corrections for Post-Training Quantization](2026-2610.32243-biloco-binary-low-rank-corrections-for-post-training-quantization.md)**  
   実装：[✓](https://github.com/jindavid/BiLoCo) ・ リポジトリ内被引用：0  

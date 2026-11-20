@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1126本）
+## 自動生成の論文一覧（1127本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -407,6 +407,10 @@
 - **2026-07 · [COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution](2026-092a8a151f95-compel-compensated-mixture-of-experts-pruning-with-expert-layer-distribu.md)**  
   実装：[✓](https://github.com/seohee0925/COMPEL) ・ リポジトリ内被引用：1  
   COMPEL（Compensated Mixture-of-Experts Pruning with 専門家-層 distribution）は、混合専門家モデル（MoE）の全エキスパートを推論時に保持するメモリ負担を、モデルの各層で異なる冗長性を考慮して削減する剪定方式である。
+
+- **2026-07 · [CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large Vision-Language Models](2026-2605.13178-clip-tricks-you-training-free-token-pruning-for-efficient-pixel-groundin.md)**  
+  実装：[✓](https://github.com/sejong-rcv/LiteLVLM) ・ リポジトリ内被引用：1  
+  一般的な画像理解向け視覚トークン枝刈りは、画像の全体表現への寄与や画像・テキストの高い類似度を手掛かりにトークンを残す。GLaMMの元の576視覚トークンを192に削減したとき、8評価分割平均の領域分割指標は75.5から68.1となり、元性能の90.3%を維持した。
 
 - **2026-07 · [Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization](2026-2607.00908-beyond-activation-alignment-the-alignment-diversity-tradeoff-in-task-awa.md)**  
   実装：[✓](https://github.com/WangFei-2019/TASA) ・ リポジトリ内被引用：1  
@@ -982,6 +986,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ルータが選んだ専門家への重み断片の配分を、ゲートスコアと事前計測した再構成残差から実行時に決め直すことで、同じ平均断片数の一律配分より出力分布のずれを最大4.5倍小さくし、同等の忠実度を22から44ギガバイト少ない重み量で達成した。
 
+- **2026-10 · [Don't Ask the LLM: Visual Token Pruning with Spectral Structure and Semantic Relevance](2026-2610.38303-don-t-ask-the-llm-visual-token-pruning-with-spectral-structure-and-seman.md)**  
+  実装：[✓](https://github.com/sejong-rcv/ST-Pruner) ・ リポジトリ内被引用：0  
+  LLMへ入る前に、視覚特徴の低ランク構造への寄与を示すスペクトル顕著性と反転したパッチ・テキスト類似度を乗算融合して視覚トークンを選ぶ学習不要の枝刈り方式で、トークンを約9分の1に減らしても性能の95パーセント超を保ち3.2倍速くする。
+
 - **2026-10 · [DIPrune: Task-Aware Token Pruning with Dual Importance for Efficient Multimodal Language Models](2026-2610.08341-diprune-task-aware-token-pruning-with-dual-importance-for-efficient-mult.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンの重要度を、層内の意味整列と層間の順位上昇という二つの順位スコアで判定し、浅層の慣性に埋もれる新興トークンを救いながら学習不要で枝刈りする方式。
@@ -1441,10 +1449,6 @@
 - **2026-07 · [CoMem: Reusing Transformer Depth across Queries with Persistent Intermediate Residuals](2026-2607.28263-comem-reusing-transformer-depth-across-queries-with-persistent-intermedi.md)**  
   実装：[✓](https://github.com/liuhanzuo/Mixture-of-Memory) ・ リポジトリ内被引用：0  
   CoMemはTransformerのどこまでを文書単独で先払い計算するかを新たな制御変数とし、文書の中間残差（residual state）を永続保存して、問い合わせ時は上位層のみ再実行する方式である。
-
-- **2026-07 · [CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large Vision-Language Models](2026-2605.13178-clip-tricks-you-training-free-token-pruning-for-efficient-pixel-groundin.md)**  
-  実装：[✓](https://github.com/sejong-rcv/LiteLVLM) ・ リポジトリ内被引用：0  
-  一般的な画像理解向け視覚トークン枝刈りは、画像の全体表現への寄与や画像・テキストの高い類似度を手掛かりにトークンを残す。GLaMMの元の576視覚トークンを192に削減したとき、8評価分割平均の領域分割指標は75.5から68.1となり、元性能の90.3%を維持した。
 
 - **2026-07 · [CausalGate: Causal Importance Distillation for Transformer Module Pruning](2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "共有blockを反復するLooped Transformerで、繰り返しcontextからmulti-token suffixをcopy proposalし、浅いrecurrent depthで誤った枝をscreenした後、先行blockのfull-depth検証と後続blockの処理を重ねるtraining-free CopyLoop。Ouro/Raven/Huginnの6 checkpointでfull-depth autoregressive decode比Base 2.98〜10.70倍、Thinking 2.74〜3.52倍のdecode高速化を報告。recurrent-depth LLM推論を直接加速するためaccept。",
   "semantic_scholar_id": "d3e21b0745bddb236a3cd305bffbc6d0206e8504",
   "source_url": "https://arxiv.org/abs/2610.38822",
-  "status": "ready",
+  "status": "superseded",
   "title": "CopyLoop: Fast Looped Transformer Decoding via Context Copying and Shallow Screening",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:36:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.38822-copyloop-fast-looped-transformer-decoding-via-context-copying-and-shallo.md",
+  "represented_canonical_id": "arXiv:2610.38822",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

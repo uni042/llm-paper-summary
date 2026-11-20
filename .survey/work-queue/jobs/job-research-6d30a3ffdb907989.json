@@ -35,10 +35,15 @@
   "selection_reason": "visual-side CLS attentionだけでは背景tokenが残り、LLM内部のquery条件付きscoreは取得が遅い問題に対し、LLM実行前にspectral saliencyと逆向きpatch-text類似度を乗算統合するST-Prunerを提案。一次要旨は多様なLVLMで視覚token最大11.1%保持でもfull-token性能95%超を維持し、LLaVA-NeXTでend-to-end 3.2倍高速化を報告。LLM prefill前の視覚token削減としてaccept。",
   "semantic_scholar_id": "257f367f6a93b2c4eb16a5018f0dd9086da05c1b",
   "source_url": "https://arxiv.org/abs/2610.38303",
-  "status": "ready",
+  "status": "superseded",
   "title": "Don't Ask the LLM: Visual Token Pruning with Spectral Structure and Semantic Relevance",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:36:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.38303-don-t-ask-the-llm-visual-token-pruning-with-spectral-structure-and-seman.md",
+  "represented_canonical_id": "arXiv:2610.38303",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

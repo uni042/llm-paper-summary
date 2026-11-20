@@ -35,10 +35,15 @@
   "selection_reason": "vLLMの投機デコードはbatch sizeごとのdraft長を手書き表で与えるが、実トラフィックの受理率や負荷変化で最適値が変わる。TableTuneはvLLMの実際の実行経路でbatch sizeとdraft長を測定してthroughput最大化表を構築し、受理率を監視するpluginが稼働中に表を再学習する。H100の5 draft設定中4設定で最良固定長の94%以上のthroughputを達成し、誤設定から最大58%改善したと報告するためaccept。",
   "semantic_scholar_id": "1255dd03a9af0d92de45f1d7e7b59f3e00a9824f",
   "source_url": "https://arxiv.org/abs/2610.38968",
-  "status": "ready",
+  "status": "superseded",
   "title": "TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:36:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.38968-tabletune-measured-self-correcting-draft-length-tables-for-dynamic-specu.md",
+  "represented_canonical_id": "arXiv:2610.38968",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
