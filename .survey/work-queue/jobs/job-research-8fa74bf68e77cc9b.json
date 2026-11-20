@@ -35,10 +35,15 @@
   "selection_reason": "因果反転ファイル索引による学習済み疎注意の高速化AttentionIndex。索引器が接頭辞の全キーをスコア付けし、100万トークンでプリフィルの半分を超える問題に対し、類似度でキーを束ねた反転ファイル索引で候補を絞る。推論の注意機構そのもの。",
   "semantic_scholar_id": "a5e76a33b495ef0f17374e2334e7b8b5bade0baf",
   "source_url": "https://arxiv.org/abs/2611.02508",
-  "status": "ready",
+  "status": "superseded",
   "title": "AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:29:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inver.md",
+  "represented_canonical_id": "arXiv:2611.02508",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

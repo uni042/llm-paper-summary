@@ -35,10 +35,15 @@
   "selection_reason": "負荷配慮型KVキャッシュ再利用によるプリフィルスケジューリングFairway。接頭辞共有で再利用の度合いが要請ごとに最大100倍違う状況で、再利用優先の順序が中央値の初回トークン時間を最良にしつつ裾を飢えさせる問題に対し、負荷を配慮した順序付け。推論基盤のスケジューリング機構そのもの。",
   "semantic_scholar_id": "0b613001885c5f5e2bb2b33ebcd9dd7e76b6d1c2",
   "source_url": "https://arxiv.org/abs/2611.02082",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fairway: Load-Aware KV Cache Reuse for LLM Prefill Scheduling",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:29:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.md",
+  "represented_canonical_id": "arXiv:2611.02082",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -194,6 +194,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
 
+- **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
+  実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：1  
+  個々の鍵・値を主記憶から再読込する費用が再計算より安くても、再利用時までキャッシュに残っていなければ高速化は実現しない。一方、高い演算能力を持つH800では退避・再読込が一貫して不利であり、容量を増やせば必ず得になるわけではない。主張する93%の削減は再計算された入力トークン数についてであり、すべての計算費用やサービス料金が93%減ることを意味しない。
+
 - **2026-08 · [SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding](2026-2608.07915-spectra-pushing-the-kv-cache-beyond-the-2-bit-cliff-via-spectral-transfo.md)**  
   実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：1  
   単純に全値を2ビットまで量子化すると、外れ値が量子化範囲を占有し、小さな値が同じ離散レベルへ潰れて品質が急激に悪化する場合がある。Llama-3.1-8B-InstructのLongBench英語8課題平均はFP16で53.24、SPECTRAの7.66倍KV圧縮で54.00、8.84倍で51.89、11.12倍で48.81である。
@@ -315,10 +319,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は固定Hadamard回転・正規化・4ビット符号帳でKVをオンチップNVM向けに量子化し、補助情報と読み出し再構成を減らして長文脈KVの面積・エネルギーを抑える。
-
-- **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
-  実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：0  
-  個々の鍵・値を主記憶から再読込する費用が再計算より安くても、再利用時までキャッシュに残っていなければ高速化は実現しない。一方、高い演算能力を持つH800では退避・再読込が一貫して不利であり、容量を増やせば必ず得になるわけではない。主張する93%の削減は再計算された入力トークン数についてであり、すべての計算費用やサービス料金が93%減ることを意味しない。
 
 - **2026-09 · [Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving](2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md)**  
   実装：[✓](https://github.com/Seagate) ・ リポジトリ内被引用：0  
@@ -477,7 +477,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：190  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：191  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  

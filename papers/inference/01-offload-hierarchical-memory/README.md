@@ -124,6 +124,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   専門家活性化の系列予測、期限付きプリフェッチ、将来予測キャッシュ、CUDA Graph互換実行を統合し、MoEオフロードの転送待ちと実行時オーバーヘッドを同時に削減する。
 
+- **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](2026-2609.13537-dynamic-hbm-repartitioning.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  専門家重みとKVキャッシュ間のHBM境界をCUDA VMMで動的再分割し、マルチターンMoEのprefix-キャッシュ cliffを緩和する。
+
 - **2026-08 · [The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks](2026-2608.12114-the-ingestion-tax-adopting-file-backed-weights-in-tensor-frameworks.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   統合メモリのApple Silicon、CPU–GPU間の一貫性接続を持つGH200、共有主記憶を使うAMD APUなどで問題になる。この三条件が揃うと、Apple M5 Maxの単一トークン用int8行列・ベクトル積では、標準的なテンソル生成経路の53〜82 GB/sに対して、公開APIを用いた直接採用が516 GB/sを記録する。
@@ -205,10 +209,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [EMA: Elastic and Performance Transparent Memory Across GPUs](2026-2609.27040-ema.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数GPUサーバでは、合計の高帯域メモリ（HBM）に余裕があっても、GPUごとの固定割当が原因で、一部の利用者だけがメモリ不足に陥る。EMAはこの余地を利用するGPU間メモリ共有システムである。著者らはvLLMを基盤に、4台のA100 40GBと8台のA100 80GBでLLM推論を評価した。
-
-- **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](2026-2609.13537-dynamic-hbm-repartitioning.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  専門家重みとKVキャッシュ間のHBM境界をCUDA VMMで動的再分割し、マルチターンMoEのprefix-キャッシュ cliffを緩和する。
 
 - **2026-09 · [BOOST: Concurrent Access to Host Memory and HBM to Accelerate LLM Inference](2026-2609.13592-boost-concurrent-host-hbm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

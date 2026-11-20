@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（280本）
+## 自動生成の論文一覧（281本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -221,6 +221,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching](2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  位置を問わない区画キャッシュの再利用へ適応したモデル自身で学習した選択器が、注意得点を使わずに再計算すべき区画を選ぶことで、予算百分の五で規則型二方式を全組で上回り完全な入力処理への相対低下を最大百分の八・三に抑え、初回トークン時間を最大十六・一倍、有効スループットを最大七・八倍にしたと報告した。
 
 - **2026-10 · [Understanding GPU Megakernels: Why Residency Can Mislead](2026-2611.00495-understanding-gpu-megakernels-why-residency-can-mislead.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
