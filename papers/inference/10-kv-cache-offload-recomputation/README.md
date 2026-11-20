@@ -66,6 +66,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：6  
   CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
 
+- **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：5  
+  疎注意が実際に読むtop-k KVだけを固定サイズHBMキャッシュへ置き、全履歴はホストDRAMに保持してLRU・融合CUDA取得・共有選択の正確な先読みで補うことで、出力を変えず長文デコードのHBM容量壁を外す方式。
+
 - **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   VeriCacheは圧縮KVで候補を生成し、完全KVをCPU／共有ストアから読み込んで最初の不一致を検証・訂正し、品質を保ったまま復元帯域とGPU計算を要求間で重ねる方式。
@@ -90,10 +94,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：4  
   CacheBridgeは出典モデルのKVを受信モデルのヘッド局所表現へ線形変換し、注意感度で係数を学習・GPU融合して、モデル切替時の再プリフィル計算と変換器容量を減らす方式。
 
-- **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：4  
-  疎注意が実際に読むtop-k KVだけを固定サイズHBMキャッシュへ置き、全履歴はホストDRAMに保持してLRU・融合CUDA取得・共有選択の正確な先読みで補うことで、出力を変えず長文デコードのHBM容量壁を外す方式。
-
 - **2026-07 · [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)**  
   実装：[✓](https://github.com/shutianluo/DirectKV) ・ リポジトリ内被引用：4  
   注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。
@@ -109,6 +109,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ハイブリッドLLMの位置非依存キャッシュで、複数の再帰状態を厳密合成せず単一チャンク状態から再計算する方式。Mamba-2ではEPIC併用時の完全プリフィル比品質を46.6%から86.8%へ改善し、合成処理の追加遅延も避ける。
+
+- **2026-07 · [DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch](2026-2607.26475-dualdecoder-predictive-prefetch.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  DualDecoderは投機トークンから次の疎KV位置を予測し、層計算より先にCPUから必要KVを転送する。GPUには現在・次層の二層だけを保持し補助状態の容量を減らす方式。
 
 - **2026-07 · [A CXL Memory Rack for Multi-Turn LLM Serving](2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -153,10 +157,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-07 · [Learning Agent Execution for KV-Cache Management in Agentic Serving](2026-2608.14624-cachescout.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   CacheScoutはエージェント遷移をオンライン学習し、次に呼ばれそうな固定プレフィックスKVをGPUへ残し、空き時間に先読みして再プリフィルと追い出しを減らす方式。
-
-- **2026-07 · [DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch](2026-2607.26475-dualdecoder-predictive-prefetch.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  DualDecoderは投機トークンから次の疎KV位置を予測し、層計算より先にCPUから必要KVを転送する。GPUには現在・次層の二層だけを保持し補助状態の容量を減らす方式。
 
 - **2026-06 · [SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving](2026-2606.08635-spectrumkv-mixed-precision-pd-kv-transfer.md)**  
   実装：[✓](https://github.com/YangSteve1223/kvcache-lab) ・ リポジトリ内被引用：2  

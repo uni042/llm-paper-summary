@@ -35,10 +35,15 @@
   "selection_reason": "MoE圧縮のための頻度配慮型統一剪定・統合PRIME。専門家の剪定と統合を別々に行い貪欲ヒューリスティクスに依る既存圧縮に対し、剪定・統合の割り当てを大域的な整数線形計画として解く統一最適化枠組み。推論圧縮機構そのもの。",
   "semantic_scholar_id": "bf9cbf14ab3445a32cabdb69261c5b8f162361aa",
   "source_url": "https://arxiv.org/abs/2610.13982",
-  "status": "ready",
+  "status": "superseded",
   "title": "PRIME: Frequency-Aware Unified Pruning and Merging for MoE Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:37:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.md",
+  "represented_canonical_id": "arXiv:2610.13982",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

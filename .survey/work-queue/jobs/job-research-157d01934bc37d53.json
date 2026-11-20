@@ -35,10 +35,15 @@
   "selection_reason": "86個のopen-weight LLM checkpointを7 benchmark・6種のハードウェアで実測し、品質と推論消費エネルギーのPareto関係を分析する。性能が同等以上の別構成に比べ中央値2.6–4.8倍のエネルギーを費やす構成が多く、thinking有効化は平均約3.7倍、FP8化は品質を大きく変えずエネルギーを約25%削減する。実測hardware・推論モード・token予算に依存するサービング効率のベンチマーク研究としてaccept。",
   "semantic_scholar_id": "1fb268b10931b3bba7286b836976016b6f308bf6",
   "source_url": "https://arxiv.org/abs/2610.14389",
-  "status": "ready",
+  "status": "superseded",
   "title": "Measuring the Inference Energy Efficiency of Open-Weight LLMs across Benchmarks, Reasoning Modes, and Hardware",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:37:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-ben.md",
+  "represented_canonical_id": "arXiv:2610.14389",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

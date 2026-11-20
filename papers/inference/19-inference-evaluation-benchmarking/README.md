@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（152本）
+## 自動生成の論文一覧（154本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -109,6 +109,14 @@
 - **2026-10 · [Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking](2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声対話を完全オフラインで動かすモジュール式スタックと安価な部品表を提示し、2層の実機で量子化形式を比べ、4ビット形式が大きさと品質の釣り合いで最適であることを実測で示した研究。
+
+- **2026-10 · [Measuring the Inference Energy Efficiency of Open-Weight LLMs across Benchmarks, Reasoning Modes, and Hardware](2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-ben.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  86チェックポイントを7ベンチマークと6基盤で飽和サービングしながらGPUエネルギーを直接測り、能力とエネルギーのパレートフロンティア、推論モードと出力予算の費用、トークン数という代理指標の限界、FP8とハードウェア変更の効果を明らかにした大規模実測研究。
+
+- **2026-10 · [Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures](2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-acr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  連続バッチングのデコードスケジューラ8方針を6モデルと3種のGPUで実機比較し、優劣がハードウェアで入れ替わることを示した評価研究。
 
 - **2026-10 · [ixi-sLM: On-Device sLM for AI Call Agent Service](2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -425,7 +433,7 @@
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
@@ -476,9 +484,17 @@
   実装：[✓](https://github.com/xiaomi-research/timeviper) ・ リポジトリ内被引用：1  
   1時間の動画を毎秒1枚、1フレーム768トークンで表現すると約276万トークンになり、通常の全注意では処理費用とメモリが大きい。TimeViperは、状態空間モデル（State Space モデル; SSM）のMamba-2とTransformerの注意層を混ぜた基盤を使い、さらに言語モデルの途中で視覚トークンを圧縮する。
 
+- **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
+  実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：1  
+  従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
+
 - **2025-11 · [MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning](2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md)**  
   実装：[✓](https://github.com/icip-cas/MemSearcher) ・ リポジトリ内被引用：1  
   検索エージェント（search agent）が外部検索を何度も行うと、思考、検索クエリ、検索結果を全て会話履歴に追記する従来のReAct方式では、ターンが増えるにつれて入力文脈が長くなる。検索エージェントの入力文脈はほぼ一定長で、論文の評価条件では4,000トークン未満を維持する。
+
+- **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
 
 - **2025-05 · [Quantitative Analysis of Performance Drop in DeepSeek Model Quantization](2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md)**  
   実装：[✓](https://github.com/UnicomAI/DeepSeek-Eval) ・ リポジトリ内被引用：1  
@@ -488,17 +504,9 @@
   実装：✓ ・ リポジトリ内被引用：1  
   中心となるのは、BitNet、BitNet b1.58、BitNet a4.8、FBI-LLM、Bi-Mambaなど、重みの二値化・三値化を学習時から組み込む方式である。
 
-- **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
-  実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：0  
-  従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
-
 - **2025-11 · [Iris: First-Class Multi-GPU Programming Experience in Triton](2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.md)**  
   実装：[✓](https://github.com/ROCm/iris) ・ リポジトリ内被引用：0  
   対称メモリをTritonのタイル抽象へ持ち込み、計算と通信をタイル単位で重ねる融合カーネルを純粋なPythonとTritonで書ける複数GPU通信ライブラリ。集合通信比で平均1.21倍の高速化。
-
-- **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
 
 - **2025-11 · [Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions](2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "478a0edc9ece2e3d6098941b888a159b89f0c204",
+  "base_commit": "62e7cd767b101b1c56acd276cbc7319b157b60df",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -603,7 +603,11 @@
     "2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.json",
     "2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-serving.json",
     "2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-attention-masking.json",
+    "2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarchy.json",
+    "2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization-for-llms.json",
+    "2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.json",
     "2026-2610.13990-dosa-dots-sparse-attention.json",
+    "2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-benchmarks-reasoning-modes-and-hardware.json",
     "2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.json",
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
@@ -615,6 +619,7 @@
     "2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggregated-llm-inference.json",
     "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json",
     "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json",
+    "2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-across-gpu-architectures.json",
     "2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-transformers.json",
     "2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-models.json",
     "2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inference.json",
@@ -44245,6 +44250,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.13708": {
+      "order": [
+        "2026-11-20T10:32:15+00:00",
+        "2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarchy.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13767": {
+      "order": [
+        "2026-11-20T10:33:11+00:00",
+        "2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13982": {
+      "order": [
+        "2026-11-20T10:34:09+00:00",
+        "2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14389": {
+      "order": [
+        "2026-11-20T10:35:06+00:00",
+        "2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-benchmarks-reasoning-modes-and-hardware.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15899": {
+      "order": [
+        "2026-11-20T10:36:03+00:00",
+        "2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-across-gpu-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55084,6 +55134,21 @@
     "arxiv:2610.12338": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.md"
+    ],
+    "arxiv:2610.13708": [
+      "papers/inference/13-sparse-attention/2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarch.md"
+    ],
+    "arxiv:2610.13767": [
+      "papers/inference/99-other-inference-systems/2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md"
+    ],
+    "arxiv:2610.13982": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.md"
+    ],
+    "arxiv:2610.14389": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-ben.md"
+    ],
+    "arxiv:2610.15899": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-acr.md"
     ]
   }
 }

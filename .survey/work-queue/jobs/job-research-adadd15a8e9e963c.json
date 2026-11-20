@@ -35,10 +35,15 @@
   "selection_reason": "Adaptive DHiSparseはHiSparseのCPU側KV履歴と疎な取得を投機デコードへ拡張し、負荷に応じてGPUに残す追加履歴を増減する。DSpark/DFlash2の受理規則を維持し、draft KVのwindow-bounded ring、共有missing-row retrieval、層群間verification staging再利用を組み合わせる。GLM-5.3の100K文脈・同時128でDFlash2使用時793 output tokens/s/GPU、HiSparse比1.45倍を報告。KV階層管理と投機サービングに直接該当。",
   "semantic_scholar_id": "c42ca13bd06315beac78601e639ab15ab143e45c",
   "source_url": "https://arxiv.org/abs/2610.13708",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:37:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarch.md",
+  "represented_canonical_id": "arXiv:2610.13708",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

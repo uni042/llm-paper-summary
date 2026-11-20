@@ -35,10 +35,15 @@
   "selection_reason": "モデルやkernelを変更せずcontinuous batchingの軽量優先規則を比較する。PyTorch/Hugging Face実行testbenchでL40S/A100/H100、Qwen/Gemma/Mistralの6モデル、ShareGPT由来workloadに対し1152構成を評価する。著者要旨はaging shortest-prompt-firstがL40Sと混合workloadで実用的な有力baselineとし、oracle残長優先でもhardwareとbatchingの影響を無視できないと示す。新規大規模システムではないがLLM serving schedulerの実機比較としてaccept。",
   "semantic_scholar_id": "48019535badefc5bdb0497e85e88a55dd2025fc2",
   "source_url": "https://arxiv.org/abs/2610.15899",
-  "status": "ready",
+  "status": "superseded",
   "title": "Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:37:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-acr.md",
+  "represented_canonical_id": "arXiv:2610.15899",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

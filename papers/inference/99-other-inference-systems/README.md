@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1102本）
+## 自動生成の論文一覧（1103本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -833,6 +833,10 @@
 - **2026-10 · [Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference](2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みの格子を半オクターブの分数冪へ細かくし、活性値は一様整数のまま、ルート2倍を加算器1個で近似して誤差を較正で吸収することで、乗算器なしのシフト加算実行を保ったまま4ビットで一様整数に近い精度を得る量子化。
+
+- **2026-10 · [DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs](2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み再構成誤差の最小化で得た行と列の二重スケールを、そのまま活性値のチャネル再スケーリングに流用することで、調整データなしに重みと活性値の4ビット量子化をINT4からMX形式・NVFP4まで一つの手続きで実現する方式。
 
 - **2026-10 · [DPA-MoE: A Runtime Precision Control Framework for MoE Inference](2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2548,13 +2552,13 @@
   実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：52  
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
+- **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：44  
+  長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
+
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
   実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：44  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
-
-- **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：43  
-  長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
   実装：✓ ・ リポジトリ内被引用：42  
@@ -3615,7 +3619,7 @@
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：89  
+  実装：✓ ・ リポジトリ内被引用：90  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -3878,6 +3882,10 @@
   実装：[✓](https://github.com/guozhiyu/glu_dass) ・ リポジトリ内被引用：1  
   LLaMA2やMistralのMLPでは、入力をGate投影とUp投影に通し、活性化関数と要素積によって中間表現を作り、Down投影で元の隠れ次元へ戻す。通常の重み単位剪定は各線形層の入力活性と重みの大きさを見て独立にゼロ化するため、ある中間ニューロンのDown側の寄与を重視しても、その中間値を作るGate/Up側の重みが多く削られる可能性がある。
 
+- **2024-05 · [AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs](2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-me.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  適応型LASSOのソフトしきい値化で重みだけから外れ値を分離し、較正データなしで完全な低ビット量子化を行う学習後量子化手法。量子化時間は既存手法の10倍以上速い。
+
 - **2024-02 · [Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers](2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）は多数のTransformer層を積み重ねることで表現能力を獲得する。重要な限定条件は、すべて分類タスク向けに再微調整した後の結果である。
@@ -4021,10 +4029,6 @@
 - **2024-05 · [Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information](2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   損失の曲率を表すヘッセ行列で量子化誤差の重要度を測り、ブロック単位に反復量子化しながら残りの重みを更新する学習後量子化。コードブック表現で、比較方式が4ビットを要する精度をより少ないビットで狙う。
-
-- **2024-05 · [AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs](2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-me.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  適応型LASSOのソフトしきい値化で重みだけから外れ値を分離し、較正データなしで完全な低ビット量子化を行う学習後量子化手法。量子化時間は既存手法の10倍以上速い。
 
 - **2024-04 · [LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory](2024-2404.11163-longvq-long-sequence-modeling-with-vector-quantization-on-structured-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4235,7 +4239,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：293  
+  実装：✓ ・ リポジトリ内被引用：294  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "weight再構成MSEを最小化する二重scaleを求めるとactivationのchannel別再scaleも得られる性質を利用し、calibration data不要でW4A4等へPTQするDUALQUANTを提案。MX/NVFP4 block formatを統一的に扱い、variable splittingとblock coordinate descentで解く。一次要旨はRTX4090のLlama-3.1-8B実packed W4A4推論でBF16比memory最大2.61倍削減、throughput最大2.46倍向上を報告。実装を伴う低ビットLLM推論としてaccept。",
   "semantic_scholar_id": "d8f756392b3d17c3a917f43ceff551746d5572a8",
   "source_url": "https://arxiv.org/abs/2610.13767",
-  "status": "ready",
+  "status": "superseded",
   "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:37:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md",
+  "represented_canonical_id": "arXiv:2610.13767",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
