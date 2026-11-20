@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d07::chunk-0001-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22602",
+      "identity_tokens": [
+        "arXiv:2607.22602",
+        "https://arxiv.org/abs/2607.22602"
+      ],
+      "title": "DeepLook: Uncertainty-Guided Branching with Lookahead Confidence for Efficient Reasoning",
+      "reason": "不確実性が高い区間でのみ分岐し先読み信頼度で候補継続を順位付けする訓練不要デコードにより生成トークンを87.3％削減しており、推論時計算配分を直接効率化する手法であるため。",
+      "source_url": "https://arxiv.org/abs/2607.22602",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05885",
+      "identity_tokens": [
+        "arXiv:2610.05885",
+        "https://arxiv.org/abs/2610.05885"
+      ],
+      "title": "The Optimization Landscape of Learning Compacted Context Models",
+      "reason": "フルKVキャッシュの振る舞いを再現する小さなKVベクトル集合を学習するコンテキスト圧縮の最適化地形を解析し、Perceiver型圧縮器で圧縮有用性を改善するKVキャッシュ圧縮そのものの研究であるため。",
+      "source_url": "https://arxiv.org/abs/2610.05885",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24861",
+      "identity_tokens": [
+        "arXiv:2610.24861",
+        "https://arxiv.org/abs/2610.24861"
+      ],
+      "title": "FlowMaker: From Tasks to Cost-Efficient Generative AI Workflow Deployments",
+      "reason": "LLM呼び出し列からなる生成AIワークフローについてワークフロー構造・モデル割当・デプロイ構成を負荷に応じて共同選択し、グッドプット最大10.14倍とコスト削減を示すサービングシステムであるため。",
+      "source_url": "https://arxiv.org/abs/2610.24861",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.37903",
+      "identity_tokens": [
+        "arXiv:2610.37903",
+        "https://arxiv.org/abs/2610.37903"
+      ],
+      "title": "Think Twice: The Metis-1.6 Technical Report",
+      "reason": "Mamba-2と注意のMoEハイブリッドで活性パラメータは少ないものの、要旨の中心はゼロからの事前学習・SFTと40ベンチマークの能力報告であり、推論サービングやデコード効率の具体的機構は示されていないため。",
+      "source_url": "https://arxiv.org/abs/2610.37903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.01459",
+      "identity_tokens": [
+        "arXiv:2502.01459",
+        "https://arxiv.org/abs/2502.01459"
+      ],
+      "title": "Learning to Partially Defer for Sequences",
+      "reason": "トークン単位で専門家へ委譲するrejectorによりコストと精度のトレードオフを改善するが、対象は旅行セールスマンや要約など汎用系列予測で、LLM推論システムへの適用機構は要旨では汎用的で薄いため。",
+      "source_url": "https://arxiv.org/abs/2502.01459",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12111",
+      "identity_tokens": [
+        "arXiv:2510.12111",
+        "https://arxiv.org/abs/2510.12111"
+      ],
+      "title": "Chimera: State Space Models Beyond Sequences",
+      "reason": "状態空間モデルを任意グラフ位相へ一般化しDAGでは線形時間再帰を示すが、対象は言語・視覚・グラフ全般のモデリングであり、LLM推論時のメモリやレイテンシへの直接貢献は要旨で具体化されていないため。",
+      "source_url": "https://arxiv.org/abs/2510.12111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 295
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20991",
+      "identity_tokens": [
+        "arXiv:2508.20991",
+        "https://arxiv.org/abs/2508.20991"
+      ],
+      "title": "ExpertSim: Fast Particle Detector Simulation Using Mixture-of-Generative-Experts",
+      "reason": "混合生成専門家はCERNのZero Degree Calorimeter検出器応答シミュレーション専用であり、LLMの推論・デコード・KVキャッシュ等への技術的貢献は要旨に一切示されていない異分野応用であるため。",
+      "source_url": "https://arxiv.org/abs/2508.20991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.05842",
+      "identity_tokens": [
+        "arXiv:2205.05842",
+        "https://arxiv.org/abs/2205.05842"
+      ],
+      "title": "Supplementary Material: Implementation and Experiments for GAU-based Model",
+      "reason": "GAUで注意とFFNを統合し高速化とVRAM削減をうたうが、本稿は補足資料で中国語コーパス事前学習とCLUE精度が中心であり、推論時の処理性能の切り分けやサービング評価は要旨で不明瞭であるため。",
+      "source_url": "https://arxiv.org/abs/2205.05842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 299
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.04042",
+      "identity_tokens": [
+        "arXiv:2611.04042",
+        "https://arxiv.org/abs/2611.04042"
+      ],
+      "title": "Testing Processor Contracts in Speculative Decoding Engines",
+      "reason": "投機的サンプリングにおけるlogits processorのprefix契約を定式化し、未検証ドラフト参照や状態ロールバック欠如を差分適合テストで検出する、投機的デコードエンジン検証の直接研究であるため。",
+      "source_url": "https://arxiv.org/abs/2611.04042",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 302
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00539",
+      "identity_tokens": [
+        "arXiv:2605.00539",
+        "https://arxiv.org/abs/2605.00539"
+      ],
+      "title": "AGoQ: Activation and Gradient Quantization for Memory-Efficient Distributed Training of LLMs",
+      "reason": "層別活性化量子化と8ビット勾配All-Reduceは分散学習のメモリと通信を減らす訓練専用手法であり、推論への具体的適用や推論時量子化としての評価は要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2605.00539",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 303
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.03270",
+      "identity_tokens": [
+        "arXiv:2604.03270",
+        "https://arxiv.org/abs/2604.03270"
+      ],
+      "title": "Knowledge Packs: Zero-Token Knowledge Delivery via KV Cache Injection",
+      "reason": "テキストの前方パスで得たKVキャッシュを事前計算して注入しRAGのトークンを最大95％節約するKnowledge Packsを提案し、書式不整合による劣化まで検証するKVキャッシュ再利用の直接手法であるため。",
+      "source_url": "https://arxiv.org/abs/2604.03270",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 305
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.09865",
+      "identity_tokens": [
+        "arXiv:2601.09865",
+        "https://arxiv.org/abs/2601.09865"
+      ],
+      "title": "Advancing Model Refinement: Muon-Optimized Distillation and Quantization for LLM Deployment",
+      "reason": "GPTQ量子化・LoRA・データ蒸留を統合しモデルを6GBから3GBへ圧縮して資源制約デバイスでの効率的推論を目指す配置向け圧縮枠組みであり、訂正通知はあるものの推論圧縮への直接提案が要旨で具体的であるため。",
+      "source_url": "https://arxiv.org/abs/2601.09865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 306
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.00801",
+      "identity_tokens": [
+        "arXiv:2604.00801",
+        "https://arxiv.org/abs/2604.00801"
+      ],
+      "title": "Routing-Free Mixture-of-Experts",
+      "reason": "中央ルータやTop-Kを排し専門家自身が活性化を決めるRouting-Free MoEと負荷均衡枠組みを提案するが、要旨はMoEアーキテクチャ設計全般であり推論時の専門家実行やサービング効率の測定は示されていないため。",
+      "source_url": "https://arxiv.org/abs/2604.00801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 308
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2209.12769",
+      "identity_tokens": [
+        "arXiv:2209.12769",
+        "https://arxiv.org/abs/2209.12769"
+      ],
+      "title": "Optimizing DNN Compilation for Distributed Training With Joint OP and Tensor Fusion",
+      "reason": "DisCoはデータ並列分散学習向けに演算子融合と通信テンソル融合を共同最適化するDNNコンパイラであり、対象が訓練イテレーション短縮に限られLLM推論への適用は要旨にないため。",
+      "source_url": "https://arxiv.org/abs/2209.12769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 309
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08007",
+      "identity_tokens": [
+        "arXiv:2602.08007",
+        "https://arxiv.org/abs/2602.08007"
+      ],
+      "title": "From O(mn) to O(r2): Two-Sided Low-Rank Communication for Adam in Distributed Training with Memory Efficiency",
+      "reason": "TSR-AdamはAdamの勾配同期を両側低ランク化して事前学習の通信量を13倍削減する分散最適化手法であり、メモリ効率も訓練文脈に限られ推論システムへの具体的貢献は示されていないため。",
+      "source_url": "https://arxiv.org/abs/2602.08007",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 310
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.02376",
+      "identity_tokens": [
+        "arXiv:2406.02376",
+        "https://arxiv.org/abs/2406.02376"
+      ],
+      "title": "Retaining Key Information under High Compression Ratios: Query-Guided Compressor for LLMs",
+      "reason": "クエリ誘導で重要情報を保持するコンテキスト圧縮と動的圧縮率により高圧縮でもQA性能を維持し、推論コストとスループットの利益を明示するLLMコンテキスト圧縮の直接手法であるため。",
+      "source_url": "https://arxiv.org/abs/2406.02376",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.21362",
+      "identity_tokens": [
+        "arXiv:2608.21362",
+        "https://arxiv.org/abs/2608.21362"
+      ],
+      "title": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+      "reason": "位置非依存のチャンク単位KV再利用、二重ハッシュ、境界再計算、非対称KV量子化とエビクションを備えTTFTを4.49倍短縮するKVBoostはKVキャッシュ再利用システムそのものであるため。",
+      "source_url": "https://arxiv.org/abs/2608.21362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.21919",
+      "identity_tokens": [
+        "arXiv:2505.21919",
+        "https://arxiv.org/abs/2505.21919"
+      ],
+      "title": "Towards Efficient Key-Value Cache Management for Prefix Prefilling in LLM Inference",
+      "reason": "RAGやエージェントのprefix prefillにおけるKVキャッシュアクセスパターンを実トレースで分析しRedisやRDMAシステムでメタデータ管理を評価して分散KVキャッシュ管理設計の知見を示す推論基盤研究であるため。",
+      "source_url": "https://arxiv.org/abs/2505.21919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.11203",
+      "identity_tokens": [
+        "arXiv:2410.11203",
+        "https://arxiv.org/abs/2410.11203"
+      ],
+      "title": "Error Diffusion: Post Training Quantization with Block-Scaled Number Formats for Neural Networks",
+      "reason": "ブロック拡縮数値形式向けに誤差拡散で学習後量子化を行いHessianや逆伝播なしでパラメータ量子化誤差を層ごとに拡散させる手法で、LLMを含むモデルの配置コスト削減に直接寄与するため。",
+      "source_url": "https://arxiv.org/abs/2410.11203",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.04450",
+      "identity_tokens": [
+        "arXiv:2605.04450",
+        "https://arxiv.org/abs/2605.04450"
+      ],
+      "title": "When KV Meets Embeddings: Dynamic GPU Memory Allocation for Accelerating Generative Recommender Serving",
+      "reason": "生成推薦サービングで埋め込みホットキャッシュとKVキャッシュが競合するGPU HBMをPPO制御で動的配分しリクエストルーティングと併せてP99レイテンシを24から38％削減するサービングシステムであるため。",
+      "source_url": "https://arxiv.org/abs/2605.04450",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 319
+    }
+  ],
+  "parent_run_key": "muse-20261121-d07",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

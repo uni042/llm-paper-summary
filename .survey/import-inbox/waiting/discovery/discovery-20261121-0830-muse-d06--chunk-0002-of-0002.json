@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d06::chunk-0002-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05275",
+      "identity_tokens": [
+        "arXiv:2602.05275",
+        "https://arxiv.org/abs/2602.05275"
+      ],
+      "title": "Magic-MM-Embedding: Towards Visual-Token-Efficient Universal Multimodal Embedding with MLLMs",
+      "reason": "視覚トークン圧縮で推論遅延を下げるMLLMアーキテクチャと段階的対照学習を組み合わせるMagic-MM-Embeddingは、主目的が汎用マルチモーダル検索の埋め込み精度であり、推論効率は設計の一要素にとどまり定量的なシステム効果が薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2602.05275",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 275
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01218",
+      "identity_tokens": [
+        "arXiv:2607.01218",
+        "https://arxiv.org/abs/2607.01218"
+      ],
+      "title": "The State-Prediction Separation Hypothesis",
+      "reason": "次トークン予測と将来予測用の状態保持を別々の計算ストリームに分離するTransformer変種を事前学習で評価し言語モデリング性能を上げる研究であり、推論時の計算・メモリ・デコード効率への効果は要旨で主張されていない。",
+      "source_url": "https://arxiv.org/abs/2607.01218",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14501",
+      "identity_tokens": [
+        "arXiv:2604.14501",
+        "https://arxiv.org/abs/2604.14501"
+      ],
+      "title": "On the Expressive Power and Limitations of Multi-Layer SSMs",
+      "reason": "多層状態空間モデルについて深さ・有限精度・状態次元と思考連鎖が関数合成問題の表現力に与える影響を証明する理論研究であり、実システムの推論高速化やメモリ削減に使える具体的手法は提案されていない。",
+      "source_url": "https://arxiv.org/abs/2604.14501",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.03506",
+      "identity_tokens": [
+        "arXiv:2601.03506",
+        "https://arxiv.org/abs/2601.03506"
+      ],
+      "title": "QA-Merging: Query-Adaptive Reasoning via Layer Selective Model Merging",
+      "reason": "長短の思考連鎖モデルを統合する際、推論パターンの乖離が大きい層だけを較正し残りに閉形式の隠れ状態補正を適用するQA-Mergingは、クエリ適応的に推論コストを下げつつ性能を保つ効率的推論への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2601.03506",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28859",
+      "identity_tokens": [
+        "arXiv:2608.28859",
+        "https://arxiv.org/abs/2608.28859"
+      ],
+      "title": "The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning",
+      "reason": "推論モデルが答えの確率が安定した後も思考を続ける無駄に対し、第18層の平均差方向である停止ベクトルを活性を再構成して重みに内在化する手法は、精度を保ったまま思考トークンを約4分の1削減する推論トークン削減の直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2608.28859",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15241",
+      "identity_tokens": [
+        "arXiv:2411.15241",
+        "https://arxiv.org/abs/2411.15241"
+      ],
+      "title": "EfficientViM: Efficient Vision Mamba with Hidden State Mixer based State Space Duality",
+      "reason": "隠れ状態ミキサーに基づく状態空間双対でチャネル混合を圧縮された隠れ状態内で行うEfficientViMはImageNet向け視覚アーキテクチャの速度・精度改善であり、LLM推論システムへの適用は要旨に示されていないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2411.15241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.24711",
+      "identity_tokens": [
+        "arXiv:2509.24711",
+        "https://arxiv.org/abs/2509.24711"
+      ],
+      "title": "Stop Before You Fail: Operational Capability Boundaries for Mitigating Unproductive Reasoning in Large Reasoning Models",
+      "reason": "大規模推論モデルが能力境界を超えた問題で無駄な推論を続ける問題に対し、推論表現と最終入力トークンの隠れ状態から解けない兆候をテスト時に監視して早期停止し、トークン使用量を62.7〜93.6%削減する推論時制御の直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2509.24711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19697",
+      "identity_tokens": [
+        "arXiv:2601.19697",
+        "https://arxiv.org/abs/2601.19697"
+      ],
+      "title": "AlignCoder: Aligning Retrieval with Target Intent for Repository-Level Code Completion",
+      "reason": "リポジトリレベルのコード補完で、候補補完から拡張クエリを作り強化学習で検索器を訓練するAlignCoderは検索精度と補完の完全一致スコア改善が主目的であり、推論システムの効率やデコード機構への貢献は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2601.19697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00760",
+      "identity_tokens": [
+        "arXiv:2602.00760",
+        "https://arxiv.org/abs/2602.00760"
+      ],
+      "title": "APR: Penalizing Structural Redundancy in Large Reasoning Models via Anchor-based Process Rewards",
+      "reason": "答えが安定した後の反復検証を推論アンカー後のAnswer-Stable Tailと定義し、アンカーに基づく過程報酬で強化学習時に罰するAPRは冗長な推論を減らすが、手続きの中心は報酬整形による学習側の最適化であり推論時機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2602.00760",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 287
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14589",
+      "identity_tokens": [
+        "arXiv:2605.14589",
+        "https://arxiv.org/abs/2605.14589"
+      ],
+      "title": "EndPrompt: Efficient Long-Context Extension via Terminal Anchoring",
+      "reason": "短い訓練系列の末尾に遠い位置インデックスの終端プロンプトを付けて長文脈へ拡張するEndPromptは、長文脈推論を可能にするが貢献の中心は二次コストを避ける文脈拡張の学習手法であり、推論時の計算やメモリを減らす機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.14589",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    }
+  ],
+  "parent_run_key": "muse-20261121-d06",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

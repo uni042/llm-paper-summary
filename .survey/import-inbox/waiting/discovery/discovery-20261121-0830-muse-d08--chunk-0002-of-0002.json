@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d08::chunk-0002-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.18021",
+      "identity_tokens": [
+        "arXiv:2411.18021",
+        "https://arxiv.org/abs/2411.18021"
+      ],
+      "title": "Can bidirectional encoder become the ultimate winner for downstream applications of foundation models?",
+      "reason": "BERTとGPTなど双方向・一方向エンコーダの発展と下流タスク性能を比較する解説的な論文で、推論実行の高速化やメモリ削減といったシステム技術への貢献は要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2411.18021",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06412",
+      "identity_tokens": [
+        "arXiv:2602.06412",
+        "https://arxiv.org/abs/2602.06412"
+      ],
+      "title": "Stopping Computation for Converged Tokens in Masked Diffusion-LM Decoding",
+      "reason": "マスク拡散言語モデルのデコードで収束したトークン位置のクエリ射影とFFN計算を止めキー・バリューをキャッシュするSureLockによりFLOPsを30から50%削減する直接手法である。",
+      "source_url": "https://arxiv.org/abs/2602.06412",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 365
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.19154",
+      "identity_tokens": [
+        "arXiv:2512.19154",
+        "https://arxiv.org/abs/2512.19154"
+      ],
+      "title": "Beyond Sliding Windows: Learning to Manage Memory in Non-Markovian Environments",
+      "reason": "非マルコフ環境で働く強化学習エージェントの観測メモリを適応的に積むメタアルゴリズムの研究で、対象はエージェントの学習と行動推論でありLLM推論システムへの適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2512.19154",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30771",
+      "identity_tokens": [
+        "arXiv:2605.30771",
+        "https://arxiv.org/abs/2605.30771"
+      ],
+      "title": "Eywa: Provenance-Grounded Long-Term Memory for AI Agents",
+      "reason": "セッションを跨ぐAIエージェント向けに来歴付き長期メモリとLLM呼び出しなしの検索経路を提案するが、主目的は記憶の監査可能性と想起精度であり推論実行効率への貢献は限定的なため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.30771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 367
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.04811",
+      "identity_tokens": [
+        "arXiv:2605.04811",
+        "https://arxiv.org/abs/2605.04811"
+      ],
+      "title": "Tree-based Credit Assignment for Multi-Agent Memory System",
+      "reason": "記憶構築・要約・検索エージェントへの強化学習クレジット割当を木構造で推定する手法で、LLM記憶系には関連するが推論時の計算やメモリ効率ではなく学習信号の設計が中心のため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.04811",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 368
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08739",
+      "identity_tokens": [
+        "arXiv:2609.08739",
+        "https://arxiv.org/abs/2609.08739"
+      ],
+      "title": "Tools-CC-Bench: a Benchmark Suite for Collective Communication with Compression in HPC and AI Workloads",
+      "reason": "HPCとLLMワークロード向けに通信圧縮付き集合通信を測るベンチマークCC-Benchで基盤計測には関連するが、対象は汎用HPC通信で推論特化の機構やサービング評価は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.08739",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 370
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.07586",
+      "identity_tokens": [
+        "arXiv:2203.07586",
+        "https://arxiv.org/abs/2203.07586"
+      ],
+      "title": "Long Document Summarization with Top-down and Bottom-up Inference",
+      "reason": "階層的な潜在表現の上下方向推論で長文要約の精度と効率を上げる応用モデルであり、ここでの推論は表現推定を指し、LLMの生成・サービング実行系への貢献は要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2203.07586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 371
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16860",
+      "identity_tokens": [
+        "arXiv:2502.16860",
+        "https://arxiv.org/abs/2502.16860"
+      ],
+      "title": "LongAttn: Selecting Long-context Training Data via Token-level Attention",
+      "reason": "トークンレベルの注意から長距離依存を測って長文脈学習データLongABC-32Kを選別する学習データ構築の研究で、推論時の処理やメモリを改善する機構は要旨に示されていないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2502.16860",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 372
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04480",
+      "identity_tokens": [
+        "arXiv:2407.04480",
+        "https://arxiv.org/abs/2407.04480"
+      ],
+      "title": "LoCo: Low-Bit Communication Adaptor for Large-Scale Model Training",
+      "reason": "大規模モデル学習における低ビット勾配通信の誤差を補償して同期を高速化するLoCoの研究で、高速化の対象は学習のみであり推論への具体的適用が確認できない凍結範囲に当たるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2407.04480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 373
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.18184",
+      "identity_tokens": [
+        "arXiv:2506.18184",
+        "https://arxiv.org/abs/2506.18184"
+      ],
+      "title": "Memba: Membrane-driven Parameter-Efficient Fine-Tuning for Mamba",
+      "reason": "状態空間モデルMamba向けに膜電位ゲートとLoRAを組み合わせたパラメータ効率微調整Membaの提案で、下流適応の学習効率が主眼でありLLM推論実行への直接貢献は要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2506.18184",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 374
+    }
+  ],
+  "parent_run_key": "muse-20261121-d08",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

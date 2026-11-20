@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d07::chunk-0002-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.16238",
+      "identity_tokens": [
+        "arXiv:2512.16238",
+        "https://arxiv.org/abs/2512.16238"
+      ],
+      "title": "Trustworthy and Controllable Professional Knowledge Utilization in Large Language Models with TEE-GPU Execution",
+      "reason": "専門知識を分離可能なアダプタとしてTEE内でのみ実行し分割実行スケジューリングやアダプタ剪定でサービング時のリクエストレイテンシをCPUのみTEE比8.1から11.9倍高速化するLLM実行システムであるため。",
+      "source_url": "https://arxiv.org/abs/2512.16238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.16915",
+      "identity_tokens": [
+        "arXiv:2609.16915",
+        "https://arxiv.org/abs/2609.16915"
+      ],
+      "title": "ROSETTA: Efficient and Accurate Privacy-Preserving LLM Decoding via Hybrid CKKS/TFHE Evaluation",
+      "reason": "完全準同型暗号によるプライベート推論でデコード段の非線形演算をCKKSとTFHEのハイブリッドで評価しSoftmax最大4.8倍と端末間デコード1.5から2.1倍高速化を示すプライベートデコード手法であるため。",
+      "source_url": "https://arxiv.org/abs/2609.16915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07711",
+      "identity_tokens": [
+        "arXiv:2606.07711",
+        "https://arxiv.org/abs/2606.07711"
+      ],
+      "title": "Rosetta Memory: Adaptive Memory for Cross-LLM Agents",
+      "reason": "LLMエージェントの長期記憶をモデル横断で適応させる書込・読出演算子を学習しQAタスク性能を上げるが、対象は応用レベルの記憶提示であり推論ランタイムのメモリ効率やレイテンシ改善は要旨で示されていないため。",
+      "source_url": "https://arxiv.org/abs/2606.07711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.02891",
+      "identity_tokens": [
+        "arXiv:2503.02891",
+        "https://arxiv.org/abs/2503.02891"
+      ],
+      "title": "Vision Transformers on the Edge: A Comprehensive Survey of Model Compression and Acceleration Strategies",
+      "reason": "Vision Transformerのエッジ配置向けモデル圧縮とハードウェア加速を総説する論文であり、対象が画像モデルに限られLLM推論システムへの直接の技術的貢献は要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2503.02891",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2307.05972",
+      "identity_tokens": [
+        "arXiv:2307.05972",
+        "https://arxiv.org/abs/2307.05972"
+      ],
+      "title": "Self-Distilled Quantization: Achieving High Compression Rates in Transformer-Based Language Models",
+      "reason": "自己蒸留量子化により累積量子化誤差を抑えて多言語Transformer言語モデルを32ビットから8ビットへ圧縮し性能を維持する、言語モデル推論圧縮に直接使える量子化手法であるため。",
+      "source_url": "https://arxiv.org/abs/2307.05972",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.17588",
+      "identity_tokens": [
+        "arXiv:2509.17588",
+        "https://arxiv.org/abs/2509.17588"
+      ],
+      "title": "Interpreting Attention Heads for Image-to-Text Information Flow in Large Vision-Language Models",
+      "reason": "大規模視覚言語モデルの注意ヘッド帰属で画像からテキストへの情報流を解釈する分析であり、推論高速化やメモリ削減などのシステム機構は提案されておらず解釈可能性のみが貢献であるため。",
+      "source_url": "https://arxiv.org/abs/2509.17588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07604",
+      "identity_tokens": [
+        "arXiv:2606.07604",
+        "https://arxiv.org/abs/2606.07604"
+      ],
+      "title": "Contribution Weights: A Geometrical Analysis of Self-Attention Transformers",
+      "reason": "注意重みに値ベクトルの大きさと方向を加えたContribution Weightsでトークン重要度と注意シンクを幾何学的に分析する解釈研究であり、推論システムの効率化手法は要旨で提案されていないため。",
+      "source_url": "https://arxiv.org/abs/2606.07604",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.00051",
+      "identity_tokens": [
+        "arXiv:2611.00051",
+        "https://arxiv.org/abs/2611.00051"
+      ],
+      "title": "TenonAgent: Virtualizing Execution Residency for Memory-Oversubscribed LLM Agents",
+      "reason": "LLMエージェントのサンドボックス常駐を仮想化し予測的アドミッション制御とカーネルゲートでメモリ過剰割当時のOOMを抑え最大5.5倍高速化する、エージェントサービング用ランタイムシステムであるため。",
+      "source_url": "https://arxiv.org/abs/2611.00051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.18148",
+      "identity_tokens": [
+        "arXiv:2411.18148",
+        "https://arxiv.org/abs/2411.18148"
+      ],
+      "title": "A runtime-adaptive transformer neural network accelerator on FPGAs",
+      "reason": "Transformerエンコーダ・デコーダの密行列演算をFPGA上で実行時適応的にタイリングし量子化して実行するADAPTORアクセラレータで、GPUやCPU比の電力効率と高速化を実測する推論ハードウェア研究であるため。",
+      "source_url": "https://arxiv.org/abs/2411.18148",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 330
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.04240",
+      "identity_tokens": [
+        "arXiv:2503.04240",
+        "https://arxiv.org/abs/2503.04240"
+      ],
+      "title": "DiffPO: Diffusion-styled Preference Optimization for Efficient Inference-Time Alignment of Large Language Models",
+      "reason": "拡散風選好最適化で文単位に推論時アライメントを行いトークン単位生成の遅延を避けるが、主目的は人間選好への整合品質であり推論システムのスループットやメモリへの貢献は副次的で薄いため。",
+      "source_url": "https://arxiv.org/abs/2503.04240",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 331
+    }
+  ],
+  "parent_run_key": "muse-20261121-d07",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

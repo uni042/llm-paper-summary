@@ -1,0 +1,395 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d05::chunk-0001-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.20861",
+      "identity_tokens": [
+        "arXiv:2512.20861",
+        "https://arxiv.org/abs/2512.20861"
+      ],
+      "title": "Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs",
+      "reason": "ブロック低ランク重みに対するカスタムTritonカーネルの部分融合とメモリ配置最適化で、Llama等の単一・複数トークン推論を最大3.76倍高速化しメモリ律速を直接緩和しているため。",
+      "source_url": "https://arxiv.org/abs/2512.20861",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 207,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.05015",
+      "identity_tokens": [
+        "arXiv:2309.05015",
+        "https://arxiv.org/abs/2309.05015"
+      ],
+      "title": "DeViT: Decomposing Vision Transformers for Collaborative Inference in Edge Devices",
+      "reason": "対象はLLMではなくVision Transformerを複数小モデルへ分解するエッジ協調推論であり、通信削減は示されるがLLMサービングへの適用や検証が要旨にないため。",
+      "source_url": "https://arxiv.org/abs/2309.05015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01075",
+      "identity_tokens": [
+        "arXiv:2411.01075",
+        "https://arxiv.org/abs/2411.01075"
+      ],
+      "title": "Cephalo: Harnessing Heterogeneous GPU Clusters for Training Transformer Models",
+      "reason": "異種GPUクラスタでTransformerの学習スループットと学習状態配置を最適化する訓練システムであり、推論・デコード・サービングへの具体的適用が要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2411.01075",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 209,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.01058",
+      "identity_tokens": [
+        "arXiv:2605.01058",
+        "https://arxiv.org/abs/2605.01058"
+      ],
+      "title": "LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference",
+      "reason": "蒸留モデルで効かなくなる早期終了を、層方向の表現近似制約で回復させ、MiniLMで実測1.61倍の推論高速化と層削減を示す直接的な推論効率化手法であるため。",
+      "source_url": "https://arxiv.org/abs/2605.01058",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 210,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.29768",
+      "identity_tokens": [
+        "arXiv:2603.29768",
+        "https://arxiv.org/abs/2603.29768"
+      ],
+      "title": "Big2Small: A Unifying Neural Network Framework for Model Compression",
+      "reason": "重みをINRで符号化するモデル圧縮の統一枠組みだが、検証は画像分類・セグメンテーションであり、LLMでの推論メモリやレイテンシの効果が要旨で具体化されていないため。",
+      "source_url": "https://arxiv.org/abs/2603.29768",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 212,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00267",
+      "identity_tokens": [
+        "arXiv:2610.00267",
+        "https://arxiv.org/abs/2610.00267"
+      ],
+      "title": "ThermE: Predictive Management of Shared Thermal Headroom for Sustained LLM Inference on Thermally Constrained Edge SoCs",
+      "reason": "vLLM上に熱ヘッドルーム予測とスケジューリングを実装し、エッジSoC上の持続的LLM推論でTTFTとTPOT、SLO違反率を実測改善するランタイムシステムであるため。",
+      "source_url": "https://arxiv.org/abs/2610.00267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 213,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.02691",
+      "identity_tokens": [
+        "arXiv:2301.02691",
+        "https://arxiv.org/abs/2301.02691"
+      ],
+      "title": "Systems for Parallel and Distributed Large-Model Deep Learning Training",
+      "reason": "大規模モデルの分散学習における並列化やメモリ階層活用を概観する訓練システムのサーベイであり、LLM推論システムへの新規な技術的貢献が要旨にないため。",
+      "source_url": "https://arxiv.org/abs/2301.02691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 214,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.17815",
+      "identity_tokens": [
+        "arXiv:2311.17815",
+        "https://arxiv.org/abs/2311.17815"
+      ],
+      "title": "A Survey on Design Methodologies for Accelerating Deep Learning on Heterogeneous Architectures",
+      "reason": "深層学習アクセラレータの設計手法・コンパイラ・設計空間探索を広くレビューする内容で、LLM推論に特化した機構や評価ではなく関連性が薄いため。",
+      "source_url": "https://arxiv.org/abs/2311.17815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 215,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.06184",
+      "identity_tokens": [
+        "arXiv:2503.06184",
+        "https://arxiv.org/abs/2503.06184"
+      ],
+      "title": "Sample-aware Adaptive Structured Pruning for Large Language Models",
+      "reason": "LLMの構造化プルーニングで較正データと重要度指標をベイズ最適化により適応選択し、20％削減時も性能97％を維持して配備時の資源要求を直接下げるため。",
+      "source_url": "https://arxiv.org/abs/2503.06184",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 216,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.06016",
+      "identity_tokens": [
+        "arXiv:2508.06016",
+        "https://arxiv.org/abs/2508.06016"
+      ],
+      "title": "Crisp Attention: Regularizing Transformers via Structured Sparsity",
+      "reason": "DistilBERTの注意へ構造化スパース性を入れるが、主結果はSST-2での精度向上と正則化効果であり、推論レイテンシやメモリ削減の実測が要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2508.06016",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.16680",
+      "identity_tokens": [
+        "arXiv:2508.16680",
+        "https://arxiv.org/abs/2508.16680"
+      ],
+      "title": "CALR: Corrective Adaptive Low-Rank Decomposition for Efficient Large Language Model Layer Compression",
+      "reason": "SVD圧縮で失われる機能的残差を学習可能な低ランク補正モジュールで回復し、複数LLMでパラメータを最大約52％削減する具体的なLLM圧縮手法であるため。",
+      "source_url": "https://arxiv.org/abs/2508.16680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.14427",
+      "identity_tokens": [
+        "arXiv:2212.14427",
+        "https://arxiv.org/abs/2212.14427"
+      ],
+      "title": "Efficient Movie Scene Detection using State-Space Transformers",
+      "reason": "映画シーン検出という動画理解応用が主目的の状態空間Transformerであり、高速・省メモリ性も同タスク内の比較に限られLLM推論への貢献がないため。",
+      "source_url": "https://arxiv.org/abs/2212.14427",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 222,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.00841",
+      "identity_tokens": [
+        "arXiv:2510.00841",
+        "https://arxiv.org/abs/2510.00841"
+      ],
+      "title": "LLM Routing with Dueling Feedback",
+      "reason": "クエリごとに満足度・専門性・推論コストを両立させるLLMルーティングを文脈付きデュエリングバンディットとして定式化し、コスト込みの実証評価を行っているため。",
+      "source_url": "https://arxiv.org/abs/2510.00841",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 223,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.18173",
+      "identity_tokens": [
+        "arXiv:2406.18173",
+        "https://arxiv.org/abs/2406.18173"
+      ],
+      "title": "UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs",
+      "reason": "メモリ強化Transformerの増分最適化でLlama2-7Bの文脈を4Kから100Kへ拡張しつつ、推論コストを文脈長に対してほぼ線形に抑える長文脈推論手法であるため。",
+      "source_url": "https://arxiv.org/abs/2406.18173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 224,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05794",
+      "identity_tokens": [
+        "arXiv:2607.05794",
+        "https://arxiv.org/abs/2607.05794"
+      ],
+      "title": "From Passive Retrieval to Active Memory Navigation: Learning to Use Memory as a Structured Action Space",
+      "reason": "会話エージェント向け長期ユーザメモリを構造化しナビゲーション学習する応用枠組みであり、推論コスト分析は付随的でLLMサービング機構自体の改善ではないため。",
+      "source_url": "https://arxiv.org/abs/2607.05794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 225,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21704",
+      "identity_tokens": [
+        "arXiv:2606.21704",
+        "https://arxiv.org/abs/2606.21704"
+      ],
+      "title": "When Compression Helps and When It Hurts: Condition-Aware Analysis of Chain-of-Thought Distillation",
+      "reason": "CoT蒸留の圧縮条件を分析し訓練時圧縮が推論時節約に直結しないこと等を示す分析研究であり、新しい推論システム機構の提案や実装評価ではないため。",
+      "source_url": "https://arxiv.org/abs/2606.21704",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 226,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.17616",
+      "identity_tokens": [
+        "arXiv:2608.17616",
+        "https://arxiv.org/abs/2608.17616"
+      ],
+      "title": "MoNe: Modular Neural Memory for Efficient Long Context Inference",
+      "reason": "凍結Transformerへ装着する神経メモリで文脈再読をなくし、128Kトークン時に計算とピークGPUメモリを約80％削減する長文脈推論の具体的機構であるため。",
+      "source_url": "https://arxiv.org/abs/2608.17616",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 228,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05302",
+      "identity_tokens": [
+        "arXiv:2402.05302",
+        "https://arxiv.org/abs/2402.05302"
+      ],
+      "title": "Training DNN Models over Heterogeneous Clusters with Optimal Performance",
+      "reason": "異種クラスタ上のDNN学習でバッチサイズ等を適応調整する分散訓練システムCannikinであり、対象は学習スループットのみで推論への適用が要旨にないため。",
+      "source_url": "https://arxiv.org/abs/2402.05302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 230,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09377",
+      "identity_tokens": [
+        "arXiv:2604.09377",
+        "https://arxiv.org/abs/2604.09377"
+      ],
+      "title": "Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios",
+      "reason": "タスク種別を潜在変数としてクエリごとのコストと性能をモデル化するLLMルーターTRouterを提案し、コールドスタート条件でもルーティング効用を示しているため。",
+      "source_url": "https://arxiv.org/abs/2604.09377",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 231,
+      "origin": "discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14427",
+      "identity_tokens": [
+        "arXiv:2607.14427",
+        "https://arxiv.org/abs/2607.14427"
+      ],
+      "title": "Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers",
+      "reason": "深さ再帰Transformerでトークンごとの固定点収束を読み取り訓練不要で停止判定し、平均深さを38％削減する適応的推論計算量削減手法を具体的に示すため。",
+      "source_url": "https://arxiv.org/abs/2607.14427",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T08:30:00+09:00",
+      "last_checked_at": "2026-11-21T08:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 232,
+      "origin": "discovery_worklist"
+    }
+  ],
+  "parent_run_key": "muse-20261121-d05",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
