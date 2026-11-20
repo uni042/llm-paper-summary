@@ -35,10 +35,15 @@
   "selection_reason": "共有recurrent coreを繰り返すLoopLMでは量子化構成の優劣が反復深度で変化するため、target深度での最終予測損失を目的にchannel scaling・直交回転を選ぶLoopyを提案。候補へ校正windowを逐次配分して全深度forward評価を保つ。一次要旨はOuro-1.4BのW4A4でSpinQuant比LAMBADA perplexityを36.5%低減と報告。反復型LLMの推論時の重み・activation圧縮としてaccept。",
   "semantic_scholar_id": "d93dd32bf7fb2f8a270cf6ad8939e4c07b072fd8",
   "source_url": "https://arxiv.org/abs/2610.05265",
-  "status": "ready",
+  "status": "superseded",
   "title": "Loopy: Low-Bit Quantization Framework for Looped Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:36:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.05265-loopy-low-bit-quantization-framework-for-looped-language-models.md",
+  "represented_canonical_id": "arXiv:2610.05265",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

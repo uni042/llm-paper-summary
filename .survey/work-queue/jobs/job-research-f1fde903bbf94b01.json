@@ -35,10 +35,15 @@
   "selection_reason": "KV削除を過去attention質量だけで判定すると次トークンの出力分布を損なう問題に対し、削除候補ごとの圧縮後logitsを事前forward統計から近似し、フルKV時とのKL divergenceで削除影響を評価する学習不要方式。個々の候補に対する追加masked forwardを回避し、保持KV予算が等しい条件で特に強圧縮時の下流品質を改善。圧縮時の追加計算はあるが評価条件内でfull-cache推論よりend-to-end高速化すると要旨は報告しており、推論KV圧縮の直接手法としてaccept。倍率は要旨にないため記載しない。",
   "semantic_scholar_id": "a367385422a194661b20791bd46c8a749102247c",
   "source_url": "https://arxiv.org/abs/2610.06479",
-  "status": "ready",
+  "status": "superseded",
   "title": "Behavior-Preserving KV Cache Compression",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:36:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.06479-behavior-preserving-kv-cache-compression.md",
+  "represented_canonical_id": "arXiv:2610.06479",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "複数tool callや引数fieldを逐次生成する遅延を減らすため、将来slotの値を並列にdraftし、実際の出力prefixに対してtarget modelがまとめて検証し、誤ったtokenだけ修正するSchemaFillを提案。一次要旨はGlaive/BFCLでautoregressive decode比最大4.05倍のend-to-end throughputを報告。tool schemaを利用した厳密検証付きLLM推論高速化としてaccept。",
   "semantic_scholar_id": "62dc544c66fa2860c6f1f84def2b5c06a743f528",
   "source_url": "https://arxiv.org/abs/2610.07086",
-  "status": "ready",
+  "status": "superseded",
   "title": "SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:36:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-deco.md",
+  "represented_canonical_id": "arXiv:2610.07086",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

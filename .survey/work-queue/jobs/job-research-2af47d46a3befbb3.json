@@ -35,10 +35,15 @@
   "selection_reason": "EdgeAgentはApple M4等のCPU/GPU統合メモリ環境で、decodeのバス競合とエージェントtool待機を同時に扱う。UMA-aware zero-copy tensor parallelism、draft難易度に応じた投機予算制御、停止中agentの非同期suspend-and-yieldを組み合わせる。M4評価で実行方式のみで1.29倍、tool待機が多い条件で全体1.77倍の高速化を報告。",
   "semantic_scholar_id": "31f47f57a5ad4c1ce43d427a1695ca535656c074",
   "source_url": "https://arxiv.org/abs/2610.03394",
-  "status": "ready",
+  "status": "superseded",
   "title": "EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures",
   "type": "research",
   "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:36:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent.md",
+  "represented_canonical_id": "arXiv:2610.03394",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
