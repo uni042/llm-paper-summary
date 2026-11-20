@@ -35,10 +35,15 @@
   "selection_reason": "将来中間表現予測による高速LLM推論FIRP。自己回帰デコードが1回の伝播で1トークンしか生まない問題に対し、将来トークンの中間隠れ状態を予測する新しい投機的デコード。推論高速化機構そのもの。",
   "semantic_scholar_id": "3ecb55bba1205f8bee877c29d042663499a4125b",
   "source_url": "https://arxiv.org/abs/2410.20488",
-  "status": "ready",
+  "status": "superseded",
   "title": "FIRP: Faster LLM Inference via Future Intermediate Representation Prediction",
   "type": "research",
   "venue": "Natural Language Processing and Chinese Computing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-20T07:16:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-predict.md",
+  "represented_canonical_id": "arXiv:2410.20488",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

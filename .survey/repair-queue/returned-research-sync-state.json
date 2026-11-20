@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "927d4728fb984c9b1fbaa758ee271d18e8ecf991",
+  "base_commit": "fd6ef0c9ec3d045db25921a609b1206da26bdc34",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -56,6 +56,7 @@
     "2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-language-models-using-second-order-matrix-derivative-in.json",
     "2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.json",
     "2024-2406.00030-large-language-model-pruning.json",
+    "2024-2406.06571-subllm-a-novel-efficient-architecture-with-token-sequence-subsampling-for-llm.json",
     "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
     "2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-target-language-text.json",
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
@@ -67,6 +68,7 @@
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json",
+    "2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-prediction.json",
     "2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-deployment.json",
     "2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-scheduling.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
@@ -74,10 +76,13 @@
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
     "2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.json",
+    "2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.json",
+    "2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-awareness.json",
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
+    "2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.json",
     "2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.json",
     "2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pretrained-llms.json",
     "2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.json",
@@ -43152,6 +43157,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2406.06571": {
+      "order": [
+        "2026-11-20T07:13:08+00:00",
+        "2024-2406.06571-subllm-a-novel-efficient-architecture-with-token-sequence-subsampling-for-llm.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.20488": {
+      "order": [
+        "2026-11-20T07:13:49+00:00",
+        "2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.12486": {
+      "order": [
+        "2026-11-20T07:14:30+00:00",
+        "2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.15127": {
+      "order": [
+        "2026-11-20T07:15:12+00:00",
+        "2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-awareness.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2501.07139": {
+      "order": [
+        "2026-11-20T07:15:14+00:00",
+        "2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "2b9a9416aae02a21ff7b8568ed83b1530b6a6a86dbe9e53a3ca758c4525a13e3",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.md",
+        "canonical_id": "arXiv:2501.07139",
+        "worker_completed_at": "2026-11-20T15:20:00+09:00",
+        "worker_run_key": "2026-11-20-muse-c2b4",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3525,
+          "body_paragraphs": 20,
+          "method_chars": 1399,
+          "method_paragraphs": 5,
+          "evaluation_chars": 436,
+          "limitation_chars": 282,
+          "insufficiency_flags": [
+            "評価説明量 436 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 436 < 500"
+        ],
+        "processed_at": "2026-11-20T07:15:14+00:00"
+      },
+      "return_count": 1
     }
   },
   "imported_paper_paths": {
@@ -53584,6 +53661,18 @@
     "arxiv:2412.11741": [
       "papers/inference/07-kv-cache-optimization-compression/2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.md"
+    ],
+    "arxiv:2406.06571": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.06571-subllm-a-novel-efficient-architecture-with-token-sequence-subsampling-fo.md"
+    ],
+    "arxiv:2410.20488": [
+      "papers/inference/05-speculative-decoding-moe/2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-predict.md"
+    ],
+    "arxiv:2412.12486": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.md"
+    ],
+    "arxiv:2412.15127": [
+      "papers/inference/99-other-inference-systems/2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-aw.md"
     ]
   }
 }

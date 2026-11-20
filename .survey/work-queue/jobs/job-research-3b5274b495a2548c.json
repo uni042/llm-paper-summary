@@ -35,10 +35,15 @@
   "selection_reason": "Decoder-only Transformerにsubsampling、upsampling、bypassを導入して中間系列長を短縮する。著者はLLaMA比較で学習速度26%改善、GPU当たりメモリ10GB削減、推論速度最大37%改善、メモリ1GB削減を報告。LLM学習・推論効率に直接関係する。",
   "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
   "source_url": "https://arxiv.org/abs/2406.06571",
-  "status": "ready",
+  "status": "superseded",
   "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
   "type": "research",
   "venue": "European Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-20T07:16:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2406.06571-subllm-a-novel-efficient-architecture-with-token-sequence-subsampling-fo.md",
+  "represented_canonical_id": "arXiv:2406.06571",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
