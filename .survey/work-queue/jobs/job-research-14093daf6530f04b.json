@@ -35,10 +35,15 @@
   "selection_reason": "Scatter/Gatherの補完的な非連続token群を複数層で組み合わせ、局所sparse attentionでも長距離情報を中継する静的パターンINTRAを提案。CQS制約に合わせたFlashAttention型kernelが非連続indexを実行時に生成・密にpackする。一次要旨はLLaMA-3.1-8Bの長文脈prefill効率とteacher-forced retrievalの維持を示し、attention microbenchmarkでMoBA比最大8.4倍高速と報告。FLUX画像生成評価も含むがLLM prefill kernelにも直接適用されるためaccept。",
   "semantic_scholar_id": "3d2c1215d966570d57040bc8721ea61fc09519d7",
   "source_url": "https://arxiv.org/abs/2610.34056",
-  "status": "ready",
+  "status": "superseded",
   "title": "INTRA: Interleaved Non-contiguous Token spaRse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:35:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.34056-intra-interleaved-non-contiguous-token-sparse-attention.md",
+  "represented_canonical_id": "arXiv:2610.34056",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

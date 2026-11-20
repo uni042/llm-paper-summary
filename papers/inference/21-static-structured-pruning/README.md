@@ -66,7 +66,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-06 · [SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics](2025-2506.01844-smolvla-a-vision-language-action-model-for-affordable-and-efficient-robo.md)**  
-  実装：[✓](https://github.com/huggingface/lerobot) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/huggingface/lerobot) ・ リポジトリ内被引用：8  
   中核は、SmolVLM-2を使う視覚言語部の上位層を省略し、1画像の視覚トークンを64個に抑え、行動専門家（action 専門家）に交差注意と自己注意を交互に配置する設計である。実機のPick-Placeでは同期推論の平均完了時間13.75秒に対し、非同期推論は9.70秒、固定時間内の成功した物体移動数は9個から19個へ増えた。
 
 - **2025-11 · [INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models](2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md)**  

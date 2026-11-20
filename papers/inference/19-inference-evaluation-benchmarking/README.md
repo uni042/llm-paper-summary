@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（154本）
+## 自動生成の論文一覧（156本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -114,6 +114,10 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-10 · [VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware](2026-2610.34717-vla-hwbench-where-the-time-goes-when-vla-models-run-on-edge-hardware.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  開放モデル18種を2種の縁端計算機で7段階に分解して測り、遅延はモデル規模ではなく行動生成の反復回数で決まること、融合と4ビット化が最大の利得だが適用範囲が狭いこと、最適化後はソフトウェア律速が残ることを明らかにした。
+
 - **2026-10 · [Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference](2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みのみ量子化10構成のエネルギー・速度・精度・メモリを5モデル・4タスク・4種のGPUで統一実測し、融合カーネル型の8ビット量子化が最大約4倍省エネルギーであることと、長入力・短出力で利得が最大になり実行時間がエネルギーの代理指標になることを明らかにした評価論文。
@@ -121,6 +125,10 @@
 - **2026-10 · [Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing](2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ベンチマークの実行順序・再起動・ウォームアップ・間隔を統制する順次分離プロトコルで、推論測定のrun間変動係数を15.2パーセントから2.2パーセントへ下げ、回帰テストに使える再現性を得る方法と実測。
+
+- **2026-10 · [Prefetch-Steered Routing: Deterministic Cache-Aware Expert Selection for Offloaded Mixture-of-Experts Decoding](2026-2610.34721-prefetch-steered-routing-deterministic-cache-aware-expert-selection-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MoEのエキスパート選択を、転送タイミングで変わる物理キャッシュではなく決定的な論理キャッシュに基づいて行い、プリフェッチで選ばれるエキスパート自体をルーティングへ織り込むことで、評価と配備の一致を保ったままオフロードデコードを速める方式。
 
 - **2026-10 · [PACE: Pareto-Adaptive Compression for Efficient Native MLLMs](2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -421,7 +429,7 @@
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
-  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：31  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  

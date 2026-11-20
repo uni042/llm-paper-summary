@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（580本）
+## 自動生成の論文一覧（581本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -365,6 +365,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   StiefAttentionは、学習済みの大規模言語モデルを再事前学習せずに、推論時の鍵・値（KV）キャッシュを低ランク化する手法である。
 
+- **2026-10 · [ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals](2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-r.md)**  
+  実装：[✓](https://github.com/heejunkim00/ResidualQuant) ・ リポジトリ内被引用：1  
+  最終ループのKVを参照に残し他ループの差分だけを2ビットで保存する残差量子化で、KV保存量を80.7パーセント減らしながらBF16に近い精度を保った。
+
 - **2026-10 · [Monte Carlo Estimation for KV Cache Eviction](2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   履歴が長くなるほどメモリ容量と転送帯域を圧迫するため、限られた保持枠に重要なトークンだけを残す削除方式が研究されている。一方、同じ条件のサンプル当たり実行時間はAnDProの7.8799秒に対し17.5342秒であり、速度向上ではない。
@@ -376,6 +380,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [KV2: A Self-Refining KV Cache](2026-2610.03198-kv2-a-self-refining-kv-cache.md)**  
   実装：[✓](https://anonymous.4open.science/r/KVsquared-0B97/) ・ リポジトリ内被引用：1  
   再利用型KV圧縮で、軽量な代理スコアが選んだ少数の文脈トークンだけを再構成クエリに使い、最終エビクションスコアを決める2段方式。予算2パーセントの極端な圧縮で比較対象との差が最大になる。
+
+- **2026-10 · [Hybrid Latent Attention for Looped Language Models](2026-2610.07940-hybrid-latent-attention-for-looped-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  古いトークンを全ループ共有の潜在として保存し再構成せず直接読み、直近分だけ正確なKVを残す注意機構で、キャッシュを10.7倍圧縮し16K文脈の復号を最大7.4倍高速化した。
 
 - **2026-10 · [Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing](2026-2610.22172-efficient-kv-cache-migration-for-geo-distributed-llm-inference-in-collab.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -691,9 +699,9 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   ドラフトモデルのKV圧縮で、プリフィル選択が生成中に陳腐化する問題に対し、直近ウィンドウとの予算併用、デコード中の再採点、適応的な更新間隔、圧縮マスク付き蒸留学習を段階的に組み合わせ、固定予算で受理長をほぼ維持する手法群。
 
-- **2026-10 · [ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals](2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-r.md)**  
-  実装：[✓](https://github.com/heejunkim00/ResidualQuant) ・ リポジトリ内被引用：0  
-  最終ループのKVを参照に残し他ループの差分だけを2ビットで保存する残差量子化で、KV保存量を80.7パーセント減らしながらBF16に近い精度を保った。
+- **2026-10 · [Recency Is the Wrong Axis: A Negative Result on Windowed Deepest-Plane KV Caching in Looped Language Models](2026-2610.34436-recency-is-the-wrong-axis-a-negative-result-on-windowed-deepest-plane-kv.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  最深プレーンだけのKV共有への最近窓修復は、効くかどうかが新しさではなくプレーンの収束度と共有される位置で決まることを、3モデルと事前登録実験で示した否定的結果。窓の採用前に熟成度テストとプロンプト側確認が必要になる。
 
 - **2026-10 · [Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute](2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -786,10 +794,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations](2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層ごとのKV保持率と専門家数を同じ探索の枠組みで扱い、固定した代理評価、予算超過の事前棄却、予算の段階的な引き締めで、品質と資源のパレートな設定群を効率よく探す手法。
-
-- **2026-10 · [Hybrid Latent Attention for Looped Language Models](2026-2610.07940-hybrid-latent-attention-for-looped-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  古いトークンを全ループ共有の潜在として保存し再構成せず直接読み、直近分だけ正確なKVを残す注意機構で、キャッシュを10.7倍圧縮し16K文脈の復号を最大7.4倍高速化した。
 
 - **2026-10 · [HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs](2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md)**  
   実装：[✓](https://github.com/FlashLabAE/HBFSim) ・ リポジトリ内被引用：0  
@@ -2056,7 +2060,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：411  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：412  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
@@ -2326,7 +2330,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：795  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：797  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

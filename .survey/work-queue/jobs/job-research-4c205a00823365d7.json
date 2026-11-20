@@ -35,10 +35,15 @@
   "selection_reason": "ロボット向けVLA推論の実際の遅延要因を18モデル、Jetson AGX ThorとRyzen AI Max+ PRO 395、7段階の処理分解で測定する。行動生成方式による遅延差はJetsonで82倍、AMDで157倍に達し、4-bit重みとkernel fusionで特定2モデルをPyTorch torch.compile比2.6～2.9倍高速化したと報告する。VLA固有の評価だが推論カーネル・量子化・エッジハードウェアの定量分析に直接寄与するためaccept。",
   "semantic_scholar_id": "839a5a8188cf0e9a76ac9d38639c9cd98c2a34da",
   "source_url": "https://arxiv.org/abs/2610.34717",
-  "status": "ready",
+  "status": "superseded",
   "title": "VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:35:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.34717-vla-hwbench-where-the-time-goes-when-vla-models-run-on-edge-hardware.md",
+  "represented_canonical_id": "arXiv:2610.34717",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

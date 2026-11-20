@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（199本）
+## 自動生成の論文一覧（200本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -92,6 +92,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   固定トークン数だけを選ぶ上位k方式は単純だが、必要な注意質量が層・ヘッド・入力・復号時点ごとに変わるため、同じ予算でも精度が安定しない。RetroInfer比の注意演算単体は最大1.78倍、出力1トークン当たりの復号は最大1.26倍の高速化であり、両者は異なる測定単位である。
 
+- **2026-09 · [FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates](2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md)**  
+  実装：[✓](https://github.com/Superone77/FlashLoop) ・ リポジトリ内被引用：3  
+  ループ型Transformerで、変化の大きいトークンと注意列だけを再計算し、ループ間のKV残差を量子化する学習不要の推論基盤で、精度をほぼ保ち高速化1.64倍とメモリ6分の1を達成した。
+
 - **2026-08 · [LongCat Sparse Attention: Taming the Lightning via Streaming-aware Hierarchical Cross-Layer Indexing](2026-2608.01662-longcat-sparse-attention-taming-the-lightning-via-streaming-aware-hierar.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   LongCat Sparse 注意機構（LSA）は、長文脈モデルにおける疎注意の「選ぶための計算」と「選んだ鍵・値をGPUが読むための計算」の両方を減らす研究である。
@@ -140,10 +144,6 @@
   実装：[✓](https://github.com/hustvl/InfiniteVL) ・ リポジトリ内被引用：3  
   従来の全注意（full 注意機構）型Transformerは、事前充填（プリフィル）で系列長の二乗に比例する計算を要し、復号（デコード）では生成が進むほどKVキャッシュが増える。RTX 4090での実測では、基本型は約450K文脈でQwen2.5-VL-3B比のトークン当たり復号遅延を1.7倍改善し、256K文脈の事前充填を2.8倍高速化した。
 
-- **2026-09 · [FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates](2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md)**  
-  実装：[✓](https://github.com/Superone77/FlashLoop) ・ リポジトリ内被引用：2  
-  ループ型Transformerで、変化の大きいトークンと注意列だけを再計算し、ループ間のKV残差を量子化する学習不要の推論基盤で、精度をほぼ保ち高速化1.64倍とメモリ6分の1を達成した。
-
 - **2026-04 · [AsyncTLS: Efficient Generative LLM Inference with Asynchronous Two-level Sparse Attention](2026-2604.07815-asynctls-efficient-generative-llm-inference-with-asynchronous-two-level-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   必要な過去トークンだけを読む疎注意（sparse 注意機構）は計算を減らすが、重要トークンを毎回全体から探す索引処理が重い。Qwen3とGLM-4.7-Flashの長文脈評価では、全注意に近い品質を保ち、注意演算子単体で最大10.0倍、96K文脈でオフロードを含む要求処理率は最大4.70倍の改善を報告した。
@@ -167,6 +167,10 @@
 - **2026-09 · [CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference](2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   平均補償後に残る注意誤差を注意質量とブロック内得点分散の積で推定し、厳密に読む鍵・値ブロックを選ぶことで、長文脈の疎な注意計算の精度と中央処理装置退避効率を改善する。
+
+- **2026-09 · [Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models](2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md)**  
+  実装：[✓](https://github.com/tbn5pj/WISE_code) ・ リポジトリ内被引用：1  
+  再帰型言語モデルは、同じネットワークブロックを何度も通して潜在表現を更新することで、固定パラメータ数のまま推論時計算量を増やせる。4K文脈では、後半20段の注意をネイティブFlashAttention比で1.758倍、探索段を含む32段の注意軌跡全体でも1.355倍高速化した。
 
 - **2026-08 · [RouteSparse: Input-Conditional Pattern Routing for Budgeted Long-Context Prefilling](2026-2608.29058-routesparse-input-conditional-pattern-routing-for-budgeted-long-context-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -274,6 +278,10 @@
   実装：[✓](https://github.com/jiwonsong-dev/JSSA) ・ リポジトリ内被引用：0  
   トークンスコア保存誤差を最小化する共有低次元部分空間でのトークン選択と、KVヘッドごとに異なる選択を元のキャッシュから直接読むギャザーなしカーネルを組み合わせた、学習不要のトークン単位疎な注意。
 
+- **2026-10 · [INTRA: Interleaved Non-contiguous Token spaRse Attention](2026-2610.34056-intra-interleaved-non-contiguous-token-sparse-attention.md)**  
+  実装：[✓](https://github.com/NovTi/INTRA) ・ リポジトリ内被引用：0  
+  遠距離通信を中継として設計する静的スパースアテンション。散布と収集の相補的なグループを交互に重ね、非連続トークンを密に詰め直すカーネルで、検索品質を保ちながら注意計算を大きく削る。
+
 - **2026-10 · [HHR: Hierarchical Hash Retrieval for Efficient LLM Generation](2026-2610.01230-hhr-hierarchical-hash-retrieval-for-efficient-llm-generation.md)**  
   実装：[✓](https://github.com/lianjunl13-sudo/HHR) ・ リポジトリ内被引用：0  
   品質ではLongBenchのLlama-3.1-8B平均が密注意47.51、HHR46.96と僅かに低下する一方、ハッシュ型の比較方式HATA45.86より高い。
@@ -361,10 +369,6 @@
 - **2026-09 · [AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving](2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md)**  
   実装：[✓](https://gitcode.com/cann/cann-recipes-infer) ・ リポジトリ内被引用：0  
   疎注意で選ばれたKV項目を、ベクトル化ハッシュ照合で装置側バッファと突き合わせ、不在分だけを全コアへ均等に転送する退避高速化演算子で、的中率94.83パーセントと出力遅延39パーセント削減を実要求で示した。
-
-- **2026-09 · [Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models](2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md)**  
-  実装：[✓](https://github.com/tbn5pj/WISE_code) ・ リポジトリ内被引用：0  
-  再帰型言語モデルは、同じネットワークブロックを何度も通して潜在表現を更新することで、固定パラメータ数のまま推論時計算量を増やせる。4K文脈では、後半20段の注意をネイティブFlashAttention比で1.758倍、探索段を含む32段の注意軌跡全体でも1.355倍高速化した。
 
 - **2026-08 · [TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration](2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceler.md)**  
   実装：[✓](https://github.com/HanzhiZhang-Ulrica/TileMix) ・ リポジトリ内被引用：0  
@@ -525,7 +529,7 @@
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：112  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：113  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  

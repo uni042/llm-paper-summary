@@ -35,10 +35,15 @@
   "selection_reason": "投機復号のdraftモデルを別途学習する代わりにtargetモデルを構造化剪定し、実測draft推論遅延とtarget応答に対するcross-entropyを同時最適化する。分布整合性とdrafter実行時間のトレードオフを直接設計する方式で、著者要旨ではtargetパラメータを最大92%剪定して競争力のあるdraftを生成し、他のtoken alignment/蒸留方式と併用可能と報告。ただし要旨に具体的なend-to-end速度倍率はない。最終目的が投機復号の実行効率であるためaccept。",
   "semantic_scholar_id": "54aaf8ec3514d545cf190f569c5226876b16dab4",
   "source_url": "https://arxiv.org/abs/2610.34103",
-  "status": "ready",
+  "status": "superseded",
   "title": "T2D: Target-to-Draft Model Pruning&Adaptation for Efficient Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:35:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.34103-t2d-target-to-draft-model-pruning-adaptation-for-efficient-speculative-d.md",
+  "represented_canonical_id": "arXiv:2610.34103",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

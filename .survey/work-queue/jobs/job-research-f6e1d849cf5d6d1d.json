@@ -35,10 +35,15 @@
   "selection_reason": "LoopLMのKV cacheがloop数Rに比例する問題に対し、深いloopのKVが重要で前段loopは最終planeへ収束する観測を使い、最終planeだけを基本保持し最近tokenのみ全深度保持するRIPEを提案。一次要旨はHuginnの1024-tokenで64-position windowがfull cacheの11.9%容量に抑え、self-speculative speedupを2.09倍から2.58倍へ改善と報告。LoopLM推論時のKVメモリ削減としてaccept。",
   "semantic_scholar_id": "fa8414cf25df372d3877696a5fa4fd42eeec49b4",
   "source_url": "https://arxiv.org/abs/2610.34436",
-  "status": "ready",
+  "status": "superseded",
   "title": "Prefix Keys and Values Matter Late: RIPE Caching for Self-Speculative Decoding in Looped Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:35:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.34436-recency-is-the-wrong-axis-a-negative-result-on-windowed-deepest-plane-kv.md",
+  "represented_canonical_id": "arXiv:2610.34436",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
