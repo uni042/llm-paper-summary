@@ -35,10 +35,15 @@
   "selection_reason": "MapFlowは異なるLLM間でKVそのものではなくattention mapを共有し、layer/head間の線形変換と部分再計算で互換性を確保。長文脈向けblock sparse圧縮とfused retrieval kernelも導入し、異種モデル間でprefill latencyを減らす。要旨に正確な倍率がないため倍率は捏造しない。モデル間文脈再利用・推論servingの直接的な技術貢献。",
   "semantic_scholar_id": "5249bdd4109d35a21dd335749658ced6ceb8e34e",
   "source_url": "https://arxiv.org/abs/2610.14688",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:13:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.md",
+  "represented_canonical_id": "arXiv:2610.14688",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

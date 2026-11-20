@@ -35,10 +35,15 @@
   "selection_reason": "エージェントの長文脈再送ではprefix cacheによりprefillが短縮される一方、CPUで全入力を再トークン化する処理がTTFTのボトルネックになる。GraphTokは事前分割、BPEマージ、token ID組立てを単一の再生可能なCUDA graphで実行し、短入力のみCPUへ振り分ける。vLLMでcached prefix時の平均TTFTを2.1～2.4倍改善し、121k-token要求のDynamo frontend処理能力を518 requests/sと報告するためaccept。",
   "semantic_scholar_id": "faef8a2f4374b00b07148a68bb3d0208ab69f757",
   "source_url": "https://arxiv.org/abs/2610.13325",
-  "status": "ready",
+  "status": "superseded",
   "title": "Taking Tokenization off the Host for Agentic LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:13:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.13325",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

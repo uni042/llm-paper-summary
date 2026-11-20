@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "7b872b7fdf86d9b001dccceb874793ad9f14e90e",
+  "base_commit": "5474e7cd950da00582bbaf24d4b008a51025ca16",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -390,6 +390,11 @@
     "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
     "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
     "2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inference.json",
+    "2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.json",
+    "2026-2610.13060-kv-repurpose-a-testbed-for-evaluating-non-prefix-kv-cache-reuse.json",
+    "2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.json",
+    "2026-2610.13990-dosa-dots-sparse-attention.json",
+    "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41386,6 +41391,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.12570": {
+      "order": [
+        "2026-11-20T01:06:03+00:00",
+        "2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13060": {
+      "order": [
+        "2026-11-20T01:07:22+00:00",
+        "2026-2610.13060-kv-repurpose-a-testbed-for-evaluating-non-prefix-kv-cache-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13325": {
+      "order": [
+        "2026-11-20T01:08:41+00:00",
+        "2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13990": {
+      "order": [
+        "2026-11-20T01:10:00+00:00",
+        "2026-2610.13990-dosa-dots-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14688": {
+      "order": [
+        "2026-11-20T01:11:19+00:00",
+        "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51127,6 +51177,21 @@
     "arxiv:2610.12327": [
       "papers/inference/09-kernel-runtime-compilation/2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md"
+    ],
+    "arxiv:2610.12570": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.md"
+    ],
+    "arxiv:2610.13060": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.13060-kv-repurpose-a-testbed-for-evaluating-non-prefix-kv-cache-reuse.md"
+    ],
+    "arxiv:2610.13325": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md"
+    ],
+    "arxiv:2610.13990": [
+      "papers/inference/13-sparse-attention/2026-2610.13990-dosa-dots-sparse-attention.md"
+    ],
+    "arxiv:2610.14688": [
+      "papers/inference/13-sparse-attention/2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "KV-RepurposeはvLLM上でprefix以外の文書segment KV再利用を試験するため、segment-aware scheduling、prompt構成、容量制御、監視を一体化する。Zipf型RAG負荷で20%の要求が固定prefixを共有する条件、30GB cacheではsegment再利用hit率63.9%に対しprefix cache3.3%、1TBのprefix cacheでも17.9%と報告。cross-document推論での品質限界も示す。",
   "semantic_scholar_id": "15d31a2a46c1bd465fbb479269e3ddb8c939cfcf",
   "source_url": "https://arxiv.org/abs/2610.13060",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV-Repurpose: A Testbed for Evaluating Non-Prefix KV-Cache Reuse",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:13:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.13060-kv-repurpose-a-testbed-for-evaluating-non-prefix-kv-cache-reuse.md",
+  "represented_canonical_id": "arXiv:2610.13060",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
