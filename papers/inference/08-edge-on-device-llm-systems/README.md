@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（87本）
+## 自動生成の論文一覧（88本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -49,6 +49,10 @@
 - **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
+
+- **2026-10 · [HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models](2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-mod.md)**  
+  実装：[✓](https://github.com/tuhh-ncps/hydrallm) ・ リポジトリ内被引用：0  
+  有効ヘッド数1つで埋め込みから出力ヘッドまでの幅を連動させ、単一の重みから入れ子の部分モデルを実行時に切り出す弾性推論と、静的モデルを重要度並べ替えと確率的学習で弾性化する変換手順、および視覚射影への拡張。
 
 - **2026-09 · [TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching](2026-2609.21172-tierkv-long-context-on-device-llms-via-predictive-multi-tier-kv-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

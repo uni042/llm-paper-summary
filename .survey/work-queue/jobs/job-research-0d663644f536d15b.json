@@ -35,10 +35,15 @@
   "selection_reason": "MQA attention head数を変えるとembedding・attention・FFN・出力headの有効幅も連動するnested subnetworkを単一重みから構成し、重要度順reorderと蒸留付きelastic訓練で複数推論予算に対応するHydraLLMを提案。一次要旨は25%のheadだけを使う場合にfull-width比token generation throughputを75.3%向上と報告。LLM/VLMの端末・GPU資源に応じた推論幅制御としてaccept。",
   "semantic_scholar_id": "6e8bb6d261d7c4a3e6008028ae67586c72088513",
   "source_url": "https://arxiv.org/abs/2610.23455",
-  "status": "ready",
+  "status": "superseded",
   "title": "HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-mod.md",
+  "represented_canonical_id": "arXiv:2610.23455",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

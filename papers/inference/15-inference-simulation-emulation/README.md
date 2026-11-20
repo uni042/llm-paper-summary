@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（84本）
+## 自動生成の論文一覧（85本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -41,7 +41,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
-  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：7  
   分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。
 
 - **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  
@@ -85,6 +85,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Exploiting the Flexibility of LLM Inference for Frequency Regulation Service](2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-ser.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論の遅延余裕を使ってクラスタの消費電力を電力網の周波数調整信号へ追随させるため、リクエスト割り当てとトークン配分の階層スケジューリングに、遅れた報酬の再配分と平均場近似による大規模協調を組み合わせた手法。
 
 - **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

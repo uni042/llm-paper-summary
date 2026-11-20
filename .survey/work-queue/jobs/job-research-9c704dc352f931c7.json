@@ -35,10 +35,15 @@
   "selection_reason": "GPUに載らないMoE expertをすべて転送するかCPUで処理するかの二者択一ではなく、expert別のtoken負荷に応じて高負荷expertをGPUへ転送し、低負荷expertをCPUで実行する。CPU演算経路とPCIe転送＋GPU演算経路の終了時刻を均衡させる割当を適応調整する。著者のarXiv登録要旨は3種類のMoE LLMで最良比較方式に対しprefill最大51.9%、decode throughput最大39.5%改善を報告。CPU/GPU協調オフロードの直接的貢献としてaccept。",
   "semantic_scholar_id": "db5b136a2c0139ee3717ca1b8855f1c87e1b3bbd",
   "source_url": "https://arxiv.org/abs/2610.23006",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient CPU-GPU collaborative MoE inference via Adaptive Expert Assignment",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.23006-efficient-cpu-gpu-collaborative-moe-inference-via-adaptive-expert-assign.md",
+  "represented_canonical_id": "arXiv:2610.23006",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

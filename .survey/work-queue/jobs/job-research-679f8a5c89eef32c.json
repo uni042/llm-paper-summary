@@ -35,10 +35,15 @@
   "selection_reason": "HBMに近い帯域と大容量を持つHigh Bandwidth FlashのNAND特有の遅延・書込み寿命を、LLM serving frontendとflash内部動作を組み合わせたevent-driven simulator HBFSimで評価。一次要旨はLlama-3.1-70B/Qwen3-235B-A22BのdecodeでHBFがhost DRAM比11～19倍高速なデータ供給を示し、HBMはHBFのcacheよりKV保持へ割り当てる方が有利と報告。実機ではなくsimulationである点を明示した上でLLMメモリ階層設計としてaccept。",
   "semantic_scholar_id": "821fb25f05d7e7c9f52227050e0f8737207d4b51",
   "source_url": "https://arxiv.org/abs/2610.23503",
-  "status": "ready",
+  "status": "superseded",
   "title": "HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md",
+  "represented_canonical_id": "arXiv:2610.23503",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

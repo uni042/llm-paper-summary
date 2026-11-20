@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4d477a8f4a747ff1622d55901ac55d9ae6a35996",
+  "base_commit": "c63c0b7e3fb6cc6fc34f76d4a699d0402b03fe7c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -425,6 +425,11 @@
     "2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.json",
     "2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut-driven-mixed-precision-acceleration.json",
     "2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-llms-inference.json",
+    "2026-2610.23006-efficient-cpu-gpu-collaborative-moe-inference-via-adaptive-expert-assignment.json",
+    "2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-models.json",
+    "2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.json",
+    "2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-service.json",
+    "2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41736,6 +41741,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.23006": {
+      "order": [
+        "2026-11-20T02:17:51+00:00",
+        "2026-2610.23006-efficient-cpu-gpu-collaborative-moe-inference-via-adaptive-expert-assignment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.23455": {
+      "order": [
+        "2026-11-20T02:19:12+00:00",
+        "2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.23503": {
+      "order": [
+        "2026-11-20T02:20:32+00:00",
+        "2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.23532": {
+      "order": [
+        "2026-11-20T02:21:52+00:00",
+        "2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-service.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.23787": {
+      "order": [
+        "2026-11-20T02:23:11+00:00",
+        "2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51617,6 +51667,21 @@
     "arxiv:2610.22985": [
       "papers/inference/13-sparse-attention/2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-l.md",
       "papers/inference/13-sparse-attention/2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-l.md"
+    ],
+    "arxiv:2610.23006": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.23006-efficient-cpu-gpu-collaborative-moe-inference-via-adaptive-expert-assign.md"
+    ],
+    "arxiv:2610.23455": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-mod.md"
+    ],
+    "arxiv:2610.23503": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md"
+    ],
+    "arxiv:2610.23532": [
+      "papers/inference/15-inference-simulation-emulation/2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-ser.md"
+    ],
+    "arxiv:2610.23787": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論クラスタを電力系統の周波数調整可能な負荷として扱い、要求のreplica配置とtoken単位資源配分を階層MDPで制御する。ミリ秒の推論制御と秒単位の周波数信号をreward redistribution networkで接続し、mean-field近似で多数replicaへ拡張する。著者要旨は実データに基づくシミュレーションでSLOを損なわず周波数調整信号を追従したと報告。推論サービングの電力制御・token schedulingの直接的方式としてaccept。ただし性能値はシミュレーション。",
   "semantic_scholar_id": "e68f5225f2b443541565e2622eaedfdad7630db5",
   "source_url": "https://arxiv.org/abs/2610.23532",
-  "status": "ready",
+  "status": "superseded",
   "title": "Exploiting the Flexibility of LLM Inference for Frequency Regulation Service",
   "type": "research",
   "venue": "IEEE Transactions on Power Systems",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-ser.md",
+  "represented_canonical_id": "arXiv:2610.23532",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

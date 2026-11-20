@@ -35,10 +35,15 @@
   "selection_reason": "長い対話履歴を持つagentic workloadではdraftモデルの受理長が最大80%悪化し、draft側KV保持も重い。DLiteはtargetモデルの文脈hidden stateを直接再利用し、長期履歴を明示保持せず局所的に候補を予測する。ブロック内依存を軽量逐次headで補い、二段階学習を用いる。著者要旨は受理長2～6、DSpark比最大70%改善を報告。長文脈agentの投機復号高速化としてaccept。",
   "semantic_scholar_id": "9cb4eaf05345fa18505d0fb53d2076448718428f",
   "source_url": "https://arxiv.org/abs/2610.23787",
-  "status": "ready",
+  "status": "superseded",
   "title": "DLite: History-free Speculative Decoding for Agentic AI",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.md",
+  "represented_canonical_id": "arXiv:2610.23787",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
