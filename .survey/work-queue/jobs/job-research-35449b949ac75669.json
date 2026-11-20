@@ -35,10 +35,15 @@
   "selection_reason": "PrefixPlaceはLLMサービングで再利用するprefix KVを複数ワーカーへ配置する最適化方式。需要、各GPUのメモリ制約、prefill再計算、他レプリカからのKV転送費用を使ってepochごとの配置を決め、局所更新を木上の動的計画法で解く。T4/L4/A100の実測費用を用い、RAG再生でvLLMの自動prefix cachingよりmaterialization費用削減を40.3%改善と報告。KV再利用と分散サービングの直接的なシステム寄与がある。",
   "semantic_scholar_id": "d462125803c28c3e87d2afa0dc6798c38773935f",
   "source_url": "https://arxiv.org/abs/2608.01655",
-  "status": "ready",
+  "status": "superseded",
   "title": "PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:23:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model.md",
+  "represented_canonical_id": "arXiv:2608.01655",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

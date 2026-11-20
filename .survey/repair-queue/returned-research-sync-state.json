@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f3d2a0a07731a2bbead909274564b3402746e082",
+  "base_commit": "0f0ed664e9f5d979c7cf1c4b2faff5ea1ddbdf07",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -299,17 +299,22 @@
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
+    "2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.json",
     "2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computation-fusion.json",
     "2026-2607.23265-wavezip-wavelet-driven-space-time-decoupling-for-video-token-condensation.json",
     "2026-2607.24148-a-motion-aware-vector-quantization-framework-with-centroid-reuse-for-efficient-vla-inference.json",
     "2026-2607.25669-omnidelta-skill-driven-budget-allocation-for-token-compression-in-omni-llms.json",
     "2026-2607.27591-prox-training-free-ffn-activation-sparsity-via-approximate-intermediate-channel-salience-in-llms.json",
     "2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-context-attention.json",
+    "2026-2607.28166-commit-locally-exit-globally-coordinating-adaptive-sampling-and-early-exit-in-diffusion-language-models.json",
     "2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruning.json",
     "2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.json",
     "2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-question-answering.json",
+    "2026-2608.00573-trimmoe-a-communication-aware-and-adaptive-depth-framework-for-distributed-edge-inference.json",
     "2026-2608.00914-augmented-backpressure-for-decentralized-management-of-agentic-networks.json",
     "2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded-language-flows.json",
+    "2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.json",
+    "2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model-serving-under-heterogeneous-compute-and-transfer-costs.json",
     "2026-2608.01665-allocation-before-ranking-decoupled-token-compression-for-omnillms.json",
     "2026-2608.01718-lacache-robust-semantic-caching-for-llm-serving.json",
     "2026-2608.01847-focus-fp4-optimization-via-coupled-relaxation-and-dual-granularity-scaling.json",
@@ -42286,6 +42291,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.22720": {
+      "order": [
+        "2026-11-20T04:16:30+00:00",
+        "2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.28166": {
+      "order": [
+        "2026-11-20T04:17:49+00:00",
+        "2026-2607.28166-commit-locally-exit-globally-coordinating-adaptive-sampling-and-early-exit-in-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.00573": {
+      "order": [
+        "2026-11-20T04:19:07+00:00",
+        "2026-2608.00573-trimmoe-a-communication-aware-and-adaptive-depth-framework-for-distributed-edge-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.01638": {
+      "order": [
+        "2026-11-20T04:20:26+00:00",
+        "2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.01655": {
+      "order": [
+        "2026-11-20T04:21:45+00:00",
+        "2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model-serving-under-heterogeneous-compute-and-transfer-costs.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52387,6 +52437,21 @@
     "arxiv:2609.34866": [
       "papers/inference/99-other-inference-systems/2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quan.md",
       "papers/inference/99-other-inference-systems/2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quan.md"
+    ],
+    "arxiv:2607.22720": [
+      "papers/inference/99-other-inference-systems/2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.md"
+    ],
+    "arxiv:2607.28166": [
+      "papers/inference/99-other-inference-systems/2026-2607.28166-commit-locally-exit-globally-coordinating-adaptive-sampling-and-early-ex.md"
+    ],
+    "arxiv:2608.00573": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.00573-trimmoe-a-communication-aware-and-adaptive-depth-framework-for-distribut.md"
+    ],
+    "arxiv:2608.01638": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.md"
+    ],
+    "arxiv:2608.01655": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model.md"
     ]
   }
 }

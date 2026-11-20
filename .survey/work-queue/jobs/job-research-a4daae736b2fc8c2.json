@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMの生成時に、候補答えの確信度とargmax安定性を検証するCVCで全体停止を制御し、BWECで非最終ブロックの確定を早めるLATCHを提案。LLaDA/Dreamの11タスクで短答9.3–17.8倍、長推論2.0–3.3倍のend-to-end TPS改善を報告する直接的な復号高速化。",
   "semantic_scholar_id": "f5ae71a3cbc91c49a81a0f3e73aa309fccdd1784",
   "source_url": "https://arxiv.org/abs/2607.28166",
-  "status": "ready",
+  "status": "superseded",
   "title": "Commit Locally, Exit Globally: Coordinating Adaptive Sampling and Early Exit in Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:23:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.28166-commit-locally-exit-globally-coordinating-adaptive-sampling-and-early-ex.md",
+  "represented_canonical_id": "arXiv:2607.28166",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

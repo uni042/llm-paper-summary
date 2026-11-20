@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（143本）
+## 自動生成の論文一覧（144本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -189,6 +189,10 @@
 - **2026-08 · [Launch-Bound and Substitutable: Why Three Inference Optimizations Fail to Pay Off in Mixture-of-Experts Models](2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEの融合カーネル・4/8ビット量子化・グラフコンパイルを単体とE2Eで測定し、局所高速化が起動律速や品質へどう波及するかを分解して、置換可能な最適化の限界を明らかにする研究。
+
+- **2026-08 · [Dynamic Resolution Routing for Efficient Egocentric Grounding](2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低解像度画像で対象らしい場所を予測し、選ばれたパッチだけを高解像度で符号化して低解像度文脈へ順序を保って差し込む解像度ルーティングで、視覚トークンを最大67パーセント減らしながら全解像度性能の86.4パーセントを保ち、枝刈り方式より最大1.66倍速くする。
 
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
