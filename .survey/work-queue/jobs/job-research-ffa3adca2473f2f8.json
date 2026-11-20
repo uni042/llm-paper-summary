@@ -35,10 +35,15 @@
   "selection_reason": "PhaseGateはApple M4等の統合メモリ端末でCPU検索とGPU LLM推論が競合する際、prefillとdecodeで別々の検索同時実行上限を設定する。検索4 workerではdecode P95遅延が60～61%悪化する一方prefillは約6%の悪化であることを計測。phase-awareな4/1 worker制御により、LLMのP95を無検索基準1.25倍以内に抑えつつ、固定制御比検索throughput2倍を報告。",
   "semantic_scholar_id": "aa3ca07aa7d471259c85b506ec4de3dd15b457dd",
   "source_url": "https://arxiv.org/abs/2610.04537",
-  "status": "ready",
+  "status": "superseded",
   "title": "PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs on Unified Memory",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:40:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-uni.md",
+  "represented_canonical_id": "arXiv:2610.04537",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

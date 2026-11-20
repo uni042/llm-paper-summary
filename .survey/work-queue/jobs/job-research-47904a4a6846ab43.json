@@ -35,10 +35,15 @@
   "selection_reason": "KV保持率の層別連続値とMoE expert数の層別離散値を共通の制約付き多目的black-box最適化で探索する。予算超過構成をモデル実行前に除外し、proxy集合で探索したPareto解を本評価で再検証する。一次要旨はQwen2.5-7Bの16K KVを64.4%削減しTPOTを22.9～48.5%短縮、DeepSeek-V2-Liteでtoken-expert対を43.0%削減したと報告。KV圧縮・MoE推論の具体的設定最適化としてaccept。",
   "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
   "source_url": "https://arxiv.org/abs/2610.04473",
-  "status": "ready",
+  "status": "superseded",
   "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:40:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurat.md",
+  "represented_canonical_id": "arXiv:2610.04473",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

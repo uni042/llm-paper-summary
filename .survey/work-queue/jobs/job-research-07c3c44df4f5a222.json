@@ -35,10 +35,15 @@
   "selection_reason": "SAGAはsparse attentionでvalue乗算が軽くなる一方query-key計算が支配的になる点に着目し、Key headを減らしValue headを多く保つ非対称GQAを提案する。近似top-N注意と組み合わせ、最大1.5Bモデルで長文脈decodeがfull attention GQA比2倍超のend-to-end高速化を報告。事前学習済みモデルからのfine-tune変換法も示す。",
   "semantic_scholar_id": "1df85775b30e3716a21224be9dbd377269e34197",
   "source_url": "https://arxiv.org/abs/2610.04753",
-  "status": "ready",
+  "status": "superseded",
   "title": "More Value per Key: Asymmetric Sparse Attention for Faster LLM Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:40:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.04753-more-value-per-key-asymmetric-sparse-attention-for-faster-llm-decoding.md",
+  "represented_canonical_id": "arXiv:2610.04753",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

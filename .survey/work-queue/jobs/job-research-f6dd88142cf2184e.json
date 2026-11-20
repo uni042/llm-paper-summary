@@ -35,10 +35,15 @@
   "selection_reason": "SLO配慮型プリフィル・デコード分離のその場弾力性FluidPD。固定したワーカー比率が需要比率の変動に追随できず、空き容量があるのにSLO違反になる問題に対し、その場で弾力的に構成を変える。推論基盤機構そのもの。",
   "semantic_scholar_id": "4d48b38919091ce3a677ca16ff2d7de7f18dc323",
   "source_url": "https://arxiv.org/abs/2610.06917",
-  "status": "ready",
+  "status": "superseded",
   "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:40:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-l.md",
+  "represented_canonical_id": "arXiv:2610.06917",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

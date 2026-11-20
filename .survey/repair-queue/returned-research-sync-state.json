@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fa33e0509e543b3889f90280ef21a0181edd2e0e",
+  "base_commit": "82f7b3855ff44ca435effb444283de19cbeada85",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -426,6 +426,10 @@
     "2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent-systems-on-cpu-gpu-unified-memory-architectures.json",
     "2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.json",
     "2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-on-intel-gpus.json",
+    "2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurations.json",
+    "2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-unified-memory.json",
+    "2026-2610.04635-latentindex-cross-layer-sharing-with-layer-specific-selection-for-sparse-attention.json",
+    "2026-2610.04753-more-value-per-key-asymmetric-sparse-attention-for-faster-llm-decoding.json",
     "2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-lora-assisted-on-premise-llm-deployment.json",
     "2026-2610.05106-sharpdraft-accelerating-long-context-speculative-decoding-with-cardinality-aware-query-scaling.json",
     "2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matrix-engines.json",
@@ -437,6 +441,7 @@
     "2026-2610.06479-behavior-preserving-kv-cache-compression.json",
     "2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-protocol-for-agentic-llm-serving.json",
     "2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.json",
+    "2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-llm-serving.json",
     "2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-decoding.json",
     "2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.json",
     "2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.json",
@@ -42686,6 +42691,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.04473": {
+      "order": [
+        "2026-11-20T05:35:35+00:00",
+        "2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurations.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.04537": {
+      "order": [
+        "2026-11-20T05:36:32+00:00",
+        "2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-unified-memory.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.04635": {
+      "order": [
+        "2026-11-20T05:37:29+00:00",
+        "2026-2610.04635-latentindex-cross-layer-sharing-with-layer-specific-selection-for-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.04753": {
+      "order": [
+        "2026-11-20T05:38:26+00:00",
+        "2026-2610.04753-more-value-per-key-asymmetric-sparse-attention-for-faster-llm-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.06917": {
+      "order": [
+        "2026-11-20T05:39:23+00:00",
+        "2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52947,6 +52997,21 @@
     "arxiv:2610.04277": [
       "papers/inference/09-kernel-runtime-compilation/2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md"
+    ],
+    "arxiv:2610.04473": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurat.md"
+    ],
+    "arxiv:2610.04537": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-uni.md"
+    ],
+    "arxiv:2610.04635": [
+      "papers/inference/13-sparse-attention/2026-2610.04635-latentindex-cross-layer-sharing-with-layer-specific-selection-for-sparse.md"
+    ],
+    "arxiv:2610.04753": [
+      "papers/inference/13-sparse-attention/2026-2610.04753-more-value-per-key-asymmetric-sparse-attention-for-faster-llm-decoding.md"
+    ],
+    "arxiv:2610.06917": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-l.md"
     ]
   }
 }
