@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "468f5524a3d0a4a927c7338e4b2ccfb6019b9593",
+  "base_commit": "3817c72682599d17cfb0fa2a5bcc5930853e2b0c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -803,6 +803,11 @@
     "2026-2610.39418-linquant-functional-invariances-for-low-precision-linear-recurrences.json",
     "2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-inference.json",
     "2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-in-llm-prefill-and-decode-phases.json",
+    "2026-2610.39761-gpu-resident-speculative-decoding-for-in-browser-llm-inference-with-webgpu.json",
+    "2026-2610.39852-dwise-denoising-workload-informed-scheduling-engine.json",
+    "2026-2610.39853-kv-cache-quantization-for-diffusion-language-models.json",
+    "2026-2610.39931-low-bit-gdn-recurrent-state-quantization-global-gradient-aware-allocation-and-pure-write-sliding-windows.json",
+    "2026-2610.39999-phosv1-efficient-scaling-of-model-sleeping-on-a-single-server-for-autoscaling-with-gpu-context-deduplication.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45595,6 +45600,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.39761": {
+      "order": [
+        "2026-11-20T14:58:02+00:00",
+        "2026-2610.39761-gpu-resident-speculative-decoding-for-in-browser-llm-inference-with-webgpu.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39852": {
+      "order": [
+        "2026-11-20T14:58:45+00:00",
+        "2026-2610.39852-dwise-denoising-workload-informed-scheduling-engine.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39853": {
+      "order": [
+        "2026-11-20T14:59:29+00:00",
+        "2026-2610.39853-kv-cache-quantization-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39931": {
+      "order": [
+        "2026-11-20T15:00:12+00:00",
+        "2026-2610.39931-low-bit-gdn-recurrent-state-quantization-global-gradient-aware-allocation-and-pure-write-sliding-windows.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39999": {
+      "order": [
+        "2026-11-20T15:00:54+00:00",
+        "2026-2610.39999-phosv1-efficient-scaling-of-model-sleeping-on-a-single-server-for-autoscaling-with-gpu-context-deduplication.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56974,6 +57024,21 @@
     "arxiv:2610.39621": [
       "papers/inference/99-other-inference-systems/2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md",
       "papers/inference/99-other-inference-systems/2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md"
+    ],
+    "arxiv:2610.39761": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.39761-gpu-resident-speculative-decoding-for-in-browser-llm-inference-with-webg.md"
+    ],
+    "arxiv:2610.39852": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.39852-dwise-denoising-workload-informed-scheduling-engine.md"
+    ],
+    "arxiv:2610.39853": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.39853-kv-cache-quantization-for-diffusion-language-models.md"
+    ],
+    "arxiv:2610.39931": [
+      "papers/inference/99-other-inference-systems/2026-2610.39931-low-bit-gdn-recurrent-state-quantization-global-gradient-aware-allocatio.md"
+    ],
+    "arxiv:2610.39999": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.39999-phosv1-efficient-scaling-of-model-sleeping-on-a-single-server-for-autosc.md"
     ]
   }
 }

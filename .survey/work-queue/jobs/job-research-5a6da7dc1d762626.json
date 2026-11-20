@@ -35,10 +35,15 @@
   "selection_reason": "ブラウザのGPUプロセス境界、dispatch、CPU readbackが投機復号を遅くする問題に対し、draft・検証・受理・KV更新をGPU内ループへ統合する。追加重みを要しない文脈混合drafterとデバイス別投機幅制御を使い、同一量子化runtimeのgreedy出力一致を維持する。著者要旨では0.5B～8Bの7モデル、3種類のクライアントGPUでWebLLM比3.5～8.6倍のdecode速度を報告。端末内推論runtimeの具体的実装貢献としてaccept。",
   "semantic_scholar_id": "be31299f60b6c0109ccbb2f54b95f0eb4cd0f300",
   "source_url": "https://arxiv.org/abs/2610.39761",
-  "status": "ready",
+  "status": "superseded",
   "title": "GPU-Resident Speculative Decoding for In-Browser LLM Inference with WebGPU",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:02:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.39761-gpu-resident-speculative-decoding-for-in-browser-llm-inference-with-webg.md",
+  "represented_canonical_id": "arXiv:2610.39761",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

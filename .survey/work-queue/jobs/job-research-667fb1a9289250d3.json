@@ -35,10 +35,15 @@
   "selection_reason": "Qwen3.5系のgated delta recurrent stateを低bit化する際の長い推論出力と誤差蓄積に対し、gradient感度でhead別bit幅を割り当てるGGAと最近の書込みをFP8で保持して後で低bit状態へ統合するPure-Write窓を提案。一次要旨はQwen3.5-4B/9Bの7課題でSTEPQuant@4よりGGA+PW-S8がmacro scoreを38.39/41.21ポイント改善し、冗長生成も減らすと報告。ハイブリッドLLMの推論stateメモリ削減としてaccept。",
   "semantic_scholar_id": "124e929f24cc0744ec2162ee0823cb9fb9fee161",
   "source_url": "https://arxiv.org/abs/2610.39931",
-  "status": "ready",
+  "status": "superseded",
   "title": "Low-Bit GDN Recurrent-State Quantization: Global Gradient-aware Allocation and Pure-Write Sliding Windows",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:02:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.39931-low-bit-gdn-recurrent-state-quantization-global-gradient-aware-allocatio.md",
+  "represented_canonical_id": "arXiv:2610.39931",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

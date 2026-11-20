@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMではmask解除に伴い双方向表現が変化するため、再利用KVは量子化前から完全再計算と異なる。TRACEがprompt-answer対から実際のmask解除軌跡に近い校正状態を作り、dLLM-KVQが層別のK重要成分を高精度保持しVは低bit量子化する。LLaDA・DreamでGSM8K/HumanEval/MATH/MBPPを評価し、報告された2/4bitのprefix/dual cache設定で量子化手法中の平均最高点を得る。推論KVの直接最適化としてaccept。",
   "semantic_scholar_id": "5415811b556582133635c461d3d59b7376dad74a",
   "source_url": "https://arxiv.org/abs/2610.39853",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV Cache Quantization for Diffusion Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:02:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.39853-kv-cache-quantization-for-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2610.39853",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

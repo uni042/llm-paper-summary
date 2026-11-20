@@ -35,10 +35,15 @@
   "selection_reason": "vLLMやSGLangのmodel sleepingは高速scale-upを実現する一方、休眠中もCUDA contextと共通kernel binaryがモデル数に比例してGPUメモリを消費する。PhOSv1は各engineのcontext割当を中央daemonへAPI remotingし、driver contextと重複binaryを共有して休眠モデル数を増やす。要旨ではvLLM sleep相当のscale-up時間を維持し、GPUメモリとmulti-model serving性能を改善すると報告。具体的な改善倍率は要旨にない。LLM servingのモデル切替・autoscalingに直接関係するためaccept。",
   "semantic_scholar_id": "02669033e9abf12285fd8abf7c074762c64ea66c",
   "source_url": "https://arxiv.org/abs/2610.39999",
-  "status": "ready",
+  "status": "superseded",
   "title": "PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:02:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.39999-phosv1-efficient-scaling-of-model-sleeping-on-a-single-server-for-autosc.md",
+  "represented_canonical_id": "arXiv:2610.39999",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "著者原著は拡散LLMのdenoisingラウンド数が要求ごとに異なる点に着目し、prompt特徴で初期推定し最初のdenoising hidden stateで残作業量を更新する。prefillとdecodeをblock単位の同じ残作業指標でスケジュールし、SGLang実装で平均5.4倍のend-to-end遅延短縮を報告する。dLLMサービングの直接的なスケジューラ研究としてaccept。",
   "semantic_scholar_id": "8d87d1d4ba8b43820dda049bca4288c027ade51e",
   "source_url": "https://arxiv.org/abs/2610.39852",
-  "status": "ready",
+  "status": "superseded",
   "title": "DWISE: Denoising Workload-Informed Scheduling Engine",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:02:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.39852-dwise-denoising-workload-informed-scheduling-engine.md",
+  "represented_canonical_id": "arXiv:2610.39852",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

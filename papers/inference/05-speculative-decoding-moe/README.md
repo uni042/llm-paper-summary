@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（405本）
+## 自動生成の論文一覧（406本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -607,6 +607,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [HyCo: Hybrid Drafting for Cost-Efficient Mobile-Cloud Speculative Decoding](2026-2610.21436-hyco-hybrid-drafting-for-cost-efficient-mobile-cloud-speculative-decodin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   検証モデルのMTPヘッドをスマホ側で走らせて草案の深さを作り、SLMの1パスで代替分岐を足すことで、NPUの逐次パスを増やさずにサーバGPU時間をCloud+MTP比で最大38.6パーセント削減した端末・クラウド投機的デコード。
+
+- **2026-10 · [GPU-Resident Speculative Decoding for In-Browser LLM Inference with WebGPU](2026-2610.39761-gpu-resident-speculative-decoding-for-in-browser-llm-inference-with-webg.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブラウザ固有の発行と読み戻しの費用に合わせ、決定的な小バッチ整数カーネルと装置常駐の投機ループと、ページ文脈から作るモデル不要の下書きと、装置ごとの幅の自動調整を組み合わせ、従来のブラウザ実行時より三・五倍から八・六倍速く復号し、出力は貪欲生成と完全一致したと報告した。
 
 - **2026-10 · [From Positionwise Confidence to Prefix Scheduling: Verifier Skipping in Speculative Decoding](2026-2608.14787-from-positionwise-confidence-to-prefix-scheduling-verifier-skipping-in-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1595,7 +1599,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：527  
+  実装：✓ ・ リポジトリ内被引用：528  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
