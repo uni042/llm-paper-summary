@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed57d9b4a5bd6e8e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.15671",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.15671",
+    "identity_tokens": [
+      "arXiv:2609.15671"
+    ],
+    "reason": "全文読解の結果、主貢献は視覚言語モデルのプライバシー防御であり、推論システムへの直接貢献は境界的と判定した。本論文のQPriv-VL／DTPは質問関連度とDINOv2由来の感度信号で視覚トークンを平均約40%保持（データセット別155〜318／576トークン）まで削るが、評価の主軸はFSHA・FORAの再構成PSNR、MIA成功率（VQA-RADで0.99→0.76〜0.79）、iDLG、感度除外比1.20±0.18といった攻撃耐性であり、伝送量・帯域・プリフィル／デコード遅延・スループット・演算量・KVキャッシュ量はいずれも実測されていない。トークン数はカット層を越える伝送コストの代理指標として述べられるのみで、連合学習では伝送対象がLoRA更新でありトークン削減が通信量を直接減らさず、集中学習ではネットワーク伝送自体が存在しないため、削減が推論／伝送コストへ効く経路は分割学習系に限られ定量化もされていない。枝刈り機構自体も質問誘導型トークン枝刈りという既存の推論効率化手法を防御目的へ転用し、感度信号の追加を新規性とするもので、推論実行機構そのものの新規な高速化・メモリ削減機構ではないため borderline とした。",
+    "first_checked_at": "2026-11-20T04:05:59+00:00",
+    "last_checked_at": "2026-11-20T04:05:59+00:00",
+    "linked_from": [
+      "research worker batch cont7 (arXiv:2609.15671)"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Don’t Send What You Don’t Need: Question-Guided Token Pruning as a Privacy Defense for Vision-Language Models"
+  },
+  "processed_at": "2026-11-20T04:05:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed57d9b4a5bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
