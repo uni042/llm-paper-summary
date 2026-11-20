@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "H2MT: Semantic Hierarchy-Aware Hierarchical Memory Transformer",
+      "source_url": "https://arxiv.org/abs/2605.24930",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based LLMs achieve strong results on many language tasks; however, long inputs remain challenging because context windows are finite, and prefill latency and memory grow rapidly with prompt length. Flat token-stream processing and chunk-based retrieval can therefore spend substantial computation and context budget on text unrelated to the query. Offline-indexed RAG additionally introduces external storage and index management overhead, and typically appends retrieved evidence as raw text, increasing prefill cost and latency. H^{2}MT makes long-context inference structure-aware: it builds a semantic hierarchy offline, computes a memory embedding for each node via bottom-up post-order aggregation, and routes queries coarse-to-fine at inference to prune irrelevant branches early. On LongBench QA (NarrativeQA, HotpotQA, QASPER) and two structured technical-document settings, H MT achieves favorable quality efficiency trade-offs, delivering competitive ROUGE-L and F1 (where applicable) with lower peak GPU memory and time-to-first-token (TTFT) than prompt compression, memory-token methods, and retrieval-augmented generation baselines.",
+      "identifiers": [
+        "SemanticScholar:15f4aad030313794a8bcbc618afd4d559ab94c2a"
+      ],
+      "semantic_scholar_id": "15f4aad030313794a8bcbc618afd4d559ab94c2a",
+      "canonical_id": "arXiv:2605.24930",
+      "arxiv_id": "2605.24930",
+      "doi": "10.48550/arXiv.2605.24930",
+      "authors": [
+        "Maryam Haghifam",
+        "Zi-Fan He",
+        "J. Cong",
+        "Yi-Zhou Sun"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "H2MTは意味階層をオフライン構築し各ノードのメモリ埋め込みを推論時に粗から細へ辿って無関係な枝を早期に剪定する長コンテキスト推論機構で、ピークGPUメモリとTTFTを圧縮・RAG系ベースラインより下げる効果が要旨で具体的に示されているため採用とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5c04601c3b82",
+    "round": "libimp-5c04601c3b8298f5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5c04601c3b8298f5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5c04601c3b8298f5-pre01.json",
+    "receipt": "sha256:f3a9846b10d06df785cd973e12d4bde91d3325f7bd72225c06230295c81fd038"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5c04601c3b82",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

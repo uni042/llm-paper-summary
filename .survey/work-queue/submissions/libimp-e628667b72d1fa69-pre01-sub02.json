@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel",
+      "source_url": "https://arxiv.org/abs/2501.15665",
+      "year": 2025,
+      "published": "2025-01-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decoding in a Transformer based language model is inherently sequential as a token's embedding needs to pass through all the layers in the network before the generation of the next token can begin. In this work, we propose a new architecture StagFormer (Staggered Transformer), which staggers execution along the sequence axis and thereby enables parallelizing the decoding process along the depth of the model. We achieve this by breaking the dependency of the token representation at time step $i$ in layer $l$ upon the representations of tokens until time step $i$ from layer $l-1$. Instead, we stagger the execution and only allow a dependency on token representations until time step $i-1$. The later sections of the Transformer still get access to the\"rich\"representations from the prior section but only from those token positions which are one time step behind. StagFormer allows for different sections of the model to be executed in parallel yielding a potential speedup in decoding while being quality neutral in our simulations. We also explore many natural extensions of this idea. We present how weight-sharing across the different sections being staggered can be more practical in settings with limited memory. We explore the efficacy of using a bounded window attention to pass information from one section to another which helps drive further latency gains for some applications. We also explore the scalability of the staggering idea over more than 2 sections of the Transformer. Finally, we show how one can approximate a recurrent model during inference using weight-sharing. This variant can lead to substantial gains in quality for short generations while being neutral in its latency impact.",
+      "identifiers": [
+        "SemanticScholar:af95790d2145b29194825ac563351bef67787e9c"
+      ],
+      "semantic_scholar_id": "af95790d2145b29194825ac563351bef67787e9c",
+      "canonical_id": "arXiv:2501.15665",
+      "arxiv_id": "2501.15665",
+      "doi": "10.48550/arXiv.2501.15665",
+      "authors": [
+        "Dylan J. Cutler",
+        "Arun Kandoor",
+        "Nishanth Dikkala",
+        "Nikunj Saunshi",
+        "Xin Wang",
+        "R. Panigrahy"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 663,
+        "matched_prestigious_venue": null
+      },
+      "reason": "トークン表現の層間依存を1時刻ずらすStagFormerは、Transformerの逐次デコーディングをモデル深度方向に並列実行できるようにし、品質を保ちながらデコーディング速度向上を狙うアーキテクチャである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2505.19342",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-device inference can reduce Transformer latency by parallelizing computation. However, existing methods require high inter-device bandwidth, making them impractical for bandwidth-constrained environments. We present ASTRA, a communication-efficient framework that integrates sequence parallelism with mixed-precision attention, where non-local token embeddings are transmitted as low-bit vector-quantized codes while local attention remains full precision. To preserve accuracy under aggressive compression, ASTRA introduces Noise-Augmented Quantization and Distributed Class Tokens. Across vision and language models (e.g., ViT and GPT2), ASTRA achieves up to 2.64$\\times$ speedup over single-device inference and up to 15.25$\\times$ over prior multi-device baselines while operating at bandwidths as low as 10 Mbps. ASTRA remains robust on large models (e.g., Llama-3-8B) even under non-ideal network conditions such as packet loss and dynamic networks.",
+      "identifiers": [
+        "SemanticScholar:7bc54480cb28ac0f78d7ae51f5f6a67007c3b438"
+      ],
+      "semantic_scholar_id": "7bc54480cb28ac0f78d7ae51f5f6a67007c3b438",
+      "canonical_id": "arXiv:2505.19342",
+      "arxiv_id": "2505.19342",
+      "authors": [
+        "Xiao Liu",
+        "Li-Jun Zhang",
+        "D. Ganesan",
+        "Hui Guan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 544,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ASTRAは系列並列と混合精度アテンションを統合し、非局所トークン埋め込みを低ビットベクトル量子化コードで送ることで10Mbps級の低帯域でもマルチデバイスTransformer推論を最大2.64倍高速化する通信効率化技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e628667b72d1",
+    "round": "libimp-e628667b72d1fa69-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e628667b72d1fa69-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e628667b72d1fa69-pre01.json",
+    "receipt": "sha256:934d7602a3b60791e56af8d1613b8c42a94be14ebce2a4f96337e6ec0611ee3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e628667b72d1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

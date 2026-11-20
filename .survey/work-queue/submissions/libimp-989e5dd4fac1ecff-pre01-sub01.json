@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QA-Merging: Query-Adaptive Reasoning via Layer Selective Model Merging",
+      "source_url": "https://arxiv.org/abs/2601.03506",
+      "year": 2026,
+      "published": "2026-01-07",
+      "venue": "Proceedings of the 35th ACM International Conference on Information and Knowledge Management",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent large reasoning models (LRMs) have achieved strong performance on complex reasoning tasks by generating a long chain-of-thought (Long-CoT). However, such lengthy reasoning is often unnecessary for simple queries, leading to additional computation and latency. Existing approaches to adaptive reasoning typically rely on retraining the model or designing sophisticated prompting, which are either prohibitively expensive or highly sensitive to the prompt formulation. Model merging provides a more balanced alternative for adaptive reasoning by avoiding expensive training and integrating Long-CoT and Short-CoT behaviors. However, existing merging methods are often static and input-agnostic, or rely on costly all-layer calibration, which limits their effectiveness for query-adaptive reasoning. To tackle these challenges, we propose Query-adaptive Layer Selective Merging (QA-Merging), an activation-based merging framework that integrates a Long-CoT model and a Short-CoT model to obtain a query-adaptive reasoner without training from scratch or requiring large-scale additional data. QA-Merging first constructs a small pattern-labeled calibration set that assigns each query an appropriate reasoning pattern. Motivated by our empirical analysis that Long-CoT and Short-CoT behaviors diverge unevenly across transformer layers, QA-Merging identifies layers with high reasoning pattern divergence and calibrates only these layers through feature alignment and contrastive shaping, while applying closed-form hidden-state correction to the remaining layers. Experiments on seven widely used reasoning benchmarks across two model scales demonstrate that QA-Merging reduces inference cost and maintains strong performance. The code is available at https://anonymous.4open.science/r/QA-Merging-q1a2.",
+      "identifiers": [
+        "SemanticScholar:fffa333a09ce9c92bfb4ea417e2b38b724a28bf3"
+      ],
+      "semantic_scholar_id": "fffa333a09ce9c92bfb4ea417e2b38b724a28bf3",
+      "canonical_id": "arXiv:2601.03506",
+      "arxiv_id": "2601.03506",
+      "doi": "10.1145/3799682.3840696",
+      "authors": [
+        "Zhao-Feng Zhong",
+        "Wei Yuan",
+        "Tong Chen",
+        "Liang Qu",
+        "Xiang-Yu Zhao",
+        "Q. Nguyen",
+        "Hong-Zhi Yin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 317,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長短の思考連鎖モデルを統合する際、推論パターンの乖離が大きい層だけを較正し残りに閉形式の隠れ状態補正を適用するQA-Mergingは、クエリ適応的に推論コストを下げつつ性能を保つ効率的推論への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2608.28859",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models do not stop when they know the answer. On DeepSeek-R1-Distill-Qwen-7B the chain of thought runs about twice as long as the model's own answer probability takes to settle, and how much of that excess is removable varies from problem to problem, so a global length penalty cannot take it out. We take it out by internalizing a causal interpretability finding into the weights. The mechanism is a halt vector: a difference-of-means direction at layer 18 of this model whose steering strength controls how long it thinks, while a replicated value axis does nothing. Installing that intervention in the weights is harder than it looks. Maximizing the scalar projection onto the direction corrupts the off-axis dimensions a frozen downstream reader depends on, and generation gets longer instead of shorter; what works is reconstructing the whole steered activation with those dimensions pinned to their natural values. Fit from 24 problems and no reinforcement learning, the halt removes about a quarter of the thinking at held accuracy across five unseen benchmarks, and the cut tracks each problem's own removable slack at 0.70. It also closes a non-termination pathology that grows with difficulty and that a decoding-time confidence hook makes worse. We do not claim to beat a well-tuned length penalty or decoding-time early exit on the raw trade-off; the contribution is how the halt is obtained.",
+      "identifiers": [
+        "SemanticScholar:9d7e3569f6ff5b7f5e72953adf5ca59369bf8253"
+      ],
+      "semantic_scholar_id": "9d7e3569f6ff5b7f5e72953adf5ca59369bf8253",
+      "canonical_id": "arXiv:2608.28859",
+      "arxiv_id": "2608.28859",
+      "doi": "10.48550/arXiv.2608.28859",
+      "authors": [
+        "Dylan Jayabahu",
+        "Tinuade Adeleke"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 84,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論モデルが答えの確率が安定した後も思考を続ける無駄に対し、第18層の平均差方向である停止ベクトルを活性を再構成して重みに内在化する手法は、精度を保ったまま思考トークンを約4分の1削減する推論トークン削減の直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Stop Before You Fail: Operational Capability Boundaries for Mitigating Unproductive Reasoning in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2509.24711",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current answering paradigms for Large Reasoning Models (LRMs) often fail to account for the fact that some questions may lie beyond the model's operational capability boundary, leading to long but unproductive reasoning. In this paper, we study whether LRMs expose early signals predictive of such cases, and whether these signals can be used to mitigate unproductive reasoning. In black-box settings, we find that reasoning expressions contain failure-predictive signals. In white-box settings, we show that the hidden states of the last input token contain information that is predictive of whether a question will not be solved correctly under our evaluation setup. Building on these observations, we propose two test-time monitoring strategies: reasoning expression monitoring and hidden states monitoring, that reduce token usage by 62.7-93.6%, substantially improving efficiency and reliability while largely preserving accuracy.",
+      "identifiers": [
+        "SemanticScholar:ed19562aa6a98b160ab5ed56a1b175c133066800"
+      ],
+      "semantic_scholar_id": "ed19562aa6a98b160ab5ed56a1b175c133066800",
+      "canonical_id": "arXiv:2509.24711",
+      "arxiv_id": "2509.24711",
+      "doi": "10.18653/2026.emnlp-main.1252",
+      "authors": [
+        "Qingjie Zhang",
+        "Yujia Fu",
+        "Yang Wang",
+        "Liu Yan",
+        "Tao Wei",
+        "Ke Xu",
+        "Min-Lie Huang",
+        "Han Qiu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 417,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "大規模推論モデルが能力境界を超えた問題で無駄な推論を続ける問題に対し、推論表現と最終入力トークンの隠れ状態から解けない兆候をテスト時に監視して早期停止し、トークン使用量を62.7〜93.6%削減する推論時制御の直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-989e5dd4fac1",
+    "round": "libimp-989e5dd4fac1ecff-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-989e5dd4fac1ecff-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-989e5dd4fac1ecff-pre01.json",
+    "receipt": "sha256:17687d5384f2bd28a6e4bac6e456b06f5045f78d681677b9066891d01842653c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-989e5dd4fac1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

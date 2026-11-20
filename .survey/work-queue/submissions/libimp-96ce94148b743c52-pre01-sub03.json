@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models",
+      "source_url": "https://arxiv.org/abs/2409.14595",
+      "year": 2024,
+      "published": "2024-09-22",
+      "venue": "ENLSP",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs), with their increasing depth and number of parameters, have demonstrated outstanding performance across a variety of natural language processing tasks. However, this growth in scale leads to increased computational demands, particularly during inference and fine-tuning. To address these challenges, we introduce EchoAtt, a novel framework aimed at optimizing transformer-based models by analyzing and leveraging the similarity of attention patterns across layers. Our analysis reveals that many inner layers in LLMs, especially larger ones, exhibit highly similar attention matrices. By exploiting this similarity, EchoAtt enables the sharing of attention matrices in less critical layers, significantly reducing computational requirements without compromising performance. We incorporate this approach within a knowledge distillation setup, where a pre-trained teacher model guides the training of a smaller student model. The student model selectively shares attention matrices in layers with high similarity while inheriting key parameters from the teacher. Our best results with TinyLLaMA-1.1B demonstrate that EchoAtt improves inference speed by 15\\%, training speed by 25\\%, and reduces the number of parameters by approximately 4\\%, all while improving zero-shot performance. These findings highlight the potential of attention matrix sharing to enhance the efficiency of LLMs, making them more practical for real-time and resource-limited applications.",
+      "identifiers": [
+        "SemanticScholar:5270d556608d58aba6557b5f994db0b30f31287a"
+      ],
+      "semantic_scholar_id": "5270d556608d58aba6557b5f994db0b30f31287a",
+      "canonical_id": "arXiv:2409.14595",
+      "arxiv_id": "2409.14595",
+      "doi": "10.48550/arXiv.2409.14595",
+      "authors": [
+        "Hossein Rajabzadeh",
+        "A. Jafari",
+        "Aman Sharma",
+        "Benyamin Jami",
+        "Hyock Ju Kwon",
+        "Ali Ghodsi",
+        "Boxing Chen",
+        "Mehdi Rezagholizadeh"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 789,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層間で類似する注意行列を共有するEchoAttにより推論速度を15%高めパラメータも削減しており、Transformer推論時の計算量削減への直接的な技術貢献が確認できるため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling Up Throughput-oriented LLM Inference Applications on Heterogeneous Opportunistic GPU Clusters with Pervasive Context Management",
+      "source_url": "https://arxiv.org/abs/2509.13201",
+      "year": 2025,
+      "published": "2025-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widespread growth in LLM developments increasingly demands more computational power from clusters than what they can supply. Traditional LLM applications inherently require huge static resource allocations, which force users to either wait in a long job queue and accept progress delay, or buy expensive hardware to fulfill their needs and exacerbate the demand-supply problem. However, not all LLM applications are latency-sensitive and can instead be executed in a throughput-oriented way. This throughput orientation allows a dynamic allocation that opportunistically pools available resources over time, avoiding both the long queue and expensive GPU purchases. Effectively utilizing opportunistic resources brings numerous challenges nevertheless. Our solution, pervasive context management, exploits the common computational context in LLM applications and provides mechanisms and policies that allow seamless context reuse on opportunistic resources. Our evaluation shows an LLM application with pervasive context management on opportunistic resources reduces its execution time by 98.1%.",
+      "identifiers": [
+        "SemanticScholar:83b43af6e58f7d3a23ebb6153ef6df3b02881518"
+      ],
+      "semantic_scholar_id": "83b43af6e58f7d3a23ebb6153ef6df3b02881518",
+      "canonical_id": "arXiv:2509.13201",
+      "arxiv_id": "2509.13201",
+      "doi": "10.48550/arXiv.2509.13201",
+      "authors": [
+        "Thanh Son Phung",
+        "D. Thain"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 430,
+        "matched_prestigious_venue": null
+      },
+      "reason": "日和見的な異種GPUクラスタ上でスループット志向のLLM推論を動かし、共通計算コンテキストの再利用で実行時間を98.1%削減すると示す、分散推論サービングへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-96ce94148b74",
+    "round": "libimp-96ce94148b743c52-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-96ce94148b743c52-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-96ce94148b743c52-pre01.json",
+    "receipt": "sha256:0e4d15c71ca9f2adf325d8b87010aad6cbadce928ea9524b578d622cb55a3129"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-96ce94148b74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

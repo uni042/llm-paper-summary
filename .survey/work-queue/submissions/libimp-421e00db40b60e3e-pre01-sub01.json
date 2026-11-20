@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HMPO: Hybrid Median-length Policy Optimization for Chain-of-Thought Compression",
+      "source_url": "https://arxiv.org/abs/2606.01934",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models achieve remarkable performance via extended chain-of-thought (CoT) reasoning, yet this lengthy process incurs substantial inference overhead. Existing CoT compression methods struggle with inflexible manual length budgets, computationally expensive multi-stage training pipelines, and fragile scalability restricted to small models. We propose HMPO (Hybrid Median-length Policy Optimization), a cost-effective, single-stage reinforcement learning framework. HMPO efficiently compresses CoT via three synergistic components: an adaptive median-based budget derived from successful rollouts to eliminate manual tuning, a cosine-decay token reward for smooth length penalization, and a multiplicative reward formulation that substantially mitigates trivial reward hacking by strictly prioritizing answer correctness. Trained exclusively on mathematical data, HMPO generalizes seamlessly across math, code, science, and instruction-following tasks. Extensive experiments scaling from 9B to 122B parameters across dense and Mixture-of-Experts (MoE) architectures demonstrate that HMPO achieves 19%--46% token compression with negligible accuracy degradation, all while drastically reducing training costs compared to existing multi-stage baselines.",
+      "identifiers": [
+        "SemanticScholar:df5a87cd047be4ae4bd7cb5411aa490a7fdbad18"
+      ],
+      "semantic_scholar_id": "df5a87cd047be4ae4bd7cb5411aa490a7fdbad18",
+      "canonical_id": "arXiv:2606.01934",
+      "arxiv_id": "2606.01934",
+      "doi": "10.48550/arXiv.2606.01934",
+      "authors": [
+        "Ming-Hui Zheng",
+        "Hong-Xu Chen",
+        "Hui-Min Ren",
+        "Hong-Sheng Xin",
+        "Xiao-Yan Qu",
+        "Zehao Wang",
+        "Shu-Lin Yang",
+        "Zi-Yue Peng",
+        "Kai-Ke Zhang",
+        "Z. Pan",
+        "Kun Zhan"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "中央値ベース予算と長さ報酬による強化学習でCoTを19〜46％圧縮し、精度低下を抑えつつ推論トークン overhead を直接削減する手法を大規模モデルで示すため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    },
+    {
+      "title": "Roll Out and Roll Back: Diffusion LLMs are Their Own Efficiency Teachers",
+      "source_url": "https://arxiv.org/abs/2605.16941",
+      "year": 2026,
+      "published": "2026-05-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (DLLMs) promise fast parallel generation, yet open-source DLLMs still face a severe quality-speed trade-off: accelerating decoding by revealing multiple tokens often causes substantial quality degradation. We attribute this dilemma to a train-inference mismatch amplified by irreversible decoding. While training reconstructs tokens from randomly corrupted states, efficient inference requires an adaptive denoising order, where easier tokens are revealed earlier and context-dependent ones are deferred. This view motivates two complementary methods: an inference-time method that makes parallel decoding revokable, and a training-time extension that distills the reliable order exposed by this revokable process. Accordingly, we first propose Wide-In, Narrow-Out (WINO), a training-free decoding algorithm that enables revokable parallel generation. WINO aggressively drafts multiple tokens, verifies generated tokens with enriched global context, and re-masks unreliable ones for later refinement. Building on this discovered order, we further introduce WINO+, which injects the verified denoising trajectories produced by WINO into model parameters, aligning training with efficient inference. Experiments on LLaDA and MMaDA show that WINO improves both quality and efficiency, while WINO+ further strengthens this progression. On GSM8K, WINO improves accuracy from 73.24% to 75.82% with a 6.10x step reduction, and WINO+ further achieves 76.58% with a 6.83x reduction. On Flickr30K, WINO+ reaches a 16.22x step reduction with improved CIDEr. These results demonstrate that DLLMs can serve as their own efficiency teachers by first discovering reliable denoising orders through revokable decoding and then learning to follow them for faster generation. Code is available at https://github.com/Feng-Hong/WINO-DLLM/tree/WINO-plus.",
+      "identifiers": [
+        "SemanticScholar:a2bdcb32a490cef2f22b25d11f7545282a764ee1"
+      ],
+      "semantic_scholar_id": "a2bdcb32a490cef2f22b25d11f7545282a764ee1",
+      "canonical_id": "arXiv:2605.16941",
+      "arxiv_id": "2605.16941",
+      "doi": "10.48550/arXiv.2605.16941",
+      "authors": [
+        "Fanqin Zeng",
+        "Feng Hong",
+        "Geng Yu",
+        "Huang-Jie Zheng",
+        "Xiao-Feng Cao",
+        "Ya Zhang",
+        "Bo Han",
+        "Yan-Feng Wang",
+        "Jiang-Chao Yao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLM向けに取消可能な並列デコードWINOとその軌跡の蒸留を提案し、生成ステップを6倍以上削減しながら品質も改善する直接的なデコード高速化であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    },
+    {
+      "title": "AdaptiveLLM: A Framework for Selecting Optimal Cost-Efficient LLM for Code-Generation Based on CoT Length",
+      "source_url": "https://arxiv.org/abs/2506.10525",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "Asia-Pacific Symposium on Internetware",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) have significantly advanced code generation efficiency, they face inherent challenges in balancing performance and inference costs across diverse programming tasks. Dynamically selecting the optimal LLM based on task difficulty and resource constraints offers a promising approach to achieve an optimal balance between efficiency and performance. However, existing model selection methods are resource-intensive and often neglect cost efficiency. Moreover, these approaches rely on human-annotated difficulty labels that are frequently inaccessible in real-world settings and may not align with the LLM’s own assessment of task difficulty. In this paper, we introduce AdaptiveLLM, a framework that dynamically selects optimal LLMs for a given coding task by automatically assessing task difficulty. Our framework first estimates task difficulty using Chain-of-Thought lengths generated by reasoning model, clusters these into three difficulty levels via k-means, and fine-tunes CodeBERT to embed difficulty-aware features. A trained XGBoost classifier then selects the best model for each problem, optimizing the performance-cost trade-off. Experimental results show that AdaptiveLLM achieves a 7.86% improvement in pass@1 score while reducing resource consumption by 88.9% compared to baseline method ComplexityNet. When compared to a single model, AdaptiveLLM demonstrates an approximately 15% accuracy improvement, while maintaining the same level of cost consumption. Apart from that, the difficulty assessment using CoT provides more reliable selection criteria than human evaluation. Our replication package is available at https://github.com/cjhCoder7/AdaptiveLLM.",
+      "identifiers": [
+        "SemanticScholar:38113310ed583fee52deff51a1059c74531a59c0"
+      ],
+      "semantic_scholar_id": "38113310ed583fee52deff51a1059c74531a59c0",
+      "canonical_id": "arXiv:2506.10525",
+      "arxiv_id": "2506.10525",
+      "doi": "10.1145/3755881.3755925",
+      "authors": [
+        "Jun-Hang Cheng",
+        "Fang Liu",
+        "Cheng-Ru Wu",
+        "Li Zhang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 526,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoT長からコード生成タスクの難易度を推定し最適なLLMを選択するAdaptiveLLMで、精度を保ちながら資源消費を88.9％削減するコスト効率的ルーティングであるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    },
+    {
+      "title": "LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead",
+      "source_url": "https://arxiv.org/abs/2505.16221",
+      "year": 2025,
+      "published": "2025-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid advancement of large language models has unlocked remarkable capabilities across a diverse array of natural language processing tasks. However, the considerable differences among available LLMs-in terms of cost, performance, and computational demands-pose significant challenges for users aiming to identify the most suitable model for specific tasks. In this work, we present LightRouter, a novel framework designed to systematically select and integrate a small subset of LLMs from a larger pool, with the objective of jointly optimizing both task performance and cost efficiency. LightRouter leverages an adaptive selection mechanism to identify models that require only a minimal number of boot tokens, thereby reducing costs, and further employs an effective integration strategy to combine their outputs. Extensive experiments across multiple benchmarks demonstrate that LightRouter matches or outperforms widely-used ensemble baselines, achieving up to a 25% improvement in accuracy. Compared with leading high-performing models, LightRouter achieves comparable performance while reducing inference costs by up to 27%. Importantly, our framework operates without any prior knowledge of individual models and relies exclusively on inexpensive, lightweight models. This work introduces a practical approach for efficient LLM selection and provides valuable insights into optimal strategies for model combination.",
+      "identifiers": [
+        "SemanticScholar:5f69feac70609bdc0232d426f468f108fe5643e9"
+      ],
+      "semantic_scholar_id": "5f69feac70609bdc0232d426f468f108fe5643e9",
+      "canonical_id": "arXiv:2505.16221",
+      "arxiv_id": "2505.16221",
+      "doi": "10.48550/arXiv.2505.16221",
+      "authors": [
+        "Yi-Fan Zhang",
+        "Xin-Kui Zhao",
+        "Zuxin Wang",
+        "Guan-Jie Cheng",
+        "Yue-Shen Xu",
+        "Shui-Guang Deng",
+        "Jian-Wei Yin"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 547,
+        "matched_prestigious_venue": null
+      },
+      "reason": "少数LLMの選択と出力統合を最小ブートトークンで行うLightRouterにより、同等性能のまま推論コストを最大27％削減する具体的なモデル選択・統合枠組みであるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    },
+    {
+      "title": "MESS+: Energy-Optimal Inferencing in Language Model Zoos with Service Level Guarantees",
+      "source_url": "https://arxiv.org/abs/2411.00889",
+      "year": 2024,
+      "published": "2024-10-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Open-weight large language model (LLM) zoos allow users to quickly integrate state-of-the-art models into systems. Despite increasing availability, selecting the most appropriate model for a given task still largely relies on public benchmark leaderboards and educated guesses. This can be unsatisfactory for both inference service providers and end users, where the providers usually prioritize cost efficiency, while the end users usually prioritize model output quality for their inference requests. In commercial settings, these two priorities are often brought together in Service Level Agreements (SLA). We present MESS+, an online stochastic optimization algorithm for energy-optimal model selection from a model zoo, which works on a per-inference-request basis. For a given SLA that requires high accuracy, we are up to 2.5x more energy efficient with MESS+ than with randomly selecting an LLM from the zoo while maintaining SLA quality constraints.",
+      "identifiers": [
+        "SemanticScholar:34bc9d0ba0b909657c530b57fdce2d0d8d442a62"
+      ],
+      "semantic_scholar_id": "34bc9d0ba0b909657c530b57fdce2d0d8d442a62",
+      "canonical_id": "arXiv:2411.00889",
+      "arxiv_id": "2411.00889",
+      "doi": "10.48550/arXiv.2411.00889",
+      "authors": [
+        "Ryan Zhang",
+        "Herbert Woisetschläger",
+        "Shi-Qiang Wang",
+        "Hans-Arno Jacobsen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 750,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SLA品質制約の下で推論リクエストごとにモデル動物園からエネルギー最適なLLMを選ぶオンライン最適化MESS+であり、サービング時のモデル選択システムであるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-421e00db40b6",
+    "round": "libimp-421e00db40b60e3e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-421e00db40b60e3e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-421e00db40b60e3e-pre01.json",
+    "receipt": "sha256:9a2a7074cbd0dda2499e3329dfc3db3db604e57991b20f31e65ffac0ec993ed9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-421e00db40b6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

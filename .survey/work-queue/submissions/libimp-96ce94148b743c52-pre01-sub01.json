@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Adaptive Test-Time Compute Allocation for Block Diffusion Language Models in Complex Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.09555",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in block diffusion language models have demonstrated competitive performance and strong scalability on reasoning tasks. However, their test-time compute allocation remains largely unexplored, leaving a critical speed-effectiveness trade-off unresolved in long Chain-of-Thought reasoning. To address this, we propose a unified test-time compute allocation framework that introduces adaptivity in both step-wise decoding and blockwise generation. At the decoding level, we propose Bounded Adaptive Confidence Decoding (BACD), a difficulty-aware sampling strategy that dynamically adjusts denoising based on model confidence, accelerating inference while controlling error accumulation. Beyond step-wise adaptivity, we introduce the Think Coarse, Critic Fine (TCCF) paradigm that allocates large block sizes for exploratory thinking and smaller block sizes for precise refinement. To stabilize training under varying block configurations, we adopt Progressive Block Size Extension, which mitigates quality degradation when scaling up block sizes. Extensive evaluations on six benchmarks show that our TDAR-8B model with BACD and TCCF achieves a 2.38$\\times$ speedup and +3.4% average accuracy over the strong TraDo-8B baseline, unlocking the potential of block diffusion in complex reasoning.",
+      "identifiers": [
+        "SemanticScholar:3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59"
+      ],
+      "semantic_scholar_id": "3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59",
+      "canonical_id": "arXiv:2602.09555",
+      "arxiv_id": "2602.09555",
+      "doi": "10.18653/2026.findings-emnlp.1774",
+      "authors": [
+        "Yi Lu",
+        "De-Yang Kong",
+        "Jia-Ning Wang",
+        "Linsen Guo",
+        "Xue Wang",
+        "Qi Guo",
+        "Tao Gui",
+        "Xuan-Jing Huang",
+        "Wei Ye",
+        "Shi-Kun Zhang",
+        "Wei Wang"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ブロック拡散言語モデルのデコードで信頼度に応じた適応的計算配分とブロックサイズ切替を行い、2.38倍の高速化と精度向上を示す、テスト時デコード効率化の直接手法であるため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Think-as-You-See: Streaming Chain-of-Thought Reasoning for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2603.02872",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision Language Models (LVLMs) exhibit strong Chain-of-Thought (CoT) capabilities, yet most existing paradigms assume full-video availability before inference, a batch-style process misaligned with real-world video streams where information arrives sequentially. Motivated by the streaming nature of video data, we investigate two streaming reasoning paradigms for LVLMs. The first, an interleaved paradigm, alternates between receiving frames and producing partial reasoning but remains constrained by strictly ordered cache updates. To better match streaming inputs, we propose \\textbf{Think-as-You-See (TaYS)}, a unified framework enabling true concurrent reasoning. TaYS integrates parallelized CoT generation, stream-constrained training, and stream-parallel inference. It further employs temporally aligned reasoning units, streaming attention masks and positional encodings, and a dual KV-cache that decouples visual encoding from textual reasoning. We evaluate all paradigms on the Qwen2.5-VL family across representative video CoT tasks, including event dynamics analysis, causal reasoning, and thematic understanding. Experiments show that TaYS consistently outperforms both batch and interleaved baselines, improving reasoning performance while substantially reducing time-to-first-token (TTFT) and overall reasoning delay. These results demonstrate the effectiveness of data-aligned streaming reasoning in enabling efficient and responsive video understanding for LVLMs. We release our code at https://github.com/EIT-NLP/StreamingLLM/tree/main/TaYS",
+      "identifiers": [
+        "SemanticScholar:29f31880bf3c2c566889ea5ba3ccecfc308256d3"
+      ],
+      "semantic_scholar_id": "29f31880bf3c2c566889ea5ba3ccecfc308256d3",
+      "canonical_id": "arXiv:2603.02872",
+      "arxiv_id": "2603.02872",
+      "doi": "10.48550/arXiv.2603.02872",
+      "authors": [
+        "Jia-Liang Zhang",
+        "Jun-Long Tong",
+        "Jun-Yang Lin",
+        "Hao Wu",
+        "Yi-Rong Sun",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ビデオストリーム向けに並列化した思考連鎖生成とデュアルKVキャッシュによるストリーム並列推論を提案し、TTFTと推論遅延を下げる具体機構が要旨に明示されているため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "1-Bit Wonder: Improving QAT Performance in the Low-Bit Regime through K-Means Quantization",
+      "source_url": "https://arxiv.org/abs/2602.15563",
+      "year": 2026,
+      "published": "2026-02-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization-aware training (QAT) is an effective method to drastically reduce the memory footprint of LLMs while keeping performance degradation at an acceptable level. However, the optimal choice of quantization format and bit-width presents a challenge in practice. The full design space of quantization is not fully explored in the context of QAT, and the precise trade-off between quantization and downstream performance is poorly understood, as comparisons often rely solely on perplexity-based evaluations. In this work, we address these shortcomings with an empirical study of QAT in the low-bit regime. We show that k-means based weight quantization outperforms integer formats and can be implemented efficiently on standard hardware. Furthermore, we find that, under a fixed inference memory budget, the best performance on generative downstream tasks is achieved with $1$-bit quantized weights.",
+      "identifiers": [
+        "SemanticScholar:9cfd8aebe45d95f1ab6cb11703fc90994c3c661a"
+      ],
+      "semantic_scholar_id": "9cfd8aebe45d95f1ab6cb11703fc90994c3c661a",
+      "canonical_id": "arXiv:2602.15563",
+      "arxiv_id": "2602.15563",
+      "doi": "10.48550/arXiv.2602.15563",
+      "authors": [
+        "Sohir Maskey",
+        "Constantin Eichenberg",
+        "Johannes Messner",
+        "Douglas Orr"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      },
+      "reason": "k-meansによる1ビット重み量子化を量子化対応学習で検証し、固定した推論メモリ予算の下で生成タスク性能が最良になると示す、LLM推論向け量子化への直接貢献であるため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FourierSampler: Unlocking Non-Autoregressive Potential in Diffusion Language Models via Frequency-Guided Generation",
+      "source_url": "https://arxiv.org/abs/2601.23182",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the non-autoregressive potential of diffusion language models (dLLMs), existing decoding strategies demonstrate positional bias, failing to fully unlock the potential of arbitrary generation. In this work, we delve into the inherent spectral characteristics of dLLMs and present the first frequency-domain analysis showing that low-frequency components in hidden states primarily encode global structural information and long-range dependencies, while high-frequency components are responsible for characterizing local details. Based on this observation, we propose FourierSampler, which leverages a frequency-domain sliding window mechanism to dynamically guide the model to achieve a\"structure-to-detail\"generation. FourierSampler outperforms other inference enhancement strategies on LLADA and SDAR, achieving relative improvements of 20.4% on LLaDA1.5-8B and 16.0% on LLaDA-8B-Instruct. It notably surpasses similarly sized autoregressive models like Llama3.1-8B-Instruct.",
+      "identifiers": [
+        "SemanticScholar:446a6dea6c25ac7b4708442679a42564b3c22089"
+      ],
+      "semantic_scholar_id": "446a6dea6c25ac7b4708442679a42564b3c22089",
+      "canonical_id": "arXiv:2601.23182",
+      "arxiv_id": "2601.23182",
+      "doi": "10.48550/arXiv.2601.23182",
+      "authors": [
+        "Si-Yang He",
+        "Qi-Qi Wang",
+        "Xiaoran Liu",
+        "Hongnan Ma",
+        "Yiwei Shi",
+        "Yue-Rong Song",
+        "Ying Zhu",
+        "Tianyi Liang",
+        "Zeng-Feng Huang",
+        "Zi-Wei He",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "拡散言語モデルの隠れ状態の周波数特性に基づくFourierSamplerという生成デコード戦略を提案し、既存の推論強化手法を上回る性能改善を示しており、デコード機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SALT: Salience-Aware Lexical Trie for Long-Context Compression",
+      "source_url": "https://arxiv.org/abs/2607.17486",
+      "year": 2026,
+      "published": "2026-07-20",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) process increasingly longer prompts, computation and KV-cache memory costs have emerged as major bottlenecks in inference systems. Existing input-level prompt compression methods address this, but rank each sentence by a scalar relevance score, treating the document as an unstructured pool of words and sentences. Under tight budgets, this causes theme collapse, where the dominant theme(s) of a document consumes the budget, discarding less-frequent yet task-relevant themes. Preserving thematic coverage instead requires allocating the budget across recurring themes rather than scoring sentences in isolation. To this end, we propose SALT, a model-agnostic extractive framework that organizes per-sentence keywords into a trie ordered by sentence frequency (SF), a lightweight, reusable proxy for document thematic structure. This trie-based organization smooths memory allocation and prevents dominant themes from monopolizing the budget. Multi-anchor retrieval activates trie nodes labeled by query keywords at any depth, and the trie persists across dialogue turns, supporting multi-turn use without re-encoding the document. By preserving document themes, SALT reduces the prefill computation and memory cost of long-context prompts while remaining composable with KV-cache methods that target decoding-time latency and memory.",
+      "identifiers": [
+        "SemanticScholar:cc9d7843699a61f73314d0e6ddd019854c390197"
+      ],
+      "semantic_scholar_id": "cc9d7843699a61f73314d0e6ddd019854c390197",
+      "canonical_id": "arXiv:2607.17486",
+      "arxiv_id": "2607.17486",
+      "doi": "10.18653/v1/2026.emnlp-main.1723",
+      "authors": [
+        "Oteo Mamo",
+        "Hyunji Yi",
+        "Joydhriti Choudhury",
+        "Shang-Qian Gao",
+        "Wei-Kuan Yu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "長文プロンプトをテーマ別にトライで圧縮するSALTがプリフィル計算とKVキャッシュメモリを減らし、デコード側KV手法とも組み合わせ可能と明示する長文脈推論の直接手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-96ce94148b74",
+    "round": "libimp-96ce94148b743c52-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-96ce94148b743c52-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-96ce94148b743c52-pre01.json",
+    "receipt": "sha256:0e4d15c71ca9f2adf325d8b87010aad6cbadce928ea9524b578d622cb55a3129"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-96ce94148b74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

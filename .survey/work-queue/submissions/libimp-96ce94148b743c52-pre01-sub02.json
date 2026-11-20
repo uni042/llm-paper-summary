@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Degrees of Freedom for Linear Attention: Distilling Softmax Attention with Optimal Feature Efficiency",
+      "source_url": "https://arxiv.org/abs/2507.03340",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention has attracted interest as a computationally efficient approximation to softmax attention, especially for long sequences. Recent studies have explored distilling softmax attention in pre-trained Transformers into linear attention. However, a critical challenge remains: how to choose the feature dimension that governs the approximation quality. Existing methods fix this dimension uniformly across all attention layers, overlooking the diverse roles and complexities of them. In this paper, we propose a principled method to automatically determine the feature dimension in linear attention using the concept of statistical degrees of freedom, which represent the effective dimensionality of the inputs. We provide a theoretical bound on the approximation error and show that the dimension chosen by our method achieves smaller error under a fixed computational budget. Furthermore, we introduce an efficient layerwise training strategy to learn nonlinear features tailored to each layer. Experiments on multiple pre-trained transformers demonstrate that our method improves the performance of distilled models compared to baselines without increasing the inference cost. Our findings also provide insight into how the complexity of the attention mechanism evolves across layers.",
+      "identifiers": [
+        "SemanticScholar:dfabdaaf06a67a958045f79be14c2aea557fbdd0"
+      ],
+      "semantic_scholar_id": "dfabdaaf06a67a958045f79be14c2aea557fbdd0",
+      "canonical_id": "arXiv:2507.03340",
+      "arxiv_id": "2507.03340",
+      "doi": "10.48550/arXiv.2507.03340",
+      "authors": [
+        "Naoki Nishikawa",
+        "Rei Higuchi",
+        "Taiji Suzuki"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "softmax注意を線形注意へ蒸留する際の特徴次元を層ごとに自由度から決め、推論コストを増やさず近似誤差と性能を改善する手法で、注意機構の推論効率化に直接関わるため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MCPO: Modality-Contrastive Preference Optimization for Multimodal Chain-of-Thought Compression",
+      "source_url": "https://arxiv.org/abs/2609.04947",
+      "year": 2026,
+      "published": "2026-09-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, multimodal large-scale reasoning models have demonstrated remarkable capabilities in solving complex tasks through long Chains-of-Thought (M-CoT). However, excessively long reasoning trajectories incur substantial computational costs and significant KV-cache pressure. Existing CoT compression and alignment paradigms mainly rely on static rules or single-dimensional preferences, lacking fine-grained cross-modal constraints; as a result, they are prone to inducing visual laziness and hallucinatory reasoning. To address these issues, we propose Modality-Contrastive Preference Optimization (MCPO), a highly sample-efficient two-stage length-compression method that requires fewer than 900 training samples. In the compression stage, we introduce a step-level Normalized Cross-Modal Mutual Information (NCMI) pruning algorithm, which automatically identifies and removes visual-independent reasoning steps by comparing the reasoning discrepancies between with-image and no-image contexts. This significantly reduces redundancy and hallucinatory content in the reasoning chains. In the alignment stage, the model first undergoes supervised fine-tuning to achieve domain-adaptive initialization, followed by optimization using an asymmetric multimodal length-controlled preference loss. This objective adopts a highly nonlinear odds-ratio formulation that provides steep gradients in the with-image context to reinforce length constraints for preferred trajectories, while applying a scaled, flat-gradient linear difference in the no-image context to maintain modality consistency, thereby achieving stable cross-modal preference alignment. Extensive experiments on mainstream base models such as Qwen3-VL-Thinking show that our method can reduce CoT length by up to 69.5% and achieve up to 3.34x end-to-end inference speedup while preserving original accuracy.",
+      "identifiers": [
+        "SemanticScholar:5c2cd79f5f85bab413723e5af877609ecf25ac17"
+      ],
+      "semantic_scholar_id": "5c2cd79f5f85bab413723e5af877609ecf25ac17",
+      "canonical_id": "arXiv:2609.04947",
+      "arxiv_id": "2609.04947",
+      "doi": "10.48550/arXiv.2609.04947",
+      "authors": [
+        "Guang-Heng Yang",
+        "Zhen-Liang Ni",
+        "Zhen-Kai Wu",
+        "Han Shu",
+        "Juan Feng",
+        "Wen-Ming Yang",
+        "Jie Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 77,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多モーダル思考連鎖から視覚に依存しない冗長ステップを剪定して長さを最大69.5%縮め、KVキャッシュ圧力を下げつつ最大3.34倍の推論高速化を示すため、推論効率化が主目的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Time-Anchored Diffusion Language Models: Latent-Space Caching for Fast Generation",
+      "source_url": "https://arxiv.org/abs/2609.37924",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on anchored diffusion language models improves denoising by shaping an intermediate latent space with supervised important-token targets. In this work, we introduce time-based (self-supervised) anchoring, which learns and reuses latent anchors without requiring such targets. Our key observation is that anchors encode persistent properties of the clean sequence, such as its semantic intent, global structure, or intermediate plan. Although their hidden representations become stale as the token canvas evolves, their semantic content remains useful across nearby diffusion times. This is implemented through a two-stage architecture consisting of a relatively expensive anchor network that generates the latent cache state and a lightweight denoising network that intelligently combines the cached latent state with the current state at each reverse step using a fusion module. This gives anchoring a latent-space caching interpretation: the anchor network is evaluated periodically, while its cached representation is reused across multiple reverse steps. We instantiate this framework as TADM:Post-train, which time-anchorizes pretrained DLMs, and TADM:Pretraining, which learns time-based anchors during pretraining. Applied to DiffusionGemma-26B, TADM:Post-train improves throughput by approximately 49% to 79% on several math, code, and STEM benchmarks (GSM8K, AIME26, GPQA-Diamond, LiveCodeBench-v6, HumanEval, MMLU-Pro). TADM:Pretraining reduces Transformer-layer computation by up to 38% relative to a standard single-stage DLM, achieves up to 73% higher measured throughput than ADLM.",
+      "identifiers": [
+        "SemanticScholar:d52df0314a0dd201f3fb9092d8888ce6a19eeac6"
+      ],
+      "semantic_scholar_id": "d52df0314a0dd201f3fb9092d8888ce6a19eeac6",
+      "canonical_id": "arXiv:2609.37924",
+      "arxiv_id": "2609.37924",
+      "doi": "10.48550/arXiv.2609.37924",
+      "authors": [
+        "J. Paul",
+        "Litu Rout",
+        "Aditya Akella",
+        "S. Shakkottai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルで潜在アンカーをキャッシュして複数逆拡散ステップに再利用するTADMによりスループットを約49から79%高めており、潜在キャッシュによる生成高速化の直接手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AgentWeave: Efficient Distributed Agent Serving via Flow Decomposition",
+      "source_url": "https://arxiv.org/abs/2610.14804",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent applications are evolving into workflows composed of large language model (LLM) calls and tool invocations, termed modules. Existing distributed agent systems typically adopt a disaggregated architecture, deploying different modules on separate devices. While this enables pipeline parallelism, imbalanced module latencies introduce severe pipeline bubbles that limit throughput. A natural alternative is an aggregated architecture that co-deploys all modules across all devices, eliminating bubbles by keeping every device continuously active. However, this introduces request blocking: short requests are forced to progress in lockstep with longer ones in the same batch, and newly arriving requests must wait until the entire ongoing batch completes the full workflow. To address this, we propose AgentWeave, an efficient distributed serving system for agent applications built on the aggregated architecture. Its core mechanism, flow decomposition, decomposes long agent requests into fine-grained execution units while preserving agent semantics, allowing short and newly arriving requests to proceed without being stalled by long-running ones. Complementing this, a flow-adaptive scheduler dynamically balances the throughput gains of decomposition against its scheduling overhead. Experiments across four representative agent applications demonstrate that AgentWeave improves throughput by 1.28-1.81x, reduces average latency by 2.08-2.45x, and reduces P90 latency by 1.56-2.04x over state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:e61a8145478c0677e27841df11a69824dda6ed31"
+      ],
+      "semantic_scholar_id": "e61a8145478c0677e27841df11a69824dda6ed31",
+      "canonical_id": "arXiv:2610.14804",
+      "arxiv_id": "2610.14804",
+      "authors": [
+        "Kai-Bin Guo",
+        "Peng-Tu Li",
+        "Zi-Cong Hong",
+        "Zhi-Yuan Fang",
+        "Wu-Hui Chen",
+        "R. Guerraoui",
+        "A. Kermarrec"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェントワークフローを細粒度の実行単位へ分解するAgentWeaveという分散エージェントサービング系を提案し、スループットと平均・P90レイテンシの改善を実測しているため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Window Token Concatenation for Efficient Visual Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.04024",
+      "year": 2025,
+      "published": "2025-04-05",
+      "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To effectively reduce the visual tokens in Visual Large Language Models (VLLMs), we propose a novel approach called Wi ndow Token Co ncatenation (WiCo). Specifically, we employ a sliding window to concatenate spatially adjacent visual tokens. However, directly concatenating these tokens may group diverse tokens into one, and thus obscure some fine details. To address this challenge, we propose fine-tuning the last few layers of the vision encoder to adaptively adjust the visual tokens, encouraging that those within the same window exhibit similar features. To further enhance the performance on fine-grained visual understanding tasks, we introduce WiCo+, which decomposes the visual tokens in later layers of the LLM. Such a design enjoys the merits of the large perception field of the LLM for fine-grained visual understanding while keeping a small number of visual tokens for efficient inference. We perform extensive experiments on both coarse- and finegrained visual understanding tasks based on LLaVA-1.5 and Shikra, showing better performance compared with existing token reduction projectors. The code is available: https://github.com/JackYFL/WiCo.",
+      "identifiers": [
+        "SemanticScholar:e3c21821e1ae738da253b043298b067e3792298a"
+      ],
+      "semantic_scholar_id": "e3c21821e1ae738da253b043298b067e3792298a",
+      "canonical_id": "arXiv:2504.04024",
+      "arxiv_id": "2504.04024",
+      "doi": "10.1109/CVPRW67362.2025.00301",
+      "authors": [
+        "Yi-Fan Li",
+        "Wentao Bao",
+        "Bo-Tao Ye",
+        "Zhen Tan",
+        "Tian-Long Chen",
+        "Huan Liu",
+        "Yu Kong"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 594,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚トークンをウィンドウ単位で連結して視覚大規模言語モデルの視覚トークン数を減らすWiCoにより、細粒度理解を保ちながら効率的な推論を狙う具体機構が要旨に明示されているため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-96ce94148b74",
+    "round": "libimp-96ce94148b743c52-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-96ce94148b743c52-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-96ce94148b743c52-pre01.json",
+    "receipt": "sha256:0e4d15c71ca9f2adf325d8b87010aad6cbadce928ea9524b578d622cb55a3129"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-96ce94148b74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
