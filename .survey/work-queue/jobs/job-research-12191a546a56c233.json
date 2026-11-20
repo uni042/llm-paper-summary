@@ -35,10 +35,15 @@
   "selection_reason": "動的疎注意のprefillでは疎インデックス生成と不規則なKV参照がメモリ律速になる。FAST-PrefillはFPGA上で中間テンソルを作らないストリーム型インデックス生成、KVブロック生存期間を考慮した二層キャッシュ、DSPとLUTビットプレーン演算を併用する行列演算器を設計する。Alveo U280、Llama/Qwen、4K〜128K文脈、batch 1でNVIDIA A5000実装比TTFT最大2.5倍、エネルギー効率4.5倍と著者らは報告。異なるハードウェア比較である点を保持し、長文脈LLM prefillアクセラレータとしてaccept。",
   "semantic_scholar_id": "301e74a4649983c500fb783a67b670ffc063dea2",
   "source_url": "https://arxiv.org/abs/2602.20515",
-  "status": "ready",
+  "status": "superseded",
   "title": "FAST-Prefill: FPGA Accelerated Sparse Attention for Long Context LLM Prefill",
   "type": "research",
   "venue": "IEEE Symposium on Field-Programmable Custom Computing Machines",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T08:44:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-pref.md",
+  "represented_canonical_id": "arXiv:2602.20515",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

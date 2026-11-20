@@ -35,10 +35,15 @@
   "selection_reason": "分散LLMアダプタサービングのGPU台数を削減するため、デジタルツイン、学習済み性能予測、貪欲配置を統合。評価負荷でGPU必要数を平均60%削減、デジタルツインのスループット推定誤差は5%未満。",
   "semantic_scholar_id": "493241a0c893fb9ebf29f48dc08d2036a1ad1673",
   "source_url": "https://arxiv.org/abs/2602.24044",
-  "status": "ready",
+  "status": "superseded",
   "title": "Data Driven Optimization of GPU efficiency for Distributed LLM Adapter Serving",
   "type": "research",
   "venue": "Future generations computer systems",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T08:44:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-s.md",
+  "represented_canonical_id": "arXiv:2602.24044",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

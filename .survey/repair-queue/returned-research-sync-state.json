@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d2a0e016676490c53e36d78f3d4cf40b50427dc1",
+  "base_commit": "3b3a15ca6d3ad4e2bb2bf67c9fcfba7f63c0744a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -227,8 +227,13 @@
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
     "2026-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficient-multimodal-large-language-models.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
+    "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json",
     "2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.json",
+    "2026-2602.19938-a-replicate-and-quantize-strategy-for-plug-and-play-load-balancing-of-sparse-mixture-of-experts-llms.json",
+    "2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-prefill.json",
     "2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.json",
+    "2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.json",
+    "2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-serving.json",
     "2026-2603.00188-st-lite-training-free-kv-cache-compression-with-spatio-trajectory-guidance-for-long-horizon-gui-agents.json",
     "2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.json",
     "2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-llms.json",
@@ -43745,6 +43750,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2602.18846": {
+      "order": [
+        "2026-11-20T08:40:17+00:00",
+        "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.19938": {
+      "order": [
+        "2026-11-20T08:41:04+00:00",
+        "2026-2602.19938-a-replicate-and-quantize-strategy-for-plug-and-play-load-balancing-of-sparse-mixture-of-experts-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.20515": {
+      "order": [
+        "2026-11-20T08:41:52+00:00",
+        "2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-prefill.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.21144": {
+      "order": [
+        "2026-11-20T08:42:39+00:00",
+        "2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.24044": {
+      "order": [
+        "2026-11-20T08:43:27+00:00",
+        "2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54384,6 +54434,21 @@
     "arxiv:2602.07375": [
       "papers/inference/99-other-inference-systems/2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistica.md",
       "papers/inference/99-other-inference-systems/2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistica.md"
+    ],
+    "arxiv:2602.18846": [
+      "papers/inference/99-other-inference-systems/2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-a.md"
+    ],
+    "arxiv:2602.19938": [
+      "papers/inference/99-other-inference-systems/2026-2602.19938-a-replicate-and-quantize-strategy-for-plug-and-play-load-balancing-of-sp.md"
+    ],
+    "arxiv:2602.20515": [
+      "papers/inference/13-sparse-attention/2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-pref.md"
+    ],
+    "arxiv:2602.21144": [
+      "papers/inference/99-other-inference-systems/2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.md"
+    ],
+    "arxiv:2602.24044": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-s.md"
     ]
   }
 }

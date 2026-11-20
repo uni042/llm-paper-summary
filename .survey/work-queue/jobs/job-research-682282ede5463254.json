@@ -35,10 +35,15 @@
   "selection_reason": "視覚encoder側の冗長トークン統合とLLM内部のテキスト誘導枝刈りを組合せる。LLaVA-1.5-7Bで視覚トークン67%減でも基準精度99%以上を保持と報告。",
   "semantic_scholar_id": "74e761e84ff67a06ee13533fb866ea0f429a29ed",
   "source_url": "https://arxiv.org/abs/2602.18846",
-  "status": "ready",
+  "status": "superseded",
   "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T08:44:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-a.md",
+  "represented_canonical_id": "arXiv:2602.18846",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

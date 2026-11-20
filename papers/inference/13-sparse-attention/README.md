@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（188本）
+## 自動生成の論文一覧（189本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -461,6 +461,10 @@
 - **2026-02 · [Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing](2026-2602.02159-focus-dllm-accelerating-long-context-diffusion-llm-inference-via-confide.md)**  
   実装：[✓](https://github.com/Longxmas/Focus-dLLM) ・ リポジトリ内被引用：0  
   前ステップの信頼度で次に復号される位置を予測して注意を絞り、吸着先トークンを層間で共有する学習不要の高速化で、32K文脈で29.6倍のスループットを精度を保ちながら達成した。
+
+- **2026-02 · [FAST-Prefill: FPGA Accelerated Sparse Attention for Long Context LLM Prefill](2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-pref.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  索引生成の融合パイプライン化、残り使用回数で管理する2層KVキャッシュ、DSPとLUTの混成演算で長文脈プリフィルを加速するFPGA設計。TTFT最大2.5倍、エネルギー効率最大4.5倍。
 
 - **2026-01 · [Sparse Attention as Compact Kernel Regression](2026-2601.22766-sparse-attention-as-compact-kernel-regression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

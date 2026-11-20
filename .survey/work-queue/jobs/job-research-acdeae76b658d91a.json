@@ -35,10 +35,15 @@
   "selection_reason": "MoEの推論時に人気expertへトークンが偏る問題に対し、頻繁に使われるexpertを複製し、低重要度expertと複製を量子化して元のメモリ予算内へ収めるReplicate-and-Quantizeを提案。ルータ再学習なしで負荷不均衡を最大1.4倍改善し、精度変化±0.6%以内と報告。MoE expert配置・推論スケジューリングに直接関連。",
   "semantic_scholar_id": "a7d82a2840d76c9f886ec58801665dc2181ab474",
   "source_url": "https://arxiv.org/abs/2602.19938",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Replicate-and-Quantize Strategy for Plug-and-Play Load Balancing of Sparse Mixture-of-Experts LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T08:44:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.19938-a-replicate-and-quantize-strategy-for-plug-and-play-load-balancing-of-sp.md",
+  "represented_canonical_id": "arXiv:2602.19938",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
