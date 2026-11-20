@@ -35,10 +35,15 @@
   "selection_reason": "混合量子化とHuffman符号化で重み保存容量と帯域を削減。SmolLM、Phi-3、Mistralで評価し、Jetson P3450等で推論31.9〜146.6%高速化と著者報告。",
   "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
   "source_url": "https://arxiv.org/abs/2505.02380",
-  "status": "ready",
+  "status": "superseded",
   "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
   "type": "research",
   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:41:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language.md",
+  "represented_canonical_id": "arXiv:2505.02380",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "DeepSeek-R1/V3の複数bit幅で量子化後の能力低下を測定し、FP8に対して4bitの劣化が小さい条件を報告。さらに動的3bitのDQ3KMを提案し、従来Q3KMより高品質で多くの課題ではQ4KMに近いとする。H100/A100/昇騰910B上の単一マシン配置可能性を検討する推論向け圧縮評価。",
   "semantic_scholar_id": "60b2f37a51dd6ff9dd63e56772215939fbc24a69",
   "source_url": "https://arxiv.org/abs/2505.02390",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quantitative Analysis of Performance Drop in DeepSeek Model Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:41:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md",
+  "represented_canonical_id": "arXiv:2505.02390",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

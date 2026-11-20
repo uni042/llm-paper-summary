@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "311efc178f4b33bf0d3a232b21fc46b027976c19",
+  "base_commit": "d400750dd591834cc8937407174cc75d97b9f6a7",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -105,6 +105,10 @@
     "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
+    "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json",
+    "2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language-model-inference-on-edge-devices.json",
+    "2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.json",
+    "2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.json",
     "2025-2505.03810-grouped-sequency-arranged-rotation-optimizing-rotation-transformation-for-quantization-for-free.json",
     "2025-2505.04081-qstore-quantization-aware-compressed-model-storage.json",
     "2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.json",
@@ -114,6 +118,7 @@
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.19812-efficient-multi-modal-long-context-learning-for-training-free-adaptation.json",
+    "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json",
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
     "2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.json",
     "2025-2506.10446-fast-on-the-easy-deep-on-the-hard-efficient-reasoning-via-powered-length-penalty.json",
@@ -43356,6 +43361,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2504.21174": {
+      "order": [
+        "2026-11-20T07:34:04+00:00",
+        "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.02380": {
+      "order": [
+        "2026-11-20T07:35:24+00:00",
+        "2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language-model-inference-on-edge-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.02390": {
+      "order": [
+        "2026-11-20T07:36:45+00:00",
+        "2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.03373": {
+      "order": [
+        "2026-11-20T07:38:05+00:00",
+        "2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.20112": {
+      "order": [
+        "2026-11-20T07:39:26+00:00",
+        "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53840,6 +53890,21 @@
     "arxiv:2503.22451": [
       "papers/inference/99-other-inference-systems/2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md",
       "papers/inference/99-other-inference-systems/2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md"
+    ],
+    "arxiv:2504.21174": [
+      "papers/inference/99-other-inference-systems/2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.md"
+    ],
+    "arxiv:2505.02380": [
+      "papers/inference/16-weight-quantization-compression/2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language.md"
+    ],
+    "arxiv:2505.02390": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md"
+    ],
+    "arxiv:2505.03373": [
+      "papers/inference/99-other-inference-systems/2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.md"
+    ],
+    "arxiv:2505.20112": [
+      "papers/inference/99-other-inference-systems/2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md"
     ]
   }
 }

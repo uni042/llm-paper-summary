@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1070本）
+## 自動生成の論文一覧（1073本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2716,6 +2716,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
 
+- **2025-05 · [ERC-SVD: Error-Controlled SVD for Large Language Model Compression](2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  切り捨て残差を2段目の特異値分解で回収する残差補償と、最後の数層だけへの部分層圧縮で誤差伝播を抑える、学習不要の特異値分解圧縮手法。同じ圧縮率で既存の特異値分解系手法より品質を保つ。
+
 - **2025-05 · [Cross-Attention Speculative Decoding](2025-2505.24544-cross-attention-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Beagle（Budget EAGLE）は、投機的復号の小型下書きモデルに単層のcross-注意機構 Transformerを採用し、EAGLE-v2のようなself-注意機構型下書きに近い速度を、単純な構造と少ないメモリで得る方式である。
@@ -3284,6 +3288,10 @@
   実装：[✓](https://github.com/woominsong/Simba) ・ リポジトリ内被引用：0  
   Simbaは、Mambaなどの状態空間モデル（SSM）で、入力系列のトークンを層が深くなるほど段階的に間引く推論時の疎化手法である。付録の8枚のRTX2080 Ti上のPyTorch実装では、Mamba-2.8Bの入力長3Kの推論時間5.819秒に対しSimbaは3.217秒で、約1.81倍の高速化である。
 
+- **2025-05 · [SPAP: Structured Pruning via Alternating Optimization and Penalty Methods](2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MLPの構造枝刈りを混合整数最適化として定式化し、緩和の最適性を証明したうえでペナルティ法と交互最小化で解く手法。経験的指標に頼らず枝刈り先と重みの回復を決め、疎性30パーセントで約1.29倍の高速化を得た。
+
 - **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
@@ -3355,6 +3363,10 @@
 - **2025-04 · [Empower Vision Applications with LoRA LMM](2025-2411.00915-empower-vision-applications-with-lora-lmm.md)**  
   実装：[✓](https://github.com/mi150/VaLoRA) ・ リポジトリ内被引用：0  
   オンラインでは入力形状に合うタイル構成を事前探索したATMMカーネルを使い、LoRAを基盤重みへ統合するモード、統合しないモード、両者を混ぜるdeLoRAモードを負荷に応じて選ぶ。
+
+- **2025-04 · [Efficient LLMs with AMP: Attention Heads and MLP Pruning](2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.md)**  
+  実装：[✓](https://github.com/c2d-usp/Efficient-LLMs-with-AMP) ・ リポジトリ内被引用：0  
+  入力を重みへ射影して測る寄与の大きさで、注意ヘッドとMLPニューロンを同時に削る構造化枝刈り。ノルム基準より精度を保ち、実測の高速化も得る。
 
 - **2025-04 · [An Empirical Study on Prompt Compression for Large Language Models](2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md)**  
   実装：[✓](https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression) ・ リポジトリ内被引用：0  
@@ -3945,7 +3957,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：285  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：286  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
