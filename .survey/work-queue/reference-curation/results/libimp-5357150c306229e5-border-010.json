@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27431",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27431",
+    "identity_tokens": [
+      "arXiv:2605.27431"
+    ],
+    "reason": "マルチモーダル学習の課題にMoEがどう効くかを効率的なエンジン・表現学習・アダプタの観点で整理するサーベイで、選択的専門家活性化による計算分離には触れるが新規の推論手法ではなくマルチモーダル課題解決が主目的のため境界とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

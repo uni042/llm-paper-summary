@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.07179",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.07179",
+    "identity_tokens": [
+      "arXiv:2407.07179"
+    ],
+    "reason": "高輝度LHCの粒子飛跡再構成にTransformerやU-Netを適用しヒット割り当て予測の精度と計算性能を評価する高エネルギー物理のデータ処理研究であり、LLM推論システムとは対象も機構も無関係である。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Trackformers: in search of transformer-based particle tracking for the high-luminosity LHC era"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

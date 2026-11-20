@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-989e5dd4fac1ecff-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.01218",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.01218",
+    "identity_tokens": [
+      "arXiv:2607.01218"
+    ],
+    "reason": "次トークン予測と将来予測用の状態保持を別々の計算ストリームに分離するTransformer変種を事前学習で評価し言語モデリング性能を上げる研究であり、推論時の計算・メモリ・デコード効率への効果は要旨で主張されていない。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The State-Prediction Separation Hypothesis"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-989e5dd4fac1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

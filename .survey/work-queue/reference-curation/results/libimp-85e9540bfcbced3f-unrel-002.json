@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-85e9540bfcbced3f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.02891",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.02891",
+    "identity_tokens": [
+      "arXiv:2503.02891"
+    ],
+    "reason": "Vision Transformerのエッジ配置向けモデル圧縮とハードウェア加速を総説する論文であり、対象が画像モデルに限られLLM推論システムへの直接の技術的貢献は要旨に示されていないため。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Vision Transformers on the Edge: A Comprehensive Survey of Model Compression and Acceleration Strategies"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85e9540bfcbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

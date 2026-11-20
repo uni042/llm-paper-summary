@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b40ad63c90737e9f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.37903",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.37903",
+    "identity_tokens": [
+      "arXiv:2610.37903"
+    ],
+    "reason": "Mamba-2と注意のMoEハイブリッドで活性パラメータは少ないものの、要旨の中心はゼロからの事前学習・SFTと40ベンチマークの能力報告であり、推論サービングやデコード効率の具体的機構は示されていないため。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Think Twice: The Metis-1.6 Technical Report"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b40ad63c9073",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.00966",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.00966",
+    "identity_tokens": [
+      "arXiv:2507.00966"
+    ],
+    "reason": "Mambaと時間・周波数マルチヘッド注意を組み合わせたMambAttentionは単一チャネル音声強調の汎化性能を上げるための音響モデルであり、LLMの推論・デコード・メモリ効率とは無関係な音声信号処理の応用である。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MambAttention: Mamba With Multi-Head Attention for Generalizable Single-Channel Speech Enhancement"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

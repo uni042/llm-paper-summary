@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-937030dc1a7e5983-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.30771",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.30771",
+    "identity_tokens": [
+      "arXiv:2605.30771"
+    ],
+    "reason": "セッションを跨ぐAIエージェント向けに来歴付き長期メモリとLLM呼び出しなしの検索経路を提案するが、主目的は記憶の監査可能性と想起精度であり推論実行効率への貢献は限定的なため境界とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Eywa: Provenance-Grounded Long-Term Memory for AI Agents"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-937030dc1a7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

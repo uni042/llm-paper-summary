@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96ce94148b743c52-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.20132",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.20132",
+    "identity_tokens": [
+      "arXiv:2505.20132"
+    ],
+    "reason": "テンソル化による重み圧縮と解釈可能性を論じる位置付け論文で一般的なニューラルネット圧縮には触れるが、LLM推論の実行系やメモリ削減の具体機構と評価が要旨に示されていないため境界とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tensorization is a powerful but underexplored tool for compression and interpretability of neural networks"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96ce94148b74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

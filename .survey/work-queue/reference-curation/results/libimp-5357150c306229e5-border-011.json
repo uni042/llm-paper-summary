@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.20616",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.20616",
+    "identity_tokens": [
+      "arXiv:2605.20616"
+    ],
+    "reason": "言語エージェントのセッション横断の経験記憶をオフラインで統合し作業記憶バンクを最大12倍小さくするAuto-Dreamerは、エージェントの知識記憶の管理が主目的であり、GPUメモリやKVキャッシュ等の推論実行時メモリ機構への貢献は薄いため境界とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

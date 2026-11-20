@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-989e5dd4fac1ecff-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.14589",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.14589",
+    "identity_tokens": [
+      "arXiv:2605.14589"
+    ],
+    "reason": "短い訓練系列の末尾に遠い位置インデックスの終端プロンプトを付けて長文脈へ拡張するEndPromptは、長文脈推論を可能にするが貢献の中心は二次コストを避ける文脈拡張の学習手法であり、推論時の計算やメモリを減らす機構ではないため境界とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EndPrompt: Efficient Long-Context Extension via Terminal Anchoring"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-989e5dd4fac1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

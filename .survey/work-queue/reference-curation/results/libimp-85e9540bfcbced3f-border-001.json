@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-85e9540bfcbced3f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.07711",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.07711",
+    "identity_tokens": [
+      "arXiv:2606.07711"
+    ],
+    "reason": "LLMエージェントの長期記憶をモデル横断で適応させる書込・読出演算子を学習しQAタスク性能を上げるが、対象は応用レベルの記憶提示であり推論ランタイムのメモリ効率やレイテンシ改善は要旨で示されていないため。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rosetta Memory: Adaptive Memory for Cross-LLM Agents"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85e9540bfcbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

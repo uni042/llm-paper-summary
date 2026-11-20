@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b40ad63c90737e9f-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.08007",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.08007",
+    "identity_tokens": [
+      "arXiv:2602.08007"
+    ],
+    "reason": "TSR-AdamはAdamの勾配同期を両側低ランク化して事前学習の通信量を13倍削減する分散最適化手法であり、メモリ効率も訓練文脈に限られ推論システムへの具体的貢献は示されていないため。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From O(mn) to O(r2): Two-Sided Low-Rank Communication for Adam in Distributed Training with Memory Efficiency"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b40ad63c9073",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

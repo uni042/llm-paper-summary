@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.03233",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.03233",
+    "identity_tokens": [
+      "arXiv:2311.03233"
+    ],
+    "reason": "学習中にモデル形状を変える適応的モデルが静的モデルのスケーリング則を上回り、目標性能への学習計算を減らすという計算最適な事前学習の研究であり、推論・サービング・デコードに関する適用や効果は要旨に一切示されていない。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Navigating Scaling Laws: Compute Optimality in Adaptive Model Training"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.02601",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.02601",
+    "identity_tokens": [
+      "arXiv:2204.02601"
+    ],
+    "reason": "多言語事前学習モデルへの構造化枝刈りを設定・アルゴリズム・効率の面から評価し、推論時にモデルサイズを変えられるDynamic Sparsificationを出すが、対象は旧来の多言語PLMでLLM推論システムへの貢献は間接的かつ薄いため境界とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Probing Structured Pruning on Multilingual Pre-trained Models: Settings, Algorithms, and Efficiency"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

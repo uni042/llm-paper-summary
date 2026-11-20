@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5357150c306229e5-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.12496",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.12496",
+    "identity_tokens": [
+      "arXiv:2412.12496"
+    ],
+    "reason": "Vision Mambaのトークンマージ後に数分間の再学習で精度を回復し推論を1.2〜1.5倍速くするR-MeeToはImageNet画像分類専用の視覚モデル効率化であり、LLM推論への適用や効果は要旨に示されていないため対象外とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Faster Vision Mamba is Rebuilt in Minutes via Merged Token Re-training"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5357150c3062",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

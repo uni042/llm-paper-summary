@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-937030dc1a7e5983-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.16860",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.16860",
+    "identity_tokens": [
+      "arXiv:2502.16860"
+    ],
+    "reason": "トークンレベルの注意から長距離依存を測って長文脈学習データLongABC-32Kを選別する学習データ構築の研究で、推論時の処理やメモリを改善する機構は要旨に示されていないため対象外とする。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LongAttn: Selecting Long-context Training Data via Token-level Attention"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-937030dc1a7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

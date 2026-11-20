@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-502d037745a5239f-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.21704",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.21704",
+    "identity_tokens": [
+      "arXiv:2606.21704"
+    ],
+    "reason": "CoT蒸留の圧縮条件を分析し訓練時圧縮が推論時節約に直結しないこと等を示す分析研究であり、新しい推論システム機構の提案や実装評価ではないため。",
+    "first_checked_at": "2026-11-20T22:26:34+00:00",
+    "last_checked_at": "2026-11-20T22:26:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Compression Helps and When It Hurts: Condition-Aware Analysis of Chain-of-Thought Distillation"
+  },
+  "processed_at": "2026-11-20T22:26:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-502d037745a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
