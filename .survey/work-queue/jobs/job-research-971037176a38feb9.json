@@ -35,10 +35,15 @@
   "selection_reason": "線形・gated・delta-ruleの再帰演算で、計算結果を保存する回転・対角scale・decay/write配置変更など7種の不変変換を導出し、低精度prefillの数値誤差を低減する。既存SSDi8のMamba-2 prefillへ適用し、一次要旨はMamba-2 1.3B/2.7B/8BとNemotron-H 8Bで同等latency時のperplexity改善を報告。ハイブリッドLLMの推論量子化・prefill kernelに直接関係するためaccept。",
   "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
   "source_url": "https://arxiv.org/abs/2610.39418",
-  "status": "ready",
+  "status": "superseded",
   "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:56:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.39418-linquant-functional-invariances-for-low-precision-linear-recurrences.md",
+  "represented_canonical_id": "arXiv:2610.39418",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

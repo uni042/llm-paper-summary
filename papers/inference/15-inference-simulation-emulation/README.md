@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（92本）
+## 自動生成の論文一覧（93本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -101,6 +101,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Learning to Formulate: Agentic Hardware–Software Co-Design of AI Infrastructure through Progressive Optimization and Verification](2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントが最適化の定式化を書き解法器が解き検証が裏づける分担と、段ごとの詳細化と壁の緩和により、固定チップでは完全な層が本番経路より一・〇七五倍速く、協調設計では最悪周期が参照の〇・四二八倍まで下がり、証明の再利用で検査が二・五一倍速くなったと、分かれた研究の形で報告した。
 
 - **2026-10 · [GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving](2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

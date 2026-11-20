@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3b317b305cc9cf8d406b3a1074b6bc470fac504b",
+  "base_commit": "ffbbd7771318c378732747100b151e2a57c97900",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -798,6 +798,11 @@
     "2026-2610.38809-causal-attention-on-cpu-a-cache-aware-and-load-balanced-scheduling-kernel-for-prefill.json",
     "2026-2610.38822-copyloop-fast-looped-transformer-decoding-via-context-copying-and-shallow-screening.json",
     "2026-2610.38968-tabletune-measured-self-correcting-draft-length-tables-for-dynamic-speculative-decoding.json",
+    "2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inference.json",
+    "2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastructure-through-progressive-optimization-and-verification.json",
+    "2026-2610.39418-linquant-functional-invariances-for-low-precision-linear-recurrences.json",
+    "2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-inference.json",
+    "2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-in-llm-prefill-and-decode-phases.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45545,6 +45550,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.39216": {
+      "order": [
+        "2026-11-20T14:48:21+00:00",
+        "2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39380": {
+      "order": [
+        "2026-11-20T14:49:44+00:00",
+        "2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastructure-through-progressive-optimization-and-verification.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39418": {
+      "order": [
+        "2026-11-20T14:51:08+00:00",
+        "2026-2610.39418-linquant-functional-invariances-for-low-precision-linear-recurrences.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39562": {
+      "order": [
+        "2026-11-20T14:52:31+00:00",
+        "2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.39621": {
+      "order": [
+        "2026-11-20T14:53:54+00:00",
+        "2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-in-llm-prefill-and-decode-phases.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56904,6 +56954,21 @@
     "arxiv:2610.38968": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.38968-tabletune-measured-self-correcting-draft-length-tables-for-dynamic-specu.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.38968-tabletune-measured-self-correcting-draft-length-tables-for-dynamic-specu.md"
+    ],
+    "arxiv:2610.39216": [
+      "papers/inference/99-other-inference-systems/2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inferenc.md"
+    ],
+    "arxiv:2610.39380": [
+      "papers/inference/15-inference-simulation-emulation/2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastr.md"
+    ],
+    "arxiv:2610.39418": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.39418-linquant-functional-invariances-for-low-precision-linear-recurrences.md"
+    ],
+    "arxiv:2610.39562": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-infe.md"
+    ],
+    "arxiv:2610.39621": [
+      "papers/inference/99-other-inference-systems/2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "メモリ律速MoE推論のプリフィル・デコードシーソーを破るPDScope。専門家をCPUメモリに置く局所配備で、プリフィルの積極的読み込みとデコードの保守的転送が衝突する問題に対し、位相ごとに予測可能な専門家ルーティングで両者を分離する。推論基盤機構そのもの。",
   "semantic_scholar_id": "abf9fc5a3ede55c394d64f3afb5a544fe69d8f1e",
   "source_url": "https://arxiv.org/abs/2610.39216",
-  "status": "ready",
+  "status": "superseded",
   "title": "PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:56:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inferenc.md",
+  "represented_canonical_id": "arXiv:2610.39216",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

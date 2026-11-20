@@ -35,10 +35,15 @@
   "selection_reason": "LLM agentが計算graphからchip制約まで設計の数理定式化を段階的に生成し、solverが最適化、検証・実測が仮定と結果を確認するFormulaic。NVIDIA GB10上でQwen3-8Bの完全layerをSGLang比1.075倍高速化し、Ventus GPU simulationでQwen2.5-0.5Bのworst-case cycleを基準の0.428まで削減（software-onlyは0.934）。異なる個別studyであり単一end-to-end deploymentではない。LLM inference layerとGPU設計の共同最適化を直接評価するためaccept。",
   "semantic_scholar_id": "b19b0b08c501e09f00f772fb5dbf204b340f79c9",
   "source_url": "https://arxiv.org/abs/2610.39380",
-  "status": "ready",
+  "status": "superseded",
   "title": "Learning to Formulate: Agentic Hardware-Software Co-Design of AI Infrastructure through Progressive Optimization and Verification",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:56:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastr.md",
+  "represented_canonical_id": "arXiv:2610.39380",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

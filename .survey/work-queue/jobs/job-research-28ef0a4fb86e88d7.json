@@ -35,10 +35,15 @@
   "selection_reason": "MLLM複数ターンで初回prefill tokenをpruneしながら、除外tokenを破棄せずdecode中の余剰計算枠や応答後のscheduling gapで順次prefillするRaincheck。attention visibility制御とaffine state mappingで生成開始後のcontext更新を可能にし、prefill/decode fusionで重み再読を抑える。Qwen3-VL-8BとQwen3.5-9B、初期30% token保持条件で、SGLang実装はMultiVerseの初回TTFTをfull prefill比最大24.1%削減し、平均TPOT増加は0.5%未満。MLLM推論時のprefill資源配分に直接関係しaccept。",
   "semantic_scholar_id": "dd47522b63781ddc9d8ea2d1f6c1698dbe77a676",
   "source_url": "https://arxiv.org/abs/2610.39562",
-  "status": "ready",
+  "status": "superseded",
   "title": "Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:56:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-infe.md",
+  "represented_canonical_id": "arXiv:2610.39562",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

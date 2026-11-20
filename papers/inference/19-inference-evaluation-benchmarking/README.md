@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（156本）
+## 自動生成の論文一覧（157本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -125,6 +125,10 @@
 - **2026-10 · [Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing](2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ベンチマークの実行順序・再起動・ウォームアップ・間隔を統制する順次分離プロトコルで、推論測定のrun間変動係数を15.2パーセントから2.2パーセントへ下げ、回帰テストに使える再現性を得る方法と実測。
+
+- **2026-10 · [Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference](2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-infe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  間引きで外れたマルチモーダルトークンを捨てず、生成中の空き計算と応答後の隙間で元の順序に処理し直し、可視性制御と状態写像で生成中の文脈へ差し込むことで、失われた品質の平均七七・七パーセントを回復しつつ最初の応答を最大二四・一パーセント速くし、出力間隔の悪化を〇・五パーセント未満に抑えたと報告した。
 
 - **2026-10 · [Prefetch-Steered Routing: Deterministic Cache-Aware Expert Selection for Offloaded Mixture-of-Experts Decoding](2026-2610.34721-prefetch-steered-routing-deterministic-cache-aware-expert-selection-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
