@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（574本）
+## 自動生成の論文一覧（575本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -851,6 +851,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   強いW4ベースを先に固定し残差だけを4ビットで足してW8ターゲットを復元する入れ子表現により、別コピーなしでW4ドラフトとW8検証を単一の重みとKVキャッシュから読み分ける自己投機的デコード手法。
 
+- **2026-10 · [Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE](2026-2610.32711-beyond-hotness-high-resolution-memory-characterization-of-cloud-and-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プロセッサのサンプリング拡張でLLM推論を含む8ワークロードのメモリ挙動を細かく測り、遅延の集中とアイドル期間で階層メモリへの適性を判定した計測研究。
+
 - **2026-10 · [BELT: BEhavior-Aligned Low-Rank KV Cache Compression with Learned Top-k Rank Allocation](2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-r.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意分布と注意出力に目的関数を合わせた低ランクKV圧縮と、全ヘッド横断の学習型ランク配分により、70パーセント圧縮でも長文脈品質を保ち、量子化併用で最大17.8倍の削減と最大3.3倍のデコード高速化を得た。
@@ -1666,7 +1670,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   各問い合わせで重要な鍵値をトークン単位に選び、ヘッド軟投票・選択キャッシュ・ページ化内積カーネルで長文脈注意を高精度かつ高速化する。
 
 - **2025-07 · [Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation](2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   共有Transformerブロックを再帰利用し、ルータがトークンごとに継続深度を決めて活動集合だけへ注意・KV保持することで、推論時の適応計算とパラメータ共有を両立する。
 
 - **2025-05 · [PM-KVQ: Progressive Mixed-precision KV Cache Quantization for Long-CoT LLMs](2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md)**  

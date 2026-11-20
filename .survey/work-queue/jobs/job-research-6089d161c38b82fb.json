@@ -35,10 +35,15 @@
   "selection_reason": "大規模Transformer向け空間アクセラレータを、複数演算のpipelineとdataflowを共同最適化してRTL生成するTranSAGEを提案。動的計画法で演算グラフを分割し、パイプラインに適した演算群・データフローを設計空間探索する。4種類のLLMで商用GPU/NPU比最大2.41倍throughput、13.04倍energy efficiencyを報告しており、LLM推論専用ハードウェアの直接的研究としてaccept。",
   "semantic_scholar_id": "677e510cd193857260c81ef53692c2bc662ec4f3",
   "source_url": "https://arxiv.org/abs/2610.32279",
-  "status": "ready",
+  "status": "superseded",
   "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
   "type": "research",
   "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:13:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.32279-transage-automating-spatial-accelerator-generation-for-large-scale-trans.md",
+  "represented_canonical_id": "arXiv:2610.32279",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

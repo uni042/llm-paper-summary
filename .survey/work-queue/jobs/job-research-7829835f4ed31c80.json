@@ -35,10 +35,15 @@
   "selection_reason": "通信事業者の地理分散WAN上でnetwork slicing、GPU partitioning、elastic serving、監視を統合したLLM推論reference architectureをJOINER UK実網で評価する。著者要旨はreplicationは配置に比較的鈍感だがメモリに制約され、pipeline parallelは近距離～中距離跨ぎに耐える一方、tensor parallelとprefill/decode分離は単一subnet hopを越えると成立しにくいと報告。実WANの推論配置・SLO評価としてaccept。",
   "semantic_scholar_id": "5a36f4873f8d6161f52c761d66907c2fd7a29cb1",
   "source_url": "https://arxiv.org/abs/2610.32638",
-  "status": "ready",
+  "status": "superseded",
   "title": "InferSlice: A Reference Architecture for SLO-driven LLM Inference over a Telco Wide-Area Network",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:13:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.32638-inferslice-a-reference-architecture-for-slo-driven-llm-inference-over-a-.md",
+  "represented_canonical_id": "arXiv:2610.32638",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

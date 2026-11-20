@@ -125,6 +125,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。
 
+- **2026-05 · [Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems](2026-2605.22883-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  しかしエージェント型のシステムでは、利用者の一つの目的を達成するまでに計画の生成、道具の呼び出し、途中結果の検査、失敗後の再試行、最終回答の生成など、複数回の推論が連鎖する。x86の対応した目標集合でOOIは4.34倍、GraceのCPUとGPUを含めたローカル測定では7.63倍となった。
+
 - **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
   実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：1  
   通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
@@ -246,10 +250,6 @@
 - **2026-05 · [MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading](2026-2605.10268-memreread-enhancing-agentic-long-context-reasoning-via-memory-guided-rer.md)**  
   実装：[✓](https://github.com/iiGray/MemReread) ・ リポジトリ内被引用：0  
   MemRereadは、長い文書を固定容量の作業メモリへ逐次要約するエージェントに、不足した証拠を後から原文で再読する処理を加える研究である。履歴メモリを検索する方式でも、捨てられた情報が履歴に保存されていなければ検索対象にならない。
-
-- **2026-05 · [Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems](2026-2605.22883-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  しかしエージェント型のシステムでは、利用者の一つの目的を達成するまでに計画の生成、道具の呼び出し、途中結果の検査、失敗後の再試行、最終回答の生成など、複数回の推論が連鎖する。x86の対応した目標集合でOOIは4.34倍、GraceのCPUとGPUを含めたローカル測定では7.63倍となった。
 
 - **2026-05 · [Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost](2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

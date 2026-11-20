@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2af6577a0d059d3ad0fb7766fd9d20c9a3c102f8",
+  "base_commit": "d769fdd2f2dfe7c555e09dfd81001a1828103d93",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -743,6 +743,11 @@
     "2026-2610.31897-learning-structured-sparsity-for-large-models-bridging-model-compressibility-and-efficient-inference.json",
     "2026-2610.32009-gs-moe-training-free-moe-compression-via-groupwise-subspace-sharing-and-pruning.json",
     "2026-2610.32243-biloco-binary-low-rank-corrections-for-post-training-quantization.json",
+    "2026-2610.32279-transage-automating-spatial-accelerator-generation-for-large-scale-transformer-models.json",
+    "2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-model-agents.json",
+    "2026-2610.32492-accordion-elastic-depth-inference-via-fixed-prefix-layer-looping.json",
+    "2026-2610.32638-inferslice-a-reference-architecture-for-slo-driven-llm-inference-over-a-telco-wide-area-network.json",
+    "2026-2610.32711-beyond-hotness-high-resolution-memory-characterization-of-cloud-and-llm-workloads-for-tiered-memory-with-arm-spe.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -44995,6 +45000,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.32279": {
+      "order": [
+        "2026-11-20T13:09:15+00:00",
+        "2026-2610.32279-transage-automating-spatial-accelerator-generation-for-large-scale-transformer-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.32417": {
+      "order": [
+        "2026-11-20T13:10:00+00:00",
+        "2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-model-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.32492": {
+      "order": [
+        "2026-11-20T13:10:47+00:00",
+        "2026-2610.32492-accordion-elastic-depth-inference-via-fixed-prefix-layer-looping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.32638": {
+      "order": [
+        "2026-11-20T13:11:32+00:00",
+        "2026-2610.32638-inferslice-a-reference-architecture-for-slo-driven-llm-inference-over-a-telco-wide-area-network.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.32711": {
+      "order": [
+        "2026-11-20T13:12:18+00:00",
+        "2026-2610.32711-beyond-hotness-high-resolution-memory-characterization-of-cloud-and-llm-workloads-for-tiered-memory-with-arm-spe.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56134,6 +56184,21 @@
     "arxiv:2610.32243": [
       "papers/inference/09-kernel-runtime-compilation/2026-2610.32243-biloco-binary-low-rank-corrections-for-post-training-quantization.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2610.32243-biloco-binary-low-rank-corrections-for-post-training-quantization.md"
+    ],
+    "arxiv:2610.32279": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.32279-transage-automating-spatial-accelerator-generation-for-large-scale-trans.md"
+    ],
+    "arxiv:2610.32417": [
+      "papers/inference/99-other-inference-systems/2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-mo.md"
+    ],
+    "arxiv:2610.32492": [
+      "papers/inference/99-other-inference-systems/2026-2610.32492-accordion-elastic-depth-inference-via-fixed-prefix-layer-looping.md"
+    ],
+    "arxiv:2610.32638": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.32638-inferslice-a-reference-architecture-for-slo-driven-llm-inference-over-a-.md"
+    ],
+    "arxiv:2610.32711": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.32711-beyond-hotness-high-resolution-memory-characterization-of-cloud-and-llm-.md"
     ]
   }
 }

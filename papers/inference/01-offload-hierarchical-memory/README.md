@@ -452,6 +452,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：2  
   単純なオンデマンドオフロードでは、ゲートが専門家を選んでからCPUからGPUへ重みを転送するため、転送完了まで計算が待つ。Switch-BaseのXSum評価ではDeepSpeed-Offload比1.99〜3.46倍、平均2.74倍、Pre-gated MoE比平均2.22倍、MoE-Infinity比平均1.55倍のトークン処理量を報告する。
 
+- **2025-08 · [Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective](2025-2508.08531-profiling-large-language-model-inference-on-apple-silicon-a-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ローカルLLMの実行環境を選ぶ際、モデルが何GBに収まるか、何bitで量子化できるか、GPUの理論FLOPSがいくつかという指標だけでは実際の生成速度を予測できない。DeepSeek 236BのM2 Ultra上ではIQ2Mが57.33ms/トークンで最も遅く、サイズが約1.73倍のIQ4NLは1.21倍速い。
+
 - **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル計算中の余剰HBM帯域で次層KVを先読みし、512MB〜1GB級M3Dオンチップメモリへ保持して、長文デコードのKV転送待ちを隠すハードウェア・スケジューラ協調方式。
@@ -467,10 +471,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
   実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：1  
   SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
-
-- **2025-08 · [Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective](2025-2508.08531-profiling-large-language-model-inference-on-apple-silicon-a-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ローカルLLMの実行環境を選ぶ際、モデルが何GBに収まるか、何bitで量子化できるか、GPUの理論FLOPSがいくつかという指標だけでは実際の生成速度を予測できない。DeepSeek 236BのM2 Ultra上ではIQ2Mが57.33ms/トークンで最も遅く、サイズが約1.73倍のIQ4NLは1.21倍速い。
 
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -515,7 +515,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
-  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：43  
   HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
 
 - **2024-11 · [MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)**  

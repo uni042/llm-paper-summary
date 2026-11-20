@@ -35,10 +35,15 @@
   "selection_reason": "ローカル量子化LLM agentで1 token当たりの省エネルギーがtask完了当たりの省エネルギーを保証しないことを、29 agent task・6 family、4/8bitの2モデル、A100とllama.cppで測定。4bitは通常token当たり消費電力を下げるが追加tokenと再試行によって完了task当たり最大3.5倍のエネルギーを要する場合を報告。量子化精度とagent実行予算の選択に直接関わる推論システム評価としてaccept。",
   "semantic_scholar_id": "24adc4b709bae44d24a41ede53516140eecba855",
   "source_url": "https://arxiv.org/abs/2610.32417",
-  "status": "ready",
+  "status": "superseded",
   "title": "Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:13:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-mo.md",
+  "represented_canonical_id": "arXiv:2610.32417",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

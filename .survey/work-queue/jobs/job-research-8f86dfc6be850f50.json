@@ -35,10 +35,15 @@
   "selection_reason": "5つの推論計算予算に対し、固定prefixのlayer looping実行経路を持つMoEモデルAccordionを提案。各micro-batchでbudgetをサンプルするjoint pretrainingとbudget別SFT/RL・複数expertのdistillationで1モデルが異なる推論深度に対応。Accordion-6B-A0.5Bは3.6T token事前学習後、追加layer実行の中間budgetで最大品質改善の89%を半分の追加layer実行数で獲得と報告。サービングthroughput実測は要旨にないが、明示的な計算予算と品質のtradeoffを提供する推論時適応計算の研究としてaccept。",
   "semantic_scholar_id": "f1494c2b2a6e28c26d22f31251f8c171e76c741e",
   "source_url": "https://arxiv.org/abs/2610.32492",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:13:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.32492-accordion-elastic-depth-inference-via-fixed-prefix-layer-looping.md",
+  "represented_canonical_id": "arXiv:2610.32492",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

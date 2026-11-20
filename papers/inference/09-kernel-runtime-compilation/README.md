@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（274本）
+## 自動生成の論文一覧（275本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -72,6 +72,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/SJTU-IPADS/MetaAttention) ・ リポジトリ内被引用：3  
   MetaAttentionは、異なる注意機構をハードウェアごとに手作業で実装する費用を削減しながら、専用実装に近い実行性能を得るためのカーネル生成基盤である。両者は著者・基本設計・最大10.4倍という結果が対応する一方、本稿で詳細な数値・実験条件を確認したのは公開プレプリント版である。
 
+- **2026-01 · [Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use](2026-2601.22362-understanding-efficiency-quantization-batching-and-serving-strategies-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  大規模言語モデル（Large Language モデル; LLM）の推論電力量は、モデルのパラメータ数や重みのビット幅だけでは決まらない。同じモデルを同じGPUで実行しても、事前充填（プリフィル）と逐次復号（デコード）では計算律速かメモリ律速かが異なり、要求を逐次処理するか連続バッチ化するかによってGPUの待機時間が大きく変わる。重要な結論は三つある。
+
 - **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
@@ -95,10 +99,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation](2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md)**  
   実装：[✓](https://github.com/kaist-ina/Trinity-AE) ・ リポジトリ内被引用：2  
   Transformerの推論カーネル最適化では、計算グラフ上の演算融合・代数変形と、GPU上のタイル分割・共有メモリ配置・並列化を別々のコンパイラ段階で決めることが多い。この分離によって、FlashAttentionのように代数変形とデータ移動・実行順序を同時に変える最適化を一般的なコンパイラが自動発見しにくい。
-
-- **2026-01 · [Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use](2026-2601.22362-understanding-efficiency-quantization-batching-and-serving-strategies-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  大規模言語モデル（Large Language モデル; LLM）の推論電力量は、モデルのパラメータ数や重みのビット幅だけでは決まらない。同じモデルを同じGPUで実行しても、事前充填（プリフィル）と逐次復号（デコード）では計算律速かメモリ律速かが異なり、要求を逐次処理するか連続バッチ化するかによってGPUの待機時間が大きく変わる。重要な結論は三つある。
 
 - **2026-01 · [TIRx: A Unified Tile Primitive ML Compiler Across Heterogeneous Backends](2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -197,6 +197,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models](2026-2610.32279-transage-automating-spatial-accelerator-generation-for-large-scale-trans.md)**  
+  実装：[✓](https://github.com/sjtu-zhao-lab/TranSAGE) ・ リポジトリ内被引用：0  
+  複数演算のパイプライン化を前提に、グラフ分割とデータフロー探索で演算クラスタとアーキテクチャを共同で決め、回路記述まで自動生成する、トランスフォーマ向け空間アクセラレータのコンパイラ型生成器。
 
 - **2026-10 · [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md)**  
   実装：[✓](https://github.com/intel/SyclKittens) ・ リポジトリ内被引用：0  

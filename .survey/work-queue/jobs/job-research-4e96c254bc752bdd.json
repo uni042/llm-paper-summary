@@ -35,10 +35,15 @@
   "selection_reason": "ARM SPEを用いてCloudSuiteとLLMの8 workloadを高分解能にprofileし、region別のaccess pattern・memory idle period・latency profileからtiered memoryの配置適性を判定する方法を提示。一次要旨は従来のhotness指標だけでは見えないtiering機会を調査する。LLM推論を含むDRAM階層配置の測定基盤としてaccept。ただし個別のLLM throughput改善量は要旨未報告。",
   "semantic_scholar_id": "5318ae3318d3eeae2855a77681ff122d80b7f8b0",
   "source_url": "https://arxiv.org/abs/2610.32711",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Hotness: High-Resolution Memory Characterization of Cloud and LLM Workloads for Tiered Memory with ARM SPE",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:13:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.32711-beyond-hotness-high-resolution-memory-characterization-of-cloud-and-llm-.md",
+  "represented_canonical_id": "arXiv:2610.32711",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
