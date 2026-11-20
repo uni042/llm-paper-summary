@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨はMoEの専門家疎性と注意のブロック疎性・KV物理削除を同時に活用し、SRAM-PIM/HBM-PIMに注意とFFNを分離するSPIMOEを提案。A100 GPU比E2E最大8.35倍、PIMoE比MoE FFN最大3.33倍と報告。PIMによる推論アクセラレーションに直接該当。",
   "semantic_scholar_id": "8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd",
   "source_url": "https://arxiv.org/abs/2609.34612",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:05:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterog.md",
+  "represented_canonical_id": "arXiv:2609.34612",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

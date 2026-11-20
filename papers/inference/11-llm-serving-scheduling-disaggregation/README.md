@@ -300,6 +300,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   異種LLM群で要求難易度、残りワークフロー長、実行中トークン量を同時予測し、モデル選択と待ち行列順序を共同制御して遅延とタスク性能のPareto前線を改善する。
 
+- **2026-02 · [PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving](2026-2602.12029-prefillshare-shared-prefill-multi-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  複数LLMが同じ文脈を別々にプリフィルする重複を、凍結共有プリフィル＋KV条件付き追加学習でモデル横断共有し、エージェント処理の尾遅延とKVメモリを削減する。
+
 - **2026-02 · [PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models](2026-2602.11530-pascal-phase-aware-reasoning-llm-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   推論型大規模言語モデルの非表示推論と表示回答を別の利用者目標として扱い、優先度待ち行列・出力平滑化・フェーズ境界での鍵値キャッシュ移行により、最初の回答が見えるまでの裾の待ち時間を最大七十二パーセント削減する。
@@ -539,10 +543,6 @@
 - **2026-02 · [TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference](2026-2602.05145-tide-temporal-incremental-draft-engine-for-self-improving-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   TIDE（Temporal Incremental 下書き Engine、時間的増分草稿エンジン）は、投機的復号（投機的復号）を「静的な草稿モデルを使う復号手法」から「実際の入力分布に合わせて草稿モデルを更新し、必要な場合だけ投機するサービングシステム」へ拡張する研究である。
-
-- **2026-02 · [PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving](2026-2602.12029-prefillshare-shared-prefill-multi-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  複数LLMが同じ文脈を別々にプリフィルする重複を、凍結共有プリフィル＋KV条件付き追加学習でモデル横断共有し、エージェント処理の尾遅延とKVメモリを削減する。
 
 - **2026-02 · [InfMem: Learning System-2 Memory Control for Long-Context Agent](2026-2602.02704-infmem-learning-system-2-memory-control-for-long-context-agent.md)**  
   実装：[✓](https://github.com/UCMP13753/InfMem) ・ リポジトリ内被引用：1  
@@ -1269,7 +1269,7 @@
   GPUに載りきらない接頭辞KVをCPUやSSDへ置くだけでは、復帰時の小ページ転送とロード待ちが性能を支配する。StrataはGPU支援転送、階層別メモリ配置、I/Oを資源として扱う要求スケジューリングを一体化する。
 
 - **2025-04 · [SLOs-Serve: Optimized Serving of Multi-SLO LLMs](2025-2504.08784-slos-serve-multi-slo-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：30  
   段階別SLOを動的計画法で扱い、チャンク化プリフィル・投機的デコード・入場制御・レプリカルーティングを統合してGPU当たり容量を平均2.2倍改善する。
 
 - **2025-02 · [SageServe: Optimizing LLM Serving on Cloud Data Centers with Forecast Aware Auto-Scaling](2025-2502.14617-sageserve-multi-timescale-cloud-autoscaling.md)**  
@@ -2133,7 +2133,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1638  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1639  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（181本）
+## 自動生成の論文一覧（182本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -237,6 +237,10 @@
 - **2026-10 · [Accelerating Cross-Model LLM Inference via Attention Map Reuse](2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.md)**  
   実装：[✓](https://github.com/PKU-DAIR/MapFlow) ・ リポジトリ内被引用：0  
   異種モデル間でKV状態ではなく注意マップを再利用する提供基盤で、線形変換と部分再計算、疎圧縮と融合カーネルにより、品質を保ちながら初回トークン遅延を15から20パーセント減らしスループットを最大25パーセント高めた。
+
+- **2026-09 · [SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures](2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterog.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意と専門家計算をSRAM型とHBM型の異種メモリ内計算へ分離し、ブロック疎注意によるKV削減と適応型ルーティングによる負荷均衡を組み合わせた、長推論MoE向けのアルゴリズムとハードウェアの協調設計。
 
 - **2026-09 · [SparseEngine: Sparse-First Inference Engine](2026-2609.39068-sparseengine-sparse-first-inference-engine.md)**  
   実装：[✓](https://github.com/CURRENTF/SparseEngine) ・ リポジトリ内被引用：0  
@@ -619,11 +623,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：318  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：319  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：213  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：214  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

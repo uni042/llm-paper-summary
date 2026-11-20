@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "388d6866afc0ee01b683b50ff64ec41e30a269b5",
+  "base_commit": "2a134ca1c65c6d6a0b30ea9bdff7e82009f75aed",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -367,8 +367,13 @@
     "2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix-replay-for-hybrid-llms.json",
     "2026-2609.33503-relaxkv-recomputation-guided-by-the-query-with-sparse-context-attention-for-efficient-kv-cache-reuse.json",
     "2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pruning.json",
+    "2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-precomputation-and-neutral-reconstruction.json",
+    "2026-2609.34259-quantaspike-short-window-spike-driven-quantization-for-large-language-models.json",
     "2026-2609.34370-spexis-speculative-lookahead-scheduling-for-llm-inference.json",
+    "2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.json",
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
+    "2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterogeneous-pim-architectures.json",
+    "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
@@ -42236,6 +42241,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.34054": {
+      "order": [
+        "2026-11-20T04:00:53+00:00",
+        "2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-precomputation-and-neutral-reconstruction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34259": {
+      "order": [
+        "2026-11-20T04:01:40+00:00",
+        "2026-2609.34259-quantaspike-short-window-spike-driven-quantization-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34380": {
+      "order": [
+        "2026-11-20T04:02:26+00:00",
+        "2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34612": {
+      "order": [
+        "2026-11-20T04:03:12+00:00",
+        "2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterogeneous-pim-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34866": {
+      "order": [
+        "2026-11-20T04:03:59+00:00",
+        "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52317,6 +52367,21 @@
     "arxiv:2609.33977": [
       "papers/inference/99-other-inference-systems/2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pru.md",
       "papers/inference/99-other-inference-systems/2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pru.md"
+    ],
+    "arxiv:2609.34054": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-p.md"
+    ],
+    "arxiv:2609.34259": [
+      "papers/inference/99-other-inference-systems/2026-2609.34259-quantaspike-short-window-spike-driven-quantization-for-large-language-mo.md"
+    ],
+    "arxiv:2609.34380": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.md"
+    ],
+    "arxiv:2609.34612": [
+      "papers/inference/13-sparse-attention/2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterog.md"
+    ],
+    "arxiv:2609.34866": [
+      "papers/inference/99-other-inference-systems/2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quan.md"
     ]
   }
 }

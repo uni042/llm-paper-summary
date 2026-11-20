@@ -35,10 +35,15 @@
   "selection_reason": "注意感度から層の役割へ：混合精度量子化の再訪JAB。重み行列ごとに代理目的を合わせる従来のパイプラインが、注意ブロックの実際の計算を追わない問題に対し、Q・K・V共同の目的を注意出力の上で定義し、量子化の適合とブロック選択の双方に使う。推論量子化機構そのもの。",
   "semantic_scholar_id": "2b72b62a234d42e7d4d602b7573d119fc59ebdf2",
   "source_url": "https://arxiv.org/abs/2609.34866",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:05:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quan.md",
+  "represented_canonical_id": "arXiv:2609.34866",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

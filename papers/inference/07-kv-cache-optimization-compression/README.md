@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（513本）
+## 自動生成の論文一覧（515本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -145,6 +145,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/qluoluo/faster-flash-decoding) ・ リポジトリ内被引用：4  
   2ビット鍵でKV全体を低帯域走査し、局所・シンク由来の近似最大値からtop-δで必要ブロックだけを選ぶ選別・計算融合カーネルにより、長文デコードを最大11.63倍のカーネル高速化、最大2.37倍の生成スループットへ高める。
 
+- **2026-06 · [Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse](2026-2606.23581-kamera-unified-position-invariant-multimodal-kv-cache-for-training-free-.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  Kameraは、画像・動画・画面の断片を繰り返し参照する視覚言語モデルのエージェントで、以前に計算した鍵・値キャッシュ（KVキャッシュ）を異なる文脈位置へ移して再利用するための方式である。
+
 - **2026-05 · [Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM](2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md)**  
   実装：[✓](https://github.com/TianyiWu233/DYNAMIC-DLLM) ・ リポジトリ内被引用：4  
   層別キャッシュ更新量とトークン別確定基準を動的化し、追加学習なしで最大4.48倍の拡散型LLM推論高速化を実現する。
@@ -180,10 +184,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。
-
-- **2026-06 · [Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse](2026-2606.23581-kamera-unified-position-invariant-multimodal-kv-cache-for-training-free-.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  Kameraは、画像・動画・画面の断片を繰り返し参照する視覚言語モデルのエージェントで、以前に計算した鍵・値キャッシュ（KVキャッシュ）を異なる文脈位置へ移して再利用するための方式である。
 
 - **2026-05 · [AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems](2026-2607.21604-agentkvshift-agentic-memory-kv-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -771,6 +771,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Darrenus/prefix-sharing-is-sorting) ・ リポジトリ内被引用：0  
   入力部品の並びと要求処理順を階層的に最適化し、既存の先頭キャッシュを変更せず実検索データで先頭共有を増やして事前計算量を17〜36%削減する。
 
+- **2026-09 · [PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction](2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  共有軌跡が初めて処理される時点で全エージェント分の低ランクキャッシュを事前計算し、さらにアダプターなしの隠れ状態から基底キャッシュを再構成することで、繰り返しプリフィルを消しながら精度低下を平均1.1ポイントに抑える学習不要のKVキャッシュ共有方式。
+
 - **2026-09 · [Periodic Weak Spots: Phase Sensitivity from Chunked KV-Cache Compression](2026-2609.36322-periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   チャンク型KVキャッシュ圧縮（chunked KV-キャッシュ compression）は、連続するトークンを固定幅の窓へ区切り、各窓を少数のK/V表現へ要約することで長文脈推論のKV容量と注意計算を削減する。
@@ -870,6 +874,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Dynamic Flow, Static Graph: KV Cache Reuse for Efficient LLM Serving on Mobile NPUs](2026-2609.34727-dynamic-flow-static-graph-kv-cache-reuse-for-efficient-llm-serving-on-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、固定形状の計算グラフ内で必要なトークンだけ再計算する方式、複数グラフ呼出しを統合する動的計画法、NPU・CPUメモリ・フラッシュにまたがる階層KV保存、読み込み・位置補正・保存とNPU実行の非同期重畳を組み合わせる。
+
+- **2026-09 · [DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory](2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KV圧力が高いときだけ入れ子型の低精度実行へ切り替え、残差の重みメモリをKVブロックへ転用することで、バースト時のプリエンプションとSLO違反を抑える二重精度サービング方式。
 
 - **2026-09 · [Divergence Timing and Cumulative Disagreement under KV-Cache Eviction](2026-2609.16617-divergence-timing-and-cumulative-disagreement-under-kv-cache-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1346,7 +1354,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
-  実装：[✓](https://github.com/microsoft/vattention) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/microsoft/vattention) ・ リポジトリ内被引用：83  
   KVキャッシュの仮想アドレスを連続に保ったままCUDA仮想メモリで物理ページだけを需要時割当し、PagedAttention固有のブロック表と専用注意カーネルを不要にする方式。長文脈サービングで最大1.23倍のスループット改善を報告する。
 
 - **2024-12 · [A Survey on Large Language Model Acceleration based on KV Cache Management](2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md)**  

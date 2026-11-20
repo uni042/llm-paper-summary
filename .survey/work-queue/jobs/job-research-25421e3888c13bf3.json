@@ -35,10 +35,15 @@
   "selection_reason": "同一基盤モデルを共有する複数LoRAエージェントが共有履歴を各々prefillし直す冗長性を、基盤KVとエージェント固有低ランクKVの分離・事前計算で解消するPReCache。前エージェントのアダプタ由来の状態を中立な隠れ状態から再構築する方式も提案し、逐次・並行サービングでのKV再利用を扱う。",
   "semantic_scholar_id": "debe4032a54022021bd82bb73f7dbd673da5e4a8",
   "source_url": "https://arxiv.org/abs/2609.34054",
-  "status": "ready",
+  "status": "superseded",
   "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:05:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-p.md",
+  "represented_canonical_id": "arXiv:2609.34054",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

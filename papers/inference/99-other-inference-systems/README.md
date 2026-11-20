@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1047本）
+## 自動生成の論文一覧（1049本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -44,6 +44,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
 
+- **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
+
 - **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
   実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：6  
   入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
@@ -59,10 +63,6 @@
 - **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：6  
   コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
-
-- **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
 
 - **2026-04 · [Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding](2026-2604.12358-why-and-when-visual-token-pruning-fails-a-study-on-relevant-visual-infor.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -874,6 +874,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模LLMを低ビット量子化する際、すべての重みを同じビット幅にするより、精度劣化に敏感なテンソルを高ビット、耐性のあるテンソルを低ビットにした方が、同じ容量予算で品質を維持できる可能性がある。
 
+- **2026-09 · [QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models](2026-2609.34259-quantaspike-short-window-spike-driven-quantization-for-large-language-mo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  三値イベントと2のべき乗の量子で1ステップあたりの情報量を増やし、外れ値だけに開始スパイクを1回追加することで、発火窓4ステップのままシフトと累積だけで計算できるスパイク駆動の学習後量子化。
+
 - **2026-09 · [PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention](2026-2609.33746-pq-hsa-reusing-product-quantized-scores-for-hybrid-sparse-approximate-at.md)**  
   実装：[✓](https://github.com/KunmingSHAO/pqhsa_release) ・ リポジトリ内被引用：0  
   PQ-HSAは、積量化（PQ）で圧縮したキーを全件走査して近似logitを求め、そのスコアを上位KVの選択だけでなく、非選択KVの背景寄与の推定にも使う。
@@ -929,6 +933,10 @@
 - **2026-09 · [From Position Risks to Block Survival: Faster Generation for Diffusion Language Models](2026-2609.33390-from-position-risks-to-block-survival-faster-generation-for-diffusion-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデル（DLM）は複数の将来トークンを並列に提案できるため、自己回帰生成より少ないモデル評価回数で長い出力を作れる可能性がある。arXiv:2609.33390の原著ではI-DLM 8B/32Bを対象に、H200上の18条件で同規模I-DLM比の生成スループットを8Bで幾何平均22.7%、32Bで29.8%改善する。
+
+- **2026-09 · [From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers](2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の共同目的で再構成とビット配分を統一するJABを検証し、注意だけでは感度配分が効く一方、全モデルでは行列の役割に基づく単純なオフセット規則が曲率基準を上回ることを示した混合精度量子化の分析研究。
 
 - **2026-09 · [FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward](2026-2609.33410-foldattention-declared-reference-softmax-for-fast-decode-and-determinist.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
