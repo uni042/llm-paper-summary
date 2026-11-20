@@ -35,10 +35,15 @@
   "selection_reason": "SpAxはCPU RAM/flashへ重みをoffloadしたLLMで、activationの小さい行に対応する重みを完全取得・圧縮近似取得・省略の3段階で選ぶ。小さなactivationでは重み近似誤差の影響が弱いことを利用し、CPU offloadで16bit平均3.86倍、4bit平均2.06倍のdecode高速化、flash offloadで16bit平均3.31倍を報告。WikiText-2 perplexity増加は最大10%という品質コストに注意。",
   "semantic_scholar_id": "b1943655ab02832bfe9bca6d44ffc9f0dd8ea0c5",
   "source_url": "https://arxiv.org/abs/2610.02598",
-  "status": "ready",
+  "status": "superseded",
   "title": "Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:25:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on.md",
+  "represented_canonical_id": "arXiv:2610.02598",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

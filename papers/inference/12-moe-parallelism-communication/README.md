@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（68本）
+## 自動生成の論文一覧（69本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -37,13 +37,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/stepfun-ai/Step-3.5-Flash) ・ リポジトリ内被引用：6  
   長文脈への対応では、512トークンの滑動窓注意（Sliding Window 注意機構、SWA）を3層、全注意を1層とする交互配置を使う。
 
+- **2025-12 · [Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens](2025-2512.09277-efficient-moe-serving-in-the-memory-bound-regime-balance-activated-exper.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
+
 - **2025-12 · [JANUS: Disaggregating Attention and Experts for Scalable MoE Inference](2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   JANUSは、専門家混合（Mixture-of-Experts、MoE）モデルのオンライン推論を、注意機構と専門家層を別々のGPU群へ配置して独立に伸縮するシステムである。
-
-- **2025-12 · [Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens](2025-2512.09277-efficient-moe-serving-in-the-memory-bound-regime-balance-activated-exper.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
 
 - **2026-03 · [NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL](2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -60,6 +60,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-12 · [Efficient MoE Inference with Fine-Grained Scheduling of Disaggregated Expert Parallelism](2025-2512.21487-findep-fine-grained-disaggregated-expert-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   分離専門家並列で注意・共有専門家・専門家計算と双方向通信を細粒度タスクへ分割し、粒度と実行順を性能モデルから同時最適化して、最適化済みPPPipe比でスループットを最大1.61倍へ高める。
+
+- **2026-08 · [TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes](2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エキスパートの時間が平坦領域と線形領域の最大値で決まることを実測し、トークン数でも起動数でもなく最遅装置の時間そのものを最小化する配送で、混合領域の無駄な分割と偏りを同時に避けた負荷分散方式。
 
 - **2026-07 · [OrderMoE: An expert similarity driven distributed edge MoE inference](2026-2607.17154-ordermoe-expert-similarity-distributed-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -103,6 +107,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：0  
   GPU間通信が律速になるMoEプリフィルで、4倍帯域・最大1,152 GPUの光スケールアップ網をモデル化し、長文・高バッチ時のプリフィルを2〜5倍級に短縮する一方、デコード飽和へのボトルネック移動も示す。
 
+- **2026-09 · [MegaFlux: Skew-Resilient MoE Megakernels via Pipelined Expert Replication](2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ルーティングの偏りで生じるGPUの足引っ張りを、専門家の複製配置とトークンブロック割当てを実行時に計画し、複製の重み転送と勾配集約をメガカーネル内部で計算と重ねることで解消し、固定配置比で順方向1.45倍、逆方向1.28倍の幾何平均高速化を得た。
+
 - **2026-09 · [Joint Effects of GPU Server Topology, Parallelism, and Congestion Control on MoE Inference: A Controlled Simulation Study](2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート; MoE）は、トークンごとに一部の専門家を選んで実行することで、大きな総パラメータ数と限定的な活性計算量を両立する。
@@ -114,10 +122,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-09 · [CascadeEP: Asynchronous Expert Execution for MoE Prefill under Attention Imbalance](2026-2609.33252-cascadeep-asynchronous-expert-execution-for-moe-prefill-under-attention-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート、MoE）の大規模提供では、注意計算を複数のデータ並列複製（data-parallel 注意機構 replicas）へ分散し、選択された専門家（エキスパート）の重みを複数GPUに分割配置する構成が用いられる。
-
-- **2026-08 · [TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes](2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-co.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  エキスパートの時間が平坦領域と線形領域の最大値で決まることを実測し、トークン数でも起動数でもなく最遅装置の時間そのものを最小化する配送で、混合領域の無駄な分割と偏りを同時に避けた負荷分散方式。
 
 - **2026-08 · [HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference](2026-2608.00577-hetroute-collaborative-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

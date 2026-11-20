@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（140本）
+## 自動生成の論文一覧（141本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -108,6 +108,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   注意計算だけを相分離し巨大MoEエキスパートを共有、タイル単位の適応型永続カーネルと注意側起動の片側通信で相間干渉を抑え、H800上でインスタンス単位P/D分離比最大2.01倍の有効スループットを達成する。
 
+- **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoEのルーティング偏りを実効エキスパート数でモデル化し、GPU上の実ヒストグラムから条件付きCUDAグラフで適切な融合MoEカーネルを選び、B200上のMoE遅延を短縮する。
+
 - **2026-05 · [ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling](2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md)**  
   実装：[✓](https://github.com/npnothard/ZipMoE-ICML26) ・ リポジトリ内被引用：1  
   BF16指数部の統計冗長性を無損失圧縮し、NVMe読出しとCPU並列展開を4状態キャッシュと近似保証付きスケジューラで重畳して、共有メモリ型端末のMoEを入出力律速から計算中心へ移す。
@@ -129,6 +133,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-10 · [MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference](2026-2610.01950-moe-core-coordinated-expert-offloading-and-residency-for-memory-constrai.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   総パラメータが数百B以上になると、単一NPUのメモリに全専門家を置けず、ホストメモリから必要な重みを転送する。MoE-COREは、プリフィルとデコードで必要な専門家の集合と遅延許容度が異なる点に着目し、異なる常駐・転送方式を一つのランタイムで管理する。
+
+- **2026-10 · [Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights](2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  退避した重みの読み方を元形式・圧縮近似・省略の三段階に分け、活性値の大きさで割り当てることで、間引きの品質急落を避けながら生成を最大5.57倍高速化した手法。
 
 - **2026-09 · [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -241,10 +249,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-07 · [Elastic Memory Remapping for Multi-tenant LLM Serving](2026-elastic-memory-remapping-oneiros.md)**  
   実装：[✓](https://github.com/UT-SysML/Oneiros/) ・ リポジトリ内被引用：0  
   複数の大規模言語モデルを同じGPUで提供すると、各モデルの重みを常駐させるために大量の高帯域メモリが固定的に消費される。従来のKVキャッシュ退避では、生成のたびに更新されるキャッシュをGPUとCPUの間で移動する。
-
-- **2026-07 · [Decoding the Skew: Distribution-Aware MoE Inference with Adaptive Kernel Dispatch](2026-2607.23099-distribution-aware-moe-kernel-dispatch.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoEのルーティング偏りを実効エキスパート数でモデル化し、GPU上の実ヒストグラムから条件付きCUDAグラフで適切な融合MoEカーネルを選び、B200上のMoE遅延を短縮する。
 
 - **2026-07 · [Communication-Aware Placement and Pruning for Efficient Mixture-of-Experts Inference](2026-2607.05116-communication-aware-placement-pruning-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

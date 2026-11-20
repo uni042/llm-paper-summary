@@ -35,10 +35,15 @@
   "selection_reason": "token削減と特徴次元削減を同時に行うKV圧縮。低rank-aware学習で長文脈をbeacon記憶へ集約し、layerごとにrankを割り当て、beacon keyに対するRoPEを外してlatent空間のままattentionを計算し復元遅延を避ける。著者要旨はLongBenchで4～32倍圧縮、128Kでattention最大7.34倍、end-to-end decode最大3.38倍を報告。KV容量と演算費用の直接的最適化としてaccept。",
   "semantic_scholar_id": "74e363fc88872d63264db9ec7018d5fde9b0b53d",
   "source_url": "https://arxiv.org/abs/2610.02953",
-  "status": "ready",
+  "status": "superseded",
   "title": "SlimKV: Joint Token-Feature KV Cache Compression with Reconstruction-Free Beacon Attention",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:25:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free.md",
+  "represented_canonical_id": "arXiv:2610.02953",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

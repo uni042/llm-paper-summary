@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e0ea02d4302cc7653686ecde09ccc133c9d4a7d4",
+  "base_commit": "c2b303ef6ac2791d76a0d8f5d15538db278a824b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -370,6 +370,11 @@
     "2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.json",
     "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json",
     "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json",
+    "2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.json",
+    "2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on-offloaded-weights.json",
+    "2026-2610.02670-leap-learning-efficient-action-proposals-for-llm-agents.json",
+    "2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free-beacon-attention.json",
+    "2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41186,6 +41191,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.00671": {
+      "order": [
+        "2026-11-20T00:19:09+00:00",
+        "2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02598": {
+      "order": [
+        "2026-11-20T00:20:15+00:00",
+        "2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on-offloaded-weights.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02670": {
+      "order": [
+        "2026-11-20T00:21:22+00:00",
+        "2026-2610.02670-leap-learning-efficient-action-proposals-for-llm-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02953": {
+      "order": [
+        "2026-11-20T00:22:28+00:00",
+        "2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free-beacon-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.03027": {
+      "order": [
+        "2026-11-20T00:23:34+00:00",
+        "2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50847,6 +50897,21 @@
     "arxiv:2609.39819": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.md"
+    ],
+    "arxiv:2610.00671": [
+      "papers/inference/12-moe-parallelism-communication/2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.md"
+    ],
+    "arxiv:2610.02598": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on.md"
+    ],
+    "arxiv:2610.02670": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.02670-leap-learning-efficient-action-proposals-for-llm-agents.md"
+    ],
+    "arxiv:2610.02953": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free.md"
+    ],
+    "arxiv:2610.03027": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.md"
     ]
   }
 }

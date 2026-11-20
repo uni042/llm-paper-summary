@@ -35,10 +35,15 @@
   "selection_reason": "KV cacheの1-bit vector quantizationでcentroid数が不足する問題に対し、query誘導のchannel重み、head間正規化、共分散を考慮したchannel groupingで量子化空間を整えるTaSQを提案する。RoPE互換の変換をprojection重みとcodebookへ吸収し、従来VQ lookupの構造を保つ。著者要旨はRTX6000 Ada/SGLang実装でBF16比batch最大14倍、ピークthroughput1.87倍を報告。KV圧縮と推論servingへの直接的貢献としてaccept。",
   "semantic_scholar_id": "111f4141684da6355cbb525002535bfe4ceb2094",
   "source_url": "https://arxiv.org/abs/2610.03027",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tailoring the Quantization Space for 1-Bit KV Cache Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:25:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.md",
+  "represented_canonical_id": "arXiv:2610.03027",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

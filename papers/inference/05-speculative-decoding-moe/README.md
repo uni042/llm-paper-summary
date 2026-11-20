@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（353本）
+## 自動生成の論文一覧（354本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -282,6 +282,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/labscommunity/pipeline-sharded-inference-paper) ・ リポジトリ内被引用：1  
   本論文は、単独のメモリ容量では700億パラメータ級の大規模言語モデルを保持できない民生用AIパソコンを、通常のネットワーク越しに束ねる分散推論方式を示す。Llama 3.1 8Bの2台構成では、単一利用者の分散実行16.33トークン/秒から、2利用者合計43.97トークン/秒へ改善する。
 
+- **2026-08 · [OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling](2026-2608.00814-ooo-spec-out-of-order-semantic-speculation-for-fast-tool-calling.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  OoO-Specは、この未解決の部分を文字列上の位置に到達する前に、意味的なスロットとして並列予測する方式である。
+
 - **2026-08 · [CURE: Local Uncertainty Repair for Block-Parallel Speculative Decoding](2026-2608.00531-cure-local-uncertainty-repair-for-block-parallel-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   CUREは、大規模言語モデルの投機的復号（投機的復号）において、草案を一度に複数トークン生成する方式の弱点を、少数の修復枝だけで補う推論時の仕組みである。Qwen3-8Bを検証器とする単一GPU実験では、通常の自己回帰復号に比べHumanEvalで3.490倍、MBPPで2.661倍、LiveCodeBench-liteで3.071倍の高速化を報告する。
@@ -403,6 +407,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [Match the Distribution, Not the Compute: Post-Training Multi-Token Prediction Heads](2026-2610.00888-match-the-distribution-not-the-compute-post-training-multi-token-predict.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   凍結したQwen3-8Bが生成する推論文を教師にMTPヘッドだけを後学習し、厳密検証で事前学習済みMiMo-7B-RLに近い平均受理長を実現する。分布ずれを制御する近似検証と、実測処理量に応じてヘッド数を変える適応制御器も評価する。
+
+- **2026-10 · [LEAP: Learning Efficient Action Proposals For LLM Agents](2026-2610.02670-leap-learning-efficient-action-proposals-for-llm-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小さい下書きモデルを対象モデルの行動列で学習して行動投機の一致率を大幅に上げ、エージェント課題全体を最大約1.6倍高速化した研究で、高速化を見積もる遅延の枠組みも併せて示した。
 
 - **2026-10 · [JetSpec++: Foresight Parallel Drafting with Self Refinements](2026-2610.19792-jetspec-foresight-parallel-drafting-with-self-refinements.md)**  
   実装：[✓](https://github.com/hao-ai-lab/JetSpec) ・ リポジトリ内被引用：0  
@@ -551,10 +559,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-08 · [Trajectory-Level Speculative Decoding for Diffusion Language Models](2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの低信頼度縮退に対し、位置と解除順序を含む軌跡を木で投機しブロック単位で並列検証することで、デノイズステップを30から40パーセント減らし、Fast-dLLM比約1.3倍の高速化を精度変化1パーセント未満で得た。
-
-- **2026-08 · [OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling](2026-2608.00814-ooo-spec-out-of-order-semantic-speculation-for-fast-tool-calling.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  OoO-Specは、この未解決の部分を文字列上の位置に到達する前に、意味的なスロットとして並列予測する方式である。
 
 - **2026-08 · [Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes](2026-2608.03839-oilbird-training-free-speculative-decoding-with-keys-the-verifier-alread.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1387,7 +1391,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：483  
+  実装：✓ ・ リポジトリ内被引用：484  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

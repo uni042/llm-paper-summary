@@ -98,6 +98,10 @@
   実装：[✓](https://github.com/Heliulu/LiftQuant) ・ リポジトリ内被引用：1  
   LLMの重み量子化はGPUメモリ消費を減らす有力な方法だが、多くの方式は2ビット、3ビット、4ビットといった整数の量子化幅を単位にする。たとえば70Bモデルの3ビット版が24GBのGPUへ収まらず、2ビット版なら大きな余裕が残る場合、空いた容量を精度向上へ使いにくい。
 
+- **2026-06 · [GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation](2026-2606.23419-grinqh-graded-input-based-quantization-hierarchy-for-efficient-llm-gener.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  後者、とりわけバッチ1では、大きな線形層の重みを毎トークン読み出すため帯域律速になりやすい。重みを一律に3ビットや4ビットへ量子化すると帯域は減るが、重要なチャネルの精度も同時に失われる。Qwen3-8BのRTX 4090上では、4ビットMARLINの最適化カーネルより約25%高速な、GSM8K品質とのパレート前線上の動作点を示す。
+
 - **2026-05 · [Fitting Is Not Enough: Smoothness in Extremely Quantized LLMs](2026-2605.08894-fitting-is-not-enough-smoothness-in-extremely-quantized-llms.md)**  
   実装：[✓](https://github.com/xuyuzhuang11/FINE) ・ リポジトリ内被引用：1  
   極低ビットの大規模言語モデル（LLM）量子化では、元の浮動小数点モデルと量子化モデルの中間出力を近付ける「順方向の再構成誤差」が一般的な最適化対象である。
@@ -255,10 +259,6 @@
 - **2026-06 · [Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models](2026-2606.05429-minimizing-the-hidden-cost-of-scales-graph-guided-ultra-low-bit-quantiza.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SAGE-PTQ（Saliency-Aware Graph-guided Efficient Post-学習 量子化）は、LLM重みを1bit前後まで圧縮する際に見落とされがちな量子化スケールと重みグループの位置情報の費用を抑える方式である。
-
-- **2026-06 · [GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation](2026-2606.23419-grinqh-graded-input-based-quantization-hierarchy-for-efficient-llm-gener.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  後者、とりわけバッチ1では、大きな線形層の重みを毎トークン読み出すため帯域律速になりやすい。重みを一律に3ビットや4ビットへ量子化すると帯域は減るが、重要なチャネルの精度も同時に失われる。Qwen3-8BのRTX 4090上では、4ビットMARLINの最適化カーネルより約25%高速な、GSM8K品質とのパレート前線上の動作点を示す。
 
 - **2026-05 · [The Quantization Benefits of Residual-Free Transformers](2026-2605.25880-the-quantization-benefits-of-residual-free-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -509,7 +509,7 @@
   SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
 
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
-  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：115  
+  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：116  
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
@@ -541,7 +541,7 @@
   OneBitは、学習済み大規模言語モデル（LLM）の重みを極端に低いビット数で保存する際に生じる精度劣化を、線形層の表現形式そのものを変更することで緩和する研究である。査読版の表3では、LLaMA-7Bの重み保存量が13.5 GBから1.3 GBへ、LLaMA-13Bでは26.0 GBから2.2 GBへ減る。
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：50  
+  実装：✓ ・ リポジトリ内被引用：51  
   複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
 
 - **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
@@ -663,7 +663,7 @@
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 - **2023-06 · [SqueezeLLM: Dense-and-Sparse Quantization](2023-2306.07629-squeezellm-dense-and-sparse-quantization.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：187  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：188  
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
@@ -729,7 +729,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：654  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：655  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  

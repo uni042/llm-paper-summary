@@ -49,13 +49,13 @@
   実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：8  
   エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
+- **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
+
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
-
-- **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
 
 - **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -88,6 +88,10 @@
 - **2026-01 · [Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents](2026-2601.01885-agentic-memory-learning-unified-long-term-and-short-term-memory-manageme.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長時間動作するLLMエージェントには、会話や作業をまたいで残す長期記憶（Long-Term メモリ; LTM）と、現在のプロンプト内で参照する短期記憶（Short-Term メモリ; STM）がある。従来は、長期記憶の追加・更新を外部の記憶管理器に任せ、短期文脈の検索・要約は一定間隔や文脈長しきい値で動かすことが多かった。
+
+- **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
 
 - **2026-08 · [Adaptive KV Retention for LLM Agents at Human-Approval Timescales](2026-2608.30830-adaptive-kv-retention-for-llm-agents-at-human-approval-timescales.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -190,10 +194,6 @@
 - **2026-08 · [AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs](2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   軽量ドラフターだけが完全文脈を読み、完全/圧縮文脈のロジット差δと文脈発散連動の受理ゲートで、圧縮文脈しか見ない大規模検証器の精度を回復する非対称推測復号。
-
-- **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
 
 - **2026-07 · [The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI](2026-2607.06906-the-harness-effect-how-orchestration-design-sets-the-token-economics-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
