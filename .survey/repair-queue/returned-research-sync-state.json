@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "92e00be12e4564fa102a72ebe5c73e58795d8008",
+  "base_commit": "a43eda32095b78589fe39aa451e53823649adfe4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -26783,39 +26783,11 @@
     },
     "arXiv:2510.19498": {
       "order": [
-        "2026-10-30T04:14:43+00:00",
-        "retry-research-5f180e992b15--libfile_67d0d0b5fb1c819192aa41dcc639ffda--2025-2510.19498-spikequant-snn-ttfs-mixed-precision-research-20261030-1230-scheduled-chat.json"
+        "2026-11-20T08:12:14+00:00",
+        "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "7eb06b713c10672690a3c79f145422f581fa1fa10d9d5254475520260ca5f47c",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f180e992b15--libfile_67d0d0b5fb1c819192aa41dcc639ffda--2025-2510.19498-spikequant-snn-ttfs-mixed-precision-research-20261030-1230-scheduled-chat-30-r01.md",
-        "canonical_id": "arXiv:2510.19498",
-        "worker_completed_at": "2026-10-30T12:40:00+09:00",
-        "worker_run_key": "20261030-1230-scheduled-chat-30/r01",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 8403,
-          "body_paragraphs": 46,
-          "method_chars": 0,
-          "method_paragraphs": 0,
-          "evaluation_chars": 2553,
-          "limitation_chars": 0,
-          "insufficiency_flags": [
-            "手法説明量 0 < 700",
-            "限界説明量 0 < 推奨 120"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 手法説明量 0 < 700"
-        ],
-        "processed_at": "2026-10-30T04:14:43+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 2
     },
     "arXiv:2606.01509": {
@@ -54185,16 +54157,23 @@
       "papers/inference/99-other-inference-systems/2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.md"
     ],
     "arxiv:2510.02675": [
+      "papers/inference/15-inference-simulation-emulation/2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-.md",
       "papers/inference/15-inference-simulation-emulation/2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-.md"
     ],
     "arxiv:2510.15620": [
+      "papers/inference/05-speculative-decoding-moe/2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md",
       "papers/inference/05-speculative-decoding-moe/2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md"
     ],
     "arxiv:2510.16045": [
+      "papers/inference/16-weight-quantization-compression/2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.md",
       "papers/inference/16-weight-quantization-compression/2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.md"
     ],
     "arxiv:2510.18525": [
+      "papers/inference/05-speculative-decoding-moe/2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-p.md",
       "papers/inference/05-speculative-decoding-moe/2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-p.md"
+    ],
+    "arxiv:2510.19498": [
+      "papers/inference/99-other-inference-systems/2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network.md"
     ]
   }
 }
