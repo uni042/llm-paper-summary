@@ -35,10 +35,15 @@
   "selection_reason": "並列ドラフトモデルの学習目的として、ラウンド間の結合（前ラウンドの受理数が次ラウンドの開始位置を決める）を捉えた期待デコードラウンド数EDRを導く理論枠組み。学習は手段であり、評価軸は受理長とデコード効率そのもの。既存ドラフトモデル2種の微調整で9ベンチマークを通じ受理長の改善を示しており、投機的デコードの推論効率化が最終目的のため対象に含める。",
   "semantic_scholar_id": "03c1c5f03f9455620d81cd322496dfa4557764ca",
   "source_url": "https://arxiv.org/abs/2610.10411",
-  "status": "ready",
+  "status": "superseded",
   "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:53:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expect.md",
+  "represented_canonical_id": "arXiv:2610.10411",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

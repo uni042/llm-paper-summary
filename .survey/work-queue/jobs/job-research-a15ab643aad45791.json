@@ -35,10 +35,15 @@
   "selection_reason": "PageWeaverはqueryごとの選択KV pageの重なりを使ってquery群を構成し、Tensor Core tileの充填とKV page再利用を両立する。GPU上のbounded searchでquery IDを生成し、ID-aware two-CTA kernelでQ再配置やcross-page中間出力を避ける。H200のFP8 KVでFlashInfer比complete-call幾何平均1.70倍、whole-model prefill throughput7.88～14.36%改善を報告。ただしB300では準備コストが利点を相殺する条件がある。",
   "semantic_scholar_id": "fc055a9710a79db30c6f4be66cbff218a194c19d",
   "source_url": "https://arxiv.org/abs/2610.11201",
-  "status": "ready",
+  "status": "superseded",
   "title": "PageWeaver: KV-Guided Query Unions for Sparse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:53:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.md",
+  "represented_canonical_id": "arXiv:2610.11201",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

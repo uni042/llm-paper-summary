@@ -35,10 +35,15 @@
   "selection_reason": "RaReCacheは異なるサイズのモデル間でKVを線形変換すると、情報量の高い一部tokenに誤差が集中する点を利用する。変換後KVの低支持方向エネルギーからrank disagreementを計測し、重要tokenだけtargetで再計算する。Qwen3-0.6B→14Bの23倍サイズ差で30%再計算によりtarget精度95～99%を維持し、prefill最大3.04倍、単GPUオンラインthroughput1.8倍を報告。",
   "semantic_scholar_id": "08454848b25f6c04f6cb6bf60b498f928d121774",
   "source_url": "https://arxiv.org/abs/2610.11358",
-  "status": "ready",
+  "status": "superseded",
   "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:53:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse-via-rank-disagr.md",
+  "represented_canonical_id": "arXiv:2610.11358",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "LoopLMでloop間KVが類似する性質を利用し、最終loop KVを基準に残りloopを2bit residualとして保存するResidualQuantを提案。least-squares scaling・回転・loop別mixed precisionで復元誤差を抑える。一次要旨は理論KV容量80.7%削減、RTX5090の固定batch decode最大3.66倍高速、batch拡大でpeak throughput最大5.38倍を報告。LoopLMのKV量子化と実推論高速化としてaccept。",
   "semantic_scholar_id": "26afff57155b8417bd402cce55aac3ebac24fa6a",
   "source_url": "https://arxiv.org/abs/2610.10381",
-  "status": "ready",
+  "status": "superseded",
   "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:53:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-r.md",
+  "represented_canonical_id": "arXiv:2610.10381",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

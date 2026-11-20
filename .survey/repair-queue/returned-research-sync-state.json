@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "dbafed4a1509d5c6b6695ae32493ed5ca5c1ccec",
+  "base_commit": "fe65eb1e101d3a2b523e69a9a0cfeb8e8cd897b8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -385,6 +385,11 @@
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
     "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
     "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json",
+    "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
+    "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
+    "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
+    "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
+    "2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inference.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41336,6 +41341,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.10381": {
+      "order": [
+        "2026-11-20T00:48:24+00:00",
+        "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.10411": {
+      "order": [
+        "2026-11-20T00:49:18+00:00",
+        "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.11201": {
+      "order": [
+        "2026-11-20T00:50:12+00:00",
+        "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.11358": {
+      "order": [
+        "2026-11-20T00:51:06+00:00",
+        "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.12327": {
+      "order": [
+        "2026-11-20T00:52:00+00:00",
+        "2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51057,6 +51107,21 @@
     "arxiv:2610.09342": [
       "papers/inference/99-other-inference-systems/2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-com.md",
       "papers/inference/99-other-inference-systems/2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-com.md"
+    ],
+    "arxiv:2610.10381": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-r.md"
+    ],
+    "arxiv:2610.10411": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expect.md"
+    ],
+    "arxiv:2610.11201": [
+      "papers/inference/13-sparse-attention/2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.md"
+    ],
+    "arxiv:2610.11358": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse-via-rank-disagr.md"
+    ],
+    "arxiv:2610.12327": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md"
     ]
   }
 }
