@@ -35,10 +35,15 @@
   "selection_reason": "BELTはfrozen reasoning LLMのhidden stateから現時点と将来の回答のbeliefを予測し、token単価と独立に学習したfeatureへ軽量線形stop policyを適用する。Qwen3-1.7Bで生成token41%、OLMo-3-7B-Thinkで51%削減し、5種のOOD数学benchmark平均で精度低下なしと報告。推論計算量削減へ直接貢献。",
   "semantic_scholar_id": "c8df8520064ceb91113b5f848880cafe3e910d53",
   "source_url": "https://arxiv.org/abs/2610.30450",
-  "status": "ready",
+  "status": "superseded",
   "title": "Same Beliefs, Different Policies: Learning Reusable Representations for Early Stopping in LLM Reasoning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:38:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.30450-same-beliefs-different-policies-learning-reusable-representations-for-ea.md",
+  "represented_canonical_id": "arXiv:2610.30450",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

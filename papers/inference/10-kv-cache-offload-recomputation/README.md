@@ -102,6 +102,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：4  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
 
+- **2026-04 · [HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing](2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  HybridGenはKVをCPU/GPUへ分けて各側で注意を計算しGPUで正規化し、次層CPU計算・PCIe転送・GPU計算も重ねて長文デコードの転送／CPU律速を減らす方式。
+
 - **2026-02 · [KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning](2026-2602.23592-keep-kv-cache-centric-embodied-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KEEPは更新頻度で具身記憶を群分けし、文脈依存の重要度伝播で必要KVだけを再計算し、層をまたぐ先読みでCPU→GPU読込み待ちを減らす方式。
@@ -129,10 +133,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [Runtime-Certified Bounded-Error Quantized Attention](2026-2605.20868-runtime-certified-bounded-error-quantized-attention.md)**  
   実装：[✓](https://github.com/DeanoC/certified-quantized-attention) ・ リポジトリ内被引用：3  
   GPUではINT8/INT4 KV、CPUではFP16原本を保持し、各生成ステップで注意誤差上界を検証して危険時だけ高精度へ段階復帰する品質保証付きKV圧縮。
-
-- **2026-04 · [HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing](2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  HybridGenはKVをCPU/GPUへ分けて各側で注意を計算しGPUで正規化し、次層CPU計算・PCIe転送・GPU計算も重ねて長文デコードの転送／CPU律速を減らす方式。
 
 - **2026-04 · [CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration](2026-2604.25080-cacheflow.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -481,7 +481,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   オンラインの大規模言語モデル推論では、要求をまとめて実行することでGPUの行列積を効率化できる。MLSys 2025正式論文は、同一ホストのCPUを使う条件で、GPUのみの実行と比べてT4で最大7.5倍、A10Gで最大26%、H100で最大14%の処理率改善を報告する。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   FastDecodeは、言語モデルの逐次生成で巨大化する鍵・値キャッシュ（KVキャッシュ）をGPU外へ置くだけでなく、キャッシュを読む注意計算そのものを複数のCPUノードへ移す推論配信システムである。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  

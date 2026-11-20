@@ -98,7 +98,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
-  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：140  
+  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：141  
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
 
 - **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
@@ -156,7 +156,7 @@
   これに対し、線形再帰モデルは固定サイズの状態へ履歴を圧縮して次のトークンを生成できるため、推論時の状態保存量を系列長に依存させない。
 
 - **2024-01 · [Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models](2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md)**  
-  実装：[✓](https://github.com/OpenNLPLab/lightning-attention) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/OpenNLPLab/lightning-attention) ・ リポジトリ内被引用：18  
   一覧用要約：Lightning 注意機構-2は因果線形注意を現在のタイル内と過去タイルからの寄与に分解し、タイル内を因果マスク付き通常行列積、タイル間を固定サイズの累積KV状態による右積で計算する。前向き・逆向きの両方をTritonで入出力認識型に実装し、長系列でも学習速度と作業メモリを安定させる。
 
 - **2024-02 · [BlackMamba: Mixture of Experts for State-Space Models](2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md)**  

@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（567本）
+## 自動生成の論文一覧（569本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -26,7 +26,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   密モデルと混合専門家モデルを含むGemma 4の技術報告。局所・大域注意の配置、キー・値キャッシュ共有、キーの値への再利用、部分回転位置符号化、量子化対応学習、複数トークン予測ドラフタ、12Bの符号化器不要構成を組み合わせ、推論時の重み容量・KV容量・復号費用をそれぞれ減らす。数値はモデル系列・量子化形式・文脈長ごとに区別して読む必要がある。
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
@@ -699,6 +699,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/RL-MIND/MultiAlloc) ・ リポジトリ内被引用：0  
   固定KVメモリ予算を層ごとのビット幅向上とトークンごとの高精度保持へ、オフラインプロファイルで測った需要に基づいて配分し、推論時は探索なしで静的方針を適用するKVキャッシュ量子化の配分枠組み。
 
+- **2026-10 · [MoEZip: Routing-Aware KV Cache Compression for Sparse Mixture-of-Experts LLMs](2026-2610.30206-moezip-routing-aware-kv-cache-compression-for-sparse-mixture-of-experts-.md)**  
+  実装：[✓](https://github.com/kmswin1/MoEZip) ・ リポジトリ内被引用：0  
+  KV削減でエキスパート選択が反転するMoE固有の失敗に対し、ルータのFisherトレースで脆さを測って保持予算の一部を保護用アンカーへ割り当て、強い圧縮でも品質を保つKV圧縮方式。
+
 - **2026-10 · [MLAfication: Efficiently Enabling High-Fidelity MLA for Modern LLMs](2026-2610.17202-mlafication-efficiently-enabling-high-fidelity-mla-for-modern-llms.md)**  
   実装：[✓](https://github.com/JT-Ushio/MLAfication) ・ リポジトリ内被引用：0  
   多ヘッド潜在注意への変換を、キーの正規化の平均による較正と、触る射影だけの蒸留で、正規化つきモデルと混合専門家モデルへ広げ、品質を保ったままキャッシュ圧縮とサービング高速化を得る変換法。
@@ -750,6 +754,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs](2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.md)**  
   実装：[✓](https://github.com/FlashLabAE/HBFSim) ・ リポジトリ内被引用：0  
   実機のない高帯域フラッシュを含むメモリ階層を、較正済みの提供スケジューラとフラッシュ内部モデルを閉ループでつないで模擬する器を作り、配置はKV優先、変換は並列性を保つ範囲マッピング、寿命はKV書き込み量で決まるという設計指針を引き出した。
+
+- **2026-10 · [HAWK: Heterogeneity-Aware KV Cache Transfer for Efficient GPU-NPU Phase-Disaggregated LLM Inference](2026-2610.29873-hawk-heterogeneity-aware-kv-cache-transfer-for-efficient-gpu-npu-phase-d.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルをGPU、デコードをNPUに分ける異種分離型サービングのためのKV転送機構。共通のRDMA経路で直接転送し、テンソル配置の違いを転送前の部分変換とチャネル別バッファで転送中に吸収することで、GPU単独に迫る性能と高い電力・コスト効率を実機で示す。
 
 - **2026-10 · [FuTransformer: FP8 Prefill and INT4 Decode for Llama-Style Inference on Hopper](2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-h.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1538,11 +1546,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   キャッシュを減らせば容量は空くが、注意品質の低下、検索・量子化の追加計算、CPU/SSD転送、再計算など別の費用が発生する。
 
 - **2025-05 · [KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction](2025-2505.23416-kvzip.md)**  
-  実装：[✓](https://github.com/snu-mllab/KVzip) ・ リポジトリ内被引用：76  
+  実装：[✓](https://github.com/snu-mllab/KVzip) ・ リポジトリ内被引用：77  
   元文脈の再構成時に使われるKVを重要とみなし、将来クエリを知らずに再利用可能な長文脈KVキャッシュを3〜4倍圧縮する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
-  実装：✓ ・ リポジトリ内被引用：68  
+  実装：✓ ・ リポジトリ内被引用：69  
   TurboQuantは、高次元ベクトルを入力データセットに合わせて学習し直さずに低ビット化する、オンライン量子化方式である。理論面では、復元二乗誤差と内積誤差の両方について、ビット幅bに対して概ね4のマイナスb乗で減る上界を示し、情報理論的な下限との差が最大約2.7倍の定数内であると証明する。
 
 - **2025-05 · [dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching](2025-2506.06295-dllm-cache-adaptive-caching.md)**  
@@ -2016,7 +2024,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
-  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：303  
+  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：304  
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
@@ -2024,7 +2032,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   CPU側の全KVキャッシュから次レイヤーで重要なトークンだけを予測してGPUへ先読みし、長文オフロード推論のPCIe転送を削減して最大3.00倍高速化する。
 
 - **2024-07 · [Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference](2024-2407.11550-ada-kv.md)**  
-  実装：[✓](https://github.com/FFY0/AdaKV) ・ リポジトリ内被引用：162  
+  実装：[✓](https://github.com/FFY0/AdaKV) ・ リポジトリ内被引用：163  
   注意ヘッドごとの集中度に応じて同一層内のKV保持予算を再配分し、既存Top-k圧縮の総容量を変えずに追い出し損失を下げる手法。
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
@@ -2274,7 +2282,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：788  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：789  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

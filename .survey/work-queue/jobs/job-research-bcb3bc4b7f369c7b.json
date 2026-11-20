@@ -35,10 +35,15 @@
   "selection_reason": "MoEではKV追い出しがattentionだけでなく次tokenのexpert routingも変化させ得る点に着目し、routing分布のFisher情報から摂動感度を評価してattention重要度と統合するMoEZipを提案する。著者要旨はKV保持率10%でLongBench/RULERの従来最高方式比平均+24/+20点、score比2.3/4.9倍と報告。MoEの品質を保つKV圧縮としてaccept。",
   "semantic_scholar_id": "e4180b33abe65d5e998929399840f88a0c6dcf25",
   "source_url": "https://arxiv.org/abs/2610.30206",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoEZip: Routing-Aware KV Cache Compression for Sparse Mixture-of-Experts LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:38:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.30206-moezip-routing-aware-kv-cache-compression-for-sparse-mixture-of-experts-.md",
+  "represented_canonical_id": "arXiv:2610.30206",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

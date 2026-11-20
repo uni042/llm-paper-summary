@@ -232,6 +232,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   プリフィル・デコード分離環境でGPU台数だけでなく電力上限も段階間で再配分し、待ち行列とTTFT/TPOTを見ながら電力移動→GPU役割変更の順でSLO達成率を維持するRAPIDを実機評価する。
 
+- **2026-01 · [EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend](2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  マルチモーダル推論をエンコード・事前充填・復号へ三分離し、段階間の非同期特徴量/KV転送、モダリティ別ルーティング、物理同居を組み合わせて、異種段階の干渉を抑えながらSLOと資源効率を改善する。
+
 - **2025-12 · [Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs](2025-2512.20210-predictive-lora-serverless-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   LoRA要求の時系列から次に必要なアダプタを先読みし、重みを2MB固定ページへ分割して異種rankの断片化を抑えることで、1000アダプタ時にS-LoRA比1.52倍のスループットと高負荷TTFT 35%短縮を達成する。
@@ -347,10 +351,6 @@
 - **2026-01 · [FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection](2026-2601.03928-focusui-efficient-ui-grounding-via-position-preserving-visual-token-sele.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   指示に合うパッチだけを顕著性で残し、落とした区間を末尾の標識でつなぐ位置保存型の視覚トークン選択で、保持率30パーセントでもUI位置特定の精度低下を3.2ポイントに抑え、推論を1.44倍速くした。
-
-- **2026-01 · [EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend](2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  マルチモーダル推論をエンコード・事前充填・復号へ三分離し、段階間の非同期特徴量/KV転送、モダリティ別ルーティング、物理同居を組み合わせて、異種段階の干渉を抑えながらSLOと資源効率を改善する。
 
 - **2026-01 · [Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference](2026-2601.22996-competitive-non-clairvoyant-kv-cache-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1361,20 +1361,24 @@
   対話型と非対話型の要求を統合GPUプールで共有し、地域間ルーティング、需要予測、整数線形計画、遅延実行を異なる時間尺度で連携させる。Office 365の本番トレースでSLOを維持しつつGPU時間を最大25%削減した。
 
 - **2025-04 · [semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage](2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   入力処理と逐次生成の計算をSM単位で分離しつつ高帯域メモリを共有し、完全分離方式のKV転送と保存容量の偏りを除いてエンドツーエンド遅延を最大2.58倍改善する。
+
+- **2025-08 · [Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving](2025-2508.01989-taichi-unified-prefill-decode-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：24  
+  プリフィル重視/デコード重視インスタンスを混在させ、要求ごとのTTFT・TPOT余裕を別要求へ移すことで集約型と分離型を統一するLLM配信基盤。既存集約型比9〜47%、分離型比29〜77%グッドプットを改善する。
 
 - **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
   不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
 
-- **2025-08 · [Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving](2025-2508.01989-taichi-unified-prefill-decode-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
-  プリフィル重視/デコード重視インスタンスを混在させ、要求ごとのTTFT・TPOT余裕を別要求へ移すことで集約型と分離型を統一するLLM配信基盤。既存集約型比9〜47%、分離型比29〜77%グッドプットを改善する。
-
 - **2025-02 · [HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment](2025-2502.07903-hexgen-2.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   異種GPU上の事前充填・復号分離を、グラフ分割と最大流で段階別並列化・資源配置・KV転送まで共同最適化するLLMサービング方式。
+
+- **2025-01 · [Efficiently Serving Large Multimodal Models Using EPD Disaggregation](2025-2501.05460-efficiently-serving-large-multimodal-models-using-epd-disaggregation.md)**  
+  実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：22  
+  本論文は大規模マルチモーダルモデル（Large Multimodal モデル、LMM）の推論を、マルチモーダル符号化（Encode、E）、事前入力処理（プリフィル、P）、逐次復号（デコード、D）の三段階に分離するEPD分離（EPD Disaggregation）を提案する。
 
 - **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
   実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：22  
@@ -1383,10 +1387,6 @@
 - **2025-02 · [ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving](2025-2502.00937-modserve.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
   画像処理・画像符号化とテキスト生成を独立プールへ分離し、モダリティ別ルーティングと自動拡縮でLMMの末尾遅延とGPU費用を削減する。
-
-- **2025-01 · [Efficiently Serving Large Multimodal Models Using EPD Disaggregation](2025-2501.05460-efficiently-serving-large-multimodal-models-using-epd-disaggregation.md)**  
-  実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：21  
-  本論文は大規模マルチモーダルモデル（Large Multimodal モデル、LMM）の推論を、マルチモーダル符号化（Encode、E）、事前入力処理（プリフィル、P）、逐次復号（デコード、D）の三段階に分離するEPD分離（EPD Disaggregation）を提案する。
 
 - **2025-01 · [DeepServe: Serverless Large Language Model Serving at Scale](2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
@@ -1404,6 +1404,10 @@
   実装：✓ ・ リポジトリ内被引用：19  
   次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
 
+- **2025-07 · [Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving](2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
+
 - **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
   実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：18  
   AReaLは、長い推論列を生成する大規模推論モデル（大規模推論モデル（Large Reasoning モデル; LRM））の強化学習（強化学習（reinforcement learning; RL））で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習システムである。
@@ -1415,10 +1419,6 @@
 - **2025-02 · [AIBrix: Towards Scalable, Cost-Effective Large Language Model Inference Infrastructure](2025-2504.03648-aibrix-towards-scalable-cost-effective-large-language-model-inference-in.md)**  
   実装：[✓](https://github.com/vllm-project/aibrix) ・ リポジトリ内被引用：18  
   GPU利用率のみで自動スケーリングすれば、入力長と出力長の差、復号負荷、KV容量圧迫を適切に反映できない。提案は、Kubernetesによる粗粒度資源管理を残しつつ、LLMのトークン処理量・接頭辞一致・KV使用量・アダプター配置・GPU別費用を観測する仕組みを導入する。
-
-- **2025-07 · [Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving](2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
 
 - **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
   実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：16  
@@ -1456,6 +1456,10 @@
   実装：[✓](https://github.com/ykcombat/sglang/tree/slo_config) ・ リポジトリ内被引用：14  
   前者は大きな行列積を実行しやすい一方、後者は各反復で重みとキャッシュを読み出すためメモリ帯域の制約を受けやすい。両段階を別々のGPUへ割り当てる分離配信は干渉を避けられるが、要求が片方に偏ると計算資源が遊休し、キャッシュの保存先も分かれる。
 
+- **2025-03 · [Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation](2025-2503.20552-adrenaline.md)**  
+  実装：[✓](https://github.com/ASISys/Adrenaline) ・ リポジトリ内被引用：14  
+  デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。
+
 - **2025-01 · [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   対話型リクエストの遅延目標を守りながら余ったGPU容量をバッチリクエストへ使うため、各GPUで同時処理するリクエスト数を素早く増減する制御と、クラスタ全体のGPUインスタンス数を遅い周期で増減する制御を分けたLLM自動スケーラ。
@@ -1471,10 +1475,6 @@
 - **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：13  
   固定した最大周波数でGPUを動かすと低負荷時に余分な電力を使うが、単純に周波数を下げると同時要求数やKVキャッシュ量が増えたとき遅延が悪化する。著者らは、要求の生成長を予測し、将来の各復号反復におけるバッチサイズとKVキャッシュ使用量を推定する。
-
-- **2025-03 · [Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation](2025-2503.20552-adrenaline.md)**  
-  実装：[✓](https://github.com/ASISys/Adrenaline) ・ リポジトリ内被引用：13  
-  デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。
 
 - **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -1568,6 +1568,10 @@
   実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：8  
   消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
 
+- **2025-05 · [Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture](2025-2505.11916-arrow-adaptive-scheduling-mechanisms-for-disaggregated-llm-inference-arc.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  LLMサービングでは、入力全体を処理する入力処理と、次トークンを逐次生成する逐次生成とで、計算密度、メモリ帯域要求、許容遅延が異なる。これらを別のGPU群へ分離する構成は相互干渉を減らすが、固定のGPU配分比では、長い入力が集中した時間帯には入力処理が詰まり、長い出力が増えた時間帯には逐次生成が詰まる。
+
 - **2025-04 · [Efficient LLM Serving on Hybrid Real-time and Best-effort Requests](2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   RTのTTFT/TPOT締切を動的優先度にした反復単位スケジューリングと、RT/BEが同じKVブロックを逆方向から共有する双方向KV管理で、混在負荷の遅延と処理量を両立する。
@@ -1591,10 +1595,6 @@
 - **2025-06 · [TD-Pipe: Temporally-Disaggregated Pipeline Parallelism Architecture for High-Throughput LLM Inference](2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md)**  
   実装：[✓](https://github.com/MLSysU/TD-Pipe) ・ リポジトリ内被引用：7  
   PCIeのみで接続されたGPUのパイプライン並列推論において、プリフィルとデコードを時間分離し、予測型KVメモリ管理と負荷移送で遊休時間を削減する。
-
-- **2025-05 · [Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture](2025-2505.11916-arrow-adaptive-scheduling-mechanisms-for-disaggregated-llm-inference-arc.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  LLMサービングでは、入力全体を処理する入力処理と、次トークンを逐次生成する逐次生成とで、計算密度、メモリ帯域要求、許容遅延が異なる。これらを別のGPU群へ分離する構成は相互干渉を減らすが、固定のGPU配分比では、長い入力が集中した時間帯には入力処理が詰まり、長い出力が増えた時間帯には逐次生成が詰まる。
 
 - **2024-12 · [METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation](2024-2412.10543-metis-fast-quality-aware-rag-systems-with-configuration-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1967,7 +1967,7 @@
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：125  
+  実装：✓ ・ リポジトリ内被引用：126  
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
 - **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
@@ -1999,7 +1999,7 @@
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：85  
+  実装：✓ ・ リポジトリ内被引用：86  
   プリフィルとデコードを別実行単位へ分ける推論提供で、GPU / CPU上のKVキャッシュを実行単位横断で検索・共有・転送できる共通メモリプールを作り、過去接頭部の再利用と処理段階間KV移動を同じ仕組みで扱うシステム。
 
 - **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
@@ -2066,13 +2066,13 @@
   実装：[✓](https://github.com/ruipeterpan/marconi) ・ リポジトリ内被引用：32  
   言語モデルの接頭辞キャッシュ（Prefix Caching）は、複数要求が共有するシステム指示や会話履歴の前半部分について、過去に計算した内部状態を再利用して初回トークン生成までの時間を短縮する。主要評価では、拡張vLLMに対するトークン命中率がLMSysで平均4.5倍、ShareGPTで7.3倍、SWEBenchで34.4倍となる。
 
+- **2024-08 · [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：32  
+  P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
+
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
   実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：31  
   BatchLLMは、検索結果の説明文生成、広告文書の変換、推薦候補の採点など、数千件以上のプロンプトをまとめて処理する大規模言語モデル（LLM）の一括推論を対象とするシステムである。原著のMLSys 2026産業部門版は、NVIDIA A100とAMD MI200上で、vLLMやSGLangに対して1.3～10.8倍の端点処理率改善を報告する。
-
-- **2024-08 · [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：31  
-  P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
 
 - **2024-10 · [Don't Stop Me Now: Embedding Based Scheduling for LLMs](2024-2410.01035-embedding-based-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：30  
@@ -2241,7 +2241,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：200  
+  実装：✓ ・ リポジトリ内被引用：201  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  

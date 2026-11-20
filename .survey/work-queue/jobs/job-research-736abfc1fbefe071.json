@@ -35,10 +35,15 @@
   "selection_reason": "GPU-NPU位相分離向け異種KVキャッシュ転送HAWK。プリフィルは計算律速、デコードはメモリ律速という位相差から、プリフィルをGPU、デコードをNPUに割り当てる異種構成で、位相分離に伴うKV転送を効率化する。推論基盤機構そのもの。",
   "semantic_scholar_id": "8de422553079cefc4b37ce9ec224b991312d0b31",
   "source_url": "https://arxiv.org/abs/2610.29873",
-  "status": "ready",
+  "status": "superseded",
   "title": "HAWK: Heterogeneity-Aware KV Cache Transfer for Efficient GPU-NPU Phase-Disaggregated LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:38:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.29873-hawk-heterogeneity-aware-kv-cache-transfer-for-efficient-gpu-npu-phase-d.md",
+  "represented_canonical_id": "arXiv:2610.29873",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

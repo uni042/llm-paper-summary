@@ -341,6 +341,10 @@
   実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：10  
   本研究は、一つの利用者問い合わせが約20回の大規模言語モデル（LLM）呼び出しを誘発するエージェント型Text-to-SQL処理に対し、問い合わせ全体の応答期限を守る推論スケジューラを設計する。
 
+- **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
+  実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：8  
+  Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
+
 - **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
@@ -348,10 +352,6 @@
 - **2025-10 · [FlowMesh: A Service Fabric for Composable LLM Workflows](2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   LLMワークフローをDAG演算子へ分解し、完全一致の重複排除・実行互換バッチ化・異種GPU配置・無状態ワーカーを一体化して、金銭コスト1.8〜3.8倍、エネルギー1.3〜2.0倍の改善を示す。
-
-- **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
-  実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：7  
-  Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
 
 - **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
   実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：6  

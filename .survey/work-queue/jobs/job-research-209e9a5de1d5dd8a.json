@@ -35,10 +35,15 @@
   "selection_reason": "LLMの重みのみ2～3bit混合精度量子化を、dequantしてFP16 GEMMへ渡すのではなく、bit幅に応じて演算量が減るradix-4 FP-INT shift-add datapathで直接処理するFIGFLEXを提案する。channel groupごとの精度割当と入力スケーリングを協調設計する。著者要旨はLlama2-7Bの3/2bit平均でperplexity5.85/8.77、3bit混合精度線形GEMMの面積当たりthroughputがAxCore比1.56倍、FIGLUT比1.42倍と報告。推論量子化アクセラレータとしてaccept。",
   "semantic_scholar_id": "94eddf82cc39442074450bba35372c867e66694d",
   "source_url": "https://arxiv.org/abs/2610.30480",
-  "status": "ready",
+  "status": "superseded",
   "title": "FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:38:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.30480-figflex-a-mixed-precision-fp-int-gemm-accelerator-co-designed-with-low-b.md",
+  "represented_canonical_id": "arXiv:2610.30480",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

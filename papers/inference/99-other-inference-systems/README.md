@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1112本）
+## 自動生成の論文一覧（1114本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -148,6 +148,10 @@
   実装：[✓](https://github.com/19PINE-AI/programmable-kv) ・ リポジトリ内被引用：3  
   プリフィル済みKVキャッシュを結論メモとして捉え、追記訂正による編集とRoPE再配置による部品合成で再プリフィルを回避する。
 
+- **2026-05 · [Test-Time Speculation](2026-2605.09329-test-time-speculation.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  投機的復号（投機的復号）は、小さく高速なドラフトモデルに複数トークンの候補を作らせ、大きな対象モデルがまとめて検証することで、対象モデルの呼び出し回数を減らす方式である。原著の実験ではDFlashを基準に受理長が平均41%、最大72%改善し、EAGLE-3を基準に平均34%、最大67%改善した。
+
 - **2026-05 · [Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models](2026-2605.28051-beyond-surrogate-gradients-fully-differentiable-token-pruning-for-vision.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   DiffPruneは、視覚言語モデル（Vision-Language モデル、VLM）の入力画像を多数の視覚トークンへ展開した後、どのトークンだけを言語モデルへ渡すかを学習する方式である。一次論文のLLaVA-1.5-7B評価では、576個の視覚トークンから64個だけを保持する88.9%削減時、10課題の正規化平均性能が元モデルの96.5%となった。
@@ -227,10 +231,6 @@
 - **2026-06 · [Less is MoE: Trimming Experts in Domain-Specialist Language Models](2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md)**  
   実装：[✓](https://github.com/HectorHHZ/Less-is-MoE) ・ リポジトリ内被引用：2  
   Less is MoEは、混合専門家モデル（Mixture of エキスパート、MoE）を圧縮する際に専門家を丸ごと削ると、一般常識の選択式問題では性能が残っても数学推論やコード生成が崩壊する原因を分析し、専門家内部の順伝播ネットワーク（FFN）中間次元を削るFisher-MoEを提案する研究である。
-
-- **2026-05 · [Test-Time Speculation](2026-2605.09329-test-time-speculation.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  投機的復号（投機的復号）は、小さく高速なドラフトモデルに複数トークンの候補を作らせ、大きな対象モデルがまとめて検証することで、対象モデルの呼び出し回数を減らす方式である。原著の実験ではDFlashを基準に受理長が平均41%、最大72%改善し、EAGLE-3を基準に平均34%、最大67%改善した。
 
 - **2026-05 · [Search Your Block Floating Point Scales!](2026-2605.12464-search-your-block-floating-point-scales.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -854,6 +854,10 @@
   実装：[✓](https://github.com/smth-fun/self-evolving-inference-system) ・ リポジトリ内被引用：0  
   個別のGPUカーネルだけを最適化するのではなく、モデル層、正規化、量子化、注意計算、KVキャッシュ、CPU側のスケジューラ、CUDAグラフ、トークン選択、投機的復号までを同じ目的関数のもとで改修する。中心実験では、Qwen3-0.6BをNVIDIA H100 80GBの単一GPUで、単一要求の貪欲復号として実行する。
 
+- **2026-10 · [Same Beliefs, Different Policies: Learning Reusable Representations for Early Stopping in LLM Reasoning](2026-2610.30450-same-beliefs-different-policies-learning-reusable-representations-for-ea.md)**  
+  実装：[✓](https://github.com/EdisonNi-hku/BELT) ・ リポジトリ内被引用：0  
+  凍結した推論モデルの隠れ状態から正答見込みの4つの信念を価格非依存に学習し、その上に線形の停止方策を当てはめることで、価格変更に再学習なしで追随しながら生成トークンを4割から5割減らす早期停止方式。
+
 - **2026-10 · [Revisiting Cauchy–Schwarz Norm Bounds for SDC Detection in LLM Inference](2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行列積出力のノルム上限だけでサイレントデータ破損を検出する方式を故障注入で再評価し、稠密モデルの線形層ではチェックサム方式の検出能力の99パーセントを検証費用87パーセント減で保ち、MoEルーターでは55パーセントに落ちることを示した研究。
@@ -893,6 +897,10 @@
 - **2026-10 · [Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference](2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みの格子を半オクターブの分数冪へ細かくし、活性値は一様整数のまま、ルート2倍を加算器1個で近似して誤差を較正で吸収することで、乗算器なしのシフト加算実行を保ったまま4ビットで一様整数に近い精度を得る量子化。
+
+- **2026-10 · [FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization](2026-2610.30480-figflex-a-mixed-precision-fp-int-gemm-accelerator-co-designed-with-low-b.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みのビット数が下がるほど計算が速くなる基数4のFP-INTデータパスと、GPTQの補償後誤差でビット配分を決める量子化器を協調設計し、低ビット化をメモリだけでなく計算の利得へ変えたアクセラレータ。
 
 - **2026-10 · [Fast and Accurate: Improving Personalized LLM Performance by Semantic Concentration Inspired Workload Split between RAG and Fine-Tuning](2026-2610.15921-fast-and-accurate-improving-personalized-llm-performance-by-semantic-con.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

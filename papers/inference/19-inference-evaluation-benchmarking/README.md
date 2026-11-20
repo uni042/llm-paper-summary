@@ -84,6 +84,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル時の注意演算、鍵・値（KV）キャッシュ、入力列の読み込みが増え、初回応答の待ち時間が長くなる。EvoCompは、視覚トークンのうち質問への回答に必要なものだけを選び、下流LLMへ渡す系列長を減らす方式である。LLaVA-1.5-7Bでは576トークンを192に削減したとき、6ベンチマークの平均成績を元モデルの99.3%に保つ。
 
+- **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
+  実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：1  
+  中間回答の確信度の時系列から、届いた推論は閾値で、不発な推論は不安定さの蓄積で止める学習不要の早期終了で、トークン量を25から50パーセント削りながら釣り合いを最も良くした。
+
 - **2026-03 · [Wattchmen: Watching the Wattchers -- High Fidelity, Flexible GPU Energy Modeling](2026-2603.26435-wattchmen-watching-the-wattchers-high-fidelity-flexible-gpu-energy-model.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   一方、従来の細粒度モデルは一部の命令だけを対象にするか、別のGPU・冷却条件への移植性が不足していた。これはLLM専用推論の速度を改善する方式ではなく、GPUを使う学習・推論・科学計算のエネルギーを分析し最適化箇所を見つける基盤である。
@@ -353,10 +357,6 @@
 - **2026-04 · [Efficient Multimodal Spatial Reasoning via Dynamic and Asymmetric Routing](2026-22e11514f14e-efficient-multimodal-spatial-reasoning-via-dynamic-and-asymmetric-routin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これにより複雑な空間関係を段階的に処理できるが、過去の中間トークンが自己回帰的に蓄積し、注意計算・KVキャッシュ・推論遅延を押し上げる。既存の固定率圧縮では、初期段階で必要な画像細部を落としたり、深い層ですでに冗長な視覚トークンを残したりする。
-
-- **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
-  実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：0  
-  中間回答の確信度の時系列から、届いた推論は閾値で、不発な推論は不安定さの蓄積で止める学習不要の早期終了で、トークン量を25から50パーセント削りながら釣り合いを最も良くした。
 
 - **2026-04 · [Comparative Characterization of KV Cache Management Strategies for LLM Inference](2026-2604.05012-comparative-characterization-kv-cache-management-strategies-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
