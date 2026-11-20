@@ -35,10 +35,15 @@
   "selection_reason": "複数lineを並列生成する言語モデルで固定commit scheduleが依存未解決のtokenを早期確定する問題に対し、2次元lattice上のfrontierを評価して確信度に応じcommitを遅延するLatLMを提案。append-only cacheで確定状態を保持し、2D causal maskで学習する。一次要旨は482Mモデルで独立line課題を自回帰比25～41%のround数で解き、混合依存鎖ではLCLM比精度96.5%対78.5%と報告。新規parallel LM decoding方式としてaccept。",
   "semantic_scholar_id": "1ffcab6cf3ea98ad78ec31145b012a1985afd334",
   "source_url": "https://arxiv.org/abs/2610.23951",
-  "status": "ready",
+  "status": "superseded",
   "title": "LatLM: Line-Parallel Language Models with Deferred Commitment",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:40:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.23951-latlm-line-parallel-language-models-with-deferred-commitment.md",
+  "represented_canonical_id": "arXiv:2610.23951",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

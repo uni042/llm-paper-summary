@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "079a9487eb32f452d1e6f40e767517d905466a66",
+  "base_commit": "9c7d0160baa1b332aaa8e86c928d485e09710d8f",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -684,6 +684,9 @@
     "2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-service.json",
     "2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.json",
     "2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-hopper.json",
+    "2026-2610.23935-factorization-guided-training-and-inference-for-diffusion-drafted-speculative-decoding.json",
+    "2026-2610.23939-peekkv-the-first-content-token-already-knows-which-heads-matter.json",
+    "2026-2610.23951-latlm-line-parallel-language-models-with-deferred-commitment.json",
     "2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.json",
     "2026-2610.24102-hierarchical-and-query-aware-visual-token-pruning-for-high-resolution-lvlms.json",
     "2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-llm-serving.json",
@@ -698,6 +701,8 @@
     "2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-software-co-design-exploration.json",
     "2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.json",
     "2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.json",
+    "2026-2610.26693-parallel-language-models-via-variational-decoding.json",
+    "2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learned-token-pruning.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -44545,6 +44550,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.23935": {
+      "order": [
+        "2026-11-20T11:34:58+00:00",
+        "2026-2610.23935-factorization-guided-training-and-inference-for-diffusion-drafted-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.23939": {
+      "order": [
+        "2026-11-20T11:35:57+00:00",
+        "2026-2610.23939-peekkv-the-first-content-token-already-knows-which-heads-matter.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.23951": {
+      "order": [
+        "2026-11-20T11:36:54+00:00",
+        "2026-2610.23951-latlm-line-parallel-language-models-with-deferred-commitment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26693": {
+      "order": [
+        "2026-11-20T11:37:52+00:00",
+        "2026-2610.26693-parallel-language-models-via-variational-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26754": {
+      "order": [
+        "2026-11-20T11:38:49+00:00",
+        "2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learned-token-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55504,6 +55554,21 @@
     "arxiv:2610.20865": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.md"
+    ],
+    "arxiv:2610.23935": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.23935-factorization-guided-training-and-inference-for-diffusion-drafted-specul.md"
+    ],
+    "arxiv:2610.23939": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.23939-peekkv-the-first-content-token-already-knows-which-heads-matter.md"
+    ],
+    "arxiv:2610.23951": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.23951-latlm-line-parallel-language-models-with-deferred-commitment.md"
+    ],
+    "arxiv:2610.26693": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.26693-parallel-language-models-via-variational-decoding.md"
+    ],
+    "arxiv:2610.26754": [
+      "papers/inference/99-other-inference-systems/2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md"
     ]
   }
 }

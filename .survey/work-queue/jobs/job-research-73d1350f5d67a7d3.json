@@ -35,10 +35,15 @@
   "selection_reason": "KV圧縮の重要attention headがprefillとdecodeで変化する点に着目し、prefill直後の最初の内容tokenだけを観測してhead-groupとtokenの重要度を推定する。head-groupに比例したKV予算を配分し各群内で高重要tokenを保持するため、offline profilingや再学習が不要。著者要旨はLlama3.1-8BのRULER 16Kで10%メモリ予算でもfull-cache精度95.7%、LongBenchの1.5%予算で95.9%保持と報告。長文脈KV圧縮としてaccept。",
   "semantic_scholar_id": "e39379f2eb3d8ba858d5be58aac44449d05121db",
   "source_url": "https://arxiv.org/abs/2610.23939",
-  "status": "ready",
+  "status": "superseded",
   "title": "PeekKV: The First Content Token Already Knows Which Heads Matter",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:40:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.23939-peekkv-the-first-content-token-already-knows-which-heads-matter.md",
+  "represented_canonical_id": "arXiv:2610.23939",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -188,6 +188,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。
 
+- **2025-12 · [KV Admission: Learning What to Write for Efficient Long-Context LLM Inference](2025-2512.17452-kv-admission-learning-what-to-write-for-efficient-long-context-llm-infer.md)**  
+  実装：[✓](https://github.com/EMCLab-Sinica/WG-KV) ・ リポジトリ内被引用：1  
+  KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-10 · [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md)**  
@@ -618,10 +622,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/uw-syfi/Magneton) ・ リポジトリ内被引用：0  
   同等機能の別実装と演算子単位でエネルギーを比べ、無駄な実装とその原因である設定や呼出し経路まで自動で特定する差分エネルギーデバッグ。9システムで既知15件を診断し未知8件を発見。
 
-- **2025-12 · [KV Admission: Learning What to Write for Efficient Long-Context LLM Inference](2025-2512.17452-kv-admission-learning-what-to-write-for-efficient-long-context-llm-infer.md)**  
-  実装：[✓](https://github.com/EMCLab-Sinica/WG-KV) ・ リポジトリ内被引用：0  
-  KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
-
 - **2025-12 · [gpu_ext: Extensible OS Policies for GPUs via eBPF](2025-2512.12615-gpu-ext-extensible-os-policies-for-gpus-via-ebpf.md)**  
   実装：[✓](https://github.com/eunomia-bpf/gpu_ext) ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の推論性能は、GPUの演算能力だけでなく、GPUメモリへ何を保持し、何をCPU側へ退避させ、いつ事前読み込みし、複数処理へどのように実行時間を割り当てるかに大きく左右される。
@@ -637,7 +637,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：200  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：201  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -645,7 +645,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：49  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
@@ -1033,7 +1033,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：595  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：596  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

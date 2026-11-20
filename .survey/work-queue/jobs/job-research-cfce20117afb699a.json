@@ -35,10 +35,15 @@
   "selection_reason": "長文脈入力のトークン重要度をMoE式のゲート付き注意で学習しエンドツーエンドに剪定するTokenGateにより、プリフィルを1.4〜11.3倍高速化しピークメモリを下げるため、プリフィル最適化への直接貢献である。",
   "semantic_scholar_id": "c09d859599098589e512ba13841a5c254edbaa20",
   "source_url": "https://arxiv.org/abs/2610.26754",
-  "status": "ready",
+  "status": "superseded",
   "title": "TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:40:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md",
+  "represented_canonical_id": "arXiv:2610.26754",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

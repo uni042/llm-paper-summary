@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 4480,
+  "active_count": 4485,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -5509,6 +5509,13 @@
       ],
       "source_hash": "91a79505b462ebeba4ffed0b300f3262e067c167123d63db544a04dffc74d402"
     },
+    "arXiv:2610.23935": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2610.23935-factorization-guided-training-and-inference-for-diffusion-drafted-specul.md",
+      "identifiers": [
+        "arXiv:2610.23935"
+      ],
+      "source_hash": "27a51acb49b2f36a429fffefbdb246b496d5bf34040ec02e515517d7697e41fd"
+    },
     "arXiv:2610.24365": {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2610.24365-flashmap-flow-map-speculative-decoding.md",
       "identifiers": [
@@ -5536,6 +5543,13 @@
         "arXiv:2610.26660"
       ],
       "source_hash": "a1740f82a1b5b5519bee461fdebffda77dc8fd3105429d06a000e270c1bc8a1a"
+    },
+    "arXiv:2610.26693": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2610.26693-parallel-language-models-via-variational-decoding.md",
+      "identifiers": [
+        "arXiv:2610.26693"
+      ],
+      "source_hash": "a8828b42442eb7e29e34895b46368a6de90b91421f697f5cbce253ca5815f48f"
     },
     "DOI:10.18653/v1/2026.findings-acl.1065": {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2ad70212cfe6-training-free-adaptive-speculative-decoding-via-linguistic-priors.md",
@@ -9682,6 +9696,20 @@
         "arXiv:2610.23796"
       ],
       "source_hash": "1b337b079e5a5f7ba2d28c5ed60db2620c8c8d6837e211d775a4522a26e2de4e"
+    },
+    "arXiv:2610.23939": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.23939-peekkv-the-first-content-token-already-knows-which-heads-matter.md",
+      "identifiers": [
+        "arXiv:2610.23939"
+      ],
+      "source_hash": "b22988aa380c5d64e50c1c262071cff491be8a326b1c66043f72785c3906c45d"
+    },
+    "arXiv:2610.23951": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.23951-latlm-line-parallel-language-models-with-deferred-commitment.md",
+      "identifiers": [
+        "arXiv:2610.23951"
+      ],
+      "source_hash": "cb431cc6974e6189509d642754bd8f35c9ba17f5ed3878659b36347f34949d25"
     },
     "arXiv:2610.24179": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-l.md",
@@ -31929,6 +31957,13 @@
       ],
       "source_hash": "478271cf0e39814c994cbe38763e471e0923db6b65d196d1b8c6e4b2c8166d06"
     },
+    "arXiv:2610.26754": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md",
+      "identifiers": [
+        "arXiv:2610.26754"
+      ],
+      "source_hash": "29520624953cab66d7eee60e7bb8bc499dcc68793d0db9c548dc0a2f4e339274"
+    },
     "DOI:10.1145/3789240.3829130": {
       "path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
       "identifiers": [
@@ -33357,10 +33392,12 @@
     "arXiv:2610.22788": "arXiv:2610.22788",
     "arXiv:2610.22877": "arXiv:2610.22877",
     "arXiv:2610.23787": "arXiv:2610.23787",
+    "arXiv:2610.23935": "arXiv:2610.23935",
     "arXiv:2610.24365": "arXiv:2610.24365",
     "arXiv:2610.24722": "arXiv:2610.24722",
     "arXiv:2610.26531": "arXiv:2610.26531",
     "arXiv:2610.26660": "arXiv:2610.26660",
+    "arXiv:2610.26693": "arXiv:2610.26693",
     "DOI:10.18653/v1/2026.findings-acl.1065": "DOI:10.18653/v1/2026.findings-acl.1065",
     "DOI:10.65109/sgxl4097": "DOI:10.65109/sgxl4097",
     "DOI:10.18653/v1/2026.findings-eacl.31": "DOI:10.18653/v1/2026.findings-eacl.31",
@@ -34057,6 +34094,8 @@
     "DOI:10.1145/3848591.3856870": "arXiv:2610.23503",
     "arXiv:2610.23503": "arXiv:2610.23503",
     "arXiv:2610.23796": "arXiv:2610.23796",
+    "arXiv:2610.23939": "arXiv:2610.23939",
+    "arXiv:2610.23951": "arXiv:2610.23951",
     "DOI:10.1145/3857371": "arXiv:2610.24179",
     "arXiv:2610.24179": "arXiv:2610.24179",
     "arXiv:2610.24499": "arXiv:2610.24499",
@@ -37751,6 +37790,7 @@
     "arXiv:2610.24102": "arXiv:2610.24102",
     "DOI:10.1145/3840404.3848173": "arXiv:2610.26083",
     "arXiv:2610.26083": "arXiv:2610.26083",
+    "arXiv:2610.26754": "arXiv:2610.26754",
     "DOI:10.1145/3789240.3829130": "DOI:10.1145/3789240.3829130",
     "DOI:10.14778/3819518.3819541": "DOI:10.14778/3819518.3819541",
     "DOI:10.1109/access.2026.3664226": "DOI:10.1109/access.2026.3664226",

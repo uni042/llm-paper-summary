@@ -40,6 +40,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
 
+- **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  復号済みトークンを候補と確定へ分け、候補を信頼度の高い文脈だけで検証して検証文脈の汚染を断つ取消可能復号で、Saber比2.71倍の高速化と品質改善を両立した。
+
 - **2026-07 · [HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference](2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意の行列積を4ビット化する際に、較正固定の等価な拡大・縮小でキーの外れ値をクエリ側へ移し、正規化子を実際に使う量子化済み重みから求めることで、判断のずれを大幅に減らした学習不要の方式である。
@@ -225,10 +229,6 @@
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
   スケジューリング・入力処理・生成・KVキャッシュの各ボトルネックを実機測定で独立確認し、四要素すべてに複数の証拠を残す小さなLLMサービング再生用トレースを選ぶ。
-
-- **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  復号済みトークンを候補と確定へ分け、候補を信頼度の高い文脈だけで検証して検証文脈の汚染を断つ取消可能復号で、Saber比2.71倍の高速化と品質改善を両立した。
 
 - **2026-08 · [Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models](2026-2608.14797-beyond-tokens-a-survey-on-decoding-methods-for-large-language-and-vision.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

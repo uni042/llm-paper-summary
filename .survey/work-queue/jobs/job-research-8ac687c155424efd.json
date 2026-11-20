@@ -35,10 +35,15 @@
   "selection_reason": "Parallel Language Modelsは潜在補助変数を通じてtoken間依存を伝播させ、1 forwardで相互整合する複数tokenを生成する。自己回帰損失と並列decode損失を含む変分下界で学習し、80M～3Bの事前学習モデルで品質と速度のPareto改善を示す。1.3Bのpost-trainingモデルで数理・coding・指示追従品質を保ちながら推論2.3～5.7倍高速化を報告。",
   "semantic_scholar_id": "28ca0cf486be6c52332da3e9a5fef1828aaa58f1",
   "source_url": "https://arxiv.org/abs/2610.26693",
-  "status": "ready",
+  "status": "superseded",
   "title": "Parallel Language Models via Variational Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:40:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.26693-parallel-language-models-via-variational-decoding.md",
+  "represented_canonical_id": "arXiv:2610.26693",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
