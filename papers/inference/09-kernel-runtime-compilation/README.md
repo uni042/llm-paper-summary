@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（255本）
+## 自動生成の論文一覧（256本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -405,6 +405,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference](2026-2606.02823-qift-shift-friendly-no-zero-w2-post-training-quantization-for-rotated-w2.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qiftは、大規模言語モデル（Large Language モデル; LLM）の推論を省メモリ化する際、2ビットの符号で表現できる四つの実数値をどこへ置くかを主題とする。通常の符号付き2ビット量子化は$\{-2,-1,0,+1\}$を復元値に使う。
+
+- **2026-06 · [Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression](2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compre.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混合精度量子化と構造的枝刈りの二値マスクを、エンドツーエンド損失で学習するハイパーネットワークで同時最適化する圧縮手法。超低ビットで先行手法を上回り、実測でもプリフィル高速化とメモリ削減を示す。
 
 - **2026-06 · [Ekka: Automated Diagnosis of Silent Errors in LLM Inference](2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（530本）
+## 自動生成の論文一覧（531本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1183,6 +1183,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   1ビットKVキャッシュを維持したまま、量子化で崩れた高確率候補の局所順位だけを検出・補正し、RULER精度を47.8%から83.2%へ回復するDGAP。
 
+- **2026-06 · [Can I Buy Your KV Cache?](2026-2606.13361-can-i-buy-your-kv-cache.md)**  
+  実装：[✓](https://github.com/zly-idleness/kvstore) ・ リポジトリ内被引用：0  
+  文書のKVキャッシュを発行者が事前計算して成果物化し、利用側が読み込んでプリフィルを省略する再利用を検証した研究。トークン完全一致を確認し、再利用はプリフィルの9〜50倍安く、配送より提供者側ホスティングが経済的に成り立つことを示す。
+
 - **2026-06 · [Affix Cache for Diffusion Large Language Models](2026-2608.26140-affix-cache-for-diffusion-large-language-models.md)**  
   実装：[✓](https://github.com/sands-lab/ACache) ・ リポジトリ内被引用：0  
   ACache（Affix Cache）は、拡散型大規模言語モデル（Diffusion Large Language モデル; DLLM）において、複数の生成要求が同じ文脈を共有する際に、共有文脈の鍵・値キャッシュ（KV キャッシュ）を一度だけ保存し、要求ごとに必要な一部だけを再計算する推論基盤である。
@@ -1494,7 +1498,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   複数の大規模言語モデル（LLM）が協調するシステムでは、あるモデルが推論や分析の結果を文章として生成し、別のモデルがその文章を読み込んで次の応答を作ることが多い。
 
 - **2025-02 · [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   文書自体が同じなのに、GPUはその文書の鍵・値（KV）を再計算することになる。Cache-Craftは再利用するかどうかの判定と、どれだけ再計算して修復するかの決定を分離する。実際のRAGワークロードでは、接頭辞キャッシュ比で冗長計算を51%減らし、連続バッチ下で処理率を1.6倍、エンドツーエンド応答遅延を約半分にしたと報告する。
 
 - **2025-11 · [TiDAR: Think in Diffusion, Talk in Autoregression](2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md)**  

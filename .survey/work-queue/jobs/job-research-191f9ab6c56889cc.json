@@ -35,10 +35,15 @@
   "selection_reason": "arXiv公式の題名はPhaseQuantであり、worklistのDynamicPTQとは表記が異なる。同一arXiv identityの最新版要旨は、残差ストリームで巨大活性が現れる層だけ活性8bitを割り当て、他の重み・KV・活性を4bitに維持するPhaseQuantを提案。QuaRot/SpinQuant等に統合できるため、推論向け混合精度PTQに直接該当。",
   "semantic_scholar_id": "48e0051ae0ec82aca38f1faf069f18190ef9becc",
   "source_url": "https://arxiv.org/abs/2606.12487",
-  "status": "ready",
+  "status": "superseded",
   "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:51:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stre.md",
+  "represented_canonical_id": "arXiv:2606.12487",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

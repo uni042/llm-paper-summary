@@ -35,10 +35,15 @@
   "selection_reason": "エッジLLM向けルックアップ表による処理内メモリ加速PALUTE。量子化推論が逆量子化と非線形演算子に支配される問題に対し、事前計算した表引きで演算を置き換える単一基板3D DRAMのPIMアクセラレータ。推論ハードウェアそのもの。",
   "semantic_scholar_id": "0de624b1cce656408139d0a2225a1a8cc390a723",
   "source_url": "https://arxiv.org/abs/2606.08891",
-  "status": "ready",
+  "status": "superseded",
   "title": "PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference",
   "type": "research",
   "venue": "International Symposium on Low Power Electronics and Design",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:51:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/17-pim-near-data-acceleration/2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-i.md",
+  "represented_canonical_id": "arXiv:2606.08891",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

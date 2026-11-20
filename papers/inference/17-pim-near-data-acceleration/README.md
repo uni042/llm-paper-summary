@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（36本）
+## 自動生成の論文一覧（37本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -48,6 +48,10 @@
 - **2026-04 · [AMMA: A Multi-Chiplet Memory-Centric Architecture for Low-Latency 1M Context Attention Serving](2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-cont.md)**  
   実装：[✓](https://github.com/zhongkaiyu/AMMA) ・ リポジトリ内被引用：1  
   計算ダイを近傍処理付きメモリキューブへ置き換え、二段の並列化と集合通信の組み替えで帯域を使い切るメモリ中心の注意加速器で、エイチ百比で遅延一五・五分の一とエネルギー六・九分の一をシミュレーション中心の評価で示した。
+
+- **2025-12 · [CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference](2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -87,6 +91,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   RAGのベクトル検索を三次元NAND配列内の二重境界検出へ変換し、候補埋め込みの外部読出しを避けてCPU比最大41.7倍高速化する。
 
+- **2026-06 · [PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference](2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モノリシック3次元DRAMの中でルックアップテーブルを大規模並列に照会し、逆量子化なしの低ビット推論を行うメモリ内処理加速器。毎秒1264トークンを0.16ワットで処理し、既存の表引き・近接メモリ方式より高いエネルギー効率を示す。
+
 - **2026-06 · [COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices](2026-2606.30553-cosm-a-cooperative-scheduling-framework-for-concurrent-pim-and-cpu-execu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPUとメモリを共有するPIMで、CPUの空き時間窓を推定してその中だけにPIMの仕事を差し込む協調スケジューリングにより、CPU性能の低下2.0パーセントでPIMスループットをCPU優先方式の2.8倍にした。
@@ -102,10 +110,6 @@
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
-
-- **2025-12 · [CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference](2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
 - **2025-12 · [Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference](2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

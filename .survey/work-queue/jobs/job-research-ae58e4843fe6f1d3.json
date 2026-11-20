@@ -35,10 +35,15 @@
   "selection_reason": "QLMIOはマルチモーダルLLMのcloud/edge実行配置を生成品質と応答遅延の双方で最適化するオフロード制御を提案。自作の実cloud-edge協調環境とMIOBenchで評価し、比較対象比最大58.14%の遅延削減とcloud-onlyに匹敵するタスク完了率を報告。数値は当該テストベッド条件でありLLM内部kernel高速化ではない。MLLM推論の配置・レイテンシ最適化に直接該当。",
   "semantic_scholar_id": "c8ae23b4c3c942f164da3c01f0b8a383e56c154a",
   "source_url": "https://arxiv.org/abs/2606.15210",
-  "status": "ready",
+  "status": "superseded",
   "title": "Generation Quality-Latency Tradeoff-Aware Inference Offloading for Multimodal LLMs in Cloud-Edge Continuum",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:51:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multi.md",
+  "represented_canonical_id": "arXiv:2606.15210",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

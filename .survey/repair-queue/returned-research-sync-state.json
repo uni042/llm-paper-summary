@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d1247762ded33b10344a203f1d857483d016a165",
+  "base_commit": "61cdcfc55ee67c94492e67575b394b811dce46c4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -259,11 +259,16 @@
     "2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approximation-for-quantized-gated-deltanet.json",
     "2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-inference.json",
     "2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.json",
+    "2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compression.json",
     "2026-2606.08511-look-less-reason-more-block-wise-attention-skipping-for-efficient-multimodal-llms.json",
+    "2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-inference.json",
     "2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-model-inference.json",
+    "2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stream-dynamics.json",
+    "2026-2606.13361-can-i-buy-your-kv-cache.json",
     "2026-2606.14277-one-layer-s-trash-is-another-layer-s-treasure-adaptive-layer-wise-visual-token-selection-in-lvlms.json",
     "2026-2606.14782-last-but-not-least-boundary-attention-calibration-for-multimodal-kv-cache-compression.json",
     "2026-2606.15070-stop-when-further-reasoning-won-t-help-attention-state-adaptive-generation-in-reasoning-models.json",
+    "2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multimodal-llms-in-cloud-edge-continuum.json",
     "2026-2606.15805-mean-field-parallel-decoding-for-discrete-diffusion-language-models.json",
     "2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.json",
     "2026-2606.18681-moving-beyond-diversity-visual-token-pruning-as-subspace-reconstruction-for-efficient-vlms.json",
@@ -42736,6 +42741,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.07819": {
+      "order": [
+        "2026-11-20T05:43:24+00:00",
+        "2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.08891": {
+      "order": [
+        "2026-11-20T05:44:46+00:00",
+        "2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.12487": {
+      "order": [
+        "2026-11-20T05:46:07+00:00",
+        "2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stream-dynamics.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.13361": {
+      "order": [
+        "2026-11-20T05:47:29+00:00",
+        "2026-2606.13361-can-i-buy-your-kv-cache.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.15210": {
+      "order": [
+        "2026-11-20T05:48:51+00:00",
+        "2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multimodal-llms-in-cloud-edge-continuum.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53017,6 +53067,21 @@
     "arxiv:2610.06917": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-l.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-l.md"
+    ],
+    "arxiv:2606.07819": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compre.md"
+    ],
+    "arxiv:2606.08891": [
+      "papers/inference/17-pim-near-data-acceleration/2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-i.md"
+    ],
+    "arxiv:2606.12487": [
+      "papers/inference/99-other-inference-systems/2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stre.md"
+    ],
+    "arxiv:2606.13361": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.13361-can-i-buy-your-kv-cache.md"
+    ],
+    "arxiv:2606.15210": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multi.md"
     ]
   }
 }
