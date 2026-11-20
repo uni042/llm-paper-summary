@@ -35,10 +35,15 @@
   "selection_reason": "Apple M5 Max/MLXでKVのblock FP4、radial quantization、両者の直列結合、Metal融合kernelを比較する。Metal PolarQuantは46.8tok/s・3456B/tokenでbf16比3.64倍圧縮、Python参照実装比1.84倍高速化。一方、直列FP4+Polarは15.1tok/sへ悪化し、32K以上では全方式がKV全展開の累積O(N²)仕事により失速する。実装と失敗条件を明確にした端末推論性能評価としてaccept。",
   "semantic_scholar_id": "c34d8891611f43591b356934c4a43c2600b7d58d",
   "source_url": "https://arxiv.org/abs/2610.33076",
-  "status": "ready",
+  "status": "superseded",
   "title": "Double KV Cache Optimization on Apple Silicon: Block-FP4, Radial Quantization, and Fused Metal Kernels",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:19:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.33076-double-kv-cache-optimization-on-apple-silicon-block-fp4-radial-quantizat.md",
+  "represented_canonical_id": "arXiv:2610.33076",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

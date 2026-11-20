@@ -35,10 +35,15 @@
   "selection_reason": "Video-MemCompはstreaming video MLLMで一次Taylor展開により局所近似誤差と層別感度を分離し、pre-RoPEでのtoken集約とattention保存バイアス、offline gradient/online entropyに基づく層別KV予算配分を行う。Qwen2.5-VL-3Bで精度62.3%→64.1%、KVメモリ90%超削減と報告。動画理解向けだがKV容量削減の直接的手法。",
   "semantic_scholar_id": "d9673b7f96ec7bbe74c8a59a08819486ecb66f6c",
   "source_url": "https://arxiv.org/abs/2610.32784",
-  "status": "ready",
+  "status": "superseded",
   "title": "Video-MemComp: Taylor-Guided Sensitivity-Aware Memory Management for Streaming Video Understanding",
   "type": "research",
   "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:19:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.32784-video-memcomp-taylor-guided-sensitivity-aware-memory-management-for-stre.md",
+  "represented_canonical_id": "arXiv:2610.32784",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

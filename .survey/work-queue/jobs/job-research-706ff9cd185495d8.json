@@ -35,10 +35,15 @@
   "selection_reason": "LEMSはlayerごとの局所・大域重要度と誤差伝播biasを組み合わせたsurrogateをILPで最適化し、SVD rankを配分する。KFAC-SVDはtoken統計でFisher近似のrank collapseを緩和。Mistral/Qwen3/Llama3系でzero-shot精度最大4.7ポイント、PPL平均19%改善と報告。推論向け重み圧縮だが実測token/sは要旨にない。",
   "semantic_scholar_id": "6d5e24f924b8475129b810e913630b05b7caee10",
   "source_url": "https://arxiv.org/abs/2610.32878",
-  "status": "ready",
+  "status": "superseded",
   "title": "Advancing SVD-based LLM Compression via Layer-Wise Error Model Search",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:19:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.32878-advancing-svd-based-llm-compression-via-layer-wise-error-model-search.md",
+  "represented_canonical_id": "arXiv:2610.32878",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

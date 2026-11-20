@@ -35,10 +35,15 @@
   "selection_reason": "Transformer系soft-prompt compressorの計算負荷を避け、Mamba SSMが任意長contextを線形時間でencodingし、凍結したtarget LLMへ短い表現として渡すBoa Compressor。full-context teacherとcompressed-context studentの次token logitsを蒸留で一致させる。既存Transformer compressor比約1桁高速で同等以上の圧縮後品質、最大16倍の圧縮率を評価し、online毎query圧縮でend-to-end遅延を削減すると報告。LLM推論時のprompt圧縮としてaccept。",
   "semantic_scholar_id": "e0823a3ff1ed7c257a8e4181727406b48fa66d62",
   "source_url": "https://arxiv.org/abs/2610.33006",
-  "status": "ready",
+  "status": "superseded",
   "title": "Linear-Time Context Compression with State-Space Encoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:19:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.33006-linear-time-context-compression-with-state-space-encoding.md",
+  "represented_canonical_id": "arXiv:2610.33006",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

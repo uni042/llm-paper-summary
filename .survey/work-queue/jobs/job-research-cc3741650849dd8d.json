@@ -35,10 +35,15 @@
   "selection_reason": "QViDはTransformerのquery-key射影から生じるquery–vision相互作用行列の低ランク性を利用し、主要な潜在相互作用モードに沿って視覚tokenを訓練不要で選別する。画像・動画理解の同一token予算で既存のquery-aware pruningを上回ると著者らは報告。要旨にend-to-end遅延の数値はなく、token削減による計算効率化の候補として採択。",
   "semantic_scholar_id": "1ba7adf2f92934afc88339b3ffacbef7eb1d4550",
   "source_url": "https://arxiv.org/abs/2610.33215",
-  "status": "ready",
+  "status": "superseded",
   "title": "Vision Token Pruning via Query-Vision Interaction Decomposition",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:19:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.33215-vision-token-pruning-via-query-vision-interaction-decomposition.md",
+  "represented_canonical_id": "arXiv:2610.33215",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
