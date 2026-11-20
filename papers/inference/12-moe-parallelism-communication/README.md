@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（71本）
+## 自動生成の論文一覧（72本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -277,6 +277,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  
   DMA-Latteは、AMD Instinct MI300Xの既存DMAハードウェアに備わる放送（broadcast）、交換（swap）、同一エンジンでの連続コピー（back-to-back copy）、依存条件付き事前発行（prelaunch）を組み合わせ、小粒度転送の非データ移動費用を削減する方式である。
 
+- **2025-08 · [FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication](2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-comm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  集合通信のデータを任意ビット幅で量子化して送る通信方式。ビット分割で不規則なビット幅を扱い、スパイク保存で外れ値を残して2ビット化の崩壊を防ぐ。PCIeノードでは階層通信のパイプライン化も併用する。
+
 - **2025-07 · [Photonic Fabric Platform for AI Accelerators](2025-2507.14000-photonic-fabric-platform-for-ai-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案のPhotonic Fabric Appliance（PFA）は、HBM3EとDDR5を含むメモリモジュールを光スイッチで接続し、16モジュール構成で最大32TBの共有メモリと115Tbpsの全対全デジタル交換を想定する。
@@ -288,7 +292,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   LongVILAは、長時間動画を理解する視覚言語モデル（Vision-Language モデル、VLM）の学習手順と分散実行基盤を同時に設計した研究である。256基のGPUを使うと勾配チェックポイントを使わず約200万トークンの学習文脈を扱え、従来のリング型系列並列に対して2.1〜5.7倍の訓練処理量を得る。
 
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
 
 - **2024-01 · [Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference](2024-2401.08383-exploiting-inter-layer-expert-affinity-for-accelerating-mixture-of-exper.md)**  
@@ -310,7 +314,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   提案する三機構は動的ゲート（動的 Gating）、専門家バッファ（専門家 Buffering）、専門家負荷分散（専門家 読み込み Balancing）である。動的ゲートによる最大スループットは、静的方式比で言語モデル6.21～11.23倍、機械翻訳エンコーダ5.75～10.98倍、デコーダ2.58～5.71倍へ改善した。
 
 - **2023-06 · [ZeRO++: Extremely Efficient Collective Communication for Giant Model Training](2023-2306.10209-zero-extremely-efficient-collective-communication-for-giant-model-traini.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：8  
   大規模言語モデル（LLM）を多数のGPUで学習する場合、重みや勾配、最適化器状態を分割してメモリ使用量を下げるZeRO-3は、各層の計算時に必要な重みを集め直す。ZeRO++は前向き重みをINT8に圧縮して0.5M、逆向き重みをノード内で再構成してノード間0、勾配をINT4で通信して0.25Mにする。
 
 ### 5年前（2021-12〜2022-11）

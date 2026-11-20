@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "97cbb9da87b67da418c9ae06ef12756852425735",
+  "base_commit": "bb3c0b8d939545d80bef8d76a42b068698571beb",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -138,14 +138,19 @@
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
     "2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.json",
     "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json",
+    "2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-inference.json",
+    "2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-communication.json",
     "2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in-efficient-llm-reasoning.json",
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
+    "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
     "2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with-hybrid-ckks-and-mpc.json",
+    "2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dynamic-grouping.json",
     "2025-2509.06274-ipr-intelligent-prompt-routing-with-user-controlled-quality-cost-trade-offs.json",
     "2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit-slice-enabled-sparsity-and-repetitiveness.json",
     "2025-2509.15148-atts-asynchronous-test-time-scaling-via-conformal-prediction.json",
     "2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-for-parameter-efficient-fine-tuning-on-large-language-models.json",
+    "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
     "2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruct.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
@@ -43533,6 +43538,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2508.03726": {
+      "order": [
+        "2026-11-20T07:58:52+00:00",
+        "2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.03760": {
+      "order": [
+        "2026-11-20T07:59:49+00:00",
+        "2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-communication.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.09471": {
+      "order": [
+        "2026-11-20T08:00:45+00:00",
+        "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.03054": {
+      "order": [
+        "2026-11-20T08:01:42+00:00",
+        "2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dynamic-grouping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.23410": {
+      "order": [
+        "2026-11-20T08:02:39+00:00",
+        "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54073,6 +54123,21 @@
     "arxiv:2507.10059": [
       "papers/inference/99-other-inference-systems/2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.md",
       "papers/inference/99-other-inference-systems/2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.md"
+    ],
+    "arxiv:2508.03726": [
+      "papers/inference/05-speculative-decoding-moe/2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-infe.md"
+    ],
+    "arxiv:2508.03760": [
+      "papers/inference/12-moe-parallelism-communication/2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-comm.md"
+    ],
+    "arxiv:2508.09471": [
+      "papers/inference/99-other-inference-systems/2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-metho.md"
+    ],
+    "arxiv:2509.03054": [
+      "papers/inference/16-weight-quantization-compression/2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dy.md"
+    ],
+    "arxiv:2509.23410": [
+      "papers/inference/99-other-inference-systems/2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "GPU間通信を任意ビット幅で扱うため、ビット分割と外れ値の浮動小数保持を組み合わせる。NVLinkとPCIeでAllReduce最大3.2倍、All2All最大2倍を報告し、分散LLMの学習・配備双方に用いる低ビット通信基盤で、MoE推論のエキスパート通信にも関連する。",
   "semantic_scholar_id": "1a4947b830efa340ee7093a7771d7f7d27d86579",
   "source_url": "https://arxiv.org/abs/2508.03760",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:04:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-comm.md",
+  "represented_canonical_id": "arXiv:2508.03760",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

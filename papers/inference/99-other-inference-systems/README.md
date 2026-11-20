@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1078本）
+## 自動生成の論文一覧（1080本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2512,13 +2512,13 @@
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：31  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
+- **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
+  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：29  
+  単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
+
 - **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
   実装：✓ ・ リポジトリ内被引用：29  
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
-
-- **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
-  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：28  
-  単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
@@ -2612,6 +2612,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
 
+- **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
+
 - **2025-11 · [A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-based Multimodal Large Language Models](2025-2511.15098-a-comprehensive-study-on-visual-token-redundancy-for-discrete-diffusion-.md)**  
   実装：[✓](https://github.com/Yrdal3910/dMLLM-Visual-Token-Redundancy-Analysis) ・ リポジトリ内被引用：4  
   本論文は、画像・動画を扱う離散拡散型マルチモーダル大規模言語モデル（discrete diffusion-based Multimodal Large Language Models、dMLLM）に、自己回帰型の視覚トークン枝刈りをそのまま移植しても期待通り高速化しない理由を実験的に分析する。
@@ -2627,10 +2631,6 @@
 - **2025-03 · [Performance Aware LLM Load Balancer for Mixed Workloads](2025-e32383a452cd-performance-aware-llm-load-balancer-for-mixed-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   本研究の対象は、同じ大規模言語モデルを複数のGPUインスタンスで提供するとき、各要求をどのインスタンスへ送るかという負荷分散である。1インスタンス内のバッチ形成を改善する研究と異なり、要求がいったん不適切なインスタンスへ送られると、その内部のスケジューラだけでは混在負荷による干渉を解消しにくい。
-
-- **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
 
 - **2025-11 · [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](2025-2511.18890-nemotron-flash-towards-latency-optimal-hybrid-small-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2667,6 +2667,10 @@
 - **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
   実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：3  
   ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
+
+- **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
 
 - **2024-12 · [WebLLM: A High-Performance In-Browser LLM Inference Engine](2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md)**  
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：3  
@@ -2752,10 +2756,6 @@
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：2  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
 
-- **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
-
 - **2025-11 · [VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking](2025-2511.18692-vlm-in-a-flash-i-o-efficient-sparsification-of-vision-language-model-via.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   連続したニューロンの塊を単位に、重要度を推定遅延で割った効用で塊を選ぶ疎化と、連続分布に基づく遅延の見積もりにより、同等の精度でフラッシュ読み込みの遅延を二つの組み込み機器で平均二・一九倍と二・八九倍、最大四・六五倍と五・七六倍改善したと報告した。
@@ -2819,6 +2819,10 @@
 - **2025-09 · [PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation](2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md)**  
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  
   PipelineRLは、大規模言語モデルの長文推論を強化学習で訓練するときに、系列生成器と訓練器の並行実行および生成途中の重み更新（in-flight 重み update）を組み合わせるシステムである。
+
+- **2025-09 · [PATCH: Learnable Tile-level Hybrid Sparsity for LLMs](2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.md)**  
+  実装：[✓](https://github.com/Paramathic/patch) ・ リポジトリ内被引用：1  
+  重みをタイル単位で密か2:4疎かを学習して選び、疎性率を0から50パーセントで連続制御するハイブリッド疎性PATCH。LLaMA-2 7Bで密比最大1.38倍の実測高速化とMaskLLM超えの精度。
 
 - **2025-09 · [LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models](2025-2509.23729-luq-layerwise-ultra-low-bit-quantization-for-multimodal-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -3151,6 +3155,10 @@
 - **2025-08 · [Fast weight programming and linear transformers: from machine learning to neurobiology](2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   主要な根拠は原著の式(13)、(23)～(24)、表1、表2、および関連研究の分析であり、著者が新しいサービングシステムを実装して速度を測定した論文ではない。
+
+- **2025-08 · [EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning Method for Large Language Models](2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-metho.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形層を二部グラフとみなし、対角選択で連結性を保証しながらN:M構造化枝刈りを行う学習後枝刈り手法。重要度保持とチャネル破損回避を両立し、全モデルで既存の構造化枝刈りを上回る。
 
 - **2025-07 · [SpeLLM: Character-Level Multi-Head Decoding](2025-2507.16323-spellm-character-level-multi-head-decoding.md)**  
   実装：[✓](https://github.com/schwartz-lab-NLP/SpeLLM) ・ リポジトリ内被引用：0  
@@ -3527,7 +3535,7 @@
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：61  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
@@ -3977,7 +3985,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：290  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：292  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "tile単位でdenseと2:4疎性を学習選択し、0–50%の連続的疎性率とGPU実効高速化を両立。LLaMA-2 7B/A6000でdense比1.18–1.38倍のend-to-end高速化を報告。",
   "semantic_scholar_id": "8bf317891001f836afe891dbc702b276e5db3a5d",
   "source_url": "https://arxiv.org/abs/2509.23410",
-  "status": "ready",
+  "status": "superseded",
   "title": "PATCH: Learnable Tile-level Hybrid Sparsity for LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:04:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.md",
+  "represented_canonical_id": "arXiv:2509.23410",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

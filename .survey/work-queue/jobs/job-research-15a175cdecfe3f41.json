@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論を高速化する投機的ビームの階層検証HVT。投機的ビームの検証が優先度なく逐次に行われ無駄な計算が生む問題に対し、尤度の高い下書きを優先し見込みのないものを早期に剪定する階層検証木。推論高速化機構そのもの。",
   "semantic_scholar_id": "161c8611c5640fb89100bff8c0bd7e79e341d2b3",
   "source_url": "https://arxiv.org/abs/2508.03726",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hierarchical Verification of Speculative Beams for Accelerating LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:04:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-infe.md",
+  "represented_canonical_id": "arXiv:2508.03726",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

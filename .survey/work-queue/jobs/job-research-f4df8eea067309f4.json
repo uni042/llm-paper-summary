@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨のMSBは、グループ内分散を最小化する動的グルーピングによって校正データ・変換を不要にする重みのみの事後量子化方式。Llama 3.2 3Bの4bit・64要素ブロック設定でWikiText-2 PPL 8.43、全精度7.81、GPTQ既定設定12.23と報告。量子化自体はCPUソルバで行い、評価は低bitパックを用いないbfloat16実行であるため、実測推論高速化を主張していない点も区別する。",
   "semantic_scholar_id": "e12970a1c7530818dc25a3c5a808d4d7b7fb0040",
   "source_url": "https://arxiv.org/abs/2509.03054",
-  "status": "ready",
+  "status": "superseded",
   "title": "Calibration and Transformation-Free Weight-Only LLMs Quantization via Dynamic Grouping",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:04:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dy.md",
+  "represented_canonical_id": "arXiv:2509.03054",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
