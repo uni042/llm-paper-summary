@@ -35,10 +35,15 @@
   "selection_reason": "E8格子を暗黙の8次元codebookとして用い、明示codebook探索を省いた2bit QATを提案。2bit本体と疎な拡張符号で格子点を保持する。一次要旨はQwen3.6-35B-A3Bで4課題平均が全精度と同等、表現memoryを80%削減し、各形式の最大可能batchでBF16比1.97倍のdecode throughputを報告。学習手法を用いるが成果はMoE LLM推論の2bit重み圧縮・decode高速化に直接適用するためaccept。",
   "semantic_scholar_id": "fa61e572d47adb2a4c88c0bcc921436e3267fd41",
   "source_url": "https://arxiv.org/abs/2610.27699",
-  "status": "ready",
+  "status": "superseded",
   "title": "E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:47:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md",
+  "represented_canonical_id": "arXiv:2610.27699",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

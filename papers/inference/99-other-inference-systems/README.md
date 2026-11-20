@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1109本）
+## 自動生成の論文一覧（1110本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -881,6 +881,10 @@
 - **2026-10 · [Fast and Accurate: Improving Personalized LLM Performance by Semantic Concentration Inspired Workload Split between RAG and Fine-Tuning](2026-2610.15921-fast-and-accurate-improving-personalized-llm-performance-by-semantic-con.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   履歴の意味的集中度で中核をPEFTへ、周辺をRAGへ振り分け、推論時に中核クエリの検索を省く負荷分割。
+
+- **2026-10 · [E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks](2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  E8格子への算術的な射影で重み8個を探索なしに共同量子化し、有限コアと疎な拡張で正確に書き出す2ビット量子化対応学習で、35B級モデルをBF16同等の平均スコアまで回復させた。
 
 - **2026-10 · [DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs](2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4401,7 +4405,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：346  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：347  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

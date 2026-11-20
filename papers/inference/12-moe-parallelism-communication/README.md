@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（74本）
+## 自動生成の論文一覧（75本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -114,6 +114,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-10 · [Democratizing MoE inference on commodity GPUs with CoMoE](2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   民生GPUのホスト経由トポロジーを逆手に取り、ホスト裏付けトークンマルチキャストとトークン単位のステージング集約でMoE通信の冗長転送と全体同期を消し、安価なGPUでデータセンター級のスループットに迫る通信システム。
+
+- **2026-10 · [3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP](2026-2610.26991-3d-moe-complementarity-guided-hardware-software-co-design-for-moe-decode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパート負荷が打ち消し合う相補性でグループ化と近傍配置を行い、残る集中は重みを一度読んで近傍へ一斉配信する専用経路で受け、ずれは段階的な再配置で直すことで、3次元積層ニアメモリ上のMoEデコードの局所性と均衡を両立させる協調設計。
 
 - **2026-09 · [Scaling Inference Prefill with High-Radix Photonic Interconnects](2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -222,7 +226,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。
 
 - **2025-09 · [Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving](2025-2509.17863-expert-as-a-service-moe-serving.md)**  
@@ -253,16 +257,16 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：6  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
 
+- **2025-10 · [Patterns behind Chaos：大規模MoEのデータ移動予測](2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  その知見を将来のウェハ級GPU設計へ適用すると四モデル平均6.6倍、既存GPU向けプリフィル認識型専門家配置ではMoE計算を最大1.25倍高速化した。
+
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   数十台の装置にまたがる複製を丸ごと増やす方式は容量を大きな単位でしか増減できず、追加のために全重みを読み直す時間もかかる。拡張操作の所要時間は最速の比較方式の約0.11倍であり、最良条件では約9倍短い。
 
-- **2025-10 · [Patterns behind Chaos：大規模MoEのデータ移動予測](2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  その知見を将来のウェハ級GPU設計へ適用すると四モデル平均6.6倍、既存GPU向けプリフィル認識型専門家配置ではMoE計算を最大1.25倍高速化した。
-
 - **2025-09 · [HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing](2025-2509.09420-hd-moe-hybrid-and-dynamic-parallelism-for-mixture-of-expert-llms-with-3d.md)**  
-  実装：[✓](https://github.com/angerybob/HD-MoE) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/angerybob/HD-MoE) ・ リポジトリ内被引用：5  
   推論時には直近の専門家選択を用いて次層の負荷を予測し、過負荷になりそうな専門家を限られた時間内に事前配信し、追加通信を増やさない範囲でトークンを空いた節点へ振り分ける。
 
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
@@ -318,7 +322,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：34  
+  実装：✓ ・ リポジトリ内被引用：35  
   提案する三機構は動的ゲート（動的 Gating）、専門家バッファ（専門家 Buffering）、専門家負荷分散（専門家 読み込み Balancing）である。動的ゲートによる最大スループットは、静的方式比で言語モデル6.21～11.23倍、機械翻訳エンコーダ5.75～10.98倍、デコーダ2.58～5.71倍へ改善した。
 
 - **2023-06 · [ZeRO++: Extremely Efficient Collective Communication for Giant Model Training](2023-2306.10209-zero-extremely-efficient-collective-communication-for-giant-model-traini.md)**  

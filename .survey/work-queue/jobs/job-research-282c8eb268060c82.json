@@ -35,10 +35,15 @@
   "selection_reason": "LLMサービングのprefix KV再利用でglobal indexがクラッシュすると全KV再計算が必要になる問題に対し、連続block metadataをsegment化し、疎なin-memory routing directoryとfilterでSSD上の候補segmentを絞るSARPを提案。一次要旨は4種類のmulti-turn/agentic workloadで再起動時復元8.0～77.5倍高速、既存SSD index比request throughput最大66.6倍を報告。SSD階層KV cacheの耐障害性とprefix検索性能に直接関係するためaccept。",
   "semantic_scholar_id": "e8351ce1f36dce814bbb394ff3ca8c7e43ecbf15",
   "source_url": "https://arxiv.org/abs/2610.26849",
-  "status": "ready",
+  "status": "superseded",
   "title": "SARP: An On-SSD Index for KVCache with Fast Prefix Matching and Recovery",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:47:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.26849-sarp-an-on-ssd-index-for-kvcache-with-fast-prefix-matching-and-recovery.md",
+  "represented_canonical_id": "arXiv:2610.26849",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

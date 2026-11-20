@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3e0f98558d8447c60b17283ca3aab387dfdd5459",
+  "base_commit": "db53c315e1dd4aa196c95fd91c5ea333591213d8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -703,6 +703,11 @@
     "2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.json",
     "2026-2610.26693-parallel-language-models-via-variational-decoding.json",
     "2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learned-token-pruning.json",
+    "2026-2610.26849-sarp-an-on-ssd-index-for-kvcache-with-fast-prefix-matching-and-recovery.json",
+    "2026-2610.26991-3d-moe-complementarity-guided-hardware-software-co-design-for-moe-decode-on-3d-stacked-nmp.json",
+    "2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-models.json",
+    "2026-2610.27438-mlips-multi-layer-indexer-pool-sharing.json",
+    "2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice-codebooks.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -44595,6 +44600,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.26849": {
+      "order": [
+        "2026-11-20T11:42:21+00:00",
+        "2026-2610.26849-sarp-an-on-ssd-index-for-kvcache-with-fast-prefix-matching-and-recovery.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26991": {
+      "order": [
+        "2026-11-20T11:43:19+00:00",
+        "2026-2610.26991-3d-moe-complementarity-guided-hardware-software-co-design-for-moe-decode-on-3d-stacked-nmp.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.27123": {
+      "order": [
+        "2026-11-20T11:44:16+00:00",
+        "2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.27438": {
+      "order": [
+        "2026-11-20T11:45:13+00:00",
+        "2026-2610.27438-mlips-multi-layer-indexer-pool-sharing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.27699": {
+      "order": [
+        "2026-11-20T11:46:10+00:00",
+        "2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice-codebooks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55574,6 +55624,21 @@
     "arxiv:2610.26754": [
       "papers/inference/99-other-inference-systems/2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md",
       "papers/inference/99-other-inference-systems/2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md"
+    ],
+    "arxiv:2610.26849": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.26849-sarp-an-on-ssd-index-for-kvcache-with-fast-prefix-matching-and-recovery.md"
+    ],
+    "arxiv:2610.26991": [
+      "papers/inference/12-moe-parallelism-communication/2026-2610.26991-3d-moe-complementarity-guided-hardware-software-co-design-for-moe-decode.md"
+    ],
+    "arxiv:2610.27123": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-.md"
+    ],
+    "arxiv:2610.27438": [
+      "papers/inference/13-sparse-attention/2026-2610.27438-mlips-multi-layer-indexer-pool-sharing.md"
+    ],
+    "arxiv:2610.27699": [
+      "papers/inference/99-other-inference-systems/2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "疎注意で各層が全接頭辞を走査する費用に対し、上位候補プールを層間で共有し各層が自前のスコアで選び直すMLIPSをvLLMに実装して、長文脈で1.14〜1.40倍の高速化とGPUエネルギー14.8〜27.4%削減を示す。推論カーネル／インデクサ機構への直接貢献である。",
   "semantic_scholar_id": "dd680f0166ec29e240b56d389ef0d0ad31f13fd6",
   "source_url": "https://arxiv.org/abs/2610.27438",
-  "status": "ready",
+  "status": "superseded",
   "title": "MLIPS: Multi-Layer Indexer Pool Sharing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:47:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.27438-mlips-multi-layer-indexer-pool-sharing.md",
+  "represented_canonical_id": "arXiv:2610.27438",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
