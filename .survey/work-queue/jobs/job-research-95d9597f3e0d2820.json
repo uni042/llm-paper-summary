@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨。LLMのW3A3量子化で、層方向に蓄積する誤差とattention経由でtoken間に伝播する誤差を区別。少量データのパラメータ効率的調整と、system promptのKV cacheのみ高精度を保持するmixed-precisionを組み合わせる。Llama/QwenでAtom・QuaRot比のPPL改善を報告し、推論用低ビット量子化とKV精度管理に直接関係する。",
   "semantic_scholar_id": "2adfac5a499e1a9c80f5fc53a88fe370b964a911",
   "source_url": "https://arxiv.org/abs/2405.15346",
-  "status": "ready",
+  "status": "superseded",
   "title": "BiSup: Bidirectional Quantization Error Suppression for Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-20T07:11:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-mo.md",
+  "represented_canonical_id": "arXiv:2405.15346",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

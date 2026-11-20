@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0e823475f0c5ce85387a8020032dd32d213f3809",
+  "base_commit": "891c50281dd2f458a72a39df7f131acc681b1c29",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -51,7 +51,9 @@
     "2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.json",
     "2024-2405.05525-ditto-quantization-aware-secure-inference-of-transformers-upon-mpc.json",
     "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json",
+    "2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-models.json",
     "2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.json",
+    "2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-language-models-using-second-order-matrix-derivative-in.json",
     "2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.json",
     "2024-2406.00030-large-language-model-pruning.json",
     "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
@@ -59,6 +61,7 @@
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
+    "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
@@ -68,7 +71,9 @@
     "2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-scheduling.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
+    "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
+    "2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.json",
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
@@ -43102,6 +43107,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2405.15346": {
+      "order": [
+        "2026-11-20T07:03:49+00:00",
+        "2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.17470": {
+      "order": [
+        "2026-11-20T07:05:11+00:00",
+        "2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-language-models-using-second-order-matrix-derivative-in.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.02026": {
+      "order": [
+        "2026-11-20T07:06:32+00:00",
+        "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.03599": {
+      "order": [
+        "2026-11-20T07:07:54+00:00",
+        "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.11741": {
+      "order": [
+        "2026-11-20T07:09:15+00:00",
+        "2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53514,6 +53564,21 @@
     "arxiv:2406.09041": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-langua.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-langua.md"
+    ],
+    "arxiv:2405.15346": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-mo.md"
+    ],
+    "arxiv:2405.17470": [
+      "papers/inference/99-other-inference-systems/2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-languag.md"
+    ],
+    "arxiv:2409.02026": [
+      "papers/inference/16-weight-quantization-compression/2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantizati.md"
+    ],
+    "arxiv:2412.03599": [
+      "papers/inference/99-other-inference-systems/2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-f.md"
+    ],
+    "arxiv:2412.11741": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.md"
     ]
   }
 }

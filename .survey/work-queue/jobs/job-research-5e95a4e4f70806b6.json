@@ -35,10 +35,15 @@
   "selection_reason": "疎表現による1ビットKVキャッシュCSR。長文脈でKVキャッシュが線形に増えてメモリを圧迫する問題に対し、稠密なKVテンソルを疎表現へ変換して1ビット化する。推論メモリ機構そのもの。",
   "semantic_scholar_id": "c8424bf742e789de1f7528d6ee418b5d8414b604",
   "source_url": "https://arxiv.org/abs/2412.11741",
-  "status": "ready",
+  "status": "superseded",
   "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-20T07:11:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.md",
+  "represented_canonical_id": "arXiv:2412.11741",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

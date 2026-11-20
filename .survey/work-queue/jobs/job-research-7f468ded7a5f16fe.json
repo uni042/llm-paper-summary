@@ -35,10 +35,15 @@
   "selection_reason": "層間正準相関に基づくCMPQ、枝刈り感度に基づくPMPQ、Taylor分解で入力摂動感度を測るTDMPQという3種の混合精度割当を提案。BERTとOPT系列で最大4倍圧縮、FP16比で最大2倍の効率向上を著者報告。LLM学習後量子化・圧縮の直接的な関連研究。",
   "semantic_scholar_id": "3938e34c44bdaa13fa6b5d875d8f9e80611b37e5",
   "source_url": "https://arxiv.org/abs/2412.03599",
-  "status": "ready",
+  "status": "superseded",
   "title": "CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-20T07:11:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-f.md",
+  "represented_canonical_id": "arXiv:2412.03599",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
