@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（259本）
+## 自動生成の論文一覧（260本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -879,7 +879,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：52  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
@@ -981,6 +981,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-09 · [Efficiently Dispatching Flash Attention For Partially Filled Attention Masks](2024-2409.15097-efficiently-dispatching-flash-attention-for-partially-filled-attention-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   SharmaとGeipingのBinary Block Masking（BinBlkMsk）は、FlashAttentionのブロック分割を活用し、マスクに許可要素が一つもないブロックを実行せず、許可要素を含むブロックだけを処理する方式である。
+
+- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
 
 - **2024-05 · [CLAQ: Pushing the Limits of Low-Bit Post-Training Quantization for LLMs](2024-2405.17233-claq-pushing-the-limits-of-low-bit-post-training-quantization-for-llms.md)**  
   実装：[✓](https://github.com/fayuge/CLAQ) ・ リポジトリ内被引用：0  

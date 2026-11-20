@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1061本）
+## 自動生成の論文一覧（1063本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3862,6 +3862,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   尺度を固定した静的量子化と環をまたぐ型変換手続きと知識蒸留を組み合わせ、量子化した秘匿推論を初めて実行可能にし、先行方式比で最大4.40倍の高速化を精度低下を抑えて達成した。
 
+- **2024-05 · [AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs](2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-me.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  適応型LASSOのソフトしきい値化で重みだけから外れ値を分離し、較正データなしで完全な低ビット量子化を行う学習後量子化手法。量子化時間は既存手法の10倍以上速い。
+
 - **2024-04 · [LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory](2024-2404.11163-longvq-long-sequence-modeling-with-vector-quantization-on-structured-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LongVQは、SSMの構造化長期記憶とベクトル量子化されたKeyによる固定長の注意を組み合わせ、系列長に対して線形時間で動作するハイブリッドモデルである。
@@ -3945,7 +3949,7 @@
   従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
 
 - **2023-06 · [MiniLLM: On-Policy Distillation of Large Language Models](2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md)**  
-  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：47  
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
@@ -3957,7 +3961,7 @@
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
 
 - **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
@@ -4023,6 +4027,10 @@
 - **2023-05 · [Revisiting Offline Compression: Going Beyond Factorization-based Methods for Transformer Language Models](2023-2302.04045-revisiting-offline-compression-going-beyond-factorization-based-methods-.md)**  
   実装：[✓](https://github.com/MohammadrezaBanaei/auto-encoder-based-transformer-compression) ・ リポジトリ内被引用：1  
   本研究は、既に学習されたTransformerの重み行列を、事前学習モデル全体の再訓練や蒸留を行わずに小さくする「オフライン圧縮」を対象とする。
+
+- **2023-11 · [AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models](2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化の難しさを範囲の比で定義し直し、活性値と重みの範囲を各チャネルで一致させる等化と、偏り誤差の統計的補正を組み合わせた学習不要量子化。8ビットと超低ビットの両方で既存手法を上回る。
 
 - **2023-10 · [NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models](2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-e.md)**  
   実装：[✓](https://github.com/jongwooko/NASH-Pruning-Official) ・ リポジトリ内被引用：0  
@@ -4213,7 +4221,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：274  
+  実装：✓ ・ リポジトリ内被引用：275  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  

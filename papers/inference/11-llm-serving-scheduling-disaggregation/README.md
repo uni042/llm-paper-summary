@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（561本）
+## 自動生成の論文一覧（563本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2173,6 +2173,14 @@
 - **2024-11 · [EconoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving](2024-2411.06364-econoserve-maximizing-multi-resource-utilization-with-slo-guarantees-in-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   EconoServeはLLMサービングでGPUの演算能力とKVキャッシュ（KVC）容量を同時に活用するための、プリフィルとgenerationの責任分離・時間同期バッチ・KVCの時間的再利用を組み合わせたスケジューラである。
+
+- **2024-06 · [ME-Switch: A Memory-Efficient Expert Switching Framework for Large Language Models](2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  基盤モデル1つと、顕著チャネルだけ全精度で残す混合精度圧縮した差分重みで多数の専門モデルを切り替え提供する枠組み。領域分類ルーターが質問に合う専門モデルを自動選択する。
+
+- **2024-05 · [Turnip: A "Nondeterministic" GPU Runtime with CPU RAM Offload](2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  計算グラフを依存関係だけのグラフへ変換し、CPUオフロードの転送完了順に実行順をその場で適応させるGPUランタイム。固定順序より速く、厳しいメモリ制約でも動作する。
 
 - **2023-12 · [Linear Attention via Orthogonal Memory](2023-2312.11135-linear-attention-via-orthogonal-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

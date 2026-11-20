@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d67c8c5ffd53214a3924cd25348587e81976ebf8",
+  "base_commit": "07bf1f4a79ba8c9b6d4ab99c16bdc5450f93f72d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -41,6 +41,7 @@
     "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json",
     "2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language-models.json",
     "2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-encoder-decoder-language-models.json",
+    "2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-large-language-models.json",
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
@@ -49,7 +50,11 @@
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
     "2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.json",
     "2024-2405.05525-ditto-quantization-aware-secure-inference-of-transformers-upon-mpc.json",
+    "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json",
+    "2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.json",
     "2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.json",
+    "2024-2406.00030-large-language-model-pruning.json",
+    "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
     "2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-target-language-text.json",
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
@@ -43052,6 +43057,51 @@
         "processed_at": "2026-11-20T06:44:07+00:00"
       },
       "return_count": 2
+    },
+    "arXiv:2311.01305": {
+      "order": [
+        "2026-11-20T06:48:13+00:00",
+        "2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.13358": {
+      "order": [
+        "2026-11-20T06:49:09+00:00",
+        "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.16283": {
+      "order": [
+        "2026-11-20T06:50:05+00:00",
+        "2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2406.00030": {
+      "order": [
+        "2026-11-20T06:51:01+00:00",
+        "2024-2406.00030-large-language-model-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2406.09041": {
+      "order": [
+        "2026-11-20T06:51:57+00:00",
+        "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53444,6 +53494,21 @@
     ],
     "arxiv:2309.05210": [
       "papers/inference/99-other-inference-systems/2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md"
+    ],
+    "arxiv:2311.01305": [
+      "papers/inference/99-other-inference-systems/2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-.md"
+    ],
+    "arxiv:2405.13358": [
+      "papers/inference/99-other-inference-systems/2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-me.md"
+    ],
+    "arxiv:2405.16283": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.md"
+    ],
+    "arxiv:2406.00030": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2406.00030-large-language-model-pruning.md"
+    ],
+    "arxiv:2406.09041": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-langua.md"
     ]
   }
 }

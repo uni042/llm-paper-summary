@@ -35,10 +35,15 @@
   "selection_reason": "GPU計算のCPU RAMオフロードで転送完了時刻の不確定性が計算をブロックする問題に対し、計算を依存グラフへコンパイルして実行時にイベント応答で演算順序を選ぶランタイムTURNIPを提案する。オフロード実行時メモリ管理への直接貢献である。",
   "semantic_scholar_id": "62051926adbdb23011931c13f0c5e5f6dd1c8ce6",
   "source_url": "https://arxiv.org/abs/2405.16283",
-  "status": "ready",
+  "status": "superseded",
   "title": "TURNIP: A \"Nondeterministic\" GPU Runtime with CPU RAM Offload",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-20T06:53:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.md",
+  "represented_canonical_id": "arXiv:2405.16283",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
