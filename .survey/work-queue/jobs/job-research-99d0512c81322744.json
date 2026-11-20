@@ -35,10 +35,15 @@
   "selection_reason": "FP4 PTQの誤差補正を高精度SVD低ランク行列でなく、±1符号のbinary低ランク因子で表す。rank当たりの格納量を16分の1に抑え、FP4 GEMMをtensor core、補正をCUDA coreで同一kernel内に並列実行する。著者要旨は4B～72B LLMでメモリを合わせたSVDQuant同等以上の品質、B300のbatch1でrank512までFP4単独GEMM比11%以内の実行遅延と報告。量子化誤差補正とカーネルの直接的貢献としてaccept。",
   "semantic_scholar_id": "de38fe5d23dc2776c0f5f036804a1d445cd4f926",
   "source_url": "https://arxiv.org/abs/2610.32243",
-  "status": "ready",
+  "status": "superseded",
   "title": "BiLoCo: Binary Low-Rank Corrections for Post-Training Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:02:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.32243-biloco-binary-low-rank-corrections-for-post-training-quantization.md",
+  "represented_canonical_id": "arXiv:2610.32243",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

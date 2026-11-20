@@ -52,6 +52,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   Context-Aware MoEは低頻度専門家をCXL接続NDP側で計算し、重要度に応じたGPU配置と1〜4ビット量子化で重み転送を減らす。
 
+- **2026-09 · [Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs](2026-2609.11744-building-py-kvcache-a-performance-characterization-of-external-kv-caching-for-vllm-with-nvme-ssds.md)**  
+  実装：[✓](https://github.com/atlarge-research/py-kvcache) ・ リポジトリ内被引用：2  
+  GPU・CPU・NVMe間のKV再利用を実測し、非同期直接I/O、固定容量ステージング、待機列先読み、再計算との損益分岐判定を組み合わせたvLLM外部KVキャッシュを実装・評価する。
+
 - **2026-08 · [Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference](2026-2608.12103-kernel-managed-expert-cache-tiering.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本研究は1兆パラメータ級の混合専門家モデルの重みを専用管理器でなくLinuxカーネルのページキャッシュに任せ、再利用性と先読み助言を比較してDRAM不足時の管理負担を減らす。
@@ -99,10 +103,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-12 · [Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation](2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本研究は、専門家混合（MoE）モデルの重みをGPU外のメモリから必要に応じて読み込むオフロード推論で、低ビット化による帯域節約と推論品質を両立する手法を扱う。
-
-- **2026-09 · [Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs](2026-2609.11744-building-py-kvcache-a-performance-characterization-of-external-kv-caching-for-vllm-with-nvme-ssds.md)**  
-  実装：[✓](https://github.com/atlarge-research/py-kvcache) ・ リポジトリ内被引用：1  
-  GPU・CPU・NVMe間のKV再利用を実測し、非同期直接I/O、固定容量ステージング、待機列先読み、再計算との損益分岐判定を組み合わせたvLLM外部KVキャッシュを実装・評価する。
 
 - **2026-08 · [The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks](2026-2608.12114-the-ingestion-tax-adopting-file-backed-weights-in-tensor-frameworks.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

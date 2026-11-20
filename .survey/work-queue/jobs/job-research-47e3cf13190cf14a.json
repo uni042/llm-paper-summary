@@ -35,10 +35,15 @@
   "selection_reason": "グループ部分空間共有による訓練不要MoE圧縮GS-MoE。全専門家のパラメータ保存が律速になる問題に対し、専門家をまたぐ共有部分空間と専門家内のニューロン圧縮の2軸で、訓練不要に圧縮する。推論圧縮機構そのもの。",
   "semantic_scholar_id": "b5c59d89735f561d2b435d00727624597cd73a95",
   "source_url": "https://arxiv.org/abs/2610.32009",
-  "status": "ready",
+  "status": "superseded",
   "title": "GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:02:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2610.32009-gs-moe-training-free-moe-compression-via-groupwise-subspace-sharing-and-.md",
+  "represented_canonical_id": "arXiv:2610.32009",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "S-SALAADは重みと低rank・構造化sparse成分を同時学習し、複数メモリ予算で動作するelastic圧縮モデルを作る。非構造化sparseのindexingと不規則アクセスが速度向上を相殺する問題に対し、hardware-compatible patternとCPU/GPU専用kernelを組み合わせる。Llama2/Qwen3でPPL・メモリ・推論遅延のPareto改善を報告するが、要旨に具体倍率はない。",
   "semantic_scholar_id": "3baaff41b3a316c33ff565fd34edd7eb388c46e2",
   "source_url": "https://arxiv.org/abs/2610.31897",
-  "status": "ready",
+  "status": "superseded",
   "title": "Learning Structured Sparsity for Large Models: Bridging Model Compressibility and Efficient Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:02:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.31897-learning-structured-sparsity-for-large-models-bridging-model-compressibi.md",
+  "represented_canonical_id": "arXiv:2610.31897",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

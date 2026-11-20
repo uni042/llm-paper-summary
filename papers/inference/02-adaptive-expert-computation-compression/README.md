@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（130本）
+## 自動生成の論文一覧（131本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -74,6 +74,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：3  
   MoEの重みから入力統計に基づく共有成分を抜いて全精度で残し、固有成分だけをベクトル量子化して出力の偏りを補正することで、3ビットでも全精度並みの正解率を保った量子化方式。
 
+- **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  共活性クラスタごとに完全精度代表を残し他専門家を整列済み低ランク補正化、ルータを維持したまま約50%圧縮するLorExpertsと計算共有用BTExperts。
+
 - **2026-08 · [ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration](2026-2608.24938-exfold-training-free-expert-folding.md)**  
   実装：[✓](https://github.com/Time-Rune/ExFold-MoE) ・ リポジトリ内被引用：2  
   除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のエキスパート Folding。
@@ -117,10 +121,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
-
-- **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  共活性クラスタごとに完全精度代表を残し他専門家を整列済み低ランク補正化、ルータを維持したまま約50%圧縮するLorExpertsと計算共有用BTExperts。
 
 - **2026-07 · [On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain](2026-2607.01444-on-the-utility-and-factual-reliability-of-pruned-mixture-of-experts-mode.md)**  
   実装：[✓](https://github.com/gucci-j/moe-pruning-reliability) ・ リポジトリ内被引用：1  
@@ -167,6 +167,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-10 · [Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models](2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   残す専門家の集合全体の再構成誤差を連続緩和で直接最適化して専門家を選び、選択後に重みも再構成で適応させる枝刈りで、個別得点方式より最大で絶対16.2点高い精度を保った。
+
+- **2026-10 · [GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning](2026-2610.32009-gs-moe-training-free-moe-compression-via-groupwise-subspace-sharing-and-.md)**  
+  実装：[✓](https://github.com/cbacary/GS-MoE) ・ リポジトリ内被引用：0  
+  エキスパートを誤差基準でグループ化してグループ共有の低ランク部分空間を持たせ、同時にニューロン選択で各エキスパートの中間幅を削ることで、再学習なしにMoEの保存量を大きく減らす圧縮方式。予算は層・グループ・エキスパートへ階層的に配分する。
 
 - **2026-10 · [Fine-Grained Units, Flat Decisions: Hierarchical Micro-Experts](2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-experts.md)**  
   実装：[✓](https://github.com/xzktx003/UC_RAMP) ・ リポジトリ内被引用：0  
@@ -299,7 +303,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-06 · [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](2025-2506.23266-sub-moe-subspace-expert-merging.md)**  
-  実装：[✓](https://github.com/siruihan2024/Sub-MoE) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/siruihan2024/Sub-MoE) ・ リポジトリ内被引用：22  
   機能類似度クラスタリングと共有部分空間SVDでMoE専門家を整列し、活性頻度重み付きV統合でパラメータ衝突を抑える学習不要の専門家統合。
 
 - **2025-04 · [Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations](2025-2504.05586-finding-fantastic-experts.md)**  
@@ -521,7 +525,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：153  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：154  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  

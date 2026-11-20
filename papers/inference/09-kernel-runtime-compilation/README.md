@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（272本）
+## 自動生成の論文一覧（274本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -33,7 +33,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：33  
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
@@ -218,6 +218,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   推論レプリカの遊休メモリを、実行中PEFTステップの保存済み活性値1個単位で推論へ引き渡し、ステップを捨てずに逆伝播の再計算で取り戻す細粒度GPUメモリ共有方式。
 
+- **2026-10 · [Learning Structured Sparsity for Large Models: Bridging Model Compressibility and Efficient Inference](2026-2610.31897-learning-structured-sparsity-for-large-models-bridging-model-compressibi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みの低ランク成分と構造化スパース成分を学習時に一体で学び、単一チェックポイントから複数メモリ予算へゼロショットで圧縮し、ブロック専用カーネルでメモリ削減を実際の推論高速化へ変換する、エッジ推論向けの弾性圧縮の枠組み。
+
 - **2026-10 · [Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference](2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantizat.md)**  
   実装：[✓](https://github.com/PuppyQ08/24_quant_compare) ・ リポジトリ内被引用：0  
   2対4スパース性と量子化を等ビットと等階層で全オペランド実測比較し、床より上では一段の量子化が常に勝ち、床でのみ再学習を条件に2対4が1.3倍から1.7倍の高速化と27パーセントのプリフィル改善をもたらすことを、エネルギー損失の解析とともに示した研究。
@@ -245,6 +249,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling](2026-2610.07742-cleave-scaling-tensor-program-optimization-via-decoupled-algebraic-searc.md)**  
   実装：[✓](https://github.com/nyu-systems/cleave) ・ リポジトリ内被引用：0  
   形状を記号化して代数変換の探索をスケジューリングから分離し、反復タイリングと水平融合で複数リダクションを含むグラフを自動で融合カーネル化するコンパイラ。手書き注意カーネル級の最適化を自動生成する。
+
+- **2026-10 · [BiLoCo: Binary Low-Rank Corrections for Post-Training Quantization](2026-2610.32243-biloco-binary-low-rank-corrections-for-post-training-quantization.md)**  
+  実装：[✓](https://github.com/jindavid/BiLoCo) ・ リポジトリ内被引用：0  
+  4ビット量子化への低ランク補正を、16ビット因子から符号だけの二値因子へ置き換えて同じ保存量で16倍のランクを使い、補正の計算を遊んでいる汎用コアへ逃がして本体の行列積と並行実行する量子化方式と融合カーネル。
 
 - **2026-10 · [AlignQuant: Tile-Aligned Mixed-Precision Quantization for Efficient LLM Generation](2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-g.md)**  
   実装：[✓](https://github.com/HanzhiZhang-Ulrica/AlignQuant) ・ リポジトリ内被引用：0  
@@ -657,7 +665,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
-  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：23  
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
@@ -919,7 +927,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：197  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：198  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  

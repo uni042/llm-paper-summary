@@ -35,10 +35,15 @@
   "selection_reason": "agentic tool callの自己回帰生成を投機的decodeで加速するため、過去に検証済みのtool callをuser別LRU上限付きstoreへonline書き戻しし、draftを再利用するSpecMem。副作用のあるtool callはtarget検証完了まで実行を遅延させる。3つのopen-weight modelとmulti-session/user query streamで、固定store比平均accepted tokenが27%高く、wall-clock速度最大1.74倍と報告。再利用storeの更新と安全な検証を含むLLM agent servingの直接最適化としてaccept。",
   "semantic_scholar_id": "03a67d13f9d063f078614724baf3c1c70634bbd7",
   "source_url": "https://arxiv.org/abs/2610.31840",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:02:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.31840-specmem-accelerating-agentic-tool-calling-via-live-memory-management.md",
+  "represented_canonical_id": "arXiv:2610.31840",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

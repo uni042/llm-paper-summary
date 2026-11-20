@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（573本）
+## 自動生成の論文一覧（574本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -750,6 +750,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash](2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文脈区間の寿命を書込み前に判定し、短命な区間を高速メモリ、長命な区間をフラッシュへ配置することで、フラッシュの書換え寿命を最大3.13倍に延ばした配置層の提案。
+
+- **2026-10 · [KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving](2026-2610.31827-kvstream-adaptive-parallel-storage-management-for-kv-caching-in-large-sc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィックスKVの読み出しをNVMeと並列ファイルシステムの合計帯域で賄うため、各チャンクを全階層へ複製し、書き込みを遅延させ、空いた階層が未読チャンクを引き取る完了駆動ルーティングで静的分割の限界を回避し、上限の5パーセント以内で読み出すKVキャッシュエンジン。
 
 - **2026-10 · [KVCompass: A Discovery Plane for Internet-Scale Prefix Cache Sharing in LLM Serving](2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-l.md)**  
   実装：[✓](https://github.com/011shiyiLing/KVCompass) ・ リポジトリ内被引用：0  
@@ -2036,7 +2040,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：383  
+  実装：✓ ・ リポジトリ内被引用：384  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  

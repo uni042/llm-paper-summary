@@ -35,10 +35,15 @@
   "selection_reason": "KVキャッシュのための適応並列保存管理KVStream。接頭辞のKVがGPUとホストメモリを超えて保存I/Oが推論の臨界経路に乗る問題に対し、接頭辞取得を階層をまたぐ総帯域スケジューリングとして扱うKVキャッシュエンジン。推論基盤の保存機構そのもの。",
   "semantic_scholar_id": "58c1b733cf61573379acdfb41a3cf19e79e678c7",
   "source_url": "https://arxiv.org/abs/2610.31827",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:02:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.31827-kvstream-adaptive-parallel-storage-management-for-kv-caching-in-large-sc.md",
+  "represented_canonical_id": "arXiv:2610.31827",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -93,6 +93,10 @@
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：2  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
 
+- **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
+  実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：2  
+  本研究は、画像を一度だけ入力して答える通常の視覚言語モデルではなく、画像の拡大、切り出し、追加観察などの視覚ツールを複数回呼び出すエージェント型マルチモーダル大規模言語モデルの応答遅延を対象とする。提案方式SpecEyesは、ツールを必要としない質問を早期に見つけ、軽量な視覚言語モデルの回答をそのまま返す。
+
 - **2026-02 · [AgentCgroup: Understanding and Controlling OS Resources of AI Agents](2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md)**  
   実装：[✓](https://github.com/eunomia-bpf/agentcgroup) ・ リポジトリ内被引用：2  
   AIエージェント144課題のOS資源変動を測定し、OS処理55〜60%、メモリピーク最大15.4倍を確認。ツール呼出し単位cgroupとeBPF制御で競合時の生存率100%と高優先度P95割当遅延29%削減を示す。
@@ -128,10 +132,6 @@
 - **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
   実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：1  
   MARSは、複数の大規模言語モデル（LLM）エージェントが同じホストで稼働する際、モデル推論のGPU時間だけでなく、ツール呼び出しで消費されるCPU時間と鍵・値キャッシュ（KV キャッシュ）の保持費用まで同時に制御するサービング方式である。
-
-- **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
-  実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：1  
-  本研究は、画像を一度だけ入力して答える通常の視覚言語モデルではなく、画像の拡大、切り出し、追加観察などの視覚ツールを複数回呼び出すエージェント型マルチモーダル大規模言語モデルの応答遅延を対象とする。提案方式SpecEyesは、ツールを必要としない質問を早期に見つけ、軽量な視覚言語モデルの回答をそのまま返す。
 
 - **2026-03 · [Orla: A Library for Serving LLM-Based Multi-Agent Systems](2026-2603.13605-orla-a-library-for-serving-llm-based-multi-agent-systems.md)**  
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  
@@ -310,11 +310,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：56  
+  実装：✓ ・ リポジトリ内被引用：57  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
-  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：37  
   従来の記憶システムでは、いつ保存し、どの形式で整理し、どの条件で取り出すかを開発者が固定する場合が多い。NeurIPS 2025正式掲載論文では、長期会話の質問応答データで六つの基盤モデルを評価し、特に時間推論や複数会話をまたぐ質問で改善を示した。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
