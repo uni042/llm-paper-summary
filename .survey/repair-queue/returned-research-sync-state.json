@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5399bc4b5aeaa4419c824cf4bf8bd7215e31e83f",
+  "base_commit": "c5102a0e1ed7bfc06f6f51de414241479e292231",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -202,11 +202,15 @@
     "2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasoning.json",
     "2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.json",
     "2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.json",
+    "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
+    "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json",
     "2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.json",
     "2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-block-aware-precision-rescaling.json",
+    "2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.json",
+    "2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-quantization.json",
     "2026-2602.02159-focus-dllm-accelerating-long-context-diffusion-llm-inference-via-confidence-guided-context-focusing.json",
     "2026-2602.02538-enhancing-post-training-quantization-via-future-activation-awareness.json",
     "2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-token-pruning.json",
@@ -215,6 +219,7 @@
     "2026-2602.06454-relaygen-intra-generation-model-switching-for-efficient-reasoning.json",
     "2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-with-hypothesis-path-expansion-and-reduction.json",
     "2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-foundation-models.json",
+    "2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistical-correction.json",
     "2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-context-inference.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
@@ -43695,6 +43700,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2601.20408": {
+      "order": [
+        "2026-11-20T08:33:52+00:00",
+        "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.22959": {
+      "order": [
+        "2026-11-20T08:34:40+00:00",
+        "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.02126": {
+      "order": [
+        "2026-11-20T08:35:27+00:00",
+        "2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.02151": {
+      "order": [
+        "2026-11-20T08:36:15+00:00",
+        "2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.07375": {
+      "order": [
+        "2026-11-20T08:37:02+00:00",
+        "2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistical-correction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54314,6 +54364,21 @@
     "arxiv:2512.08365": [
       "papers/inference/09-kernel-runtime-compilation/2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-ene.md",
       "papers/inference/09-kernel-runtime-compilation/2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-ene.md"
+    ],
+    "arxiv:2601.20408": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-o.md"
+    ],
+    "arxiv:2601.22959": [
+      "papers/inference/99-other-inference-systems/2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vi.md"
+    ],
+    "arxiv:2602.02126": [
+      "papers/inference/99-other-inference-systems/2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.md"
+    ],
+    "arxiv:2602.02151": [
+      "papers/inference/99-other-inference-systems/2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-.md"
+    ],
+    "arxiv:2602.07375": [
+      "papers/inference/99-other-inference-systems/2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistica.md"
     ]
   }
 }

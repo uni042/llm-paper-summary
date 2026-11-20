@@ -35,10 +35,15 @@
   "selection_reason": "Triageは動画VLMの冗長な視覚トークンを減らすため、まずフレームの変化と質問関連性で重要フレームを選び、次にcore tokenと多様性重視のcontext tokenへ予算を配分する。後段にはバッチ化した最大限界関連性（MMR）選択を用いる。学習不要の動画token圧縮として推論速度・メモリ改善を要旨で報告し、MLLMの入力圧縮へ直接寄与する。",
   "semantic_scholar_id": "68a94e57954e34f9a57abdb1af93a7b8a041b53c",
   "source_url": "https://arxiv.org/abs/2601.22959",
-  "status": "ready",
+  "status": "superseded",
   "title": "Triage: Hierarchical Visual Budgeting for Efficient Video Reasoning in Vision-Language Models",
   "type": "research",
   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T08:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vi.md",
+  "represented_canonical_id": "arXiv:2601.22959",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

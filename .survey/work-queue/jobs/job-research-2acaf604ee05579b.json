@@ -35,10 +35,15 @@
   "selection_reason": "GPTQの群スケールを入力統計に基づく群内再構成誤差最小化で初期化し、整数重み固定後に座標降下法と閉形式更新で層全体の再構成誤差を再最適化する。前層の量子化誤差伝播も取り込み、低オーバーヘッドで群単位量子化の品質を改善するLLM推論用重み圧縮技術。",
   "semantic_scholar_id": "f6efdc5a563aefea0eb22b5e48d77e00460cc7f8",
   "source_url": "https://arxiv.org/abs/2602.02126",
-  "status": "ready",
+  "status": "superseded",
   "title": "Two-Stage Grid Optimization for Group-wise Quantization of LLMs",
   "type": "research",
   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T08:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.md",
+  "represented_canonical_id": "arXiv:2602.02126",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1085本）
+## 自動生成の論文一覧（1089本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2110,6 +2110,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の強化学習による後学習（reinforcement learning post-学習）では、重みを更新する学習器（trainer）と、現在の方策を用いて回答を生成する推論ワーカー（inference worker）が分離されることが多い。
 
+- **2026-02 · [Two-Stage Grid Optimization for Group-wise Quantization of LLMs](2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPTQのグループ別スケールを、入力統計による初期化と層再構成損失の座標降下による洗練の二段で決め直す量子化。2ビットでの精度崩壊を大きく緩和する。
+
 - **2026-02 · [TraceNAS: Zero-shot LLM Pruning via Gradient Trace Correlation](2026-2602.02891-tracenas-zero-shot-llm-pruning-via-gradient-trace-correlation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TraceNASは、事前学習済み大規模言語モデル（Large Language モデル、LLM）から層と内部チャネルを削除する構造的枝刈り（structured 枝刈り）において、候補構造を逐一学習させずに選ぶための探索方式である。
@@ -2153,6 +2157,10 @@
 - **2026-02 · [SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference](2026-2602.00942-salaad-sparse-and-low-rank-adaptation-via-admm-for-large-language-model-.md)**  
   実装：[✓](https://github.com/HaoMAFRLu/salaad) ・ リポジトリ内被引用：0  
   SALAADは、言語モデルの重みを疎成分と低ランク成分の和として表現できるように事前学習中から構造を誘導し、配置時には必要なメモリ予算に応じて同じ学習済みチェックポイントを縮小できる方式である。
+
+- **2026-02 · [Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization](2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-.md)**  
+  実装：[✓](https://github.com/zhoustan/VQRound) ・ リポジトリ内被引用：0  
+  適応型丸めの丸め行列をコードブックで表し直し、学習量を最大で元の0.2パーセント程度まで削る量子化。初期化の工夫と合わせて、2ビットでも崩壊を避ける。
 
 - **2026-02 · [Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization](2026-2602.24059-quant-experts-token-aware-adaptive-error-reconstruction-with-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2230,6 +2238,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   画像と言語を入力するマルチモーダル大規模言語モデル（MLLM）では、モデルの重みを低ビット量子化することで端末配置を容易にできる。VQAv2上のIdefics3ではbf16の精度79.3に対し、int4 HQQが77.2、int4 MBQが78.1、int3 HQQが64.0、int3 MBQが71.2となる。
 
+- **2026-02 · [Efficient Post-Training Pruning of Large Language Models with Statistical Correction](2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistica.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一次統計だけで重要度を較正し、枝刈り後の信号エネルギーを閉形式で戻す軽量な学習後枝刈り。再構成型の重い計算なしに、Wanda等の精度を一貫して押し上げる。
+
 - **2026-02 · [Efficient Encoder-Free Fourier-based 3D Large Multimodal Model](2026-2602.23153-efficient-encoder-free-fourier-based-3d-large-multimodal-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Fase3Dは、重い専用3Dエンコーダを使わず、浅い多層パーセプトロン（MLP）と幾何的なスーパーポイント（superpoint）集約、空間充填曲線（Space-Filling Curve、SFC）に基づく1次元整列、高速フーリエ変換（Fast Fourier Transform、FFT）による文脈混合、疎グラフを用いたトークン統合で…
@@ -2273,6 +2285,10 @@
 - **2026-01 · [VTC-R1: Vision-Text Compression for Efficient Long-Context Reasoning](2026-2601.22069-vtc-r1-vision-text-compression-for-efficient-long-context-reasoning.md)**  
   実装：[✓](https://github.com/w-yibo/VTC-R1) ・ リポジトリ内被引用：0  
   本研究は、長い思考履歴を文字列として保持し続ける代わりに、既に生成した推論を画像へ描画して次の推論段階へ渡す視覚・テキスト圧縮（Vision-Text Compression; VTC）を提案する。約1億8100万のテキストトークンに相当する履歴を約5400万の視覚トークンとして表し、集計上3.4倍のトークン圧縮を得る。
+
+- **2026-01 · [Triage: Hierarchical Visual Budgeting for Efficient Video Reasoning in Vision-Language Models](2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フレーム選択の重要度をトークン配分へ引き継ぐ階層的な視覚予算配分で、動画推論のトークンを学習なしに削る。保持率を半分にしても精度はむしろ上がる条件がある。
 
 - **2026-01 · [Towards Understanding Best Practices for Quantization of Vision-Language Models](2026-2601.15287-towards-understanding-best-practices-for-quantization-of-vision-language.md)**  
   実装：[✓](https://github.com/gautomdas/mmq) ・ リポジトリ内被引用：0  
