@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-20T08:14:41+00:00",
+  "generated_at": "2026-11-20T23:14:13+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -290,60 +290,6 @@
       "worker_run_key": "muse-20261119-cont4-research-2502.15075"
     },
     {
-      "canonical_id": "arXiv:2504.09897",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2504.09897",
-      "returned_at": "2026-11-19T12:37:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 492 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3372,
-        "body_paragraphs": 21,
-        "method_chars": 1195,
-        "method_paragraphs": 4,
-        "evaluation_chars": 492,
-        "limitation_chars": 225,
-        "insufficiency_flags": [
-          "評価説明量 492 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.md",
-      "import_result_path": ".survey/import-inbox/results/research/2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
-      "worker_run_key": "muse-20261119-cont4-research-2504.09897"
-    },
-    {
-      "canonical_id": "arXiv:2409.10644",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2409.10644",
-      "returned_at": "2026-11-20T06:42:42+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 493 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4022,
-        "body_paragraphs": 22,
-        "method_chars": 1428,
-        "method_paragraphs": 5,
-        "evaluation_chars": 493,
-        "limitation_chars": 284,
-        "insufficiency_flags": [
-          "評価説明量 493 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2024-2409.10644-improving-multi-candidate-speculative-decoding.md",
-      "import_result_path": ".survey/import-inbox/results/research/2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
-      "worker_run_key": "2026-11-20-muse-c2b4"
-    },
-    {
       "canonical_id": "arXiv:2410.18701",
       "title": null,
       "source_url": "https://arxiv.org/abs/2410.18701",
@@ -398,33 +344,6 @@
       "worker_run_key": "2026-11-20-muse-c2b4"
     },
     {
-      "canonical_id": "arXiv:2502.02790",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2502.02790",
-      "returned_at": "2026-11-20T07:18:50+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 495 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3778,
-        "body_paragraphs": 21,
-        "method_chars": 1583,
-        "method_paragraphs": 5,
-        "evaluation_chars": 495,
-        "limitation_chars": 221,
-        "insufficiency_flags": [
-          "評価説明量 495 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2025-2502.02790-leveraging-the-true-depth-of-llms.md",
-      "import_result_path": ".survey/import-inbox/results/research/2025-2502.02790-leveraging-the-true-depth-of-llms.json",
-      "worker_run_key": "2026-11-20-muse-c2b4"
-    },
-    {
       "canonical_id": "arXiv:2506.10205",
       "title": null,
       "source_url": "https://arxiv.org/abs/2506.10205",
@@ -450,6 +369,87 @@
       "blocked_path": ".survey/import-inbox/blocked/research/2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.md",
       "import_result_path": ".survey/import-inbox/results/research/2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.json",
       "worker_run_key": "2026-11-20-muse-c2b4"
+    },
+    {
+      "canonical_id": "arXiv:2502.02790",
+      "title": "Leveraging the true depth of LLMs",
+      "source_url": "https://arxiv.org/abs/2502.02790",
+      "returned_at": "2026-11-20T23:13:02+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 495 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3778,
+        "body_paragraphs": 21,
+        "method_chars": 1583,
+        "method_paragraphs": 5,
+        "evaluation_chars": 495,
+        "limitation_chars": 221,
+        "insufficiency_flags": [
+          "評価説明量 495 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2432ea2f4a89--2025-2502.02790-leveraging-the-true-depth-of-llms.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2432ea2f4a89--2025-2502.02790-leveraging-the-true-depth-of-llms.json",
+      "worker_run_key": "2026-11-20-muse-c2b4"
+    },
+    {
+      "canonical_id": "arXiv:2409.10644",
+      "title": "Improving Multi-candidate Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2409.10644",
+      "returned_at": "2026-11-20T23:13:04+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 493 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4022,
+        "body_paragraphs": 22,
+        "method_chars": 1428,
+        "method_paragraphs": 5,
+        "evaluation_chars": 493,
+        "limitation_chars": 284,
+        "insufficiency_flags": [
+          "評価説明量 493 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-256c23cd6baa--2024-2409.10644-improving-multi-candidate-speculative-decoding.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-256c23cd6baa--2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
+      "worker_run_key": "2026-11-20-muse-c2b4"
+    },
+    {
+      "canonical_id": "arXiv:2504.09897",
+      "title": "TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.09897",
+      "returned_at": "2026-11-20T23:13:05+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 492 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3372,
+        "body_paragraphs": 21,
+        "method_chars": 1195,
+        "method_paragraphs": 4,
+        "evaluation_chars": 492,
+        "limitation_chars": 225,
+        "insufficiency_flags": [
+          "評価説明量 492 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6793395ba9a0--2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6793395ba9a0--2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
+      "worker_run_key": "muse-20261119-cont4-research-2504.09897"
     }
   ]
 }

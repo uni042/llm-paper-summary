@@ -35,10 +35,15 @@
   "selection_reason": "一次abstractを確認。投機的デコードのドラフタ学習で、ターゲットによる検証経路に沿った期待受理長EALを直接最適化するREAL損失を導出し、path weightsとRao-Blackwellizationで推定の不偏性と分散を扱う。Qwen3.6-35B-A3BターゲットとDomino drafterによる9タスク部分集合・5 seedの比較で受理長改善を報告。推論時アーキテクチャ変更なしで投機的復号の受理効率に寄与するためaccept。速度改善の定量値はabstractにないため推測しない。",
   "semantic_scholar_id": "063db6da6d583b724f3ede365061e6845d8e73ec",
   "source_url": "https://arxiv.org/abs/2611.14399",
-  "status": "ready",
+  "status": "superseded",
   "title": "REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T23:14:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-dec.md",
+  "represented_canonical_id": "arXiv:2611.14399",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
