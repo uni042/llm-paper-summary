@@ -68,6 +68,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   特に保持率1%など極端な条件では、複雑な既存手法が一様ランダム抽出より低い精度になることもある。
 
+- **2026-04 · [EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling](2026-2604.17087-evocomp-learning-visual-token-compression-for-multimodal-large-language-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  プリフィル時の注意演算、鍵・値（KV）キャッシュ、入力列の読み込みが増え、初回応答の待ち時間が長くなる。EvoCompは、視覚トークンのうち質問への回答に必要なものだけを選び、下流LLMへ渡す系列長を減らす方式である。LLaVA-1.5-7Bでは576トークンを192に削減したとき、6ベンチマークの平均成績を元モデルの99.3%に保つ。
+
 - **2026-03 · [Wattchmen: Watching the Wattchers -- High Fidelity, Flexible GPU Energy Modeling](2026-2603.26435-wattchmen-watching-the-wattchers-high-fidelity-flexible-gpu-energy-model.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   一方、従来の細粒度モデルは一部の命令だけを対象にするか、別のGPU・冷却条件への移植性が不足していた。これはLLM専用推論の速度を改善する方式ではなく、GPUを使う学習・推論・科学計算のエネルギーを分析し最適化箇所を見つける基盤である。
@@ -79,6 +83,10 @@
 - **2026-02 · [Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing](2026-2602.03845-parallel-probe-towards-efficient-parallel-thinking-via-2d-probing.md)**  
   実装：[✓](https://github.com/zhengkid/Parallel-Probe) ・ リポジトリ内被引用：1  
   多数派の答えが途中で既に確定していても、最後まで生成する方式では長い少数経路の完了待ちと総生成トークンが残る。論文の表1では、Qwen3-0.6Bの数学3ベンチマーク平均で、固定64経路の多数決に比べ正答率22.8%から23.3%へ変化しつつ、逐次トークン31.6千個から20.3千個、総トークン945.7千個から735.3千個へ減少した。
+
+- **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -298,10 +306,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   候補N個からT個を残す計算量は概ねO(NT)であり、TがNより十分小さい強い圧縮で実用的とされる。LLaVA-1.5-7Bでは576個の視覚トークンを16個へ削減しても、9課題の集計で元モデルの91.8%の性能を維持する。
 
-- **2026-04 · [EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling](2026-2604.17087-evocomp-learning-visual-token-compression-for-multimodal-large-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  プリフィル時の注意演算、鍵・値（KV）キャッシュ、入力列の読み込みが増え、初回応答の待ち時間が長くなる。EvoCompは、視覚トークンのうち質問への回答に必要なものだけを選び、下流LLMへ渡す系列長を減らす方式である。LLaVA-1.5-7Bでは576トークンを192に削減したとき、6ベンチマークの平均成績を元モデルの99.3%に保つ。
-
 - **2026-04 · [Efficient Multimodal Spatial Reasoning via Dynamic and Asymmetric Routing](2026-22e11514f14e-efficient-multimodal-spatial-reasoning-via-dynamic-and-asymmetric-routin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これにより複雑な空間関係を段階的に処理できるが、過去の中間トークンが自己回帰的に蓄積し、注意計算・KVキャッシュ・推論遅延を押し上げる。既存の固定率圧縮では、初期段階で必要な画像細部を落としたり、深い層ですでに冗長な視覚トークンを残したりする。
@@ -361,10 +365,6 @@
 - **2026-01 · [FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning](2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意関数をSoftmax1へ替えて寄与の小さい推論文を生成されにくくする微調整方式で、トークンを約7割削りながら正解率を平均で改善した。
-
-- **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
 
 ### 2年前（2024-12〜2025-11）
 
