@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（596本）
+## 自動生成の論文一覧（597本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -666,6 +666,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs](2026-2610.17355-wire-weight-space-implicit-representation-encoding-of-frozen-video-llms.md)**  
   実装：[✓](https://github.com/AmeenAli/WIRE) ・ リポジトリ内被引用：0  
   凍結した動画言語モデルの視覚入力を質問条件付き走査でキャリアトークンへ圧縮して列を物理的に短くし、圧縮で失われた情報をハイパーネットワーク生成の一時的な低ランク重み更新へ移すことで、プリフィルとKVキャッシュを削減する方式。
+
+- **2026-10 · [Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn](2026-2610.41825-where-kv-cache-error-lives-in-looped-language-models-a-diagnostic-study-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ループ型モデルのキー・値キャッシュで、感度は値が九十四パーセントを担うのに実測の分布のずれはキーが八十九パーセントを担う逆転と、二次の予測が典型列では当たるが少数の自信の強い行で集計が崩れることを同一行の測定で示し、共有重みの増幅が三十二回繰り返しで誤差の向きにより一・六五倍から四・〇九倍まで変わると報告した診断研究である。
 
 - **2026-10 · [When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill](2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-con.md)**  
   実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：0  

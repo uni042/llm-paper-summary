@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0454f565bdeced561c75e9e9dcccc5d52d016dda",
+  "base_commit": "bf7fc18a9cda51cc59a7987927ba12dfa108cda0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -833,6 +833,11 @@
     "2026-2610.41511-specification-guided-generation-for-large-language-models.json",
     "2026-2610.41672-understanding-the-energy-cost-of-quantized-agents-on-shared-gpus.json",
     "2026-2610.41822-trainable-vector-quantization-for-large-language-models.json",
+    "2026-2610.41825-where-kv-cache-error-lives-in-looped-language-models-a-diagnostic-study-of-ouro-and-huginn.json",
+    "2026-2610.41850-dynamical-memory-transformer-selective-recurrent-memories-with-constant-cost-attention.json",
+    "2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b200-and-b300-across-hpc-and-ai-workloads.json",
+    "2026-2610.41968-prune-gradually-adapt-sparsely-efficient-pruning-of-large-language-models-at-extreme-sparsity.json",
+    "2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-language-models.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45895,6 +45900,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.41825": {
+      "order": [
+        "2026-11-20T21:47:40+00:00",
+        "2026-2610.41825-where-kv-cache-error-lives-in-looped-language-models-a-diagnostic-study-of-ouro-and-huginn.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.41850": {
+      "order": [
+        "2026-11-20T21:49:05+00:00",
+        "2026-2610.41850-dynamical-memory-transformer-selective-recurrent-memories-with-constant-cost-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.41919": {
+      "order": [
+        "2026-11-20T21:50:30+00:00",
+        "2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b200-and-b300-across-hpc-and-ai-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.41968": {
+      "order": [
+        "2026-11-20T21:51:54+00:00",
+        "2026-2610.41968-prune-gradually-adapt-sparsely-efficient-pruning-of-large-language-models-at-extreme-sparsity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.42084": {
+      "order": [
+        "2026-11-20T21:53:19+00:00",
+        "2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57394,6 +57444,21 @@
     "arxiv:2610.41822": [
       "papers/inference/99-other-inference-systems/2026-2610.41822-trainable-vector-quantization-for-large-language-models.md",
       "papers/inference/99-other-inference-systems/2026-2610.41822-trainable-vector-quantization-for-large-language-models.md"
+    ],
+    "arxiv:2610.41825": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.41825-where-kv-cache-error-lives-in-looped-language-models-a-diagnostic-study-.md"
+    ],
+    "arxiv:2610.41850": [
+      "papers/inference/99-other-inference-systems/2026-2610.41850-dynamical-memory-transformer-selective-recurrent-memories-with-constant-.md"
+    ],
+    "arxiv:2610.41919": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md"
+    ],
+    "arxiv:2610.41968": [
+      "papers/inference/99-other-inference-systems/2026-2610.41968-prune-gradually-adapt-sparsely-efficient-pruning-of-large-language-model.md"
+    ],
+    "arxiv:2610.42084": [
+      "papers/inference/99-other-inference-systems/2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-lan.md"
     ]
   }
 }

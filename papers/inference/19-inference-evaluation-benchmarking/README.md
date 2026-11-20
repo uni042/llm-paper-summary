@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（161本）
+## 自動生成の論文一覧（162本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -117,6 +117,10 @@
   決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
+  実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
+  新旧のデータセンター向け図形処理装置を二つの独立クラスタで横断測定し、新装置が畳み込みで最大五・六倍、七百億の言語モデル推論で二十四から二十七パーセント遅い一方で大きな行列積の負荷では速いこと、遅さは基板電力の低さからカーネルごとの費用に帰着すること、同一半導体でも提供基盤の版で最初のトークンまでの時間が二・一倍変わることを示した。
 
 - **2026-10 · [VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware](2026-2610.34717-vla-hwbench-where-the-time-goes-when-vla-models-run-on-edge-hardware.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

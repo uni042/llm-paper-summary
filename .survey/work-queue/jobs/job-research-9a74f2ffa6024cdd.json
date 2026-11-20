@@ -35,10 +35,15 @@
   "selection_reason": "連続拡散型言語モデルの学習時より長い生成で生じる反復・意味ドリフトを、local sliding-window attention、遠隔block要約、動的内容検索と位置再マップで抑制する。denoising段階に応じたwindow制御を行い、複数CDLMで生成PPLと反復率改善を報告。長文生成時のattention文脈アクセスを直接変更する推論時手法でありaccept。ただしabstractには実測速度改善値はない。",
   "semantic_scholar_id": "f93608ddba919f1ac4897e4cb31fa837c6876774",
   "source_url": "https://arxiv.org/abs/2610.42084",
-  "status": "ready",
+  "status": "superseded",
   "title": "RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:55:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-lan.md",
+  "represented_canonical_id": "arXiv:2610.42084",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

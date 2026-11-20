@@ -35,10 +35,15 @@
   "selection_reason": "ETAPSはLLMの重みを段階的に削りながら小規模な疎な差分パラメータを学習し、50〜90%の高スパース化でも精度を保つ圧縮手法。125M〜13Bの6モデルでELSAよりperplexityが低く、最大42%改善と報告。LLaMA2-7Bの90%剪定では持続状態5分の1、GPU時間49%削減。最終重みの保存量・推論時演算削減を目的とするためaccept。ただしabstractに実測の推論速度向上はない。",
   "semantic_scholar_id": "a11ae38f88b99418fe0a3a6876fae94071d09353",
   "source_url": "https://arxiv.org/abs/2610.41968",
-  "status": "ready",
+  "status": "superseded",
   "title": "Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:55:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41968-prune-gradually-adapt-sparsely-efficient-pruning-of-large-language-model.md",
+  "represented_canonical_id": "arXiv:2610.41968",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

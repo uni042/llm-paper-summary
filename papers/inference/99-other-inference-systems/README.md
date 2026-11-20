@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1140本）
+## 自動生成の論文一覧（1143本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -962,6 +962,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Attic-KV（Attic）は、長い文書を一度だけプリフィルしてKVキャッシュを保存し、将来の多数の質問に使い回す環境で、質問がまだ分からない段階でKVを圧縮する方式である。最終的なKV位置の重要度は再読時の注意機構・出力寄与から決め、保持率3～5%という厳しい条件でも事実を残しやすくする。
 
+- **2026-10 · [RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models](2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-lan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  連続拡散の言語モデルの長さ外挿へ、局所の窓と遠方の要約と内容検索を一つの注意に統合し、位置の再配置と条件付け注意の補正と段階に応じた窓を組み合わせる学習不要の方式で、中規模基盤の生成長八千でパープレキシティを百六十五・九三から三十二・一三へ、繰り返し率を七・七パーセントから一・二パーセントへ下げたと報告した。
+
+- **2026-10 · [Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity](2026-2610.41968-prune-gradually-adapt-sparsely-efficient-pruning-of-large-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疎化の上限を段階的に締め、各段階で小さな疎な差分だけを適応させて勾配を次の枝刈りへ使う方式で、六モデル・疎化率五〇から九〇パーセントの全条件で先行最良方式よりパープレキシティを下げ最大四二パーセント削減し、七十億の九割疎化を単一装置で保持状態五分の一・装置時間四九パーセント減で実行したと報告した。
+
 - **2026-10 · [PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference](2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inferenc.md)**  
   実装：[✓](https://github.com/nezha-Anonymous/PDScope) ・ リポジトリ内被引用：0  
   専門家の転送をめぐる入力処理と生成の板挟みを、段階別の予測・層をまたぐ計画・静的な実行の三層で解き、主流モデルで入力処理を最大十・三倍、生成を最大六・一倍速くし、次層予測の当たり率も九割超を示した。
@@ -1037,6 +1045,10 @@
 - **2026-10 · [E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks](2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   E8格子への算術的な射影で重み8個を探索なしに共同量子化し、有限コアと疎な拡張で正確に書き出す2ビット量子化対応学習で、35B級モデルをBF16同等の平均スコアまで回復させた。
+
+- **2026-10 · [Dynamical Memory Transformer: Selective Recurrent Memories with Constant Cost Attention](2026-2610.41850-dynamical-memory-transformer-selective-recurrent-memories-with-constant-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  過去を複数の力学的な記憶単位の固定長状態へ圧縮し、注意はトークン履歴ではなく記憶の出力へ向ける分離型の仕組みで、選択的複写で九十八・六八パーセントと最良の精度と強い長さ外挿を示す一方、大規模な言語モデルではMambaに劣り、生成は一トークン約一・六ミリ秒で状態六十八キロバイト一定だったと報告した。
 
 - **2026-10 · [DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs](2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

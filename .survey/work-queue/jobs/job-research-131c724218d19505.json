@@ -35,10 +35,15 @@
   "selection_reason": "B200/B300の8 GPUクラスタ2系統でLlama-3-8B/70B推論等を測り、B300が70B推論スループットでB200より24〜27%低い条件を示す。B300の一部畳み込み負荷では1100W上限の36〜53%しか使わず、同一B300でも開発版vLLMの違いでTTFTが2.1倍変動。GPU推論インフラの性能・電力測定とruntime選択に直接関係する。",
   "semantic_scholar_id": "65ca912cb87ecb963295f1e39f2abbe6a97cb77c",
   "source_url": "https://arxiv.org/abs/2610.41919",
-  "status": "ready",
+  "status": "superseded",
   "title": "Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:55:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md",
+  "represented_canonical_id": "arXiv:2610.41919",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
