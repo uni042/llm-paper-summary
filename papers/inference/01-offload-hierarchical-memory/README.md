@@ -392,6 +392,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：7  
   低得点の活性専門家をGPU常駐の類似得点専門家へ置換し、重要専門家だけを先読みしてPCIe転送を減らす端末向けMoE推論方式。
 
+- **2025-06 · [HarMoEny: Efficient Multi-GPU Inference of MoE Models](2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md)**  
+  実装：[✓](https://github.com/sacs-epfl/HarMoEny) ・ リポジトリ内被引用：7  
+  MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。
+
 - **2025-03 · [FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference](2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   重み読出しを計算と非同期化し、各層へ固定メモリを均等配分し、容量に応じて保持テンソルを切り替えることで、端末向けCPU推論をmmap比最大12.5倍高速化する。
@@ -399,10 +403,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-08 · [Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding](2025-2508.21706-specmoeoff-speculative-decoding-offload.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   専門家重み転送でGPUが遊ぶMoEオフロードに投機的デコードを組み合わせ、1回の重み転送で複数トークンを検証する。CPU向け注意検証と自動設定選択も加え、MoE-Lightning比でスループットを平均2.1倍、最大2.9倍へ改善する。
-
-- **2025-06 · [HarMoEny: Efficient Multi-GPU Inference of MoE Models](2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md)**  
-  実装：[✓](https://github.com/sacs-epfl/HarMoEny) ・ リポジトリ内被引用：6  
-  MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。
 
 - **2025-06 · [eLLM: Elastic Memory Management Framework for Efficient LLM Serving](2025-2506.15155-ellm-elastic-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -531,7 +531,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   復号時は演算量に比べて大量の重みを毎回読み出すため、メモリ帯域と小粒度I/Oが律速しやすい。圧縮により理論上の演算量・容量を減らしても、実ハードウェアが不規則な疎パターンや異なるビット幅を効率的に扱えなければ処理時間は縮まらない。
 
 - **2024-05 · [Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation](2024-2405.01814-attention-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   注意演算とその他をH20/H100へ分離し、CPU非介在通信と自動分割・パイプラインで層間通信を隠して、同費用vLLM比16.1〜90.1%高いデコードスループットを得る。
 
 - **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  

@@ -2505,7 +2505,7 @@
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
 
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
-  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：28  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
@@ -3475,7 +3475,7 @@
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：33  
+  実装：✓ ・ リポジトリ内被引用：34  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  

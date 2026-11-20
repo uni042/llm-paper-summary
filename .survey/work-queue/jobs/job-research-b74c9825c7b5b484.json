@@ -35,10 +35,15 @@
   "selection_reason": "SWIFTは生成とwatermark構築を同一LLM backendへ統合し、再計算とキャッシュ重複を減らすとともに非同期co-serving・adaptive schedulingを実装。vLLM最適化を使い、SafeSealに対して5.9倍低いlatencyを報告。watermark用途に限定されるが、serving backend上での追加推論処理の統合・スケジューリングによる遅延削減を直接評価するためaccept。",
   "semantic_scholar_id": "74933159d75fefacfc54cb509ae11e80f724e341",
   "source_url": "https://arxiv.org/abs/2610.03955",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Co-Serving LLM Watermarking on Modern Inference Engines",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:33:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.md",
+  "represented_canonical_id": "arXiv:2610.03955",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

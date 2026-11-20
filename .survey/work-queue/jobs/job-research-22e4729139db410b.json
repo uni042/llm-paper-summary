@@ -35,10 +35,15 @@
   "selection_reason": "coding-agentのKV状態の階層別配置、context長の混在、workerルーティングを考慮した二段階admission制御。単一/複数worker実験で出力トークンthroughput平均20.3%、SLO準拠throughput平均70.5%改善を著者報告。LLM servingに直接関係。",
   "semantic_scholar_id": "36037537e923bfd71078e43f468687ca67ebe680",
   "source_url": "https://arxiv.org/abs/2610.03088",
-  "status": "ready",
+  "status": "superseded",
   "title": "Coda: Exploiting Admission Flexibility for Coding-Agent Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:33:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.md",
+  "represented_canonical_id": "arXiv:2610.03088",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

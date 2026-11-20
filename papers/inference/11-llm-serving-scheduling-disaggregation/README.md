@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（555本）
+## 自動生成の論文一覧（557本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -64,6 +64,10 @@
   実装：[✓](https://github.com/microsoft/llm-42) ・ リポジトリ内被引用：8  
   動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。
 
+- **2026-07 · [SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling](2026-2607.08565-smetric-session-centric-agent-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。
+
 - **2026-04 · [Cascadia: An Efficient Cascade Serving System for Large Language Models](2025-2506.04203-cascadia-cascade-serving-routing-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。
@@ -72,9 +76,9 @@
   実装：✓ ・ リポジトリ内被引用：7  
   生成長を事前に予測して近い長さの要求をまとめればこの無駄を減らせるが、既存法はDistilBERTのような補助モデルを別途動かすため、追加遅延とGPUメモリを消費する。
 
-- **2026-07 · [SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling](2026-2607.08565-smetric-session-centric-agent-scheduling.md)**  
+- **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
-  セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。
+  エージェントのLLM呼出しだけでなくツール・検索・サンドボックス・状態・通信を含む実行を測定し、トークン速度だけでは捉えられない待ち時間と資源競合がどこで生じるかを明らかにしたベンチマーク。
 
 - **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
   実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：6  
@@ -91,10 +95,6 @@
 - **2026-01 · [A Universal Load Balancing Principle and Its Application to Large Language Model Serving](2026-2601.17855-universal-load-balancing-principle-llm-serving.md)**  
   実装：[✓](https://github.com/Echoscd/Load-Balancing-Release) ・ リポジトリ内被引用：6  
   同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。
-
-- **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  エージェントのLLM呼出しだけでなくツール・検索・サンドボックス・状態・通信を含む実行を測定し、トークン速度だけでは捉えられない待ち時間と資源競合がどこで生じるかを明らかにしたベンチマーク。
 
 - **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
   実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：5  
@@ -597,6 +597,14 @@
 - **2026-10 · [DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving](2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEの精度コストを保存レートと読解レートへ分け、1つの接頭辞可読ストリームからワークロードごとに読み幅をラグランジュ配分で選ぶことで、単一の配備物のままデコード転送量を最適化する手法。
+
+- **2026-10 · [AFORE: Attention-FFN Disaggregation with Overlapped Reconfiguration of Experts](2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-ex.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意・FFN分離のMoEサービングで、対象マイクロバッチの需要を先読みしてエキスパート複製を計画し、移行を先行計算と重ねて隠す再構成方式。静的配置比でスループット平均29.8パーセント増。
+
+- **2026-10 · [Adaptive Co-Serving LLM Watermarking on Modern Inference Engines](2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  透かし構築を本文生成と同じLLMとvLLM基盤で非同期に同時実行し、圧力適応の受付と接頭辞キャッシュで遅延を抑えながら、検出精度99.65パーセントと実用性4.87を両立させた方式。
 
 - **2026-10 · [Accelerated Dataflow: scaling inference in streaming data analytics with efficiency](2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1265,7 +1273,7 @@
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
-  実装：✓ ・ リポジトリ内被引用：50  
+  実装：✓ ・ リポジトリ内被引用：51  
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
@@ -1336,6 +1344,10 @@
   実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：20  
   一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
 
+- **2025-02 · [Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs](2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：19  
+  次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
+
 - **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
   実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：19  
   複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
@@ -1343,10 +1355,6 @@
 - **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
   実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：18  
   AReaLは、長い推論列を生成する大規模推論モデル（大規模推論モデル（Large Reasoning モデル; LRM））の強化学習（強化学習（reinforcement learning; RL））で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習システムである。
-
-- **2025-02 · [Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs](2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
 
 - **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
   実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：17  
@@ -1895,7 +1903,7 @@
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：188  
+  実装：✓ ・ リポジトリ内被引用：189  
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
@@ -1927,7 +1935,7 @@
   異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
 - **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：86  
+  実装：✓ ・ リポジトリ内被引用：87  
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
@@ -1963,7 +1971,7 @@
   SSJFはBERT-base代理モデルでLLMの出力長を予測して短い要求を先に処理し、FCFS比で平均完了時間を30.5〜39.6%削減する。
 
 - **2024-02 · [INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference](2024-2402.01869-infercept-intercept-aware-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：60  
+  実装：✓ ・ リポジトリ内被引用：61  
   外部ツールや人間応答を待つ間に生成が中断される拡張LLMで、KVキャッシュをGPUに保持する、CPUへ退避する、破棄して再計算するという三つの選択肢を、GPUメモリの時間積で表した浪費量を基準に要求ごとに切り替える推論基盤。
 
 - **2024-07 · [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)**  
@@ -2189,7 +2197,7 @@
   Vicuna自身を軽量な応答長予測器として使い、生成前に要求を長さ別へ並べ替える。予測外れを失敗回収・再計算で隔離し、短い要求には大きなバッチを使うことで、可変長生成に特有のバッチ内遊休を減らす。
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
-  実装：[✓](https://github.com/Relaxed-System-Lab/HexGen) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/Relaxed-System-Lab/HexGen) ・ リポジトリ内被引用：24  
   HexGenは、性能もメモリ容量も異なるGPUが複数のデータセンターに分散し、拠点間ネットワークの帯域と遅延も不均一な環境で、大規模言語モデル（LLM）の生成推論を提供する分散実行システムである。
 
 - **2023-09 · [LLMCarbon: Modeling the End-To-End Carbon Footprint of Large Language Models](2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md)**  

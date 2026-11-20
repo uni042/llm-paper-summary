@@ -35,10 +35,15 @@
   "selection_reason": "Intel GPUのmatrix-engineレイアウト、L1 prefetch、GPU stack間通信をtile APIへ埋め込んだSyclKittensを提案し、kernel実装の探索空間を構造化する。一次要旨はGEMMでoneDNN比57.5%から82.1%へ、手動調整を含むkernel suiteで96%へ到達し、Llama-3.1-8B推論がtorch.compile比単一GPUで1.59倍、複数GPU decodeでoneCCL比最大2.91倍高速と報告。LLM推論kernelの具体的runtime/実装としてaccept。",
   "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
   "source_url": "https://arxiv.org/abs/2610.04277",
-  "status": "ready",
+  "status": "superseded",
   "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:33:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md",
+  "represented_canonical_id": "arXiv:2610.04277",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

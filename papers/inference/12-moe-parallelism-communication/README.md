@@ -69,6 +69,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：1  
   エキスパートの時間が平坦領域と線形領域の最大値で決まることを実測し、トークン数でも起動数でもなく最遅装置の時間そのものを最小化する配送で、混合領域の無駄な分割と偏りを同時に避けた負荷分散方式。
 
+- **2026-08 · [EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference](2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md)**  
+  実装：[✓](https://github.com/yize-wu/EasyInfra) ・ リポジトリ内被引用：1  
+  EasyBalanceが対象とするのは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家並列（専門家 parallelism; EP）推論で、GPU間に配った専門家の処理量が入力ごとに偏る問題である。各バッチ内の層順序は保持するため、専門家選択やモデルの数値演算を近似する方式ではない。
+
 - **2026-07 · [Mixture-of-Experts Serving](2026-2607.17880-mixture-of-experts-serving-online-algorithms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は時間変動する専門家需要へのGPU割当をサービス遅延と再構成費のオンライン最適化として定式化し、分数解の丸め・貪欲更新で再配置コストを抑える理論保証を示す。
@@ -134,10 +138,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-08 · [FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction](2026-2608.14205-freebalance-prerouting-online-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FreeBalanceは前層出力を現層ルータへ先行入力して専門家負荷を予測し、注意計算中に予算内で専門家を交換する。正式ルーティングを維持し、負荷偏りと移動待ちを減らす。
-
-- **2026-08 · [EasyBalance: Cross-Layer Load Balancing in Distributed MoE Inference](2026-2608.07964-easybalance-cross-layer-load-balancing-in-distributed-moe-inference.md)**  
-  実装：[✓](https://github.com/yize-wu/EasyInfra) ・ リポジトリ内被引用：0  
-  EasyBalanceが対象とするのは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家並列（専門家 parallelism; EP）推論で、GPU間に配った専門家の処理量が入力ごとに偏る問題である。各バッチ内の層順序は保持するため、専門家選択やモデルの数値演算を近似する方式ではない。
 
 - **2026-08 · [AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge](2026-2608.22932-airmoe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -210,7 +210,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。
 
 - **2025-09 · [Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving](2025-2509.17863-expert-as-a-service-moe-serving.md)**  
@@ -238,20 +238,20 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   本論文は、大規模言語モデル（LLM）の学習と推論を支えるGPU間集団通信（collective 通信）の実装上の限界を分析し、NVIDIA Collective Communications Library（NCCL）を補強するNCCLXを提案・評価する。
 
 - **2025-08 · [Accelerating Edge Inference for Distributed MoE Models with Latency-Optimized Expert Placement](2025-2508.12851-dancemoe-latency-optimized-edge-expert-placement.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
 
 - **2025-10 · [Patterns behind Chaos：大規模MoEのデータ移動予測](2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   その知見を将来のウェハ級GPU設計へ適用すると四モデル平均6.6倍、既存GPU向けプリフィル認識型専門家配置ではMoE計算を最大1.25倍高速化した。
 
+- **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  数十台の装置にまたがる複製を丸ごと増やす方式は容量を大きな単位でしか増減できず、追加のために全重みを読み直す時間もかかる。拡張操作の所要時間は最速の比較方式の約0.11倍であり、最良条件では約9倍短い。
+
 - **2025-09 · [HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing](2025-2509.09420-hd-moe-hybrid-and-dynamic-parallelism-for-mixture-of-expert-llms-with-3d.md)**  
   実装：[✓](https://github.com/angerybob/HD-MoE) ・ リポジトリ内被引用：4  
   推論時には直近の専門家選択を用いて次層の負荷を予測し、過負荷になりそうな専門家を限られた時間内に事前配信し、追加通信を増やさない範囲でトークンを空いた節点へ振り分ける。
-
-- **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  数十台の装置にまたがる複製を丸ごと増やす方式は容量を大きな単位でしか増減できず、追加のために全重みを読み直す時間もかかる。拡張操作の所要時間は最速の比較方式の約0.11倍であり、最良条件では約9倍短い。
 
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：3  

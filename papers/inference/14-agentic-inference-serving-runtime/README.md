@@ -34,28 +34,28 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System](2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md)**  
-  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：25  
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
+
+- **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
+  実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：11  
+  実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
 
 - **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
   実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：11  
   エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
-- **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
-  実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：10  
-  実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
-
 - **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
+
+- **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
 - **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
-
-- **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
 - **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
   実装：✓ ・ リポジトリ内被引用：6  

@@ -35,10 +35,15 @@
   "selection_reason": "複数の後続質問で再利用する長文脈KVキャッシュを対象に、軽量proxy scoreで情報量の高い文脈トークンを選び、その一部だけを再構成queryとして使って最終的なKV削除スコアを計算する二段階方式。全プロンプト再処理を省き、RULER 16KのKV予算2%では次善方式より平均スコアが40ポイント超高いと一次論文が報告する。推論時のKV圧縮・キャッシュ再利用に直接寄与するためaccept。",
   "semantic_scholar_id": "082c6f988d0aa3ade2a27bfddfcfc6aec217b32d",
   "source_url": "https://arxiv.org/abs/2610.03198",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV$^2$: A Self-Refining KV Cache",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:33:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.03198-kv2-a-self-refining-kv-cache.md",
+  "represented_canonical_id": "arXiv:2610.03198",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

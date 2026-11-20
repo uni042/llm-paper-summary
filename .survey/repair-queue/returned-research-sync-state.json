@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a4ef4db7727e653d621736bb4c96bb99db6d878f",
+  "base_commit": "8895c0f1d6e7c576f5f5285db5b762d49ddc1565",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -420,7 +420,12 @@
     "2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free-beacon-attention.json",
     "2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.json",
     "2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.json",
+    "2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.json",
+    "2026-2610.03198-kv2-a-self-refining-kv-cache.json",
+    "2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-experts.json",
     "2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent-systems-on-cpu-gpu-unified-memory-architectures.json",
+    "2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.json",
+    "2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-on-intel-gpus.json",
     "2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-lora-assisted-on-premise-llm-deployment.json",
     "2026-2610.05106-sharpdraft-accelerating-long-context-speculative-decoding-with-cardinality-aware-query-scaling.json",
     "2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matrix-engines.json",
@@ -42636,6 +42641,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.03088": {
+      "order": [
+        "2026-11-20T05:25:55+00:00",
+        "2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.03198": {
+      "order": [
+        "2026-11-20T05:27:16+00:00",
+        "2026-2610.03198-kv2-a-self-refining-kv-cache.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.03203": {
+      "order": [
+        "2026-11-20T05:28:36+00:00",
+        "2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.03955": {
+      "order": [
+        "2026-11-20T05:29:57+00:00",
+        "2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.04277": {
+      "order": [
+        "2026-11-20T05:31:18+00:00",
+        "2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-on-intel-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52877,6 +52927,21 @@
     "arxiv:2610.03007": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.md"
+    ],
+    "arxiv:2610.03088": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.md"
+    ],
+    "arxiv:2610.03198": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.03198-kv2-a-self-refining-kv-cache.md"
+    ],
+    "arxiv:2610.03203": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-ex.md"
+    ],
+    "arxiv:2610.03955": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.md"
+    ],
+    "arxiv:2610.04277": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md"
     ]
   }
 }

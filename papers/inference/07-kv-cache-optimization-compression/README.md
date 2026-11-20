@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（527本）
+## 自動生成の論文一覧（529本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -336,6 +336,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Monte Carlo Estimation for KV Cache Eviction](2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   履歴が長くなるほどメモリ容量と転送帯域を圧迫するため、限られた保持枠に重要なトークンだけを残す削除方式が研究されている。一方、同じ条件のサンプル当たり実行時間はAnDProの7.8799秒に対し17.5342秒であり、速度向上ではない。
+
+- **2026-10 · [KV2: A Self-Refining KV Cache](2026-2610.03198-kv2-a-self-refining-kv-cache.md)**  
+  実装：[✓](https://anonymous.4open.science/r/KVsquared-0B97/) ・ リポジトリ内被引用：1  
+  再利用型KV圧縮で、軽量な代理スコアが選んだ少数の文脈トークンだけを再構成クエリに使い、最終エビクションスコアを決める2段方式。予算2パーセントの極端な圧縮で比較対象との差が最大になる。
 
 - **2026-10 · [Behavior-Preserving KV Cache Compression](2026-2610.06479-behavior-preserving-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -678,6 +682,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Compositional Performance Modeling of LLM Inference Clusters with Hierarchical KV Caching](2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   局所的な計算・転送費用とKVの所在・容量・準備状態を分離して離散イベントで合成する推論クラスタのシミュレータで、1P1D較正のモデルを他構成へ再利用し、階層型KVキャッシュ下の遅延と再利用を高精度に予測する研究。
+
+- **2026-10 · [Coda: Exploiting Admission Flexibility for Coding-Agent Serving](2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  コーディングエージェント向けサービングで、KV状態の準備費用と待ち時間による受付順の並べ替え、文脈長の近い集団への注意分割、多ワーカーでの文脈適合ルーティングを組み合わせ、進行を保ちながらスループットを上げる方式。
 
 - **2026-10 · [Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving](2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-proto.md)**  
   実装：[✓](https://anonymous.4open.science/r/hear-3D1E/) ・ リポジトリ内被引用：0  
@@ -1422,7 +1430,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   TurboQuantは、高次元ベクトルを入力データセットに合わせて学習し直さずに低ビット化する、オンライン量子化方式である。理論面では、復元二乗誤差と内積誤差の両方について、ビット幅bに対して概ね4のマイナスb乗で減る上界を示し、情報理論的な下限との差が最大約2.7倍の定数内であると証明する。
 
 - **2025-10 · [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution](2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md)**  
-  実装：[✓](https://github.com/NVIDIA/kvpress) ・ リポジトリ内被引用：57  
+  実装：[✓](https://github.com/NVIDIA/kvpress) ・ リポジトリ内被引用：58  
   Expected 注意機構は、大規模言語モデルの推論で増大する鍵・値キャッシュ（KV キャッシュ）を、追加学習なしに選択削除する方法である。Qwen3-8BのRULER 16Kでは、キャッシュ50%削除でも無圧縮92.9に対し92.7を維持する。
 
 - **2025-05 · [dKV-Cache: The Cache for Diffusion Language Models](2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md)**  
@@ -1864,7 +1872,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：358  
+  実装：✓ ・ リポジトリ内被引用：360  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -1904,7 +1912,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Keyformerは、生成中に増え続ける鍵値キャッシュ（KVキャッシュ）を、重要な過去トークンだけへ圧縮する方式である。著者らは、注意重みの約90%が過去トークンの一部に集中するという観察から、すべての履歴を保持する必要はないと考える。
 
 - **2024-02 · [No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization](2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md)**  
-  実装：✓ ・ リポジトリ内被引用：68  
+  実装：✓ ・ リポジトリ内被引用：69  
   自己回帰推論の鍵・値キャッシュ（KVキャッシュ）は、生成済みの各トークンの中間状態を再利用して再計算を避ける一方、必要容量が同時要求数と文脈長にほぼ比例して増える。提案する混合精度KVキャッシュ（MiKV）は、重要トークンを高精度で保持し、従来なら追い出すトークンも2〜4ビットで保存する。
 
 - **2024-07 · [PQCache: Product Quantization-based KVCache for Long Context LLM Inference](2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md)**  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（254本）
+## 自動生成の論文一覧（255本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -189,6 +189,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md)**  
+  実装：[✓](https://github.com/intel/SyclKittens) ・ リポジトリ内被引用：0  
+  インテルGPUで速くなる書き方そのものを操作として内蔵したタイル型プログラミングモデルを提示し、生の言語よりコーディングエージェントが速いカーネルへ早く届くことと、推論の高速化を実測で示した研究。
 
 - **2026-10 · [SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference](2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md)**  
   実装：[✓](https://wang-qitong.github.io/SparseDecoding) ・ リポジトリ内被引用：0  

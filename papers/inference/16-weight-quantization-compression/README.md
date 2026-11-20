@@ -382,13 +382,13 @@
   実装：[✓](https://github.com/SAI-Lab-NYU/QSVD) ・ リポジトリ内被引用：11  
   QSVDは、画像と文章を同時に処理する視覚言語モデル（Vision-Language モデル; VLM）の注意層で、問い合わせ（Query; Q）・鍵（Key; K）・値（Value; V）の射影重みを別々に圧縮するのではなく結合して低ランク分解する手法である。
 
+- **2025-08 · [LMDeploy Accelerates Mixed-Precision LLM Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
+  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：11  
+  量子化された重みを行列積の直前に浮動小数点へ復号すると、復号命令と共有メモリへの転送が計算の待ち時間になる。既存の混合精度推論基盤に対して配信遅延を最大61%（平均30%）削減し、処理率を最大156%（平均58%）向上したと報告する。
+
 - **2025-02 · [M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type](2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   一般的なINT4量子化は整数演算に向くが、各値の分布が一様でないと量子化誤差が大きくなる。専用アクセラレータのシミュレーションでは、先行するLLMアクセラレータに対して平均2.99倍、最大4.46倍の高速化と、平均2.81倍、最大4.10倍のエネルギー削減を報告する。
-
-- **2025-08 · [LMDeploy Accelerates Mixed-Precision LLM Inference with TurboMind](2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md)**  
-  実装：[✓](https://github.com/InternLM/lmdeploy) ・ リポジトリ内被引用：10  
-  量子化された重みを行列積の直前に浮動小数点へ復号すると、復号命令と共有メモリへの転送が計算の待ち時間になる。既存の混合精度推論基盤に対して配信遅延を最大61%（平均30%）削減し、処理率を最大156%（平均58%）向上したと報告する。
 
 - **2025-10 · [INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats](2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md)**  
   実装：[✓](https://github.com/ChenMnZ/INT_vs_FP) ・ リポジトリ内被引用：9  
