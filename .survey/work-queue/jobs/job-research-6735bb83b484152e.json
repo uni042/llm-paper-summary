@@ -35,10 +35,15 @@
   "selection_reason": "LLM servingの出力長予測にprefill隠れ状態の線形readoutを使い、完了requestを教師としたrecursive least squaresでonline更新。CPU非同期実行によりGPU prefillと予測・batch順序決定を重ねる。ドメインシフトでSpearman相関64.7%改善、他の長さ予測器に対し平均per-token latency15.9〜40.8%削減、throughput1.9%改善と報告。推論スケジューリングの直接改善。",
   "semantic_scholar_id": "052813f41c61994de5b041dee792a9f746cf6934",
   "source_url": "https://arxiv.org/abs/2610.41359",
-  "status": "ready",
+  "status": "superseded",
   "title": "LEAP: Efficient LLM Inference Scheduling with Generalizable Length Prediction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:22:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.41359-leap-efficient-llm-inference-scheduling-with-generalizable-length-predic.md",
+  "represented_canonical_id": "arXiv:2610.41359",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

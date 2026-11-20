@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（89本）
+## 自動生成の論文一覧（90本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -150,6 +150,10 @@
 - **2026-10 · [Taking Tokenization off the Host for Agentic LLM Serving](2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md)**  
   実装：[✓](https://github.com/Msiavashi/GraphTok) ・ リポジトリ内被引用：0  
   符号化の全工程を1つのCUDAグラフとしてGPUで実行するトークン化器で、参照と同一のトークン番号を保ったまま、接頭辞活用時の応答開始を2倍以上速くし、前面の供給能力を大きく広げた。
+
+- **2026-10 · [In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents](2026-2610.41291-in-model-context-compression-with-agentic-soft-tokens-for-long-horizon-l.md)**  
+  実装：[✓](https://github.com/RISE-X-Lab/Agentic-Soft-Token) ・ リポジトリ内被引用：0  
+  実行中モデルの再帰状態で吸収済みと判定した観測を連続値の柔らかいトークンへ畳み正確な値は通常トークンで保護する学習不要の圧縮で、長期課題の精度を未圧縮同等以上に保ち注意の組を最大で五十九点八四パーセント減らしたと報告した。
 
 - **2026-10 · [Context as Infrastructure: Knowledge Compilation for Retrieval in Agentic Systems with Harnesses](2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic.md)**  
   実装：[✓](https://github.com/infiniflow/ragflow) ・ リポジトリ内被引用：0  

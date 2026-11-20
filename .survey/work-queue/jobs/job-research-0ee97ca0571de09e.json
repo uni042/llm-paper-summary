@@ -35,10 +35,15 @@
   "selection_reason": "長期エージェントの肥大化する文脈に対しASTCはGated Delta Networkとattentionのハイブリッドモデルの再帰状態から既吸収情報を抽出し、soft tokenとして引き継ぎつつ必要な値をhard tokenで保持する。後段計算を減らし再利用可能なKVを作り、精度を保ったままend-to-end attention pairを最大50.68%削減。推論時文脈圧縮の直接的技術貢献。",
   "semantic_scholar_id": "7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf",
   "source_url": "https://arxiv.org/abs/2610.41291",
-  "status": "ready",
+  "status": "superseded",
   "title": "In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:22:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2610.41291-in-model-context-compression-with-agentic-soft-tokens-for-long-horizon-l.md",
+  "represented_canonical_id": "arXiv:2610.41291",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（160本）
+## 自動生成の論文一覧（161本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -137,6 +137,10 @@
 - **2026-10 · [PACE: Pareto-Adaptive Compression for Efficient Native MLLMs](2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ネイティブ型マルチモーダルモデルの視覚トークンを、高さと幅へ分けた重要度とパレート最適な段階別保持率で圧縮し、保持率25パーセントでもほぼ無損失のまま計算量を2.0倍分減らした研究。
+
+- **2026-10 · [Operon-S1: a fast decision controller for long-horizon biomedical agents](2026-2610.41350-operon-s1-a-fast-decision-controller-for-long-horizon-biomedical-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントの反復判断を13の決定点の閉じた質問として切り出し、答えを含まない固定メッセージだけで介入する高速決定層により、判断を測定・交換・学習できる層として分離した。
 
 - **2026-10 · [On the Fundamental Limits of Prefill-Based Decoding Length Prediction](2026-2610.40541-on-the-fundamental-limits-of-prefill-based-decoding-length-prediction.md)**  
   実装：[✓](https://github.com/ShwStone/DecodingPredict) ・ リポジトリ内被引用：0  

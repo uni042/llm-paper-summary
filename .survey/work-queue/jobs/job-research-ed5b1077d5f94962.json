@@ -35,10 +35,15 @@
   "selection_reason": "LLMエージェントのツール実行段階ごとに投機復号の受理率が変わることを動的実行と固定prefix replayで分析。10,000訓練状態/2,500試験状態のTraceSpec-Trajを構築し、状態条件付き受理率ギャップ推定でdraft学習予算を配分する。DSpark基準でreplay throughputを12.5〜22.6%改善し、Qwen3-4Bでは固定全ターン教師信号比で受理長3.3〜10.0%改善。推論加速への直接貢献。",
   "semantic_scholar_id": "88db0f0317de444ee1f6bef8ab392f3fe9dac3a7",
   "source_url": "https://arxiv.org/abs/2610.41177",
-  "status": "ready",
+  "status": "superseded",
   "title": "TraceSpec: Understanding and Improving Speculative Decoding for LLM Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:22:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.41177-tracespec-understanding-and-improving-speculative-decoding-for-llm-agent.md",
+  "represented_canonical_id": "arXiv:2610.41177",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

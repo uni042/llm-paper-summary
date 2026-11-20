@@ -35,10 +35,15 @@
   "selection_reason": "長期の生命科学LLM agentで13種類の反復的な判断を閉じた質問へ分離し、汎用生成モデルではなく小型decision modelへ委譲する。CPUローカルでin-loop request中央値0.6秒、元の生成モデルが担う場合はtask costの8.0〜35.2%を占めると報告。5/6 benchmarkでagent scoreの有意な変化なし。用途はbiomedicalだが推論呼出しを安価なdecision modelへ置換する実行コスト最適化を示すためaccept。",
   "semantic_scholar_id": "a0dac219b30d06086741ab87aabc773d191a5342",
   "source_url": "https://arxiv.org/abs/2610.41350",
-  "status": "ready",
+  "status": "superseded",
   "title": "Operon-S1: a fast decision controller for long-horizon biomedical agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:22:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.41350-operon-s1-a-fast-decision-controller-for-long-horizon-biomedical-agents.md",
+  "represented_canonical_id": "arXiv:2610.41350",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

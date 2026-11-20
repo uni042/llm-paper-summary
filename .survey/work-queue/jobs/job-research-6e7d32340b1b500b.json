@@ -35,10 +35,15 @@
   "selection_reason": "MoE expert出力の低いeffective rankと分布modeの重複を利用し、router重みを事前重要度として使いながらexpert集合全体の構造を保つgreedy pruningを提案。PEEPは重み付き射影energy、DCEPは分布coverage誤差を基準とする。DeepSeek-V2-LiteとQwen3-30B-A3Bでexpert保持率75%/50%の比較において多数のbenchmarkで既存pruning法を上回り平均性能が最良と報告。推論常駐expertメモリ削減の直接手法。",
   "semantic_scholar_id": "4daf9b3252ae1f44fc73866b66c272e9e7d94089",
   "source_url": "https://arxiv.org/abs/2610.41236",
-  "status": "ready",
+  "status": "superseded",
   "title": "Experts Exhibit Structured Redundancy: Structure-Preserving Expert Pruning for Mixture-of-Experts Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:22:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.41236-experts-exhibit-structured-redundancy-structure-preserving-expert-prunin.md",
+  "represented_canonical_id": "arXiv:2610.41236",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
