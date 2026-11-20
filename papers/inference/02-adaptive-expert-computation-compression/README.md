@@ -38,6 +38,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：5  
   バッチ全体のルーター得点を集約して専門家集合を動的共有し、再学習なしで専門家混合推論の活性数・GPU負荷・投機デコード性能を改善する。
 
+- **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
+  実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：5  
+  バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
+
 - **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
   実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：4  
   本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
@@ -53,10 +57,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-04 · [Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference](2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   本論文は混合専門家（Mixture-of-Experts、MoE）モデルで、各層・各トークンが起動する専門家数を一律に減らすと品質が大きく悪化する問題に対し、モデル全体の専門家起動回数を固定したまま、層間とトークン間で予算を再配分するAlloc-MoEを提案する。
-
-- **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
-  実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：4  
-  バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
 
 - **2026-01 · [KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models](2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -125,6 +125,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
+
+- **2026-09 · [Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts](2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  動的MoE推論で専門家数を減らすと出力分散と尺度が増える問題を特定し、層・次元ごとの平均と分散を学習時分布へ戻す軽量補正で、同じ専門家予算の精度を大幅に回復する。
 
 - **2026-09 · [BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding](2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -232,10 +236,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は混合専門家モデル（Mixture-of-Experts、MoE）の推論時に、各トークンで何個の専門家ネットワークを実行するかを決める問題を扱う。固定個数選択（Top-K）では容易なトークンにも同じ数の専門家を割り当てる。
 
-- **2026-09 · [Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts](2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  動的MoE推論で専門家数を減らすと出力分散と尺度が増える問題を特定し、層・次元ごとの平均と分散を学習時分布へ戻す軽量補正で、同じ専門家予算の精度を大幅に回復する。
-
 - **2026-09 · [Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment](2026-2609.06076-post-compression-adjustment-cost-normalized.md)**  
   実装：[✓](https://github.com/AIDASLab/Post-Compression-Adjustment) ・ リポジトリ内被引用：0  
   圧縮済みMoEを小規模調整の初期値と再定義し、3000例・1エポックの全パラメータ微調整で平均37.3%の性能差を回復するコスト正規化研究。
@@ -299,7 +299,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
-  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：39  
+  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：40  
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-06 · [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](2025-2506.23266-sub-moe-subspace-expert-merging.md)**  
@@ -327,7 +327,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   低重要度エキスパートを削除後、内部ニューロンをセグメントとして互換な残存エキスパートへ再配置・クラスタ統合し、再学習なしで知識を回収するMoE圧縮法。
 
 - **2025-11 · [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](2025-2511.15690-modes-dynamic-expert-skipping.md)**  
-  実装：[✓](https://github.com/ModelTC/MoDES) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/ModelTC/MoDES) ・ リポジトリ内被引用：10  
   層重要度のKL較正と画像・テキスト別閾値で、重要なエキスパートだけを残し、高省略率でもマルチモーダル性能を保つ学習不要の動的エキスパート省略法。
 
 - **2025-02 · [Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis](2025-2502.04416-analytical-ffn-to-moe-restructuring.md)**  
@@ -437,7 +437,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-02 · [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)**  
-  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：132  
+  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：134  
   本研究は、学習済みモデルを大規模に再学習せず、①各層の出力をできるだけ保つ専門家の集合を探索して重みを恒久的に削除する事後専門家枝刈り、②実行時にルータが選んだ2専門家のうち寄与の小さい第2専門家だけをトークン単位で省く動的専門家省略を組み合わせる。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
@@ -525,7 +525,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：155  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：156  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
