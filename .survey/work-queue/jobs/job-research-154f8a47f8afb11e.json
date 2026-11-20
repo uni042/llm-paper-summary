@@ -35,10 +35,15 @@
   "selection_reason": "低ビットLLMの精度回復に各層独立の低ランク補償を付けるとレイテンシとメモリが増える問題に対し、入力共有グループで右因子を共通化し必要箇所だけ復元するGlowQ/GlowQ-Sを提案。選択型ではTTFB平均23.4%減・スループット37.4%増を報告。",
   "semantic_scholar_id": "144713214950f337c2f9bc5867dd7d3c2c1dd973",
   "source_url": "https://arxiv.org/abs/2603.25385",
-  "status": "ready",
+  "status": "superseded",
   "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T06:05:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.25385-glowq-group-shared-low-rank-approximation-for-quantized-llms.md",
+  "represented_canonical_id": "arXiv:2603.25385",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

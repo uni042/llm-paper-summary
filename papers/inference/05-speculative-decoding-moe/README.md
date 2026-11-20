@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（378本）
+## 自動生成の論文一覧（379本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -385,6 +385,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [NanoSpec: Accelerating Speculative Decoding using Minimalist In-Context Vocabularies](2026-2605.26444-microspec-lightweight-in-context-vocabularies.md)**  
   実装：[✓](https://github.com/csAugust/NanoSpec) ・ リポジトリ内被引用：1  
   文脈と直近候補から毎ステップ3000未満の動的ドラフト語彙を作り、必要なLMヘッド重みを非同期収集して射影計算を削減する投機的デコード最適化。EAGLE-2のドラフト時間を平均51.6%削減する。
+
+- **2026-04 · [MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference](2026-2604.02945-msao-adaptive-modality-sparsity-aware-offloading-with-edge-cloud-collabo.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  モダリティごとの冗長度を測る指標で圧縮とオフロードを決め、エッジのドラフト生成とクラウドの検証を重ねて通信を隠す、マルチモーダル推論のエッジ・クラウド協調方式。精度をほぼ保ち遅延と資源を大きく減らす。
 
 - **2026-04 · [Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding](2026-2604.02047-goose-anisotropic-speculation-trees-for-training-free-speculative-decodi.md)**  
   実装：[✓](https://github.com/2kinto/GOOSE_Speculative_Decoding) ・ リポジトリ内被引用：1  

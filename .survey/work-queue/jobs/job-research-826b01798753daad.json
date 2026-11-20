@@ -35,10 +35,15 @@
   "selection_reason": "一次arXiv論文の本文・要旨を確認。ベースモデルとpost-training後の重み差分ΔWの符号保持率・コサイン類似度を最適化するdata-free FP8量子化。通常MSE量子化で失われるpost-training固有の挙動を保持する予備実験を報告。LLM圧縮・量子化に直接関連するためaccept。",
   "semantic_scholar_id": "00481397a6710208311793bf06d60b1ad8416953",
   "source_url": "https://arxiv.org/abs/2603.22324",
-  "status": "ready",
+  "status": "superseded",
   "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T06:05:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2603.22324-daq-delta-aware-quantization-for-post-training-llm-weight-compression.md",
+  "represented_canonical_id": "arXiv:2603.22324",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

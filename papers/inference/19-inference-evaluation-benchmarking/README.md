@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（145本）
+## 自動生成の論文一覧（146本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -357,6 +357,10 @@
 - **2026-03 · [Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents](2026-2603.12634-spend-less-reason-better-budget-aware-value-tree-search-for-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実サービスではツール呼び出し回数、生成トークン数、API料金に上限があるため、単に推論を長くする方式は適さない。原著はgpt-oss-20bとQwen3-30B-A3B-Instruct-2507を用い、HotpotQA、2WikiMultihopQA、MuSiQue、Bamboogleで評価した。
+
+- **2026-03 · [AE-LLM: Adaptive Efficiency Optimization for Large Language Models](2026-2603.20492-ae-llm-adaptive-efficiency-optimization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  効率化手法の組合せを多目的最適化として自動探索する枠組み。代理モデルの予測と進化探索で、精度・遅延・メモリ・エネルギーのバランスが取れた構成を配備条件ごとに見つける。
 
 - **2026-02 · [On the Optimal Reasoning Length for RL-Trained Language Models](2026-2602.09591-on-the-optimal-reasoning-length-for-rl-trained-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

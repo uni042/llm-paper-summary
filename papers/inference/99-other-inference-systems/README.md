@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1056本）
+## 自動生成の論文一覧（1057本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2018,6 +2018,10 @@
   実装：[✓](https://github.com/yurakuratov/gradmem) ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデル（LLM）では、過去の情報を再利用するために鍵・値キャッシュ（KV キャッシュ）を保持するのが一般的である。しかしキャッシュは通常、層数と文脈長に比例して増える。GradMemはこの記憶形成を、単なる順伝播による要約ではなく、推論時に小さな記憶ベクトルへ勾配降下を行う最適化問題として定義する。モデル本体の重みは推論時に更新しない。
 
+- **2026-03 · [GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs](2026-2603.25385-glowq-group-shared-low-rank-approximation-for-quantized-llms.md)**  
+  実装：[✓](https://github.com/ahnselim/GlowQ) ・ リポジトリ内被引用：0  
+  量子化誤差の低ランク補正の右因子を入力共有グループで共有し、射影を1回だけ計算して使い回す方式。共分散整合でランク配分を適正化し、選択的復元で遅延を大きく下げる。
+
 - **2026-03 · [Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models](2026-2603.11220-frequency-modulated-visual-restoration-for-matryoshka-large-multimodal-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FMVR（Frequency-Modulated Visual Restoration）は、削減済み視覚表現の平均値からの残差と最大値からの残差をそれぞれ学習可能な係数で変調し、目立つ特徴と埋もれた特徴の両方を補強する方式である。原著表3では36トークン時に初期入力処理時間が58.1から18.0ミリ秒へ短縮し、総メモリが21.6から13.8GBへ減少する。
@@ -3897,7 +3901,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：279  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：280  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  

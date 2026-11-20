@@ -35,10 +35,15 @@
   "selection_reason": "MSAOはマルチモーダルLLMのエッジ・クラウド分担を、空間・時間・モダリティの活性疎性をまとめたMAS指標と実時間システム状態で決める。confidenceに基づく投機実行で転送待ちを隠す。VQAv2とMMBenchでエンドツーエンド遅延30%削減、throughput 1.5〜2.3倍を報告しており、MLLMのオフロード・スケジューリングを直接最適化する。",
   "semantic_scholar_id": "0fb5c5272ad6b56046b1d48c7cc1abfac620e11a",
   "source_url": "https://arxiv.org/abs/2604.02945",
-  "status": "ready",
+  "status": "superseded",
   "title": "MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T06:05:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2604.02945-msao-adaptive-modality-sparsity-aware-offloading-with-edge-cloud-collabo.md",
+  "represented_canonical_id": "arXiv:2604.02945",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

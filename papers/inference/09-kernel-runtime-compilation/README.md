@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（256本）
+## 自動生成の論文一覧（257本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -541,6 +541,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores](2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案方式AILFM（Active Imitation Learning for LFMs）は、コアごとの命令実行率、最終段キャッシュのミス率、平均キャッシュ距離、電力予算、温度を観測し、どのカーネルをどのコアに割り当てると温度上限を守りながら実行時間を短縮できるかを判断する。
+
+- **2026-03 · [Sparser, Faster, Lighter Transformer Language Models](2026-2603.23198-sparser-faster-lighter-transformer-language-models.md)**  
+  実装：[✓](https://github.com/SakanaAI/sparser-faster-llms) ・ リポジトリ内被引用：0  
+  フィードフォワード層の活性スパース性を、タイル単位の疎形式と融合カーネルで実際の速度・省メモリ・省エネルギーへ変える研究。正則化だけで99パーセント超のスパース性をほぼ無劣化で得られることも示す。
 
 - **2026-03 · [RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication](2026-2603.27462-rsr-core-a-high-performance-engine-for-low-bit-matrix-vector-multiplicat.md)**  
   実装：[✓](https://github.com/UIC-InDeXLab/RSR-core) ・ リポジトリ内被引用：0  

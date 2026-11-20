@@ -2115,7 +2115,7 @@
   推論要求を優先しながら、パラメータ効率微調整（PEFT）の順伝播と逆伝播をトークン窓へ分解し、同じ基盤モデルを使うGPU反復へ混載する。推論の遅延制約を満たす範囲で学習トークン数を動的に選び、分離クラスタ方式より学習処理量を増やすシステムである。
 
 - **2024-05 · [PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services](2024-2405.14636-perllm-personalized-inference-scheduling-with-edge-cloud-collaboration-f.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
 
 - **2024-11 · [FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving](2024-2411.18424-fastswitch-optimizing-context-switching-efficiency-in-fairness-aware-lar.md)**  
