@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（143本）
+## 自動生成の論文一覧（144本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -305,6 +305,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-05 · [HCInfer: An Efficient Inference System via Error Compensation for Resource-Constrained Devices](2026-2605.05819-hcinfer-an-efficient-inference-system-via-error-compensation-for-resourc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   数十億〜数百億パラメータのLLMを一般向けGPUで動かすには、重みを低ビット化してGPUメモリに収めるか、収まりきらない重みをCPUメモリへ置いて必要時に転送することが多い。低ビット量子化は速度とメモリ効率を改善するが、極端な3〜4ビットでは正答率が低下し得る。
+
+- **2026-05 · [H2MT: Semantic Hierarchy-Aware Hierarchical Memory Transformer](2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文書の意味階層の各ノードに固定長の潜在メモリを事前に作って再利用し、質問ごとに階層を粗から細へ辿って関係ノードだけを読者へ渡すことで、長文の再プリフィルを避け、品質を保ちながら最初のトークンまでの時間とピークメモリを下げた研究。ただし階層が弱い文書では原文検索に負ける。
 
 - **2026-05 · [Gaze Attention: Query-Adaptive Visual Routing for Efficient Multimodal LLMs](2026-2605.13080-gaze-attention-query-adaptive-visual-routing-for-efficient-multimodal-ll.md)**  
   実装：[✓](https://github.com/junha1125/Gaze-Attention) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "H2MTは意味階層をオフライン構築し各ノードのメモリ埋め込みを推論時に粗から細へ辿って無関係な枝を早期に剪定する長コンテキスト推論機構で、ピークGPUメモリとTTFTを圧縮・RAG系ベースラインより下げる効果が要旨で具体的に示されているため採用とする。",
   "semantic_scholar_id": "15f4aad030313794a8bcbc618afd4d559ab94c2a",
   "source_url": "https://arxiv.org/abs/2605.24930",
-  "status": "ready",
+  "status": "superseded",
   "title": "H2MT: Semantic Hierarchy-Aware Hierarchical Memory Transformer",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T22:51:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.md",
+  "represented_canonical_id": "arXiv:2605.24930",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

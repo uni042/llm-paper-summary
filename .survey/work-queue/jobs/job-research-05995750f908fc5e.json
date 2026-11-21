@@ -35,10 +35,15 @@
   "selection_reason": "再現性のあるLLM推論向けHEALはカーネル境界の切り捨て誤差を原因と特定し、QKVへのINT16量子化でKVキャッシュ容量を増やさず安定性を保ち、誤差補償付き行列積を16ビットTensor Coreで実行してFP32比のオーバーヘッドを最大6分の1に抑える推論機構である。",
   "semantic_scholar_id": "c6f1d202c44f8f51336ddd53eec45abd8762e3b9",
   "source_url": "https://arxiv.org/abs/2606.21023",
-  "status": "ready",
+  "status": "superseded",
   "title": "Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T22:51:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducib.md",
+  "represented_canonical_id": "arXiv:2606.21023",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

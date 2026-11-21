@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（293本）
+## 自動生成の論文一覧（294本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -518,6 +518,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   異常信号なしに品質だけが劣化する提供基盤の誤りを、参照実装との中間状態の突き合わせで自動診断する仕組みを提案し、実在不具合17件で5回試行88パーセントの特定率と新規4件の確認済み診断を示した。
 
+- **2026-06 · [Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL](2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducib.md)**  
+  実装：[✓](https://github.com/ucla-systems/HEAL) ・ リポジトリ内被引用：0  
+  異なる装置で答えが変わる原因をカーネル境界の切り捨てと特定し、クエリ・キー・バリューの整数16ビット保持と行列積の残差補償で誤差を反転閾値の下へ抑え、32ビット並みの再現性を16ビットのメモリ量で得た方式。
+
 - **2026-06 · [APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing](2026-2606.08761-apex4-efficient-pure-w4a4-llm-inference-via-intra-sm-compute-rebalancing.md)**  
   実装：[✓](https://github.com/APEX4-W4A4/APEX4-W4A4) ・ リポジトリ内被引用：0  
   ところが、量子化精度を守るため重み・活性化を細かいグループへ分けると、各グループのINT32行列積結果に対してFP32スケールを適用しなければならない。
@@ -729,7 +733,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：51  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
