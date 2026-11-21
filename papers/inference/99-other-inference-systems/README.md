@@ -884,6 +884,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   LLMCacheは、入力文字列が完全一致しなくても意味的に似ていればTransformer内部の中間活性を再利用できると考え、各層の出力を入力の指紋とともに保存する推論方式である。
 
+- **2025-12 · [Interleaved Latent Visual Reasoning with Selective Perceptual Modeling](2025-2512.05665-interleaved-latent-visual-reasoning-with-selective-perceptual-modeling.md)**  
+  実装：[✓](https://github.com/XD111ds/ILVR) ・ リポジトリ内被引用：1  
+  既存の方法には、画像を切り出す外部道具を繰り返し呼ぶもの、中間画像を新たに生成するもの、画像の特徴を短い潜在ベクトルへ圧縮するものがある。Qwen2.5-VL-7Bでの原著評価では、COMTの平均正答率60.8%、VSPの正答率81.5%を達成し、静的潜在方式Mirageの56.0%・76.0%を上回った。
+
 - **2025-12 · [HFS: Holistic Query-Aware Frame Selection for Efficient Video Understanding](2025-2512.11534-hfs-holistic-query-aware-frame-selection-for-efficient-video-understandi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   質問の意図を潜在クエリとして抽出し、関連度・被覆・冗長性を束ねた集合目的と選択器・推論器の相互学習でフレーム集合そのものを最適化し、16フレームで従来の選択法を上回る精度と小さい追加遅延を両立した。
@@ -2766,10 +2770,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Mesh-注意機構は、数十万から100万トークンの系列に対して注意機構を多数のGPUへ分割する際、各GPUが受け取る問い合わせ（Q）と鍵・値（KV）の転送量を同時に抑える分散注意アルゴリズムである。
 
-- **2025-12 · [Interleaved Latent Visual Reasoning with Selective Perceptual Modeling](2025-2512.05665-interleaved-latent-visual-reasoning-with-selective-perceptual-modeling.md)**  
-  実装：[✓](https://github.com/XD111ds/ILVR) ・ リポジトリ内被引用：0  
-  既存の方法には、画像を切り出す外部道具を繰り返し呼ぶもの、中間画像を新たに生成するもの、画像の特徴を短い潜在ベクトルへ圧縮するものがある。Qwen2.5-VL-7Bでの原著評価では、COMTの平均正答率60.8%、VSPの正答率81.5%を達成し、静的潜在方式Mirageの56.0%・76.0%を上回った。
-
 - **2025-12 · [Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression](2025-5f0897915cbf-glance2gaze-efficient-vision-language-models-from-glance-fusion-to-gaze-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   高解像度画像や動画では視覚トークン数が大きくなり、言語モデルの注意計算、鍵・値キャッシュ（KV キャッシュ）、初回トークン生成までの遅延が増加する。Glance2Gazeは、最初に画像全体を眺めて必要な細部へ視線を絞るという着想を二つの計算機構へ具体化する。
@@ -2889,7 +2889,7 @@
   従来の全履歴追記方式では、過去の検索結果が毎ターンのプロンプトへ残るため、文脈長に比例して鍵値キャッシュの容量が増え、注意計算や再入力の費用も高くなる。16目標の多段質問応答では、Qwen2.5-14B-Instructの完全一致数0.567に対しMEM1は1.97、ピークトークン数は3,840に対し1,040、推論時間は29.7秒に対し8.70秒だった。
 
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
-  実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：15  
   入力とモデル重みをそれぞれ秘匿したままBERT、GPT-2、LLaMA-7B、ViTを実行し、従来方式に比べて実測の転送量と実行時間を改善する。
 
 - **2025-05 · [Llama-Nemotron: Efficient Reasoning Models](2025-2505.00949-llama-nemotron-efficient-reasoning-models.md)**  
@@ -4591,7 +4591,7 @@
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
 
 - **2022-11 · [Iron: Private Inference on Transformers](2022-0ed2662d9eee-iron-private-inference-on-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   この構成では、サーバーは入力内容を読めるため、医療文書や企業機密をそのまま送信したくない利用者には問題がある。Ironはこの二つの律速点に特化した手順を設計する。従来の行列・ベクトル積を行ごとに繰り返す方式と比較し、一般の行列形状で出力行数の平方根程度の通信削減を理論的に示す。
 
 - **2022-05 · [A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation](2022-219d2c1fa7a8-a-simple-hash-based-early-exiting-approach-for-language-understanding-an.md)**  
