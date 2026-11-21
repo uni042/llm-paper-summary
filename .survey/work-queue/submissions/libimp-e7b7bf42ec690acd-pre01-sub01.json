@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LRCP: Low-Rank Compressibility Guided Visual Token Pruning for Efficient LVLMs",
+      "source_url": "https://arxiv.org/abs/2605.15621",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) achieve strong multimodal understanding, but their inference cost grows rapidly with the number of visual tokens, especially for high-resolution images and long videos. Existing attention-based methods estimate token importance from attention scores, which may introduce positional bias, while representation-based methods reduce visual redundancy based on feature relations or reconstruction errors, overlooking the global structure of the visual token set. In this paper, we revisit visual token compression from the perspective of low-rank compressibility. Across models and datasets, we observe that visual token representations exhibit a pronounced low-rank structure, with a dominant subspace that remains stable even after a large fraction of tokens is randomly removed. Motivated by this finding, we propose LRCP, a training-free compression framework that first estimates the dominant low-rank subspace of visual tokens via PCA, and then scores each token by its projection residual onto this subspace, retaining tokens that are poorly explained by the low-rank background. Extensive experiments show that LRCP achieves superior results, preserving 94.7% of the original image-understanding performance with an 88.9% token reduction and 97.8% of the average video-understanding accuracy with an 87.5% token reduction.",
+      "identifiers": [
+        "SemanticScholar:0e9e4d47bca6bc9968c1ea68006fae881eaceb92"
+      ],
+      "semantic_scholar_id": "0e9e4d47bca6bc9968c1ea68006fae881eaceb92",
+      "canonical_id": "arXiv:2605.15621",
+      "arxiv_id": "2605.15621",
+      "doi": "10.48550/arXiv.2605.15621",
+      "authors": [
+        "Hong-Yu Lu",
+        "Feng Zhang",
+        "Wenwei Jin",
+        "Hu Hu",
+        "Tian-Jun Shi",
+        "Shi-Kai Jiang",
+        "Yao Hu",
+        "Jiawei Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚トークンの低ランク圧縮可能性に基づき主成分部分空間への射影残差でトークンを選別し、学習不要で視覚トークンを約89パーセント削減しながらLVLM推論コストを下げる具体的な圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation",
+      "source_url": "https://arxiv.org/abs/2605.15913",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block attention, which processes the input as separate blocks that cannot attend to one another, offers significant potential to improve KV cache reuse in long-context scenarios such as Retrieval-Augmented Generation (RAG). However, its broader application is hindered by two key challenges: the difficulty of segmenting input text into meaningful, self-contained blocks, and the inefficiency of existing block fine-tuning methods that risk degrading performance. To address these, we first construct SemanticSeg, a large and diverse semantic segmentation dataset containing over 30k instances across 16 categories-including books, code, web text, and conversations with text lengths ranging from 2k to 32k. Using this dataset, we train a lightweight segmenter to automatically partition text into human-instinct-aligned blocks with controllable granularity. Second, we propose block distillation, a training framework that is more efficient than block fine-tuning, which uses a frozen full-attention teacher model to guide the block-attention student. This framework integrates three novel components: block sink tokens to mitigate information loss at block boundaries, block dropout to leverage training signals from all blocks, and token-level loss weighting to focus learning on block-attention-sensitive tokens. Experiments across multiple models and benchmarks demonstrate that our segmenter outperforms heuristic and statistical baselines, and block distillation achieves near-full-attention performance under block attention, establishing a practical and scalable pathway for deploying block attention.",
+      "identifiers": [
+        "SemanticScholar:cbedb1f432d317bfc1f4ab854641264818ef2f9c"
+      ],
+      "semantic_scholar_id": "cbedb1f432d317bfc1f4ab854641264818ef2f9c",
+      "canonical_id": "arXiv:2605.15913",
+      "arxiv_id": "2605.15913",
+      "doi": "10.48550/arXiv.2605.15913",
+      "authors": [
+        "Shuaiyi Li",
+        "Zhi-Song Zhang",
+        "Yan Wang",
+        "Lei Zhu",
+        "Dongyang Ma",
+        "Chen-Long Deng",
+        "Yang Deng",
+        "Wai Lam"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ブロック注意によるKVキャッシュ再利用を長文脈RAGで実用化するため、意味的分割データセットと軽量セグメンターおよびブロック蒸留を提案し、ほぼ全注意並み性能でブロック注意展開を可能にする技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Shards Fly: Cross-Tensor In-Flight Conversion for Low-Latency, Low-Memory Weight Updates in Disaggregated RL",
+      "source_url": "https://arxiv.org/abs/2611.00646",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregated LLM reinforcement learning (RL) repeatedly synchronizes policy weights between training and rollout GPU pools. Existing systems reduce communication through shard delivery and replica forwarding, yet separate conversion passes and staging buffers still add latency and GPU-memory overheads to synchronous updates. We present ShardFly, which coordinates reusable transfer planning with streaming GPU execution for synchronous, in-place weight updates. ShardFly introduces two components. The Planner compiles native shard mappings, quantization dependencies, and replica routes into cross-tensor schedules, reserving payload buffers only for scheduled transfers. The Executor runs each rank's schedule in one persistent transfer kernel, fusing memory-layout conversion, quantization, GPU-initiated communication, and destination writes while forwarding transformed bytes across replicas. Plans and communication state are reused under stable configurations and replaced between updates for coordinated rollout scaling. On up to 32 H20 GPUs, ShardFly achieves complete BF16 weight-update speedups of 1.26--27.92$\\times$ across five models and four baselines: veRL NCCL, Awex, veRL NIXL, and WeightBridge. In end-to-end Qwen3-30B-A3B GRPO across four rollout configurations, ShardFly improves response-token throughput by 5.49--6.71\\% over veRL NCCL.",
+      "identifiers": [
+        "SemanticScholar:ae958e7f8136cc70d601692601658adaee304902"
+      ],
+      "semantic_scholar_id": "ae958e7f8136cc70d601692601658adaee304902",
+      "canonical_id": "arXiv:2611.00646",
+      "arxiv_id": "2611.00646",
+      "authors": [
+        "Jia-Yu Xiao",
+        "Ye Wang",
+        "Zhi Zhang",
+        "Jia-Rui Guo",
+        "Kan Liu",
+        "Tao Lan",
+        "Min-Chen Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分離型LLM強化学習で訓練プールとロールアウトプール間の重み同期を、変換と量子化と通信を融合した単一カーネルで実行し低遅延かつ低メモリに更新する分散推論連携システムである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e7b7bf42ec69",
+    "round": "libimp-e7b7bf42ec690acd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e7b7bf42ec690acd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e7b7bf42ec690acd-pre01.json",
+    "receipt": "sha256:5f226f3a02181e5fef490edca807ef19790eca9c74120311ec911678edd7e899"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e7b7bf42ec69",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

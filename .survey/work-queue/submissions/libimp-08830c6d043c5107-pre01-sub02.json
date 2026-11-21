@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Layer Pruning With Consensus: A Triple-Win Solution",
+      "source_url": "https://arxiv.org/abs/2411.14345",
+      "year": 2024,
+      "published": "2024-11-21",
+      "venue": "IEEE Access",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer pruning offers a promising alternative to standard structured pruning, effectively reducing computational costs, latency, and memory footprint. While notable layer-pruning approaches aim to detect unimportant layers for removal, they often rely on single criteria that may not fully capture the complex, underlying properties of layers. We propose a novel approach that combines multiple similarity metrics for neural network internal representation. Our criterion, called Consensus, leverages shape and stochastic metrics, such as adaptations of the Bures and Procrustes distances, to create a single expressive measure of low-importance layers. Our technique delivers a triple-win solution: low accuracy drop, high performance improvement, and increased robustness to adversarial attacks. With up to 78.80% Floating-Point Operations (FLOPs) reduction and performance on par with state-of-the-art methods across different benchmarks, our approach reduces energy consumption and carbon emissions by up to 66.99% and 68.75%, respectively. Additionally, it avoids shortcut learning and improves robustness by up to 4 percentage points under various adversarial attacks. Overall, the Consensus criterion demonstrates its effectiveness in creating robust, efficient, and environmentally friendly pruned models.",
+      "identifiers": [
+        "SemanticScholar:59679d6f4c866a04e3d4d95e097133be9f306ac9"
+      ],
+      "semantic_scholar_id": "59679d6f4c866a04e3d4d95e097133be9f306ac9",
+      "canonical_id": "arXiv:2411.14345",
+      "arxiv_id": "2411.14345",
+      "doi": "10.1109/ACCESS.2025.3601042",
+      "authors": [
+        "Leandro Giusti Mugnaini",
+        "C. T. Duarte",
+        "Anna Helena Reali Costa",
+        "Artur Jordão"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 730,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数類似度を統合したConsensus基準で不要層を除去しFLOPsを最大78.8%削減する層剪定は、遅延とメモリ削減を狙う推論向け構造圧縮として直接的に有効である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DOTResize: Reducing LLM Width via Discrete Optimal Transport-based Neuron Merging",
+      "source_url": "https://arxiv.org/abs/2507.04517",
+      "year": 2025,
+      "published": "2025-07-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning methods designed for Large Language Models (LLMs) generally focus on identifying and removing the least important components to optimize model size. However, in this work, we question this prevalent approach by instead exploring how to recombine information from structures designated for pruning back into the reduced model. We specifically focus on neuron width reduction, and frame this problem as a Discrete Optimal Transport problem, and propose DOTResize, a novel Transformer compression method that uses optimal transport theory to transform and compress model width. To ensure applicability within the Transformer architecture, we motivate and incorporate necessary entropic regularization and matrix factorization techniques into the transportation maps produced by our method. Unlike pruning-based approaches which discard neurons based on importance measures, DOTResize re-projects the entire neuron width, allowing the retention and redistribution of useful signal across the reduced layer. Empirical results show that compared to simple or state-of-the-art neuron width-pruning techniques, DOTResize serves as a useful add-on to pruning, while achieving measurable reductions in real-world computational cost.",
+      "identifiers": [
+        "SemanticScholar:d90b16dbcb230bd66a69fe6fbd8b100a303c7025"
+      ],
+      "semantic_scholar_id": "d90b16dbcb230bd66a69fe6fbd8b100a303c7025",
+      "canonical_id": "arXiv:2507.04517",
+      "arxiv_id": "2507.04517",
+      "doi": "10.48550/arXiv.2507.04517",
+      "authors": [
+        "Neha Verma",
+        "Kenton Murray",
+        "Kevin Duh"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      },
+      "reason": "離散最適輸送で剪定対象ニューロンの信号を再投影しLLMの幅を縮小するDOTResizeは、実計算コスト削減を伴うTransformer圧縮手法であり推論向けモデル圧縮に直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FAR: Function-preserving Attention Replacement for IMC-friendly Inference",
+      "source_url": "https://arxiv.org/abs/2505.21535",
+      "year": 2025,
+      "published": "2025-05-24",
+      "venue": "ACM Great Lakes Symposium on VLSI",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While transformers dominate modern vision and language models, their attention mechanism remains poorly suited for in-memory computing (IMC) devices due to intensive activation-to-activation multiplications and non-local memory access, leading to substantial latency and bandwidth overhead on ReRAM-based accelerators. To address this mismatch, we propose FAR, a Function-preserving Attention Replacement framework that substitutes all attention in pretrained DeiTs with sequential modules inherently compatible with IMC dataflows. Specifically, FAR replaces self-attention with a multi-head bidirectional LSTM architecture via block-wise distillation to retain functional equivalence while enabling linear-time computation and localized weight reuse. We further incorporate structured pruning on FAR models, enabling flexible adaptation to resource-constrained IMC arrays while maintaining functional fidelity. Evaluations on the DeiT family demonstrate that FAR maintains comparable accuracy to the original attention-based models on ImageNet and multiple downstream tasks with reduced parameters and latency. Further analysis shows that FAR preserves the semantic token relationships learned by attention while improving computational efficiency, highlighting its potential for energy-efficient transformer inference on IMC-based edge accelerators.",
+      "identifiers": [
+        "SemanticScholar:5bbe977fd40c05116ab74d22e80af42588b09c58"
+      ],
+      "semantic_scholar_id": "5bbe977fd40c05116ab74d22e80af42588b09c58",
+      "canonical_id": "arXiv:2505.21535",
+      "arxiv_id": "2505.21535",
+      "doi": "10.1145/3787109.3816372",
+      "authors": [
+        "Yu-Xin Ren",
+        "Maxwell D. Collins",
+        "Miao Hu",
+        "Huan-Rui Yang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 546,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習済みDeiTの注意を双方向LSTMへ蒸留置換しReRAM型IMCのデータフローに適合させるFARは、エッジ推論の遅延と帯域削減を目的とした推論向け置換手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-08830c6d043c",
+    "round": "libimp-08830c6d043c5107-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-08830c6d043c5107-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-08830c6d043c5107-pre01.json",
+    "receipt": "sha256:461d226d8c599f0ce26e6b2cbcf4b9accc48bb2cb4e352370828408e7b0fd47c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-08830c6d043c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

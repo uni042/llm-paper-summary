@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ParaTempo: Efficient Parallel Reasoning via Temporal Confidence",
+      "source_url": "https://arxiv.org/abs/2608.16425",
+      "year": 2026,
+      "published": "2026-08-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel reasoning improves the accuracy and robustness of large reasoning models by exploring multiple solution paths, but its computational cost grows with reasoning depth and branch count. Existing methods for managing these parallel paths typically rely on final-answer consensus, local token confidence, or isolated intermediate probes. However, these signals are often delayed, weakly tied to actual reasoning progress, or too noisy for dynamic, branch-level control. To address these limitations, we introduce ParaTempo, a training-free asynchronous parallel reasoning framework. ParaTempo is driven by temporal confidence, a branch-local measure of answer-space convergence. Each branch is periodically probed for a tentative answer probability distribution, and temporal confidence quantifies how sharply the recent intermediate probes concentrate on a dominant answer. Once sufficient evidence has accumulated, ParaTempo drives its entire control process from this single signal: low-confidence branches are pruned, branches that persistently commit to their dominant answer are retired early, freed computation is reallocated by forking new branches, and generation stops globally once the confidence-weighted vote concentrates. Without requiring synchronization among reasoning trajectories, ParaTempo adaptively allocates computation based on branch-level convergence. Experiments on challenging mathematical and scientific reasoning benchmarks show that ParaTempo reduces average latency by 21.8-32.2% and total token usage by 18.1-30.3% while maintaining competitive accuracy. Moreover, temporal confidence exhibits stronger temporal stability and predictive power for future branch convergence than token-level and instantaneous signals.",
+      "identifiers": [
+        "SemanticScholar:dbe59f7f2a6ab92306200895f07b49711b516855"
+      ],
+      "semantic_scholar_id": "dbe59f7f2a6ab92306200895f07b49711b516855",
+      "canonical_id": "arXiv:2608.16425",
+      "arxiv_id": "2608.16425",
+      "doi": "10.48550/arXiv.2608.16425",
+      "authors": [
+        "Xuteng Zhang",
+        "Wen-Hao Zeng",
+        "Xiao-Dong Gu",
+        "Chao Hu",
+        "Hao-Tian Lin",
+        "Yu-Ling Shi",
+        "Min Wang",
+        "Bei-Jun Shen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 96,
+        "matched_prestigious_venue": null
+      },
+      "reason": "時間的信頼度で並列推論枝を剪定・早期終了・再割当するParaTempoは、非同期並列推論の計算配分を制御し遅延を21から32%とトークンを18から30%削減する手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Forget the Data and Fine-Tuning! Just Fold the Network to Compress",
+      "source_url": "https://arxiv.org/abs/2502.10216",
+      "year": 2025,
+      "published": "2025-02-14",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce model folding, a novel data-free model compression technique that merges structurally similar neurons across layers, significantly reducing the model size without the need for fine-tuning or access to training data. Unlike existing methods, model folding preserves data statistics during compression by leveraging k-means clustering, and using novel data-free techniques to prevent variance collapse or explosion. Our theoretical framework and experiments across standard benchmarks, including ResNet18 and LLaMA-7B, demonstrate that model folding achieves comparable performance to data-driven compression techniques and outperforms recently proposed data-free methods, especially at high sparsity levels. This approach is particularly effective for compressing large-scale models, making it suitable for deployment in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:b70694bedd9961df57be1cd6bb898b3546e98cc6"
+      ],
+      "semantic_scholar_id": "b70694bedd9961df57be1cd6bb898b3546e98cc6",
+      "canonical_id": "arXiv:2502.10216",
+      "arxiv_id": "2502.10216",
+      "doi": "10.48550/arXiv.2502.10216",
+      "authors": [
+        "Dong Wang",
+        "Haris Šikić",
+        "L. Thiele",
+        "O. Saukh"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 645,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "構造的に似たニューロンを層を跨いで統合しデータも微調整もなしにモデルを小さくするモデルフォールディングは、資源制約下配置に適したLLM圧縮として推論効率へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Flash Inference: Near Linear Time Inference for Long Convolution Sequence Models and Beyond",
+      "source_url": "https://arxiv.org/abs/2410.12982",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While transformers have been at the core of most recent advancements in sequence generative models, their computational cost remains quadratic in sequence length. Several subquadratic architectures have been proposed to address this computational issue. Some of them, including long convolution sequence models (LCSMs), such as Hyena, address this issue at training time but remain quadratic during inference. We propose a method for speeding up LCSMs'exact inference to quasilinear $O(L\\log^2L)$ time, identify the key properties that make this possible, and propose a general framework that exploits these. Our approach, inspired by previous work on relaxed polynomial interpolation, is based on a tiling which helps decrease memory movement and share computation. It has the added benefit of allowing for almost complete parallelization across layers of the position-mixing part of the architecture. Empirically, we provide a proof of concept implementation for Hyena, which gets up to $7.8\\times$ end-to-end improvement over standard inference by improving $110\\times$ within the position-mixing part.",
+      "identifiers": [
+        "SemanticScholar:7e4c11952126ac9047d471c52c7880ccd2ebdfa6"
+      ],
+      "semantic_scholar_id": "7e4c11952126ac9047d471c52c7880ccd2ebdfa6",
+      "canonical_id": "arXiv:2410.12982",
+      "arxiv_id": "2410.12982",
+      "doi": "10.48550/arXiv.2410.12982",
+      "authors": [
+        "Costin-Andrei Oncescu",
+        "Sanket Purandare",
+        "Stratos Idreos",
+        "S. Kakade"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 766,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "長畳み込み系列モデルの推論を準線形時間化しタイル化でメモリ移動と並列化を改善するFlash Inferenceは、Hyenaで7.8倍の高速化を示す推論カーネル・アルゴリズムである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RedKnot-MLA: Multi-Head Offline-Online Reuse for DeepSeek-V4 Long-Context Serving",
+      "source_url": "https://arxiv.org/abs/2609.07008",
+      "year": 2026,
+      "published": "2026-09-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-head latent attention (MLA) exposes many logical query heads through one packed latent KV stream. This representation is memory efficient, but it removes the physical per-head cache boundary assumed by conventional head-wise reuse. We present our system, a DeepSeek-V4 realization of RedKnot's head-aware reuse principle. Each immutable document is processed offline at canonical position zero; certified Local-head contributions are retained as MLA-Off. At serving time, query-side RoPE relocation restores the document's request position, a small Global-head set and protected Local token rows are recomputed as MLA-Online, and the two paths are merged before a single shared output projection. The packed MLA latent is never split. DeepSeek-V4-Flash uses 37 reusable layers and a 56/8 Local/Global partition, giving a 75.29% analytic logical head-row ceiling; the Pro-0813 profile uses 55 layers and 112/16 heads, giving 78.89%. Frozen Flash operating points show hot-artifact TTFT speedups of 2.02-3.84x. At 256K, the archived three-dataset study reports an aggregate F1 change of +3.24 percentage points, an EM change of +4.16 points, and a 78.7-79.5% analytic major-operator arithmetic saving, while one dataset decreases by 2.81 F1 points. A separate author-reported 256K hot-artifact QPS measurement is approximately 2.0x; because its raw concurrency trace is not included in this bundle, we mark it as preliminary rather than archived evidence. We describe the factorization, position repair, token-row closure, sparse-MoE support, TP8 integration, and the measurement boundaries needed to interpret these results.",
+      "identifiers": [
+        "SemanticScholar:d569fa6a6f9d2dce96be043da5efca5761b78c75"
+      ],
+      "semantic_scholar_id": "d569fa6a6f9d2dce96be043da5efca5761b78c75",
+      "canonical_id": "arXiv:2609.07008",
+      "arxiv_id": "2609.07008",
+      "doi": "10.48550/arXiv.2609.07008",
+      "authors": [
+        "Yang Liu",
+        "Zhao-Kai Luo",
+        "Hua-Yi Jin",
+        "Ruo-Zhou He",
+        "Chen-Chen Hong",
+        "Ming-Xiao Ma",
+        "Biao Zhang",
+        "Zhi-Yong Wang",
+        "Bo-Yu Wang",
+        "Guan-Jie Chen",
+        "Yi-Fei Liu",
+        "Tao Xie",
+        "Jun-Hao Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLAの潜在KVを分割せずオフライン再利用とオンライン再計算を統合し長文脈サービングでTTFTを2から3.84倍高速化するRedKnot-MLAは、KV再利用によるサービング最適化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs",
+      "source_url": "https://arxiv.org/abs/2610.03296",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Complex reasoning queries can be decomposed into directed acyclic task graphs and distributed across heterogeneous LLMs, reducing latency through parallelism and enabling smaller models to solve complex tasks. In practice, however, the suitability of an LLM for a given subtask may be a priori unknown, and execution alone does not reveal output correctness. We propose JOVE, an online framework that jointly assigns executor LLMs and selects intermediate outputs for paid verification. Verification runs asynchronously and is used to improve future allocations, so the system must balance spending on execution now against learning for later. We study how to optimize this trade-off under a long-term budget and a per-query latency constraint, with stochastic, initially unknown LLM service quality, invocation costs, and execution times. JOVE makes execution and verification decisions by solving a sequence of per-query mixed-integer linear programs. Online learning updates task-dependent estimates of LLM quality based on verification feedback, while an information-gain bonus incorporates the value of learning into allocation decisions. Under a natural set of assumptions, we establish sublinear quality-learning regret for JOVE. Across four reasoning benchmarks, JOVE achieves competitive accuracy against standard inference baselines while reducing average cost and latency by at least 3.17 times.",
+      "identifiers": [
+        "SemanticScholar:1ac84e41378cd621cf913bea1f93a9d5c4d63bc3"
+      ],
+      "semantic_scholar_id": "1ac84e41378cd621cf913bea1f93a9d5c4d63bc3",
+      "canonical_id": "arXiv:2610.03296",
+      "arxiv_id": "2610.03296",
+      "authors": [
+        "Hao-Ran Zhang",
+        "Dongjun Kim",
+        "Seohyeon Cha",
+        "Kevin S. Chan",
+        "A. Swami",
+        "G. de Veciana",
+        "H. Vikalo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複雑な推論クエリをDAGに分解し異種LLMへ実行と検証を予算と遅延制約下でオンライン割当するJOVEは、コストと遅延を3倍以上削減する分散推論スケジューリングそのものである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-08830c6d043c",
+    "round": "libimp-08830c6d043c5107-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-08830c6d043c5107-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-08830c6d043c5107-pre01.json",
+    "receipt": "sha256:461d226d8c599f0ce26e6b2cbcf4b9accc48bb2cb4e352370828408e7b0fd47c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-08830c6d043c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

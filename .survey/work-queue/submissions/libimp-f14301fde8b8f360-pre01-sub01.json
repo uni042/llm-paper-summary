@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Detection-Extraction Gap: Models Know the Answer Before They Can Say It",
+      "source_url": "https://arxiv.org/abs/2604.06613",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern reasoning models continue generating long after the answer is already determined. Across five model configurations, two families, and three benchmarks, we find that 52--88% of chain-of-thought tokens are produced after the answer is recoverable from a partial prefix. This post-commitment generation reveals a structural phenomenon: the detection-extraction gap. Free continuations from early prefixes recover the correct answer even at 10% of the trace, while forced extraction fails on 42% of these cases. The answer is recoverable from the model state, yet prompt-conditioned decoding fails to extract it. We formalize this mismatch via a total-variation bound between free and forced continuation distributions, yielding quantitative estimates of suffix-induced shift. Exploiting this asymmetry, we propose Black-box Adaptive Early Exit (BAEE), which uses free continuations for both detection and extraction, truncating 70--78% of serial generation while improving accuracy by 1--5pp across all models. For thinking-mode models, early exit prevents post-commitment overwriting, yielding gains of up to 5.8pp; a cost-optimized variant achieves 68--73% reduction at a median of 9 API calls. Code is available at https://github.com/EdWangLoDaSc/know2say.",
+      "identifiers": [
+        "SemanticScholar:c06bf2530bc6853e0a0b1904615b95cb5215b804"
+      ],
+      "semantic_scholar_id": "c06bf2530bc6853e0a0b1904615b95cb5215b804",
+      "canonical_id": "arXiv:2604.06613",
+      "arxiv_id": "2604.06613",
+      "doi": "10.48550/arXiv.2604.06613",
+      "authors": [
+        "Han Wang",
+        "Ming-Xuan Zhu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論モデルが答え確定後も生成を続ける検出・抽出ギャップを定量化し、自由継続を用いるBlack-box Adaptive Early Exitで直列生成の70〜78%を打ち切り精度も改善しており、デコード早期終了という推論高速化への直接貢献が具体的であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BitDecoding-FP4: Native FP4 KV Cache Decoding via Algorithm-System Co-Design",
+      "source_url": "https://arxiv.org/abs/2611.09825",
+      "year": 2026,
+      "published": "2026-11-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache dominates memory capacity and bandwidth in long-context LLM serving. While 4-bit microscaling formats (NVFP4, MXFP4) shrink the cache and run attention on FP4 Tensor Cores, a fundamental gap remains between algorithmic quantization and system-aware acceleration: existing FP4 KV systems use vanilla quantization that causes severe accuracy drops, whereas accuracy-oriented 4-bit algorithms rely on vector codebooks whose lookup overhead degrades decoding throughput. We present BitDecoding-FP4, an algorithm--system co-design for accurate and efficient native FP4 KV decoding. We mitigate three error sources: Dual-Residual Query Quantization splits queries into two FP4 tensors, cutting query logit error from 60% to 1%; Underflow-Aware Probability Scaling prevents E4M3 scales from rounding long-context probabilities to zero; and Outlier-Aware Key Quantization combines static smoothing, Hadamard rotation, and scale search to suppress key outliers under token-wise scaling. At the system level, we remove the softmax bottleneck via transposed softmax with fused probability quantization and stacked query MMA on paged KV caches. Across dense and MoE models with GQA and MLA, BitDecoding-FP4 stays within 0.5 points of BF16 KV accuracy with NVFP4 (1 point with MXFP4), and tracks BF16 KV in RL training rollouts. In end-to-end serving on NVIDIA B300 with Qwen3-4B and Qwen3-30B-A3B, it delivers 2.4-3.0$\\times$ higher peak serving throughput than BF16 KV. The implementation is available at https://github.com/OpenBitSys/BitDecoding-FP4.",
+      "identifiers": [
+        "SemanticScholar:c190c5ccedb68b93d8f4fbb798cedce38f6ac2e0"
+      ],
+      "semantic_scholar_id": "c190c5ccedb68b93d8f4fbb798cedce38f6ac2e0",
+      "canonical_id": "arXiv:2611.09825",
+      "arxiv_id": "2611.09825",
+      "authors": [
+        "Da-You Du",
+        "Wo-On-Yee Ng",
+        "Guang-Ming Sheng",
+        "Nick Lau",
+        "Jian-Yi Cheng",
+        "Luo Mai"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NVFP4等の4ビット形式でKVキャッシュをネイティブにデコードするBitDecoding-FP4をアルゴリズムとシステムの協調設計で実現し、B300上でBF16比2.4〜3.0倍のサービングスループットを示しておりKVキャッシュ量子化への直接貢献が具体的であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Matrix Implementation for Rotary Position Embedding",
+      "source_url": "https://arxiv.org/abs/2604.09742",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rotary Position Embedding (RoPE) has become a core component of modern Transformer architectures across language, vision, and 3D domains. However, existing implementations rely on vector-level split and merge operations that introduce non-negligible computational overhead, often overlooked in attention optimization. The problem is further amplified in multi-dimensional settings (e.g., 2D and 3D RoPE), where additional vector operations and uneven feature partitions degrade hardware utilization. To overcome these limitations, we propose RoME (Rotary Matrix position Embedding), a mathematically equivalent yet computationally efficient reformulation of RoPE that replaces vector operations with unified matrix transformations. RoME eliminates dimension-specific operations, simplifies implementation, and enables fused parallel execution across Cube and Vector units on modern NPUs. Experiments show that RoME delivers substantial acceleration at both the operator and full-model levels. The implementation is available at https://gitcode.com/cann/ops-transformer/blob/master/experimental/posembedding/rope_matrix/README.md.",
+      "identifiers": [
+        "SemanticScholar:8dbadf570d1e1d602a762ffbc9c2dfa7a49f2599"
+      ],
+      "semantic_scholar_id": "8dbadf570d1e1d602a762ffbc9c2dfa7a49f2599",
+      "canonical_id": "arXiv:2604.09742",
+      "arxiv_id": "2604.09742",
+      "doi": "10.48550/arXiv.2604.09742",
+      "authors": [
+        "Min-Qi Chen",
+        "Zhongqi Yue",
+        "Shi-Hao Zhang",
+        "Yun Xu",
+        "Pengwei Wu",
+        "Kai Xu",
+        "Ze-Yi Huang",
+        "Hanwang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 225,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RoPEのベクトル分割・結合演算を行列変換へ置換するRoMEを提案し、NPUのCube/Vectorユニットで融合並列実行して演算子レベルとモデル全体の双方で高速化を示しており、注意機構まわりのカーネル最適化への直接貢献が具体的であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.17627",
+      "year": 2026,
+      "published": "2026-04-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models under latency service-level objectives (SLOs) is a configuration-heavy systems problem with an unusually failure-prone search space: many plausible configurations crash outright or miss user-visible latency targets, and standard black-box optimizers treat these failures as wasted trials. We present SLO-Guard, a crash-aware autotuner for vLLM serving that treats crashes as first-class observations. SLO-Guard combines a feasible-first Thermal Budget Annealing (TBA) exploration phase with a warm-started Tree-structured Parzen Estimator (TPE) exploitation phase; the handoff replays all exploration history, including crashes encoded as extreme constraint violations. We additionally contribute a configuration-repair pass, a GPU-aware KV-cache memory guard, and a four-category crash taxonomy. We evaluate SLO-Guard on Qwen2-1.5B served with vLLM 0.19 on an NVIDIA A100 40GB. Across a pre-specified five-seed study, both SLO-Guard and uniform random search attain 75/75 feasibility with zero crashes under the corrected concurrent harness, and are statistically tied on best-achieved latency (Mann-Whitney two-sided p=0.84). SLO-Guard's advantage is in budget consistency: more trials in the fast-serving regime (10.20 vs. 7.40 out of 15; one-sided p=0.014) and higher post-handoff consistency (0.876 vs. 0.539; p=0.010). Under concurrent load, SLO-Guard's cross-seed standard deviation on best latency is 4.4x tighter than random search's (2.26 ms vs. 10.00 ms). A harness-replication analysis shows that the consistency findings survive an independent sequential-dispatch measurement condition. The central claim is not that SLO-Guard finds a better final configuration, but that it spends a fixed tuning budget more predictably once the fast regime has been found.",
+      "identifiers": [
+        "SemanticScholar:e6fb269c5e3a37bbd3cdd1cbabd9a62169914d17"
+      ],
+      "semantic_scholar_id": "e6fb269c5e3a37bbd3cdd1cbabd9a62169914d17",
+      "canonical_id": "arXiv:2604.17627",
+      "arxiv_id": "2604.17627",
+      "doi": "10.48550/arXiv.2604.17627",
+      "authors": [
+        "Christian Lysenstøen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      },
+      "reason": "vLLMサービングの設定探索でクラッシュを一級の観測として扱うSLO-Guardを提案し、KVキャッシュメモリガードや設定修復を含めてSLO制約下の自動チューニングの予算一貫性を改善しており、LLMサービング運用への直接貢献であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CacheRouter: A Dual-Path Tool Routing Architecture with Cache-Preserving Main-Model Isolation for Long-Tail Tool Discovery",
+      "source_url": "https://arxiv.org/abs/2608.22708",
+      "year": 2026,
+      "published": "2026-08-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tool use in LLM systems faces a structural trade-off. Progressive disclosure keeps the prompt small by showing only the tools relevant to the current task, while prompt caching rewards a request prefix that stays fixed across calls; every change to the visible tool list invalidates the cached prefix. This paper treats the trade-off as a problem of request architecture and proposes a dual-path routing design that assigns tool selection and tool delivery to separate channels. The main model always sees a small, fixed set of core tools, so the head of its request is unchanged across calls; all other tools are reached through an independent routing channel, in which a router sub-model searches the full tool list, selects one tool, executes it, and returns the result. Tool registration is automated from source code and supports runtime updates, so the tool set can grow without modifying the main model's request prefix. The design generalizes progressive disclosure: capabilities are disclosed through the routing channel, and the main model's prefix stays stable. A prototype implementation was exercised on 55 functional queries and a 30-turn dialogue; token-level cache hit rates reached 90.99% and 95.2%, cutting input cost to about 12.0% and 8.0% of a no-cache baseline under DeepSeek's pricing, where cache-hit input tokens cost roughly 1/30 of cache-miss tokens.",
+      "identifiers": [
+        "SemanticScholar:9f1ab91046129d5499dcebb379c3221e20f2dc9c"
+      ],
+      "semantic_scholar_id": "9f1ab91046129d5499dcebb379c3221e20f2dc9c",
+      "canonical_id": "arXiv:2608.22708",
+      "arxiv_id": "2608.22708",
+      "doi": "10.48550/arXiv.2608.22708",
+      "authors": [
+        "Dong-Hui Zha",
+        "Ling-Wei Xu",
+        "Lin-Xiao Wu",
+        "Yixue Dong",
+        "H. Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 89,
+        "matched_prestigious_venue": null
+      },
+      "reason": "主モデルの接頭辞を固定してプロンプトキャッシュを保持しつつ別経路でツールを探索するCacheRouterを実装し、キャッシュヒット率90%以上と入力コスト大幅削減を示しており、プレフィックスキャッシュを活かすサービング設計への直接貢献であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f14301fde8b8",
+    "round": "libimp-f14301fde8b8f360-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f14301fde8b8f360-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f14301fde8b8f360-pre01.json",
+    "receipt": "sha256:676fbff6a99913c5fede5261209fc4d69810f41c5a43edbd78aa5a1c50234f99"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f14301fde8b8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

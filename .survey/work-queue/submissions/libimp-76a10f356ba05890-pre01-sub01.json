@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search",
+      "source_url": "https://arxiv.org/abs/2311.15269",
+      "year": 2023,
+      "published": "2023-11-26",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Increasingly complex and diverse deep neural network (DNN) models necessitate distributing the execution across multiple devices for training and inference tasks, and also require carefully planned schedules for performance. However, existing practices often rely on predefined schedules that may not fully exploit the benefits of emerging diverse model-aware operator placement strategies. Handcrafting high-efficiency schedules can be challenging due to the large and varying schedule space. This paper presents Tessel, an automated system that searches for efficient schedules for distributed DNN training and inference for diverse operator placement strategies. To reduce search costs, Tessel leverages the insight that the most efficient schedules often exhibit repetitive pattern (repetend) across different data inputs. This leads to a two-phase approach: repetend construction and schedule completion. By exploring schedules for various operator placement strategies, Tessel significantly improves both training and inference performance. Experiments with representative DNN models demonstrate that Tessel achieves up to 5.5 x training performance speedup and up to 38 % inference latency reduction.",
+      "identifiers": [
+        "SemanticScholar:8820369cbf53c520924eb84f27f21fb646eb9937"
+      ],
+      "semantic_scholar_id": "8820369cbf53c520924eb84f27f21fb646eb9937",
+      "canonical_id": "arXiv:2311.15269",
+      "arxiv_id": "2311.15269",
+      "doi": "10.1109/HPCA57654.2024.00067",
+      "authors": [
+        "Zhiqi Lin",
+        "You-Shan Miao",
+        "Guanbin Xu",
+        "Cheng Li",
+        "Olli Saarikivi",
+        "Saeed Maleki",
+        "Fan Yang"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1091,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "分散DNN実行のスケジュールをrepetend探索で自動最適化するTesselを提案し、推論遅延を最大38%削減するなど分散推論のスケジューリングへ直接貢献するため対象である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CausalPrune: Counterfactual Causal Token Pruning for Efficient Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2611.00058",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved remarkable progress in multimodal understanding, but their practical deployment is still limited by the substantial computation introduced by excessive visual tokens. Visual token pruning offers an effective solution by removing redundant visual tokens during inference. However, existing methods typically estimate token importance from correlational statistics, which cannot distinguish tokens that causally determine the model output from those spuriously associated with it. To address this issue, we propose \\textbf{CausalPrune}, a counterfactual causal token pruning framework for efficient LVLMs. We formulate LVLM inference as a Structural Causal Model and introduce the Causal Token Importance Score (CTIS), which estimates the Average Treatment Effect of intervening on each visual token. To make causal estimation practical, we derive an efficient first-order approximation of CTIS and incorporate backdoor adjustment to mitigate latent cross-modal confounding. Within this causal formulation, layer-wise causal mediation decomposes token importance into direct and indirect effects through intermediate hidden states, enabling progressive pruning across transformer layers in a principled manner. Extensive experiments on various LVLM architectures, such as LLaVA-1.5 and Qwen2.5-VL, demonstrate that CausalPrune maintains comparable or even superior multimodal performance while achieving substantial reductions in FLOPs and prefill latency, consistently outperforming existing pruning methods.",
+      "identifiers": [
+        "SemanticScholar:701fc775299f371ede0e6b8b0d3d63f330120172"
+      ],
+      "semantic_scholar_id": "701fc775299f371ede0e6b8b0d3d63f330120172",
+      "canonical_id": "arXiv:2611.00058",
+      "arxiv_id": "2611.00058",
+      "authors": [
+        "Peng-Cheng Zheng",
+        "Chao-Ning Zhang",
+        "Ya Wen",
+        "Jia-Xin Huang",
+        "Jia-Quan Zhang",
+        "Cai-Yan Qin",
+        "Kui-En Liu",
+        "Sheng Zheng",
+        "P. Lio'",
+        "Yang Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LVLM推論時の視覚トークン冗長性を因果的トークン重要度CTISと反事実推定で剪定し、FLOPsとprefill遅延を直接削減する推論効率化手法であるため対象に合致する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Smart Bird: Learnable Sparse Attention for Efficient and Effective Transformer",
+      "source_url": "https://arxiv.org/abs/2108.09193",
+      "year": 2021,
+      "published": "2021-08-20",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has achieved great success in NLP. However, the quadratic complexity of the self-attention mechanism in Transformer makes it inefficient in handling long sequences. Many existing works explore to accelerate Transformers by computing sparse self-attention instead of a dense one, which usually attends to tokens at certain positions or randomly selected tokens. However, manually selected or random tokens may be uninformative for context modeling. In this paper, we propose Smart Bird, which is an efficient and effective Transformer with learnable sparse attention. In Smart Bird, we first compute a sketched attention matrix with a single-head low-dimensional Transformer, which aims to find potential important interactions between tokens. We then sample token pairs based on their probability scores derived from the sketched attention matrix to generate different sparse attention index matrices for different attention heads. Finally, we select token embeddings according to the index matrices to form the input of sparse attention networks. Extensive experiments on six benchmark datasets for different tasks validate the efficiency and effectiveness of Smart Bird in text modeling.",
+      "identifiers": [
+        "SemanticScholar:35992a67762af8897ea741b955718ab731004f2d"
+      ],
+      "semantic_scholar_id": "35992a67762af8897ea741b955718ab731004f2d",
+      "canonical_id": "arXiv:2108.09193",
+      "arxiv_id": "2108.09193",
+      "doi": "10.48550/arXiv.2108.09193",
+      "authors": [
+        "Chuhan Wu",
+        "Fang-Zhao Wu",
+        "Tao Qi",
+        "Bin-Xing Jiao",
+        "Da-Xin Jiang",
+        "Yongfeng Huang",
+        "Xing Xie"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1919,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformerの二次複雑度を下げる学習可能なスパース注意Smart Birdを提案し、スケッチ注意で重要ペアを選ぶ機構が注意計算の推論効率へ直接寄与するため対象である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-76a10f356ba0",
+    "round": "libimp-76a10f356ba05890-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-76a10f356ba05890-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-76a10f356ba05890-pre01.json",
+    "receipt": "sha256:6573f0b6b485a17a2f8a0fc2bf60ddbd77a5e147c1b6d04660112d5661f1b4bd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-76a10f356ba0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

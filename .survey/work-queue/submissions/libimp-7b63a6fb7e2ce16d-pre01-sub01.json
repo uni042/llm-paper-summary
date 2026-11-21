@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "C2C-Explorer: An Exploration Framework for Chip-to-Chip Interconnect Architectures in LLM Cloud Computing Systems",
+      "source_url": "https://arxiv.org/abs/2608.08611",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "Design Automation Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scaling-up of large language models (LLMs) necessitates computing systems to have multi-processor-chip architectures, elevating the importance of chip-to-chip (C2C) communication. However, designing efficient C2C hardware architectures for LLM workloads faces three key challenges: generating realistic LLM-specific C2C traffic, accurately simulating hardware-level communication at scale, and efficiently exploring the exponentially large C2C design space. We propose C2C-Explorer, an adaptive Bayesian DSE framework that integrates a LLM-workload-driven traffic generator, a scalable interconnect simulator (switch/full-mesh, up to 512 chips), and a metric-guided evaluator into a workload-to-hardware optimization pipeline, enabling systematic C2C architectural co-design under realistic LLM workloads. Validated against FPGA-based C2C prototypes, the C2C simulator achieves 2.46–8.23% end-to-end timing error across diverse traffic patterns. Its hybrid cycle & event model further accelerates large-scale simulation by up to 7.8× over a pure cycle-accurate baseline. Applied to a 32-XPU DeepSeek-R1-671B inference workload, C2C-Explorer identifies configurations that improve goodput by 44.1% and reduce memory by 98.4%. C2C-Explorer is open-source and available at https://github.com/Selinaee/C2C-Explorer.",
+      "identifiers": [
+        "SemanticScholar:78219cabdc6e869019ffe9be82e331e7d1cd1aaa"
+      ],
+      "semantic_scholar_id": "78219cabdc6e869019ffe9be82e331e7d1cd1aaa",
+      "canonical_id": "arXiv:2608.08611",
+      "arxiv_id": "2608.08611",
+      "doi": "10.1145/3770743.3803909",
+      "authors": [
+        "Jia-Yi Li",
+        "Di Wu",
+        "Qing-Xu Li",
+        "Hong-Xiao Zhao",
+        "Jia-Qi Yang",
+        "Anjunyi Fan",
+        "Wen-Bin Zhang",
+        "Bo-Shiun Wu",
+        "Shu-Ting Liu",
+        "Shi-Feng Fang",
+        "Jian-Bo Dong",
+        "Di-Min Niu",
+        "Bo-Nan Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMクラウド向けチップ間相互接続をトラフィック生成・シミュレーション・ベイズ探索で設計するC2C-Explorerであり、DeepSeek-R1推論ワークロードでgoodput改善を示す直接的なシステム貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dynamic Pyramid Network for Efficient Multimodal Large Language Model",
+      "source_url": "https://arxiv.org/abs/2503.20322",
+      "year": 2025,
+      "published": "2025-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in various vision-language (VL) tasks, but their expensive computations still limit the real-world application. To address this issue, recent efforts aim to compress the visual features to save the computational costs of MLLMs. However, direct visual compression methods, e.g. efficient projectors, inevitably destroy the visual semantics in MLLM, especially in difficult samples. To overcome this shortcoming, we propose a novel dynamic pyramid network (DPN) for efficient MLLMs. Specifically, DPN formulates MLLM as a hierarchical structure where visual features are gradually compressed with increasing depth. In this case, even with a high compression ratio, fine-grained visual information can still be perceived in shallow layers. To maximize the benefit of DPN, we further propose an innovative Dynamic Pooling Experts (DPE) that can dynamically choose the optimal visual compression rate according to input features. With this design, harder samples will be assigned larger computations, thus preserving the model performance. To validate our approach, we conduct extensive experiments on two popular MLLMs and ten benchmarks. Experimental results show that DPN can save up to 56% average FLOPs on LLaVA while further achieving +0.74% performance gains. Besides, the generalization ability of DPN is also validated on the existing high-resolution MLLM called LLaVA-HR. The source code will be released at https://github.com/aihao2000/DPN-LLaVA.",
+      "identifiers": [
+        "SemanticScholar:acece8c987ed4c89a37f86a2a7082c192a6c8a75"
+      ],
+      "semantic_scholar_id": "acece8c987ed4c89a37f86a2a7082c192a6c8a75",
+      "canonical_id": "arXiv:2503.20322",
+      "arxiv_id": "2503.20322",
+      "doi": "10.48550/arXiv.2503.20322",
+      "authors": [
+        "Hao Ai",
+        "Kunyi Wang",
+        "Zezhou Wang",
+        "Hao Lu",
+        "Ji-Chang Tian",
+        "Ya-Xin Luo",
+        "Peng Xing",
+        "Jen-Yuan Huang",
+        "Huaxia Li",
+        "G. Luo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 605,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLLMの視覚特徴を階層的に段階圧縮し入力に応じて圧縮率を選ぶ動的ピラミッド網DPNでLLaVAのFLOPsを56%削減する、マルチモーダルLLM推論効率への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7b63a6fb7e2c",
+    "round": "libimp-7b63a6fb7e2ce16d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7b63a6fb7e2ce16d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7b63a6fb7e2ce16d-pre01.json",
+    "receipt": "sha256:633b076ccefaa78444406db8b00b7701d971aeec901ea6a4757dd3ace85123c8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7b63a6fb7e2c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
