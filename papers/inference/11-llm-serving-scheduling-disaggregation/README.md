@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（590本）
+## 自動生成の論文一覧（591本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -826,6 +826,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   同じ8件の候補でも、1回のバッチ生成と8回の逐次生成では総エネルギーが4.64倍から4.86倍も違うことをA100の実測で示し、候補数だけではテスト時スケーリングの費用を表せないと明らかにした研究。
 
+- **2026-09 · [ROSETTA: Efficient and Accurate Privacy-Preserving LLM Decoding via Hybrid CKKS/TFHE Evaluation](2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybri.md)**  
+  実装：[✓](https://anonymous.4open.science/r/ROSETTA_artifact-B77F/) ・ リポジトリ内被引用：0  
+  秘匿LLMデコードの非線形演算を、分割ルックアップテーブルによる高精度なTFHE評価と、レベル配分と一体で解く方式選択で処理するハイブリッドCKKS・TFHE方式の研究。
+
 - **2026-09 · [REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](2026-2609.11209-reva-reusable-evidence-view-rag-serving.md)**  
   実装：[✓](https://github.com/UIUC-MLSys/REVA) ・ リポジトリ内被引用：0  
   過去のRAG要求で対象LLMが文書のどこへ注意したかを文書単位で蓄積し、次回は保存済み重要度から普通のテキスト証拠を数十msで再構成して要求ごとの重い圧縮を避ける。
@@ -1440,6 +1444,10 @@
   実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：23  
   本論文は大規模マルチモーダルモデル（Large Multimodal モデル、LMM）の推論を、マルチモーダル符号化（Encode、E）、事前入力処理（プリフィル、P）、逐次復号（デコード、D）の三段階に分離するEPD分離（EPD Disaggregation）を提案する。
 
+- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：23  
+  複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
+
 - **2025-04 · [Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints](2025-2504.11320-fluid-guided-online-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
   流体平衡からデコード進捗区間ごとのGPU常駐構成を見積もり、WAIT/Nested WAITで制御する。未知の出力長は予測せず、生成を継続する残存要求を段階分類してKV追い出し連鎖を抑えるスケジューラ。
@@ -1447,10 +1455,6 @@
 - **2025-01 · [DeepServe: Serverless Large Language Model Serving at Scale](2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
   要求・ジョブ・タスク抽象、NPU中心FlowServe、KV局所性とPD構成を統合した分散スケジューラ、NPU-fork等の高速スケールを組み合わせたHuawei Cloud本番サーバーレスLLM基盤。
-
-- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：22  
-  複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
 
 - **2025-02 · [ModServe: Modality- and Stage-Aware Resource Disaggregation for Scalable Multimodal Model Serving](2025-2502.00937-modserve.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
@@ -1884,6 +1888,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   さらに高負荷でも同じ類似度しきい値を維持すると、モデル本体へ送られる要求が多すぎて遅延目標を守れない場合がある。SISO（Similar Input? Similar Output!）は、意味クラスタの重心をキャッシュする方式、意味的な局所性に基づく置換、要求負荷に応じた検索しきい値の動的制御を組み合わせる。
 
+- **2025-08 · [Pruning Long Chain-of-Thought of Large Reasoning Models via Small-Scale Preference Optimization](2025-2508.10164-pruning-long-chain-of-thought-of-large-reasoning-models-via-small-scale-.md)**  
+  実装：[✓](https://github.com/SleepyWithoutCoffee/Small_Scale) ・ リポジトリ内被引用：1  
+  大規模推論モデル（LRM）は、複雑な数学問題や知識問題に答えるために長いChain-of-Thought（CoT）を生成する。大規模なオンライン強化学習で長さ報酬を最適化する方式は、学習用の大量生成と複雑な実行基盤を要する。
+
 - **2025-07 · [Toppings: CPU-Assisted, Rank-Aware Adapter Serving for LLM Inference](2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   アダプタ読み込みの裏でCPUに適応計算を先行させて読み込み待ちを隠し、ランクからデコード遅延を予測する性能モデルで要求の配置先を選ぶことで、多人数向けアダプタ提供の平均遅延を最大1.7倍改善し、目標達成率99パーセントを達成した提供基盤。
@@ -1959,10 +1967,6 @@
 - **2025-09 · [Intra-request branch orchestration for efficient LLM reasoning](2025-2509.24957-intra-request-branch-orchestration-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、推論時に複数のChain-of-Thought（CoT）枝を生成して多数決を取る自己整合性（SC）のトークン費用とリクエスト完了遅延を同時に削減するDUCHESSを提案する。
-
-- **2025-08 · [Pruning Long Chain-of-Thought of Large Reasoning Models via Small-Scale Preference Optimization](2025-2508.10164-pruning-long-chain-of-thought-of-large-reasoning-models-via-small-scale-.md)**  
-  実装：[✓](https://github.com/SleepyWithoutCoffee/Small_Scale) ・ リポジトリ内被引用：0  
-  大規模推論モデル（LRM）は、複雑な数学問題や知識問題に答えるために長いChain-of-Thought（CoT）を生成する。大規模なオンライン強化学習で長さ報酬を最適化する方式は、学習用の大量生成と複雑な実行基盤を要する。
 
 - **2025-07 · [MoLink: Distributed and Efficient Serving Framework for Large Models](2025-2507.05043-molink-distributed-and-efficient-serving-framework-for-large-models.md)**  
   実装：[✓](https://github.com/oldcpple/MoLink) ・ リポジトリ内被引用：0  

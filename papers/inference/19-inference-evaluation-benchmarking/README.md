@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（173本）
+## 自動生成の論文一覧（175本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -36,9 +36,17 @@
   実装：✓ ・ リポジトリ内被引用：2  
   携帯端末でニューラル処理装置が常に速いわけではないことを段階別に実測し、入力処理では中央処理装置が最大1.6倍速く、逐次生成の実効加速も1.05から1.20倍にとどまり、全面任せでは電力が最大51パーセント増えることを示した。
 
+- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
+  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：2  
+  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
+
 - **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
   実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：2  
   既存の圧縮方式の多くは、視覚符号化器が全トークンを処理し終えた後に間引く。単一NVIDIA A100上のLLaVA-OneVision-7Bでは、言語モデルへ入る視覚トークンを元の10%に保つ条件で、最初のトークンまでの時間（Time to First Token; TTFT）が889.9ミリ秒から336.2ミリ秒へ短縮し、約2.65倍の逆数比となる。
+
+- **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
+  実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：2  
+  中間回答の確信度の時系列から、届いた推論は閾値で、不発な推論は不安定さの蓄積で止める学習不要の早期終了で、トークン量を25から50パーセント削りながら釣り合いを最も良くした。
 
 - **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -68,10 +76,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   エージェント実行を呼出し依存グラフとして記録・再生し、8種類の実アプリでサービング負荷とハードウェア指標を再現可能に測る評価基盤を提示する。
 
-- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
-  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：1  
-  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
-
 - **2026-05 · [Silicon Showdown: Performance, Efficiency, and Ecosystem Barriers in Consumer-Grade LLM Inference](2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consum.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   消費者向けNvidia GPUとApple Siliconを70B級モデルとNVFP4まで含めて実測比較した分析。Nvidiaは収まる範囲で計算密度が最高だがVRAMの壁とバックエンド摩擦があり、Appleは統合メモリで大規模モデルを実用精度のまま載せ効率でも勝るという二分構造を示した。
@@ -95,10 +99,6 @@
 - **2026-04 · [EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling](2026-2604.17087-evocomp-learning-visual-token-compression-for-multimodal-large-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル時の注意演算、鍵・値（KV）キャッシュ、入力列の読み込みが増え、初回応答の待ち時間が長くなる。EvoCompは、視覚トークンのうち質問への回答に必要なものだけを選び、下流LLMへ渡す系列長を減らす方式である。LLaVA-1.5-7Bでは576トークンを192に削減したとき、6ベンチマークの平均成績を元モデルの99.3%に保つ。
-
-- **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
-  実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：1  
-  中間回答の確信度の時系列から、届いた推論は閾値で、不発な推論は不安定さの蓄積で止める学習不要の早期終了で、トークン量を25から50パーセント削りながら釣り合いを最も良くした。
 
 - **2026-03 · [Wattchmen: Watching the Wattchers -- High Fidelity, Flexible GPU Energy Modeling](2026-2603.26435-wattchmen-watching-the-wattchers-high-fidelity-flexible-gpu-energy-model.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -194,6 +194,10 @@
   実装：[✓](https://github.com/EasonAI-5589/starpro) ・ リポジトリ内被引用：0  
   融合前はピボット付きQRで特徴被覆を保つ候補プールを作り、デコーダ内では深さで変わる注意に合わせて段階的に絞る2段階の視覚トークン削減で、90.5パーセント削減でも性能の92.7パーセント保持と2.24倍高速化を両立した。
 
+- **2026-09 · [Stable Answers, Unfinished Reasoning: Why Self-Consensus Is Not a Safe Early-Exit Signal](2026-2609.09989-stable-answers-unfinished-reasoning-why-self-consensus-is-not-a-safe-ear.md)**  
+  実装：[✓](https://github.com/Antony-zdh/stable-answers-unfinished-reasoning) ・ リポジトリ内被引用：0  
+  単一軌跡への繰り返しプローブの一致を早期終了信号にする自己合意について、一致は推論の終了ではなく回答の持続しか示さない合意・終了ギャップを測定し、事前登録した3,520ルールの走査で安全かつ節約になる合意ルールが存在しない一方、境界確信度の対照は全ゲートを通過することを示した分析研究。
+
 - **2026-09 · [SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops](2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md)**  
   実装：[✓](https://github.com/WindChimeRan/SiliconBench) ・ リポジトリ内被引用：0  
   Apple Siliconの九推論基盤を速度・共有メモリ・忠実度・新モデル対応・複数機で横断監査し、vllm-metalの並行処理と遠隔直接メモリアクセスを使うテンソル並列の優位を示す。
@@ -241,6 +245,10 @@
 - **2026-09 · [FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure](2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単一MoE層の選択可能プローブと二段階グループ検査で、特権監視なしにグレー障害GPU・通信経路をアプリ層から局所化し、診断プローブを約20倍削減する。
+
+- **2026-09 · [Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models](2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの制約付きデコードで、制約を逐次状態ではなく因子グラフとして保持し変数消去で厳密に解く方式を提案し、全制約充足を小さな追加遅延で達成した研究。
 
 - **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
   実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：0  

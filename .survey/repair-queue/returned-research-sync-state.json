@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "79af2e67cefcc10f8e6bdd9b544b8161a1f050a6",
+  "base_commit": "a0983f415d895c63976be6ee794362b04391feba",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -540,13 +540,17 @@
     "2026-2609.01224-s2prune-spatially-structured-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json",
     "2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.json",
+    "2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-cot-compression.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
     "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
     "2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.json",
+    "2026-2609.09989-stable-answers-unfinished-reasoning-self-consensus-early-exit-signal.json",
+    "2026-2609.10264-maverick-private-and-verifiable-llm-inference-made-practical-via-matrix-vector.json",
     "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
+    "2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybrid-ckks-tfhe.json",
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
     "2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-energy-and-performance-of-llm-test-time-scaling.json",
@@ -568,6 +572,7 @@
     "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal-models.json",
+    "2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-models.json",
     "2026-2609.33051-sketchssm-write-to-the-full-state-read-from-a-compact-sketch.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
     "2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix-replay-for-hybrid-llms.json",
@@ -46814,6 +46819,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.04947": {
+      "order": [
+        "2026-11-21T06:14:14+00:00",
+        "2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-cot-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.09989": {
+      "order": [
+        "2026-11-21T06:15:41+00:00",
+        "2026-2609.09989-stable-answers-unfinished-reasoning-self-consensus-early-exit-signal.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.10264": {
+      "order": [
+        "2026-11-21T06:17:06+00:00",
+        "2026-2609.10264-maverick-private-and-verifiable-llm-inference-made-practical-via-matrix-vector.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.16915": {
+      "order": [
+        "2026-11-21T06:18:32+00:00",
+        "2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybrid-ckks-tfhe.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.32900": {
+      "order": [
+        "2026-11-21T06:19:58+00:00",
+        "2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58775,6 +58825,21 @@
     "arxiv:2609.03158": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md"
+    ],
+    "arxiv:2609.04947": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-chain-o.md"
+    ],
+    "arxiv:2609.09989": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.09989-stable-answers-unfinished-reasoning-why-self-consensus-is-not-a-safe-ear.md"
+    ],
+    "arxiv:2609.10264": [
+      "papers/inference/99-other-inference-systems/2026-2609.10264-maverick-private-and-verifiable-llm-inference-made-practical-via-matrix-.md"
+    ],
+    "arxiv:2609.16915": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybri.md"
+    ],
+    "arxiv:2609.32900": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md"
     ]
   }
 }
