@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T06:34:36+00:00",
-  "paper_count": 4737,
-  "edge_count": 63618,
+  "generated_at": "2026-11-21T06:44:22+00:00",
+  "paper_count": 4742,
+  "edge_count": 63630,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 28,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -185,7 +185,7 @@
     "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md": 7,
     "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md": 9,
     "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md": 4,
-    "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md": 20,
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md": 21,
     "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md": 7,
     "papers/inference/02-adaptive-expert-computation-compression/2025-2509.06346-ban-pick-smarter-routing.md": 2,
     "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md": 12,
@@ -1807,6 +1807,7 @@
     "papers/inference/09-kernel-runtime-compilation/2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quant.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.39816-beyond-accuracy-prefix-invariant-realizations-of-low-precision-fast-matr.md": 0,
+    "papers/inference/09-kernel-runtime-compilation/2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-.md": 0,
@@ -1868,7 +1869,7 @@
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md": 2,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.16857-shadowserve-smartnic-kv-fetching.md": 4,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md": 9,
-    "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md": 169,
+    "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md": 170,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2510.10129-cacheclip-rag-kv-cache-reuse.md": 15,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md": 21,
     "papers/inference/10-kv-cache-offload-recomputation/2025-2511.00321-cxl-pnm-kv-cache.md": 5,
@@ -1986,7 +1987,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md": 93,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md": 588,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md": 69,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 807,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 808,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.11135-linear-attention-via-orthogonal-memory.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md": 52,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md": 4,
@@ -2099,7 +2100,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md": 3,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.20552-adrenaline.md": 15,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md": 9,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md": 57,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md": 58,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03648-aibrix-towards-scalable-cost-effective-large-language-model-inference-in.md": 18,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md": 12,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md": 16,
@@ -2315,7 +2316,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11035-introspective-diffusion-language-models.md": 9,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.12171-pipelive.md": 4,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md": 16,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md": 17,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15732-accuracy-is-speed-towards-long-context-aware-routing-for-distributed-llm.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.16400-collm-continuous-adaptation-for-slo-aware-llm-serving-on-shared-gpu-clus.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md": 0,
@@ -2324,7 +2325,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md": 7,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md": 1,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02329-taming-request-imbalance-slo-aware-scheduling.md": 1,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hoste.md": 0,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hoste.md": 1,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md": 3,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md": 6,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md": 3,
@@ -2499,6 +2500,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.31551-easerve-encode-aware-disaggregated-serving-for-multimodal-large-language.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.34117-slimwise-decoupling-expert-pruning-across-prefill-and-decode-for-efficie.md": 0,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisio.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.36760-quantmla-function-aligned-dual-path-quantization-for-low-bit-mla-kv-cach.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.37626-splash-switching-parallel-layouts-of-attention-with-seamless-handoff-for.md": 0,
@@ -2565,7 +2567,7 @@
     "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md": 7,
     "papers/inference/12-moe-parallelism-communication/2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md": 8,
     "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md": 25,
-    "papers/inference/12-moe-parallelism-communication/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md": 33,
+    "papers/inference/12-moe-parallelism-communication/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md": 34,
     "papers/inference/12-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md": 13,
     "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md": 10,
     "papers/inference/12-moe-parallelism-communication/2025-2505.13345-occult-collaborative-expert-communication.md": 3,
@@ -2622,6 +2624,7 @@
     "papers/inference/12-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.33252-cascadeep-asynchronous-expert-execution-for-moe-prefill-under-attention-.md": 0,
+    "papers/inference/12-moe-parallelism-communication/2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2609.40093-efficient-expert-parallel-communication-on-pcie-connected-consumer-gpus.md": 0,
     "papers/inference/12-moe-parallelism-communication/2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.md": 0,
@@ -2841,7 +2844,7 @@
     "papers/inference/13-sparse-attention/2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md": 0,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md": 17,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md": 37,
-    "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md": 35,
+    "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md": 36,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md": 11,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md": 16,
     "papers/inference/14-agentic-inference-serving-runtime/2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md": 11,
@@ -2905,7 +2908,7 @@
     "papers/inference/14-agentic-inference-serving-runtime/2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration.md": 0,
     "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md": 0,
     "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md": 3,
-    "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00101-agentic-coding-production-scale-characterization.md": 10,
+    "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00101-agentic-coding-production-scale-characterization.md": 11,
     "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md": 1,
     "papers/inference/14-agentic-inference-serving-runtime/2026-2608.10402-tiderl-boosting-agentic-rl-goodput-with-readiness-aware-scheduling.md": 0,
     "papers/inference/14-agentic-inference-serving-runtime/2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-.md": 0,
@@ -3036,7 +3039,7 @@
     "papers/inference/16-weight-quantization-compression/2021-2109.04838-block-pruning-for-faster-transformers.md": 37,
     "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md": 218,
     "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md": 318,
-    "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md": 759,
+    "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md": 760,
     "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md": 681,
     "papers/inference/16-weight-quantization-compression/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md": 82,
     "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md": 355,
@@ -3418,6 +3421,7 @@
     "papers/inference/19-inference-evaluation-benchmarking/2026-2609.32712-massalloc-attention-let-attention-allocate-its-own-compute.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2026-2609.34077-maskcoft-masked-co-adaptive-fine-tuning-for-memory-efficient-moe-inferen.md": 0,
+    "papers/inference/19-inference-evaluation-benchmarking/2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agen.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-s.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md": 0,
     "papers/inference/19-inference-evaluation-benchmarking/2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-ben.md": 0,
@@ -3583,7 +3587,7 @@
     "papers/inference/99-other-inference-systems/2023-2302.08141-auto-parallelizing-large-models-with-rhino-a-systematic-approach-on-prod.md": 0,
     "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md": 53,
     "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md": 94,
-    "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md": 95,
+    "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md": 96,
     "papers/inference/99-other-inference-systems/2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md": 0,
     "papers/inference/99-other-inference-systems/2023-2305.15033-smarttrim-adaptive-tokens-and-attention-pruning-for-efficient-vision-lan.md": 1,
     "papers/inference/99-other-inference-systems/2023-2306.01841-binary-and-ternary-natural-language-generation.md": 0,
@@ -3879,7 +3883,7 @@
     "papers/inference/99-other-inference-systems/2025-2506.14158-s4c-speculative-sampling-with-syntactic-and-semantic-coherence-for-effic.md": 0,
     "papers/inference/99-other-inference-systems/2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md": 0,
     "papers/inference/99-other-inference-systems/2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md": 1,
-    "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md": 14,
+    "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md": 15,
     "papers/inference/99-other-inference-systems/2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.md": 1,
     "papers/inference/99-other-inference-systems/2025-2506.17255-ultrasketchllm-sub-1-bit-llm-compression-via-sketch-and-hardware-friendl.md": 0,
     "papers/inference/99-other-inference-systems/2025-2506.18145-routing-mamba-scaling-state-space-models-with-mixture-of-experts-project.md": 0,
@@ -4609,6 +4613,7 @@
     "papers/inference/99-other-inference-systems/2026-2609.36062-smat-attention-structured-long-context-sequence-modeling.md": 1,
     "papers/inference/99-other-inference-systems/2026-2609.36120-thinquant-scalable-rotation-learning-for-weight-and-activation-quantizat.md": 0,
     "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-.md": 0,
     "papers/inference/99-other-inference-systems/2026-2609.38169-stepquant-when-and-where-errors-matter-in-delta-rule-recurrent-state-qua.md": 1,
     "papers/inference/99-other-inference-systems/2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-count.md": 0,
     "papers/inference/99-other-inference-systems/2026-2609.39982-mid-harness-scaling-actions-between-model-and-harness-for-terminal-agent.md": 0,
@@ -34644,6 +34649,10 @@
       "papers/inference/16-weight-quantization-compression/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
       "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
     ],
+    "papers/inference/09-kernel-runtime-compilation/2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-.md": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md"
+    ],
     "papers/inference/09-kernel-runtime-compilation/2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
       "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
@@ -46217,6 +46226,9 @@
       "papers/inference/19-inference-evaluation-benchmarking/2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md",
       "papers/inference/99-other-inference-systems/2026-2605.28207-pruning-and-distilling-mixture-of-experts-into-dense-language-models.md"
     ],
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisio.md": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2608.00101-agentic-coding-production-scale-characterization.md"
+    ],
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.36760-quantmla-function-aligned-dual-path-quantization-for-low-bit-mla-kv-cach.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
@@ -48087,6 +48099,12 @@
       "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
       "papers/inference/12-moe-parallelism-communication/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
       "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md"
+    ],
+    "papers/inference/12-moe-parallelism-communication/2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.md": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+      "papers/inference/12-moe-parallelism-communication/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
     ],
     "papers/inference/12-moe-parallelism-communication/2026-2609.37828-joint-effects-of-gpu-server-topology-parallelism-and-congestion-control-.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
@@ -60744,6 +60762,10 @@
       "papers/inference/08-edge-on-device-llm-systems/2025-2412.00099-mixture-of-cache-conditional-experts-for-efficient-mobile-device-inferen.md",
       "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "papers/inference/19-inference-evaluation-benchmarking/2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agen.md": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+      "papers/inference/99-other-inference-systems/2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md"
     ],
     "papers/inference/19-inference-evaluation-benchmarking/2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-s.md": [
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
@@ -75799,6 +75821,11 @@
       "papers/inference/16-weight-quantization-compression/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
       "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
       "papers/inference/99-other-inference-systems/2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md"
+    ],
+    "papers/inference/99-other-inference-systems/2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-.md": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hoste.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2609.38169-stepquant-when-and-where-errors-matter-in-delta-rule-recurrent-state-qua.md": [
       "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
