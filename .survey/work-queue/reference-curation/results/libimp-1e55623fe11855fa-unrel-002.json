@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e55623fe11855fa-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.22761",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.22761",
+    "identity_tokens": [
+      "arXiv:2509.22761"
+    ],
+    "reason": "マルチモーダル画像生成におけるテスト時潜在推論で生成品質を上げる手法であり、LLM推論システムの高速化やメモリ削減を目的とした技術ではないため異分野応用と判断した。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MILR: Improving Multimodal Image Generation via Test-Time Latent Reasoning"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e55623fe118",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

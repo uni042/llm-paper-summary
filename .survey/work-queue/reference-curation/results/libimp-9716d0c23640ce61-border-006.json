@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9716d0c23640ce61-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.04184",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.04184",
+    "identity_tokens": [
+      "arXiv:2604.04184"
+    ],
+    "reason": "ストリーミングVideoLLM向けに文脈管理や配置最適化を含むリアルタイム推論フレームワークをうたうが、要旨の中心は動画理解モデルと学習であり推論システム側の具体的な機構の記述が薄い。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AURA: Always-On Understanding and Real-Time Assistance via Video Streams"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9716d0c23640",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

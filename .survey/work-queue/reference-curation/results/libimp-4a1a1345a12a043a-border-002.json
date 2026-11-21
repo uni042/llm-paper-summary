@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a1a1345a12a043a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.06797",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.06797",
+    "identity_tokens": [
+      "arXiv:2603.06797"
+    ],
+    "reason": "推論時アライメントで複数候補生成と報酬モデル選択を扱うが、主眼は探索と報酬ハッキングのトレードオフであり、サービング機構やデコード効率の具体設計は示されていない。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Best-of-Tails: Bridging Optimism and Pessimism in Inference-Time Alignment"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a1a1345a12a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

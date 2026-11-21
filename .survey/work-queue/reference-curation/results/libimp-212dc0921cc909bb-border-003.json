@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-212dc0921cc909bb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.13262",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.13262",
+    "identity_tokens": [
+      "arXiv:2602.13262"
+    ],
+    "reason": "同一重みクローンを並列文脈へ spawnし生成と文脈予算を配分するSELFCESTは推論予算下の精度・コストParetoを改善するが、獲得はエージェント強化学習による学習済み制御でありサービング基盤の実装技術ではない。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "General learned delegation by clones"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-212dc0921cc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

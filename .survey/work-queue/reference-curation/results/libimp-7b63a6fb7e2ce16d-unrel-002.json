@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b63a6fb7e2ce16d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.17048",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.17048",
+    "identity_tokens": [
+      "arXiv:2412.17048"
+    ],
+    "reason": "音声言語モデルが意味的に一貫しない原因をモダリティ移行で分析する研究であり、学習上の示唆が中心で推論高速化やサービング等のシステム貢献は含まれていない。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b63a6fb7e2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

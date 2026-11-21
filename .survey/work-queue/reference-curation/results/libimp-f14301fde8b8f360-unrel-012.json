@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f14301fde8b8f360-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.03815",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.03815",
+    "identity_tokens": [
+      "arXiv:2602.03815"
+    ],
+    "reason": "視覚トークン剪定を訓練段階へ適用する際の訓練・推論ミスマッチをfast-slow構成で解消するDualSpeedはMLLMの訓練を2.1〜4.0倍高速化する学習効率化の研究であり、推論システム自体の改善ではないため。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Fast-Slow Efficient Training for Multimodal Large Language Models via Visual Token Pruning"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f14301fde8b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

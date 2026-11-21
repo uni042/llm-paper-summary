@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b63a6fb7e2ce16d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.10749",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.10749",
+    "identity_tokens": [
+      "arXiv:2610.10749"
+    ],
+    "reason": "凍結した専門家エンコーダとテキストLLMリーダーで音声質問に答える解釈可能なパイプラインL2Rであり、音声理解の応用構成が主体で推論システム技術ではない。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Listen-to-Reason: Listen with Experts, Retrieve over a Graph, Reason with LLMs"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b63a6fb7e2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

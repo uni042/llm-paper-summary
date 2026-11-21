@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76a10f356ba05890-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33947",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33947",
+    "identity_tokens": [
+      "arXiv:2609.33947"
+    ],
+    "reason": "拡散言語モデルの少数ステップ生成でサンプラー sharpening が有効だと示す研究で、並列生成のデコード設定には関わるものの対象は拡散LM特有のサンプリングであり境界的である。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Simple Diffusion Language Models Are More Effective Few-Step Generators Than Reported"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a10f356ba0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

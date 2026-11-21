@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e123537a22c5233a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.03182",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.03182",
+    "identity_tokens": [
+      "arXiv:2503.03182"
+    ],
+    "reason": "ChronosPipeはHBMをキャッシュとみなすパイプライン並列でLLM事前学習のメモリ効率と学習可能サイズを拡大する学習専用のスケジューリングであり、推論は対象外であるため。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e123537a22c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

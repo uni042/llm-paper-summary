@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a1a1345a12a043a-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.09850",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.09850",
+    "identity_tokens": [
+      "arXiv:2503.09850"
+    ],
+    "reason": "Native Sparse Attentionで表形式データの二次複雑度を下げるTabNSAだが、適用先は表学習の訓練・表現でありLLM推論での注意カーネルやサービングへの検証はない。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TabNSA: Native Sparse Attention for Efficient Tabular Data Learning"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a1a1345a12a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76a10f356ba05890-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.16109",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.16109",
+    "identity_tokens": [
+      "arXiv:2404.16109"
+    ],
+    "reason": "LLM推論過程の正しさをゼロ知識証明するzkLLMと注意向けzkAttnを提案するが、主貢献は検証可能性と暗号証明であり、推論性能やサービング効率の改善ではないため境界的である。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "zkLLM: Zero Knowledge Proofs for Large Language Models"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a10f356ba0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

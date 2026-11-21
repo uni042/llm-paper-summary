@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08830c6d043c5107-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.06090",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.06090",
+    "identity_tokens": [
+      "arXiv:2606.06090"
+    ],
+    "reason": "階層状態木でエージェント実行状態を管理しトークン消費を55%減らすMAGEは文脈増大抑制に触れるが、主体は長期タスク用メモリ設計であり推論基盤との関係は間接的である。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Semantic Organization: Memory as Execution State Management for Long-Horizon Agents"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08830c6d043c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

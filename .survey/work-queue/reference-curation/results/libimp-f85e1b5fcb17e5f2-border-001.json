@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f85e1b5fcb17e5f2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2209.12127",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2209.12127",
+    "identity_tokens": [
+      "arXiv:2209.12127"
+    ],
+    "reason": "レイテンシ上限を制約として8ビット量子化込みでTransformerアーキテクチャを探索するSpeedLimitは推論レイテンシを扱うものの、主体はニューラルアーキテクチャ探索によるモデル設計でありサービングやデコードのシステム技術ではないため。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SpeedLimit: Neural Architecture Search for Quantized Transformer Models"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f85e1b5fcb17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

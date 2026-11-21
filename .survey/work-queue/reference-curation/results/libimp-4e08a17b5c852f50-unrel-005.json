@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e08a17b5c852f50-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.14032",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.14032",
+    "identity_tokens": [
+      "arXiv:2510.14032"
+    ],
+    "reason": "長尺動画をグラフ構造で表現して検索・検証を挟むRAGで動画言語モデルの理解精度を上げる応用フレームワークであり、検索ノイズ低減が主題で推論基盤の計算やメモリ機構ではない。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Vgent: Graph-based Retrieval-Reasoning-Augmented Generation For Long Video Understanding"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e08a17b5c85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

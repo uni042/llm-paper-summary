@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-212dc0921cc909bb-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.08615",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.08615",
+    "identity_tokens": [
+      "arXiv:2606.08615"
+    ],
+    "reason": "Streaming Harnessで12時間保持の長期メモリと秒未満レイテンシの実時間処理をVLMへ付与するが、主体は248K件のストリーミング学習データと評価ベンチマーク構築でありLLM推論システム自体の新機構は要旨で不明瞭である。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Harnessing Streaming Video in the Wild"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-212dc0921cc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

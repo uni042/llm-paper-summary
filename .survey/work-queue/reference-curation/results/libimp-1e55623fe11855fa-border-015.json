@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e55623fe11855fa-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2109.15142",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2109.15142",
+    "identity_tokens": [
+      "arXiv:2109.15142"
+    ],
+    "reason": "多粒子力学系の類推から注意とフィードフォワードを近似してパラメータと計算量を減らすTransformer再設計であり、効率化の方向性は関連するが推論システムとしての実装貢献は要旨では不明瞭なため境界とした。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Redesigning the Transformer Architecture with Insights from Multi-particle Dynamical Systems"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e55623fe118",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

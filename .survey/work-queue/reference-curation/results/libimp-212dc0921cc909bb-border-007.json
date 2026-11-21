@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-212dc0921cc909bb-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.19765",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.19765",
+    "identity_tokens": [
+      "arXiv:2512.19765"
+    ],
+    "reason": "勾配ベースの意味ドリフト検出で専門家を追加し信頼度質量で動的ルーティングするMASSはMoEの専門家特化を扱うが、評価は言語・視覚データでの精度と特化度が中心で推論サービングのスループットやメモリ機構は示されていない。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How Many Experts Are Enough? Towards Optimal Semantic Specialization for Mixture-of-Experts"
+  },
+  "processed_at": "2026-11-21T10:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-212dc0921cc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

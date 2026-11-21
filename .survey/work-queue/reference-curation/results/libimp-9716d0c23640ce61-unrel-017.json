@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9716d0c23640ce61-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.08161",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.08161",
+    "identity_tokens": [
+      "arXiv:2512.08161"
+    ],
+    "reason": "画像の霞除去向けにフーリエ領域のRWKV注意や意味ブリッジを組み合わせた復元ネットワークであり、線形計算量はモデル特性の主張にとどまりLLM推論システムへの寄与はない。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Fourier-RWKV: A Multi-State Perception Network for Efficient Image Dehazing"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9716d0c23640",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87e12163cf8f82a5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.27334",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.27334",
+    "identity_tokens": [
+      "arXiv:2609.27334"
+    ],
+    "reason": "生軌跡を保持し読取時にタスク適応メモリを合成するJitMemはALFWorld等のエージェント成功率を上げるが、扱うのはエージェント記憶のキュレーション学習でありLLMの推論実行やサービング機構ではない。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87e12163cf8f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

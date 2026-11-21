@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0c4786b30847d55-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.02457",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.02457",
+    "identity_tokens": [
+      "arXiv:2506.02457"
+    ],
+    "reason": "音声対話アシスタントの理解・生成能力を測るSOVA-Benchという評価フレームワークであり、推論効率やデコード等のシステム技術を提案していないため対象外である。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SOVA-Bench: Benchmarking the Speech Conversation Ability for LLM-based Voice Assistant"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0c4786b3084",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f14301fde8b8f360-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26147",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26147",
+    "identity_tokens": [
+      "arXiv:2609.26147"
+    ],
+    "reason": "事後学習後もブロック単位の重み構造が保たれることを実証し、共有ブロックを別名参照するLinkerLLMでGPUメモリを18〜48%削減する応用を示すが、主体は重み空間の実証研究でありサービング性能の直接評価は限られるため。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Block-Level Weight-Space Structure Persists Under Post-Training: An Empirical Study Across LLM Families"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f14301fde8b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

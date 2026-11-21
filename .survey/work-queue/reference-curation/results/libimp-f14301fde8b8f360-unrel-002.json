@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f14301fde8b8f360-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.09138",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.09138",
+    "identity_tokens": [
+      "arXiv:2603.09138"
+    ],
+    "reason": "回転等変性を視覚Mambaへ組み込むEQ-VMambaの提案であり、対象は画像分類・セグメンテーション・超解像といった視覚タスクで、LLM推論やサービングの仕組みとは分野が異なるため。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Rotation Equivariant Mamba for Vision Tasks"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f14301fde8b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

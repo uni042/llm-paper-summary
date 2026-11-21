@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87e12163cf8f82a5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.18226",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.18226",
+    "identity_tokens": [
+      "arXiv:2506.18226"
+    ],
+    "reason": "動的疎注意ADSAと動的KVキャッシュ更新で自己回帰画像生成のGPUメモリを約50パーセント削減するが、対象はテキストから画像への生成モデルであり言語LLMの推論システムへの適用は要旨で直接示されていない。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-21T10:55:41+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Make It Efficient: Dynamic Sparse Attention for Autoregressive Image Generation"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87e12163cf8f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

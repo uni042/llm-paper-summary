@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-702194dac933fa93-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.16722",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.16722",
+    "identity_tokens": [
+      "arXiv:2609.16722"
+    ],
+    "reason": "VideoMMは低解像度マクロ代理で領域選択し必要な箇所だけ高精細トークンで推論して動画MLLMを高速化するが、対象が長尺動画理解に特化した応用推論であるため。",
+    "first_checked_at": "2026-11-21T10:55:40+00:00",
+    "last_checked_at": "2026-11-21T10:55:40+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VideoMM: Adaptive Macro-Micro Inference for Efficient Video MLLMs"
+  },
+  "processed_at": "2026-11-21T10:55:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-702194dac933",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
