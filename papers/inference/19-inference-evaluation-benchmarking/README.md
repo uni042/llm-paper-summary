@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（172本）
+## 自動生成の論文一覧（173本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -181,6 +181,10 @@
 - **2026-10 · [How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs](2026-2610.40039-how-far-are-we-from-on-device-vlm-inference-a-measurement-study-on-edge-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末の神経処理装置で六つの視覚言語モデルをカーネル単位で測り、注意はソフトマックスが支配して行列装置が空転すること、線形注意の利得は配置変換で消えること、逐次生成の勝敗は注意の行列並列度で決まることを示し、課題ごとの甘い解像度を提案した測定研究である。
+
+- **2026-09 · [Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization](2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚トークン枝刈りを、残すトークンの順位付けではなく、捨てるトークンを誰が代表するかという被覆最適化として定式化し、強い圧縮ほど既存方式を引き離した学習不要の枝刈り研究。
 
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -469,7 +473,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：39  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
@@ -477,7 +481,7 @@
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
-  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：34  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
@@ -685,7 +689,7 @@
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
-  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：13  
   しかし実際のサービスでは、数学問題、法務文書、要約、常識質問など、タスクごとに得意なモデルが異なる。常に最も大きいモデルを呼ぶ方式は品質を得やすい反面、必要以上の推論計算を消費する。これらは品質と必要なモデル呼出し回数の評価であり、実際のGPU実行時間・請求金額の削減倍率を測定したものではない（原著§5、表1・2）。
 
 - **2023-05 · [A Quantitative Review on Language Model Efficiency Research](2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md)**  

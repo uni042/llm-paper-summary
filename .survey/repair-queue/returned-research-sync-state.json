@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2b58d3bbf436007f0cd0184f187012d8f3440066",
+  "base_commit": "d5f2b9419c7eae1f71baf931f02824965e093a34",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -314,6 +314,7 @@
     "2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-and-capacity-constraints.json",
     "2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answering.json",
     "2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-coding.json",
+    "2026-2604.01220-universal-yoco-for-efficient-depth-scaling.json",
     "2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-llm-compression.json",
     "2026-2604.01881-hieravid-hierarchical-token-pruning-for-fast-video-large-language-models.json",
     "2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-diffusion-language-models.json",
@@ -331,6 +332,7 @@
     "2026-2604.06787-when-is-thinking-enough-early-exit-via-sufficiency-assessment-for-efficient-reasoning.json",
     "2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.json",
     "2026-2604.07173-infinilora-disaggregated-multi-lora-serving.json",
+    "2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthesis-for-cold-start.json",
     "2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.json",
     "2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.json",
     "2026-2604.09975-encformer-secure-and-efficient-transformer-inference-over-encrypted-data.json",
@@ -404,6 +406,7 @@
     "2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.json",
     "2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-context-inference.json",
     "2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-in-gui-vision-language-models.json",
+    "2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compression.json",
     "2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted-recovery.json",
     "2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-reasoning.json",
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
@@ -462,6 +465,7 @@
     "2026-2607.11368-decomposing-runtime-kernel-and-quantization-speedups-via-a-matched-fp16-intermediate-a-hardware-conditioned-case-study-o.json",
     "2026-2607.12266-saturation-makes-quantization-error-additive-a-coverage-model-with-a-certificate.json",
     "2026-2607.14327-prem-learning-what-to-preserve-and-when-to-refresh-for-context-compression.json",
+    "2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.json",
     "2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsity-aware-truncation.json",
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
@@ -535,6 +539,7 @@
     "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01224-s2prune-spatially-structured-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json",
+    "2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
     "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
@@ -46764,6 +46769,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.01220": {
+      "order": [
+        "2026-11-21T06:07:06+00:00",
+        "2026-2604.01220-universal-yoco-for-efficient-depth-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.09377": {
+      "order": [
+        "2026-11-21T06:07:56+00:00",
+        "2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthesis-for-cold-start.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.01934": {
+      "order": [
+        "2026-11-21T06:08:47+00:00",
+        "2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.14427": {
+      "order": [
+        "2026-11-21T06:09:37+00:00",
+        "2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.03158": {
+      "order": [
+        "2026-11-21T06:10:27+00:00",
+        "2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58705,6 +58755,21 @@
     "arxiv:2603.02872": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-l.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-l.md"
+    ],
+    "arxiv:2604.01220": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.01220-universal-yoco-for-efficient-depth-scaling.md"
+    ],
+    "arxiv:2604.09377": [
+      "papers/inference/99-other-inference-systems/2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthes.md"
+    ],
+    "arxiv:2606.01934": [
+      "papers/inference/99-other-inference-systems/2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compr.md"
+    ],
+    "arxiv:2607.14427": [
+      "papers/inference/99-other-inference-systems/2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.md"
+    ],
+    "arxiv:2609.03158": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md"
     ]
   }
 }
