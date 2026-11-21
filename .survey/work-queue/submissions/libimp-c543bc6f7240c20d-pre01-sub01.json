@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction",
+      "source_url": "https://arxiv.org/abs/2604.26209",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Some text generation tasks, such as Attribute Value Extraction (AVE), require decoding multiple independent sequences from the same document context. While standard autoregressive decoding is slow due to its sequential nature, the independence between output sequences offers an opportunity for parallelism. We present Hyper-Parallel Decoding, a novel decoding algorithm that accelerates offline decoding by leveraging both shared memory and computation across batches. HPD enables out-of-order token generation through position ID manipulation, significantly improving efficiency. Experiments on AVE show that attribute-value pairs are conditionally independent, enabling us to parallelize value generation within each prompt. By further stacking multiple documents within a single prompt, we can decode in parallel up to 96 tokens per prompt. HPD works with all LLMs, and reduces both inference costs and total inference time by up to 13.8X without compromising output quality, potentially saving hundreds of thousands of dollars on industry AVE tasks. Although designed for attribute extraction, HPD makes no assumptions unique to the AVE domain and can in theory be applied to other scenarios with independent output structures.",
+      "identifiers": [
+        "SemanticScholar:b219fd4695b3b5b91ef419980d944d91d1dbd7d3"
+      ],
+      "semantic_scholar_id": "b219fd4695b3b5b91ef419980d944d91d1dbd7d3",
+      "canonical_id": "arXiv:2604.26209",
+      "arxiv_id": "2604.26209",
+      "doi": "10.48550/arXiv.2604.26209",
+      "authors": [
+        "Theodore Glavas",
+        "Nikhita Vedula",
+        "Dushyanta Dhyani",
+        "Yilun Zhu",
+        "S. Malmasi"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "属性値抽出のように独立な出力列を共有文脈から並列にデコードするHyper-Parallel Decodingで、位置ID操作による順序外生成により推論時間とコストを最大13.8倍削減するデコード手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ExpertWeaver: Unlocking the Inherent MoE in Dense LLMs with GLU Activation Patterns",
+      "source_url": "https://arxiv.org/abs/2602.15521",
+      "year": 2026,
+      "published": "2026-02-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) effectively scales model capacity while preserving computational efficiency through sparse expert activation. However, training high-quality MoEs from scratch is prohibitively expensive. A promising alternative is to convert pretrained dense models into sparse MoEs. Existing dense-to-MoE methods fall into two categories: \\textbf{dynamic structural pruning} that converts dense models into MoE architectures with moderate sparsity to balance performance and inference efficiency, and \\textbf{downcycling} approaches that use pretrained dense models to initialize highly sparse MoE architectures. However, existing methods break the intrinsic activation patterns within dense models, leading to suboptimal expert construction. In this work, we argue that the Gated Linear Unit (GLU) mechanism provides a natural blueprint for dense-to-MoE conversion. We show that the fine-grained neural-wise activation patterns of GLU reveal a coarse-grained structure, uncovering an inherent MoE architecture composed of consistently activated universal neurons and dynamically activated specialized neurons. Leveraging this discovery, we introduce ExpertWeaver, a training-free framework that partitions neurons according to their activation patterns and constructs shared experts and specialized routed experts with layer-adaptive configurations. Our experiments demonstrate that ExpertWeaver significantly outperforms existing methods, both as a training-free dynamic structural pruning technique and as a downcycling strategy for superior MoE initialization.",
+      "identifiers": [
+        "SemanticScholar:9982940f880278b81baeec32f59c0b3ca0798aed"
+      ],
+      "semantic_scholar_id": "9982940f880278b81baeec32f59c0b3ca0798aed",
+      "canonical_id": "arXiv:2602.15521",
+      "arxiv_id": "2602.15521",
+      "doi": "10.48550/arXiv.2602.15521",
+      "authors": [
+        "Ziyu Zhao",
+        "Tong Zhu",
+        "Zhi-Qiang Zhang",
+        "Tian-Tian Fan",
+        "Jin-Luan Yang",
+        "Kun Kuang",
+        "Zhongyu Wei",
+        "Fei Wu",
+        "Yu Cheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 277,
+        "matched_prestigious_venue": null
+      },
+      "reason": "密なLLMのGLU活性化パターンから普遍的ニューロンと専門ニューロンを分け共有・ルーティング専門家を無学習で構築するExpertWeaverで、密モデルを疎なMoEへ変換し推論効率を高める手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cascade Token Selection for Transformer Attention Acceleration",
+      "source_url": "https://arxiv.org/abs/2605.03110",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A method is presented for reducing the cost of representative token selection in transformer attention layers by exploiting the coherence of the representative set across depth. Activation Decorrelation Attention (ADA) selects $r \\ll T$ representative tokens at each layer via a Gram threshold and computes attention on the compressed $r \\times r$ problem, but the selection requires a $T \\times T$ Gram matrix at every layer. The cascade mechanism introduced here inherits the representative set from layer $l$ to layer $l+1$, validates it via a $(T - r) \\times r$ cross-Gram computation, and updates it with a small number of additions and removals. The cost of the selection step drops from $O(T^2 d)$ to $O(T r d)$ per layer. Validation on three model families (GPT-2 124M, GPT-J 6B, OPT 6.7B) on AMD MI300X demonstrates Gram operation savings of $22\\%$ to $63\\%$ with mean Jaccard overlap of $0.83$ to $0.94$ between consecutive layers. The cascade reveals that the set of informative tokens is a structural property of the input that propagates coherently through the depth of the network: the same tokens carry the non-redundant information at layer $l$ and at layer $l+1$.",
+      "identifiers": [
+        "SemanticScholar:63b2d615aa3df249a5f72af416c451cc80d7b719"
+      ],
+      "semantic_scholar_id": "63b2d615aa3df249a5f72af416c451cc80d7b719",
+      "canonical_id": "arXiv:2605.03110",
+      "arxiv_id": "2605.03110",
+      "doi": "10.48550/arXiv.2605.03110",
+      "authors": [
+        "Stephen J. Thomas"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      },
+      "reason": "代表トークン集合が層間で coherent である性質を使い選択を継承・検証してGram行列計算を二次から削減するカスケード機構で、Transformer注意のトークン選択コストを下げる高速化手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ReFold: Training-Free Reversible Inter-Turn Context Folding for Long-Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2610.07863",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon LLM agents act on an append-only interaction history that is re-sent to the model at every step, so the context and its cost grow with steps until the sessions exceed the context window. Existing methods manage the context through context requirement prediction, relying on additional model calls, heuristic rules, or trained policies. However, these predictive approaches introduce runtime overhead, invalidate prefix caches, and permanently discard content with no guarantee of recovery. To overcome these limitations, we introduce ReFold: a training-free rendering layer that preserves the underlying interaction history while compressing only the model's rendered context. It removes two kinds of inter-turn redundancy without an auxiliary predictor: content an earlier turn already displayed, replaced by a stub, and turns the agent itself reports finished, folded into a one-line note. Both operators use chunked rendering, rewriting the cached prefix once every few steps rather than at every step. Every removal is strictly reversible, a wrong removal costs one restore from the history rather than permanent content loss. Because it operates at the rendering layer, ReFold is plug-and-play across standard ReAct-style harnesses. Evaluations across five long-horizon benchmarks and two frontier LLMs demonstrate that ReFold reduces token consumption by up to 2.5x and halves the KV-cache memory per session without degrading task success rates. Under capped context budgets, it avoids up to 92% of forced compactions. Under concurrent serving workloads, it reduces request queuing delays by up to 100%, accelerating inference by up to 1.7x, while cutting inference costs by up to 3.4x.",
+      "identifiers": [
+        "SemanticScholar:26b2df50f205b2978902ac308a20164122145c80"
+      ],
+      "semantic_scholar_id": "26b2df50f205b2978902ac308a20164122145c80",
+      "canonical_id": "arXiv:2610.07863",
+      "arxiv_id": "2610.07863",
+      "authors": [
+        "Yupeng Su",
+        "Jia-Yi Tian",
+        "Zheng Zhang",
+        "Souvik Kundu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長期エージェントの対話履歴を可逆に折り畳んで描画文脈だけを圧縮するReFoldで、接頭辞キャッシュを保ちながらトークン消費とセッション当たりKVキャッシュを半減しサービング遅延も削減する手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model",
+      "source_url": "https://arxiv.org/abs/2510.07782",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose a rotation-constrained compensation method to address the errors introduced by structured pruning of large language models (LLMs). LLMs are trained on massive datasets and accumulate rich semantic knowledge in their representation space. In contrast, pruning is typically carried out with only a small amount of calibration data, which makes output mismatches unavoidable. Although direct least-squares fitting can reduce such errors, it tends to overfit to the limited calibration set, destructively modifying pretrained weights. To overcome this difficulty, we update the pruned parameters under a rotation constraint. This constrained update preserves the geometry of output representations (i.e., norms and inner products) and simultaneously re-aligns the pruned subspace with the original outputs. Furthermore, in rotation-constrained compensation, removing components that strongly contribute to the principal directions of the output makes error recovery difficult. Since input dimensions with large variance strongly affect these principal directions, we design a variance-aware importance score that ensures such dimensions are preferentially kept in the pruned model. By combining this scoring rule with rotation-constrained updates, the proposed method effectively compensates errors while retaining the components likely to be more important in a geometry-preserving manner. In the experiments, we apply the proposed method to Llama-7B and Llama-2-13B, and evaluate it on WikiText2 and multiple language understanding benchmarks. The results demonstrate consistently better perplexity and task accuracy compared with existing baselines.",
+      "identifiers": [
+        "SemanticScholar:c49df4e1099334882564f1fe79b9e54bd5c308df"
+      ],
+      "semantic_scholar_id": "c49df4e1099334882564f1fe79b9e54bd5c308df",
+      "canonical_id": "arXiv:2510.07782",
+      "arxiv_id": "2510.07782",
+      "doi": "10.48550/arXiv.2510.07782",
+      "authors": [
+        "Shuichiro Haruta",
+        "K. Matsumoto",
+        "Zhi Li",
+        "Ya-Nan Wang",
+        "Mori Kurokawa"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 408,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "構造化剪定で生じるLLMの出力誤差を回転制約付きで補償し分散の大きい入力次元を優先保持するRCPUで、Llama系での困惑度と精度を既存手法より改善する推論向け剪定手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c543bc6f7240",
+    "round": "libimp-c543bc6f7240c20d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c543bc6f7240c20d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c543bc6f7240c20d-pre01.json",
+    "receipt": "sha256:9e4db9deaeea52a8793d17dd7375a3b5506e745a7f69feba182cc7e9aa0db46e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c543bc6f7240",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

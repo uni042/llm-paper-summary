@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d10::provider-gap",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.11603",
+      "identity_tokens": [
+        "arXiv:2603.11603",
+        "https://arxiv.org/abs/2603.11603"
+      ],
+      "title": "AutoScout: Structured Optimization for Automating ML System Configuration",
+      "reason": "モデル並列や通信最適化、低レベル実行時パラメータを含むMLシステム構成を階層依存付き混合最適化問題として定式化し、忠実度の異なるシミュレータ併用で探索コストを下げながら学習・微調整・推論の構成を自動最適化するシステム手法であるため。",
+      "source_url": "https://arxiv.org/abs/2603.11603",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d10",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261121-1640-muse-c2d10--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2603.11603"
+  ]
+}

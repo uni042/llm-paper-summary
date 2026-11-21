@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Krause Synchronization Transformers",
+      "source_url": "https://arxiv.org/abs/2602.11534",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention in Transformers relies on globally normalized softmax weights, causing all tokens to compete for influence at every layer. When composed across depth, this interaction pattern induces strong synchronization dynamics that favor convergence toward a dominant mode, a behavior associated with representation collapse and attention sink phenomena. We introduce Krause Attention, a principled attention mechanism inspired by bounded-confidence consensus dynamics. Krause Attention replaces similarity-based global aggregation with distance-based, localized, and selectively sparse interactions, promoting structured local synchronization instead of global mixing. We relate this behavior to recent theory modeling Transformer dynamics as interacting particle systems, and show how bounded-confidence interactions naturally moderate attention concentration and alleviate attention sinks. Restricting interactions to local neighborhoods also reduces runtime complexity from quadratic to linear in sequence length. Empirically, we validate Krause Attention across diverse settings, including vision (ViT on CIFAR/ImageNet), autoregressive image generation (MNIST/CIFAR-10), large language models (Llama/Qwen), and language models trained from scratch at multiple scales (100M/200M). Across these domains, Krause Attention achieves consistent performance gains while improving computational efficiency, highlighting bounded-confidence dynamics as a scalable and effective inductive bias for attention.",
+      "identifiers": [
+        "SemanticScholar:697263d5f05da231dddfc070474bfb464afc0df9"
+      ],
+      "semantic_scholar_id": "697263d5f05da231dddfc070474bfb464afc0df9",
+      "canonical_id": "arXiv:2602.11534",
+      "arxiv_id": "2602.11534",
+      "doi": "10.48550/arXiv.2602.11534",
+      "authors": [
+        "Jing-Kun Liu",
+        "Yisong Yue",
+        "M. Welling",
+        "Yue Song"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      },
+      "reason": "有界信頼の合意ダイナミクスに基づくKrause注意で局所的で疎な相互作用に置き換え、注意の計算量を二次から線形へ下げつつLLMを含む複数領域で効率と性能の両立を示した注意機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs",
+      "source_url": "https://arxiv.org/abs/2608.13416",
+      "year": 2026,
+      "published": "2026-08-13",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Humans effortlessly perceive the present while remembering the past, yet streaming VLMs often trade off real-time perception against long-term memory. Prior work shows that shortening the context can sharpen current-scene perception at the expense of long-range recall. To reconcile these abilities, we introduce StreamTTT, which writes long-range history into online-updated fast weights outside the attention context. This leaves a short sliding key-value cache dedicated to recent evidence, mitigating attention dilution. We train StreamTTT jointly on offline long-video QA and a newly constructed real-time QA corpus. On OVO-Bench, under each model's reported input protocol, StreamTTT-4B outperforms the same-scale SimpleStream-4B by 0.6 points in real-time perception and 5.3 points in backward tracing. It also surpasses the larger SimpleStream-8B by 0.73 points on StreamingBench's Real-Time Visual Understanding (RTVU) subset. Our code is publicly available at https://github.com/zeyun-zhong/StreamTTT.",
+      "identifiers": [
+        "SemanticScholar:1e143a75958ecd594c539cb90d7b92d5f82ad2ba"
+      ],
+      "semantic_scholar_id": "1e143a75958ecd594c539cb90d7b92d5f82ad2ba",
+      "canonical_id": "arXiv:2608.13416",
+      "arxiv_id": "2608.13416",
+      "doi": "10.48550/arXiv.2608.13416",
+      "authors": [
+        "Joya Chen",
+        "Ze-Yun Zhong",
+        "M. Shou"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミングVLMで長期履歴を注意文脈外の高速重みに書き込み短期は短いスライディングKVキャッシュに限定することで、リアルタイム知覚と長期想起を両立させる推論メモリ機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2609.02780",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding is a critical capability for real-world applications, including embodied intelligence, autonomous driving, industrial monitoring, surveillance and early warning, and wearable assistants. However, processing continuous video streams with multimodal large language models (MLLMs) is computationally expensive. Existing efforts have explored reducing streaming overhead through visual token pruning, token merging, quantization, on-demand frame retrieval, and context offloading. However, most existing methods overlook the dimension of model depth. Repeatedly executing full-depth MLLM prefill over incoming frames is prohibitively expensive, incurring substantial computational overhead and causing the KV cache to grow at a rate directly proportional to the prefill depth. To address these challenges, we propose ShallowStream, a novel framework that leverages the shallow layers of an MLLM to simultaneously perform frame encoding and retrieval index building. During stream processing, ShallowStream maintains an always-on lightweight index using the KV cache of shallow layers. During query-time answering, we leverage the attention scores generated by the shallow layers to score context frames and employ a diversity-aware selection strategy to retrieve precise and comprehensive evidence. ShallowStream achieves performance on par with the strongest existing streaming methods, while reducing per-frame prefill latency and 10-second end-to-end latency by up to 52.1x and 11.9x, respectively. Our code is available at https://github.com/CURRENTF/ShallowStream.",
+      "identifiers": [
+        "SemanticScholar:fc752fcce5978786a259ae2176549f6bb7da7705"
+      ],
+      "semantic_scholar_id": "fc752fcce5978786a259ae2176549f6bb7da7705",
+      "canonical_id": "arXiv:2609.02780",
+      "arxiv_id": "2609.02780",
+      "doi": "10.48550/arXiv.2609.02780",
+      "authors": [
+        "Jitai Hao",
+        "Ke-Shuai Yang",
+        "Ding-Kun Yan",
+        "Fan Liu",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミング動画MLLMで浅い層のKVキャッシュを常時インデックスとして使い深い層での回答時に証拠を検索することで、フレーム当たりプリフィル遅延を最大52倍削減する推論手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling",
+      "source_url": "https://arxiv.org/abs/2602.13680",
+      "year": 2026,
+      "published": "2026-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) encounter significant performance bottlenecks in long-sequence tasks due to the computational complexity and memory overhead inherent in the self-attention mechanism. To address these challenges, we introduce \\textsc{AllMem}, a novel and efficient hybrid architecture that integrates Sliding Window Attention (SWA) with non-linear Test-Time Training (TTT) memory networks. \\textsc{AllMem} enables models to effectively scale to ultra-long contexts while mitigating catastrophic forgetting. This approach not only overcomes the representation constraints typical of linear memory models but also significantly reduces the computational and memory footprint during long-sequence inference. Furthermore, we implement a Memory-Efficient Fine-Tuning strategy to replace standard attention layers in pre-trained models with memory-augmented sliding window layers. This framework facilitates the efficient transformation of any off-the-shelf pre-trained LLM into an \\textsc{AllMem}-based architecture. Empirical evaluations confirm that our 4k window model achieves near-lossless performance on 37k LongBench with a marginal 0.83 drop compared to full attention. Furthermore, on InfiniteBench at a 128k context, our 8k window variant outperforms full attention, which validates the effectiveness of our parameterized memory in mitigating noise and maintaining robust long-range modeling without the prohibitive costs of global attention.",
+      "identifiers": [
+        "SemanticScholar:49869dd893cc05511ff1519105765d9fabdba986"
+      ],
+      "semantic_scholar_id": "49869dd893cc05511ff1519105765d9fabdba986",
+      "canonical_id": "arXiv:2602.13680",
+      "arxiv_id": "2602.13680",
+      "doi": "10.48550/arXiv.2602.13680",
+      "authors": [
+        "Zi-Ming Wang",
+        "Xiang Wang",
+        "Kailong Peng",
+        "Lang Qin",
+        "Juan Gabriel Kostelec",
+        "Christos Sourmpis",
+        "Axel Laborieux",
+        "Qinghai Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      },
+      "reason": "スライディングウィンドウ注意と非線形テスト時学習メモリを組み合わせたAllMemで長文文脈推論の計算量とメモリを抑え、128k文脈でも全体注意を上回る長文推論アーキテクチャである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Olica: Efficient Structured Pruning of Large Language Models without Retraining",
+      "source_url": "https://arxiv.org/abs/2506.08436",
+      "year": 2025,
+      "published": "2025-06-10",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most existing structured pruning methods for Large Language Models (LLMs) require substantial computational and data resources for retraining to reestablish the corrupted correlations, making them prohibitively expensive. To address this, we propose a pruning framework for LLMs called Orthogonal decomposition and Linear Calibration (Olica), which eliminates the need for retraining. A key observation is that the multi-head attention (MHA) layer depends on two types of matrix products. By treating these matrix products as unified entities and applying principal component analysis (PCA), we extract the most important information to compress LLMs without sacrificing accuracy or disrupting their original structure. Consequently, retraining becomes unnecessary. A fast decomposition method is devised, reducing the complexity of PCA by a factor of the square of the number of attention heads. Additionally, to mitigate error accumulation problem caused by pruning the feed-forward network (FFN) layer, we introduce a linear calibration method to reconstruct the residual errors of pruned layers using low-rank matrices. By leveraging singular value decomposition (SVD) on the solution of the least-squares problem, these matrices are obtained without requiring retraining. Extensive experiments show that the proposed Olica is efficient in terms of data usage, GPU memory, and running time, while delivering superior performance across multiple benchmarks.",
+      "identifiers": [
+        "SemanticScholar:824f8b80ad40f64b6fe1b2b1b2a7759ac6466263"
+      ],
+      "semantic_scholar_id": "824f8b80ad40f64b6fe1b2b1b2a7759ac6466263",
+      "canonical_id": "arXiv:2506.08436",
+      "arxiv_id": "2506.08436",
+      "doi": "10.48550/arXiv.2506.08436",
+      "authors": [
+        "Jiujun He",
+        "Huazhen Lin"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 529,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "多頭注意の行列積への主成分分析とFFNの線形校正により再学習なしでLLMを構造化剪定するOlicaで、データ量・GPUメモリ・実行時間を抑えつつ圧縮性能を示す推論向け圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-93e26c8bf20a",
+    "round": "libimp-93e26c8bf20aff95-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-93e26c8bf20aff95-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-93e26c8bf20aff95-pre01.json",
+    "receipt": "sha256:1e4b3fe0b7493a3a1556079c833d0e10ebb7431579636f43ba8602ed14082265"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-93e26c8bf20a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

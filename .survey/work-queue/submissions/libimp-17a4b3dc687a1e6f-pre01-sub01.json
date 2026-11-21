@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Text Compression for Efficient Language Generation",
+      "source_url": "https://arxiv.org/abs/2503.11426",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We challenge the prevailing assumption that LLMs must rely fully on sub-word tokens for high-quality text generation. To this end, we propose the\"Generative Pretrained Thoughtformer\"(GPTHF), a hierarchical transformer language model capable of text generation by compressing text into sentence embeddings and employing a sentence attention mechanism. GPTHF retains GPT's architecture, modifying only token interactions via dynamic sparse attention masks. Our experiments show that GPTHF achieves an up to an order of magnitude improvement in FLOPs efficiency and a threefold increase in runtime speed compared to equally-sized GPT models in the low-size regime. This is achieved through a unique generation method that caches and reuses sentence embeddings, allowing significant portions of the input to bypass large parts of the network.",
+      "identifiers": [
+        "SemanticScholar:f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636"
+      ],
+      "semantic_scholar_id": "f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636",
+      "canonical_id": "arXiv:2503.11426",
+      "arxiv_id": "2503.11426",
+      "doi": "10.48550/arXiv.2503.11426",
+      "authors": [
+        "David Gu",
+        "Peter Belcák",
+        "Roger Wattenhofer"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "文埋め込みへテキストを圧縮し文注意と動的スパース注意で生成するGPTHFは、文埋め込みをキャッシュして再利用し大規模層を迂回させることでFLOPsを最大で桁単位に削減しGPT比3倍の生成速度を示しており、言語生成推論の効率化への直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On the Importance of a Multi-Scale Calibration for Quantization",
+      "source_url": "https://arxiv.org/abs/2602.07465",
+      "year": 2026,
+      "published": "2026-02-07",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a cornerstone for efficiently deploying large language models (LLMs), where a small calibration set critically affects quantization performance. However, conventional practices rely on random sequences of fixed length, overlooking the variable-length nature of LLM inputs. Input length directly influences the activation distribution and, consequently, the weight importance captured by the Hessian, which in turn affects quantization outcomes. As a result, Hessian estimates derived from fixed-length calibration may fail to represent the true importance of weights across diverse input scenarios. We propose MaCa (Matryoshka Calibration), a simple yet effective method for length-aware Hessian construction. MaCa (i) incorporates multi-scale sequence length information into Hessian estimation and (ii) regularizes each sequence as an independent sample, yielding a more stable and fruitful Hessian for accurate quantization. Experiments on state-of-the-art LLMs (e.g., Qwen3, Gemma3, LLaMA3) demonstrate that MaCa consistently improves accuracy under low bit quantization, offering a lightweight enhancement compatible with existing PTQ frameworks. To the best of our knowledge, this is the first work to systematically highlight the role of multi-scale calibration in LLM quantization.",
+      "identifiers": [
+        "SemanticScholar:a4deaafaca31fb9ba18a2448a6bfd614ff587b0c"
+      ],
+      "semantic_scholar_id": "a4deaafaca31fb9ba18a2448a6bfd614ff587b0c",
+      "canonical_id": "arXiv:2602.07465",
+      "arxiv_id": "2602.07465",
+      "doi": "10.48550/arXiv.2602.07465",
+      "authors": [
+        "Seungwoo Son",
+        "Ingyu Seong",
+        "Junhan Kim",
+        "Hyemi Jang",
+        "Yongkweon Jeon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 287,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの学習後量子化において入力長の多様さを多尺度キャリブレーションMaCaでHessian推定へ組み込み重み重要度を安定化させる手法であり、低ビット量子化の精度を既存PTQ枠組みと互換に改善する推論向け量子化への直接貢献が明確である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MOSAIC: Efficient Mixture-of-Agent Scheduling via Adaptive Aggregation and Inference Concurrency",
+      "source_url": "https://arxiv.org/abs/2606.03014",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Agents (MoA) systems improve reasoning accuracy by routing each query to multiple expert LLMs and aggregating their outputs. Efficiently executing this workload on limited GPU resources has bottlenecks. Skill-based routing creates skewed expert demand, and combining instruction-tuned LLMs with long-reasoning models results in extreme variability in generation lengths. Consequently, traditional scheduling strategies suffer from significant GPU idling and throughput collapse due to load imbalances. We present MOSAIC, a scheduling framework for accelerating batch-oriented MoA workloads. MOSAIC uses two-stage workload-aware scheduling: an expert placement stage, where an integer linear program (ILP) decides expert placement, followed by a query-sequencing stage that schedules requests based on predicted output lengths. Additionally, MOSAIC uses confidence-aware adaptive aggregation, leveraging inter-expert agreement to bypass the heavy aggregator LLM for consensus queries. On a 4-GPU system, MOSAIC achieves 2.7-3.4x end-to-end speedups over round-robin scheduling and reduces the mean time-to-answer by 3.9-7.8x, while matching accuracy within +/-1pp.",
+      "identifiers": [
+        "SemanticScholar:d00d2936dbfb0f524913885d978f71a2b9cc2264"
+      ],
+      "semantic_scholar_id": "d00d2936dbfb0f524913885d978f71a2b9cc2264",
+      "canonical_id": "arXiv:2606.03014",
+      "arxiv_id": "2606.03014",
+      "doi": "10.48550/arXiv.2606.03014",
+      "authors": [
+        "Saptarshi Mitra",
+        "Yi-Fan Zhang",
+        "Rachid Karami",
+        "Sreetama Sarkar",
+        "Phyo Pyae Moe Aung",
+        "Nazmul Takbir",
+        "Souvik Kundu",
+        "Si-Tao Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数専門家LLMへのルーティングと集約を行うMixture-of-Agents実行を対象に、整数線形計画による専門家配置、予測出力長に基づくクエリ順序付け、合意時の集約LLM迂回を組み合わせたMOSAICが4GPUで2.7から3.4倍の高速化を示しており、推論スケジューリングへの直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VLZip: Unified Visual and Textual Compression for Interleaved Long-Context Modeling",
+      "source_url": "https://arxiv.org/abs/2608.08630",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision Language Models (VLMs) face significant challenges with ultra-long, interleaved image-text sequences due to the quadratic complexity of self-attention. Current solutions either resort to aggressive token pruning, risking irreversible information loss, or adopt efficient but less precise architectures, while largely ignoring the equally vital textual component. We introduce VLZip, a framework that unifies visual and textual compression for high-fidelity reasoning within a pure Transformer. At its core, VLZip hierarchically distills visual and textual segments into compact, layer-specific\"soft prefixes\"and injects them into each decoder layer's hidden states, drastically shortening the attention sequence while preserving fine-grained global context. To address deficient evaluations in the field, we also introduce LongVLBench, a new benchmark derived from video narratives that demands holistic, narrative-level reasoning. Extensive experiments show VLZip achieves leading performance on long-context multimodal reasoning, enabling training up to 120K tokens, a 6x increase over the baseline, and inference beyond 280K tokens with significantly reduced memory, while demonstrating the memory scalability to handle up to 2M tokens. By excelling at extreme context lengths where existing methods collapse, VLZip establishes an efficient and powerful new standard for long-context multimodal AI. Code is available at https://github.com/ShareLab-SII/VLZip.",
+      "identifiers": [
+        "SemanticScholar:176e969573ff202f3c93cf5098eb35ff8a79b967"
+      ],
+      "semantic_scholar_id": "176e969573ff202f3c93cf5098eb35ff8a79b967",
+      "canonical_id": "arXiv:2608.08630",
+      "arxiv_id": "2608.08630",
+      "doi": "10.1007/978-3-032-37550-6_11",
+      "authors": [
+        "Yu-Qi Zhang",
+        "Cheng Chen",
+        "Yu-Yu Guo",
+        "Wen-Jie Yang",
+        "Lingchen Meng",
+        "Peng Di",
+        "Hang Yu",
+        "Zu-Xuan Wu",
+        "Yu-Gang Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "画像とテキストが交互する超長文脈VLM向けに視覚・テキスト区間を層固有のソフトプレフィックスへ階層的に蒸留して注意系列を短縮するVLZipは、推論280Kトークン超と大幅なメモリ削減、最大2Mトークンまでの拡張性を示しており、長文脈推論の圧縮機構として直接的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reflection Steering: Disentangling Reflection from Reasoning in Activation Space for Token-Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2608.25542",
+      "year": 2026,
+      "published": "2026-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models often produce reasoning traces with verification, revision, and backtracking. When reflection merely re-checks established results, it wastes reasoning tokens and increases latency. Most existing reflection steering methods add a label-derived mean-difference direction across preset layers, but its entanglement with reasoning and length signals destabilizes the accuracy-efficiency trade-off. In this paper, we propose Reflection Steering, a training-free framework for controlling reflection-associated computation within LLMs by disentangling reflection-related activations from general reasoning. Specifically, we contrast reflective and non-reflective hidden states at each LLM layer, denoise the resulting reflection directions with PCA, and orthogonalize them against general-reasoning directions. To limit downstream amplification from early-layer interventions, we calibrate each layer across multiple intervention strengths on a small set, retain only stable layers, and apply bounded projection removal to their residual-stream activations. We conduct extensive experiments across two public benchmarks and three open-weight LLMs against state-of-the-art activation-steering baselines. Results show that Reflection Steering reduces reasoning tokens by 16.9% on average across six matched settings. Besides, our method further introduces a bounded reflection intervention-strength parameter $\\alpha$, enabling deployment-time adjustment to balance token savings, accuracy, and generation stability.",
+      "identifiers": [
+        "SemanticScholar:21802a6b6cd35779507cb5e340a39d56f35c8564"
+      ],
+      "semantic_scholar_id": "21802a6b6cd35779507cb5e340a39d56f35c8564",
+      "canonical_id": "arXiv:2608.25542",
+      "arxiv_id": "2608.25542",
+      "doi": "10.48550/arXiv.2608.25542",
+      "authors": [
+        "Jia-Rui Hu",
+        "Zhi-Yuan Wen",
+        "Xiao-Yun Liu",
+        "Jia-Bin Shen",
+        "Yu Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論モデルの冗長な反省計算を対象に、反省と一般推論の活性を層ごとに分離しPCA除ノイズと直交化を経た有界射影除去を残差ストリームへ適用するReflection Steeringは、学習なしで推論トークンを平均16.9%削減しデプロイ時に強さを調整できるトークン効率推論手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-17a4b3dc687a",
+    "round": "libimp-17a4b3dc687a1e6f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-17a4b3dc687a1e6f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-17a4b3dc687a1e6f-pre01.json",
+    "receipt": "sha256:f5327259f4ffb0d935cf9aa85c3f18bb655194daa428cab6cbb5762c04868aba"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-17a4b3dc687a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

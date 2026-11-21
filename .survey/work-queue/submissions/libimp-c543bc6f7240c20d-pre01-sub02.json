@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.14618",
+      "year": 2026,
+      "published": "2026-07-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "CPUs are the most universal target for on-device LLM inference, but existing low-bit quantization methods offer either coarse operating points or fine-grained mixed precision that is difficult to execute efficiently on CPUs. We present PolyQ, a CPU-oriented compiler/quantization co-design for activation-aware channel-wise bit allocation under a user-specified average-bit budget. PolyQ assigns per-channel bit-widths from $\\{2,3,4,8,16\\}$, then uses a compile-time model compiler to permute and cluster channels into bit-homogeneous blocks, generate SIMD- and LUT-compatible kernels, and merge compatible permutations across operators to keep layout regularization off the runtime path. This turns fine-grained budget fitting into a practical fractional-bit deployment method for CPU-only inference. Across Falcon-H1-3B, Llama2-13B, and Qwen3-32B on WikiText-2, PolyQ provides stable quality scaling from 3--6\\,b and improves perplexity by 2.4--32.1\\% over prior methods at a 3\\,b target. End-to-end measurements on three representative CPUs -- workstation, laptop, and mobile -- show that compiler layout regularization reduces activation reorder traffic by up to 70.8\\%, prefill latency and decode throughput scale nearly proportionally with the configured bit budget, and energy/token overhead stays below 2\\% relative to an optimized LUT-based back-end. These results show that fractional-bit CPU deployment is practical, predictable, and energy-efficient across diverse edge targets.",
+      "identifiers": [
+        "SemanticScholar:e6d2d187d7c19c39acb2e4ae7e9c373033a77749"
+      ],
+      "semantic_scholar_id": "e6d2d187d7c19c39acb2e4ae7e9c373033a77749",
+      "canonical_id": "arXiv:2607.14618",
+      "arxiv_id": "2607.14618",
+      "doi": "10.48550/arXiv.2607.14618",
+      "authors": [
+        "Hyunwoo Oh",
+        "Suyeon Jang",
+        "Han-Ning Chen",
+        "KyungIn Nam",
+        "Sanggeon Yun",
+        "Ryozo Masukawa",
+        "M. Imani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 128,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジCPU向けLLM推論でチャネル毎の混合精度量子化とコンパイラによるレイアウト正規化を共同設計するPolyQで、SIMD・LUTカーネル生成によりビット予算に応じた遅延と消費電力を示した量子化基盤である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Event-Driven Language Models with Sparse Neural Activity for Neuromorphic Hardware",
+      "source_url": "https://arxiv.org/abs/2608.30439",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference with transformer-based large language models (LLMs) is often limited by the memory-bound KV cache and quadratic attention cost. State-space models (SSMs) mitigate this through linear attention and fixed-size recurrent states, but their large dense linear projections remain computationally expensive even after quantization. We introduce a method that induces sparse neural activity in heavily quantized linear-attention models with minimal performance loss. Activations below a per-projection trainable threshold ($\\pm \\Delta$) are nullified while preserving crucial outliers, achieving comparable performance to dense models with up to 4$\\times$ fewer effective arithmetic operations. Targeting a multi-core, multi-chip neuromorphic platform, where event-driven execution converts unstructured sparsity into throughput at both the compute and communication levels, a capability GPU architectures fundamentally lack, we project up to 37$\\times$ higher throughput and 16$\\times$ lower power versus edge GPU inference of a comparable transformer-based model, and up to 5.4$\\times$ improvements over the non-sparsified baseline. These results position sparse, quantized linear-attention models as a natural fit for deploying LLMs on event-driven multi-core platforms.",
+      "identifiers": [
+        "SemanticScholar:6607b6429b15e82e107d344b44c034a87d05877d"
+      ],
+      "semantic_scholar_id": "6607b6429b15e82e107d344b44c034a87d05877d",
+      "canonical_id": "arXiv:2608.30439",
+      "arxiv_id": "2608.30439",
+      "doi": "10.48550/arXiv.2608.30439",
+      "authors": [
+        "Simon Richter",
+        "Ru-Hai Lin",
+        "Jason Yik",
+        "Taylor Kergan",
+        "Rui-Jie Zhu",
+        "F. Moradi",
+        "J. Eshraghian"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化した線形注意LLMで閾値以下の活性化を消して疎な神経活動を誘導し、ニューロモーフィック基盤のイベント駆動実行でエッジGPU比のスループットと電力効率の大幅改善を見込む推論手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HAAN: A Holistic Approach for Accelerating Normalization Operations in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2502.11832",
+      "year": 2025,
+      "published": "2025-02-17",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing (NLP) tasks by achieving state-of-the-art performance across a range of benchmarks. Central to the success of these models is the integration of sophisticated architectural components aimed at improving training stability, convergence speed, and generalization capabilities. Among these components, normalization operation, such as layer normalization (LayerNorm), emerges as a pivotal technique, offering substantial benefits to the overall model performance. However, previous studies have indicated that normalization operations can substantially elevate processing latency and energy usage. In this work, we adopt the principles of algorithm and hardware co-design, introducing a holistic normalization accelerating method named HAAN. The evaluation results demonstrate that HAAN can achieve significantly better hardware performance compared to state-of-the-art solutions.",
+      "identifiers": [
+        "SemanticScholar:2e2c90040f0b959756b525a77efdea8b31663eea"
+      ],
+      "semantic_scholar_id": "2e2c90040f0b959756b525a77efdea8b31663eea",
+      "canonical_id": "arXiv:2502.11832",
+      "arxiv_id": "2502.11832",
+      "doi": "10.23919/DATE64628.2025.10993005",
+      "authors": [
+        "Tian-Fan Peng",
+        "Tian-Hua Xia",
+        "Jiajun Qin",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 642,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの正規化演算が遅延とエネルギーを増やす問題にアルゴリズムとハードウェアの共同設計で対処するHAANで、正規化カーネルのハードウェア性能を既存手法より改善する推論高速化手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c543bc6f7240",
+    "round": "libimp-c543bc6f7240c20d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c543bc6f7240c20d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c543bc6f7240c20d-pre01.json",
+    "receipt": "sha256:9e4db9deaeea52a8793d17dd7375a3b5506e745a7f69feba182cc7e9aa0db46e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c543bc6f7240",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

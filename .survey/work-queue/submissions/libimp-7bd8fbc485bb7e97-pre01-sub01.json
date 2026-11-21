@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ROCKET: Rapid Optimization via Calibration-guided Knapsack Enhanced Truncation for Efficient Model Compression",
+      "source_url": "https://arxiv.org/abs/2602.11008",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present ROCKET, a training-free model compression method that achieves state-of-the-art performance in comparison with factorization, structured-sparsification and dynamic compression baselines. Operating under a global compression budget, ROCKET comprises two key innovations: First, it formulates layer-wise compression allocation as a multi-choice knapsack problem, selecting the optimal compression level for each layer to minimize total reconstruction error while adhering to a target model size. Second, it introduces a single-step sparse matrix factorization inspired by dictionary learning: using only a small calibration set, it sparsifies weight coefficients based on activation-weights sensitivity and then updates the dictionary in closed form via least squares bypassing iterative optimization, sparse coding, or backpropagation entirely. ROCKET consistently outperforms existing compression approaches across different model architectures at 20-50\\% compression rates. Notably, it retains over 90\\% of the original model's performance at 30\\% compression without any fine-tuning. Moreover, when applying a light fine-tuning phase, recovery is substantially enhanced: for instance, compressing Qwen3-14B to an 8B-parameter model and healing it with just 30 million tokens yields performance nearly on par with the original Qwen3-8B. The code for ROCKET is at github.com/mts-ai/ROCKET/tree/main.",
+      "identifiers": [
+        "SemanticScholar:7bd8bb482b3826efb57ec2a9efca03ece9a3a025"
+      ],
+      "semantic_scholar_id": "7bd8bb482b3826efb57ec2a9efca03ece9a3a025",
+      "canonical_id": "arXiv:2602.11008",
+      "arxiv_id": "2602.11008",
+      "doi": "10.48550/arXiv.2602.11008",
+      "authors": [
+        "Ammar Ali",
+        "Baher Mohammad",
+        "Denis Makhov",
+        "Dmitriy Shopkhoev",
+        "Magauiya Zhussip",
+        "Stamatios Lefkimmiatis"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      },
+      "reason": "校正集合のみで層別圧縮配分を多選択ナップサック問題として解き、辞書学習型の疎行列分解を一回で閉形式更新する訓練不要圧縮ROCKETを提案し、Qwen3-14Bから8Bへの圧縮などLLMのモデルサイズ削減を一次要旨で具体的に示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MoBiE: Efficient Inference of Mixture of Binary Experts under Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2604.06798",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) based large language models (LLMs) offer strong performance but suffer from high memory and computation costs. Weight binarization provides extreme efficiency, yet existing binary methods designed for dense LLMs struggle with MoE-specific issues, including cross-expert redundancy, task-agnostic importance estimation, and quantization-induced routing shifts. To this end, we propose MoBiE, the first binarization framework tailored for MoE-based LLMs. MoBiE is built on three core innovations: 1. using joint SVD decomposition to reduce cross-expert redundancy; 2. integrating global loss gradients into local Hessian metrics to enhance weight importance estimation; 3. introducing an error constraint guided by the input null space to mitigate routing distortion. Notably, MoBiE achieves these optimizations while incurring no additional storage overhead, striking a balance between efficiency and model performance. Extensive experiments demonstrate that MoBiE consistently outperforms state-of-the-art binary methods across multiple MoE-based LLMs and benchmarks. For example, on Qwen3-30B-A3B, MoBiE reduces perplexity by 52.2$\\%$, improves average zero-shot performance by 43.4$\\%$, achieves over 2 $\\times$ inference speedup, and further shortens quantization time. The code is available at https://github.com/Kishon-zzx/MoBiE.",
+      "identifiers": [
+        "SemanticScholar:a50efb7cdaaaaf5e57100599bd017908755d7f0a"
+      ],
+      "semantic_scholar_id": "a50efb7cdaaaaf5e57100599bd017908755d7f0a",
+      "canonical_id": "arXiv:2604.06798",
+      "arxiv_id": "2604.06798",
+      "doi": "10.48550/arXiv.2604.06798",
+      "authors": [
+        "Zhi-Xiong Zhao",
+        "Zu-Kang Xu",
+        "Zhi-Xuan Chen",
+        "Da-Wei Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE型LLMを対象に、共同SVDによる専門家間冗長削減、勾配を統合した重要度推定、入力零空間に基づく誤差制約を組み合わせた二値化枠組みMoBiEを提案し、Qwen3-30B-A3Bで推論2倍超の高速化を一次要旨で示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compiling Code LLMs into Lightweight Executables",
+      "source_url": "https://arxiv.org/abs/2603.29813",
+      "year": 2026,
+      "published": "2026-03-31",
+      "venue": "Proc. ACM Softw. Eng.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for better prediction accuracy and higher execution performance in neural networks continues to grow. The emergence and success of Large Language Models (LLMs) have produced many cloud-based tools for software engineering tasks such as code suggestion. Although effective, cloud deployment raises concerns over privacy, latency, and reliance on network connectivity. Running LLMs locally on personal devices such as laptops would address these issues, because it enables offline use and reduces response time. However, local deployment is challenging, since commodity devices lack high-performance accelerators such as GPUs and are constrained by limited memory and compute capacity, which makes it hard to execute large models efficiently. We present Ditto, a framework that optimizes both the model size of Code LLMs and the inference programs that execute them, with a focus on statically-typed languages such as C. Our approach integrates two components. The first is a quantization technique inspired by product quantization, which groups model parameters into per-block codebooks via K-Means clustering and stores each weight as a bit-packed low-bitwidth index. The quantizer further supports a mixed-precision mode that keeps a small number of sensitivity-critical tensors in float32. The second component is a compilation pass integrated into LLVM that automatically detects and replaces unoptimized General Matrix-Vector Multiplication (GEMV) operations, which are the most computationally intensive part of code models, with calls into Basic Linear Algebra Subprograms (BLAS) libraries that are highly optimized for the target hardware. The output of Ditto is a compiled executable that runs the selected Code LLM on commodity hardware. We evaluate Ditto on three popular Code LLMs, namely Code Llama, MagicCoder, and OpenCodeInterpreter, achieving up to 10.5× faster inference, 6.4× lower memory usage, and 10.5× lower energy consumption compared with their original inference pipelines, while preserving accuracy close to the full-precision models, with an average loss of only 0.27% in pass@1. Ditto also outperforms the state-of-the-art int8 quantization baseline, achieving up to 6.96% higher pass@1 accuracy, 2.2× speedup, and 1.6× memory reduction, which demonstrates the effectiveness of our approach.",
+      "identifiers": [
+        "SemanticScholar:c82a2aefa789ba07fa47334937c8290c58c23fd8"
+      ],
+      "semantic_scholar_id": "c82a2aefa789ba07fa47334937c8290c58c23fd8",
+      "canonical_id": "arXiv:2603.29813",
+      "arxiv_id": "2603.29813",
+      "doi": "10.1145/3808196",
+      "authors": [
+        "Jie-Ke Shi",
+        "Jun-Da He",
+        "Zhou Yang",
+        "Cheng-Ran Yang",
+        "M. Klymenko",
+        "T. Hoàng",
+        "S. Xu",
+        "Zhen-Chang Xing",
+        "David Lo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Code LLMを対象に、積量子化に着想を得たコードブックで重みを低ビット指数化し、LLVMパスで未最適なGEMVをBLAS呼出へ置換するDittoを提案し、汎用機器上で推論10.5倍高速化とメモリ削減を一次要旨で具体的に示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Budgeting Bytes: A Windowed Storage Roofline and Dual-Budget Architecture Ablations for Storage-Bound LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.04238",
+      "year": 2026,
+      "published": "2026-07-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding on cheap hardware is bound not by FLOPs but by the bytes each generated token must move across the slowest populated tier of a memory hierarchy. We treat bytes-per-token as a first-class design axis, organized by an address-determinism taxonomy that classifies parameters by when their fetch address becomes known during a token's forward pass (A0: at token sampling; A1: before attention; A2: layerwise data-dependent; A3: always read). This reduces prefetch scheduling to single-machine feasibility with release times, yielding a closed-form windowed roofline. We run dual-budget (bytes-per-token times storage) ablations across three sub-100M scales, then take the framework to real large-MoE deployment and report a substantial negative result the roofline predicts: on an 8GB edge board running Qwen3-30B-A3B (4-bit, 18GB), the model overflows RAM and decode is pinned at the eMMC bandwidth ceiling; predictive expert prefetch does not help -- not temporal-locality prefetch (net-negative), not even a trace-driven oracle with perfect prediction -- because the binding constraint is byte volume over a saturated bus, which prefetch cannot reduce. The lever that works is reducing bytes-per-token until the model fits the fast tier: quantized to fit a 16GB unified-memory device, the same model runs GPU-resident at 11.5 tok/s (22x). We reconcile this with GPU-serving expert-prefetch predictors: a frozen-model probe predicts Qwen3-30B routing from the pre-attention state at 91.2%, a scale-invariant predictability property, but this converts to throughput only where the fast tier caches most of the model and per-token transfer is comparable to compute -- measured to hold on an A100 PCIe-offload path and to fail on bandwidth-walled edge storage. Predictability is not speedup; we chart where the gap closes.",
+      "identifiers": [
+        "SemanticScholar:1b18672e495f2bf8a45476fb291a5bc2bdbf6158"
+      ],
+      "semantic_scholar_id": "1b18672e495f2bf8a45476fb291a5bc2bdbf6158",
+      "canonical_id": "arXiv:2609.04238",
+      "arxiv_id": "2609.04238",
+      "doi": "10.48550/arXiv.2609.04238",
+      "authors": [
+        "Hanhaodi Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 115,
+        "matched_prestigious_venue": null
+      },
+      "reason": "安価なハードウェアでの自己回帰デコードをトークン当たり移動バイト数で捉える窓付きルーフラインを定式化し、階層メモリや専門家プリフェッチの負の結果と、量子化で高速層へ収めた際の22倍高速化をQwen3-30B-A3Bの実機で示すオフロード・デコード分析である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens",
+      "source_url": "https://arxiv.org/abs/2507.00715",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model-based generative recommendation (LLMRec) has achieved notable success, but it suffers from high inference latency due to massive computational overhead and memory pressure of KV Cache. Existing KV Cache reduction methods face critical limitations: cache compression offers marginal acceleration given recommendation tasks' short decoding steps, while prompt compression risks discarding vital interaction history. Through systematic analysis of attention patterns in LLMRec, we uncover two pivotal insights: 1) layer-wise attention sparsity inversion where early layers retain dense informative patterns while later layers exhibit high redundancy, and 2) dual attention sinks phenomenon where attention scores concentrate on both head and tail tokens of input sequences. Motivated by these insights, we propose EARN, an efficient inference framework that leverages the early layers to compress information into register tokens placed at the input sequence boundaries, then focuses solely on these tokens in the subsequent layers. Extensive experiments on three datasets, two LLMRec methods and two LLM architectures demonstrate EARN's superiority, achieving up to 3.79x speedup and 80.8% KV Cache reduction with better accuracy than the general finetuning approach. Our work bridges the efficiency-effectiveness gap in LLMRec, offering practical deployment advantages for industrial scenarios.",
+      "identifiers": [
+        "SemanticScholar:1a767a3e12f5f87123f66a2b254660959264cf6f"
+      ],
+      "semantic_scholar_id": "1a767a3e12f5f87123f66a2b254660959264cf6f",
+      "canonical_id": "arXiv:2507.00715",
+      "arxiv_id": "2507.00715",
+      "doi": "10.1145/3711896.3736919",
+      "authors": [
+        "Chao-Qun Yang",
+        "Xin-Yu Lin",
+        "Wenjie Wang",
+        "Yong-Qi Li",
+        "Teng Sun",
+        "Xianjing Han",
+        "Tat-Seng Chua"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成推薦向けLLMの注意パターンの層別疎性反転と二重の注意シンクを分析し、初期層で情報をレジスタトークンへ圧縮して後段層はそれだけを見るEARNを提案し、KVキャッシュ80.8％削減と最大3.79倍高速化を一次要旨で示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7bd8fbc485bb",
+    "round": "libimp-7bd8fbc485bb7e97-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7bd8fbc485bb7e97-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7bd8fbc485bb7e97-pre01.json",
+    "receipt": "sha256:f4c07d3399398db4bf34ae9b0b631df851626a7ddb92373a6c7003aa97276eae"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7bd8fbc485bb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Just on Time: Token-Level Early Stopping for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.11133",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models generate text through iterative refinement, a process that is often computationally inefficient because many tokens reach stability long before the final denoising step. We introduce a training-free, token-level early stopping approach that identifies convergence independently at each position. Our method leverages lightweight signals derived from the model's predictions and local context to dynamically determine when individual tokens can be finalized. This yields adaptive per-token freezing without task-specific fine-tuning, substantially reducing the total number of diffusion steps required. Across diverse benchmarks, spanning mathematical reasoning, general question answering, and scientific understanding, our approach achieves substantial efficiency gains while preserving generation quality.",
+      "identifiers": [
+        "SemanticScholar:67f0049deb667e8c4092a21340020a95814026ed"
+      ],
+      "semantic_scholar_id": "67f0049deb667e8c4092a21340020a95814026ed",
+      "canonical_id": "arXiv:2602.11133",
+      "arxiv_id": "2602.11133",
+      "doi": "10.48550/arXiv.2602.11133",
+      "authors": [
+        "Zakhar Kohut",
+        "Severyn Shykula",
+        "Mykola Vysotskyi",
+        "Serhii Dmytryshyn",
+        "Дмитро Хамула",
+        "Michal Zakrzewski",
+        "Damian Rynczak",
+        "Jacek Małecki",
+        "Taras Rumezhak",
+        "Volodymyr Karpiv"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルでトークンごとに収束を判定し個別に早期終了させる学習不要な手法により、不要な反復デノイズステップを削減して生成効率を直接高めている。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "E-LANG: Energy-Based Joint Inferencing of Super and Swift Language Models",
+      "source_url": "https://arxiv.org/abs/2203.00748",
+      "year": 2022,
+      "published": "2022-03-01",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Building huge and highly capable language models has been a trend in the past years. Despite their great performance, they incur high computational cost. A common solution is to apply model compression or choose light-weight architectures, which often need a separate fixed-size model for each desirable computational budget, and may lose performance in case of heavy compression. This paper proposes an effective dynamic inference approach, called E-LANG, which distributes the inference between large accurate Super-models and light-weight Swift models. To this end, a decision making module routes the inputs to Super or Swift models based on the energy characteristics of the representations in the latent space. This method is easily adoptable and architecture agnostic. As such, it can be applied to black-box pre-trained models without a need for architectural manipulations, reassembling of modules, or re-training. Unlike existing methods that are only applicable to encoder-only backbones and classification tasks, our method also works for encoder-decoder structures and sequence-to-sequence tasks such as translation. The E-LANG performance is verified through a set of experiments with T5 and BERT backbones on GLUE, SuperGLUE, and WMT. In particular, we outperform T5-11B with an average computations speed-up of 3.3X on GLUE and 2.9X on SuperGLUE. We also achieve BERT-based SOTA on GLUE with 3.2X less computations. Code and demo are available in supplementary materials.",
+      "identifiers": [
+        "SemanticScholar:3a56263ab3f6301b3696631551bb2032676a2d28"
+      ],
+      "semantic_scholar_id": "3a56263ab3f6301b3696631551bb2032676a2d28",
+      "canonical_id": "arXiv:2203.00748",
+      "arxiv_id": "2203.00748",
+      "doi": "10.48550/arXiv.2203.00748",
+      "authors": [
+        "Mohammad Akbari",
+        "Amin Banitalebi-Dehkordi",
+        "Yong Zhang"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1726,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "大きなSuperモデルと軽量Swiftモデルへ潜在表現のエネルギーで入力を振り分ける動的推論により、T5やBERTで約3倍の計算高速化を実現する推論分配機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "What Dense Graph Do You Need for Self-Attention?",
+      "source_url": "https://arxiv.org/abs/2205.14014",
+      "year": 2022,
+      "published": "2022-05-27",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have made progress in miscellaneous tasks, but suffer from quadratic computational and memory complexities. Recent works propose sparse Transformers with attention on sparse graphs to reduce complexity and remain strong performance. While effective, the crucial parts of how dense a graph needs to be to perform well are not fully explored. In this paper, we propose Normalized Information Payload (NIP), a graph scoring function measuring information transfer on graph, which provides an analysis tool for trade-offs between performance and complexity. Guided by this theoretical analysis, we present Hypercube Transformer, a sparse Transformer that models token interactions in a hypercube and shows comparable or even better results with vanilla Transformer while yielding $O(N\\log N)$ complexity with sequence length $N$. Experiments on tasks requiring various sequence lengths lay validation for our graph function well.",
+      "identifiers": [
+        "SemanticScholar:13f10195d2a24fea28c0ea57cbd393aa76256c26"
+      ],
+      "semantic_scholar_id": "13f10195d2a24fea28c0ea57cbd393aa76256c26",
+      "canonical_id": "arXiv:2205.14014",
+      "arxiv_id": "2205.14014",
+      "doi": "10.48550/arXiv.2205.14014",
+      "authors": [
+        "Yu-Xin Wang",
+        "Chul Lee",
+        "Qipeng Guo",
+        "Zhangyue Yin",
+        "Yunhua Zhou",
+        "Xuanjing Huang",
+        "Xipeng Qiu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1639,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "自己注意の情報伝達を測るNIPで疎グラフの密度を解析し、ハイパーキューブ構造でO(N log N)計算量の疎な注意を実現する注意機構の直接的な効率化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2509.17486",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation improves the factual accuracy of Large Language Models (LLMs) by incorporating external context, but often suffers from irrelevant retrieved content that hinders effectiveness. Context compression addresses this issue by filtering out irrelevant information from context before LLM generation. However, existing methods struggle to adaptively adjust compression rates for different context, maintain low latency and integrate information across multiple documents. To overcome these limitations, We introduce AttnComp, an adaptive, efficient and context-aware compression framework. By leveraging the attention mechanism of LLMs to identify relevant information, AttnComp employs a Top-P compression algorithm to retain the minimal set of documents whose cumulative attention weights exceeds a predefined threshold. In addition to compression, AttnComp estimates response confidence by assessing the overall relevance of the retrieved content, enabling users to gauge response reliability. Experiments demonstrate that AttnComp outperforms existing compression methods and uncompressed baselines, achieving higher accuracy with substantial compression rates and lower latency.",
+      "identifiers": [
+        "SemanticScholar:4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f"
+      ],
+      "semantic_scholar_id": "4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f",
+      "canonical_id": "arXiv:2509.17486",
+      "arxiv_id": "2509.17486",
+      "doi": "10.48550/arXiv.2509.17486",
+      "authors": [
+        "Lvzhou Luo",
+        "Yixuan Cao",
+        "Ping Luo"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 425,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "LLMの注意重みで検索文書の関連度を測りTop-Pで文脈を適応圧縮するAttnCompにより、RAG生成前の文脈長とレイテンシを削減する推論時圧縮機構を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Importance-Guided Basis Selection for Low-Rank Decomposition of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.01627",
+      "year": 2026,
+      "published": "2026-05-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank decomposition is a compelling approach for compressing large language models, but its effectiveness hinges on selecting which singular-vector bases to retain for a target task. Existing methods such as Basel adapt singular-value coefficients on downstream data and prune bases with small re-learned magnitudes, a heuristic that can be misaligned with task performance because it ignores the local geometry of the loss landscape. We present Basis Selection with Importance (BSI), a principled low-rank compression framework that ranks and prunes bases by directly estimating the expected loss increase incurred when each basis is removed. BSI derives a derivative-based importance score from a second-order Taylor expansion of the task loss with respect to singular values, combining first-order sensitivity and second-order curvature to quantify pruning impact. To make this criterion practical for LLMs, we develop an efficient Hessian-diagonal estimator by adapting the Hutchinson randomized-probing method to loss curvature with symmetric parameter perturbations. We provide a comprehensive theoretical analysis, including loss-increase bounds under basis pruning, explicit propagation of Hessian-diagonal estimation error into these bounds, variance characterization tied to the Hessian spectrum, high-probability sample-complexity guarantees for achieving a target estimation accuracy, and guidance on perturbation intensity. Extensive experiments on mathematical reasoning benchmarks demonstrate that BSI consistently outperforms state-of-the-art low-rank decomposition baselines, with especially strong improvements under deep compression.",
+      "identifiers": [
+        "SemanticScholar:b6bc5149d03b188998e7d07fa6ccdade2867b50a"
+      ],
+      "semantic_scholar_id": "b6bc5149d03b188998e7d07fa6ccdade2867b50a",
+      "canonical_id": "arXiv:2605.01627",
+      "arxiv_id": "2605.01627",
+      "doi": "10.48550/arXiv.2605.01627",
+      "authors": [
+        "Daniel Agyei Asante",
+        "Er-Nie Chang",
+        "Yang Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低ランク分解の基底を損失の二階テイラー展開に基づく重要度で選別し深い圧縮でも性能を保つBSIを提案しており、LLM圧縮による推論効率化へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d73415af4974",
+    "round": "libimp-d73415af4974d4ad-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d73415af4974d4ad-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d73415af4974d4ad-pre01.json",
+    "receipt": "sha256:126af30267a8917b4aa40a1731b6b47ed431043c2386e079f2ca526f20ce7ed0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d73415af4974",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

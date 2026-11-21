@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Less Uniform Discrete Diffusion is More Powerful and Scalable",
+      "source_url": "https://arxiv.org/abs/2609.35817",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although uniform diffusion language models (UDLMs) represent a promising diffusion paradigm, scaling them remains challenging. We identify the core obstacle as an over-uniform training objective and condition-target confusion during sampling. To address these, we propose Less Uniform Diffusion (LUDI), a novel UDLM framework. Specifically, we (i) introduce a less uniform loss that directs each reverse transition toward the clean token, and (ii) equip the model with per-token time embeddings that supply token-level corruption hints, enabling confidence-based few-step sampling. Experiments across scales show that LUDI yields cleaner supervision and improves few-step generation. We further continue-train a 7B autoregressive model into LUDI-7B, resulting in a UDLM capable of complex reasoning. It achieves a 3-token-per-step speedup over AR decoding and competitive performance compared with masked diffusion baselines, revealing that the full potential of UDLMs for complex generation remains to be unlocked.",
+      "identifiers": [
+        "SemanticScholar:603a3a293614a4a6403e41ded3e5665783599af4"
+      ],
+      "semantic_scholar_id": "603a3a293614a4a6403e41ded3e5665783599af4",
+      "canonical_id": "arXiv:2609.35817",
+      "arxiv_id": "2609.35817",
+      "doi": "10.18653/2026.emnlp-main.1714",
+      "authors": [
+        "Kai-Bo Wang",
+        "Ding Ding",
+        "Fang-Yu Ding",
+        "Zi-Jin Feng",
+        "Han Shi",
+        "Hao-Li Bai",
+        "Jia-Cheng Sun",
+        "Yang Xiang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "一様離散拡散言語モデル向けにクリーンなトークンへ向ける非一様損失とトークン単位の時刻埋め込みを導入し、信頼度に基づく少数ステップサンプリングで自己回帰デコード比3トークン毎ステップの生成高速化を実現するデコード手法であるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ba3ab89da37c",
+    "round": "libimp-ba3ab89da37cc88c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ba3ab89da37cc88c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ba3ab89da37cc88c-pre01.json",
+    "receipt": "sha256:abadc0a517ed4a6963dbc39b7858be2704c5b90d388dc99fb390bceb5d2d6140"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ba3ab89da37c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

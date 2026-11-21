@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fixed-Point Masked Generative Modeling",
+      "source_url": "https://arxiv.org/abs/2605.31215",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked Generative Models (MGMs) enable parallel decoding and achieve strong performance across modalities, but require full-sequence bidirectional transformers at every step, making training costly and degrading quality under low sampling budgets. Existing work improves efficiency via better samplers or cheaper fixed-depth denoisers, but they still allocate a fixed amount of denoiser computation to each refinement step. We introduce Fixed-Point Masked Generative Models (FP-MGMs), which replace part of the denoiser with a fixed-point solver over shared attention layers to enable adaptive depth with fewer parameters. To make it more effective for masked generation, we first introduce a cross-step consistency loss, which aligns hidden representations at neighboring denoising steps and, second, three-state reuse (3SR) which warm-starts the solver using the previous solution by treating differently unchanged, still-masked, and newly revealed tokens respectively. Together, these components define our complete training-to-inference framework for fixed-point masked generation, \\emph{CoFRe}. We also show that pre-trained MGMs can be converted into FP-MGMs with short fine-tuning, avoiding full retraining. Across modalities, CoFRe improves the quality and cost trade-off. On OpenWebText, CoFRe reduces parameters by 38.8\\%, training time by 11.5\\%, and VRAM by 16.9\\%, while improving generative perplexity from 830.8 to 101.8 at a budget of $96$ transformer-block forward passes, compared to MDLM. In ImageNette, CoFRe reduces training time by 48.6\\% and VRAM by 50.7\\%, while improving FID in all sample budgets tested. Overall, CoFRe offers a practical framework for cheaper training and stronger low-budget masked generation.",
+      "identifiers": [
+        "SemanticScholar:cdd79b609e57a71b5425b6c4397cc821ff31a2f8"
+      ],
+      "semantic_scholar_id": "cdd79b609e57a71b5425b6c4397cc821ff31a2f8",
+      "canonical_id": "arXiv:2605.31215",
+      "arxiv_id": "2605.31215",
+      "doi": "10.48550/arXiv.2605.31215",
+      "authors": [
+        "Andrea Miele",
+        "Yiming Qin",
+        "Alba Carballo-Castro",
+        "Justin Deschenaux",
+        "P. Frossard"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マスク生成モデルのデノイザ一部を共有注意層上の固定点ソルバへ置換し適応深度と再利用で低予算生成の品質とコストを改善する、訓練から推論までの効率化枠組みである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Switchcraft: AI Model Router for Agentic Tool Calling",
+      "source_url": "https://arxiv.org/abs/2605.07112",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic AI systems that invoke external tools are powerful but costly, leading developers to default to large models and overspend inference budgets. Existing model routers target chat responses or end-task success, not the correctness of the individual tool calls on which agent tasks depend; we present Switchcraft, the first (to the best of our knowledge) model router optimized for strict tool-call correctness in agentic workloads. We construct an evaluation framework on six function-calling benchmarks, holding one out entirely, and fine-tune a calibrated DistilBERT-based classifier, deployed inline under a latency budget, to select the lowest-cost model subject to correctness or abstain when none is likely to answer correctly. Switchcraft reaches 78.3% answer accuracy (86.4% when correct abstentions are credited) at 59% lower cost than the best individual model (75.6%), saving over $3,800 per million queries, and outperforms kNN, MIRT, heuristic, and random routers. On the held-out benchmark, it matches or exceeds every individual model at 5--7X lower cost than the strongest ones. We find two counter-intuitive results: larger models do not consistently outperform smaller ones on tool-use tasks, and nominally cheaper models can incur higher total cost due to token-intensive output.",
+      "identifiers": [
+        "SemanticScholar:46b0ffa47f02f35f586447016ac75f8fe86eaeec"
+      ],
+      "semantic_scholar_id": "46b0ffa47f02f35f586447016ac75f8fe86eaeec",
+      "canonical_id": "arXiv:2605.07112",
+      "arxiv_id": "2605.07112",
+      "doi": "10.48550/arXiv.2605.07112",
+      "authors": [
+        "Sharad Agarwal",
+        "Pooria Namyar",
+        "Alec Wolman",
+        "Rahul Ambavat",
+        "Ankur K. Gupta",
+        "Qizheng Zhang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ツール呼び出し正確度を校正した分類器で最も安いモデルへ振り分けるSwitchcraftはレイテンシ予算内で動作するモデルルータであり、推論コストを59%下げるサービング機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BitLM: Unlocking Multi-Token Language Generation with Bitwise Continuous Diffusion",
+      "source_url": "https://arxiv.org/abs/2605.11577",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive language models generate text one token at a time, yet natural language is inherently structured in multi-token units, including phrases, n-grams, and collocations that carry meaning jointly. This one-token bottleneck limits both the expressiveness of the model during pre-training and its throughput at inference time. Existing remedies such as speculative decoding or diffusion-based language models either leave the underlying bottleneck intact or sacrifice the causal structure essential to language modeling. We propose BitLM, a language model that represents each token as a fixed-length binary code and employs a lightweight diffusion head to denoise multiple tokens in parallel within each block. Crucially, BitLM preserves left-to-right causal attention across blocks while making joint lexical decisions within each block, combining the reliability of autoregressive modeling with the parallelism of iterative refinement. By replacing the large-vocabulary softmax with bitwise denoising, BitLM reframes token generation as iterative commitment in a compact binary space, enabling more efficient pre-training and substantially faster inference without altering the causal foundation that makes language models effective. Our results demonstrate that the one-token-at-a-time paradigm is not a fundamental requirement but an interface choice, and that changing it can yield a stronger and faster language model. We hope BitLM points toward a promising direction for next-generation language model architectures.",
+      "identifiers": [
+        "SemanticScholar:7f05a5b3fbb61b1f2d1aa4b83d2cb86fefb0f354"
+      ],
+      "semantic_scholar_id": "7f05a5b3fbb61b1f2d1aa4b83d2cb86fefb0f354",
+      "canonical_id": "arXiv:2605.11577",
+      "arxiv_id": "2605.11577",
+      "doi": "10.48550/arXiv.2605.11577",
+      "authors": [
+        "Shao-Bin Zhuang",
+        "Yuang Ai",
+        "Jia-Ming Han",
+        "Xiao-Hui Li",
+        "Huaibo Huang",
+        "Xiangyu Yue",
+        "Xuefeng Hu",
+        "Kun Xu",
+        "Ya-Li Wang",
+        "Hao Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "各トークンを二進符号化し軽量拡散ヘッドでブロック内複数トークンを並列生成するBitLMは、一トークンずつのボトルネックを解消して推論スループット向上を狙う生成方式である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FineRMoE: Dimension Expansion for Finer-Grained Expert with Its Upcycling Approach",
+      "source_url": "https://arxiv.org/abs/2603.13364",
+      "year": 2026,
+      "published": "2026-03-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As revealed by the scaling law of fine-grained MoE, model performance ceases to be improved once the granularity of the intermediate dimension exceeds the optimal threshold, limiting further gains from single-dimension fine-grained design. To address this bottleneck, we propose FineRMoE (FineR-Grained MoE), an architecture that extends fine-grained expert design to both intermediate and output dimensions, aiming to enhance expert specialization beyond the single-dimension limit. We further introduce a bi-level sparse forward computation paradigm and a specialized routing mechanism to govern the activation. In addition, to obviate the prohibitive cost of training FineRMoE from scratch, we devise a generalized upcycling method to build FineRMoE in a cost-effective manner. Extensive experiments demonstrate the superior performance achieved by FineRMoE across ten standard benchmarks. Compared with the strongest baseline, FineRMoE achieves 6 times higher parameter efficiency, 281 times lower prefill latency, and 136 timese higher decoding throughput during inference.",
+      "identifiers": [
+        "SemanticScholar:83cd266351aa5e6f89243129202e7eb7102e990a"
+      ],
+      "semantic_scholar_id": "83cd266351aa5e6f89243129202e7eb7102e990a",
+      "canonical_id": "arXiv:2603.13364",
+      "arxiv_id": "2603.13364",
+      "doi": "10.48550/arXiv.2603.13364",
+      "authors": [
+        "Ning Liao",
+        "Xiao-Xing Wang",
+        "Xiao-Han Qin",
+        "Jun-Chi Yan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "細粒度MoEを中間と出力の両次元へ拡張し二階層疎前方計算とルーティングで、プリフィル遅延281倍低減とデコードスループット136倍を主張するMoE推論向け設計である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-65814eb2b00f",
+    "round": "libimp-65814eb2b00fe19d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-65814eb2b00fe19d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-65814eb2b00fe19d-pre01.json",
+    "receipt": "sha256:55f0177f61a885ee92d162d3dd12cefb6dc123e6fe36bf12fdac6b4627e5b1e5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-65814eb2b00f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

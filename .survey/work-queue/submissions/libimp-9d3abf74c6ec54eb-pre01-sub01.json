@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "C-PTQ: Fisher-weighted Channel-wise Sensitivity for Post-training Quantization of MLLMs",
+      "source_url": "https://arxiv.org/abs/2607.21076",
+      "year": 2026,
+      "published": "2026-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) require huge memory and computational costs, which limits their practical deployment. Post-training quantization (PTQ) techniques offer an efficient solution for model compression and inference acceleration. Yet, the quantized model faces performance degradation due to outlier channels, which are highly sensitive to quantization and substantially impair activation fidelity and task accuracy. To protect these salient channels during quantization, existing PTQ methods leverage modality- or token-level metrics to guide channel-wise scaling (CWS) of LLM decoders. However, these orthogonal measurements fail to capture channel-wise impacts on task-specific loss, and the misalignment between importance and scaling factors ultimately leads to suboptimal performance. To address this issue, we propose C-PTQ, a unified channel-wise PTQ method that harmonizes task-specific loss perturbation and quantization error. Motivated by second-order derivatives, we design a Fisher-weighted objective as a tractable Hessian approximation, seamlessly injecting task sensitivity into the scaling process. Notably, we achieve state-of-the-art performance without auxiliary modules like LoRA, thereby maintaining high efficiency. Experiments on Qwen2.5VL, InternVL2 and LLaVA-OV across 8 benchmarks demonstrate our effectiveness in both weight-only and weight-activation settings.",
+      "identifiers": [
+        "SemanticScholar:5e24429c6f7628c75e712de537eb7e30ee201325"
+      ],
+      "semantic_scholar_id": "5e24429c6f7628c75e712de537eb7e30ee201325",
+      "canonical_id": "arXiv:2607.21076",
+      "arxiv_id": "2607.21076",
+      "doi": "10.48550/arXiv.2607.21076",
+      "authors": [
+        "Jia-Meng Li",
+        "Han Zhou",
+        "M. Blaschko"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチモーダルLLMの学習後量子化で外れ値チャネルの感度をFisher重み付き目的でスケーリングへ反映するC-PTQを提案し、重みのみと重み・活性化の両設定で圧縮と推論加速を狙う手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SEVEN: Pruning Transformer Model by Reserving Sentinels",
+      "source_url": "https://arxiv.org/abs/2403.12688",
+      "year": 2024,
+      "published": "2024-03-19",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale Transformer models (TM) have demonstrated outstanding performance across various tasks. However, their considerable parameter size restricts their applicability, particularly on mobile devices. Due to the dynamic and intricate nature of gradients on TM compared to Convolutional Neural Networks, commonly used pruning methods tend to retain weights with larger gradient noise. This results in pruned models that are sensitive to sparsity and datasets, exhibiting suboptimal performance. Symbolic Descent (SD) is a general approach for training and fine-tuning TM. In this paper, we attempt to describe the noisy batch gradient sequences on TM through the cumulative process of SD. We utilize this design to dynamically assess the importance scores of weights.SEVEN is introduced by us, which particularly favors weights with consistently high sensitivity, i.e., weights with small gradient noise. These weights are tended to be preserved by SEVEN. Extensive experiments on various TM in natural language, question-answering, and image classification domains are conducted to validate the effectiveness of SEVEN. The results demonstrate significant improvements of SEVEN in multiple pruning scenarios and across different sparsity levels. Additionally, SEVEN exhibits robust performance under various fine-tuning strategies. The code is publicly available at https://github.com/xiaojinying/SEVEN.",
+      "identifiers": [
+        "SemanticScholar:177e91ea5064ad7a5b88cb10471eebcdc38b3a60"
+      ],
+      "semantic_scholar_id": "177e91ea5064ad7a5b88cb10471eebcdc38b3a60",
+      "canonical_id": "arXiv:2403.12688",
+      "arxiv_id": "2403.12688",
+      "doi": "10.1109/IJCNN60899.2024.10651013",
+      "authors": [
+        "Jin-Ying Xiao",
+        "Ping Li",
+        "Jie Nie",
+        "Zhe Tang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 977,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformerのプルーニングで勾配ノイズの小さい一貫して高感度な重みをセンチネルとして残すSEVENを提案し、モバイル等でのモデル小型化と多様なスパース率での性能維持を示す圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Acceleration Multiple Heads Decoding for LLM via Dynamic Tree Attention",
+      "source_url": "https://arxiv.org/abs/2502.05947",
+      "year": 2025,
+      "published": "2025-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multiple heads decoding accelerates the inference of Large Language Models (LLMs) by predicting next several tokens simultaneously. It generates and verifies multiple candidate sequences in parallel via tree attention with a fixed structure. In this paper, we replace the fixed tree attention with dynamic tree attention on multiple head decoding, specifically in the context of MEDUSA. We propose a simple and low complexity strategy to generate candidates and construct the dynamic tree structure. Preliminary experiments show that the proposed method improves the decoding efficiency of multiple head decoding for LLMs while maintaining the generation quality. This result demonstrates the potential for improvement of multiple head decoding in candidate generation.",
+      "identifiers": [
+        "SemanticScholar:6a92831b8da38e16d1c59a22ca5c4c8f7fc756a3"
+      ],
+      "semantic_scholar_id": "6a92831b8da38e16d1c59a22ca5c4c8f7fc756a3",
+      "canonical_id": "arXiv:2502.05947",
+      "arxiv_id": "2502.05947",
+      "doi": "10.48550/arXiv.2502.05947",
+      "authors": [
+        "Zhen-Dong Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 650,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MEDUSAの複数ヘッドデコードで固定木注意を動的木注意へ置き換え、候補生成と木構造構築を低複雑度で行ってLLMデコード効率を生成品質を保ちながら改善する手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9d3abf74c6ec",
+    "round": "libimp-9d3abf74c6ec54eb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9d3abf74c6ec54eb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9d3abf74c6ec54eb-pre01.json",
+    "receipt": "sha256:61cb0519ef2084799d245e0ac5852344ad4f760473cda8c368cd736f5a042d03"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9d3abf74c6ec",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
