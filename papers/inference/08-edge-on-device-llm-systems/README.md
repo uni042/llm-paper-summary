@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-05 · [An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)](2024-2403.11805-llm-as-a-system-service-on-mobile-devices.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   アプリを切り替えるたびに履歴全体を再計算するか、ディスクへ退避したKVを読み戻すと、次の生成開始までの待ち時間が長くなる。正式出版版の実機評価では、一律8ビット圧縮を伴うチャンク退避方式に対し、コンテキスト切替遅延を最大20倍、平均9.7倍削減した。
 
 - **2026-05 · [Agent-X: Full Pipeline Acceleration of On-device AI Agents](2026-2605.10380-agent-x-full-pipeline-acceleration-of-on-device-ai-agents.md)**  
@@ -256,13 +256,13 @@
   実装：✓ ・ リポジトリ内被引用：13  
   提案するキャッシュ優先ルーティング（Cache-Prior ルーティング）は、既存ルータのスコアに「DRAM内に既にある専門家」への加算項を導入し、上位K個の専門家の選択を変更する。
 
+- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  端末内で一つの大規模言語モデルを複数アプリから共用する場合、画面操作エージェント、チャット、バックグラウンド要約は、それぞれ異なる遅延目標を要求する。ElastiLMは、この二つの調整軸を同じ要求制御に統合する。これは生成速度が10.45%増えたという意味ではなく、指定された遅延制約を守った要求の正答率の絶対差である。
+
 - **2025-08 · [ShadowNPU: System and Algorithm Co-design for NPU-Centric On-Device LLM Inference](2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   NPUで重要トークン位置だけを近似推定し、高精度疎注意をCPU/GPUへ限定してパイプライン化することで、モバイルLLMの注意フォールバックを削減する。
-
-- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  端末内で一つの大規模言語モデルを複数アプリから共用する場合、画面操作エージェント、チャット、バックグラウンド要約は、それぞれ異なる遅延目標を要求する。ElastiLMは、この二つの調整軸を同じ要求制御に統合する。これは生成速度が10.45%増えたという意味ではなく、指定された遅延制約を守った要求の正答率の絶対差である。
 
 - **2025-06 · [MNN-LLM: A Generic Inference Engine for Fast Large Language Model Deployment on Mobile Devices](2025-2506.10443-mnn-llm-mobile-inference-engine.md)**  
   実装：[✓](https://github.com/alibaba/MNN) ・ リポジトリ内被引用：8  

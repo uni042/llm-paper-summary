@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（587本）
+## 自動生成の論文一覧（588本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1996,6 +1996,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、学習済み大規模言語モデルの重みを平均2ビット前後へ事後量子化する際、すべての重み列に同じビット幅を割り当てると重要な列の誤差が大きくなり、困惑度が急激に悪化する問題を扱う。原著の効率評価はRTX 4090上の量子化前処理時間であり、生成トークン/sやエンドツーエンド推論時間の改善は示していない。
 
+- **2025-01 · [FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices](2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  異なるビット幅の量子化モデルのモジュールを混ぜたハイブリッド群を木探索で生成し、約100MB粒度でメモリへ合わせられる弾性配備を小さなストレージで実現する枠組み。
+
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
@@ -2293,7 +2297,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：204  
+  実装：✓ ・ リポジトリ内被引用：205  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -2301,7 +2305,7 @@
   複数モデルへ届くリクエスト数が時間ごとに偏る環境で、モデルを複数GPUへ分割して置き、空いているGPUをモデル間で共有しやすくすることで、特定モデルだけ待ち行列が伸びるのを抑えるサービング配置手法。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
-  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：158  
+  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：159  
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  

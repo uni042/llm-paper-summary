@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（418本）
+## 自動生成の論文一覧（419本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1425,7 +1425,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：504  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：505  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
@@ -1513,7 +1513,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   各接頭辞の受理確率を適切に設計し、受理された中で最も長い接頭辞を確定させる。PaLM-2-Sを対象、PaLM-2-XXSを下書きとし、候補長8、8種類のデータセットで測った結果、対象モデル一回当たりの生成量を示すブロック効率は平均3.41から3.70へ増え、標準検証に対して8.30%改善した。
 
 - **2024-01 · [Multi-Candidate Speculative Decoding](2024-2401.06706-multi-candidate-speculative-decoding.md)**  
-  実装：[✓](https://github.com/NJUNLP/MCSD) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/NJUNLP/MCSD) ・ リポジトリ内被引用：36  
   標準方式では各深さに一つの候補しかない。したがって、研究の核は「候補幅による受理率向上」「分布保存の検証」「共有接頭辞による検証費用削減」の三点である。
 
 - **2024-11 · [SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications](2024-2411.04975-suffixdecoding-extreme-speculative-decoding-for-emerging-ai-applications.md)**  
@@ -1631,6 +1631,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-10 · [FIRP: Faster LLM Inference via Future Intermediate Representation Prediction](2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-predict.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   未来トークンの隠れ状態を中間層で線形射影により予測し、後段の層で文脈と相互作用させて精緻化してから復号する単一モデルの投機的デコード。Medusaより小さい追加パラメータで高い受理率と最大2.78倍の高速化を得る。
+
+- **2024-09 · [Improving Multi-candidate Speculative Decoding](2024-2409.10644-improving-multi-candidate-speculative-decoding.md)**  
+  実装：[✓](https://github.com/JackZeng0208/DynaSD) ・ リポジトリ内被引用：0  
+  複数候補の投機的デコードで候補木の初期トークンを対象モデルから複数サンプリングして受理率を上げ、最大27.5パーセント高速化した一方、動的な長さ調整と早期停止は静的構成に勝てなかった研究。
 
 - **2024-07 · [S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models](2024-2407.01955-s2d-sorted-speculative-decoding-for-more-efficient-deployment-of-nested-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

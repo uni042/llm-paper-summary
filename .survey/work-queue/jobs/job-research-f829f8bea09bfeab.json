@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨は固定バッチと既存反復単位補充の不要計算を分析し、prefill中の新規要求挿入を効率化する動的再バッチ化BATONを提案。LLMサービングのバッチスケジューリングとGPU利用率改善に直接該当。",
   "semantic_scholar_id": "ff53557b55dc8d2aa746b1298590835929f21432",
   "source_url": "https://arxiv.org/abs/2410.18701",
-  "status": "ready",
+  "status": "superseded",
   "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
   "type": "research",
   "venue": "The Web Conference",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-21T04:00:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-model.md",
+  "represented_canonical_id": "arXiv:2410.18701",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

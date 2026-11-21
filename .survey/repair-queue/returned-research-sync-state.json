@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "06b152ed9fd0e3869345e2b2384edb47594bd3dc",
+  "base_commit": "a4c5e22f3e8ca1b050cd1cf3dd512fb323df87c2",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -68,6 +68,7 @@
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json",
+    "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic.json",
     "2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-prediction.json",
     "2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-deployment.json",
     "2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-scheduling.json",
@@ -43319,38 +43320,11 @@
     },
     "arXiv:2410.18701": {
       "order": [
-        "2026-11-20T23:15:11+00:00",
-        "retry-research-93a422913b4f--2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json"
+        "2026-11-21T03:55:51+00:00",
+        "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "9ed7004259f9c01b18cb65bb04b7304fd7c5050028e9d6e8a29b64604a6b89f1",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-93a422913b4f--2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.md",
-        "canonical_id": "arXiv:2410.18701",
-        "worker_completed_at": "2026-11-20T15:20:00+09:00",
-        "worker_run_key": "2026-11-20-muse-c2b4",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 3385,
-          "body_paragraphs": 20,
-          "method_chars": 1250,
-          "method_paragraphs": 4,
-          "evaluation_chars": 462,
-          "limitation_chars": 231,
-          "insufficiency_flags": [
-            "評価説明量 462 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 462 < 500"
-        ],
-        "processed_at": "2026-11-20T23:15:11+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2311.01305": {
@@ -57989,6 +57963,9 @@
     "arxiv:2611.14399": [
       "papers/inference/05-speculative-decoding-moe/2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-dec.md",
       "papers/inference/05-speculative-decoding-moe/2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-dec.md"
+    ],
+    "arxiv:2410.18701": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-model.md"
     ]
   }
 }

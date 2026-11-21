@@ -35,10 +35,15 @@
   "selection_reason": "著者一次arXiv要旨で、Key投影のスペクトル/FrobeniusノルムがValueより大きい傾向を解析し、同一KVメモリ予算でKey側へ高ビットを割り当てる理論と混合精度量子化の実験を提示することを確認。例としてKey 4bit/Value 2bitを比較する推論時KVキャッシュ圧縮の直接研究。worklistの旧題名「Bit Allocation Insights Informed by Spectral Gaps...」は現在のarXiv表示題名「More for Keys, Less for Values」と異なるため、同一arXiv IDで版同一性を保持し題名を更新した。",
   "semantic_scholar_id": "d99ec0428aee7b8500a380918dc074968eac4e87",
   "source_url": "https://arxiv.org/abs/2502.15075",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quantize What Counts: More for Keys, Less for Values",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T04:00:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.md",
+  "represented_canonical_id": "arXiv:2502.15075",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

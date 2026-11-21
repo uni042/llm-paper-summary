@@ -35,10 +35,15 @@
   "selection_reason": "複数候補の投機的復号において、対象モデル側で候補を初期化し、動的に長さを変えるスライス型トポロジー対応因果マスクと早期停止判定モデルを導入する。Llama 2-7B対象・JackFram 68Mドラフトで従来MCSD比最大27.5%の生成高速化を報告し、LLMデコードの直接的な実行最適化に該当する。",
   "semantic_scholar_id": "5a16ec8d214b8b7156222c84c6272292d0840f8d",
   "source_url": "https://arxiv.org/abs/2409.10644",
-  "status": "ready",
+  "status": "superseded",
   "title": "Improving Multi-candidate Speculative Decoding",
   "type": "research",
   "venue": "ENLSP",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-21T04:00:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2024-2409.10644-improving-multi-candidate-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2409.10644",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

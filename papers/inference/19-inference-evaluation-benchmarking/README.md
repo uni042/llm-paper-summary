@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（162本）
+## 自動生成の論文一覧（163本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -584,6 +584,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   交差注意の重みが一部の画像特徴へ偏り層間でも変わらない観測に基づき、最初の層で注意頭ごとの上位特徴の和集合だけを残して残り層のキャッシュと計算を減らす追加学習なしの方式で、特徴を約半分にしても性能同等を保ちバッチ三二の遅延を二六パーセント減らした。
 
+- **2025-02 · [Leveraging the true depth of LLMs](2025-2502.02790-leveraging-the-true-depth-of-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  連続する2層を同じ入力から並列に計算させてテンソル並列の同期回数を半減させるレイヤー並列化を提案し、再学習なしでLlama 2 7Bのスループットを1.19倍にしつつ、精度低下とファインチューニングによる回復の範囲を実測した研究。
+
 - **2025-02 · [KVCrush: Key value cache size-reduction using similarity in head-behaviour](2025-2503.00022-kvcrush-key-value-cache-size-reduction-using-similarity-in-head-behaviou.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVCrushは、長文脈のLLM推論でKVキャッシュを縮小する際に、重要度の高いトークンだけを残す既存方式の弱点を補う手法である。平均KV削減率約4倍の条件でも精度低下を小さく抑えられる一方、すべての個別課題でFullKVに勝つわけではない。
@@ -595,7 +599,7 @@
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
-  実装：✓ ・ リポジトリ内被引用：50  
+  実装：✓ ・ リポジトリ内被引用：51  
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
