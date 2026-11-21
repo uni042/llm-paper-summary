@@ -35,10 +35,15 @@
   "selection_reason": "相対位置注意のオフセット依存計算をFlashAttention型タイル計算へ正確に組み込むカーネルをTritonで実装し、8K系列で前向き1.8〜6.4倍・メモリ最大128倍削減を示しており、注意カーネルの実行効率への直接の技術的貢献である。",
   "semantic_scholar_id": "03f7648ab3b0d0f2c4f3bdeb29901004f790491f",
   "source_url": "https://arxiv.org/abs/2611.01182",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fast and Exact Relative-Position Attention via Structure-Aware Kernels",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:58:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.md",
+  "represented_canonical_id": "arXiv:2611.01182",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

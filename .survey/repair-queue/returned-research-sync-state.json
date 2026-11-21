@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "84b4bd8b07896c49fe571b1ce8ba6c6e4c217fad",
+  "base_commit": "688cd1cb13f69cb950e2897076af9a7ab5e18f68",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -937,6 +937,7 @@
     "2026-2611.00495-understanding-gpu-megakernels-why-residency-can-mislead.json",
     "2026-2611.00506-weights-that-stay-on-chip-megakernels-for-serial-heads-in-speculative-decoding.json",
     "2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attention.json",
+    "2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.json",
     "2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decoding-for-vision-language-models.json",
     "2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-caching.json",
     "2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.json",
@@ -953,6 +954,8 @@
     "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
     "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json",
     "2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-the-drafter.json",
+    "2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reduction-in-moe-serving.json",
+    "2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contextual-compatibility-in-non-prefix-reuse.json",
     "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
     "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json",
     "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json",
@@ -963,6 +966,7 @@
     "2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffusion-draft-trees.json",
     "2026-2611.13017-multi-future-drafting-mixture-block-drafters-for-tree-verified-speculative-decoding.json",
     "2026-2611.13442-forespark-joint-draft-and-verification-budget-scheduling-for-parallel-speculative-decoding.json",
+    "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
@@ -47014,6 +47018,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.01182": {
+      "order": [
+        "2026-11-21T06:53:11+00:00",
+        "2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06147": {
+      "order": [
+        "2026-11-21T06:54:19+00:00",
+        "2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reduction-in-moe-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06397": {
+      "order": [
+        "2026-11-21T06:55:27+00:00",
+        "2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contextual-compatibility-in-non-prefix-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.13641": {
+      "order": [
+        "2026-11-21T06:56:35+00:00",
+        "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59055,6 +59095,18 @@
     "arxiv:2611.00051": [
       "papers/inference/09-kernel-runtime-compilation/2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-ll.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-ll.md"
+    ],
+    "arxiv:2611.01182": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.md"
+    ],
+    "arxiv:2611.06147": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reducti.md"
+    ],
+    "arxiv:2611.06397": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contex.md"
+    ],
+    "arxiv:2611.13641": [
+      "papers/inference/99-other-inference-systems/2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transform.md"
     ]
   }
 }

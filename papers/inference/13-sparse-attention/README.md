@@ -148,6 +148,10 @@
   実装：[✓](https://github.com/hustvl/InfiniteVL) ・ リポジトリ内被引用：3  
   従来の全注意（full 注意機構）型Transformerは、事前充填（プリフィル）で系列長の二乗に比例する計算を要し、復号（デコード）では生成が進むほどKVキャッシュが増える。RTX 4090での実測では、基本型は約450K文脈でQwen2.5-VL-3B比のトークン当たり復号遅延を1.7倍改善し、256K文脈の事前充填を2.8倍高速化した。
 
+- **2026-09 · [RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse](2026-2609.33503-relaxkv-recomputation-guided-by-the-query-with-sparse-context-attention-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  層ごとのクエリ注意で修復するトークンを層別に選び、再計算時に読む文脈もその選択の和集合へ絞ることで、位置非依存キャッシュの修復費用を下げつつ長文脈品質を保つ方式で、4モデル全てで先行方式の集計品質を上回った。
+
 - **2026-04 · [SAS: Sparse Attention Synthesizer for Efficient Language Model Inference](2026-35256164722e-sas-sparse-attention-synthesizer-for-efficient-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   SAS（Sparse 注意機構 Synthesizer）は、大規模言語モデルの疎注意を、マスクの記述だけでなく鍵・値キャッシュ（Key-Value Cache; KVキャッシュ）の配置・寿命管理と低水準カーネルの生成まで一体化するシステムである。
@@ -171,10 +175,6 @@
 - **2026-09 · [Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention](2026-2609.08450-sample-guided-exact-topk-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   HPC-Ops Top-Kは、標本で上位候補境界を予測し、全行の一回走査で十分性を証明、足りない時だけ回復して正確なK個を選び、長文疎注意の再走査を減らす。
-
-- **2026-09 · [RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse](2026-2609.33503-relaxkv-recomputation-guided-by-the-query-with-sparse-context-attention-.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  層ごとのクエリ注意で修復するトークンを層別に選び、再計算時に読む文脈もその選択の和集合へ絞ることで、位置非依存キャッシュの修復費用を下げつつ長文脈品質を保つ方式で、4モデル全てで先行方式の集計品質を上回った。
 
 - **2026-09 · [Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding](2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

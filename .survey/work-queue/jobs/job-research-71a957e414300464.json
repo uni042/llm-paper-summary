@@ -35,10 +35,15 @@
   "selection_reason": "MoE LLMサービングで有効専門家削減による高速化が有害要求の拒否を弱める問題を示し、プロンプトと生成冒頭だけ全専門家を実行するSafeStartをvLLM融合カーネルで実装して速度の85%以上を保つため、MoE推論への直接貢献として採用する。",
   "semantic_scholar_id": "f77f64a5664013cf2fdbf5910f79957690cffd82",
   "source_url": "https://arxiv.org/abs/2611.06147",
-  "status": "ready",
+  "status": "superseded",
   "title": "SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:58:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reducti.md",
+  "represented_canonical_id": "arXiv:2611.06147",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
