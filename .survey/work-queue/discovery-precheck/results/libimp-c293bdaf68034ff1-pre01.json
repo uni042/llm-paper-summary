@@ -1,0 +1,249 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c293bdaf68034ff1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c293bdaf6803",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.16162",
+    "arXiv:2607.25335",
+    "arXiv:2609.03158"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1744503ff8fdbe0052c8243bbfc6fb875e0c16ed",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T00:07:56.211134+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.16162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization"
+    },
+    {
+      "requested_id": "arXiv:2607.25335",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.03158",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization",
+      "source_url": "https://arxiv.org/abs/2609.03158",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning reduces the inference cost of vision-language models (VLMs), but most methods only ask which tokens to keep. This retained-token view can keep redundant high-scoring tokens while leaving discarded evidence without a close representative. We propose CoverPruner, a training-free pruner that asks the complementary demand-side question: after a token is removed, which surviving original token represents it for the target VLM? CoverPruner formulates pruning as Representational Coverage Maximization (RCM), covering the full projected visual-token set with query-weighted demand. It instantiates RCM with projector-space coverage and a lightweight first-layer attention probe. Across multiple VLM architectures and compression rates, CoverPruner achieves the best average accuracy among all compared methods, with the largest gains usually appearing under aggressive compression.",
+      "identifiers": [
+        "SemanticScholar:b8489a57f37d545520c3df5814e1c9c924e23f90"
+      ],
+      "semantic_scholar_id": "b8489a57f37d545520c3df5814e1c9c924e23f90",
+      "canonical_id": "arXiv:2609.03158",
+      "arxiv_id": "2609.03158",
+      "doi": "10.18653/2026.emnlp-main.349",
+      "authors": [
+        "Qin Zhu",
+        "Wei-Hang You",
+        "Han-Qi Jiang",
+        "Chang-Di Yang",
+        "Tian-Ming Liu",
+        "G. Yuan"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Every Time I Hire a Linguist, Inference Costs Go Down: On Linguistic Rules as Effective Prompt Compressors",
+      "source_url": "https://arxiv.org/abs/2607.25335",
+      "year": 2026,
+      "published": "2026-07-28",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prompt compression shortens LLM input to reduce inference cost, yet existing methods score token importance through LM forward passes. It remains questionable whether such nuanced, costly token selection is necessary. Compression requires identifying informative content, a problem that linguistic research has long addressed through cues that can be operationalized as deterministic rules. We therefore ask: can \\textbf{linguistic rules alone} serve as effective prompt compressors, without LM-based scoring at compression time? To address this, we conduct offline evolutionary search over lexical, syntactic, semantic, and discourse seeds to find competitive rule combinations. The resulting linguistic compressor requires no LM forward pass at deployment and uses only CPU-side processing for compression. We evaluate it with a dual-path protocol to balance compression quality and reconstruction fidelity. Across short passages, multi-document reasoning, and dialogue-memory QA datasets, evolved compressors achieve performance similar to that of recent advanced prompt-compression strategies. Performance is strongest under light-to-moderate compression and degrades as compression becomes more aggressive, while the Direct and Reconstruction paths exhibit distinct patterns. Evolutionary analysis reveals that effective compression fuses signals across linguistic levels and, as the compression ratio increases, rules shift from token pruning to sentence extraction.",
+      "identifiers": [
+        "SemanticScholar:82d8ebbddf2ec61b2d55be9fb3ce8372374439cb"
+      ],
+      "semantic_scholar_id": "82d8ebbddf2ec61b2d55be9fb3ce8372374439cb",
+      "canonical_id": "arXiv:2607.25335",
+      "arxiv_id": "2607.25335",
+      "doi": "10.48550/arXiv.2607.25335",
+      "authors": [
+        "Jianfei Ma",
+        "Zhao-Xin Feng",
+        "E. Chersoni",
+        "Si-Chang Chen"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 116,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.03158",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.349",
+        "id:SemanticScholar:b8489a57f37d545520c3df5814e1c9c924e23f90",
+        "id:arXiv:2609.03158",
+        "title:who speaks for the pruned visual token pruning as coverage optimization",
+        "url:https://arxiv.org/abs/2609.03158"
+      ],
+      "record": {
+        "title": "Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization",
+        "source_url": "https://arxiv.org/abs/2609.03158",
+        "year": 2026,
+        "published": "2026-09-02",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual token pruning reduces the inference cost of vision-language models (VLMs), but most methods only ask which tokens to keep. This retained-token view can keep redundant high-scoring tokens while leaving discarded evidence without a close representative. We propose CoverPruner, a training-free pruner that asks the complementary demand-side question: after a token is removed, which surviving original token represents it for the target VLM? CoverPruner formulates pruning as Representational Coverage Maximization (RCM), covering the full projected visual-token set with query-weighted demand. It instantiates RCM with projector-space coverage and a lightweight first-layer attention probe. Across multiple VLM architectures and compression rates, CoverPruner achieves the best average accuracy among all compared methods, with the largest gains usually appearing under aggressive compression.",
+        "identifiers": [
+          "SemanticScholar:b8489a57f37d545520c3df5814e1c9c924e23f90"
+        ],
+        "semantic_scholar_id": "b8489a57f37d545520c3df5814e1c9c924e23f90",
+        "canonical_id": "arXiv:2609.03158",
+        "arxiv_id": "2609.03158",
+        "doi": "10.18653/2026.emnlp-main.349",
+        "authors": [
+          "Qin Zhu",
+          "Wei-Hang You",
+          "Han-Qi Jiang",
+          "Chang-Di Yang",
+          "Tian-Ming Liu",
+          "G. Yuan"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 80,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.25335",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.25335",
+        "id:SemanticScholar:82d8ebbddf2ec61b2d55be9fb3ce8372374439cb",
+        "id:arXiv:2607.25335",
+        "title:every time i hire a linguist inference costs go down on linguistic rules as effective prompt compressors",
+        "url:https://arxiv.org/abs/2607.25335"
+      ],
+      "record": {
+        "title": "Every Time I Hire a Linguist, Inference Costs Go Down: On Linguistic Rules as Effective Prompt Compressors",
+        "source_url": "https://arxiv.org/abs/2607.25335",
+        "year": 2026,
+        "published": "2026-07-28",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prompt compression shortens LLM input to reduce inference cost, yet existing methods score token importance through LM forward passes. It remains questionable whether such nuanced, costly token selection is necessary. Compression requires identifying informative content, a problem that linguistic research has long addressed through cues that can be operationalized as deterministic rules. We therefore ask: can \\textbf{linguistic rules alone} serve as effective prompt compressors, without LM-based scoring at compression time? To address this, we conduct offline evolutionary search over lexical, syntactic, semantic, and discourse seeds to find competitive rule combinations. The resulting linguistic compressor requires no LM forward pass at deployment and uses only CPU-side processing for compression. We evaluate it with a dual-path protocol to balance compression quality and reconstruction fidelity. Across short passages, multi-document reasoning, and dialogue-memory QA datasets, evolved compressors achieve performance similar to that of recent advanced prompt-compression strategies. Performance is strongest under light-to-moderate compression and degrades as compression becomes more aggressive, while the Direct and Reconstruction paths exhibit distinct patterns. Evolutionary analysis reveals that effective compression fuses signals across linguistic levels and, as the compression ratio increases, rules shift from token pruning to sentence extraction.",
+        "identifiers": [
+          "SemanticScholar:82d8ebbddf2ec61b2d55be9fb3ce8372374439cb"
+        ],
+        "semantic_scholar_id": "82d8ebbddf2ec61b2d55be9fb3ce8372374439cb",
+        "canonical_id": "arXiv:2607.25335",
+        "arxiv_id": "2607.25335",
+        "doi": "10.48550/arXiv.2607.25335",
+        "authors": [
+          "Jianfei Ma",
+          "Zhao-Xin Feng",
+          "E. Chersoni",
+          "Si-Chang Chen"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 116,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1d7bd6ca180a40664893c7c2a7a7319195c6f40d4928b7309827dfcae238b8e9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

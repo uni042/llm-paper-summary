@@ -1,0 +1,676 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-494804e36c0aa9b8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-494804e36c0a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.15524",
+    "arXiv:2408.10631",
+    "arXiv:2412.15750",
+    "arXiv:2603.11340",
+    "arXiv:2605.04084",
+    "arXiv:2608.06628",
+    "arXiv:2610.19210"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1744503ff8fdbe0052c8243bbfc6fb875e0c16ed",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T00:08:04.506978+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.15524",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.10631",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.15750",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.11340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.04084",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06628",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19210",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FASQ: Flexible Accelerated Subspace Quantization for Calibration-Free LLM Compression",
+      "source_url": "https://arxiv.org/abs/2605.04084",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressing large language models (LLMs) for deployment on commodity GPUs remains challenging: conventional scalar quantization is limited to fixed bit-widths (e.g., 8/4/3-bit), offers only a few discrete compression points, and typically requires calibration data. We present FASQ (Flexible Accelerated Subspace Quantization), a calibration-free framework that applies product quantization to LLM weight matrices. By tuning two parameters, sub-vector size and codebook cardinality, FASQ exposes a continuous design space spanning 27-49% of the original FP16 model size, filling compression gaps that fixed-bit schemes cannot reach. On Meta-Llama-3-8B, FASQ surpasses 4-bit GPTQ and AWQ in accuracy (67.1-67.7 avg.) at 37-42% model size, with consistent results on Qwen3-8B and Qwen3.5-9B-Base. To make product quantization practical at inference time, we design custom CUDA kernels: a LUT-free direct-compute GEMV for decode and an output-stationary double-buffered LUT GEMM for prefill, both with split-K parallelism. On an RTX~3090, FASQ achieves 45.2 tok/s decode at effective 4-bit (2.56x memory reduction) and 51.8 tok/s at effective 3-bit (2.80x), both surpassing FP16 tensor-core performance (43.9 tok/s) and delivering 1.6 to 1.8x the throughput of AWQ, 2.5 to 2.5x of GPTQ, and 4.3 to 5x of RTN. FASQ is the only compressed method that accelerates decode beyond FP16, offering calibration-free compression, continuous size-quality trade-offs, and real-time inference on a single consumer GPU.",
+      "identifiers": [
+        "SemanticScholar:1bd29374935cfb951e4c776e087149751282cb2c"
+      ],
+      "semantic_scholar_id": "1bd29374935cfb951e4c776e087149751282cb2c",
+      "canonical_id": "arXiv:2605.04084",
+      "arxiv_id": "2605.04084",
+      "doi": "10.48550/arXiv.2605.04084",
+      "authors": [
+        "Ye Qiao",
+        "Yian Wang",
+        "Zhiheng Chen",
+        "Hyoukjun Kwon",
+        "Si-Tao Huang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Pruning Large Language Models: Benefits and Pitfalls of Reconstruction Error Minimization",
+      "source_url": "https://arxiv.org/abs/2406.15524",
+      "year": 2024,
+      "published": "2024-06-21",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This work suggests fundamentally rethinking the current practice of pruning large language models (LLMs). The way it is done is by divide and conquer: split the model into submodels, sequentially prune them, and reconstruct predictions of the dense counterparts on small calibration data one at a time; the final model is obtained simply by putting the resulting sparse submodels together. While this approach enables pruning under memory constraints, it generates high reconstruction errors. In this work, we first present an array of reconstruction techniques that can significantly reduce this error by more than 90%. Unwittingly, however, we discover that minimizing reconstruction error is not always ideal and can overfit the given calibration data, resulting in rather increased language perplexity and poor performance at downstream tasks. We find out that a strategy of self-generating calibration data can mitigate this trade-off between reconstruction and generalization, suggesting new directions in the presence of both benefits and pitfalls of reconstruction for pruning LLMs.",
+      "identifiers": [
+        "SemanticScholar:db49aa6ff9f329f72fb0071a2d2312092d2fa877"
+      ],
+      "semantic_scholar_id": "db49aa6ff9f329f72fb0071a2d2312092d2fa877",
+      "canonical_id": "arXiv:2406.15524",
+      "arxiv_id": "2406.15524",
+      "doi": "10.48550/arXiv.2406.15524",
+      "authors": [
+        "Sungbin Shin",
+        "Wonpyo Park",
+        "Jaeho Lee",
+        "Namhoon Lee"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 883,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Improving LLM performance through black-box online tuning: a case for adding system specs to Factsheets for Trusted AI",
+      "source_url": "https://arxiv.org/abs/2603.11340",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "2026 IEEE 42nd International Conference on Data Engineering Workshops (ICDEW)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we present a novel approach for a black-box online controller that uses only end-to-end measurements over short segments (no internal instrumentation) and hillclimbing to maximize goodput (the throughput of requests that satisfy the service-level objective). We provide empirical evidence to suggest that the design is well-founded. With this specific advance in LLM serving on hand as a clear example, we move on to discuss the importance of integrating system performance and sustainability metrics into Factsheets for those adopting AI systems.",
+      "identifiers": [
+        "SemanticScholar:894096b9e199b8785c347aed8988cb948e86f79b"
+      ],
+      "semantic_scholar_id": "894096b9e199b8785c347aed8988cb948e86f79b",
+      "canonical_id": "arXiv:2603.11340",
+      "arxiv_id": "2603.11340",
+      "doi": "10.1109/ICDEW71238.2026.00010",
+      "authors": [
+        "Yonas Atinafu",
+        "Henry Lin",
+        "Robin Cohen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Retrofitting Linear Attention into Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.06628",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (dLLMs) offer a promising alternative to autoregressive models by accelerating inference through parallel decoding. Recent dLLMs commonly use blockwise semi-autoregressive decoding, generating blocks autoregressively while denoising tokens within each active block in parallel. However, despite KV caching, each denoising step still attends to all previous blocks, repeatedly incurring prefix-attention cost. Motivated by this bottleneck, we ask whether dLLM inference can be further accelerated by linearizing attention over previous blocks. We introduce block-hybrid attention, which retains exact softmax attention within the active denoising block while applying linear attention over previous blocks. We show that this hybrid attention can be retrofitted into a pretrained dLLM with minimal post-training: LLaDA-Hybrid replaces 6 of the 20 attention layers in LLaDA~2.1, a 16B open-source dLLM, largely following LoLCAT (Zhang et al, 2024). The conversion takes only approximately 60 hours while preserving benchmark performance: 72.0% vs. 75.6% on HumanEval, 63.0% vs. 57.7% on MBPP+, and 86.7% vs. 88.3% on CMATH. With a Triton implementation, LLaDA-Hybrid achieves up to $1.7\\times$ higher decoding throughput and supports more concurrent requests before exhausting memory, showing that pretrained dLLMs can be efficiently linearized for faster inference. Our code is available at: https://github.com/Diuven/LLaDA-Hybrid.",
+      "identifiers": [
+        "SemanticScholar:0a614fd09a917c91732a701b9113e31ebe5a9816"
+      ],
+      "semantic_scholar_id": "0a614fd09a917c91732a701b9113e31ebe5a9816",
+      "canonical_id": "arXiv:2608.06628",
+      "arxiv_id": "2608.06628",
+      "doi": "10.48550/arXiv.2608.06628",
+      "authors": [
+        "Jinha Kim",
+        "Younghun Roh",
+        "Jaeyeon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Titan-Llama: Retrofitting Pre-trained LLMs with External Neural Memory Modules",
+      "source_url": "https://arxiv.org/abs/2610.19210",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are efficient to pre-train at scale because attention permits parallel computation across sequence positions, but long-context inference requires increasingly large KV caches. Efficient recurrent alternatives reduce the asymptotic complexity of inference, but their sequential dependence limits token-wise parallelism during training, making them harder to scale. Further, the current paradigm of extending long context tasks creates competing notions of retaining information precisely and keeping long-context inference efficient. To address this gap, we introduce Titan-Llama, a post-training method for retrofitting attention-based language models with a hierarchical memory architecture that updates parameters at test-time. Titan-Llama applies a blockwise attention mask and preserves full-fidelity attention over recent tokens while compressing historical context into recurrent, fixed-size neural memory modules (NMMs). Our formulation allows pre-trained attention layers to be replaced without training a new language model from scratch. On Llama-3.2-1B-Instruct, Titan-Llama raises accuracy over segmented attention windows from 23.87\\% to 40.51\\% on QuALITY and from 14.50\\% to 40.75\\% on LongHealth. Inference benchmarks show more than 20\\% faster prefill, 37\\% faster decode at medium context lengths, and 24\\% lower steady-state decode memory usage in the evaluated configurations. Together, these results demonstrate that incorporating memory architecture mechanisms that utilize test-time training effectively modulates long-context behavior of pre-trained models, offering a practical route to adapting pre-trained transformers for efficient long-context inference. Our code is released on Github \\href{https://github.com/sarahpannn/titans-pytorch/tree/main}{GitHub}",
+      "identifiers": [
+        "SemanticScholar:d5b9a2afcf6a58c09f565c39ca5d45949260c565"
+      ],
+      "semantic_scholar_id": "d5b9a2afcf6a58c09f565c39ca5d45949260c565",
+      "canonical_id": "arXiv:2610.19210",
+      "arxiv_id": "2610.19210",
+      "authors": [
+        "Sarah Pan",
+        "Ali Behrouz"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Extracting Interpretable Task-Specific Circuits from Large Language Models for Faster Inference",
+      "source_url": "https://arxiv.org/abs/2412.15750",
+      "year": 2024,
+      "published": "2024-12-20",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have shown impressive performance across a wide range of tasks. However, the size of LLMs is steadily increasing, hindering their application on computationally constrained environments. On the other hand, despite their general capabilities, there are many situations where only one specific task is performed, rendering all other capabilities unnecessary and wasteful. This leads us to the following question: Is it possible to extract the minimal subset from an LLM that is able to perform a specific task in a faster, standalone manner? Recent works on Mechanistic Interpretability (MI) have shown that specific tasks are performed by a localized subset of components, or circuit. However, current techniques used to identify the circuit cannot be used to extract it for its standalone usage. In this work, we propose a novel approach to automatically extract the subset of the LLM that properly performs a targeted task requiring no additional training and a small amount of data samples. We evaluate our approach on different tasks and show that the resulting models are (i) considerably smaller, reducing the number of parameters up to 82.77% and (ii) more interpretable, as they focus on the circuit that is used to carry out the specific task, and can therefore be understood using MI techniques.",
+      "identifiers": [
+        "SemanticScholar:1defb97df220a3286f48899e87c7e45195ff165e"
+      ],
+      "semantic_scholar_id": "1defb97df220a3286f48899e87c7e45195ff165e",
+      "canonical_id": "arXiv:2412.15750",
+      "arxiv_id": "2412.15750",
+      "doi": "10.48550/arXiv.2412.15750",
+      "authors": [
+        "Jorge García-Carrasco",
+        "Alejandro Maté",
+        "Juan Trujillo"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 701,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM-Barber: Block-Aware Rebuilder for Sparsity Mask in One-Shot for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.10631",
+      "year": 2024,
+      "published": "2024-08-20",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have seen substantial growth, necessitating efficient model pruning techniques. Existing post-training pruning methods primarily measure weight importance in converged dense models, often overlooking changes in weight significance during the pruning process, leading to performance degradation. To address this issue, we present LLM-Barber (Block-Aware Rebuilder for Sparsity Mask in One-Shot), a novel one-shot pruning framework that rebuilds the sparsity mask of pruned models without any retraining or weight reconstruction. LLM-Barber incorporates block-aware error optimization across Self-Attention and MLP blocks, facilitating global performance optimization. We are the first to employ the product of weights and gradients as a pruning metric in the context of LLM post-training pruning. This enables accurate identification of weight importance in massive models and significantly reduces computational complexity compared to methods using second-order information. Our experiments show that LLM-Barber efficiently prunes models from LLaMA and OPT families (7B to 13B) on a single A100 GPU in just 30 minutes, achieving state-of-the-art results in both perplexity and zero-shot performance across various language benchmarks.",
+      "identifiers": [
+        "SemanticScholar:e07f5150d47a9f4e71ee0c0507ee613e812addbe"
+      ],
+      "semantic_scholar_id": "e07f5150d47a9f4e71ee0c0507ee613e812addbe",
+      "canonical_id": "arXiv:2408.10631",
+      "arxiv_id": "2408.10631",
+      "doi": "10.1109/ICCAD66269.2025.11240704",
+      "authors": [
+        "Yupeng Su",
+        "Ziyi Guan",
+        "Xiao-Qun Liu",
+        "Tian-Lai Jin",
+        "Dong-Dong Wu",
+        "Zheng-Fei Chen",
+        "G. Chesi",
+        "Ngai Wong",
+        "Hao Yu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 823,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.04084",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.04084",
+        "id:SemanticScholar:1bd29374935cfb951e4c776e087149751282cb2c",
+        "id:arXiv:2605.04084",
+        "title:fasq flexible accelerated subspace quantization for calibrationfree llm compression",
+        "url:https://arxiv.org/abs/2605.04084"
+      ],
+      "record": {
+        "title": "FASQ: Flexible Accelerated Subspace Quantization for Calibration-Free LLM Compression",
+        "source_url": "https://arxiv.org/abs/2605.04084",
+        "year": 2026,
+        "published": "2026-04-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compressing large language models (LLMs) for deployment on commodity GPUs remains challenging: conventional scalar quantization is limited to fixed bit-widths (e.g., 8/4/3-bit), offers only a few discrete compression points, and typically requires calibration data. We present FASQ (Flexible Accelerated Subspace Quantization), a calibration-free framework that applies product quantization to LLM weight matrices. By tuning two parameters, sub-vector size and codebook cardinality, FASQ exposes a continuous design space spanning 27-49% of the original FP16 model size, filling compression gaps that fixed-bit schemes cannot reach. On Meta-Llama-3-8B, FASQ surpasses 4-bit GPTQ and AWQ in accuracy (67.1-67.7 avg.) at 37-42% model size, with consistent results on Qwen3-8B and Qwen3.5-9B-Base. To make product quantization practical at inference time, we design custom CUDA kernels: a LUT-free direct-compute GEMV for decode and an output-stationary double-buffered LUT GEMM for prefill, both with split-K parallelism. On an RTX~3090, FASQ achieves 45.2 tok/s decode at effective 4-bit (2.56x memory reduction) and 51.8 tok/s at effective 3-bit (2.80x), both surpassing FP16 tensor-core performance (43.9 tok/s) and delivering 1.6 to 1.8x the throughput of AWQ, 2.5 to 2.5x of GPTQ, and 4.3 to 5x of RTN. FASQ is the only compressed method that accelerates decode beyond FP16, offering calibration-free compression, continuous size-quality trade-offs, and real-time inference on a single consumer GPU.",
+        "identifiers": [
+          "SemanticScholar:1bd29374935cfb951e4c776e087149751282cb2c"
+        ],
+        "semantic_scholar_id": "1bd29374935cfb951e4c776e087149751282cb2c",
+        "canonical_id": "arXiv:2605.04084",
+        "arxiv_id": "2605.04084",
+        "doi": "10.48550/arXiv.2605.04084",
+        "authors": [
+          "Ye Qiao",
+          "Yian Wang",
+          "Zhiheng Chen",
+          "Hyoukjun Kwon",
+          "Si-Tao Huang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 213,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.15524",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.15524",
+        "id:SemanticScholar:db49aa6ff9f329f72fb0071a2d2312092d2fa877",
+        "id:arXiv:2406.15524",
+        "title:rethinking pruning large language models benefits and pitfalls of reconstruction error minimization",
+        "url:https://arxiv.org/abs/2406.15524"
+      ],
+      "record": {
+        "title": "Rethinking Pruning Large Language Models: Benefits and Pitfalls of Reconstruction Error Minimization",
+        "source_url": "https://arxiv.org/abs/2406.15524",
+        "year": 2024,
+        "published": "2024-06-21",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This work suggests fundamentally rethinking the current practice of pruning large language models (LLMs). The way it is done is by divide and conquer: split the model into submodels, sequentially prune them, and reconstruct predictions of the dense counterparts on small calibration data one at a time; the final model is obtained simply by putting the resulting sparse submodels together. While this approach enables pruning under memory constraints, it generates high reconstruction errors. In this work, we first present an array of reconstruction techniques that can significantly reduce this error by more than 90%. Unwittingly, however, we discover that minimizing reconstruction error is not always ideal and can overfit the given calibration data, resulting in rather increased language perplexity and poor performance at downstream tasks. We find out that a strategy of self-generating calibration data can mitigate this trade-off between reconstruction and generalization, suggesting new directions in the presence of both benefits and pitfalls of reconstruction for pruning LLMs.",
+        "identifiers": [
+          "SemanticScholar:db49aa6ff9f329f72fb0071a2d2312092d2fa877"
+        ],
+        "semantic_scholar_id": "db49aa6ff9f329f72fb0071a2d2312092d2fa877",
+        "canonical_id": "arXiv:2406.15524",
+        "arxiv_id": "2406.15524",
+        "doi": "10.48550/arXiv.2406.15524",
+        "authors": [
+          "Sungbin Shin",
+          "Wonpyo Park",
+          "Jaeho Lee",
+          "Namhoon Lee"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 883,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.11340",
+      "identity_tokens": [
+        "id:DOI:10.1109/icdew71238.2026.00010",
+        "id:SemanticScholar:894096b9e199b8785c347aed8988cb948e86f79b",
+        "id:arXiv:2603.11340",
+        "title:improving llm performance through blackbox online tuning a case for adding system specs to factsheets for trusted ai",
+        "url:https://arxiv.org/abs/2603.11340"
+      ],
+      "record": {
+        "title": "Improving LLM performance through black-box online tuning: a case for adding system specs to Factsheets for Trusted AI",
+        "source_url": "https://arxiv.org/abs/2603.11340",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "2026 IEEE 42nd International Conference on Data Engineering Workshops (ICDEW)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we present a novel approach for a black-box online controller that uses only end-to-end measurements over short segments (no internal instrumentation) and hillclimbing to maximize goodput (the throughput of requests that satisfy the service-level objective). We provide empirical evidence to suggest that the design is well-founded. With this specific advance in LLM serving on hand as a clear example, we move on to discuss the importance of integrating system performance and sustainability metrics into Factsheets for those adopting AI systems.",
+        "identifiers": [
+          "SemanticScholar:894096b9e199b8785c347aed8988cb948e86f79b"
+        ],
+        "semantic_scholar_id": "894096b9e199b8785c347aed8988cb948e86f79b",
+        "canonical_id": "arXiv:2603.11340",
+        "arxiv_id": "2603.11340",
+        "doi": "10.1109/ICDEW71238.2026.00010",
+        "authors": [
+          "Yonas Atinafu",
+          "Henry Lin",
+          "Robin Cohen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06628",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.06628",
+        "id:SemanticScholar:0a614fd09a917c91732a701b9113e31ebe5a9816",
+        "id:arXiv:2608.06628",
+        "title:retrofitting linear attention into diffusion language models",
+        "url:https://arxiv.org/abs/2608.06628"
+      ],
+      "record": {
+        "title": "Retrofitting Linear Attention into Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2608.06628",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (dLLMs) offer a promising alternative to autoregressive models by accelerating inference through parallel decoding. Recent dLLMs commonly use blockwise semi-autoregressive decoding, generating blocks autoregressively while denoising tokens within each active block in parallel. However, despite KV caching, each denoising step still attends to all previous blocks, repeatedly incurring prefix-attention cost. Motivated by this bottleneck, we ask whether dLLM inference can be further accelerated by linearizing attention over previous blocks. We introduce block-hybrid attention, which retains exact softmax attention within the active denoising block while applying linear attention over previous blocks. We show that this hybrid attention can be retrofitted into a pretrained dLLM with minimal post-training: LLaDA-Hybrid replaces 6 of the 20 attention layers in LLaDA~2.1, a 16B open-source dLLM, largely following LoLCAT (Zhang et al, 2024). The conversion takes only approximately 60 hours while preserving benchmark performance: 72.0% vs. 75.6% on HumanEval, 63.0% vs. 57.7% on MBPP+, and 86.7% vs. 88.3% on CMATH. With a Triton implementation, LLaDA-Hybrid achieves up to $1.7\\times$ higher decoding throughput and supports more concurrent requests before exhausting memory, showing that pretrained dLLMs can be efficiently linearized for faster inference. Our code is available at: https://github.com/Diuven/LLaDA-Hybrid.",
+        "identifiers": [
+          "SemanticScholar:0a614fd09a917c91732a701b9113e31ebe5a9816"
+        ],
+        "semantic_scholar_id": "0a614fd09a917c91732a701b9113e31ebe5a9816",
+        "canonical_id": "arXiv:2608.06628",
+        "arxiv_id": "2608.06628",
+        "doi": "10.48550/arXiv.2608.06628",
+        "authors": [
+          "Jinha Kim",
+          "Younghun Roh",
+          "Jaeyeon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 107,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19210",
+      "identity_tokens": [
+        "id:SemanticScholar:d5b9a2afcf6a58c09f565c39ca5d45949260c565",
+        "id:arXiv:2610.19210",
+        "title:titanllama retrofitting pretrained llms with external neural memory modules",
+        "url:https://arxiv.org/abs/2610.19210"
+      ],
+      "record": {
+        "title": "Titan-Llama: Retrofitting Pre-trained LLMs with External Neural Memory Modules",
+        "source_url": "https://arxiv.org/abs/2610.19210",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers are efficient to pre-train at scale because attention permits parallel computation across sequence positions, but long-context inference requires increasingly large KV caches. Efficient recurrent alternatives reduce the asymptotic complexity of inference, but their sequential dependence limits token-wise parallelism during training, making them harder to scale. Further, the current paradigm of extending long context tasks creates competing notions of retaining information precisely and keeping long-context inference efficient. To address this gap, we introduce Titan-Llama, a post-training method for retrofitting attention-based language models with a hierarchical memory architecture that updates parameters at test-time. Titan-Llama applies a blockwise attention mask and preserves full-fidelity attention over recent tokens while compressing historical context into recurrent, fixed-size neural memory modules (NMMs). Our formulation allows pre-trained attention layers to be replaced without training a new language model from scratch. On Llama-3.2-1B-Instruct, Titan-Llama raises accuracy over segmented attention windows from 23.87\\% to 40.51\\% on QuALITY and from 14.50\\% to 40.75\\% on LongHealth. Inference benchmarks show more than 20\\% faster prefill, 37\\% faster decode at medium context lengths, and 24\\% lower steady-state decode memory usage in the evaluated configurations. Together, these results demonstrate that incorporating memory architecture mechanisms that utilize test-time training effectively modulates long-context behavior of pre-trained models, offering a practical route to adapting pre-trained transformers for efficient long-context inference. Our code is released on Github \\href{https://github.com/sarahpannn/titans-pytorch/tree/main}{GitHub}",
+        "identifiers": [
+          "SemanticScholar:d5b9a2afcf6a58c09f565c39ca5d45949260c565"
+        ],
+        "semantic_scholar_id": "d5b9a2afcf6a58c09f565c39ca5d45949260c565",
+        "canonical_id": "arXiv:2610.19210",
+        "arxiv_id": "2610.19210",
+        "authors": [
+          "Sarah Pan",
+          "Ali Behrouz"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.15750",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.15750",
+        "id:SemanticScholar:1defb97df220a3286f48899e87c7e45195ff165e",
+        "id:arXiv:2412.15750",
+        "title:extracting interpretable taskspecific circuits from large language models for faster inference",
+        "url:https://arxiv.org/abs/2412.15750"
+      ],
+      "record": {
+        "title": "Extracting Interpretable Task-Specific Circuits from Large Language Models for Faster Inference",
+        "source_url": "https://arxiv.org/abs/2412.15750",
+        "year": 2024,
+        "published": "2024-12-20",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have shown impressive performance across a wide range of tasks. However, the size of LLMs is steadily increasing, hindering their application on computationally constrained environments. On the other hand, despite their general capabilities, there are many situations where only one specific task is performed, rendering all other capabilities unnecessary and wasteful. This leads us to the following question: Is it possible to extract the minimal subset from an LLM that is able to perform a specific task in a faster, standalone manner? Recent works on Mechanistic Interpretability (MI) have shown that specific tasks are performed by a localized subset of components, or circuit. However, current techniques used to identify the circuit cannot be used to extract it for its standalone usage. In this work, we propose a novel approach to automatically extract the subset of the LLM that properly performs a targeted task requiring no additional training and a small amount of data samples. We evaluate our approach on different tasks and show that the resulting models are (i) considerably smaller, reducing the number of parameters up to 82.77% and (ii) more interpretable, as they focus on the circuit that is used to carry out the specific task, and can therefore be understood using MI techniques.",
+        "identifiers": [
+          "SemanticScholar:1defb97df220a3286f48899e87c7e45195ff165e"
+        ],
+        "semantic_scholar_id": "1defb97df220a3286f48899e87c7e45195ff165e",
+        "canonical_id": "arXiv:2412.15750",
+        "arxiv_id": "2412.15750",
+        "doi": "10.48550/arXiv.2412.15750",
+        "authors": [
+          "Jorge García-Carrasco",
+          "Alejandro Maté",
+          "Juan Trujillo"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 701,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.10631",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240704",
+        "id:SemanticScholar:e07f5150d47a9f4e71ee0c0507ee613e812addbe",
+        "id:arXiv:2408.10631",
+        "title:llmbarber blockaware rebuilder for sparsity mask in oneshot for large language models",
+        "url:https://arxiv.org/abs/2408.10631"
+      ],
+      "record": {
+        "title": "LLM-Barber: Block-Aware Rebuilder for Sparsity Mask in One-Shot for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2408.10631",
+        "year": 2024,
+        "published": "2024-08-20",
+        "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have seen substantial growth, necessitating efficient model pruning techniques. Existing post-training pruning methods primarily measure weight importance in converged dense models, often overlooking changes in weight significance during the pruning process, leading to performance degradation. To address this issue, we present LLM-Barber (Block-Aware Rebuilder for Sparsity Mask in One-Shot), a novel one-shot pruning framework that rebuilds the sparsity mask of pruned models without any retraining or weight reconstruction. LLM-Barber incorporates block-aware error optimization across Self-Attention and MLP blocks, facilitating global performance optimization. We are the first to employ the product of weights and gradients as a pruning metric in the context of LLM post-training pruning. This enables accurate identification of weight importance in massive models and significantly reduces computational complexity compared to methods using second-order information. Our experiments show that LLM-Barber efficiently prunes models from LLaMA and OPT families (7B to 13B) on a single A100 GPU in just 30 minutes, achieving state-of-the-art results in both perplexity and zero-shot performance across various language benchmarks.",
+        "identifiers": [
+          "SemanticScholar:e07f5150d47a9f4e71ee0c0507ee613e812addbe"
+        ],
+        "semantic_scholar_id": "e07f5150d47a9f4e71ee0c0507ee613e812addbe",
+        "canonical_id": "arXiv:2408.10631",
+        "arxiv_id": "2408.10631",
+        "doi": "10.1109/ICCAD66269.2025.11240704",
+        "authors": [
+          "Yupeng Su",
+          "Ziyi Guan",
+          "Xiao-Qun Liu",
+          "Tian-Lai Jin",
+          "Dong-Dong Wu",
+          "Zheng-Fei Chen",
+          "G. Chesi",
+          "Ngai Wong",
+          "Hao Yu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 823,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:473f206a2ffaddeccd0b25a5323449f78c6ef31556d5e2174695f1c4dbaa2f8f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

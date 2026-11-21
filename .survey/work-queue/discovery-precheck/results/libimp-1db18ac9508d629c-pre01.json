@@ -1,0 +1,522 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1db18ac9508d629c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1db18ac9508d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.01253",
+    "arXiv:2601.20520",
+    "arXiv:2606.07581",
+    "arXiv:2610.10135",
+    "arXiv:2610.25908"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1744503ff8fdbe0052c8243bbfc6fb875e0c16ed",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T00:07:50.040934+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.01253",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20520",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.07581",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10135",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25908",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Context Tokens are Anchors: Understanding the Repetition Curse in dMLLMs from an Information Flow Perspective",
+      "source_url": "https://arxiv.org/abs/2601.20520",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent diffusion-based Multimodal Large Language Models (dMLLMs) suffer from high inference latency and therefore rely on caching techniques to accelerate decoding. However, the application of cache mechanisms often introduces undesirable repetitive text generation, a phenomenon we term the \\textbf{Repeat Curse}. To better investigate underlying mechanism behind this issue, we analyze repetition generation through the lens of information flow. Our work reveals three key findings: (1) context tokens aggregate semantic information as anchors and guide the final predictions; (2) as information propagates across layers, the entropy of context tokens converges in deeper layers, reflecting the model's growing prediction certainty; (3) Repetition is typically linked to disruptions in the information flow of context tokens and to the inability of their entropy to converge in deeper layers. Based on these insights, we present \\textbf{CoTA}, a plug-and-play method for mitigating repetition. CoTA enhances the attention of context tokens to preserve intrinsic information flow patterns, while introducing a penalty term to the confidence score during decoding to avoid outputs driven by uncertain context tokens. With extensive experiments, CoTA demonstrates significant effectiveness in alleviating repetition and achieves consistent performance improvements on general tasks. Code is available at https://github.com/ErikZ719/CoTA",
+      "identifiers": [
+        "SemanticScholar:d5adb315bec6221056f150a5d11bbecdc08c3367"
+      ],
+      "semantic_scholar_id": "d5adb315bec6221056f150a5d11bbecdc08c3367",
+      "canonical_id": "arXiv:2601.20520",
+      "arxiv_id": "2601.20520",
+      "doi": "10.48550/arXiv.2601.20520",
+      "authors": [
+        "Qi-Yan Zhao",
+        "Xiao-Feng Zhang",
+        "Shuo-Chen Chang",
+        "Qian-Yu Chen",
+        "Xiao-Song Yuan",
+        "Xuhang Chen",
+        "Luo-Qi Liu",
+        "Jia-Jun Zhang",
+        "Xu-Yao Zhang",
+        "Da-Han Wang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 297,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Behavioral Consistency in Machine Learning",
+      "source_url": "https://arxiv.org/abs/2606.07581",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A trained model is usually described by its weights, as if the weights fixed its behavior. In practice the same weights are run by different programs. Training uses high-precision accumulation and fixed tensor shapes, while serving uses low-precision arithmetic, fused attention kernels, a paged key-value cache, and dynamic batching. These programs produce different next-token distributions from identical weights. We make this dependence explicit by indexing a policy by the kernel that executes it, and we propose kernel contracts, which state how far a serving kernel may drift from a reference kernel on each slice of traffic and what the serving system should do when a limit is exceeded. We prove non-asymptotic bounds that link the logit difference between two kernels to total-variation and KL divergence, to the change in expected reward, to the bias of policy gradients computed from rollouts generated by another kernel, and to whether the greedy token can change. We test the bounds and the contracts in GPU experiments on Qwen2.5-7B-Instruct with Hugging Face and vLLM. The bounds hold on every prompt we measured. Lower precision, a different serving engine, and a different batch size each change the generated token on some prompts, and these changes concentrate on prompts where the model is nearly undecided between two tokens. A kernel can therefore look fine on aggregate metrics while behaving differently on exactly these prompts. Checking a contract separately on each slice of traffic catches these cases.",
+      "identifiers": [
+        "SemanticScholar:854330e413e3c7e1b7184fcab488d28f3fbd5072"
+      ],
+      "semantic_scholar_id": "854330e413e3c7e1b7184fcab488d28f3fbd5072",
+      "canonical_id": "arXiv:2606.07581",
+      "arxiv_id": "2606.07581",
+      "authors": [
+        "Lan Wu",
+        "Bruce Changlong Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention via Black-Box Vector Search",
+      "source_url": "https://arxiv.org/abs/2610.10135",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention mechanisms estimate attention over $n$ tokens using a small subset of keys. Many existing approaches use maximum inner product search (MIPS) to retrieve the heaviest keys, which motivates the following question: given black-box access to a MIPS oracle, how many keys must be retrieved to output an $\\varepsilon$-accurate attention estimate? We answer this question by unifying prior approaches through the framework of priority sampling. With a single MIPS index, we show that $\\Theta(\\sqrt{n}/\\varepsilon)$ retrieved keys are both sufficient and necessary. With $\\Theta(\\log n)$ indices, we give an algorithm that retrieves only $O(\\log n+1/\\varepsilon^2)$ keys and prove that this is near-optimal. More generally, we design algorithms that establish a smooth tradeoff between the number of MIPS indices and number of retrieved keys. We then show that if we allow augmentation of keys and queries, we can bypass the above lower bounds: there exists a simple priority-sampling estimator using a single MIPS index and $O(1/\\varepsilon^2)$ retrieved keys. When integrated into LLM inference, our algorithms outperform top-$k$ and sampling approaches used in prior work and yield attention approximation that scales favorably to long contexts.",
+      "identifiers": [
+        "SemanticScholar:90746581c33aee4088f6cb5bd86d3bbe9e4b2263"
+      ],
+      "semantic_scholar_id": "90746581c33aee4088f6cb5bd86d3bbe9e4b2263",
+      "canonical_id": "arXiv:2610.10135",
+      "arxiv_id": "2610.10135",
+      "authors": [
+        "Stepan Zharkov",
+        "Krish Singal",
+        "Ashwin Padaki",
+        "Alexandr Andoni"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CALM: Consistency-Aware Logit Masking in Decoding Space for Mitigating Overthinking of Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2610.25908",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) have achieved strong performance on challenging mathematical and scientific tasks through long chain-of-thought reasoning, but they often suffer from overthinking with unnecessary reasoning steps. Existing truncation-based methods typically detect consecutive trial-answer agreement and force early exit, yet such local stopping signals do not necessarily indicate final-answer stability and can disrupt useful subsequent reflection or verification, potentially leading to performance degradation. We propose consistency-aware logit masking (CALM), a training-free decoding intervention for mitigating overthinking in LRMs. CALM first monitors trial answers at step boundaries and then applies logit masking to action transition point (ATP) tokens such as\"Wait\",\"Alternatively\", and\"Hmm\", suppressing redundant transitional reasoning while allowing the model to continue its thought process more naturally. Experiments across four advanced LRMs and five benchmarks show that CALM reduces token consumption by 18.6%-25.0% compared with full CoT reasoning while maintaining performance, and can even improve accuracy by 0.07%-1.48% by reducing redundant reasoning. LLM-as-a-Judge results also demonstrate that CALM provides more coherent and concise results.",
+      "identifiers": [
+        "SemanticScholar:5116556b3dd0f2054b4c6e4096d3df61421950ed"
+      ],
+      "semantic_scholar_id": "5116556b3dd0f2054b4c6e4096d3df61421950ed",
+      "canonical_id": "arXiv:2610.25908",
+      "arxiv_id": "2610.25908",
+      "authors": [
+        "Sheng-Jing Liu",
+        "Fei-Yang Li",
+        "Yuxuan Yang",
+        "Yi-Le Wang",
+        "Hui Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NM-SpMM: Accelerating Matrix Multiplication Using N:M Sparsity with GPGPU",
+      "source_url": "https://arxiv.org/abs/2503.01253",
+      "year": 2025,
+      "published": "2025-03-03",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep learning demonstrates effectiveness across a wide range of tasks. However, the dense and over-parameterized nature of these models results in significant resource consumption during deployment. In response to this issue, weight pruning, particularly through $N: M$ sparsity matrix multiplication, offers an efficient solution by transforming dense operations into semisparse ones. $N: M$ sparsity provides an option for balancing performance and model accuracy, but introduces more complex programming and optimization challenges. To address these issues, we design a systematic top-down performance analysis model for $N: M$ sparsity. Meanwhile, NM-SpMM is proposed as an efficient general $N: M$ sparsity implementation. Based on our performance analysis, NM-SpMM employs a hierarchical blocking mechanism as a general optimization to enhance data locality, while memory access optimization and pipeline design are introduced as sparsity-aware optimization, allowing it to achieve close-to-theoretical peak performance across different sparsity levels. Experimental results show that NM-SpMM is 2.1x faster than nmSPARSE (the state-of-the-art for general $N: M$ sparsity) and 1.4× to 6.3× faster than cuBLAS's dense GEMM operations, closely approaching the theoretical maximum speedup resulting from the reduction in computation due to sparsity. NM-SpMM is open source and publicly available at https://github.com/M-H482/NM-SpMM.",
+      "identifiers": [
+        "SemanticScholar:4d0de40cc001f7f2d3c5fa0cee2a1eb5f3ee5b4c"
+      ],
+      "semantic_scholar_id": "4d0de40cc001f7f2d3c5fa0cee2a1eb5f3ee5b4c",
+      "canonical_id": "arXiv:2503.01253",
+      "arxiv_id": "2503.01253",
+      "doi": "10.1109/IPDPS64566.2025.00087",
+      "authors": [
+        "Cong Ma",
+        "Du Wu",
+        "Zhelang Deng",
+        "Jiang Chen",
+        "Xiaowen Huang",
+        "Jin-Tao Meng",
+        "Wenxi Zhu",
+        "Bingqiang Wang",
+        "Amelie Chi Zhou",
+        "Peng Chen",
+        "Minwen Deng",
+        "Yan-Jie Wei",
+        "Sheng-Zhong Feng",
+        "Yi Pan"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 628,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.20520",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20520",
+        "id:SemanticScholar:d5adb315bec6221056f150a5d11bbecdc08c3367",
+        "id:arXiv:2601.20520",
+        "title:context tokens are anchors understanding the repetition curse in dmllms from an information flow perspective",
+        "url:https://arxiv.org/abs/2601.20520"
+      ],
+      "record": {
+        "title": "Context Tokens are Anchors: Understanding the Repetition Curse in dMLLMs from an Information Flow Perspective",
+        "source_url": "https://arxiv.org/abs/2601.20520",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent diffusion-based Multimodal Large Language Models (dMLLMs) suffer from high inference latency and therefore rely on caching techniques to accelerate decoding. However, the application of cache mechanisms often introduces undesirable repetitive text generation, a phenomenon we term the \\textbf{Repeat Curse}. To better investigate underlying mechanism behind this issue, we analyze repetition generation through the lens of information flow. Our work reveals three key findings: (1) context tokens aggregate semantic information as anchors and guide the final predictions; (2) as information propagates across layers, the entropy of context tokens converges in deeper layers, reflecting the model's growing prediction certainty; (3) Repetition is typically linked to disruptions in the information flow of context tokens and to the inability of their entropy to converge in deeper layers. Based on these insights, we present \\textbf{CoTA}, a plug-and-play method for mitigating repetition. CoTA enhances the attention of context tokens to preserve intrinsic information flow patterns, while introducing a penalty term to the confidence score during decoding to avoid outputs driven by uncertain context tokens. With extensive experiments, CoTA demonstrates significant effectiveness in alleviating repetition and achieves consistent performance improvements on general tasks. Code is available at https://github.com/ErikZ719/CoTA",
+        "identifiers": [
+          "SemanticScholar:d5adb315bec6221056f150a5d11bbecdc08c3367"
+        ],
+        "semantic_scholar_id": "d5adb315bec6221056f150a5d11bbecdc08c3367",
+        "canonical_id": "arXiv:2601.20520",
+        "arxiv_id": "2601.20520",
+        "doi": "10.48550/arXiv.2601.20520",
+        "authors": [
+          "Qi-Yan Zhao",
+          "Xiao-Feng Zhang",
+          "Shuo-Chen Chang",
+          "Qian-Yu Chen",
+          "Xiao-Song Yuan",
+          "Xuhang Chen",
+          "Luo-Qi Liu",
+          "Jia-Jun Zhang",
+          "Xu-Yao Zhang",
+          "Da-Han Wang"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 297,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.07581",
+      "identity_tokens": [
+        "id:SemanticScholar:854330e413e3c7e1b7184fcab488d28f3fbd5072",
+        "id:arXiv:2606.07581",
+        "title:behavioral consistency in machine learning",
+        "url:https://arxiv.org/abs/2606.07581"
+      ],
+      "record": {
+        "title": "Behavioral Consistency in Machine Learning",
+        "source_url": "https://arxiv.org/abs/2606.07581",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A trained model is usually described by its weights, as if the weights fixed its behavior. In practice the same weights are run by different programs. Training uses high-precision accumulation and fixed tensor shapes, while serving uses low-precision arithmetic, fused attention kernels, a paged key-value cache, and dynamic batching. These programs produce different next-token distributions from identical weights. We make this dependence explicit by indexing a policy by the kernel that executes it, and we propose kernel contracts, which state how far a serving kernel may drift from a reference kernel on each slice of traffic and what the serving system should do when a limit is exceeded. We prove non-asymptotic bounds that link the logit difference between two kernels to total-variation and KL divergence, to the change in expected reward, to the bias of policy gradients computed from rollouts generated by another kernel, and to whether the greedy token can change. We test the bounds and the contracts in GPU experiments on Qwen2.5-7B-Instruct with Hugging Face and vLLM. The bounds hold on every prompt we measured. Lower precision, a different serving engine, and a different batch size each change the generated token on some prompts, and these changes concentrate on prompts where the model is nearly undecided between two tokens. A kernel can therefore look fine on aggregate metrics while behaving differently on exactly these prompts. Checking a contract separately on each slice of traffic catches these cases.",
+        "identifiers": [
+          "SemanticScholar:854330e413e3c7e1b7184fcab488d28f3fbd5072"
+        ],
+        "semantic_scholar_id": "854330e413e3c7e1b7184fcab488d28f3fbd5072",
+        "canonical_id": "arXiv:2606.07581",
+        "arxiv_id": "2606.07581",
+        "authors": [
+          "Lan Wu",
+          "Bruce Changlong Xu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.10135",
+      "identity_tokens": [
+        "id:SemanticScholar:90746581c33aee4088f6cb5bd86d3bbe9e4b2263",
+        "id:arXiv:2610.10135",
+        "title:attention via blackbox vector search",
+        "url:https://arxiv.org/abs/2610.10135"
+      ],
+      "record": {
+        "title": "Attention via Black-Box Vector Search",
+        "source_url": "https://arxiv.org/abs/2610.10135",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention mechanisms estimate attention over $n$ tokens using a small subset of keys. Many existing approaches use maximum inner product search (MIPS) to retrieve the heaviest keys, which motivates the following question: given black-box access to a MIPS oracle, how many keys must be retrieved to output an $\\varepsilon$-accurate attention estimate? We answer this question by unifying prior approaches through the framework of priority sampling. With a single MIPS index, we show that $\\Theta(\\sqrt{n}/\\varepsilon)$ retrieved keys are both sufficient and necessary. With $\\Theta(\\log n)$ indices, we give an algorithm that retrieves only $O(\\log n+1/\\varepsilon^2)$ keys and prove that this is near-optimal. More generally, we design algorithms that establish a smooth tradeoff between the number of MIPS indices and number of retrieved keys. We then show that if we allow augmentation of keys and queries, we can bypass the above lower bounds: there exists a simple priority-sampling estimator using a single MIPS index and $O(1/\\varepsilon^2)$ retrieved keys. When integrated into LLM inference, our algorithms outperform top-$k$ and sampling approaches used in prior work and yield attention approximation that scales favorably to long contexts.",
+        "identifiers": [
+          "SemanticScholar:90746581c33aee4088f6cb5bd86d3bbe9e4b2263"
+        ],
+        "semantic_scholar_id": "90746581c33aee4088f6cb5bd86d3bbe9e4b2263",
+        "canonical_id": "arXiv:2610.10135",
+        "arxiv_id": "2610.10135",
+        "authors": [
+          "Stepan Zharkov",
+          "Krish Singal",
+          "Ashwin Padaki",
+          "Alexandr Andoni"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.25908",
+      "identity_tokens": [
+        "id:SemanticScholar:5116556b3dd0f2054b4c6e4096d3df61421950ed",
+        "id:arXiv:2610.25908",
+        "title:calm consistencyaware logit masking in decoding space for mitigating overthinking of large reasoning models",
+        "url:https://arxiv.org/abs/2610.25908"
+      ],
+      "record": {
+        "title": "CALM: Consistency-Aware Logit Masking in Decoding Space for Mitigating Overthinking of Large Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2610.25908",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) have achieved strong performance on challenging mathematical and scientific tasks through long chain-of-thought reasoning, but they often suffer from overthinking with unnecessary reasoning steps. Existing truncation-based methods typically detect consecutive trial-answer agreement and force early exit, yet such local stopping signals do not necessarily indicate final-answer stability and can disrupt useful subsequent reflection or verification, potentially leading to performance degradation. We propose consistency-aware logit masking (CALM), a training-free decoding intervention for mitigating overthinking in LRMs. CALM first monitors trial answers at step boundaries and then applies logit masking to action transition point (ATP) tokens such as\"Wait\",\"Alternatively\", and\"Hmm\", suppressing redundant transitional reasoning while allowing the model to continue its thought process more naturally. Experiments across four advanced LRMs and five benchmarks show that CALM reduces token consumption by 18.6%-25.0% compared with full CoT reasoning while maintaining performance, and can even improve accuracy by 0.07%-1.48% by reducing redundant reasoning. LLM-as-a-Judge results also demonstrate that CALM provides more coherent and concise results.",
+        "identifiers": [
+          "SemanticScholar:5116556b3dd0f2054b4c6e4096d3df61421950ed"
+        ],
+        "semantic_scholar_id": "5116556b3dd0f2054b4c6e4096d3df61421950ed",
+        "canonical_id": "arXiv:2610.25908",
+        "arxiv_id": "2610.25908",
+        "authors": [
+          "Sheng-Jing Liu",
+          "Fei-Yang Li",
+          "Yuxuan Yang",
+          "Yi-Le Wang",
+          "Hui Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.01253",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps64566.2025.00087",
+        "id:SemanticScholar:4d0de40cc001f7f2d3c5fa0cee2a1eb5f3ee5b4c",
+        "id:arXiv:2503.01253",
+        "title:nmspmm accelerating matrix multiplication using nm sparsity with gpgpu",
+        "url:https://arxiv.org/abs/2503.01253"
+      ],
+      "record": {
+        "title": "NM-SpMM: Accelerating Matrix Multiplication Using N:M Sparsity with GPGPU",
+        "source_url": "https://arxiv.org/abs/2503.01253",
+        "year": 2025,
+        "published": "2025-03-03",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep learning demonstrates effectiveness across a wide range of tasks. However, the dense and over-parameterized nature of these models results in significant resource consumption during deployment. In response to this issue, weight pruning, particularly through $N: M$ sparsity matrix multiplication, offers an efficient solution by transforming dense operations into semisparse ones. $N: M$ sparsity provides an option for balancing performance and model accuracy, but introduces more complex programming and optimization challenges. To address these issues, we design a systematic top-down performance analysis model for $N: M$ sparsity. Meanwhile, NM-SpMM is proposed as an efficient general $N: M$ sparsity implementation. Based on our performance analysis, NM-SpMM employs a hierarchical blocking mechanism as a general optimization to enhance data locality, while memory access optimization and pipeline design are introduced as sparsity-aware optimization, allowing it to achieve close-to-theoretical peak performance across different sparsity levels. Experimental results show that NM-SpMM is 2.1x faster than nmSPARSE (the state-of-the-art for general $N: M$ sparsity) and 1.4× to 6.3× faster than cuBLAS's dense GEMM operations, closely approaching the theoretical maximum speedup resulting from the reduction in computation due to sparsity. NM-SpMM is open source and publicly available at https://github.com/M-H482/NM-SpMM.",
+        "identifiers": [
+          "SemanticScholar:4d0de40cc001f7f2d3c5fa0cee2a1eb5f3ee5b4c"
+        ],
+        "semantic_scholar_id": "4d0de40cc001f7f2d3c5fa0cee2a1eb5f3ee5b4c",
+        "canonical_id": "arXiv:2503.01253",
+        "arxiv_id": "2503.01253",
+        "doi": "10.1109/IPDPS64566.2025.00087",
+        "authors": [
+          "Cong Ma",
+          "Du Wu",
+          "Zhelang Deng",
+          "Jiang Chen",
+          "Xiaowen Huang",
+          "Jin-Tao Meng",
+          "Wenxi Zhu",
+          "Bingqiang Wang",
+          "Amelie Chi Zhou",
+          "Peng Chen",
+          "Minwen Deng",
+          "Yan-Jie Wei",
+          "Sheng-Zhong Feng",
+          "Yi Pan"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 628,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:84b668aa8ac98e69397ee7e8b1db8f9908fddcc0022c5911c9535295e36bea03",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
