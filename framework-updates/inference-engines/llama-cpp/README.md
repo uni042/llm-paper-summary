@@ -100,6 +100,19 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-21 — llama.cpp b12591〜b12613（開発ビルド）
+
+b12590の続き。対象期間の開発ビルドはb12591からb12613（2026-11-21 19:40 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。
+
+- **b12613: Vulkan Flash Attention coopmat1のAMD Windowsドライババグ回避**。unrollの調整による回避であり、対象はAMD Windows環境のVulkan経路に限られる。
+- **Vulkan RDNA4向けMMVQ性能改善**: Q3_K / Q5_K / IQ4_XS の行列ベクトル積をRDNA4向けに最適化。一般的な生成速度倍率は公表されていない。
+- **tinyBLAS PPCのalignment修正**: Flint Q4_K_M / Gemma 3 27Bで起きていた文字化けを修正する正確性修正。
+- **fused lightning indexerのgating撤廃**: 条件付きだった融合インデクサが常時有効化された。
+- **b12602: SYCL backendのGrouped XMX GEMM性能改善**。SLM stagingによるもので、対象はIntel系のSYCL経路。
+- この範囲では新規backend追加や新規モデルアーキテクチャ対応の大きな発表はない。いずれもVulkan／SYCLの性能改善と修正が中心である。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12613 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12602
+
 ## 2026-11-20 — llama.cpp b12554〜b12590（開発ビルド）
 
 b12553の続き。対象期間の開発ビルドはb12554（2026-11-19 22:19 UTC）からb12590（2026-11-20 19:02 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。

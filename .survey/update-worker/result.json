@@ -1,18 +1,16 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "muse-fwllm-20261121",
+  "attempt_id": "muse-fwllm-20261122",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "framework-updates/inference-engines/tensorrt-llm/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
-    "framework-updates/inference-engines/tensorrt-llm/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/README.md"
   ],
-  "summary": "2026-11-20〜11-21: TensorRT-LLM v1.3.0 stable (2026-11-20, Rubin preview, DeepSeek-V4/Kimi K3/Qwen3.5 support, KV Cache Manager V2 default, DSpark/DFlash drafters, MXFP8), llama.cpp b12554-b12590 dev builds (Gemma 4 multi-seq prompt processing b12588, Vulkan chunked GATED_DELTA_NET b12561, Domyn Edge 4B b12568, drama3 voice cloning b12590); LLM series: no primary-confirmed important updates in window. Direct-apply per skill §9 (Phase 1)."
+  "summary": "2026-11-21〜11-22: llama.cpp b12591-b12613 dev builds (Vulkan FA coopmat1 AMD Windows workaround b12613, RDNA4 MMVQ perf for Q3_K/Q5_K/IQ4_XS, tinyBLAS PPC alignment fix, fused lightning indexer ungated, SYCL Grouped XMX GEMM perf b12602); all other frameworks and LLM series: no primary-confirmed important updates in window. Direct-apply per skill §9 (Phase 1)."
 }
