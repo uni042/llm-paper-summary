@@ -1,0 +1,241 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-702194dac933fa93-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-702194dac933",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2405.17052",
+    "arXiv:2408.14906"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8689e1883f1b26582b5cc37e0059506863c1ec3a",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T10:57:32.838286+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2405.17052",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.14906",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SelfCP: Compressing over-limit prompt via the frozen large language model itself",
+      "source_url": "https://arxiv.org/abs/2405.17052",
+      "year": 2024,
+      "published": "2024-05-27",
+      "venue": "Information Processing & Management",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long prompt leads to huge hardware costs when using transformer-based Large Language Models (LLMs). Unfortunately, many tasks, such as summarization, inevitably introduce long documents, and the wide application of in-context learning easily makes the prompt length explode. This paper proposes a Self-Compressor (SelfCP), which employs the target LLM itself to compress over-limit prompts into dense vectors while keeping the allowed prompts unmodified. Dense vectors are then projected into dense tokens via a learnable connector to make the same LLM unburden to understand. The connector is supervised-tuned under the language modeling objective of the LLM on relatively long texts selected from publicly accessed datasets, involving an instruction dataset to make SelfCP respond to various prompts, while the target LLM keeps frozen during training. We build the lightweight SelfCP upon 2 different backbones with merely 17M learnable parameters originating from the connector and a learnable embedding. Evaluation on both English and Chinese benchmarks demonstrate that SelfCP effectively substitutes 12$\\times$ over-limit prompts with dense tokens to reduce memory costs and booster inference throughputs, yet improving response quality. The outstanding performance brings an efficient solution for LLMs to tackle long prompts without training LLMs from scratch.",
+      "identifiers": [
+        "SemanticScholar:3e8d7d78b30246a01b0ec7423d154982428fd25d"
+      ],
+      "semantic_scholar_id": "3e8d7d78b30246a01b0ec7423d154982428fd25d",
+      "canonical_id": "arXiv:2405.17052",
+      "arxiv_id": "2405.17052",
+      "doi": "10.1016/j.ipm.2024.103873",
+      "authors": [
+        "Jun Gao",
+        "Zi-Qiang Cao",
+        "Wen-Jie Li"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 908,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Writing in the Margins: Better Inference Pattern for Long Context Retrieval",
+      "source_url": "https://arxiv.org/abs/2408.14906",
+      "year": 2024,
+      "published": "2024-08-27",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we introduce Writing in the Margins (WiM), a new inference pattern for Large Language Models designed to optimize the handling of long input sequences in retrieval-oriented tasks. This approach leverages the chunked prefill of the key-value cache to perform segment-wise inference, which enables efficient processing of extensive contexts along with the generation and classification of intermediate information (\"margins\") that guide the model towards specific tasks. This method increases computational overhead marginally while significantly enhancing the performance of off-the-shelf models without the need for fine-tuning. Specifically, we observe that WiM provides an average enhancement of 7.5% in accuracy for reasoning skills (HotpotQA, MultiHop-RAG) and more than a 30.0% increase in the F1-score for aggregation tasks (CWE). Additionally, we show how the proposed pattern fits into an interactive retrieval design that provides end-users with ongoing updates about the progress of context processing, and pinpoints the integration of relevant information into the final response. We release our implementation of WiM using Hugging Face Transformers library at https://github.com/writer/writing-in-the-margins.",
+      "identifiers": [
+        "SemanticScholar:241eb4831172a9bbc691b1eb00b8c3d8226b98ac"
+      ],
+      "semantic_scholar_id": "241eb4831172a9bbc691b1eb00b8c3d8226b98ac",
+      "canonical_id": "arXiv:2408.14906",
+      "arxiv_id": "2408.14906",
+      "doi": "10.48550/arXiv.2408.14906",
+      "authors": [
+        "Melisa Russak",
+        "Umar Jamil",
+        "Christopher M. Bryant",
+        "Kiran Kamble",
+        "Axel Magnuson",
+        "Mateusz Russak",
+        "Waseem AlShikh"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 816,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2405.17052",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.ipm.2024.103873",
+        "id:SemanticScholar:3e8d7d78b30246a01b0ec7423d154982428fd25d",
+        "id:arXiv:2405.17052",
+        "title:selfcp compressing overlimit prompt via the frozen large language model itself",
+        "url:https://arxiv.org/abs/2405.17052"
+      ],
+      "record": {
+        "title": "SelfCP: Compressing over-limit prompt via the frozen large language model itself",
+        "source_url": "https://arxiv.org/abs/2405.17052",
+        "year": 2024,
+        "published": "2024-05-27",
+        "venue": "Information Processing & Management",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long prompt leads to huge hardware costs when using transformer-based Large Language Models (LLMs). Unfortunately, many tasks, such as summarization, inevitably introduce long documents, and the wide application of in-context learning easily makes the prompt length explode. This paper proposes a Self-Compressor (SelfCP), which employs the target LLM itself to compress over-limit prompts into dense vectors while keeping the allowed prompts unmodified. Dense vectors are then projected into dense tokens via a learnable connector to make the same LLM unburden to understand. The connector is supervised-tuned under the language modeling objective of the LLM on relatively long texts selected from publicly accessed datasets, involving an instruction dataset to make SelfCP respond to various prompts, while the target LLM keeps frozen during training. We build the lightweight SelfCP upon 2 different backbones with merely 17M learnable parameters originating from the connector and a learnable embedding. Evaluation on both English and Chinese benchmarks demonstrate that SelfCP effectively substitutes 12$\\times$ over-limit prompts with dense tokens to reduce memory costs and booster inference throughputs, yet improving response quality. The outstanding performance brings an efficient solution for LLMs to tackle long prompts without training LLMs from scratch.",
+        "identifiers": [
+          "SemanticScholar:3e8d7d78b30246a01b0ec7423d154982428fd25d"
+        ],
+        "semantic_scholar_id": "3e8d7d78b30246a01b0ec7423d154982428fd25d",
+        "canonical_id": "arXiv:2405.17052",
+        "arxiv_id": "2405.17052",
+        "doi": "10.1016/j.ipm.2024.103873",
+        "authors": [
+          "Jun Gao",
+          "Zi-Qiang Cao",
+          "Wen-Jie Li"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 908,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.14906",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.14906",
+        "id:SemanticScholar:241eb4831172a9bbc691b1eb00b8c3d8226b98ac",
+        "id:arXiv:2408.14906",
+        "title:writing in the margins better inference pattern for long context retrieval",
+        "url:https://arxiv.org/abs/2408.14906"
+      ],
+      "record": {
+        "title": "Writing in the Margins: Better Inference Pattern for Long Context Retrieval",
+        "source_url": "https://arxiv.org/abs/2408.14906",
+        "year": 2024,
+        "published": "2024-08-27",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we introduce Writing in the Margins (WiM), a new inference pattern for Large Language Models designed to optimize the handling of long input sequences in retrieval-oriented tasks. This approach leverages the chunked prefill of the key-value cache to perform segment-wise inference, which enables efficient processing of extensive contexts along with the generation and classification of intermediate information (\"margins\") that guide the model towards specific tasks. This method increases computational overhead marginally while significantly enhancing the performance of off-the-shelf models without the need for fine-tuning. Specifically, we observe that WiM provides an average enhancement of 7.5% in accuracy for reasoning skills (HotpotQA, MultiHop-RAG) and more than a 30.0% increase in the F1-score for aggregation tasks (CWE). Additionally, we show how the proposed pattern fits into an interactive retrieval design that provides end-users with ongoing updates about the progress of context processing, and pinpoints the integration of relevant information into the final response. We release our implementation of WiM using Hugging Face Transformers library at https://github.com/writer/writing-in-the-margins.",
+        "identifiers": [
+          "SemanticScholar:241eb4831172a9bbc691b1eb00b8c3d8226b98ac"
+        ],
+        "semantic_scholar_id": "241eb4831172a9bbc691b1eb00b8c3d8226b98ac",
+        "canonical_id": "arXiv:2408.14906",
+        "arxiv_id": "2408.14906",
+        "doi": "10.48550/arXiv.2408.14906",
+        "authors": [
+          "Melisa Russak",
+          "Umar Jamil",
+          "Christopher M. Bryant",
+          "Kiran Kamble",
+          "Axel Magnuson",
+          "Mateusz Russak",
+          "Waseem AlShikh"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 816,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9eb1357023c199ae09480f434595f95d6d0aa920ad60ffcdc1c740b25a5ba533",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,344 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e7b7bf42ec690acd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e7b7bf42ec69",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.15621",
+    "arXiv:2605.15913",
+    "arXiv:2611.00646"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8689e1883f1b26582b5cc37e0059506863c1ec3a",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T10:57:33.148894+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.15621",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.15913",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.00646",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LRCP: Low-Rank Compressibility Guided Visual Token Pruning for Efficient LVLMs",
+      "source_url": "https://arxiv.org/abs/2605.15621",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) achieve strong multimodal understanding, but their inference cost grows rapidly with the number of visual tokens, especially for high-resolution images and long videos. Existing attention-based methods estimate token importance from attention scores, which may introduce positional bias, while representation-based methods reduce visual redundancy based on feature relations or reconstruction errors, overlooking the global structure of the visual token set. In this paper, we revisit visual token compression from the perspective of low-rank compressibility. Across models and datasets, we observe that visual token representations exhibit a pronounced low-rank structure, with a dominant subspace that remains stable even after a large fraction of tokens is randomly removed. Motivated by this finding, we propose LRCP, a training-free compression framework that first estimates the dominant low-rank subspace of visual tokens via PCA, and then scores each token by its projection residual onto this subspace, retaining tokens that are poorly explained by the low-rank background. Extensive experiments show that LRCP achieves superior results, preserving 94.7% of the original image-understanding performance with an 88.9% token reduction and 97.8% of the average video-understanding accuracy with an 87.5% token reduction.",
+      "identifiers": [
+        "SemanticScholar:0e9e4d47bca6bc9968c1ea68006fae881eaceb92"
+      ],
+      "semantic_scholar_id": "0e9e4d47bca6bc9968c1ea68006fae881eaceb92",
+      "canonical_id": "arXiv:2605.15621",
+      "arxiv_id": "2605.15621",
+      "doi": "10.48550/arXiv.2605.15621",
+      "authors": [
+        "Hong-Yu Lu",
+        "Feng Zhang",
+        "Wenwei Jin",
+        "Hu Hu",
+        "Tian-Jun Shi",
+        "Shi-Kai Jiang",
+        "Yao Hu",
+        "Jiawei Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation",
+      "source_url": "https://arxiv.org/abs/2605.15913",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block attention, which processes the input as separate blocks that cannot attend to one another, offers significant potential to improve KV cache reuse in long-context scenarios such as Retrieval-Augmented Generation (RAG). However, its broader application is hindered by two key challenges: the difficulty of segmenting input text into meaningful, self-contained blocks, and the inefficiency of existing block fine-tuning methods that risk degrading performance. To address these, we first construct SemanticSeg, a large and diverse semantic segmentation dataset containing over 30k instances across 16 categories-including books, code, web text, and conversations with text lengths ranging from 2k to 32k. Using this dataset, we train a lightweight segmenter to automatically partition text into human-instinct-aligned blocks with controllable granularity. Second, we propose block distillation, a training framework that is more efficient than block fine-tuning, which uses a frozen full-attention teacher model to guide the block-attention student. This framework integrates three novel components: block sink tokens to mitigate information loss at block boundaries, block dropout to leverage training signals from all blocks, and token-level loss weighting to focus learning on block-attention-sensitive tokens. Experiments across multiple models and benchmarks demonstrate that our segmenter outperforms heuristic and statistical baselines, and block distillation achieves near-full-attention performance under block attention, establishing a practical and scalable pathway for deploying block attention.",
+      "identifiers": [
+        "SemanticScholar:cbedb1f432d317bfc1f4ab854641264818ef2f9c"
+      ],
+      "semantic_scholar_id": "cbedb1f432d317bfc1f4ab854641264818ef2f9c",
+      "canonical_id": "arXiv:2605.15913",
+      "arxiv_id": "2605.15913",
+      "doi": "10.48550/arXiv.2605.15913",
+      "authors": [
+        "Shuaiyi Li",
+        "Zhi-Song Zhang",
+        "Yan Wang",
+        "Lei Zhu",
+        "Dongyang Ma",
+        "Chen-Long Deng",
+        "Yang Deng",
+        "Wai Lam"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Shards Fly: Cross-Tensor In-Flight Conversion for Low-Latency, Low-Memory Weight Updates in Disaggregated RL",
+      "source_url": "https://arxiv.org/abs/2611.00646",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregated LLM reinforcement learning (RL) repeatedly synchronizes policy weights between training and rollout GPU pools. Existing systems reduce communication through shard delivery and replica forwarding, yet separate conversion passes and staging buffers still add latency and GPU-memory overheads to synchronous updates. We present ShardFly, which coordinates reusable transfer planning with streaming GPU execution for synchronous, in-place weight updates. ShardFly introduces two components. The Planner compiles native shard mappings, quantization dependencies, and replica routes into cross-tensor schedules, reserving payload buffers only for scheduled transfers. The Executor runs each rank's schedule in one persistent transfer kernel, fusing memory-layout conversion, quantization, GPU-initiated communication, and destination writes while forwarding transformed bytes across replicas. Plans and communication state are reused under stable configurations and replaced between updates for coordinated rollout scaling. On up to 32 H20 GPUs, ShardFly achieves complete BF16 weight-update speedups of 1.26--27.92$\\times$ across five models and four baselines: veRL NCCL, Awex, veRL NIXL, and WeightBridge. In end-to-end Qwen3-30B-A3B GRPO across four rollout configurations, ShardFly improves response-token throughput by 5.49--6.71\\% over veRL NCCL.",
+      "identifiers": [
+        "SemanticScholar:ae958e7f8136cc70d601692601658adaee304902"
+      ],
+      "semantic_scholar_id": "ae958e7f8136cc70d601692601658adaee304902",
+      "canonical_id": "arXiv:2611.00646",
+      "arxiv_id": "2611.00646",
+      "authors": [
+        "Jia-Yu Xiao",
+        "Ye Wang",
+        "Zhi Zhang",
+        "Jia-Rui Guo",
+        "Kan Liu",
+        "Tao Lan",
+        "Min-Chen Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.15621",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15621",
+        "id:SemanticScholar:0e9e4d47bca6bc9968c1ea68006fae881eaceb92",
+        "id:arXiv:2605.15621",
+        "title:lrcp lowrank compressibility guided visual token pruning for efficient lvlms",
+        "url:https://arxiv.org/abs/2605.15621"
+      ],
+      "record": {
+        "title": "LRCP: Low-Rank Compressibility Guided Visual Token Pruning for Efficient LVLMs",
+        "source_url": "https://arxiv.org/abs/2605.15621",
+        "year": 2026,
+        "published": "2026-05-15",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models (LVLMs) achieve strong multimodal understanding, but their inference cost grows rapidly with the number of visual tokens, especially for high-resolution images and long videos. Existing attention-based methods estimate token importance from attention scores, which may introduce positional bias, while representation-based methods reduce visual redundancy based on feature relations or reconstruction errors, overlooking the global structure of the visual token set. In this paper, we revisit visual token compression from the perspective of low-rank compressibility. Across models and datasets, we observe that visual token representations exhibit a pronounced low-rank structure, with a dominant subspace that remains stable even after a large fraction of tokens is randomly removed. Motivated by this finding, we propose LRCP, a training-free compression framework that first estimates the dominant low-rank subspace of visual tokens via PCA, and then scores each token by its projection residual onto this subspace, retaining tokens that are poorly explained by the low-rank background. Extensive experiments show that LRCP achieves superior results, preserving 94.7% of the original image-understanding performance with an 88.9% token reduction and 97.8% of the average video-understanding accuracy with an 87.5% token reduction.",
+        "identifiers": [
+          "SemanticScholar:0e9e4d47bca6bc9968c1ea68006fae881eaceb92"
+        ],
+        "semantic_scholar_id": "0e9e4d47bca6bc9968c1ea68006fae881eaceb92",
+        "canonical_id": "arXiv:2605.15621",
+        "arxiv_id": "2605.15621",
+        "doi": "10.48550/arXiv.2605.15621",
+        "authors": [
+          "Hong-Yu Lu",
+          "Feng Zhang",
+          "Wenwei Jin",
+          "Hu Hu",
+          "Tian-Jun Shi",
+          "Shi-Kai Jiang",
+          "Yao Hu",
+          "Jiawei Li"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.15913",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.15913",
+        "id:SemanticScholar:cbedb1f432d317bfc1f4ab854641264818ef2f9c",
+        "id:arXiv:2605.15913",
+        "title:towards generalization of block attention via automatic segmentation and block distillation",
+        "url:https://arxiv.org/abs/2605.15913"
+      ],
+      "record": {
+        "title": "Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation",
+        "source_url": "https://arxiv.org/abs/2605.15913",
+        "year": 2026,
+        "published": "2026-05-15",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block attention, which processes the input as separate blocks that cannot attend to one another, offers significant potential to improve KV cache reuse in long-context scenarios such as Retrieval-Augmented Generation (RAG). However, its broader application is hindered by two key challenges: the difficulty of segmenting input text into meaningful, self-contained blocks, and the inefficiency of existing block fine-tuning methods that risk degrading performance. To address these, we first construct SemanticSeg, a large and diverse semantic segmentation dataset containing over 30k instances across 16 categories-including books, code, web text, and conversations with text lengths ranging from 2k to 32k. Using this dataset, we train a lightweight segmenter to automatically partition text into human-instinct-aligned blocks with controllable granularity. Second, we propose block distillation, a training framework that is more efficient than block fine-tuning, which uses a frozen full-attention teacher model to guide the block-attention student. This framework integrates three novel components: block sink tokens to mitigate information loss at block boundaries, block dropout to leverage training signals from all blocks, and token-level loss weighting to focus learning on block-attention-sensitive tokens. Experiments across multiple models and benchmarks demonstrate that our segmenter outperforms heuristic and statistical baselines, and block distillation achieves near-full-attention performance under block attention, establishing a practical and scalable pathway for deploying block attention.",
+        "identifiers": [
+          "SemanticScholar:cbedb1f432d317bfc1f4ab854641264818ef2f9c"
+        ],
+        "semantic_scholar_id": "cbedb1f432d317bfc1f4ab854641264818ef2f9c",
+        "canonical_id": "arXiv:2605.15913",
+        "arxiv_id": "2605.15913",
+        "doi": "10.48550/arXiv.2605.15913",
+        "authors": [
+          "Shuaiyi Li",
+          "Zhi-Song Zhang",
+          "Yan Wang",
+          "Lei Zhu",
+          "Dongyang Ma",
+          "Chen-Long Deng",
+          "Yang Deng",
+          "Wai Lam"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.00646",
+      "identity_tokens": [
+        "id:SemanticScholar:ae958e7f8136cc70d601692601658adaee304902",
+        "id:arXiv:2611.00646",
+        "title:when shards fly crosstensor inflight conversion for lowlatency lowmemory weight updates in disaggregated rl",
+        "url:https://arxiv.org/abs/2611.00646"
+      ],
+      "record": {
+        "title": "When Shards Fly: Cross-Tensor In-Flight Conversion for Low-Latency, Low-Memory Weight Updates in Disaggregated RL",
+        "source_url": "https://arxiv.org/abs/2611.00646",
+        "year": 2026,
+        "published": "2026-10-31",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Disaggregated LLM reinforcement learning (RL) repeatedly synchronizes policy weights between training and rollout GPU pools. Existing systems reduce communication through shard delivery and replica forwarding, yet separate conversion passes and staging buffers still add latency and GPU-memory overheads to synchronous updates. We present ShardFly, which coordinates reusable transfer planning with streaming GPU execution for synchronous, in-place weight updates. ShardFly introduces two components. The Planner compiles native shard mappings, quantization dependencies, and replica routes into cross-tensor schedules, reserving payload buffers only for scheduled transfers. The Executor runs each rank's schedule in one persistent transfer kernel, fusing memory-layout conversion, quantization, GPU-initiated communication, and destination writes while forwarding transformed bytes across replicas. Plans and communication state are reused under stable configurations and replaced between updates for coordinated rollout scaling. On up to 32 H20 GPUs, ShardFly achieves complete BF16 weight-update speedups of 1.26--27.92$\\times$ across five models and four baselines: veRL NCCL, Awex, veRL NIXL, and WeightBridge. In end-to-end Qwen3-30B-A3B GRPO across four rollout configurations, ShardFly improves response-token throughput by 5.49--6.71\\% over veRL NCCL.",
+        "identifiers": [
+          "SemanticScholar:ae958e7f8136cc70d601692601658adaee304902"
+        ],
+        "semantic_scholar_id": "ae958e7f8136cc70d601692601658adaee304902",
+        "canonical_id": "arXiv:2611.00646",
+        "arxiv_id": "2611.00646",
+        "authors": [
+          "Jia-Yu Xiao",
+          "Ye Wang",
+          "Zhi Zhang",
+          "Jia-Rui Guo",
+          "Kan Liu",
+          "Tao Lan",
+          "Min-Chen Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5f226f3a02181e5fef490edca807ef19790eca9c74120311ec911678edd7e899",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,620 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e123537a22c5233a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e123537a22c5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2407.12070",
+    "arXiv:2607.01127",
+    "arXiv:2607.22432",
+    "arXiv:2607.28824",
+    "arXiv:2609.11163",
+    "arXiv:2609.32259"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8689e1883f1b26582b5cc37e0059506863c1ec3a",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T10:57:47.678454+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2407.12070",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.01127",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22432",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.28824",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.11163",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32259",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Prefill-Free Cross-Family KV Cache Transfer for Heterogeneous Multi-Agent LLMs",
+      "source_url": "https://arxiv.org/abs/2609.32259",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent multi-agent LLM systems increasingly combine heterogeneous models for specialized agent roles. However, text-based communication requires each receiver to prefill shared context already processed by the sender. Reusing the sender's key-value (KV) cache avoids this redundancy, but prefill-free transfer across model families must handle differences in tokenization, model depth, and KV representations. To address these issues, we propose \\textit{HeteroFold}, a prefill-free cross-family KV cache transfer method that keeps both the sender and receiver frozen. HeteroFold aligns model structures, maps the sender cache into the receiver space, and calibrates it to preserve receiver behavior. Across six transfer directions, HeteroFold achieves the best cache-transfer performance on all four long-context benchmarks and most short-context settings. It also matches text-based communication on the multi-agent benchmark. At 32K context length, Llama-3.1-8B$\\rightarrow$Ministral-3-14B transfer is $10.7\\times$ faster than Native Prefill and $1.18$--$1.47\\times$ faster than the state-of-the-art prefill-free baselines, Dense Latent and KV Ridge. These results show that HeteroFold enables efficient cross-family KV reuse without receiver prefill.",
+      "identifiers": [
+        "SemanticScholar:fa5cd422c4b3840b7024ccde7dd27bac894d3eb3"
+      ],
+      "semantic_scholar_id": "fa5cd422c4b3840b7024ccde7dd27bac894d3eb3",
+      "canonical_id": "arXiv:2609.32259",
+      "arxiv_id": "2609.32259",
+      "doi": "10.48550/arXiv.2609.32259",
+      "authors": [
+        "Vincent-Daniel Yun",
+        "Woo-Sang Lim",
+        "Haneul Yoo",
+        "Sungjoo Yoo",
+        "M. Annavaram",
+        "Sai Praneeth Karimireddy"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters",
+      "source_url": "https://arxiv.org/abs/2607.22432",
+      "year": 2026,
+      "published": "2026-07-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt tiles as first-class primitives, making tile-centric programming the prevailing approach for high-performance GPU kernels. Performance-analysis tooling has not followed: programmers still rely on coarse roofline bounds, opaque ML predictors, or post-hoc profilers to understand kernel execution. This gap is acute for modern AI workloads, where kernel fusion and distributed inference depend on tensor cores, CUDA cores, cache hierarchies, memory pipelines, and inter-GPU networks. We present TileSight, a tile-centric performance-modeling tool that elevates the tile from a programming primitive to an analysis primitive. Within a GPU core, TileSight models compute-memory pipeline overlap; across cores, it models the cache hierarchy; across GPUs, it models inter-node communication. All layers share the tile abstraction: the intra-tile layer expresses work as a resource vector spanning network, memory, and compute pipelines; the inter-tile layer schedules dependent and ordered actions to expose legal overlap and infers multi-level cache hit rates from tile reuse distance; and the cross-device layer maps remote tensor accesses to placements and routes them through an alpha-beta stage cost. On A100, H200, B200, and B6000, TileSight predicts single-GPU kernel latency with 12.35% pooled mean absolute percentage error (MAPE), outperforming state-of-the-art baselines and transferring better across architectures. Its L2 cache-hit-rate predictions are within roughly one percentage point of measurements on every GPU. At up to 32 GPUs, TileSight achieves 16.18% weighted MAPE (wMAPE) on fused distributed kernels and 13.52% wMAPE on end-to-end vLLM serving. In optimization, TileSight selects tile configurations competitive with strong vendor and expert baselines. TileSight will be open-sourced upon publication.",
+      "identifiers": [
+        "SemanticScholar:5bbc0d4232c1a0409647b38f10b3a44c2b47576c"
+      ],
+      "semantic_scholar_id": "5bbc0d4232c1a0409647b38f10b3a44c2b47576c",
+      "canonical_id": "arXiv:2607.22432",
+      "arxiv_id": "2607.22432",
+      "doi": "10.48550/arXiv.2607.22432",
+      "authors": [
+        "Zhi-Wen Mo",
+        "Yu Cheng",
+        "Lei Wang",
+        "Zheng-Ju Tang",
+        "Lei Xu",
+        "Guo-Yu Li",
+        "Yuqiu Dong",
+        "Ling-Xiao Ma",
+        "Yu-Qing Xia",
+        "Ji-Long Xue",
+        "Fan Yang",
+        "Luo Mai",
+        "Zhi Yang",
+        "W. Luk",
+        "Hong-Xiang Fan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs",
+      "source_url": "https://arxiv.org/abs/2607.28824",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) workloads motivate multi-partition GPUs as a path to scaling compute and memory capacity, but their non-uniform memory access characteristics and inter-partition communication can amplify contention and degrade locality, leading to suboptimal kernel latency. To address this, we analyze performance-critical LLM kernel implementations spanning weight projection, mixture-of-experts, and attention variants of state-of-the-art serving engines to present a characterization of data access patterns in multi-partition GPUs. First, we introduce memory trace analysis methodology to derive workgroup-level data access and sharing behavior, then evaluate the locality implications on latency using a cycle-level simulator. Using these tools, we categorize LLM kernel operands into three inter-workgroup sharing patterns (global, partial, or private) and show that the required optimization strategies differ across categories, from simple per-workgroup pinning to subgroup-aware co-scheduling. Our findings highlight the need for placement-aware kernel programming and smarter architectural support for work and data locality in multi-partition GPUs.",
+      "identifiers": [
+        "SemanticScholar:9676cfeabfb42f5e2ff4a4468f18be2b683d8b82"
+      ],
+      "semantic_scholar_id": "9676cfeabfb42f5e2ff4a4468f18be2b683d8b82",
+      "canonical_id": "arXiv:2607.28824",
+      "arxiv_id": "2607.28824",
+      "doi": "10.48550/arXiv.2607.28824",
+      "authors": [
+        "Donghyeon Joo",
+        "Sooraj Puthoor",
+        "Nuwan Jayasena",
+        "Bahar Asgari"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LogbQuant: Quantizing Language Models in Logarithmic Space",
+      "source_url": "https://arxiv.org/abs/2607.01127",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "International Conference on Pattern Recognition",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has become an invaluable tool to reduce memory requirements and inference speed of modern language models, in particular to make them available for consumer setups and edge devices. While previous work has primarily focused on uniform quantization codebooks, such approaches are prone to suboptimal representations due to low-frequency high-magnitude weights. We introduce Log$_\\text{b}$Quant, a novel logarithmic quantization approach with adjustable bases, to adapt to common parameter distributions. We show that our method exhibits superior performance at 4-bit precision on several performance benchmarks compared to asymmetric linear quantization at tensor-wise granularity, while achieving moderate speedup and high memory savings, making it suitable for private use on consumer-grade GPUs.",
+      "identifiers": [
+        "SemanticScholar:78cb98ccd4f13330538150ddc4c9386b90ed4ac2"
+      ],
+      "semantic_scholar_id": "78cb98ccd4f13330538150ddc4c9386b90ed4ac2",
+      "canonical_id": "arXiv:2607.01127",
+      "arxiv_id": "2607.01127",
+      "doi": "10.48550/arXiv.2607.01127",
+      "authors": [
+        "Jeremias Bohn",
+        "Tizian Dippold",
+        "Mahdi Koubaa",
+        "Elias R. Wahl",
+        "G. Groh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LILA: Data-Free Structured Pruning of LLMs via Latent Spectral Geometry",
+      "source_url": "https://arxiv.org/abs/2609.11163",
+      "year": 2026,
+      "published": "2026-09-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning of large language models (LLMs) has universally required calibration data, gradient computation, or large auxiliary policy networks at pruning time. LILA (\\emph{Latent-Informed Layer Analysis}) demonstrates that this dependency is avoidable: each FFN weight matrix is factorized with Non-negative Matrix Factorization (NMF) to obtain a parts-based spectral representation, and neuron importance is scored via the Kolmogorov--Smirnov (KS) distance between singular value distributions of the full and neuron-ablated NMF matrix, a closed-form criterion requiring no calibration corpus, forward pass, or gradient computation. Two data-free matrix variants (Abs, Split) generate pruning masks from weight spectral geometry alone; a calibration-guided variant (Act) is provided as an internal ablation. Evaluation spans 7 model families (up to 70B). Without fine-tuning, data-free LILA surpasses PruneNet (45M-parameter RL policy) by up to 2.12~pp in zero-shot accuracy on LLaMA-2-7B and outperforms WikiText-2-calibrated SliceGPT by up to 6.1~pp across all sparsity levels, confirming data-free performance is not an artifact of omitting activation statistics. After one LoRA RFT epoch (matched WikiText-2 protocol), LILA Act surpasses SliceGPT+RFT by 6.39~pp on average using 98.4\\% fewer calibration samples (16 vs.\\ 1,024) across LLaMA-2-7B and Phi-2. NTK analysis confirms a $17{\\times}$ reduction in functional distortion versus random pruning, providing theoretical grounding for the spectral criterion.",
+      "identifiers": [
+        "SemanticScholar:42b012fa8a52c7d950ae9b7ab8ceb097dff2b36d"
+      ],
+      "semantic_scholar_id": "42b012fa8a52c7d950ae9b7ab8ceb097dff2b36d",
+      "canonical_id": "arXiv:2609.11163",
+      "arxiv_id": "2609.11163",
+      "authors": [
+        "Sankar Behera",
+        "Dhruv Singh",
+        "Anshika Agnihotri",
+        "R. K. Choudhary",
+        "Satyadev Ahlawat",
+        "Yamuna Prasad"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Co-Designing Binarized Transformer and Hardware Accelerator for Efficient End-to-End Edge Deployment",
+      "source_url": "https://arxiv.org/abs/2407.12070",
+      "year": 2024,
+      "published": "2024-07-16",
+      "venue": "International Conference on Computer Aided Design",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have revolutionized AI tasks, but their large size hinders real-world deployment on resource-constrained and latency-critical edge devices. While binarized Transformers offer a promising solution by significantly reducing model size, existing approaches suffer from algorithm-hardware mismatches with limited co-design exploration, leading to suboptimal performance on edge devices. Hence, we propose a co-design method for efficient end-to-end edge deployment of Transformers from three aspects: algorithm, hardware, and joint optimization. First, we propose BMT, a novel hardware-friendly binarized Transformer with optimized quantization methods and components, and we further enhance its model accuracy by leveraging the weighted ternary weight splitting training technique. Second, we develop a streaming processor mixed binarized Transformer accelerator, namely BAT, which is equipped with specialized units and scheduling pipelines for efficient inference of binarized Transformers. Finally, we co-optimize the algorithm and hardware through a design space exploration approach to achieve a global trade-off between accuracy, latency, and robustness for real-world deployments. Experimental results show our co-design achieves up to $2.14 \\sim 49.37 \\times$ throughput gains and $3.72 \\sim 88.53 \\times$ better energy efficiency over state-of-the-art Transformer accelerators, enabling efficient end-to-end edge deployment.",
+      "identifiers": [
+        "SemanticScholar:e81bda3fc98c0b19be709694870aa10ae4f506d5"
+      ],
+      "semantic_scholar_id": "e81bda3fc98c0b19be709694870aa10ae4f506d5",
+      "canonical_id": "arXiv:2407.12070",
+      "arxiv_id": "2407.12070",
+      "doi": "10.1145/3676536.3676733",
+      "authors": [
+        "Yuhao Ji",
+        "Chao Fang",
+        "Shao-Bo Ma",
+        "Haikuo Shao",
+        "Zhong-Feng Wang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 858,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.32259",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.32259",
+        "id:SemanticScholar:fa5cd422c4b3840b7024ccde7dd27bac894d3eb3",
+        "id:arXiv:2609.32259",
+        "title:prefillfree crossfamily kv cache transfer for heterogeneous multiagent llms",
+        "url:https://arxiv.org/abs/2609.32259"
+      ],
+      "record": {
+        "title": "Prefill-Free Cross-Family KV Cache Transfer for Heterogeneous Multi-Agent LLMs",
+        "source_url": "https://arxiv.org/abs/2609.32259",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent multi-agent LLM systems increasingly combine heterogeneous models for specialized agent roles. However, text-based communication requires each receiver to prefill shared context already processed by the sender. Reusing the sender's key-value (KV) cache avoids this redundancy, but prefill-free transfer across model families must handle differences in tokenization, model depth, and KV representations. To address these issues, we propose \\textit{HeteroFold}, a prefill-free cross-family KV cache transfer method that keeps both the sender and receiver frozen. HeteroFold aligns model structures, maps the sender cache into the receiver space, and calibrates it to preserve receiver behavior. Across six transfer directions, HeteroFold achieves the best cache-transfer performance on all four long-context benchmarks and most short-context settings. It also matches text-based communication on the multi-agent benchmark. At 32K context length, Llama-3.1-8B$\\rightarrow$Ministral-3-14B transfer is $10.7\\times$ faster than Native Prefill and $1.18$--$1.47\\times$ faster than the state-of-the-art prefill-free baselines, Dense Latent and KV Ridge. These results show that HeteroFold enables efficient cross-family KV reuse without receiver prefill.",
+        "identifiers": [
+          "SemanticScholar:fa5cd422c4b3840b7024ccde7dd27bac894d3eb3"
+        ],
+        "semantic_scholar_id": "fa5cd422c4b3840b7024ccde7dd27bac894d3eb3",
+        "canonical_id": "arXiv:2609.32259",
+        "arxiv_id": "2609.32259",
+        "doi": "10.48550/arXiv.2609.32259",
+        "authors": [
+          "Vincent-Daniel Yun",
+          "Woo-Sang Lim",
+          "Haneul Yoo",
+          "Sungjoo Yoo",
+          "M. Annavaram",
+          "Sai Praneeth Karimireddy"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22432",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.22432",
+        "id:SemanticScholar:5bbc0d4232c1a0409647b38f10b3a44c2b47576c",
+        "id:arXiv:2607.22432",
+        "title:tilesight a firstprinciples tilecentric analytical gpu performance model from cores to clusters",
+        "url:https://arxiv.org/abs/2607.22432"
+      ],
+      "record": {
+        "title": "TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters",
+        "source_url": "https://arxiv.org/abs/2607.22432",
+        "year": 2026,
+        "published": "2026-07-24",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt tiles as first-class primitives, making tile-centric programming the prevailing approach for high-performance GPU kernels. Performance-analysis tooling has not followed: programmers still rely on coarse roofline bounds, opaque ML predictors, or post-hoc profilers to understand kernel execution. This gap is acute for modern AI workloads, where kernel fusion and distributed inference depend on tensor cores, CUDA cores, cache hierarchies, memory pipelines, and inter-GPU networks. We present TileSight, a tile-centric performance-modeling tool that elevates the tile from a programming primitive to an analysis primitive. Within a GPU core, TileSight models compute-memory pipeline overlap; across cores, it models the cache hierarchy; across GPUs, it models inter-node communication. All layers share the tile abstraction: the intra-tile layer expresses work as a resource vector spanning network, memory, and compute pipelines; the inter-tile layer schedules dependent and ordered actions to expose legal overlap and infers multi-level cache hit rates from tile reuse distance; and the cross-device layer maps remote tensor accesses to placements and routes them through an alpha-beta stage cost. On A100, H200, B200, and B6000, TileSight predicts single-GPU kernel latency with 12.35% pooled mean absolute percentage error (MAPE), outperforming state-of-the-art baselines and transferring better across architectures. Its L2 cache-hit-rate predictions are within roughly one percentage point of measurements on every GPU. At up to 32 GPUs, TileSight achieves 16.18% weighted MAPE (wMAPE) on fused distributed kernels and 13.52% wMAPE on end-to-end vLLM serving. In optimization, TileSight selects tile configurations competitive with strong vendor and expert baselines. TileSight will be open-sourced upon publication.",
+        "identifiers": [
+          "SemanticScholar:5bbc0d4232c1a0409647b38f10b3a44c2b47576c"
+        ],
+        "semantic_scholar_id": "5bbc0d4232c1a0409647b38f10b3a44c2b47576c",
+        "canonical_id": "arXiv:2607.22432",
+        "arxiv_id": "2607.22432",
+        "doi": "10.48550/arXiv.2607.22432",
+        "authors": [
+          "Zhi-Wen Mo",
+          "Yu Cheng",
+          "Lei Wang",
+          "Zheng-Ju Tang",
+          "Lei Xu",
+          "Guo-Yu Li",
+          "Yuqiu Dong",
+          "Ling-Xiao Ma",
+          "Yu-Qing Xia",
+          "Ji-Long Xue",
+          "Fan Yang",
+          "Luo Mai",
+          "Zhi Yang",
+          "W. Luk",
+          "Hong-Xiang Fan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28824",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.28824",
+        "id:SemanticScholar:9676cfeabfb42f5e2ff4a4468f18be2b683d8b82",
+        "id:arXiv:2607.28824",
+        "title:characterizing llm kernel access and memory interaction in multipartition numa gpus",
+        "url:https://arxiv.org/abs/2607.28824"
+      ],
+      "record": {
+        "title": "Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs",
+        "source_url": "https://arxiv.org/abs/2607.28824",
+        "year": 2026,
+        "published": "2026-07-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) workloads motivate multi-partition GPUs as a path to scaling compute and memory capacity, but their non-uniform memory access characteristics and inter-partition communication can amplify contention and degrade locality, leading to suboptimal kernel latency. To address this, we analyze performance-critical LLM kernel implementations spanning weight projection, mixture-of-experts, and attention variants of state-of-the-art serving engines to present a characterization of data access patterns in multi-partition GPUs. First, we introduce memory trace analysis methodology to derive workgroup-level data access and sharing behavior, then evaluate the locality implications on latency using a cycle-level simulator. Using these tools, we categorize LLM kernel operands into three inter-workgroup sharing patterns (global, partial, or private) and show that the required optimization strategies differ across categories, from simple per-workgroup pinning to subgroup-aware co-scheduling. Our findings highlight the need for placement-aware kernel programming and smarter architectural support for work and data locality in multi-partition GPUs.",
+        "identifiers": [
+          "SemanticScholar:9676cfeabfb42f5e2ff4a4468f18be2b683d8b82"
+        ],
+        "semantic_scholar_id": "9676cfeabfb42f5e2ff4a4468f18be2b683d8b82",
+        "canonical_id": "arXiv:2607.28824",
+        "arxiv_id": "2607.28824",
+        "doi": "10.48550/arXiv.2607.28824",
+        "authors": [
+          "Donghyeon Joo",
+          "Sooraj Puthoor",
+          "Nuwan Jayasena",
+          "Bahar Asgari"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 114,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01127",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.01127",
+        "id:SemanticScholar:78cb98ccd4f13330538150ddc4c9386b90ed4ac2",
+        "id:arXiv:2607.01127",
+        "title:logbquant quantizing language models in logarithmic space",
+        "url:https://arxiv.org/abs/2607.01127"
+      ],
+      "record": {
+        "title": "LogbQuant: Quantizing Language Models in Logarithmic Space",
+        "source_url": "https://arxiv.org/abs/2607.01127",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "International Conference on Pattern Recognition",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization has become an invaluable tool to reduce memory requirements and inference speed of modern language models, in particular to make them available for consumer setups and edge devices. While previous work has primarily focused on uniform quantization codebooks, such approaches are prone to suboptimal representations due to low-frequency high-magnitude weights. We introduce Log$_\\text{b}$Quant, a novel logarithmic quantization approach with adjustable bases, to adapt to common parameter distributions. We show that our method exhibits superior performance at 4-bit precision on several performance benchmarks compared to asymmetric linear quantization at tensor-wise granularity, while achieving moderate speedup and high memory savings, making it suitable for private use on consumer-grade GPUs.",
+        "identifiers": [
+          "SemanticScholar:78cb98ccd4f13330538150ddc4c9386b90ed4ac2"
+        ],
+        "semantic_scholar_id": "78cb98ccd4f13330538150ddc4c9386b90ed4ac2",
+        "canonical_id": "arXiv:2607.01127",
+        "arxiv_id": "2607.01127",
+        "doi": "10.48550/arXiv.2607.01127",
+        "authors": [
+          "Jeremias Bohn",
+          "Tizian Dippold",
+          "Mahdi Koubaa",
+          "Elias R. Wahl",
+          "G. Groh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11163",
+      "identity_tokens": [
+        "id:SemanticScholar:42b012fa8a52c7d950ae9b7ab8ceb097dff2b36d",
+        "id:arXiv:2609.11163",
+        "title:lila datafree structured pruning of llms via latent spectral geometry",
+        "url:https://arxiv.org/abs/2609.11163"
+      ],
+      "record": {
+        "title": "LILA: Data-Free Structured Pruning of LLMs via Latent Spectral Geometry",
+        "source_url": "https://arxiv.org/abs/2609.11163",
+        "year": 2026,
+        "published": "2026-09-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning of large language models (LLMs) has universally required calibration data, gradient computation, or large auxiliary policy networks at pruning time. LILA (\\emph{Latent-Informed Layer Analysis}) demonstrates that this dependency is avoidable: each FFN weight matrix is factorized with Non-negative Matrix Factorization (NMF) to obtain a parts-based spectral representation, and neuron importance is scored via the Kolmogorov--Smirnov (KS) distance between singular value distributions of the full and neuron-ablated NMF matrix, a closed-form criterion requiring no calibration corpus, forward pass, or gradient computation. Two data-free matrix variants (Abs, Split) generate pruning masks from weight spectral geometry alone; a calibration-guided variant (Act) is provided as an internal ablation. Evaluation spans 7 model families (up to 70B). Without fine-tuning, data-free LILA surpasses PruneNet (45M-parameter RL policy) by up to 2.12~pp in zero-shot accuracy on LLaMA-2-7B and outperforms WikiText-2-calibrated SliceGPT by up to 6.1~pp across all sparsity levels, confirming data-free performance is not an artifact of omitting activation statistics. After one LoRA RFT epoch (matched WikiText-2 protocol), LILA Act surpasses SliceGPT+RFT by 6.39~pp on average using 98.4\\% fewer calibration samples (16 vs.\\ 1,024) across LLaMA-2-7B and Phi-2. NTK analysis confirms a $17{\\times}$ reduction in functional distortion versus random pruning, providing theoretical grounding for the spectral criterion.",
+        "identifiers": [
+          "SemanticScholar:42b012fa8a52c7d950ae9b7ab8ceb097dff2b36d"
+        ],
+        "semantic_scholar_id": "42b012fa8a52c7d950ae9b7ab8ceb097dff2b36d",
+        "canonical_id": "arXiv:2609.11163",
+        "arxiv_id": "2609.11163",
+        "authors": [
+          "Sankar Behera",
+          "Dhruv Singh",
+          "Anshika Agnihotri",
+          "R. K. Choudhary",
+          "Satyadev Ahlawat",
+          "Yamuna Prasad"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 72,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.12070",
+      "identity_tokens": [
+        "id:DOI:10.1145/3676536.3676733",
+        "id:SemanticScholar:e81bda3fc98c0b19be709694870aa10ae4f506d5",
+        "id:arXiv:2407.12070",
+        "title:codesigning binarized transformer and hardware accelerator for efficient endtoend edge deployment",
+        "url:https://arxiv.org/abs/2407.12070"
+      ],
+      "record": {
+        "title": "Co-Designing Binarized Transformer and Hardware Accelerator for Efficient End-to-End Edge Deployment",
+        "source_url": "https://arxiv.org/abs/2407.12070",
+        "year": 2024,
+        "published": "2024-07-16",
+        "venue": "International Conference on Computer Aided Design",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models have revolutionized AI tasks, but their large size hinders real-world deployment on resource-constrained and latency-critical edge devices. While binarized Transformers offer a promising solution by significantly reducing model size, existing approaches suffer from algorithm-hardware mismatches with limited co-design exploration, leading to suboptimal performance on edge devices. Hence, we propose a co-design method for efficient end-to-end edge deployment of Transformers from three aspects: algorithm, hardware, and joint optimization. First, we propose BMT, a novel hardware-friendly binarized Transformer with optimized quantization methods and components, and we further enhance its model accuracy by leveraging the weighted ternary weight splitting training technique. Second, we develop a streaming processor mixed binarized Transformer accelerator, namely BAT, which is equipped with specialized units and scheduling pipelines for efficient inference of binarized Transformers. Finally, we co-optimize the algorithm and hardware through a design space exploration approach to achieve a global trade-off between accuracy, latency, and robustness for real-world deployments. Experimental results show our co-design achieves up to $2.14 \\sim 49.37 \\times$ throughput gains and $3.72 \\sim 88.53 \\times$ better energy efficiency over state-of-the-art Transformer accelerators, enabling efficient end-to-end edge deployment.",
+        "identifiers": [
+          "SemanticScholar:e81bda3fc98c0b19be709694870aa10ae4f506d5"
+        ],
+        "semantic_scholar_id": "e81bda3fc98c0b19be709694870aa10ae4f506d5",
+        "canonical_id": "arXiv:2407.12070",
+        "arxiv_id": "2407.12070",
+        "doi": "10.1145/3676536.3676733",
+        "authors": [
+          "Yuhao Ji",
+          "Chao Fang",
+          "Shao-Bo Ma",
+          "Haikuo Shao",
+          "Zhong-Feng Wang"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 858,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:242fad96482169bf21f1eb5a69a5429db61ac8072729cbd14f53f185ddb740ff",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

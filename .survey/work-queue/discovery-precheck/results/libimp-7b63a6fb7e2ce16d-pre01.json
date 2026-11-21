@@ -1,0 +1,267 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7b63a6fb7e2ce16d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7b63a6fb7e2c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.20322",
+    "arXiv:2608.08611"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8689e1883f1b26582b5cc37e0059506863c1ec3a",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T10:57:32.811743+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.20322",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08611",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "C2C-Explorer: An Exploration Framework for Chip-to-Chip Interconnect Architectures in LLM Cloud Computing Systems",
+      "source_url": "https://arxiv.org/abs/2608.08611",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "Design Automation Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scaling-up of large language models (LLMs) necessitates computing systems to have multi-processor-chip architectures, elevating the importance of chip-to-chip (C2C) communication. However, designing efficient C2C hardware architectures for LLM workloads faces three key challenges: generating realistic LLM-specific C2C traffic, accurately simulating hardware-level communication at scale, and efficiently exploring the exponentially large C2C design space. We propose C2C-Explorer, an adaptive Bayesian DSE framework that integrates a LLM-workload-driven traffic generator, a scalable interconnect simulator (switch/full-mesh, up to 512 chips), and a metric-guided evaluator into a workload-to-hardware optimization pipeline, enabling systematic C2C architectural co-design under realistic LLM workloads. Validated against FPGA-based C2C prototypes, the C2C simulator achieves 2.46–8.23% end-to-end timing error across diverse traffic patterns. Its hybrid cycle & event model further accelerates large-scale simulation by up to 7.8× over a pure cycle-accurate baseline. Applied to a 32-XPU DeepSeek-R1-671B inference workload, C2C-Explorer identifies configurations that improve goodput by 44.1% and reduce memory by 98.4%. C2C-Explorer is open-source and available at https://github.com/Selinaee/C2C-Explorer.",
+      "identifiers": [
+        "SemanticScholar:78219cabdc6e869019ffe9be82e331e7d1cd1aaa"
+      ],
+      "semantic_scholar_id": "78219cabdc6e869019ffe9be82e331e7d1cd1aaa",
+      "canonical_id": "arXiv:2608.08611",
+      "arxiv_id": "2608.08611",
+      "doi": "10.1145/3770743.3803909",
+      "authors": [
+        "Jia-Yi Li",
+        "Di Wu",
+        "Qing-Xu Li",
+        "Hong-Xiao Zhao",
+        "Jia-Qi Yang",
+        "Anjunyi Fan",
+        "Wen-Bin Zhang",
+        "Bo-Shiun Wu",
+        "Shu-Ting Liu",
+        "Shi-Feng Fang",
+        "Jian-Bo Dong",
+        "Di-Min Niu",
+        "Bo-Nan Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Pyramid Network for Efficient Multimodal Large Language Model",
+      "source_url": "https://arxiv.org/abs/2503.20322",
+      "year": 2025,
+      "published": "2025-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in various vision-language (VL) tasks, but their expensive computations still limit the real-world application. To address this issue, recent efforts aim to compress the visual features to save the computational costs of MLLMs. However, direct visual compression methods, e.g. efficient projectors, inevitably destroy the visual semantics in MLLM, especially in difficult samples. To overcome this shortcoming, we propose a novel dynamic pyramid network (DPN) for efficient MLLMs. Specifically, DPN formulates MLLM as a hierarchical structure where visual features are gradually compressed with increasing depth. In this case, even with a high compression ratio, fine-grained visual information can still be perceived in shallow layers. To maximize the benefit of DPN, we further propose an innovative Dynamic Pooling Experts (DPE) that can dynamically choose the optimal visual compression rate according to input features. With this design, harder samples will be assigned larger computations, thus preserving the model performance. To validate our approach, we conduct extensive experiments on two popular MLLMs and ten benchmarks. Experimental results show that DPN can save up to 56% average FLOPs on LLaVA while further achieving +0.74% performance gains. Besides, the generalization ability of DPN is also validated on the existing high-resolution MLLM called LLaVA-HR. The source code will be released at https://github.com/aihao2000/DPN-LLaVA.",
+      "identifiers": [
+        "SemanticScholar:acece8c987ed4c89a37f86a2a7082c192a6c8a75"
+      ],
+      "semantic_scholar_id": "acece8c987ed4c89a37f86a2a7082c192a6c8a75",
+      "canonical_id": "arXiv:2503.20322",
+      "arxiv_id": "2503.20322",
+      "doi": "10.48550/arXiv.2503.20322",
+      "authors": [
+        "Hao Ai",
+        "Kunyi Wang",
+        "Zezhou Wang",
+        "Hao Lu",
+        "Ji-Chang Tian",
+        "Ya-Xin Luo",
+        "Peng Xing",
+        "Jen-Yuan Huang",
+        "Huaxia Li",
+        "G. Luo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 605,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.08611",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770743.3803909",
+        "id:SemanticScholar:78219cabdc6e869019ffe9be82e331e7d1cd1aaa",
+        "id:arXiv:2608.08611",
+        "title:c2cexplorer an exploration framework for chiptochip interconnect architectures in llm cloud computing systems",
+        "url:https://arxiv.org/abs/2608.08611"
+      ],
+      "record": {
+        "title": "C2C-Explorer: An Exploration Framework for Chip-to-Chip Interconnect Architectures in LLM Cloud Computing Systems",
+        "source_url": "https://arxiv.org/abs/2608.08611",
+        "year": 2026,
+        "published": "2026-07-26",
+        "venue": "Design Automation Conference",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The scaling-up of large language models (LLMs) necessitates computing systems to have multi-processor-chip architectures, elevating the importance of chip-to-chip (C2C) communication. However, designing efficient C2C hardware architectures for LLM workloads faces three key challenges: generating realistic LLM-specific C2C traffic, accurately simulating hardware-level communication at scale, and efficiently exploring the exponentially large C2C design space. We propose C2C-Explorer, an adaptive Bayesian DSE framework that integrates a LLM-workload-driven traffic generator, a scalable interconnect simulator (switch/full-mesh, up to 512 chips), and a metric-guided evaluator into a workload-to-hardware optimization pipeline, enabling systematic C2C architectural co-design under realistic LLM workloads. Validated against FPGA-based C2C prototypes, the C2C simulator achieves 2.46–8.23% end-to-end timing error across diverse traffic patterns. Its hybrid cycle & event model further accelerates large-scale simulation by up to 7.8× over a pure cycle-accurate baseline. Applied to a 32-XPU DeepSeek-R1-671B inference workload, C2C-Explorer identifies configurations that improve goodput by 44.1% and reduce memory by 98.4%. C2C-Explorer is open-source and available at https://github.com/Selinaee/C2C-Explorer.",
+        "identifiers": [
+          "SemanticScholar:78219cabdc6e869019ffe9be82e331e7d1cd1aaa"
+        ],
+        "semantic_scholar_id": "78219cabdc6e869019ffe9be82e331e7d1cd1aaa",
+        "canonical_id": "arXiv:2608.08611",
+        "arxiv_id": "2608.08611",
+        "doi": "10.1145/3770743.3803909",
+        "authors": [
+          "Jia-Yi Li",
+          "Di Wu",
+          "Qing-Xu Li",
+          "Hong-Xiao Zhao",
+          "Jia-Qi Yang",
+          "Anjunyi Fan",
+          "Wen-Bin Zhang",
+          "Bo-Shiun Wu",
+          "Shu-Ting Liu",
+          "Shi-Feng Fang",
+          "Jian-Bo Dong",
+          "Di-Min Niu",
+          "Bo-Nan Yan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 118,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.20322",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.20322",
+        "id:SemanticScholar:acece8c987ed4c89a37f86a2a7082c192a6c8a75",
+        "id:arXiv:2503.20322",
+        "title:dynamic pyramid network for efficient multimodal large language model",
+        "url:https://arxiv.org/abs/2503.20322"
+      ],
+      "record": {
+        "title": "Dynamic Pyramid Network for Efficient Multimodal Large Language Model",
+        "source_url": "https://arxiv.org/abs/2503.20322",
+        "year": 2025,
+        "published": "2025-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in various vision-language (VL) tasks, but their expensive computations still limit the real-world application. To address this issue, recent efforts aim to compress the visual features to save the computational costs of MLLMs. However, direct visual compression methods, e.g. efficient projectors, inevitably destroy the visual semantics in MLLM, especially in difficult samples. To overcome this shortcoming, we propose a novel dynamic pyramid network (DPN) for efficient MLLMs. Specifically, DPN formulates MLLM as a hierarchical structure where visual features are gradually compressed with increasing depth. In this case, even with a high compression ratio, fine-grained visual information can still be perceived in shallow layers. To maximize the benefit of DPN, we further propose an innovative Dynamic Pooling Experts (DPE) that can dynamically choose the optimal visual compression rate according to input features. With this design, harder samples will be assigned larger computations, thus preserving the model performance. To validate our approach, we conduct extensive experiments on two popular MLLMs and ten benchmarks. Experimental results show that DPN can save up to 56% average FLOPs on LLaVA while further achieving +0.74% performance gains. Besides, the generalization ability of DPN is also validated on the existing high-resolution MLLM called LLaVA-HR. The source code will be released at https://github.com/aihao2000/DPN-LLaVA.",
+        "identifiers": [
+          "SemanticScholar:acece8c987ed4c89a37f86a2a7082c192a6c8a75"
+        ],
+        "semantic_scholar_id": "acece8c987ed4c89a37f86a2a7082c192a6c8a75",
+        "canonical_id": "arXiv:2503.20322",
+        "arxiv_id": "2503.20322",
+        "doi": "10.48550/arXiv.2503.20322",
+        "authors": [
+          "Hao Ai",
+          "Kunyi Wang",
+          "Zezhou Wang",
+          "Hao Lu",
+          "Ji-Chang Tian",
+          "Ya-Xin Luo",
+          "Peng Xing",
+          "Jen-Yuan Huang",
+          "Huaxia Li",
+          "G. Luo"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 605,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:633b076ccefaa78444406db8b00b7701d971aeec901ea6a4757dd3ace85123c8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

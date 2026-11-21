@@ -1,0 +1,346 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-76a10f356ba05890-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-76a10f356ba0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2108.09193",
+    "arXiv:2311.15269",
+    "arXiv:2611.00058"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8689e1883f1b26582b5cc37e0059506863c1ec3a",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T10:57:32.841820+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2108.09193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2311.15269",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.00058",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search",
+      "source_url": "https://arxiv.org/abs/2311.15269",
+      "year": 2023,
+      "published": "2023-11-26",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Increasingly complex and diverse deep neural network (DNN) models necessitate distributing the execution across multiple devices for training and inference tasks, and also require carefully planned schedules for performance. However, existing practices often rely on predefined schedules that may not fully exploit the benefits of emerging diverse model-aware operator placement strategies. Handcrafting high-efficiency schedules can be challenging due to the large and varying schedule space. This paper presents Tessel, an automated system that searches for efficient schedules for distributed DNN training and inference for diverse operator placement strategies. To reduce search costs, Tessel leverages the insight that the most efficient schedules often exhibit repetitive pattern (repetend) across different data inputs. This leads to a two-phase approach: repetend construction and schedule completion. By exploring schedules for various operator placement strategies, Tessel significantly improves both training and inference performance. Experiments with representative DNN models demonstrate that Tessel achieves up to 5.5 x training performance speedup and up to 38 % inference latency reduction.",
+      "identifiers": [
+        "SemanticScholar:8820369cbf53c520924eb84f27f21fb646eb9937"
+      ],
+      "semantic_scholar_id": "8820369cbf53c520924eb84f27f21fb646eb9937",
+      "canonical_id": "arXiv:2311.15269",
+      "arxiv_id": "2311.15269",
+      "doi": "10.1109/HPCA57654.2024.00067",
+      "authors": [
+        "Zhiqi Lin",
+        "You-Shan Miao",
+        "Guanbin Xu",
+        "Cheng Li",
+        "Olli Saarikivi",
+        "Saeed Maleki",
+        "Fan Yang"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1091,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "CausalPrune: Counterfactual Causal Token Pruning for Efficient Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2611.00058",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved remarkable progress in multimodal understanding, but their practical deployment is still limited by the substantial computation introduced by excessive visual tokens. Visual token pruning offers an effective solution by removing redundant visual tokens during inference. However, existing methods typically estimate token importance from correlational statistics, which cannot distinguish tokens that causally determine the model output from those spuriously associated with it. To address this issue, we propose \\textbf{CausalPrune}, a counterfactual causal token pruning framework for efficient LVLMs. We formulate LVLM inference as a Structural Causal Model and introduce the Causal Token Importance Score (CTIS), which estimates the Average Treatment Effect of intervening on each visual token. To make causal estimation practical, we derive an efficient first-order approximation of CTIS and incorporate backdoor adjustment to mitigate latent cross-modal confounding. Within this causal formulation, layer-wise causal mediation decomposes token importance into direct and indirect effects through intermediate hidden states, enabling progressive pruning across transformer layers in a principled manner. Extensive experiments on various LVLM architectures, such as LLaVA-1.5 and Qwen2.5-VL, demonstrate that CausalPrune maintains comparable or even superior multimodal performance while achieving substantial reductions in FLOPs and prefill latency, consistently outperforming existing pruning methods.",
+      "identifiers": [
+        "SemanticScholar:701fc775299f371ede0e6b8b0d3d63f330120172"
+      ],
+      "semantic_scholar_id": "701fc775299f371ede0e6b8b0d3d63f330120172",
+      "canonical_id": "arXiv:2611.00058",
+      "arxiv_id": "2611.00058",
+      "authors": [
+        "Peng-Cheng Zheng",
+        "Chao-Ning Zhang",
+        "Ya Wen",
+        "Jia-Xin Huang",
+        "Jia-Quan Zhang",
+        "Cai-Yan Qin",
+        "Kui-En Liu",
+        "Sheng Zheng",
+        "P. Lio'",
+        "Yang Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Smart Bird: Learnable Sparse Attention for Efficient and Effective Transformer",
+      "source_url": "https://arxiv.org/abs/2108.09193",
+      "year": 2021,
+      "published": "2021-08-20",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has achieved great success in NLP. However, the quadratic complexity of the self-attention mechanism in Transformer makes it inefficient in handling long sequences. Many existing works explore to accelerate Transformers by computing sparse self-attention instead of a dense one, which usually attends to tokens at certain positions or randomly selected tokens. However, manually selected or random tokens may be uninformative for context modeling. In this paper, we propose Smart Bird, which is an efficient and effective Transformer with learnable sparse attention. In Smart Bird, we first compute a sketched attention matrix with a single-head low-dimensional Transformer, which aims to find potential important interactions between tokens. We then sample token pairs based on their probability scores derived from the sketched attention matrix to generate different sparse attention index matrices for different attention heads. Finally, we select token embeddings according to the index matrices to form the input of sparse attention networks. Extensive experiments on six benchmark datasets for different tasks validate the efficiency and effectiveness of Smart Bird in text modeling.",
+      "identifiers": [
+        "SemanticScholar:35992a67762af8897ea741b955718ab731004f2d"
+      ],
+      "semantic_scholar_id": "35992a67762af8897ea741b955718ab731004f2d",
+      "canonical_id": "arXiv:2108.09193",
+      "arxiv_id": "2108.09193",
+      "doi": "10.48550/arXiv.2108.09193",
+      "authors": [
+        "Chuhan Wu",
+        "Fang-Zhao Wu",
+        "Tao Qi",
+        "Bin-Xing Jiao",
+        "Da-Xin Jiang",
+        "Yongfeng Huang",
+        "Xing Xie"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1919,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2311.15269",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca57654.2024.00067",
+        "id:SemanticScholar:8820369cbf53c520924eb84f27f21fb646eb9937",
+        "id:arXiv:2311.15269",
+        "title:tessel boosting distributed execution of large dnn models via flexible schedule search",
+        "url:https://arxiv.org/abs/2311.15269"
+      ],
+      "record": {
+        "title": "Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search",
+        "source_url": "https://arxiv.org/abs/2311.15269",
+        "year": 2023,
+        "published": "2023-11-26",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Increasingly complex and diverse deep neural network (DNN) models necessitate distributing the execution across multiple devices for training and inference tasks, and also require carefully planned schedules for performance. However, existing practices often rely on predefined schedules that may not fully exploit the benefits of emerging diverse model-aware operator placement strategies. Handcrafting high-efficiency schedules can be challenging due to the large and varying schedule space. This paper presents Tessel, an automated system that searches for efficient schedules for distributed DNN training and inference for diverse operator placement strategies. To reduce search costs, Tessel leverages the insight that the most efficient schedules often exhibit repetitive pattern (repetend) across different data inputs. This leads to a two-phase approach: repetend construction and schedule completion. By exploring schedules for various operator placement strategies, Tessel significantly improves both training and inference performance. Experiments with representative DNN models demonstrate that Tessel achieves up to 5.5 x training performance speedup and up to 38 % inference latency reduction.",
+        "identifiers": [
+          "SemanticScholar:8820369cbf53c520924eb84f27f21fb646eb9937"
+        ],
+        "semantic_scholar_id": "8820369cbf53c520924eb84f27f21fb646eb9937",
+        "canonical_id": "arXiv:2311.15269",
+        "arxiv_id": "2311.15269",
+        "doi": "10.1109/HPCA57654.2024.00067",
+        "authors": [
+          "Zhiqi Lin",
+          "You-Shan Miao",
+          "Guanbin Xu",
+          "Cheng Li",
+          "Olli Saarikivi",
+          "Saeed Maleki",
+          "Fan Yang"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1091,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.00058",
+      "identity_tokens": [
+        "id:SemanticScholar:701fc775299f371ede0e6b8b0d3d63f330120172",
+        "id:arXiv:2611.00058",
+        "title:causalprune counterfactual causal token pruning for efficient large visionlanguage models",
+        "url:https://arxiv.org/abs/2611.00058"
+      ],
+      "record": {
+        "title": "CausalPrune: Counterfactual Causal Token Pruning for Efficient Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2611.00058",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) have achieved remarkable progress in multimodal understanding, but their practical deployment is still limited by the substantial computation introduced by excessive visual tokens. Visual token pruning offers an effective solution by removing redundant visual tokens during inference. However, existing methods typically estimate token importance from correlational statistics, which cannot distinguish tokens that causally determine the model output from those spuriously associated with it. To address this issue, we propose \\textbf{CausalPrune}, a counterfactual causal token pruning framework for efficient LVLMs. We formulate LVLM inference as a Structural Causal Model and introduce the Causal Token Importance Score (CTIS), which estimates the Average Treatment Effect of intervening on each visual token. To make causal estimation practical, we derive an efficient first-order approximation of CTIS and incorporate backdoor adjustment to mitigate latent cross-modal confounding. Within this causal formulation, layer-wise causal mediation decomposes token importance into direct and indirect effects through intermediate hidden states, enabling progressive pruning across transformer layers in a principled manner. Extensive experiments on various LVLM architectures, such as LLaVA-1.5 and Qwen2.5-VL, demonstrate that CausalPrune maintains comparable or even superior multimodal performance while achieving substantial reductions in FLOPs and prefill latency, consistently outperforming existing pruning methods.",
+        "identifiers": [
+          "SemanticScholar:701fc775299f371ede0e6b8b0d3d63f330120172"
+        ],
+        "semantic_scholar_id": "701fc775299f371ede0e6b8b0d3d63f330120172",
+        "canonical_id": "arXiv:2611.00058",
+        "arxiv_id": "2611.00058",
+        "authors": [
+          "Peng-Cheng Zheng",
+          "Chao-Ning Zhang",
+          "Ya Wen",
+          "Jia-Xin Huang",
+          "Jia-Quan Zhang",
+          "Cai-Yan Qin",
+          "Kui-En Liu",
+          "Sheng Zheng",
+          "P. Lio'",
+          "Yang Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2108.09193",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2108.09193",
+        "id:SemanticScholar:35992a67762af8897ea741b955718ab731004f2d",
+        "id:arXiv:2108.09193",
+        "title:smart bird learnable sparse attention for efficient and effective transformer",
+        "url:https://arxiv.org/abs/2108.09193"
+      ],
+      "record": {
+        "title": "Smart Bird: Learnable Sparse Attention for Efficient and Effective Transformer",
+        "source_url": "https://arxiv.org/abs/2108.09193",
+        "year": 2021,
+        "published": "2021-08-20",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer has achieved great success in NLP. However, the quadratic complexity of the self-attention mechanism in Transformer makes it inefficient in handling long sequences. Many existing works explore to accelerate Transformers by computing sparse self-attention instead of a dense one, which usually attends to tokens at certain positions or randomly selected tokens. However, manually selected or random tokens may be uninformative for context modeling. In this paper, we propose Smart Bird, which is an efficient and effective Transformer with learnable sparse attention. In Smart Bird, we first compute a sketched attention matrix with a single-head low-dimensional Transformer, which aims to find potential important interactions between tokens. We then sample token pairs based on their probability scores derived from the sketched attention matrix to generate different sparse attention index matrices for different attention heads. Finally, we select token embeddings according to the index matrices to form the input of sparse attention networks. Extensive experiments on six benchmark datasets for different tasks validate the efficiency and effectiveness of Smart Bird in text modeling.",
+        "identifiers": [
+          "SemanticScholar:35992a67762af8897ea741b955718ab731004f2d"
+        ],
+        "semantic_scholar_id": "35992a67762af8897ea741b955718ab731004f2d",
+        "canonical_id": "arXiv:2108.09193",
+        "arxiv_id": "2108.09193",
+        "doi": "10.48550/arXiv.2108.09193",
+        "authors": [
+          "Chuhan Wu",
+          "Fang-Zhao Wu",
+          "Tao Qi",
+          "Bin-Xing Jiao",
+          "Da-Xin Jiang",
+          "Yongfeng Huang",
+          "Xing Xie"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1919,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6573f0b6b485a17a2f8a0fc2bf60ddbd77a5e147c1b6d04660112d5661f1b4bd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

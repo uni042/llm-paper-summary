@@ -1,0 +1,249 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7df1ba5136dbd052-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7df1ba5136db",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.00643",
+    "arXiv:2609.06320"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8689e1883f1b26582b5cc37e0059506863c1ec3a",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T10:57:32.833270+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.00643",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.06320",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+      "source_url": "https://arxiv.org/abs/2609.00643",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent revisions expose a fundamental correctness--efficiency trade-off during concurrent execution. Discarding ongoing work preserves latest-version correctness but wastes progress that may remain valid, whereas reusing prior work preserves efficiency but risks propagating stale state into outputs and tool effects. Existing recovery strategies resolve this trade-off in an imbalanced way with coarse-grained policies: they either favor efficiency by allowing potentially stale work to continue, or favor correctness by restarting the workflow or recomputing a linear suffix from the earliest conflict, thereby discarding unaffected progress. We present \\textsc{Revise}, a validity-guided runtime for fine-grained recovery in structured agent workflows. When a revision arrives, \\textsc{Revise} first intersects its delta with recorded data and control dependencies and propagates the resulting impact through the partially executed DAG to identify affected work. It then stops invalid work, preserves validity-established progress beyond the earliest conflict, and recomputes only the affected region. Incomplete provenance conservatively expands recovery, while reused results are revalidated before commit. Analysis of real coding-agent traces show online recovery opportunities: 118 sessions retain observable work before a queued later message is delivered; across 167 overlapping assistant responses, enqueue-to-completion overlap reaches 56.55~s at p95. Across 300 challenging revision/commit executions, \\textsc{Revise} matches a latest-version oracle with no stale outputs or effects. On unmodified LangGraph and LLMCompiler applications using Qwen3-14B, it reduces model calls by 40.6--56.0\\% relative to full restart and by 31.3--43.6\\% relative to suffix recomputation. Under serving pressure, it further reduces revision-to-correct-completion tokens by 13.26\\% and improves SLO goodput by 3.07--5.43\\%.",
+      "identifiers": [
+        "SemanticScholar:0ad69bade8d5f619dc4742677646f7c62b3afa52"
+      ],
+      "semantic_scholar_id": "0ad69bade8d5f619dc4742677646f7c62b3afa52",
+      "canonical_id": "arXiv:2609.00643",
+      "arxiv_id": "2609.00643",
+      "doi": "10.48550/arXiv.2609.00643",
+      "authors": [
+        "Ruo-Ling Qi",
+        "Xuan'er Wu",
+        "Peng-Hang Liu",
+        "Jian Chen",
+        "Yi-Rui Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 81,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FrankenReport: Early Exiting in Long-Form Generation Using Expected Value of Computation",
+      "source_url": "https://arxiv.org/abs/2609.06320",
+      "year": 2026,
+      "published": "2026-09-06",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While deep research systems address interactive information-seeking needs impressively, their real-world deployments face latency and resource-consumption challenges. We present FrankenReport, an interface for long-form knowledge-seeking report generation that supports adaptive early exiting per section: it evaluates intermediate outputs during generation and predicts whether further targeted computation will yield significant quality gains. In a simulation study, FrankenReport outperforms random allocation baselines by a large margin (up to 4x) under low budgets and smoothly recovers full-pipeline quality as the budget grows, showing that future quality gains are predictable from intermediate drafts. Through experiments and user studies, we further show that despite varying preferences across users and topics, FrankenReport adapts to simple, natural user feedback as efficiently as methods requiring much costlier supervision such as generated drafts and explicit rationales.",
+      "identifiers": [
+        "SemanticScholar:6fe6c442f855f716be2ac136c0faca3d2a2ec73b"
+      ],
+      "semantic_scholar_id": "6fe6c442f855f716be2ac136c0faca3d2a2ec73b",
+      "canonical_id": "arXiv:2609.06320",
+      "arxiv_id": "2609.06320",
+      "doi": "10.18653/2026.emnlp-main.2548",
+      "authors": [
+        "Zheng-Ping Jiang",
+        "Gonzalo Ramos",
+        "Ji-Na Suh",
+        "S. Ng",
+        "Elias Stengel-Eskin",
+        "Justin Svegliato",
+        "Benjamin Van Durme",
+        "Andy Huntington",
+        "Sam Thomson"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 76,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.00643",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.00643",
+        "id:SemanticScholar:0ad69bade8d5f619dc4742677646f7c62b3afa52",
+        "id:arXiv:2609.00643",
+        "title:revise validityguided recovery for online revisions in agent workflows",
+        "url:https://arxiv.org/abs/2609.00643"
+      ],
+      "record": {
+        "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+        "source_url": "https://arxiv.org/abs/2609.00643",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agent revisions expose a fundamental correctness--efficiency trade-off during concurrent execution. Discarding ongoing work preserves latest-version correctness but wastes progress that may remain valid, whereas reusing prior work preserves efficiency but risks propagating stale state into outputs and tool effects. Existing recovery strategies resolve this trade-off in an imbalanced way with coarse-grained policies: they either favor efficiency by allowing potentially stale work to continue, or favor correctness by restarting the workflow or recomputing a linear suffix from the earliest conflict, thereby discarding unaffected progress. We present \\textsc{Revise}, a validity-guided runtime for fine-grained recovery in structured agent workflows. When a revision arrives, \\textsc{Revise} first intersects its delta with recorded data and control dependencies and propagates the resulting impact through the partially executed DAG to identify affected work. It then stops invalid work, preserves validity-established progress beyond the earliest conflict, and recomputes only the affected region. Incomplete provenance conservatively expands recovery, while reused results are revalidated before commit. Analysis of real coding-agent traces show online recovery opportunities: 118 sessions retain observable work before a queued later message is delivered; across 167 overlapping assistant responses, enqueue-to-completion overlap reaches 56.55~s at p95. Across 300 challenging revision/commit executions, \\textsc{Revise} matches a latest-version oracle with no stale outputs or effects. On unmodified LangGraph and LLMCompiler applications using Qwen3-14B, it reduces model calls by 40.6--56.0\\% relative to full restart and by 31.3--43.6\\% relative to suffix recomputation. Under serving pressure, it further reduces revision-to-correct-completion tokens by 13.26\\% and improves SLO goodput by 3.07--5.43\\%.",
+        "identifiers": [
+          "SemanticScholar:0ad69bade8d5f619dc4742677646f7c62b3afa52"
+        ],
+        "semantic_scholar_id": "0ad69bade8d5f619dc4742677646f7c62b3afa52",
+        "canonical_id": "arXiv:2609.00643",
+        "arxiv_id": "2609.00643",
+        "doi": "10.48550/arXiv.2609.00643",
+        "authors": [
+          "Ruo-Ling Qi",
+          "Xuan'er Wu",
+          "Peng-Hang Liu",
+          "Jian Chen",
+          "Yi-Rui Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 81,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06320",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.2548",
+        "id:SemanticScholar:6fe6c442f855f716be2ac136c0faca3d2a2ec73b",
+        "id:arXiv:2609.06320",
+        "title:frankenreport early exiting in longform generation using expected value of computation",
+        "url:https://arxiv.org/abs/2609.06320"
+      ],
+      "record": {
+        "title": "FrankenReport: Early Exiting in Long-Form Generation Using Expected Value of Computation",
+        "source_url": "https://arxiv.org/abs/2609.06320",
+        "year": 2026,
+        "published": "2026-09-06",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While deep research systems address interactive information-seeking needs impressively, their real-world deployments face latency and resource-consumption challenges. We present FrankenReport, an interface for long-form knowledge-seeking report generation that supports adaptive early exiting per section: it evaluates intermediate outputs during generation and predicts whether further targeted computation will yield significant quality gains. In a simulation study, FrankenReport outperforms random allocation baselines by a large margin (up to 4x) under low budgets and smoothly recovers full-pipeline quality as the budget grows, showing that future quality gains are predictable from intermediate drafts. Through experiments and user studies, we further show that despite varying preferences across users and topics, FrankenReport adapts to simple, natural user feedback as efficiently as methods requiring much costlier supervision such as generated drafts and explicit rationales.",
+        "identifiers": [
+          "SemanticScholar:6fe6c442f855f716be2ac136c0faca3d2a2ec73b"
+        ],
+        "semantic_scholar_id": "6fe6c442f855f716be2ac136c0faca3d2a2ec73b",
+        "canonical_id": "arXiv:2609.06320",
+        "arxiv_id": "2609.06320",
+        "doi": "10.18653/2026.emnlp-main.2548",
+        "authors": [
+          "Zheng-Ping Jiang",
+          "Gonzalo Ramos",
+          "Ji-Na Suh",
+          "S. Ng",
+          "Elias Stengel-Eskin",
+          "Justin Svegliato",
+          "Benjamin Van Durme",
+          "Andy Huntington",
+          "Sam Thomson"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 76,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c53c167240251f7490c2a66fcf9c94ca69e81d4f7724de52cb973f7da7a2ca6b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
