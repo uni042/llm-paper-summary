@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ebfd119bf6b38c96-unrel-012",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.04205",
+  "reason": "推論モデルの蒸留訓練でCoT軌跡の最初と最後の区間だけを残すEPiCにより訓練時間を34%削減する研究であり、対象は推論モデルの学習コストであってデプロイ時のLLM推論実行ではない。",
+  "title": "EPiC: Towards Lossless Speedup for Reasoning Training through Edge-Preserving CoT Condensation",
+  "identity_tokens": [
+    "arXiv:2506.04205",
+    "https://arxiv.org/abs/2506.04205"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebfd119bf6b3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
