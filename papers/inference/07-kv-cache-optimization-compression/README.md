@@ -2149,6 +2149,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：1  
   層をスタックに分け、上位スタックの依存を1時刻前へずらすことでデコード時に深さ方向の並列実行を可能にするアーキテクチャStagFormerを提案し、品質維持と引き換えにKVキャッシュ増加と追加計算を伴うことを示した研究。
 
+- **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
+  実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：1  
+  大規模言語モデル（LLM）のKVキャッシュ圧縮は、通常のGPU推論では過去トークンの一部を削除・選択することで注意計算量とメモリを減らす。さらに粗いクラスタから細かいクラスタへ選択を絞り、近接Transformer層の選択インデックスを共有することで、MPC特有の比較と秘密インデックスgatherの費用を削減する。
+
 - **2024-12 · [CSR: Achieving 1 Bit Key-Value Cache via Sparse Representation](2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   KVキャッシュを学習済み辞書による疎表現へ変換し、インデックスと係数だけを保存して1ビット相当まで圧縮する手法。量子化が届かない2ビット未満でも長文脈タスクの性能を大きく保つ。
@@ -2180,10 +2184,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [BaKlaVa - Budgeted Allocation of KV cache for Long-context Inference](2025-2502.13176-baklava-budgeted-allocation-of-kv-cache-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   BaKlaVaは、長文脈のLLM推論でKVキャッシュを削減する際、全注意ヘッドへ同じ保持容量を与えるのではなく、重要度の高いヘッドへ多く、低いヘッドへ少なく配分する方式である。
-
-- **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
-  実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：0  
-  大規模言語モデル（LLM）のKVキャッシュ圧縮は、通常のGPU推論では過去トークンの一部を削除・選択することで注意計算量とメモリを減らす。さらに粗いクラスタから細かいクラスタへ選択を絞り、近接Transformer層の選択インデックスを共有することで、MPC特有の比較と秘密インデックスgatherの費用を削減する。
 
 - **2024-12 · [Boosting Long-Context Management via Query-Guided Activation Refilling](2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
