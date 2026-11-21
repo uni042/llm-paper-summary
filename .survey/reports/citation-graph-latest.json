@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T22:52:12+00:00",
-  "paper_count": 4761,
-  "edge_count": 63881,
+  "generated_at": "2026-11-21T22:59:54+00:00",
+  "paper_count": 4766,
+  "edge_count": 63888,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 28,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -99,6 +99,7 @@
     "papers/inference/01-offload-hierarchical-memory/2026-2605.21427-pals-power-aware-moe-serving.md": 3,
     "papers/inference/01-offload-hierarchical-memory/2026-2605.22416-asymmetric-virtual-memory-paging-hybrid-inference.md": 1,
     "papers/inference/01-offload-hierarchical-memory/2026-2605.23751-approaching-i-o-optimality-for-approximate-attention.md": 0,
+    "papers/inference/01-offload-hierarchical-memory/2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.md": 0,
     "papers/inference/01-offload-hierarchical-memory/2026-2606.05511-rh-plus-pim-row-hit-scheduling.md": 0,
     "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md": 3,
     "papers/inference/01-offload-hierarchical-memory/2026-2606.15453-spatio-temporal-expert-prefetching.md": 2,
@@ -1137,6 +1138,7 @@
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md": 9,
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.14292-minimal-intervention-kv-retention-via-set-conditioned-diversity.md": 0,
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.14310-cords-coreset-based-representative-and-diverse-selection-for-streaming-v.md": 0,
+    "papers/inference/07-kv-cache-optimization-compression/2026-2605.15913-towards-generalization-of-block-attention-via-automatic-segmentation-and.md": 1,
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.16439-kvcapsule-efficient-sequential-kv-cache-compression-for-vision-language-.md": 0,
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.17170-triaxialkv-toward-extreme-low-precision-kv-cache-quantization-for-agenti.md": 3,
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.17447-fastocr-dynamic-visual-fixation-via-kv-cache-pruning-for-efficient-docum.md": 0,
@@ -1607,7 +1609,7 @@
     "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md": 20,
     "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md": 2,
-    "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md": 50,
+    "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md": 51,
     "papers/inference/09-kernel-runtime-compilation/2024-2412.17560-gqsa-group-quantization-and-sparsity-for-accelerating-large-language-mod.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md": 62,
     "papers/inference/09-kernel-runtime-compilation/2025-2501.01005-flashinfer-attention-engine-serving.md": 221,
@@ -1767,6 +1769,7 @@
     "papers/inference/09-kernel-runtime-compilation/2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md": 2,
     "papers/inference/09-kernel-runtime-compilation/2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md": 1,
+    "papers/inference/09-kernel-runtime-compilation/2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducib.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2606.31982-era-entropy-guided-visual-token-pruning-with-rectified-attention-for-eff.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2026-2607.04164-brownoutmoe-structure-aware-expert-grouping-for-efficient-and-accurate-l.md": 0,
@@ -2257,7 +2260,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md": 3,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md": 3,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md": 8,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md": 9,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md": 6,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-o.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md": 3,
@@ -2775,7 +2778,7 @@
     "papers/inference/13-sparse-attention/2026-2606.04511-sparda.md": 3,
     "papers/inference/13-sparse-attention/2026-2606.09508-from-rigid-to-dynamic-entropy-guided-adaptive-inference-for-long-context.md": 1,
     "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md": 14,
-    "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md": 76,
+    "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md": 77,
     "papers/inference/13-sparse-attention/2026-2606.22874-spotattention-plug-in-block-sparse-routing-for-pretrained-long-context-t.md": 4,
     "papers/inference/13-sparse-attention/2026-2606.23961-forget-without-compromise-nexus-sampling-for-streaming-kv-cache-eviction.md": 0,
     "papers/inference/13-sparse-attention/2026-2606.30709-hierarchical-global-attention-hga.md": 0,
@@ -3660,7 +3663,7 @@
     "papers/inference/99-other-inference-systems/2024-2402.13598-user-llm-efficient-llm-contextualization-with-user-embeddings.md": 0,
     "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md": 13,
     "papers/inference/99-other-inference-systems/2024-2402.17512-unifying-linear-time-attention-via-latent-probabilistic-modelling.md": 0,
-    "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md": 66,
+    "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md": 67,
     "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md": 34,
     "papers/inference/99-other-inference-systems/2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md": 3,
     "papers/inference/99-other-inference-systems/2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md": 0,
@@ -3928,7 +3931,7 @@
     "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md": 35,
     "papers/inference/99-other-inference-systems/2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-metho.md": 0,
     "papers/inference/99-other-inference-systems/2025-2508.14302-glass-global-local-aggregation-for-inference-time-sparsification-of-llms.md": 0,
-    "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md": 132,
+    "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md": 134,
     "papers/inference/99-other-inference-systems/2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-large-lang.md": 0,
     "papers/inference/99-other-inference-systems/2025-2508.16700-gpt-oss-20b-a-comprehensive-deployment-centric-analysis-of-openai-s-open.md": 0,
     "papers/inference/99-other-inference-systems/2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md": 2,
@@ -4441,6 +4444,7 @@
     "papers/inference/99-other-inference-systems/2026-2605.29657-occamtoken-efficient-vlm-inference-with-training-free-and-budget-adaptiv.md": 0,
     "papers/inference/99-other-inference-systems/2026-2605.30753-efficient-diffusion-llms-via-temporal-spatial-parallel-decoding-and-conf.md": 1,
     "papers/inference/99-other-inference-systems/2026-2605.30852-speculative-pipeline-decoding-higher-accuracy-drafting-with-hidden-laten.md": 1,
+    "papers/inference/99-other-inference-systems/2026-2605.31215-fixed-point-masked-generative-modeling.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-de.md": 1,
     "papers/inference/99-other-inference-systems/2026-2606.00573-laser-loss-aware-singular-value-decomposition-and-rank-allocation-for-ef.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md": 1,
@@ -4493,6 +4497,7 @@
     "papers/inference/99-other-inference-systems/2026-2606.24187-towards-fast-and-effective-long-video-understanding-of-multimodal-large-.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.24286-avoc-enhancing-hour-level-audio-video-understanding-in-omni-modal-llms-v.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.24447-p-mtp-efficient-document-parsing-via-multi-token-prediction-with-progres.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branc.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.25426-above-the-inner-loop-exceeding-accelerate-at-llm-prefill-gemm-on-the-m1-amx.md": 0,
@@ -6225,6 +6230,7 @@
       "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
       "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
     ],
+    "papers/inference/01-offload-hierarchical-memory/2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.md": [],
     "papers/inference/01-offload-hierarchical-memory/2026-2606.05511-rh-plus-pim-row-hit-scheduling.md": [
       "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
     ],
@@ -24028,6 +24034,10 @@
       "papers/inference/07-kv-cache-optimization-compression/2025-2506.15745-infinipot-v-memory-constrained-kv-cache-compression-for-streaming-video-.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2307.08691-flashattention-2.md"
     ],
+    "papers/inference/07-kv-cache-optimization-compression/2026-2605.15913-towards-generalization-of-block-attention-via-automatic-segmentation-and.md": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+      "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md"
+    ],
     "papers/inference/07-kv-cache-optimization-compression/2026-2605.16439-kvcapsule-efficient-sequential-kv-cache-compression-for-vision-language-.md": [
       "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md",
@@ -34091,6 +34101,10 @@
       "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
       "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md"
     ],
+    "papers/inference/09-kernel-runtime-compilation/2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducib.md": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md"
+    ],
     "papers/inference/09-kernel-runtime-compilation/2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md": [
       "papers/inference/09-kernel-runtime-compilation/2022-2205.14135-flashattention.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2307.08691-flashattention-2.md",
@@ -35211,6 +35225,7 @@
       "papers/inference/07-kv-cache-optimization-compression/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2602.01519-you-need-an-encoder-for-native-position-independent-caching.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2602.02579-prophetkv-user-query-driven-selective-recomputation-for-efficient-kv-cac.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2605.15913-towards-generalization-of-block-attention-via-automatic-segmentation-and.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2607.02770-gemma-4-technical-report.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2607.28069-sempic-learning-semantic-position-independent-kv-caches.md",
@@ -73422,6 +73437,9 @@
       "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-2605.31215-fixed-point-masked-generative-modeling.md": [
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
     "papers/inference/99-other-inference-systems/2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-de.md": [
       "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
@@ -74129,6 +74147,9 @@
       "papers/inference/05-speculative-decoding-moe/2025-2503.10135-gumiho-a-hybrid-architecture-to-prioritize-early-tokens-in-speculative-decoding.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md"
+    ],
+    "papers/inference/99-other-inference-systems/2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md": [
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md": [
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
