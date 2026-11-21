@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-21T22:57:46+00:00",
-  "record_count": 6846,
+  "updated_at": "2026-11-21T23:14:23+00:00",
+  "record_count": 6847,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -106414,6 +106414,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference"
+    },
+    "arXiv:2606.14598": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.14598",
+      "identity_tokens": [
+        "arXiv:2606.14598"
+      ],
+      "reason": "Full-text read for Research: the target is the image-generation diffusion transformer Ideogram 4.0 (9.3B), fusing a fake-quantization path into a native INT8 GEMM kernel on consumer Ampere GPUs (GEMM 2.8-4.2x, 1024px generation 156.5s). The kernel technique is adjacent to LLM inference quantization, but the paper itself targets image diffusion models, not LLM inference systems, so immediate Research grounding is weak.",
+      "first_checked_at": "2026-11-21T23:14:22+00:00",
+      "last_checked_at": "2026-11-21T23:14:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0"
     }
   }
 }
