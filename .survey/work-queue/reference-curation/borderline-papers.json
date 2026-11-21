@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-21T17:57:50+00:00",
-  "record_count": 6845,
+  "updated_at": "2026-11-21T22:57:46+00:00",
+  "record_count": 6846,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -106401,6 +106401,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Towards Optimal Compression: Joint Pruning and Quantization"
+    },
+    "arXiv:2312.10193": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.10193",
+      "identity_tokens": [
+        "arXiv:2312.10193"
+      ],
+      "reason": "Full-text read for Research: evaluation covers only Vision Transformer ImageNet-1k classification and Wav2Vec speech recognition; no LLM or language-modeling experiments (LM appears only in related-work citations). Granular conditional computation is transferable to LLM inference in principle, but this paper itself does not target LLM inference systems, so immediate Research grounding is weak.",
+      "first_checked_at": "2026-11-21T22:57:45+00:00",
+      "last_checked_at": "2026-11-21T22:57:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference"
     }
   }
 }
