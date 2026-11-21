@@ -1078,13 +1078,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：8  
   巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
 
+- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
+
 - **2024-03 · [Scattered Mixture-of-Experts Implementation](2024-2403.08245-scattered-mixture-of-experts-implementation.md)**  
   実装：[✓](https://github.com/shawntan/scattermoe) ・ リポジトリ内被引用：7  
   特にバッチが大きい学習や複数要求の推論では、中間のトークン表現を何度も高帯域メモリへ書き戻すことが問題になる。ScatterMoEは専門家へ割り当てたトークンを実体の配列として並べ替える代わりに、専門家順の索引を並べ替え、カーネルが入力の必要な位置を直接読み込む。
-
-- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：5  
