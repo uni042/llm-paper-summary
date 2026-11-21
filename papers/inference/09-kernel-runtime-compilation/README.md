@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（288本）
+## 自動生成の論文一覧（289本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -485,6 +485,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring](2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md)**  
   実装：[✓](https://github.com/ashutoshuiuc/tilemaxsim) ・ リポジトリ内被引用：0  
   融合した最大類似度スコア計算が帯域律速から計算律速へ切り替わる境界を閉形式と実測で示し、転送量を15.9倍減らす積量子化の融合が従属的な表引き65億回のために3.0倍遅くなることを明らかにした分析研究。
+
+- **2026-06 · [TileFuse: A Fused Mixed-Precision Kernel Library for Efficient Quantized LLM Inference on AMD NPUs](2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-.md)**  
+  実装：[✓](https://github.com/glassescrab/mlir-aie/tree/feature/update-mix-mm-int4-verification) ・ リポジトリ内被引用：0  
+  AMD XDNA2 NPU向けに、逆量子化を融合した混合精度カーネルとメタデータ同梱の事前タイリングと全アレイGEMVを共設計し、AWQ形式をそのまま動かせるようにしたTileFuseの研究。
 
 - **2026-06 · [Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing](2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-local.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1105,7 +1109,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：619  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：620  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

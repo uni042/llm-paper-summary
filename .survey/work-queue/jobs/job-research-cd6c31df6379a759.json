@@ -35,10 +35,15 @@
   "selection_reason": "AMD XDNA2 NPU向けにAWQ形式W4A16等の展開・逆量子化・GEMM/GEMVを融合した混合精度カーネルライブラリTileFuseを実装し、Ryzen AI実機でprefillレイテンシ最大2.0倍高速化と64.6％の省電力を示す、オンデバイス量子化推論への直接貢献である。",
   "semantic_scholar_id": "bf7fb17e21b00922c37cd15df8abbca3a469409d",
   "source_url": "https://arxiv.org/abs/2606.11357",
-  "status": "ready",
+  "status": "superseded",
   "title": "TileFuse: A Fused Mixed-Precision Kernel Library for Efficient Quantized LLM Inference on AMD NPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T05:28:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-.md",
+  "represented_canonical_id": "arXiv:2606.11357",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

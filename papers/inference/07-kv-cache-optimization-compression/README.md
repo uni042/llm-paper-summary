@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（611本）
+## 自動生成の論文一覧（612本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -592,6 +592,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Reformulating KV Cache Eviction Problem for Long-Context LLM Inference](2026-2605.07234-reformulating-kv-cache-eviction-problem-for-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   既存の追い出し手法は、過去のトークンが受けた注意重みを平均・集計し、その値の大きな位置を残すことが多い。NVIDIA H100 80GBでのLlama-3.1-8B、128K文脈、同保持予算の効率測定では、完全キャッシュ比で復号のトークン当たり遅延が2.3倍改善し、最大メモリは63.3GBから約47.5GBへ低下した。
+
+- **2026-05 · [RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching](2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-cachin.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  接頭辞にならない履歴とアイテムのKVを意味複製とグラフ分割の2層で分散保持し、親和性のある台へ寄せて重みトークンだけ再計算することで、推薦の最初の応答を最大9.51倍速くした分散推論系。
 
 - **2026-05 · [QKVShare: Quantized KV-Cache Handoff for Multi-Agent On-Device LLMs](2026-2605.03884-qkvshare-quantized-kv-cache-handoff-for-multi-agent-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1467,6 +1471,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/aminems/AppleSiliconFFT) ・ リポジトリ内被引用：0  
   統一メモリでは鍵値の転送が生成を支配するため、回転と尺度と四ビット詰め込みを一回の融合カーネルにまとめれば、量子化の追加費用より転送の節約が大きくなり、十六ビットより速く約三倍の圧縮が同時に得られることを実機で示した。
 
+- **2026-05 · [When KV Meets Embeddings: Dynamic GPU Memory Allocation for Accelerating Generative Recommender Serving](2026-2605.04450-when-kv-meets-embeddings-dynamic-gpu-memory-allocation-for-accelerating-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生成レコメンダのGPU HBMを埋め込みキャッシュとKVキャッシュへ実行時に再配分する問題を定式化し、3層PPO制御器による配分決定、在駐状態を動かさない配分適用、両キャッシュの局所性を併せ見たルーティングを備えるRACERで、静的配分比の限界を実測とともに示した研究。
+
 - **2026-05 · [Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles](2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は新しい推論アルゴリズムを提案するものではなく、8Bから671Bパラメータまでの密なモデルと混合専門家モデルを、8基のNVIDIA H200を持つ実機で比較した性能特性研究である。
@@ -1486,10 +1494,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference](2026-2605.19218-rotation-aligned-key-channel-pruning-for-efficient-vision-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来は重要度の低い視覚トークンを丸ごと削除する方式が多いが、文書の小さな文字や画像全体に散らばる情報を必要とする質問では、削除した位置の証拠を復元できない。
-
-- **2026-05 · [RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching](2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-cachin.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  接頭辞にならない履歴とアイテムのKVを意味複製とグラフ分割の2層で分散保持し、親和性のある台へ寄せて重みトークンだけ再計算することで、推薦の最初の応答を最大9.51倍速くした分散推論系。
 
 - **2026-05 · [Probing the Prompt KV Cache: Where It Becomes Dispensable](2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2450,7 +2454,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：815  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：816  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

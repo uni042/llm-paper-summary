@@ -648,6 +648,14 @@
   実装：✓ ・ リポジトリ内被引用：1  
   RelServeは、表の各行へ同じテンプレートのLLM処理を適用する問い合わせ（relQuery）を、オンラインで低遅延に実行するための推論基盤である。静的な短い仕事優先方式は開始前の待ち時間を減らせても、処理が進んだ後の残作業や共有接頭辞キャッシュの利用状況を反映しない。
 
+- **2026-01 · [RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference](2026-2601.01712-relaygr-scaling-long-sequence-generative-recommendation-via-cross-stage-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  そこでRelayGRは、選択的な先行実行、利用者IDによる同一インスタンスへの振分け、ホストメモリへの短期退避を一体で設計する。
+
+- **2025-12 · [xGR: Efficient Generative Recommendation Serving at Scale](2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  通常の対話型LLMとは異なり、入力は数百〜数千トークンと長い一方、出力は商品を表す数個のトークンに限られる。著者は注意演算子xAttention、探索アルゴリズムxBeam、実行管理xScheduleの三つをxLLM上に統合する。
+
 - **2025-12 · [SpaceServe: Spatial Multiplexing of Complementary Encoders and Decoders for Multimodal LLMs](2025-b801ff7cdf66-spaceserve-spatial-multiplexing-of-complementary-encoders-and-decoders-f.md)**  
   実装：[✓](https://github.com/gofreelee/SpaceServe) ・ リポジトリ内被引用：1  
   画像エンコーダは大きな行列演算を行う計算律速、デコーダの1トークン生成は重み・KVキャッシュの読み込みが支配的なメモリ律速になりやすい。SMを何基ずつ割り当てるかはオフラインの演算子プロファイルから作る資源効用曲線に基づき、要求の画像解像度・入力長・負荷に応じてオンラインで変える。
@@ -1326,10 +1334,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、言語モデルの重みと鍵・値キャッシュ（KVキャッシュ）の双方を3〜4ビット程度に圧縮しても推論品質を保ち、その圧縮表現を16ビット浮動小数点へ全面展開せず計算できる専用ハードウェアを設計する研究である。端末向け単一バッチでは、損失なしの設定でFP16専用アクセラレータに対し識別課題2.1倍、生成課題2.4倍の平均高速化を報告する。
 
-- **2026-01 · [RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference](2026-2601.01712-relaygr-scaling-long-sequence-generative-recommendation-via-cross-stage-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  そこでRelayGRは、選択的な先行実行、利用者IDによる同一インスタンスへの振分け、ホストメモリへの短期退避を一体で設計する。
-
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同一GPU内でプリフィル/デコードを非lockstep並行実行し、共有KVとCU maskingでSLOと利用率を両立、MI300X実機で有効スループット平均4.9倍を報告。
@@ -1341,10 +1345,6 @@
 - **2026-01 · [Meeting SLOs, Slashing Hours: Automated Enterprise LLM Optimization with OptiKIT](2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化、品質ゲート、SLO認定つき性能測定、ベイズ調整を1本の分散パイプラインへ自動化した企業向けLLM最適化基盤。GPU当たり最大2.87倍のスループットと、専門家工数の大幅削減を実運用で示す。
-
-- **2025-12 · [xGR: Efficient Generative Recommendation Serving at Scale](2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  通常の対話型LLMとは異なり、入力は数百〜数千トークンと長い一方、出力は商品を表す数個のトークンに限られる。著者は注意演算子xAttention、探索アルゴリズムxBeam、実行管理xScheduleの三つをxLLM上に統合する。
 
 - **2025-12 · [ProServe: Unified Multi-Priority Request Scheduling for LLM Serving](2025-2512.12928-proserve-unified-multi-priority-request-scheduling-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1381,7 +1381,7 @@
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
-  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：53  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  

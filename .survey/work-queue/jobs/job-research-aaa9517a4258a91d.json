@@ -35,10 +35,15 @@
   "selection_reason": "大規模音声言語モデルでタスクごとに異なる注意ヘッド重要度を用いて音声トークンを剪定する学習不要なHeadRouterであり、保持率を下げても性能を保ちながら音声LLMの推論費用を削減する機構である。",
   "semantic_scholar_id": "544dd7d01277ed832eedde6df3e6886ec758a312",
   "source_url": "https://arxiv.org/abs/2604.23717",
-  "status": "ready",
+  "status": "superseded",
   "title": "HeadRouter: Dynamic Head-Weight Routing for Task-Adaptive Audio Token Pruning in Large Audio Language Models",
   "type": "research",
   "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T05:28:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.23717-headrouter-dynamic-head-weight-routing-for-task-adaptive-audio-token-pru.md",
+  "represented_canonical_id": "arXiv:2604.23717",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
