@@ -105,6 +105,10 @@
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：2  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
 
+- **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
+  実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：2  
+  通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
+
 - **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
   実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：2  
   本研究は、画像を一度だけ入力して答える通常の視覚言語モデルではなく、画像の拡大、切り出し、追加観察などの視覚ツールを複数回呼び出すエージェント型マルチモーダル大規模言語モデルの応答遅延を対象とする。提案方式SpecEyesは、ツールを必要としない質問を早期に見つけ、軽量な視覚言語モデルの回答をそのまま返す。
@@ -136,10 +140,6 @@
 - **2026-05 · [Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems](2026-2605.22883-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-s.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   しかしエージェント型のシステムでは、利用者の一つの目的を達成するまでに計画の生成、道具の呼び出し、途中結果の検査、失敗後の再試行、最終回答の生成など、複数回の推論が連鎖する。x86の対応した目標集合でOOIは4.34倍、GraceのCPUとGPUを含めたローカル測定では7.63倍となった。
-
-- **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
-  実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：1  
-  通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
 
 - **2026-03 · [Orla: A Library for Serving LLM-Based Multi-Agent Systems](2026-2603.13605-orla-a-library-for-serving-llm-based-multi-agent-systems.md)**  
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  

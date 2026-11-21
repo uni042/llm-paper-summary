@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2a1b27f15ae371d27e1e8be757662e5a4c3140bf",
+  "base_commit": "44bdceed5a4bfe803620f437cdf8d27e39b4c63e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -608,6 +608,7 @@
     "2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.json",
     "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json",
     "2026-2609.32114-empowering-hybrid-attention-models-on-npus.json",
+    "2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agent-llms.json",
     "2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.json",
     "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
@@ -635,6 +636,7 @@
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json",
     "2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-open-weight.json",
+    "2026-2609.38006-harissa-inference-time-self-checks-for-efficient-and-safe-local-language-model-deployment.json",
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
     "2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generalization-limits.json",
@@ -645,8 +647,11 @@
     "2026-2609.40093-efficient-expert-parallel-communication-on-pcie-connected-consumer-gpus.json",
     "2026-2609.40127-learning-functional-subspaces-for-neural-network-compression.json",
     "2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-demand-profiling.json",
+    "2026-2610.00267-therme-predictive-management-of-shared-thermal-headroom-for-sustained-llm-inference-on-thermally-constrained-edge-socs.json",
+    "2026-2610.00497-gumbel-straight-flow-distilling-autoregressive-models-into-one-step-flow-maps.json",
     "2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.json",
     "2026-2610.01160-serving-a-revisable-world-versioned-execution-for-interruptible-agents.json",
+    "2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persistent-scheduling.json",
     "2026-2610.02233-budgeted-cache-repair-for-cross-context-kv-cache-reuse.json",
     "2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-experts.json",
     "2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on-offloaded-weights.json",
@@ -47481,6 +47486,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.32259": {
+      "order": [
+        "2026-11-21T23:53:32+00:00",
+        "2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agent-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.38006": {
+      "order": [
+        "2026-11-21T23:54:14+00:00",
+        "2026-2609.38006-harissa-inference-time-self-checks-for-efficient-and-safe-local-language-model-deployment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.00267": {
+      "order": [
+        "2026-11-21T23:54:56+00:00",
+        "2026-2610.00267-therme-predictive-management-of-shared-thermal-headroom-for-sustained-llm-inference-on-thermally-constrained-edge-socs.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.00497": {
+      "order": [
+        "2026-11-21T23:55:38+00:00",
+        "2026-2610.00497-gumbel-straight-flow-distilling-autoregressive-models-into-one-step-flow-maps.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02229": {
+      "order": [
+        "2026-11-21T23:56:20+00:00",
+        "2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persistent-scheduling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59694,6 +59744,21 @@
     "arxiv:2609.30884": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapter.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapter.md"
+    ],
+    "arxiv:2609.32259": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agen.md"
+    ],
+    "arxiv:2609.38006": [
+      "papers/inference/99-other-inference-systems/2026-2609.38006-harissa-inference-time-self-checks-for-efficient-and-safe-local-language.md"
+    ],
+    "arxiv:2610.00267": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2610.00267-therme-predictive-management-of-shared-thermal-headroom-for-sustained-ll.md"
+    ],
+    "arxiv:2610.00497": [
+      "papers/inference/99-other-inference-systems/2026-2610.00497-gumbel-straight-flow-distilling-autoregressive-models-into-one-step-flow.md"
+    ],
+    "arxiv:2610.02229": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persis.md"
     ]
   }
 }

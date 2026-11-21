@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（100本）
+## 自動生成の論文一覧（101本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -89,6 +89,10 @@
 - **2026-09 · [TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching](2026-2609.21172-tierkv-long-context-on-device-llms-via-predictive-multi-tier-kv-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   サーバーGPUと異なりスマートフォンはOSや他アプリとDRAMを共有し、メモリ上限を超えるとプロセスが強制終了される場合がある。TierKVは、キャッシュを正確なFP16形式の階層0、低ランク圧縮したDRAM内の階層1、フラッシュへ退避した階層2に分ける。
+
+- **2026-09 · [ThermE: Predictive Management of Shared Thermal Headroom for Sustained LLM Inference on Thermally Constrained Edge SoCs](2026-2610.00267-therme-predictive-management-of-shared-thermal-headroom-for-sustained-ll.md)**  
+  実装：[✓](https://anonymous.4open.science/r/ThermE-codebase-D37B/) ・ リポジトリ内被引用：0  
+  候補操作の発熱を事前に見積もり、熱余裕を予測して周波数設定とトークン上限を不確実さ込みで選ぶことで、共有冷却のエッジSoC上でvLLM比で最初のトークンまでの時間を40.55パーセント減らし、品質目標違反率を5.70パーセントまで下げた実行系の研究。
 
 - **2026-09 · [PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling](2026-2609.09662-pelm-speculative-decoding-dvfs.md)**  
   実装：[✓](https://github.com/imec-nu/PELM) ・ リポジトリ内被引用：0  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（181本）
+## 自動生成の論文一覧（182本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -257,6 +257,10 @@
 - **2026-09 · [FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure](2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単一MoE層の選択可能プローブと二段階グループ検査で、特権監視なしにグレー障害GPU・通信経路をアプリ層から局所化し、診断プローブを約20倍削減する。
+
+- **2026-09 · [Efficient FlashAttention on Blackwell via Fixed-Shift Softmax and Persistent Scheduling](2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  行最大値の逐次補正を固定シフトで消し、逆方向の正規化を逆数分母の保存で前処理へ移し、持続型スケジューリングと重ねることで、新世代GPU向け注意カーネルのスループットを24条件の幾何平均で7.3パーセント高めた実装研究。
 
 - **2026-09 · [Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models](2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
