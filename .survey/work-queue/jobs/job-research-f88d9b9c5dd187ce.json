@@ -35,10 +35,15 @@
   "selection_reason": "キャリブレーション不要の部分空間量子化に加えデコード用GEMVとプリフィル用GEMMの専用CUDAカーネルを実装し、RTX3090でAWQ比1.6〜1.8倍のスループットを実測しているため。",
   "semantic_scholar_id": "1bd29374935cfb951e4c776e087149751282cb2c",
   "source_url": "https://arxiv.org/abs/2605.04084",
-  "status": "ready",
+  "status": "superseded",
   "title": "FASQ: Flexible Accelerated Subspace Quantization for Calibration-Free LLM Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T04:36:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm.md",
+  "represented_canonical_id": "arXiv:2605.04084",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

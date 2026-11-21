@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（164本）
+## 自動生成の論文一覧（165本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -357,6 +357,10 @@
 - **2026-05 · [Linear Scaling Video VLMs for Long Video Understanding](2026-2605.31598-linear-scaling-video-vlms-for-long-video-understanding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い動画を視覚言語モデル（Vision-Language モデル; VLM）へ入力すると、映像から得られる視覚トークンが時間とともに増え、各フレームが過去の全フレームへ自己注意（self-注意機構）を計算する通常の実装では、全映像を処理する事前充填（プリフィル）の計算量がフレーム数 N に対して二次的に増える。
+
+- **2026-05 · [LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference](2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層対応の蒸留が早期終了の前提である表現の収束を潰す非両立性を特定し、中間層を最終層へ近づける制約を蒸留へ加えたLEAPで、蒸留モデルでも収束ベースの早期終了により1.61倍の実測高速化を得た研究。
 
 - **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

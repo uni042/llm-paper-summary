@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ce0dc16339cdc85a475f92429343e362b229cc38",
+  "base_commit": "158095cfc921ea0b3a6614e33eff1fc3c371a26c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -285,6 +285,7 @@
     "2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of-low-precision-vision-language-models.json",
     "2026-2604.02816-qapruner-quantization-aware-vision-token-pruning-for-multimodal-large-language-models.json",
     "2026-2604.02945-msao-adaptive-modality-sparsity-aware-offloading-with-edge-cloud-collaboration-for-efficient-multimodal-llm-inference.json",
+    "2026-2604.03270-knowledge-packs-zero-token-knowledge-delivery-via-kv-cache-injection.json",
     "2026-2604.03950-diagonal-tiled-mixed-precision-attention-for-efficient-low-bit-mxfp-inference.json",
     "2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-models.json",
     "2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.json",
@@ -297,6 +298,7 @@
     "2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.json",
     "2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.json",
     "2026-2604.09975-encformer-secure-and-efficient-transformer-inference-over-encrypted-data.json",
+    "2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping.json",
     "2026-2604.10898-zoomr-memory-efficient-reasoning-through-multi-granularity-key-value-retrieval.json",
     "2026-2604.11080-respinquant-efficient-layer-wise-llm-quantization-via-subspace-residual-rotation-approximation.json",
     "2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compression-for-latent-multi-agent-llm-collaboration.json",
@@ -321,11 +323,14 @@
     "2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-context-attention-serving.json",
     "2026-2604.26378-coquant-joint-weight-activation-subspace-projection-for-mixed-precision-llms.json",
     "2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consumer-grade-llm-inference.json",
+    "2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inference.json",
     "2026-2605.01858-decouple-and-cache-kv-cache-construction-for-streaming-video-understanding.json",
     "2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hosted-open-weight-llm-apis.json",
     "2026-2605.04075-retentivekv-state-space-memory-for-uncertainty-aware-multimodal-kv-cache-eviction.json",
+    "2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm-compression.json",
     "2026-2605.05699-when-quantization-is-free-an-int4-kv-cache-that-outruns-fp16-on-apple-silicon.json",
     "2026-2605.06052-xtramac-an-efficient-mac-architecture-for-mixed-precision-llm-inference-on-fpga.json",
+    "2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.json",
     "2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-bit-language-models.json",
     "2026-2605.06850-shadow-mask-distillation-for-memory-efficient-alignment-in-rl-post-training.json",
     "2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-caching.json",
@@ -46214,6 +46219,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.03270": {
+      "order": [
+        "2026-11-21T04:32:12+00:00",
+        "2026-2604.03270-knowledge-packs-zero-token-knowledge-delivery-via-kv-cache-injection.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.10567": {
+      "order": [
+        "2026-11-21T04:33:02+00:00",
+        "2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.01058": {
+      "order": [
+        "2026-11-21T04:33:52+00:00",
+        "2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.04084": {
+      "order": [
+        "2026-11-21T04:34:42+00:00",
+        "2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.06116": {
+      "order": [
+        "2026-11-21T04:35:32+00:00",
+        "2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57935,6 +57985,21 @@
     "arxiv:2604.01609": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md"
+    ],
+    "arxiv:2604.03270": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.03270-knowledge-packs-zero-token-knowledge-delivery-via-kv-cache-injection.md"
+    ],
+    "arxiv:2604.10567": [
+      "papers/inference/99-other-inference-systems/2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping-in-.md"
+    ],
+    "arxiv:2605.01058": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inferen.md"
+    ],
+    "arxiv:2605.04084": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm.md"
+    ],
+    "arxiv:2605.06116": [
+      "papers/inference/99-other-inference-systems/2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.md"
     ]
   }
 }

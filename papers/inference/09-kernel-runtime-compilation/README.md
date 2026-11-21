@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（285本）
+## 自動生成の論文一覧（286本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -601,6 +601,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Fast Cross-Operator Optimization of Attention Dataflow](2026-2604.03446-fast-cross-operator-optimization-of-attention-dataflow.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   中間の注意得点行列を外部DRAMへ書き戻すと大量のメモリ転送が生じるため、複数演算を融合し、オンチップの小さなバッファで部分結果を保持することが重要になる。MMEE（Matrix Multiplication Encoded Enumeration、行列積符号化列挙）は、この探索空間を解析式と行列演算で高速に評価する手法である。
+
+- **2026-04 · [FASQ: Flexible Accelerated Subspace Quantization for Calibration-Free LLM Compression](2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み自身へのクラスタリングによる積量子化で較正なしの連続圧縮を実現し、参照表なし直接計算のデコードカーネルで圧縮法として唯一FP16超えのデコード速度を達成した研究。
 
 - **2026-04 · [FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels](2026-2604.20913-fairyfuse-multiplication-free-llm-inference-on-cpus-via-fused-ternary-ke.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
