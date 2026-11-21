@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-512924a7d1fa30a9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.07297",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.07297",
+    "identity_tokens": [
+      "arXiv:2210.07297"
+    ],
+    "reason": "異種クラスタ向けモデル並列戦略の自動探索だが対象は大規模モデルの学習実行であり、推論サービングやデコード高速化への直接貢献は要旨に示されていないため対象外である。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-512924a7d1fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

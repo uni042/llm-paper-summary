@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b501d1051bf213c4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.03479",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.03479",
+    "identity_tokens": [
+      "arXiv:2601.03479"
+    ],
+    "reason": "長期履歴を学習可能トークンへ圧縮する逐次推薦手法であり、対象は推薦モデルの計算効率と精度であって、LLM推論システムやサービング基盤の技術ではないため異分野応用として扱う。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Efficient Sequential Recommendation for Long Term User Interest Via Personalization"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b501d1051bf2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

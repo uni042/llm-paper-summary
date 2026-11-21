@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cc5927bf5f53633-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.20280",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.20280",
+    "identity_tokens": [
+      "arXiv:2608.20280"
+    ],
+    "reason": "LLM意味キャッシュの追い出し方針をFIFOやLRUやLFU等でワークロードと容量と符号器を揃えて系統比較しLFUが無難と結論する計測研究であり、対象はサービング用キャッシュだが新規機構ではなく評価中心のため境界とした。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Which Eviction Policy Should an LLM Cache Use? A Systematic Study Across Workloads, Capacities, and Encoders"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cc5927bf5f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

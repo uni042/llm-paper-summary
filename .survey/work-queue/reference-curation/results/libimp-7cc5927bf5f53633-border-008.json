@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cc5927bf5f53633-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.21847",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.21847",
+    "identity_tokens": [
+      "arXiv:2605.21847"
+    ],
+    "reason": "GPU内部コンポーネント単位の電力管理CompPowで各種ML演算の省電力余地を分析し効率10%と性能5%の改善可能性を示すが、提示はケーススタディと協調設計への提言中心で具体的な推論システム実装の検証が乏しいため境界とした。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CompPow: A Case for Component-level GPU Power Management"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cc5927bf5f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

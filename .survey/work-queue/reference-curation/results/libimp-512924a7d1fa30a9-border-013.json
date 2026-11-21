@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-512924a7d1fa30a9-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.14487",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.14487",
+    "identity_tokens": [
+      "arXiv:2605.14487"
+    ],
+    "reason": "注意ヘッドの役割別にKVキャッシュ配分を変えるHead Forcingはキャッシュ戦略として具体的だが、対象が自己回帰動画拡散モデルの長尺生成でありLLM推論への直接適用ではないため保留とする。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Head Forcing: Long Autoregressive Video Generation via Head Heterogeneity"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-512924a7d1fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

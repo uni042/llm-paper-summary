@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-512924a7d1fa30a9-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.07301",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.07301",
+    "identity_tokens": [
+      "arXiv:2509.07301"
+    ],
+    "reason": "先読みキーで因果注意のキーを文脈に応じて更新するCASTLEは言語モデル注意機構の改変だが、主眼はパープレキシティ改善であり推論時の計算量やKVキャッシュ効率の効果が不明瞭なため保留とする。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Causal Attention with Lookahead Keys"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-512924a7d1fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

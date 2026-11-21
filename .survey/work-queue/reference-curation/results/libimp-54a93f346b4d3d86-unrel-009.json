@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a93f346b4d3d86-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.05935",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.05935",
+    "identity_tokens": [
+      "arXiv:2610.05935"
+    ],
+    "reason": "GRPO等の強化学習で勾配計算を報酬到着直後に流すことで学習を高速化する訓練基盤であり、推論サービングではなくエージェントRL学習主体の加速であるため",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ThunderSyncRL: Lossless Acceleration of Agentic Reinforcement Learning"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a93f346b4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

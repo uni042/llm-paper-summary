@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a93f346b4d3d86-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.15089",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.15089",
+    "identity_tokens": [
+      "arXiv:2512.15089"
+    ],
+    "reason": "クエリ難易度に応じて推論戦略を切り替える弾力的推論枠組みで計算コストと精度の均衡を狙うが、システム実装より推論戦略選択というアルゴリズム側の提案であるため",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Fast and Slow: Cognitive-Inspired Elastic Reasoning for Large Language Models"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a93f346b4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

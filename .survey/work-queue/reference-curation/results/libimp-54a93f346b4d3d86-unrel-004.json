@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a93f346b4d3d86-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.09932",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.09932",
+    "identity_tokens": [
+      "arXiv:2605.09932"
+    ],
+    "reason": "長文脈SFTにおける注意の希釈を二段階最適化で抑える微調整手法であり、推論時の処理ではなく学習単独の改善であるためサーベイ対象の推論システム外であるため",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FocuSFT: Bilevel Optimization for Dilution-Aware Long-Context Fine-Tuning"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a93f346b4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

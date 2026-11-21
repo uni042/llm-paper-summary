@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db4e42fc5828fb15-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.18014",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.18014",
+    "identity_tokens": [
+      "arXiv:2405.18014"
+    ],
+    "reason": "状態空間モデルの状態鎖をモダリティ間で結合するCoupled Mambaは感情分析等のマルチモーダル融合モデルの提案であり、推論高速化の主張も融合精度が主眼でLLM推論とは無関係である。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Coupled Mamba: Enhanced Multi-modal Fusion with Coupled State Space Model"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db4e42fc5828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

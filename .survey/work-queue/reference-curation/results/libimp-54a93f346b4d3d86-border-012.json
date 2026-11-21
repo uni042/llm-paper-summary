@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a93f346b4d3d86-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.05605",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.05605",
+    "identity_tokens": [
+      "arXiv:2312.05605"
+    ],
+    "reason": "時間畳み込みとチャンク化注意を組み合わせた系列モデルでMEGAより高速な推論を示すが、新規モデルアーキテクチャの効率比較でありLLMサービング機構ではないため",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TCNCA: Temporal Convolution Network with Chunked Attention for Scalable Sequence Processing"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a93f346b4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db4e42fc5828fb15-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.15759",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.15759",
+    "identity_tokens": [
+      "arXiv:2609.15759"
+    ],
+    "reason": "全二重音声対話モデルへ軽量ASRヘッドを並列追加してストリーミング文字起こしを可能にする手法であり、音声モデルの機能拡張であってLLM推論基盤の研究ではない。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Enabling Streaming User Transcription in Full-Duplex Speech-to-Speech Models"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db4e42fc5828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

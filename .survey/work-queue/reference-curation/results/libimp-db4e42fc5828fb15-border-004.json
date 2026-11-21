@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db4e42fc5828fb15-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.19033",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.19033",
+    "identity_tokens": [
+      "arXiv:2610.19033"
+    ],
+    "reason": "トークンごとに必要なランク1 LoRA成分をノイズフロア検出で決めるSQUELCHは専門家活性化の効率化に触れるが、主眼は適応精度であり推論時の実行コスト削減効果が要旨で不明瞭なため保留とする。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How Many Ranks Does a Token Need? A Noise-Floor Squelch for Rank-One LoRA Experts"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db4e42fc5828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

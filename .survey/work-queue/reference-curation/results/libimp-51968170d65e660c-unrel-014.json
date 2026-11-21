@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51968170d65e660c-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.11140",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.11140",
+    "identity_tokens": [
+      "arXiv:2505.11140"
+    ],
+    "reason": "知識グラフ経路で接地した推論痕跡を集めてLLMを微調整し事実性を高める手法であり、改善は学習データ側の工夫によるもので推論システムの処理効率や配信技術ではないため対象外である。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Follow the Path: Reasoning over Knowledge Graph Paths to Improve Large Language Model Factuality"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51968170d65e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-24f44dc472ffb593-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.01472",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.01472",
+    "identity_tokens": [
+      "arXiv:2602.01472"
+    ],
+    "reason": "複数質問を同時提示した際の自己圧縮現象を利用して簡潔な推論軌跡を収集し微調整する手法であり、推論時機構ではなく効率的推論を内面化させる学習データ構築であるため",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ConPress: Learning Efficient Reasoning from Multi-Question Contextual Pressure"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-24f44dc472ff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

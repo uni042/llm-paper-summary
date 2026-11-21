@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebfd119bf6b38c96-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.27700",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.27700",
+    "identity_tokens": [
+      "arXiv:2610.27700"
+    ],
+    "reason": "長期記憶をコード抽象で構築し宣言的検索プログラムで照会するMemory as Codeによりトークン消費を減らしつつエージェント記憶精度を上げるが、本体はエージェントの記憶構築と検索の枠組みであり推論サービング機構ではないため境界とした。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory as Code: Declarative Retrieval over Codified Long-Term Memory"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebfd119bf6b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

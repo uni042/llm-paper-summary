@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51968170d65e660c-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.07788",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.07788",
+    "identity_tokens": [
+      "arXiv:2401.07788"
+    ],
+    "reason": "モデル並列学習における活性化と勾配のTopK・量子化圧縮と誤差補償の検証が主体であり、扱うのは分散学習の通信削減であって推論時の処理や配信の技術ではないため対象外である。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Activations and Gradients Compression for Model-Parallel Training"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51968170d65e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

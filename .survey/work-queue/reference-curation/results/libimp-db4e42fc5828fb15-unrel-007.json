@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db4e42fc5828fb15-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.18508",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.18508",
+    "identity_tokens": [
+      "arXiv:2404.18508"
+    ],
+    "reason": "深層状態空間モデルでイベントカメラ信号をイベント単位に大規模処理する研究であり、ニューロモーフィックセンシングの応用であってLLM推論の実行技術ではない。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Scalable Event-by-Event Processing of Neuromorphic Sensory Signals with Deep State-Space Models"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db4e42fc5828",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

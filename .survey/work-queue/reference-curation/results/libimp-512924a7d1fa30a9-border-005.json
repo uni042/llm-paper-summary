@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-512924a7d1fa30a9-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2211.16289",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2211.16289",
+    "identity_tokens": [
+      "arXiv:2211.16289"
+    ],
+    "reason": "相対位置埋め込みで注意カーネルを構造化し対数線形計算量を実現するLiSAは注意演算子の効率化として具体的だが、検証がImageNetやCOCO等の視覚タスクのみでLLM推論への適用が示されていないため保留とする。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Lightweight Structure-Aware Attention for Visual Understanding"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-512924a7d1fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

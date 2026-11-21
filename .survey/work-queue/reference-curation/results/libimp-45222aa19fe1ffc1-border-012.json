@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45222aa19fe1ffc1-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2105.03994",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2105.03994",
+    "identity_tokens": [
+      "arXiv:2105.03994"
+    ],
+    "reason": "自己注意を置換するメッセージパッシング層Dispatcherを提案し計算量O(N log N)を示すが、言語モデリングの層設計に留まりサービングやデコードでの実測効果は不明である。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dispatcher: A Message-Passing Approach to Language Modelling"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45222aa19fe1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

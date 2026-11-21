@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebfd119bf6b38c96-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.29637",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.29637",
+    "identity_tokens": [
+      "arXiv:2607.29637"
+    ],
+    "reason": "コード画像の空白除去と指示に応じた視覚トークン剪定でマルチモーダルコード理解の入力を最大71%削減するが、対象はコード理解タスク特化の視覚圧縮であり汎用LLMサービング機構ではないため境界とした。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebfd119bf6b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

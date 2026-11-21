@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b501d1051bf213c4-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.01587",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.01587",
+    "identity_tokens": [
+      "arXiv:2609.01587"
+    ],
+    "reason": "学習後量子化の損傷がどの層に生じるかを因果的混合精度介入で測り、追加ビットは局所修復より全体粒度へ配るべきだと示す分析研究であり、新しい量子化やサービング手法の提案ではないため保留とする。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b501d1051bf2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

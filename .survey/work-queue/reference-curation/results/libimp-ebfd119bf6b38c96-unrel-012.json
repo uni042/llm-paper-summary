@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebfd119bf6b38c96-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.04205",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.04205",
+    "identity_tokens": [
+      "arXiv:2506.04205"
+    ],
+    "reason": "推論モデルの蒸留訓練でCoT軌跡の最初と最後の区間だけを残すEPiCにより訓練時間を34%削減する研究であり、対象は推論モデルの学習コストであってデプロイ時のLLM推論実行ではない。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-21T17:57:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "EPiC: Towards Lossless Speedup for Reasoning Training through Edge-Preserving CoT Condensation"
+  },
+  "processed_at": "2026-11-21T17:57:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebfd119bf6b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

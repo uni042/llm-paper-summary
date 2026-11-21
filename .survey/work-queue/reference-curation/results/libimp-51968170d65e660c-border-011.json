@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51968170d65e660c-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2208.04347",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2208.04347",
+    "identity_tokens": [
+      "arXiv:2208.04347"
+    ],
+    "reason": "長入力要約向けにブロック局所注意と全体トークンを組み合わせたPEGASUS-Xの拡張と追加事前学習が主題で、長文処理の効率には関連するが要約タスクと学習が主体で推論系の寄与は薄い。",
+    "first_checked_at": "2026-11-21T17:57:49+00:00",
+    "last_checked_at": "2026-11-21T17:57:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Investigating Efficiently Extending Transformers for Long Input Summarization"
+  },
+  "processed_at": "2026-11-21T17:57:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51968170d65e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
