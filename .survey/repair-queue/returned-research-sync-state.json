@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "7fbba8c316f4ae8530d08251d0b3b3fc92d59c4c",
+  "base_commit": "87f7b17b284ca0ded6c61c4ef02ea63a45f4bec8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -717,6 +717,7 @@
     "2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-language-models-on-consumer-cpus.json",
     "2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.json",
     "2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.json",
+    "2026-2610.17868-prefilling-dllm-v2-learned-chunk-routing-for-long-context-diffusion-language-models.json",
     "2026-2610.17917-batch-paced-fixed-budget-batch-decoding-in-discrete-diffusion-language-models.json",
     "2026-2610.17959-virtual-head-attention.json",
     "2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-rank-allocation.json",
@@ -778,6 +779,7 @@
     "2026-2610.24365-flashmap-flow-map-speculative-decoding.json",
     "2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-efficient-long-context-llm-inference.json",
     "2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-diffusion-language-models.json",
+    "2026-2610.24861-flowmaker-from-tasks-to-cost-efficient-generative-ai-workflow-deployments.json",
     "2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.json",
     "2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inference.json",
     "2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-large-language-models.json",
@@ -801,6 +803,7 @@
     "2026-2610.28619-adaptive-multi-token-prediction-how-far-should-we-go.json",
     "2026-2610.28671-accelerating-cpu-speculative-decoding-via-unified-graph-execution-and-transactional-kv-isolation.json",
     "2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantization-in-llm-inference.json",
+    "2026-2610.29013-target-regeneration-shrinks-the-gains-of-draft-training-objectives-in-speculative-decoding.json",
     "2026-2610.29210-understanding-target-probability-reuse-in-speculative-decoding.json",
     "2026-2610.29489-reorienting-the-vector-axis-restructuring-flashattention-for-long-vector-processors.json",
     "2026-2610.29527-rcsd-reinforcement-and-continual-learning-for-domain-specific-speculative-decoding.json",
@@ -816,6 +819,7 @@
     "2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quantization-of-mixture-of-experts-models.json",
     "2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cache-offloading-in-llm-serving.json",
     "2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storage.json",
+    "2026-2610.30951-openattention-one-percent-is-enough-with-tail-proxies.json",
     "2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressibility-training.json",
     "2026-2610.31169-saria-persistence-aware-kv-caching-with-coordinated-dram-ssd-reload-for-llm-agents.json",
     "2026-2610.31309-extreme-compression-of-per-layer-embeddings-via-cross-layer-latent-vector-quantization.json",
@@ -927,6 +931,7 @@
     "2026-2610.42128-decisionrank-on-policy-distillation-for-decision-model-rerankers.json",
     "2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attention.json",
     "2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.json",
+    "2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-llm-agents.json",
     "2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.json",
     "2026-2611.00486-integer-exact-microscaling-running-mxfp4-language-models-on-int8-matrix-units.json",
     "2026-2611.00495-understanding-gpu-megakernels-why-residency-can-mislead.json",
@@ -46964,6 +46969,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.17868": {
+      "order": [
+        "2026-11-21T06:42:45+00:00",
+        "2026-2610.17868-prefilling-dllm-v2-learned-chunk-routing-for-long-context-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24861": {
+      "order": [
+        "2026-11-21T06:44:14+00:00",
+        "2026-2610.24861-flowmaker-from-tasks-to-cost-efficient-generative-ai-workflow-deployments.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.29013": {
+      "order": [
+        "2026-11-21T06:45:42+00:00",
+        "2026-2610.29013-target-regeneration-shrinks-the-gains-of-draft-training-objectives-in-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.30951": {
+      "order": [
+        "2026-11-21T06:47:09+00:00",
+        "2026-2610.30951-openattention-one-percent-is-enough-with-tail-proxies.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.00051": {
+      "order": [
+        "2026-11-21T06:48:36+00:00",
+        "2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-llm-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58985,6 +59035,21 @@
     "arxiv:2610.16165": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.16165-think-before-you-speak-enabling-training-free-latent-communication-betwe.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.16165-think-before-you-speak-enabling-training-free-latent-communication-betwe.md"
+    ],
+    "arxiv:2610.17868": [
+      "papers/inference/13-sparse-attention/2026-2610.17868-prefilling-dllm-v2-learned-chunk-routing-for-long-context-diffusion-lang.md"
+    ],
+    "arxiv:2610.24861": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.24861-flowmaker-from-tasks-to-cost-efficient-generative-ai-workflow-deployment.md"
+    ],
+    "arxiv:2610.29013": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.29013-target-regeneration-shrinks-the-gains-of-draft-training-objectives-in-sp.md"
+    ],
+    "arxiv:2610.30951": [
+      "papers/inference/13-sparse-attention/2026-2610.30951-openattention-one-percent-is-enough-with-tail-proxies.md"
+    ],
+    "arxiv:2611.00051": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-ll.md"
     ]
   }
 }

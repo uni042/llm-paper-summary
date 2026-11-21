@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（291本）
+## 自動生成の論文一覧（292本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -87,6 +87,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
+
+- **2026-06 · [Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models](2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md)**  
+  実装：[✓](https://github.com/menik1126/Prefilling-dLLM) ・ リポジトリ内被引用：2  
+  Prefilling-dLLMは、この入力接頭辞を長さ一定の小区間へ分け、各区間の鍵・値（Key–Value、KV）表現を事前に一度だけ計算し、問い合わせに関係する区間だけを残して反復的な雑音除去（denoising）に再利用する方式である。
 
 - **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
   実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：2  
@@ -180,10 +184,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   低ランク成分と残差成分の両方を量子化しやすい分布へ学習で作り替える4ビット量子化により、FP16に近い精度を保ちながら最大1.8倍の高速化を得た。
 
-- **2026-06 · [Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models](2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md)**  
-  実装：[✓](https://github.com/menik1126/Prefilling-dLLM) ・ リポジトリ内被引用：1  
-  Prefilling-dLLMは、この入力接頭辞を長さ一定の小区間へ分け、各区間の鍵・値（Key–Value、KV）表現を事前に一度だけ計算し、問い合わせに関係する区間だけを残して反復的な雑音除去（denoising）に再利用する方式である。
-
 - **2026-06 · [ERA: Entropy-Guided Visual Token Pruning with Rectified Attention for Efficient MLLMs](2026-2606.31982-era-entropy-guided-visual-token-pruning-with-rectified-attention-for-eff.md)**  
   実装：[✓](https://github.com/924973292/ERA) ・ リポジトリ内被引用：1  
   画像内の似た領域を一つの代表トークンへ統合すれば系列長は短くなるが、代表トークンの特徴ベクトルを平均しただけでは、注意機構がその領域に与える総重みを正しく保てない。LLaVA-1.5-7Bでは576個の視覚トークンを32個に減らしたとき、九評価の平均性能維持率93.4%を報告する。
@@ -261,6 +261,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models](2026-2610.32279-transage-automating-spatial-accelerator-generation-for-large-scale-trans.md)**  
   実装：[✓](https://github.com/sjtu-zhao-lab/TranSAGE) ・ リポジトリ内被引用：0  
   複数演算のパイプライン化を前提に、グラフ分割とデータフロー探索で演算クラスタとアーキテクチャを共同で決め、回路記述まで自動生成する、トランスフォーマ向け空間アクセラレータのコンパイラ型生成器。
+
+- **2026-10 · [TenonAgent: Virtualizing Execution Residency for Memory-Oversubscribed LLM Agents](2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-ll.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMエージェントのサンドボックス常駐を仮想化し、アクション境界の予測受付と再起動安全な解体、実行中のカーネル側ペーシングでホストメモリの過剰割当てを安全に行うランタイムを提案した研究。
 
 - **2026-10 · [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md)**  
   実装：[✓](https://github.com/intel/SyclKittens) ・ リポジトリ内被引用：0  

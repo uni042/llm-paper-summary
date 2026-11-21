@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデルの各デノイジングステップで全長双方向注意を行う高コストに対し、チャンク単位の学習済みルーティングで疎な注意を学習時から組み込み、128K文脈でデコードが密注意比172倍高速と示す、長文脈推論の注意計算削減への直接貢献である。",
   "semantic_scholar_id": "d53d94429b15d63eedbc7bb959e6adbc7cb1f0da",
   "source_url": "https://arxiv.org/abs/2610.17868",
-  "status": "ready",
+  "status": "superseded",
   "title": "Prefilling-dLLM v2: Learned Chunk Routing for Long-Context Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:51:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.17868-prefilling-dllm-v2-learned-chunk-routing-for-long-context-diffusion-lang.md",
+  "represented_canonical_id": "arXiv:2610.17868",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（592本）
+## 自動生成の論文一覧（593本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -737,6 +737,10 @@
 - **2026-10 · [FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving](2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離型サービングのプリフィル／デコード容量比を、デコード側へのトークン横取りと実行中ワーカーの役割切替でその場で動かし、追加GPUなしにSLO達成率を最大94.6ポイント改善する手法。
+
+- **2026-10 · [FlowMaker: From Tasks to Cost-Efficient Generative AI Workflow Deployments](2026-2610.24861-flowmaker-from-tasks-to-cost-efficient-generative-ai-workflow-deployment.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ワークフロー構造、モデル割当て、配置構成とモデル再利用を、現在のクラスタ状態に基づいてタスク配置時に一体で選ぶ提供システム。制約の評価順序を使った段階的剪定で列挙なしに探索し、有効スループットとコストを大きく改善した研究。
 
 - **2026-10 · [Experts Exhibit Structured Redundancy: Structure-Preserving Expert Pruning for Sparse Mixture-of-Experts Large Language Models](2026-2610.41236-experts-exhibit-structured-redundancy-structure-preserving-expert-prunin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

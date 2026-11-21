@@ -66,6 +66,10 @@
   実装：[✓](https://github.com/list0830/ResComp) ・ リポジトリ内被引用：3  
   GPTQなどの学習後量子化（Post-学習 量子化; PTQ）は、線形層の重みを一列ずつ低ビット化し、量子化によって失われる出力を残りの未量子化重みの更新で補償する。Llama3.1-8B-InstructのGPTAQではゼロショット6課題平均70.3%→72.3%となった。
 
+- **2026-09 · [Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees](2026-2609.33887-faster-block-diffusion-serving-with-distribution-free-risk-guarantees.md)**  
+  実装：[✓](https://github.com/js-lee-AI/Redline) ・ リポジトリ内被引用：2  
+  高速設定ほど未確定なトークンを早く確定する傾向があり、正答率の低下が問題になる。提案方式Redlineは、候補となる複数の推論設定を較正用の質問集合で実行し、基準設定が正解し候補設定が不正解となる件数を数える。
+
 - **2026-08 · [QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization](2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-opti.md)**  
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/QTEA) ・ リポジトリ内被引用：2  
   全重み三値化に列単位の疎残差補償と再スケール改良、誤差減衰を組み合わせた2ビット未満の学習後量子化で、実効1.7ビットでも精度を大きく保ちFP16比7.2倍に高速化した。
@@ -93,10 +97,6 @@
 - **2026-09 · [OBC-Prune: Outcome-Based Calibration for Large Reasoning Model Pruning](2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   正答・誤答の思考過程を同一問題で対にし、文ごとの因果的寄与で較正活性値を再重み付けすることで、一発枝刈り後の推論精度と停止挙動を改善する。
-
-- **2026-09 · [Faster Block-Diffusion Serving with Distribution-Free Risk Guarantees](2026-2609.33887-faster-block-diffusion-serving-with-distribution-free-risk-guarantees.md)**  
-  実装：[✓](https://github.com/js-lee-AI/Redline) ・ リポジトリ内被引用：1  
-  高速設定ほど未確定なトークンを早く確定する傾向があり、正答率の低下が問題になる。提案方式Redlineは、候補となる複数の推論設定を較正用の質問集合で実行し、基準設定が正解し候補設定が不正解となる件数を数える。
 
 - **2026-09 · [Beyond Scalar Sensitivity: Activation-Aware Mixed-Precision LLM Quantization with Cross-Layer Refinement](2026-2609.25916-beyond-scalar-sensitivity-activation-aware-mixed-precision-llm-quantizat.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
