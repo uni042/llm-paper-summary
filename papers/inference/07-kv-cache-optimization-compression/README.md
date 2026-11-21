@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（612本）
+## 自動生成の論文一覧（615本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1307,6 +1307,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   文脈長が長くなるほどKVキャッシュは大きくなり、GPUメモリを占有するだけでなく、生成時に参照するメモリ量も増える。一方で同じ数を全層に配れば、生成結果を強く左右する層が過度に圧縮され、圧縮に強い層にメモリが余る可能性がある。
 
+- **2026-08 · [Retrofitting Linear Attention into Diffusion Language Models](2026-2608.06628-retrofitting-linear-attention-into-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/Diuven/LLaDA-Hybrid) ・ リポジトリ内被引用：0  
+  拡散言語モデルの確定済みブロックへの注意を固定サイズの再帰状態で読むブロックハイブリッド注意を提案し、学習済みモデルの6層だけを2段階の軽量な追加学習で線形注意化して、品質を概ね保ちながらデコードを最大1.73倍高速化した研究。
+
 - **2026-08 · [PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression](2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PagedAttentionの固定長ページごとにKVを独立低ランク分解し、密ページと因子化ページを復元なしで同時に注意計算することで、学習不要のままKV容量を約60%へ削減する。
@@ -1326,6 +1330,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving](2026-2608.23962-tensor-parallelism-versus-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   画像処理装置追加と鍵値圧縮を百万トークン当たり費用で直接比較し、重みが単一装置へ収まる範囲では圧縮が一・二〜二倍安いことを示す。
+
+- **2026-08 · [MoNe: Modular Neural Memory for Efficient Long Context Inference](2026-2608.17616-mone-modular-neural-memory-for-efficient-long-context-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  凍結したトランスフォーマーの各層へ高速重みニューラルメモリを付け、文脈を固定長セグメントごとにテスト時学習で書き込み、推論時は質問だけからメモリトークンを生成して文脈を読み直さないことで、128K文脈の計算とピークGPUメモリを文脈内学習比で約80パーセント削減した研究。
 
 - **2026-08 · [LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference](2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md)**  
   実装：[✓](https://github.com/cafeii/LiveMem) ・ リポジトリ内被引用：0  
@@ -1378,6 +1386,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving](2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   スループット飽和の原因がデコード注意の帯域飽和であることを実測で特定し、半解析の予測モデルとバッチ構成の助言器で、予測誤差の大幅削減と最大55ギガバイトのメモリ削減余地を示した。
+
+- **2026-07 · [SALT: Salience-Aware Lexical Trie for Long-Context Compression](2026-2607.17486-salt-salience-aware-lexical-trie-for-long-context-compression.md)**  
+  実装：[✓](https://github.com/oteomamo/SALT) ・ リポジトリ内被引用：0  
+  長文脈圧縮で文のスカラー順位付けをやめ、文頻度順のキーワードトライへ予算を主題枝ごとに配分する方式を提案し、主題の潰れを防ぎながら前処理方式最良の精度と複数ターンでの費用削減を示した研究。
 
 - **2026-07 · [ReFreeKV: Towards Threshold-Free KV Cache Compression](2026-2502.16886-refreekv-towards-threshold-free-kv-cache-compression.md)**  
   実装：[✓](https://github.com/Patrick-Ni/ReFreeKV) ・ リポジトリ内被引用：0  

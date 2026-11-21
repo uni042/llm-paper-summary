@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデルの過去ブロックへの注意を線形注意へ置換するblock-hybrid attentionをTriton実装し、デコードスループット最大1.7倍と同時リクエスト数増加を実測しているため。",
   "semantic_scholar_id": "0a614fd09a917c91732a701b9113e31ebe5a9816",
   "source_url": "https://arxiv.org/abs/2608.06628",
-  "status": "ready",
+  "status": "superseded",
   "title": "Retrofitting Linear Attention into Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T05:35:48+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.06628-retrofitting-linear-attention-into-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2608.06628",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

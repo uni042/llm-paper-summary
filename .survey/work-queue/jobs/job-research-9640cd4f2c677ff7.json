@@ -35,10 +35,15 @@
   "selection_reason": "LLMエージェントの制御経路のルーティング判定をGPU上に保持してホスト往復を避け、コホート単位のバッチ化で1.19〜2.39倍の高速化を示す、エージェント実行・スケジューリングへの直接的システム貢献である。",
   "semantic_scholar_id": "feb042989973490636d9141cf0ee3d7f785ea670",
   "source_url": "https://arxiv.org/abs/2608.12123",
-  "status": "ready",
+  "status": "superseded",
   "title": "Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T05:35:48+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-.md",
+  "represented_canonical_id": "arXiv:2608.12123",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
