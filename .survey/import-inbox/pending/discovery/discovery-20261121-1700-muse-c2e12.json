@@ -1,0 +1,551 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261121-c2e12",
+ "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.00485",
+   "identity_tokens": [
+    "arXiv:2602.00485",
+    "https://arxiv.org/abs/2602.00485"
+   ],
+   "title": "Replacing Parameters with Preferences: Federated Alignment of Heterogeneous Vision-Language Models",
+   "reason": "連合学習で異種VLMをGRPOと報酬混合により整列させる学習枠組みであり、推論サービングやデコード高速化への直接貢献は要旨に示されていないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2602.00485",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 178
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.03296",
+   "identity_tokens": [
+    "arXiv:2610.03296",
+    "https://arxiv.org/abs/2610.03296"
+   ],
+   "title": "JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs",
+   "reason": "複雑な推論クエリをDAGに分解し異種LLMへ実行と検証を予算と遅延制約下でオンライン割当するJOVEは、コストと遅延を3倍以上削減する分散推論スケジューリングそのものである。",
+   "source_url": "https://arxiv.org/abs/2610.03296",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 179
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2412.00624",
+   "identity_tokens": [
+    "arXiv:2412.00624",
+    "https://arxiv.org/abs/2412.00624"
+   ],
+   "title": "VideoSAVi: Self-Aligned Video Language Models without Human Supervision",
+   "reason": "動画LLMの自己批評で選好データを生成しDPOで自己学習させるVideoSAViは、動画理解の学習パイプラインが主体であり推論システム技術の提案ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2412.00624",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 180
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2507.04517",
+   "identity_tokens": [
+    "arXiv:2507.04517",
+    "https://arxiv.org/abs/2507.04517"
+   ],
+   "title": "DOTResize: Reducing LLM Width via Discrete Optimal Transport-based Neuron Merging",
+   "reason": "離散最適輸送で剪定対象ニューロンの信号を再投影しLLMの幅を縮小するDOTResizeは、実計算コスト削減を伴うTransformer圧縮手法であり推論向けモデル圧縮に直接寄与する。",
+   "source_url": "https://arxiv.org/abs/2507.04517",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 182
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.06090",
+   "identity_tokens": [
+    "arXiv:2606.06090",
+    "https://arxiv.org/abs/2606.06090"
+   ],
+   "title": "Beyond Semantic Organization: Memory as Execution State Management for Long-Horizon Agents",
+   "reason": "階層状態木でエージェント実行状態を管理しトークン消費を55%減らすMAGEは文脈増大抑制に触れるが、主体は長期タスク用メモリ設計であり推論基盤との関係は間接的である。",
+   "source_url": "https://arxiv.org/abs/2606.06090",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 183
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2610.04318",
+   "identity_tokens": [
+    "arXiv:2610.04318",
+    "https://arxiv.org/abs/2610.04318"
+   ],
+   "title": "Rethinking Long-Video Efficiency: A Joint Allocation Perspective on Frames, Pixels, and Front-End Latency",
+   "reason": "低解像度密サンプリングと高解像度フレーム併用で前端デコード遅延を下げるLoHiはVLM推論効率に関わるが、動画理解向けフレーム配分が主体で汎用サービング技術ではない。",
+   "source_url": "https://arxiv.org/abs/2610.04318",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 185
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2410.12982",
+   "identity_tokens": [
+    "arXiv:2410.12982",
+    "https://arxiv.org/abs/2410.12982"
+   ],
+   "title": "Flash Inference: Near Linear Time Inference for Long Convolution Sequence Models and Beyond",
+   "reason": "長畳み込み系列モデルの推論を準線形時間化しタイル化でメモリ移動と並列化を改善するFlash Inferenceは、Hyenaで7.8倍の高速化を示す推論カーネル・アルゴリズムである。",
+   "source_url": "https://arxiv.org/abs/2410.12982",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 187
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.07008",
+   "identity_tokens": [
+    "arXiv:2609.07008",
+    "https://arxiv.org/abs/2609.07008"
+   ],
+   "title": "RedKnot-MLA: Multi-Head Offline-Online Reuse for DeepSeek-V4 Long-Context Serving",
+   "reason": "MLAの潜在KVを分割せずオフライン再利用とオンライン再計算を統合し長文脈サービングでTTFTを2から3.84倍高速化するRedKnot-MLAは、KV再利用によるサービング最適化である。",
+   "source_url": "https://arxiv.org/abs/2609.07008",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 188
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.06835",
+   "identity_tokens": [
+    "arXiv:2504.06835",
+    "https://arxiv.org/abs/2504.06835"
+   ],
+   "title": "LVC: A Lightweight Compression Framework for Enhancing VLMs in Long Video Understanding",
+   "reason": "クエリ注意による動画圧縮と銘打ちつつ整合層のみを1万件で学習させVLMへ長動画理解能力を移転するLVCは、能力獲得の学習手法であり推論圧縮システムではない。",
+   "source_url": "https://arxiv.org/abs/2504.06835",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 189
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2411.14345",
+   "identity_tokens": [
+    "arXiv:2411.14345",
+    "https://arxiv.org/abs/2411.14345"
+   ],
+   "title": "Layer Pruning With Consensus: A Triple-Win Solution",
+   "reason": "複数類似度を統合したConsensus基準で不要層を除去しFLOPsを最大78.8%削減する層剪定は、遅延とメモリ削減を狙う推論向け構造圧縮として直接的に有効である。",
+   "source_url": "https://arxiv.org/abs/2411.14345",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 190
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2507.02957",
+   "identity_tokens": [
+    "arXiv:2507.02957",
+    "https://arxiv.org/abs/2507.02957"
+   ],
+   "title": "CS-VLM: Compressed Sensing Attention for Efficient Vision-Language Representation Learning",
+   "reason": "圧縮センシングでキーと値を低次元へ射影し注意を再構成するCSATは注意複雑性削減を狙うが、VLM表現学習向け新アーキテクチャの検証が主体でサービング実証が弱い。",
+   "source_url": "https://arxiv.org/abs/2507.02957",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 191
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2505.21535",
+   "identity_tokens": [
+    "arXiv:2505.21535",
+    "https://arxiv.org/abs/2505.21535"
+   ],
+   "title": "FAR: Function-preserving Attention Replacement for IMC-friendly Inference",
+   "reason": "事前学習済みDeiTの注意を双方向LSTMへ蒸留置換しReRAM型IMCのデータフローに適合させるFARは、エッジ推論の遅延と帯域削減を目的とした推論向け置換手法である。",
+   "source_url": "https://arxiv.org/abs/2505.21535",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 192
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2407.13069",
+   "identity_tokens": [
+    "arXiv:2407.13069",
+    "https://arxiv.org/abs/2407.13069"
+   ],
+   "title": "Dynamic Sentiment Analysis with Local Large Language Models using Majority Voting: A Study on Factors Affecting Restaurant Evaluation",
+   "reason": "ローカルLLMの多数決でレストラン口コミの感情分析を行う応用研究であり、飲食評価要因の分析が目的で推論システムやデコード手法への貢献は含まれていない。",
+   "source_url": "https://arxiv.org/abs/2407.13069",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 193
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.16481",
+   "identity_tokens": [
+    "arXiv:2605.16481",
+    "https://arxiv.org/abs/2605.16481"
+   ],
+   "title": "Visual Agentic Memory: Enabling Online Long Video Understanding via Online Indexing, Hierarchical Memory, and Agentic Retrieval",
+   "reason": "オンライン索引と階層メモリで長動画の証拠を保持検索するVAMはストリーミング制約下のメモリ管理を含むが、動画理解フレームワークが主体でLLM推論基盤とは距離がある。",
+   "source_url": "https://arxiv.org/abs/2605.16481",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 199
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.16425",
+   "identity_tokens": [
+    "arXiv:2608.16425",
+    "https://arxiv.org/abs/2608.16425"
+   ],
+   "title": "ParaTempo: Efficient Parallel Reasoning via Temporal Confidence",
+   "reason": "時間的信頼度で並列推論枝を剪定・早期終了・再割当するParaTempoは、非同期並列推論の計算配分を制御し遅延を21から32%とトークンを18から30%削減する手法である。",
+   "source_url": "https://arxiv.org/abs/2608.16425",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 200
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2502.10216",
+   "identity_tokens": [
+    "arXiv:2502.10216",
+    "https://arxiv.org/abs/2502.10216"
+   ],
+   "title": "Forget the Data and Fine-Tuning! Just Fold the Network to Compress",
+   "reason": "構造的に似たニューロンを層を跨いで統合しデータも微調整もなしにモデルを小さくするモデルフォールディングは、資源制約下配置に適したLLM圧縮として推論効率へ直接寄与する。",
+   "source_url": "https://arxiv.org/abs/2502.10216",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 202
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2609.37311",
+   "identity_tokens": [
+    "arXiv:2609.37311",
+    "https://arxiv.org/abs/2609.37311"
+   ],
+   "title": "ReMem: Rethinking Perception and Memory in Long-Context Recommendation Agents",
+   "reason": "OCR知覚と動的メモリで推薦エージェントの長期選好を扱うReMemは、Amazonデータでの推薦タスク改善が主体でありLLM推論システムの技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2609.37311",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 203
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.17921",
+   "identity_tokens": [
+    "arXiv:2605.17921",
+    "https://arxiv.org/abs/2605.17921"
+   ],
+   "title": "An Efficient Streaming Video Understanding Framework with Agentic Control",
+   "reason": "年齢考慮型忘却によるメモリ圧縮と強モデルへのルーティングを行うR3-Streamingは視覚トークンを95%以上削減するが、ストリーミング動画理解専用の制御枠組みである。",
+   "source_url": "https://arxiv.org/abs/2605.17921",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 207
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.02835",
+   "identity_tokens": [
+    "arXiv:2606.02835",
+    "https://arxiv.org/abs/2606.02835"
+   ],
+   "title": "Thinking Past the Answer: Evaluating Harmful Overthinking in Large Reasoning Models",
+   "reason": "正答到達後の過剰思考を接頭辞単位で評価し早期停止の限界を示す本研究は、大規模推論モデルの評価プロトコルと分析であり推論システムの実装提案ではない。",
+   "source_url": "https://arxiv.org/abs/2606.02835",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 208
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2608.27338",
+   "identity_tokens": [
+    "arXiv:2608.27338",
+    "https://arxiv.org/abs/2608.27338"
+   ],
+   "title": "One Model, Many Minds: Unlocking Multi-Agent Synergy in a Single Agent via Mixture of Roles",
+   "reason": "複数の役割ステアリングベクトルを合成し単一ターン推論で多エージェント相当を狙うMoReはトークン費用を20分の1にするが、主体は特殊化学習でありサービング機構は不明瞭である。",
+   "source_url": "https://arxiv.org/abs/2608.27338",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 209
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.00643",
+   "identity_tokens": [
+    "arXiv:2609.00643",
+    "https://arxiv.org/abs/2609.00643"
+   ],
+   "title": "REVISE: Validity-Guided Recovery for Online Revisions in Agent Workflows",
+   "reason": "改訂時に依存関係から影響範囲だけを再計算し有効な進捗を保持するREVISEは、モデル呼出を40から56%削減しSLOグッドプットを改善するエージェント実行ランタイムである。",
+   "source_url": "https://arxiv.org/abs/2609.00643",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 210
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.02035",
+   "identity_tokens": [
+    "arXiv:2410.02035",
+    "https://arxiv.org/abs/2410.02035"
+   ],
+   "title": "Tuning Frequency Bias of State Space Models",
+   "reason": "状態空間モデルの周波数バイアスを初期化と勾配フィルタで調整する理論研究であり、画像ノイズ除去とLRAでの学習性能が検証対象で推論高速化の提案ではない。",
+   "source_url": "https://arxiv.org/abs/2410.02035",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 211
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2502.15315",
+   "identity_tokens": [
+    "arXiv:2502.15315",
+    "https://arxiv.org/abs/2502.15315"
+   ],
+   "title": "Tight Clusters Make Specialized Experts",
+   "reason": "適応クラスタリングで特徴重みを求めMoEルータのトークンと専門家対応を改善する提案はMoEに関わるが、収束と頑健性など学習時の性能改善が主体で推論効率の実証は薄い。",
+   "source_url": "https://arxiv.org/abs/2502.15315",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 212
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.22560",
+   "identity_tokens": [
+    "arXiv:2505.22560",
+    "https://arxiv.org/abs/2505.22560"
+   ],
+   "title": "Geometric Hyena Networks for Large-scale Equivariant Learning",
+   "reason": "回転平行移動同変な長畳み込みでRNAやタンパク質の幾何文脈を処理するGeometric Hyenaは、分子科学向けモデルでありLLM推論システムとは分野が異なるため対象外である。",
+   "source_url": "https://arxiv.org/abs/2505.22560",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 213
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2505.23617",
+   "identity_tokens": [
+    "arXiv:2505.23617",
+    "https://arxiv.org/abs/2505.23617"
+   ],
+   "title": "One Trajectory, One Token: Grounded Video Tokenization Via Panoptic Sub-Object Trajectory",
+   "reason": "汎光学的な部分物体軌跡を1トークン化するTrajViTは推論FLOPsを18分の1にするが、動画エンコーダのトークン化と検索や質問応答の精度改善が主体の応用寄り手法である。",
+   "source_url": "https://arxiv.org/abs/2505.23617",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 214
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.07657",
+   "identity_tokens": [
+    "arXiv:2406.07657",
+    "https://arxiv.org/abs/2406.07657"
+   ],
+   "title": "OPTune: Efficient Online Preference Tuning",
+   "reason": "オンライン選好チューニングで有益な応答だけを動的サンプルし学習を1.27から1.56倍速くするOPTuneは、RLHFの学習効率化であり推論時の処理効率とは別問題である。",
+   "source_url": "https://arxiv.org/abs/2406.07657",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 216
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2603.16430",
+   "identity_tokens": [
+    "arXiv:2603.16430",
+    "https://arxiv.org/abs/2603.16430"
+   ],
+   "title": "EngGPT2: Sovereign, Efficient and Open Intelligence",
+   "reason": "16Bで3B活性のMoEとして訓練されたイタリア語LLMのEngGPT2は推論電力の少なさを謳うが、要旨はモデル公開とベンチマーク報告が主体でシステム機構の説明がない。",
+   "source_url": "https://arxiv.org/abs/2603.16430",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 217
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.06320",
+   "identity_tokens": [
+    "arXiv:2609.06320",
+    "https://arxiv.org/abs/2609.06320"
+   ],
+   "title": "FrankenReport: Early Exiting in Long-Form Generation Using Expected Value of Computation",
+   "reason": "長文レポート生成で節ごとに中間出力を評価し計算の期待価値から早期終了を判断するFrankenReportは、低予算時の計算配分と遅延資源制約に直接対処する生成制御手法である。",
+   "source_url": "https://arxiv.org/abs/2609.06320",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 218
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.18829",
+   "identity_tokens": [
+    "arXiv:2610.18829",
+    "https://arxiv.org/abs/2610.18829"
+   ],
+   "title": "OmniCompass: A Holistic Benchmark for Omni-Modal Video Grounding and Understanding",
+   "reason": "全モーダル動画の時間・空間グラウンディングと質問応答を測るOmniCompassは、手作業注釈によるベンチマーク構築と50モデルの評価のみでありシステム提案を含まない。",
+   "source_url": "https://arxiv.org/abs/2610.18829",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 219
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2510.20622",
+   "identity_tokens": [
+    "arXiv:2510.20622",
+    "https://arxiv.org/abs/2510.20622"
+   ],
+   "title": "SeViCES: Unifying Semantic-Visual Evidence Consensus for Long Video Understanding",
+   "reason": "意味と視覚の合意で長動画フレームを選び回答を精緻化するSeViCESは計算負荷の高いVideo-LLM利用を効率化し得るが、要旨では精度と頑健性の改善が主体で遅延実測がない。",
+   "source_url": "https://arxiv.org/abs/2510.20622",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 220
+  }
+ ]
+}
