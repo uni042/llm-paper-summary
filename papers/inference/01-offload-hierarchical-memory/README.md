@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（142本）
+## 自動生成の論文一覧（143本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -475,6 +475,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。
+
+- **2025-04 · [WindVE: Collaborative CPU-NPU Vector Embedding](2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RAGのベクトル埋め込みで、NPUのキューが満杯のときだけピーククエリを遊休CPUへオフロードし、線形回帰で見積もったキュー深さで運用することで、SLOを守ったまま同時実行数を最大22.3パーセント高めたCPU-NPU協調システムの研究。
 
 - **2025-04 · [Hardware-based Heterogeneous Memory Management for Large Language Model Inference](2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

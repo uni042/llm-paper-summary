@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（608本）
+## 自動生成の論文一覧（609本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -2112,6 +2112,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [CoKV: Optimizing KV Cache Allocation via Cooperative Game](2025-2502.17501-cokv-optimizing-kv-cache-allocation-via-cooperative-game.md)**  
   実装：[✓](https://github.com/nawei1010/CoKV) ・ リポジトリ内被引用：1  
   Mistral-7B-Instruct-v0.2をA100 40GBで動かした実測では、28kトークン入力の生成総時間がFullKVの半分未満、32k入力のピークGPUメモリは64%削減された。オンライン要求ごとにゲーム理論の評価をやり直す方式ではない。
+
+- **2025-01 · [StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel](2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-par.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  層をスタックに分け、上位スタックの依存を1時刻前へずらすことでデコード時に深さ方向の並列実行を可能にするアーキテクチャStagFormerを提案し、品質維持と引き換えにKVキャッシュ増加と追加計算を伴うことを示した研究。
 
 - **2024-12 · [CSR: Achieving 1 Bit Key-Value Cache via Sparse Representation](2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

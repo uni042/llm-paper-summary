@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（166本）
+## 自動生成の論文一覧（167本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -592,6 +592,10 @@
   実装：[✓](https://github.com/ZeroNLP/ResDecode) ・ リポジトリ内被引用：0  
   投機的復号では軽いドラフト側が複数の未来トークンを先読みし、対象の大きな言語モデルが候補をまとめて検証する。対象モデルの検証を通った候補だけを採用するため、単にドラフトを高速化するだけでなく、候補の採択長と検証費用の均衡が重要になる。
 
+- **2025-05 · [LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead](2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全候補へ短いブートトークンだけを生成させて見込みを判定し、有望なモデルだけに続きを生成させて統合する適応型ルーティングLightRouterを提案し、集成方式より低い推論コストで高い精度を示した研究。
+
 - **2025-04 · [Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features](2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   交差注意の重みが一部の画像特徴へ偏り層間でも変わらない観測に基づき、最初の層で注意頭ごとの上位特徴の和集合だけを残して残り層のキャッシュと計算を減らす追加学習なしの方式で、特徴を約半分にしても性能同等を保ちバッチ三二の遅延を二六パーセント減らした。
@@ -661,7 +665,7 @@
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
-  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：12  
   しかし実際のサービスでは、数学問題、法務文書、要約、常識質問など、タスクごとに得意なモデルが異なる。常に最も大きいモデルを呼ぶ方式は品質を得やすい反面、必要以上の推論計算を消費する。これらは品質と必要なモデル呼出し回数の評価であり、実際のGPU実行時間・請求金額の削減倍率を測定したものではない（原著§5、表1・2）。
 
 - **2023-05 · [A Quantitative Review on Language Model Efficiency Research](2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md)**  
@@ -681,6 +685,6 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：126  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：127  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

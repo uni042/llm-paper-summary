@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "25605179bde551513aaff2f5d66e2665d3c5c9cc",
+  "base_commit": "63b2afb4a4a030942df0306a77d8a9be3bc997ba",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -90,6 +90,7 @@
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
     "2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.json",
     "2025-2501.08631-swsc-shared-weight-for-similar-channel-in-llm.json",
+    "2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-parallel.json",
     "2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.json",
     "2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pretrained-llms.json",
     "2025-2502.02790-leveraging-the-true-depth-of-llms.json",
@@ -111,6 +112,7 @@
     "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
+    "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json",
     "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json",
     "2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language-model-inference-on-edge-devices.json",
     "2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.json",
@@ -122,6 +124,7 @@
     "2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-generation.json",
     "2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.json",
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
+    "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json",
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.19812-efficient-multi-modal-long-context-learning-for-training-free-adaptation.json",
     "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json",
@@ -150,6 +153,7 @@
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
     "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
+    "2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-llm-layer-compression.json",
     "2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with-hybrid-ckks-and-mpc.json",
     "2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dynamic-grouping.json",
     "2025-2509.06274-ipr-intelligent-prompt-routing-with-user-controlled-quality-cost-trade-offs.json",
@@ -169,6 +173,7 @@
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.00315-language-modeling-with-factorization-memory.json",
     "2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.json",
+    "2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reasoning.json",
     "2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effects.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
     "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json",
@@ -46364,6 +46369,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2501.15665": {
+      "order": [
+        "2026-11-21T04:55:33+00:00",
+        "2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-parallel.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.14941": {
+      "order": [
+        "2026-11-21T04:56:16+00:00",
+        "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.16221": {
+      "order": [
+        "2026-11-21T04:56:59+00:00",
+        "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.16680": {
+      "order": [
+        "2026-11-21T04:57:42+00:00",
+        "2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-llm-layer-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.02130": {
+      "order": [
+        "2026-11-21T04:58:25+00:00",
+        "2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58145,6 +58195,21 @@
     "arxiv:2412.15750": [
       "papers/inference/99-other-inference-systems/2024-2412.15750-extracting-interpretable-task-specific-circuits-from-large-language-mode.md",
       "papers/inference/99-other-inference-systems/2024-2412.15750-extracting-interpretable-task-specific-circuits-from-large-language-mode.md"
+    ],
+    "arxiv:2501.15665": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-par.md"
+    ],
+    "arxiv:2504.14941": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.md"
+    ],
+    "arxiv:2505.16221": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.md"
+    ],
+    "arxiv:2508.16680": [
+      "papers/inference/99-other-inference-systems/2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-large-lang.md"
+    ],
+    "arxiv:2511.02130": [
+      "papers/inference/99-other-inference-systems/2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reason.md"
     ]
   }
 }
