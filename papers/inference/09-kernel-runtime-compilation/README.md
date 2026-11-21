@@ -768,6 +768,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/yansikuan/memory-r1) ・ リポジトリ内被引用：6  
   メモリ-R1は、記憶を管理するエージェント（メモリ Manager）と、検索した記憶から回答するエージェント（Answer Agent）を分離し、どちらも最終回答の正しさを報酬とする強化学習（reinforcement learning）で訓練する。
 
+- **2025-04 · [Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures](2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  著者らはシステム対応カーネル推論プロファイラ（システム-Aware Kernel Inference Profiler; SKIP）を作り、PyTorch演算子からCUDA起動呼出し、GPUカーネルへ至る依存関係を時刻と対応付ける。
+
 - **2025-10 · [PT2-LLM: Post-Training Ternarization for Large Language Models](2025-2510.03267-pt2-llm-post-training-ternarization-for-large-language-models.md)**  
   実装：[✓](https://github.com/XIANGLONGYAN/PT2-LLM) ・ リポジトリ内被引用：4  
   大規模言語モデルの重みを三値 {-1,0,+1} に制限すると、通常の2-bit量子化より少ない情報量で保存できる。LLaMA-7Bを三値化した場合、モデルサイズはFP16の13.48GBから1.88GBへ減り、圧縮倍率は7.17倍、変換時間は32分と報告される。
@@ -783,10 +787,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-04 · [SD2: Self-Distilled Sparse Drafters](2025-2504.08838-sd2-self-distilled-sparse-drafters.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   投機的復号では、小さなドラフトモデルが数トークンを先に生成し、大きなターゲットモデルが候補をまとめて検証する。ドラフトが軽くてもターゲットと予測が合わなければ、受理されるトークン数が減り、高速化の利得が消える。逆に高精度なドラフトが重すぎれば、候補生成の逐次時間が支配的になる。受理長、理論MAC削減、実機の遅延改善は異なる評価軸として区別する。
-
-- **2025-04 · [Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures](2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  著者らはシステム対応カーネル推論プロファイラ（システム-Aware Kernel Inference Profiler; SKIP）を作り、PyTorch演算子からCUDA起動呼出し、GPUカーネルへ至る依存関係を時刻と対応付ける。
 
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：3  
@@ -979,7 +979,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：210  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：211  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
@@ -1063,7 +1063,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   IntelのxFasterTransformerに、CPU向けSlimAttention、トークン・ヘッド単位のINT8 KVキャッシュ、oneCCLによる分散推論とゼロコピー通信を組み込む。Xeon 8563C環境でLlama2-70Bの次トークン遅延を2ソケット249.7msから8ソケット87.7msへ短縮した。
 
 - **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
 
 - **2024-09 · [Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference](2024-2409.20361-rotated-runtime-smooth-training-free-activation-smoother-for-accurate-in.md)**  
@@ -1105,7 +1105,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：617  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：618  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -1147,7 +1147,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：861  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：863  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
