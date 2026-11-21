@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL",
+      "source_url": "https://arxiv.org/abs/2606.21023",
+      "year": 2026,
+      "published": "2026-06-19",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) deploy into mission-critical domains (e.g., finance, medicine, and law), output reproducibility has become a strict system requirement. While practitioners use greedy decoding to eliminate algorithmic stochasticity, empirical deployments with 16-bit precisions still exhibit catastrophic output divergence across heterogeneous GPUs. Through SASS-level profiling, we reveal that this inconsistency is fundamentally driven by truncation errors introduced during downcasting at kernel boundaries. However, achieving reproducibility via a global FP32 pipeline incurs prohibitive system penalties: bypassing 16-bit hardware accelerators hurts compute efficiency, while upcasting the KV cache doubles memory overhead. To bridge this gap, we propose Hybrid Error ALleviation (HEAL), a targeted intervention that approximates FP32 precision while resolving hardware constraints through two targeted mechanisms. First, recognizing that floating-point formats underutilize their bit-width for Q, K, V tensors, HEAL applies INT16 quantization that preserves numerical stability without expanding the KV cache footprint. Second, HEAL synthesizes high-precision matrix multiplications via an algebraic error compensation strategy, executing entirely on high-throughput 16-bit Tensor Cores. To evaluate our approach practically, we introduce MCR-Bench, a benchmark targeting reproducibility in mission-critical tasks. HEAL achieves the same level of reproducibility on downstream tasks as the FP32 baseline while reducing the performance overhead by up to 6.0$\\times$.",
+      "identifiers": [
+        "SemanticScholar:c6f1d202c44f8f51336ddd53eec45abd8762e3b9"
+      ],
+      "semantic_scholar_id": "c6f1d202c44f8f51336ddd53eec45abd8762e3b9",
+      "canonical_id": "arXiv:2606.21023",
+      "arxiv_id": "2606.21023",
+      "doi": "10.48550/arXiv.2606.21023",
+      "authors": [
+        "Zhenting Zhu",
+        "Lucas Thai",
+        "Shan Yu",
+        "Yicheng Liu",
+        "Yi-Fan Qiao",
+        "Chen-Xi Wang",
+        "Harry Xu",
+        "Jun-Yi Shu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      },
+      "reason": "再現性のあるLLM推論向けHEALはカーネル境界の切り捨て誤差を原因と特定し、QKVへのINT16量子化でKVキャッシュ容量を増やさず安定性を保ち、誤差補償付き行列積を16ビットTensor Coreで実行してFP32比のオーバーヘッドを最大6分の1に抑える推論機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "COMPOT: Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers Compression",
+      "source_url": "https://arxiv.org/abs/2602.15200",
+      "year": 2026,
+      "published": "2026-02-16",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training compression of transformer models commonly relies on truncated singular value decomposition (SVD) strategies leading to low-rank approximations of the original model weights. However, the underlying single shared subspace modeling can degrade accuracy even at moderate compression. Sparse dictionary learning provides a more flexible union-of-subspaces representation, but existing approaches often suffer from costly iterative dictionary and coefficient updates. We propose $\\textbf{COMPOT}$ ($\\textbf{C}$alibration-$\\textbf{O}$ptimized $\\textbf{M}$atrix $\\textbf{P}$rocrustes $\\textbf{O}$rthogonalization for $\\textbf{T}$ransformers), a training-free compression framework that uses a small calibration dataset to estimate a sparse weight factorization. COMPOT employs orthogonal dictionaries that enable closed-form Procrustes updates for the dictionary and analytical single-step sparse coding for the coefficients, reducing significantly the overall optimization cost. To handle heterogeneous layer sensitivity under a global compression budget, COMPOT further introduces a one-shot dynamic allocation strategy that adaptively redistributes layer-wise compression rates. Extensive experiments across diverse architectures and tasks show that COMPOT consistently delivers a superior quality-compression trade-off over strong low-rank and sparse baselines, while remaining fully compatible with post-training quantization for extreme compression.",
+      "identifiers": [
+        "SemanticScholar:3c5192ed119eb20b17de800e3a1b4bc454f60f11"
+      ],
+      "semantic_scholar_id": "3c5192ed119eb20b17de800e3a1b4bc454f60f11",
+      "canonical_id": "arXiv:2602.15200",
+      "arxiv_id": "2602.15200",
+      "doi": "10.48550/arXiv.2602.15200",
+      "authors": [
+        "Denis Makhov",
+        "Dmitriy Shopkhoev",
+        "Magauiya Zhussip",
+        "Ammar Ali",
+        "Baher Mohammad",
+        "Stamatios Lefkimmiatis"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer向け学習不要圧縮COMPOTは較正データで直交辞書とスパース符号化を閉形式に解き、層別感度に応じた圧縮率配分で低ランク手法より優れた品質・圧縮トレードオフを示し、量子化とも併用可能な推論向けモデル圧縮として直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
+      "source_url": "https://arxiv.org/abs/2603.10026",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Operator fusion, as a key performance optimization technique in the deployment of AI models, significantly improves execution efficiency and has been widely adopted in modern AI compilers. However, for cascaded reduction operations involving multiple loops with inter-loop data dependencies, such as the safe softmax followed by GEMM within attention mechanisms, existing compilers lack effective automated fusion and kernel generation capabilities. Although some works have addressed specific instances through hand-crafted fusion strategies, their solutions are limited in generality and difficult to extend to other similar structures. Given the prevalence of such computational patterns in deep learning models, there remains significant untapped potential in achieving general and automated fusion optimization. In this paper, we present a formal theoretical methodology for analyzing cascaded reductions which can fuse them into a single loop and introduce an incremental computation form. Based on this methodology, we design Red uction Fuser (RedFuser), a framework that automatically identifies supported cascaded reduction patterns and generates optimized fused kernels. Experiments show that RedFuser successfully fuses diverse workloads, achieving up to 2× to 5× speedup over state-of-the-art AI compilers and matching the performance of highly optimized hand-written kernels.",
+      "identifiers": [
+        "SemanticScholar:04e30a7f22b68eb238dcfdd7976be4fb80be893f"
+      ],
+      "semantic_scholar_id": "04e30a7f22b68eb238dcfdd7976be4fb80be893f",
+      "canonical_id": "arXiv:2603.10026",
+      "arxiv_id": "2603.10026",
+      "doi": "10.1145/3779212.3790209",
+      "authors": [
+        "Xin-Sheng Tang",
+        "Yang-Cheng Li",
+        "Nan Wang",
+        "Zhiyi Shu",
+        "Xingyu Ling",
+        "Junna Xing",
+        "Peng Zhou",
+        "Qiang Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AIアクセラレータ向けにsafe softmaxとGEMMのような連鎖リダクションを単一ループへ融合するRedFuserを提案し、増分計算形式で融合カーネルを自動生成して注意機構等のワークロードでコンパイラ比2〜5倍の高速化を示す、注意・カーネルへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Privacy-Preserving LLMs Routing",
+      "source_url": "https://arxiv.org/abs/2604.15728",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) routing has emerged as a critical strategy to balance model performance and cost-efficiency by dynamically selecting services from various model providers. However, LLM routing adds an intermediate layer between users and LLMs, creating new privacy risks to user data. These privacy risks have not been systematically studied. Although cryptographic techniques such as Secure Multi-Party Computation (MPC) enable privacy-preserving computation, their protocol design and implementation remain under-explored, and na\\\"ive implementations typically incur prohibitive computational overhead. To address this, we propose a privacy-preserving LLM routing framework (PPRoute). PPRoute includes multiple strategies to speed up encoder inference and nearest neighbor search under the MPC and maintain the quality of LLM routing. First, PPRoute uses MPC-friendly operations to boost the encoder inference. Second, PPRoute uses a multiple-step model training algorithm to maintain routing quality despite the constraints of the encrypted domain. Third, PPRoute proposes an unsorted Top-k algorithm with $O(1)$ communication complexity for secure sorting in model search, significantly reducing communication latency. Across different datasets, PPRoute achieves the performance of plaintext counterparts, while achieving approximately a 20$\\times$ speedup over na\\\"ive MPC implementations.",
+      "identifiers": [
+        "SemanticScholar:326354a8e09353dc3c8a59ecd814cc6fde89a1b5"
+      ],
+      "semantic_scholar_id": "326354a8e09353dc3c8a59ecd814cc6fde89a1b5",
+      "canonical_id": "arXiv:2604.15728",
+      "arxiv_id": "2604.15728",
+      "doi": "10.48550/arXiv.2604.15728",
+      "authors": [
+        "Xi-Dong Wu",
+        "Yu-Kuan Zhang",
+        "Yuqiong Ji",
+        "Reza Shirkavand",
+        "Qian Lou",
+        "Shang-Qian Gao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      },
+      "reason": "プライバシー保護LLMルーティングPPRouteはMPC下でエンコーダ推論をMPCフレンドリーな演算に置換し、通信量O(1)の非ソートTop-kでモデル探索を高速化して素朴なMPC比で約20倍の高速化を示しており、ルーティングを含む推論基盤へのシステム貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sparsity Induction for Accurate Post-Training Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.21652",
+      "year": 2026,
+      "published": "2026-02-25",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have demonstrated capabilities in text generation, while their increasing parameter scales present challenges in computational and memory efficiency. Post-training sparsity (PTS), which reduces model cost by removing weights from dense networks, is an effective approach. However, native dense matrices lack high sparsity, making existing approaches that directly remove weights disrupt model states, resulting in unsatisfactory performance recovery even with post-tuning. We propose Sparsity Induction, which promotes models toward higher sparsity at both distribution and feature levels before pruning, to push the limits of PTS. At the distribution level, we enhance distributional sparsity through mathematically equivalent scaling transformations, which are fully absorbable and incur no extra parameters or inference-time overhead. At the feature level, we introduce Spectral Norm Loss to promote feature sparsity from a low-rank perspective. Experiments across diverse model architectures and tasks demonstrate that our method further enhances sparsity-friendliness, achieving superior pruning performance over existing approaches.",
+      "identifiers": [
+        "SemanticScholar:0900d6b0bab7b88d8395c1690515240b2946e7e5"
+      ],
+      "semantic_scholar_id": "0900d6b0bab7b88d8395c1690515240b2946e7e5",
+      "canonical_id": "arXiv:2602.21652",
+      "arxiv_id": "2602.21652",
+      "doi": "10.48550/arXiv.2602.21652",
+      "authors": [
+        "Minhao Jiang",
+        "Zhikai Li",
+        "Xue-Wen Liu",
+        "Jing Zhang",
+        "Meng-Juan Chen",
+        "Qing-Yi Gu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの学習後プルーニング向けSparsity Inductionは吸収可能なスケーリング変換で分布レベル、スペクトルノルム損失で特徴レベルのスパース性を事前に誘導してから枝刈りし、推論時オーバーヘッドを増やさず既存プルーニングより優れた性能を示す推論向け圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a49a381136a0",
+    "round": "libimp-a49a381136a0d8f4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a49a381136a0d8f4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a49a381136a0d8f4-pre01.json",
+    "receipt": "sha256:8ad218d0be7f51030a55a728fdce9671ca5ce0d88fce61f69cd97806d675289d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a49a381136a0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

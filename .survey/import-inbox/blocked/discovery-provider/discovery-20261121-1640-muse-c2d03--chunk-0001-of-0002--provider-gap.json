@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d03::provider-gap",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 7,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.29221",
+      "identity_tokens": [
+        "arXiv:2607.29221",
+        "https://arxiv.org/abs/2607.29221"
+      ],
+      "title": "MOSAIC: Masked Outsourcing of Secure AI Computations",
+      "reason": "信頼できないサーバへ行列積をマスキングして委譲する秘匿Transformer推論プロトコルで、Hadamard回転による誤差増大抑制と70Bモデルでのend-to-end実装により大規模機密推論の基盤技術を具体的に示している",
+      "source_url": "https://arxiv.org/abs/2607.29221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 131
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22563",
+      "identity_tokens": [
+        "arXiv:2601.22563",
+        "https://arxiv.org/abs/2601.22563"
+      ],
+      "title": "EUGens: Efficient, Unified, and General Dense Layers",
+      "reason": "ランダム特徴で全結合層を近似し入力ノルム依存を加えた新しいdense層により推論複雑度を二次から線形へ下げ、Transformer等で推論速度27%とメモリ30%の改善を実測しており推論効率化への直接貢献が具体的である",
+      "source_url": "https://arxiv.org/abs/2601.22563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 138
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02966",
+      "identity_tokens": [
+        "arXiv:2611.02966",
+        "https://arxiv.org/abs/2611.02966"
+      ],
+      "title": "SHq: Learnable Grids for LLM Weight Quantization",
+      "reason": "ブロック単位LUT量子化のグリッドを圧伸強度とオフセットでパラメータ化し符号ビットで鏡像グリッドも選べるようにする重み量子化手法で、2から6ビットでKLと下流精度を改善しLLM推論向け低ビット化に直接寄与する",
+      "source_url": "https://arxiv.org/abs/2611.02966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 145
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.17952",
+      "identity_tokens": [
+        "arXiv:2606.17952",
+        "https://arxiv.org/abs/2606.17952"
+      ],
+      "title": "SoftMoE: Soft Differentiable Routing for Mixture-of-Experts in LLMs",
+      "reason": "離散top-kルーティングをtruncated soft top-k緩和へ置換し層ごとの平均活性専門家数を全域予算制約で学習させるMoE手法で、推論予算下で活性専門家を大幅に減らしつつ性能を維持しておりMoE推論効率への貢献が具体的である",
+      "source_url": "https://arxiv.org/abs/2606.17952",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 146
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02559",
+      "identity_tokens": [
+        "arXiv:2606.02559",
+        "https://arxiv.org/abs/2606.02559"
+      ],
+      "title": "From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression",
+      "reason": "AttentionとFeedForwardをサブモジュール単位で非連続に選び軽量な残差バイパスへ置換する学習後圧縮手法で、25%スパース時に精度維持に加え推論高速化とKVキャッシュ削減を実測しており推論向け圧縮として直接寄与する",
+      "source_url": "https://arxiv.org/abs/2606.02559",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14277",
+      "identity_tokens": [
+        "arXiv:2610.14277",
+        "https://arxiv.org/abs/2610.14277"
+      ],
+      "title": "Echo: Error-Compensated 4-Bit Tensor-Parallel Communication for LLM Training and Inference",
+      "reason": "テンソル並列のall-reduceを4ビット伝送と高精度加算に分離し注入誤差を後続呼び出しへフィードバックして累積を抑える通信手法で、TTFT改善と推論精度維持を実測しており分散LLM推論への直接貢献が明確である",
+      "source_url": "https://arxiv.org/abs/2610.14277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.29607",
+      "identity_tokens": [
+        "arXiv:2605.29607",
+        "https://arxiv.org/abs/2605.29607"
+      ],
+      "title": "Cluster-Level Attention-Guided Parallel Decoding for Masked Diffusion Language Models",
+      "reason": "マスク拡散言語モデルで高信頼な連続スパンをクラスタ化し自己注意からクラスタ間依存を推定して競合しない単位を並列確定する学習不要デコーダで、1.77から8.47倍の高速化を示し並列デコードへの直接貢献がある",
+      "source_url": "https://arxiv.org/abs/2605.29607",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 155
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d03",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261121-1640-muse-c2d03--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2601.22563",
+    "arXiv:2605.29607",
+    "arXiv:2606.02559",
+    "arXiv:2606.17952",
+    "arXiv:2607.29221",
+    "arXiv:2610.14277",
+    "arXiv:2611.02966"
+  ]
+}

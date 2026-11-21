@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint",
+      "source_url": "https://arxiv.org/abs/2608.28003",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes a layer bit allocation method for Gemma-3-1B, formulating the problem as performance maximization (latency decrease) given a degradation budget constraint (allowable level of generation quality loss). This approach is different from time- and resource-consuming uniform layer quantization methods that are used in the literature (like GPTQ or AWQ) or allocation methods without proven performance-accelerating effect (like MixLLM or TorchAO). The layer sensitivity profile resulting from our prior work SA-PTQ is applied using the activation pass-through mode inside TensorRT-LLM. For each layer precision is determined individually in blocks, according to a grouping introduced in the prior step (5+5, 10+10, all26), differentiating the contribution of FFN, Attention, and lm_head to the overall speedup. The clock speed was measured for 13 W8A8 variants on an RTX 5090. We find that for FFN and lm_head the time cost of quantization/dequantization is compensated for by the use of integer arithmetic, while for short context lengths, the opposite holds true for Attention: an additional step of quantization slows execution down. We propose a manual implementation of SmoothQuant for TensorRT-LLM which was necessary due to export failures, unavailable for lm_head. The best solution found under joint consideration of all three criteria with minimal degradation was FFN 5+5 with lm_head, providing an 11.0% reduction in latency with negligible quality loss (98.90% Top-1 agreement, +0.85% perplexity degradation). With acceptable quality loss for FFN all26 + lm_head, a speedup up to 19.1% was found possible. We suggest further optimizations: fused attention kernels in INT8, KV-cache quantization, using FP8 instead of INT8 and partial Attention quantization analogous to FFN.",
+      "identifiers": [
+        "SemanticScholar:ed689fb91f6fa09bcf3226d46529a012de47e222"
+      ],
+      "semantic_scholar_id": "ed689fb91f6fa09bcf3226d46529a012de47e222",
+      "canonical_id": "arXiv:2608.28003",
+      "arxiv_id": "2608.28003",
+      "doi": "10.48550/arXiv.2608.28003",
+      "authors": [
+        "Artem Safronov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gemma-3-1Bを対象にTensorRT-LLM上で層ごとにビット幅を割り当てる量子化手法を提案し、品質劣化制約のもとでFFNとlm_headの量子化により遅延を最大19.1%削減した推論向け量子化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Budgeted KV-Cache Repair for Evolving Contexts",
+      "source_url": "https://arxiv.org/abs/2610.17338",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language-model agents revise their working context as information becomes obsolete, but deleting text does not erase its influence on cached computation. Later key-value (KV) states remain conditioned on the deleted content, while recomputing the entire retained suffix can be costly. We introduce budgeted KV-cache repair: recovering task performance by recomputing a user-chosen fraction of the retained suffix. Comparing repair allocations under identical relevance scores and token budgets, we find that refreshing coherent regions can substantially outperform refreshing isolated tokens. This finding motivates Semantic-Unit Refresh (SUR), which allocates the budget to query-relevant text regions using inexpensive embedding scores, without training or an auxiliary transformer forward. To execute these repairs efficiently, a layer-packed executor processes selected states together at each layer while preserving full causal cache access. Across five models, SUR achieves strong recovery in controlled deletion tasks while recomputing only 2-5% of the suffix. On four natural multi-hop QA datasets, it achieves near-full-recompute exact match at a 5% budget with lower post-edit latency. The executor accelerates fragmented refresh by up to 16.1x over interval-wise execution.",
+      "identifiers": [
+        "SemanticScholar:95dc7bea2d2908090a2ce6a998f86e15da255c50"
+      ],
+      "semantic_scholar_id": "95dc7bea2d2908090a2ce6a998f86e15da255c50",
+      "canonical_id": "arXiv:2610.17338",
+      "arxiv_id": "2610.17338",
+      "authors": [
+        "Han Yu",
+        "Wen-Hui Zhu",
+        "Jincheng Cao",
+        "Rui Cai",
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "Xi-Wen Chen",
+        "Hao Wang",
+        "Xuan-Zhao Dong",
+        "Han Shi",
+        "Meng-Lin Zhou",
+        "Shayan Mohajer Hamidi",
+        "Ling-Ning Su",
+        "Mina Razghandi",
+        "Sayan Ghosh",
+        "Qing Lan",
+        "Rohit Jain",
+        "Alborz Geramifard"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "削除された文脈の影響が残るKVキャッシュを、予算内で意味単位ごとに再計算するSemantic-Unit Refreshと層パック実行器で修復し、再計算量2〜5%で遅延を抑えるKVキャッシュ管理の直接的技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HASSLE-free: A unified Framework for Sparse plus Low-Rank Matrix Decomposition for LLMs",
+      "source_url": "https://arxiv.org/abs/2502.00899",
+      "year": 2025,
+      "published": "2025-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The impressive capabilities of large foundation models come at a cost of substantial computing resources to serve them. Compressing these pre-trained models is of practical interest as it can democratize deploying them to the machine learning community at large by lowering the costs associated with inference. A promising compression scheme is to decompose foundation models' dense weights into a sum of sparse plus low-rank matrices. In this paper, we design a unified framework coined HASSLE-free for (semi-structured) sparse plus low-rank matrix decomposition of foundation models. Our framework introduces the local layer-wise reconstruction error objective for this decomposition, we demonstrate that prior work solves a relaxation of this optimization problem; and we provide efficient and scalable methods to minimize the exact introduced optimization problem. HASSLE-free substantially outperforms state-of-the-art methods in terms of the introduced objective and a wide range of LLM evaluation benchmarks. For the Llama3-8B model with a 2:4 sparsity component plus a 64-rank component decomposition, a compression scheme for which recent work shows important inference acceleration on GPUs, HASSLE-free reduces the test perplexity by 12% for the WikiText-2 dataset and reduces the gap (compared to the dense model) of the average of eight popular zero-shot tasks by 15% compared to existing methods.",
+      "identifiers": [
+        "SemanticScholar:eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a"
+      ],
+      "semantic_scholar_id": "eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a",
+      "canonical_id": "arXiv:2502.00899",
+      "arxiv_id": "2502.00899",
+      "doi": "10.48550/arXiv.2502.00899",
+      "authors": [
+        "Mehdi Makni",
+        "Kayhan Behdin",
+        "Zheng Xu",
+        "Natalia Ponomareva",
+        "R. Mazumder"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 657,
+        "matched_prestigious_venue": null
+      },
+      "reason": "基盤モデルの重みを疎行列と低ランク行列の和へ分解するHASSLE-freeは、層ごとの再構成誤差を直接最適化し2:4疎性と64ランク分解でGPU推論加速が見込まれるモデル圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ShishuLM : Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models",
+      "source_url": "https://arxiv.org/abs/2510.13860",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While the transformer architecture has achieved state-of-the-art performance on natural language processing tasks, these models impose substantial memory and computational overhead. Recent research has identified significant architectural redundancies within these models, particularly in the attention sub-layers in the top layers, presenting opportunities for optimization without compromising performance. Taking insights from research on inference-time layer pruning and depth-dependent computation in language models, we introduce an efficient language model architecture referred to as ShishuLM. By replacing full decoder layers at the top of the model with MLP-only blocks, we achieve up to 10-60% improvement in generation latency and 1.3 -5 $\\times$ gain in throughput. Upon further sharing parameters across adjacent MLP-only layers of ShishuLM, we obtain up to 20% savings in memory with minimal degradation in performance. Our findings provide insights towards building more efficient language modeling architectures from a pre-training standpoint by leveraging how information flows in transformers.",
+      "identifiers": [
+        "SemanticScholar:ce4d81618659faf8400bf86a46ff766b62e68ebc"
+      ],
+      "semantic_scholar_id": "ce4d81618659faf8400bf86a46ff766b62e68ebc",
+      "canonical_id": "arXiv:2510.13860",
+      "arxiv_id": "2510.13860",
+      "authors": [
+        "Shivansh Kumar",
+        "Gopalakrishnan Srinivasan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 404,
+        "matched_prestigious_venue": null
+      },
+      "reason": "上位デコーダ層をMLPのみのブロックへ置換し隣接層でパラメータ共有するShishuLMにより、生成遅延を10〜60%改善しスループットを最大5倍にする言語モデル推論効率化アーキテクチャである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a3c6bf7b7852",
+    "round": "libimp-a3c6bf7b7852b832-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a3c6bf7b7852b832-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a3c6bf7b7852b832-pre01.json",
+    "receipt": "sha256:e1629fad97983ecfdec7656b59c6765ddcdf6789d691f2183f97ecde5273dd7f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a3c6bf7b7852",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

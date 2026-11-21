@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AdapShot: Adaptive Many-Shot In-Context Learning with Semantic-Aware KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2605.03644",
+      "year": 2026,
+      "published": "2026-05-05",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many-Shot In-Context Learning (ICL) has emerged as a promising paradigm, leveraging extensive examples to unlock the reasoning potential of Large Language Models (LLMs). However, existing methods typically rely on a predetermined, fixed number of shots. This static approach often fails to adapt to the varying difficulty of different queries, leading to either insufficient context or interference from noise. Furthermore, the prohibitive computational and memory costs of long contexts severely limit Many-Shot's feasibility. To address the above limitations, we propose AdapShot, which dynamically optimizes shot counts and leverages KV cache reuse for efficient inference. Specifically, we design a probe-based evaluation mechanism that utilizes output entropy to determine the optimal number of shots. To bypass the redundant prefilling computation during both the probing and inference phases, we incorporate a semantics-aware KV cache reuse strategy. Within this reuse strategy, to address positional encoding incompatibilities, we introduce a decoupling and re-encoding method that enables the flexible reordering of cached key-value pairs. Extensive experiments demonstrate that AdapShot achieves an average performance gain of around 10% and a 4.64x speedup compared to state-of-the-art DBSA.",
+      "identifiers": [
+        "SemanticScholar:241c0d274016495c8f2e675ce6442b6d0ce9a9a8"
+      ],
+      "semantic_scholar_id": "241c0d274016495c8f2e675ce6442b6d0ce9a9a8",
+      "canonical_id": "arXiv:2605.03644",
+      "arxiv_id": "2605.03644",
+      "doi": "10.18653/v1/2026.acl-long.1990",
+      "authors": [
+        "Jie Ou",
+        "Jin-Yu Guo",
+        "Shiyao Guo",
+        "Yuang Li",
+        "Rui-Qi Wu",
+        "Zhao-Kun Wang",
+        "WenYi Li",
+        "Wen-Hong Tian"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Many-Shot文脈内学習向けに、出力エントロピーによるショット数の適応決定と、位置符号化の分離・再符号化を伴う意味認識型KVキャッシュ再利用を組み合わせ、冗長なプリフィルを避けて4.64倍の高速化を示すKVキャッシュ機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "dLLM-ASR: A Faster Diffusion LLM-based Framework for Speech Recognition",
+      "source_url": "https://arxiv.org/abs/2601.17902",
+      "year": 2026,
+      "published": "2026-01-25",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Automatic speech recognition (ASR) systems based on large language models (LLMs) achieve superior performance by leveraging pretrained LLMs as decoders, but their token-by-token generation mechanism leads to inference latency that grows linearly with sequence length. Meanwhile, discrete diffusion large language models (dLLMs) offer a promising alternative, enabling high-quality parallel sequence generation with pretrained decoders. However, directly applying native text-oriented dLLMs to ASR leads to a fundamental mismatch between open-ended text generation and the acoustically conditioned transcription paradigm required by ASR. As a result, it introduces unnecessary difficulty and computational redundancy, such as denoising from pure noise, inflexible generation lengths, and fixed denoising steps. We propose dLLM-ASR, an efficient dLLM-based ASR framework that formulates dLLM's decoding as a prior-guided and adaptive denoising process. It leverages an ASR prior to initialize the denoising process and provide an anchor for sequence length. Building upon this prior, length-adaptive pruning dynamically removes redundant tokens, while confidence-based denoising allows converged tokens to exit the denoising loop early, enabling token-level adaptive computation. Experiments demonstrate that dLLM-ASR achieves recognition accuracy comparable to autoregressive LLM-based ASR systems and delivers a 4.44$\\times$ inference speedup, establishing a practical and efficient paradigm for ASR.",
+      "identifiers": [
+        "SemanticScholar:3bc5a90583e99c53ae0e36d85825070ef45076ab"
+      ],
+      "semantic_scholar_id": "3bc5a90583e99c53ae0e36d85825070ef45076ab",
+      "canonical_id": "arXiv:2601.17902",
+      "arxiv_id": "2601.17902",
+      "doi": "10.48550/arXiv.2601.17902",
+      "authors": [
+        "Wen-Jie Tian",
+        "Bing-Shen Mu",
+        "Guo-Bin Ma",
+        "Xuelong Geng",
+        "Zhi-Xian Zhao",
+        "Lei Xie"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 300,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMを用いた音声認識向けに、ASR事前情報を初期化に使う事前誘導型の適応的デノイジング、長さ適応プルーニング、収束トークンの早期退出を組み合わせ、自己回帰型LLMベースASRと同等の精度で4.44倍の推論高速化を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment",
+      "source_url": "https://arxiv.org/abs/2607.08029",
+      "year": 2026,
+      "published": "2026-07-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The emergence of vision language models with fewer than 3 billion parameters has accelerated the implementation of on-device multimodal intelligence. However, a detailed understanding of component-wise quantization remains a bottleneck for optimal deployment. This paper presents a systematic evaluation framework for empirically validating five hypotheses across six quantization configurations on the Jetson Orin NX and AGX. By separating the vision encoder, projector, and large language model backbone yields the following results: (1) Quantization sensitivity is governed by the structural paradigm (MoE vs. dense) rather than scale alone, with MoE backbones mitigating INT4 noise where dense backbones degrade; (2) SigLIP encoders incur disproportionate INT8 latency on Jetson Ampere--a deployment-specific encoder-kernel-hardware interaction, not a SigLIP flaw; (3) Although INT4 quantization of LLMs greatly reduces VRAM consumption, it also causes slower token generation due to dequantization overhead; (4) Composite quantization errors are largely additive, except along the modality-alignment path, which is architecture-dependent; (5) The intelligence-per-joule profile varies significantly across platforms owing to memory bandwidth constraints.",
+      "identifiers": [
+        "SemanticScholar:864c65f31a58190788044b0d9fa3ddb0e6f40f41"
+      ],
+      "semantic_scholar_id": "864c65f31a58190788044b0d9fa3ddb0e6f40f41",
+      "canonical_id": "arXiv:2607.08029",
+      "arxiv_id": "2607.08029",
+      "doi": "10.48550/arXiv.2607.08029",
+      "authors": [
+        "Hyeju Shin",
+        "Chorwon Kim",
+        "Ryangsoo Kim",
+        "Hark Yoo",
+        "Jaein Kim"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      },
+      "reason": "3B未満の小規模VLMを対象に、視覚エンコーダ・射影・LLM骨格を分離した構成要素別量子化をJetson Orin上で六構成で計測し、INT4のVRAM削減と逆量子化による生成遅延、MoEと密モデルの感度差などエッジ配備に直結する知見を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Tile-Level Activation Overlap for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.02521",
+      "year": 2026,
+      "published": "2026-05-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "SwiGLU is the dominant MLP activation in modern large language models, yet its intermediate tensor materialization costs 9-37% of MLP execution time. We present two complementary CUTLASS-based SM90 kernels that fuse SwiGLU into GeMM at the tile level. Kernel-1 overlaps Swish computation on the Gate accumulator with Up-tile loading using the Pingpong warp-specialized schedule; Kernel-2 interleaves SwiGLU with tile stores via a custom Epilogue Visitor Tree. Evaluated on Qwen-2.5 models (0.5B-72B) on NVIDIA H100, our kernels achieve up to 2.47x speedup over PyTorch, shifting workloads from memory-bound to compute-bound and reaching 79.5% peak BF16 utilization. We demonstrate that torch.compile cannot replicate this fusion (3-7x slower than our kernels), validating the need for hand-crafted tile-level design. Our fused kernels are also numerically superior, achieving zero mismatches compared to 4.5-11% for cuBLAS.",
+      "identifiers": [
+        "SemanticScholar:8920eeec29ba2c0581e8b167135503549b0b1ccd"
+      ],
+      "semantic_scholar_id": "8920eeec29ba2c0581e8b167135503549b0b1ccd",
+      "canonical_id": "arXiv:2607.02521",
+      "arxiv_id": "2607.02521",
+      "doi": "10.48550/arXiv.2607.02521",
+      "authors": [
+        "Abhinav Jangda",
+        "Tyler Sorensen",
+        "S. Burckhardt",
+        "Jianlan Ye",
+        "Chao-Yin Li",
+        "Atul Gupta"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのMLPで支配的なSwiGLUの中間テンソル実体化コストに対し、CUTLASSベースのSM90カーネルでGeMMのタイル単位にSwish計算を融合・重畳させ、H100上でQwen系モデルに対して高速化と高いBF16利用率を示すカーネル最適化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RequestRouter: Request-Boundary Routing for Efficient Single-GPU LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.23057",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "RequestRouter is a lightweight request-boundary controller for reducing the latency and energy cost of single-GPU large language model inference. Rather than serving all requests with one static configuration, the system uses cheap request-level features to select one fixed inference mode per request, including FP16, quantized inference, speculative decoding, prefix caching, continuous batching, and hybrid modes such as GPTQ plus prefix caching and INT8 plus continuous batching. We evaluate RequestRouter using an 8B instruction-tuned language model served through vLLM on NVIDIA A100 GPUs. Across the full-scale A100 evaluation--26,500 fixed-mode evaluations followed by 3,500 online-controller evaluations, for 30,000 measured inference executions in total--the controller achieves a 2.10x mean latency speedup over FP16 and a 0.48x energy ratio on deployment-style workloads. A smaller matched evaluation with repeated measurements provides a controlled statistical check of this result: RequestRouter retains a 1.93x latency speedup (95% CI: 1.88--1.98x) and a 0.523 energy ratio (95% CI: 0.506--0.540), showing that the gains persist under a more tightly controlled protocol. On a separate expanded automatic benchmark evaluation, the routed policy retains 99.6% of FP16 macro accuracy. A 100,000-call CPU microbenchmark measures only 0.00475 ms mean routing overhead (0.00532 ms p99). Thus, simple request-aware routing can recover substantial serving efficiency without retraining or modifying the underlying LLM.",
+      "identifiers": [
+        "SemanticScholar:e001aaaec588196726e2b3e05f025c0d486d48e3"
+      ],
+      "semantic_scholar_id": "e001aaaec588196726e2b3e05f025c0d486d48e3",
+      "canonical_id": "arXiv:2605.23057",
+      "arxiv_id": "2605.23057",
+      "authors": [
+        "Aman Sunesh",
+        "Ali Alshehhi",
+        "Hivansh Dhakne"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "単一GPUのLLM推論向けに、リクエスト特徴からFP16・量子化・投機的デコード・プレフィックスキャッシュ・連続バッチング等の固定モードをリクエスト境界で選択するRequestRouterをvLLM上で評価し、遅延とエネルギーの改善を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cf8989489370",
+    "round": "libimp-cf8989489370d134-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cf8989489370d134-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cf8989489370d134-pre01.json",
+    "receipt": "sha256:be35d95e824cf082a622f1b06675adf12415d0b11c881272f48e2a0dc9b904da"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cf8989489370",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

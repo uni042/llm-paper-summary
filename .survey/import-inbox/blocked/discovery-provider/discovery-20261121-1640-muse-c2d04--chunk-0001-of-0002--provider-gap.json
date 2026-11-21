@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d04::provider-gap",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 5,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31576",
+      "identity_tokens": [
+        "arXiv:2610.31576",
+        "https://arxiv.org/abs/2610.31576"
+      ],
+      "title": "What Makes a Good Unmasking Policy? A Controlled Study of Learned Unmasking in Diffusion Language Models",
+      "reason": "拡散言語モデルの学習済みアンマスキング方策を教師のコミット可能ラベルや軌跡収縮目標で分析し、LLaDA-8Bで関数評価回数とスループットのフロンティアを改善するデコード手法であり推論高速化に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.31576",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 180
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.15428",
+      "identity_tokens": [
+        "arXiv:2507.15428",
+        "https://arxiv.org/abs/2507.15428"
+      ],
+      "title": "EgoPrune: Efficient Token Pruning for Egomotion Video Reasoning in Embodied Agent",
+      "reason": "一人称動画向けにキーフレーム選択と透視変換による冗長除去、MMR選択を組み合わせた学習不要の視覚トークンプルーニングEgoPruneはFLOPsと遅延を下げJetson Orin NX上の実機推論でも有効性を示している。",
+      "source_url": "https://arxiv.org/abs/2507.15428",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 190
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38521",
+      "identity_tokens": [
+        "arXiv:2609.38521",
+        "https://arxiv.org/abs/2609.38521"
+      ],
+      "title": "ShamAN-Q: Shampoo Augmented NanoQuant for Sub-1-bit LLM Weights",
+      "reason": "NanoQuantの対角再構成をShampoo由来のKronecker Fisher計量によるMahalanobis損失へ置換するShamAN-Qは1ビット未満の学習後量子化でQwen3のperplexityを改善しLLM重み圧縮に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2609.38521",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 195
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20686",
+      "identity_tokens": [
+        "arXiv:2610.20686",
+        "https://arxiv.org/abs/2610.20686"
+      ],
+      "title": "RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention",
+      "reason": "Multi-head Latent Attention向けに部分空間回転と量子化レンジを共同校正するRoLaQは2ビットKVキャッシュを実現し、SGLang実装で同一予算比3.96倍の容量と256K入力で2.51倍のデコードスループットを示す。",
+      "source_url": "https://arxiv.org/abs/2610.20686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 201
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2308.07470",
+      "identity_tokens": [
+        "arXiv:2308.07470",
+        "https://arxiv.org/abs/2308.07470"
+      ],
+      "title": "Symphony: Optimized DNN Model Serving using Deferred Batch Scheduling",
+      "reason": "リクエストのSLOを満たすスケジュール可能ウィンドウまでバッチ投入を遅らせるSymphonyはDNNサービングの遅延バッチスケジューリングでgoodputを5倍にしGPU台数削減とオートスケーリング連携を実現する。",
+      "source_url": "https://arxiv.org/abs/2308.07470",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 204
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d04",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261121-1640-muse-c2d04--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2308.07470",
+    "arXiv:2507.15428",
+    "arXiv:2609.38521",
+    "arXiv:2610.20686",
+    "arXiv:2610.31576"
+  ]
+}
