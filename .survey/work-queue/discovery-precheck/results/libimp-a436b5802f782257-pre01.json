@@ -1,0 +1,317 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a436b5802f782257-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a436b5802f78",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.06803",
+    "arXiv:2610.18862",
+    "arXiv:2611.09225"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "970109f7e459cc2dbbe3f03d82a14ec7f9aed353",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T08:08:41.172554+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.06803",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18862",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.09225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Forest Before Trees: Latent Superposition for Efficient Visual Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.06803",
+      "year": 2026,
+      "published": "2026-01-11",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Chain-of-Thought empowers Large Vision-Language Models with multi-step reasoning, explicit textual rationales suffer from an information bandwidth bottleneck, where continuous visual details are discarded during discrete tokenization. Recent latent reasoning methods attempt to address this challenge, but often fall prey to premature semantic collapse due to rigid autoregressive objectives. In this paper, we propose Laser, a novel paradigm that reformulates visual deduction via Dynamic Windowed Alignment Learning (DWAL). Instead of forcing a point-wise prediction, Laser aligns the latent state with a dynamic validity window of future semantics. This mechanism enforces a\"Forest-before-Trees\"cognitive hierarchy, enabling the model to maintain a probabilistic superposition of global features before narrowing down to local details. Crucially, Laser maintains interpretability via decodable trajectories while stabilizing unconstrained learning via Self-Refined Superposition. Extensive experiments on 6 benchmarks demonstrate that Laser achieves state-of-the-art performance among latent reasoning methods, surpassing the strong baseline Monet by 5.03% on average. Notably, it achieves these gains with extreme efficiency, reducing inference tokens by more than 97%, while demonstrating robust generalization to out-of-distribution domains.",
+      "identifiers": [
+        "SemanticScholar:8c88cf0e8a943a97f62f2851361915e4f1d3b33b"
+      ],
+      "semantic_scholar_id": "8c88cf0e8a943a97f62f2851361915e4f1d3b33b",
+      "canonical_id": "arXiv:2601.06803",
+      "arxiv_id": "2601.06803",
+      "doi": "10.48550/arXiv.2601.06803",
+      "authors": [
+        "Yu-Bo Wang",
+        "Jun-Tian Zhang",
+        "Yichen Wu",
+        "Yankai Lin",
+        "Nils Lukas",
+        "Yuhan Liu"
+      ],
+      "priority": 132,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 132,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 314,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.18862",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models achieve strong performance through long chains of thought (CoT), but often spend more tokens than needed to solve a problem. Existing ways to shorten the CoT require additional training for each model, add a fixed steering vector to the model's hidden states, or use decoding heuristics such as stopping early or banning words like\"wait\", which can reduce accuracy. We propose DoubtLess, a training-free decoding method in which a much smaller reasoning model steers the large one towards brevity. The small model reads the large model's CoT so far twice, once prompted to be brief (the brief thinker) and once prompted to be verbose (the verbose thinker), and the difference between its two logit vectors, scaled by a strength, is added to the large model's logits at every step of the CoT. On seven benchmarks of competition mathematics, graduate-level science and competitive programming, DoubtLess shortens the CoT of Qwen3-32B by 31% with unchanged accuracy, outperforming five inference-time baselines. We also show that DoubtLess reduces thinking tokens per turn by 20% in a self-debugging coding agent with unchanged task performance. It also generalizes to two other model families with unchanged accuracy. When combined with training-based compression, it further shortens the CoT of a model already trained for brevity. Ablations and behavioral analysis show that DoubtLess reduces repeated checking, with most token savings coming after the correct answer first appears in the CoT. Our code is available at https://github.com/leoluolol/DoubtLess.",
+      "identifiers": [
+        "SemanticScholar:c2cd5e6acc6ed31b0d21914fb8a8660639cd00a5"
+      ],
+      "semantic_scholar_id": "c2cd5e6acc6ed31b0d21914fb8a8660639cd00a5",
+      "canonical_id": "arXiv:2610.18862",
+      "arxiv_id": "2610.18862",
+      "authors": [
+        "Minghao Luo",
+        "Liang Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fused-Softmax for efficient quantized attention",
+      "source_url": "https://arxiv.org/abs/2611.09225",
+      "year": 2026,
+      "published": "2026-11-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-precision matrix throughput on modern GPUs is growing far faster than vector-arithmetic throughput. Attention therefore cannot realize the available GEMM performance because softmax has become the pipeline bottleneck. We introduce Fused-Softmax Attention, a training-free algorithm that reformulates and approximates softmax to fold its dominant operations into the attention GEMMs, moving work from vector units to matrix cores. Implemented for the AMD CDNA 4 architecture, our MXFP8, MXFP6 and MXFP4 kernels reach approximately 3.0, 4.0 and 4.6 PFLOP/s on an AMD Instinct MI355X GPU, yielding speedups of $2.1\\times$, $2.8\\times$ and $3.2\\times$ over the BF16 attention. Importantly, the additional error introduced by Fused-Softmax remains below the error floor set by quantizing the GEMM operands. On Wan2.2-T2V-A14B, a hybrid MXFP6/4 schedule delivers up to $2.05\\times$ end-to-end speedup while preserving the visual quality of the outputs. The kernels ship in AMD's open-source AITER library, and they powered AMD's MLPerf Inference v6.1 Wan2.2 submission, which ran $1.7\\times$ faster than AMD's previous-round result on the same hardware. Our results show that redesigning softmax to utilize the matrix pipeline enables attention to capitalize on continued growth in low-precision matrix throughput.",
+      "identifiers": [
+        "SemanticScholar:f07a2545578b386a1e96fd58334192fb3d055c3e"
+      ],
+      "semantic_scholar_id": "f07a2545578b386a1e96fd58334192fb3d055c3e",
+      "canonical_id": "arXiv:2611.09225",
+      "arxiv_id": "2611.09225",
+      "authors": [
+        "Tian-Xin Wu",
+        "Juuso Korhonen",
+        "Jesús Carabaño Bravo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.06803",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.06803",
+        "id:SemanticScholar:8c88cf0e8a943a97f62f2851361915e4f1d3b33b",
+        "id:arXiv:2601.06803",
+        "title:forest before trees latent superposition for efficient visual reasoning",
+        "url:https://arxiv.org/abs/2601.06803"
+      ],
+      "record": {
+        "title": "Forest Before Trees: Latent Superposition for Efficient Visual Reasoning",
+        "source_url": "https://arxiv.org/abs/2601.06803",
+        "year": 2026,
+        "published": "2026-01-11",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Chain-of-Thought empowers Large Vision-Language Models with multi-step reasoning, explicit textual rationales suffer from an information bandwidth bottleneck, where continuous visual details are discarded during discrete tokenization. Recent latent reasoning methods attempt to address this challenge, but often fall prey to premature semantic collapse due to rigid autoregressive objectives. In this paper, we propose Laser, a novel paradigm that reformulates visual deduction via Dynamic Windowed Alignment Learning (DWAL). Instead of forcing a point-wise prediction, Laser aligns the latent state with a dynamic validity window of future semantics. This mechanism enforces a\"Forest-before-Trees\"cognitive hierarchy, enabling the model to maintain a probabilistic superposition of global features before narrowing down to local details. Crucially, Laser maintains interpretability via decodable trajectories while stabilizing unconstrained learning via Self-Refined Superposition. Extensive experiments on 6 benchmarks demonstrate that Laser achieves state-of-the-art performance among latent reasoning methods, surpassing the strong baseline Monet by 5.03% on average. Notably, it achieves these gains with extreme efficiency, reducing inference tokens by more than 97%, while demonstrating robust generalization to out-of-distribution domains.",
+        "identifiers": [
+          "SemanticScholar:8c88cf0e8a943a97f62f2851361915e4f1d3b33b"
+        ],
+        "semantic_scholar_id": "8c88cf0e8a943a97f62f2851361915e4f1d3b33b",
+        "canonical_id": "arXiv:2601.06803",
+        "arxiv_id": "2601.06803",
+        "doi": "10.48550/arXiv.2601.06803",
+        "authors": [
+          "Yu-Bo Wang",
+          "Jun-Tian Zhang",
+          "Yichen Wu",
+          "Yankai Lin",
+          "Nils Lukas",
+          "Yuhan Liu"
+        ],
+        "priority": 132,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 132,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 314,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18862",
+      "identity_tokens": [
+        "id:SemanticScholar:c2cd5e6acc6ed31b0d21914fb8a8660639cd00a5",
+        "id:arXiv:2610.18862",
+        "title:doubtless trainingfree contrastive decoding for efficient reasoning",
+        "url:https://arxiv.org/abs/2610.18862"
+      ],
+      "record": {
+        "title": "DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2610.18862",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning models achieve strong performance through long chains of thought (CoT), but often spend more tokens than needed to solve a problem. Existing ways to shorten the CoT require additional training for each model, add a fixed steering vector to the model's hidden states, or use decoding heuristics such as stopping early or banning words like\"wait\", which can reduce accuracy. We propose DoubtLess, a training-free decoding method in which a much smaller reasoning model steers the large one towards brevity. The small model reads the large model's CoT so far twice, once prompted to be brief (the brief thinker) and once prompted to be verbose (the verbose thinker), and the difference between its two logit vectors, scaled by a strength, is added to the large model's logits at every step of the CoT. On seven benchmarks of competition mathematics, graduate-level science and competitive programming, DoubtLess shortens the CoT of Qwen3-32B by 31% with unchanged accuracy, outperforming five inference-time baselines. We also show that DoubtLess reduces thinking tokens per turn by 20% in a self-debugging coding agent with unchanged task performance. It also generalizes to two other model families with unchanged accuracy. When combined with training-based compression, it further shortens the CoT of a model already trained for brevity. Ablations and behavioral analysis show that DoubtLess reduces repeated checking, with most token savings coming after the correct answer first appears in the CoT. Our code is available at https://github.com/leoluolol/DoubtLess.",
+        "identifiers": [
+          "SemanticScholar:c2cd5e6acc6ed31b0d21914fb8a8660639cd00a5"
+        ],
+        "semantic_scholar_id": "c2cd5e6acc6ed31b0d21914fb8a8660639cd00a5",
+        "canonical_id": "arXiv:2610.18862",
+        "arxiv_id": "2610.18862",
+        "authors": [
+          "Minghao Luo",
+          "Liang Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.09225",
+      "identity_tokens": [
+        "id:SemanticScholar:f07a2545578b386a1e96fd58334192fb3d055c3e",
+        "id:arXiv:2611.09225",
+        "title:fusedsoftmax for efficient quantized attention",
+        "url:https://arxiv.org/abs/2611.09225"
+      ],
+      "record": {
+        "title": "Fused-Softmax for efficient quantized attention",
+        "source_url": "https://arxiv.org/abs/2611.09225",
+        "year": 2026,
+        "published": "2026-11-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-precision matrix throughput on modern GPUs is growing far faster than vector-arithmetic throughput. Attention therefore cannot realize the available GEMM performance because softmax has become the pipeline bottleneck. We introduce Fused-Softmax Attention, a training-free algorithm that reformulates and approximates softmax to fold its dominant operations into the attention GEMMs, moving work from vector units to matrix cores. Implemented for the AMD CDNA 4 architecture, our MXFP8, MXFP6 and MXFP4 kernels reach approximately 3.0, 4.0 and 4.6 PFLOP/s on an AMD Instinct MI355X GPU, yielding speedups of $2.1\\times$, $2.8\\times$ and $3.2\\times$ over the BF16 attention. Importantly, the additional error introduced by Fused-Softmax remains below the error floor set by quantizing the GEMM operands. On Wan2.2-T2V-A14B, a hybrid MXFP6/4 schedule delivers up to $2.05\\times$ end-to-end speedup while preserving the visual quality of the outputs. The kernels ship in AMD's open-source AITER library, and they powered AMD's MLPerf Inference v6.1 Wan2.2 submission, which ran $1.7\\times$ faster than AMD's previous-round result on the same hardware. Our results show that redesigning softmax to utilize the matrix pipeline enables attention to capitalize on continued growth in low-precision matrix throughput.",
+        "identifiers": [
+          "SemanticScholar:f07a2545578b386a1e96fd58334192fb3d055c3e"
+        ],
+        "semantic_scholar_id": "f07a2545578b386a1e96fd58334192fb3d055c3e",
+        "canonical_id": "arXiv:2611.09225",
+        "arxiv_id": "2611.09225",
+        "authors": [
+          "Tian-Xin Wu",
+          "Juuso Korhonen",
+          "Jesús Carabaño Bravo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 15,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e892353bfcc81d1575e09513a79b9010931d95f462c1733d18c7d2ac2915fcde",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

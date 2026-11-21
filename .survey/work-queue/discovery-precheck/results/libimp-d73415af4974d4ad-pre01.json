@@ -1,0 +1,687 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d73415af4974d4ad-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d73415af4974",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2203.00748",
+    "arXiv:2205.14014",
+    "arXiv:2211.04076",
+    "arXiv:2509.17486",
+    "arXiv:2510.03291",
+    "arXiv:2602.11133",
+    "arXiv:2605.01627"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "970109f7e459cc2dbbe3f03d82a14ec7f9aed353",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T08:08:16.819955+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2203.00748",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2205.14014",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2211.04076",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.17486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.03291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.11133",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.01627",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Just on Time: Token-Level Early Stopping for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.11133",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models generate text through iterative refinement, a process that is often computationally inefficient because many tokens reach stability long before the final denoising step. We introduce a training-free, token-level early stopping approach that identifies convergence independently at each position. Our method leverages lightweight signals derived from the model's predictions and local context to dynamically determine when individual tokens can be finalized. This yields adaptive per-token freezing without task-specific fine-tuning, substantially reducing the total number of diffusion steps required. Across diverse benchmarks, spanning mathematical reasoning, general question answering, and scientific understanding, our approach achieves substantial efficiency gains while preserving generation quality.",
+      "identifiers": [
+        "SemanticScholar:67f0049deb667e8c4092a21340020a95814026ed"
+      ],
+      "semantic_scholar_id": "67f0049deb667e8c4092a21340020a95814026ed",
+      "canonical_id": "arXiv:2602.11133",
+      "arxiv_id": "2602.11133",
+      "doi": "10.48550/arXiv.2602.11133",
+      "authors": [
+        "Zakhar Kohut",
+        "Severyn Shykula",
+        "Mykola Vysotskyi",
+        "Serhii Dmytryshyn",
+        "Дмитро Хамула",
+        "Michal Zakrzewski",
+        "Damian Rynczak",
+        "Jacek Małecki",
+        "Taras Rumezhak",
+        "Volodymyr Karpiv"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "E-LANG: Energy-Based Joint Inferencing of Super and Swift Language Models",
+      "source_url": "https://arxiv.org/abs/2203.00748",
+      "year": 2022,
+      "published": "2022-03-01",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Building huge and highly capable language models has been a trend in the past years. Despite their great performance, they incur high computational cost. A common solution is to apply model compression or choose light-weight architectures, which often need a separate fixed-size model for each desirable computational budget, and may lose performance in case of heavy compression. This paper proposes an effective dynamic inference approach, called E-LANG, which distributes the inference between large accurate Super-models and light-weight Swift models. To this end, a decision making module routes the inputs to Super or Swift models based on the energy characteristics of the representations in the latent space. This method is easily adoptable and architecture agnostic. As such, it can be applied to black-box pre-trained models without a need for architectural manipulations, reassembling of modules, or re-training. Unlike existing methods that are only applicable to encoder-only backbones and classification tasks, our method also works for encoder-decoder structures and sequence-to-sequence tasks such as translation. The E-LANG performance is verified through a set of experiments with T5 and BERT backbones on GLUE, SuperGLUE, and WMT. In particular, we outperform T5-11B with an average computations speed-up of 3.3X on GLUE and 2.9X on SuperGLUE. We also achieve BERT-based SOTA on GLUE with 3.2X less computations. Code and demo are available in supplementary materials.",
+      "identifiers": [
+        "SemanticScholar:3a56263ab3f6301b3696631551bb2032676a2d28"
+      ],
+      "semantic_scholar_id": "3a56263ab3f6301b3696631551bb2032676a2d28",
+      "canonical_id": "arXiv:2203.00748",
+      "arxiv_id": "2203.00748",
+      "doi": "10.48550/arXiv.2203.00748",
+      "authors": [
+        "Mohammad Akbari",
+        "Amin Banitalebi-Dehkordi",
+        "Yong Zhang"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1726,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "What Dense Graph Do You Need for Self-Attention?",
+      "source_url": "https://arxiv.org/abs/2205.14014",
+      "year": 2022,
+      "published": "2022-05-27",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have made progress in miscellaneous tasks, but suffer from quadratic computational and memory complexities. Recent works propose sparse Transformers with attention on sparse graphs to reduce complexity and remain strong performance. While effective, the crucial parts of how dense a graph needs to be to perform well are not fully explored. In this paper, we propose Normalized Information Payload (NIP), a graph scoring function measuring information transfer on graph, which provides an analysis tool for trade-offs between performance and complexity. Guided by this theoretical analysis, we present Hypercube Transformer, a sparse Transformer that models token interactions in a hypercube and shows comparable or even better results with vanilla Transformer while yielding $O(N\\log N)$ complexity with sequence length $N$. Experiments on tasks requiring various sequence lengths lay validation for our graph function well.",
+      "identifiers": [
+        "SemanticScholar:13f10195d2a24fea28c0ea57cbd393aa76256c26"
+      ],
+      "semantic_scholar_id": "13f10195d2a24fea28c0ea57cbd393aa76256c26",
+      "canonical_id": "arXiv:2205.14014",
+      "arxiv_id": "2205.14014",
+      "doi": "10.48550/arXiv.2205.14014",
+      "authors": [
+        "Yu-Xin Wang",
+        "Chul Lee",
+        "Qipeng Guo",
+        "Zhangyue Yin",
+        "Yunhua Zhou",
+        "Xuanjing Huang",
+        "Xipeng Qiu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1639,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation",
+      "source_url": "https://arxiv.org/abs/2509.17486",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation improves the factual accuracy of Large Language Models (LLMs) by incorporating external context, but often suffers from irrelevant retrieved content that hinders effectiveness. Context compression addresses this issue by filtering out irrelevant information from context before LLM generation. However, existing methods struggle to adaptively adjust compression rates for different context, maintain low latency and integrate information across multiple documents. To overcome these limitations, We introduce AttnComp, an adaptive, efficient and context-aware compression framework. By leveraging the attention mechanism of LLMs to identify relevant information, AttnComp employs a Top-P compression algorithm to retain the minimal set of documents whose cumulative attention weights exceeds a predefined threshold. In addition to compression, AttnComp estimates response confidence by assessing the overall relevance of the retrieved content, enabling users to gauge response reliability. Experiments demonstrate that AttnComp outperforms existing compression methods and uncompressed baselines, achieving higher accuracy with substantial compression rates and lower latency.",
+      "identifiers": [
+        "SemanticScholar:4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f"
+      ],
+      "semantic_scholar_id": "4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f",
+      "canonical_id": "arXiv:2509.17486",
+      "arxiv_id": "2509.17486",
+      "doi": "10.48550/arXiv.2509.17486",
+      "authors": [
+        "Lvzhou Luo",
+        "Yixuan Cao",
+        "Ping Luo"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 425,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Importance-Guided Basis Selection for Low-Rank Decomposition of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.01627",
+      "year": 2026,
+      "published": "2026-05-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank decomposition is a compelling approach for compressing large language models, but its effectiveness hinges on selecting which singular-vector bases to retain for a target task. Existing methods such as Basel adapt singular-value coefficients on downstream data and prune bases with small re-learned magnitudes, a heuristic that can be misaligned with task performance because it ignores the local geometry of the loss landscape. We present Basis Selection with Importance (BSI), a principled low-rank compression framework that ranks and prunes bases by directly estimating the expected loss increase incurred when each basis is removed. BSI derives a derivative-based importance score from a second-order Taylor expansion of the task loss with respect to singular values, combining first-order sensitivity and second-order curvature to quantify pruning impact. To make this criterion practical for LLMs, we develop an efficient Hessian-diagonal estimator by adapting the Hutchinson randomized-probing method to loss curvature with symmetric parameter perturbations. We provide a comprehensive theoretical analysis, including loss-increase bounds under basis pruning, explicit propagation of Hessian-diagonal estimation error into these bounds, variance characterization tied to the Hessian spectrum, high-probability sample-complexity guarantees for achieving a target estimation accuracy, and guidance on perturbation intensity. Extensive experiments on mathematical reasoning benchmarks demonstrate that BSI consistently outperforms state-of-the-art low-rank decomposition baselines, with especially strong improvements under deep compression.",
+      "identifiers": [
+        "SemanticScholar:b6bc5149d03b188998e7d07fa6ccdade2867b50a"
+      ],
+      "semantic_scholar_id": "b6bc5149d03b188998e7d07fa6ccdade2867b50a",
+      "canonical_id": "arXiv:2605.01627",
+      "arxiv_id": "2605.01627",
+      "doi": "10.48550/arXiv.2605.01627",
+      "authors": [
+        "Daniel Agyei Asante",
+        "Er-Nie Chang",
+        "Yang Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Linear Self-attention Approximation via Trainable Feedforward Kernel",
+      "source_url": "https://arxiv.org/abs/2211.04076",
+      "year": 2022,
+      "published": "2022-11-08",
+      "venue": "International Conference on Artificial Neural Networks",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In pursuit of faster computation, Efficient Transformers demonstrate an impressive variety of approaches -- models attaining sub-quadratic attention complexity can utilize a notion of sparsity or a low-rank approximation of inputs to reduce the number of attended keys; other ways to reduce complexity include locality-sensitive hashing, key pooling, additional memory to store information in compacted or hybridization with other architectures, such as CNN. Often based on a strong mathematical basis, kernelized approaches allow for the approximation of attention with linear complexity while retaining high accuracy. Therefore, in the present paper, we aim to expand the idea of trainable kernel methods to approximate the self-attention mechanism of the Transformer architecture.",
+      "identifiers": [
+        "SemanticScholar:b6c0a5190a26f6519d039999d0880b22430f4e10"
+      ],
+      "semantic_scholar_id": "b6c0a5190a26f6519d039999d0880b22430f4e10",
+      "canonical_id": "arXiv:2211.04076",
+      "arxiv_id": "2211.04076",
+      "doi": "10.1007/978-3-031-15934-3_67",
+      "authors": [
+        "Uladzislau Yorsh",
+        "Alexander Kovalenko"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1474,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UniPruning: Unifying Local Metric and Global Feedback for Scalable Sparse LLMs",
+      "source_url": "https://arxiv.org/abs/2510.03291",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) achieve strong performance across diverse tasks but face prohibitive computational and memory costs. Pruning offers a promising path by inducing sparsity while preserving architectural flexibility. However, existing methods struggle to balance efficiency and robustness: local metric approaches prune layer by layer but often collapse under high sparsity, whereas global feedback methods enforce consistency at the cost of expensive weight updates or restrictive semi-structured formats. We present UniPruning, a unified post-training pruning framework that combines the speed of local saliency metrics with the stability of global coordination, enabled by a mirror descent based optimization, all without updating model weights. UniPruning leverages fast layer-wise scoring and a lightweight global controller to allocate a single sparsity budget, supporting both unstructured and semi-structured N :M pruning within one framework. After a brief calibration, it can generate pruning masks for arbitrary sparsity levels in one shot, and adapts seamlessly to hardware-aware constraints. Extensive experiments on multiple pretrained LLM families and standard benchmarks show that UniPruning consistently delivers competitive or superior perplexity and zero-shot accuracy. Ablation studies further highlight the importance of mirror descent and local saliency anchoring. Overall, UniPruning provides an efficient, principled, and scalable solution for sparsifying large-scale LLMs. Our code is available at: https://github.com/RainbowQTT/UniPruning.",
+      "identifiers": [
+        "SemanticScholar:ac9c2c1da800d5b2cbb2eba6f7556f54ece612da"
+      ],
+      "semantic_scholar_id": "ac9c2c1da800d5b2cbb2eba6f7556f54ece612da",
+      "canonical_id": "arXiv:2510.03291",
+      "arxiv_id": "2510.03291",
+      "doi": "10.48550/arXiv.2510.03291",
+      "authors": [
+        "Yi-Zhuo Ding",
+        "Wan-Ying Qu",
+        "Jia-Wei Geng",
+        "Wen-Qi Shao",
+        "Yan-Wei Fu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 418,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.11133",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.11133",
+        "id:SemanticScholar:67f0049deb667e8c4092a21340020a95814026ed",
+        "id:arXiv:2602.11133",
+        "title:just on time tokenlevel early stopping for diffusion language models",
+        "url:https://arxiv.org/abs/2602.11133"
+      ],
+      "record": {
+        "title": "Just on Time: Token-Level Early Stopping for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2602.11133",
+        "year": 2026,
+        "published": "2026-02-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models generate text through iterative refinement, a process that is often computationally inefficient because many tokens reach stability long before the final denoising step. We introduce a training-free, token-level early stopping approach that identifies convergence independently at each position. Our method leverages lightweight signals derived from the model's predictions and local context to dynamically determine when individual tokens can be finalized. This yields adaptive per-token freezing without task-specific fine-tuning, substantially reducing the total number of diffusion steps required. Across diverse benchmarks, spanning mathematical reasoning, general question answering, and scientific understanding, our approach achieves substantial efficiency gains while preserving generation quality.",
+        "identifiers": [
+          "SemanticScholar:67f0049deb667e8c4092a21340020a95814026ed"
+        ],
+        "semantic_scholar_id": "67f0049deb667e8c4092a21340020a95814026ed",
+        "canonical_id": "arXiv:2602.11133",
+        "arxiv_id": "2602.11133",
+        "doi": "10.48550/arXiv.2602.11133",
+        "authors": [
+          "Zakhar Kohut",
+          "Severyn Shykula",
+          "Mykola Vysotskyi",
+          "Serhii Dmytryshyn",
+          "Дмитро Хамула",
+          "Michal Zakrzewski",
+          "Damian Rynczak",
+          "Jacek Małecki",
+          "Taras Rumezhak",
+          "Volodymyr Karpiv"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 283,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.00748",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2203.00748",
+        "id:SemanticScholar:3a56263ab3f6301b3696631551bb2032676a2d28",
+        "id:arXiv:2203.00748",
+        "title:elang energybased joint inferencing of super and swift language models",
+        "url:https://arxiv.org/abs/2203.00748"
+      ],
+      "record": {
+        "title": "E-LANG: Energy-Based Joint Inferencing of Super and Swift Language Models",
+        "source_url": "https://arxiv.org/abs/2203.00748",
+        "year": 2022,
+        "published": "2022-03-01",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Building huge and highly capable language models has been a trend in the past years. Despite their great performance, they incur high computational cost. A common solution is to apply model compression or choose light-weight architectures, which often need a separate fixed-size model for each desirable computational budget, and may lose performance in case of heavy compression. This paper proposes an effective dynamic inference approach, called E-LANG, which distributes the inference between large accurate Super-models and light-weight Swift models. To this end, a decision making module routes the inputs to Super or Swift models based on the energy characteristics of the representations in the latent space. This method is easily adoptable and architecture agnostic. As such, it can be applied to black-box pre-trained models without a need for architectural manipulations, reassembling of modules, or re-training. Unlike existing methods that are only applicable to encoder-only backbones and classification tasks, our method also works for encoder-decoder structures and sequence-to-sequence tasks such as translation. The E-LANG performance is verified through a set of experiments with T5 and BERT backbones on GLUE, SuperGLUE, and WMT. In particular, we outperform T5-11B with an average computations speed-up of 3.3X on GLUE and 2.9X on SuperGLUE. We also achieve BERT-based SOTA on GLUE with 3.2X less computations. Code and demo are available in supplementary materials.",
+        "identifiers": [
+          "SemanticScholar:3a56263ab3f6301b3696631551bb2032676a2d28"
+        ],
+        "semantic_scholar_id": "3a56263ab3f6301b3696631551bb2032676a2d28",
+        "canonical_id": "arXiv:2203.00748",
+        "arxiv_id": "2203.00748",
+        "doi": "10.48550/arXiv.2203.00748",
+        "authors": [
+          "Mohammad Akbari",
+          "Amin Banitalebi-Dehkordi",
+          "Yong Zhang"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1726,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2205.14014",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2205.14014",
+        "id:SemanticScholar:13f10195d2a24fea28c0ea57cbd393aa76256c26",
+        "id:arXiv:2205.14014",
+        "title:what dense graph do you need for selfattention",
+        "url:https://arxiv.org/abs/2205.14014"
+      ],
+      "record": {
+        "title": "What Dense Graph Do You Need for Self-Attention?",
+        "source_url": "https://arxiv.org/abs/2205.14014",
+        "year": 2022,
+        "published": "2022-05-27",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have made progress in miscellaneous tasks, but suffer from quadratic computational and memory complexities. Recent works propose sparse Transformers with attention on sparse graphs to reduce complexity and remain strong performance. While effective, the crucial parts of how dense a graph needs to be to perform well are not fully explored. In this paper, we propose Normalized Information Payload (NIP), a graph scoring function measuring information transfer on graph, which provides an analysis tool for trade-offs between performance and complexity. Guided by this theoretical analysis, we present Hypercube Transformer, a sparse Transformer that models token interactions in a hypercube and shows comparable or even better results with vanilla Transformer while yielding $O(N\\log N)$ complexity with sequence length $N$. Experiments on tasks requiring various sequence lengths lay validation for our graph function well.",
+        "identifiers": [
+          "SemanticScholar:13f10195d2a24fea28c0ea57cbd393aa76256c26"
+        ],
+        "semantic_scholar_id": "13f10195d2a24fea28c0ea57cbd393aa76256c26",
+        "canonical_id": "arXiv:2205.14014",
+        "arxiv_id": "2205.14014",
+        "doi": "10.48550/arXiv.2205.14014",
+        "authors": [
+          "Yu-Xin Wang",
+          "Chul Lee",
+          "Qipeng Guo",
+          "Zhangyue Yin",
+          "Yunhua Zhou",
+          "Xuanjing Huang",
+          "Xipeng Qiu"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1639,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.17486",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.17486",
+        "id:SemanticScholar:4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f",
+        "id:arXiv:2509.17486",
+        "title:attncomp attentionguided adaptive context compression for retrievalaugmented generation",
+        "url:https://arxiv.org/abs/2509.17486"
+      ],
+      "record": {
+        "title": "AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation",
+        "source_url": "https://arxiv.org/abs/2509.17486",
+        "year": 2025,
+        "published": "2025-09-22",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation improves the factual accuracy of Large Language Models (LLMs) by incorporating external context, but often suffers from irrelevant retrieved content that hinders effectiveness. Context compression addresses this issue by filtering out irrelevant information from context before LLM generation. However, existing methods struggle to adaptively adjust compression rates for different context, maintain low latency and integrate information across multiple documents. To overcome these limitations, We introduce AttnComp, an adaptive, efficient and context-aware compression framework. By leveraging the attention mechanism of LLMs to identify relevant information, AttnComp employs a Top-P compression algorithm to retain the minimal set of documents whose cumulative attention weights exceeds a predefined threshold. In addition to compression, AttnComp estimates response confidence by assessing the overall relevance of the retrieved content, enabling users to gauge response reliability. Experiments demonstrate that AttnComp outperforms existing compression methods and uncompressed baselines, achieving higher accuracy with substantial compression rates and lower latency.",
+        "identifiers": [
+          "SemanticScholar:4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f"
+        ],
+        "semantic_scholar_id": "4b39c5af6be0fe1731bd4add77b5f4e1d6340a7f",
+        "canonical_id": "arXiv:2509.17486",
+        "arxiv_id": "2509.17486",
+        "doi": "10.48550/arXiv.2509.17486",
+        "authors": [
+          "Lvzhou Luo",
+          "Yixuan Cao",
+          "Ping Luo"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 425,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.01627",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.01627",
+        "id:SemanticScholar:b6bc5149d03b188998e7d07fa6ccdade2867b50a",
+        "id:arXiv:2605.01627",
+        "title:importanceguided basis selection for lowrank decomposition of large language models",
+        "url:https://arxiv.org/abs/2605.01627"
+      ],
+      "record": {
+        "title": "Importance-Guided Basis Selection for Low-Rank Decomposition of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.01627",
+        "year": 2026,
+        "published": "2026-05-02",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-rank decomposition is a compelling approach for compressing large language models, but its effectiveness hinges on selecting which singular-vector bases to retain for a target task. Existing methods such as Basel adapt singular-value coefficients on downstream data and prune bases with small re-learned magnitudes, a heuristic that can be misaligned with task performance because it ignores the local geometry of the loss landscape. We present Basis Selection with Importance (BSI), a principled low-rank compression framework that ranks and prunes bases by directly estimating the expected loss increase incurred when each basis is removed. BSI derives a derivative-based importance score from a second-order Taylor expansion of the task loss with respect to singular values, combining first-order sensitivity and second-order curvature to quantify pruning impact. To make this criterion practical for LLMs, we develop an efficient Hessian-diagonal estimator by adapting the Hutchinson randomized-probing method to loss curvature with symmetric parameter perturbations. We provide a comprehensive theoretical analysis, including loss-increase bounds under basis pruning, explicit propagation of Hessian-diagonal estimation error into these bounds, variance characterization tied to the Hessian spectrum, high-probability sample-complexity guarantees for achieving a target estimation accuracy, and guidance on perturbation intensity. Extensive experiments on mathematical reasoning benchmarks demonstrate that BSI consistently outperforms state-of-the-art low-rank decomposition baselines, with especially strong improvements under deep compression.",
+        "identifiers": [
+          "SemanticScholar:b6bc5149d03b188998e7d07fa6ccdade2867b50a"
+        ],
+        "semantic_scholar_id": "b6bc5149d03b188998e7d07fa6ccdade2867b50a",
+        "canonical_id": "arXiv:2605.01627",
+        "arxiv_id": "2605.01627",
+        "doi": "10.48550/arXiv.2605.01627",
+        "authors": [
+          "Daniel Agyei Asante",
+          "Er-Nie Chang",
+          "Yang Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 203,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2211.04076",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-15934-3_67",
+        "id:SemanticScholar:b6c0a5190a26f6519d039999d0880b22430f4e10",
+        "id:arXiv:2211.04076",
+        "title:linear selfattention approximation via trainable feedforward kernel",
+        "url:https://arxiv.org/abs/2211.04076"
+      ],
+      "record": {
+        "title": "Linear Self-attention Approximation via Trainable Feedforward Kernel",
+        "source_url": "https://arxiv.org/abs/2211.04076",
+        "year": 2022,
+        "published": "2022-11-08",
+        "venue": "International Conference on Artificial Neural Networks",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In pursuit of faster computation, Efficient Transformers demonstrate an impressive variety of approaches -- models attaining sub-quadratic attention complexity can utilize a notion of sparsity or a low-rank approximation of inputs to reduce the number of attended keys; other ways to reduce complexity include locality-sensitive hashing, key pooling, additional memory to store information in compacted or hybridization with other architectures, such as CNN. Often based on a strong mathematical basis, kernelized approaches allow for the approximation of attention with linear complexity while retaining high accuracy. Therefore, in the present paper, we aim to expand the idea of trainable kernel methods to approximate the self-attention mechanism of the Transformer architecture.",
+        "identifiers": [
+          "SemanticScholar:b6c0a5190a26f6519d039999d0880b22430f4e10"
+        ],
+        "semantic_scholar_id": "b6c0a5190a26f6519d039999d0880b22430f4e10",
+        "canonical_id": "arXiv:2211.04076",
+        "arxiv_id": "2211.04076",
+        "doi": "10.1007/978-3-031-15934-3_67",
+        "authors": [
+          "Uladzislau Yorsh",
+          "Alexander Kovalenko"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1474,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.03291",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.03291",
+        "id:SemanticScholar:ac9c2c1da800d5b2cbb2eba6f7556f54ece612da",
+        "id:arXiv:2510.03291",
+        "title:unipruning unifying local metric and global feedback for scalable sparse llms",
+        "url:https://arxiv.org/abs/2510.03291"
+      ],
+      "record": {
+        "title": "UniPruning: Unifying Local Metric and Global Feedback for Scalable Sparse LLMs",
+        "source_url": "https://arxiv.org/abs/2510.03291",
+        "year": 2025,
+        "published": "2025-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) achieve strong performance across diverse tasks but face prohibitive computational and memory costs. Pruning offers a promising path by inducing sparsity while preserving architectural flexibility. However, existing methods struggle to balance efficiency and robustness: local metric approaches prune layer by layer but often collapse under high sparsity, whereas global feedback methods enforce consistency at the cost of expensive weight updates or restrictive semi-structured formats. We present UniPruning, a unified post-training pruning framework that combines the speed of local saliency metrics with the stability of global coordination, enabled by a mirror descent based optimization, all without updating model weights. UniPruning leverages fast layer-wise scoring and a lightweight global controller to allocate a single sparsity budget, supporting both unstructured and semi-structured N :M pruning within one framework. After a brief calibration, it can generate pruning masks for arbitrary sparsity levels in one shot, and adapts seamlessly to hardware-aware constraints. Extensive experiments on multiple pretrained LLM families and standard benchmarks show that UniPruning consistently delivers competitive or superior perplexity and zero-shot accuracy. Ablation studies further highlight the importance of mirror descent and local saliency anchoring. Overall, UniPruning provides an efficient, principled, and scalable solution for sparsifying large-scale LLMs. Our code is available at: https://github.com/RainbowQTT/UniPruning.",
+        "identifiers": [
+          "SemanticScholar:ac9c2c1da800d5b2cbb2eba6f7556f54ece612da"
+        ],
+        "semantic_scholar_id": "ac9c2c1da800d5b2cbb2eba6f7556f54ece612da",
+        "canonical_id": "arXiv:2510.03291",
+        "arxiv_id": "2510.03291",
+        "doi": "10.48550/arXiv.2510.03291",
+        "authors": [
+          "Yi-Zhuo Ding",
+          "Wan-Ying Qu",
+          "Jia-Wei Geng",
+          "Wen-Qi Shao",
+          "Yan-Wei Fu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 418,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:126af30267a8917b4aa40a1731b6b47ed431043c2386e079f2ca526f20ce7ed0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

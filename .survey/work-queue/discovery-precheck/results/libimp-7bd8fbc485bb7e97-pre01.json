@@ -1,0 +1,782 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7bd8fbc485bb7e97-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7bd8fbc485bb",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2312.10193",
+    "arXiv:2507.00715",
+    "arXiv:2602.11008",
+    "arXiv:2603.29813",
+    "arXiv:2604.06798",
+    "arXiv:2609.04238",
+    "arXiv:2609.38006",
+    "arXiv:2611.04671"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "970109f7e459cc2dbbe3f03d82a14ec7f9aed353",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T08:08:16.964400+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2312.10193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.00715",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.11008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.29813",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.06798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.04238",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38006",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.04671",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ROCKET: Rapid Optimization via Calibration-guided Knapsack Enhanced Truncation for Efficient Model Compression",
+      "source_url": "https://arxiv.org/abs/2602.11008",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present ROCKET, a training-free model compression method that achieves state-of-the-art performance in comparison with factorization, structured-sparsification and dynamic compression baselines. Operating under a global compression budget, ROCKET comprises two key innovations: First, it formulates layer-wise compression allocation as a multi-choice knapsack problem, selecting the optimal compression level for each layer to minimize total reconstruction error while adhering to a target model size. Second, it introduces a single-step sparse matrix factorization inspired by dictionary learning: using only a small calibration set, it sparsifies weight coefficients based on activation-weights sensitivity and then updates the dictionary in closed form via least squares bypassing iterative optimization, sparse coding, or backpropagation entirely. ROCKET consistently outperforms existing compression approaches across different model architectures at 20-50\\% compression rates. Notably, it retains over 90\\% of the original model's performance at 30\\% compression without any fine-tuning. Moreover, when applying a light fine-tuning phase, recovery is substantially enhanced: for instance, compressing Qwen3-14B to an 8B-parameter model and healing it with just 30 million tokens yields performance nearly on par with the original Qwen3-8B. The code for ROCKET is at github.com/mts-ai/ROCKET/tree/main.",
+      "identifiers": [
+        "SemanticScholar:7bd8bb482b3826efb57ec2a9efca03ece9a3a025"
+      ],
+      "semantic_scholar_id": "7bd8bb482b3826efb57ec2a9efca03ece9a3a025",
+      "canonical_id": "arXiv:2602.11008",
+      "arxiv_id": "2602.11008",
+      "doi": "10.48550/arXiv.2602.11008",
+      "authors": [
+        "Ammar Ali",
+        "Baher Mohammad",
+        "Denis Makhov",
+        "Dmitriy Shopkhoev",
+        "Magauiya Zhussip",
+        "Stamatios Lefkimmiatis"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoBiE: Efficient Inference of Mixture of Binary Experts under Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2604.06798",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) based large language models (LLMs) offer strong performance but suffer from high memory and computation costs. Weight binarization provides extreme efficiency, yet existing binary methods designed for dense LLMs struggle with MoE-specific issues, including cross-expert redundancy, task-agnostic importance estimation, and quantization-induced routing shifts. To this end, we propose MoBiE, the first binarization framework tailored for MoE-based LLMs. MoBiE is built on three core innovations: 1. using joint SVD decomposition to reduce cross-expert redundancy; 2. integrating global loss gradients into local Hessian metrics to enhance weight importance estimation; 3. introducing an error constraint guided by the input null space to mitigate routing distortion. Notably, MoBiE achieves these optimizations while incurring no additional storage overhead, striking a balance between efficiency and model performance. Extensive experiments demonstrate that MoBiE consistently outperforms state-of-the-art binary methods across multiple MoE-based LLMs and benchmarks. For example, on Qwen3-30B-A3B, MoBiE reduces perplexity by 52.2$\\%$, improves average zero-shot performance by 43.4$\\%$, achieves over 2 $\\times$ inference speedup, and further shortens quantization time. The code is available at https://github.com/Kishon-zzx/MoBiE.",
+      "identifiers": [
+        "SemanticScholar:a50efb7cdaaaaf5e57100599bd017908755d7f0a"
+      ],
+      "semantic_scholar_id": "a50efb7cdaaaaf5e57100599bd017908755d7f0a",
+      "canonical_id": "arXiv:2604.06798",
+      "arxiv_id": "2604.06798",
+      "doi": "10.48550/arXiv.2604.06798",
+      "authors": [
+        "Zhi-Xiong Zhao",
+        "Zu-Kang Xu",
+        "Zhi-Xuan Chen",
+        "Da-Wei Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compiling Code LLMs into Lightweight Executables",
+      "source_url": "https://arxiv.org/abs/2603.29813",
+      "year": 2026,
+      "published": "2026-03-31",
+      "venue": "Proc. ACM Softw. Eng.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The demand for better prediction accuracy and higher execution performance in neural networks continues to grow. The emergence and success of Large Language Models (LLMs) have produced many cloud-based tools for software engineering tasks such as code suggestion. Although effective, cloud deployment raises concerns over privacy, latency, and reliance on network connectivity. Running LLMs locally on personal devices such as laptops would address these issues, because it enables offline use and reduces response time. However, local deployment is challenging, since commodity devices lack high-performance accelerators such as GPUs and are constrained by limited memory and compute capacity, which makes it hard to execute large models efficiently. We present Ditto, a framework that optimizes both the model size of Code LLMs and the inference programs that execute them, with a focus on statically-typed languages such as C. Our approach integrates two components. The first is a quantization technique inspired by product quantization, which groups model parameters into per-block codebooks via K-Means clustering and stores each weight as a bit-packed low-bitwidth index. The quantizer further supports a mixed-precision mode that keeps a small number of sensitivity-critical tensors in float32. The second component is a compilation pass integrated into LLVM that automatically detects and replaces unoptimized General Matrix-Vector Multiplication (GEMV) operations, which are the most computationally intensive part of code models, with calls into Basic Linear Algebra Subprograms (BLAS) libraries that are highly optimized for the target hardware. The output of Ditto is a compiled executable that runs the selected Code LLM on commodity hardware. We evaluate Ditto on three popular Code LLMs, namely Code Llama, MagicCoder, and OpenCodeInterpreter, achieving up to 10.5× faster inference, 6.4× lower memory usage, and 10.5× lower energy consumption compared with their original inference pipelines, while preserving accuracy close to the full-precision models, with an average loss of only 0.27% in pass@1. Ditto also outperforms the state-of-the-art int8 quantization baseline, achieving up to 6.96% higher pass@1 accuracy, 2.2× speedup, and 1.6× memory reduction, which demonstrates the effectiveness of our approach.",
+      "identifiers": [
+        "SemanticScholar:c82a2aefa789ba07fa47334937c8290c58c23fd8"
+      ],
+      "semantic_scholar_id": "c82a2aefa789ba07fa47334937c8290c58c23fd8",
+      "canonical_id": "arXiv:2603.29813",
+      "arxiv_id": "2603.29813",
+      "doi": "10.1145/3808196",
+      "authors": [
+        "Jie-Ke Shi",
+        "Jun-Da He",
+        "Zhou Yang",
+        "Cheng-Ran Yang",
+        "M. Klymenko",
+        "T. Hoàng",
+        "S. Xu",
+        "Zhen-Chang Xing",
+        "David Lo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Budgeting Bytes: A Windowed Storage Roofline and Dual-Budget Architecture Ablations for Storage-Bound LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.04238",
+      "year": 2026,
+      "published": "2026-07-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding on cheap hardware is bound not by FLOPs but by the bytes each generated token must move across the slowest populated tier of a memory hierarchy. We treat bytes-per-token as a first-class design axis, organized by an address-determinism taxonomy that classifies parameters by when their fetch address becomes known during a token's forward pass (A0: at token sampling; A1: before attention; A2: layerwise data-dependent; A3: always read). This reduces prefetch scheduling to single-machine feasibility with release times, yielding a closed-form windowed roofline. We run dual-budget (bytes-per-token times storage) ablations across three sub-100M scales, then take the framework to real large-MoE deployment and report a substantial negative result the roofline predicts: on an 8GB edge board running Qwen3-30B-A3B (4-bit, 18GB), the model overflows RAM and decode is pinned at the eMMC bandwidth ceiling; predictive expert prefetch does not help -- not temporal-locality prefetch (net-negative), not even a trace-driven oracle with perfect prediction -- because the binding constraint is byte volume over a saturated bus, which prefetch cannot reduce. The lever that works is reducing bytes-per-token until the model fits the fast tier: quantized to fit a 16GB unified-memory device, the same model runs GPU-resident at 11.5 tok/s (22x). We reconcile this with GPU-serving expert-prefetch predictors: a frozen-model probe predicts Qwen3-30B routing from the pre-attention state at 91.2%, a scale-invariant predictability property, but this converts to throughput only where the fast tier caches most of the model and per-token transfer is comparable to compute -- measured to hold on an A100 PCIe-offload path and to fail on bandwidth-walled edge storage. Predictability is not speedup; we chart where the gap closes.",
+      "identifiers": [
+        "SemanticScholar:1b18672e495f2bf8a45476fb291a5bc2bdbf6158"
+      ],
+      "semantic_scholar_id": "1b18672e495f2bf8a45476fb291a5bc2bdbf6158",
+      "canonical_id": "arXiv:2609.04238",
+      "arxiv_id": "2609.04238",
+      "doi": "10.48550/arXiv.2609.04238",
+      "authors": [
+        "Hanhaodi Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 115,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens",
+      "source_url": "https://arxiv.org/abs/2507.00715",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model-based generative recommendation (LLMRec) has achieved notable success, but it suffers from high inference latency due to massive computational overhead and memory pressure of KV Cache. Existing KV Cache reduction methods face critical limitations: cache compression offers marginal acceleration given recommendation tasks' short decoding steps, while prompt compression risks discarding vital interaction history. Through systematic analysis of attention patterns in LLMRec, we uncover two pivotal insights: 1) layer-wise attention sparsity inversion where early layers retain dense informative patterns while later layers exhibit high redundancy, and 2) dual attention sinks phenomenon where attention scores concentrate on both head and tail tokens of input sequences. Motivated by these insights, we propose EARN, an efficient inference framework that leverages the early layers to compress information into register tokens placed at the input sequence boundaries, then focuses solely on these tokens in the subsequent layers. Extensive experiments on three datasets, two LLMRec methods and two LLM architectures demonstrate EARN's superiority, achieving up to 3.79x speedup and 80.8% KV Cache reduction with better accuracy than the general finetuning approach. Our work bridges the efficiency-effectiveness gap in LLMRec, offering practical deployment advantages for industrial scenarios.",
+      "identifiers": [
+        "SemanticScholar:1a767a3e12f5f87123f66a2b254660959264cf6f"
+      ],
+      "semantic_scholar_id": "1a767a3e12f5f87123f66a2b254660959264cf6f",
+      "canonical_id": "arXiv:2507.00715",
+      "arxiv_id": "2507.00715",
+      "doi": "10.1145/3711896.3736919",
+      "authors": [
+        "Chao-Qun Yang",
+        "Xin-Yu Lin",
+        "Wenjie Wang",
+        "Yong-Qi Li",
+        "Teng Sun",
+        "Xianjing Han",
+        "Tat-Seng Chua"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2312.10193",
+      "year": 2023,
+      "published": "2023-12-15",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While transformer models have been highly successful, they are computationally inefficient. We observe that for each layer, the full width of the layer may be needed only for a small subset of tokens inside a batch and that the \"effective\" width needed to process a token can vary from layer to layer. Motivated by this observation, we introduce the Adaptive Computation Module (ACM), a generic module that dynamically adapts its computational load to match the estimated difficulty of the input on a per-token basis. An ACM consists of a sequence of learners that progressively refine the output of their preceding counterparts. An additional gating mechanism determines the optimal number of learners to execute for each token. We also propose a distillation technique to replace any pre-trained model with an \"ACMized\" variant. Our evaluation of transformer models in computer vision and speech recognition demonstrates that substituting layers with ACMs significantly reduces inference costs without degrading the downstream accuracy for a wide interval of user-defined budgets.",
+      "identifiers": [
+        "SemanticScholar:19fdbff53a9f1ee654a9bdb605b4b62d22588d13"
+      ],
+      "semantic_scholar_id": "19fdbff53a9f1ee654a9bdb605b4b62d22588d13",
+      "canonical_id": "arXiv:2312.10193",
+      "arxiv_id": "2312.10193",
+      "doi": "10.48550/arXiv.2312.10193",
+      "authors": [
+        "B. Wójcik",
+        "Alessio Devoto",
+        "K. Pustelnik",
+        "Pasquale Minervini",
+        "Simone Scardapane"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1072,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HARISSA: Inference-Time Self-Checks for Efficient and Safe Local Language Model Deployment",
+      "source_url": "https://arxiv.org/abs/2609.38006",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Running a language model locally offers advantages in privacy, latency, and cost, but local hardware fits only small models, which are less capable than frontier models. The usual remedy for a hard query, escalating it to a cloud model, gives up the privacy and cost advantages of running locally. A deployment that stays local faces two decisions for hard queries instead. First, it can spend more computation on a query, e.g., reasoning before answering, which raises accuracy at a cost in latency, so it must decide which queries are worth the extra computation (efficiency). Second, some queries are beyond the local model, and delivering a wrong answer is worse than deferring the query to a human in the loop, so it must decide which answers are safe to deliver (safety). We show that both decisions can be made from the model's own hidden states. The prefill state, computed before any token is generated, predicts whether the model will answer correctly, and the answer state, at the end of the generated answer, predicts whether that answer is correct. HARISSA fine-tunes the model so that both states predict correctness, then makes both decisions with one policy that cascades through the ways of answering from cheapest to most expensive, skipping a way the prefill state predicts will fail and deferring the query when the answer it stops with is predicted wrong. On a device running a single model, HARISSA is within one accuracy point of chain-of-thought at 2.7 times lower latency. On a server holding four sizes of one model, HARISSA is more accurate than the FrugalGPT and Self-REF cascades at the same latency, and at the same deferral rate the answer state leaves fewer wrong answers than the standard confidence signals in five of six task and setting pairs.",
+      "identifiers": [
+        "SemanticScholar:6d8d76b4c32a383175383c7e7e03e4017faea47f"
+      ],
+      "semantic_scholar_id": "6d8d76b4c32a383175383c7e7e03e4017faea47f",
+      "canonical_id": "arXiv:2609.38006",
+      "arxiv_id": "2609.38006",
+      "doi": "10.48550/arXiv.2609.38006",
+      "authors": [
+        "Kenan Alkiek",
+        "Moontae Lee",
+        "David Jurgens",
+        "V. G. Vinod Vydiswaran"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LeanSparse: Memory-Efficient Serving for Native Sparse-Attention LLMs",
+      "source_url": "https://arxiv.org/abs/2611.04671",
+      "year": 2026,
+      "published": "2026-11-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention limits the history read by each query, but serving long contexts still requires substantial GPU memory. Existing KV offloading systems retain the full history of indexer keys on GPU, limiting decode concurrency. Prefill's temporary memory demand can further delay admission even when enough memory remains for the same request's subsequent decode. We present LeanSparse, a serving system that reduces both decode's persistent memory use and prefill's temporary memory demand. Our design exploits two observations: prefill consumes historical data one layer at a time, and decode can identify promising candidates before comparing their original indexer scores. During prefill, LeanSparse streams layer histories through two reusable GPU buffers, overlapping next-layer loading with ongoing model computation. During decode, coarse-to-fine indexing searches compact representations and retrieves original indexer keys only for candidate refinement. Separate indexer key and KV caches reuse data across generation steps. We implement LeanSparse in SGLang and evaluate it on DeepSeek-V4-Flash. At 950K context length, LeanSparse supports 2.95$\\times$ as many concurrent requests and achieves 2.14$\\times$ decode throughput over HiSparse. On multi-turn Open-SWE traces, it reduces median time to first token from 21.6 to 0.6s and median session completion time by 17.7% relative to ECHO.",
+      "identifiers": [
+        "SemanticScholar:19ca57fe2ddf952c158f86a9985b0600a4e590c1"
+      ],
+      "semantic_scholar_id": "19ca57fe2ddf952c158f86a9985b0600a4e590c1",
+      "canonical_id": "arXiv:2611.04671",
+      "arxiv_id": "2611.04671",
+      "authors": [
+        "Zai-Feng Pan",
+        "Chris Wu",
+        "Xin-Wei Qiang",
+        "Zheng-Ding Hu",
+        "Zhong-Kai Yu",
+        "Yu-Fei Ding"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.11008",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.11008",
+        "id:SemanticScholar:7bd8bb482b3826efb57ec2a9efca03ece9a3a025",
+        "id:arXiv:2602.11008",
+        "title:rocket rapid optimization via calibrationguided knapsack enhanced truncation for efficient model compression",
+        "url:https://arxiv.org/abs/2602.11008"
+      ],
+      "record": {
+        "title": "ROCKET: Rapid Optimization via Calibration-guided Knapsack Enhanced Truncation for Efficient Model Compression",
+        "source_url": "https://arxiv.org/abs/2602.11008",
+        "year": 2026,
+        "published": "2026-02-11",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present ROCKET, a training-free model compression method that achieves state-of-the-art performance in comparison with factorization, structured-sparsification and dynamic compression baselines. Operating under a global compression budget, ROCKET comprises two key innovations: First, it formulates layer-wise compression allocation as a multi-choice knapsack problem, selecting the optimal compression level for each layer to minimize total reconstruction error while adhering to a target model size. Second, it introduces a single-step sparse matrix factorization inspired by dictionary learning: using only a small calibration set, it sparsifies weight coefficients based on activation-weights sensitivity and then updates the dictionary in closed form via least squares bypassing iterative optimization, sparse coding, or backpropagation entirely. ROCKET consistently outperforms existing compression approaches across different model architectures at 20-50\\% compression rates. Notably, it retains over 90\\% of the original model's performance at 30\\% compression without any fine-tuning. Moreover, when applying a light fine-tuning phase, recovery is substantially enhanced: for instance, compressing Qwen3-14B to an 8B-parameter model and healing it with just 30 million tokens yields performance nearly on par with the original Qwen3-8B. The code for ROCKET is at github.com/mts-ai/ROCKET/tree/main.",
+        "identifiers": [
+          "SemanticScholar:7bd8bb482b3826efb57ec2a9efca03ece9a3a025"
+        ],
+        "semantic_scholar_id": "7bd8bb482b3826efb57ec2a9efca03ece9a3a025",
+        "canonical_id": "arXiv:2602.11008",
+        "arxiv_id": "2602.11008",
+        "doi": "10.48550/arXiv.2602.11008",
+        "authors": [
+          "Ammar Ali",
+          "Baher Mohammad",
+          "Denis Makhov",
+          "Dmitriy Shopkhoev",
+          "Magauiya Zhussip",
+          "Stamatios Lefkimmiatis"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 283,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.06798",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.06798",
+        "id:SemanticScholar:a50efb7cdaaaaf5e57100599bd017908755d7f0a",
+        "id:arXiv:2604.06798",
+        "title:mobie efficient inference of mixture of binary experts under posttraining quantization",
+        "url:https://arxiv.org/abs/2604.06798"
+      ],
+      "record": {
+        "title": "MoBiE: Efficient Inference of Mixture of Binary Experts under Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2604.06798",
+        "year": 2026,
+        "published": "2026-04-08",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) based large language models (LLMs) offer strong performance but suffer from high memory and computation costs. Weight binarization provides extreme efficiency, yet existing binary methods designed for dense LLMs struggle with MoE-specific issues, including cross-expert redundancy, task-agnostic importance estimation, and quantization-induced routing shifts. To this end, we propose MoBiE, the first binarization framework tailored for MoE-based LLMs. MoBiE is built on three core innovations: 1. using joint SVD decomposition to reduce cross-expert redundancy; 2. integrating global loss gradients into local Hessian metrics to enhance weight importance estimation; 3. introducing an error constraint guided by the input null space to mitigate routing distortion. Notably, MoBiE achieves these optimizations while incurring no additional storage overhead, striking a balance between efficiency and model performance. Extensive experiments demonstrate that MoBiE consistently outperforms state-of-the-art binary methods across multiple MoE-based LLMs and benchmarks. For example, on Qwen3-30B-A3B, MoBiE reduces perplexity by 52.2$\\%$, improves average zero-shot performance by 43.4$\\%$, achieves over 2 $\\times$ inference speedup, and further shortens quantization time. The code is available at https://github.com/Kishon-zzx/MoBiE.",
+        "identifiers": [
+          "SemanticScholar:a50efb7cdaaaaf5e57100599bd017908755d7f0a"
+        ],
+        "semantic_scholar_id": "a50efb7cdaaaaf5e57100599bd017908755d7f0a",
+        "canonical_id": "arXiv:2604.06798",
+        "arxiv_id": "2604.06798",
+        "doi": "10.48550/arXiv.2604.06798",
+        "authors": [
+          "Zhi-Xiong Zhao",
+          "Zu-Kang Xu",
+          "Zhi-Xuan Chen",
+          "Da-Wei Yang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.29813",
+      "identity_tokens": [
+        "id:DOI:10.1145/3808196",
+        "id:SemanticScholar:c82a2aefa789ba07fa47334937c8290c58c23fd8",
+        "id:arXiv:2603.29813",
+        "title:compiling code llms into lightweight executables",
+        "url:https://arxiv.org/abs/2603.29813"
+      ],
+      "record": {
+        "title": "Compiling Code LLMs into Lightweight Executables",
+        "source_url": "https://arxiv.org/abs/2603.29813",
+        "year": 2026,
+        "published": "2026-03-31",
+        "venue": "Proc. ACM Softw. Eng.",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The demand for better prediction accuracy and higher execution performance in neural networks continues to grow. The emergence and success of Large Language Models (LLMs) have produced many cloud-based tools for software engineering tasks such as code suggestion. Although effective, cloud deployment raises concerns over privacy, latency, and reliance on network connectivity. Running LLMs locally on personal devices such as laptops would address these issues, because it enables offline use and reduces response time. However, local deployment is challenging, since commodity devices lack high-performance accelerators such as GPUs and are constrained by limited memory and compute capacity, which makes it hard to execute large models efficiently. We present Ditto, a framework that optimizes both the model size of Code LLMs and the inference programs that execute them, with a focus on statically-typed languages such as C. Our approach integrates two components. The first is a quantization technique inspired by product quantization, which groups model parameters into per-block codebooks via K-Means clustering and stores each weight as a bit-packed low-bitwidth index. The quantizer further supports a mixed-precision mode that keeps a small number of sensitivity-critical tensors in float32. The second component is a compilation pass integrated into LLVM that automatically detects and replaces unoptimized General Matrix-Vector Multiplication (GEMV) operations, which are the most computationally intensive part of code models, with calls into Basic Linear Algebra Subprograms (BLAS) libraries that are highly optimized for the target hardware. The output of Ditto is a compiled executable that runs the selected Code LLM on commodity hardware. We evaluate Ditto on three popular Code LLMs, namely Code Llama, MagicCoder, and OpenCodeInterpreter, achieving up to 10.5× faster inference, 6.4× lower memory usage, and 10.5× lower energy consumption compared with their original inference pipelines, while preserving accuracy close to the full-precision models, with an average loss of only 0.27% in pass@1. Ditto also outperforms the state-of-the-art int8 quantization baseline, achieving up to 6.96% higher pass@1 accuracy, 2.2× speedup, and 1.6× memory reduction, which demonstrates the effectiveness of our approach.",
+        "identifiers": [
+          "SemanticScholar:c82a2aefa789ba07fa47334937c8290c58c23fd8"
+        ],
+        "semantic_scholar_id": "c82a2aefa789ba07fa47334937c8290c58c23fd8",
+        "canonical_id": "arXiv:2603.29813",
+        "arxiv_id": "2603.29813",
+        "doi": "10.1145/3808196",
+        "authors": [
+          "Jie-Ke Shi",
+          "Jun-Da He",
+          "Zhou Yang",
+          "Cheng-Ran Yang",
+          "M. Klymenko",
+          "T. Hoàng",
+          "S. Xu",
+          "Zhen-Chang Xing",
+          "David Lo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 235,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04238",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.04238",
+        "id:SemanticScholar:1b18672e495f2bf8a45476fb291a5bc2bdbf6158",
+        "id:arXiv:2609.04238",
+        "title:budgeting bytes a windowed storage roofline and dualbudget architecture ablations for storagebound llm decoding",
+        "url:https://arxiv.org/abs/2609.04238"
+      ],
+      "record": {
+        "title": "Budgeting Bytes: A Windowed Storage Roofline and Dual-Budget Architecture Ablations for Storage-Bound LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.04238",
+        "year": 2026,
+        "published": "2026-07-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding on cheap hardware is bound not by FLOPs but by the bytes each generated token must move across the slowest populated tier of a memory hierarchy. We treat bytes-per-token as a first-class design axis, organized by an address-determinism taxonomy that classifies parameters by when their fetch address becomes known during a token's forward pass (A0: at token sampling; A1: before attention; A2: layerwise data-dependent; A3: always read). This reduces prefetch scheduling to single-machine feasibility with release times, yielding a closed-form windowed roofline. We run dual-budget (bytes-per-token times storage) ablations across three sub-100M scales, then take the framework to real large-MoE deployment and report a substantial negative result the roofline predicts: on an 8GB edge board running Qwen3-30B-A3B (4-bit, 18GB), the model overflows RAM and decode is pinned at the eMMC bandwidth ceiling; predictive expert prefetch does not help -- not temporal-locality prefetch (net-negative), not even a trace-driven oracle with perfect prediction -- because the binding constraint is byte volume over a saturated bus, which prefetch cannot reduce. The lever that works is reducing bytes-per-token until the model fits the fast tier: quantized to fit a 16GB unified-memory device, the same model runs GPU-resident at 11.5 tok/s (22x). We reconcile this with GPU-serving expert-prefetch predictors: a frozen-model probe predicts Qwen3-30B routing from the pre-attention state at 91.2%, a scale-invariant predictability property, but this converts to throughput only where the fast tier caches most of the model and per-token transfer is comparable to compute -- measured to hold on an A100 PCIe-offload path and to fail on bandwidth-walled edge storage. Predictability is not speedup; we chart where the gap closes.",
+        "identifiers": [
+          "SemanticScholar:1b18672e495f2bf8a45476fb291a5bc2bdbf6158"
+        ],
+        "semantic_scholar_id": "1b18672e495f2bf8a45476fb291a5bc2bdbf6158",
+        "canonical_id": "arXiv:2609.04238",
+        "arxiv_id": "2609.04238",
+        "doi": "10.48550/arXiv.2609.04238",
+        "authors": [
+          "Hanhaodi Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 115,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.00715",
+      "identity_tokens": [
+        "id:DOI:10.1145/3711896.3736919",
+        "id:SemanticScholar:1a767a3e12f5f87123f66a2b254660959264cf6f",
+        "id:arXiv:2507.00715",
+        "title:earn efficient inference acceleration for llmbased generative recommendation by register tokens",
+        "url:https://arxiv.org/abs/2507.00715"
+      ],
+      "record": {
+        "title": "EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens",
+        "source_url": "https://arxiv.org/abs/2507.00715",
+        "year": 2025,
+        "published": "2025-07-01",
+        "venue": "Knowledge Discovery and Data Mining",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model-based generative recommendation (LLMRec) has achieved notable success, but it suffers from high inference latency due to massive computational overhead and memory pressure of KV Cache. Existing KV Cache reduction methods face critical limitations: cache compression offers marginal acceleration given recommendation tasks' short decoding steps, while prompt compression risks discarding vital interaction history. Through systematic analysis of attention patterns in LLMRec, we uncover two pivotal insights: 1) layer-wise attention sparsity inversion where early layers retain dense informative patterns while later layers exhibit high redundancy, and 2) dual attention sinks phenomenon where attention scores concentrate on both head and tail tokens of input sequences. Motivated by these insights, we propose EARN, an efficient inference framework that leverages the early layers to compress information into register tokens placed at the input sequence boundaries, then focuses solely on these tokens in the subsequent layers. Extensive experiments on three datasets, two LLMRec methods and two LLM architectures demonstrate EARN's superiority, achieving up to 3.79x speedup and 80.8% KV Cache reduction with better accuracy than the general finetuning approach. Our work bridges the efficiency-effectiveness gap in LLMRec, offering practical deployment advantages for industrial scenarios.",
+        "identifiers": [
+          "SemanticScholar:1a767a3e12f5f87123f66a2b254660959264cf6f"
+        ],
+        "semantic_scholar_id": "1a767a3e12f5f87123f66a2b254660959264cf6f",
+        "canonical_id": "arXiv:2507.00715",
+        "arxiv_id": "2507.00715",
+        "doi": "10.1145/3711896.3736919",
+        "authors": [
+          "Chao-Qun Yang",
+          "Xin-Yu Lin",
+          "Wenjie Wang",
+          "Yong-Qi Li",
+          "Teng Sun",
+          "Xianjing Han",
+          "Tat-Seng Chua"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.10193",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.10193",
+        "id:SemanticScholar:19fdbff53a9f1ee654a9bdb605b4b62d22588d13",
+        "id:arXiv:2312.10193",
+        "title:adaptive computation modules granular conditional computation for efficient inference",
+        "url:https://arxiv.org/abs/2312.10193"
+      ],
+      "record": {
+        "title": "Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2312.10193",
+        "year": 2023,
+        "published": "2023-12-15",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While transformer models have been highly successful, they are computationally inefficient. We observe that for each layer, the full width of the layer may be needed only for a small subset of tokens inside a batch and that the \"effective\" width needed to process a token can vary from layer to layer. Motivated by this observation, we introduce the Adaptive Computation Module (ACM), a generic module that dynamically adapts its computational load to match the estimated difficulty of the input on a per-token basis. An ACM consists of a sequence of learners that progressively refine the output of their preceding counterparts. An additional gating mechanism determines the optimal number of learners to execute for each token. We also propose a distillation technique to replace any pre-trained model with an \"ACMized\" variant. Our evaluation of transformer models in computer vision and speech recognition demonstrates that substituting layers with ACMs significantly reduces inference costs without degrading the downstream accuracy for a wide interval of user-defined budgets.",
+        "identifiers": [
+          "SemanticScholar:19fdbff53a9f1ee654a9bdb605b4b62d22588d13"
+        ],
+        "semantic_scholar_id": "19fdbff53a9f1ee654a9bdb605b4b62d22588d13",
+        "canonical_id": "arXiv:2312.10193",
+        "arxiv_id": "2312.10193",
+        "doi": "10.48550/arXiv.2312.10193",
+        "authors": [
+          "B. Wójcik",
+          "Alessio Devoto",
+          "K. Pustelnik",
+          "Pasquale Minervini",
+          "Simone Scardapane"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1072,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38006",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.38006",
+        "id:SemanticScholar:6d8d76b4c32a383175383c7e7e03e4017faea47f",
+        "id:arXiv:2609.38006",
+        "title:harissa inferencetime selfchecks for efficient and safe local language model deployment",
+        "url:https://arxiv.org/abs/2609.38006"
+      ],
+      "record": {
+        "title": "HARISSA: Inference-Time Self-Checks for Efficient and Safe Local Language Model Deployment",
+        "source_url": "https://arxiv.org/abs/2609.38006",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Running a language model locally offers advantages in privacy, latency, and cost, but local hardware fits only small models, which are less capable than frontier models. The usual remedy for a hard query, escalating it to a cloud model, gives up the privacy and cost advantages of running locally. A deployment that stays local faces two decisions for hard queries instead. First, it can spend more computation on a query, e.g., reasoning before answering, which raises accuracy at a cost in latency, so it must decide which queries are worth the extra computation (efficiency). Second, some queries are beyond the local model, and delivering a wrong answer is worse than deferring the query to a human in the loop, so it must decide which answers are safe to deliver (safety). We show that both decisions can be made from the model's own hidden states. The prefill state, computed before any token is generated, predicts whether the model will answer correctly, and the answer state, at the end of the generated answer, predicts whether that answer is correct. HARISSA fine-tunes the model so that both states predict correctness, then makes both decisions with one policy that cascades through the ways of answering from cheapest to most expensive, skipping a way the prefill state predicts will fail and deferring the query when the answer it stops with is predicted wrong. On a device running a single model, HARISSA is within one accuracy point of chain-of-thought at 2.7 times lower latency. On a server holding four sizes of one model, HARISSA is more accurate than the FrugalGPT and Self-REF cascades at the same latency, and at the same deferral rate the answer state leaves fewer wrong answers than the standard confidence signals in five of six task and setting pairs.",
+        "identifiers": [
+          "SemanticScholar:6d8d76b4c32a383175383c7e7e03e4017faea47f"
+        ],
+        "semantic_scholar_id": "6d8d76b4c32a383175383c7e7e03e4017faea47f",
+        "canonical_id": "arXiv:2609.38006",
+        "arxiv_id": "2609.38006",
+        "doi": "10.48550/arXiv.2609.38006",
+        "authors": [
+          "Kenan Alkiek",
+          "Moontae Lee",
+          "David Jurgens",
+          "V. G. Vinod Vydiswaran"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.04671",
+      "identity_tokens": [
+        "id:SemanticScholar:19ca57fe2ddf952c158f86a9985b0600a4e590c1",
+        "id:arXiv:2611.04671",
+        "title:leansparse memoryefficient serving for native sparseattention llms",
+        "url:https://arxiv.org/abs/2611.04671"
+      ],
+      "record": {
+        "title": "LeanSparse: Memory-Efficient Serving for Native Sparse-Attention LLMs",
+        "source_url": "https://arxiv.org/abs/2611.04671",
+        "year": 2026,
+        "published": "2026-11-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention limits the history read by each query, but serving long contexts still requires substantial GPU memory. Existing KV offloading systems retain the full history of indexer keys on GPU, limiting decode concurrency. Prefill's temporary memory demand can further delay admission even when enough memory remains for the same request's subsequent decode. We present LeanSparse, a serving system that reduces both decode's persistent memory use and prefill's temporary memory demand. Our design exploits two observations: prefill consumes historical data one layer at a time, and decode can identify promising candidates before comparing their original indexer scores. During prefill, LeanSparse streams layer histories through two reusable GPU buffers, overlapping next-layer loading with ongoing model computation. During decode, coarse-to-fine indexing searches compact representations and retrieves original indexer keys only for candidate refinement. Separate indexer key and KV caches reuse data across generation steps. We implement LeanSparse in SGLang and evaluate it on DeepSeek-V4-Flash. At 950K context length, LeanSparse supports 2.95$\\times$ as many concurrent requests and achieves 2.14$\\times$ decode throughput over HiSparse. On multi-turn Open-SWE traces, it reduces median time to first token from 21.6 to 0.6s and median session completion time by 17.7% relative to ECHO.",
+        "identifiers": [
+          "SemanticScholar:19ca57fe2ddf952c158f86a9985b0600a4e590c1"
+        ],
+        "semantic_scholar_id": "19ca57fe2ddf952c158f86a9985b0600a4e590c1",
+        "canonical_id": "arXiv:2611.04671",
+        "arxiv_id": "2611.04671",
+        "authors": [
+          "Zai-Feng Pan",
+          "Chris Wu",
+          "Xin-Wei Qiang",
+          "Zheng-Ding Hu",
+          "Zhong-Kai Yu",
+          "Yu-Fei Ding"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f4c07d3399398db4bf34ae9b0b631df851626a7ddb92373a6c7003aa97276eae",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

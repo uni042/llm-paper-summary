@@ -1,0 +1,521 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-17a4b3dc687a1e6f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-17a4b3dc687a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.11426",
+    "arXiv:2602.07465",
+    "arXiv:2606.03014",
+    "arXiv:2608.08630",
+    "arXiv:2608.25542"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "970109f7e459cc2dbbe3f03d82a14ec7f9aed353",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T08:08:12.912019+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.11426",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.07465",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.03014",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08630",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.25542",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Text Compression for Efficient Language Generation",
+      "source_url": "https://arxiv.org/abs/2503.11426",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We challenge the prevailing assumption that LLMs must rely fully on sub-word tokens for high-quality text generation. To this end, we propose the\"Generative Pretrained Thoughtformer\"(GPTHF), a hierarchical transformer language model capable of text generation by compressing text into sentence embeddings and employing a sentence attention mechanism. GPTHF retains GPT's architecture, modifying only token interactions via dynamic sparse attention masks. Our experiments show that GPTHF achieves an up to an order of magnitude improvement in FLOPs efficiency and a threefold increase in runtime speed compared to equally-sized GPT models in the low-size regime. This is achieved through a unique generation method that caches and reuses sentence embeddings, allowing significant portions of the input to bypass large parts of the network.",
+      "identifiers": [
+        "SemanticScholar:f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636"
+      ],
+      "semantic_scholar_id": "f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636",
+      "canonical_id": "arXiv:2503.11426",
+      "arxiv_id": "2503.11426",
+      "doi": "10.48550/arXiv.2503.11426",
+      "authors": [
+        "David Gu",
+        "Peter Belcák",
+        "Roger Wattenhofer"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "On the Importance of a Multi-Scale Calibration for Quantization",
+      "source_url": "https://arxiv.org/abs/2602.07465",
+      "year": 2026,
+      "published": "2026-02-07",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a cornerstone for efficiently deploying large language models (LLMs), where a small calibration set critically affects quantization performance. However, conventional practices rely on random sequences of fixed length, overlooking the variable-length nature of LLM inputs. Input length directly influences the activation distribution and, consequently, the weight importance captured by the Hessian, which in turn affects quantization outcomes. As a result, Hessian estimates derived from fixed-length calibration may fail to represent the true importance of weights across diverse input scenarios. We propose MaCa (Matryoshka Calibration), a simple yet effective method for length-aware Hessian construction. MaCa (i) incorporates multi-scale sequence length information into Hessian estimation and (ii) regularizes each sequence as an independent sample, yielding a more stable and fruitful Hessian for accurate quantization. Experiments on state-of-the-art LLMs (e.g., Qwen3, Gemma3, LLaMA3) demonstrate that MaCa consistently improves accuracy under low bit quantization, offering a lightweight enhancement compatible with existing PTQ frameworks. To the best of our knowledge, this is the first work to systematically highlight the role of multi-scale calibration in LLM quantization.",
+      "identifiers": [
+        "SemanticScholar:a4deaafaca31fb9ba18a2448a6bfd614ff587b0c"
+      ],
+      "semantic_scholar_id": "a4deaafaca31fb9ba18a2448a6bfd614ff587b0c",
+      "canonical_id": "arXiv:2602.07465",
+      "arxiv_id": "2602.07465",
+      "doi": "10.48550/arXiv.2602.07465",
+      "authors": [
+        "Seungwoo Son",
+        "Ingyu Seong",
+        "Junhan Kim",
+        "Hyemi Jang",
+        "Yongkweon Jeon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 287,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MOSAIC: Efficient Mixture-of-Agent Scheduling via Adaptive Aggregation and Inference Concurrency",
+      "source_url": "https://arxiv.org/abs/2606.03014",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Agents (MoA) systems improve reasoning accuracy by routing each query to multiple expert LLMs and aggregating their outputs. Efficiently executing this workload on limited GPU resources has bottlenecks. Skill-based routing creates skewed expert demand, and combining instruction-tuned LLMs with long-reasoning models results in extreme variability in generation lengths. Consequently, traditional scheduling strategies suffer from significant GPU idling and throughput collapse due to load imbalances. We present MOSAIC, a scheduling framework for accelerating batch-oriented MoA workloads. MOSAIC uses two-stage workload-aware scheduling: an expert placement stage, where an integer linear program (ILP) decides expert placement, followed by a query-sequencing stage that schedules requests based on predicted output lengths. Additionally, MOSAIC uses confidence-aware adaptive aggregation, leveraging inter-expert agreement to bypass the heavy aggregator LLM for consensus queries. On a 4-GPU system, MOSAIC achieves 2.7-3.4x end-to-end speedups over round-robin scheduling and reduces the mean time-to-answer by 3.9-7.8x, while matching accuracy within +/-1pp.",
+      "identifiers": [
+        "SemanticScholar:d00d2936dbfb0f524913885d978f71a2b9cc2264"
+      ],
+      "semantic_scholar_id": "d00d2936dbfb0f524913885d978f71a2b9cc2264",
+      "canonical_id": "arXiv:2606.03014",
+      "arxiv_id": "2606.03014",
+      "doi": "10.48550/arXiv.2606.03014",
+      "authors": [
+        "Saptarshi Mitra",
+        "Yi-Fan Zhang",
+        "Rachid Karami",
+        "Sreetama Sarkar",
+        "Phyo Pyae Moe Aung",
+        "Nazmul Takbir",
+        "Souvik Kundu",
+        "Si-Tao Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VLZip: Unified Visual and Textual Compression for Interleaved Long-Context Modeling",
+      "source_url": "https://arxiv.org/abs/2608.08630",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision Language Models (VLMs) face significant challenges with ultra-long, interleaved image-text sequences due to the quadratic complexity of self-attention. Current solutions either resort to aggressive token pruning, risking irreversible information loss, or adopt efficient but less precise architectures, while largely ignoring the equally vital textual component. We introduce VLZip, a framework that unifies visual and textual compression for high-fidelity reasoning within a pure Transformer. At its core, VLZip hierarchically distills visual and textual segments into compact, layer-specific\"soft prefixes\"and injects them into each decoder layer's hidden states, drastically shortening the attention sequence while preserving fine-grained global context. To address deficient evaluations in the field, we also introduce LongVLBench, a new benchmark derived from video narratives that demands holistic, narrative-level reasoning. Extensive experiments show VLZip achieves leading performance on long-context multimodal reasoning, enabling training up to 120K tokens, a 6x increase over the baseline, and inference beyond 280K tokens with significantly reduced memory, while demonstrating the memory scalability to handle up to 2M tokens. By excelling at extreme context lengths where existing methods collapse, VLZip establishes an efficient and powerful new standard for long-context multimodal AI. Code is available at https://github.com/ShareLab-SII/VLZip.",
+      "identifiers": [
+        "SemanticScholar:176e969573ff202f3c93cf5098eb35ff8a79b967"
+      ],
+      "semantic_scholar_id": "176e969573ff202f3c93cf5098eb35ff8a79b967",
+      "canonical_id": "arXiv:2608.08630",
+      "arxiv_id": "2608.08630",
+      "doi": "10.1007/978-3-032-37550-6_11",
+      "authors": [
+        "Yu-Qi Zhang",
+        "Cheng Chen",
+        "Yu-Yu Guo",
+        "Wen-Jie Yang",
+        "Lingchen Meng",
+        "Peng Di",
+        "Hang Yu",
+        "Zu-Xuan Wu",
+        "Yu-Gang Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reflection Steering: Disentangling Reflection from Reasoning in Activation Space for Token-Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2608.25542",
+      "year": 2026,
+      "published": "2026-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models often produce reasoning traces with verification, revision, and backtracking. When reflection merely re-checks established results, it wastes reasoning tokens and increases latency. Most existing reflection steering methods add a label-derived mean-difference direction across preset layers, but its entanglement with reasoning and length signals destabilizes the accuracy-efficiency trade-off. In this paper, we propose Reflection Steering, a training-free framework for controlling reflection-associated computation within LLMs by disentangling reflection-related activations from general reasoning. Specifically, we contrast reflective and non-reflective hidden states at each LLM layer, denoise the resulting reflection directions with PCA, and orthogonalize them against general-reasoning directions. To limit downstream amplification from early-layer interventions, we calibrate each layer across multiple intervention strengths on a small set, retain only stable layers, and apply bounded projection removal to their residual-stream activations. We conduct extensive experiments across two public benchmarks and three open-weight LLMs against state-of-the-art activation-steering baselines. Results show that Reflection Steering reduces reasoning tokens by 16.9% on average across six matched settings. Besides, our method further introduces a bounded reflection intervention-strength parameter $\\alpha$, enabling deployment-time adjustment to balance token savings, accuracy, and generation stability.",
+      "identifiers": [
+        "SemanticScholar:21802a6b6cd35779507cb5e340a39d56f35c8564"
+      ],
+      "semantic_scholar_id": "21802a6b6cd35779507cb5e340a39d56f35c8564",
+      "canonical_id": "arXiv:2608.25542",
+      "arxiv_id": "2608.25542",
+      "doi": "10.48550/arXiv.2608.25542",
+      "authors": [
+        "Jia-Rui Hu",
+        "Zhi-Yuan Wen",
+        "Xiao-Yun Liu",
+        "Jia-Bin Shen",
+        "Yu Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2503.11426",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.11426",
+        "id:SemanticScholar:f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636",
+        "id:arXiv:2503.11426",
+        "title:text compression for efficient language generation",
+        "url:https://arxiv.org/abs/2503.11426"
+      ],
+      "record": {
+        "title": "Text Compression for Efficient Language Generation",
+        "source_url": "https://arxiv.org/abs/2503.11426",
+        "year": 2025,
+        "published": "2025-03-14",
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We challenge the prevailing assumption that LLMs must rely fully on sub-word tokens for high-quality text generation. To this end, we propose the\"Generative Pretrained Thoughtformer\"(GPTHF), a hierarchical transformer language model capable of text generation by compressing text into sentence embeddings and employing a sentence attention mechanism. GPTHF retains GPT's architecture, modifying only token interactions via dynamic sparse attention masks. Our experiments show that GPTHF achieves an up to an order of magnitude improvement in FLOPs efficiency and a threefold increase in runtime speed compared to equally-sized GPT models in the low-size regime. This is achieved through a unique generation method that caches and reuses sentence embeddings, allowing significant portions of the input to bypass large parts of the network.",
+        "identifiers": [
+          "SemanticScholar:f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636"
+        ],
+        "semantic_scholar_id": "f5e0e732986ef3c09463e54b1a1fc9ebd4b2d636",
+        "canonical_id": "arXiv:2503.11426",
+        "arxiv_id": "2503.11426",
+        "doi": "10.48550/arXiv.2503.11426",
+        "authors": [
+          "David Gu",
+          "Peter Belcák",
+          "Roger Wattenhofer"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 617,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.07465",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.07465",
+        "id:SemanticScholar:a4deaafaca31fb9ba18a2448a6bfd614ff587b0c",
+        "id:arXiv:2602.07465",
+        "title:on the importance of a multiscale calibration for quantization",
+        "url:https://arxiv.org/abs/2602.07465"
+      ],
+      "record": {
+        "title": "On the Importance of a Multi-Scale Calibration for Quantization",
+        "source_url": "https://arxiv.org/abs/2602.07465",
+        "year": 2026,
+        "published": "2026-02-07",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a cornerstone for efficiently deploying large language models (LLMs), where a small calibration set critically affects quantization performance. However, conventional practices rely on random sequences of fixed length, overlooking the variable-length nature of LLM inputs. Input length directly influences the activation distribution and, consequently, the weight importance captured by the Hessian, which in turn affects quantization outcomes. As a result, Hessian estimates derived from fixed-length calibration may fail to represent the true importance of weights across diverse input scenarios. We propose MaCa (Matryoshka Calibration), a simple yet effective method for length-aware Hessian construction. MaCa (i) incorporates multi-scale sequence length information into Hessian estimation and (ii) regularizes each sequence as an independent sample, yielding a more stable and fruitful Hessian for accurate quantization. Experiments on state-of-the-art LLMs (e.g., Qwen3, Gemma3, LLaMA3) demonstrate that MaCa consistently improves accuracy under low bit quantization, offering a lightweight enhancement compatible with existing PTQ frameworks. To the best of our knowledge, this is the first work to systematically highlight the role of multi-scale calibration in LLM quantization.",
+        "identifiers": [
+          "SemanticScholar:a4deaafaca31fb9ba18a2448a6bfd614ff587b0c"
+        ],
+        "semantic_scholar_id": "a4deaafaca31fb9ba18a2448a6bfd614ff587b0c",
+        "canonical_id": "arXiv:2602.07465",
+        "arxiv_id": "2602.07465",
+        "doi": "10.48550/arXiv.2602.07465",
+        "authors": [
+          "Seungwoo Son",
+          "Ingyu Seong",
+          "Junhan Kim",
+          "Hyemi Jang",
+          "Yongkweon Jeon"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 287,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.03014",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.03014",
+        "id:SemanticScholar:d00d2936dbfb0f524913885d978f71a2b9cc2264",
+        "id:arXiv:2606.03014",
+        "title:mosaic efficient mixtureofagent scheduling via adaptive aggregation and inference concurrency",
+        "url:https://arxiv.org/abs/2606.03014"
+      ],
+      "record": {
+        "title": "MOSAIC: Efficient Mixture-of-Agent Scheduling via Adaptive Aggregation and Inference Concurrency",
+        "source_url": "https://arxiv.org/abs/2606.03014",
+        "year": 2026,
+        "published": "2026-06-02",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Agents (MoA) systems improve reasoning accuracy by routing each query to multiple expert LLMs and aggregating their outputs. Efficiently executing this workload on limited GPU resources has bottlenecks. Skill-based routing creates skewed expert demand, and combining instruction-tuned LLMs with long-reasoning models results in extreme variability in generation lengths. Consequently, traditional scheduling strategies suffer from significant GPU idling and throughput collapse due to load imbalances. We present MOSAIC, a scheduling framework for accelerating batch-oriented MoA workloads. MOSAIC uses two-stage workload-aware scheduling: an expert placement stage, where an integer linear program (ILP) decides expert placement, followed by a query-sequencing stage that schedules requests based on predicted output lengths. Additionally, MOSAIC uses confidence-aware adaptive aggregation, leveraging inter-expert agreement to bypass the heavy aggregator LLM for consensus queries. On a 4-GPU system, MOSAIC achieves 2.7-3.4x end-to-end speedups over round-robin scheduling and reduces the mean time-to-answer by 3.9-7.8x, while matching accuracy within +/-1pp.",
+        "identifiers": [
+          "SemanticScholar:d00d2936dbfb0f524913885d978f71a2b9cc2264"
+        ],
+        "semantic_scholar_id": "d00d2936dbfb0f524913885d978f71a2b9cc2264",
+        "canonical_id": "arXiv:2606.03014",
+        "arxiv_id": "2606.03014",
+        "doi": "10.48550/arXiv.2606.03014",
+        "authors": [
+          "Saptarshi Mitra",
+          "Yi-Fan Zhang",
+          "Rachid Karami",
+          "Sreetama Sarkar",
+          "Phyo Pyae Moe Aung",
+          "Nazmul Takbir",
+          "Souvik Kundu",
+          "Si-Tao Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 172,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08630",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-37550-6_11",
+        "id:SemanticScholar:176e969573ff202f3c93cf5098eb35ff8a79b967",
+        "id:arXiv:2608.08630",
+        "title:vlzip unified visual and textual compression for interleaved longcontext modeling",
+        "url:https://arxiv.org/abs/2608.08630"
+      ],
+      "record": {
+        "title": "VLZip: Unified Visual and Textual Compression for Interleaved Long-Context Modeling",
+        "source_url": "https://arxiv.org/abs/2608.08630",
+        "year": 2026,
+        "published": "2026-08-09",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision Language Models (VLMs) face significant challenges with ultra-long, interleaved image-text sequences due to the quadratic complexity of self-attention. Current solutions either resort to aggressive token pruning, risking irreversible information loss, or adopt efficient but less precise architectures, while largely ignoring the equally vital textual component. We introduce VLZip, a framework that unifies visual and textual compression for high-fidelity reasoning within a pure Transformer. At its core, VLZip hierarchically distills visual and textual segments into compact, layer-specific\"soft prefixes\"and injects them into each decoder layer's hidden states, drastically shortening the attention sequence while preserving fine-grained global context. To address deficient evaluations in the field, we also introduce LongVLBench, a new benchmark derived from video narratives that demands holistic, narrative-level reasoning. Extensive experiments show VLZip achieves leading performance on long-context multimodal reasoning, enabling training up to 120K tokens, a 6x increase over the baseline, and inference beyond 280K tokens with significantly reduced memory, while demonstrating the memory scalability to handle up to 2M tokens. By excelling at extreme context lengths where existing methods collapse, VLZip establishes an efficient and powerful new standard for long-context multimodal AI. Code is available at https://github.com/ShareLab-SII/VLZip.",
+        "identifiers": [
+          "SemanticScholar:176e969573ff202f3c93cf5098eb35ff8a79b967"
+        ],
+        "semantic_scholar_id": "176e969573ff202f3c93cf5098eb35ff8a79b967",
+        "canonical_id": "arXiv:2608.08630",
+        "arxiv_id": "2608.08630",
+        "doi": "10.1007/978-3-032-37550-6_11",
+        "authors": [
+          "Yu-Qi Zhang",
+          "Cheng Chen",
+          "Yu-Yu Guo",
+          "Wen-Jie Yang",
+          "Lingchen Meng",
+          "Peng Di",
+          "Hang Yu",
+          "Zu-Xuan Wu",
+          "Yu-Gang Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25542",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.25542",
+        "id:SemanticScholar:21802a6b6cd35779507cb5e340a39d56f35c8564",
+        "id:arXiv:2608.25542",
+        "title:reflection steering disentangling reflection from reasoning in activation space for tokenefficient inference",
+        "url:https://arxiv.org/abs/2608.25542"
+      ],
+      "record": {
+        "title": "Reflection Steering: Disentangling Reflection from Reasoning in Activation Space for Token-Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2608.25542",
+        "year": 2026,
+        "published": "2026-08-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models often produce reasoning traces with verification, revision, and backtracking. When reflection merely re-checks established results, it wastes reasoning tokens and increases latency. Most existing reflection steering methods add a label-derived mean-difference direction across preset layers, but its entanglement with reasoning and length signals destabilizes the accuracy-efficiency trade-off. In this paper, we propose Reflection Steering, a training-free framework for controlling reflection-associated computation within LLMs by disentangling reflection-related activations from general reasoning. Specifically, we contrast reflective and non-reflective hidden states at each LLM layer, denoise the resulting reflection directions with PCA, and orthogonalize them against general-reasoning directions. To limit downstream amplification from early-layer interventions, we calibrate each layer across multiple intervention strengths on a small set, retain only stable layers, and apply bounded projection removal to their residual-stream activations. We conduct extensive experiments across two public benchmarks and three open-weight LLMs against state-of-the-art activation-steering baselines. Results show that Reflection Steering reduces reasoning tokens by 16.9% on average across six matched settings. Besides, our method further introduces a bounded reflection intervention-strength parameter $\\alpha$, enabling deployment-time adjustment to balance token savings, accuracy, and generation stability.",
+        "identifiers": [
+          "SemanticScholar:21802a6b6cd35779507cb5e340a39d56f35c8564"
+        ],
+        "semantic_scholar_id": "21802a6b6cd35779507cb5e340a39d56f35c8564",
+        "canonical_id": "arXiv:2608.25542",
+        "arxiv_id": "2608.25542",
+        "doi": "10.48550/arXiv.2608.25542",
+        "authors": [
+          "Jia-Rui Hu",
+          "Zhi-Yuan Wen",
+          "Xiao-Yun Liu",
+          "Jia-Bin Shen",
+          "Yu Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 87,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f5327259f4ffb0d935cf9aa85c3f18bb655194daa428cab6cbb5762c04868aba",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

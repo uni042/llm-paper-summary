@@ -1,0 +1,941 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-93e26c8bf20aff95-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-93e26c8bf20a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2411.07066",
+    "arXiv:2506.08436",
+    "arXiv:2511.11505",
+    "arXiv:2602.11534",
+    "arXiv:2602.13680",
+    "arXiv:2608.13416",
+    "arXiv:2609.02780",
+    "arXiv:2609.34867",
+    "arXiv:2610.10552",
+    "arXiv:2611.03247"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "970109f7e459cc2dbbe3f03d82a14ec7f9aed353",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T08:08:12.646480+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2411.07066",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.08436",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.11505",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.11534",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.13416",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.02780",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34867",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10552",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.03247",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Krause Synchronization Transformers",
+      "source_url": "https://arxiv.org/abs/2602.11534",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention in Transformers relies on globally normalized softmax weights, causing all tokens to compete for influence at every layer. When composed across depth, this interaction pattern induces strong synchronization dynamics that favor convergence toward a dominant mode, a behavior associated with representation collapse and attention sink phenomena. We introduce Krause Attention, a principled attention mechanism inspired by bounded-confidence consensus dynamics. Krause Attention replaces similarity-based global aggregation with distance-based, localized, and selectively sparse interactions, promoting structured local synchronization instead of global mixing. We relate this behavior to recent theory modeling Transformer dynamics as interacting particle systems, and show how bounded-confidence interactions naturally moderate attention concentration and alleviate attention sinks. Restricting interactions to local neighborhoods also reduces runtime complexity from quadratic to linear in sequence length. Empirically, we validate Krause Attention across diverse settings, including vision (ViT on CIFAR/ImageNet), autoregressive image generation (MNIST/CIFAR-10), large language models (Llama/Qwen), and language models trained from scratch at multiple scales (100M/200M). Across these domains, Krause Attention achieves consistent performance gains while improving computational efficiency, highlighting bounded-confidence dynamics as a scalable and effective inductive bias for attention.",
+      "identifiers": [
+        "SemanticScholar:697263d5f05da231dddfc070474bfb464afc0df9"
+      ],
+      "semantic_scholar_id": "697263d5f05da231dddfc070474bfb464afc0df9",
+      "canonical_id": "arXiv:2602.11534",
+      "arxiv_id": "2602.11534",
+      "doi": "10.48550/arXiv.2602.11534",
+      "authors": [
+        "Jing-Kun Liu",
+        "Yisong Yue",
+        "M. Welling",
+        "Yue Song"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs",
+      "source_url": "https://arxiv.org/abs/2608.13416",
+      "year": 2026,
+      "published": "2026-08-13",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Humans effortlessly perceive the present while remembering the past, yet streaming VLMs often trade off real-time perception against long-term memory. Prior work shows that shortening the context can sharpen current-scene perception at the expense of long-range recall. To reconcile these abilities, we introduce StreamTTT, which writes long-range history into online-updated fast weights outside the attention context. This leaves a short sliding key-value cache dedicated to recent evidence, mitigating attention dilution. We train StreamTTT jointly on offline long-video QA and a newly constructed real-time QA corpus. On OVO-Bench, under each model's reported input protocol, StreamTTT-4B outperforms the same-scale SimpleStream-4B by 0.6 points in real-time perception and 5.3 points in backward tracing. It also surpasses the larger SimpleStream-8B by 0.73 points on StreamingBench's Real-Time Visual Understanding (RTVU) subset. Our code is publicly available at https://github.com/zeyun-zhong/StreamTTT.",
+      "identifiers": [
+        "SemanticScholar:1e143a75958ecd594c539cb90d7b92d5f82ad2ba"
+      ],
+      "semantic_scholar_id": "1e143a75958ecd594c539cb90d7b92d5f82ad2ba",
+      "canonical_id": "arXiv:2608.13416",
+      "arxiv_id": "2608.13416",
+      "doi": "10.48550/arXiv.2608.13416",
+      "authors": [
+        "Joya Chen",
+        "Ze-Yun Zhong",
+        "M. Shou"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2609.02780",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding is a critical capability for real-world applications, including embodied intelligence, autonomous driving, industrial monitoring, surveillance and early warning, and wearable assistants. However, processing continuous video streams with multimodal large language models (MLLMs) is computationally expensive. Existing efforts have explored reducing streaming overhead through visual token pruning, token merging, quantization, on-demand frame retrieval, and context offloading. However, most existing methods overlook the dimension of model depth. Repeatedly executing full-depth MLLM prefill over incoming frames is prohibitively expensive, incurring substantial computational overhead and causing the KV cache to grow at a rate directly proportional to the prefill depth. To address these challenges, we propose ShallowStream, a novel framework that leverages the shallow layers of an MLLM to simultaneously perform frame encoding and retrieval index building. During stream processing, ShallowStream maintains an always-on lightweight index using the KV cache of shallow layers. During query-time answering, we leverage the attention scores generated by the shallow layers to score context frames and employ a diversity-aware selection strategy to retrieve precise and comprehensive evidence. ShallowStream achieves performance on par with the strongest existing streaming methods, while reducing per-frame prefill latency and 10-second end-to-end latency by up to 52.1x and 11.9x, respectively. Our code is available at https://github.com/CURRENTF/ShallowStream.",
+      "identifiers": [
+        "SemanticScholar:fc752fcce5978786a259ae2176549f6bb7da7705"
+      ],
+      "semantic_scholar_id": "fc752fcce5978786a259ae2176549f6bb7da7705",
+      "canonical_id": "arXiv:2609.02780",
+      "arxiv_id": "2609.02780",
+      "doi": "10.48550/arXiv.2609.02780",
+      "authors": [
+        "Jitai Hao",
+        "Ke-Shuai Yang",
+        "Ding-Kun Yan",
+        "Fan Liu",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling",
+      "source_url": "https://arxiv.org/abs/2602.13680",
+      "year": 2026,
+      "published": "2026-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) encounter significant performance bottlenecks in long-sequence tasks due to the computational complexity and memory overhead inherent in the self-attention mechanism. To address these challenges, we introduce \\textsc{AllMem}, a novel and efficient hybrid architecture that integrates Sliding Window Attention (SWA) with non-linear Test-Time Training (TTT) memory networks. \\textsc{AllMem} enables models to effectively scale to ultra-long contexts while mitigating catastrophic forgetting. This approach not only overcomes the representation constraints typical of linear memory models but also significantly reduces the computational and memory footprint during long-sequence inference. Furthermore, we implement a Memory-Efficient Fine-Tuning strategy to replace standard attention layers in pre-trained models with memory-augmented sliding window layers. This framework facilitates the efficient transformation of any off-the-shelf pre-trained LLM into an \\textsc{AllMem}-based architecture. Empirical evaluations confirm that our 4k window model achieves near-lossless performance on 37k LongBench with a marginal 0.83 drop compared to full attention. Furthermore, on InfiniteBench at a 128k context, our 8k window variant outperforms full attention, which validates the effectiveness of our parameterized memory in mitigating noise and maintaining robust long-range modeling without the prohibitive costs of global attention.",
+      "identifiers": [
+        "SemanticScholar:49869dd893cc05511ff1519105765d9fabdba986"
+      ],
+      "semantic_scholar_id": "49869dd893cc05511ff1519105765d9fabdba986",
+      "canonical_id": "arXiv:2602.13680",
+      "arxiv_id": "2602.13680",
+      "doi": "10.48550/arXiv.2602.13680",
+      "authors": [
+        "Zi-Ming Wang",
+        "Xiang Wang",
+        "Kailong Peng",
+        "Lang Qin",
+        "Juan Gabriel Kostelec",
+        "Christos Sourmpis",
+        "Axel Laborieux",
+        "Qinghai Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Olica: Efficient Structured Pruning of Large Language Models without Retraining",
+      "source_url": "https://arxiv.org/abs/2506.08436",
+      "year": 2025,
+      "published": "2025-06-10",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most existing structured pruning methods for Large Language Models (LLMs) require substantial computational and data resources for retraining to reestablish the corrupted correlations, making them prohibitively expensive. To address this, we propose a pruning framework for LLMs called Orthogonal decomposition and Linear Calibration (Olica), which eliminates the need for retraining. A key observation is that the multi-head attention (MHA) layer depends on two types of matrix products. By treating these matrix products as unified entities and applying principal component analysis (PCA), we extract the most important information to compress LLMs without sacrificing accuracy or disrupting their original structure. Consequently, retraining becomes unnecessary. A fast decomposition method is devised, reducing the complexity of PCA by a factor of the square of the number of attention heads. Additionally, to mitigate error accumulation problem caused by pruning the feed-forward network (FFN) layer, we introduce a linear calibration method to reconstruct the residual errors of pruned layers using low-rank matrices. By leveraging singular value decomposition (SVD) on the solution of the least-squares problem, these matrices are obtained without requiring retraining. Extensive experiments show that the proposed Olica is efficient in terms of data usage, GPU memory, and running time, while delivering superior performance across multiple benchmarks.",
+      "identifiers": [
+        "SemanticScholar:824f8b80ad40f64b6fe1b2b1b2a7759ac6466263"
+      ],
+      "semantic_scholar_id": "824f8b80ad40f64b6fe1b2b1b2a7759ac6466263",
+      "canonical_id": "arXiv:2506.08436",
+      "arxiv_id": "2506.08436",
+      "doi": "10.48550/arXiv.2506.08436",
+      "authors": [
+        "Jiujun He",
+        "Huazhen Lin"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 529,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Freeze the Decoder, Heal the Encoder: Parameter-Efficient Adaptation for SVD-Based KV-Cache Compression",
+      "source_url": "https://arxiv.org/abs/2610.10552",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Comparing parameter-efficient fine-tuning recipes under a single, shared learning rate is a common but flawed practice: when the arms being compared have very different trainable-parameter counts, a shared rate can simultaneously depress the larger arms'means and inflate their variance, manufacturing a large, seemingly multi-seed-significant advantage for the smallest arm that is not a real effect. We document this confound in a concrete setting: post-hoc SVD-based KV-cache compression, where an already-pretrained model is converted to a low-rank (multi-head-latent-attention-style) cache by factorizing its key/value weights into a down-projection (\"encoder\") and an up-projection (\"decoder\"), after which a short fine-tune (\"healing\") recovers the accuracy lost to truncation. Under a shared learning rate, freezing the decoder and healing only the encoder looks like a clear win over healing the decoder or both factors; once every arm is given its own tuned learning rate, that apparent advantage disappears, and encoder-only healing instead reaches parity with the alternatives, at a real, measured saving of 3x fewer trainable parameters and 3x less optimizer-state memory. We verify this parity with per-arm learning-rate tuning and three seeds per configuration on a vision-language model (Qwen2.5-VL-3B-Instruct), at the one compression ratio this protocol covers, and replicate it on a text-only testbed across two backbones. Encoder-only healing is therefore a lower-memory drop-in recipe for retrofitting low-rank KV-cache compression at training time, and the shared-learning-rate pitfall we document and correct is a cautionary result for comparing any fine-tuning recipes whose arms differ in trainable-parameter count.",
+      "identifiers": [
+        "SemanticScholar:eac265b164e624a55b6779d1e2ae7cdba3ee3cce"
+      ],
+      "semantic_scholar_id": "eac265b164e624a55b6779d1e2ae7cdba3ee3cce",
+      "canonical_id": "arXiv:2610.10552",
+      "arxiv_id": "2610.10552",
+      "authors": [
+        "Yu-Feng Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 57,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "P4Q: Co-designing Token Pruning and Quantization for Vision-Language Model Acceleration",
+      "source_url": "https://arxiv.org/abs/2609.34867",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision language models have achieved strong performance across a wide range of multimodal applications, yet their substantial computational and memory costs hinder efficient deployment. Visual token pruning and post-training quantization reduce inference overhead along two complementary dimensions, namely sequence length and numerical precision. Existing workflows typically optimize these techniques independently or apply them sequentially. Their distinct optimization objectives leave critical interactions unaddressed and constrain the achievable compression performance. We revisit these designs and present P4Q, a practical co-design framework that jointly optimizes visual token pruning and low-bit quantization for efficient VLM inference. First, P4Q introduces a quantization-aware visual token selection strategy before the LLM. It applies fake quantization to copies of the features produced by the projector and selects visual tokens using statistics computed from these fake-quantized features, thereby conditioning the selector's feature-based decisions on simulated low-bit perturbations. Second, P4Q introduces a pruning-aware quantization calibration strategy. It uses the same selection strategy as pruning to calibrate the quantized model on the retained-token distribution, thereby aligning the calibration process with the pruned execution path used during deployment. By coupling these two components, P4Q achieves substantial inference speedups while maintaining comparable task performance, resulting in a better efficiency-accuracy trade-off than independently optimized pipelines. For instance, on LLaVA-NeXT, P4Q achieves an average end-to-end inference speedup of 2.8x across eight distinct test sets, while retaining higher accuracy than prior compression and quantization methods.",
+      "identifiers": [
+        "SemanticScholar:f8cba0a612558edbafb18dc32cefbd8c05930eb9"
+      ],
+      "semantic_scholar_id": "f8cba0a612558edbafb18dc32cefbd8c05930eb9",
+      "canonical_id": "arXiv:2609.34867",
+      "arxiv_id": "2609.34867",
+      "doi": "10.48550/arXiv.2609.34867",
+      "authors": [
+        "Hai-Zhao Jing",
+        "Zhen-Hao Shang",
+        "Hao-Kui Zhang",
+        "Rong Xiao",
+        "Peng Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "R$^2$-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation",
+      "source_url": "https://arxiv.org/abs/2611.03247",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni-modal large language models (Omni-LLMs) typically process large numbers of multimodal tokens from audio-visual inputs, incurring substantial computational costs and a large memory footprint for the key-value (KV) cache. Aggressive token pruning can alleviate this problem while maintaining competitive performance on multiple-choice tasks, which require only a single option as output. However, we observe substantial quality degradation when generating long-form, open-ended responses. We attribute this gap to query-guided selection, which can retain sufficient evidence for answer selection while discarding details needed for comprehensive generation. This motivates reducing overlapping information across tokens, termed structural redundancy, while preserving diverse content. However, the retained representations may still contain precision redundancy due to unnecessarily high numerical precision in their cached values. To address these two levels of redundancy in token representations, we introduce a training-free framework named R$^2$-Omni. First, Structure-Aware Token Consolidation (STC) consolidates redundant representations using spatiotemporal similarity in video and local continuity in audio. Then, Semantic-Sensitivity Guided Precision Allocation (SSPA) allocates value precision to the retained representations according to the estimated reduction in attention-output error under quantized keys, with query attention and audio-visual alignment providing a semantic prior. Extensive experiments on long-form generation benchmarks demonstrate an average 5.0$\\times$ reduction in the memory footprint while preserving 97.98% of baseline generation quality and achieving a 1.48$\\times$ end-to-end speedup, highlighting the benefits of jointly reducing structural and precision redundancy.",
+      "identifiers": [
+        "SemanticScholar:2f60fb96998a1b089f6c101bbf7ba88727afa442"
+      ],
+      "semantic_scholar_id": "2f60fb96998a1b089f6c101bbf7ba88727afa442",
+      "canonical_id": "arXiv:2611.03247",
+      "arxiv_id": "2611.03247",
+      "authors": [
+        "Bo Feng",
+        "P. Zhou",
+        "Zheng-Lin Wan",
+        "Wei Wang",
+        "Wang-Bo Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Zeroth-Order Adaptive Neuron Alignment Based Pruning without Re-Training",
+      "source_url": "https://arxiv.org/abs/2411.07066",
+      "year": 2024,
+      "published": "2024-11-11",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Network pruning focuses on algorithms that aim to reduce a given model's computational cost by removing a subset of its parameters while having minimal impact on performance. Throughout the last decade, the most widely used pruning paradigm has been pruning and re-training, which nowadays is inconvenient due to the vast amount of pre-trained models, which are, in any case, too expensive to re-train. In this paper, we exploit functional information from dense pre-trained models, i.e., their input activations, to obtain sparse models that maximize the activations'alignment with respect to their corresponding dense models. Hence, we propose \\textbf{NeuroAl}, a \\emph{top-up} algorithm that can be used on top of any given pruning algorithm for LLMs, which modifies the block-wise and row-wise sparsity, exploiting information from both the dense model and its sparse version to maximize the \\emph{neuron alignment} among activations. Different from existing methods, our approach adaptively selects the best hyperparameters for the block-wise and row-wise sparsity ratios w.r.t. the model and the desired sparsity, and requires \\emph{no re-training}. We test our method over $\\sim$300 test cases with four LLM families, three sparsity ratios, and ten language tasks (three language modeling and seven zero-shot datasets), showing how it consistently outperforms the latest state-of-the-art methods in terms of performance-runtime trade-off. The code is available at \\href{https://github.com/eliacunegatti/NeuroAL}{https://github.com/eliacunegatti/NeuroAL}.",
+      "identifiers": [
+        "SemanticScholar:15e39854f9292c00d268e008b27265ff73be7ac5"
+      ],
+      "semantic_scholar_id": "15e39854f9292c00d268e008b27265ff73be7ac5",
+      "canonical_id": "arXiv:2411.07066",
+      "arxiv_id": "2411.07066",
+      "doi": "10.48550/arXiv.2411.07066",
+      "authors": [
+        "Elia Cunegatti",
+        "L. Custode",
+        "Giovanni Iacca"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 740,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models",
+      "source_url": "https://arxiv.org/abs/2511.11505",
+      "year": 2025,
+      "published": "2025-11-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Blocking communication presents a major hurdle in running MoEs efficiently in distributed settings. To address this, we present FarSkip-Collective which modifies the architecture of modern models to enable overlapping of their computation with communication. Our approach modifies the architecture to skip connections in the model and it is unclear a priori whether the modified model architecture can remain as capable, especially for large state-of-the-art models and while modifying all of the model layers. We answer this question in the affirmative and fully convert a series of state-of-the-art models varying from 16B to 109B parameters to enable overlapping of their communication while achieving accuracy that is comparable with their original open-source releases. For example, we convert Llama 4 Scout (109B) via self-distillation and achieve average accuracy within 1% of its instruction tuned release averaged over a wide range of downstream evaluations. In addition to demonstrating retained accuracy of the large modified models, we realize the benefits of FarSkip-Collective through optimized implementations that explicitly overlap communication with computation, accelerating both training and inference in existing frameworks. For inference, we demonstrate 32.6% speedup in Time To First Token when serving a converted DeepSeek-V3 architecture with expert parallelism in SGLang and achieve 97.3% communication-computation overlap during the prefill stage. During training, our approach enables 88.9% communication overlap of the all-to-all communication collectives when pre-training DeepSeek-V3 MoE layers with expert parallelism.",
+      "identifiers": [
+        "SemanticScholar:325785bfa1f9a9c4cf75fb6d90d8f1d910365b71"
+      ],
+      "semantic_scholar_id": "325785bfa1f9a9c4cf75fb6d90d8f1d910365b71",
+      "canonical_id": "arXiv:2511.11505",
+      "arxiv_id": "2511.11505",
+      "doi": "10.48550/arXiv.2511.11505",
+      "authors": [
+        "Yonatan Dukler",
+        "Guihong Li",
+        "Deval Shah",
+        "Jiang Liu",
+        "Vikram Appia",
+        "Emad Barsoum"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.11534",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.11534",
+        "id:SemanticScholar:697263d5f05da231dddfc070474bfb464afc0df9",
+        "id:arXiv:2602.11534",
+        "title:krause synchronization transformers",
+        "url:https://arxiv.org/abs/2602.11534"
+      ],
+      "record": {
+        "title": "Krause Synchronization Transformers",
+        "source_url": "https://arxiv.org/abs/2602.11534",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-attention in Transformers relies on globally normalized softmax weights, causing all tokens to compete for influence at every layer. When composed across depth, this interaction pattern induces strong synchronization dynamics that favor convergence toward a dominant mode, a behavior associated with representation collapse and attention sink phenomena. We introduce Krause Attention, a principled attention mechanism inspired by bounded-confidence consensus dynamics. Krause Attention replaces similarity-based global aggregation with distance-based, localized, and selectively sparse interactions, promoting structured local synchronization instead of global mixing. We relate this behavior to recent theory modeling Transformer dynamics as interacting particle systems, and show how bounded-confidence interactions naturally moderate attention concentration and alleviate attention sinks. Restricting interactions to local neighborhoods also reduces runtime complexity from quadratic to linear in sequence length. Empirically, we validate Krause Attention across diverse settings, including vision (ViT on CIFAR/ImageNet), autoregressive image generation (MNIST/CIFAR-10), large language models (Llama/Qwen), and language models trained from scratch at multiple scales (100M/200M). Across these domains, Krause Attention achieves consistent performance gains while improving computational efficiency, highlighting bounded-confidence dynamics as a scalable and effective inductive bias for attention.",
+        "identifiers": [
+          "SemanticScholar:697263d5f05da231dddfc070474bfb464afc0df9"
+        ],
+        "semantic_scholar_id": "697263d5f05da231dddfc070474bfb464afc0df9",
+        "canonical_id": "arXiv:2602.11534",
+        "arxiv_id": "2602.11534",
+        "doi": "10.48550/arXiv.2602.11534",
+        "authors": [
+          "Jing-Kun Liu",
+          "Yisong Yue",
+          "M. Welling",
+          "Yue Song"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 282,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13416",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.13416",
+        "id:SemanticScholar:1e143a75958ecd594c539cb90d7b92d5f82ad2ba",
+        "id:arXiv:2608.13416",
+        "title:streamttt reconciling realtime perception and longterm memory in streaming vlms",
+        "url:https://arxiv.org/abs/2608.13416"
+      ],
+      "record": {
+        "title": "StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs",
+        "source_url": "https://arxiv.org/abs/2608.13416",
+        "year": 2026,
+        "published": "2026-08-13",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Humans effortlessly perceive the present while remembering the past, yet streaming VLMs often trade off real-time perception against long-term memory. Prior work shows that shortening the context can sharpen current-scene perception at the expense of long-range recall. To reconcile these abilities, we introduce StreamTTT, which writes long-range history into online-updated fast weights outside the attention context. This leaves a short sliding key-value cache dedicated to recent evidence, mitigating attention dilution. We train StreamTTT jointly on offline long-video QA and a newly constructed real-time QA corpus. On OVO-Bench, under each model's reported input protocol, StreamTTT-4B outperforms the same-scale SimpleStream-4B by 0.6 points in real-time perception and 5.3 points in backward tracing. It also surpasses the larger SimpleStream-8B by 0.73 points on StreamingBench's Real-Time Visual Understanding (RTVU) subset. Our code is publicly available at https://github.com/zeyun-zhong/StreamTTT.",
+        "identifiers": [
+          "SemanticScholar:1e143a75958ecd594c539cb90d7b92d5f82ad2ba"
+        ],
+        "semantic_scholar_id": "1e143a75958ecd594c539cb90d7b92d5f82ad2ba",
+        "canonical_id": "arXiv:2608.13416",
+        "arxiv_id": "2608.13416",
+        "doi": "10.48550/arXiv.2608.13416",
+        "authors": [
+          "Joya Chen",
+          "Ze-Yun Zhong",
+          "M. Shou"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.02780",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.02780",
+        "id:SemanticScholar:fc752fcce5978786a259ae2176549f6bb7da7705",
+        "id:arXiv:2609.02780",
+        "title:shallowstream index shallow then answer deep for streaming video understanding",
+        "url:https://arxiv.org/abs/2609.02780"
+      ],
+      "record": {
+        "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+        "source_url": "https://arxiv.org/abs/2609.02780",
+        "year": 2026,
+        "published": "2026-09-02",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming video understanding is a critical capability for real-world applications, including embodied intelligence, autonomous driving, industrial monitoring, surveillance and early warning, and wearable assistants. However, processing continuous video streams with multimodal large language models (MLLMs) is computationally expensive. Existing efforts have explored reducing streaming overhead through visual token pruning, token merging, quantization, on-demand frame retrieval, and context offloading. However, most existing methods overlook the dimension of model depth. Repeatedly executing full-depth MLLM prefill over incoming frames is prohibitively expensive, incurring substantial computational overhead and causing the KV cache to grow at a rate directly proportional to the prefill depth. To address these challenges, we propose ShallowStream, a novel framework that leverages the shallow layers of an MLLM to simultaneously perform frame encoding and retrieval index building. During stream processing, ShallowStream maintains an always-on lightweight index using the KV cache of shallow layers. During query-time answering, we leverage the attention scores generated by the shallow layers to score context frames and employ a diversity-aware selection strategy to retrieve precise and comprehensive evidence. ShallowStream achieves performance on par with the strongest existing streaming methods, while reducing per-frame prefill latency and 10-second end-to-end latency by up to 52.1x and 11.9x, respectively. Our code is available at https://github.com/CURRENTF/ShallowStream.",
+        "identifiers": [
+          "SemanticScholar:fc752fcce5978786a259ae2176549f6bb7da7705"
+        ],
+        "semantic_scholar_id": "fc752fcce5978786a259ae2176549f6bb7da7705",
+        "canonical_id": "arXiv:2609.02780",
+        "arxiv_id": "2609.02780",
+        "doi": "10.48550/arXiv.2609.02780",
+        "authors": [
+          "Jitai Hao",
+          "Ke-Shuai Yang",
+          "Ding-Kun Yan",
+          "Fan Liu",
+          "Qiang Huang",
+          "Jun Yu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 80,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.13680",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.13680",
+        "id:SemanticScholar:49869dd893cc05511ff1519105765d9fabdba986",
+        "id:arXiv:2602.13680",
+        "title:allmem a memorycentric recipe for efficient longcontext modeling",
+        "url:https://arxiv.org/abs/2602.13680"
+      ],
+      "record": {
+        "title": "AllMem: A Memory-centric Recipe for Efficient Long-context Modeling",
+        "source_url": "https://arxiv.org/abs/2602.13680",
+        "year": 2026,
+        "published": "2026-02-14",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) encounter significant performance bottlenecks in long-sequence tasks due to the computational complexity and memory overhead inherent in the self-attention mechanism. To address these challenges, we introduce \\textsc{AllMem}, a novel and efficient hybrid architecture that integrates Sliding Window Attention (SWA) with non-linear Test-Time Training (TTT) memory networks. \\textsc{AllMem} enables models to effectively scale to ultra-long contexts while mitigating catastrophic forgetting. This approach not only overcomes the representation constraints typical of linear memory models but also significantly reduces the computational and memory footprint during long-sequence inference. Furthermore, we implement a Memory-Efficient Fine-Tuning strategy to replace standard attention layers in pre-trained models with memory-augmented sliding window layers. This framework facilitates the efficient transformation of any off-the-shelf pre-trained LLM into an \\textsc{AllMem}-based architecture. Empirical evaluations confirm that our 4k window model achieves near-lossless performance on 37k LongBench with a marginal 0.83 drop compared to full attention. Furthermore, on InfiniteBench at a 128k context, our 8k window variant outperforms full attention, which validates the effectiveness of our parameterized memory in mitigating noise and maintaining robust long-range modeling without the prohibitive costs of global attention.",
+        "identifiers": [
+          "SemanticScholar:49869dd893cc05511ff1519105765d9fabdba986"
+        ],
+        "semantic_scholar_id": "49869dd893cc05511ff1519105765d9fabdba986",
+        "canonical_id": "arXiv:2602.13680",
+        "arxiv_id": "2602.13680",
+        "doi": "10.48550/arXiv.2602.13680",
+        "authors": [
+          "Zi-Ming Wang",
+          "Xiang Wang",
+          "Kailong Peng",
+          "Lang Qin",
+          "Juan Gabriel Kostelec",
+          "Christos Sourmpis",
+          "Axel Laborieux",
+          "Qinghai Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.08436",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.08436",
+        "id:SemanticScholar:824f8b80ad40f64b6fe1b2b1b2a7759ac6466263",
+        "id:arXiv:2506.08436",
+        "title:olica efficient structured pruning of large language models without retraining",
+        "url:https://arxiv.org/abs/2506.08436"
+      ],
+      "record": {
+        "title": "Olica: Efficient Structured Pruning of Large Language Models without Retraining",
+        "source_url": "https://arxiv.org/abs/2506.08436",
+        "year": 2025,
+        "published": "2025-06-10",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Most existing structured pruning methods for Large Language Models (LLMs) require substantial computational and data resources for retraining to reestablish the corrupted correlations, making them prohibitively expensive. To address this, we propose a pruning framework for LLMs called Orthogonal decomposition and Linear Calibration (Olica), which eliminates the need for retraining. A key observation is that the multi-head attention (MHA) layer depends on two types of matrix products. By treating these matrix products as unified entities and applying principal component analysis (PCA), we extract the most important information to compress LLMs without sacrificing accuracy or disrupting their original structure. Consequently, retraining becomes unnecessary. A fast decomposition method is devised, reducing the complexity of PCA by a factor of the square of the number of attention heads. Additionally, to mitigate error accumulation problem caused by pruning the feed-forward network (FFN) layer, we introduce a linear calibration method to reconstruct the residual errors of pruned layers using low-rank matrices. By leveraging singular value decomposition (SVD) on the solution of the least-squares problem, these matrices are obtained without requiring retraining. Extensive experiments show that the proposed Olica is efficient in terms of data usage, GPU memory, and running time, while delivering superior performance across multiple benchmarks.",
+        "identifiers": [
+          "SemanticScholar:824f8b80ad40f64b6fe1b2b1b2a7759ac6466263"
+        ],
+        "semantic_scholar_id": "824f8b80ad40f64b6fe1b2b1b2a7759ac6466263",
+        "canonical_id": "arXiv:2506.08436",
+        "arxiv_id": "2506.08436",
+        "doi": "10.48550/arXiv.2506.08436",
+        "authors": [
+          "Jiujun He",
+          "Huazhen Lin"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 529,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.10552",
+      "identity_tokens": [
+        "id:SemanticScholar:eac265b164e624a55b6779d1e2ae7cdba3ee3cce",
+        "id:arXiv:2610.10552",
+        "title:freeze the decoder heal the encoder parameterefficient adaptation for svdbased kvcache compression",
+        "url:https://arxiv.org/abs/2610.10552"
+      ],
+      "record": {
+        "title": "Freeze the Decoder, Heal the Encoder: Parameter-Efficient Adaptation for SVD-Based KV-Cache Compression",
+        "source_url": "https://arxiv.org/abs/2610.10552",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Comparing parameter-efficient fine-tuning recipes under a single, shared learning rate is a common but flawed practice: when the arms being compared have very different trainable-parameter counts, a shared rate can simultaneously depress the larger arms'means and inflate their variance, manufacturing a large, seemingly multi-seed-significant advantage for the smallest arm that is not a real effect. We document this confound in a concrete setting: post-hoc SVD-based KV-cache compression, where an already-pretrained model is converted to a low-rank (multi-head-latent-attention-style) cache by factorizing its key/value weights into a down-projection (\"encoder\") and an up-projection (\"decoder\"), after which a short fine-tune (\"healing\") recovers the accuracy lost to truncation. Under a shared learning rate, freezing the decoder and healing only the encoder looks like a clear win over healing the decoder or both factors; once every arm is given its own tuned learning rate, that apparent advantage disappears, and encoder-only healing instead reaches parity with the alternatives, at a real, measured saving of 3x fewer trainable parameters and 3x less optimizer-state memory. We verify this parity with per-arm learning-rate tuning and three seeds per configuration on a vision-language model (Qwen2.5-VL-3B-Instruct), at the one compression ratio this protocol covers, and replicate it on a text-only testbed across two backbones. Encoder-only healing is therefore a lower-memory drop-in recipe for retrofitting low-rank KV-cache compression at training time, and the shared-learning-rate pitfall we document and correct is a cautionary result for comparing any fine-tuning recipes whose arms differ in trainable-parameter count.",
+        "identifiers": [
+          "SemanticScholar:eac265b164e624a55b6779d1e2ae7cdba3ee3cce"
+        ],
+        "semantic_scholar_id": "eac265b164e624a55b6779d1e2ae7cdba3ee3cce",
+        "canonical_id": "arXiv:2610.10552",
+        "arxiv_id": "2610.10552",
+        "authors": [
+          "Yu-Feng Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 57,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34867",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34867",
+        "id:SemanticScholar:f8cba0a612558edbafb18dc32cefbd8c05930eb9",
+        "id:arXiv:2609.34867",
+        "title:p4q codesigning token pruning and quantization for visionlanguage model acceleration",
+        "url:https://arxiv.org/abs/2609.34867"
+      ],
+      "record": {
+        "title": "P4Q: Co-designing Token Pruning and Quantization for Vision-Language Model Acceleration",
+        "source_url": "https://arxiv.org/abs/2609.34867",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision language models have achieved strong performance across a wide range of multimodal applications, yet their substantial computational and memory costs hinder efficient deployment. Visual token pruning and post-training quantization reduce inference overhead along two complementary dimensions, namely sequence length and numerical precision. Existing workflows typically optimize these techniques independently or apply them sequentially. Their distinct optimization objectives leave critical interactions unaddressed and constrain the achievable compression performance. We revisit these designs and present P4Q, a practical co-design framework that jointly optimizes visual token pruning and low-bit quantization for efficient VLM inference. First, P4Q introduces a quantization-aware visual token selection strategy before the LLM. It applies fake quantization to copies of the features produced by the projector and selects visual tokens using statistics computed from these fake-quantized features, thereby conditioning the selector's feature-based decisions on simulated low-bit perturbations. Second, P4Q introduces a pruning-aware quantization calibration strategy. It uses the same selection strategy as pruning to calibrate the quantized model on the retained-token distribution, thereby aligning the calibration process with the pruned execution path used during deployment. By coupling these two components, P4Q achieves substantial inference speedups while maintaining comparable task performance, resulting in a better efficiency-accuracy trade-off than independently optimized pipelines. For instance, on LLaVA-NeXT, P4Q achieves an average end-to-end inference speedup of 2.8x across eight distinct test sets, while retaining higher accuracy than prior compression and quantization methods.",
+        "identifiers": [
+          "SemanticScholar:f8cba0a612558edbafb18dc32cefbd8c05930eb9"
+        ],
+        "semantic_scholar_id": "f8cba0a612558edbafb18dc32cefbd8c05930eb9",
+        "canonical_id": "arXiv:2609.34867",
+        "arxiv_id": "2609.34867",
+        "doi": "10.48550/arXiv.2609.34867",
+        "authors": [
+          "Hai-Zhao Jing",
+          "Zhen-Hao Shang",
+          "Hao-Kui Zhang",
+          "Rong Xiao",
+          "Peng Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.03247",
+      "identity_tokens": [
+        "id:SemanticScholar:2f60fb96998a1b089f6c101bbf7ba88727afa442",
+        "id:arXiv:2611.03247",
+        "title:r2omni reducing structural and precision redundancy in omnillms for longform generation",
+        "url:https://arxiv.org/abs/2611.03247"
+      ],
+      "record": {
+        "title": "R$^2$-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation",
+        "source_url": "https://arxiv.org/abs/2611.03247",
+        "year": 2026,
+        "published": "2026-11-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Omni-modal large language models (Omni-LLMs) typically process large numbers of multimodal tokens from audio-visual inputs, incurring substantial computational costs and a large memory footprint for the key-value (KV) cache. Aggressive token pruning can alleviate this problem while maintaining competitive performance on multiple-choice tasks, which require only a single option as output. However, we observe substantial quality degradation when generating long-form, open-ended responses. We attribute this gap to query-guided selection, which can retain sufficient evidence for answer selection while discarding details needed for comprehensive generation. This motivates reducing overlapping information across tokens, termed structural redundancy, while preserving diverse content. However, the retained representations may still contain precision redundancy due to unnecessarily high numerical precision in their cached values. To address these two levels of redundancy in token representations, we introduce a training-free framework named R$^2$-Omni. First, Structure-Aware Token Consolidation (STC) consolidates redundant representations using spatiotemporal similarity in video and local continuity in audio. Then, Semantic-Sensitivity Guided Precision Allocation (SSPA) allocates value precision to the retained representations according to the estimated reduction in attention-output error under quantized keys, with query attention and audio-visual alignment providing a semantic prior. Extensive experiments on long-form generation benchmarks demonstrate an average 5.0$\\times$ reduction in the memory footprint while preserving 97.98% of baseline generation quality and achieving a 1.48$\\times$ end-to-end speedup, highlighting the benefits of jointly reducing structural and precision redundancy.",
+        "identifiers": [
+          "SemanticScholar:2f60fb96998a1b089f6c101bbf7ba88727afa442"
+        ],
+        "semantic_scholar_id": "2f60fb96998a1b089f6c101bbf7ba88727afa442",
+        "canonical_id": "arXiv:2611.03247",
+        "arxiv_id": "2611.03247",
+        "authors": [
+          "Bo Feng",
+          "P. Zhou",
+          "Zheng-Lin Wan",
+          "Wei Wang",
+          "Wang-Bo Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.07066",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.07066",
+        "id:SemanticScholar:15e39854f9292c00d268e008b27265ff73be7ac5",
+        "id:arXiv:2411.07066",
+        "title:zerothorder adaptive neuron alignment based pruning without retraining",
+        "url:https://arxiv.org/abs/2411.07066"
+      ],
+      "record": {
+        "title": "Zeroth-Order Adaptive Neuron Alignment Based Pruning without Re-Training",
+        "source_url": "https://arxiv.org/abs/2411.07066",
+        "year": 2024,
+        "published": "2024-11-11",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Network pruning focuses on algorithms that aim to reduce a given model's computational cost by removing a subset of its parameters while having minimal impact on performance. Throughout the last decade, the most widely used pruning paradigm has been pruning and re-training, which nowadays is inconvenient due to the vast amount of pre-trained models, which are, in any case, too expensive to re-train. In this paper, we exploit functional information from dense pre-trained models, i.e., their input activations, to obtain sparse models that maximize the activations'alignment with respect to their corresponding dense models. Hence, we propose \\textbf{NeuroAl}, a \\emph{top-up} algorithm that can be used on top of any given pruning algorithm for LLMs, which modifies the block-wise and row-wise sparsity, exploiting information from both the dense model and its sparse version to maximize the \\emph{neuron alignment} among activations. Different from existing methods, our approach adaptively selects the best hyperparameters for the block-wise and row-wise sparsity ratios w.r.t. the model and the desired sparsity, and requires \\emph{no re-training}. We test our method over $\\sim$300 test cases with four LLM families, three sparsity ratios, and ten language tasks (three language modeling and seven zero-shot datasets), showing how it consistently outperforms the latest state-of-the-art methods in terms of performance-runtime trade-off. The code is available at \\href{https://github.com/eliacunegatti/NeuroAL}{https://github.com/eliacunegatti/NeuroAL}.",
+        "identifiers": [
+          "SemanticScholar:15e39854f9292c00d268e008b27265ff73be7ac5"
+        ],
+        "semantic_scholar_id": "15e39854f9292c00d268e008b27265ff73be7ac5",
+        "canonical_id": "arXiv:2411.07066",
+        "arxiv_id": "2411.07066",
+        "doi": "10.48550/arXiv.2411.07066",
+        "authors": [
+          "Elia Cunegatti",
+          "L. Custode",
+          "Giovanni Iacca"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 740,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11505",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.11505",
+        "id:SemanticScholar:325785bfa1f9a9c4cf75fb6d90d8f1d910365b71",
+        "id:arXiv:2511.11505",
+        "title:farskipcollective unhobbling blocking communication in mixture of experts models",
+        "url:https://arxiv.org/abs/2511.11505"
+      ],
+      "record": {
+        "title": "FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models",
+        "source_url": "https://arxiv.org/abs/2511.11505",
+        "year": 2025,
+        "published": "2025-11-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Blocking communication presents a major hurdle in running MoEs efficiently in distributed settings. To address this, we present FarSkip-Collective which modifies the architecture of modern models to enable overlapping of their computation with communication. Our approach modifies the architecture to skip connections in the model and it is unclear a priori whether the modified model architecture can remain as capable, especially for large state-of-the-art models and while modifying all of the model layers. We answer this question in the affirmative and fully convert a series of state-of-the-art models varying from 16B to 109B parameters to enable overlapping of their communication while achieving accuracy that is comparable with their original open-source releases. For example, we convert Llama 4 Scout (109B) via self-distillation and achieve average accuracy within 1% of its instruction tuned release averaged over a wide range of downstream evaluations. In addition to demonstrating retained accuracy of the large modified models, we realize the benefits of FarSkip-Collective through optimized implementations that explicitly overlap communication with computation, accelerating both training and inference in existing frameworks. For inference, we demonstrate 32.6% speedup in Time To First Token when serving a converted DeepSeek-V3 architecture with expert parallelism in SGLang and achieve 97.3% communication-computation overlap during the prefill stage. During training, our approach enables 88.9% communication overlap of the all-to-all communication collectives when pre-training DeepSeek-V3 MoE layers with expert parallelism.",
+        "identifiers": [
+          "SemanticScholar:325785bfa1f9a9c4cf75fb6d90d8f1d910365b71"
+        ],
+        "semantic_scholar_id": "325785bfa1f9a9c4cf75fb6d90d8f1d910365b71",
+        "canonical_id": "arXiv:2511.11505",
+        "arxiv_id": "2511.11505",
+        "doi": "10.48550/arXiv.2511.11505",
+        "authors": [
+          "Yonatan Dukler",
+          "Guihong Li",
+          "Deval Shah",
+          "Jiang Liu",
+          "Vikram Appia",
+          "Emad Barsoum"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 372,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1e4b3fe0b7493a3a1556079c833d0e10ebb7431579636f43ba8602ed14082265",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
