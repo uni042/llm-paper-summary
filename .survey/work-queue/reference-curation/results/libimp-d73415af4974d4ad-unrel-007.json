@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d73415af4974d4ad-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11312",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11312",
+    "identity_tokens": [
+      "arXiv:2607.11312"
+    ],
+    "reason": "長時間動画から技能を学び実時間課題へ適用できるかを問うSLVMBenchという評価ベンチマークの提案であり、推論システムや高速化手法の提案ではない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SLVMBench: Skill Learning from Video Memory"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d73415af4974",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

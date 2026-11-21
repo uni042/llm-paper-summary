@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b94595bc2b6de235-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.13080",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.13080",
+    "identity_tokens": [
+      "arXiv:2607.13080"
+    ],
+    "reason": "企業コーディングエージェントのクラウドAPIとオンプレ量子化モデルのコストと欠陥率を28日間の事例で比較した推論経済学のケーススタディであり、新たな推論システム技術の提案ではない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Inference Economics of Enterprise Coding Agents: A Case Study of Cloud vs. On-Premise LLMs"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b94595bc2b6d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

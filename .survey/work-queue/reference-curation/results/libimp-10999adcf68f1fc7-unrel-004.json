@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10999adcf68f1fc7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.13438",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.13438",
+    "identity_tokens": [
+      "arXiv:2605.13438"
+    ],
+    "reason": "エージェントの断片的イベントを認知的構造へ自律的に折り畳む常時稼働メモリCogniFoldの提案であり、内容はエージェント記憶の組織化と認知ベンチマーク評価が中心で、LLM推論処理系の機構とは関係しない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "CogniFold: Always-On Proactive Memory via Cognitive Folding"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10999adcf68f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

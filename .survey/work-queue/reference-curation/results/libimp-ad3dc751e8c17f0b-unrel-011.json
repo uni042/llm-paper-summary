@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad3dc751e8c17f0b-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.07890",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.07890",
+    "identity_tokens": [
+      "arXiv:2501.07890"
+    ],
+    "reason": "専門家間の情報伝播を擬似グラフと再帰的ルーティングで模しLoRAで推論能力や認知深度を高めるGRAPHMOEの提案であり、MoE推論の効率やサービングではなくモデル品質の向上が目的であるため",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "GRAPHMOE: Amplifying Cognitive Depth of Mixture-of-Experts Network via Introducing Self-Rethinking Mechanism"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad3dc751e8c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

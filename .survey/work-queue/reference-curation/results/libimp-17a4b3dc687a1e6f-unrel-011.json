@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17a4b3dc687a1e6f-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.17257",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.17257",
+    "identity_tokens": [
+      "arXiv:2309.17257"
+    ],
+    "reason": "日常生活場面における人間の将来行動予測アルゴリズムの進展を分類・表形式で整理した深層学習サーベイであり、自動運転や人間ロボット相互作用向けの応用分野の概観であってLLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A Survey on Deep Learning Techniques for Action Anticipation"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17a4b3dc687a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

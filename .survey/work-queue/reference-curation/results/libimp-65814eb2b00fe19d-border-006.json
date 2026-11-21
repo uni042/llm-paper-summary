@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65814eb2b00fe19d-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.14694",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.14694",
+    "identity_tokens": [
+      "arXiv:2606.14694"
+    ],
+    "reason": "入力ストリーム中に考える適応的推論と階層的方策最適化を提案するAdaSRは遅延配慮の計算配分を含むが、主体は強化学習による学習法であり推論システム機構は薄い。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65814eb2b00f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

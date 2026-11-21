@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba3ab89da37cc88c-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.22049",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.22049",
+    "identity_tokens": [
+      "arXiv:2510.22049"
+    ],
+    "reason": "生成推薦の逐次変換器向けに履歴要約トークンをキャッシュして候補注意を二段階化し、百万件規模の履歴でも下流の学習・推論コストを固定化するVISTAの提案だが、対象は推薦プラットフォームのサービングでありLLM推論ではないため。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Massive Memorization with Hundreds of Trillions of Parameters for Sequential Transducer Generative Recommenders"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba3ab89da37c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

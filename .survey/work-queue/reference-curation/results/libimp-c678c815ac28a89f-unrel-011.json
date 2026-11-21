@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c678c815ac28a89f-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.06462",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.06462",
+    "identity_tokens": [
+      "arXiv:2602.06462"
+    ],
+    "reason": "マスク拡散言語モデルの中間充填決定へ信用割り当てを行う方策最適化DiSPOの提案であり、内容は強化学習による生成モデルの学習改善が主体で、推論時の処理速度や資源効率を扱うシステム技術ではない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Diffusion-State Policy Optimization for Masked Diffusion Language Models"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c678c815ac28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

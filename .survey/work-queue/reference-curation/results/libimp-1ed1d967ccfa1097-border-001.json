@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ed1d967ccfa1097-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.07901",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.07901",
+    "identity_tokens": [
+      "arXiv:2402.07901"
+    ],
+    "reason": "高速多重極法や高速ガウス変換に着想を得た因数分解可能な注意で計算・メモリ複雑度を二次から線形へ下げるFASTは、注意行列の全結合関係を保つ点を述べるが、一次要旨は標準設定での検証に留まり、大規模言語モデルの推論実行での遅延やスループット実測は示されていない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FAST: Factorizable Attention for Speeding up Transformers"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ed1d967ccfa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a08bf03f23a96973-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32569",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32569",
+    "identity_tokens": [
+      "arXiv:2609.32569"
+    ],
+    "reason": "発話と視覚・空間音響の文脈を組にしたスマートホーム向けマルチモーダル推論ベンチマークと手続き記憶を持つ基線の評価が中心で、推論システム技術への直接貢献はないため。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "OmniSmartHome: A Multimodal Reasoning Benchmark for Smart-Home Agents"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a08bf03f23a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

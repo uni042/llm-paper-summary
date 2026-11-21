@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a436b5802f782257-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.22032",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.22032",
+    "identity_tokens": [
+      "arXiv:2604.22032"
+    ],
+    "reason": "行列積や融合注意カーネルを含むMLカーネルの精度・順序・例外値に関する契約を8要素で記述する仕様言語はカーネル正確性として関連するが、提案は規範仕様と違反署名の定義であり高速なカーネル実装や推論性能の改善そのものではない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Kernel Contracts: A Specification Language for ML Kernel Correctness Across Heterogeneous Silicon"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a436b5802f78",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

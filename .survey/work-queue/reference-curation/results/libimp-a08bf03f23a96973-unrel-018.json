@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a08bf03f23a96973-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.00079",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.00079",
+    "identity_tokens": [
+      "arXiv:2406.00079"
+    ],
+    "reason": "意思決定Transformerの骨格をMambaへ置換しサブゴールで誘導する強化学習エージェントの提案で、オンライン試験の高速化もRL課題内のモデル効率に閉じLLM推論とは対象が異なるため。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Decision Mamba: Reinforcement Learning via Hybrid Selective Sequence Modeling"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a08bf03f23a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

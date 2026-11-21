@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad3dc751e8c17f0b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.15678",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.15678",
+    "identity_tokens": [
+      "arXiv:2410.15678"
+    ],
+    "reason": "Mambaの局所パターンへの依存を分析し大域選択モジュールを追加して分散情報タスクの精度を上げる研究で、線形複雑性モデルには関連するものの推論高速化やサービングへの直接貢献は示されていないため",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Revealing and Mitigating the Local Pattern Shortcuts of Mamba"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad3dc751e8c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

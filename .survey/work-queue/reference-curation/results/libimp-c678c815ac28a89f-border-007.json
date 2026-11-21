@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c678c815ac28a89f-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.09075",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.09075",
+    "identity_tokens": [
+      "arXiv:2602.09075"
+    ],
+    "reason": "ゲート付き線形注意の固定容量メモリをベイズ的メタ可塑性で拡張するPalimpsaを理論的に提案するが、内容は注意機構の学習理論と連想想起ベンチマークが中心で、実際のLLM推論処理系での高速化や省メモリ効果は示されていない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning to Remember, Learn, and Forget in Attention-Based Models"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c678c815ac28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

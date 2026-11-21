@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93e26c8bf20aff95-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.23131",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.23131",
+    "identity_tokens": [
+      "arXiv:2505.23131"
+    ],
+    "reason": "非同期データフローグラフの演算をデバイスへ割り当て実行時間を削減する学習型スケジューリングであり、MLワークロード一般の配置最適化で、LLM推論特化の機構や評価は要旨からは限定的である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DOPPLER: Dual-Policy Learning for Device Assignment in Asynchronous Dataflow Graphs"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93e26c8bf20a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

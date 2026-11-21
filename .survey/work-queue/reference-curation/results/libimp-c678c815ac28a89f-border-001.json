@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c678c815ac28a89f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14159",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14159",
+    "identity_tokens": [
+      "arXiv:2604.14159"
+    ],
+    "reason": "モバイル端末上のLLM入力メソッドとして階層メモリによる個人化と端末向けシステム最適化を謳うが、要旨の中心は入力支援アプリケーションと個人化精度であり、推論高速化の具体的な機構や計測が不明瞭で関連は薄い。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HUOZIIME: An On-Device LLM-enhanced Input Method for Deep Personalization"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c678c815ac28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

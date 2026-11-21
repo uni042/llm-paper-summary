@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17a4b3dc687a1e6f-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.07599",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.07599",
+    "identity_tokens": [
+      "arXiv:2603.07599"
+    ],
+    "reason": "音声言語モデルの会話における感情・速度・音量・ピッチの話し方強度制御を多ターン対話で測るStyleBenchという評価ベンチマークであり、能力評価のみで推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "StyleBench: Evaluating Speech Language Models on Conversational Speaking Style Control"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17a4b3dc687a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17a4b3dc687a1e6f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.28027",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.28027",
+    "identity_tokens": [
+      "arXiv:2610.28027"
+    ],
+    "reason": "強化学習の事後学習手法が7つのオープンソース学習フレームワークへ取り込まれる過程をコミット履歴と論文の対応で計測した調査であり、推論システム技術そのものの提案ではなく学習手法の採用実態分析に留まる。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From RL Papers to Framework Code: Inclusion and Review in Seven Open-Source Training Frameworks"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17a4b3dc687a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

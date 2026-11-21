@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93e26c8bf20aff95-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.19836",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.19836",
+    "identity_tokens": [
+      "arXiv:2509.19836"
+    ],
+    "reason": "100万トークン超の長系列でTransformerを学習するためのBurstAttention等を含む分散学習フレームワークであり、対象は学習の高速化で推論サービングへの直接貢献は示されていない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "BurstEngine: An efficient distributed framework for training transformers On extremely Long sequences of over 1M tokens"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93e26c8bf20a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a08bf03f23a96973-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.07922",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.07922",
+    "identity_tokens": [
+      "arXiv:2604.07922"
+    ],
+    "reason": "大規模推論モデルの過剰思考に対し有限状態機械の思考モードと軽量な過程報酬モデルで段階ごとに枝刈りし推論トークンを最大40%削減するが、サービング基盤やデコード機構ではなく推論過程の制御方策が中心であるため。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SAT: Balancing Reasoning Accuracy and Efficiency with Stepwise Adaptive Thinking"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a08bf03f23a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

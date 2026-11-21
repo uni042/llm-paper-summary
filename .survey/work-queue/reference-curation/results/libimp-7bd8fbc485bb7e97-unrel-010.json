@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7bd8fbc485bb7e97-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.05509",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.05509",
+    "identity_tokens": [
+      "arXiv:2503.05509"
+    ],
+    "reason": "一次要旨の内容は中央サーバなしの完全分散連合学習システムPlexusであり、モデル集約とサンプリングを参加ノードへ分散して学習到達時間を短縮するもので、タイトルが示すMoE推論や専門家分割に関する推論システムの記述は要旨中に存在しない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Accelerating MoE Model Inference with Expert Sharding"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7bd8fbc485bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

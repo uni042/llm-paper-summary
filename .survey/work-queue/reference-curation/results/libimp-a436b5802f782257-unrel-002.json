@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a436b5802f782257-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.30858",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.30858",
+    "identity_tokens": [
+      "arXiv:2605.30858"
+    ],
+    "reason": "予測エージェント向けに再利用可能な予測因子と較正知識を階層的記憶へ蓄積するForecastCompassは、対象が確率予測という応用タスクの精度と較正でありLLM推論システムへの直接貢献は示されていない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ForecastCompass: Guiding Agentic Forecasting with Adaptive Factor Memory"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a436b5802f78",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

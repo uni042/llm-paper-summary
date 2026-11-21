@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d3abf74c6ec54eb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.07412",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.07412",
+    "identity_tokens": [
+      "arXiv:2309.07412"
+    ],
+    "reason": "線形回帰型ニューラルネットワークが正規言語の文法規則を学習できるかを理論解析し、ブロック対角な遷移行列を提案する表現能力の研究であり、LLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Advancing Regular Language Reasoning in Linear Recurrent Neural Networks"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d3abf74c6ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

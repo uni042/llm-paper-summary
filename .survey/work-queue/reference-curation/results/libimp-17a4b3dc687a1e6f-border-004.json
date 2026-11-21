@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17a4b3dc687a1e6f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.12545",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.12545",
+    "identity_tokens": [
+      "arXiv:2610.12545"
+    ],
+    "reason": "編集連鎖で因果モデルを学習し生成済み文脈へトークンの挿入・置換・削除を可能にするAutoIndexerはデコード機構として新しいが、主眼は柔軟な順序生成やコード修正などの編集能力であり、推論速度やメモリ等のシステム効率への効果は要旨で不明瞭である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AutoIndexer: Flexible-Order Decoding by Training Causal Models on Chains of Edits"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17a4b3dc687a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

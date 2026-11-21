@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d73415af4974d4ad-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2105.14068",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2105.14068",
+    "identity_tokens": [
+      "arXiv:2105.14068"
+    ],
+    "reason": "コードワードヒストグラムで線形時間自己注意を実現するLISAは注意効率化の要素を含むが、評価も用途も逐次推薦システムに特化しておりLLM推論への適用は間接的である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Linear-Time Self Attention with Codeword Histogram for Efficient Recommendation"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d73415af4974",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

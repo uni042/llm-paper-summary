@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10999adcf68f1fc7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.18533",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.18533",
+    "identity_tokens": [
+      "arXiv:2406.18533"
+    ],
+    "reason": "3D Gaussian Splattingの学習を複数GPUへ分散させるシステムGrendelの提案であり、対象は三次元再構成の学習並列化であって、言語モデルの推論やサービングとは無関係な別分野の研究である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "On Scaling Up 3D Gaussian Splatting Training"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10999adcf68f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

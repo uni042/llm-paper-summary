@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad3dc751e8c17f0b-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.12340",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.12340",
+    "identity_tokens": [
+      "arXiv:2502.12340"
+    ],
+    "reason": "本番ノードと不健全ノードを決定的実行で比較し、サイレントデータ破損がLLM訓練の勾配や収束に与える影響を分析する研究であり、対象は推論ではなく大規模学習時のハードウェア障害であるため",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Understanding Silent Data Corruption in LLM Training"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad3dc751e8c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

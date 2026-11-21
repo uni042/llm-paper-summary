@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b94595bc2b6de235-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.07746",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.07746",
+    "identity_tokens": [
+      "arXiv:2409.07746"
+    ],
+    "reason": "3次元MR画像からの脳腫瘍表現学習と解釈可能な状態空間モデルによる自己教師あり学習が主題であり、対象は医用画像解析であってLLM推論システムとは分野が異なる。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Learning Brain Tumor Representation in 3D High-Resolution MR Images via Interpretable State Space Models"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b94595bc2b6d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad3dc751e8c17f0b-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2111.10951",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2111.10951",
+    "identity_tokens": [
+      "arXiv:2111.10951"
+    ],
+    "reason": "深さ適応型BERTの小規模サブネットワークが二値分類で全モデルを上回る場合があることを示しBERTを縮小する簡易法を述べるが、分類タスク向けのモデル縮小でありLLMサービング機構ではないため",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Can depth-adaptive BERT perform better on binary classification tasks"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad3dc751e8c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

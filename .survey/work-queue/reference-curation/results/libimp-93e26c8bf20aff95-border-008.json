@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93e26c8bf20aff95-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.14695",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.14695",
+    "identity_tokens": [
+      "arXiv:2606.14695"
+    ],
+    "reason": "特定ペルソナに必要な部分ネットワークを切り出して軽量な役割演技モデルを作るPersona-Prunerで、LLM剪定技術ではあるが対象がロールプレイ応用に特化し汎用推論貢献は限定的である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93e26c8bf20a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

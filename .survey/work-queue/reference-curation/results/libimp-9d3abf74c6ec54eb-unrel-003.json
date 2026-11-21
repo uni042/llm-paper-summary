@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d3abf74c6ec54eb-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2211.09949",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2211.09949",
+    "identity_tokens": [
+      "arXiv:2211.09949"
+    ],
+    "reason": "自己教師あり音声Transformerについて重みプルーニングや蒸留など四種の圧縮法を実時間係数等で比較した評価研究であり、対象は音声処理でLLM推論の新機構ではない。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Is Smaller Always Faster? Tradeoffs in Compressing Self-Supervised Speech Transformers"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d3abf74c6ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7bd8fbc485bb7e97-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.23527",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.23527",
+    "identity_tokens": [
+      "arXiv:2603.23527"
+    ],
+    "reason": "積極的プロンプト圧縮が出力長と総推論コストへ与える影響を複数ベンチマークと提供事業者で再現検証し、指示残存確率やCompression Robustness Indexを提案する研究は、圧縮の配備時評価としては関連するが、新たな圧縮・推論機構の提案ではなく計測と分析が主体である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compression Method Matters: Benchmark-Dependent Output Dynamics in LLM Prompt Compression"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7bd8fbc485bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7bd8fbc485bb7e97-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.19172",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.19172",
+    "identity_tokens": [
+      "arXiv:2606.19172"
+    ],
+    "reason": "Engramモデルのハッシュ鍵付きメモリ表への局所編集で利用者事実を格納し共有アダプタと分離する方式は、検索パイプラインとの比較やフットプリント削減に触れるものの、主体は個人化記憶と推論技能の分離であり、推論システム機構としての寄与は間接的である。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "User as Engram: Internalizing Per-User Memory as Local Parametric Edits"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7bd8fbc485bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

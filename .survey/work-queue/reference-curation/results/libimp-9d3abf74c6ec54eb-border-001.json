@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d3abf74c6ec54eb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.08439",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.08439",
+    "identity_tokens": [
+      "arXiv:2510.08439"
+    ],
+    "reason": "コストを意識したLLMオーケストレーションとして強化学習で学習したルータが外部モデルを呼び分けるシステムを提案するが、貢献の中心はルーティング方策の学習であり推論実行機構は薄い。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-21T08:03:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "xRouter: Training Cost-Aware LLMs Orchestration System via Reinforcement Learning"
+  },
+  "processed_at": "2026-11-21T08:03:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d3abf74c6ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
