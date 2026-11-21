@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（294本）
+## 自動生成の論文一覧（295本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -702,6 +702,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   LatencyPrismは、本番の大規模言語モデル（LLM）推論で、ユーザーの体感品質に影響する遅延の一時的な増大を、サービスを止めずに検知し、原因の切り分けに必要な実行情報を取得するシステムである。
 
+- **2025-12 · [Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs](2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-res.md)**  
+  実装：[✓](https://github.com/pabillam/mem-efficient-blr) ・ リポジトリ内被引用：0  
+  ブロック低ランク圧縮は多トークン推論では中間テンソルの往復でメモリ律速になることをルーフライン分析で示し、部分融合とメモリ配置の最適化を行ったTritonカーネルで中間の書き戻しを消すことで、圧縮の理論上の節約を実測の高速化へ戻す研究。
+
 - **2025-12 · [Magneton: Optimizing Energy Efficiency of ML Systems via Differential Energy Debugging](2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-ene.md)**  
   実装：[✓](https://github.com/uw-syfi/Magneton) ・ リポジトリ内被引用：0  
   同等機能の別実装と演算子単位でエネルギーを比べ、無駄な実装とその原因である設定や呼出し経路まで自動で特定する差分エネルギーデバッグ。9システムで既知15件を診断し未知8件を発見。
@@ -1129,7 +1133,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：625  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：626  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -1213,7 +1217,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-12〜2019-11）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：212  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：213  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

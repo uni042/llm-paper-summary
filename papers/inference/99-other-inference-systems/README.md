@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1191本）
+## 自動生成の論文一覧（1193本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2662,6 +2662,10 @@
   実装：[✓](https://github.com/michaelfeil/radix-mlp) ・ リポジトリ内被引用：0  
   RadixMLPは、同一バッチに入った複数の系列が長い接頭辞を共有している場合、共有部分の多層パーセプトロン（MLP）、層正規化（LayerNorm）、線形射影、埋め込みなどを何度も実行する無駄を削減する方式である。
 
+- **2026-01 · [QA-Merging: Query-Adaptive Reasoning via Layer Selective Model Merging](2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.md)**  
+  実装：[✓](https://github.com/Zephyr-Zhong/QA-Merging) ・ リポジトリ内被引用：0  
+  長い思考過程を出すモデルと短い思考過程を出すモデルについて、両者の隠れ状態が大きく分かれる層だけを特徴合わせで較正し、残りの層は閉形式の隠れ状態補正で済ませて統合することで、難しい問いには長く、簡単な問いには短く答える単一モデルを作る統合方式。
+
 - **2026-01 · [Power-based Partial Attention: Bridging Linear-Complexity and Full Attention](2026-2601.17334-power-based-partial-attention-bridging-linear-complexity-and-full-attent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、完全注意の二次計算量と局所窓注意の線形計算量の中間を、べき指数 p によって連続的に構成する「べき乗型部分注意（Power-based Partial 注意機構; PPA）」を提案する。MATH500では p=0 の67.4%から p=0.75 の79.8%、p=0.875 の82.4%へ上昇し、全注意 p=1 の80.8%に並ぶ。
@@ -2809,7 +2813,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：134  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：135  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -2837,7 +2841,7 @@
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：41  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
@@ -3531,6 +3535,10 @@
 - **2025-09 · [HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs](2025-2509.23967-hipo-hybrid-policy-optimization-for-dynamic-reasoning-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HiPO（Hybrid Policy Optimization）は、各入力に対して詳細推論を行うThink-onと直接回答するThink-offを選ぶ能力をモデル自体に学習させる方式である。
+
+- **2025-09 · [FS-DFM: Fast and Accurate Long Text Generation with Few-Step Diffusion Language Models](2025-2509.20624-fs-dfm-fast-and-accurate-long-text-generation-with-few-step-diffusion-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ステップ数を条件として学習し、大きな1歩が多歩の合成と一致する一貫性と、区間積分した累積スカラーによる更新で、離散フローマッチングの生成を1024ステップから8ステップへ減らして同等のパープレキシティを保つ方式。
 
 - **2025-09 · [Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation](2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

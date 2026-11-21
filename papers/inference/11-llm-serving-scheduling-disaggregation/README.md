@@ -1468,13 +1468,13 @@
   実装：✓ ・ リポジトリ内被引用：22  
   要求・ジョブ・タスク抽象、NPU中心FlowServe、KV局所性とPD構成を統合した分散スケジューラ、NPU-fork等の高速スケールを組み合わせたHuawei Cloud本番サーバーレスLLM基盤。
 
+- **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
+  実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：20  
+  AReaLは、長い推論列を生成する大規模推論モデル（大規模推論モデル（Large Reasoning モデル; LRM））の強化学習（強化学習（reinforcement learning; RL））で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習システムである。
+
 - **2025-02 · [Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs](2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
   次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
-
-- **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
-  実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：19  
-  AReaLは、長い推論列を生成する大規模推論モデル（大規模推論モデル（Large Reasoning モデル; LRM））の強化学習（強化学習（reinforcement learning; RL））で、ロールアウト生成とパラメータ更新を同じバッチ障壁で交互実行する同期方式をやめ、生成GPU群と学習GPU群を完全に分離する学習システムである。
 
 - **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
   実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：19  
@@ -1928,6 +1928,10 @@
   実装：[✓](https://github.com/LawrenceRLiu/NoWag) ・ リポジトリ内被引用：1  
   NoWag（Normalized 重み and 活性値 Guided Compression）は、学習済みLLMの重み行列を入出力形状を保ったまま低ビット量子化または疎化するための共通枠組みである。NoWag-Pも50%非構造剪定ではWandaより低いperplexityを示す。
 
+- **2025-01 · [FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices](2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  異なるビット幅の量子化モデルのモジュールを混ぜたハイブリッド群を木探索で生成し、約100MB粒度でメモリへ合わせられる弾性配備を小さなストレージで実現する枠組み。
+
 - **2025-11 · [Parallel Vision Token Scheduling for Fast and Accurate Multimodal LMMs Inference](2025-2511.18875-parallel-vision-token-scheduling-for-fast-and-accurate-multimodal-lmms-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ParVTS（Parallel Vision Token Scheduling）は、高解像度画像を入力するマルチモーダル大規模言語モデル（MLLM）において、視覚トークンを一律に残すか捨てるかという二者択一を避ける推論時手法である。
@@ -2011,10 +2015,6 @@
 - **2025-01 · [Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models](2025-2501.18154-mixed-precision-graph-neural-quantization-for-low-bit-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、学習済み大規模言語モデルの重みを平均2ビット前後へ事後量子化する際、すべての重み列に同じビット幅を割り当てると重要な列の誤差が大きくなり、困惑度が急激に悪化する問題を扱う。原著の効率評価はRTX 4090上の量子化前処理時間であり、生成トークン/sやエンドツーエンド推論時間の改善は示していない。
-
-- **2025-01 · [FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices](2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  異なるビット幅の量子化モデルのモジュールを混ぜたハイブリッド群を木探索で生成し、約100MB粒度でメモリへ合わせられる弾性配備を小さなストレージで実現する枠組み。
 
 ### 3年前（2023-12〜2024-11）
 

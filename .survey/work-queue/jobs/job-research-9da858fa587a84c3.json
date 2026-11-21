@@ -35,10 +35,15 @@
   "selection_reason": "構造化剪定で生じるLLMの出力誤差を回転制約付きで補償し分散の大きい入力次元を優先保持するRCPUで、Llama系での困惑度と精度を既存手法より改善する推論向け剪定手法である。",
   "semantic_scholar_id": "c49df4e1099334882564f1fe79b9e54bd5c308df",
   "source_url": "https://arxiv.org/abs/2510.07782",
-  "status": "ready",
+  "status": "superseded",
   "title": "RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T23:20:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a.md",
+  "represented_canonical_id": "arXiv:2510.07782",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

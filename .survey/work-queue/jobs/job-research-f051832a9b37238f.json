@@ -35,10 +35,15 @@
   "selection_reason": "ブロック低ランク重みに対するカスタムTritonカーネルの部分融合とメモリ配置最適化で、Llama等の単一・複数トークン推論を最大3.76倍高速化しメモリ律速を直接緩和しているため。",
   "semantic_scholar_id": "e8e332efb03eae69c917db5c495d418567c357ac",
   "source_url": "https://arxiv.org/abs/2512.20861",
-  "status": "ready",
+  "status": "superseded",
   "title": "Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T23:20:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-res.md",
+  "represented_canonical_id": "arXiv:2512.20861",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
