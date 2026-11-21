@@ -35,10 +35,15 @@
   "selection_reason": "全二重音声対話モデルがフレームごとに自己回帰バックボーンを回す逐次計算を、複数フレーム先を一度に予測するローリングマスク拡散のDiffuPlexで減らし、展開経路で1.46〜1.59倍の壁時計高速化を示す推論高速化の直接貢献である。",
   "semantic_scholar_id": "57769d297b35057855c9648aae298dfa139f59a5",
   "source_url": "https://arxiv.org/abs/2610.12214",
-  "status": "ready",
+  "status": "superseded",
   "title": "DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:40:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.12214-diffuplex-accelerating-full-duplex-spoken-dialog-models-via-rolling-mask.md",
+  "represented_canonical_id": "arXiv:2610.12214",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

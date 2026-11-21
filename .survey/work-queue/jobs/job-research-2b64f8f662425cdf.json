@@ -35,10 +35,15 @@
   "selection_reason": "EncBankは事前学習LLMの下位層を再利用可能な文書エンコーダとして中間状態を低ビットで保存し複数クエリで共有することで、永続GPUストレージを28.1%まで圧縮しプリフィルを1.40倍高速化する、推論時の再利用メモリ機構そのものであるため採用とする。",
   "semantic_scholar_id": "8b2aab08ed6ae363f52fc28cb8dd2a7e9f4883f9",
   "source_url": "https://arxiv.org/abs/2610.10058",
-  "status": "ready",
+  "status": "superseded",
   "title": "Cache the Encoder Within:Compact, Reusable Memory across LLM Queries",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:40:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.10058-cache-the-encoder-within-compact-reusable-memory-across-llm-queries.md",
+  "represented_canonical_id": "arXiv:2610.10058",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

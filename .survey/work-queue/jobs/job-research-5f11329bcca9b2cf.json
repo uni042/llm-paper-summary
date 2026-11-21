@@ -35,10 +35,15 @@
   "selection_reason": "言語エージェント間のテキスト通信のプリフィル遅延を避けるため、下流モデルへ上流モデルのKVキャッシュを学習なしで線形補間して融合するCacheFuseを提案しTTFTを最大12.2倍高速化する点を要旨が示しており、KVキャッシュ共有による多モデル推論への直接貢献として採用する。",
   "semantic_scholar_id": "bdb062051ad222a5eb897a73fa30f2615833a05f",
   "source_url": "https://arxiv.org/abs/2610.16165",
-  "status": "ready",
+  "status": "superseded",
   "title": "Think Before You Speak: Enabling Training-Free Latent Communication Between Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:40:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.16165-think-before-you-speak-enabling-training-free-latent-communication-betwe.md",
+  "represented_canonical_id": "arXiv:2610.16165",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

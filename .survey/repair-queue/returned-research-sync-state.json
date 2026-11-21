@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "95337a2d502a64c3c1298743d0dda96119a74a1d",
+  "base_commit": "5ace5398af09ad8c5d43ef4f3184eafb9e27056a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -632,6 +632,7 @@
     "2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matrix-engines.json",
     "2026-2610.05265-loopy-low-bit-quantization-framework-for-looped-language-models.json",
     "2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-opportunistic-fine-tuning.json",
+    "2026-2610.05885-the-optimization-landscape-of-learning-compacted-context-models.json",
     "2026-2610.06011-d-loop-looped-diffusion-drafting-for-speculative-decoding.json",
     "2026-2610.06026-differentiable-bit-widths-co-optimizing-pruning-and-quantization-via-svd-for-ultra-efficient-llm-compression.json",
     "2026-2610.06286-deferkv-rethinking-eviction-timing-for-one-shot-kv-cache-compression.json",
@@ -666,6 +667,7 @@
     "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json",
     "2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.json",
     "2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-for-regression-testing.json",
+    "2026-2610.10058-cache-the-encoder-within-compact-reusable-memory-across-llm-queries.json",
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
     "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json",
@@ -674,6 +676,7 @@
     "2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.json",
     "2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.json",
     "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
+    "2026-2610.12214-diffuplex-accelerating-full-duplex-spoken-dialog-models-via-rolling-masked-diffusion.json",
     "2026-2610.12242-tokenrouter-efficient-serving-system-for-token-level-llm-routing.json",
     "2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inference.json",
     "2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.json",
@@ -691,6 +694,7 @@
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
     "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json",
+    "2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.json",
     "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
     "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
@@ -700,6 +704,7 @@
     "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json",
     "2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-across-gpu-architectures.json",
     "2026-2610.15921-fast-and-accurate-improving-personalized-llm-performance-by-semantic-concentration-inspired-workload-split-between-rag-and-fine-tuning.json",
+    "2026-2610.16165-think-before-you-speak-training-free-latent-communication-between-language-models.json",
     "2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-transformers.json",
     "2026-2610.16890-forge-procedural-weight-generation-for-sparse-moe-inference.json",
     "2026-2610.17191-freesolo-linear-time-sparse-attention-with-zero-shot-length-extrapolation.json",
@@ -46914,6 +46919,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.05885": {
+      "order": [
+        "2026-11-21T06:34:40+00:00",
+        "2026-2610.05885-the-optimization-landscape-of-learning-compacted-context-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.10058": {
+      "order": [
+        "2026-11-21T06:35:41+00:00",
+        "2026-2610.10058-cache-the-encoder-within-compact-reusable-memory-across-llm-queries.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.12214": {
+      "order": [
+        "2026-11-21T06:36:40+00:00",
+        "2026-2610.12214-diffuplex-accelerating-full-duplex-spoken-dialog-models-via-rolling-masked-diffusion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15095": {
+      "order": [
+        "2026-11-21T06:37:40+00:00",
+        "2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.16165": {
+      "order": [
+        "2026-11-21T06:38:40+00:00",
+        "2026-2610.16165-think-before-you-speak-training-free-latent-communication-between-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58915,6 +58965,21 @@
     "arxiv:2609.40247": [
       "papers/inference/09-kernel-runtime-compilation/2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-.md"
+    ],
+    "arxiv:2610.05885": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.05885-the-optimization-landscape-of-learning-compacted-context-models.md"
+    ],
+    "arxiv:2610.10058": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.10058-cache-the-encoder-within-compact-reusable-memory-across-llm-queries.md"
+    ],
+    "arxiv:2610.12214": [
+      "papers/inference/99-other-inference-systems/2026-2610.12214-diffuplex-accelerating-full-duplex-spoken-dialog-models-via-rolling-mask.md"
+    ],
+    "arxiv:2610.15095": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.md"
+    ],
+    "arxiv:2610.16165": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.16165-think-before-you-speak-enabling-training-free-latent-communication-betwe.md"
     ]
   }
 }
