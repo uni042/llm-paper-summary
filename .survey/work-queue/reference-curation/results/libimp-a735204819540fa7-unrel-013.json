@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.06181",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.06181",
+    "identity_tokens": [
+      "arXiv:2602.06181"
+    ],
+    "reason": "量子化モデル50種を偏りベンチマークで評価し量子化によるバイアス反転や不確実性との関係を分析する研究であり、量子化モデルを対象にはしているが内容は社会的バイアスという能力・振る舞い評価のみで、量子化手法や推論システムへの技術的貢献はないため無関係とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Investigating Social Bias Changes in Quantized Language Models"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

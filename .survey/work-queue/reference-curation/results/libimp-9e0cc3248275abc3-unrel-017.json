@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e0cc3248275abc3-unrel-017",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.13077",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.13077",
+    "identity_tokens": [
+      "arXiv:2410.13077"
+    ],
+    "reason": "後期層のロジットを学習可能なルーティングで統合するMixture-of-Depths EnsembleによるLLMチューニング枠組みであり、対象は微調整時の訓練信号の活用であって推論時の計算削減機構ではないため無関係である。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Tuning Language Models by Mixture-of-Depths Ensemble"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e0cc3248275",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae65b06de94f5076-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2110.10548",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2110.10548",
+    "identity_tokens": [
+      "arXiv:2110.10548"
+    ],
+    "reason": "データ並列とモデル並列の階層アクセラレータへの配置を特徴付け、構文誘導合成で階層を意識した集合通信列を生成しall-reduceを高速化する枠組みであり、分散実行基盤には関連するが対象は汎用深層学習の学習時通信が主体でLLM推論への直接適用や評価は要旨に確認できないため境界とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Synthesizing Optimal Parallelism Placement and Reduction Strategies on Hierarchical Systems for Deep Learning"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae65b06de94f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

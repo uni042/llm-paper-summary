@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f9bc9e51a2abe35-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.19046",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.19046",
+    "identity_tokens": [
+      "arXiv:2607.19046"
+    ],
+    "reason": "教師の低・高努力プロンプト間の対数確率差をトークン単位の優位信号にする対照的オンポリシー蒸留COPDは推論長を短縮するが、手法の主体は学生モデルの訓練であり推論時機構は新たに導入されない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Contrastive On-Policy Distillation"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f9bc9e51a2a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

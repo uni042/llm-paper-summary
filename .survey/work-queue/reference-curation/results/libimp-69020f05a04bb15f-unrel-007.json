@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69020f05a04bb15f-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.13187",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.13187",
+    "identity_tokens": [
+      "arXiv:2506.13187"
+    ],
+    "reason": "LoRA初期化をタスク共分散のSVDで決める微調整手法で収束高速化や忘却抑制を示すが、対象はファインチューニングの学習過程のみであり推論時の計算・メモリ削減への直接貢献は確認できない",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Dynamic Context-oriented Decomposition for Task-aware Low-rank Adaptation with Less Forgetting and Faster Convergence"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69020f05a04b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

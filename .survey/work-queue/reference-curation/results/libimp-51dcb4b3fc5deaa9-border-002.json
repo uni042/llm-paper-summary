@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51dcb4b3fc5deaa9-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.11497",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.11497",
+    "identity_tokens": [
+      "arXiv:2505.11497"
+    ],
+    "reason": "動画拡散モデル向け量子化QVGenは補助モジュールのランク減衰で4ビット以下の量子化認識学習を安定化させ推論オーバーヘッドを消す工夫を示すが、適用先は動画生成拡散モデルでありLLM推論への直接の適用や機構は要旨に確認できないため境界とする。",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QVGen: Pushing the Limit of Quantized Video Generative Models"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51dcb4b3fc5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

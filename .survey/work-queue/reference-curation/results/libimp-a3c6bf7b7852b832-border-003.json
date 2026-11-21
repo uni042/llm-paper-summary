@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3c6bf7b7852b832-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.29252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.29252",
+    "identity_tokens": [
+      "arXiv:2603.29252"
+    ],
+    "reason": "視覚KVキャッシュを記憶源として二経路圧縮で転送・書込みするFlexMemにより長尺動画理解を扱うが、主目的は動画MLLMの理解精度と処理可能フレーム数の拡大であり汎用推論基盤への貢献は限られる。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scaling the Long Video Understanding of Multimodal Large Language Models via Visual Memory Mechanism"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3c6bf7b7852",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

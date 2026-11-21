@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.20368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.20368",
+    "identity_tokens": [
+      "arXiv:2509.20368"
+    ],
+    "reason": "検証器の局所難易度に基づき生成ステップごとに再サンプリングや巻き戻しを判断してテスト時計算を配分する手法であり、推論時計算量の適応制御には関連するものの、サービング基盤やデコード実行機構そのもののシステム改善ではなく精度と計算のトレードオフ手法が主体のため境界とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LATTS: Locally Adaptive Test-Time Scaling"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

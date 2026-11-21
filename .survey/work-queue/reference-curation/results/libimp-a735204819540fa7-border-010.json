@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.22873",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.22873",
+    "identity_tokens": [
+      "arXiv:2610.22873"
+    ],
+    "reason": "推論トレースのKVキャッシュ再利用が持つ残留影響を悪用するブラックボックス攻撃R2ECAPを提示し再利用機構の脆弱性を実証している点でKVキャッシュ運用には関連するが、提案は攻撃手法とその評価であり推論システムの効率や設計を改善する貢献ではないため境界とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stealthy Poisoning Attacks via Reused KV Cache of Reasoning"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

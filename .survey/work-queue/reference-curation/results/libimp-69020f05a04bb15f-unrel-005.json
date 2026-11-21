@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69020f05a04bb15f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.01601",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.01601",
+    "identity_tokens": [
+      "arXiv:2609.01601"
+    ],
+    "reason": "リポジトリ規模のコード生成で決定的なcritical token位置を検出して検索を発動するRAG枠組みで、改善対象は生成コードの正しさであり推論の高速化やKVキャッシュ等のシステム機構には踏み込んでいない",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Adaptive Critical Token-Aware Retrieval for Repository-Level Code Generation"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69020f05a04b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

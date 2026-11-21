@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-51dcb4b3fc5deaa9-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.18177",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.18177",
+    "identity_tokens": [
+      "arXiv:2412.18177"
+    ],
+    "reason": "オンライン継続学習向けS6MODは選択的状態空間モデルの離散化をクラス条件付きに調整して新規タスクへの適応性を高める学習手法であり、評価も継続学習の性能向上が中心で、LLM推論やサービングの効率化への具体的な適用は確認できない。",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Enhancing Online Continual Learning with Plug-and-Play State Space Model and Class-Conditional Mixture of Discretization"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-51dcb4b3fc5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

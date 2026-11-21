@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae65b06de94f5076-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.05329",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.05329",
+    "identity_tokens": [
+      "arXiv:2610.05329"
+    ],
+    "reason": "事前学習中の重み平均が学習後量子化の性能を改善する機構を、進捗保持と摂動頑健性のトレードオフとして理論化し平均カーネル族を導く研究であり、PTQの前提条件には関連するが提案主体は学習側の理論解析で新たな量子化や推論実行手法そのものではないため境界とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Understanding the Weight Averaging Mechanism in LLM Training for Post-Training Quantization"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae65b06de94f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

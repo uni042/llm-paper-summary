@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69020f05a04bb15f-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.17781",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.17781",
+    "identity_tokens": [
+      "arXiv:2603.17781"
+    ],
+    "reason": "事実をハッシュアドレス可能なKnowledge ObjectとしてO(1)検索する永続メモリ方式でin-context保持より低コストとするが、検証の中心は事実保持と多ホップ推論の精度であり推論サービングのメモリ階層機構としては具体性が弱いため保留とする",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Facts as First Class Objects: Knowledge Objects for Persistent LLM Memory"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69020f05a04b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

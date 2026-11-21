@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d7c71487cda0b7f-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.05816",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.05816",
+    "identity_tokens": [
+      "arXiv:2406.05816"
+    ],
+    "reason": "マルチヘッド注意をハイパーネットワークとして再定式化し潜在コードで構成的汎化を説明する分析はRaven課題での理解が目的で、注意カーネルの高速化や推論効率への具体的な機構は提案されていない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Attention as a Hypernetwork"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d7c71487cda",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

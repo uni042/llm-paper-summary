@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-995bc4d25d8c9740-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.16001",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.16001",
+    "identity_tokens": [
+      "arXiv:2603.16001"
+    ],
+    "reason": "LVLMの重み剪定でテキスト経路と視覚経路の感度差を踏まえ較正プールと層適応的な視覚トークン選択を行う非対称剪定手法だが、要旨では精度優位が中心で推論速度やメモリ削減の実測が示されていないため保留とする",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mostly Text, Smart Visuals: Asymmetric Text-Visual Pruning for Large Vision-Language Models"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-995bc4d25d8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

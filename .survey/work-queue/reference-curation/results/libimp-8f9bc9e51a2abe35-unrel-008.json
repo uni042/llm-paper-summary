@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f9bc9e51a2abe35-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.26742",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.26742",
+    "identity_tokens": [
+      "arXiv:2610.26742"
+    ],
+    "reason": "Muon最適化の勾配直交化を多項式回路で安くするPolar Switchは事前学習時の直交化ランタイムを15%以上下げる訓練最適化であり、推論時の計算やサービングには適用されない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Polar Switch: Fast Muon Orthogonalization with Polynomial Circuits"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f9bc9e51a2a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

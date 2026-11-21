@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf8989489370d134-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.07972",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.07972",
+    "identity_tokens": [
+      "arXiv:2502.07972"
+    ],
+    "reason": "MoEテキスト埋め込みモデルNomic Embed v2の学習を扱い、推論遅延とメモリ増大を動機に掲げるものの、具体的なサービング機構やKV管理ではなくモデル学習とベンチマーク性能が主体であり、LLM推論システムへの直接貢献は限定的である。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Training Sparse Mixture Of Experts Text Embedding Models"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf8989489370",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

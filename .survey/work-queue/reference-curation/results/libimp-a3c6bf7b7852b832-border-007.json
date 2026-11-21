@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3c6bf7b7852b832-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.20802",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.20802",
+    "identity_tokens": [
+      "arXiv:2509.20802"
+    ],
+    "reason": "LLMベース音声合成を対象にWER基準の層重要度で構造化プルーニングと適応的蒸留を行うSPADEは、深さ半減と1.7倍の実時間化を示すがTTSという特定応用向け圧縮に留まる。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3c6bf7b7852",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

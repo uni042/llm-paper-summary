@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.23949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.23949",
+    "identity_tokens": [
+      "arXiv:2505.23949"
+    ],
+    "reason": "転置可能なN:Mスパースマスクを最適輸送とDykstra法で大規模モデル向けに生成しLLaMAへ適用する圧縮手法だが、主眼は学習時の転置効率とマスク探索の高速化であり、推論時の実行速度やサービング機構の直接評価は示されていないため境界とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TSENOR: Highly-Efficient Algorithm for Finding Transposable N:M Sparse Masks"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

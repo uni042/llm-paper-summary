@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.02328",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.02328",
+    "identity_tokens": [
+      "arXiv:2606.02328"
+    ],
+    "reason": "低ランク行列や部分等長行列に対するリーマン最適化を小型言語モデルの注意パラメータ学習へ適用する研究であり、AdamWを明確に上回らず、推論・サービング・KVキャッシュ等のシステム技術への直接貢献は要旨に確認できないため無関係とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Riemannian Gradient Descent for Low-Rank Architectures"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-995bc4d25d8c9740-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.00486",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.00486",
+    "identity_tokens": [
+      "arXiv:2506.00486"
+    ],
+    "reason": "一般化ガウス事前分布に基づく初期化と活性・勾配制約による訓練法で分散訓練の通信削減などを狙う研究であり、小型で高速なモデルという主張も学習最適化が主体で推論システム機構の検証はない",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "It Takes a Good Model to Train a Good Model: Generalized Gaussian Priors for Optimized LLMs"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-995bc4d25d8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

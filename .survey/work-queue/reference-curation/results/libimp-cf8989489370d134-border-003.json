@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf8989489370d134-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2210.05529",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2210.05529",
+    "identity_tokens": [
+      "arXiv:2210.05529"
+    ],
+    "reason": "長文書分類向け階層的注意Transformerでセグメント単位と跨セグメントのエンコーダによりGPUメモリ削減と処理高速化を報告するが、対象は分類用エンコーダの事前学習モデルであり、LLMの生成推論やデコードへの直接適用は示されていない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Exploration of Hierarchical Attention Transformers for Efficient Long Document Classification"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf8989489370",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

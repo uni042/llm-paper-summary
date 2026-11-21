@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e0cc3248275abc3-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.06648",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.06648",
+    "identity_tokens": [
+      "arXiv:2610.06648"
+    ],
+    "reason": "拡散言語モデルの生成分布を凍結モデルの特徴空間でMMDにより近づける事後学習法であり、デコード並列度の向上に触れるものの主眼は生成品質の学習目的関数であって推論システム機構ではないため無関係である。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Representation-Space MMD for Diffusion Language Models"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e0cc3248275",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

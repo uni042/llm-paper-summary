@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-881ea5718f75e12c-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.17783",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.17783",
+    "identity_tokens": [
+      "arXiv:2503.17783"
+    ],
+    "reason": "通信ネットワークの障害チケット分析という下流応用向けに、量子化とプルーニングの組合せでエネルギー消費と性能のトレードオフを評価する事例研究であり、汎用的なLLM推論機構の新規提案ではなく応用主体の知見にとどまる。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Energy-Aware LLMs: A step towards sustainable AI for downstream applications"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-881ea5718f75",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

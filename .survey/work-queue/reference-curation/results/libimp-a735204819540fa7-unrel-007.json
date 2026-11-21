@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.01571",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.01571",
+    "identity_tokens": [
+      "arXiv:2311.01571"
+    ],
+    "reason": "長い臨床テキストを複数のBERT系エンコーダのアンサンブルと集約で処理し死亡率や入院期間を予測する臨床予測の研究であり、入力長制約への対処も予測精度目的のモデル融合であって、LLM推論システムの実行効率やキャッシュ機構への貢献ではないため無関係とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "On Preserving the Knowledge of Long Clinical Texts"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

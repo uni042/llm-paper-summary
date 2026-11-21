@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a735204819540fa7-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.02206",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.02206",
+    "identity_tokens": [
+      "arXiv:2510.02206"
+    ],
+    "reason": "自己注意を再帰層とプーリングで置換する系列モデルを提案し生音声で学習高速化と知覚指標を評価するアーキテクチャ研究であり、LLMへの適用は将来課題とされ、推論サービングやKVキャッシュ等の実行システムへの直接貢献は示されていないため無関係とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Poolformer: Recurrent Networks with Pooling for Long-Sequence Modeling"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a73520481954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

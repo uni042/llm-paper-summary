@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-41bfecfba70b0e9f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.03113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.03113",
+    "identity_tokens": [
+      "arXiv:2505.03113"
+    ],
+    "reason": "画像認識向け軽量ビジョントランスフォーマのオンライン生成戦略を効率的部品・動的ネットワーク・知識蒸留の観点で整理したサーベイであり、LLM推論システムの新規技術ではない。",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Image Recognition with Online Lightweight Vision Transformer: A Survey"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-41bfecfba70b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

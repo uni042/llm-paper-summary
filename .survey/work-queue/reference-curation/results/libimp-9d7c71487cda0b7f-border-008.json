@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d7c71487cda0b7f-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.03493",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.03493",
+    "identity_tokens": [
+      "arXiv:2411.03493"
+    ],
+    "reason": "ソフトマックス注意の勾配信号を指数変換で大きくするLASER注意は既存実装への小変更で導入できるが、要旨の主眼は学習効率と下流精度の改善であり推論時の速度やメモリの評価は中心ではない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LASER: Attention with Exponential Transformation"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d7c71487cda",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

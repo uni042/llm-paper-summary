@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a3c6bf7b7852b832-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.18031",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.18031",
+    "identity_tokens": [
+      "arXiv:2603.18031"
+    ],
+    "reason": "注意を概念ボトルネック型線形フィルタへ置換し選択的再帰流と融合するInfoMambaは近線形な系列モデルアーキテクチャの提案であり、効率は示唆されるがLLM推論システムとしての実装評価はない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "InfoMamba: An Attention-Free Hybrid Mamba-Transformer Model"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a3c6bf7b7852",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

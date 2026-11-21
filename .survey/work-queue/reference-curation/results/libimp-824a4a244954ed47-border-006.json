@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-824a4a244954ed47-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.16922",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.16922",
+    "identity_tokens": [
+      "arXiv:2603.16922"
+    ],
+    "reason": "端末上音声認識向けに自己注意を学習可能なパルス蓄積で線形時間に置換しMLX推論で3.27倍高速化するLPAはオンデバイス注意置換として関連するが、対象がwav2vec2等の音声モデルでLLMではないため境界的である。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learnable Pulse Accumulation for On-Device Speech Recognition: How Much Attention Do You Need?"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-824a4a244954",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

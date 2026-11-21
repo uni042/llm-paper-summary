@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-995bc4d25d8c9740-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.16514",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.16514",
+    "identity_tokens": [
+      "arXiv:2604.16514"
+    ],
+    "reason": "自己回帰VLMをブロック拡散VLMへ段階的ブロック統合と蒸留で変換し最大3倍のデコードスループットを得る枠組みだが、貢献の主体は変換のための学習手順であり推論時のサービング機構そのものの提案ではないため保留とする",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BARD: Bridging Autoregressive and Diffusion Vision-Language Models via Highly Efficient Progressive Block Merging and Stage-Wise Distillation"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-995bc4d25d8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

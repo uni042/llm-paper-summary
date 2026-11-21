@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e0cc3248275abc3-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.18239",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.18239",
+    "identity_tokens": [
+      "arXiv:2510.18239"
+    ],
+    "reason": "推薦システムで候補集合と利用者履歴に対する注意計算をリンク埋め込みと線形注意で削減するLIMEの提案であり、対象は推薦モデルの推論高速化であってLLMの推論・サービングではないため無関係である。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LIME: Link-based user-item Interaction Modeling with decoupled xor attention for Efficient test time scaling"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e0cc3248275",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae65b06de94f5076-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2107.01499",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2107.01499",
+    "identity_tokens": [
+      "arXiv:2107.01499"
+    ],
+    "reason": "分散データ並列学習向けに量子化や分散化や通信遅延といったシステム緩和を柔軟に実装できるMPI型通信ライブラリBAGUAを構築し学習時間を短縮する研究であり、高速化対象は分散学習の訓練過程のみでLLM推論やサービングの実行機構への直接貢献はないため無関係とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "BAGUA: Scaling up Distributed Learning with System Relaxations"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae65b06de94f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

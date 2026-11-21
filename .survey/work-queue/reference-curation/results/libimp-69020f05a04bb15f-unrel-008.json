@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69020f05a04bb15f-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.09037",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.09037",
+    "identity_tokens": [
+      "arXiv:2405.09037"
+    ],
+    "reason": "初期化時点で顕著性からスパースサブネットワークを決める連合学習手法で通信量と訓練時間を削減するが、対象は分散訓練の通信効率でありLLM推論やオンデバイス推論の機構とは異なる",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SSFL: Discovering Sparse Unified Subnetworks at Initialization for Efficient Federated Learning"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69020f05a04b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

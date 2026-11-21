@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-881ea5718f75e12c-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.02588",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.02588",
+    "identity_tokens": [
+      "arXiv:2607.02588"
+    ],
+    "reason": "長時間動画理解向けに階層メモリとエージェント推論を組み合わせるHomerの提案であり、成果は動画質問応答ベンチマークの精度向上で、メモリは映像の意味構造を指しLLM推論のキャッシュやサービング効率化機構ではない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Homer: Understanding Long-form Videos with Hierarchical Memory and Agentic Reasoning"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-881ea5718f75",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d6d0a4eed92eebd-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.20284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.20284",
+    "identity_tokens": [
+      "arXiv:2403.20284"
+    ],
+    "reason": "BERTのファインチューニングで出力LayerNormが最も変化し、その部分学習だけでGLUE性能が得られると示す分析であり、学習効率の知見に留まって推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-21T07:41:11+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LayerNorm: A key component in parameter-efficient fine-tuning"
+  },
+  "processed_at": "2026-11-21T07:41:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d6d0a4eed92",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-41bfecfba70b0e9f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.23551",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.23551",
+    "identity_tokens": [
+      "arXiv:2506.23551"
+    ],
+    "reason": "トランスフォーマ型アーキテクチャの普遍近似性をトークン識別可能性を軸に統一的に証明する理論研究であり、注意機構の種類ごとの理論保証が対象で推論の高速化や運用技術とは無関係である。",
+    "first_checked_at": "2026-11-21T07:41:10+00:00",
+    "last_checked_at": "2026-11-21T07:41:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A unified framework for establishing the universal approximation of transformer-type architectures"
+  },
+  "processed_at": "2026-11-21T07:41:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-41bfecfba70b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
