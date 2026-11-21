@@ -2769,7 +2769,7 @@
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
-  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：46  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
@@ -4491,7 +4491,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：314  
+  実装：✓ ・ リポジトリ内被引用：315  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -4577,7 +4577,7 @@
   教師と生徒の注意頭数を揃える制約を外し、Query・Key・Valueのトークン間関係を共通の「関係頭」で比較する。推論速度の改善は蒸留後の小型モデルによるもので、実行時に教師を参照する方式ではない。
 
 - **2021-03 · [Softermax: Hardware/Software Co-Design of an Efficient Softmax for Transformers](2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   Transformerの自己注意機構では、クエリとキーの積から得た各スコアをsoftmaxで正規化し、値ベクトルへの重みを生成する。原著のTSMC 7nm設計評価では、非正規化部の面積0.25倍・エネルギー0.10倍、正規化部の面積0.65倍・エネルギー0.39倍、MAC等を含む演算器全体の面積0.90倍・エネルギー0.43倍を報告する。
 
 - **2021-11 · [SimpleTRON: Simple Transformer with O(N) Complexity](2021-2111.15588-simpletron-simple-transformer-with-o-n-complexity.md)**  
