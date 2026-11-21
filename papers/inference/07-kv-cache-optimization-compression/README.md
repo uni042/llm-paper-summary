@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（627本）
+## 自動生成の論文一覧（629本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -65,6 +65,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/PriyanshBhatnagar/STAR-KV) ・ リポジトリ内被引用：11  
   特異値の学習可能なしきい値で層・ヘッドごとのKV低ランク次元を自動配分し、鍵/値で異なる分解と低ランク対応混合精度量子化を組み合わせ、強い圧縮を実GPU高速化へつなげる。
 
+- **2026-05 · [LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents](2026-2602.01053-lragent-multilora-agent-kv-sharing.md)**  
+  実装：[✓](https://github.com/jeonhye/lragent) ・ リポジトリ内被引用：10  
+  multi-LoRAエージェントのKVを共有基盤成分と低ランク役割成分へ分解し、後者を全次元化せず注意計算することで、長い共有履歴のKVメモリと再プリフィルを削減する。
+
 - **2026-05 · [RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory](2026-2605.06675-ratequant-optimal-mixed-precision-kv-cache-quantization-via-rate-distort.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   各ヘッドの損失勾配に基づく重要度と、量子化器固有の指数型ビット数・歪み関係を校正し、逆水充填法と整数ビットの限界利得選択で配分を決める。Qwen3/Llama3の5モデルと3種類の量子化器で評価し、平均4ビット時のTurboQuantにおける量子化劣化回復率は5モデル平均75.7%。
@@ -72,10 +76,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [OSCAR: Offline Spectral Covariance-Aware Rotation for 2-bit KV Cache Quantization](2026-2605.17757-oscar-offline-spectral-covariance-aware-rotation-for-2-bit-kv-cache-quan.md)**  
   実装：[✓](https://github.com/FutureMLS-Lab/OSCAR) ・ リポジトリ内被引用：9  
   しかし2ビットには4段階の値しかなく、KV活性値の少数の大きな外れ値が量子化範囲を支配すると、通常値の区別が失われ、注意分布が崩れる。システム評価はNVIDIA H100上の著者実装であり、12GB級の民生GPUや標準配布版llama.cppで同じ結果が出ると示したものではない。
-
-- **2026-05 · [LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents](2026-2602.01053-lragent-multilora-agent-kv-sharing.md)**  
-  実装：[✓](https://github.com/jeonhye/lragent) ・ リポジトリ内被引用：9  
-  multi-LoRAエージェントのKVを共有基盤成分と低ランク役割成分へ分解し、後者を全次元化せず注意計算することで、長い共有履歴のKVメモリと再プリフィルを削減する。
 
 - **2026-05 · [KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving](2026-2605.13734-kvserve-service-aware-kv-cache-compression.md)**  
   実装：[✓](https://github.com/hpdps-group/KVServe) ・ リポジトリ内被引用：9  
@@ -500,6 +500,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Cartridges++: KV Cache Compression without Off-Context Derailment](2026-2609.35621-cartridges-kv-cache-compression-without-off-context-derailment.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   文書を一度だけ処理し、少数の仮想KV位置へ圧縮した記憶を複数の質問で再利用できれば、デコード時に参照するKV長を減らせる。主要なQwen3長文3課題で、後者の関連性ルータは文書内質問の90%超を受理し、文書外質問の90%超を拒否した。
+
+- **2026-09 · [CacheReforge: Bounded Recovery for Stale KV Caches under Evolving Adapters](2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapter.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  アダプターの更新で古くなったKVキャッシュを、層ごとの版の記録と感度とずれの積による危険度で判定し、直接再利用、範囲を絞った再計算、影響サフィックス全体の再計算の三つから選んで回復させることで、KLを92.4パーセント減らしながら再計算を層の5.44パーセントに抑えた研究。
 
 - **2026-09 · [Budgeted Cache Repair for Cross-Context KV-Cache Reuse](2026-2610.02233-budgeted-cache-repair-for-cross-context-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1571,6 +1575,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   KVCapsuleは、視覚言語モデルの画像トークンが作る鍵・値キャッシュを、単に重要度の低いトークンから削除するのではなく、後で復元できる表現へ圧縮する手法である。五つの視覚言語モデルと画像・動画評価で、視覚KVを平均約60%削減しながら多くの品質指標を保つ。
 
+- **2026-05 · [KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference](2026-2608.21362-kvboost-chunk-level-key-value-cache-reuse-with-deviation-guided-recomput.md)**  
+  実装：[✓](https://github.com/pythongiant/kvboost) ・ リポジトリ内被引用：0  
+  プロンプトをチャンクに切り二重ハッシュでKVを引くことで任意位置の共通部分を再利用し、継ぎ目の誤差をずれの大きいトークンだけの再計算で直すことで、最初のトークンまでの時間を4.49倍短縮し前置きキャッシュも上回った研究。
+
 - **2026-05 · [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](2026-2605.12471-kv-fold-one-step-kv-cache-recurrence-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い入力を一度に処理する大規模言語モデル（LLM）の事前処理では、全トークンに対する注意演算と、各層の鍵・値キャッシュ（KV キャッシュ）を保持するための記憶容量が問題になる。新しい注意カーネルや学習済み圧縮器の提案ではなく、既存Transformerの推論操作に対する実証的な分析が中心となる。
@@ -2236,7 +2244,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：571  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：572  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -2248,7 +2256,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：392  
+  実装：✓ ・ リポジトリ内被引用：393  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  

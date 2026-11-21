@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（99本）
+## 自動生成の論文一覧（100本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -133,6 +133,10 @@
 - **2026-08 · [FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving](2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md)**  
   実装：[✓](https://github.com/z-lab/flashdrive) ・ リポジトリ内被引用：0  
   FlashDriveは、映像と鍵・値キャッシュ（KVキャッシュ）の時系列再利用、拡散モデルによる複数推論トークンの投機的生成、軌跡生成の中間速度再利用、CUDA実行グラフと演算融合、重み4ビット・活性値8ビット量子化を組み合わせる。最終構成では716.9→151.4ミリ秒、約4.7倍の実測高速化となる。
+
+- **2026-08 · [Event-Driven Language Models with Sparse Neural Activity for Neuromorphic Hardware](2026-2608.30439-event-driven-language-models-with-sparse-neural-activity-for-neuromorphi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化された線形注意モデルの全射影に、射影ごとに学習する閾値で小さい活性値をゼロ化する仕組みと疎さの損失を入れ、有効演算を最大約4倍減らし、イベント駆動の多チップ基盤では密モデル比5.4倍のスループットが投影されることを示した研究。
 
 - **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21481269) ・ リポジトリ内被引用：0  

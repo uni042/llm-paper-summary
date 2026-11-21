@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "9ad3912759358323f20d5ac16fe28aa0d7b1ff72",
+  "base_commit": "a5f3da410eff48178b30e9b5e6aaf63340344580",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -553,11 +553,13 @@
     "2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-routing-for-agentic-llms-on-unified-memory.json",
     "2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context-transformers.json",
     "2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruning-of-large-language-models.json",
+    "2026-2608.21362-kvboost-chunk-level-key-value-cache-reuse-with-deviation-guided-recomputation-for-efficient-large-language-model-inferen.json",
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
     "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
     "2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.json",
     "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json",
+    "2026-2608.25542-reflection-steering-disentangling-reflection-from-reasoning-in-activation-space-for-token-efficient-inference.json",
     "2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-language-model-inference.json",
     "2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-quality-trade-off-in-autoregressive-models.json",
     "2026-2608.27128-small-frequency-corrections-can-change-what-survives-kv-cache-compression.json",
@@ -568,6 +570,7 @@
     "2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficient-reasoning.json",
     "2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.json",
     "2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for-hybrid-llms.json",
+    "2026-2608.30439-event-driven-language-models-with-sparse-neural-activity-for-neuromorphic-hardware.json",
     "2026-2608.30509-chipsmore-compute-in-interconnect-and-memory-chiplets-for-multi-mode-multi-request-llm-inference-acceleration.json",
     "2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.json",
     "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json",
@@ -593,6 +596,7 @@
     "2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-agentic-programs.json",
     "2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-llm-serving.json",
     "2026-2609.23314-valuediff-value-geometric-kv-cache-eviction-for-sink-suppressed-llms.json",
+    "2026-2609.24270-dissecting-how-die-scaling-breaks-gpu-fine-grained-scheduling.json",
     "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json",
     "2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-language-models.json",
     "2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-hybrid-language-models-a-4b-to-9b-hybrid-state-ha.json",
@@ -600,6 +604,7 @@
     "2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.json",
     "2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-context-compression.json",
     "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json",
+    "2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapters.json",
     "2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.json",
     "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json",
     "2026-2609.32114-empowering-hybrid-attention-models-on-npus.json",
@@ -47431,6 +47436,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.21362": {
+      "order": [
+        "2026-11-21T23:43:46+00:00",
+        "2026-2608.21362-kvboost-chunk-level-key-value-cache-reuse-with-deviation-guided-recomputation-for-efficient-large-language-model-inferen.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.25542": {
+      "order": [
+        "2026-11-21T23:45:13+00:00",
+        "2026-2608.25542-reflection-steering-disentangling-reflection-from-reasoning-in-activation-space-for-token-efficient-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.30439": {
+      "order": [
+        "2026-11-21T23:46:40+00:00",
+        "2026-2608.30439-event-driven-language-models-with-sparse-neural-activity-for-neuromorphic-hardware.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.24270": {
+      "order": [
+        "2026-11-21T23:48:07+00:00",
+        "2026-2609.24270-dissecting-how-die-scaling-breaks-gpu-fine-grained-scheduling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.30884": {
+      "order": [
+        "2026-11-21T23:49:34+00:00",
+        "2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59624,6 +59674,21 @@
     "arxiv:2608.15592": [
       "papers/inference/99-other-inference-systems/2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-lengt.md",
       "papers/inference/99-other-inference-systems/2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-lengt.md"
+    ],
+    "arxiv:2608.21362": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.21362-kvboost-chunk-level-key-value-cache-reuse-with-deviation-guided-recomput.md"
+    ],
+    "arxiv:2608.25542": [
+      "papers/inference/99-other-inference-systems/2026-2608.25542-reflection-steering-disentangling-reflection-from-reasoning-in-activatio.md"
+    ],
+    "arxiv:2608.30439": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2608.30439-event-driven-language-models-with-sparse-neural-activity-for-neuromorphi.md"
+    ],
+    "arxiv:2609.24270": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.24270-dissecting-how-die-scaling-breaks-gpu-fine-grained-scheduling.md"
+    ],
+    "arxiv:2609.30884": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapter.md"
     ]
   }
 }

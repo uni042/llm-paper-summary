@@ -35,10 +35,15 @@
   "selection_reason": "推論モデルの冗長な反省計算を対象に、反省と一般推論の活性を層ごとに分離しPCA除ノイズと直交化を経た有界射影除去を残差ストリームへ適用するReflection Steeringは、学習なしで推論トークンを平均16.9%削減しデプロイ時に強さを調整できるトークン効率推論手法である。",
   "semantic_scholar_id": "21802a6b6cd35779507cb5e340a39d56f35c8564",
   "source_url": "https://arxiv.org/abs/2608.25542",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reflection Steering: Disentangling Reflection from Reasoning in Activation Space for Token-Efficient Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T23:51:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.25542-reflection-steering-disentangling-reflection-from-reasoning-in-activatio.md",
+  "represented_canonical_id": "arXiv:2608.25542",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

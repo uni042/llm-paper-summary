@@ -35,10 +35,15 @@
   "selection_reason": "アダプタ更新で陳腐化したKVキャッシュ向けCacheReforgeは層別混合バージョン表現と感度較正・再計算境界により有界な再計算で現行アダプタ挙動を回復し、再計算を層の5.44%に抑えつつKLを92.4%削減する、KVキャッシュ管理への直接貢献である。",
   "semantic_scholar_id": "8709ecc808c2d2d46dc9cf907424f7c0fd9a26ad",
   "source_url": "https://arxiv.org/abs/2609.30884",
-  "status": "ready",
+  "status": "superseded",
   "title": "CacheReforge: Bounded Recovery for Stale KV Caches under Evolving Adapters",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T23:51:57+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapter.md",
+  "represented_canonical_id": "arXiv:2609.30884",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
