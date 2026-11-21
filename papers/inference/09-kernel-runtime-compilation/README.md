@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（286本）
+## 自動生成の論文一覧（287本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -573,6 +573,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [Demystifying the Mixture of Experts Serving Tax](2026-b71f37ac28fc-demystifying-the-mixture-of-experts-serving-tax.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Mixture-of-Experts（MoE）が「1トークン当たりに実行する演算量を減らせる」という設計上の利点と、実際のGPUサービングで低遅延・高スループットを得られることの間にある差を調べるシステム特性分析研究である。
+
+- **2026-05 · [Behavioral Consistency in Machine Learning](2026-2606.07581-behavioral-consistency-in-machine-learning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同一重みを実行カーネルで添字付けし、ロジット差から分布・報酬・勾配バイアスへの bound と、スライス別に許容ドリフトと対処を宣言するカーネル契約を提案し、vLLMとHugging Faceの9構成で検証した研究。
 
 - **2026-04 · [SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models](2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

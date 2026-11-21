@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "da83a08215fbb86ae42ee289252a86cd2e386cfd",
+  "base_commit": "a067b5601397265fb77505b784966707380ae76a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -340,6 +340,7 @@
     "2026-2605.10050-echoprune-interpreting-redundancy-as-temporal-echoes-for-efficient-videollms.json",
     "2026-2605.10414-remember-to-forget-gated-adaptive-positional-encoding.json",
     "2026-2605.10905-tlx-hardware-native-evolvable-mimw-gpu-compiler-for-large-scale-production-environments.json",
+    "2026-2605.10980-leap-unlocking-dllm-parallelism-via-lookahead-early-convergence-token-detection.json",
     "2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimodal-large-language-models.json",
     "2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.json",
     "2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation-decomposition-for-efficient-llm-inference.json",
@@ -347,6 +348,7 @@
     "2026-2605.14310-cords-coreset-based-representative-and-diverse-selection-for-streaming-video-understanding.json",
     "2026-2605.14929-a-hardware-aware-per-layer-methodology-for-post-training-quantization-of-large-language-models.json",
     "2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.json",
+    "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json",
     "2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.json",
     "2026-2605.19322-dynatok-temporally-adaptive-and-positional-bias-aware-token-compression-for-video-llms.json",
     "2026-2605.19506-eventprune-cascaded-event-assisted-token-pruning-for-efficient-first-person-dynamic-spatial-reasoning.json",
@@ -370,6 +372,7 @@
     "2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approximation-for-quantized-gated-deltanet.json",
     "2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-inference.json",
     "2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.json",
+    "2026-2606.07581-behavioral-consistency-in-machine-learning.json",
     "2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compression.json",
     "2026-2606.08511-look-less-reason-more-block-wise-attention-skipping-for-efficient-multimodal-llms.json",
     "2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-inference.json",
@@ -428,10 +431,12 @@
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
     "2026-2607.22587-trisp-tri-signal-structured-pruning-for-large-language-models.json",
+    "2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence.json",
     "2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.json",
     "2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computation-fusion.json",
     "2026-2607.23265-wavezip-wavelet-driven-space-time-decoupling-for-video-token-condensation.json",
     "2026-2607.24148-a-motion-aware-vector-quantization-framework-with-centroid-reuse-for-efficient-vla-inference.json",
+    "2026-2607.25335-every-time-i-hire-a-linguist-inference-costs-go-down-on-linguistic-rules-as-effective.json",
     "2026-2607.25669-omnidelta-skill-driven-budget-allocation-for-token-compression-in-omni-llms.json",
     "2026-2607.27591-prox-training-free-ffn-activation-sparsity-via-approximate-intermediate-channel-salience-in-llms.json",
     "2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-context-attention.json",
@@ -46264,6 +46269,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.10980": {
+      "order": [
+        "2026-11-21T04:39:32+00:00",
+        "2026-2605.10980-leap-unlocking-dllm-parallelism-via-lookahead-early-convergence-token-detection.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.18331": {
+      "order": [
+        "2026-11-21T04:40:59+00:00",
+        "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.07581": {
+      "order": [
+        "2026-11-21T04:42:27+00:00",
+        "2026-2606.07581-behavioral-consistency-in-machine-learning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.22602": {
+      "order": [
+        "2026-11-21T04:43:55+00:00",
+        "2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.25335": {
+      "order": [
+        "2026-11-21T04:45:22+00:00",
+        "2026-2607.25335-every-time-i-hire-a-linguist-inference-costs-go-down-on-linguistic-rules-as-effective.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58005,6 +58055,21 @@
     "arxiv:2605.06116": [
       "papers/inference/99-other-inference-systems/2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.md",
       "papers/inference/99-other-inference-systems/2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.md"
+    ],
+    "arxiv:2605.10980": [
+      "papers/inference/99-other-inference-systems/2026-2605.10980-leap-unlocking-dllm-parallelism-via-lookahead-early-convergence-token-de.md"
+    ],
+    "arxiv:2605.18331": [
+      "papers/inference/99-other-inference-systems/2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-model.md"
+    ],
+    "arxiv:2606.07581": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.07581-behavioral-consistency-in-machine-learning.md"
+    ],
+    "arxiv:2607.22602": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence-for-effi.md"
+    ],
+    "arxiv:2607.25335": [
+      "papers/inference/99-other-inference-systems/2026-2607.25335-every-time-i-hire-a-linguist-inference-costs-go-down-on-linguistic-rules.md"
     ]
   }
 }

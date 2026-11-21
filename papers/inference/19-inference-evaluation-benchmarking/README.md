@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（165本）
+## 自動生成の論文一覧（166本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -325,6 +325,10 @@
 - **2026-06 · [Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models](2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-mod.md)**  
   実装：[✓](https://github.com/zjubinchen/CLSE) ・ リポジトリ内被引用：0  
   層をまたぐ周波数成分の変化量を重要度にして視覚トークンを第2層の前に落とす学習不要の枝刈りで、88.9パーセント削減でも全トークン性能の94.8パーセントを保持した。
+
+- **2026-06 · [DeepLook: Uncertainty-Guided Branching with Lookahead Confidence for Efficient Reasoning](2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence-for-effi.md)**  
+  実装：[✓](https://github.com/txyang1/deeplook) ・ リポジトリ内被引用：0  
+  推論トレースをセグメント単位で監視し、不確実性が集中する地点でのみ分岐して、先読み区間の平均信頼度で候補を順位付けし枝刈りする学習不要のデコーディング法を提案し、数学で精度を保ちながら生成トークンを大きく減らせることと、知識集約型課題では効かなくなる境界を示した研究。
 
 - **2026-06 · [Characterizing Software Aging in GPU-Based LLM Serving Systems](2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
