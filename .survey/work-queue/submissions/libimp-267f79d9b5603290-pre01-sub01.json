@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Universal YOCO for Efficient Depth Scaling",
+      "source_url": "https://arxiv.org/abs/2604.01220",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of test-time scaling has remarkably boosted the reasoning and agentic proficiency of Large Language Models (LLMs). Yet, standard Transformers struggle to scale inference-time compute efficiently, as conventional looping strategies suffer from high computational overhead and a KV cache that inflates alongside model depth. We present Universal YOCO (YOCO-U), which combines the YOCO decoder-decoder architecture with recursive computation to achieve a synergistic effect greater than either alone. Built on the YOCO framework, YOCO-U implements a Universal Self-Decoder that performs multiple iterations via parameter sharing, while confining the iterative process to shallow, efficient-attention layers. This combination yields a favorable capability-efficiency tradeoff that neither YOCO nor recursion achieves independently. The YOCO architecture provides a constant global KV cache and linear pre-filling, while partial recursion enhances representational depth with limited overhead. Together, YOCO-U improves token utility and scaling behavior while maintaining efficient inference. Empirical results confirm that YOCO-U remains highly competitive in general and long-context benchmarks, demonstrating that the integration of efficient-attention architectures and recursive computation is a promising direction for scalable LLMs.",
+      "identifiers": [
+        "SemanticScholar:f1b909db58f01f9d098a7087d843698442cd2c37"
+      ],
+      "semantic_scholar_id": "f1b909db58f01f9d098a7087d843698442cd2c37",
+      "canonical_id": "arXiv:2604.01220",
+      "arxiv_id": "2604.01220",
+      "doi": "10.48550/arXiv.2604.01220",
+      "authors": [
+        "Yu-Tao Sun",
+        "Li Dong",
+        "Tian-Zhu Ye",
+        "Shao-Han Huang",
+        "Jian-Yong Wang",
+        "Fu-Ru Wei"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 234,
+        "matched_prestigious_venue": null
+      },
+      "reason": "YOCOのデコーダ・デコーダ構成に再帰計算を組み合わせ、反復を浅い効率的注意層に閉じ込めることでグローバルKVキャッシュを一定に保ち線形prefillを実現するYOCO-Uは、テスト時スケーリングの推論計算とKV増大への直接の対処である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DSMoE: Matrix-Partitioned Experts with Dynamic Routing for Computation-Efficient Dense LLMs",
+      "source_url": "https://arxiv.org/abs/2502.12455",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models continue to scale, computational costs and resource consumption have emerged as significant challenges. While existing sparsification methods like pruning reduce computational overhead, they risk losing model knowledge through parameter removal. This paper proposes DSMoE (Dynamic Sparse Mixture-of-Experts), a novel approach that achieves sparsification by partitioning pre-trained FFN layers into computational blocks. We implement adaptive expert routing using sigmoid activation and straight-through estimators, enabling tokens to flexibly access different aspects of model knowledge based on input complexity. Additionally, we introduce a sparsity loss term to balance performance and computational efficiency. Extensive experiments on LLaMA models demonstrate that under equivalent computational constraints, DSMoE achieves superior performance compared to existing pruning and MoE approaches across language modeling and downstream tasks, particularly excelling in generation tasks. Analysis reveals that DSMoE learns distinctive layerwise activation patterns, providing new insights for future MoE architecture design.",
+      "identifiers": [
+        "SemanticScholar:500b4c76d991e619c71a02a7ce3d946b64d02c7b"
+      ],
+      "semantic_scholar_id": "500b4c76d991e619c71a02a7ce3d946b64d02c7b",
+      "canonical_id": "arXiv:2502.12455",
+      "arxiv_id": "2502.12455",
+      "doi": "10.48550/arXiv.2502.12455",
+      "authors": [
+        "Min-Xuan Lv",
+        "Zhenpeng Su",
+        "Leiyu Pan",
+        "Yizhe Xiong",
+        "Zijia Lin",
+        "Hui Chen",
+        "Wei Zhou",
+        "Jun-Gong Han",
+        "Gui-Guang Ding",
+        "Wen-Wu Ou",
+        "Di Zhang",
+        "Kun Gai",
+        "Song-Lin Hu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 641,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "事前学習済みFFNを計算ブロックへ分割しトークンごとに動的ルーティングするDSMoEが、剪定のようにパラメータを捨てずに計算量同等条件で既存の剪定・MoE手法を上回り生成タスクで特に有効と示す、密LLMの計算効率化への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RKSC: Reasoning-Aware KV Cache Sharing and Confident Early Exit for Multi-Step LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.09937",
+      "year": 2026,
+      "published": "2026-06-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce RKSC (Reasoning-Aware KV Cache Sharing), a training-free inference framework that eliminates two structural redundancies in multi-branch LLM reasoning pipelines. ASKS (Attention-Similarity KV Sharing) computes the prefix KV cache once and broadcasts it to all semantically similar branches via hidden-state cosine similarity, strictly generalising the token-exact prefix caching used by vLLM and SGLang. CGEE (Confidence-Gated Early Exit) applies two complementary exit mechanisms: (1) it skips the verification forward pass entirely when generation confidence is decisive across branches, and (2) it terminates the verification pass at an intermediate layer when per-layer entropy stabilises, using lightweight hooks on the transformer backbone. RSBCM (Reasoning-Selective Block Cache Manager) prevents unbounded cache growth via attention-weighted depth-priority eviction. Across five model families (7B-10B), four benchmarks, and 1,000 evaluated problems, RKSC achieves a mean speedup of 3.008x over the No-KV baseline (peak 3.990x), a 1.66x mean improvement over vLLM-equivalent prefix caching, with a CGEE-induced error rate of only 0.37% (6 errors out of 1,616 verify calls). No fine-tuning or architecture changes are required. Code is available at https://github.com/AnirudhSekar/RKSC.",
+      "identifiers": [
+        "SemanticScholar:9a2e23ad3b8f12adbe74f70d270807823a480d1d"
+      ],
+      "semantic_scholar_id": "9a2e23ad3b8f12adbe74f70d270807823a480d1d",
+      "canonical_id": "arXiv:2606.09937",
+      "arxiv_id": "2606.09937",
+      "doi": "10.48550/arXiv.2606.09937",
+      "authors": [
+        "A. Sekar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 167,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多分岐推論で接頭辞KVを意味的類似度に基づき共有するASKS、確信度で検証パスを省略・早期終了するCGEE、注意重み付きエビクションを組み合わせ、vLLM相当の接頭辞キャッシュ比1.66倍の高速化を示す、LLM推論フレームワークへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Prefilling-dLLM v2: Learned Chunk Routing for Long-Context Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.17868",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models apply bidirectional attention over the whole context at every denoising step, so a longer context makes each step substantially more expensive. Sparsifying only at inference leaves the pretrained weights unchanged, so the model is never trained under the sparse pattern it runs with. We propose Prefilling-dLLM v2, which continues training a diffusion language model so that it routes with its native mask token. One mask is appended at the end of each chunk, and a learned role offset marks it as a routing slot. On every fourth layer, a query keeps a bidirectional local window and the top-K chunks scored from that mask; the other layers use a bidirectional sliding window. Starting from Dream-v0-Base-7B extended to 16K with YaRN, we compare Prefilling-dLLM v2 with bidirectional NSA, DSA, and SWA under the same layout, key budget, and dense initialization, using the same Fast-dLLM decoder. With the YaRN factor scaled to the evaluation length, Prefilling-dLLM v2 leads the other sparse methods on all three RULER tasks from 16K to 128K. Its mean accuracy at 128K is 7.4 points above NSA, the next sparse model, while DSA and SWA remain near zero. At the same length, decoding is 172x faster than with full dense attention.",
+      "identifiers": [
+        "SemanticScholar:d53d94429b15d63eedbc7bb959e6adbc7cb1f0da"
+      ],
+      "semantic_scholar_id": "d53d94429b15d63eedbc7bb959e6adbc7cb1f0da",
+      "canonical_id": "arXiv:2610.17868",
+      "arxiv_id": "2610.17868",
+      "authors": [
+        "Qi Han",
+        "Jing Xiong",
+        "Zi-Yuan Zhang",
+        "Ngai Wong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルの各デノイジングステップで全長双方向注意を行う高コストに対し、チャンク単位の学習済みルーティングで疎な注意を学習時から組み込み、128K文脈でデコードが密注意比172倍高速と示す、長文脈推論の注意計算削減への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-267f79d9b560",
+    "round": "libimp-267f79d9b5603290-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-267f79d9b5603290-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-267f79d9b5603290-pre01.json",
+    "receipt": "sha256:45b8323ff0dd6a6c4ee2738051f6318af26c2a2b41949bd37dd5ff5b3023efe4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-267f79d9b560",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

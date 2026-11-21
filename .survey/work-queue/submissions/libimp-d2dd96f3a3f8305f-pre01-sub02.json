@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving",
+      "source_url": "https://arxiv.org/abs/2611.06147",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models send each token through a few of many expert subnetworks. Serving methods make these models faster by running even fewer experts per token, and they are validated on accuracy benchmarks. We show that these methods can weaken the model's refusal of harmful requests, and we introduce SafeStart, which largely restores refusal while keeping most of the speedup. In vLLM on one RTX A6000, keeping about two thirds of the selected experts speeds up offline decoding by 15 to 28% at batch size 8. We find that, at this setting, under a jailbreak that tells the model not to refuse, the share of harmful requests that the model answers rises by 18.4 percentage points on Qwen1.5-MoE, 9.5 on OLMoE, and 6.6 on DeepSeek-V2-Lite, the three of nine models where it rises significantly, while MMLU accuracy drops by less than two points. We discover that most of this increase arises while the model processes the prompt and generates its first few tokens. SafeStart therefore runs all experts for the prompt and the first eight generated tokens, and the reduced set of experts afterwards, through a fused kernel in vLLM. With experts removed, SafeStart keeps at least 85% of the offline decode speedup at batch sizes 8 and 32 and brings the change under this jailbreak to between -2.1 and +1.3 points for three expert-reduction methods on these three models. On 889 held-out requests, in an analysis fixed before generation, truncation raises harmful compliance by 5.8 to 21.4 points, and SafeStart leaves a rise of 0.6 to 2.6 points, non-inferior to the original model on two of the three models. Our results show that faster MoE serving need not cost safety: a serving system can keep most of the gain from running fewer experts by running all of them at the start of each response, and it should test refusal, not only accuracy, before it enables such a method.",
+      "identifiers": [
+        "SemanticScholar:f77f64a5664013cf2fdbf5910f79957690cffd82"
+      ],
+      "semantic_scholar_id": "f77f64a5664013cf2fdbf5910f79957690cffd82",
+      "canonical_id": "arXiv:2611.06147",
+      "arxiv_id": "2611.06147",
+      "authors": [
+        "Erfan Baghaei Potraghloo",
+        "Saeid Shokoufa",
+        "Seyedarmin Azizi",
+        "Arya Fayyazi",
+        "Souvik Kundu",
+        "M. Kamal",
+        "M. Pedram"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE LLMサービングで有効専門家削減による高速化が有害要求の拒否を弱める問題を示し、プロンプトと生成冒頭だけ全専門家を実行するSafeStartをvLLM融合カーネルで実装して速度の85%以上を保つため、MoE推論への直接貢献として採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Where Should a KV-Cache Repair Budget Go? Distractor Structure and Contextual Compatibility in Non-Prefix Reuse",
+      "source_url": "https://arxiv.org/abs/2611.06397",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Non-prefix KV-cache reuse encodes retrieved chunks independently and concatenates their caches. To find where a small repair budget should be spent, we vary the chunks around the answer-bearing one (the target) across three 7B-8B models and four datasets of dialogue memory, open-domain QA and API documentation. Reuse loses 19-100% of the context-dependent questions that full prefill answers, and it loses more when the other chunks are of the same kind as the target. Because the recoverable damage is spread over these other chunks, restoring a few of them recovers little, and the budget is better spent on the target. This works through contextual compatibility: recomputing the target against the reused cache beats inserting its full-prefill KV in all seven settings tested, although the recomputed KV stays far from the full-prefill KV. Question attention over reused caches, however, selects the target in at most 18.8% of development questions. A retriever finds it more often, and recomputing its top chunk after moving it next to the question significantly beats InfoFlow-style reordering at the same 5% budget in six of nine open-domain QA and API-documentation settings. On dialogue memory, though, recomputing chunks never significantly beats the token-level selector chosen for each setting.",
+      "identifiers": [
+        "SemanticScholar:f5a805ae987c4f5d1944e324904eef5df2db4ad1"
+      ],
+      "semantic_scholar_id": "f5a805ae987c4f5d1944e324904eef5df2db4ad1",
+      "canonical_id": "arXiv:2611.06397",
+      "arxiv_id": "2611.06397",
+      "authors": [
+        "Yu-Xing Peng",
+        "Zhi-Qing Tang",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非プレフィックスKVキャッシュ再利用で独立符号化したチャンクを連結する際の修復予算配分を調べ、回答を含むターゲットチャンクを再計算することが有効だと示す研究であり、KVキャッシュ再利用機構を直接扱うため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WindVE: Collaborative CPU-NPU Vector Embedding",
+      "source_url": "https://arxiv.org/abs/2504.14941",
+      "year": 2025,
+      "published": "2025-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation is a technology that enhances large language models by integrating information retrieval. In the industry, inference services based on LLMs are highly sensitive to cost-performance ratio, prompting the need for improving hardware resource utilization in the inference service. Specifically, vector embedding and retrieval processes take up to 20% of the total latency. Therefore, optimizing the utilization of computational resources in vector embeddings is crucial for enhancing the cost-performance ratio of inference processes, which in turn boosts their product competitiveness.In this paper, we analyze the deployment costs of vector embedding technology in inference services, propose a theoretical formula, and determine through the mathematical expression that increasing the capacity to process concurrent queries is the key to reducing the deployment costs of vector embeddings. Therefore, in this paper, we focus on improving the product's capability to process concurrent queries. To optimize concurrency without sacrificing performance, we have designed a queue manager that adeptly offloads CPU peak queries. This manager utilizes a linear regression model to ascertain the optimal queue depths, a critical parameter that significantly influences the efficacy of the system. We further develop a system named WindVE that uses a CPU-NPU heterogeneous architecture to offload peak concurrent queries, which leverages the performance differences between the two processors to effectively manage traffic surges. Through experiments, we compare WindVE to the state-of-the-art vector embedding framework FlagEmbedding, and achieve a concurrency level up to 22.3% higher than the scheme without offloading.",
+      "identifiers": [
+        "SemanticScholar:83617994727c9544ca86c3b5a0b3652503636bbc"
+      ],
+      "semantic_scholar_id": "83617994727c9544ca86c3b5a0b3652503636bbc",
+      "canonical_id": "arXiv:2504.14941",
+      "arxiv_id": "2504.14941",
+      "doi": "10.48550/arXiv.2504.14941",
+      "authors": [
+        "Jinqi Huang",
+        "Xue-Bing Yu",
+        "Yi Xiong",
+        "Wen-Jie Huang",
+        "En-Tong Li",
+        "Li Zeng",
+        "Xin Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論サービスで全体遅延の最大20%を占めるベクトル埋め込みをCPU-NPU異種構成WindVEとキューマネージャでオフロードし同時クエリ処理能力を22.3%高める点を要旨が示しており、RAG推論基盤への直接貢献があるため採用する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d2dd96f3a3f8",
+    "round": "libimp-d2dd96f3a3f8305f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d2dd96f3a3f8305f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d2dd96f3a3f8305f-pre01.json",
+    "receipt": "sha256:6da4b106300dfe8a8f16f874763bb5d06cd2079013dfee2b0df1450bf89cca64"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d2dd96f3a3f8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

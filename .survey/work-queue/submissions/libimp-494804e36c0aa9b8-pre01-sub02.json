@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Extracting Interpretable Task-Specific Circuits from Large Language Models for Faster Inference",
+      "source_url": "https://arxiv.org/abs/2412.15750",
+      "year": 2024,
+      "published": "2024-12-20",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have shown impressive performance across a wide range of tasks. However, the size of LLMs is steadily increasing, hindering their application on computationally constrained environments. On the other hand, despite their general capabilities, there are many situations where only one specific task is performed, rendering all other capabilities unnecessary and wasteful. This leads us to the following question: Is it possible to extract the minimal subset from an LLM that is able to perform a specific task in a faster, standalone manner? Recent works on Mechanistic Interpretability (MI) have shown that specific tasks are performed by a localized subset of components, or circuit. However, current techniques used to identify the circuit cannot be used to extract it for its standalone usage. In this work, we propose a novel approach to automatically extract the subset of the LLM that properly performs a targeted task requiring no additional training and a small amount of data samples. We evaluate our approach on different tasks and show that the resulting models are (i) considerably smaller, reducing the number of parameters up to 82.77% and (ii) more interpretable, as they focus on the circuit that is used to carry out the specific task, and can therefore be understood using MI techniques.",
+      "identifiers": [
+        "SemanticScholar:1defb97df220a3286f48899e87c7e45195ff165e"
+      ],
+      "semantic_scholar_id": "1defb97df220a3286f48899e87c7e45195ff165e",
+      "canonical_id": "arXiv:2412.15750",
+      "arxiv_id": "2412.15750",
+      "doi": "10.48550/arXiv.2412.15750",
+      "authors": [
+        "Jorge García-Carrasco",
+        "Alejandro Maté",
+        "Juan Trujillo"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 701,
+        "matched_prestigious_venue": null
+      },
+      "reason": "タスク遂行回路だけを抽出してパラメータを最大82.77％削減した単独モデルを学習なしで得る手法であり、小型化による高速推論を目的と具体的に示しているため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLM-Barber: Block-Aware Rebuilder for Sparsity Mask in One-Shot for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2408.10631",
+      "year": 2024,
+      "published": "2024-08-20",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have seen substantial growth, necessitating efficient model pruning techniques. Existing post-training pruning methods primarily measure weight importance in converged dense models, often overlooking changes in weight significance during the pruning process, leading to performance degradation. To address this issue, we present LLM-Barber (Block-Aware Rebuilder for Sparsity Mask in One-Shot), a novel one-shot pruning framework that rebuilds the sparsity mask of pruned models without any retraining or weight reconstruction. LLM-Barber incorporates block-aware error optimization across Self-Attention and MLP blocks, facilitating global performance optimization. We are the first to employ the product of weights and gradients as a pruning metric in the context of LLM post-training pruning. This enables accurate identification of weight importance in massive models and significantly reduces computational complexity compared to methods using second-order information. Our experiments show that LLM-Barber efficiently prunes models from LLaMA and OPT families (7B to 13B) on a single A100 GPU in just 30 minutes, achieving state-of-the-art results in both perplexity and zero-shot performance across various language benchmarks.",
+      "identifiers": [
+        "SemanticScholar:e07f5150d47a9f4e71ee0c0507ee613e812addbe"
+      ],
+      "semantic_scholar_id": "e07f5150d47a9f4e71ee0c0507ee613e812addbe",
+      "canonical_id": "arXiv:2408.10631",
+      "arxiv_id": "2408.10631",
+      "doi": "10.1109/ICCAD66269.2025.11240704",
+      "authors": [
+        "Yupeng Su",
+        "Ziyi Guan",
+        "Xiao-Qun Liu",
+        "Tian-Lai Jin",
+        "Dong-Dong Wu",
+        "Zheng-Fei Chen",
+        "G. Chesi",
+        "Ngai Wong",
+        "Hao Yu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 823,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重みと勾配の積を指標にブロック単位で疎性マスクを再構築するワンショットプルーニングで、LLaMA等を単一A100で30分で圧縮し最先端の困惑度を達成しているため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-494804e36c0a",
+    "round": "libimp-494804e36c0aa9b8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-494804e36c0aa9b8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-494804e36c0aa9b8-pre01.json",
+    "receipt": "sha256:473f206a2ffaddeccd0b25a5323449f78c6ef31556d5e2174695f1c4dbaa2f8f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-494804e36c0a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Weave: Fine-Grained Dynamic SM Scheduling in an MoE Megakernel for Compute-Communication Overlap",
+      "source_url": "https://arxiv.org/abs/2609.21483",
+      "year": 2026,
+      "published": "2026-09-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) inference under expert parallelism (EP) turns each MoE layer into a distributed computation with costly dispatch and combine communication. State-of-the-art systems reduce this cost through communication-computation overlap, splitting the GPU's SMs for communication and computation respectively. However, this approach still leaves GPU resources wasted along two dimensions. Spatially, the best SM split is determined by each layer's routing result and varies across layers and GPUs, so fixed policies mismatch the workload and waste either NVLink bandwidth or compute throughput. Temporally, complex MoE data dependencies introduce bubbles that leave SMs idle. We present Weave, to our knowledge the first MoE overlap system that performs fine-grained dynamic SM scheduling - deciding per layer and per GPU by routing results at runtime. Once routing completes, each layer's communication and computation volumes become known; Weave exploits this predictability through a lightweight cost model running inside the persistent megakernel: a spatial scheduler partitions SMs into communication workers and computation workers to match the communication/computation throughput ratio, and a temporal scheduler coordinates the two worker groups to minimize SM idleness. On 4x H100 SXM GPUs across six mainstream MoE models, Weave achieves a 2.89x geometric-mean MoE-layer speedup and a 1.33x geometric-mean end-to-end speedup over five state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:4b143899db653ab727b92443b728e73a8749fdc4"
+      ],
+      "semantic_scholar_id": "4b143899db653ab727b92443b728e73a8749fdc4",
+      "canonical_id": "arXiv:2609.21483",
+      "arxiv_id": "2609.21483",
+      "doi": "10.48550/arXiv.2609.21483",
+      "authors": [
+        "Zi-Yu Huang",
+        "Yang-Jie Zhou",
+        "Chen-Hao Zhu",
+        "Peng Yu",
+        "Zi-Han Liu",
+        "Jin-Yu Liu",
+        "Shulai Zhang",
+        "Xing-Xun Tang",
+        "Hong-Zhe Yan",
+        "Xin-Hao Luo",
+        "Min-Yi Guo",
+        "Xiu Lin",
+        "Ying-Hao Yu",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang",
+        "Shi-Xuan Sun",
+        "Jingwen Leng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 64,
+        "matched_prestigious_venue": null
+      },
+      "reason": "専門並列MoE推論のメガカーネル内で層ごと・GPUごとにルーティング結果から通信と計算のSM配分を動的に決めるWeaveが、H100×4でMoE層2.89倍・端到端1.33倍の高速化を示す、MoE推論スケジューリングへの直接の技術的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TileFuse: A Fused Mixed-Precision Kernel Library for Efficient Quantized LLM Inference on AMD NPUs",
+      "source_url": "https://arxiv.org/abs/2606.11357",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing demand for on-device LLM inference, edge SoCs increasingly integrate NPUs to improve performance and energy efficiency under tight power and thermal budgets. However, practical LLM deployment on current client NPUs remains difficult: widely used quantization formats such as AWQ do not map cleanly onto many existing NPU software stacks, which are often proprietary and expose limited low-level control. In this work, we present TileFuse, a close-to-metal mixed-precision kernel library for AMD XDNA2 NPUs that targets GEMM/GEMV-based operators in quantized LLM inference. TileFuse brings practical low-bit formats such as AWQ-style W4A16 and W8A16 directly onto XDNA2, rather than forcing the model to be reshaped around an NPU-specific quantization scheme. TileFuse co-designs weight layout, metadata placement, mixed-precision microkernels, and array-level dataflow. Specifically, it fuses unpacking, dequantization, and GEMM/GEMV execution into a single kernel flow, introduces an interleaved pre-tiling layout that supports GEMM dimensions up to 32K, and redesigns GEMV dataflow to utilize the full 4x8 AIE array. Across kernel-level evaluations, TileFuse improves performance by up to 121.6% for GEMM and 281% for GEMV over full-precision baselines, while delivering more than 2x performance and energy-efficiency gains over strong iGPU baselines on GEMM. In end-to-end LLM experiments on Ryzen AI laptops, TileFuse achieves up to 2.0x lower prefilling latency with more than 64.6% lower energy consumption. Together, these results show that XDNA2 is a practical target for AWQ-style edge LLM inference and that native NPU support for off-the-shelf quantization can make NPUs substantially more usable in real client deployments.",
+      "identifiers": [
+        "SemanticScholar:bf7fb17e21b00922c37cd15df8abbca3a469409d"
+      ],
+      "semantic_scholar_id": "bf7fb17e21b00922c37cd15df8abbca3a469409d",
+      "canonical_id": "arXiv:2606.11357",
+      "arxiv_id": "2606.11357",
+      "doi": "10.48550/arXiv.2606.11357",
+      "authors": [
+        "Wesley Pang",
+        "G. Jun",
+        "Feiyang Liu",
+        "Deming Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AMD XDNA2 NPU向けにAWQ形式W4A16等の展開・逆量子化・GEMM/GEMVを融合した混合精度カーネルライブラリTileFuseを実装し、Ryzen AI実機でprefillレイテンシ最大2.0倍高速化と64.6％の省電力を示す、オンデバイス量子化推論への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Maverick: Private and Verifiable LLM Inference Made Practical via Matrix-Vector Multiplication Delegation",
+      "source_url": "https://arxiv.org/abs/2609.10264",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Open-source large language models (LLMs) are increasingly competitive with closed-source models while offering transparency and the ability to run inference without exposing user inputs to a service provider. However, running large-scale models locally requires substantial computational resources. In practice, users may still resort to a third-party provider, giving rise to privacy and correctness concerns. Existing solutions that address these problems often impose substantial server overhead or introduce additional trust assumptions. In this paper, we present Maverick, a novel approach to private and verifiable LLM inference based on a protocol for delegating matrix-vector multiplication, a dominant operation in LLMs. At its core, Maverick provides, to our knowledge, the first information-theoretically sound verification protocol for matrix-vector multiplication delegation with transparent preprocessing, efficient (batch) verification, and virtually no server overhead. We combine this verification primitive with LPN-based pseudorandom masking to provide input privacy. We implement our matrix-vector delegation primitive and use it to build an end-to-end prototype of Maverick, which we evaluate on Qwen3-4B by measuring throughput in tokens per second. We evaluate client configurations with 1-8 threads. With one client thread and a CPU server using up to 128 threads, Maverick achieves throughput gains over local inference of up to 17x when privacy masks are generated online, 45x when they are precomputed, and 44x when only verification is required. With four client threads, the corresponding gains are 13x, 18x, and 17x. When server computation is no longer the bottleneck, client-side microbenchmarks with simulated network delay show speedups of 12x-20x, 34x-135x, and 38x-157x.",
+      "identifiers": [
+        "SemanticScholar:1908e128a0b4ab55d9244e04c494d8ac983eb18d"
+      ],
+      "semantic_scholar_id": "1908e128a0b4ab55d9244e04c494d8ac983eb18d",
+      "canonical_id": "arXiv:2609.10264",
+      "arxiv_id": "2609.10264",
+      "doi": "10.48550/arXiv.2609.10264",
+      "authors": [
+        "Ben Merbaum",
+        "M. Raeisi",
+        "Wenhao Wang",
+        "Charalampos Papamanthou",
+        "Katerina Sotiraki",
+        "Fan Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 73,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の支配的演算である行列ベクトル積の委譲に情報理論的に健全な検証プロトコルとLPNマスキングによる入力秘匿を組み合わせ、Qwen3-4Bでローカル推論比最大45倍のスループットを示す、プライベートで検証可能な推論基盤への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.37902",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing LLM routers choose among models using static per-model costs. We show that open-weight inference markets introduce a second, largely ignored decision axis: after choosing a model, a client must still choose which provider serves it. Measuring live endpoints across [nummodels] open models, competing providers, multiple task types, and three measurement waves, we find that provider choice cannot be inferred from the price list. The same model can vary sharply in quality, latency, availability, and price across providers; higher-priced providers are consistently faster, but price does not reliably predict quality or availability; and provider feasibility is task-selective, with one deployment nearly normal on knowledge tasks but catastrophically degraded on multi-step reasoning. We formulate same-model provider selection as a price-taker market-aware routing problem. A simple measured-map policy routes to the cheapest provider that is both quality-equivalent and healthy, yielding matched-quality savings while avoiding degraded endpoints. Because the map drifts, we introduce FACET, an online provider router that certifies per-(provider x task) feasibility facets and fails safe to an anchor before serving uncertified arms. Across relaxed deployment assumptions, FACET tolerates imperfect task assignment and sparse feedback, while systematic evaluator bias exposes a quality-signal trust boundary that can be mitigated with ground-truth probes or audits. Live provider runs further confirm that certification can move real traffic from a premium anchor to a substantially cheaper certified endpoint. Our results suggest that market-aware LLM routing must measure not only which model to use, but also who serves it.",
+      "identifiers": [
+        "SemanticScholar:e6518dd74f22981497d49ab3704fc7186bcd8541"
+      ],
+      "semantic_scholar_id": "e6518dd74f22981497d49ab3704fc7186bcd8541",
+      "canonical_id": "arXiv:2609.37902",
+      "arxiv_id": "2609.37902",
+      "doi": "10.48550/arXiv.2609.37902",
+      "authors": [
+        "Liang He",
+        "Jing Wen",
+        "Yi-Xiong Chen",
+        "Yue Yang",
+        "Q. Lan",
+        "Kang-Ning Cui",
+        "Xi-Lu Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同一モデルをどのプロバイダが提供するかで品質・レイテンシ・可用性が大きく変わることを実測し、品質同等で健全な最安プロバイダへ振る市場対応ルーティングとFACETのオンライン認証で推論コスト削減を示す、サービング経路選択への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gumbel Straight Flow: Distilling Autoregressive Models into One-step Flow Maps",
+      "source_url": "https://arxiv.org/abs/2610.00497",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Gumbel Straight Flow (GSF), a continuous flow map language model that leverages the noise-data coupling of a pretrained autoregressive language (AR) model. We theoretically demonstrate that the coupling between Gumbel noise and one-hot token sequences induced by an autoregressive model yields non-intersecting linear paths connecting the noise to the sequence representations. To further enhance high-quality few-step path sampling, we use a flow map semigroup objective where the tangent (velocity) condition is guided directly by the AR teacher. Across various benchmarks, including pretraining and downstream tasks, GSF can outperform current few-step language generation baselines.",
+      "identifiers": [
+        "SemanticScholar:7b5acec5109be913ada7cfe7c8699c812c150d28"
+      ],
+      "semantic_scholar_id": "7b5acec5109be913ada7cfe7c8699c812c150d28",
+      "canonical_id": "arXiv:2610.00497",
+      "arxiv_id": "2610.00497",
+      "authors": [
+        "Yeongmin Kim",
+        "Arnaud Doucet",
+        "Andrew Campbell",
+        "Valentin De Bortoli",
+        "Thomas Mensink",
+        "D. Ruhe"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰モデルとGumbelノイズの結合からワンステップのフローマップ言語モデルを蒸留し、生成に必要なサンプリングステップを1ステップまで圧縮する方式で、数ステップ生成ベースラインを上回る性能を示しており生成推論のステップ数削減への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-217259ac1867",
+    "round": "libimp-217259ac1867c9a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-217259ac1867c9a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-217259ac1867c9a7-pre01.json",
+    "receipt": "sha256:41bf613236174ff21ec9e5e2acaf49046955716aef9d9cde97bf1550bdec2a51"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-217259ac1867",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
