@@ -35,10 +35,15 @@
   "selection_reason": "量子化に敏感なSoftmaxを連想プロセッサ上のインメモリ計算で整数のみで実行するソフトウェアとハードウェアの協調設計であり、資源制約下のLLM推論における非線形演算のボトルネックを直接下げる。",
   "semantic_scholar_id": "2884ccb1da414651cb908959e5591cbb14e6bd08",
   "source_url": "https://arxiv.org/abs/2411.17847",
-  "status": "ready",
+  "status": "superseded",
   "title": "SoftmAP: Software-Hardware Co-Design for Integer-Only Softmax on Associative Processors",
   "type": "research",
   "venue": "Design, Automation and Test in Europe",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-21T05:22:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associat.md",
+  "represented_canonical_id": "arXiv:2411.17847",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

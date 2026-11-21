@@ -35,10 +35,15 @@
   "selection_reason": "大規模推論モデルが能力境界を超えた問題で無駄な推論を続ける問題に対し、推論表現と最終入力トークンの隠れ状態から解けない兆候をテスト時に監視して早期停止し、トークン使用量を62.7〜93.6%削減する推論時制御の直接貢献である。",
   "semantic_scholar_id": "ed19562aa6a98b160ab5ed56a1b175c133066800",
   "source_url": "https://arxiv.org/abs/2509.24711",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stop Before You Fail: Operational Capability Boundaries for Mitigating Unproductive Reasoning in Large Reasoning Models",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T05:22:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-un.md",
+  "represented_canonical_id": "arXiv:2509.24711",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

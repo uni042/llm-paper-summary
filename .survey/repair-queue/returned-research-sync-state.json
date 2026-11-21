@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5a3c1df8d1edf6dcef2bd2f5f66f68576464ac68",
+  "base_commit": "1435a4bb07f901a431aa82066a3c3ef9b931e700",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -46,6 +46,7 @@
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
+    "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
     "2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-linear-and-back.json",
     "2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.json",
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
@@ -77,6 +78,7 @@
     "2024-2411.00889-mess-energy-optimal-inferencing-in-language-model-zoos-with-service-level-guarantees.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
+    "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
@@ -94,6 +96,7 @@
     "2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.json",
     "2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pretrained-llms.json",
     "2025-2502.02790-leveraging-the-true-depth-of-llms.json",
+    "2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-efficient-dense-llms.json",
     "2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.json",
     "2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.json",
     "2025-2502.18627-pacq-a-simt-microarchitecture-for-efficient-dataflow-in-hyper-asymmetric-gemms.json",
@@ -161,8 +164,10 @@
     "2025-2509.15148-atts-asynchronous-test-time-scaling-via-conformal-prediction.json",
     "2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-for-parameter-efficient-fine-tuning-on-large-language-models.json",
     "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
+    "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json",
     "2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruct.json",
     "2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-low-batch-llm-inference.json",
+    "2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-diffusion.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
     "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
@@ -46464,6 +46469,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2402.09773": {
+      "order": [
+        "2026-11-21T05:17:07+00:00",
+        "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2411.17847": {
+      "order": [
+        "2026-11-21T05:18:07+00:00",
+        "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2502.12455": {
+      "order": [
+        "2026-11-21T05:19:07+00:00",
+        "2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-efficient-dense-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.24711": {
+      "order": [
+        "2026-11-21T05:20:07+00:00",
+        "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.05090": {
+      "order": [
+        "2026-11-21T05:21:07+00:00",
+        "2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-diffusion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58285,6 +58335,21 @@
     "arxiv:2604.06465": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.md"
+    ],
+    "arxiv:2402.09773": [
+      "papers/inference/99-other-inference-systems/2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md"
+    ],
+    "arxiv:2411.17847": [
+      "papers/inference/15-inference-simulation-emulation/2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associat.md"
+    ],
+    "arxiv:2502.12455": [
+      "papers/inference/99-other-inference-systems/2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-ef.md"
+    ],
+    "arxiv:2509.24711": [
+      "papers/inference/99-other-inference-systems/2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-un.md"
+    ],
+    "arxiv:2510.05090": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-di.md"
     ]
   }
 }

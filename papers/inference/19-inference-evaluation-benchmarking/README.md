@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（168本）
+## 自動生成の論文一覧（169本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -461,7 +461,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：36  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
@@ -571,6 +571,10 @@
 - **2025-10 · [Higher-order Linear Attention](2025-2510.27258-higher-order-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Higher-order Linear 注意機構（HLA）は、より高次の相互作用を、低次のモーメントと補正統計の組合せへ因数分解する。
+
+- **2025-10 · [Finish First, Perfect Later: Test-Time Token-Level Cross-Validation for Diffusion Large Language Models](2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-di.md)**  
+  実装：[✓](https://github.com/Rachum-thu/tolerator) ・ リポジトリ内被引用：0  
+  拡散言語モデルの確定済みトークンを直せない問題に対し、まず全体を埋めてから部分集合を再マスクして予測し直す相互検証リファインメントを後段に置く、学習不要の2段階デコードToleratorを提案し、同一計算予算で2モデル・5ベンチマークの品質改善を示した研究。
 
 - **2025-09 · [PLaMo 2 Technical Report](2025-2509.04897-plamo-2-technical-report.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
