@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-11bcaa68d7e1ed6a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2307.05972",
+  "reason": "全文通読の結果、対象は生成型LLMではなく符号化器型の多言語モデルXLM-R Base／InfoXLM Baseであり、重みを32ビットから8ビットへ量子化してXGLUEの分類タスクで評価する研究である。量子化・圧縮という主題自体は対象範囲に近いが、デコード・サービング・KVキャッシュなどLLM推論システムへの技術的貢献は薄く、即Researchの根拠が弱いため境界と判定した。",
+  "title": "Self-Distilled Quantization: Achieving High Compression Rates in Transformer-Based Language Models",
+  "identity_tokens": [
+    "arXiv:2307.05972",
+    "https://arxiv.org/abs/2307.05972"
+  ],
+  "linked_from": [
+    "worker-worklist research_audit (cont1 pool index 62)"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11bcaa68d7e1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
