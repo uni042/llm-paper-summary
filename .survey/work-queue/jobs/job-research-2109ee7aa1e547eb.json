@@ -35,10 +35,15 @@
   "selection_reason": "MLLM向けトークン適応型層別剪定TAMP。従来の剪定が層とモダリティをまたぐトークン属性を考えない問題に対し、多様性配慮の疎性で層ごとに疎性率を調整するなど、MLLMに特化した剪定枠組み。推論圧縮機構そのもの。",
   "semantic_scholar_id": "675f08458a63f747dc232d5c7ab58b4942fc0c31",
   "source_url": "https://arxiv.org/abs/2504.09897",
-  "status": "ready",
+  "status": "superseded",
   "title": "TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T04:10:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-model.md",
+  "represented_canonical_id": "arXiv:2504.09897",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

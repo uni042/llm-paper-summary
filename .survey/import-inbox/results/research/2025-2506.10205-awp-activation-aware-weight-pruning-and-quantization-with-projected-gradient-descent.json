@@ -1,28 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_quality",
-  "source_sha256": "9d21fe3a872076acfc5b5f49d2eb818b2bd11bfb6315006e820cda8e2021f5f1",
-  "normalized_source_sha256": null,
-  "japanese_normalized": false,
-  "blocked_path": ".survey/import-inbox/blocked/research/2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.md",
+  "status": "imported",
+  "source_sha256": "7bc982b720450c059d81957e3e85d672e35609ec1c29c01590643f9b5df43ea6",
   "canonical_id": "arXiv:2506.10205",
-  "worker_completed_at": "2026-11-20T15:12:00+09:00",
-  "worker_run_key": "2026-11-20-muse-c2b4",
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-grad.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-21T12:36:34+09:00",
+  "worker_run_key": "2026-11-21-muse-cont1-b1",
   "quality_metrics": {
     "quality_gate_version": "2026-10-07-v1",
-    "body_chars": 3352,
-    "body_paragraphs": 20,
-    "method_chars": 1158,
-    "method_paragraphs": 4,
-    "evaluation_chars": 447,
-    "limitation_chars": 189,
-    "insufficiency_flags": [
-      "評価説明量 447 < 500"
-    ]
+    "body_chars": 7554,
+    "body_paragraphs": 23,
+    "method_chars": 2358,
+    "method_paragraphs": 5,
+    "evaluation_chars": 1958,
+    "limitation_chars": 445,
+    "insufficiency_flags": []
   },
-  "failures": [
-    "説明不足トリガー: 評価説明量 447 < 500"
-  ],
-  "processed_at": "2026-11-20T07:46:54+00:00"
+  "processed_at": "2026-11-21T04:05:14+00:00"
 }

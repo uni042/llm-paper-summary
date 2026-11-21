@@ -2266,6 +2266,10 @@
   実装：[✓](https://github.com/inferflow/inferflow) ・ リポジトリ内被引用：3  
   Inferflowは、言語モデルの構造が頻繁に変化する状況で、モデルごとに推論エンジンのソースコードを書き足す負担を減らすことを主目的とした推論基盤である。この拡張性に加え、低ビット量子化と複数GPU分割による実行効率を追求する。
 
+- **2024-06 · [ME-Switch: A Memory-Efficient Expert Switching Framework for Large Language Models](2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  基盤モデル1つと、顕著チャネルだけ全精度で残す混合精度圧縮した差分重みで多数の専門モデルを切り替え提供する枠組み。領域分類ルーターが質問に合う専門モデルを自動選択する。
+
 - **2024-04 · [Performance Characterization of Expert Router for Scalable LLM Inference](2024-2404.15153-performance-characterization-of-expert-router-for-scalable-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoE層内部で複数のFFNエキスパートをtop-k選択する方式とは異なり、リクエスト全体を一つの独立したLLMへルーティングする。評価には8基のNVIDIA H100（各80GB）を搭載したDGX H100を用い、Llama 3 70Bと8Bの量子化・非量子化構成を比較する。
@@ -2273,10 +2277,6 @@
 - **2024-11 · [EconoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving](2024-2411.06364-econoserve-maximizing-multi-resource-utilization-with-slo-guarantees-in-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   EconoServeはLLMサービングでGPUの演算能力とKVキャッシュ（KVC）容量を同時に活用するための、プリフィルとgenerationの責任分離・時間同期バッチ・KVCの時間的再利用を組み合わせたスケジューラである。
-
-- **2024-06 · [ME-Switch: A Memory-Efficient Expert Switching Framework for Large Language Models](2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-langua.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  基盤モデル1つと、顕著チャネルだけ全精度で残す混合精度圧縮した差分重みで多数の専門モデルを切り替え提供する枠組み。領域分類ルーターが質問に合う専門モデルを自動選択する。
 
 - **2024-05 · [Turnip: A "Nondeterministic" GPU Runtime with CPU RAM Offload](2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ac0e86f5b04e8f9f9ce7123e5b5145e8c144f6c5",
+  "base_commit": "187c72e319ae7d158b51f3cc7e08e812fbf72ddd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -204,6 +204,7 @@
     "2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.json",
     "2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.json",
     "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json",
+    "2026-2601.20520-context-tokens-are-anchors-repetition-curse-in-dmllms-information-flow-perspective.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
@@ -217,6 +218,7 @@
     "2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-token-pruning.json",
     "2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token-bypass.json",
     "2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.json",
+    "2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decoding.json",
     "2026-2602.06454-relaygen-intra-generation-model-switching-for-efficient-reasoning.json",
     "2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-with-hypothesis-path-expansion-and-reduction.json",
     "2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-foundation-models.json",
@@ -260,6 +262,7 @@
     "2026-2603.20275-understanding-pruning-regimes-in-vision-language-models-through-domain-aware-layer-selection.json",
     "2026-2603.20492-ae-llm-adaptive-efficiency-optimization-for-large-language-models.json",
     "2026-2603.21105-resprune-text-conditioned-subspace-reconstruction-for-visual-token-pruning-in-large-vision-language-models.json",
+    "2026-2603.21237-consroute-consistency-aware-adaptive-query-routing-for-cloud-edge-device-llms.json",
     "2026-2603.22324-daq-delta-aware-quantization-for-post-training-llm-weight-compression.json",
     "2026-2603.22911-forestprune-high-ratio-visual-token-compression-for-video-mllms.json",
     "2026-2603.23198-sparser-faster-lighter-transformer-language-models.json",
@@ -46188,6 +46191,33 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2601.20520": {
+      "order": [
+        "2026-11-21T04:06:16+00:00",
+        "2026-2601.20520-context-tokens-are-anchors-repetition-curse-in-dmllms-information-flow-perspective.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.06412": {
+      "order": [
+        "2026-11-21T04:07:18+00:00",
+        "2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.21237": {
+      "order": [
+        "2026-11-21T04:08:19+00:00",
+        "2026-2603.21237-consroute-consistency-aware-adaptive-query-routing-for-cloud-edge-device-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57871,6 +57901,15 @@
     ],
     "arxiv:2502.15075": [
       "papers/inference/07-kv-cache-optimization-compression/2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.md"
+    ],
+    "arxiv:2601.20520": [
+      "papers/inference/99-other-inference-systems/2026-2601.20520-context-tokens-are-anchors-understanding-the-repetition-curse-in-dmllms-.md"
+    ],
+    "arxiv:2602.06412": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decodin.md"
+    ],
+    "arxiv:2603.21237": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2603.21237-consroute-consistency-aware-adaptive-query-routing-for-cloud-edge-device.md"
     ]
   }
 }

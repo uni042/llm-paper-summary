@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（94本）
+## 自動生成の論文一覧（95本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -226,6 +226,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   TrustZoneのアクセス権と資源管理権を分離してページ単位セキュアメモリと切替可能NPUを実現し、LLM向けキャッシュ・回収・先読みでセキュア端末内推論の起動遅延を大幅に削減する。
 
+- **2026-03 · [ConsRoute: Consistency-Aware Adaptive Query Routing for Cloud-Edge-Device Large Language Models](2026-2603.21237-consroute-consistency-aware-adaptive-query-routing-for-cloud-edge-device.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  応答間の意味的一致を教師信号にし、デバイス側モデルのプリフィル隠れ状態を再利用する軽量予測器とクラスタ別ベイズ最適化閾値で、3層協調推論のルーティングを適応化した研究。
+
 - **2026-02 · [Quantization-Aware Collaborative Inference for Large Embodied AI Models](2026-2602.13052-quantization-aware-collaborative-inference-for-large-embodied-ai-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末側の計算能力・電池・通信帯域には制約があるため、端末側モデルを量子化して計算負荷を減らすことが有効である。実機はJetson AGX Orin 64GBとRTX 3090を2枚備えたサーバを無線LANで接続した構成で、遅延制約が強いと高周波数、エネルギー制約が強いと低周波数が有利になることを確認する。
@@ -304,6 +308,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
 
+- **2025-05 · [CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration](2025-2505.14085-ce-lslm-efficient-large-small-language-model-inference-and-communication.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  クラウドに大きな言語モデル（LLM）を置き、端末やエッジに小さな言語モデル（SLM）を置く場合、単純な分担には二つの問題がある。システムプロンプトのように複数ユーザー間で再利用可能な文脈と、個人の質問のようにローカルに保持すべき入力を分離できれば、両者の妥協点を作れる。
+
 - **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Federated 注意機構（FedAttn）は、この協調推論を注意機構の段階で分散する方式として提案された。
@@ -319,10 +327,6 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
-
-- **2025-05 · [CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration](2025-2505.14085-ce-lslm-efficient-large-small-language-model-inference-and-communication.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  クラウドに大きな言語モデル（LLM）を置き、端末やエッジに小さな言語モデル（SLM）を置く場合、単純な分担には二つの問題がある。システムプロンプトのように複数ユーザー間で再利用可能な文脈と、個人の質問のようにローカルに保持すべき入力を分離できれば、両者の妥協点を作れる。
 
 - **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
   実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：0  
