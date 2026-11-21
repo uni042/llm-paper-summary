@@ -35,10 +35,15 @@
   "selection_reason": "ブロック拡縮数値形式向けに誤差拡散で学習後量子化を行いHessianや逆伝播なしでパラメータ量子化誤差を層ごとに拡散させる手法で、LLMを含むモデルの配置コスト削減に直接寄与するため。",
   "semantic_scholar_id": "1481bc7e710be20b3c4035f7d6490d3dc9156cda",
   "source_url": "https://arxiv.org/abs/2410.11203",
-  "status": "ready",
+  "status": "superseded",
   "title": "Error Diffusion: Post Training Quantization with Block-Scaled Number Formats for Neural Networks",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-21T04:53:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-form.md",
+  "represented_canonical_id": "arXiv:2410.11203",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

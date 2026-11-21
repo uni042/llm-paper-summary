@@ -35,10 +35,15 @@
   "selection_reason": "TaylorShiftはTaylor-softmaxの再定式化で全トークン間相互作用を線形時間・空間で計算し、約1700トークン以上の入力で推論を高速化し800トークンからメモリ効率が改善すると示す、アテンション計算そのものの効率化技術である。",
   "semantic_scholar_id": "e87fda91c2cbf881c5388048f98098792c7f62ce",
   "source_url": "https://arxiv.org/abs/2403.02920",
-  "status": "ready",
+  "status": "superseded",
   "title": "TaylorShift: Shifting the Complexity of Self-Attention from Squared to Linear (and Back) using Taylor-Softmax",
   "type": "research",
   "venue": "International Conference on Pattern Recognition",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-21T04:53:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-li.md",
+  "represented_canonical_id": "arXiv:2403.02920",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
