@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms",
+      "source_url": "https://arxiv.org/abs/2404.16158",
+      "year": 2024,
+      "published": "2024-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FPGAs are rarely mentioned when discussing the implementation of large machine learning applications, such as Large Language Models (LLMs), in the data center. There has been much evidence showing that single FPGAs can be competitive with GPUs in performance for some computations, especially for low latency, and often much more efficient when power is considered. This suggests that there is merit to exploring the use of multiple FPGAs for large machine learning applications. The challenge with using multiple FPGAs is that there is no commonly-accepted flow for developing and deploying multi-FPGA applications, i.e., there are no tools to describe a large application, map it to multiple FPGAs and then deploy the application on a multi-FPGA platform. In this paper, we explore the feasibility of implementing large transformers using multiple FPGAs by developing a scalable multi-FPGA platform and some tools to map large applications to the platform. We validate our approach by designing an efficient multi-FPGA version of the I-BERT transformer and implement one encoder using six FPGAs as a working proof-of-concept to show that our platform and tools work. Based on our proof-of-concept prototype and the estimations of performance using the latest FPGAs compared to GPUs, we conclude that there can be a place for FPGAs in the world of large machine learning applications. We demonstrate a promising first step that shows that with the right infrastructure and tools it is reasonable to continue to explore the possible benefits of using FPGAs for applications such as LLMs.",
+      "identifiers": [
+        "SemanticScholar:17a8d1eabb0c9d2e3ec5406797c1960f4e569909"
+      ],
+      "semantic_scholar_id": "17a8d1eabb0c9d2e3ec5406797c1960f4e569909",
+      "canonical_id": "arXiv:2404.16158",
+      "arxiv_id": "2404.16158",
+      "doi": "10.48550/arXiv.2404.16158",
+      "authors": [
+        "Yu Gao",
+        "Juan Camilo Vega",
+        "P. Chow"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 941,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数FPGAへ大規模Transformerをマッピングするプラットフォームとツール群を構築しI-BERT実装で検証しており、推論ハードウェア実装への直接的なシステム貢献が具体的であるため",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-54a93f346b4d",
+    "round": "libimp-54a93f346b4d3d86-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-54a93f346b4d3d86-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-54a93f346b4d3d86-pre01.json",
+    "receipt": "sha256:927bf12d73bd33a876cf9705055808ed166ef96dee2b72f0fa33e8fb3b80e327"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-54a93f346b4d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

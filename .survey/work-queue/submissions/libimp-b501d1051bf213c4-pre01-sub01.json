@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DIP: Dynamic In-Context Planner For Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2601.03199",
+      "year": 2026,
+      "published": "2026-01-06",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have shown strong potential for general natural language tasks with in-context examples. Existing In-Context Learning (ICL) approaches largely inherit the practice of autoregressive language models (ARLMs), incorporating all examples into a fixed prompt. However, applying this rigid, static-prompt paradigm to DLMs incurs substantial computational overhead, as the model must evaluate the maximum context length at every step. We address this inefficiency with a key discovery: the block-wise KV-cache mechanism inherent to DLM inference enables the \\textit{low-cost dynamic adjustment of the context}. Following this intuition, our core idea is to start generation with a minimal prompt and progressively insert additional examples on the fly only when the generated tokens are of low confidence. Through rigorous empirical evaluations, we observe that average verified token confidence correlates strongly with generation accuracy, making it a reliable and computationally efficient signal of token quality. Formally, we propose \\textbf{D}ynamic \\textbf{I}n-Context \\textbf{P}lanner (DIP), a context-optimization algorithm based on average verified confidence that dynamically ranks and inserts in-context examples during generation, rather than providing all examples up front. Experimental results on math and coding benchmarks with LLaDA-1.5 and LLaDA-8B-Instruct show that DIP achieves up to $1.59\\times$ and $1.36\\times$ speedups, respectively, while largely preserving the generation quality of the fixed-prompt baseline. Code: https://github.com/wmd3i/DIP",
+      "identifiers": [
+        "SemanticScholar:ec22d57217704dd6e555330a64971a70d291c86e"
+      ],
+      "semantic_scholar_id": "ec22d57217704dd6e555330a64971a70d291c86e",
+      "canonical_id": "arXiv:2601.03199",
+      "arxiv_id": "2601.03199",
+      "doi": "10.48550/arXiv.2601.03199",
+      "authors": [
+        "Yang Li",
+        "Han Meng",
+        "Che-Nan Wang",
+        "Zhenyu Bi",
+        "Xuan Wang",
+        "Hai-Peng Chen"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 319,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "拡散言語モデルのブロック単位KVキャッシュを活かし、生成信頼度が低い時だけ文脈内事例を動的に挿入するDIPにより、固定プロンプト比で最大1.59倍の高速化を品質維持で達成する推論時文脈最適化技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLMForge: Multi-Backend Hardware-Aware Neural Architecture Search with Infinite-Head Attention for Edge Language Models",
+      "source_url": "https://arxiv.org/abs/2605.17653",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sub-billion-parameter Transformer language models are increasingly deployed on edge devices, where the privacy, latency, and operating-cost advantages of on-device inference are constrained by tight memory-bandwidth, energy, and thermal budgets that make architectural choice and accelerator-specific cost central to efficient inference. We present LLMForge, a hardware-aware neural architecture search (NAS) framework whose three composable contributions together make edge-LM architecture search hardware-conditioned, since different substrates impose different hardware cost bottlenecks. Infinite-Head Attention (IHA) decouples the number of query heads, KV groups, and per-head query/key and value dimensions, expanding the feasible per-layer attention configuration space by approximately 400x over grouped-query attention within our search-space ranges. Forge-Former, an encoder-based surrogate for ranking architectural candidates, outperforms MLP and random-forest baselines. Forge-DSE, an NSGA-II-based design-space-exploration engine, pairs Forge-Former with a multi-backend hardware cost model spanning GPUs, systolic accelerators, and ring-dataflow edge accelerators. Across four different hardware substrates, the searches converge to visibly different architectures whose shapes track each substrate's cost bottleneck. On the multi-chip ring substrate, our co-search returns three 300M-scale deployment-aware variants on the Pareto front. Each is re-trained on FineWeb-Edu-10BT under matched recipe against SmolLM2-360M and Qwen-0.5B architecture baselines. The accurate variant has the lowest validation loss 2.798 and competitive benchmark performance with fewer parameters, the energy-optimized variant lowers energy per token by 40%, and the latency-optimized variant lowers TTFT and TPOT by 43%.",
+      "identifiers": [
+        "SemanticScholar:54e8e06deba60eb84160d92f910bd8612f7d8445"
+      ],
+      "semantic_scholar_id": "54e8e06deba60eb84160d92f910bd8612f7d8445",
+      "canonical_id": "arXiv:2605.17653",
+      "arxiv_id": "2605.17653",
+      "doi": "10.48550/arXiv.2605.17653",
+      "authors": [
+        "Xin Jiang",
+        "Jun-Yi Luo",
+        "Rui-Chen Qi",
+        "Kauna Lei",
+        "Ben Laurie",
+        "Gregory Kielian",
+        "Mehdi Saligane"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジ向けに無限ヘッド注意で探索空間を広げ、複数バックエンドのハードウェアコストモデルでアーキテクチャ探索を行い、エネルギー毎トークン40％削減とTTFT・TPOT43％削減のデプロイ向け変種を得たオンデバイス推論研究である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Folding Tensor and Sequence Parallelism for Memory-Efficient Transformer Training & Inference",
+      "source_url": "https://arxiv.org/abs/2604.26294",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present tensor and sequence parallelism (TSP), a parallel execution strategy that folds tensor parallelism and sequence parallelism onto a single device axis. In conventional multi-dimensional parallelism layouts, tensor parallelism (TP) shards model weights while sequence parallelism (SP) shards tokens, reducing per-device parameter or activation memory, respectively. Traditionally, each scheme is assigned its own mesh dimension. TSP instead assigns each rank both a weight shard and a sequence shard, reducing both parameter and activation memory along the same device axis. We implement this design with two runtime schedules. For attention, ranks iterate over broadcast parameter shards and reconstruct context through a sequence-wise key/value exchange. For gated MLPs, weight shards circulate in a ring while partial outputs accumulate locally. By sharding both weights and activations across the same devices, TSP trades additional communication volume for reduced memory overhead. We provide a theoretical communication and memory analysis, describe our implementation of TSP attention and gated MLP blocks, and benchmark TSP against TP, SP, and TP+SP. These results position TSP as a hardware-aware alternative for long-context and memory-constrained model training, and as a viable axis of parallelism in concert with existing parallelism schemes such as pipeline and expert parallelism for dense and mixture-of-expert models.",
+      "identifiers": [
+        "SemanticScholar:993cfbcb0c840dadc4450aebf0159e83bf87dc85"
+      ],
+      "semantic_scholar_id": "993cfbcb0c840dadc4450aebf0159e83bf87dc85",
+      "canonical_id": "arXiv:2604.26294",
+      "arxiv_id": "2604.26294",
+      "doi": "10.48550/arXiv.2604.26294",
+      "authors": [
+        "Vasudev Shyam",
+        "A. Golubeva",
+        "Quentin Anthony"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": null
+      },
+      "reason": "テンソル並列と系列並列を同一デバイス軸へ折り畳み、注意ではKV交換、MLPでは重みリング循環を行う並列実行方式を実装し、メモリと通信の理論解析と既存並列との比較で推論にも使える分散実行技術を示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TriAttention: Unified Sparse Mixed-Precision Attention for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.07256",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparsity and quantization reduce the cost of attention by skipping interactions and lowering the precision of those retained. However, useful interactions differ in their precision requirements: some tolerate low-precision scores while remaining sensitive to removal. We therefore introduce TriAttention, which assigns query-key (QK) tiles to skipping, 4-bit, or 8-bit computation, using 4-bit to retain quantization-tolerant interactions at lower cost. To represent compactly, we encode each head's computation regions with two diagonal-distance boundaries, keeping policy storage independent of context length. Offline calibration then evaluates candidate boundary pairs using normalized projected-output errors and complete-tile execution costs. Using these measurements, a model-wide allocator selects each head's boundaries to minimize calibration error under a shared computation budget. During prefill, the selected boundaries generate precision-grouped traversals for a fused kernel that skips omitted tiles and combines contributions from both QK precisions into one normalized attention output. The quantized keys and values prepared during prefill are then reused in a compressed key-value (KV) cache for decoding, reducing repeated reads of prompt data. Experiments show that TriAttention achieves end-to-end generation speedups of up to 7.88x over the Torch attention and 2.65x over the BF16 baseline. Meanwhile, TriAttention maintains quality comparable to the original models on general-purpose and long-context tasks. These results show how a compact retention-and-precision policy translates local sensitivities into attention computation and repeated KV-cache access. The implementation is https://github.com/HanzhiZhang-Ulrica/TriAttention.",
+      "identifiers": [
+        "SemanticScholar:5e1a2c08edadc237b21e8592d5b74597bee9a29a"
+      ],
+      "semantic_scholar_id": "5e1a2c08edadc237b21e8592d5b74597bee9a29a",
+      "canonical_id": "arXiv:2611.07256",
+      "arxiv_id": "2611.07256",
+      "authors": [
+        "Han-Zhi Zhang",
+        "Qiao Zhang",
+        "Qing-Lei Cao",
+        "Heng Fan",
+        "Yan Huang",
+        "Ke-Wei Sha",
+        "Yun-He Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QKタイルをスキップ・4bit・8bitへ振り分けるスパース混合精度注意と融合カーネルを提案し、プリフィルで作った量子化KVキャッシュをデコードで再利用して最大7.88倍の生成高速化を示す長文脈推論技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Model-Free Speculative Decoding for Transformer-Based ASR with Token Map Drafting",
+      "source_url": "https://arxiv.org/abs/2507.21522",
+      "year": 2025,
+      "published": "2025-07-29",
+      "venue": "European Signal Processing Conference",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "End-to-end automatic speech recognition (ASR) systems based on transformer architectures, such as Whisper, offer high transcription accuracy and robustness. However, their autoregressive decoding is computationally expensive, hence limiting deployment on CPU-based and resource-constrained devices. Speculative decoding (SD) mitigates this issue by using a smaller draft model to propose candidate tokens, which are then verified by the main model. However, this approach is impractical for devices lacking hardware accelerators like GPUs. To address this, we propose Token Map Drafting, a model-free SD technique that eliminates the need for a separate draft model. Instead, we leverage a precomputed n-gram token map derived from domainspecific training data, enabling efficient speculative decoding with minimal overhead. Our method significantly accelerates ASR inference in structured, low-perplexity domains without sacrificing transcription accuracy. Experimental results demonstrate decoding speed-ups of $1.27 \\times$ on the CI-AVSR dataset and $1.37 \\times$ on our internal dataset without degrading recognition accuracy. Additionally, our approach achieves a 10% absolute improvement in decoding speed over the Distill-spec baseline running on CPU, highlighting its effectiveness for on-device ASR applications.",
+      "identifiers": [
+        "SemanticScholar:68d0d3506b5ef51a725df4ceeadc7c5660403c41"
+      ],
+      "semantic_scholar_id": "68d0d3506b5ef51a725df4ceeadc7c5660403c41",
+      "canonical_id": "arXiv:2507.21522",
+      "arxiv_id": "2507.21522",
+      "doi": "10.48550/arXiv.2507.21522",
+      "authors": [
+        "Tuan Vu Ho",
+        "Hiroaki Kokubo",
+        "Masaaki Yamamoto",
+        "Yohei Kawaguchi"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 480,
+        "matched_prestigious_venue": null
+      },
+      "reason": "下書きモデルを使わずn-gramトークンマップで候補を生成するモデルフリー投機的デコードを提案し、CPU上のWhisper系ASR推論で1.27〜1.37倍の高速化を精度維持で示す直接的なデコード技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b501d1051bf2",
+    "round": "libimp-b501d1051bf213c4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b501d1051bf213c4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b501d1051bf213c4-pre01.json",
+    "receipt": "sha256:d31ce6f0f9dfc12347e19eae2bcfb39921684dec74c4118da0ebc93192396ae6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b501d1051bf2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

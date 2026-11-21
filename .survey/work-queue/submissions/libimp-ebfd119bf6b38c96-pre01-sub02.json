@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference",
+      "source_url": "https://arxiv.org/abs/2608.20210",
+      "year": 2026,
+      "published": "2026-08-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models are usually built like large ones and then squeezed onto a CPU afterwards. We did the opposite: we fixed the target first, one user, one token at a time, 4-bit weights, ordinary CPU, and chose the architecture to suit it. The result keeps full attention in only 6 of its 18 blocks. The other 12 use short convolutions whose memory is two timesteps wide no matter how long the conversation gets, so two thirds of the network never re-reads a growing cache. Trained from scratch on 59.9B tokens, the model scores 47.31 on a five-task benchmark against a bar of 42.20 that was fixed before training began. It beats GPT-2 124M, Pythia-160M, OPT-125M and GPT-neo-125M, all trained on three to six times more data, and exceeds MobileLLM-125M's published score despite that model seeing a trillion tokens. Validation bits-per-byte is 0.8685. To check the architecture rather than the training recipe, we trained a conventional all-attention model of the same size on the same data, and wrote down the winning condition before scoring either. The hybrid won the chosen quality metric by 0.81%, matched it on downstream tasks, produced a 6.3% smaller 4-bit file, and decoded 1.76x faster at 2048 tokens of context, 2.08x against an external model of similar size. In every measurement the speed advantage is near zero at an empty context and grows with length, which is what the mechanism predicts and what a merely leaner model would not show. A simple bandwidth calculation predicts only 1.17x, so memory volume alone does not explain the gap. We also report what did not work: an unmitigated 4-bit quality cost, roughly half the convolution channels ending up inert and impossible to remove, and a vocabulary larger than this model size warrants.",
+      "identifiers": [
+        "SemanticScholar:2f2d2a3268f326c4e79ce11b12a8172578a27b12"
+      ],
+      "semantic_scholar_id": "2f2d2a3268f326c4e79ce11b12a8172578a27b12",
+      "canonical_id": "arXiv:2608.20210",
+      "arxiv_id": "2608.20210",
+      "doi": "10.48550/arXiv.2608.20210",
+      "authors": [
+        "Christos Koutsiaris"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CPU単一ユーザー推論を前提に注意を6ブロックに限定し残りを短い畳み込みで置換してキャッシュ増大を避ける小型言語モデルを設計し、4ビット化と共に2048文脈で1.76倍のデコード高速化を実測したオンデバイス推論向けアーキテクチャである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ebfd119bf6b3",
+    "round": "libimp-ebfd119bf6b38c96-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ebfd119bf6b38c96-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ebfd119bf6b38c96-pre01.json",
+    "receipt": "sha256:d273b725489b1d645366ccb29f5c9e48d27c1c2b799e553740f0642e5bf85add"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ebfd119bf6b3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

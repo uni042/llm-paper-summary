@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CipherFlow: Compiling AI Programs for Efficient Cryptographically Secure Inference",
+      "source_url": "https://arxiv.org/abs/2611.01450",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cryptographically secure inference faces two practical challenges: making secure programming accessible to AI developers and data scientists, and achieving efficient execution across deployment environments. Developers must compose cryptographic primitives correctly, while performance depends on hardware, networks, and evolving ciphertext states. We present CipherFlow, a compiler framework that takes a high-level AI computation graph, available cryptographic primitives, and a target hardware and network configuration to generate an executable, latency-optimized secure inference program. CipherFlow automates cryptographic execution decisions through three techniques: MicroBench profiles deployment-specific primitive costs; state-expanded planning jointly optimizes homomorphic encryption (HE) and secure multi-party computation (MPC) placement, conversions, and ciphertext maintenance under cryptographic-state constraints; and BlockFold summarizes branched regions to scale planning to Transformer graphs. Evaluation using measured HE/MPC backend costs across CPU/GPU and network settings shows up to 16.5$\\times$ speedup on BERT-base and over 22$\\times$ on ViT compared with static hybrid placement baselines. CipherFlow separates model programming from cryptographic execution decisions, enabling developers to express AI computations while the compiler constructs efficient secure programs.",
+      "identifiers": [
+        "SemanticScholar:1a201ea89e2f9a51e68365c9e5c9a2fe29848907"
+      ],
+      "semantic_scholar_id": "1a201ea89e2f9a51e68365c9e5c9a2fe29848907",
+      "canonical_id": "arXiv:2611.01450",
+      "arxiv_id": "2611.01450",
+      "authors": [
+        "He-Dong Zhang",
+        "Meng Zheng",
+        "Qian Lou"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "高水準AI計算グラフから同型暗号と秘密計算の配置・変換・暗号文維持を状態展開計画で最適化しレイテンシ最適なセキュア推論プログラムを生成するコンパイラで、Transformerでも大幅な高速化を示す直接的な推論実行技術である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression",
+      "source_url": "https://arxiv.org/abs/2410.04139",
+      "year": 2024,
+      "published": "2024-10-05",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved significant performance gains using advanced prompting techniques over various tasks. However, the increasing length of prompts leads to high computational costs and often obscures crucial information. Prompt compression has been proposed to alleviate these issues, but it faces challenges in (i) capturing the global context and (ii) training the compressor effectively. To tackle these challenges, we introduce a novel prompt compression method, namely Reading To Compressing (R2C), utilizing the Fusion-in-Decoder (FiD) architecture to identify the important information in the prompt. Specifically, the cross-attention scores of the FiD are used to discern essential chunks and sentences from the prompt. R2C effectively captures the global context without compromising semantic consistency while detouring the necessity of pseudo-labels for training the compressor. Empirical results show that R2C retains key contexts, enhancing the LLM performance by 6% in out-of-domain evaluations while reducing the prompt length by 80%.",
+      "identifiers": [
+        "SemanticScholar:e97fe11571ea59c566ad88742efaf58f4f177d02"
+      ],
+      "semantic_scholar_id": "e97fe11571ea59c566ad88742efaf58f4f177d02",
+      "canonical_id": "arXiv:2410.04139",
+      "arxiv_id": "2410.04139",
+      "doi": "10.48550/arXiv.2410.04139",
+      "authors": [
+        "Eunseong Choi",
+        "Sunkyung Lee",
+        "Minjin Choi",
+        "June Park",
+        "Jongwuk Lee"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 777,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Fusion-in-Decoderのクロスアテンションスコアでプロンプト中の重要チャンクと文を特定しプロンプト長を80%削減しながら性能を向上させるプロンプト圧縮手法であり、LLM推論コスト削減へ直接寄与する具体的手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference",
+      "source_url": "https://arxiv.org/abs/2512.24713",
+      "year": 2025,
+      "published": "2025-12-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable performance across a wide range of language processing tasks. However, this success comes at the cost of substantial computation and memory requirements, which significantly impedes their deployment in resource-constrained environments. To address this challenge, this work introduces an automation framework that leverages weight pruning and low-bit quantization, and presents a hardware-software co-design method that generates accelerators on the Field-Programmable Gate Array (FPGA) platform. In particular, we implement a unified pipeline that applies N:M structured pruning and 4-bit integer quantization to reduce the memory footprint, followed by optimized dequantization and matrix multiplication to enhance LLM inference on several hardware platforms, including CPUs, NVIDIA GPUs with Dense and 2:4 Sparse Tensor Cores, and a custom systolic-array-based FPGA accelerator. Utilizing 2:4 sparsity combined with quantization on $4096 \\times 4096$ matrices, our approach achieves a reduction of up to $4\\times$ in weight storage and a $1.71\\times$ speedup in matrix multiplication, yielding a $1.29\\times$ end-to-end latency reduction compared to dense GPU baselines. Scaling analysis on the LLaMA-7B model further shows that structured sparsity enhances the throughput per token by $1.36\\times$. These results demonstrate the synergy of fine-grained N:M sparsity and quantization for enabling efficient and deployable LLM inference, while the proposed FPGA accelerator offers a flexible architectural path for supporting a broader class of sparsity patterns beyond the fixed 2:4 hardware constraints.",
+      "identifiers": [
+        "SemanticScholar:c5adbcff6c63006841c3690a07cdf81c008acee3"
+      ],
+      "semantic_scholar_id": "c5adbcff6c63006841c3690a07cdf81c008acee3",
+      "canonical_id": "arXiv:2512.24713",
+      "arxiv_id": "2512.24713",
+      "doi": "10.48550/arXiv.2512.24713",
+      "authors": [
+        "Fen-Yu Hsieh",
+        "Yun-Chang Teng",
+        "D. Hong",
+        "Jan-Jan Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 325,
+        "matched_prestigious_venue": null
+      },
+      "reason": "N:M構造化プルーニングと4ビット整数量子化を統一パイプライン化しFPGAサイストリックアレイ加速器まで協調設計してLLaMA-7Bのトークン当たりスループットを向上させた、LLM推論のスパース化と量子化の直接的な実装である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Density-aware Soft Context Compression with Semi-Dynamic Compression Ratio",
+      "source_url": "https://arxiv.org/abs/2603.25926",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Soft context compression reduces the computational workload of processing long contexts in LLMs by encoding long context into a smaller number of latent tokens. However, existing frameworks apply uniform compression ratios, failing to account for the extreme variance in natural language information density. While adopting a density-aware dynamic compression ratio seems intuitive, empirical investigations reveal that models struggle intrinsically with operations parameterized by input dependent, continuous structural hyperparameters. To resolve this pitfall, we introduce Semi-Dynamic Context Compression framework. Our approach features a Discrete Ratio Selector, which predicts a compression target based on intrinsic information density and quantizes it to a predefined set of discrete compression ratios. It is efficiently jointly trained with the compressor on synthetic data, with the summary lengths as a proxy to create labels for compression ratio prediction. Extensive evaluations confirm that our density-aware framework, utilizing mean pooling as the backbone, consistently outperforms static baselines, establishing a robust Pareto frontier for context compression techniques. Our code, data and model weights are available at https://github.com/yuyijiong/semi-dynamic-context-compress",
+      "identifiers": [
+        "SemanticScholar:152b66900717d8acccb16d0ed5b5c21688910b28"
+      ],
+      "semantic_scholar_id": "152b66900717d8acccb16d0ed5b5c21688910b28",
+      "canonical_id": "arXiv:2603.25926",
+      "arxiv_id": "2603.25926",
+      "doi": "10.48550/arXiv.2603.25926",
+      "authors": [
+        "Yijiong Yu",
+        "Shuai Yuan",
+        "Jie Zheng",
+        "Hua-Zheng Wang",
+        "Ji Pei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      },
+      "reason": "情報密度に応じて離散的な圧縮率を選択器が予測し長文脈を潜在トークンへソフト圧縮する半動的文脈圧縮で、静的圧縮より優れた効率フロンティアを示しており長文脈LLM推論の計算量削減に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HPD-Parsing: Hierarchical Parallel Document Parsing",
+      "source_url": "https://arxiv.org/abs/2607.18839",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient teamwork typically combines global coordination with parallel execution, a principle not yet fully reflected in unified Vision-Language Model (VLM)-based document parsers. Existing unified parsers process an entire page jointly but generate its output through a single token-by-token autoregressive trajectory, creating a sequential bottleneck that grows with document length. Such full-page sequential generation overlooks a key property of document parsing: layout must be analyzed globally, whereas block content can be parsed in parallel. Based on this observation, we introduce HPD-Parsing, which replaces full-page autoregressive generation with a Hierarchical Parallel Decoding paradigm. A main layout branch organizes the overall document structure and dynamically assigns block-level content decoding to concurrent branches, while progressive multi-token prediction (P-MTP) further reduces the decoding steps within each branch. Experiments on public benchmarks show that HPD-Parsing achieves 4,752 tokens per second, delivering $2.62\\times$ the throughput of the fastest existing document parsing model and $3.06\\times$ that of the vanilla autoregressive baseline, while maintaining competitive parsing accuracy. These results establish hierarchical parallel decoding as an effective alternative to full-page autoregressive generation, opening a new direction for efficient unified document parsing.",
+      "identifiers": [
+        "SemanticScholar:2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8"
+      ],
+      "semantic_scholar_id": "2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8",
+      "canonical_id": "arXiv:2607.18839",
+      "arxiv_id": "2607.18839",
+      "doi": "10.48550/arXiv.2607.18839",
+      "authors": [
+        "Shubo Wei",
+        "Jing-Jing Wu",
+        "Ling-Kun Zhang",
+        "Qun-Yi Xie",
+        "Hao Zou",
+        "Lei Xiang",
+        "Xu Fan",
+        "Yang-Liu Xu",
+        "Man-Hui Lin",
+        "Xiao-Long Ma",
+        "Cheng Cui",
+        "Teng-Yu Du",
+        "Yy"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      },
+      "reason": "文書解析VLMの逐次自己回帰生成をレイアウト枝とブロック並列デコード枝に分離し多トークン予測も併用して4752トークン毎秒と2.62倍のスループットを達成した階層並列デコーディングであり、生成推論の高速化そのものである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ebfd119bf6b3",
+    "round": "libimp-ebfd119bf6b38c96-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ebfd119bf6b38c96-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ebfd119bf6b38c96-pre01.json",
+    "receipt": "sha256:d273b725489b1d645366ccb29f5c9e48d27c1c2b799e553740f0642e5bf85add"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ebfd119bf6b3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
