@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（289本）
+## 自動生成の論文一覧（290本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1106,6 +1106,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/tobna/TaylorShift) ・ リポジトリ内被引用：0  
   ソフトマックスの2次テイラー近似とテンソル積による再順序付けで、全トークン相互作用を保ちながら注意を線形時間化する方式を提案し、移行点の理論と実測の一致と精度低下なしを示した研究。
 
+- **2024-01 · [AutoChunk: Automated Activation Chunk for Memory-Efficient Long Sequence Inference](2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長系列推論で急増する活性値メモリに対し、計算グラフ上の合法なチャンク領域をチャンクフローの規則で全探索し、速度損失のコスト関数と動的計画法で最適な分割計画を選んで自動適用するコンパイラAutoChunkを提案した研究。
+
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
@@ -1151,7 +1155,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：863  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：864  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

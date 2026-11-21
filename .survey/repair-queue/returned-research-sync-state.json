@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "03048fc9d5aacee97927de5c906fea896d6b07c8",
+  "base_commit": "40dfe9d4b81c5042148a55adda984983f800cf1f",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -45,6 +45,7 @@
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
+    "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
     "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
     "2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-linear-and-back.json",
@@ -66,6 +67,7 @@
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
+    "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-formats.json",
@@ -81,6 +83,7 @@
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
+    "2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
     "2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.json",
     "2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.json",
@@ -111,6 +114,7 @@
     "2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.json",
     "2025-2504.02118-llmpi-optimizing-llms-for-high-throughput-on-raspberry-pi.json",
     "2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algorithm.json",
+    "2025-2504.04024-window-token-concatenation-for-efficient-visual-large-language-models.json",
     "2025-2504.05352-achieving-binary-weight-and-activation-for-llms-using-post-training-quantization.json",
     "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
@@ -128,6 +132,7 @@
     "2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.json",
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
     "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json",
+    "2025-2505.16743-trim-achieving-extreme-sparsity-with-targeted-row-wise-iterative-metric-driven-pruning.json",
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.19812-efficient-multi-modal-long-context-learning-for-training-free-adaptation.json",
     "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json",
@@ -46614,6 +46619,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2401.10652": {
+      "order": [
+        "2026-11-21T05:38:15+00:00",
+        "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.14595": {
+      "order": [
+        "2026-11-21T05:39:41+00:00",
+        "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.05225": {
+      "order": [
+        "2026-11-21T05:41:07+00:00",
+        "2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.04024": {
+      "order": [
+        "2026-11-21T05:42:32+00:00",
+        "2025-2504.04024-window-token-concatenation-for-efficient-visual-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.16743": {
+      "order": [
+        "2026-11-21T05:43:57+00:00",
+        "2025-2505.16743-trim-achieving-extreme-sparsity-with-targeted-row-wise-iterative-metric-driven-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58495,6 +58545,21 @@
     "arxiv:2608.28859": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md"
+    ],
+    "arxiv:2401.10652": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-.md"
+    ],
+    "arxiv:2409.14595": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.md"
+    ],
+    "arxiv:2412.05225": [
+      "papers/inference/99-other-inference-systems/2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.md"
+    ],
+    "arxiv:2504.04024": [
+      "papers/inference/99-other-inference-systems/2025-2504.04024-window-token-concatenation-for-efficient-visual-large-language-models.md"
+    ],
+    "arxiv:2505.16743": [
+      "papers/inference/99-other-inference-systems/2025-2505.16743-trim-achieving-extreme-sparsity-with-targeted-row-wise-iterative-metric-.md"
     ]
   }
 }

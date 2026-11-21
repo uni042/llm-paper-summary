@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（170本）
+## 自動生成の論文一覧（171本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -669,6 +669,10 @@
 - **2024-11 · [PPLLaVA: Varied Video Sequence Understanding With Prompt Guidance](2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   指示文と各視覚トークンの関連度を重みに使う三次元畳み込み型プーリングで動画トークンを十八倍まで圧縮し、大規模動画ベンチマークで元モデルを上回る正解率と約三分の一の処理時間を両立した。テキスト符号器の文脈拡張が長い指示への対応を担う。
+
+- **2024-09 · [EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models](2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  内側の層同士で注意行列が似るという観測に基づき、似た層の注意計算を共有する生徒モデルを知識蒸留と継続学習で作り、パラメータ削減と推論・学習の高速化を品質維持と両立させた研究。
 
 ### 4年前（2022-12〜2023-11）
 

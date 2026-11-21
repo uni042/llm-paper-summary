@@ -35,10 +35,15 @@
   "selection_reason": "長系列推論で指数的に増える活性化メモリに対し、コンパイラがチャンク計画を探索・選択しコード生成で適用するAutoChunkは活性化メモリを80%以上削減し最大系列長を3.2〜11.7倍に延ばす、推論時メモリ削減への直接貢献である。",
   "semantic_scholar_id": "50a9825f5ae6e2ed68639bd05173109b1af4b587",
   "source_url": "https://arxiv.org/abs/2401.10652",
-  "status": "ready",
+  "status": "superseded",
   "title": "AutoChunk: Automated Activation Chunk for Memory-Efficient Long Sequence Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-21T05:46:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-.md",
+  "represented_canonical_id": "arXiv:2401.10652",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
