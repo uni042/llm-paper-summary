@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d10::chunk-0002-of-0002",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.02228",
+      "identity_tokens": [
+        "arXiv:2407.02228",
+        "https://arxiv.org/abs/2407.02228"
+      ],
+      "title": "MTMamba: Enhancing Multi-Task Dense Scene Understanding by Mamba-Based Decoders",
+      "reason": "Mambaベースのデコーダで自己課題ブロックと課題間ブロックを用いる多課題稠密シーン理解の視覚モデルであり、精度改善が中心でLLM推論システムへの貢献はないため。",
+      "source_url": "https://arxiv.org/abs/2407.02228",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.17473",
+      "identity_tokens": [
+        "arXiv:2411.17473",
+        "https://arxiv.org/abs/2411.17473"
+      ],
+      "title": "TinyViM: Frequency Decoupling for Tiny Hybrid Vision Mamba",
+      "reason": "周波数分離により低周波成分だけをMambaへ入れる軽量なハイブリッド視覚骨格TinyViMの画像タスク向け提案であり、スループット向上も視覚モデル内に閉じLLM推論とは無関係であるため。",
+      "source_url": "https://arxiv.org/abs/2411.17473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02542",
+      "identity_tokens": [
+        "arXiv:2504.02542",
+        "https://arxiv.org/abs/2504.02542"
+      ],
+      "title": "Audio-Visual Controlled Video Diffusion with Masked Selective State Spaces Modeling for Natural Talking Head Generation",
+      "reason": "音声・視覚など複数信号で顔領域を制御するマスク付き状態空間モデルによるトーキングヘッド動画拡散の生成手法であり、LLMの推論やサービングの効率化を扱っていないため。",
+      "source_url": "https://arxiv.org/abs/2504.02542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 485
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10178",
+      "identity_tokens": [
+        "arXiv:2502.10178",
+        "https://arxiv.org/abs/2502.10178"
+      ],
+      "title": "From Markov to Laplace: How Mamba In-Context Learns Markov Chains",
+      "reason": "単層Mambaがマルコフ連鎖の文脈内学習でラプラス平滑化推定量を実現することを理論的に示す研究であり、Mambaの推論高速性は動機に過ぎずシステム機構の提案はないため。",
+      "source_url": "https://arxiv.org/abs/2502.10178",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 486
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.15101",
+      "identity_tokens": [
+        "arXiv:2408.15101",
+        "https://arxiv.org/abs/2408.15101"
+      ],
+      "title": "MTMamba++: Enhancing Multi-Task Dense Scene Understanding via Mamba-Based Decoders",
+      "reason": "特徴・意味の二種の課題間Mambaブロックで多課題稠密シーン理解を行う視覚アーキテクチャの拡張版であり、計算効率への言及も曖昧でLLM推論システムへの直接貢献はないため。",
+      "source_url": "https://arxiv.org/abs/2408.15101",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 487
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35817",
+      "identity_tokens": [
+        "arXiv:2609.35817",
+        "https://arxiv.org/abs/2609.35817"
+      ],
+      "title": "Less Uniform Discrete Diffusion is More Powerful and Scalable",
+      "reason": "一様離散拡散言語モデル向けにクリーンなトークンへ向ける非一様損失とトークン単位の時刻埋め込みを導入し、信頼度に基づく少数ステップサンプリングで自己回帰デコード比3トークン毎ステップの生成高速化を実現するデコード手法であるため。",
+      "source_url": "https://arxiv.org/abs/2609.35817",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 488
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.11587",
+      "identity_tokens": [
+        "arXiv:2501.11587",
+        "https://arxiv.org/abs/2501.11587"
+      ],
+      "title": "Recurrent Diffusion for Large-Scale Parameter Generation",
+      "reason": "ネットワークパラメータをトークン分割し再帰機構と拡散過程で数億規模の重みを単一GPUで生成する枠組みであり、対象はパラメータ生成そのもので推論実行の高速化やメモリ階層ではないため。",
+      "source_url": "https://arxiv.org/abs/2501.11587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 489
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.09697",
+      "identity_tokens": [
+        "arXiv:2404.09697",
+        "https://arxiv.org/abs/2404.09697"
+      ],
+      "title": "HSIDMamba: Exploring Bidirectional State-Space Models for Hyperspectral Denoising",
+      "reason": "双方向状態空間モデルと八方向走査、スペクトル注意でハイパースペクトル画像のノイズ除去を行う視覚ネットワークであり、Transformer比の効率も画像復元内に閉じLLM推論とは無関係であるため。",
+      "source_url": "https://arxiv.org/abs/2404.09697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 490
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.08903",
+      "identity_tokens": [
+        "arXiv:2407.08903",
+        "https://arxiv.org/abs/2407.08903"
+      ],
+      "title": "TensorTEE: Unifying Heterogeneous TEE Granularity for Efficient Secure Collaborative Tensor Computing",
+      "reason": "CPUとNPUの異種協調計算向けにテンソル粒度で統一したTEEを提案しオンチップでのテンソル構造保持やMAC管理でLLM学習を4倍高速化するが、評価は学習ワークロードであり推論サービングへの適用は示されていないため。",
+      "source_url": "https://arxiv.org/abs/2407.08903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.22049",
+      "identity_tokens": [
+        "arXiv:2510.22049",
+        "https://arxiv.org/abs/2510.22049"
+      ],
+      "title": "Massive Memorization with Hundreds of Trillions of Parameters for Sequential Transducer Generative Recommenders",
+      "reason": "生成推薦の逐次変換器向けに履歴要約トークンをキャッシュして候補注意を二段階化し、百万件規模の履歴でも下流の学習・推論コストを固定化するVISTAの提案だが、対象は推薦プラットフォームのサービングでありLLM推論ではないため。",
+      "source_url": "https://arxiv.org/abs/2510.22049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 493
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d10",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

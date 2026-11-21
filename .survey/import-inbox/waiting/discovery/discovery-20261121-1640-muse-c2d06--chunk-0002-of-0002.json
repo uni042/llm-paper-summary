@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d06::chunk-0002-of-0002",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.13719",
+      "identity_tokens": [
+        "arXiv:2601.13719",
+        "https://arxiv.org/abs/2601.13719"
+      ],
+      "title": "Hierarchical Long Video Understanding with Audiovisual Entity Cohesion and Agentic Search",
+      "reason": "音視覚エンティティ結束と階層インデックス、エージェント検索で長動画理解の精度を高めるHAVENは検索拡張の応用枠組みであり、推論システムの効率機構は主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2601.13719",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10651",
+      "identity_tokens": [
+        "arXiv:2606.10651",
+        "https://arxiv.org/abs/2606.10651"
+      ],
+      "title": "Kwai Keye-VL-2.0 Technical Report",
+      "reason": "DeepSeek疎注意のGQA適応やカスタムDSAカーネル、異種並列など最適化された推論基盤に触れるものの、主体は30B MoEマルチモーダル基盤モデルの能力報告であり推論システム自体の評価が主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2606.10651",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.08859",
+      "identity_tokens": [
+        "arXiv:2603.08859",
+        "https://arxiv.org/abs/2603.08859"
+      ],
+      "title": "Expressivity-Efficiency Tradeoffs for Hybrid Sequence Models",
+      "reason": "Transformerと状態空間モデルのハイブリッドが選択的コピー等でパラメータと作業メモリの限界を破ると証明する理論研究であり、実推論システムでの速度やスループットの実測はない。",
+      "source_url": "https://arxiv.org/abs/2603.08859",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.23804",
+      "identity_tokens": [
+        "arXiv:2610.23804",
+        "https://arxiv.org/abs/2610.23804"
+      ],
+      "title": "Jarvis: Coordination Deserves a Brain of Its Own in Agentic Interactive Models",
+      "reason": "前面モデルと背後タスクの不整合を型付き判定と版管理で調整するJarvisは対話エージェントの協調ハーネスであり、LLM推論の遅延・スループット等の基盤技術ではない。",
+      "source_url": "https://arxiv.org/abs/2610.23804",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22617",
+      "identity_tokens": [
+        "arXiv:2601.22617",
+        "https://arxiv.org/abs/2601.22617"
+      ],
+      "title": "EntroCut: Entropy-Guided Adaptive Truncation for Efficient Chain-of-Thought Reasoning in Small-scale Large Reasoning Models",
+      "reason": "初期推論ステップの出力エントロピーで正誤を判別し高確信状態で思考連鎖を動的に打ち切るEntroCutは、学習不要でトークン使用量を最大40%削減する推論時デコード効率化手法である。",
+      "source_url": "https://arxiv.org/abs/2601.22617",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06840",
+      "identity_tokens": [
+        "arXiv:2606.06840",
+        "https://arxiv.org/abs/2606.06840"
+      ],
+      "title": "Characterize Then Distill: Mechanistic Reasoning in Large Output Spaces",
+      "reason": "臨床コーディングで注意ヘッドの因果効果を測り学生の注意先を監督するMISTILLは機構解釈と蒸留学習の研究であり、精度同等条件での検討に留まって推論効率への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2606.06840",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17211",
+      "identity_tokens": [
+        "arXiv:2506.17211",
+        "https://arxiv.org/abs/2506.17211"
+      ],
+      "title": "BREAD: Branched Rollouts from Expert Anchors Bridge SFT & RL for Reasoning",
+      "reason": "専門家プレフィックスと分岐ロールアウトでSFTとGRPOを橋渡しするBREADは小モデルの推論能力を育てる学習手法であり、学習高速化はあっても推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2506.17211",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16790",
+      "identity_tokens": [
+        "arXiv:2508.16790",
+        "https://arxiv.org/abs/2508.16790"
+      ],
+      "title": "TaDiCodec: Text-aware Diffusion Speech Tokenizer for Speech Language Modeling",
+      "reason": "テキスト誘導拡散デコーダで6.25Hz単層コードブックを実現するTaDiCodecは音声言語モデル用トークナイザという音声コーデック応用であり、LLM推論の圧縮技術ではない。",
+      "source_url": "https://arxiv.org/abs/2508.16790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 319
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.08680",
+      "identity_tokens": [
+        "arXiv:2305.08680",
+        "https://arxiv.org/abs/2305.08680"
+      ],
+      "title": "Efficient and Effective Tree-based and Neural Learning to Rank",
+      "reason": "木ベースとニューラルの学習ランキングにおける効率と有効性を総覧するモノグラフであり、対象は情報検索のランキングであってLLM推論・サービングの技術ではない。",
+      "source_url": "https://arxiv.org/abs/2305.08680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 320
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.03804",
+      "identity_tokens": [
+        "arXiv:2401.03804",
+        "https://arxiv.org/abs/2401.03804"
+      ],
+      "title": "TeleChat Technical Report",
+      "reason": "3Bから12BのTeleChatの事前学習と選好整合、ベンチマーク評価を報告するモデル技術報告であり、推論高速化やサービングに関するシステム技術の提案は含まれない。",
+      "source_url": "https://arxiv.org/abs/2401.03804",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d06",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

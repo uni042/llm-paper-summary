@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d12::chunk-0002-of-0002",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24217",
+      "identity_tokens": [
+        "arXiv:2605.24217",
+        "https://arxiv.org/abs/2605.24217"
+      ],
+      "title": "Identifying and Mitigating Systemic Measurement Bias in Production LLM Inference Benchmarks",
+      "reason": "本番LLM推論ベンチマークで単一プロセスの非同期クライアントが起こす待ち行列ボトルネックをM/G/1モデルで示し、多プロセス評価枠組みとNormalized Time Per Output Tokenを提案して、数千QPS規模でサービングエンジン本来のTTFTやTPOTを分離測定できることを一次要旨で示している。",
+      "source_url": "https://arxiv.org/abs/2605.24217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.07901",
+      "identity_tokens": [
+        "arXiv:2402.07901",
+        "https://arxiv.org/abs/2402.07901"
+      ],
+      "title": "FAST: Factorizable Attention for Speeding up Transformers",
+      "reason": "高速多重極法や高速ガウス変換に着想を得た因数分解可能な注意で計算・メモリ複雑度を二次から線形へ下げるFASTは、注意行列の全結合関係を保つ点を述べるが、一次要旨は標準設定での検証に留まり、大規模言語モデルの推論実行での遅延やスループット実測は示されていない。",
+      "source_url": "https://arxiv.org/abs/2402.07901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.08285",
+      "identity_tokens": [
+        "arXiv:2305.08285",
+        "https://arxiv.org/abs/2305.08285"
+      ],
+      "title": "Parameter-Efficient Fine-Tuning with Layer Pruning on Free-Text Sequence-to-Sequence Modeling",
+      "reason": "LoRAと構造化層プルーニングを統合して医療要約などの系列変換タスクの微調整を効率化し、訓練時GPUメモリ半減と訓練2倍速をうたう論文であり、一次要旨の高速化対象は学習・微調整工程であって推論やサービングへの直接貢献は示されていない。",
+      "source_url": "https://arxiv.org/abs/2305.08285",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 110
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20205",
+      "identity_tokens": [
+        "arXiv:2601.20205",
+        "https://arxiv.org/abs/2601.20205"
+      ],
+      "title": "Hyperparameter Transfer with Mixture-of-Expert Layers",
+      "reason": "幅・深さ・専門家数・専門家サイズを変えた際のMoE層付きTransformerでハイパーパラメータが転移する新しいパラメータ化を動的平均場理論で正当化する研究であり、対象は訓練時のハイパーパラメータ選択であって推論実行やMoEサービングの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2601.20205",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15622",
+      "identity_tokens": [
+        "arXiv:2605.15622",
+        "https://arxiv.org/abs/2605.15622"
+      ],
+      "title": "Position: Zeroth-Order Optimization in Deep Learning Is Underexplored, Not Underpowered",
+      "reason": "零次最適化が過小評価されていると主張し、分散低減や部分空間的見方、前方のみ計算のシステム利点を論じる立場表明の論文であり、一次要旨は勾配なし学習・訓練の再考に終始し、言語モデルの推論やデコードへの直接の技術貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.15622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10456",
+      "identity_tokens": [
+        "arXiv:2410.10456",
+        "https://arxiv.org/abs/2410.10456"
+      ],
+      "title": "Ada-K Routing: Boosting the Efficiency of MoE-based LLMs",
+      "reason": "MoE型LLMでトークンごとに活性化専門家数を軽量アロケータが動的に決めるAda-Kルーティングを提案し、PPOによる学習を経てFLOPs25％超削減と20％超の推論高速化をMixtralを含む複数モデルで一次要旨に具体的に示している。",
+      "source_url": "https://arxiv.org/abs/2410.10456",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 113
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.18092",
+      "identity_tokens": [
+        "arXiv:2505.18092",
+        "https://arxiv.org/abs/2505.18092"
+      ],
+      "title": "QwenLong-CPRS: Towards ∞-LLMs with Dynamic Context Optimization",
+      "reason": "長文脈処理のprefill計算量と中間情報喪失に対し、自然言語指示で多粒度に文脈を動的圧縮するQwenLong-CPRSを提案し、トークン批評機構や窓並列推論と併せて21.59倍の文脈圧縮と複数フラッグシップモデルへの統合効果を一次要旨で示している。",
+      "source_url": "https://arxiv.org/abs/2505.18092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 117
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.16625",
+      "identity_tokens": [
+        "arXiv:2604.16625",
+        "https://arxiv.org/abs/2604.16625"
+      ],
+      "title": "AdaExplore: Failure-Driven Adaptation and Diversity-Preserving Search for Efficient Kernel Generation",
+      "reason": "Tritonカーネル生成を対象に、失敗から有効性規則の記憶を蓄積し候補カーネルの木探索で局所改良と構造再生を alternation するエージェント枠組みAdaExploreは、カーネル実行時最適化のベンチマークで高速化を示すが、主体はLLMエージェントによるコード生成であり言語モデル推論系自体の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2604.16625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 118
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.12566",
+      "identity_tokens": [
+        "arXiv:2106.12566",
+        "https://arxiv.org/abs/2106.12566"
+      ],
+      "title": "Stable, Fast and Accurate: Kernelized Attention with Relative Positional Encoding",
+      "reason": "相対位置符号化が作るToeplitz構造を利用し、カーネル化注意を高速フーリエ変換でn log n時間に計算する手法は長系列で標準Transformerより速いとするが、一次要旨は訓練安定性と課題精度の検証中心で、言語モデルのサービングや推論カーネルとしての配備実測は示されていない。",
+      "source_url": "https://arxiv.org/abs/2106.12566",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 119
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18993",
+      "identity_tokens": [
+        "arXiv:2509.18993",
+        "https://arxiv.org/abs/2509.18993"
+      ],
+      "title": "CR-Net: Scaling Parameter-Efficient Training with Cross-Layer Low-Rank Structure",
+      "reason": "層間活性残差の低ランク性を利用し前層出力と低ランク差分から活性を再構成するCR-Netは、大規模言語モデルの事前学習におけるパラメータと活性メモリ、再計算の効率化を目的とするもので、一次要旨の対象は学習工程であり推論への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2509.18993",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 121
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d12",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

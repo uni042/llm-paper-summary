@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d01::chunk-0002-of-0002",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.20750",
+      "identity_tokens": [
+        "arXiv:2503.20750",
+        "https://arxiv.org/abs/2503.20750"
+      ],
+      "title": "Optimal Scaling Laws for Efficiency Gains in a Theoretical Transformer-Augmented Sectional MoE Framework",
+      "reason": "埋め込み次元を分割して専門家へ割り当てる sectional MoE の理論枠組みと最適専門家数のスケーリング則を導く研究だが、実証検証は今後のロードマップ段階と明記されており、推論システムでの効率改善が一次要旨で具体的に確認できないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2503.20750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11497",
+      "identity_tokens": [
+        "arXiv:2505.11497",
+        "https://arxiv.org/abs/2505.11497"
+      ],
+      "title": "QVGen: Pushing the Limit of Quantized Video Generative Models",
+      "reason": "動画拡散モデル向け量子化QVGenは補助モジュールのランク減衰で4ビット以下の量子化認識学習を安定化させ推論オーバーヘッドを消す工夫を示すが、適用先は動画生成拡散モデルでありLLM推論への直接の適用や機構は要旨に確認できないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2505.11497",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.11639",
+      "identity_tokens": [
+        "arXiv:2602.11639",
+        "https://arxiv.org/abs/2602.11639"
+      ],
+      "title": "PACE: Prefix-Protected and Difficulty-Aware Compression for Efficient Reasoning",
+      "reason": "推論モデルの過剰思考を抑えるPACEは接頭辞保護と難易度応じた長さペナルティという学習時の最適化で生成トークンを最大55.7%削減するが、サービング側の推論機構ではなく再学習による出力短縮が主体であり推論システムへの貢献は間接的であるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2602.11639",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.17507",
+      "identity_tokens": [
+        "arXiv:2402.17507",
+        "https://arxiv.org/abs/2402.17507"
+      ],
+      "title": "Interactive Multi-Head Self-Attention with Linear Complexity",
+      "reason": "ヘッド間相互作用を持つ線形計算量の多頭自己注意を提案し効率的注意手法と比較する研究だが、新しいバックボーンアーキテクチャとして学習・評価されるもので、既存LLM推論のカーネルやサービングへの具体的な適用機構は要旨に確認できないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2402.17507",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27141",
+      "identity_tokens": [
+        "arXiv:2605.27141",
+        "https://arxiv.org/abs/2605.27141"
+      ],
+      "title": "VitaBench 2.0: Evaluating Personalized and Proactive Agents in Long-Term User Interactions",
+      "reason": "VitaBench 2.0は長期ユーザー対話におけるパーソナライズと能動性を測るエージェントベンチマークで、 frontier LLMの能力評価と失敗分析が目的であり、推論高速化やサービング等のシステム技術への直接貢献は要旨に一切示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.27141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.25716",
+      "identity_tokens": [
+        "arXiv:2605.25716",
+        "https://arxiv.org/abs/2605.25716"
+      ],
+      "title": "An Efficient and Privacy-Preserving Architecture for Cross-Institutional Collaborative RAG",
+      "reason": "機関間協調RAG向けFedRAGは分散KVキャッシュへの跨ノード注意という課題に対し特徴スクランブルとトークン置換によるScrambled Distributed Attentionで平文を晒さず注意実行を委譲し、安全な既存手法比で最大62倍のレイテンシ削減を示す分散推論への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2605.25716",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.18177",
+      "identity_tokens": [
+        "arXiv:2412.18177",
+        "https://arxiv.org/abs/2412.18177"
+      ],
+      "title": "Enhancing Online Continual Learning with Plug-and-Play State Space Model and Class-Conditional Mixture of Discretization",
+      "reason": "オンライン継続学習向けS6MODは選択的状態空間モデルの離散化をクラス条件付きに調整して新規タスクへの適応性を高める学習手法であり、評価も継続学習の性能向上が中心で、LLM推論やサービングの効率化への具体的な適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2412.18177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 82
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20073",
+      "identity_tokens": [
+        "arXiv:2509.20073",
+        "https://arxiv.org/abs/2509.20073"
+      ],
+      "title": "SHMoAReg: Spark Deformable Image Registration via Spatial Heterogeneous Mixture of Experts and Attention Heads",
+      "reason": "医用画像の変形レジストレーション向けSHMoARegはエンコーダへ注意ヘッド混合、デコーダへ空間異種MoEを導入してDiceスコアを上げる応用モデル研究であり、MoEという語は含むもののLLMのMoE推論システムへの貢献は示されていない異分野応用である。",
+      "source_url": "https://arxiv.org/abs/2509.20073",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 85
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09722",
+      "identity_tokens": [
+        "arXiv:2604.09722",
+        "https://arxiv.org/abs/2604.09722"
+      ],
+      "title": "ConfigSpec: Profiling-Based Configuration Selection for Distributed Edge-Cloud Speculative LLM Serving",
+      "reason": "エッジ・クラウド協調の投機的LLMサービング向けConfigSpecは下書きモデル種・量子化水準・投機長と端末特性をプロファイリングし、受諾率や電力までモデル化してgoodputと費用・エネルギー効率の競合する最適設定を選ぶ、分散投機的デコード基盤への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2604.09722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 86
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15721",
+      "identity_tokens": [
+        "arXiv:2610.15721",
+        "https://arxiv.org/abs/2610.15721"
+      ],
+      "title": "To Cache or Not to Cache: Understanding and Mitigating Safety Incompatibility in Cross-Model KV Cache Reuse",
+      "reason": "モデル間KVキャッシュ再利用の安全性不整合を体系評価し、再利用した値テンソルを層・ヘッド別のアフィン写像で受け手モデルに整合させるVReparoにより攻撃成功率を下げつつTTFT削減85.62%を維持する、クロスモデルKVキャッシュ共有への直接のシステム貢献である。",
+      "source_url": "https://arxiv.org/abs/2610.15721",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 87
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

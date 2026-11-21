@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d06::chunk-0001-of-0002",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.28213",
+      "identity_tokens": [
+        "arXiv:2605.28213",
+        "https://arxiv.org/abs/2605.28213"
+      ],
+      "title": "KLineage: Recovering the Missing When of Kernel Optimization by Deoptimizing Experts",
+      "reason": "専門家カーネルを検証ゲート付きで逆向きに簡略化し、最適化の適用条件・位置・効果をスキルとして抽出するKLineageは、GPUカーネル生成の性能と効率を直接高めるカーネル最適化技術である。",
+      "source_url": "https://arxiv.org/abs/2605.28213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2309.01729",
+      "identity_tokens": [
+        "arXiv:2309.01729",
+        "https://arxiv.org/abs/2309.01729"
+      ],
+      "title": "Softmax Bias Correction for Quantized Generative Models",
+      "reason": "量子化で生じるsoftmax出力の大きなバイアスを特定し、オフライン補正を量子化パラメータへ吸収させて推論時追加計算なしで8ビットsoftmaxの精度を改善する、生成モデルの推論向け量子化手法である。",
+      "source_url": "https://arxiv.org/abs/2309.01729",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01296",
+      "identity_tokens": [
+        "arXiv:2410.01296",
+        "https://arxiv.org/abs/2410.01296"
+      ],
+      "title": "Speculative Coreset Selection for Task-Specific Fine-tuning",
+      "reason": "小モデルでデータスコアを推定し大モデルで検証するSTAFFはファインチューニング用コアセット選択の学習データ効率化であり、投機的デコード等の推論機構とは無関係な学習側手法である。",
+      "source_url": "https://arxiv.org/abs/2410.01296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14738",
+      "identity_tokens": [
+        "arXiv:2605.14738",
+        "https://arxiv.org/abs/2605.14738"
+      ],
+      "title": "TAPIOCA: Why Task- Aware Pruning Improves OOD model Capability",
+      "reason": "タスク適応型レイヤープルーニングが分布外精度を改善する幾何学的説明を与えるが、対象は能力向上の解析であり、推論速度やメモリ削減といったシステム効率の評価は示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.14738",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21147",
+      "identity_tokens": [
+        "arXiv:2610.21147",
+        "https://arxiv.org/abs/2610.21147"
+      ],
+      "title": "All-in-One Memory: Process-Rewarded Reinforcement Learning for Memory Agents",
+      "reason": "共有証拠状態上で検索・書き込み・停止をプロセス報酬で学習するAiO-Memはエージェントの長期記憶方策の研究であり、KVキャッシュや推論メモリ階層といった推論基盤技術ではない。",
+      "source_url": "https://arxiv.org/abs/2610.21147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.20284",
+      "identity_tokens": [
+        "arXiv:2403.20284",
+        "https://arxiv.org/abs/2403.20284"
+      ],
+      "title": "LayerNorm: A key component in parameter-efficient fine-tuning",
+      "reason": "BERTのファインチューニングで出力LayerNormが最も変化し、その部分学習だけでGLUE性能が得られると示す分析であり、学習効率の知見に留まって推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2403.20284",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 287
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16928",
+      "identity_tokens": [
+        "arXiv:2505.16928",
+        "https://arxiv.org/abs/2505.16928"
+      ],
+      "title": "Beyond Needle(s) in the Embodied Haystack: Environment, Architecture, and Training Considerations for Long Context Reasoning",
+      "reason": "長軌跡の身体性QAベンチマーク∞-THORとデータセットを構築し文脈並列等の適応を試す研究で、主眼はエージェントの長文脈推論能力の評価であり推論基盤の技術提案ではない。",
+      "source_url": "https://arxiv.org/abs/2505.16928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.00663",
+      "identity_tokens": [
+        "arXiv:2112.00663",
+        "https://arxiv.org/abs/2112.00663"
+      ],
+      "title": "Graph Conditioned Sparse-Attention for Improved Source Code Understanding",
+      "reason": "AST隣接行列を注意マスクに使う疎な自己注意とグラフ拡散でコード理解モデルのメモリと推論時間を線形化するが、対象はコード要約等の専用モデルでLLM推論基盤への適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2112.00663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18313",
+      "identity_tokens": [
+        "arXiv:2505.18313",
+        "https://arxiv.org/abs/2505.18313"
+      ],
+      "title": "PLUMAGE: Probabilistic Low rank Unbiased Min Variance Gradient Estimator for Efficient Large Model Training",
+      "reason": "低ランク勾配推定量PLUMAGEは射影更新時のオプティマイザ状態ずれを解消して大規模モデルの事前学習を安定化する学習専用手法であり、推論の高速化には関与しない。",
+      "source_url": "https://arxiv.org/abs/2505.18313",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04027",
+      "identity_tokens": [
+        "arXiv:2606.04027",
+        "https://arxiv.org/abs/2606.04027"
+      ],
+      "title": "MaskForge: Structure-Aware Adaptive Attacks for Jailbreaking Diffusion Large Language Models",
+      "reason": "マスク構造パターンのライブラリとバンディット選択で拡散LLMを脱獄するMaskForgeは安全性攻撃の研究であり、推論・サービング等のシステム技術への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2606.04027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 295
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.09844",
+      "identity_tokens": [
+        "arXiv:2502.09844",
+        "https://arxiv.org/abs/2502.09844"
+      ],
+      "title": "Solving Empirical Bayes via Transformers",
+      "reason": "Transformerを経験ベイズのPoisson平均推定に転用し古典的NPMLEを上回ると示す統計学の研究であり、LLM推論システムの機構や効率とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2502.09844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.01627",
+      "identity_tokens": [
+        "arXiv:2408.01627",
+        "https://arxiv.org/abs/2408.01627"
+      ],
+      "title": "JambaTalk: Speech-driven 3D Talking Head Generation based on a Hybrid Transformer-Mamba Model",
+      "reason": "TransformerとMambaを混ぜたJambaTalkは音声駆動の3Dトーキングヘッド生成という応用モデルの提案であり、推論基盤やデコード効率化を対象としていない。",
+      "source_url": "https://arxiv.org/abs/2408.01627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03627",
+      "identity_tokens": [
+        "arXiv:2512.03627",
+        "https://arxiv.org/abs/2512.03627"
+      ],
+      "title": "MemVerse: Multimodal Memory for Lifelong Learning Agents",
+      "reason": "階層知識グラフ型長期記憶と周期的蒸留で生涯学習エージェントの想起を担うMemVerseはエージェント記憶の枠組みであり、推論時のKVキャッシュやメモリ階層の技術ではない。",
+      "source_url": "https://arxiv.org/abs/2512.03627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 301
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.13595",
+      "identity_tokens": [
+        "arXiv:2602.13595",
+        "https://arxiv.org/abs/2602.13595"
+      ],
+      "title": "The Quantization Trap: Breaking Linear Scaling Laws in Multi-Hop Reasoning",
+      "reason": "多ホップ推論では逆量子化カーネルの遅延や型変換オーバーヘッドで低ビット化が却ってエネルギー増となる量子化トラップを理論分解し、臨界モデル規模を複数GPUで検証した推論量子化の計測・解析である。",
+      "source_url": "https://arxiv.org/abs/2602.13595",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 302
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34319",
+      "identity_tokens": [
+        "arXiv:2609.34319",
+        "https://arxiv.org/abs/2609.34319"
+      ],
+      "title": "Text-Vision Synergistic Token Caching: A Training-Free Framework for Efficient Vision-Language-Action Inference",
+      "reason": "テキスト・視覚相乗に着目し注意ヘッド選別とエントロピー差による再利用層選択を行うTVCacheは、学習不要でVLAモデルのFLOPsを2.45倍削減するトークンキャッシング型推論高速化である。",
+      "source_url": "https://arxiv.org/abs/2609.34319",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 303
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.01804",
+      "identity_tokens": [
+        "arXiv:2502.01804",
+        "https://arxiv.org/abs/2502.01804"
+      ],
+      "title": "Soup-of-Experts: Pretraining Specialist Models via Parameters Averaging",
+      "reason": "専門家パラメータバンクを入力ドメイン重みで線形結合して専門モデルを生成するSoup-of-Expertsは事前学習アーキテクチャであり、MoE推論のルーティングやサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2502.01804",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 304
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07504",
+      "identity_tokens": [
+        "arXiv:2610.07504",
+        "https://arxiv.org/abs/2610.07504"
+      ],
+      "title": "Mosaic: GPU Sharing with Latency Guarantees through Kernel-Level Interference Prediction",
+      "reason": "スレッドブロック配置やメモリ階層競合をモデル化したカーネル単位干渉予測Mosaicと、SLOを守りつつ全GPU共置とSM分割を選ぶMosaicSchedは、GPU共有スケジューリングの直接的な基盤技術である。",
+      "source_url": "https://arxiv.org/abs/2610.07504",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 306
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.15184",
+      "identity_tokens": [
+        "arXiv:2210.15184",
+        "https://arxiv.org/abs/2210.15184"
+      ],
+      "title": "Too Brittle to Touch: Comparing the Stability of Quantization and Distillation towards Developing Low-Resource MT Models",
+      "reason": "低リソース機械翻訳モデルの圧縮として蒸留と学習後量子化の安定性を8言語で比較するが、新たな量子化機構の提案ではなく小規模MTモデルでの実証比較に留まる。",
+      "source_url": "https://arxiv.org/abs/2210.15184",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 307
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.20979",
+      "identity_tokens": [
+        "arXiv:2509.20979",
+        "https://arxiv.org/abs/2509.20979"
+      ],
+      "title": "Toward Robust and Efficient ML-Based GPU Caching for Modern Inference",
+      "reason": "学習拡張LRUの1-整合性と頑健性保証をGPUキャッシュLCRへ実装し、LLMワークロードでTTFTを最大28.3%削減した、現代推論向けの学習型GPUキャッシングシステムである。",
+      "source_url": "https://arxiv.org/abs/2509.20979",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 308
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12938",
+      "identity_tokens": [
+        "arXiv:2603.12938",
+        "https://arxiv.org/abs/2603.12938"
+      ],
+      "title": "Thinking in Streaming Video",
+      "reason": "推論痕跡を圧縮意味記憶として視覚トークンを置換するRCSMでストリーミング動画推論の低遅延化を狙うが、主眼は動画理解能力と強化学習による学習であり推論基盤としての評価は限定的である。",
+      "source_url": "https://arxiv.org/abs/2603.12938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 311
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d06",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

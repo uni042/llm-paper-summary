@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2d04::chunk-0002-of-0002",
+  "reference_main_sha": "2a99c0dbd16cbacb9bc83c28f7676638c2f18e1d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07019",
+      "identity_tokens": [
+        "arXiv:2605.07019",
+        "https://arxiv.org/abs/2605.07019"
+      ],
+      "title": "LensVLM: Selective Context Expansion for Compressed Visual Representation of Text",
+      "reason": "テキストを画像化して圧縮し必要な箇所だけ learned tool で展開するLensVLMは推論フレームワークとして4.3倍の実効圧縮でも全文並みの精度を保ち、視覚表現による文脈圧縮を具体的に示している。",
+      "source_url": "https://arxiv.org/abs/2605.07019",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.19046",
+      "identity_tokens": [
+        "arXiv:2607.19046",
+        "https://arxiv.org/abs/2607.19046"
+      ],
+      "title": "Contrastive On-Policy Distillation",
+      "reason": "教師の低・高努力プロンプト間の対数確率差をトークン単位の優位信号にする対照的オンポリシー蒸留COPDは推論長を短縮するが、手法の主体は学生モデルの訓練であり推論時機構は新たに導入されない。",
+      "source_url": "https://arxiv.org/abs/2607.19046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 209
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24025",
+      "identity_tokens": [
+        "arXiv:2605.24025",
+        "https://arxiv.org/abs/2605.24025"
+      ],
+      "title": "Towards Large Model Feature Coding",
+      "reason": "分割実行時の大規模モデル中間特徴量の伝送・保存を扱うLaMoFCBenchは自己回帰文脈キャッシュを含む特徴符号化の評価基盤だが、新しい符号化方式や推論システム自体の提案ではなく計測枠組みに留まる。",
+      "source_url": "https://arxiv.org/abs/2605.24025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 210
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.14708",
+      "identity_tokens": [
+        "arXiv:2609.14708",
+        "https://arxiv.org/abs/2609.14708"
+      ],
+      "title": "Lightning Weave: Improving the Accuracy-Efficiency Frontier of Reasoning Models through Capability Composition",
+      "reason": "独立に学習した能力のポリシーシフトを対数比で合成するLightning Weaveは応答トークンを約1割減らし精度効率フロンティアを上げるが、オンポリシー蒸留という事後学習が主体で推論機構の変更はない。",
+      "source_url": "https://arxiv.org/abs/2609.14708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 211
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19566",
+      "identity_tokens": [
+        "arXiv:2511.19566",
+        "https://arxiv.org/abs/2511.19566"
+      ],
+      "title": "ModHiFi: Identifying High Fidelity predictive components for Model Modification",
+      "reason": "勾配や損失なしに部分集合忠実度で重要コンポーネントを特定するModHiFiは構造化プルーニングでImageNetモデルを11%高速化するが、主眼はプルーニングとアンラーニングを含むモデル改変全般でLLM推論への適用は副次的である。",
+      "source_url": "https://arxiv.org/abs/2511.19566",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 215
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06113",
+      "identity_tokens": [
+        "arXiv:2601.06113",
+        "https://arxiv.org/abs/2601.06113"
+      ],
+      "title": "Towards Infinite Length Extrapolation: A Unified Approach",
+      "reason": "注意スコアを乗算変換と加算バイアスへ分解し適応的周波数変調と減衰バイアスを持つAPEで無限長外挿を理論化する研究は長文脈注意に関連するが、検証はTinyStories中心でサービング効率の実測はない。",
+      "source_url": "https://arxiv.org/abs/2601.06113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07414",
+      "identity_tokens": [
+        "arXiv:2606.07414",
+        "https://arxiv.org/abs/2606.07414"
+      ],
+      "title": "Sparsely gated tiny linear experts",
+      "reason": "各専門家を単一ニューロンまで縮小し非線形性を除いた疎にゲートされる線形専門家sgatlinは同FLOPsでperplexityを改善するが、評価は言語モデリングの訓練計算でありMoE推論のスループットは示されていない。",
+      "source_url": "https://arxiv.org/abs/2606.07414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21675",
+      "identity_tokens": [
+        "arXiv:2609.21675",
+        "https://arxiv.org/abs/2609.21675"
+      ],
+      "title": "DRT: Dense Reasoning Trace for Efficient and Grounded Multimodal Reasoning",
+      "reason": "自然言語CoTを象徴的接続子を持つ密な構造化トレースへ置換するDRTはトークン効率を5.5倍にするが、Trace-Grounded強化学習による推論様式の訓練が主体であり推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2609.21675",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 219
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.26742",
+      "identity_tokens": [
+        "arXiv:2610.26742",
+        "https://arxiv.org/abs/2610.26742"
+      ],
+      "title": "Polar Switch: Fast Muon Orthogonalization with Polynomial Circuits",
+      "reason": "Muon最適化の勾配直交化を多項式回路で安くするPolar Switchは事前学習時の直交化ランタイムを15%以上下げる訓練最適化であり、推論時の計算やサービングには適用されない。",
+      "source_url": "https://arxiv.org/abs/2610.26742",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 220
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.09373",
+      "identity_tokens": [
+        "arXiv:2511.09373",
+        "https://arxiv.org/abs/2511.09373"
+      ],
+      "title": "Routesplain: Towards Faithful and Intervenable Routing for Software-related Tasks",
+      "reason": "解釈可能な概念を抽出してからソフトウェア課題向けにLLMを選ぶRoutesplainはルーティングで精度とコストを改善するが、評価はコード生成等の課題性能が中心で推論基盤としてのスケジューリング機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2511.09373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T16:40:00+09:00",
+      "last_checked_at": "2026-11-21T16:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 223
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2d04",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
