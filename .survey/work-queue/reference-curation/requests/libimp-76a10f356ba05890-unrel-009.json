@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-76a10f356ba05890-unrel-009",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2410.14713",
+  "reason": "QLoRA微調整時の量子化誤差を初期化で抑えるQuAILoRAであり、4ビット量子化はファインチューニングのメモリ削減文脈で、推論向け量子化・圧縮とは目的が異なる。",
+  "title": "QuAILoRA: Quantization-Aware Initialization for LoRA",
+  "identity_tokens": [
+    "arXiv:2410.14713",
+    "https://arxiv.org/abs/2410.14713"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a10f356ba0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
