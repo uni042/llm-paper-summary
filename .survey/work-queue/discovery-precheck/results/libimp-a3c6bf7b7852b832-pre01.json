@@ -1,0 +1,890 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a3c6bf7b7852b832-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a3c6bf7b7852",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2502.00899",
+    "arXiv:2510.13860",
+    "arXiv:2511.22599",
+    "arXiv:2604.08964",
+    "arXiv:2605.28640",
+    "arXiv:2608.28003",
+    "arXiv:2609.24270",
+    "arXiv:2610.00894",
+    "arXiv:2610.17338"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bad0b71646c5879e228333a7837a58340123c603",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T07:43:56.953459+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2502.00899",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.13860",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.22599",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08964",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.28640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.28003",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.24270",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00894",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17338",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Breaking Block Boundaries: Anchor-based History-stable Decoding for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.08964",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have recently become a promising alternative to autoregressive large language models (ARMs). Semi-autoregressive (Semi-AR) decoding is widely employed in base dLLMs and advanced decoding strategies due to its superior performance. However, our observations reveal that Semi-AR decoding suffers from inherent block constraints, which cause the decoding of many cross-block stable tokens to be unnecessarily delayed. To address this challenge, we systematically investigate the identification of stable tokens and present three key findings: (1) naive lookahead decoding is unreliable, (2) token stability closely correlates with convergence trend, and (3) historical information is isolated. Building on these insights, we propose Anchor-based History-stable Decoding (AHD), a training-free, plug-and-play dynamic decoding strategy. Specifically, AHD monitors the stability trend of tokens in real time through dynamic anchors. Once a token reaches stability, it initiates early cross-block decoding to enhance efficiency and performance. Extensive experiments across language, vision-language, and audio-language domains demonstrate that AHD simultaneously improves both performance and inference efficiency. Notably, AHD effectively reverses the performance degradation typically observed in existing advanced decoding acceleration strategies. For instance, on the BBH benchmark, our approach reduces decoding steps by 80% while improving performance by 3.67%.",
+      "identifiers": [
+        "SemanticScholar:07884d6d2b1b75f312a7470ff71aa1409f4c843a"
+      ],
+      "semantic_scholar_id": "07884d6d2b1b75f312a7470ff71aa1409f4c843a",
+      "canonical_id": "arXiv:2604.08964",
+      "arxiv_id": "2604.08964",
+      "doi": "10.48550/arXiv.2604.08964",
+      "authors": [
+        "Shu Zou",
+        "Yong Wang",
+        "Ze-Hui Chen",
+        "Lin Chen",
+        "Chong-Yang Tao",
+        "Feng Zhao",
+        "Xiangxiang Chu"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 225,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Dissecting How Die Scaling Breaks GPU Fine-grained Scheduling",
+      "source_url": "https://arxiv.org/abs/2609.24270",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern GPUs are no longer physically symmetric. Die scaling leads to both manufacturing-driven floorsweeping and cache and memory partitioning. The former creates chip-specific compute topologies, while the latter causes non-uniform memory access. These asymmetries are substantial. Topology-oblivious compute unit allocation can lead to up to 1.33x performance variation, while remote accesses increase HBM latency by up to 67% and nearly double L2 latency. However, these asymmetries are hidden behind the GPU's logical resource abstractions and can vary across chips. We develop lightweight characterization methods to uncover per-chip compute topology and memory affinity. We then use the discovered information to make existing fine-grained scheduling asymmetry-aware, considering not only how many resources are allocated but also which physical resources are assigned. Across full-GPU kernel execution, intra-application multiplexing, and inter-application co-location, asymmetry-aware scheduling improves mainstream kernels by up to 1.22x, multiplexed LLM inference by up to 14.3%, and avoids up to 1.33x performance variation.",
+      "identifiers": [
+        "SemanticScholar:ff75b10838650ffef9836d7351fe6df53f6eb72a"
+      ],
+      "semantic_scholar_id": "ff75b10838650ffef9836d7351fe6df53f6eb72a",
+      "canonical_id": "arXiv:2609.24270",
+      "arxiv_id": "2609.24270",
+      "doi": "10.48550/arXiv.2609.24270",
+      "authors": [
+        "X. Fan",
+        "Jia-Hao Wang",
+        "Wei-Hao Cui",
+        "Han Zhao",
+        "Zhuo-Bin Huang",
+        "Yang-Jie Zhou",
+        "Yuxian Qiu",
+        "Shi-Xuan Sun",
+        "Bing-Sheng He",
+        "Quan Chen",
+        "Min-Yi Guo"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Clock Diffusion: Efficient Semi-Autoregressive Continuous Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.00894",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent works on continuous diffusion for discrete data have demonstrated performance on par with comparable discrete diffusion models. However, these continuous counterparts lack key features that are essential to practical use as language models, namely variable-length generation and support for a key-value cache, and they still lag behind the frontier of autoregressive and discrete diffusion quality. In this work, we address these limitations. We do so by introducing a model parameterization that uses position-dependent noise schedules to define semi-autoregressive (SAR) continuous diffusion language models (DLMs). Together with efficient training and sampling algorithms, we call this framework Clock Diffusion, and we present two special cases of our method: block and sliding window generation. We then define ClockDLMs, a family of Gaussian DLMs based on sliding window Clock Diffusion that attain state-of-the-art diffusion likelihood bounds on OpenWebText, even beating the performant block SAR discrete diffusion models. ClockDLMs trained on TinyGSM also substantially outperform continuous baselines on the GSM8K benchmark and match and exceed comparable SAR discrete diffusion models. Finally, building on our parameterization, we propose more efficient samplers that we dub Cache Grab, which adapt techniques from accelerated inference in discrete diffusion, such as committing tokens whose probabilities exceed a confidence threshold and self-speculative decoding, further improving our models'quality and efficiency.",
+      "identifiers": [
+        "SemanticScholar:f9a7d57bcfb798a3027fe81adb5368b81a7b0541"
+      ],
+      "semantic_scholar_id": "f9a7d57bcfb798a3027fe81adb5368b81a7b0541",
+      "canonical_id": "arXiv:2610.00894",
+      "arxiv_id": "2610.00894",
+      "authors": [
+        "Yair Schiff",
+        "Omer Belhasin",
+        "Roy Uziel",
+        "Matan Rusanovsky",
+        "Ran Zilberstein",
+        "Marianne Arriola",
+        "Gilad Turok",
+        "Guang-Han Wang",
+        "V. Kuleshov",
+        "Michael Elad"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DisCEdge: Distributed Context Management for Large Language Models at the Edge",
+      "source_url": "https://arxiv.org/abs/2511.22599",
+      "year": 2025,
+      "published": "2025-11-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Model (LLM) services at the edge benefits latency-sensitive and privacy-aware applications. However, the stateless nature of LLMs makes managing user context (e.g., sessions, preferences) across geo-distributed edge nodes challenging. Existing solutions, such as client-side context storage, introduce network latency and bandwidth overhead, undermining edge deployment advantages. We propose DisCEdge, a distributed context management system that stores and replicates user context in tokenized form across edge nodes. By maintaining context as token sequences, our system avoids redundant computation and enables efficient data replication. We evaluate an open-source prototype in a realistic edge environment. DisCEdge improves median response times by up to 14.46% and lowers median inter-node synchronization overhead by up to 15% compared to a raw-text-based system. It also reduces client request sizes by a median of 90% compared to client-side context management, while guaranteeing data consistency.",
+      "identifiers": [
+        "SemanticScholar:2c2e7b86ff8afda137916e7d949b1af0d123facf"
+      ],
+      "semantic_scholar_id": "2c2e7b86ff8afda137916e7d949b1af0d123facf",
+      "canonical_id": "arXiv:2511.22599",
+      "arxiv_id": "2511.22599",
+      "doi": "10.1145/3805621.3807656",
+      "authors": [
+        "Mohammadreza Malekabbasi",
+        "Ming-He Wang",
+        "David Bermbach"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 359,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "Augmenting Attention with Exponentially Decaying Memory Improves Query-Aware KV Sparsity",
+      "source_url": "https://arxiv.org/abs/2605.28640",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient inference is critical for long-context language models, where attention computation and KV-cache access dominate the cost. Recent work RAT+, introduces a recurrence-augmented attention backbone that enables flexible dilated attention at inference time. In this paper, we investigate whether this exponentially decaying memory can also improve existing query-aware sparse inference methods. Using representative methods including Quest, MoBA, and SnapKV, we show that RAT+ consistently improves accuracy over standard attention across sparse budgets on eight needle-in-a-haystack tasks. We validate these gains both on the released checkpoints from the RAT+ paper and on OLMo2-7B, which we continue pretraining with the added memory module for 10B tokens. Finally, we propose two hypotheses explaining why this memory module benefits query-aware sparse inference and design targeted experiments to support them.",
+      "identifiers": [
+        "SemanticScholar:d7dd4c90d980981ca090027bffe6c988e400bf1e"
+      ],
+      "semantic_scholar_id": "d7dd4c90d980981ca090027bffe6c988e400bf1e",
+      "canonical_id": "arXiv:2605.28640",
+      "arxiv_id": "2605.28640",
+      "doi": "10.48550/arXiv.2605.28640",
+      "authors": [
+        "Xiuying Wei",
+        "Caglar Gulcehre"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint",
+      "source_url": "https://arxiv.org/abs/2608.28003",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes a layer bit allocation method for Gemma-3-1B, formulating the problem as performance maximization (latency decrease) given a degradation budget constraint (allowable level of generation quality loss). This approach is different from time- and resource-consuming uniform layer quantization methods that are used in the literature (like GPTQ or AWQ) or allocation methods without proven performance-accelerating effect (like MixLLM or TorchAO). The layer sensitivity profile resulting from our prior work SA-PTQ is applied using the activation pass-through mode inside TensorRT-LLM. For each layer precision is determined individually in blocks, according to a grouping introduced in the prior step (5+5, 10+10, all26), differentiating the contribution of FFN, Attention, and lm_head to the overall speedup. The clock speed was measured for 13 W8A8 variants on an RTX 5090. We find that for FFN and lm_head the time cost of quantization/dequantization is compensated for by the use of integer arithmetic, while for short context lengths, the opposite holds true for Attention: an additional step of quantization slows execution down. We propose a manual implementation of SmoothQuant for TensorRT-LLM which was necessary due to export failures, unavailable for lm_head. The best solution found under joint consideration of all three criteria with minimal degradation was FFN 5+5 with lm_head, providing an 11.0% reduction in latency with negligible quality loss (98.90% Top-1 agreement, +0.85% perplexity degradation). With acceptable quality loss for FFN all26 + lm_head, a speedup up to 19.1% was found possible. We suggest further optimizations: fused attention kernels in INT8, KV-cache quantization, using FP8 instead of INT8 and partial Attention quantization analogous to FFN.",
+      "identifiers": [
+        "SemanticScholar:ed689fb91f6fa09bcf3226d46529a012de47e222"
+      ],
+      "semantic_scholar_id": "ed689fb91f6fa09bcf3226d46529a012de47e222",
+      "canonical_id": "arXiv:2608.28003",
+      "arxiv_id": "2608.28003",
+      "doi": "10.48550/arXiv.2608.28003",
+      "authors": [
+        "Artem Safronov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Budgeted KV-Cache Repair for Evolving Contexts",
+      "source_url": "https://arxiv.org/abs/2610.17338",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language-model agents revise their working context as information becomes obsolete, but deleting text does not erase its influence on cached computation. Later key-value (KV) states remain conditioned on the deleted content, while recomputing the entire retained suffix can be costly. We introduce budgeted KV-cache repair: recovering task performance by recomputing a user-chosen fraction of the retained suffix. Comparing repair allocations under identical relevance scores and token budgets, we find that refreshing coherent regions can substantially outperform refreshing isolated tokens. This finding motivates Semantic-Unit Refresh (SUR), which allocates the budget to query-relevant text regions using inexpensive embedding scores, without training or an auxiliary transformer forward. To execute these repairs efficiently, a layer-packed executor processes selected states together at each layer while preserving full causal cache access. Across five models, SUR achieves strong recovery in controlled deletion tasks while recomputing only 2-5% of the suffix. On four natural multi-hop QA datasets, it achieves near-full-recompute exact match at a 5% budget with lower post-edit latency. The executor accelerates fragmented refresh by up to 16.1x over interval-wise execution.",
+      "identifiers": [
+        "SemanticScholar:95dc7bea2d2908090a2ce6a998f86e15da255c50"
+      ],
+      "semantic_scholar_id": "95dc7bea2d2908090a2ce6a998f86e15da255c50",
+      "canonical_id": "arXiv:2610.17338",
+      "arxiv_id": "2610.17338",
+      "authors": [
+        "Han Yu",
+        "Wen-Hui Zhu",
+        "Jincheng Cao",
+        "Rui Cai",
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "Xi-Wen Chen",
+        "Hao Wang",
+        "Xuan-Zhao Dong",
+        "Han Shi",
+        "Meng-Lin Zhou",
+        "Shayan Mohajer Hamidi",
+        "Ling-Ning Su",
+        "Mina Razghandi",
+        "Sayan Ghosh",
+        "Qing Lan",
+        "Rohit Jain",
+        "Alborz Geramifard"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HASSLE-free: A unified Framework for Sparse plus Low-Rank Matrix Decomposition for LLMs",
+      "source_url": "https://arxiv.org/abs/2502.00899",
+      "year": 2025,
+      "published": "2025-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The impressive capabilities of large foundation models come at a cost of substantial computing resources to serve them. Compressing these pre-trained models is of practical interest as it can democratize deploying them to the machine learning community at large by lowering the costs associated with inference. A promising compression scheme is to decompose foundation models' dense weights into a sum of sparse plus low-rank matrices. In this paper, we design a unified framework coined HASSLE-free for (semi-structured) sparse plus low-rank matrix decomposition of foundation models. Our framework introduces the local layer-wise reconstruction error objective for this decomposition, we demonstrate that prior work solves a relaxation of this optimization problem; and we provide efficient and scalable methods to minimize the exact introduced optimization problem. HASSLE-free substantially outperforms state-of-the-art methods in terms of the introduced objective and a wide range of LLM evaluation benchmarks. For the Llama3-8B model with a 2:4 sparsity component plus a 64-rank component decomposition, a compression scheme for which recent work shows important inference acceleration on GPUs, HASSLE-free reduces the test perplexity by 12% for the WikiText-2 dataset and reduces the gap (compared to the dense model) of the average of eight popular zero-shot tasks by 15% compared to existing methods.",
+      "identifiers": [
+        "SemanticScholar:eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a"
+      ],
+      "semantic_scholar_id": "eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a",
+      "canonical_id": "arXiv:2502.00899",
+      "arxiv_id": "2502.00899",
+      "doi": "10.48550/arXiv.2502.00899",
+      "authors": [
+        "Mehdi Makni",
+        "Kayhan Behdin",
+        "Zheng Xu",
+        "Natalia Ponomareva",
+        "R. Mazumder"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 657,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ShishuLM : Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models",
+      "source_url": "https://arxiv.org/abs/2510.13860",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While the transformer architecture has achieved state-of-the-art performance on natural language processing tasks, these models impose substantial memory and computational overhead. Recent research has identified significant architectural redundancies within these models, particularly in the attention sub-layers in the top layers, presenting opportunities for optimization without compromising performance. Taking insights from research on inference-time layer pruning and depth-dependent computation in language models, we introduce an efficient language model architecture referred to as ShishuLM. By replacing full decoder layers at the top of the model with MLP-only blocks, we achieve up to 10-60% improvement in generation latency and 1.3 -5 $\\times$ gain in throughput. Upon further sharing parameters across adjacent MLP-only layers of ShishuLM, we obtain up to 20% savings in memory with minimal degradation in performance. Our findings provide insights towards building more efficient language modeling architectures from a pre-training standpoint by leveraging how information flows in transformers.",
+      "identifiers": [
+        "SemanticScholar:ce4d81618659faf8400bf86a46ff766b62e68ebc"
+      ],
+      "semantic_scholar_id": "ce4d81618659faf8400bf86a46ff766b62e68ebc",
+      "canonical_id": "arXiv:2510.13860",
+      "arxiv_id": "2510.13860",
+      "authors": [
+        "Shivansh Kumar",
+        "Gopalakrishnan Srinivasan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 404,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.08964",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08964",
+        "id:SemanticScholar:07884d6d2b1b75f312a7470ff71aa1409f4c843a",
+        "id:arXiv:2604.08964",
+        "title:breaking block boundaries anchorbased historystable decoding for diffusion large language models",
+        "url:https://arxiv.org/abs/2604.08964"
+      ],
+      "record": {
+        "title": "Breaking Block Boundaries: Anchor-based History-stable Decoding for Diffusion Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.08964",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Large Language Models (dLLMs) have recently become a promising alternative to autoregressive large language models (ARMs). Semi-autoregressive (Semi-AR) decoding is widely employed in base dLLMs and advanced decoding strategies due to its superior performance. However, our observations reveal that Semi-AR decoding suffers from inherent block constraints, which cause the decoding of many cross-block stable tokens to be unnecessarily delayed. To address this challenge, we systematically investigate the identification of stable tokens and present three key findings: (1) naive lookahead decoding is unreliable, (2) token stability closely correlates with convergence trend, and (3) historical information is isolated. Building on these insights, we propose Anchor-based History-stable Decoding (AHD), a training-free, plug-and-play dynamic decoding strategy. Specifically, AHD monitors the stability trend of tokens in real time through dynamic anchors. Once a token reaches stability, it initiates early cross-block decoding to enhance efficiency and performance. Extensive experiments across language, vision-language, and audio-language domains demonstrate that AHD simultaneously improves both performance and inference efficiency. Notably, AHD effectively reverses the performance degradation typically observed in existing advanced decoding acceleration strategies. For instance, on the BBH benchmark, our approach reduces decoding steps by 80% while improving performance by 3.67%.",
+        "identifiers": [
+          "SemanticScholar:07884d6d2b1b75f312a7470ff71aa1409f4c843a"
+        ],
+        "semantic_scholar_id": "07884d6d2b1b75f312a7470ff71aa1409f4c843a",
+        "canonical_id": "arXiv:2604.08964",
+        "arxiv_id": "2604.08964",
+        "doi": "10.48550/arXiv.2604.08964",
+        "authors": [
+          "Shu Zou",
+          "Yong Wang",
+          "Ze-Hui Chen",
+          "Lin Chen",
+          "Chong-Yang Tao",
+          "Feng Zhao",
+          "Xiangxiang Chu"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 225,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24270",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.24270",
+        "id:SemanticScholar:ff75b10838650ffef9836d7351fe6df53f6eb72a",
+        "id:arXiv:2609.24270",
+        "title:dissecting how die scaling breaks gpu finegrained scheduling",
+        "url:https://arxiv.org/abs/2609.24270"
+      ],
+      "record": {
+        "title": "Dissecting How Die Scaling Breaks GPU Fine-grained Scheduling",
+        "source_url": "https://arxiv.org/abs/2609.24270",
+        "year": 2026,
+        "published": "2026-09-21",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern GPUs are no longer physically symmetric. Die scaling leads to both manufacturing-driven floorsweeping and cache and memory partitioning. The former creates chip-specific compute topologies, while the latter causes non-uniform memory access. These asymmetries are substantial. Topology-oblivious compute unit allocation can lead to up to 1.33x performance variation, while remote accesses increase HBM latency by up to 67% and nearly double L2 latency. However, these asymmetries are hidden behind the GPU's logical resource abstractions and can vary across chips. We develop lightweight characterization methods to uncover per-chip compute topology and memory affinity. We then use the discovered information to make existing fine-grained scheduling asymmetry-aware, considering not only how many resources are allocated but also which physical resources are assigned. Across full-GPU kernel execution, intra-application multiplexing, and inter-application co-location, asymmetry-aware scheduling improves mainstream kernels by up to 1.22x, multiplexed LLM inference by up to 14.3%, and avoids up to 1.33x performance variation.",
+        "identifiers": [
+          "SemanticScholar:ff75b10838650ffef9836d7351fe6df53f6eb72a"
+        ],
+        "semantic_scholar_id": "ff75b10838650ffef9836d7351fe6df53f6eb72a",
+        "canonical_id": "arXiv:2609.24270",
+        "arxiv_id": "2609.24270",
+        "doi": "10.48550/arXiv.2609.24270",
+        "authors": [
+          "X. Fan",
+          "Jia-Hao Wang",
+          "Wei-Hao Cui",
+          "Han Zhao",
+          "Zhuo-Bin Huang",
+          "Yang-Jie Zhou",
+          "Yuxian Qiu",
+          "Shi-Xuan Sun",
+          "Bing-Sheng He",
+          "Quan Chen",
+          "Min-Yi Guo"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 61,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00894",
+      "identity_tokens": [
+        "id:SemanticScholar:f9a7d57bcfb798a3027fe81adb5368b81a7b0541",
+        "id:arXiv:2610.00894",
+        "title:clock diffusion efficient semiautoregressive continuous diffusion language models",
+        "url:https://arxiv.org/abs/2610.00894"
+      ],
+      "record": {
+        "title": "Clock Diffusion: Efficient Semi-Autoregressive Continuous Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.00894",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent works on continuous diffusion for discrete data have demonstrated performance on par with comparable discrete diffusion models. However, these continuous counterparts lack key features that are essential to practical use as language models, namely variable-length generation and support for a key-value cache, and they still lag behind the frontier of autoregressive and discrete diffusion quality. In this work, we address these limitations. We do so by introducing a model parameterization that uses position-dependent noise schedules to define semi-autoregressive (SAR) continuous diffusion language models (DLMs). Together with efficient training and sampling algorithms, we call this framework Clock Diffusion, and we present two special cases of our method: block and sliding window generation. We then define ClockDLMs, a family of Gaussian DLMs based on sliding window Clock Diffusion that attain state-of-the-art diffusion likelihood bounds on OpenWebText, even beating the performant block SAR discrete diffusion models. ClockDLMs trained on TinyGSM also substantially outperform continuous baselines on the GSM8K benchmark and match and exceed comparable SAR discrete diffusion models. Finally, building on our parameterization, we propose more efficient samplers that we dub Cache Grab, which adapt techniques from accelerated inference in discrete diffusion, such as committing tokens whose probabilities exceed a confidence threshold and self-speculative decoding, further improving our models'quality and efficiency.",
+        "identifiers": [
+          "SemanticScholar:f9a7d57bcfb798a3027fe81adb5368b81a7b0541"
+        ],
+        "semantic_scholar_id": "f9a7d57bcfb798a3027fe81adb5368b81a7b0541",
+        "canonical_id": "arXiv:2610.00894",
+        "arxiv_id": "2610.00894",
+        "authors": [
+          "Yair Schiff",
+          "Omer Belhasin",
+          "Roy Uziel",
+          "Matan Rusanovsky",
+          "Ran Zilberstein",
+          "Marianne Arriola",
+          "Gilad Turok",
+          "Guang-Han Wang",
+          "V. Kuleshov",
+          "Michael Elad"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.22599",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807656",
+        "id:SemanticScholar:2c2e7b86ff8afda137916e7d949b1af0d123facf",
+        "id:arXiv:2511.22599",
+        "title:discedge distributed context management for large language models at the edge",
+        "url:https://arxiv.org/abs/2511.22599"
+      ],
+      "record": {
+        "title": "DisCEdge: Distributed Context Management for Large Language Models at the Edge",
+        "source_url": "https://arxiv.org/abs/2511.22599",
+        "year": 2025,
+        "published": "2025-11-27",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Model (LLM) services at the edge benefits latency-sensitive and privacy-aware applications. However, the stateless nature of LLMs makes managing user context (e.g., sessions, preferences) across geo-distributed edge nodes challenging. Existing solutions, such as client-side context storage, introduce network latency and bandwidth overhead, undermining edge deployment advantages. We propose DisCEdge, a distributed context management system that stores and replicates user context in tokenized form across edge nodes. By maintaining context as token sequences, our system avoids redundant computation and enables efficient data replication. We evaluate an open-source prototype in a realistic edge environment. DisCEdge improves median response times by up to 14.46% and lowers median inter-node synchronization overhead by up to 15% compared to a raw-text-based system. It also reduces client request sizes by a median of 90% compared to client-side context management, while guaranteeing data consistency.",
+        "identifiers": [
+          "SemanticScholar:2c2e7b86ff8afda137916e7d949b1af0d123facf"
+        ],
+        "semantic_scholar_id": "2c2e7b86ff8afda137916e7d949b1af0d123facf",
+        "canonical_id": "arXiv:2511.22599",
+        "arxiv_id": "2511.22599",
+        "doi": "10.1145/3805621.3807656",
+        "authors": [
+          "Mohammadreza Malekabbasi",
+          "Ming-He Wang",
+          "David Bermbach"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 359,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28640",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.28640",
+        "id:SemanticScholar:d7dd4c90d980981ca090027bffe6c988e400bf1e",
+        "id:arXiv:2605.28640",
+        "title:augmenting attention with exponentially decaying memory improves queryaware kv sparsity",
+        "url:https://arxiv.org/abs/2605.28640"
+      ],
+      "record": {
+        "title": "Augmenting Attention with Exponentially Decaying Memory Improves Query-Aware KV Sparsity",
+        "source_url": "https://arxiv.org/abs/2605.28640",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient inference is critical for long-context language models, where attention computation and KV-cache access dominate the cost. Recent work RAT+, introduces a recurrence-augmented attention backbone that enables flexible dilated attention at inference time. In this paper, we investigate whether this exponentially decaying memory can also improve existing query-aware sparse inference methods. Using representative methods including Quest, MoBA, and SnapKV, we show that RAT+ consistently improves accuracy over standard attention across sparse budgets on eight needle-in-a-haystack tasks. We validate these gains both on the released checkpoints from the RAT+ paper and on OLMo2-7B, which we continue pretraining with the added memory module for 10B tokens. Finally, we propose two hypotheses explaining why this memory module benefits query-aware sparse inference and design targeted experiments to support them.",
+        "identifiers": [
+          "SemanticScholar:d7dd4c90d980981ca090027bffe6c988e400bf1e"
+        ],
+        "semantic_scholar_id": "d7dd4c90d980981ca090027bffe6c988e400bf1e",
+        "canonical_id": "arXiv:2605.28640",
+        "arxiv_id": "2605.28640",
+        "doi": "10.48550/arXiv.2605.28640",
+        "authors": [
+          "Xiuying Wei",
+          "Caglar Gulcehre"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28003",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.28003",
+        "id:SemanticScholar:ed689fb91f6fa09bcf3226d46529a012de47e222",
+        "id:arXiv:2608.28003",
+        "title:a method for layer bitwidth allocation in llm quantization via performance maximization under a qualitydegradation constraint",
+        "url:https://arxiv.org/abs/2608.28003"
+      ],
+      "record": {
+        "title": "A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint",
+        "source_url": "https://arxiv.org/abs/2608.28003",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper proposes a layer bit allocation method for Gemma-3-1B, formulating the problem as performance maximization (latency decrease) given a degradation budget constraint (allowable level of generation quality loss). This approach is different from time- and resource-consuming uniform layer quantization methods that are used in the literature (like GPTQ or AWQ) or allocation methods without proven performance-accelerating effect (like MixLLM or TorchAO). The layer sensitivity profile resulting from our prior work SA-PTQ is applied using the activation pass-through mode inside TensorRT-LLM. For each layer precision is determined individually in blocks, according to a grouping introduced in the prior step (5+5, 10+10, all26), differentiating the contribution of FFN, Attention, and lm_head to the overall speedup. The clock speed was measured for 13 W8A8 variants on an RTX 5090. We find that for FFN and lm_head the time cost of quantization/dequantization is compensated for by the use of integer arithmetic, while for short context lengths, the opposite holds true for Attention: an additional step of quantization slows execution down. We propose a manual implementation of SmoothQuant for TensorRT-LLM which was necessary due to export failures, unavailable for lm_head. The best solution found under joint consideration of all three criteria with minimal degradation was FFN 5+5 with lm_head, providing an 11.0% reduction in latency with negligible quality loss (98.90% Top-1 agreement, +0.85% perplexity degradation). With acceptable quality loss for FFN all26 + lm_head, a speedup up to 19.1% was found possible. We suggest further optimizations: fused attention kernels in INT8, KV-cache quantization, using FP8 instead of INT8 and partial Attention quantization analogous to FFN.",
+        "identifiers": [
+          "SemanticScholar:ed689fb91f6fa09bcf3226d46529a012de47e222"
+        ],
+        "semantic_scholar_id": "ed689fb91f6fa09bcf3226d46529a012de47e222",
+        "canonical_id": "arXiv:2608.28003",
+        "arxiv_id": "2608.28003",
+        "doi": "10.48550/arXiv.2608.28003",
+        "authors": [
+          "Artem Safronov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17338",
+      "identity_tokens": [
+        "id:SemanticScholar:95dc7bea2d2908090a2ce6a998f86e15da255c50",
+        "id:arXiv:2610.17338",
+        "title:budgeted kvcache repair for evolving contexts",
+        "url:https://arxiv.org/abs/2610.17338"
+      ],
+      "record": {
+        "title": "Budgeted KV-Cache Repair for Evolving Contexts",
+        "source_url": "https://arxiv.org/abs/2610.17338",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language-model agents revise their working context as information becomes obsolete, but deleting text does not erase its influence on cached computation. Later key-value (KV) states remain conditioned on the deleted content, while recomputing the entire retained suffix can be costly. We introduce budgeted KV-cache repair: recovering task performance by recomputing a user-chosen fraction of the retained suffix. Comparing repair allocations under identical relevance scores and token budgets, we find that refreshing coherent regions can substantially outperform refreshing isolated tokens. This finding motivates Semantic-Unit Refresh (SUR), which allocates the budget to query-relevant text regions using inexpensive embedding scores, without training or an auxiliary transformer forward. To execute these repairs efficiently, a layer-packed executor processes selected states together at each layer while preserving full causal cache access. Across five models, SUR achieves strong recovery in controlled deletion tasks while recomputing only 2-5% of the suffix. On four natural multi-hop QA datasets, it achieves near-full-recompute exact match at a 5% budget with lower post-edit latency. The executor accelerates fragmented refresh by up to 16.1x over interval-wise execution.",
+        "identifiers": [
+          "SemanticScholar:95dc7bea2d2908090a2ce6a998f86e15da255c50"
+        ],
+        "semantic_scholar_id": "95dc7bea2d2908090a2ce6a998f86e15da255c50",
+        "canonical_id": "arXiv:2610.17338",
+        "arxiv_id": "2610.17338",
+        "authors": [
+          "Han Yu",
+          "Wen-Hui Zhu",
+          "Jincheng Cao",
+          "Rui Cai",
+          "Yuanda Xu",
+          "Zheng-Ze Zhou",
+          "Xi-Wen Chen",
+          "Hao Wang",
+          "Xuan-Zhao Dong",
+          "Han Shi",
+          "Meng-Lin Zhou",
+          "Shayan Mohajer Hamidi",
+          "Ling-Ning Su",
+          "Mina Razghandi",
+          "Sayan Ghosh",
+          "Qing Lan",
+          "Rohit Jain",
+          "Alborz Geramifard"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.00899",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.00899",
+        "id:SemanticScholar:eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a",
+        "id:arXiv:2502.00899",
+        "title:hasslefree a unified framework for sparse plus lowrank matrix decomposition for llms",
+        "url:https://arxiv.org/abs/2502.00899"
+      ],
+      "record": {
+        "title": "HASSLE-free: A unified Framework for Sparse plus Low-Rank Matrix Decomposition for LLMs",
+        "source_url": "https://arxiv.org/abs/2502.00899",
+        "year": 2025,
+        "published": "2025-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The impressive capabilities of large foundation models come at a cost of substantial computing resources to serve them. Compressing these pre-trained models is of practical interest as it can democratize deploying them to the machine learning community at large by lowering the costs associated with inference. A promising compression scheme is to decompose foundation models' dense weights into a sum of sparse plus low-rank matrices. In this paper, we design a unified framework coined HASSLE-free for (semi-structured) sparse plus low-rank matrix decomposition of foundation models. Our framework introduces the local layer-wise reconstruction error objective for this decomposition, we demonstrate that prior work solves a relaxation of this optimization problem; and we provide efficient and scalable methods to minimize the exact introduced optimization problem. HASSLE-free substantially outperforms state-of-the-art methods in terms of the introduced objective and a wide range of LLM evaluation benchmarks. For the Llama3-8B model with a 2:4 sparsity component plus a 64-rank component decomposition, a compression scheme for which recent work shows important inference acceleration on GPUs, HASSLE-free reduces the test perplexity by 12% for the WikiText-2 dataset and reduces the gap (compared to the dense model) of the average of eight popular zero-shot tasks by 15% compared to existing methods.",
+        "identifiers": [
+          "SemanticScholar:eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a"
+        ],
+        "semantic_scholar_id": "eb2ebcf3bccf5be3d2c0a9482421dbd22933f94a",
+        "canonical_id": "arXiv:2502.00899",
+        "arxiv_id": "2502.00899",
+        "doi": "10.48550/arXiv.2502.00899",
+        "authors": [
+          "Mehdi Makni",
+          "Kayhan Behdin",
+          "Zheng Xu",
+          "Natalia Ponomareva",
+          "R. Mazumder"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 657,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.13860",
+      "identity_tokens": [
+        "id:SemanticScholar:ce4d81618659faf8400bf86a46ff766b62e68ebc",
+        "id:arXiv:2510.13860",
+        "title:shishulm achieving optimal and efficient parameterization with low attention transformer models",
+        "url:https://arxiv.org/abs/2510.13860"
+      ],
+      "record": {
+        "title": "ShishuLM : Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models",
+        "source_url": "https://arxiv.org/abs/2510.13860",
+        "year": 2025,
+        "published": "2025-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While the transformer architecture has achieved state-of-the-art performance on natural language processing tasks, these models impose substantial memory and computational overhead. Recent research has identified significant architectural redundancies within these models, particularly in the attention sub-layers in the top layers, presenting opportunities for optimization without compromising performance. Taking insights from research on inference-time layer pruning and depth-dependent computation in language models, we introduce an efficient language model architecture referred to as ShishuLM. By replacing full decoder layers at the top of the model with MLP-only blocks, we achieve up to 10-60% improvement in generation latency and 1.3 -5 $\\times$ gain in throughput. Upon further sharing parameters across adjacent MLP-only layers of ShishuLM, we obtain up to 20% savings in memory with minimal degradation in performance. Our findings provide insights towards building more efficient language modeling architectures from a pre-training standpoint by leveraging how information flows in transformers.",
+        "identifiers": [
+          "SemanticScholar:ce4d81618659faf8400bf86a46ff766b62e68ebc"
+        ],
+        "semantic_scholar_id": "ce4d81618659faf8400bf86a46ff766b62e68ebc",
+        "canonical_id": "arXiv:2510.13860",
+        "arxiv_id": "2510.13860",
+        "authors": [
+          "Shivansh Kumar",
+          "Gopalakrishnan Srinivasan"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 404,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e1629fad97983ecfdec7656b59c6765ddcdf6789d691f2183f97ecde5273dd7f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

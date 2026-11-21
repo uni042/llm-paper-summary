@@ -1,0 +1,629 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8d6d0a4eed92eebd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8d6d0a4eed92",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2309.01729",
+    "arXiv:2509.20979",
+    "arXiv:2602.13595",
+    "arXiv:2605.28213",
+    "arXiv:2609.34319",
+    "arXiv:2610.07504"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bad0b71646c5879e228333a7837a58340123c603",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T07:43:31.996869+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2309.01729",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.20979",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.28213",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34319",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07504",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "The Quantization Trap: Breaking Linear Scaling Laws in Multi-Hop Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.13595",
+      "year": 2026,
+      "published": "2026-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Neural scaling laws provide a predictable recipe for AI advancement: reducing numerical precision should linearly improve computational efficiency and energy profile ($E \\propto \\mathrm{bits}$). In this paper, we demonstrate that this scaling law breaks in the context of multi-hop reasoning. We reveal a'quantization trap'where reducing precision from 16-bit to 8/4-bit paradoxically increases net energy consumption while degrading reasoning accuracy. We provide a rigorous theoretical decomposition that attributes this failure to hardware casting overhead, the hidden latency cost of dequantization kernels, which becomes a dominant bottleneck in sequential reasoning chains, as well as to a sequential energy amortization failure. As a result, scaling law breaking is unavoidable in practice. We formalize a Critical Model Scale $N^*$ that predicts when the trap dissolves or deepens as a function of model size, batch size, and hardware configuration, validated across a 120$\\times$ range (0.6B--72B) on six GPU architectures. Our findings suggest that the industry's\"smaller-is-better\"heuristic is mathematically counterproductive for complex reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:9208cfa55b271f81d892eb928f1a1fe4cd7be350"
+      ],
+      "semantic_scholar_id": "9208cfa55b271f81d892eb928f1a1fe4cd7be350",
+      "canonical_id": "arXiv:2602.13595",
+      "arxiv_id": "2602.13595",
+      "doi": "10.48550/arXiv.2602.13595",
+      "authors": [
+        "Henry Han",
+        "Xiya Liu",
+        "Xiao-Dong Wang",
+        "Fei Han",
+        "Xiaodong Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KLineage: Recovering the Missing When of Kernel Optimization by Deoptimizing Experts",
+      "source_url": "https://arxiv.org/abs/2605.28213",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based agents are increasingly used to generate GPU kernels, but they often struggle to determine when an optimization is sound because its required code state and dependencies are implicit in expert implementations. We introduce KLineage, which learns this missing\"when\"knowledge from expert kernels: instead of relying on forward rollouts, KLineage walks expert implementations backward through validation-gated simplifications and reverses each accepted step into a reusable optimization skill. Each skill records not only the optimization intent, but also when to apply the optimization technique, including where it applies in code, what conditions made it valid, what effect it has, and what failures its assumptions avoid. A downstream LLM materializes these skills on new code surfaces under the same compile/correctness/profile gate. This guidance on when to apply each optimization can help downstream models to generate higher-performance kernels. On five expert workloads across two NVIDIA architectures, these lineage-derived skills serve as an effective optimization curriculum, exceeding recent memory-based LLM-kernel baselines in both final kernel quality and optimization efficiency under the same fixed budget. We also demonstrate that the KLineage framework extends beyond NVIDIA GPUs to Ascend NPUs. Our code is publicly available at https://github.com/ict-agent/klineage.",
+      "identifiers": [
+        "SemanticScholar:c784b539b18c73db90e78781440d4ffc053bacab"
+      ],
+      "semantic_scholar_id": "c784b539b18c73db90e78781440d4ffc053bacab",
+      "canonical_id": "arXiv:2605.28213",
+      "arxiv_id": "2605.28213",
+      "authors": [
+        "Shuo-Ming Zhang",
+        "Qiu-Chun Yu",
+        "Rui-Yuan Xu",
+        "Chen-Jing Zhang",
+        "Jun-Jie Peng",
+        "Zhi-Cheng Xie",
+        "Yang-Yu Zhang",
+        "Xi-Yu Shi",
+        "Ying Liu",
+        "Guang-Li Li",
+        "Xiao-Bing Feng",
+        "Hui-Min Cui",
+        "Xing-Jun Zhang",
+        "Jia-Cheng Zhao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Text-Vision Synergistic Token Caching: A Training-Free Framework for Efficient Vision-Language-Action Inference",
+      "source_url": "https://arxiv.org/abs/2609.34319",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models enable generalizable robotic control but remain computationally expensive. Token caching provides a training-free, plug-and-play acceleration alternative. However, existing VLA caching does not fully exploit a key inductive bias of VLA models: text-vision synergy, wherein textual semantics guide the precise visual grounding of task-relevant regions. In particular, existing designs insufficiently account for head-wise reliability in attention aggregation and layer-wise stability in cache reuse. To address this, we propose Text-Vision Synergistic Token Caching (TVCache), a training-free framework for efficient VLA inference. TVCache filters attention heads based on text-vision information focus to improve task-relevant and physically consistent visual grounding. Concurrently, we introduce a reuse-layer selection mechanism guided by text-vision entropy differences to avoid caching unstable representations and improve cache resource allocation. Extensive experiments across four representative VLA models, two simulation benchmarks, and real-world robotic tasks demonstrate the effectiveness and generality of TVCache. At matched token-retention ratios, TVCache consistently improves task success over existing VLA caching with comparable computational cost. On OpenVLA-OFT, it improves average success by up to 14.5 percentage points over VLA-Cache at 12.5% retention while reducing FLOPs by 2.45x relative to full-token inference.",
+      "identifiers": [
+        "SemanticScholar:fbe9f4a6c60404d47256bac8d89f860314c8103c"
+      ],
+      "semantic_scholar_id": "fbe9f4a6c60404d47256bac8d89f860314c8103c",
+      "canonical_id": "arXiv:2609.34319",
+      "arxiv_id": "2609.34319",
+      "doi": "10.48550/arXiv.2609.34319",
+      "authors": [
+        "Qian-Er Li",
+        "Cheng-Jie Zhang",
+        "Jing-Wen Chen",
+        "Zan-Jia Tong",
+        "Ji-Yuan Zhang",
+        "Hong Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mosaic: GPU Sharing with Latency Guarantees through Kernel-Level Interference Prediction",
+      "source_url": "https://arxiv.org/abs/2610.07504",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GPUs are increasingly in demand for AI workloads, yet often remain substantially underutilized, motivating workload colocation. However, colocation introduces interference that can degrade latency-critical workloads. Existing approaches mitigate interference using either heuristic-based scheduling or interference predictors. Heuristics rely on coarse-grained metrics that overlook important interference sources, while predictors often depend on simulator-specific or similarly coarse metrics. However, GPU interference is complex and arises from multiple mechanisms, including thread-block placement, memory hierarchy contention, and intra-SM resource contention. We present Mosaic, a kernel-level interference predictor that explicitly models these mechanisms using a combination of analytical and lightweight learned models. Across four GPU architectures, Mosaic reduces prediction error by up to an order of magnitude compared to prior predictors. We integrate Mosaic into a scheduler, MosaicSched, that performs online kernel admission control and selects between full-GPU colocation and SM partitioning to maximize best-effort throughput while satisfying latency SLOs. Across all workloads, MosaicSched keeps the p99 latency below or very close to the target SLO.",
+      "identifiers": [
+        "SemanticScholar:ed263e43e5aeb3ee18ee7e316ee4265d4132f0f1"
+      ],
+      "semantic_scholar_id": "ed263e43e5aeb3ee18ee7e316ee4265d4132f0f1",
+      "canonical_id": "arXiv:2610.07504",
+      "arxiv_id": "2610.07504",
+      "authors": [
+        "Foteini Strati",
+        "Ethan Graham",
+        "Leo Stephan",
+        "Paul Elvinger",
+        "Ana Klimovic"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Softmax Bias Correction for Quantized Generative Models",
+      "source_url": "https://arxiv.org/abs/2309.01729",
+      "year": 2023,
+      "published": "2023-09-04",
+      "venue": "2023 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+      "citation_count": 24,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is the go-to compression technique for large generative models, such as stable diffusion or large language models. PTQ methods commonly keep the softmax activation in higher precision as it has been shown to be very sensitive to quantization noise. However, this can lead to a significant runtime and power overhead during inference on resource-constraint edge devices. In this work, we investigate the source of the softmax sensitivity to quantization and show that the quantization operation leads to a large bias in the softmax output, causing accuracy degradation. To overcome this issue, we propose an offline bias correction technique that improves the quatizability of softmax without additional compute during deployment, as it can be readily absorbed into the quantization parameters. We demonstrate the effectiveness of our method on stable diffusion v1.5 and 125M-size OPT language model, achieving significant accuracy improvement for 8-bit quantized softmax.",
+      "identifiers": [
+        "SemanticScholar:002b4873bd937bebbcf7301c93b02a5460fc7d7e"
+      ],
+      "semantic_scholar_id": "002b4873bd937bebbcf7301c93b02a5460fc7d7e",
+      "canonical_id": "arXiv:2309.01729",
+      "arxiv_id": "2309.01729",
+      "doi": "10.1109/ICCVW60793.2023.00157",
+      "authors": [
+        "N. Pandey",
+        "Marios Fournarakis",
+        "Chirag Patel",
+        "Markus Nagel"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 24,
+        "citation_count": 24,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Toward Robust and Efficient ML-Based GPU Caching for Modern Inference",
+      "source_url": "https://arxiv.org/abs/2509.20979",
+      "year": 2025,
+      "published": "2025-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In modern GPU inference, cache efficiency remains a major bottleneck, and heuristic policies such as \\textsc{LRU} can perform far worse than the offline optimum. Existing learning-based caching systems improve hit rates mainly through predictor design, but often follow learned predictions blindly, making performance unreliable when predictions are inaccurate. In contrast, emerging learning-augmented caching algorithms~\\cite{pmlr-v80-lykouris18a,mitzenmacher2022algorithms} provide performance guarantees by carefully integrating predictions into caching policies, achieving both \\emph{consistency} (near-optimality under perfect predictions) and \\emph{robustness} (bounded worst-case performance under prediction errors). However, deployment remains challenging. A practical algorithm should satisfy strict time and space efficiency constraints, which some theoretical work overlooks, while also incurring low deployment overhead. We propose learning-augmented LRU, a deployment-oriented learning-augmented caching algorithm that guarantees \\emph{1-consistency} and \\emph{$O(k)$-robustness}, incurs low time and space overhead, and maintains strong compatibility. We further build a GPU cache, called \\textsc{LCR}, on top of learning-augmented LRU to benefit from its theoretical guarantees and translate them into practical performance. In experiments, \\textsc{LCR} reduces P99 time-to-first-token (TTFT) by up to 28.3\\% on LLM workloads and increases throughput by up to 24.2\\% on deep learning recommendation (DLRM) workloads. Even with poor predictions, performance degrades gracefully and remains close to \\textsc{LRU}, demonstrating robustness with practical value.",
+      "identifiers": [
+        "SemanticScholar:a80900a3f4dfa3d1f3be81954217479fb35a1389"
+      ],
+      "semantic_scholar_id": "a80900a3f4dfa3d1f3be81954217479fb35a1389",
+      "canonical_id": "arXiv:2509.20979",
+      "arxiv_id": "2509.20979",
+      "doi": "10.48550/arXiv.2509.20979",
+      "authors": [
+        "Peng Chen",
+        "Jiaji Zhang",
+        "Hai-Liang Zhao",
+        "Yirong Zhang",
+        "Jiahong Yu",
+        "Xue-Yan Tang",
+        "Yi-Xuan Wang",
+        "Hao Li",
+        "J. Zou",
+        "Gang Xiong",
+        "Kingsum Chow",
+        "Shui-Bing He",
+        "Shui-Guang Deng"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 422,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.13595",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.13595",
+        "id:SemanticScholar:9208cfa55b271f81d892eb928f1a1fe4cd7be350",
+        "id:arXiv:2602.13595",
+        "title:the quantization trap breaking linear scaling laws in multihop reasoning",
+        "url:https://arxiv.org/abs/2602.13595"
+      ],
+      "record": {
+        "title": "The Quantization Trap: Breaking Linear Scaling Laws in Multi-Hop Reasoning",
+        "source_url": "https://arxiv.org/abs/2602.13595",
+        "year": 2026,
+        "published": "2026-02-14",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Neural scaling laws provide a predictable recipe for AI advancement: reducing numerical precision should linearly improve computational efficiency and energy profile ($E \\propto \\mathrm{bits}$). In this paper, we demonstrate that this scaling law breaks in the context of multi-hop reasoning. We reveal a'quantization trap'where reducing precision from 16-bit to 8/4-bit paradoxically increases net energy consumption while degrading reasoning accuracy. We provide a rigorous theoretical decomposition that attributes this failure to hardware casting overhead, the hidden latency cost of dequantization kernels, which becomes a dominant bottleneck in sequential reasoning chains, as well as to a sequential energy amortization failure. As a result, scaling law breaking is unavoidable in practice. We formalize a Critical Model Scale $N^*$ that predicts when the trap dissolves or deepens as a function of model size, batch size, and hardware configuration, validated across a 120$\\times$ range (0.6B--72B) on six GPU architectures. Our findings suggest that the industry's\"smaller-is-better\"heuristic is mathematically counterproductive for complex reasoning tasks.",
+        "identifiers": [
+          "SemanticScholar:9208cfa55b271f81d892eb928f1a1fe4cd7be350"
+        ],
+        "semantic_scholar_id": "9208cfa55b271f81d892eb928f1a1fe4cd7be350",
+        "canonical_id": "arXiv:2602.13595",
+        "arxiv_id": "2602.13595",
+        "doi": "10.48550/arXiv.2602.13595",
+        "authors": [
+          "Henry Han",
+          "Xiya Liu",
+          "Xiao-Dong Wang",
+          "Fei Han",
+          "Xiaodong Li"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 280,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28213",
+      "identity_tokens": [
+        "id:SemanticScholar:c784b539b18c73db90e78781440d4ffc053bacab",
+        "id:arXiv:2605.28213",
+        "title:klineage recovering the missing when of kernel optimization by deoptimizing experts",
+        "url:https://arxiv.org/abs/2605.28213"
+      ],
+      "record": {
+        "title": "KLineage: Recovering the Missing When of Kernel Optimization by Deoptimizing Experts",
+        "source_url": "https://arxiv.org/abs/2605.28213",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM-based agents are increasingly used to generate GPU kernels, but they often struggle to determine when an optimization is sound because its required code state and dependencies are implicit in expert implementations. We introduce KLineage, which learns this missing\"when\"knowledge from expert kernels: instead of relying on forward rollouts, KLineage walks expert implementations backward through validation-gated simplifications and reverses each accepted step into a reusable optimization skill. Each skill records not only the optimization intent, but also when to apply the optimization technique, including where it applies in code, what conditions made it valid, what effect it has, and what failures its assumptions avoid. A downstream LLM materializes these skills on new code surfaces under the same compile/correctness/profile gate. This guidance on when to apply each optimization can help downstream models to generate higher-performance kernels. On five expert workloads across two NVIDIA architectures, these lineage-derived skills serve as an effective optimization curriculum, exceeding recent memory-based LLM-kernel baselines in both final kernel quality and optimization efficiency under the same fixed budget. We also demonstrate that the KLineage framework extends beyond NVIDIA GPUs to Ascend NPUs. Our code is publicly available at https://github.com/ict-agent/klineage.",
+        "identifiers": [
+          "SemanticScholar:c784b539b18c73db90e78781440d4ffc053bacab"
+        ],
+        "semantic_scholar_id": "c784b539b18c73db90e78781440d4ffc053bacab",
+        "canonical_id": "arXiv:2605.28213",
+        "arxiv_id": "2605.28213",
+        "authors": [
+          "Shuo-Ming Zhang",
+          "Qiu-Chun Yu",
+          "Rui-Yuan Xu",
+          "Chen-Jing Zhang",
+          "Jun-Jie Peng",
+          "Zhi-Cheng Xie",
+          "Yang-Yu Zhang",
+          "Xi-Yu Shi",
+          "Ying Liu",
+          "Guang-Li Li",
+          "Xiao-Bing Feng",
+          "Hui-Min Cui",
+          "Xing-Jun Zhang",
+          "Jia-Cheng Zhao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34319",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34319",
+        "id:SemanticScholar:fbe9f4a6c60404d47256bac8d89f860314c8103c",
+        "id:arXiv:2609.34319",
+        "title:textvision synergistic token caching a trainingfree framework for efficient visionlanguageaction inference",
+        "url:https://arxiv.org/abs/2609.34319"
+      ],
+      "record": {
+        "title": "Text-Vision Synergistic Token Caching: A Training-Free Framework for Efficient Vision-Language-Action Inference",
+        "source_url": "https://arxiv.org/abs/2609.34319",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models enable generalizable robotic control but remain computationally expensive. Token caching provides a training-free, plug-and-play acceleration alternative. However, existing VLA caching does not fully exploit a key inductive bias of VLA models: text-vision synergy, wherein textual semantics guide the precise visual grounding of task-relevant regions. In particular, existing designs insufficiently account for head-wise reliability in attention aggregation and layer-wise stability in cache reuse. To address this, we propose Text-Vision Synergistic Token Caching (TVCache), a training-free framework for efficient VLA inference. TVCache filters attention heads based on text-vision information focus to improve task-relevant and physically consistent visual grounding. Concurrently, we introduce a reuse-layer selection mechanism guided by text-vision entropy differences to avoid caching unstable representations and improve cache resource allocation. Extensive experiments across four representative VLA models, two simulation benchmarks, and real-world robotic tasks demonstrate the effectiveness and generality of TVCache. At matched token-retention ratios, TVCache consistently improves task success over existing VLA caching with comparable computational cost. On OpenVLA-OFT, it improves average success by up to 14.5 percentage points over VLA-Cache at 12.5% retention while reducing FLOPs by 2.45x relative to full-token inference.",
+        "identifiers": [
+          "SemanticScholar:fbe9f4a6c60404d47256bac8d89f860314c8103c"
+        ],
+        "semantic_scholar_id": "fbe9f4a6c60404d47256bac8d89f860314c8103c",
+        "canonical_id": "arXiv:2609.34319",
+        "arxiv_id": "2609.34319",
+        "doi": "10.48550/arXiv.2609.34319",
+        "authors": [
+          "Qian-Er Li",
+          "Cheng-Jie Zhang",
+          "Jing-Wen Chen",
+          "Zan-Jia Tong",
+          "Ji-Yuan Zhang",
+          "Hong Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07504",
+      "identity_tokens": [
+        "id:SemanticScholar:ed263e43e5aeb3ee18ee7e316ee4265d4132f0f1",
+        "id:arXiv:2610.07504",
+        "title:mosaic gpu sharing with latency guarantees through kernellevel interference prediction",
+        "url:https://arxiv.org/abs/2610.07504"
+      ],
+      "record": {
+        "title": "Mosaic: GPU Sharing with Latency Guarantees through Kernel-Level Interference Prediction",
+        "source_url": "https://arxiv.org/abs/2610.07504",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "GPUs are increasingly in demand for AI workloads, yet often remain substantially underutilized, motivating workload colocation. However, colocation introduces interference that can degrade latency-critical workloads. Existing approaches mitigate interference using either heuristic-based scheduling or interference predictors. Heuristics rely on coarse-grained metrics that overlook important interference sources, while predictors often depend on simulator-specific or similarly coarse metrics. However, GPU interference is complex and arises from multiple mechanisms, including thread-block placement, memory hierarchy contention, and intra-SM resource contention. We present Mosaic, a kernel-level interference predictor that explicitly models these mechanisms using a combination of analytical and lightweight learned models. Across four GPU architectures, Mosaic reduces prediction error by up to an order of magnitude compared to prior predictors. We integrate Mosaic into a scheduler, MosaicSched, that performs online kernel admission control and selects between full-GPU colocation and SM partitioning to maximize best-effort throughput while satisfying latency SLOs. Across all workloads, MosaicSched keeps the p99 latency below or very close to the target SLO.",
+        "identifiers": [
+          "SemanticScholar:ed263e43e5aeb3ee18ee7e316ee4265d4132f0f1"
+        ],
+        "semantic_scholar_id": "ed263e43e5aeb3ee18ee7e316ee4265d4132f0f1",
+        "canonical_id": "arXiv:2610.07504",
+        "arxiv_id": "2610.07504",
+        "authors": [
+          "Foteini Strati",
+          "Ethan Graham",
+          "Leo Stephan",
+          "Paul Elvinger",
+          "Ana Klimovic"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2309.01729",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccvw60793.2023.00157",
+        "id:SemanticScholar:002b4873bd937bebbcf7301c93b02a5460fc7d7e",
+        "id:arXiv:2309.01729",
+        "title:softmax bias correction for quantized generative models",
+        "url:https://arxiv.org/abs/2309.01729"
+      ],
+      "record": {
+        "title": "Softmax Bias Correction for Quantized Generative Models",
+        "source_url": "https://arxiv.org/abs/2309.01729",
+        "year": 2023,
+        "published": "2023-09-04",
+        "venue": "2023 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+        "citation_count": 24,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is the go-to compression technique for large generative models, such as stable diffusion or large language models. PTQ methods commonly keep the softmax activation in higher precision as it has been shown to be very sensitive to quantization noise. However, this can lead to a significant runtime and power overhead during inference on resource-constraint edge devices. In this work, we investigate the source of the softmax sensitivity to quantization and show that the quantization operation leads to a large bias in the softmax output, causing accuracy degradation. To overcome this issue, we propose an offline bias correction technique that improves the quatizability of softmax without additional compute during deployment, as it can be readily absorbed into the quantization parameters. We demonstrate the effectiveness of our method on stable diffusion v1.5 and 125M-size OPT language model, achieving significant accuracy improvement for 8-bit quantized softmax.",
+        "identifiers": [
+          "SemanticScholar:002b4873bd937bebbcf7301c93b02a5460fc7d7e"
+        ],
+        "semantic_scholar_id": "002b4873bd937bebbcf7301c93b02a5460fc7d7e",
+        "canonical_id": "arXiv:2309.01729",
+        "arxiv_id": "2309.01729",
+        "doi": "10.1109/ICCVW60793.2023.00157",
+        "authors": [
+          "N. Pandey",
+          "Marios Fournarakis",
+          "Chirag Patel",
+          "Markus Nagel"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 24,
+          "citation_count": 24,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.20979",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.20979",
+        "id:SemanticScholar:a80900a3f4dfa3d1f3be81954217479fb35a1389",
+        "id:arXiv:2509.20979",
+        "title:toward robust and efficient mlbased gpu caching for modern inference",
+        "url:https://arxiv.org/abs/2509.20979"
+      ],
+      "record": {
+        "title": "Toward Robust and Efficient ML-Based GPU Caching for Modern Inference",
+        "source_url": "https://arxiv.org/abs/2509.20979",
+        "year": 2025,
+        "published": "2025-09-25",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In modern GPU inference, cache efficiency remains a major bottleneck, and heuristic policies such as \\textsc{LRU} can perform far worse than the offline optimum. Existing learning-based caching systems improve hit rates mainly through predictor design, but often follow learned predictions blindly, making performance unreliable when predictions are inaccurate. In contrast, emerging learning-augmented caching algorithms~\\cite{pmlr-v80-lykouris18a,mitzenmacher2022algorithms} provide performance guarantees by carefully integrating predictions into caching policies, achieving both \\emph{consistency} (near-optimality under perfect predictions) and \\emph{robustness} (bounded worst-case performance under prediction errors). However, deployment remains challenging. A practical algorithm should satisfy strict time and space efficiency constraints, which some theoretical work overlooks, while also incurring low deployment overhead. We propose learning-augmented LRU, a deployment-oriented learning-augmented caching algorithm that guarantees \\emph{1-consistency} and \\emph{$O(k)$-robustness}, incurs low time and space overhead, and maintains strong compatibility. We further build a GPU cache, called \\textsc{LCR}, on top of learning-augmented LRU to benefit from its theoretical guarantees and translate them into practical performance. In experiments, \\textsc{LCR} reduces P99 time-to-first-token (TTFT) by up to 28.3\\% on LLM workloads and increases throughput by up to 24.2\\% on deep learning recommendation (DLRM) workloads. Even with poor predictions, performance degrades gracefully and remains close to \\textsc{LRU}, demonstrating robustness with practical value.",
+        "identifiers": [
+          "SemanticScholar:a80900a3f4dfa3d1f3be81954217479fb35a1389"
+        ],
+        "semantic_scholar_id": "a80900a3f4dfa3d1f3be81954217479fb35a1389",
+        "canonical_id": "arXiv:2509.20979",
+        "arxiv_id": "2509.20979",
+        "doi": "10.48550/arXiv.2509.20979",
+        "authors": [
+          "Peng Chen",
+          "Jiaji Zhang",
+          "Hai-Liang Zhao",
+          "Yirong Zhang",
+          "Jiahong Yu",
+          "Xue-Yan Tang",
+          "Yi-Xuan Wang",
+          "Hao Li",
+          "J. Zou",
+          "Gang Xiong",
+          "Kingsum Chow",
+          "Shui-Bing He",
+          "Shui-Guang Deng"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 422,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1fc1254f53a880f58d554a767b3e4ed2d0eea8992c4703bf7a7c5d758f865e86",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-824a4a244954ed47-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-824a4a244954",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.27428",
+    "arXiv:2608.13226"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bad0b71646c5879e228333a7837a58340123c603",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T07:43:26.078245+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.27428",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.13226",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "E3-Agent: an executable and evolving agent for resource management of edge generative inference",
+      "source_url": "https://arxiv.org/abs/2605.27428",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "Science China Information Sciences",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge deployments of generative inference increasingly face two practical realities: per-device per-model performance is often unknown at deployment time, and it is non-stationary due to user-driven semantic events, background load, and device churn. Consequently, a resource manager that is tuned offline under a fixed regime can become brittle and expensive to maintain. This paper presents E3-Agent, an executable and evolving agent for edge artificial intelligence generated content (AIGC) resource management. E3-Agent separates a fast-path router that makes millisecond-level dispatch decisions from a slow-path, event-driven large language model (LLM) meta-controller that mitigates regime shifts through a small, explicit control surface exposed via a tool interface, including risk gating, router configuration, and rapid performance calibration. The agent learns online from execution feedback and continuously adapts to unknown and time-varying service-time mappings. We evaluate E3-Agent in a discrete-event simulator driven by MLPerf-derived device-model measurement priors, covering cold-start warmup and three dynamic regimes: semantic dynamics, device churn, and hidden drift. Across the dynamic scenarios, E3-Agent reduces average latency by 65%–73% compared to the best static baseline, stays within 7%–10% of an online full-information Oracle used for evaluation, and effectively suppresses stutter rate under semantic degradation.",
+      "identifiers": [
+        "SemanticScholar:c9b4a254b947956cd928967138a804e8ae9c2a70"
+      ],
+      "semantic_scholar_id": "c9b4a254b947956cd928967138a804e8ae9c2a70",
+      "canonical_id": "arXiv:2605.27428",
+      "arxiv_id": "2605.27428",
+      "doi": "10.1007/s11432-026-5035-1",
+      "authors": [
+        "Rui Bao",
+        "Ya-Ping Sun",
+        "Zhi-Yong Chen",
+        "Fen-Gai Yang",
+        "Mei-Xia Tao",
+        "Nan Li",
+        "Wen-Jun Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport",
+      "source_url": "https://arxiv.org/abs/2608.13226",
+      "year": 2026,
+      "published": "2026-08-13",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While 3D Vision-Language Models (3D VLMs) have demonstrated remarkable spatial reasoning capabilities, they suffer from massive visual token counts that create severe computational bottlenecks during inference. Existing token pruning methods primarily rely on diversity-based selection, discarding similar tokens to maximize dispersion. However, in 3D environments, this approach frequently drops representative prototype tokens in favor of outliers, breaking the multi-view consistencies and geometric structures essential for spatial reasoning. In this paper, we propose a paradigm shift for 3D VLM token pruning: from maximizing diversity to preserving visual evidence coverage. We introduce CoverPrune, a training-free framework that formulates inference-time token pruning as an Optimal Transport (OT) problem. To overcome the intractable combinatorial subset selection inherent in this formulation, we design the Feature-Spatial-Temporal (FST) transport cost and target capacity, along with an efficient Spatial-Guided Greedy Selection (SGS) algorithm to approximate the OT objective. Furthermore, we propose CoverPrune-Lite, an accelerated variant utilizing spatially structured local matching for minimal overhead. Extensive experiments across multiple 3D visual-spatial reasoning benchmarks demonstrate that our methods achieve state-of-the-art token efficiency, maintaining robust reasoning performance even under highly aggressive pruning budgets. Visit our project website at https://github.com/Brucess/CoverPrune.",
+      "identifiers": [
+        "SemanticScholar:a693b0ccce8b447c63f50a404544505a02eef301"
+      ],
+      "semantic_scholar_id": "a693b0ccce8b447c63f50a404544505a02eef301",
+      "canonical_id": "arXiv:2608.13226",
+      "arxiv_id": "2608.13226",
+      "doi": "10.1007/978-3-032-37167-6_29",
+      "authors": [
+        "Peng Ling",
+        "Ying-Da Yin",
+        "Ling-Ting Zhu",
+        "Wei-Kai Chen",
+        "Sheng-Ju Qian",
+        "Ze-Yu Hu",
+        "Xin Wang",
+        "Wen-Ming Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.27428",
+      "identity_tokens": [
+        "id:DOI:10.1007/s11432-026-5035-1",
+        "id:SemanticScholar:c9b4a254b947956cd928967138a804e8ae9c2a70",
+        "id:arXiv:2605.27428",
+        "title:e3agent an executable and evolving agent for resource management of edge generative inference",
+        "url:https://arxiv.org/abs/2605.27428"
+      ],
+      "record": {
+        "title": "E3-Agent: an executable and evolving agent for resource management of edge generative inference",
+        "source_url": "https://arxiv.org/abs/2605.27428",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "Science China Information Sciences",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Edge deployments of generative inference increasingly face two practical realities: per-device per-model performance is often unknown at deployment time, and it is non-stationary due to user-driven semantic events, background load, and device churn. Consequently, a resource manager that is tuned offline under a fixed regime can become brittle and expensive to maintain. This paper presents E3-Agent, an executable and evolving agent for edge artificial intelligence generated content (AIGC) resource management. E3-Agent separates a fast-path router that makes millisecond-level dispatch decisions from a slow-path, event-driven large language model (LLM) meta-controller that mitigates regime shifts through a small, explicit control surface exposed via a tool interface, including risk gating, router configuration, and rapid performance calibration. The agent learns online from execution feedback and continuously adapts to unknown and time-varying service-time mappings. We evaluate E3-Agent in a discrete-event simulator driven by MLPerf-derived device-model measurement priors, covering cold-start warmup and three dynamic regimes: semantic dynamics, device churn, and hidden drift. Across the dynamic scenarios, E3-Agent reduces average latency by 65%–73% compared to the best static baseline, stays within 7%–10% of an online full-information Oracle used for evaluation, and effectively suppresses stutter rate under semantic degradation.",
+        "identifiers": [
+          "SemanticScholar:c9b4a254b947956cd928967138a804e8ae9c2a70"
+        ],
+        "semantic_scholar_id": "c9b4a254b947956cd928967138a804e8ae9c2a70",
+        "canonical_id": "arXiv:2605.27428",
+        "arxiv_id": "2605.27428",
+        "doi": "10.1007/s11432-026-5035-1",
+        "authors": [
+          "Rui Bao",
+          "Ya-Ping Sun",
+          "Zhi-Yong Chen",
+          "Fen-Gai Yang",
+          "Mei-Xia Tao",
+          "Nan Li",
+          "Wen-Jun Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.13226",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-37167-6_29",
+        "id:SemanticScholar:a693b0ccce8b447c63f50a404544505a02eef301",
+        "id:arXiv:2608.13226",
+        "title:coverprune coveragedriven token pruning for 3d vlms via optimal transport",
+        "url:https://arxiv.org/abs/2608.13226"
+      ],
+      "record": {
+        "title": "CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport",
+        "source_url": "https://arxiv.org/abs/2608.13226",
+        "year": 2026,
+        "published": "2026-08-13",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While 3D Vision-Language Models (3D VLMs) have demonstrated remarkable spatial reasoning capabilities, they suffer from massive visual token counts that create severe computational bottlenecks during inference. Existing token pruning methods primarily rely on diversity-based selection, discarding similar tokens to maximize dispersion. However, in 3D environments, this approach frequently drops representative prototype tokens in favor of outliers, breaking the multi-view consistencies and geometric structures essential for spatial reasoning. In this paper, we propose a paradigm shift for 3D VLM token pruning: from maximizing diversity to preserving visual evidence coverage. We introduce CoverPrune, a training-free framework that formulates inference-time token pruning as an Optimal Transport (OT) problem. To overcome the intractable combinatorial subset selection inherent in this formulation, we design the Feature-Spatial-Temporal (FST) transport cost and target capacity, along with an efficient Spatial-Guided Greedy Selection (SGS) algorithm to approximate the OT objective. Furthermore, we propose CoverPrune-Lite, an accelerated variant utilizing spatially structured local matching for minimal overhead. Extensive experiments across multiple 3D visual-spatial reasoning benchmarks demonstrate that our methods achieve state-of-the-art token efficiency, maintaining robust reasoning performance even under highly aggressive pruning budgets. Visit our project website at https://github.com/Brucess/CoverPrune.",
+        "identifiers": [
+          "SemanticScholar:a693b0ccce8b447c63f50a404544505a02eef301"
+        ],
+        "semantic_scholar_id": "a693b0ccce8b447c63f50a404544505a02eef301",
+        "canonical_id": "arXiv:2608.13226",
+        "arxiv_id": "2608.13226",
+        "doi": "10.1007/978-3-032-37167-6_29",
+        "authors": [
+          "Peng Ling",
+          "Ying-Da Yin",
+          "Ling-Ting Zhu",
+          "Wei-Kai Chen",
+          "Sheng-Ju Qian",
+          "Ze-Yu Hu",
+          "Xin Wang",
+          "Wen-Ming Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:83f0427389b95529f58e75972cb396e4c711b0440b9219d2318867419526d0b6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

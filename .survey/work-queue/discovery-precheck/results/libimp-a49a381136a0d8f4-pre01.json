@@ -1,0 +1,1323 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a49a381136a0d8f4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a49a381136a0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2212.07634",
+    "arXiv:2503.13108",
+    "arXiv:2601.14260",
+    "arXiv:2602.15200",
+    "arXiv:2602.21652",
+    "arXiv:2603.10026",
+    "arXiv:2604.15728",
+    "arXiv:2606.09551",
+    "arXiv:2606.21023",
+    "arXiv:2608.06723",
+    "arXiv:2609.15992",
+    "arXiv:2609.30884",
+    "arXiv:2610.04225",
+    "arXiv:2610.18690"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bad0b71646c5879e228333a7837a58340123c603",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T07:43:26.416927+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2212.07634",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.13108",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.14260",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.15200",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.21652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.10026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.15728",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.09551",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.21023",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06723",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.15992",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.30884",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18690",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL",
+      "source_url": "https://arxiv.org/abs/2606.21023",
+      "year": 2026,
+      "published": "2026-06-19",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) deploy into mission-critical domains (e.g., finance, medicine, and law), output reproducibility has become a strict system requirement. While practitioners use greedy decoding to eliminate algorithmic stochasticity, empirical deployments with 16-bit precisions still exhibit catastrophic output divergence across heterogeneous GPUs. Through SASS-level profiling, we reveal that this inconsistency is fundamentally driven by truncation errors introduced during downcasting at kernel boundaries. However, achieving reproducibility via a global FP32 pipeline incurs prohibitive system penalties: bypassing 16-bit hardware accelerators hurts compute efficiency, while upcasting the KV cache doubles memory overhead. To bridge this gap, we propose Hybrid Error ALleviation (HEAL), a targeted intervention that approximates FP32 precision while resolving hardware constraints through two targeted mechanisms. First, recognizing that floating-point formats underutilize their bit-width for Q, K, V tensors, HEAL applies INT16 quantization that preserves numerical stability without expanding the KV cache footprint. Second, HEAL synthesizes high-precision matrix multiplications via an algebraic error compensation strategy, executing entirely on high-throughput 16-bit Tensor Cores. To evaluate our approach practically, we introduce MCR-Bench, a benchmark targeting reproducibility in mission-critical tasks. HEAL achieves the same level of reproducibility on downstream tasks as the FP32 baseline while reducing the performance overhead by up to 6.0$\\times$.",
+      "identifiers": [
+        "SemanticScholar:c6f1d202c44f8f51336ddd53eec45abd8762e3b9"
+      ],
+      "semantic_scholar_id": "c6f1d202c44f8f51336ddd53eec45abd8762e3b9",
+      "canonical_id": "arXiv:2606.21023",
+      "arxiv_id": "2606.21023",
+      "doi": "10.48550/arXiv.2606.21023",
+      "authors": [
+        "Zhenting Zhu",
+        "Lucas Thai",
+        "Shan Yu",
+        "Yicheng Liu",
+        "Yi-Fan Qiao",
+        "Chen-Xi Wang",
+        "Harry Xu",
+        "Jun-Yi Shu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COMPOT: Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers Compression",
+      "source_url": "https://arxiv.org/abs/2602.15200",
+      "year": 2026,
+      "published": "2026-02-16",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training compression of transformer models commonly relies on truncated singular value decomposition (SVD) strategies leading to low-rank approximations of the original model weights. However, the underlying single shared subspace modeling can degrade accuracy even at moderate compression. Sparse dictionary learning provides a more flexible union-of-subspaces representation, but existing approaches often suffer from costly iterative dictionary and coefficient updates. We propose $\\textbf{COMPOT}$ ($\\textbf{C}$alibration-$\\textbf{O}$ptimized $\\textbf{M}$atrix $\\textbf{P}$rocrustes $\\textbf{O}$rthogonalization for $\\textbf{T}$ransformers), a training-free compression framework that uses a small calibration dataset to estimate a sparse weight factorization. COMPOT employs orthogonal dictionaries that enable closed-form Procrustes updates for the dictionary and analytical single-step sparse coding for the coefficients, reducing significantly the overall optimization cost. To handle heterogeneous layer sensitivity under a global compression budget, COMPOT further introduces a one-shot dynamic allocation strategy that adaptively redistributes layer-wise compression rates. Extensive experiments across diverse architectures and tasks show that COMPOT consistently delivers a superior quality-compression trade-off over strong low-rank and sparse baselines, while remaining fully compatible with post-training quantization for extreme compression.",
+      "identifiers": [
+        "SemanticScholar:3c5192ed119eb20b17de800e3a1b4bc454f60f11"
+      ],
+      "semantic_scholar_id": "3c5192ed119eb20b17de800e3a1b4bc454f60f11",
+      "canonical_id": "arXiv:2602.15200",
+      "arxiv_id": "2602.15200",
+      "doi": "10.48550/arXiv.2602.15200",
+      "authors": [
+        "Denis Makhov",
+        "Dmitriy Shopkhoev",
+        "Magauiya Zhussip",
+        "Ammar Ali",
+        "Baher Mohammad",
+        "Stamatios Lefkimmiatis"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
+      "source_url": "https://arxiv.org/abs/2603.10026",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Operator fusion, as a key performance optimization technique in the deployment of AI models, significantly improves execution efficiency and has been widely adopted in modern AI compilers. However, for cascaded reduction operations involving multiple loops with inter-loop data dependencies, such as the safe softmax followed by GEMM within attention mechanisms, existing compilers lack effective automated fusion and kernel generation capabilities. Although some works have addressed specific instances through hand-crafted fusion strategies, their solutions are limited in generality and difficult to extend to other similar structures. Given the prevalence of such computational patterns in deep learning models, there remains significant untapped potential in achieving general and automated fusion optimization. In this paper, we present a formal theoretical methodology for analyzing cascaded reductions which can fuse them into a single loop and introduce an incremental computation form. Based on this methodology, we design Red uction Fuser (RedFuser), a framework that automatically identifies supported cascaded reduction patterns and generates optimized fused kernels. Experiments show that RedFuser successfully fuses diverse workloads, achieving up to 2× to 5× speedup over state-of-the-art AI compilers and matching the performance of highly optimized hand-written kernels.",
+      "identifiers": [
+        "SemanticScholar:04e30a7f22b68eb238dcfdd7976be4fb80be893f"
+      ],
+      "semantic_scholar_id": "04e30a7f22b68eb238dcfdd7976be4fb80be893f",
+      "canonical_id": "arXiv:2603.10026",
+      "arxiv_id": "2603.10026",
+      "doi": "10.1145/3779212.3790209",
+      "authors": [
+        "Xin-Sheng Tang",
+        "Yang-Cheng Li",
+        "Nan Wang",
+        "Zhiyi Shu",
+        "Xingyu Ling",
+        "Junna Xing",
+        "Peng Zhou",
+        "Qiang Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Privacy-Preserving LLMs Routing",
+      "source_url": "https://arxiv.org/abs/2604.15728",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) routing has emerged as a critical strategy to balance model performance and cost-efficiency by dynamically selecting services from various model providers. However, LLM routing adds an intermediate layer between users and LLMs, creating new privacy risks to user data. These privacy risks have not been systematically studied. Although cryptographic techniques such as Secure Multi-Party Computation (MPC) enable privacy-preserving computation, their protocol design and implementation remain under-explored, and na\\\"ive implementations typically incur prohibitive computational overhead. To address this, we propose a privacy-preserving LLM routing framework (PPRoute). PPRoute includes multiple strategies to speed up encoder inference and nearest neighbor search under the MPC and maintain the quality of LLM routing. First, PPRoute uses MPC-friendly operations to boost the encoder inference. Second, PPRoute uses a multiple-step model training algorithm to maintain routing quality despite the constraints of the encrypted domain. Third, PPRoute proposes an unsorted Top-k algorithm with $O(1)$ communication complexity for secure sorting in model search, significantly reducing communication latency. Across different datasets, PPRoute achieves the performance of plaintext counterparts, while achieving approximately a 20$\\times$ speedup over na\\\"ive MPC implementations.",
+      "identifiers": [
+        "SemanticScholar:326354a8e09353dc3c8a59ecd814cc6fde89a1b5"
+      ],
+      "semantic_scholar_id": "326354a8e09353dc3c8a59ecd814cc6fde89a1b5",
+      "canonical_id": "arXiv:2604.15728",
+      "arxiv_id": "2604.15728",
+      "doi": "10.48550/arXiv.2604.15728",
+      "authors": [
+        "Xi-Dong Wu",
+        "Yu-Kuan Zhang",
+        "Yuqiong Ji",
+        "Reza Shirkavand",
+        "Qian Lou",
+        "Shang-Qian Gao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sparsity Induction for Accurate Post-Training Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.21652",
+      "year": 2026,
+      "published": "2026-02-25",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have demonstrated capabilities in text generation, while their increasing parameter scales present challenges in computational and memory efficiency. Post-training sparsity (PTS), which reduces model cost by removing weights from dense networks, is an effective approach. However, native dense matrices lack high sparsity, making existing approaches that directly remove weights disrupt model states, resulting in unsatisfactory performance recovery even with post-tuning. We propose Sparsity Induction, which promotes models toward higher sparsity at both distribution and feature levels before pruning, to push the limits of PTS. At the distribution level, we enhance distributional sparsity through mathematically equivalent scaling transformations, which are fully absorbable and incur no extra parameters or inference-time overhead. At the feature level, we introduce Spectral Norm Loss to promote feature sparsity from a low-rank perspective. Experiments across diverse model architectures and tasks demonstrate that our method further enhances sparsity-friendliness, achieving superior pruning performance over existing approaches.",
+      "identifiers": [
+        "SemanticScholar:0900d6b0bab7b88d8395c1690515240b2946e7e5"
+      ],
+      "semantic_scholar_id": "0900d6b0bab7b88d8395c1690515240b2946e7e5",
+      "canonical_id": "arXiv:2602.21652",
+      "arxiv_id": "2602.21652",
+      "doi": "10.48550/arXiv.2602.21652",
+      "authors": [
+        "Minhao Jiang",
+        "Zhikai Li",
+        "Xue-Wen Liu",
+        "Jing Zhang",
+        "Meng-Juan Chen",
+        "Qing-Yi Gu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FuseFSS: Efficient Secure LLM Inference with Function Secret Sharing",
+      "source_url": "https://arxiv.org/abs/2606.09551",
+      "year": 2026,
+      "published": "2026-06-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Two-server secure inference allows a client to query a hosted large language model (LLM) without revealing prompts or embeddings. Recent GPU systems based on function secret sharing (FSS) make linear layers efficient, but fixed-point nonlinearities and helper operations remain a bottleneck because each operator is typically implemented as a bespoke protocol with its own comparisons, wrap-around corrections, and preprocessing material. We present FuseFSS, a compiler that replaces per-operator protocol design with a single compilation pipeline. For each scalar fixed-point operator, a compact specification lists its interval partition, low-degree arithmetic pieces, and required predicate bits. The compiler emits two batched FSS evaluations on the public masked value: one packed comparison that returns all predicate bits, and one vector interval lookup that returns the active coefficients and constants. Compared to the current state-of-the-art FSS-based GPU secure inference, FuseFSS preserves accuracy while achieving a $1.24\\times$--$1.50\\times$ end-to-end speedup and reducing online communication by $9\\%$--$16\\%$ on BERT and GPT-style models; preprocessing is also lighter, with $14\\%$--$23\\%$ lower key-generation time and $20\\%$--$24\\%$ smaller keys.",
+      "identifiers": [
+        "SemanticScholar:e09b86c762c14ac06437ae4f8f241a772a3aa041"
+      ],
+      "semantic_scholar_id": "e09b86c762c14ac06437ae4f8f241a772a3aa041",
+      "canonical_id": "arXiv:2606.09551",
+      "arxiv_id": "2606.09551",
+      "doi": "10.48550/arXiv.2606.09551",
+      "authors": [
+        "Yu-Han Ma",
+        "Yong Li",
+        "Stefan Schmid"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CacheReforge: Bounded Recovery for Stale KV Caches under Evolving Adapters",
+      "source_url": "https://arxiv.org/abs/2609.30884",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models rely on KV caching to reduce repeated prefill computation in long context and interactive applications. As lightweight adapters evolve, cached states reflect earlier versions, so stale reuse distorts current model outputs, while complete affected suffix recomputation restores fidelity at substantial cost. We seek minimal recomputation that recovers current adapter behavior. Existing systems track token, context, or stable adapter identity, but neither represent caches from earlier adapter versions nor distinguish update propagation from the recomputation required for behavioral recovery. To address these gaps, we introduce CacheReforge, which represents stale KV caches as layerwise mixed-version objects. It combines per-layer adapter anchors, calibrated sensitivity, accumulated drift, and executable restart boundaries to select direct reuse, bounded recomputation, or complete affected-suffix recovery. We distinguish dependency depth from the functional recomputation horizon and use cumulative tail influence to characterize when bounded recovery preserves current-model behavior. We evaluate CacheReforge on Qwen2.5-1.5B and Qwen2.5-7B with continual LoRA updates, including 16K HotpotQA and 2WikiMQA workloads. CacheReforge reduces mean KL divergence by 92.4% relative to stale reuse, while recomputing only 5.44% of layers and reducing cache-maintenance time by 93.2% relative to fresh full prefill. These results show that version-aware recovery preserves model fidelity and most KV caching gains.",
+      "identifiers": [
+        "SemanticScholar:8709ecc808c2d2d46dc9cf907424f7c0fd9a26ad"
+      ],
+      "semantic_scholar_id": "8709ecc808c2d2d46dc9cf907424f7c0fd9a26ad",
+      "canonical_id": "arXiv:2609.30884",
+      "arxiv_id": "2609.30884",
+      "doi": "10.48550/arXiv.2609.30884",
+      "authors": [
+        "Yu-Hang Cao",
+        "Yan-Zhou Mu",
+        "Chun-Rong Fang",
+        "Zhen-Yu Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 57,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference",
+      "source_url": "https://arxiv.org/abs/2503.13108",
+      "year": 2025,
+      "published": "2025-03-17",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) improve performance on vision-language tasks by integrating visual features from pre-trained vision encoders into large language models (LLMs). However, how MLLMs process and utilize visual information remains unclear. In this paper, a shift in the dominant flow of visual information is uncovered: (1) in shallow layers, strong interactions are observed between image tokens and instruction tokens, where most visual information is injected into instruction tokens to form cross-modal semantic representations; (2) in deeper layers, image tokens primarily interact with each other, aggregating the remaining visual information to optimize semantic representations within visual modality. Based on these insights, we propose Hierarchical Modality-Aware Pruning (HiMAP), a plug-and-play inference acceleration method that dynamically prunes image tokens at specific layers, reducing computational costs by approximately 65% without sacrificing performance. Our findings offer a new understanding of visual information processing in MLLMs and provide a state-of-the-art solution for efficient inference. The code is available at https://github.com/ustc-hyin/HiMAP.",
+      "identifiers": [
+        "SemanticScholar:616c9225b7de00d5fe0d9dbfa7c5707f0686b381"
+      ],
+      "semantic_scholar_id": "616c9225b7de00d5fe0d9dbfa7c5707f0686b381",
+      "canonical_id": "arXiv:2503.13108",
+      "arxiv_id": "2503.13108",
+      "doi": "10.1109/CVPR52734.2025.00876",
+      "authors": [
+        "Hao Yin",
+        "Gunagzong Si",
+        "Zi-Lei Wang"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 614,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gradient-based Intra-attention Pruning on Pre-trained Language Models",
+      "source_url": "https://arxiv.org/abs/2212.07634",
+      "year": 2022,
+      "published": "2022-12-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained language models achieve superior performance but are computationally expensive. Techniques such as pruning and knowledge distillation have been developed to reduce their sizes and latencies. In this work, we propose a structured pruning method GRAIN (gradient-based intra-attention pruning), which performs task-specific pruning with knowledge distillation and yields highly effective models. Different from common approaches that prune each attention head as a whole, GRAIN inspects and prunes intra-attention structures, which greatly expands the structure search space and enables more flexible models. We also propose a gradient separation strategy that reduces the interference of distillation on pruning for a better combination of the two approaches. Experiments on GLUE, SQuAD, and CoNLL 2003 show that GRAIN notably outperforms other methods, especially in the high sparsity regime, and achieves 6 7x speedups while maintaining 93% 99% performance. Under extreme compression where only 3% transformer weights remain, the pruned model is still competitive compared to larger models.",
+      "identifiers": [
+        "SemanticScholar:41b044f8cf8ade197b182586a8cc1cb53733e31d"
+      ],
+      "semantic_scholar_id": "41b044f8cf8ade197b182586a8cc1cb53733e31d",
+      "canonical_id": "arXiv:2212.07634",
+      "arxiv_id": "2212.07634",
+      "doi": "10.48550/arXiv.2212.07634",
+      "authors": [
+        "Ziqing Yang",
+        "Yiming Cui",
+        "Xin Yao",
+        "Shi-Jin Wang"
+      ],
+      "priority": 28,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 28,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1437,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Optimal Model Activation Policies for Inference Networks of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.15992",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in large language models (LLMs) have rendered them necessary for Natural Language Processing (NLP) tasks, and their high inference cost motivates the study of cost-performance trade-offs. In practice, several expert LLMs are used in synergy for inference, either in an ensemble mode or in series, yet without a principled approach on how to best use the available models. An adaptive approach can route simple queries to cheaper LLMs and complex ones to more capable, costly models. However, a clear understanding on how to best leverage available expert models is missing. We introduce inference networks, a graph-based framework, where nodes denote different LLMs, and links denote conditional model activations. The inference network design problem is to determine the best topology, namely the best way to use the models that best addresses the cost-performance trade-off. We start from the basic topology of a series of LLM experts, each of which has a different cost and a different level of expertise, which is captured via model confidence. We formulate the problem of optimal activation of these models so as to minimize the expected inference cost subject to a target performance constraint. For this special class of inference networks, we prove that the optimal activation policy has a threshold structure: query the lowest-cost LLM first, and invoke the more expensive LLM only if the confidence falls below a defined threshold. For discriminative tasks, the optimal policy consists of a set of thresholds, one threshold for each class, while for generative tasks, it consists of a single threshold. We provide a structured method to compute the thresholds, and practical confidence estimation mechanisms for both task types. Experiments with open-source LLMs show substantial cost reductions while meeting the specified performance budget.",
+      "identifiers": [
+        "SemanticScholar:8ff7cd1c84b5dd63e87732816f749fb10e37d7e8"
+      ],
+      "semantic_scholar_id": "8ff7cd1c84b5dd63e87732816f749fb10e37d7e8",
+      "canonical_id": "arXiv:2609.15992",
+      "arxiv_id": "2609.15992",
+      "doi": "10.48550/arXiv.2609.15992",
+      "authors": [
+        "Foivos Charalampakos",
+        "Md. Ibrahim Ibne Alam",
+        "Iordanis Koutsopoulos",
+        "K. Kar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Level Modeling of Large Language Model Inference Latency and Energy via Hybrid Analytical-Machine-Learning Predictors",
+      "source_url": "https://arxiv.org/abs/2608.06723",
+      "year": 2026,
+      "published": "2026-08-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid scaling of Large Language Models (LLMs) has significantly increased computational cost, energy consumption, and inference latency, making accurate estimation essential for sustainable artificial intelligence deployment and hardware-aware design. In this work, we introduce Hybrid Modeling for Energy and Latency of LLMs (HYMELL), a hybrid three-level framework for estimating LLM inference latency and energy by combining analytical modeling with machine learning (ML). HYMELL models LLM execution through a three-level hierarchy: analytical estimation of primitive operations, ML prediction of higher-level components, and an end-to-end model that captures system-level overheads across both prefill and decode phases. The framework supports diverse architectures, including dense and mixture-of-experts (MoE) feed-forward networks (FFNs), as well as multi-head attention (MHA) and grouped-query attention (GQA) mechanisms. Evaluated on an NVIDIA H100 graphics processing unit (GPU), HYMELL achieves high predictive accuracy; notably, for LLaMA 3 8B, it attains less than 5% error for both prefill and decode phases. By predicting execution costs directly from architectural parameters, it enables fast, hardware-free design space exploration and energy-efficient optimization.",
+      "identifiers": [
+        "SemanticScholar:eeb86a283756b681b75abde77f13f4a902c88be7"
+      ],
+      "semantic_scholar_id": "eeb86a283756b681b75abde77f13f4a902c88be7",
+      "canonical_id": "arXiv:2608.06723",
+      "arxiv_id": "2608.06723",
+      "doi": "10.48550/arXiv.2608.06723",
+      "authors": [
+        "Saeid Shokoufa",
+        "Mohammad Erfan Sadeghi",
+        "M. Kamal",
+        "M. Pedram"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashGaze: Training-Free Multi-Scale Patch Pruning For Efficient Video Understanding",
+      "source_url": "https://arxiv.org/abs/2610.04225",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated strong performance in video understanding, yet efficiently processing long, high-resolution videos remains challenging. Such videos often contain substantial spatiotemporal redundancy, and processing redundant visual tokens can incur avoidable computational overhead. Many existing methods prune visual tokens during or after vision transformer (ViT) encoding, leaving much of the encoding cost unaddressed. Some approaches prune patches before encoding but rely on learned auxiliary networks for patch selection, incurring additional training and inference overhead. To address these limitations, we propose FlashGaze, a training-free method that reduces spatiotemporal redundancy before ViT encoding without introducing auxiliary networks. FlashGaze uses pixel-space differences as a proxy for information loss and employs Quadtree Dynamic Programming to jointly optimize patch dropping, merging, and keeping under a fixed budget. Experiments on two MLLM backbones across multiple benchmarks demonstrate substantial efficiency gains while largely preserving accuracy. On Qwen3-VL-8B, FlashGaze retains 98% of the full-input baseline accuracy on LongVideoBench while achieving up to 5.4x and 17x speedups in ViT encoding and MLLM prefill, respectively, and reducing peak GPU memory usage by a factor of 1.8. These efficiency gains enable the model to process videos with more frames and higher resolutions on the same GPU hardware, unlocking video understanding at scales previously out of reach.",
+      "identifiers": [
+        "SemanticScholar:70b87a8089ed262b81197d0e2fd30114d0b6afc3"
+      ],
+      "semantic_scholar_id": "70b87a8089ed262b81197d0e2fd30114d0b6afc3",
+      "canonical_id": "arXiv:2610.04225",
+      "arxiv_id": "2610.04225",
+      "authors": [
+        "Zi-Ye Zhu",
+        "Yang-Hao Zhou",
+        "Li-Xing Tan",
+        "Jia-Liang Kang",
+        "Shu-Xuan Li",
+        "Xiao Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Just Respect the Semantics: Image-Token Compression via Pre-LLM Semantic Variable-Resolution Tokenization and In-LLM Relevance Pruning",
+      "source_url": "https://arxiv.org/abs/2610.18690",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Image-token compression must reduce computation without hurting the semantics. We introduce Varest, guided by semantic fungibility: tokens within a coherent semantic region can be summarized coarsely, while object boundaries and literal text require finer distinctions. Object and text localizers guide variable-resolution merging, preserving spatial coverage and finer detail at boundaries and text. Learned [REL] registers then prune visual tokens after early decoder processing. Training across budgets enables one checkpoint per backbone. Across three backbones and 13 benchmarks, Varest outperforms 15 baselines in mean performance retention at every evaluated budget, retaining 86.10-92.33% of full-token performance with only 5.56% of the original layer-averaged image-token count.",
+      "identifiers": [
+        "SemanticScholar:a36b500539b38ca565aeaf1a5763f7a4105dcdda"
+      ],
+      "semantic_scholar_id": "a36b500539b38ca565aeaf1a5763f7a4105dcdda",
+      "canonical_id": "arXiv:2610.18690",
+      "arxiv_id": "2610.18690",
+      "authors": [
+        "Tian-Hao Fu",
+        "Austin S. Wang",
+        "Charles Chen",
+        "Roby Aldave-Garza",
+        "Victor Xie",
+        "Xi-Yue Jiao",
+        "Yu-Cheng Chen",
+        "Martin Tin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "End-to-End Transformer Acceleration Through Processing-in-Memory Architectures",
+      "source_url": "https://arxiv.org/abs/2601.14260",
+      "year": 2025,
+      "published": "2025-11-21",
+      "venue": "International Congress of Mathematicans",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have become central to natural language processing and large language models, but their deployment at scale faces three major challenges. First, the attention mechanism requires massive matrix multiplications and frequent movement of intermediate results between memory and compute units, leading to high latency and energy costs. Second, in longcontext inference, the key-value cache (KV cache) can grow unpredictably and even surpass the model's weight size, creating severe memory and bandwidth bottlenecks. Third, the quadratic complexity of attention with respect to sequence length amplifies both data movement and compute overhead, making large-scale inference inefficient. To address these issues, this work introduces processing-in-memory solutions that restructure attention and feed-forward computation to minimize off-chip data transfers, dynamically compress and prune the KV cache to manage memory growth, and reinterpret attention as an associative memory operation to reduce complexity and hardware footprint. Moreover, we evaluate our processing-in-memory design against state-of-the-art accelerators and general-purpose GPUs, demonstrating significant improvements in energy efficiency and latency. Together, these approaches address computation overhead, memory scalability, and attention complexity, further enabling efficient, end-to-end acceleration of Transformer models.",
+      "identifiers": [
+        "SemanticScholar:eb5725525f057c6b4ce6704df79f1a06692ea387"
+      ],
+      "semantic_scholar_id": "eb5725525f057c6b4ce6704df79f1a06692ea387",
+      "canonical_id": "arXiv:2601.14260",
+      "arxiv_id": "2601.14260",
+      "doi": "10.1109/ICM66518.2025.11322529",
+      "authors": [
+        "Xiao-Xuan Yang",
+        "Peilin Chen",
+        "Tergel Molom-Ochir",
+        "Yiran Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.21023",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.21023",
+        "id:SemanticScholar:c6f1d202c44f8f51336ddd53eec45abd8762e3b9",
+        "id:arXiv:2606.21023",
+        "title:demystifying numerical instability in llm inference achieving reproducible inference for missioncritical tasks with heal",
+        "url:https://arxiv.org/abs/2606.21023"
+      ],
+      "record": {
+        "title": "Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL",
+        "source_url": "https://arxiv.org/abs/2606.21023",
+        "year": 2026,
+        "published": "2026-06-19",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) deploy into mission-critical domains (e.g., finance, medicine, and law), output reproducibility has become a strict system requirement. While practitioners use greedy decoding to eliminate algorithmic stochasticity, empirical deployments with 16-bit precisions still exhibit catastrophic output divergence across heterogeneous GPUs. Through SASS-level profiling, we reveal that this inconsistency is fundamentally driven by truncation errors introduced during downcasting at kernel boundaries. However, achieving reproducibility via a global FP32 pipeline incurs prohibitive system penalties: bypassing 16-bit hardware accelerators hurts compute efficiency, while upcasting the KV cache doubles memory overhead. To bridge this gap, we propose Hybrid Error ALleviation (HEAL), a targeted intervention that approximates FP32 precision while resolving hardware constraints through two targeted mechanisms. First, recognizing that floating-point formats underutilize their bit-width for Q, K, V tensors, HEAL applies INT16 quantization that preserves numerical stability without expanding the KV cache footprint. Second, HEAL synthesizes high-precision matrix multiplications via an algebraic error compensation strategy, executing entirely on high-throughput 16-bit Tensor Cores. To evaluate our approach practically, we introduce MCR-Bench, a benchmark targeting reproducibility in mission-critical tasks. HEAL achieves the same level of reproducibility on downstream tasks as the FP32 baseline while reducing the performance overhead by up to 6.0$\\times$.",
+        "identifiers": [
+          "SemanticScholar:c6f1d202c44f8f51336ddd53eec45abd8762e3b9"
+        ],
+        "semantic_scholar_id": "c6f1d202c44f8f51336ddd53eec45abd8762e3b9",
+        "canonical_id": "arXiv:2606.21023",
+        "arxiv_id": "2606.21023",
+        "doi": "10.48550/arXiv.2606.21023",
+        "authors": [
+          "Zhenting Zhu",
+          "Lucas Thai",
+          "Shan Yu",
+          "Yicheng Liu",
+          "Yi-Fan Qiao",
+          "Chen-Xi Wang",
+          "Harry Xu",
+          "Jun-Yi Shu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.15200",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.15200",
+        "id:SemanticScholar:3c5192ed119eb20b17de800e3a1b4bc454f60f11",
+        "id:arXiv:2602.15200",
+        "title:compot calibrationoptimized matrix procrustes orthogonalization for transformers compression",
+        "url:https://arxiv.org/abs/2602.15200"
+      ],
+      "record": {
+        "title": "COMPOT: Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers Compression",
+        "source_url": "https://arxiv.org/abs/2602.15200",
+        "year": 2026,
+        "published": "2026-02-16",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training compression of transformer models commonly relies on truncated singular value decomposition (SVD) strategies leading to low-rank approximations of the original model weights. However, the underlying single shared subspace modeling can degrade accuracy even at moderate compression. Sparse dictionary learning provides a more flexible union-of-subspaces representation, but existing approaches often suffer from costly iterative dictionary and coefficient updates. We propose $\\textbf{COMPOT}$ ($\\textbf{C}$alibration-$\\textbf{O}$ptimized $\\textbf{M}$atrix $\\textbf{P}$rocrustes $\\textbf{O}$rthogonalization for $\\textbf{T}$ransformers), a training-free compression framework that uses a small calibration dataset to estimate a sparse weight factorization. COMPOT employs orthogonal dictionaries that enable closed-form Procrustes updates for the dictionary and analytical single-step sparse coding for the coefficients, reducing significantly the overall optimization cost. To handle heterogeneous layer sensitivity under a global compression budget, COMPOT further introduces a one-shot dynamic allocation strategy that adaptively redistributes layer-wise compression rates. Extensive experiments across diverse architectures and tasks show that COMPOT consistently delivers a superior quality-compression trade-off over strong low-rank and sparse baselines, while remaining fully compatible with post-training quantization for extreme compression.",
+        "identifiers": [
+          "SemanticScholar:3c5192ed119eb20b17de800e3a1b4bc454f60f11"
+        ],
+        "semantic_scholar_id": "3c5192ed119eb20b17de800e3a1b4bc454f60f11",
+        "canonical_id": "arXiv:2602.15200",
+        "arxiv_id": "2602.15200",
+        "doi": "10.48550/arXiv.2602.15200",
+        "authors": [
+          "Denis Makhov",
+          "Dmitriy Shopkhoev",
+          "Magauiya Zhussip",
+          "Ammar Ali",
+          "Baher Mohammad",
+          "Stamatios Lefkimmiatis"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 278,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.10026",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790209",
+        "id:SemanticScholar:04e30a7f22b68eb238dcfdd7976be4fb80be893f",
+        "id:arXiv:2603.10026",
+        "title:redfuser an automatic operator fusion framework for cascaded reductions on ai accelerators",
+        "url:https://arxiv.org/abs/2603.10026"
+      ],
+      "record": {
+        "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
+        "source_url": "https://arxiv.org/abs/2603.10026",
+        "year": 2026,
+        "published": "2026-02-24",
+        "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Operator fusion, as a key performance optimization technique in the deployment of AI models, significantly improves execution efficiency and has been widely adopted in modern AI compilers. However, for cascaded reduction operations involving multiple loops with inter-loop data dependencies, such as the safe softmax followed by GEMM within attention mechanisms, existing compilers lack effective automated fusion and kernel generation capabilities. Although some works have addressed specific instances through hand-crafted fusion strategies, their solutions are limited in generality and difficult to extend to other similar structures. Given the prevalence of such computational patterns in deep learning models, there remains significant untapped potential in achieving general and automated fusion optimization. In this paper, we present a formal theoretical methodology for analyzing cascaded reductions which can fuse them into a single loop and introduce an incremental computation form. Based on this methodology, we design Red uction Fuser (RedFuser), a framework that automatically identifies supported cascaded reduction patterns and generates optimized fused kernels. Experiments show that RedFuser successfully fuses diverse workloads, achieving up to 2× to 5× speedup over state-of-the-art AI compilers and matching the performance of highly optimized hand-written kernels.",
+        "identifiers": [
+          "SemanticScholar:04e30a7f22b68eb238dcfdd7976be4fb80be893f"
+        ],
+        "semantic_scholar_id": "04e30a7f22b68eb238dcfdd7976be4fb80be893f",
+        "canonical_id": "arXiv:2603.10026",
+        "arxiv_id": "2603.10026",
+        "doi": "10.1145/3779212.3790209",
+        "authors": [
+          "Xin-Sheng Tang",
+          "Yang-Cheng Li",
+          "Nan Wang",
+          "Zhiyi Shu",
+          "Xingyu Ling",
+          "Junna Xing",
+          "Peng Zhou",
+          "Qiang Liu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 270,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.15728",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.15728",
+        "id:SemanticScholar:326354a8e09353dc3c8a59ecd814cc6fde89a1b5",
+        "id:arXiv:2604.15728",
+        "title:privacypreserving llms routing",
+        "url:https://arxiv.org/abs/2604.15728"
+      ],
+      "record": {
+        "title": "Privacy-Preserving LLMs Routing",
+        "source_url": "https://arxiv.org/abs/2604.15728",
+        "year": 2026,
+        "published": "2026-04-17",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) routing has emerged as a critical strategy to balance model performance and cost-efficiency by dynamically selecting services from various model providers. However, LLM routing adds an intermediate layer between users and LLMs, creating new privacy risks to user data. These privacy risks have not been systematically studied. Although cryptographic techniques such as Secure Multi-Party Computation (MPC) enable privacy-preserving computation, their protocol design and implementation remain under-explored, and na\\\"ive implementations typically incur prohibitive computational overhead. To address this, we propose a privacy-preserving LLM routing framework (PPRoute). PPRoute includes multiple strategies to speed up encoder inference and nearest neighbor search under the MPC and maintain the quality of LLM routing. First, PPRoute uses MPC-friendly operations to boost the encoder inference. Second, PPRoute uses a multiple-step model training algorithm to maintain routing quality despite the constraints of the encrypted domain. Third, PPRoute proposes an unsorted Top-k algorithm with $O(1)$ communication complexity for secure sorting in model search, significantly reducing communication latency. Across different datasets, PPRoute achieves the performance of plaintext counterparts, while achieving approximately a 20$\\times$ speedup over na\\\"ive MPC implementations.",
+        "identifiers": [
+          "SemanticScholar:326354a8e09353dc3c8a59ecd814cc6fde89a1b5"
+        ],
+        "semantic_scholar_id": "326354a8e09353dc3c8a59ecd814cc6fde89a1b5",
+        "canonical_id": "arXiv:2604.15728",
+        "arxiv_id": "2604.15728",
+        "doi": "10.48550/arXiv.2604.15728",
+        "authors": [
+          "Xi-Dong Wu",
+          "Yu-Kuan Zhang",
+          "Yuqiong Ji",
+          "Reza Shirkavand",
+          "Qian Lou",
+          "Shang-Qian Gao"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.21652",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.21652",
+        "id:SemanticScholar:0900d6b0bab7b88d8395c1690515240b2946e7e5",
+        "id:arXiv:2602.21652",
+        "title:sparsity induction for accurate posttraining pruning of large language models",
+        "url:https://arxiv.org/abs/2602.21652"
+      ],
+      "record": {
+        "title": "Sparsity Induction for Accurate Post-Training Pruning of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.21652",
+        "year": 2026,
+        "published": "2026-02-25",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have demonstrated capabilities in text generation, while their increasing parameter scales present challenges in computational and memory efficiency. Post-training sparsity (PTS), which reduces model cost by removing weights from dense networks, is an effective approach. However, native dense matrices lack high sparsity, making existing approaches that directly remove weights disrupt model states, resulting in unsatisfactory performance recovery even with post-tuning. We propose Sparsity Induction, which promotes models toward higher sparsity at both distribution and feature levels before pruning, to push the limits of PTS. At the distribution level, we enhance distributional sparsity through mathematically equivalent scaling transformations, which are fully absorbable and incur no extra parameters or inference-time overhead. At the feature level, we introduce Spectral Norm Loss to promote feature sparsity from a low-rank perspective. Experiments across diverse model architectures and tasks demonstrate that our method further enhances sparsity-friendliness, achieving superior pruning performance over existing approaches.",
+        "identifiers": [
+          "SemanticScholar:0900d6b0bab7b88d8395c1690515240b2946e7e5"
+        ],
+        "semantic_scholar_id": "0900d6b0bab7b88d8395c1690515240b2946e7e5",
+        "canonical_id": "arXiv:2602.21652",
+        "arxiv_id": "2602.21652",
+        "doi": "10.48550/arXiv.2602.21652",
+        "authors": [
+          "Minhao Jiang",
+          "Zhikai Li",
+          "Xue-Wen Liu",
+          "Jing Zhang",
+          "Meng-Juan Chen",
+          "Qing-Yi Gu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 269,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.09551",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.09551",
+        "id:SemanticScholar:e09b86c762c14ac06437ae4f8f241a772a3aa041",
+        "id:arXiv:2606.09551",
+        "title:fusefss efficient secure llm inference with function secret sharing",
+        "url:https://arxiv.org/abs/2606.09551"
+      ],
+      "record": {
+        "title": "FuseFSS: Efficient Secure LLM Inference with Function Secret Sharing",
+        "source_url": "https://arxiv.org/abs/2606.09551",
+        "year": 2026,
+        "published": "2026-06-08",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Two-server secure inference allows a client to query a hosted large language model (LLM) without revealing prompts or embeddings. Recent GPU systems based on function secret sharing (FSS) make linear layers efficient, but fixed-point nonlinearities and helper operations remain a bottleneck because each operator is typically implemented as a bespoke protocol with its own comparisons, wrap-around corrections, and preprocessing material. We present FuseFSS, a compiler that replaces per-operator protocol design with a single compilation pipeline. For each scalar fixed-point operator, a compact specification lists its interval partition, low-degree arithmetic pieces, and required predicate bits. The compiler emits two batched FSS evaluations on the public masked value: one packed comparison that returns all predicate bits, and one vector interval lookup that returns the active coefficients and constants. Compared to the current state-of-the-art FSS-based GPU secure inference, FuseFSS preserves accuracy while achieving a $1.24\\times$--$1.50\\times$ end-to-end speedup and reducing online communication by $9\\%$--$16\\%$ on BERT and GPT-style models; preprocessing is also lighter, with $14\\%$--$23\\%$ lower key-generation time and $20\\%$--$24\\%$ smaller keys.",
+        "identifiers": [
+          "SemanticScholar:e09b86c762c14ac06437ae4f8f241a772a3aa041"
+        ],
+        "semantic_scholar_id": "e09b86c762c14ac06437ae4f8f241a772a3aa041",
+        "canonical_id": "arXiv:2606.09551",
+        "arxiv_id": "2606.09551",
+        "doi": "10.48550/arXiv.2606.09551",
+        "authors": [
+          "Yu-Han Ma",
+          "Yong Li",
+          "Stefan Schmid"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 166,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30884",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.30884",
+        "id:SemanticScholar:8709ecc808c2d2d46dc9cf907424f7c0fd9a26ad",
+        "id:arXiv:2609.30884",
+        "title:cachereforge bounded recovery for stale kv caches under evolving adapters",
+        "url:https://arxiv.org/abs/2609.30884"
+      ],
+      "record": {
+        "title": "CacheReforge: Bounded Recovery for Stale KV Caches under Evolving Adapters",
+        "source_url": "https://arxiv.org/abs/2609.30884",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models rely on KV caching to reduce repeated prefill computation in long context and interactive applications. As lightweight adapters evolve, cached states reflect earlier versions, so stale reuse distorts current model outputs, while complete affected suffix recomputation restores fidelity at substantial cost. We seek minimal recomputation that recovers current adapter behavior. Existing systems track token, context, or stable adapter identity, but neither represent caches from earlier adapter versions nor distinguish update propagation from the recomputation required for behavioral recovery. To address these gaps, we introduce CacheReforge, which represents stale KV caches as layerwise mixed-version objects. It combines per-layer adapter anchors, calibrated sensitivity, accumulated drift, and executable restart boundaries to select direct reuse, bounded recomputation, or complete affected-suffix recovery. We distinguish dependency depth from the functional recomputation horizon and use cumulative tail influence to characterize when bounded recovery preserves current-model behavior. We evaluate CacheReforge on Qwen2.5-1.5B and Qwen2.5-7B with continual LoRA updates, including 16K HotpotQA and 2WikiMQA workloads. CacheReforge reduces mean KL divergence by 92.4% relative to stale reuse, while recomputing only 5.44% of layers and reducing cache-maintenance time by 93.2% relative to fresh full prefill. These results show that version-aware recovery preserves model fidelity and most KV caching gains.",
+        "identifiers": [
+          "SemanticScholar:8709ecc808c2d2d46dc9cf907424f7c0fd9a26ad"
+        ],
+        "semantic_scholar_id": "8709ecc808c2d2d46dc9cf907424f7c0fd9a26ad",
+        "canonical_id": "arXiv:2609.30884",
+        "arxiv_id": "2609.30884",
+        "doi": "10.48550/arXiv.2609.30884",
+        "authors": [
+          "Yu-Hang Cao",
+          "Yan-Zhou Mu",
+          "Chun-Rong Fang",
+          "Zhen-Yu Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 57,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.13108",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52734.2025.00876",
+        "id:SemanticScholar:616c9225b7de00d5fe0d9dbfa7c5707f0686b381",
+        "id:arXiv:2503.13108",
+        "title:lifting the veil on visual information flow in mllms unlocking pathways to faster inference",
+        "url:https://arxiv.org/abs/2503.13108"
+      ],
+      "record": {
+        "title": "Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference",
+        "source_url": "https://arxiv.org/abs/2503.13108",
+        "year": 2025,
+        "published": "2025-03-17",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) improve performance on vision-language tasks by integrating visual features from pre-trained vision encoders into large language models (LLMs). However, how MLLMs process and utilize visual information remains unclear. In this paper, a shift in the dominant flow of visual information is uncovered: (1) in shallow layers, strong interactions are observed between image tokens and instruction tokens, where most visual information is injected into instruction tokens to form cross-modal semantic representations; (2) in deeper layers, image tokens primarily interact with each other, aggregating the remaining visual information to optimize semantic representations within visual modality. Based on these insights, we propose Hierarchical Modality-Aware Pruning (HiMAP), a plug-and-play inference acceleration method that dynamically prunes image tokens at specific layers, reducing computational costs by approximately 65% without sacrificing performance. Our findings offer a new understanding of visual information processing in MLLMs and provide a state-of-the-art solution for efficient inference. The code is available at https://github.com/ustc-hyin/HiMAP.",
+        "identifiers": [
+          "SemanticScholar:616c9225b7de00d5fe0d9dbfa7c5707f0686b381"
+        ],
+        "semantic_scholar_id": "616c9225b7de00d5fe0d9dbfa7c5707f0686b381",
+        "canonical_id": "arXiv:2503.13108",
+        "arxiv_id": "2503.13108",
+        "doi": "10.1109/CVPR52734.2025.00876",
+        "authors": [
+          "Hao Yin",
+          "Gunagzong Si",
+          "Zi-Lei Wang"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 614,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2212.07634",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2212.07634",
+        "id:SemanticScholar:41b044f8cf8ade197b182586a8cc1cb53733e31d",
+        "id:arXiv:2212.07634",
+        "title:gradientbased intraattention pruning on pretrained language models",
+        "url:https://arxiv.org/abs/2212.07634"
+      ],
+      "record": {
+        "title": "Gradient-based Intra-attention Pruning on Pre-trained Language Models",
+        "source_url": "https://arxiv.org/abs/2212.07634",
+        "year": 2022,
+        "published": "2022-12-15",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 18,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained language models achieve superior performance but are computationally expensive. Techniques such as pruning and knowledge distillation have been developed to reduce their sizes and latencies. In this work, we propose a structured pruning method GRAIN (gradient-based intra-attention pruning), which performs task-specific pruning with knowledge distillation and yields highly effective models. Different from common approaches that prune each attention head as a whole, GRAIN inspects and prunes intra-attention structures, which greatly expands the structure search space and enables more flexible models. We also propose a gradient separation strategy that reduces the interference of distillation on pruning for a better combination of the two approaches. Experiments on GLUE, SQuAD, and CoNLL 2003 show that GRAIN notably outperforms other methods, especially in the high sparsity regime, and achieves 6 7x speedups while maintaining 93% 99% performance. Under extreme compression where only 3% transformer weights remain, the pruned model is still competitive compared to larger models.",
+        "identifiers": [
+          "SemanticScholar:41b044f8cf8ade197b182586a8cc1cb53733e31d"
+        ],
+        "semantic_scholar_id": "41b044f8cf8ade197b182586a8cc1cb53733e31d",
+        "canonical_id": "arXiv:2212.07634",
+        "arxiv_id": "2212.07634",
+        "doi": "10.48550/arXiv.2212.07634",
+        "authors": [
+          "Ziqing Yang",
+          "Yiming Cui",
+          "Xin Yao",
+          "Shi-Jin Wang"
+        ],
+        "priority": 28,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 18,
+          "citation_count": 18,
+          "total": 28,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1437,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.15992",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.15992",
+        "id:SemanticScholar:8ff7cd1c84b5dd63e87732816f749fb10e37d7e8",
+        "id:arXiv:2609.15992",
+        "title:optimal model activation policies for inference networks of large language models",
+        "url:https://arxiv.org/abs/2609.15992"
+      ],
+      "record": {
+        "title": "Optimal Model Activation Policies for Inference Networks of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.15992",
+        "year": 2026,
+        "published": "2026-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in large language models (LLMs) have rendered them necessary for Natural Language Processing (NLP) tasks, and their high inference cost motivates the study of cost-performance trade-offs. In practice, several expert LLMs are used in synergy for inference, either in an ensemble mode or in series, yet without a principled approach on how to best use the available models. An adaptive approach can route simple queries to cheaper LLMs and complex ones to more capable, costly models. However, a clear understanding on how to best leverage available expert models is missing. We introduce inference networks, a graph-based framework, where nodes denote different LLMs, and links denote conditional model activations. The inference network design problem is to determine the best topology, namely the best way to use the models that best addresses the cost-performance trade-off. We start from the basic topology of a series of LLM experts, each of which has a different cost and a different level of expertise, which is captured via model confidence. We formulate the problem of optimal activation of these models so as to minimize the expected inference cost subject to a target performance constraint. For this special class of inference networks, we prove that the optimal activation policy has a threshold structure: query the lowest-cost LLM first, and invoke the more expensive LLM only if the confidence falls below a defined threshold. For discriminative tasks, the optimal policy consists of a set of thresholds, one threshold for each class, while for generative tasks, it consists of a single threshold. We provide a structured method to compute the thresholds, and practical confidence estimation mechanisms for both task types. Experiments with open-source LLMs show substantial cost reductions while meeting the specified performance budget.",
+        "identifiers": [
+          "SemanticScholar:8ff7cd1c84b5dd63e87732816f749fb10e37d7e8"
+        ],
+        "semantic_scholar_id": "8ff7cd1c84b5dd63e87732816f749fb10e37d7e8",
+        "canonical_id": "arXiv:2609.15992",
+        "arxiv_id": "2609.15992",
+        "doi": "10.48550/arXiv.2609.15992",
+        "authors": [
+          "Foivos Charalampakos",
+          "Md. Ibrahim Ibne Alam",
+          "Iordanis Koutsopoulos",
+          "K. Kar"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06723",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.06723",
+        "id:SemanticScholar:eeb86a283756b681b75abde77f13f4a902c88be7",
+        "id:arXiv:2608.06723",
+        "title:multilevel modeling of large language model inference latency and energy via hybrid analyticalmachinelearning predictors",
+        "url:https://arxiv.org/abs/2608.06723"
+      ],
+      "record": {
+        "title": "Multi-Level Modeling of Large Language Model Inference Latency and Energy via Hybrid Analytical-Machine-Learning Predictors",
+        "source_url": "https://arxiv.org/abs/2608.06723",
+        "year": 2026,
+        "published": "2026-08-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid scaling of Large Language Models (LLMs) has significantly increased computational cost, energy consumption, and inference latency, making accurate estimation essential for sustainable artificial intelligence deployment and hardware-aware design. In this work, we introduce Hybrid Modeling for Energy and Latency of LLMs (HYMELL), a hybrid three-level framework for estimating LLM inference latency and energy by combining analytical modeling with machine learning (ML). HYMELL models LLM execution through a three-level hierarchy: analytical estimation of primitive operations, ML prediction of higher-level components, and an end-to-end model that captures system-level overheads across both prefill and decode phases. The framework supports diverse architectures, including dense and mixture-of-experts (MoE) feed-forward networks (FFNs), as well as multi-head attention (MHA) and grouped-query attention (GQA) mechanisms. Evaluated on an NVIDIA H100 graphics processing unit (GPU), HYMELL achieves high predictive accuracy; notably, for LLaMA 3 8B, it attains less than 5% error for both prefill and decode phases. By predicting execution costs directly from architectural parameters, it enables fast, hardware-free design space exploration and energy-efficient optimization.",
+        "identifiers": [
+          "SemanticScholar:eeb86a283756b681b75abde77f13f4a902c88be7"
+        ],
+        "semantic_scholar_id": "eeb86a283756b681b75abde77f13f4a902c88be7",
+        "canonical_id": "arXiv:2608.06723",
+        "arxiv_id": "2608.06723",
+        "doi": "10.48550/arXiv.2608.06723",
+        "authors": [
+          "Saeid Shokoufa",
+          "Mohammad Erfan Sadeghi",
+          "M. Kamal",
+          "M. Pedram"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 106,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04225",
+      "identity_tokens": [
+        "id:SemanticScholar:70b87a8089ed262b81197d0e2fd30114d0b6afc3",
+        "id:arXiv:2610.04225",
+        "title:flashgaze trainingfree multiscale patch pruning for efficient video understanding",
+        "url:https://arxiv.org/abs/2610.04225"
+      ],
+      "record": {
+        "title": "FlashGaze: Training-Free Multi-Scale Patch Pruning For Efficient Video Understanding",
+        "source_url": "https://arxiv.org/abs/2610.04225",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated strong performance in video understanding, yet efficiently processing long, high-resolution videos remains challenging. Such videos often contain substantial spatiotemporal redundancy, and processing redundant visual tokens can incur avoidable computational overhead. Many existing methods prune visual tokens during or after vision transformer (ViT) encoding, leaving much of the encoding cost unaddressed. Some approaches prune patches before encoding but rely on learned auxiliary networks for patch selection, incurring additional training and inference overhead. To address these limitations, we propose FlashGaze, a training-free method that reduces spatiotemporal redundancy before ViT encoding without introducing auxiliary networks. FlashGaze uses pixel-space differences as a proxy for information loss and employs Quadtree Dynamic Programming to jointly optimize patch dropping, merging, and keeping under a fixed budget. Experiments on two MLLM backbones across multiple benchmarks demonstrate substantial efficiency gains while largely preserving accuracy. On Qwen3-VL-8B, FlashGaze retains 98% of the full-input baseline accuracy on LongVideoBench while achieving up to 5.4x and 17x speedups in ViT encoding and MLLM prefill, respectively, and reducing peak GPU memory usage by a factor of 1.8. These efficiency gains enable the model to process videos with more frames and higher resolutions on the same GPU hardware, unlocking video understanding at scales previously out of reach.",
+        "identifiers": [
+          "SemanticScholar:70b87a8089ed262b81197d0e2fd30114d0b6afc3"
+        ],
+        "semantic_scholar_id": "70b87a8089ed262b81197d0e2fd30114d0b6afc3",
+        "canonical_id": "arXiv:2610.04225",
+        "arxiv_id": "2610.04225",
+        "authors": [
+          "Zi-Ye Zhu",
+          "Yang-Hao Zhou",
+          "Li-Xing Tan",
+          "Jia-Liang Kang",
+          "Shu-Xuan Li",
+          "Xiao Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 49,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18690",
+      "identity_tokens": [
+        "id:SemanticScholar:a36b500539b38ca565aeaf1a5763f7a4105dcdda",
+        "id:arXiv:2610.18690",
+        "title:just respect the semantics imagetoken compression via prellm semantic variableresolution tokenization and inllm relevance pruning",
+        "url:https://arxiv.org/abs/2610.18690"
+      ],
+      "record": {
+        "title": "Just Respect the Semantics: Image-Token Compression via Pre-LLM Semantic Variable-Resolution Tokenization and In-LLM Relevance Pruning",
+        "source_url": "https://arxiv.org/abs/2610.18690",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Image-token compression must reduce computation without hurting the semantics. We introduce Varest, guided by semantic fungibility: tokens within a coherent semantic region can be summarized coarsely, while object boundaries and literal text require finer distinctions. Object and text localizers guide variable-resolution merging, preserving spatial coverage and finer detail at boundaries and text. Learned [REL] registers then prune visual tokens after early decoder processing. Training across budgets enables one checkpoint per backbone. Across three backbones and 13 benchmarks, Varest outperforms 15 baselines in mean performance retention at every evaluated budget, retaining 86.10-92.33% of full-token performance with only 5.56% of the original layer-averaged image-token count.",
+        "identifiers": [
+          "SemanticScholar:a36b500539b38ca565aeaf1a5763f7a4105dcdda"
+        ],
+        "semantic_scholar_id": "a36b500539b38ca565aeaf1a5763f7a4105dcdda",
+        "canonical_id": "arXiv:2610.18690",
+        "arxiv_id": "2610.18690",
+        "authors": [
+          "Tian-Hao Fu",
+          "Austin S. Wang",
+          "Charles Chen",
+          "Roby Aldave-Garza",
+          "Victor Xie",
+          "Xi-Yue Jiao",
+          "Yu-Cheng Chen",
+          "Martin Tin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.14260",
+      "identity_tokens": [
+        "id:DOI:10.1109/icm66518.2025.11322529",
+        "id:SemanticScholar:eb5725525f057c6b4ce6704df79f1a06692ea387",
+        "id:arXiv:2601.14260",
+        "title:endtoend transformer acceleration through processinginmemory architectures",
+        "url:https://arxiv.org/abs/2601.14260"
+      ],
+      "record": {
+        "title": "End-to-End Transformer Acceleration Through Processing-in-Memory Architectures",
+        "source_url": "https://arxiv.org/abs/2601.14260",
+        "year": 2025,
+        "published": "2025-11-21",
+        "venue": "International Congress of Mathematicans",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have become central to natural language processing and large language models, but their deployment at scale faces three major challenges. First, the attention mechanism requires massive matrix multiplications and frequent movement of intermediate results between memory and compute units, leading to high latency and energy costs. Second, in longcontext inference, the key-value cache (KV cache) can grow unpredictably and even surpass the model's weight size, creating severe memory and bandwidth bottlenecks. Third, the quadratic complexity of attention with respect to sequence length amplifies both data movement and compute overhead, making large-scale inference inefficient. To address these issues, this work introduces processing-in-memory solutions that restructure attention and feed-forward computation to minimize off-chip data transfers, dynamically compress and prune the KV cache to manage memory growth, and reinterpret attention as an associative memory operation to reduce complexity and hardware footprint. Moreover, we evaluate our processing-in-memory design against state-of-the-art accelerators and general-purpose GPUs, demonstrating significant improvements in energy efficiency and latency. Together, these approaches address computation overhead, memory scalability, and attention complexity, further enabling efficient, end-to-end acceleration of Transformer models.",
+        "identifiers": [
+          "SemanticScholar:eb5725525f057c6b4ce6704df79f1a06692ea387"
+        ],
+        "semantic_scholar_id": "eb5725525f057c6b4ce6704df79f1a06692ea387",
+        "canonical_id": "arXiv:2601.14260",
+        "arxiv_id": "2601.14260",
+        "doi": "10.1109/ICM66518.2025.11322529",
+        "authors": [
+          "Xiao-Xuan Yang",
+          "Peilin Chen",
+          "Tergel Molom-Ochir",
+          "Yiran Chen"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 365,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8ad218d0be7f51030a55a728fdce9671ca5ce0d88fce61f69cd97806d675289d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

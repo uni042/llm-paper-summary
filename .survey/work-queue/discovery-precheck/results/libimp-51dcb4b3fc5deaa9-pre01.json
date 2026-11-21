@@ -1,0 +1,330 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-51dcb4b3fc5deaa9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-51dcb4b3fc5d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2604.09722",
+    "arXiv:2605.25716",
+    "arXiv:2610.15721"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bad0b71646c5879e228333a7837a58340123c603",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T07:43:26.068006+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2604.09722",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.25716",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15721",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "An Efficient and Privacy-Preserving Architecture for Cross-Institutional Collaborative RAG",
+      "source_url": "https://arxiv.org/abs/2605.25716",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) empowers LLMs with external knowledge, making cross-institutional domain-specific knowledge base integration a highly promising deployment paradigm. Despite this potential, strict privacy regulations create severe\"data silos\"that obstruct such collaboration. Building federated RAG systems requires distributed inference, but the Transformer's self-attention mechanism fundamentally conflicts with this by mandating cross-node access to distributed Key-Value caches. To address this challenge, we present FedRAG, a high-throughput, privacy-preserving federated RAG framework. At its core is a novel Scrambled Distributed Attention protocol that utilizes numerically stable feature scrambling and token permutation. By dynamically delegating scrambled computations to collaborating nodes, our system successfully decouples attention execution from data localization without exposing plaintext. Crucially, our approach requires no specialized hardware or model retraining, circumventing the prohibitive latency and communication overheads of cryptographic solutions while robustly defending against intermediate state inversion attacks. Extensive evaluations demonstrate our framework preserves negligible (<0.1\\%) model utility degradation and achieves up to a 62$\\times$ latency reduction over existing secure baselines, sustaining practical, human-reading throughput for cross-institutional knowledge synergy.",
+      "identifiers": [
+        "SemanticScholar:edf7aab3bd0f34752cc7694719a7879b5c9010ae"
+      ],
+      "semantic_scholar_id": "edf7aab3bd0f34752cc7694719a7879b5c9010ae",
+      "canonical_id": "arXiv:2605.25716",
+      "arxiv_id": "2605.25716",
+      "doi": "10.48550/arXiv.2605.25716",
+      "authors": [
+        "Chenxing Mao",
+        "Shangyu Liu",
+        "Zhen-Zhe Zheng",
+        "Fan Wu",
+        "Jie Wu",
+        "Guihai Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ConfigSpec: Profiling-Based Configuration Selection for Distributed Edge-Cloud Speculative LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.09722",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "TDIS",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding enables collaborative Large Language Model (LLM) inference across cloud and edge by separating lightweight token drafting from heavyweight verification. While prior systems show performance and cost benefits, practical deployment requires navigating a large configuration space spanning draft model variants, quantisation levels, speculative lengths, and heterogeneous edge devices. This paper presents ConfigSpec, a configuration-selection framework for distributed speculative LLM serving. ConfigSpec profiles edge devices and draft-target alignment, and models drafting throughput, acceptance rate, and power to evaluate goodput, verification cost efficiency, and energy efficiency across the joint configuration space. Our analysis across three edge platforms and two LLM families reveals structurally conflicting optima. Firstly, goodput is maximised by the smallest, fastest draft model at device-dependent speculative lengths (K* =2-10). Secondly, both cost and energy efficiency converge to K=2 due to a dominant bonus-token effect—with cost favouring the largest drafter for its high acceptance rate and energy favouring the smallest for its low power draw. These conflicts confirm that no single fixed configuration can simultaneously optimise all objectives, underscoring the need for profiling-based configuration selection in disaggregated edge-cloud LLM inference.",
+      "identifiers": [
+        "SemanticScholar:589afa5d3009d1d5554051c2af3ebce77b4621bf"
+      ],
+      "semantic_scholar_id": "589afa5d3009d1d5554051c2af3ebce77b4621bf",
+      "canonical_id": "arXiv:2604.09722",
+      "arxiv_id": "2604.09722",
+      "doi": "10.1145/3802513.3803483",
+      "authors": [
+        "Xiangchen Li",
+        "Saeid Ghafouri",
+        "Jia-Kun Fan",
+        "Babar Ali",
+        "H. Vandierendonck",
+        "Dimitrios S. Nikolopoulos"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "To Cache or Not to Cache: Understanding and Mitigating Safety Incompatibility in Cross-Model KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2610.15721",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-model KV cache sharing reduces prefill computation by allowing a receiver model to reuse prefix KV states generated by a related sender model. Existing methods optimize such reuse for latency and generation quality, but its safety implications remain unclear. In this work, we systematically evaluate this issue across diverse sender-receiver pairs and reuse configurations. We refer to deviations from the receiver's native safety behavior as safety incompatibility. Our study shows that both the direction and magnitude of safety incompatibility depend on the model pair and reuse configuration, with value reuse causing substantially larger deviations than key reuse across all evaluated pairs. Furthermore, we propose VReparo, a technique that learns per-layer and per-KV-head affine maps offline to align reused sender value tensors with their receiver-native counterparts before decoding. Across two model pairs under full KV reuse and the state-of-the-art selective reuse setting, VReparo reduces the average HarmBench attack success rate (ASR) from 57.28% to 39.21% and the average StrongREJECT score from 0.4215 to 0.2163 upon our benchmarks, while retaining an average Time to First Token (TTFT) reduction of 85.62%.",
+      "identifiers": [
+        "SemanticScholar:7bf5f1a731cfd1e353534472f77fe5449dce4768"
+      ],
+      "semantic_scholar_id": "7bf5f1a731cfd1e353534472f77fe5449dce4768",
+      "canonical_id": "arXiv:2610.15721",
+      "arxiv_id": "2610.15721",
+      "authors": [
+        "Zhi-Wei Lin",
+        "Jia-Hao Liu",
+        "Yan Liu",
+        "Cheng-Peng Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.25716",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.25716",
+        "id:SemanticScholar:edf7aab3bd0f34752cc7694719a7879b5c9010ae",
+        "id:arXiv:2605.25716",
+        "title:an efficient and privacypreserving architecture for crossinstitutional collaborative rag",
+        "url:https://arxiv.org/abs/2605.25716"
+      ],
+      "record": {
+        "title": "An Efficient and Privacy-Preserving Architecture for Cross-Institutional Collaborative RAG",
+        "source_url": "https://arxiv.org/abs/2605.25716",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-Augmented Generation (RAG) empowers LLMs with external knowledge, making cross-institutional domain-specific knowledge base integration a highly promising deployment paradigm. Despite this potential, strict privacy regulations create severe\"data silos\"that obstruct such collaboration. Building federated RAG systems requires distributed inference, but the Transformer's self-attention mechanism fundamentally conflicts with this by mandating cross-node access to distributed Key-Value caches. To address this challenge, we present FedRAG, a high-throughput, privacy-preserving federated RAG framework. At its core is a novel Scrambled Distributed Attention protocol that utilizes numerically stable feature scrambling and token permutation. By dynamically delegating scrambled computations to collaborating nodes, our system successfully decouples attention execution from data localization without exposing plaintext. Crucially, our approach requires no specialized hardware or model retraining, circumventing the prohibitive latency and communication overheads of cryptographic solutions while robustly defending against intermediate state inversion attacks. Extensive evaluations demonstrate our framework preserves negligible (<0.1\\%) model utility degradation and achieves up to a 62$\\times$ latency reduction over existing secure baselines, sustaining practical, human-reading throughput for cross-institutional knowledge synergy.",
+        "identifiers": [
+          "SemanticScholar:edf7aab3bd0f34752cc7694719a7879b5c9010ae"
+        ],
+        "semantic_scholar_id": "edf7aab3bd0f34752cc7694719a7879b5c9010ae",
+        "canonical_id": "arXiv:2605.25716",
+        "arxiv_id": "2605.25716",
+        "doi": "10.48550/arXiv.2605.25716",
+        "authors": [
+          "Chenxing Mao",
+          "Shangyu Liu",
+          "Zhen-Zhe Zheng",
+          "Fan Wu",
+          "Jie Wu",
+          "Guihai Chen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.09722",
+      "identity_tokens": [
+        "id:DOI:10.1145/3802513.3803483",
+        "id:SemanticScholar:589afa5d3009d1d5554051c2af3ebce77b4621bf",
+        "id:arXiv:2604.09722",
+        "title:configspec profilingbased configuration selection for distributed edgecloud speculative llm serving",
+        "url:https://arxiv.org/abs/2604.09722"
+      ],
+      "record": {
+        "title": "ConfigSpec: Profiling-Based Configuration Selection for Distributed Edge-Cloud Speculative LLM Serving",
+        "source_url": "https://arxiv.org/abs/2604.09722",
+        "year": 2026,
+        "published": "2026-04-08",
+        "venue": "TDIS",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding enables collaborative Large Language Model (LLM) inference across cloud and edge by separating lightweight token drafting from heavyweight verification. While prior systems show performance and cost benefits, practical deployment requires navigating a large configuration space spanning draft model variants, quantisation levels, speculative lengths, and heterogeneous edge devices. This paper presents ConfigSpec, a configuration-selection framework for distributed speculative LLM serving. ConfigSpec profiles edge devices and draft-target alignment, and models drafting throughput, acceptance rate, and power to evaluate goodput, verification cost efficiency, and energy efficiency across the joint configuration space. Our analysis across three edge platforms and two LLM families reveals structurally conflicting optima. Firstly, goodput is maximised by the smallest, fastest draft model at device-dependent speculative lengths (K* =2-10). Secondly, both cost and energy efficiency converge to K=2 due to a dominant bonus-token effect—with cost favouring the largest drafter for its high acceptance rate and energy favouring the smallest for its low power draw. These conflicts confirm that no single fixed configuration can simultaneously optimise all objectives, underscoring the need for profiling-based configuration selection in disaggregated edge-cloud LLM inference.",
+        "identifiers": [
+          "SemanticScholar:589afa5d3009d1d5554051c2af3ebce77b4621bf"
+        ],
+        "semantic_scholar_id": "589afa5d3009d1d5554051c2af3ebce77b4621bf",
+        "canonical_id": "arXiv:2604.09722",
+        "arxiv_id": "2604.09722",
+        "doi": "10.1145/3802513.3803483",
+        "authors": [
+          "Xiangchen Li",
+          "Saeid Ghafouri",
+          "Jia-Kun Fan",
+          "Babar Ali",
+          "H. Vandierendonck",
+          "Dimitrios S. Nikolopoulos"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15721",
+      "identity_tokens": [
+        "id:SemanticScholar:7bf5f1a731cfd1e353534472f77fe5449dce4768",
+        "id:arXiv:2610.15721",
+        "title:to cache or not to cache understanding and mitigating safety incompatibility in crossmodel kv cache reuse",
+        "url:https://arxiv.org/abs/2610.15721"
+      ],
+      "record": {
+        "title": "To Cache or Not to Cache: Understanding and Mitigating Safety Incompatibility in Cross-Model KV Cache Reuse",
+        "source_url": "https://arxiv.org/abs/2610.15721",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cross-model KV cache sharing reduces prefill computation by allowing a receiver model to reuse prefix KV states generated by a related sender model. Existing methods optimize such reuse for latency and generation quality, but its safety implications remain unclear. In this work, we systematically evaluate this issue across diverse sender-receiver pairs and reuse configurations. We refer to deviations from the receiver's native safety behavior as safety incompatibility. Our study shows that both the direction and magnitude of safety incompatibility depend on the model pair and reuse configuration, with value reuse causing substantially larger deviations than key reuse across all evaluated pairs. Furthermore, we propose VReparo, a technique that learns per-layer and per-KV-head affine maps offline to align reused sender value tensors with their receiver-native counterparts before decoding. Across two model pairs under full KV reuse and the state-of-the-art selective reuse setting, VReparo reduces the average HarmBench attack success rate (ASR) from 57.28% to 39.21% and the average StrongREJECT score from 0.4215 to 0.2163 upon our benchmarks, while retaining an average Time to First Token (TTFT) reduction of 85.62%.",
+        "identifiers": [
+          "SemanticScholar:7bf5f1a731cfd1e353534472f77fe5449dce4768"
+        ],
+        "semantic_scholar_id": "7bf5f1a731cfd1e353534472f77fe5449dce4768",
+        "canonical_id": "arXiv:2610.15721",
+        "arxiv_id": "2610.15721",
+        "authors": [
+          "Zhi-Wei Lin",
+          "Jia-Hao Liu",
+          "Yan Liu",
+          "Cheng-Peng Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:59413c48fd86719023ddc4c539a7948629732d09e19446cc49ad8882316f7d08",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

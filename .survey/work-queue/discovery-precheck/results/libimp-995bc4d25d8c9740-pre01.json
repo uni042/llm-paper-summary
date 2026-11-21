@@ -1,0 +1,329 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-995bc4d25d8c9740-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-995bc4d25d8c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2602.00165",
+    "arXiv:2607.09385",
+    "arXiv:2609.39859"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "bad0b71646c5879e228333a7837a58340123c603",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T07:43:28.023958+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2602.00165",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.09385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39859",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Benford's Law as a Distributional Prior for Post-Training Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.00165",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a practical way to reduce the memory footprint of large language models, but low-bit quantization is sensitive to mismatches between the quantization codebook and the empirical weight/activation distributions. We revisit Benford-like leading-digit statistics as a lightweight diagnostic of scale-broad behavior in transformer tensors. Across several model families, we observe a consistent functional dichotomy: transformational nn.Linear weights tend to be Benford-like, whereas LayerNorm parameters systematically deviate. Motivated by this observation, we propose BenQ, a data-free PTQ codebook that uses a simple log-spaced grid as a proxy for scale-broad distributions and applies it selectively to transformational layers while keeping stability-critical parameters in higher precision. In 4-bit group-wise PTQ, BenQ consistently improves over uniform RTN and trades wins with NF4 across architectures and tasks, while remaining substantially simpler than optimization-based methods. We additionally report dynamic activation quantization as an exploratory stress test: the results show that log-spaced grids can reduce RTN failures in some families, but also reveal that outlier handling remains essential for reliable low-bit activation PTQ. Code is available at https://github.com/ufopcsilab/benford-quant.",
+      "identifiers": [
+        "SemanticScholar:355d889d8555e6af43abae49b120f19ee8da521f"
+      ],
+      "semantic_scholar_id": "355d889d8555e6af43abae49b120f19ee8da521f",
+      "canonical_id": "arXiv:2602.00165",
+      "arxiv_id": "2602.00165",
+      "doi": "10.48550/arXiv.2602.00165",
+      "authors": [
+        "Arthur Negrão",
+        "Pedro H. L. Silva",
+        "V. L. S. Freitas",
+        "G. Moreira",
+        "Eduardo Luz"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 296,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STEEL: Sparsity-Aware Fused Attention for Energy-Efficient Long-Sequence Inference on AMD's XDNA NPU",
+      "source_url": "https://arxiv.org/abs/2607.09385",
+      "year": 2026,
+      "published": "2026-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing adoption of large language model-based agents within operating system workflows has increased the importance of energy-efficient inference on laptop-class systems-on-chip (SoCs). While cloud offloading remains common, it introduces reliability and privacy concerns that are particularly problematic for agentic workloads. Recent laptop SoCs, therefore, incorporate neural processing engines (NPUs) optimized for energy efficiency; however, effectively mapping attention mechanisms onto NPUs remains challenging due to architectural diversity and explicit data-movement programming models. In this work, we present STEEL, the first open-source implementation of FlashAttention targeting XDNA-like NPUs. STEEL introduces a dataflow formulation of prefill attention, enabling efficient exploitation of spatial parallelism and on-chip memory. Furthermore, STEEL addresses the load imbalance induced by the causal mask by leveraging a sparsity-aware pipeline placement onto the NPU array, reducing synchronization overhead and improving utilization. We evaluate STEEL on the AMD Ryzen AI 9 HX 370 SoC and compare its performance against optimized CPU and GPU implementations. Experimental results show that STEEL reduces energy consumption by an average of 9.17x and 1.75x relative to CPU and GPU baselines, respectively. On XDNA 1, STEEL achieves an average 9.6x latency reduction over the prior state of the art, and delivers a 22.8x speedup on average compared to a layer-by-layer attention implementation on XDNA 2.",
+      "identifiers": [
+        "SemanticScholar:a04ff1202ccbc0110a67096ec72f5ee714d37c69"
+      ],
+      "semantic_scholar_id": "a04ff1202ccbc0110a67096ec72f5ee714d37c69",
+      "canonical_id": "arXiv:2607.09385",
+      "arxiv_id": "2607.09385",
+      "doi": "10.48550/arXiv.2607.09385",
+      "authors": [
+        "V. J. Jung",
+        "Gagandeep Singh",
+        "Joseph Melber",
+        "K. Denolf",
+        "F. Conti",
+        "L. Benini"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fork-dLLM: Avoiding the Flexibility Trap in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.39859",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models (dLLMs) have shown strong potential for faster inference through parallel token generation when combined with confidence-based samplers. However, recent work has shown that such methods can defer unmasking high-entropy fork positions at which multiple plausible continuations exist. This results in reduced generation diversity, as shown by worse pass@k scaling, and limits gains obtainable from RL post-training. To avoid this flexibility trap, prior work advocated for autoregressive (AR) sampling. Here, we show that discarding confidence-based sampling is unnecessary and, once inference cost is taken into account, wasteful. We first propose Fork-dLLM, a simple hybrid sampler that uses AR-style ordering only at uncertain fallback steps while retaining parallel generation otherwise. We then extend the same principle to post-training with ForkGRPO, which uses Fork-dLLM rollouts and applies the GRPO objective only at fallback steps, preserving exact policy-likelihood ratios while substantially reducing rollout and optimization cost. In our experiments, Fork-dLLM matches the strong pass@k scaling of AR sampling while being 2-3x more efficient, and ForkGRPO achieves downstream performance comparable to or better than AR-based GRPO baselines at a substantially lower training cost.",
+      "identifiers": [
+        "SemanticScholar:6d5b114a92a06b19822904b87654e4d22377a7b3"
+      ],
+      "semantic_scholar_id": "6d5b114a92a06b19822904b87654e4d22377a7b3",
+      "canonical_id": "arXiv:2609.39859",
+      "arxiv_id": "2609.39859",
+      "doi": "10.48550/arXiv.2609.39859",
+      "authors": [
+        "Stipe Frkovic",
+        "Metod Jazbec",
+        "C. A. Naesseth"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.00165",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.00165",
+        "id:SemanticScholar:355d889d8555e6af43abae49b120f19ee8da521f",
+        "id:arXiv:2602.00165",
+        "title:benfords law as a distributional prior for posttraining quantization of large language models",
+        "url:https://arxiv.org/abs/2602.00165"
+      ],
+      "record": {
+        "title": "Benford's Law as a Distributional Prior for Post-Training Quantization of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.00165",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a practical way to reduce the memory footprint of large language models, but low-bit quantization is sensitive to mismatches between the quantization codebook and the empirical weight/activation distributions. We revisit Benford-like leading-digit statistics as a lightweight diagnostic of scale-broad behavior in transformer tensors. Across several model families, we observe a consistent functional dichotomy: transformational nn.Linear weights tend to be Benford-like, whereas LayerNorm parameters systematically deviate. Motivated by this observation, we propose BenQ, a data-free PTQ codebook that uses a simple log-spaced grid as a proxy for scale-broad distributions and applies it selectively to transformational layers while keeping stability-critical parameters in higher precision. In 4-bit group-wise PTQ, BenQ consistently improves over uniform RTN and trades wins with NF4 across architectures and tasks, while remaining substantially simpler than optimization-based methods. We additionally report dynamic activation quantization as an exploratory stress test: the results show that log-spaced grids can reduce RTN failures in some families, but also reveal that outlier handling remains essential for reliable low-bit activation PTQ. Code is available at https://github.com/ufopcsilab/benford-quant.",
+        "identifiers": [
+          "SemanticScholar:355d889d8555e6af43abae49b120f19ee8da521f"
+        ],
+        "semantic_scholar_id": "355d889d8555e6af43abae49b120f19ee8da521f",
+        "canonical_id": "arXiv:2602.00165",
+        "arxiv_id": "2602.00165",
+        "doi": "10.48550/arXiv.2602.00165",
+        "authors": [
+          "Arthur Negrão",
+          "Pedro H. L. Silva",
+          "V. L. S. Freitas",
+          "G. Moreira",
+          "Eduardo Luz"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 296,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.09385",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.09385",
+        "id:SemanticScholar:a04ff1202ccbc0110a67096ec72f5ee714d37c69",
+        "id:arXiv:2607.09385",
+        "title:steel sparsityaware fused attention for energyefficient longsequence inference on amds xdna npu",
+        "url:https://arxiv.org/abs/2607.09385"
+      ],
+      "record": {
+        "title": "STEEL: Sparsity-Aware Fused Attention for Energy-Efficient Long-Sequence Inference on AMD's XDNA NPU",
+        "source_url": "https://arxiv.org/abs/2607.09385",
+        "year": 2026,
+        "published": "2026-07-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing adoption of large language model-based agents within operating system workflows has increased the importance of energy-efficient inference on laptop-class systems-on-chip (SoCs). While cloud offloading remains common, it introduces reliability and privacy concerns that are particularly problematic for agentic workloads. Recent laptop SoCs, therefore, incorporate neural processing engines (NPUs) optimized for energy efficiency; however, effectively mapping attention mechanisms onto NPUs remains challenging due to architectural diversity and explicit data-movement programming models. In this work, we present STEEL, the first open-source implementation of FlashAttention targeting XDNA-like NPUs. STEEL introduces a dataflow formulation of prefill attention, enabling efficient exploitation of spatial parallelism and on-chip memory. Furthermore, STEEL addresses the load imbalance induced by the causal mask by leveraging a sparsity-aware pipeline placement onto the NPU array, reducing synchronization overhead and improving utilization. We evaluate STEEL on the AMD Ryzen AI 9 HX 370 SoC and compare its performance against optimized CPU and GPU implementations. Experimental results show that STEEL reduces energy consumption by an average of 9.17x and 1.75x relative to CPU and GPU baselines, respectively. On XDNA 1, STEEL achieves an average 9.6x latency reduction over the prior state of the art, and delivers a 22.8x speedup on average compared to a layer-by-layer attention implementation on XDNA 2.",
+        "identifiers": [
+          "SemanticScholar:a04ff1202ccbc0110a67096ec72f5ee714d37c69"
+        ],
+        "semantic_scholar_id": "a04ff1202ccbc0110a67096ec72f5ee714d37c69",
+        "canonical_id": "arXiv:2607.09385",
+        "arxiv_id": "2607.09385",
+        "doi": "10.48550/arXiv.2607.09385",
+        "authors": [
+          "V. J. Jung",
+          "Gagandeep Singh",
+          "Joseph Melber",
+          "K. Denolf",
+          "F. Conti",
+          "L. Benini"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39859",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.39859",
+        "id:SemanticScholar:6d5b114a92a06b19822904b87654e4d22377a7b3",
+        "id:arXiv:2609.39859",
+        "title:forkdllm avoiding the flexibility trap in diffusion language models",
+        "url:https://arxiv.org/abs/2609.39859"
+      ],
+      "record": {
+        "title": "Fork-dLLM: Avoiding the Flexibility Trap in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2609.39859",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion language models (dLLMs) have shown strong potential for faster inference through parallel token generation when combined with confidence-based samplers. However, recent work has shown that such methods can defer unmasking high-entropy fork positions at which multiple plausible continuations exist. This results in reduced generation diversity, as shown by worse pass@k scaling, and limits gains obtainable from RL post-training. To avoid this flexibility trap, prior work advocated for autoregressive (AR) sampling. Here, we show that discarding confidence-based sampling is unnecessary and, once inference cost is taken into account, wasteful. We first propose Fork-dLLM, a simple hybrid sampler that uses AR-style ordering only at uncertain fallback steps while retaining parallel generation otherwise. We then extend the same principle to post-training with ForkGRPO, which uses Fork-dLLM rollouts and applies the GRPO objective only at fallback steps, preserving exact policy-likelihood ratios while substantially reducing rollout and optimization cost. In our experiments, Fork-dLLM matches the strong pass@k scaling of AR sampling while being 2-3x more efficient, and ForkGRPO achieves downstream performance comparable to or better than AR-based GRPO baselines at a substantially lower training cost.",
+        "identifiers": [
+          "SemanticScholar:6d5b114a92a06b19822904b87654e4d22377a7b3"
+        ],
+        "semantic_scholar_id": "6d5b114a92a06b19822904b87654e4d22377a7b3",
+        "canonical_id": "arXiv:2609.39859",
+        "arxiv_id": "2609.39859",
+        "doi": "10.48550/arXiv.2609.39859",
+        "authors": [
+          "Stipe Frkovic",
+          "Metod Jazbec",
+          "C. A. Naesseth"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 52,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7138783c7ab8b7e699bdcd55cbf94d5d35dbbdb1256ea466ac33ff17a5849bac",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
