@@ -38,13 +38,13 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
+- **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：8  
+  拡散言語モデル（diffusion language モデル）は、左から右へ一語ずつ出力する自己回帰型モデルと異なり、未確定位置をマスクした系列全体を繰り返し予測し、複数位置を同じ前向き計算で確定できる。
+
 - **2026-03 · [DAPD: Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs](2026-2603.12996-dapd-dependency-aware-parallel-decoding-via-attention-for-diffusion-llms.md)**  
   実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：7  
   またLLaDAの主表では比較方式とDAPDのブロック構成が異なるため、速度差の全てを位置選択アルゴリズム単独の効果とみなせない。
-
-- **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：7  
-  拡散言語モデル（diffusion language モデル）は、左から右へ一語ずつ出力する自己回帰型モデルと異なり、未確定位置をマスクした系列全体を繰り返し予測し、複数位置を同じ前向き計算で確定できる。
 
 - **2026-04 · [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](2026-2604.02560-dependency-guided-parallel-decoding-in-discrete-diffusion-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

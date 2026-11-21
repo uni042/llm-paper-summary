@@ -648,6 +648,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   TIDE（Temporal Incremental 下書き Engine、時間的増分草稿エンジン）は、投機的復号（投機的復号）を「静的な草稿モデルを使う復号手法」から「実際の入力分布に合わせて草稿モデルを更新し、必要な場合だけ投機するサービングシステム」へ拡張する研究である。
 
+- **2026-02 · [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-dif.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  マスク拡散の除去段階は中間が最も容量に敏感で両端は置き換えに強いことを全探索と分布距離で示し、段階の25%を軽い4層モデルへ置く挟み込み型配置で計算量を16.7%減らし、生成困惑度の悪化を42.85から44.31（3.41%）に抑えた。
+
 - **2026-02 · [InfMem: Learning System-2 Memory Control for Long-Context Agent](2026-2602.02704-infmem-learning-system-2-memory-control-for-long-context-agent.md)**  
   実装：[✓](https://github.com/UCMP13753/InfMem) ・ リポジトリ内被引用：1  
   100万トークン級の文書から複数箇所の証拠を集めて質問に答える場合、全文を一度に言語モデルへ入力する方式は文脈長と注意計算に制約される。推論時間は平均3.9倍、最大5.1倍短縮した。
@@ -1325,10 +1329,6 @@
 - **2026-02 · [QuRL: Efficient Reinforcement Learning with Quantized Rollout](2026-2602.13953-qurl-efficient-reinforcement-learning-with-quantized-rollout.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い思考系列では前者が学習時間の最大約70%を占める。生成用モデルだけを8ビットに量子化すれば行列積を高速化できるが、生成したトークンの確率分布が学習更新に使う高精度モデルと一致しなくなり、単純な置換は学習を不安定にする。INT8とFP8で検証し、量子化推論の要求処理量はモデル・GPUに応じて改善する。
-
-- **2026-02 · [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-dif.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  マスク拡散の除去段階は中間が最も容量に敏感で両端は置き換えに強いことを全探索と分布距離で示し、段階の25%を軽い4層モデルへ置く挟み込み型配置で計算量を16.7%減らし、生成困惑度の悪化を42.85から44.31（3.41%）に抑えた。
 
 - **2026-02 · [Multi-Layer Scheduling for MoE-Based LLM Reasoning](2026-2602.21626-multi-layer-scheduling-moe-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2019,7 +2019,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：809  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：810  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2027,7 +2027,7 @@
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：558  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：560  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2309,11 +2309,11 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1831  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1834  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：589  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：590  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
