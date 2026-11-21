@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f5530ee7978e40200a55922f70fdea945a2aaece",
+  "base_commit": "d20e580b329f038e60acc35639caf0e6e3174376",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -172,6 +172,7 @@
     "2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-information.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
     "2025-2512.06727-kv-car-kv-cache-compression-using-autoencoders-and-kv-reuse-in-large-language-models.json",
+    "2025-2512.06989-flash-multi-head-feed-forward-network.json",
     "2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-energy-debugging.json",
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
     "2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-memory-growth-for-efficient-llm-inference.json",
@@ -192,6 +193,7 @@
     "2026-2601.03067-joint-encoding-of-kv-cache-blocks-for-scalable-llm-serving.json",
     "2026-2601.03928-focusui-efficient-ui-grounding-via-position-preserving-visual-token-selection.json",
     "2026-2601.07212-mi-prun-optimize-large-language-model-pruning-via-mutual-information.json",
+    "2026-2601.08670-parallel-context-of-experts-decoding-for-retrieval-augmented-generation.json",
     "2026-2601.11200-faq-mitigating-quantization-error-via-regenerating-calibration-data-with-family-aware-quantization.json",
     "2026-2601.11553-percache-predictive-hierarchical-cache-for-rag-applications-on-mobile-devices.json",
     "2026-2601.12247-plan-verify-and-fill-a-structured-parallel-decoding-approach-for-diffusion-language-models.json",
@@ -210,6 +212,7 @@
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
     "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json",
     "2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.json",
+    "2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-for-multimodal.json",
     "2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-block-aware-precision-rescaling.json",
     "2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.json",
     "2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-quantization.json",
@@ -230,6 +233,7 @@
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
     "2026-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficient-multimodal-large-language-models.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
+    "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json",
     "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json",
     "2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.json",
     "2026-2602.19938-a-replicate-and-quantize-strategy-for-plug-and-play-load-balancing-of-sparse-mixture-of-experts-llms.json",
@@ -275,6 +279,7 @@
     "2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-and-capacity-constraints.json",
     "2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answering.json",
     "2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-coding.json",
+    "2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-llm-compression.json",
     "2026-2604.01881-hieravid-hierarchical-token-pruning-for-fast-video-large-language-models.json",
     "2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-diffusion-language-models.json",
     "2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of-low-precision-vision-language-models.json",
@@ -46164,6 +46169,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.06989": {
+      "order": [
+        "2026-11-21T04:22:07+00:00",
+        "2025-2512.06989-flash-multi-head-feed-forward-network.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.08670": {
+      "order": [
+        "2026-11-21T04:23:33+00:00",
+        "2026-2601.08670-parallel-context-of-experts-decoding-for-retrieval-augmented-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.01901": {
+      "order": [
+        "2026-11-21T04:24:58+00:00",
+        "2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-for-multimodal.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.15563": {
+      "order": [
+        "2026-11-21T04:26:24+00:00",
+        "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.01609": {
+      "order": [
+        "2026-11-21T04:27:49+00:00",
+        "2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57865,6 +57915,21 @@
     ],
     "arxiv:2506.10205": [
       "papers/inference/99-other-inference-systems/2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-grad.md"
+    ],
+    "arxiv:2512.06989": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.06989-flash-multi-head-feed-forward-network.md"
+    ],
+    "arxiv:2601.08670": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2601.08670-parallel-context-of-experts-decoding-for-retrieval-augmented-generation.md"
+    ],
+    "arxiv:2602.01901": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-.md"
+    ],
+    "arxiv:2602.15563": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-m.md"
+    ],
+    "arxiv:2604.01609": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md"
     ]
   }
 }

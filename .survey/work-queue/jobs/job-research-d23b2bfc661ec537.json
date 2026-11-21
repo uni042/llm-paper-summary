@@ -35,10 +35,15 @@
   "selection_reason": "活性共分散を集約して閉形式で最適な低ランク近似を行うSwift-SVDが重みとKVキャッシュ双方のメモリ・帯域需要を削減し、6種のLLMで圧縮時間を3〜70倍高速化しながら精度を保つ、LLM圧縮による推論効率化への直接貢献である。",
   "semantic_scholar_id": "dd047c20fbeaa12d1339000bc5b4e81652c05b65",
   "source_url": "https://arxiv.org/abs/2604.01609",
-  "status": "ready",
+  "status": "superseded",
   "title": "Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T04:30:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md",
+  "represented_canonical_id": "arXiv:2604.01609",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

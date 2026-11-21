@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（284本）
+## 自動生成の論文一覧（285本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -685,6 +685,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-12 · [GatedFWA: Linear Flash Windowed Attention with Gated Associative Memory](2025-2512.07782-gatedfwa-linear-flash-windowed-attention-with-gated-associative-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GatedFWAは、自己回帰型言語モデルのスライディング窓注意（sliding-window 注意機構; SWA）に、トークン位置と注意ヘッドに依存する記憶ゲートを組み込む方式である。
+
+- **2025-12 · [Flash Multi-Head Feed-Forward Network](2025-2512.06989-flash-multi-head-feed-forward-network.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FFNの複数ヘッド化を、比率を保つ並列サブネットワークとSRAM上でオンライン計算する融合カーネルで実用化し、SwiGLUよりメモリを3から5倍削減し推論を最大1.08倍速くしながら品質も改善した研究。
 
 - **2025-12 · [Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics](2025-2512.12602-exact-flow-linear-attention-exact-solution-from-continuous-time-dynamics.md)**  
   実装：[✓](https://github.com/declare-lab/EFLA) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "FFNを多ヘッド化する際のメモリ増に対し、FlashAttention式のI/O配慮融合カーネルでオンライン計算するFlashMHFを提案し、ピークメモリを3〜5倍削減し推論も高速化すると示すため、Transformer推論のカーネル効率化として採用する。",
   "semantic_scholar_id": "884d95c7ec6e81039279d56841dbcebe6f6a6c7f",
   "source_url": "https://arxiv.org/abs/2512.06989",
-  "status": "ready",
+  "status": "superseded",
   "title": "Flash Multi-Head Feed-Forward Network",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T04:30:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.06989-flash-multi-head-feed-forward-network.md",
+  "represented_canonical_id": "arXiv:2512.06989",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
