@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-512924a7d1fa30a9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-512924a7d1fa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.24773"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8bedb7a1240193447eb9162a173148a32c83140d",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T17:59:28.299031+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.24773",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Posterior Refinement: Fast Language Generation via Any-Order Flow Maps",
+      "source_url": "https://arxiv.org/abs/2606.24773",
+      "year": 2026,
+      "published": "2026-06-23",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Non-autoregressive generation offers a powerful paradigm for iterative refinement, allowing models to recursively critique, erase and regenerate arbitrary subsets of tokens. However, existing non-autoregressive models fail to realize this potential. Masked Diffusion Models (MDMs) suffer from factorization error, causing sample quality to collapse when generating multiple tokens simultaneously. Flow Map Language Models (FMLMs) circumvent this bottleneck via joint sequence transport for excellent few-step generation, but sacrifice the inference-time flexibility of MDMs. We introduce FMLM+, a framework that bridges this gap by equipping FMLM with masking-style noise schedules. While generating the full sequence in a single step, FMLM+ simultaneously scores the global consistency of each token a posteriori. We leverage this to introduce Posterior Refinement, a novel inference-time refinement strategy that enables the model to adaptively self-correct its outputs, matching the performance of discrete baselines with 32x fewer NFEs. Across diverse benchmarks, we demonstrate that FMLM+ with Posterior Refinement improves the speed--quality tradeoff over both MDM and FMLM families, providing a scalable foundation for high-fidelity language modeling.",
+      "identifiers": [
+        "SemanticScholar:3c8bf145f3db337646164e95fcf45261fd59a64c"
+      ],
+      "semantic_scholar_id": "3c8bf145f3db337646164e95fcf45261fd59a64c",
+      "canonical_id": "arXiv:2606.24773",
+      "arxiv_id": "2606.24773",
+      "doi": "10.48550/arXiv.2606.24773",
+      "authors": [
+        "Manan Agarwal",
+        "Sheel Shah",
+        "Chanhyuk Lee",
+        "Jaehoon Yoo",
+        "Jerry Huang",
+        "Seunghoon Hong",
+        "Aditi Raghunathan",
+        "Jinwoo Kim",
+        "N. M. Boffi"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.24773",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.24773",
+        "id:SemanticScholar:3c8bf145f3db337646164e95fcf45261fd59a64c",
+        "id:arXiv:2606.24773",
+        "title:posterior refinement fast language generation via anyorder flow maps",
+        "url:https://arxiv.org/abs/2606.24773"
+      ],
+      "record": {
+        "title": "Posterior Refinement: Fast Language Generation via Any-Order Flow Maps",
+        "source_url": "https://arxiv.org/abs/2606.24773",
+        "year": 2026,
+        "published": "2026-06-23",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Non-autoregressive generation offers a powerful paradigm for iterative refinement, allowing models to recursively critique, erase and regenerate arbitrary subsets of tokens. However, existing non-autoregressive models fail to realize this potential. Masked Diffusion Models (MDMs) suffer from factorization error, causing sample quality to collapse when generating multiple tokens simultaneously. Flow Map Language Models (FMLMs) circumvent this bottleneck via joint sequence transport for excellent few-step generation, but sacrifice the inference-time flexibility of MDMs. We introduce FMLM+, a framework that bridges this gap by equipping FMLM with masking-style noise schedules. While generating the full sequence in a single step, FMLM+ simultaneously scores the global consistency of each token a posteriori. We leverage this to introduce Posterior Refinement, a novel inference-time refinement strategy that enables the model to adaptively self-correct its outputs, matching the performance of discrete baselines with 32x fewer NFEs. Across diverse benchmarks, we demonstrate that FMLM+ with Posterior Refinement improves the speed--quality tradeoff over both MDM and FMLM families, providing a scalable foundation for high-fidelity language modeling.",
+        "identifiers": [
+          "SemanticScholar:3c8bf145f3db337646164e95fcf45261fd59a64c"
+        ],
+        "semantic_scholar_id": "3c8bf145f3db337646164e95fcf45261fd59a64c",
+        "canonical_id": "arXiv:2606.24773",
+        "arxiv_id": "2606.24773",
+        "doi": "10.48550/arXiv.2606.24773",
+        "authors": [
+          "Manan Agarwal",
+          "Sheel Shah",
+          "Chanhyuk Lee",
+          "Jaehoon Yoo",
+          "Jerry Huang",
+          "Seunghoon Hong",
+          "Aditi Raghunathan",
+          "Jinwoo Kim",
+          "N. M. Boffi"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e3968957dfd267e4a1be95d4dcb8a51a6dfb5406a92b5dbaf78e76afbd19a1ba",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,600 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ebfd119bf6b38c96-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ebfd119bf6b3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.04139",
+    "arXiv:2512.24713",
+    "arXiv:2603.25926",
+    "arXiv:2607.18839",
+    "arXiv:2608.20210",
+    "arXiv:2611.01450"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8bedb7a1240193447eb9162a173148a32c83140d",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T17:59:28.737736+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.04139",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.24713",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25926",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.18839",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.20210",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.01450",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CipherFlow: Compiling AI Programs for Efficient Cryptographically Secure Inference",
+      "source_url": "https://arxiv.org/abs/2611.01450",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cryptographically secure inference faces two practical challenges: making secure programming accessible to AI developers and data scientists, and achieving efficient execution across deployment environments. Developers must compose cryptographic primitives correctly, while performance depends on hardware, networks, and evolving ciphertext states. We present CipherFlow, a compiler framework that takes a high-level AI computation graph, available cryptographic primitives, and a target hardware and network configuration to generate an executable, latency-optimized secure inference program. CipherFlow automates cryptographic execution decisions through three techniques: MicroBench profiles deployment-specific primitive costs; state-expanded planning jointly optimizes homomorphic encryption (HE) and secure multi-party computation (MPC) placement, conversions, and ciphertext maintenance under cryptographic-state constraints; and BlockFold summarizes branched regions to scale planning to Transformer graphs. Evaluation using measured HE/MPC backend costs across CPU/GPU and network settings shows up to 16.5$\\times$ speedup on BERT-base and over 22$\\times$ on ViT compared with static hybrid placement baselines. CipherFlow separates model programming from cryptographic execution decisions, enabling developers to express AI computations while the compiler constructs efficient secure programs.",
+      "identifiers": [
+        "SemanticScholar:1a201ea89e2f9a51e68365c9e5c9a2fe29848907"
+      ],
+      "semantic_scholar_id": "1a201ea89e2f9a51e68365c9e5c9a2fe29848907",
+      "canonical_id": "arXiv:2611.01450",
+      "arxiv_id": "2611.01450",
+      "authors": [
+        "He-Dong Zhang",
+        "Meng Zheng",
+        "Qian Lou"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression",
+      "source_url": "https://arxiv.org/abs/2410.04139",
+      "year": 2024,
+      "published": "2024-10-05",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved significant performance gains using advanced prompting techniques over various tasks. However, the increasing length of prompts leads to high computational costs and often obscures crucial information. Prompt compression has been proposed to alleviate these issues, but it faces challenges in (i) capturing the global context and (ii) training the compressor effectively. To tackle these challenges, we introduce a novel prompt compression method, namely Reading To Compressing (R2C), utilizing the Fusion-in-Decoder (FiD) architecture to identify the important information in the prompt. Specifically, the cross-attention scores of the FiD are used to discern essential chunks and sentences from the prompt. R2C effectively captures the global context without compromising semantic consistency while detouring the necessity of pseudo-labels for training the compressor. Empirical results show that R2C retains key contexts, enhancing the LLM performance by 6% in out-of-domain evaluations while reducing the prompt length by 80%.",
+      "identifiers": [
+        "SemanticScholar:e97fe11571ea59c566ad88742efaf58f4f177d02"
+      ],
+      "semantic_scholar_id": "e97fe11571ea59c566ad88742efaf58f4f177d02",
+      "canonical_id": "arXiv:2410.04139",
+      "arxiv_id": "2410.04139",
+      "doi": "10.48550/arXiv.2410.04139",
+      "authors": [
+        "Eunseong Choi",
+        "Sunkyung Lee",
+        "Minjin Choi",
+        "June Park",
+        "Jongwuk Lee"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 777,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference",
+      "source_url": "https://arxiv.org/abs/2512.24713",
+      "year": 2025,
+      "published": "2025-12-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable performance across a wide range of language processing tasks. However, this success comes at the cost of substantial computation and memory requirements, which significantly impedes their deployment in resource-constrained environments. To address this challenge, this work introduces an automation framework that leverages weight pruning and low-bit quantization, and presents a hardware-software co-design method that generates accelerators on the Field-Programmable Gate Array (FPGA) platform. In particular, we implement a unified pipeline that applies N:M structured pruning and 4-bit integer quantization to reduce the memory footprint, followed by optimized dequantization and matrix multiplication to enhance LLM inference on several hardware platforms, including CPUs, NVIDIA GPUs with Dense and 2:4 Sparse Tensor Cores, and a custom systolic-array-based FPGA accelerator. Utilizing 2:4 sparsity combined with quantization on $4096 \\times 4096$ matrices, our approach achieves a reduction of up to $4\\times$ in weight storage and a $1.71\\times$ speedup in matrix multiplication, yielding a $1.29\\times$ end-to-end latency reduction compared to dense GPU baselines. Scaling analysis on the LLaMA-7B model further shows that structured sparsity enhances the throughput per token by $1.36\\times$. These results demonstrate the synergy of fine-grained N:M sparsity and quantization for enabling efficient and deployable LLM inference, while the proposed FPGA accelerator offers a flexible architectural path for supporting a broader class of sparsity patterns beyond the fixed 2:4 hardware constraints.",
+      "identifiers": [
+        "SemanticScholar:c5adbcff6c63006841c3690a07cdf81c008acee3"
+      ],
+      "semantic_scholar_id": "c5adbcff6c63006841c3690a07cdf81c008acee3",
+      "canonical_id": "arXiv:2512.24713",
+      "arxiv_id": "2512.24713",
+      "doi": "10.48550/arXiv.2512.24713",
+      "authors": [
+        "Fen-Yu Hsieh",
+        "Yun-Chang Teng",
+        "D. Hong",
+        "Jan-Jan Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 325,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Density-aware Soft Context Compression with Semi-Dynamic Compression Ratio",
+      "source_url": "https://arxiv.org/abs/2603.25926",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Soft context compression reduces the computational workload of processing long contexts in LLMs by encoding long context into a smaller number of latent tokens. However, existing frameworks apply uniform compression ratios, failing to account for the extreme variance in natural language information density. While adopting a density-aware dynamic compression ratio seems intuitive, empirical investigations reveal that models struggle intrinsically with operations parameterized by input dependent, continuous structural hyperparameters. To resolve this pitfall, we introduce Semi-Dynamic Context Compression framework. Our approach features a Discrete Ratio Selector, which predicts a compression target based on intrinsic information density and quantizes it to a predefined set of discrete compression ratios. It is efficiently jointly trained with the compressor on synthetic data, with the summary lengths as a proxy to create labels for compression ratio prediction. Extensive evaluations confirm that our density-aware framework, utilizing mean pooling as the backbone, consistently outperforms static baselines, establishing a robust Pareto frontier for context compression techniques. Our code, data and model weights are available at https://github.com/yuyijiong/semi-dynamic-context-compress",
+      "identifiers": [
+        "SemanticScholar:152b66900717d8acccb16d0ed5b5c21688910b28"
+      ],
+      "semantic_scholar_id": "152b66900717d8acccb16d0ed5b5c21688910b28",
+      "canonical_id": "arXiv:2603.25926",
+      "arxiv_id": "2603.25926",
+      "doi": "10.48550/arXiv.2603.25926",
+      "authors": [
+        "Yijiong Yu",
+        "Shuai Yuan",
+        "Jie Zheng",
+        "Hua-Zheng Wang",
+        "Ji Pei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HPD-Parsing: Hierarchical Parallel Document Parsing",
+      "source_url": "https://arxiv.org/abs/2607.18839",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient teamwork typically combines global coordination with parallel execution, a principle not yet fully reflected in unified Vision-Language Model (VLM)-based document parsers. Existing unified parsers process an entire page jointly but generate its output through a single token-by-token autoregressive trajectory, creating a sequential bottleneck that grows with document length. Such full-page sequential generation overlooks a key property of document parsing: layout must be analyzed globally, whereas block content can be parsed in parallel. Based on this observation, we introduce HPD-Parsing, which replaces full-page autoregressive generation with a Hierarchical Parallel Decoding paradigm. A main layout branch organizes the overall document structure and dynamically assigns block-level content decoding to concurrent branches, while progressive multi-token prediction (P-MTP) further reduces the decoding steps within each branch. Experiments on public benchmarks show that HPD-Parsing achieves 4,752 tokens per second, delivering $2.62\\times$ the throughput of the fastest existing document parsing model and $3.06\\times$ that of the vanilla autoregressive baseline, while maintaining competitive parsing accuracy. These results establish hierarchical parallel decoding as an effective alternative to full-page autoregressive generation, opening a new direction for efficient unified document parsing.",
+      "identifiers": [
+        "SemanticScholar:2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8"
+      ],
+      "semantic_scholar_id": "2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8",
+      "canonical_id": "arXiv:2607.18839",
+      "arxiv_id": "2607.18839",
+      "doi": "10.48550/arXiv.2607.18839",
+      "authors": [
+        "Shubo Wei",
+        "Jing-Jing Wu",
+        "Ling-Kun Zhang",
+        "Qun-Yi Xie",
+        "Hao Zou",
+        "Lei Xiang",
+        "Xu Fan",
+        "Yang-Liu Xu",
+        "Man-Hui Lin",
+        "Xiao-Long Ma",
+        "Cheng Cui",
+        "Teng-Yu Du",
+        "Yy"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference",
+      "source_url": "https://arxiv.org/abs/2608.20210",
+      "year": 2026,
+      "published": "2026-08-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models are usually built like large ones and then squeezed onto a CPU afterwards. We did the opposite: we fixed the target first, one user, one token at a time, 4-bit weights, ordinary CPU, and chose the architecture to suit it. The result keeps full attention in only 6 of its 18 blocks. The other 12 use short convolutions whose memory is two timesteps wide no matter how long the conversation gets, so two thirds of the network never re-reads a growing cache. Trained from scratch on 59.9B tokens, the model scores 47.31 on a five-task benchmark against a bar of 42.20 that was fixed before training began. It beats GPT-2 124M, Pythia-160M, OPT-125M and GPT-neo-125M, all trained on three to six times more data, and exceeds MobileLLM-125M's published score despite that model seeing a trillion tokens. Validation bits-per-byte is 0.8685. To check the architecture rather than the training recipe, we trained a conventional all-attention model of the same size on the same data, and wrote down the winning condition before scoring either. The hybrid won the chosen quality metric by 0.81%, matched it on downstream tasks, produced a 6.3% smaller 4-bit file, and decoded 1.76x faster at 2048 tokens of context, 2.08x against an external model of similar size. In every measurement the speed advantage is near zero at an empty context and grows with length, which is what the mechanism predicts and what a merely leaner model would not show. A simple bandwidth calculation predicts only 1.17x, so memory volume alone does not explain the gap. We also report what did not work: an unmitigated 4-bit quality cost, roughly half the convolution channels ending up inert and impossible to remove, and a vocabulary larger than this model size warrants.",
+      "identifiers": [
+        "SemanticScholar:2f2d2a3268f326c4e79ce11b12a8172578a27b12"
+      ],
+      "semantic_scholar_id": "2f2d2a3268f326c4e79ce11b12a8172578a27b12",
+      "canonical_id": "arXiv:2608.20210",
+      "arxiv_id": "2608.20210",
+      "doi": "10.48550/arXiv.2608.20210",
+      "authors": [
+        "Christos Koutsiaris"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.01450",
+      "identity_tokens": [
+        "id:SemanticScholar:1a201ea89e2f9a51e68365c9e5c9a2fe29848907",
+        "id:arXiv:2611.01450",
+        "title:cipherflow compiling ai programs for efficient cryptographically secure inference",
+        "url:https://arxiv.org/abs/2611.01450"
+      ],
+      "record": {
+        "title": "CipherFlow: Compiling AI Programs for Efficient Cryptographically Secure Inference",
+        "source_url": "https://arxiv.org/abs/2611.01450",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cryptographically secure inference faces two practical challenges: making secure programming accessible to AI developers and data scientists, and achieving efficient execution across deployment environments. Developers must compose cryptographic primitives correctly, while performance depends on hardware, networks, and evolving ciphertext states. We present CipherFlow, a compiler framework that takes a high-level AI computation graph, available cryptographic primitives, and a target hardware and network configuration to generate an executable, latency-optimized secure inference program. CipherFlow automates cryptographic execution decisions through three techniques: MicroBench profiles deployment-specific primitive costs; state-expanded planning jointly optimizes homomorphic encryption (HE) and secure multi-party computation (MPC) placement, conversions, and ciphertext maintenance under cryptographic-state constraints; and BlockFold summarizes branched regions to scale planning to Transformer graphs. Evaluation using measured HE/MPC backend costs across CPU/GPU and network settings shows up to 16.5$\\times$ speedup on BERT-base and over 22$\\times$ on ViT compared with static hybrid placement baselines. CipherFlow separates model programming from cryptographic execution decisions, enabling developers to express AI computations while the compiler constructs efficient secure programs.",
+        "identifiers": [
+          "SemanticScholar:1a201ea89e2f9a51e68365c9e5c9a2fe29848907"
+        ],
+        "semantic_scholar_id": "1a201ea89e2f9a51e68365c9e5c9a2fe29848907",
+        "canonical_id": "arXiv:2611.01450",
+        "arxiv_id": "2611.01450",
+        "authors": [
+          "He-Dong Zhang",
+          "Meng Zheng",
+          "Qian Lou"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.04139",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.04139",
+        "id:SemanticScholar:e97fe11571ea59c566ad88742efaf58f4f177d02",
+        "id:arXiv:2410.04139",
+        "title:from reading to compressing exploring the multidocument reader for prompt compression",
+        "url:https://arxiv.org/abs/2410.04139"
+      ],
+      "record": {
+        "title": "From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression",
+        "source_url": "https://arxiv.org/abs/2410.04139",
+        "year": 2024,
+        "published": "2024-10-05",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved significant performance gains using advanced prompting techniques over various tasks. However, the increasing length of prompts leads to high computational costs and often obscures crucial information. Prompt compression has been proposed to alleviate these issues, but it faces challenges in (i) capturing the global context and (ii) training the compressor effectively. To tackle these challenges, we introduce a novel prompt compression method, namely Reading To Compressing (R2C), utilizing the Fusion-in-Decoder (FiD) architecture to identify the important information in the prompt. Specifically, the cross-attention scores of the FiD are used to discern essential chunks and sentences from the prompt. R2C effectively captures the global context without compromising semantic consistency while detouring the necessity of pseudo-labels for training the compressor. Empirical results show that R2C retains key contexts, enhancing the LLM performance by 6% in out-of-domain evaluations while reducing the prompt length by 80%.",
+        "identifiers": [
+          "SemanticScholar:e97fe11571ea59c566ad88742efaf58f4f177d02"
+        ],
+        "semantic_scholar_id": "e97fe11571ea59c566ad88742efaf58f4f177d02",
+        "canonical_id": "arXiv:2410.04139",
+        "arxiv_id": "2410.04139",
+        "doi": "10.48550/arXiv.2410.04139",
+        "authors": [
+          "Eunseong Choi",
+          "Sunkyung Lee",
+          "Minjin Choi",
+          "June Park",
+          "Jongwuk Lee"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 777,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.24713",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.24713",
+        "id:SemanticScholar:c5adbcff6c63006841c3690a07cdf81c008acee3",
+        "id:arXiv:2512.24713",
+        "title:fpga codesign for efficient nm sparse and quantized model inference",
+        "url:https://arxiv.org/abs/2512.24713"
+      ],
+      "record": {
+        "title": "FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference",
+        "source_url": "https://arxiv.org/abs/2512.24713",
+        "year": 2025,
+        "published": "2025-12-31",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable performance across a wide range of language processing tasks. However, this success comes at the cost of substantial computation and memory requirements, which significantly impedes their deployment in resource-constrained environments. To address this challenge, this work introduces an automation framework that leverages weight pruning and low-bit quantization, and presents a hardware-software co-design method that generates accelerators on the Field-Programmable Gate Array (FPGA) platform. In particular, we implement a unified pipeline that applies N:M structured pruning and 4-bit integer quantization to reduce the memory footprint, followed by optimized dequantization and matrix multiplication to enhance LLM inference on several hardware platforms, including CPUs, NVIDIA GPUs with Dense and 2:4 Sparse Tensor Cores, and a custom systolic-array-based FPGA accelerator. Utilizing 2:4 sparsity combined with quantization on $4096 \\times 4096$ matrices, our approach achieves a reduction of up to $4\\times$ in weight storage and a $1.71\\times$ speedup in matrix multiplication, yielding a $1.29\\times$ end-to-end latency reduction compared to dense GPU baselines. Scaling analysis on the LLaMA-7B model further shows that structured sparsity enhances the throughput per token by $1.36\\times$. These results demonstrate the synergy of fine-grained N:M sparsity and quantization for enabling efficient and deployable LLM inference, while the proposed FPGA accelerator offers a flexible architectural path for supporting a broader class of sparsity patterns beyond the fixed 2:4 hardware constraints.",
+        "identifiers": [
+          "SemanticScholar:c5adbcff6c63006841c3690a07cdf81c008acee3"
+        ],
+        "semantic_scholar_id": "c5adbcff6c63006841c3690a07cdf81c008acee3",
+        "canonical_id": "arXiv:2512.24713",
+        "arxiv_id": "2512.24713",
+        "doi": "10.48550/arXiv.2512.24713",
+        "authors": [
+          "Fen-Yu Hsieh",
+          "Yun-Chang Teng",
+          "D. Hong",
+          "Jan-Jan Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 325,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.25926",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25926",
+        "id:SemanticScholar:152b66900717d8acccb16d0ed5b5c21688910b28",
+        "id:arXiv:2603.25926",
+        "title:densityaware soft context compression with semidynamic compression ratio",
+        "url:https://arxiv.org/abs/2603.25926"
+      ],
+      "record": {
+        "title": "Density-aware Soft Context Compression with Semi-Dynamic Compression Ratio",
+        "source_url": "https://arxiv.org/abs/2603.25926",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Soft context compression reduces the computational workload of processing long contexts in LLMs by encoding long context into a smaller number of latent tokens. However, existing frameworks apply uniform compression ratios, failing to account for the extreme variance in natural language information density. While adopting a density-aware dynamic compression ratio seems intuitive, empirical investigations reveal that models struggle intrinsically with operations parameterized by input dependent, continuous structural hyperparameters. To resolve this pitfall, we introduce Semi-Dynamic Context Compression framework. Our approach features a Discrete Ratio Selector, which predicts a compression target based on intrinsic information density and quantizes it to a predefined set of discrete compression ratios. It is efficiently jointly trained with the compressor on synthetic data, with the summary lengths as a proxy to create labels for compression ratio prediction. Extensive evaluations confirm that our density-aware framework, utilizing mean pooling as the backbone, consistently outperforms static baselines, establishing a robust Pareto frontier for context compression techniques. Our code, data and model weights are available at https://github.com/yuyijiong/semi-dynamic-context-compress",
+        "identifiers": [
+          "SemanticScholar:152b66900717d8acccb16d0ed5b5c21688910b28"
+        ],
+        "semantic_scholar_id": "152b66900717d8acccb16d0ed5b5c21688910b28",
+        "canonical_id": "arXiv:2603.25926",
+        "arxiv_id": "2603.25926",
+        "doi": "10.48550/arXiv.2603.25926",
+        "authors": [
+          "Yijiong Yu",
+          "Shuai Yuan",
+          "Jie Zheng",
+          "Hua-Zheng Wang",
+          "Ji Pei"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 240,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.18839",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.18839",
+        "id:SemanticScholar:2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8",
+        "id:arXiv:2607.18839",
+        "title:hpdparsing hierarchical parallel document parsing",
+        "url:https://arxiv.org/abs/2607.18839"
+      ],
+      "record": {
+        "title": "HPD-Parsing: Hierarchical Parallel Document Parsing",
+        "source_url": "https://arxiv.org/abs/2607.18839",
+        "year": 2026,
+        "published": "2026-07-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient teamwork typically combines global coordination with parallel execution, a principle not yet fully reflected in unified Vision-Language Model (VLM)-based document parsers. Existing unified parsers process an entire page jointly but generate its output through a single token-by-token autoregressive trajectory, creating a sequential bottleneck that grows with document length. Such full-page sequential generation overlooks a key property of document parsing: layout must be analyzed globally, whereas block content can be parsed in parallel. Based on this observation, we introduce HPD-Parsing, which replaces full-page autoregressive generation with a Hierarchical Parallel Decoding paradigm. A main layout branch organizes the overall document structure and dynamically assigns block-level content decoding to concurrent branches, while progressive multi-token prediction (P-MTP) further reduces the decoding steps within each branch. Experiments on public benchmarks show that HPD-Parsing achieves 4,752 tokens per second, delivering $2.62\\times$ the throughput of the fastest existing document parsing model and $3.06\\times$ that of the vanilla autoregressive baseline, while maintaining competitive parsing accuracy. These results establish hierarchical parallel decoding as an effective alternative to full-page autoregressive generation, opening a new direction for efficient unified document parsing.",
+        "identifiers": [
+          "SemanticScholar:2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8"
+        ],
+        "semantic_scholar_id": "2cb9144cbaf6fc67a471a0a7e232a9c9357c94a8",
+        "canonical_id": "arXiv:2607.18839",
+        "arxiv_id": "2607.18839",
+        "doi": "10.48550/arXiv.2607.18839",
+        "authors": [
+          "Shubo Wei",
+          "Jing-Jing Wu",
+          "Ling-Kun Zhang",
+          "Qun-Yi Xie",
+          "Hao Zou",
+          "Lei Xiang",
+          "Xu Fan",
+          "Yang-Liu Xu",
+          "Man-Hui Lin",
+          "Xiao-Long Ma",
+          "Cheng Cui",
+          "Teng-Yu Du",
+          "Yy"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 123,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20210",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.20210",
+        "id:SemanticScholar:2f2d2a3268f326c4e79ce11b12a8172578a27b12",
+        "id:arXiv:2608.20210",
+        "title:daedalus150m a convolutionattention hybrid designed for cpu inference",
+        "url:https://arxiv.org/abs/2608.20210"
+      ],
+      "record": {
+        "title": "Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference",
+        "source_url": "https://arxiv.org/abs/2608.20210",
+        "year": 2026,
+        "published": "2026-08-20",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small language models are usually built like large ones and then squeezed onto a CPU afterwards. We did the opposite: we fixed the target first, one user, one token at a time, 4-bit weights, ordinary CPU, and chose the architecture to suit it. The result keeps full attention in only 6 of its 18 blocks. The other 12 use short convolutions whose memory is two timesteps wide no matter how long the conversation gets, so two thirds of the network never re-reads a growing cache. Trained from scratch on 59.9B tokens, the model scores 47.31 on a five-task benchmark against a bar of 42.20 that was fixed before training began. It beats GPT-2 124M, Pythia-160M, OPT-125M and GPT-neo-125M, all trained on three to six times more data, and exceeds MobileLLM-125M's published score despite that model seeing a trillion tokens. Validation bits-per-byte is 0.8685. To check the architecture rather than the training recipe, we trained a conventional all-attention model of the same size on the same data, and wrote down the winning condition before scoring either. The hybrid won the chosen quality metric by 0.81%, matched it on downstream tasks, produced a 6.3% smaller 4-bit file, and decoded 1.76x faster at 2048 tokens of context, 2.08x against an external model of similar size. In every measurement the speed advantage is near zero at an empty context and grows with length, which is what the mechanism predicts and what a merely leaner model would not show. A simple bandwidth calculation predicts only 1.17x, so memory volume alone does not explain the gap. We also report what did not work: an unmitigated 4-bit quality cost, roughly half the convolution channels ending up inert and impossible to remove, and a vocabulary larger than this model size warrants.",
+        "identifiers": [
+          "SemanticScholar:2f2d2a3268f326c4e79ce11b12a8172578a27b12"
+        ],
+        "semantic_scholar_id": "2f2d2a3268f326c4e79ce11b12a8172578a27b12",
+        "canonical_id": "arXiv:2608.20210",
+        "arxiv_id": "2608.20210",
+        "doi": "10.48550/arXiv.2608.20210",
+        "authors": [
+          "Christos Koutsiaris"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 93,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d273b725489b1d645366ccb29f5c9e48d27c1c2b799e553740f0642e5bf85add",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

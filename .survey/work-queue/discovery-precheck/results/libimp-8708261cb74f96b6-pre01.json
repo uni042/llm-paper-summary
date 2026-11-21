@@ -1,0 +1,331 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8708261cb74f96b6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8708261cb74f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.07820",
+    "arXiv:2601.15296",
+    "arXiv:2608.08652"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8bedb7a1240193447eb9162a173148a32c83140d",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T17:59:28.310255+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.07820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.15296",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Entropy-Tree: Tree-Based Decoding with Entropy-Guided Exploration",
+      "source_url": "https://arxiv.org/abs/2601.15296",
+      "year": 2026,
+      "published": "2026-01-02",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models achieve strong reasoning performance, yet existing decoding strategies either explore blindly (random sampling) or redundantly (independent multi-sampling). We propose Entropy-Tree, a tree-based decoding method that exploits entropy as a signal for branching decisions--expanding the search tree only at positions where the model exhibits genuine uncertainty. Entropy-Tree shows superior accuracy and calibration in reasoning tasks: it achieves better pass@k than Multi-chain across multiple models and datasets, and its predictive entropy demonstrates better AUROC compared to several traditional metrics. Entropy-Tree unifies efficient structured exploration and reliable uncertainty estimation within a single decoding procedure.",
+      "identifiers": [
+        "SemanticScholar:2c2535bb629318fcab9d44967ae087866c72b733"
+      ],
+      "semantic_scholar_id": "2c2535bb629318fcab9d44967ae087866c72b733",
+      "canonical_id": "arXiv:2601.15296",
+      "arxiv_id": "2601.15296",
+      "doi": "10.48550/arXiv.2601.15296",
+      "authors": [
+        "Longxuan Wei",
+        "Yubo Zhang",
+        "Zijiao Zhang",
+        "Zhi-Hu Wang",
+        "Shiwan Zhao",
+        "Tian-Yu Huang",
+        "Huiting Zhao",
+        "Chenfei Liu",
+        "Shen-Ao Zhang",
+        "Jun-Chi Yan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 323,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LegoLM: Structured Weight Sharing for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.08652",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present \\LegoLM{}, a structured weight-sharing compression framework for large language models grounded in a systematic study of why global weight sharing fails and how to fix it. We identify two distinct failure modes. Distributional mismatch: for vector blocks of dimension d<= 2, transformer layers with heterogeneous weight scales impose a scale-mismatch penalty that grows linearly with d and cannot be resolved by increasing K, producing perplexity in the millions.Outlier dominance: for scalar blocks, a fraction ~1/K of weights lies beyond the outermost Lloyd-Max decision threshold and cannot be represented by any centroid; their misrepresentation accumulates across layers, causing catastrophic quality loss. \\LegoLM{} resolves both failure modes via three data-free adaptations: 1 scalar-block encoding to eliminate the $d$-linear mismatch component, 2 percentile-selective replacement that identifies and preserves outlier weights verbatim, and 3 boundary-layer protection for the first and last transformer blocks. Across GPT-2 small (124M) and Mistral-7B, \\LegoLM{} achieves +0.03% PPL degradation at 4.41X compression on Mistral-7B - outperforming PTQ-8bit in both quality and compression ratio - and -0.02% at 2.67X. Downstream evaluation on LAMBADA and HellaSwag confirms that \\LegoLM{} at K=64, p=99% preserves accuracy within noise at 5.12 X compression, exceeding PTQ-8bit's compression ratio while matching its accuracy. We further discover that outlier dominance grows with model scale: full replacement at K=128 degrades GPT-2 small by only +23% but catastrophically degrades Mistral-7B by +1,134,279%, while selective replacement at p=99% rescues both models to under +15%. A controlled ablation confirms that selective replacement is the dominant mechanism: adding it to per-layer K-means also yields near-lossless quality, matching \\LegoLM{} within 0.02%.",
+      "identifiers": [
+        "SemanticScholar:a0de0cc740bd8c0a7bdac0bf51cd0691a36a9a8c"
+      ],
+      "semantic_scholar_id": "a0de0cc740bd8c0a7bdac0bf51cd0691a36a9a8c",
+      "canonical_id": "arXiv:2608.08652",
+      "arxiv_id": "2608.08652",
+      "doi": "10.48550/arXiv.2608.08652",
+      "authors": [
+        "Joseph Bingham"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Certainty-Guided Reasoning in Large Language Models: A Dynamic Thinking Budget Approach",
+      "source_url": "https://arxiv.org/abs/2509.07820",
+      "year": 2025,
+      "published": "2025-09-09",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning language models are typically run with fixed inference budgets, which can waste computation or terminate reasoning prematurely. We introduce Certainty-Guided Reasoning (CGR), a model-agnostic adaptive inference procedure that periodically probes whether the current reasoning supports a confident final answer and terminates early once a target certainty threshold is reached, otherwise continuing until the end-of-thinking token or the budget limit. Certainty is estimated from the model's predicted probabilities over the answer tokens, yielding a lightweight stopping criterion. On AIME2025, CGR preserves baseline accuracy while reducing token usage, providing a tunable certainty-efficiency trade-off that can eliminate millions of tokens in aggregate. Across 64 random seeds, CGR exhibits consistent behavior. We also introduce a Grade metric that penalizes incorrect answers and permits abstention, capturing risk-sensitive performance. Results show that CGR improves Grade by abstaining when certainty remains low.",
+      "identifiers": [
+        "SemanticScholar:1946381f70e2b75ef86cb826b9bfe7dab7feb5f4"
+      ],
+      "semantic_scholar_id": "1946381f70e2b75ef86cb826b9bfe7dab7feb5f4",
+      "canonical_id": "arXiv:2509.07820",
+      "arxiv_id": "2509.07820",
+      "doi": "10.48550/arXiv.2509.07820",
+      "authors": [
+        "J. Nogueira",
+        "Wen-Tao Sun",
+        "Alonso Silva",
+        "L. Y. Zumot"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 438,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.15296",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.15296",
+        "id:SemanticScholar:2c2535bb629318fcab9d44967ae087866c72b733",
+        "id:arXiv:2601.15296",
+        "title:entropytree treebased decoding with entropyguided exploration",
+        "url:https://arxiv.org/abs/2601.15296"
+      ],
+      "record": {
+        "title": "Entropy-Tree: Tree-Based Decoding with Entropy-Guided Exploration",
+        "source_url": "https://arxiv.org/abs/2601.15296",
+        "year": 2026,
+        "published": "2026-01-02",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models achieve strong reasoning performance, yet existing decoding strategies either explore blindly (random sampling) or redundantly (independent multi-sampling). We propose Entropy-Tree, a tree-based decoding method that exploits entropy as a signal for branching decisions--expanding the search tree only at positions where the model exhibits genuine uncertainty. Entropy-Tree shows superior accuracy and calibration in reasoning tasks: it achieves better pass@k than Multi-chain across multiple models and datasets, and its predictive entropy demonstrates better AUROC compared to several traditional metrics. Entropy-Tree unifies efficient structured exploration and reliable uncertainty estimation within a single decoding procedure.",
+        "identifiers": [
+          "SemanticScholar:2c2535bb629318fcab9d44967ae087866c72b733"
+        ],
+        "semantic_scholar_id": "2c2535bb629318fcab9d44967ae087866c72b733",
+        "canonical_id": "arXiv:2601.15296",
+        "arxiv_id": "2601.15296",
+        "doi": "10.48550/arXiv.2601.15296",
+        "authors": [
+          "Longxuan Wei",
+          "Yubo Zhang",
+          "Zijiao Zhang",
+          "Zhi-Hu Wang",
+          "Shiwan Zhao",
+          "Tian-Yu Huang",
+          "Huiting Zhao",
+          "Chenfei Liu",
+          "Shen-Ao Zhang",
+          "Jun-Chi Yan"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 323,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08652",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.08652",
+        "id:SemanticScholar:a0de0cc740bd8c0a7bdac0bf51cd0691a36a9a8c",
+        "id:arXiv:2608.08652",
+        "title:legolm structured weight sharing for large language models",
+        "url:https://arxiv.org/abs/2608.08652"
+      ],
+      "record": {
+        "title": "LegoLM: Structured Weight Sharing for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2608.08652",
+        "year": 2026,
+        "published": "2026-08-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present \\LegoLM{}, a structured weight-sharing compression framework for large language models grounded in a systematic study of why global weight sharing fails and how to fix it. We identify two distinct failure modes. Distributional mismatch: for vector blocks of dimension d<= 2, transformer layers with heterogeneous weight scales impose a scale-mismatch penalty that grows linearly with d and cannot be resolved by increasing K, producing perplexity in the millions.Outlier dominance: for scalar blocks, a fraction ~1/K of weights lies beyond the outermost Lloyd-Max decision threshold and cannot be represented by any centroid; their misrepresentation accumulates across layers, causing catastrophic quality loss. \\LegoLM{} resolves both failure modes via three data-free adaptations: 1 scalar-block encoding to eliminate the $d$-linear mismatch component, 2 percentile-selective replacement that identifies and preserves outlier weights verbatim, and 3 boundary-layer protection for the first and last transformer blocks. Across GPT-2 small (124M) and Mistral-7B, \\LegoLM{} achieves +0.03% PPL degradation at 4.41X compression on Mistral-7B - outperforming PTQ-8bit in both quality and compression ratio - and -0.02% at 2.67X. Downstream evaluation on LAMBADA and HellaSwag confirms that \\LegoLM{} at K=64, p=99% preserves accuracy within noise at 5.12 X compression, exceeding PTQ-8bit's compression ratio while matching its accuracy. We further discover that outlier dominance grows with model scale: full replacement at K=128 degrades GPT-2 small by only +23% but catastrophically degrades Mistral-7B by +1,134,279%, while selective replacement at p=99% rescues both models to under +15%. A controlled ablation confirms that selective replacement is the dominant mechanism: adding it to per-layer K-means also yields near-lossless quality, matching \\LegoLM{} within 0.02%.",
+        "identifiers": [
+          "SemanticScholar:a0de0cc740bd8c0a7bdac0bf51cd0691a36a9a8c"
+        ],
+        "semantic_scholar_id": "a0de0cc740bd8c0a7bdac0bf51cd0691a36a9a8c",
+        "canonical_id": "arXiv:2608.08652",
+        "arxiv_id": "2608.08652",
+        "doi": "10.48550/arXiv.2608.08652",
+        "authors": [
+          "Joseph Bingham"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.07820",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.07820",
+        "id:SemanticScholar:1946381f70e2b75ef86cb826b9bfe7dab7feb5f4",
+        "id:arXiv:2509.07820",
+        "title:certaintyguided reasoning in large language models a dynamic thinking budget approach",
+        "url:https://arxiv.org/abs/2509.07820"
+      ],
+      "record": {
+        "title": "Certainty-Guided Reasoning in Large Language Models: A Dynamic Thinking Budget Approach",
+        "source_url": "https://arxiv.org/abs/2509.07820",
+        "year": 2025,
+        "published": "2025-09-09",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning language models are typically run with fixed inference budgets, which can waste computation or terminate reasoning prematurely. We introduce Certainty-Guided Reasoning (CGR), a model-agnostic adaptive inference procedure that periodically probes whether the current reasoning supports a confident final answer and terminates early once a target certainty threshold is reached, otherwise continuing until the end-of-thinking token or the budget limit. Certainty is estimated from the model's predicted probabilities over the answer tokens, yielding a lightweight stopping criterion. On AIME2025, CGR preserves baseline accuracy while reducing token usage, providing a tunable certainty-efficiency trade-off that can eliminate millions of tokens in aggregate. Across 64 random seeds, CGR exhibits consistent behavior. We also introduce a Grade metric that penalizes incorrect answers and permits abstention, capturing risk-sensitive performance. Results show that CGR improves Grade by abstaining when certainty remains low.",
+        "identifiers": [
+          "SemanticScholar:1946381f70e2b75ef86cb826b9bfe7dab7feb5f4"
+        ],
+        "semantic_scholar_id": "1946381f70e2b75ef86cb826b9bfe7dab7feb5f4",
+        "canonical_id": "arXiv:2509.07820",
+        "arxiv_id": "2509.07820",
+        "doi": "10.48550/arXiv.2509.07820",
+        "authors": [
+          "J. Nogueira",
+          "Wen-Tao Sun",
+          "Alonso Silva",
+          "L. Y. Zumot"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 438,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:79a512f588578fad8b4a280c483069b030a18645969a4abef7f6ce7f6e5faefe",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,236 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7cc5927bf5f53633-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7cc5927bf5f5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2507.17618",
+    "arXiv:2608.14560"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8bedb7a1240193447eb9162a173148a32c83140d",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-21T17:59:28.325364+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2507.17618",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.14560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA",
+      "source_url": "https://arxiv.org/abs/2608.14560",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study whether general-purpose code agents can produce state-of-the-art GPU kernels without any manually written CUDA code. We investigate this question using representative workloads from FlashInfer-Bench, focusing on the Fused MoE, DSA TopK Indexer, and DSA Sparse Attention, and evaluate all generated kernels under the correctness-gated FlashInfer-Bench protocol on NVIDIA B200 GPUs. Starting from the PyTorch implementations, workload definitions, benchmark commands, and a compact set of CUDA optimization skills, we build a kernel optimization workflow in Houmao, a multi-agent orchestration framework for heterogeneous coding agents, to generate, debug, profile, and optimize the kernels. Humans remain strictly in an orchestration role: defining the workflow, enforcing correctness and anti-hacking constraints, supplying key references, and redirecting the search when progress stalls, without reviewing or editing the kernel code itself. Across roughly 1.9 billion agent tokens, the resulting kernels achieve speedups of 92.68x on Fused MoE, 1101.02x on DSA TopK Indexer, and 181.35x on DSA Sparse Attention relative to the PyTorch reference implementations, while also significantly outperforming the corresponding FlashInfer baselines. In the official evaluation of the MLSys 2026 FlashInfer AI Kernel Generation Contest, our generated Fused MoE kernel achieves a 1.71x speedup over the FlashInfer baseline, exceeding the top result of the Fused MoE agent-assisted track, which reports a 1.68x speedup. These results suggest that, under a disciplined correctness-first workflow, code agents can serve as effective autonomous optimizers for modern GPU kernel development.",
+      "identifiers": [
+        "SemanticScholar:27c6b8e0c3dd9e53c2f110979f3bd9b42c160b29"
+      ],
+      "semantic_scholar_id": "27c6b8e0c3dd9e53c2f110979f3bd9b42c160b29",
+      "canonical_id": "arXiv:2608.14560",
+      "arxiv_id": "2608.14560",
+      "doi": "10.48550/arXiv.2608.14560",
+      "authors": [
+        "Mao-Lin Luo",
+        "Hongbin Li",
+        "Feng Lin",
+        "Han-Ling Yi",
+        "Zhenqiang Huang"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SimLens for Early Exit in Large Language Models: Eliciting Accurate Latent Predictions with One More Token",
+      "source_url": "https://arxiv.org/abs/2507.17618",
+      "year": 2025,
+      "published": "2025-07-23",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Intermediate-layer predictions in large language models (LLMs) are informative but hard to decode accurately, especially at early layers. Existing lens-style methods typically rely on direct linear readout, which is simple but often drifts away from the model's eventual prediction. We proposeSimLens, a simple training-free decoder for single-token decision tasks that keeps only the start token and a candidate answer token ([s] and [a]) and performs one lightweight continuation through the remaining upper layers. This surprisingly small modification recovers much more accurate latent predictions than direct linear decoding. We further introduce Linear SimLens, a lightweight linear approximation for entropy-based confidence estimation, and combine the two in SimExit, a hybrid early-exit mechanism. On ARC, BoolQ, and HeadQA with LLaMA-7B and Vicuna-7B, SimLens improves Iso-Compute accuracy in all six settings, with an average gain of +0.43 even when fair compute includes the extra two-token post-forward overhead. SimExit yields an average 1.15$\\times$ speedup at the best-accuracy operating points and 1.40$\\times$ when allowing up to a 1 percentage-point accuracy drop. Ablations show that [s] and [a] play distinct roles as global condition and semantic anchor, respectively.",
+      "identifiers": [
+        "SemanticScholar:c26b04a1f22e0dac26f2f8e3ff9b0f2b4f6b3301"
+      ],
+      "semantic_scholar_id": "c26b04a1f22e0dac26f2f8e3ff9b0f2b4f6b3301",
+      "canonical_id": "arXiv:2507.17618",
+      "arxiv_id": "2507.17618",
+      "authors": [
+        "Ming Ma",
+        "Bo-Wen Zheng",
+        "Zhong-Qiao Lin",
+        "Tian-Ming M. Yang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.14560",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.14560",
+        "id:SemanticScholar:27c6b8e0c3dd9e53c2f110979f3bd9b42c160b29",
+        "id:arXiv:2608.14560",
+        "title:agentic kernel optimization generating stateoftheart gpu kernels without handwritten cuda",
+        "url:https://arxiv.org/abs/2608.14560"
+      ],
+      "record": {
+        "title": "Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA",
+        "source_url": "https://arxiv.org/abs/2608.14560",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We study whether general-purpose code agents can produce state-of-the-art GPU kernels without any manually written CUDA code. We investigate this question using representative workloads from FlashInfer-Bench, focusing on the Fused MoE, DSA TopK Indexer, and DSA Sparse Attention, and evaluate all generated kernels under the correctness-gated FlashInfer-Bench protocol on NVIDIA B200 GPUs. Starting from the PyTorch implementations, workload definitions, benchmark commands, and a compact set of CUDA optimization skills, we build a kernel optimization workflow in Houmao, a multi-agent orchestration framework for heterogeneous coding agents, to generate, debug, profile, and optimize the kernels. Humans remain strictly in an orchestration role: defining the workflow, enforcing correctness and anti-hacking constraints, supplying key references, and redirecting the search when progress stalls, without reviewing or editing the kernel code itself. Across roughly 1.9 billion agent tokens, the resulting kernels achieve speedups of 92.68x on Fused MoE, 1101.02x on DSA TopK Indexer, and 181.35x on DSA Sparse Attention relative to the PyTorch reference implementations, while also significantly outperforming the corresponding FlashInfer baselines. In the official evaluation of the MLSys 2026 FlashInfer AI Kernel Generation Contest, our generated Fused MoE kernel achieves a 1.71x speedup over the FlashInfer baseline, exceeding the top result of the Fused MoE agent-assisted track, which reports a 1.68x speedup. These results suggest that, under a disciplined correctness-first workflow, code agents can serve as effective autonomous optimizers for modern GPU kernel development.",
+        "identifiers": [
+          "SemanticScholar:27c6b8e0c3dd9e53c2f110979f3bd9b42c160b29"
+        ],
+        "semantic_scholar_id": "27c6b8e0c3dd9e53c2f110979f3bd9b42c160b29",
+        "canonical_id": "arXiv:2608.14560",
+        "arxiv_id": "2608.14560",
+        "doi": "10.48550/arXiv.2608.14560",
+        "authors": [
+          "Mao-Lin Luo",
+          "Hongbin Li",
+          "Feng Lin",
+          "Han-Ling Yi",
+          "Zhenqiang Huang"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.17618",
+      "identity_tokens": [
+        "id:SemanticScholar:c26b04a1f22e0dac26f2f8e3ff9b0f2b4f6b3301",
+        "id:arXiv:2507.17618",
+        "title:simlens for early exit in large language models eliciting accurate latent predictions with one more token",
+        "url:https://arxiv.org/abs/2507.17618"
+      ],
+      "record": {
+        "title": "SimLens for Early Exit in Large Language Models: Eliciting Accurate Latent Predictions with One More Token",
+        "source_url": "https://arxiv.org/abs/2507.17618",
+        "year": 2025,
+        "published": "2025-07-23",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Intermediate-layer predictions in large language models (LLMs) are informative but hard to decode accurately, especially at early layers. Existing lens-style methods typically rely on direct linear readout, which is simple but often drifts away from the model's eventual prediction. We proposeSimLens, a simple training-free decoder for single-token decision tasks that keeps only the start token and a candidate answer token ([s] and [a]) and performs one lightweight continuation through the remaining upper layers. This surprisingly small modification recovers much more accurate latent predictions than direct linear decoding. We further introduce Linear SimLens, a lightweight linear approximation for entropy-based confidence estimation, and combine the two in SimExit, a hybrid early-exit mechanism. On ARC, BoolQ, and HeadQA with LLaMA-7B and Vicuna-7B, SimLens improves Iso-Compute accuracy in all six settings, with an average gain of +0.43 even when fair compute includes the extra two-token post-forward overhead. SimExit yields an average 1.15$\\times$ speedup at the best-accuracy operating points and 1.40$\\times$ when allowing up to a 1 percentage-point accuracy drop. Ablations show that [s] and [a] play distinct roles as global condition and semantic anchor, respectively.",
+        "identifiers": [
+          "SemanticScholar:c26b04a1f22e0dac26f2f8e3ff9b0f2b4f6b3301"
+        ],
+        "semantic_scholar_id": "c26b04a1f22e0dac26f2f8e3ff9b0f2b4f6b3301",
+        "canonical_id": "arXiv:2507.17618",
+        "arxiv_id": "2507.17618",
+        "authors": [
+          "Ming Ma",
+          "Bo-Wen Zheng",
+          "Zhong-Qiao Lin",
+          "Tian-Ming M. Yang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 486,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7eb318db11b5553be301082a49762e2c638d78d490f395b528eb353f6ef49e63",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
