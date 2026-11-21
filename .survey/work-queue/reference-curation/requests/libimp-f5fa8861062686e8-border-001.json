@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f5fa8861062686e8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.14598",
+  "reason": "Full-text read for Research: the target is the image-generation diffusion transformer Ideogram 4.0 (9.3B), fusing a fake-quantization path into a native INT8 GEMM kernel on consumer Ampere GPUs (GEMM 2.8-4.2x, 1024px generation 156.5s). The kernel technique is adjacent to LLM inference quantization, but the paper itself targets image diffusion models, not LLM inference systems, so immediate Research grounding is weak.",
+  "title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0",
+  "identity_tokens": [
+    "arXiv:2606.14598"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5fa88610626",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
