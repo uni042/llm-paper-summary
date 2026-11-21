@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1147c7e2bff1de62005800c48893323a455e8e41",
+  "base_commit": "53496b9bb1717b50ea2aa7716137f8c337168cc0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -179,6 +179,7 @@
     "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json",
     "2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.json",
     "2025-2511.18692-vlm-in-a-flash-io-efficient-sparsification-of-vision-language-model-via-neuron-chunking.json",
+    "2025-2511.19518-towards-efficient-vlms-information-theoretic-driven-compression-via-adaptive-structural-pruning.json",
     "2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-information.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
     "2025-2512.06727-kv-car-kv-cache-compression-using-autoencoders-and-kv-reuse-in-large-language-models.json",
@@ -237,6 +238,7 @@
     "2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-foundation-models.json",
     "2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistical-correction.json",
     "2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-context-inference.json",
+    "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
     "2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-large-language-models.json",
@@ -257,11 +259,13 @@
     "2026-2603.02737-ouroboros-wafer-scale-sram-cim-with-token-grained-pipelining-for-llm-inference.json",
     "2026-2603.04162-bielik-q2-sharp-a-comparative-study-of-extreme-2-bit-quantization-methods-for-a-polish-11b-language-model.json",
     "2026-2603.04460-vsprefill-vertical-slash-sparse-attention-with-lightweight-indexing-for-long-context-prefilling.json",
+    "2026-2603.04514-progressive-refinement-regulation-for-accelerating-diffusion-language-model-decoding.json",
     "2026-2603.05454-beyond-scattered-acceptance-fast-and-coherent-inference-for-dlms-via-longest-stable-prefixes.json",
     "2026-2603.05663-keeping-the-evidence-chain-semantic-evidence-allocation-for-training-free-token-pruning-in-video-temporal-grounding.json",
     "2026-2603.08065-deterministic-differentiable-structured-pruning-for-large-language-models.json",
     "2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-architectures-for-ai-accelerators.json",
     "2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysis-of-nvfp4-and-mxfp4.json",
+    "2026-2603.09215-spar-k-scheduled-periodic-alternating-early-exit-for-spoken-language-models.json",
     "2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-comprehensive-benchmark-and-deployment-study.json",
     "2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-future-without-generation.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
@@ -302,6 +306,7 @@
     "2026-2604.04972-rcp-representation-consistency-pruner-for-mitigating-distribution-shift-in-large-vision-language-models.json",
     "2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-language-model-inference.json",
     "2026-2604.06330-stdec-spatio-temporal-stability-guided-decoding-for-dllms.json",
+    "2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.json",
     "2026-2604.06787-when-is-thinking-enough-early-exit-via-sufficiency-assessment-for-efficient-reasoning.json",
     "2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.json",
     "2026-2604.07173-infinilora-disaggregated-multi-lora-serving.json",
@@ -46414,6 +46419,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2511.19518": {
+      "order": [
+        "2026-11-21T05:01:39+00:00",
+        "2025-2511.19518-towards-efficient-vlms-information-theoretic-driven-compression-via-adaptive-structural-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.08798": {
+      "order": [
+        "2026-11-21T05:02:38+00:00",
+        "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.04514": {
+      "order": [
+        "2026-11-21T05:03:37+00:00",
+        "2026-2603.04514-progressive-refinement-regulation-for-accelerating-diffusion-language-model-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.09215": {
+      "order": [
+        "2026-11-21T05:04:36+00:00",
+        "2026-2603.09215-spar-k-scheduled-periodic-alternating-early-exit-for-spoken-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.06465": {
+      "order": [
+        "2026-11-21T05:05:34+00:00",
+        "2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58215,6 +58265,21 @@
     "arxiv:2511.02130": [
       "papers/inference/99-other-inference-systems/2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reason.md",
       "papers/inference/99-other-inference-systems/2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reason.md"
+    ],
+    "arxiv:2511.19518": [
+      "papers/inference/99-other-inference-systems/2025-2511.19518-towards-efficient-vlms-information-theoretic-driven-compression-via-adap.md"
+    ],
+    "arxiv:2602.08798": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.md"
+    ],
+    "arxiv:2603.04514": [
+      "papers/inference/99-other-inference-systems/2026-2603.04514-progressive-refinement-regulation-for-accelerating-diffusion-language-mo.md"
+    ],
+    "arxiv:2603.09215": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2603.09215-spar-k-scheduled-periodic-alternating-early-exit-for-spoken-language-mod.md"
+    ],
+    "arxiv:2604.06465": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.md"
     ]
   }
 }

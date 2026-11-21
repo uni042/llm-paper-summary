@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（609本）
+## 自動生成の論文一覧（611本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1607,6 +1607,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/rajveerb/stream2llm/) ・ リポジトリ内被引用：0  
   文脈の断片が届くたびにプリフィルを進めるストリーミング基盤で、費用考慮のスケジューリングと接頭辞一致による無効化削減を組み合わせ、TTFTを最大11倍改善しつつスループットを維持した。
 
+- **2026-03 · [SPAR-K: Scheduled Periodic Alternating Early Exit for Spoken Language Models](2026-2603.09215-spar-k-scheduled-periodic-alternating-early-exit-for-spoken-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  交互生成型の音声言語モデルで、音声位置だけを周期スケジュールで早期終了させ、全深さステップで分布ずれの回復と上位KVキャッシュの一括補完を行う方式を提案し、精度をほぼ保って音声の平均深さを削減した研究。
+
 - **2026-03 · [PRISM: Photonic Similarity Engine for KV Cache Block Selection in Long-Context LLM Inference](2026-2603.21576-prism-photonic-similarity-engine-for-kv-cache-block-selection-in-long-co.md)**  
   実装：[✓](https://github.com/hyoseokp/PRISM) ・ リポジトリ内被引用：0  
   PRISMは、長文脈LLMのデコード時にKVキャッシュのどのブロックを読むべきか決める候補選択段階を、薄膜ニオブ酸リチウム（TFLN）の光回路へ移す構想である。通常のブロック疎注意では、GPUが全ブロックの短い署名を読み、現在のqueryと比較して上位k個を選び、そのブロックの実際のKVを取得する。今回の読解はPDFの最新版を基準とする。
@@ -1647,6 +1651,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/maxindian/HAE_for_VLMs) ・ リポジトリ内被引用：0  
   視覚と言語を同じ自己注意機構で処理するマルチモーダル大規模言語モデルでは、画像から展開された視覚トークンが大量の鍵・値キャッシュ（KVキャッシュ）を消費する。
 
+- **2026-02 · [CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse](2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  暗号化したまま再利用できるKVキャッシュと、プリフィルとデコードで使い分ける異種符号化により、安全な自己回帰生成のスケーリングを2次からほぼ線形へ変えた研究。
+
 - **2026-02 · [Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices](2026-2602.08060-compiler-assisted-speculative-sampling-for-accelerated-llm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの逐次生成では、次のトークンを決めるたびに大型モデルを実行するため、計算資源が限られるエッジ機器では応答遅延が大きくなる。投機的サンプリングは小型草稿モデルが複数の候補トークンを先に生成し、大型検証モデルがまとめて検証することで、大型モデルの呼び出し回数を減らす。
@@ -1682,7 +1690,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：128  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：129  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
@@ -2168,7 +2176,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：429  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：430  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  

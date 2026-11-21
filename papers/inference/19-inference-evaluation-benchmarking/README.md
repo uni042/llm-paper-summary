@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（167本）
+## 自動生成の論文一覧（168本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -381,6 +381,10 @@
 - **2026-04 · [On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks](2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-be.md)**  
   実装：[✓](https://github.com/zinichakraborty/Diffusion-LLM-Quantization-Robustness) ・ リポジトリ内被引用：0  
   推論用重みを低ビットで表す学習後量子化（post-学習 量子化; PTQ）はこの費用を減らす有力な方法だが、自己回帰型で得られた量子化の知見を拡散型へそのまま適用できるとは限らない。重要な留保として、混合精度実験は量子化を模擬しても重みを浮動小数点形式で保存する方式であり、低ビットの実物理容量削減を実測した結果ではない。
+
+- **2026-04 · [Multi-objective Evolutionary Merging Enables Efficient Reasoning Models](2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.md)**  
+  実装：[✓](https://github.com/iacobellimario/L2S-MultiObjective-Evolutionary-Merging) ・ リポジトリ内被引用：0  
+  速い思考モデルと遅い思考モデルの重み補間係数を精度と出力長の2目的で進化探索し、パレートフロントを求める学習不要のLong-to-Shortマージ手法。
 
 - **2026-04 · [LayerBoost: Layer-Aware Attention Reduction for Efficient LLMs](2026-2604.22050-layerboost-layer-aware-attention-reduction-for-efficient-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
