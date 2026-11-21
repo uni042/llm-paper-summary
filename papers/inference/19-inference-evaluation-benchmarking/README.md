@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（178本）
+## 自動生成の論文一覧（179本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -48,6 +48,10 @@
   実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：2  
   中間回答の確信度の時系列から、届いた推論は閾値で、不発な推論は不安定さの蓄積で止める学習不要の早期終了で、トークン量を25から50パーセント削りながら釣り合いを最も良くした。
 
+- **2026-02 · [Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing](2026-2602.03845-parallel-probe-towards-efficient-parallel-thinking-via-2d-probing.md)**  
+  実装：[✓](https://github.com/zhengkid/Parallel-Probe) ・ リポジトリ内被引用：2  
+  多数派の答えが途中で既に確定していても、最後まで生成する方式では長い少数経路の完了待ちと総生成トークンが残る。論文の表1では、Qwen3-0.6Bの数学3ベンチマーク平均で、固定64経路の多数決に比べ正答率22.8%から23.3%へ変化しつつ、逐次トークン31.6千個から20.3千個、総トークン945.7千個から735.3千個へ減少した。
+
 - **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
@@ -80,6 +84,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   消費者向けNvidia GPUとApple Siliconを70B級モデルとNVFP4まで含めて実測比較した分析。Nvidiaは収まる範囲で計算密度が最高だがVRAMの壁とバックエンド摩擦があり、Appleは統合メモリで大規模モデルを実用精度のまま載せ効率でも勝るという二分構造を示した。
 
+- **2026-05 · [Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA](2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-with.md)**  
+  実装：[✓](https://github.com/CodeGandee/flashinfer-bench-starter-kit/tree/main/solution/cuda) ・ リポジトリ内被引用：1  
+  正しさを門番とする評価とハッキング禁止の下で複数コードエージェントが計画・実装・プロファイル・統合を分担し、人手のCUDAなしでMoEと疎注意のカーネルを参照実装比最大1101倍まで高速化した事例研究。
+
 - **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
   実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：1  
   推論大規模言語モデルは通常の言語モデルと異なり、キャッシュ使用量が大きく変動し、少数の遅い要求が処理全体を引き延ばす。著者らは評価枠組みASUとベンチマークASU-Perfを導入し、複数のサービング最適化がモデル規模や負荷によって効いたり逆効果になったりすることを、実機評価と到着負荷の再現で示す。
@@ -111,10 +119,6 @@
 - **2026-03 · [DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention](2026-2603.08026-dyllm-efficient-diffusion-llm-inference-via-saliency-based-token-selecti.md)**  
   実装：[✓](https://github.com/scale-snu/DyLLM) ・ リポジトリ内被引用：1  
   マスク拡散型の言語モデルは、応答系列をマスクから始め、複数トークンを並列に埋めながら反復的に復号する。salient位置ではFFNを再計算し、注意も正確に更新する。DyLLMは速度だけでなく品質を維持する運用点を探す方式である。
-
-- **2026-02 · [Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing](2026-2602.03845-parallel-probe-towards-efficient-parallel-thinking-via-2d-probing.md)**  
-  実装：[✓](https://github.com/zhengkid/Parallel-Probe) ・ リポジトリ内被引用：1  
-  多数派の答えが途中で既に確定していても、最後まで生成する方式では長い少数経路の完了待ちと総生成トークンが残る。論文の表1では、Qwen3-0.6Bの数学3ベンチマーク平均で、固定64経路の多数決に比べ正答率22.8%から23.3%へ変化しつつ、逐次トークン31.6千個から20.3千個、総トークン945.7千個から735.3千個へ減少した。
 
 - **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -671,7 +675,7 @@
   演算の疎性が、専門家重みを高帯域メモリから読み出す量の削減につながらなくなる。Lynxはこの矛盾を、モデルの重みを恒久的に枝刈りするのでなく、現在のバッチのルーター出力を再配置することで緩和する。通常の同居配置で出力トークン間隔の中央値を1.09～1.30倍短縮し、精度変化を概ね1ポイント以内に抑える。
 
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
-  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：16  
   多段階推論では、単一の思考連鎖（Chain-of-Thought、CoT）だけで回答すると、途中の偶然の誤りがそのまま最終回答に伝わる。自己整合性（自己整合性、SC）は同一問題から複数の思考連鎖を独立に標本化し、最終回答を多数決してこの変動を抑える。しかしSCは難しい問題にも簡単な問題にも、事前に決めた最大標本数を一律に使う。
 
 - **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "321d456ff25dc2b043b413951a09b5b69f6d5a62",
+  "base_commit": "6e9cc1b6d7294370721b2cc07ef1510c5fd091bb",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -480,10 +480,12 @@
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
     "2026-2607.17486-salt-salience-aware-lexical-trie-for-long-context-compression.json",
+    "2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
+    "2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-optimization.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
     "2026-2607.22587-trisp-tri-signal-structured-pruning-for-large-language-models.json",
     "2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence.json",
@@ -500,6 +502,7 @@
     "2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.json",
     "2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-question-answering.json",
     "2026-2608.00573-trimmoe-a-communication-aware-and-adaptive-depth-framework-for-distributed-edge-inference.json",
+    "2026-2608.00867-nuna-characterizing-and-mitigating-non-uniform-network-access-in-multi-die-gpu-scale-up-systems.json",
     "2026-2608.00914-augmented-backpressure-for-decentralized-management-of-agentic-networks.json",
     "2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded-language-flows.json",
     "2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.json",
@@ -521,7 +524,9 @@
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-llm-agent.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
+    "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json",
     "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json",
+    "2026-2608.16425-paratempo-efficient-parallel-reasoning-via-temporal-confidence.json",
     "2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceleration.json",
     "2026-2608.17616-mone-modular-neural-memory-for-efficient-long-context-inference.json",
     "2026-2608.20359-self-speculation-for-faster-reasoning-models.json",
@@ -47154,6 +47159,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.19215": {
+      "order": [
+        "2026-11-21T22:51:59+00:00",
+        "2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "c8e84f73242d18b7781256f54f2b4fb032b87959a88b9bebb96c1d7f560a9191",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md",
+        "canonical_id": "arXiv:2607.19215",
+        "worker_completed_at": "2026-11-22T07:22:31+09:00",
+        "worker_run_key": "muse-20261122-b1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3926,
+          "body_paragraphs": 18,
+          "method_chars": 1645,
+          "method_paragraphs": 4,
+          "evaluation_chars": 481,
+          "limitation_chars": 250,
+          "insufficiency_flags": [
+            "評価説明量 481 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 481 < 500"
+        ],
+        "processed_at": "2026-11-21T22:51:59+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2607.22583": {
+      "order": [
+        "2026-11-21T22:53:00+00:00",
+        "2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.00867": {
+      "order": [
+        "2026-11-21T22:54:00+00:00",
+        "2026-2608.00867-nuna-characterizing-and-mitigating-non-uniform-network-access-in-multi-die-gpu-scale-up-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.14560": {
+      "order": [
+        "2026-11-21T22:55:00+00:00",
+        "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.16425": {
+      "order": [
+        "2026-11-21T22:55:59+00:00",
+        "2026-2608.16425-paratempo-efficient-parallel-reasoning-via-temporal-confidence.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59251,6 +59328,18 @@
     "arxiv:2606.24773": [
       "papers/inference/99-other-inference-systems/2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md",
       "papers/inference/99-other-inference-systems/2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md"
+    ],
+    "arxiv:2607.22583": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-op.md"
+    ],
+    "arxiv:2608.00867": [
+      "papers/inference/15-inference-simulation-emulation/2026-2608.00867-nuna-characterizing-and-mitigating-non-uniform-network-access-in-multi-d.md"
+    ],
+    "arxiv:2608.14560": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-with.md"
+    ],
+    "arxiv:2608.16425": [
+      "papers/inference/99-other-inference-systems/2026-2608.16425-paratempo-efficient-parallel-reasoning-via-temporal-confidence.md"
     ]
   }
 }

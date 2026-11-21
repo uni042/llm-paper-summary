@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（97本）
+## 自動生成の論文一覧（98本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -157,6 +157,10 @@
 - **2026-07 · [Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ATSInferはテンソルごとのGPU常駐価値を実測し、CPU計算・PCIe転送・GPU計算を重ねて、VRAM不足時の転送待ちとCPU律速を減らす方式。
+
+- **2026-06 · [Multi-Objective Structured Pruning of LLMs for Latency and Model Size Optimization](2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-op.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層単位の除去を性能損失と実測遅延の多目的進化探索で決め、残りの刈り込み予算を並列ベイズ最適化で層ごとに配分する2段階の構造化枝刈りで、同率の既存手法より精度を保ちながらA100とJetson Nanoの両方で最速の遅延を出した研究。
 
 - **2026-06 · [MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference](2026-2607.09686-mawforge-memory-bounded-expert-materialization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
