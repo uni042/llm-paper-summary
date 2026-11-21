@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（96本）
+## 自動生成の論文一覧（97本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -331,6 +331,10 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
+
+- **2025-05 · [ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference](2025-2505.19342-astra-communication-efficient-acceleration-for-multi-device-transformer-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  帯域制約下の多デバイスTransformer推論で、シーケンス並列に混合精度アテンション（ローカルは全精度、非ローカルはベクトル量子化コードで送信）を組み合わせ、ノイズ増強量子化と分散クラストークンで精度を守りながら通信量を最大2457.6分の1に圧縮した研究。
 
 - **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
   実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：0  

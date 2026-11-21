@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1169本）
+## 自動生成の論文一覧（1173本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2781,7 +2781,7 @@
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：39  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：40  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
@@ -3172,6 +3172,10 @@
   実装：[✓](https://github.com/CFinTech/SparseSSM) ・ リポジトリ内被引用：1  
   入力依存の離散化係数と、系列の全時刻で使い回す状態遷移パラメータが組み合わさるため、通常の線形層向け剪定手法を状態遷移重みにそのまま適用すると、削除してよい状態を見誤りやすい。正式版の要旨は、SSM重み50%を微調整なしで削除した際の品質低下が「限定的」であると説明する。
 
+- **2025-06 · [ReCUT: Balancing Reasoning Length and Accuracy in LLMs via Stepwise Trails and Preference Optimization](2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trail.md)**  
+  実装：[✓](https://github.com/NEUIR/ReCUT) ・ リポジトリ内被引用：1  
+  段階ごとに長い続きと短い続きを試し報酬で一歩ずつ選ぶ探索で選好データを作り、正確さ重視と短さ重視の二モデルをパラメータ補間で統合することで、数学推論の平均トークンを約四二パーセント減らしながら正解率を四三・九から四五・七パーセントへ上げた。
+
 - **2025-06 · [Near-Optimal Online Deployment and Routing for Streaming LLMs](2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   流入するモデル群から同時稼働数の上限内で段階ごとに配備集合を楽観的に選び、段階内では予算と処理上限を満たす線形計画で問合せを振り分ける二層の方式で、後悔が問合せ数の三分の二乗の水準という理論の下限と一致する近最適性を示した。
@@ -3368,6 +3372,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   FLoCは、長時間動画から抽出した大量の視覚トークンを、指定されたトークン数の予算内で代表性と多様性の両方を保つ部分集合へ圧縮する方式である。
 
+- **2025-10 · [Explore Briefly, Then Decide: Mitigating LLM Overthinking via Cumulative Entropy Regulation](2025-2510.02249-explore-briefly-then-decide-mitigating-llm-overthinking-via-cumulative-e.md)**  
+  実装：[✓](https://github.com/AusertDream/CumulativeEntropyRegulation) ・ リポジトリ内被引用：0  
+  トークンエントロピーの累積平均TECAで推論過程の探索量を測り、正解時にTECAが低い応答へ報酬を与えるCERと分節報酬機構をGRPOへ組み込み、考えすぎによる出力トークンの浪費を難易度適応的に抑える学習手法を提案した研究。
+
 - **2025-10 · [Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation](2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案法MHA-ESPは、質問に関連する例示を検索し、質問と例示の埋め込みを多頭注意で集約して、基盤モデルの埋め込み次元に揃えた少数の仮想トークンを作る。原著がいう最大約10倍の計算量削減は入力例示のトークン処理に関する演算量比較であり、実際の生成速度が常に10倍になるという意味ではない。
@@ -3412,6 +3420,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   適応的 Dual Reasoner（ADR）は、大規模推論モデルが簡単な計算でも長いChain-of-Thoughtを出力する「過剰思考」を抑えるため、推論途中の難しさに応じてeasy（簡潔な思考）とhard（深い思考）を切り替える方式である。
 
+- **2025-10 · [A Free Lunch in LLM Compression: Revisiting Retraining after Pruning](2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.md)**  
+  実装：[✓](https://github.com/ZIB-IOL/Free-Lunch-in-LLM-Compression) ・ リポジトリ内被引用：0  
+  枝刈り後の適応を部分モデル単位の局所再構成で行う方法を最大72Bまで検証し、非線形部分を含む粒度では品質が粒度に依存しないフリーランチ領域と、行列単位だけが劣ること、再構成後に枝刈り基準の差が消えることを示した研究。
+
+- **2025-09 · [Vocabulary Customization for Efficient Domain-Specific LLM Deployment](2025-2509.26124-vocabulary-customization-for-efficient-domain-specific-llm-deployment.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ドメイン固有トークンを語彙へ追加し、マージ操作の末尾追加によりトークン数が決して増えないことを保証しながら、入力系列を最大20パーセント短縮しスループットを20〜30パーセント高める語彙カスタマイズを、電子商取引の実務タスクで検証した研究。
+
 - **2025-09 · [Thinking-Free Policy Initialization Makes Distilled Reasoning Models More Effective and Efficient Reasoners](2025-2509.26226-thinking-free-policy-initialization-makes-distilled-reasoning-models-mor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論モデルを検証可能報酬で強化学習するRLVR（Reinforcement Learning with Verifiable Rewards）では、正解が自動判定できる数学・コード課題を多数解かせ、rolloutごとの成否からpolicyを更新する。最大応答長を短く制限すれば安くなるが、途中の検証・再考を切り捨てることで、学習後の正答率が戻らない場合がある。
@@ -3431,6 +3447,10 @@
 - **2025-09 · [SDQ-LLM: Sigma-Delta Quantization for 1-bit LLMs of any size](2025-2510.03275-sdq-llm-sigma-delta-quantization-for-1-bit-llms-of-any-size.md)**  
   実装：[✓](https://github.com/Dreamlittlecat/LLM-Quant-Factory) ・ リポジトリ内被引用：0  
   SDQ-LLMは、アナログ信号のA/D変換で用いられるSigma-Delta（ΣΔ）量子化をLLMの重みへ適用し、低ビットの離散値をオーバーサンプリングした長い表現として保持する事後量子化（PTQ）方式である。
+
+- **2025-09 · [Scaling Up Throughput-oriented LLM Inference Applications on Heterogeneous Opportunistic GPU Clusters with Pervasive Context Management](2025-2509.13201-scaling-up-throughput-oriented-llm-inference-applications-on-heterogeneo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  遅延非感受のスループット指向LLM推論を異種混合の機会的GPUクラスタで動かすため、モデル等の共通計算文脈をワーカーに常駐させて再利用する遍在的文脈管理を提案し、実行時間を98.1%削減した研究。
 
 - **2025-09 · [SBVR: Summation of BitVector Representation for Efficient LLM Quantization](2025-2509.18172-sbvr-summation-of-bitvector-representation-for-efficient-llm-quantizatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3579,10 +3599,6 @@
 - **2025-06 · [Routing Mamba: Scaling State Space Models with Mixture-of-Experts Projection](2025-2506.18145-routing-mamba-scaling-state-space-models-with-mixture-of-experts-project.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは115Mから10B総パラメータまでの構成、Mamba、Mamba2、Gated DeltaNet、注意機構とのハイブリッドであるSambaを評価する。
-
-- **2025-06 · [ReCUT: Balancing Reasoning Length and Accuracy in LLMs via Stepwise Trails and Preference Optimization](2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trail.md)**  
-  実装：[✓](https://github.com/NEUIR/ReCUT) ・ リポジトリ内被引用：0  
-  段階ごとに長い続きと短い続きを試し報酬で一歩ずつ選ぶ探索で選好データを作り、正確さ重視と短さ重視の二モデルをパラメータ補間で統合することで、数学推論の平均トークンを約四二パーセント減らしながら正解率を四三・九から四五・七パーセントへ上げた。
 
 - **2025-06 · [Principled SVD-based Delta Compression via Quantization Error Minimization](2025-2506.11087-principled-svd-based-delta-compression-via-quantization-error-minimizati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4641,7 +4657,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：357  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：360  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
