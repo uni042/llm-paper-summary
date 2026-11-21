@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f01::chunk-0001-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.15883",
+      "identity_tokens": [
+        "arXiv:2406.15883",
+        "https://arxiv.org/abs/2406.15883"
+      ],
+      "title": "SimSMoE: Solving Representational Collapse via Similarity Measure",
+      "reason": "SMoEの表現崩壊を類似度指標で解く学習手法であり、事前学習と微調整での性能検証が中心で、推論サービングやデコード高速化への直接貢献は要旨に示されていないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2406.15883",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 221
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03479",
+      "identity_tokens": [
+        "arXiv:2601.03479",
+        "https://arxiv.org/abs/2601.03479"
+      ],
+      "title": "Efficient Sequential Recommendation for Long Term User Interest Via Personalization",
+      "reason": "長期履歴を学習可能トークンへ圧縮する逐次推薦手法であり、対象は推薦モデルの計算効率と精度であって、LLM推論システムやサービング基盤の技術ではないため異分野応用として扱う。",
+      "source_url": "https://arxiv.org/abs/2601.03479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 222
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14503",
+      "identity_tokens": [
+        "arXiv:2511.14503",
+        "https://arxiv.org/abs/2511.14503"
+      ],
+      "title": "Parameter-Aware Mamba Model for Multitask Dense Prediction",
+      "reason": "状態空間モデルのパラメータ専門家で多タスク密予測を行う視覚デコーダの提案であり、NYUD-v2等の密予測ベンチマークが対象で、LLM推論の高速化やメモリ削減とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2511.14503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 226
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.21522",
+      "identity_tokens": [
+        "arXiv:2507.21522",
+        "https://arxiv.org/abs/2507.21522"
+      ],
+      "title": "Model-Free Speculative Decoding for Transformer-Based ASR with Token Map Drafting",
+      "reason": "下書きモデルを使わずn-gramトークンマップで候補を生成するモデルフリー投機的デコードを提案し、CPU上のWhisper系ASR推論で1.27〜1.37倍の高速化を精度維持で示す直接的なデコード技術である。",
+      "source_url": "https://arxiv.org/abs/2507.21522",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 227
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.05186",
+      "identity_tokens": [
+        "arXiv:2510.05186",
+        "https://arxiv.org/abs/2510.05186"
+      ],
+      "title": "OptPipe: Memory- and Scheduling-Optimized Pipeline Parallelism for LLM Training",
+      "reason": "LLM学習のパイプライン並列をメモリとスケジューリングの制約付き最適化で改善する研究であり、バブル削減も学習スループット向けで、推論実行やサービングへの適用は要旨の範囲外である。",
+      "source_url": "https://arxiv.org/abs/2510.05186",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.09919",
+      "identity_tokens": [
+        "arXiv:2412.09919",
+        "https://arxiv.org/abs/2412.09919"
+      ],
+      "title": "B-VLLM: A Vision Large Language Model with Balanced Spatio-Temporal Tokens",
+      "reason": "映像理解向けにテキスト条件付きフレーム選択と時空間トークン統合で視覚トークン数を抑える枠組みだが、評価は映像理解精度が中心で推論速度やメモリ削減の定量的な実測が要旨にないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2412.09919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 233
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.08661",
+      "identity_tokens": [
+        "arXiv:2410.08661",
+        "https://arxiv.org/abs/2410.08661"
+      ],
+      "title": "QEFT: Quantization for Efficient Fine-Tuning of LLMs",
+      "reason": "量子化と微調整を両立させるQEFTは推論高速化も謳うものの、主眼は微調整の速度とメモリと品質の改善にあり、推論専用の量子化手法としての機構やサービング実測が要旨では不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2410.08661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.26294",
+      "identity_tokens": [
+        "arXiv:2604.26294",
+        "https://arxiv.org/abs/2604.26294"
+      ],
+      "title": "Folding Tensor and Sequence Parallelism for Memory-Efficient Transformer Training & Inference",
+      "reason": "テンソル並列と系列並列を同一デバイス軸へ折り畳み、注意ではKV交換、MLPでは重みリング循環を行う並列実行方式を実装し、メモリと通信の理論解析と既存並列との比較で推論にも使える分散実行技術を示している。",
+      "source_url": "https://arxiv.org/abs/2604.26294",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.07256",
+      "identity_tokens": [
+        "arXiv:2611.07256",
+        "https://arxiv.org/abs/2611.07256"
+      ],
+      "title": "TriAttention: Unified Sparse Mixed-Precision Attention for Long-Context LLM Inference",
+      "reason": "QKタイルをスキップ・4bit・8bitへ振り分けるスパース混合精度注意と融合カーネルを提案し、プリフィルで作った量子化KVキャッシュをデコードで再利用して最大7.88倍の生成高速化を示す長文脈推論技術である。",
+      "source_url": "https://arxiv.org/abs/2611.07256",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06787",
+      "identity_tokens": [
+        "arXiv:2601.06787",
+        "https://arxiv.org/abs/2601.06787"
+      ],
+      "title": "Garbage Attention in Large Language Models: BOS Sink Heads and Sink-aware Pruning",
+      "reason": "BOSシンクの高い注意ヘッドが冗長であることを示し、そのヘッドを剪定する圧縮戦略を提案するが、要旨の評価は下流タスク保持率が中心で推論レイテンシやメモリ削減の実測が示されていないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2601.06787",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03137",
+      "identity_tokens": [
+        "arXiv:2608.03137",
+        "https://arxiv.org/abs/2608.03137"
+      ],
+      "title": "Verifiable Memory: Learning Unified Memory Management with Local and Global Verifiers for Large Language Model Agents",
+      "reason": "LLMエージェントの長期・短期メモリを検証器付き方策で統合管理する枠組みであり、対象はエージェントの文脈保持と証拠想起であって、KVキャッシュや推論エンジン内部のメモリ管理とは層が異なるため関連は薄い。",
+      "source_url": "https://arxiv.org/abs/2608.03137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01587",
+      "identity_tokens": [
+        "arXiv:2609.01587",
+        "https://arxiv.org/abs/2609.01587"
+      ],
+      "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+      "reason": "学習後量子化の損傷がどの層に生じるかを因果的混合精度介入で測り、追加ビットは局所修復より全体粒度へ配るべきだと示す分析研究であり、新しい量子化やサービング手法の提案ではないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2609.01587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17653",
+      "identity_tokens": [
+        "arXiv:2605.17653",
+        "https://arxiv.org/abs/2605.17653"
+      ],
+      "title": "LLMForge: Multi-Backend Hardware-Aware Neural Architecture Search with Infinite-Head Attention for Edge Language Models",
+      "reason": "エッジ向けに無限ヘッド注意で探索空間を広げ、複数バックエンドのハードウェアコストモデルでアーキテクチャ探索を行い、エネルギー毎トークン40％削減とTTFT・TPOT43％削減のデプロイ向け変種を得たオンデバイス推論研究である。",
+      "source_url": "https://arxiv.org/abs/2605.17653",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19456",
+      "identity_tokens": [
+        "arXiv:2410.19456",
+        "https://arxiv.org/abs/2410.19456"
+      ],
+      "title": "Computational Bottlenecks of Training Small-scale Large Language Models",
+      "reason": "2B以下の小規模LLM学習についてGPU種別やバッチサイズ等の計算ボトルネックをクラウド上で測る研究であり、対象は学習コストとスループットの計測であって推論システムの技術ではない。",
+      "source_url": "https://arxiv.org/abs/2410.19456",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 250
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.05174",
+      "identity_tokens": [
+        "arXiv:2006.05174",
+        "https://arxiv.org/abs/2006.05174"
+      ],
+      "title": "Hand-crafted Attention is All You Need? A Study of Attention on Self-supervised Audio Transformer",
+      "reason": "自己教師あり音声Transformerの注意重みを分析し入力非依存の初期化で学習と推論を2割速くする音声表現学習の研究であり、対象ドメインも目的もLLM推論システムとは異なるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2006.05174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.24037",
+      "identity_tokens": [
+        "arXiv:2505.24037",
+        "https://arxiv.org/abs/2505.24037"
+      ],
+      "title": "Leave it to the Specialist: Repair Sparse LLMs with Sparse Fine-Tuning via Sparsity Evolution",
+      "reason": "スパースLLMの微調整で疎構造を進化させ剪定済み重みを再活性化するSEFTは、メモリと時間の効率も示すが主眼は下流タスク適応の微調整手法であり、推論圧縮そのものの提案ではないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2505.24037",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.03199",
+      "identity_tokens": [
+        "arXiv:2601.03199",
+        "https://arxiv.org/abs/2601.03199"
+      ],
+      "title": "DIP: Dynamic In-Context Planner For Diffusion Language Models",
+      "reason": "拡散言語モデルのブロック単位KVキャッシュを活かし、生成信頼度が低い時だけ文脈内事例を動的に挿入するDIPにより、固定プロンプト比で最大1.59倍の高速化を品質維持で達成する推論時文脈最適化技術である。",
+      "source_url": "https://arxiv.org/abs/2601.03199",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01281",
+      "identity_tokens": [
+        "arXiv:2603.01281",
+        "https://arxiv.org/abs/2603.01281"
+      ],
+      "title": "Spectral Attention Steering for Prompt Highlighting",
+      "reason": "キー埋め込みをスペクトル編集して注意を誘導するSEKAはFlashAttention互換で低オーバーヘッドを謳うが、目的はプロンプト強調というモデル制御であり、推論高速化やキャッシュ削減を主目的とする技術ではないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2603.01281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 261
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09169",
+      "identity_tokens": [
+        "arXiv:2602.09169",
+        "https://arxiv.org/abs/2602.09169"
+      ],
+      "title": "Train Less, Infer Faster: Efficient Model Finetuning and Compression via Structured Sparsity",
+      "reason": "行列の行列スパース化と確率的ゲートで微調整し推論時間短縮と2〜4割のパラメータ削減を示すが、提案の中心はLoRA代替の適応手法であり、推論専用の構造化スパース実行機構の詳細が要旨では薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2602.09169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 262
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.07171",
+      "identity_tokens": [
+        "arXiv:2210.07171",
+        "https://arxiv.org/abs/2210.07171"
+      ],
+      "title": "SQuAT: Sharpness- and Quantization-Aware Training for BERT",
+      "reason": "BERT向けにシャープネスと量子化を同時に意識する学習法で低ビット量子化精度を改善する研究であり、量子化自体は推論効率に関わるものの、手法は学習過程の最適化が主体で推論エンジンへの貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2210.07171",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 263
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f01",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

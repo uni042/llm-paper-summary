@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2e04::chunk-0002-of-0002",
+  "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.22798",
+      "identity_tokens": [
+        "arXiv:2507.22798",
+        "https://arxiv.org/abs/2507.22798"
+      ],
+      "title": "Quantifying surprise in clinical care: Detecting highly informative events in electronic health records with foundation models",
+      "reason": "電子カルテにおける情報量の高いイベントを基盤モデルの驚き度で検出する臨床応用研究であり、医療記録の予測解釈が目的で、言語モデルの推論システムやその効率化とは分野が異なるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2507.22798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00454",
+      "identity_tokens": [
+        "arXiv:2602.00454",
+        "https://arxiv.org/abs/2602.00454"
+      ],
+      "title": "Cross-Modal Memory Compression for Efficient Multi-Agent Debate",
+      "reason": "マルチエージェント討論の履歴を画像表現へ変換して入力トークンを92%以上削減するDebateOCRを提案し計算削減を謳うが、対象は討論という特定応用の文脈管理に限定され、汎用的なLLM推論機構としての位置付けは弱い。",
+      "source_url": "https://arxiv.org/abs/2602.00454",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 301
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.18533",
+      "identity_tokens": [
+        "arXiv:2406.18533",
+        "https://arxiv.org/abs/2406.18533"
+      ],
+      "title": "On Scaling Up 3D Gaussian Splatting Training",
+      "reason": "3D Gaussian Splattingの学習を複数GPUへ分散させるシステムGrendelの提案であり、対象は三次元再構成の学習並列化であって、言語モデルの推論やサービングとは無関係な別分野の研究である。",
+      "source_url": "https://arxiv.org/abs/2406.18533",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 303
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13438",
+      "identity_tokens": [
+        "arXiv:2605.13438",
+        "https://arxiv.org/abs/2605.13438"
+      ],
+      "title": "CogniFold: Always-On Proactive Memory via Cognitive Folding",
+      "reason": "エージェントの断片的イベントを認知的構造へ自律的に折り畳む常時稼働メモリCogniFoldの提案であり、内容はエージェント記憶の組織化と認知ベンチマーク評価が中心で、LLM推論処理系の機構とは関係しない。",
+      "source_url": "https://arxiv.org/abs/2605.13438",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 305
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.23812",
+      "identity_tokens": [
+        "arXiv:2610.23812",
+        "https://arxiv.org/abs/2610.23812"
+      ],
+      "title": "Learning Personalized Memory Gating from Delayed One-Sided Feedback",
+      "reason": "言語モデルエージェントの長期メモリに事実を残すかを遅延片側フィードバックで個人化学習するゲーティング方策の理論研究であり、対象は記憶保持の意思決定であって推論時のKVキャッシュや計算効率の技術ではない。",
+      "source_url": "https://arxiv.org/abs/2610.23812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 306
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.06515",
+      "identity_tokens": [
+        "arXiv:2503.06515",
+        "https://arxiv.org/abs/2503.06515"
+      ],
+      "title": "SAQ-SAM: Semantically-Aligned Quantization for Segment Anything Model",
+      "reason": "Segment Anything Modelの学習後量子化を意味的整合の観点で改善するSAQ-SAMの提案であり、対象は画像セグメンテーション用視覚モデルの端末展開で、LLM推論向け量子化とはモデルも用途も異なるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2503.06515",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 307
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.06382",
+      "identity_tokens": [
+        "arXiv:2311.06382",
+        "https://arxiv.org/abs/2311.06382"
+      ],
+      "title": "Transfer Learning for Structured Pruning under Limited Task Data",
+      "reason": "限られたタスクデータ下で構造化剪定と転移学習を組み合わせる枠組みを経験的に検討しているが、対象モデルは汎用の事前学習モデル全般であり、LLM推論の高速化や省メモリ化を直接測った研究ではなく関連は薄い。",
+      "source_url": "https://arxiv.org/abs/2311.06382",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 309
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28716",
+      "identity_tokens": [
+        "arXiv:2603.28716",
+        "https://arxiv.org/abs/2603.28716"
+      ],
+      "title": "Dynamic Dual-Granularity Skill Bank for Agentic RL",
+      "reason": "エージェント強化学習のためにタスクとステップの二粒度スキルバンクを政策と共同学習するD2Skillの提案であり、内容は訓練時の経験再利用と方策最適化が主体で、推論システムの処理機構を扱っていない。",
+      "source_url": "https://arxiv.org/abs/2603.28716",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 310
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15941",
+      "identity_tokens": [
+        "arXiv:2411.15941",
+        "https://arxiv.org/abs/2411.15941"
+      ],
+      "title": "MobileMamba: Lightweight Multi-Receptive Visual Mamba Network",
+      "reason": "軽量な視覚MambaネットワークMobileMambaで多受容野特徴相互作用により画像分類の速度と精度を両立させる研究であり、対象は視覚モデル専用で言語モデルの推論やサービングとは分野が異なるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2411.15941",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 311
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21414",
+      "identity_tokens": [
+        "arXiv:2601.21414",
+        "https://arxiv.org/abs/2601.21414"
+      ],
+      "title": "System 1&2 Synergy via Dynamic Model Interpolation",
+      "reason": "InstructとThinkingのチェックポイントをクエリごとに動的補間して推論強度を調整するDAMIを提案し効率と精度の両立を狙うが、評価は数学推論ベンチマークでの精度中心で、補間による実際の推論コスト削減量は要旨で不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2601.21414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2e04",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

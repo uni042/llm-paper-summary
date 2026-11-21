@@ -1,0 +1,375 @@
+{
+  "artifact_type": "discovery_run",
+  "origin": "discovery_worklist",
+  "record_count": 20,
+  "records": [
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2509.22992",
+      "classification": "accept",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2509.22992",
+        "https://arxiv.org/abs/2509.22992"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "多段カスケードや早期終了を含むMLサービングを多段階意思決定として定式化し、リコールが最適な精度・遅延トレードオフ達成に必要十分であることを証明するサービング設計そのものの研究である。",
+      "source_url": "https://arxiv.org/abs/2509.22992",
+      "title": "T-TAMER: Provably Taming Trade-offs in ML Serving",
+      "worklist_rank": 447
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2605.24044",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2605.24044",
+        "https://arxiv.org/abs/2605.24044"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "推論DAGのリアルタイムスケジューリングや中間デッドライン配分はサービングのスケジューリングと重なるが、対象はロボット向けDNNの制約付き実行でありLLM推論への適用機構は要旨では示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.24044",
+      "title": "MERIS: Adaptive Real-Time Scheduling of Refined Inference DAGs in Dynamic Robotic Environments",
+      "worklist_rank": 448
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2610.29467",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2610.29467",
+        "https://arxiv.org/abs/2610.29467"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "長期対話エージェントの利用者信念を信頼度付きで保持・訂正する記憶統合の研究であり、推論時のKVキャッシュやサービング機構ではなくパーソナライゼーション用メモリ管理が主題である。",
+      "source_url": "https://arxiv.org/abs/2610.29467",
+      "title": "PreCoMem: Predictive Cognitive Memory for Self-Evolving Long-Term Dialogue Agents",
+      "worklist_rank": 449
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2509.18168",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2509.18168",
+        "https://arxiv.org/abs/2509.18168"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "長文の意味解析を階層的なセグメントグラフで処理する手法で、推論高速化やメモリ削減は副次的効果にとどまり、AMR解析や意味役割付与といったNLP応用タスク自体が中心である。",
+      "source_url": "https://arxiv.org/abs/2509.18168",
+      "title": "HSGM: Hierarchical Segment-Graph Memory for Scalable Long-Text Semantics",
+      "worklist_rank": 450
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2508.20376",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2508.20376",
+        "https://arxiv.org/abs/2508.20376"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "マルチタスク稠密予測向けにMambaの双方向スキャンを改良する視覚モデルアーキテクチャの提案であり、LLMの推論・デコードやサービングシステムへの貢献は要旨に含まれていない。",
+      "source_url": "https://arxiv.org/abs/2508.20376",
+      "title": "Enhancing Mamba Decoder with Bidirectional Interaction in Multi-Task Dense Prediction",
+      "worklist_rank": 455
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2504.09803",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2504.09803",
+        "https://arxiv.org/abs/2504.09803"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "事前学習済みマルチタスクモデルを枝刈りしてエッジデバイス向けに小型化する圧縮手法であり推論配置と関連するが、評価は画像データセットでLLM推論向けの具体的な圧縮機構は不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2504.09803",
+      "title": "CUT: Pruning Pre-Trained Multi-Task Models into Compact Models for Edge Devices",
+      "worklist_rank": 460
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2604.04184",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2604.04184",
+        "https://arxiv.org/abs/2604.04184"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "ストリーミングVideoLLM向けに文脈管理や配置最適化を含むリアルタイム推論フレームワークをうたうが、要旨の中心は動画理解モデルと学習であり推論システム側の具体的な機構の記述が薄い。",
+      "source_url": "https://arxiv.org/abs/2604.04184",
+      "title": "AURA: Always-On Understanding and Real-Time Assistance via Video Streams",
+      "worklist_rank": 461
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2602.17025",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2602.17025",
+        "https://arxiv.org/abs/2602.17025"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "GRPO学習において終端報酬から継続・停止の誘導信号を作りロールアウト長を抑える強化学習の学習手法であり、推論サービングやデコード実行系ではなく訓練効率の改善が主題である。",
+      "source_url": "https://arxiv.org/abs/2602.17025",
+      "title": "WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization for Rollout-Efficient Reasoning",
+      "worklist_rank": 462
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2609.11899",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2609.11899",
+        "https://arxiv.org/abs/2609.11899"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "エッジ・クラウド間で視覚的必要性に応じてキーフレーム取得を制御しクエリ当たりの視覚処理コストを上限化する仕組みは推論コスト制御と関連するが、長尺動画理解という応用側のルーティングが主体である。",
+      "source_url": "https://arxiv.org/abs/2609.11899",
+      "title": "Caption-once, Frames-on-Demand: Visual-Need Routing for Budget-Aware Agentic Long Video Understanding",
+      "worklist_rank": 464
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2603.19606",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2603.19606",
+        "https://arxiv.org/abs/2603.19606"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "リモートセンシングの変化検出向けにRWKVを用いた階層エンコーダを提案する画像解析モデルであり、線形時間推論はアーキテクチャ特性の説明にとどまりLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2603.19606",
+      "title": "Beyond Quadratic: Linear-Time Change Detection with RWKV",
+      "worklist_rank": 465
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2601.23184",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2601.23184",
+        "https://arxiv.org/abs/2601.23184"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "明示的な思考連鎖を潜在空間へ圧縮して推論時の計算冗長性を下げる発想はデコード効率と関連するが、提案の実体はVAEによる潜在推論の学習パラダイムであり実行システムとしての機構ではない。",
+      "source_url": "https://arxiv.org/abs/2601.23184",
+      "title": "ReGuLaR: Variational Latent Reasoning Guided by Rendered Chain-of-Thought",
+      "worklist_rank": 466
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2602.08332",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2602.08332",
+        "https://arxiv.org/abs/2602.08332"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "入力処理と並行して思考トークンを生成し埋め込みへ戻すことで思考連鎖の遅延を抑える手法は推論時計算の重ね合わせとして関連するが、教師あり学習による推論方式の提案でありサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2602.08332",
+      "title": "Latent Reasoning with Supervised Thinking States",
+      "worklist_rank": 467
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2602.07451",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2602.07451",
+        "https://arxiv.org/abs/2602.07451"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "拡散型LLMと自己回帰型デコードを同一エージェント枠組みで比較し速度やツール呼び出し失敗、注意マスク整合の問題を示す分析であり、生成パラダイムの評価が中心で新たな推論システムの実装提案ではない。",
+      "source_url": "https://arxiv.org/abs/2602.07451",
+      "title": "DLLM Agent: See Farther, Run Faster",
+      "worklist_rank": 468
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2603.18558",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2603.18558",
+        "https://arxiv.org/abs/2603.18558"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "固定フレーム予算の下で質問を階層論理木に分解してフレームを選ぶ長尺動画質問応答の前処理手法であり、文脈窓制約への対処は応用側の選択アルゴリズムにとどまりLLM推論基盤の技術ではない。",
+      "source_url": "https://arxiv.org/abs/2603.18558",
+      "title": "HiMu: Hierarchical Multimodal Frame Selection for Long Video Question Answering",
+      "worklist_rank": 469
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2602.23828",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2602.23828",
+        "https://arxiv.org/abs/2602.23828"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "最短路やゲノム配列アラインメントなど動的計画法向けに3D DRAM上のPIMアクセラレータを設計するハードウェア研究であり、LLM推論のメモリ階層やオフロードとは対象ワークロードが異なる。",
+      "source_url": "https://arxiv.org/abs/2602.23828",
+      "title": "GenDRAM:Hardware-Software Co-Design of General Platform in DRAM",
+      "worklist_rank": 470
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2604.16484",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2604.16484",
+        "https://arxiv.org/abs/2604.16484"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "物理実行の裏で拡散デノイジングを進める投機的非同期推論で遮断遅延を半減させる要素は推論実行と関連するが、論文全体はロボット操作向け世界モデルの学習と sim-to-real 転移が主体である。",
+      "source_url": "https://arxiv.org/abs/2604.16484",
+      "title": "DexWorldModel: Causal Latent World Modeling towards Automated Learning of Embodied Tasks",
+      "worklist_rank": 472
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2606.09516",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2606.09516",
+        "https://arxiv.org/abs/2606.09516"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "シフトウィンドウ注意を密なSDPA経路に載せ替え軽量オートエンコーダでチャンク単位デコードを高速化するなど生成モデル推論の最適化は具体的だが、対象は動画復元の拡散モデルでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2606.09516",
+      "title": "SwiftVR: Real-Time One-Step Generative Video Restoration",
+      "worklist_rank": 473
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2512.08161",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2512.08161",
+        "https://arxiv.org/abs/2512.08161"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "画像の霞除去向けにフーリエ領域のRWKV注意や意味ブリッジを組み合わせた復元ネットワークであり、線形計算量はモデル特性の主張にとどまりLLM推論システムへの寄与はない。",
+      "source_url": "https://arxiv.org/abs/2512.08161",
+      "title": "Fourier-RWKV: A Multi-State Perception Network for Efficient Image Dehazing",
+      "worklist_rank": 475
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2603.12350",
+      "classification": "borderline",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2603.12350",
+        "https://arxiv.org/abs/2603.12350"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "音声言語モデル向けにCTCベースのエンコーダ統合とオンザフライ可能なデコーダ再設計でストリーミング化し遅延を下げる点はデコード実行と関連するが、主題は音声トークン化と埋め込みの方式である。",
+      "source_url": "https://arxiv.org/abs/2603.12350",
+      "title": "TASTE-Streaming: Towards Streamable Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
+      "worklist_rank": 476
+    },
+    {
+      "body_check": "abstract_screen_only; body_not_read",
+      "canonical_id": "arXiv:2607.01345",
+      "classification": "unrelated",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "identity_tokens": [
+        "arXiv:2607.01345",
+        "https://arxiv.org/abs/2607.01345"
+      ],
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "reason": "二人会話のターン交代の自然さを尤度ベースで自動評価し摂動ベンチマークで検証する評価フレームワークであり、対話システムの推論実行や遅延制御の技術提案は含まれていない。",
+      "source_url": "https://arxiv.org/abs/2607.01345",
+      "title": "TurnNat: Automatic Evaluation of Turn-Taking Naturalness in Dyadic Spoken Dialogue",
+      "worklist_rank": 477
+    }
+  ],
+  "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+  "run_key": "muse-20261121-c2e08::chunk-0001-of-0002",
+  "schema_version": 2,
+  "worker_id": "muse",
+  "parent_run_key": "muse-20261121-c2e08",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

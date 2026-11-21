@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f01::chunk-0002-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.29397",
+      "identity_tokens": [
+        "arXiv:2607.29397",
+        "https://arxiv.org/abs/2607.29397"
+      ],
+      "title": "Studying quantization trade-offs for efficient inference deployment in machine translation",
+      "reason": "機械翻訳のデプロイでW4A8等の量子化と文書チャンキングのレイテンシ・スループット trade-offを単一GPUで実測する研究だが、新規の推論手法ではなく特定応用での評価が主体であるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2607.29397",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 264
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.23663",
+      "identity_tokens": [
+        "arXiv:2509.23663",
+        "https://arxiv.org/abs/2509.23663"
+      ],
+      "title": "HIVTP: A Training-Free Method to Improve VLMs Efficiency via Hierarchical Visual Token Pruning Using Middle-Layer-Based Importance Score",
+      "reason": "視覚エンコーダ中間層の注意から重要度を推定し階層的に視覚トークンを剪定する学習不要手法HIVTPにより、LLaVA系でTTFTを最大55％削減し生成スループットを最大60％改善するVLM推論効率化技術である。",
+      "source_url": "https://arxiv.org/abs/2509.23663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 265
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.08999",
+      "identity_tokens": [
+        "arXiv:2510.08999",
+        "https://arxiv.org/abs/2510.08999"
+      ],
+      "title": "SQS: Bayesian DNN Compression through Sparse Quantized Sub-distributions",
+      "reason": "スパイク・アンド・スラブ事前分布と混合ガウスで剪定と低ビット量子化をベイズ変分学習で同時に行う統合圧縮枠組みを提案し、Llama3.2やQwen2.5等で既存法より高い圧縮率を同等の性能低下で示している。",
+      "source_url": "https://arxiv.org/abs/2510.08999",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 266
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01849",
+      "identity_tokens": [
+        "arXiv:2602.01849",
+        "https://arxiv.org/abs/2602.01849"
+      ],
+      "title": "Self-Rewarding Sequential Monte Carlo for Masked Diffusion Language Models",
+      "reason": "マスク拡散言語モデル向けに自己報酬型逐次モンテカルロで複数粒子を並列探索する推論時スケーリング手法だが、狙いはサンプリング品質と多様性の改善であり、速度やメモリ等の推論効率の改善は要旨に示されていないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2602.01849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 267
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12671",
+      "identity_tokens": [
+        "arXiv:2502.12671",
+        "https://arxiv.org/abs/2502.12671"
+      ],
+      "title": "Baichuan-M1: Pushing the Medical Capability of Large Language Models",
+      "reason": "医療特化LLMを20兆トークンで一から学習したBaichuan-M1のモデル開発報告であり、医療性能と汎用性能の両立が主題で、推論システムやサービング効率に関する技術的貢献は含まれていない。",
+      "source_url": "https://arxiv.org/abs/2502.12671",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 269
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.15218",
+      "identity_tokens": [
+        "arXiv:2502.15218",
+        "https://arxiv.org/abs/2502.15218"
+      ],
+      "title": "ESPnet-SpeechLM: An Open Speech Language Model Toolkit",
+      "reason": "音声言語モデルの開発を標準化するESPnet-SpeechLMツールキットの紹介であり、前処理から事前学習と評価までのワークフロー提供が目的で、LLM推論の高速化や分散実行の技術ではない。",
+      "source_url": "https://arxiv.org/abs/2502.15218",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 270
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.17135",
+      "identity_tokens": [
+        "arXiv:2211.17135",
+        "https://arxiv.org/abs/2211.17135"
+      ],
+      "title": "BudgetLongformer: Can we Cheaply Pretrain a SotA Legal Language Model From Scratch?",
+      "reason": "法律ドメインのLongformerを置換トークン検出で安価に事前学習するBudgetLongformerの研究であり、長文要約での性能検証が中心で、効率的アーキテクチャの推論システムへの貢献を示すものではない。",
+      "source_url": "https://arxiv.org/abs/2211.17135",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 271
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.08050",
+      "identity_tokens": [
+        "arXiv:2604.08050",
+        "https://arxiv.org/abs/2604.08050"
+      ],
+      "title": "ABMAMBA: Multimodal Large Language Model with Aligned Hierarchical Bidirectional Scan for Efficient Video Captioning",
+      "reason": "双方向走査Mambaで二次注意を線形化し映像キャプションで約3倍のスループットを示すマルチモーダルモデルだが、主眼はキャプション精度とモデルアーキテクチャであり、汎用推論システムとしての機構は限定的であるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2604.08050",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 272
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33020",
+      "identity_tokens": [
+        "arXiv:2610.33020",
+        "https://arxiv.org/abs/2610.33020"
+      ],
+      "title": "Mine or Yours? Self-Other Confusion in Latent LLM Communication",
+      "reason": "他モデルのKVキャッシュを共有する潜在通信で自己と他者の優先度を取り違える現象を配置別に分析した研究であり、キャッシュ共有という推論基盤に触れるものの、新しいシステム機構の提案ではなく評価と知見が主体である。",
+      "source_url": "https://arxiv.org/abs/2610.33020",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 273
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.05915",
+      "identity_tokens": [
+        "arXiv:2511.05915",
+        "https://arxiv.org/abs/2511.05915"
+      ],
+      "title": "CoEdge-RAG: Optimizing Hierarchical Scheduling for Retrieval-Augmented LLMs in Collaborative Edge Computing",
+      "reason": "協調エッジ計算で検索拡張LLMを階層スケジューリングするCoEdge-RAGを提案し、ノード間の負荷分散とノード内のメモリ配分をオンライン最適化して遅延と品質の trade-offを改善する分散推論スケジューリング技術である。",
+      "source_url": "https://arxiv.org/abs/2511.05915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 275
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

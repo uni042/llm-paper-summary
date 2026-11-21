@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2e11::chunk-0001-of-0002",
+  "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17621",
+      "identity_tokens": [
+        "arXiv:2607.17621",
+        "https://arxiv.org/abs/2607.17621"
+      ],
+      "title": "Mechanistic Attention Guidance for Agent Memory Refinement",
+      "reason": "retrieval-head attentionでメモリ利用行列を作りエージェント記憶を segment単位で修正するAGMRだが、対象は対話エージェントの記憶洗練でありLLMサービングやKVキャッシュ等の推論基盤技術ではないため関連は薄い。",
+      "source_url": "https://arxiv.org/abs/2607.17621",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 127
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08615",
+      "identity_tokens": [
+        "arXiv:2606.08615",
+        "https://arxiv.org/abs/2606.08615"
+      ],
+      "title": "Harnessing Streaming Video in the Wild",
+      "reason": "Streaming Harnessで12時間保持の長期メモリと秒未満レイテンシの実時間処理をVLMへ付与するが、主体は248K件のストリーミング学習データと評価ベンチマーク構築でありLLM推論システム自体の新機構は要旨で不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2606.08615",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 130
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15509",
+      "identity_tokens": [
+        "arXiv:2610.15509",
+        "https://arxiv.org/abs/2610.15509"
+      ],
+      "title": "CacheLink: Functional KV Transport for Zero-Prefill Cross-Model Context Handoff",
+      "reason": "送信側KVキャッシュを受信モデル互換状態へ機能的に変換し再プリフィルなしで継続生成するCacheLinkを提案し、32K文脈でハンドオフレイテンシを最大7.27倍削減するなどKV輸送という推論サービングへの直接貢献が具体的である。",
+      "source_url": "https://arxiv.org/abs/2610.15509",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 131
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13262",
+      "identity_tokens": [
+        "arXiv:2602.13262",
+        "https://arxiv.org/abs/2602.13262"
+      ],
+      "title": "General learned delegation by clones",
+      "reason": "同一重みクローンを並列文脈へ spawnし生成と文脈予算を配分するSELFCESTは推論予算下の精度・コストParetoを改善するが、獲得はエージェント強化学習による学習済み制御でありサービング基盤の実装技術ではない。",
+      "source_url": "https://arxiv.org/abs/2602.13262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 134
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31975",
+      "identity_tokens": [
+        "arXiv:2609.31975",
+        "https://arxiv.org/abs/2609.31975"
+      ],
+      "title": "Model Casting and Low-Parameter Gating: Towards More Sparsely Activated FFNs",
+      "reason": "FFN活性を疎化するmodel castingと低パラメータLoPA Gatingにより推論時FLOPを最大約3倍削減し、専用カーネルでGPU実測3.31倍高速化を示すなど推論向け疎活性化FFNの直接的な効率化手法である。",
+      "source_url": "https://arxiv.org/abs/2609.31975",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 135
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02228",
+      "identity_tokens": [
+        "arXiv:2510.02228",
+        "https://arxiv.org/abs/2510.02228"
+      ],
+      "title": "xLSTM Scaling Laws: Competitive Performance with Linear Time-Complexity",
+      "reason": "xLSTMとTransformerのIsoFLOP等によるスケーリング則比較と推論時スケーリング特性の分析が主体で、新しい推論システムやデコード手法の提案ではなく、学習計算予算に対する性能予測を扱う研究である。",
+      "source_url": "https://arxiv.org/abs/2510.02228",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 137
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.01974",
+      "identity_tokens": [
+        "arXiv:2304.01974",
+        "https://arxiv.org/abs/2304.01974"
+      ],
+      "title": "Dialogue-Contextualized Re-ranking for Medical History-Taking",
+      "reason": "医療問診における質問候補の対話文脈付き再ランキングとnDCGやmAPの改善を扱う応用研究であり、対象は症状チェック等の医療対話システムであってLLM推論・サービング技術とは分野が異なる。",
+      "source_url": "https://arxiv.org/abs/2304.01974",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 138
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.00662",
+      "identity_tokens": [
+        "arXiv:2411.00662",
+        "https://arxiv.org/abs/2411.00662"
+      ],
+      "title": "MoNTA: Accelerating Mixture-of-Experts Training with Network-Traffc-Aware Parallel Optimization",
+      "reason": "MoNTAは通信量とクラスタトポロジに応じた並列戦略選択でMoEの分散学習を最適化しAllToAll性能や学習レイテンシを改善するもので、タイトル通り学習単独の最適化でありMoE推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/2411.00662",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 142
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14934",
+      "identity_tokens": [
+        "arXiv:2610.14934",
+        "https://arxiv.org/abs/2610.14934"
+      ],
+      "title": "FidelityQ: Preserving Predictive Fidelity in Ultra-Low-Bit Language Model Quantization",
+      "reason": "2ビットまでの超低ビットスカラー量子化FidelityQがIACによる符号化と知識集約キャリブレーションで予測忠実度を保ち、線形層メモリをFP16比8倍削減するなどLLM配備向け量子化への直接貢献が明確である。",
+      "source_url": "https://arxiv.org/abs/2610.14934",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 144
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.19765",
+      "identity_tokens": [
+        "arXiv:2512.19765",
+        "https://arxiv.org/abs/2512.19765"
+      ],
+      "title": "How Many Experts Are Enough? Towards Optimal Semantic Specialization for Mixture-of-Experts",
+      "reason": "勾配ベースの意味ドリフト検出で専門家を追加し信頼度質量で動的ルーティングするMASSはMoEの専門家特化を扱うが、評価は言語・視覚データでの精度と特化度が中心で推論サービングのスループットやメモリ機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2512.19765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 146
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17280",
+      "identity_tokens": [
+        "arXiv:2603.17280",
+        "https://arxiv.org/abs/2603.17280"
+      ],
+      "title": "The 1/W Law: An Analytical Study of Context-Length Routing Topology and GPU Generation Gains for LLM Inference Energy Efficiency",
+      "reason": "文脈長がKVキャッシュ同時実行数を律速しtok/Wが半減する1/W則を導出し、二プール文脈長ルーティングFleetOptで約2.5倍のエネルギー効率を示すなどLLM推論の計測とルーティング設計に直接関わる分析である。",
+      "source_url": "https://arxiv.org/abs/2603.17280",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 148
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11582",
+      "identity_tokens": [
+        "arXiv:2605.11582",
+        "https://arxiv.org/abs/2605.11582"
+      ],
+      "title": "Efficient LLM-based Advertising via Model Compression and Parallel Verification",
+      "reason": "適応的グループ量子化と階層的疎化、前缀木並列検証で広告生成LLMの推論を高速化するが、枠組みはリアルタイム広告という特定応用への統合が主体であり各推論技術自体の新規性や汎用サービング評価は要旨で限定的である。",
+      "source_url": "https://arxiv.org/abs/2605.11582",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.02561",
+      "identity_tokens": [
+        "arXiv:2506.02561",
+        "https://arxiv.org/abs/2506.02561"
+      ],
+      "title": "Pruning General Large Language Models into Customized Expert Models",
+      "reason": "言語・ドメイン・タスク次元で無関係なニューロンを同定して後学習なしに汎用LLMを軽量専門家モデルへ枝刈りするCus-Prunは、推論速度向上を目的としたモデル圧縮手法として直接的で具体的な貢献を持つ。",
+      "source_url": "https://arxiv.org/abs/2506.02561",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 150
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06702",
+      "identity_tokens": [
+        "arXiv:2609.06702",
+        "https://arxiv.org/abs/2609.06702"
+      ],
+      "title": "PARSER: Read in Parallel, Reason in Depth for Long-Context LLM Agents",
+      "reason": "チャンク並列読解のサブエージェントとscatter-gather推論で長文脈QAのレイテンシを最大11倍下げるPARSERだが、主体はメモリエージェントの読解アーキテクチャと強化学習であり汎用LLMサービング基盤の技術ではない。",
+      "source_url": "https://arxiv.org/abs/2609.06702",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 152
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.06001",
+      "identity_tokens": [
+        "arXiv:2508.06001",
+        "https://arxiv.org/abs/2508.06001"
+      ],
+      "title": "KnapFormer: An Online Load Balancer for Efficient Diffusion Transformers Training",
+      "reason": "KnapFormerはDiffusion Transformerの分散学習で系列並列とナップサック型負荷分散を組み合わせ学習を2から3倍高速化するもので、対象は画像・映像拡散モデルの学習でありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2508.06001",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.10274",
+      "identity_tokens": [
+        "arXiv:2601.10274",
+        "https://arxiv.org/abs/2601.10274"
+      ],
+      "title": "Queueing-Aware Optimization of Reasoning Tokens for Accuracy-Latency Trade-offs in LLM Servers",
+      "reason": "LLMサーバをM/G/1キューとしてモデル化しタスク種別ごとの推論トークン配分で精度と平均システム時間のトレードオフを最適化する定式化と投影勾配法を示し、サービングスケジューリングへの直接貢献が具体的である。",
+      "source_url": "https://arxiv.org/abs/2601.10274",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.15497",
+      "identity_tokens": [
+        "arXiv:2210.15497",
+        "https://arxiv.org/abs/2210.15497"
+      ],
+      "title": "LSG Attention: Extrapolation of pretrained Transformers to long sequences",
+      "reason": "局所・疎・大域を組み合わせたLSG Attentionで長系列への外挿と高速化を図るが、評価は長文書の分類と要約が中心で、生成LLMのデコードやサービング環境でのKVキャッシュやスループット検証は要旨に含まれない。",
+      "source_url": "https://arxiv.org/abs/2210.15497",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 157
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21714",
+      "identity_tokens": [
+        "arXiv:2503.21714",
+        "https://arxiv.org/abs/2503.21714"
+      ],
+      "title": "As easy as PIE: understanding when pruning causes language models to disagree",
+      "reason": "枝刈りで特に精度が落ちるデータ点PIEの性質をNLPデータセット横断で分析する研究であり、新しい圧縮・推論手法の提案ではなく、枝刈りの影響に関する評価・理解のみを扱っている。",
+      "source_url": "https://arxiv.org/abs/2503.21714",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 159
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28383",
+      "identity_tokens": [
+        "arXiv:2608.28383",
+        "https://arxiv.org/abs/2608.28383"
+      ],
+      "title": "Semantic Head Specialization Guides Hybrid ViT Attention for Multimodal LLMs",
+      "reason": "ViTヘッドの意味特化指標SHS-Indexに基づくAriadne Attentionで注意計算を6.5倍削減するが、対象はマルチモーダルLLMの視覚エンコーダ側ViTであり言語モデルの推論・デコード基盤そのものではない。",
+      "source_url": "https://arxiv.org/abs/2608.28383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 160
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.05425",
+      "identity_tokens": [
+        "arXiv:2112.05425",
+        "https://arxiv.org/abs/2112.05425"
+      ],
+      "title": "Couplformer: Rethinking Vision Transformer with Coupling Attention Map",
+      "reason": "Couplformerは注意マップを分離して画像分類用Vision Transformerのメモリ消費を28パーセント削減する視覚バックボーン研究であり、LLM推論や言語モデルサービングとは対象分野が異なる。",
+      "source_url": "https://arxiv.org/abs/2112.05425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 162
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2e11",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

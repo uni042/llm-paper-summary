@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f06::chunk-0001-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.07297",
+      "identity_tokens": [
+        "arXiv:2210.07297",
+        "https://arxiv.org/abs/2210.07297"
+      ],
+      "title": "AMP: Automatically Finding Model Parallel Strategies with Heterogeneity Awareness",
+      "reason": "異種クラスタ向けモデル並列戦略の自動探索だが対象は大規模モデルの学習実行であり、推論サービングやデコード高速化への直接貢献は要旨に示されていないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2210.07297",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01915",
+      "identity_tokens": [
+        "arXiv:2603.01915",
+        "https://arxiv.org/abs/2603.01915"
+      ],
+      "title": "Fast Entropy Decoding for Sparse MVM on GPUs",
+      "reason": "GPU向け疎行列ベクトル積をエントロピー符号化dtANSで圧縮し高速復号するカーネル提案だが、評価はSuiteSparseの汎用行列でありLLM推論との結びつきが要旨では薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2603.01915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04838",
+      "identity_tokens": [
+        "arXiv:2610.04838",
+        "https://arxiv.org/abs/2610.04838"
+      ],
+      "title": "MemTrace: State-Consistent Memory for Long-Horizon Coding Agents",
+      "reason": "コーディングエージェント向けに来歴付きメモリトレースで文脈予算と状態整合を扱う記憶システムだが、LLM推論基盤ではなくエージェント応用寄りのため関連性は薄く保留とする。",
+      "source_url": "https://arxiv.org/abs/2610.04838",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.29995",
+      "identity_tokens": [
+        "arXiv:2610.29995",
+        "https://arxiv.org/abs/2610.29995"
+      ],
+      "title": "Remembering Through Change: Provenance-Preserving Hypergraph Memory for Multimodal Agents",
+      "reason": "マルチモーダルエージェント向けにハイパーグラフで実体同一性と状態変化を保持する長期記憶機構だが、推論サービング技術ではなく記憶表現の応用研究であるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2610.29995",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.16289",
+      "identity_tokens": [
+        "arXiv:2211.16289",
+        "https://arxiv.org/abs/2211.16289"
+      ],
+      "title": "Lightweight Structure-Aware Attention for Visual Understanding",
+      "reason": "相対位置埋め込みで注意カーネルを構造化し対数線形計算量を実現するLiSAは注意演算子の効率化として具体的だが、検証がImageNetやCOCO等の視覚タスクのみでLLM推論への適用が示されていないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2211.16289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.07301",
+      "identity_tokens": [
+        "arXiv:2509.07301",
+        "https://arxiv.org/abs/2509.07301"
+      ],
+      "title": "Causal Attention with Lookahead Keys",
+      "reason": "先読みキーで因果注意のキーを文脈に応じて更新するCASTLEは言語モデル注意機構の改変だが、主眼はパープレキシティ改善であり推論時の計算量やKVキャッシュ効率の効果が不明瞭なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2509.07301",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06053",
+      "identity_tokens": [
+        "arXiv:2602.06053",
+        "https://arxiv.org/abs/2602.06053"
+      ],
+      "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+      "reason": "全二重音声対話モデルに役割条件と声クローンを組み込むPersonaPlexは音声モデルの学習と対話応用の研究であり、LLM推論システムの高速化や運用技術とは異なる分野である。",
+      "source_url": "https://arxiv.org/abs/2602.06053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.17220",
+      "identity_tokens": [
+        "arXiv:2512.17220",
+        "https://arxiv.org/abs/2512.17220"
+      ],
+      "title": "Mindscape-Aware Retrieval Augmented Generation for Improved Long Context Understanding",
+      "reason": "階層要約による全体意味表現で検索と生成を条件付けるMiA-RAGは長文理解向けRAGの精度改善手法であり、推論サービングやデコード機構へのシステム的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2512.17220",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24773",
+      "identity_tokens": [
+        "arXiv:2606.24773",
+        "https://arxiv.org/abs/2606.24773"
+      ],
+      "title": "Posterior Refinement: Fast Language Generation via Any-Order Flow Maps",
+      "reason": "任意順序フローマップに事後整合性スコアを組み合わせ、生成トークンを推論時に自己修正するPosterior RefinementでNFEを32分の1に削減し、言語生成の速度品質トレードオフを直接改善する推論手法である。",
+      "source_url": "https://arxiv.org/abs/2606.24773",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07823",
+      "identity_tokens": [
+        "arXiv:2604.07823",
+        "https://arxiv.org/abs/2604.07823"
+      ],
+      "title": "LPM 1.0: Video-based Character Performance Model",
+      "reason": "拡散トランスフォーマによるキャラクタ演技生成モデルLPMとそのベンチマークの提案であり、実時間生成はモデルの応用性能であってLLM推論システム技術の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2604.07823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01513",
+      "identity_tokens": [
+        "arXiv:2601.01513",
+        "https://arxiv.org/abs/2601.01513"
+      ],
+      "title": "FastV-RAG: Towards Fast and Fine-Grained Video QA with Retrieval-Augmented Generation",
+      "reason": "軽量ドラフトモデルと重量モデル検証による投機的デコードを動画質問応答RAGへ適用し約2倍高速化するが、基盤技術の新規性より映像応用主体の構成であるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2601.01513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.20938",
+      "identity_tokens": [
+        "arXiv:2604.20938",
+        "https://arxiv.org/abs/2604.20938"
+      ],
+      "title": "HARBOR: Automated Harness Optimization",
+      "reason": "文脈圧縮やツールキャッシュ等を含むエージェントハーネスの設定空間をベイズ最適化するHARBORは推論運用に隣接するが、対象はコーディングエージェントの構成探索でありサービング機構は不明瞭なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2604.20938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17004",
+      "identity_tokens": [
+        "arXiv:2602.17004",
+        "https://arxiv.org/abs/2602.17004"
+      ],
+      "title": "Arcee Trinity Large Technical Report",
+      "reason": "400Bパラメータの疎なMoEモデルTrinity Large等の学習完了を報告する技術レポートであり、MoE推論の実行機構やサービング最適化ではなくモデル学習自体の記録である。",
+      "source_url": "https://arxiv.org/abs/2602.17004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14487",
+      "identity_tokens": [
+        "arXiv:2605.14487",
+        "https://arxiv.org/abs/2605.14487"
+      ],
+      "title": "Head Forcing: Long Autoregressive Video Generation via Head Heterogeneity",
+      "reason": "注意ヘッドの役割別にKVキャッシュ配分を変えるHead Forcingはキャッシュ戦略として具体的だが、対象が自己回帰動画拡散モデルの長尺生成でありLLM推論への直接適用ではないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2605.14487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24144",
+      "identity_tokens": [
+        "arXiv:2603.24144",
+        "https://arxiv.org/abs/2603.24144"
+      ],
+      "title": "Semantic-Aware Interruption Detection in Spoken Dialogue Systems: Benchmark, Metric, and Model",
+      "reason": "音声対話における割り込み検出のベンチマークSID-BenchとAPT指標およびLLMベース検出モデルの提案であり、対話応用の評価研究であって推論システム技術ではない。",
+      "source_url": "https://arxiv.org/abs/2603.24144",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11136",
+      "identity_tokens": [
+        "arXiv:2605.11136",
+        "https://arxiv.org/abs/2605.11136"
+      ],
+      "title": "EVOCHAMBER: Test-Time Co-evolution of Multi-Agent System at Individual, Team, and Population Scales",
+      "reason": "テスト時にマルチエージェント集団を共進化させるEVOCHAMBERはエージェント協調の枠組みであり、推論計算の配分やサービング機構ではなく応用レベルの進化手法である。",
+      "source_url": "https://arxiv.org/abs/2605.11136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22285",
+      "identity_tokens": [
+        "arXiv:2603.22285",
+        "https://arxiv.org/abs/2603.22285"
+      ],
+      "title": "VideoDetective: Clue Hunting via both Extrinsic Query and Intrinsic Relevance for Long Video Understanding",
+      "reason": "視覚時間アフィニティグラフ上で関連区間を伝播推定するVideoDetectiveは長尺動画質問応答の精度手法であり、MLLMの文脈処理応用であって推論基盤技術ではない。",
+      "source_url": "https://arxiv.org/abs/2603.22285",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.04563",
+      "identity_tokens": [
+        "arXiv:2601.04563",
+        "https://arxiv.org/abs/2601.04563"
+      ],
+      "title": "A Vision for Multisensory Intelligence: Sensing, Science, and Synergy",
+      "reason": "多感覚知能の今後十年を論じるビジョン論文であり、センシングやモダリティ統合の展望提示にとどまり、LLM推論システムに関する具体的な技術提案を含まない。",
+      "source_url": "https://arxiv.org/abs/2601.04563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07593",
+      "identity_tokens": [
+        "arXiv:2605.07593",
+        "https://arxiv.org/abs/2605.07593"
+      ],
+      "title": "TraceAV-Bench: Benchmarking Multi-Hop Trajectory Reasoning over Long Audio-Visual Videos",
+      "reason": "長尺音声映像に対する多ホップ推論を測るTraceAV-Benchはベンチマーク構築とモデル評価のみの研究であり、推論高速化やサービング機構の提案ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2605.07593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13544",
+      "identity_tokens": [
+        "arXiv:2606.13544",
+        "https://arxiv.org/abs/2606.13544"
+      ],
+      "title": "Adaptive Turn-Taking for Real-time Multi-Party Voice Agents",
+      "reason": "役割条件付き音声LLMによる多人数会話のターン交替制御ModeratorLMは音声エージェントの対話挙動に関する応用研究であり、推論システムの処理機構とは関係が薄い。",
+      "source_url": "https://arxiv.org/abs/2606.13544",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f06",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

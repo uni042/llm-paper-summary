@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f06::chunk-0002-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.11213",
+      "identity_tokens": [
+        "arXiv:2512.11213",
+        "https://arxiv.org/abs/2512.11213"
+      ],
+      "title": "FutureWeaver: Planning Test-Time Compute for Multi-Agent Systems with Modularized Collaboration",
+      "reason": "固定予算下でマルチエージェントのテスト時計算配分を二層計画で最適化するFutureWeaverは推論時計算のスケジューリングに触れるが、協調モジュール中心でサービング機構が不明瞭なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2512.11213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11759",
+      "identity_tokens": [
+        "arXiv:2604.11759",
+        "https://arxiv.org/abs/2604.11759"
+      ],
+      "title": "Retrieval Is Not Enough: Why Organizational AI Needs Epistemic Infrastructure",
+      "reason": "組織知識に認識的構造を持たせるOIDAフレームワークの提案であり、検索精度ではなく知識表現と評価法を論じるもので、LLM推論システム技術への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.11759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15759",
+      "identity_tokens": [
+        "arXiv:2609.15759",
+        "https://arxiv.org/abs/2609.15759"
+      ],
+      "title": "Enabling Streaming User Transcription in Full-Duplex Speech-to-Speech Models",
+      "reason": "全二重音声対話モデルへ軽量ASRヘッドを並列追加してストリーミング文字起こしを可能にする手法であり、音声モデルの機能拡張であってLLM推論基盤の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.15759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.19033",
+      "identity_tokens": [
+        "arXiv:2610.19033",
+        "https://arxiv.org/abs/2610.19033"
+      ],
+      "title": "How Many Ranks Does a Token Need? A Noise-Floor Squelch for Rank-One LoRA Experts",
+      "reason": "トークンごとに必要なランク1 LoRA成分をノイズフロア検出で決めるSQUELCHは専門家活性化の効率化に触れるが、主眼は適応精度であり推論時の実行コスト削減効果が要旨で不明瞭なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2610.19033",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18014",
+      "identity_tokens": [
+        "arXiv:2405.18014",
+        "https://arxiv.org/abs/2405.18014"
+      ],
+      "title": "Coupled Mamba: Enhanced Multi-modal Fusion with Coupled State Space Model",
+      "reason": "状態空間モデルの状態鎖をモダリティ間で結合するCoupled Mambaは感情分析等のマルチモーダル融合モデルの提案であり、推論高速化の主張も融合精度が主眼でLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2405.18014",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.02315",
+      "identity_tokens": [
+        "arXiv:2407.02315",
+        "https://arxiv.org/abs/2407.02315"
+      ],
+      "title": "VFIMamba: Video Frame Interpolation with State Space Models",
+      "reason": "状態空間モデルでフレーム間情報を伝えるVFIMambaは動画フレーム補間の映像処理手法であり、線形計算量の利点も補間品質のためでLLM推論システムとは異分野である。",
+      "source_url": "https://arxiv.org/abs/2407.02315",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 481
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18508",
+      "identity_tokens": [
+        "arXiv:2404.18508",
+        "https://arxiv.org/abs/2404.18508"
+      ],
+      "title": "Scalable Event-by-Event Processing of Neuromorphic Sensory Signals with Deep State-Space Models",
+      "reason": "深層状態空間モデルでイベントカメラ信号をイベント単位に大規模処理する研究であり、ニューロモーフィックセンシングの応用であってLLM推論の実行技術ではない。",
+      "source_url": "https://arxiv.org/abs/2404.18508",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 482
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17979",
+      "identity_tokens": [
+        "arXiv:2503.17979",
+        "https://arxiv.org/abs/2503.17979"
+      ],
+      "title": "Trade-offs in Large Reasoning Models: An Empirical Analysis of Deliberative and Adaptive Reasoning over Foundational Capabilities",
+      "reason": "大規模推論モデルの熟慮的推論と基礎能力のトレードオフを複数モデルで実証分析した評価研究であり、適応的推論への示唆はあるが推論システムの具体的手法提案ではない。",
+      "source_url": "https://arxiv.org/abs/2503.17979",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 483
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.15934",
+      "identity_tokens": [
+        "arXiv:2503.15934",
+        "https://arxiv.org/abs/2503.15934"
+      ],
+      "title": "SaMam: Style-aware State Space Model for Arbitrary Image Style Transfer",
+      "reason": "Mambaベースのエンコーダとデコーダで任意画像のスタイル変換を行うSaMamは画像生成応用の手法であり、大域受容野の効率化も画風変換目的でLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2503.15934",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 484
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.08695",
+      "identity_tokens": [
+        "arXiv:2301.08695",
+        "https://arxiv.org/abs/2301.08695"
+      ],
+      "title": "Baechi: fast device placement of machine learning graphs",
+      "reason": "メモリ制約デバイス群へ機械学習計算グラフを配置するBaechiは学習グラフのデバイス配置アルゴリズムであり、対象が学習ステップの配置最適化であるため推論サービングの範囲外である。",
+      "source_url": "https://arxiv.org/abs/2301.08695",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 485
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f06",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

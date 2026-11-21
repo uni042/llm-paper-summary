@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f02::chunk-0002-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22428",
+      "identity_tokens": [
+        "arXiv:2605.22428",
+        "https://arxiv.org/abs/2605.22428"
+      ],
+      "title": "Exploiting Multicast for Accelerating Collective Communication",
+      "reason": "AllGatherやAlltoAllの重複送信をマルチキャスト型MultiWrite意味論で除去しAscend NPU上で集合通信遅延を最大三十三パーセント削減した分散推論基盤への直接貢献であるため",
+      "source_url": "https://arxiv.org/abs/2605.22428",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 305
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05774",
+      "identity_tokens": [
+        "arXiv:2512.05774",
+        "https://arxiv.org/abs/2512.05774"
+      ],
+      "title": "Active Video Perception: Iterative Evidence Seeking for Agentic Long Video Understanding",
+      "reason": "長尺動画理解で計画観察省察を繰り返し証拠を集めるエージェント枠組みであり推論時間削減は能動知覚の副次効果で、動画応用主体のため推論基盤とは距離があるため",
+      "source_url": "https://arxiv.org/abs/2512.05774",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 310
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04430",
+      "identity_tokens": [
+        "arXiv:2602.04430",
+        "https://arxiv.org/abs/2602.04430"
+      ],
+      "title": "The Stretto Execution Engine for Semantic Data Systems",
+      "reason": "意味演算子の実行計画を誤差予算配分で最適化しKVキャッシュ圧縮で実行戦略の幅を作る意味データシステム向け実行エンジンであり、汎用LLMサービングとは領域が異なるため",
+      "source_url": "https://arxiv.org/abs/2602.04430",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 311
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01472",
+      "identity_tokens": [
+        "arXiv:2602.01472",
+        "https://arxiv.org/abs/2602.01472"
+      ],
+      "title": "ConPress: Learning Efficient Reasoning from Multi-Question Contextual Pressure",
+      "reason": "複数質問を同時提示した際の自己圧縮現象を利用して簡潔な推論軌跡を収集し微調整する手法であり、推論時機構ではなく効率的推論を内面化させる学習データ構築であるため",
+      "source_url": "https://arxiv.org/abs/2602.01472",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21967",
+      "identity_tokens": [
+        "arXiv:2609.21967",
+        "https://arxiv.org/abs/2609.21967"
+      ],
+      "title": "NemotronLabs VoiceChat: An Open Full-duplex Speech-to-Speech Model with Tool Calling Capabilities",
+      "reason": "全二重音声対話モデルとしてストリーミング符号器や並行出力流を統合したモデル公開の報告であり、リアルタイム性は音声モデル設計の話で推論サービング基盤ではないため",
+      "source_url": "https://arxiv.org/abs/2609.21967",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00291",
+      "identity_tokens": [
+        "arXiv:2609.00291",
+        "https://arxiv.org/abs/2609.00291"
+      ],
+      "title": "StreamScout: Learning When to Look Deeper for Streaming Video Understanding",
+      "reason": "ストリーミング動画理解で証拠の深さに応じて視覚ビューを段階的に追加する適応推論枠組みだが、対象は動画質問応答の応用でありLLM推論基盤への一般化は限定的なため",
+      "source_url": "https://arxiv.org/abs/2609.00291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20017",
+      "identity_tokens": [
+        "arXiv:2512.20017",
+        "https://arxiv.org/abs/2512.20017"
+      ],
+      "title": "Scaling Point-based Differentiable Rendering for Large-scale Reconstruction",
+      "reason": "点ベース微分可能レンダリングの大規模再構成向けに局所性を活かして通信を削減する分散学習システムであり、三次元再構成という異分野の訓練基盤であるため",
+      "source_url": "https://arxiv.org/abs/2512.20017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.10178",
+      "identity_tokens": [
+        "arXiv:2603.10178",
+        "https://arxiv.org/abs/2603.10178"
+      ],
+      "title": "Video-Based Reward Modeling for Computer-Use Agents",
+      "reason": "コンピュータ操作エージェントの実行動画から報酬を予測するモデルとデータセットの構築であり、時空間トークン剪定は補助要素で評価モデル自体が主体であるため",
+      "source_url": "https://arxiv.org/abs/2603.10178",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38331",
+      "identity_tokens": [
+        "arXiv:2610.38331",
+        "https://arxiv.org/abs/2610.38331"
+      ],
+      "title": "Multi-Token Prediction Done Right",
+      "reason": "多トークン予測の勾配をKL自己蒸留成分と雑音残差に分解し残差を除くSoft-MTPで投機的デコードを高速化しており、推論高速化への直接的で具体的な貢献があるため",
+      "source_url": "https://arxiv.org/abs/2610.38331",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.16732",
+      "identity_tokens": [
+        "arXiv:2210.16732",
+        "https://arxiv.org/abs/2210.16732"
+      ],
+      "title": "How Far are We from Robust Long Abstractive Summarization?",
+      "reason": "長文要約システムと評価指標を人手注釈で細かく評価しROUGEや事実性指標の限界を論じる研究であり、評価のみで推論システム技術への貢献はないため",
+      "source_url": "https://arxiv.org/abs/2210.16732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f02",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

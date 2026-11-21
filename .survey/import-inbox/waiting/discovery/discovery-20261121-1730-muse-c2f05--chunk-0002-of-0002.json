@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f05::chunk-0002-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04417",
+      "identity_tokens": [
+        "arXiv:2602.04417",
+        "https://arxiv.org/abs/2602.04417"
+      ],
+      "title": "EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL",
+      "reason": "EMAアンカーとTop-k KL推定でGRPO等の方策勾配を安定化し数学推論やエージェントRLの性能を上げるEMA-PGは、LLMの強化学習訓練アルゴリズムの改良であり推論システムには寄与しない。",
+      "source_url": "https://arxiv.org/abs/2602.04417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05608",
+      "identity_tokens": [
+        "arXiv:2402.05608",
+        "https://arxiv.org/abs/2402.05608"
+      ],
+      "title": "Scalable Diffusion Models with State Space Backbone",
+      "reason": "U-Netを状態空間バックボーンに置換した拡散モデルDiSの画像生成性能とスケーリングを論じる研究であり、画像拡散モデルの学習アーキテクチャが主題でLLM推論実行とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2402.05608",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21960",
+      "identity_tokens": [
+        "arXiv:2509.21960",
+        "https://arxiv.org/abs/2509.21960"
+      ],
+      "title": "Think Smart, Not Hard: Difficulty Adaptive Reasoning for Large Audio Language Models",
+      "reason": "大規模音声言語モデルで問題難易度に応じて推論長を変える報酬関数を設計し過剰思考を減らす研究だが、機構は強化学習の報酬設計による訓練側の適応であり推論サービングの仕組みではない。",
+      "source_url": "https://arxiv.org/abs/2509.21960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.10818",
+      "identity_tokens": [
+        "arXiv:2408.10818",
+        "https://arxiv.org/abs/2408.10818"
+      ],
+      "title": "Learning Randomized Algorithms with Transformers",
+      "reason": "ランダム化アルゴリズムをTransformerがデータ駆動で学習できるかを連想想起やグラフ彩色で検証する理論・学習研究であり、LLM推論の高速化や資源効率を扱うものではない。",
+      "source_url": "https://arxiv.org/abs/2408.10818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.20280",
+      "identity_tokens": [
+        "arXiv:2608.20280",
+        "https://arxiv.org/abs/2608.20280"
+      ],
+      "title": "Which Eviction Policy Should an LLM Cache Use? A Systematic Study Across Workloads, Capacities, and Encoders",
+      "reason": "LLM意味キャッシュの追い出し方針をFIFOやLRUやLFU等でワークロードと容量と符号器を揃えて系統比較しLFUが無難と結論する計測研究であり、対象はサービング用キャッシュだが新規機構ではなく評価中心のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2608.20280",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.13117",
+      "identity_tokens": [
+        "arXiv:2407.13117",
+        "https://arxiv.org/abs/2407.13117"
+      ],
+      "title": "SOMONITOR: Combining Explainable AI&Large Language Models for Marketing Analytics",
+      "reason": "説明可能AIとLLMを組み合わせて競合コンテンツ分析やCTR予測からマーケティング用コンテンツブリーフを生成するSOMONITORは、マーケティング分析への応用システムであり推論技術の論文ではない。",
+      "source_url": "https://arxiv.org/abs/2407.13117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.17618",
+      "identity_tokens": [
+        "arXiv:2507.17618",
+        "https://arxiv.org/abs/2507.17618"
+      ],
+      "title": "SimLens for Early Exit in Large Language Models: Eliciting Accurate Latent Predictions with One More Token",
+      "reason": "中間層予測を候補トークンとの軽量な継続実行で読み出すSimLensとエントロピー推定を組み合わせたSimExit早期終了機構により、精度を保ちながら最大1.40倍の高速化を示したLLM推論の早期終了技術である。",
+      "source_url": "https://arxiv.org/abs/2507.17618",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07074",
+      "identity_tokens": [
+        "arXiv:2606.07074",
+        "https://arxiv.org/abs/2606.07074"
+      ],
+      "title": "SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating",
+      "reason": "深層調査エージェントのSFT軌跡選別と適応的報酬ゲーティングでツール呼び出しとトークン消費を減らすSlimSearcherは、ウェブエージェントの訓練効率化が主体でありLLM推論サービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2606.07074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.14560",
+      "identity_tokens": [
+        "arXiv:2608.14560",
+        "https://arxiv.org/abs/2608.14560"
+      ],
+      "title": "Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA",
+      "reason": "コードエージェント群がFlashInfer-BenchのFused MoEやDSA疎注意等のワークロード向けGPUカーネルを生成・プロファイル・最適化しFlashInfer基準を上回る高速化を達成した研究で、推論カーネル最適化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2608.14560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21847",
+      "identity_tokens": [
+        "arXiv:2605.21847",
+        "https://arxiv.org/abs/2605.21847"
+      ],
+      "title": "CompPow: A Case for Component-level GPU Power Management",
+      "reason": "GPU内部コンポーネント単位の電力管理CompPowで各種ML演算の省電力余地を分析し効率10%と性能5%の改善可能性を示すが、提示はケーススタディと協調設計への提言中心で具体的な推論システム実装の検証が乏しいため境界とした。",
+      "source_url": "https://arxiv.org/abs/2605.21847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f05",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

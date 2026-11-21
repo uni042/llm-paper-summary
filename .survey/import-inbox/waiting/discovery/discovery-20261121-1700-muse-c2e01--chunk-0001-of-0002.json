@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2e01::chunk-0001-of-0002",
+  "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2309.14174",
+      "identity_tokens": [
+        "arXiv:2309.14174",
+        "https://arxiv.org/abs/2309.14174"
+      ],
+      "title": "Only 5% Attention Is All You Need: Efficient Long-range Document-level Neural Machine Translation",
+      "reason": "軽量注意による選択層で attend するトークンを約5%まで絞り、文書レベル機械翻訳の注意計算を93%削減し推論を高速化する具体的な注意スパース化手法を提示しているため",
+      "source_url": "https://arxiv.org/abs/2309.14174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 122
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.00867",
+      "identity_tokens": [
+        "arXiv:2608.00867",
+        "https://arxiv.org/abs/2608.00867"
+      ],
+      "title": "NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems",
+      "reason": "マルチダイGPUスケールアップにおける非均一ネットワークアクセスを定量化し、空間認識ルーティングと配置で集合通信を最大1.8倍高速化しTPOTを改善する分散推論基盤の提案であるため",
+      "source_url": "https://arxiv.org/abs/2608.00867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 127
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08755",
+      "identity_tokens": [
+        "arXiv:2606.08755",
+        "https://arxiv.org/abs/2606.08755"
+      ],
+      "title": "Co-Evolving Skill Generation and Policy Optimization",
+      "reason": "言語エージェント向けに再利用可能なスキルを生成し強化学習で方策を訓練する枠組みであり、推論サービングやデコード等のシステム技術ではなく学習手法そのものが主題であるため",
+      "source_url": "https://arxiv.org/abs/2606.08755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 130
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20630",
+      "identity_tokens": [
+        "arXiv:2605.20630",
+        "https://arxiv.org/abs/2605.20630"
+      ],
+      "title": "Evaluating Temporal Semantic Caching and Workflow Optimization in Agentic Plan-Execute Pipelines",
+      "reason": "産業用エージェントのパイプラインで時間依存を考慮する意味キャッシュとMCPワークフロー最適化を評価するが、AssetOpsBenchという特定応用での評価が主体で汎用サービング機構の詳細は限られるため",
+      "source_url": "https://arxiv.org/abs/2605.20630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 132
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.15678",
+      "identity_tokens": [
+        "arXiv:2410.15678",
+        "https://arxiv.org/abs/2410.15678"
+      ],
+      "title": "Revealing and Mitigating the Local Pattern Shortcuts of Mamba",
+      "reason": "Mambaの局所パターンへの依存を分析し大域選択モジュールを追加して分散情報タスクの精度を上げる研究で、線形複雑性モデルには関連するものの推論高速化やサービングへの直接貢献は示されていないため",
+      "source_url": "https://arxiv.org/abs/2410.15678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 133
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07599",
+      "identity_tokens": [
+        "arXiv:2602.07599",
+        "https://arxiv.org/abs/2602.07599"
+      ],
+      "title": "Rational Transductors",
+      "reason": "重み付き有限オートマトン由来の回帰を注意に注入しTransformerの表現力を正規言語等へ拡張する理論的アーキテクチャ研究であり、推論システムの実装や効率化を扱っていないため",
+      "source_url": "https://arxiv.org/abs/2602.07599",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 134
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14500",
+      "identity_tokens": [
+        "arXiv:2609.14500",
+        "https://arxiv.org/abs/2609.14500"
+      ],
+      "title": "When does a scaling result justify a different allocation? A critical review of resource-allocation evidence for AI systems",
+      "reason": "事前学習やテスト時計算、検索、エージェント評価におけるスケーリング結果と資源配分の証拠を批判的にレビューする論考であり、新たな推論システム技術の提案を含まないため",
+      "source_url": "https://arxiv.org/abs/2609.14500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 135
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.10615",
+      "identity_tokens": [
+        "arXiv:2508.10615",
+        "https://arxiv.org/abs/2508.10615"
+      ],
+      "title": "FuXi-β: Towards a Lightweight and Fast Large-Scale Generative Recommendation Model",
+      "reason": "生成推薦モデルFuXiにおいて相対注意バイアスの索引操作とQK注意マップを削減して学習と推論を加速するが、対象が推薦システムという応用領域に特化しておりLLM推論への一般性は限定的であるため",
+      "source_url": "https://arxiv.org/abs/2508.10615",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 136
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.14679",
+      "identity_tokens": [
+        "arXiv:2501.14679",
+        "https://arxiv.org/abs/2501.14679"
+      ],
+      "title": "Surface Vision Mamba: Leveraging Bidirectional State Space Model for Efficient Spherical Manifold Representation",
+      "reason": "球面皮質表面データに対するVision Mambaで新生児脳の表現型回帰を行う医用・視覚分野の研究であり、推論が速い点は副次的でLLM推論システムとは分野が異なるため",
+      "source_url": "https://arxiv.org/abs/2501.14679",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 137
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.10951",
+      "identity_tokens": [
+        "arXiv:2111.10951",
+        "https://arxiv.org/abs/2111.10951"
+      ],
+      "title": "Can depth-adaptive BERT perform better on binary classification tasks",
+      "reason": "深さ適応型BERTの小規模サブネットワークが二値分類で全モデルを上回る場合があることを示しBERTを縮小する簡易法を述べるが、分類タスク向けのモデル縮小でありLLMサービング機構ではないため",
+      "source_url": "https://arxiv.org/abs/2111.10951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 141
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08215",
+      "identity_tokens": [
+        "arXiv:2601.08215",
+        "https://arxiv.org/abs/2601.08215"
+      ],
+      "title": "Towards Principled Design of Mixture-of-Experts Language Models under Memory and Inference Constraints",
+      "reason": "メモリと推論コストの制約下でMoE言語モデルの総パラメータ数と専門家スパース性の関係を体系的に調べ設計原則を導く研究だが、サービング実装やスケジューリング等のシステム実装は提示していないため",
+      "source_url": "https://arxiv.org/abs/2601.08215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 142
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.00394",
+      "identity_tokens": [
+        "arXiv:2507.00394",
+        "https://arxiv.org/abs/2507.00394"
+      ],
+      "title": "HelixPipe: Efficient Distributed Training of Long Sequence Transformers with Attention Parallel Pipeline Parallelism",
+      "reason": "長系列Transformerの分散学習向けに注意並列パイプライン並列化やマイクロバッチスケジュールを提案する学習スループット改善の研究であり、推論ではなく訓練単独を対象としているため",
+      "source_url": "https://arxiv.org/abs/2507.00394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 143
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.07890",
+      "identity_tokens": [
+        "arXiv:2501.07890",
+        "https://arxiv.org/abs/2501.07890"
+      ],
+      "title": "GRAPHMOE: Amplifying Cognitive Depth of Mixture-of-Experts Network via Introducing Self-Rethinking Mechanism",
+      "reason": "専門家間の情報伝播を擬似グラフと再帰的ルーティングで模しLoRAで推論能力や認知深度を高めるGRAPHMOEの提案であり、MoE推論の効率やサービングではなくモデル品質の向上が目的であるため",
+      "source_url": "https://arxiv.org/abs/2501.07890",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 147
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.12298",
+      "identity_tokens": [
+        "arXiv:2601.12298",
+        "https://arxiv.org/abs/2601.12298"
+      ],
+      "title": "CD-PIM: A High-Bandwidth and Compute-Efficient LPDDR5-Based PIM for Low-Batch LLM Acceleration on Edge-Device",
+      "reason": "エッジデバイス上の低バッチLLM向けにLPDDR5ベースPIMを設計し、擬似バンク化やGEMVとGEMMのインターリーブ、KVキャッシュのマッピング最適化で帯域ボトルネックを解消する具体的ハードウェア提案であるため",
+      "source_url": "https://arxiv.org/abs/2601.12298",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.10953",
+      "identity_tokens": [
+        "arXiv:2601.10953",
+        "https://arxiv.org/abs/2601.10953"
+      ],
+      "title": "SwiftKV: An Edge-Oriented Attention Algorithm and Multi-Head Accelerator for Fast, Efficient LLM Decoding",
+      "reason": "KVキャッシュを一度だけ処理するパイプライン型の単一パス注意アルゴリズムSwiftKVと多ヘッド対応アクセラレータを提案し、エッジ上でのLLMデコード遅延と生成速度を実測で改善しているため",
+      "source_url": "https://arxiv.org/abs/2601.10953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 152
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17948",
+      "identity_tokens": [
+        "arXiv:2610.17948",
+        "https://arxiv.org/abs/2610.17948"
+      ],
+      "title": "HaloBlock: Faster and Better Decoding for Diffusion Large Language Models",
+      "reason": "拡散LLMのブロック単位デコードにおける難易度偏りと境界の文脈不連続に対し、双方向累積エントロピーでハロー領域を適応的に割り当てるHaloBlockにより生成品質と推論効率を両立させるデコード手法であるため",
+      "source_url": "https://arxiv.org/abs/2610.17948",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02572",
+      "identity_tokens": [
+        "arXiv:2605.02572",
+        "https://arxiv.org/abs/2605.02572"
+      ],
+      "title": "On Training Large Language Models for Long-Horizon Tasks: An Empirical Study of Horizon Length",
+      "reason": "長期ホライズンタスクでホライズン長がLLMエージェントの訓練安定性や信用割当に与える影響を制御実験で調べる実証研究であり、推論時のシステム最適化ではなく訓練ダイナミクスが主題であるため",
+      "source_url": "https://arxiv.org/abs/2605.02572",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 155
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19349",
+      "identity_tokens": [
+        "arXiv:2606.19349",
+        "https://arxiv.org/abs/2606.19349"
+      ],
+      "title": "Where to Place the Query? Unveiling and Mitigating Positional Bias in In-Context Learning for Diffusion LLMs via Decoding Dynamics",
+      "reason": "拡散LLMの文脈内学習におけるクエリ位置バイアスをデコード過程の分析で明らかにし平均信頼度に基づく訓練不要の配置ルーティングを提案するが、対象はプロンプト配置でありサービング基盤技術ではないため",
+      "source_url": "https://arxiv.org/abs/2606.19349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12340",
+      "identity_tokens": [
+        "arXiv:2502.12340",
+        "https://arxiv.org/abs/2502.12340"
+      ],
+      "title": "Understanding Silent Data Corruption in LLM Training",
+      "reason": "本番ノードと不健全ノードを決定的実行で比較し、サイレントデータ破損がLLM訓練の勾配や収束に与える影響を分析する研究であり、対象は推論ではなく大規模学習時のハードウェア障害であるため",
+      "source_url": "https://arxiv.org/abs/2502.12340",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 157
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18199",
+      "identity_tokens": [
+        "arXiv:2604.18199",
+        "https://arxiv.org/abs/2604.18199"
+      ],
+      "title": "Linear-Time and Constant-Memory Text Embeddings Based on Recurrent Language Models",
+      "reason": "Mamba2等の回帰型モデルをテキスト埋め込みに用い垂直チャンク推論で定数メモリ化する手法を示すが、対象は埋め込み生成でありLLMの生成サービングやデコードを扱うものではないため",
+      "source_url": "https://arxiv.org/abs/2604.18199",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 158
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2e01",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

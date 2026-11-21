@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f02::chunk-0001-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.16158",
+      "identity_tokens": [
+        "arXiv:2404.16158",
+        "https://arxiv.org/abs/2404.16158"
+      ],
+      "title": "The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms",
+      "reason": "複数FPGAへ大規模Transformerをマッピングするプラットフォームとツール群を構築しI-BERT実装で検証しており、推論ハードウェア実装への直接的なシステム貢献が具体的であるため",
+      "source_url": "https://arxiv.org/abs/2404.16158",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.29341",
+      "identity_tokens": [
+        "arXiv:2605.29341",
+        "https://arxiv.org/abs/2605.29341"
+      ],
+      "title": "WorldMemArena: Evaluating Multimodal Agent Memory Through Action-World Interaction",
+      "reason": "マルチモーダルエージェントの記憶を四段階ライフサイクルで診断する四百件規模のベンチマーク提案であり、評価のみで推論システム技術への貢献は示されていないため",
+      "source_url": "https://arxiv.org/abs/2605.29341",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.23266",
+      "identity_tokens": [
+        "arXiv:2602.23266",
+        "https://arxiv.org/abs/2602.23266"
+      ],
+      "title": "Discourse-Aware Dual-Track Streaming Response for Low-Latency Spoken Dialogue Systems",
+      "reason": "小モデルと大モデルの並行生成やASRとTTSの重ね合わせで音声対話の応答遅延を削減するが、対話応用主体の枠組みであり汎用推論基盤としての機構は限定的なため",
+      "source_url": "https://arxiv.org/abs/2602.23266",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28338",
+      "identity_tokens": [
+        "arXiv:2606.28338",
+        "https://arxiv.org/abs/2606.28338"
+      ],
+      "title": "Memory Shot for Long-Term Dialogue",
+      "reason": "対話履歴を画像化した視覚記憶単位で長期対話の想起を高速化する手法だが、対象は対話記憶の表現と構築でありLLMサービングやKVキャッシュ機構ではないため",
+      "source_url": "https://arxiv.org/abs/2606.28338",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09932",
+      "identity_tokens": [
+        "arXiv:2605.09932",
+        "https://arxiv.org/abs/2605.09932"
+      ],
+      "title": "FocuSFT: Bilevel Optimization for Dilution-Aware Long-Context Fine-Tuning",
+      "reason": "長文脈SFTにおける注意の希釈を二段階最適化で抑える微調整手法であり、推論時の処理ではなく学習単独の改善であるためサーベイ対象の推論システム外であるため",
+      "source_url": "https://arxiv.org/abs/2605.09932",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05484",
+      "identity_tokens": [
+        "arXiv:2610.05484",
+        "https://arxiv.org/abs/2610.05484"
+      ],
+      "title": "Universal Test-Time Training",
+      "reason": "全層で共有する高速重み記憶を持つTest-Time Trainingアーキテクチャの提案であり、言語モデリングのモデル構造研究であって推論サービング技術ではないため",
+      "source_url": "https://arxiv.org/abs/2610.05484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.07164",
+      "identity_tokens": [
+        "arXiv:2211.07164",
+        "https://arxiv.org/abs/2211.07164"
+      ],
+      "title": "Evade the Trap of Mediocrity: Promoting Diversity and Novelty in Text Generation via Concentrating Attention",
+      "reason": "注意分布の鋭さを正則化損失で制御して生成文の多様性を高める学習手法であり、推論高速化やシステム機構ではなく生成品質の訓練側改善にとどまるため",
+      "source_url": "https://arxiv.org/abs/2211.07164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.13324",
+      "identity_tokens": [
+        "arXiv:2506.13324",
+        "https://arxiv.org/abs/2506.13324"
+      ],
+      "title": "Towards Pervasive Distributed Agentic Generative AI–A State of The Art",
+      "reason": "遍在環境におけるLLMエージェントの構成要素やエッジ配置を概観するサーベイであり、具体的な推論システムの新規機構や実装評価を提示していないため",
+      "source_url": "https://arxiv.org/abs/2506.13324",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12034",
+      "identity_tokens": [
+        "arXiv:2604.12034",
+        "https://arxiv.org/abs/2604.12034"
+      ],
+      "title": "Memory as Metabolism: A Design for Companion Knowledge Systems",
+      "reason": "個人用知識ウィキ向けに記憶の代謝を模したガバナンス規範と運用操作を設計提案する論文であり、推論実行系の性能機構や実装を扱っていないため",
+      "source_url": "https://arxiv.org/abs/2604.12034",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05935",
+      "identity_tokens": [
+        "arXiv:2610.05935",
+        "https://arxiv.org/abs/2610.05935"
+      ],
+      "title": "ThunderSyncRL: Lossless Acceleration of Agentic Reinforcement Learning",
+      "reason": "GRPO等の強化学習で勾配計算を報酬到着直後に流すことで学習を高速化する訓練基盤であり、推論サービングではなくエージェントRL学習主体の加速であるため",
+      "source_url": "https://arxiv.org/abs/2610.05935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36918",
+      "identity_tokens": [
+        "arXiv:2610.36918",
+        "https://arxiv.org/abs/2610.36918"
+      ],
+      "title": "TrawMem: Reframing Agent Memory as Task-Oriented Role-Adaptive Workspaces",
+      "reason": "対話履歴を役割適応型ワークスペースとして編成し文脈トークンを削減するエージェント記憶手法だが、核は記憶選択の応用であり推論基盤の機構は薄いため",
+      "source_url": "https://arxiv.org/abs/2610.36918",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.13546",
+      "identity_tokens": [
+        "arXiv:2507.13546",
+        "https://arxiv.org/abs/2507.13546"
+      ],
+      "title": "NABLA: Neighborhood Adaptive Block-Level Attention for Efficient Video Generation",
+      "reason": "ビデオ拡散Transformer向けに近傍適応型ブロック疎注意で計算量を削減し推論を高速化するが、対象は動画生成でありLLM推論への直接適用は示されていないため",
+      "source_url": "https://arxiv.org/abs/2507.13546",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.05605",
+      "identity_tokens": [
+        "arXiv:2312.05605",
+        "https://arxiv.org/abs/2312.05605"
+      ],
+      "title": "TCNCA: Temporal Convolution Network with Chunked Attention for Scalable Sequence Processing",
+      "reason": "時間畳み込みとチャンク化注意を組み合わせた系列モデルでMEGAより高速な推論を示すが、新規モデルアーキテクチャの効率比較でありLLMサービング機構ではないため",
+      "source_url": "https://arxiv.org/abs/2312.05605",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.08514",
+      "identity_tokens": [
+        "arXiv:2508.08514",
+        "https://arxiv.org/abs/2508.08514"
+      ],
+      "title": "DeCAL Tokenwise Compression",
+      "reason": "符号器復号器でトークン単位の圧縮表現を学習し検索や質問応答に再利用する圧縮手法だが、計算を犠牲に品質を優先しLLM推論向け圧縮とは目的が異なるため",
+      "source_url": "https://arxiv.org/abs/2508.08514",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15089",
+      "identity_tokens": [
+        "arXiv:2512.15089",
+        "https://arxiv.org/abs/2512.15089"
+      ],
+      "title": "Beyond Fast and Slow: Cognitive-Inspired Elastic Reasoning for Large Language Models",
+      "reason": "クエリ難易度に応じて推論戦略を切り替える弾力的推論枠組みで計算コストと精度の均衡を狙うが、システム実装より推論戦略選択というアルゴリズム側の提案であるため",
+      "source_url": "https://arxiv.org/abs/2512.15089",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.23213",
+      "identity_tokens": [
+        "arXiv:2610.23213",
+        "https://arxiv.org/abs/2610.23213"
+      ],
+      "title": "Not All Test-Time Compute Is Evidence: Model-Specific Bias in LLM Reasoning",
+      "reason": "同一モデルの追加計算は独立した証拠にならないことを示し不一致時に異種モデル群へ仲裁させる手法であり、推論計算の使い方の分析主体で基盤技術は限定的なため",
+      "source_url": "https://arxiv.org/abs/2610.23213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20851",
+      "identity_tokens": [
+        "arXiv:2509.20851",
+        "https://arxiv.org/abs/2509.20851"
+      ],
+      "title": "Poisoning Prompt-Guided Sampling in Video Large Language Models",
+      "reason": "動画LLMのプロンプト誘導型フレームサンプリングを毒性化して有害区間を隠す転移攻撃の研究であり、推論システムの改善ではなく動画モデレーションへの攻撃評価であるため",
+      "source_url": "https://arxiv.org/abs/2509.20851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12265",
+      "identity_tokens": [
+        "arXiv:2508.12265",
+        "https://arxiv.org/abs/2508.12265"
+      ],
+      "title": "Fast, Slow, and Tool-augmented Thinking for LLMs: A Review",
+      "reason": "高速思考と低速思考およびツール拡張思考を知識境界で分類したLLM推論戦略のレビューであり、新規の推論システム機構や実装を提示するものではないため",
+      "source_url": "https://arxiv.org/abs/2508.12265",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 298
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13370",
+      "identity_tokens": [
+        "arXiv:2605.13370",
+        "https://arxiv.org/abs/2605.13370"
+      ],
+      "title": "Phasor Memory Networks: Stable Backpropagation Through Time for Scalable Explicit Memory",
+      "reason": "位相回転で勾配を安定化する明示的記憶ネットワークを提案しコピー課題や長文脈で検証するモデルアーキテクチャ研究であり、推論サービング技術ではないため",
+      "source_url": "https://arxiv.org/abs/2605.13370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 302
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23392",
+      "identity_tokens": [
+        "arXiv:2509.23392",
+        "https://arxiv.org/abs/2509.23392"
+      ],
+      "title": "Your Models Have Thought Enough: Training Large Reasoning Models to Stop Overthinking",
+      "reason": "証拠蓄積の知見から推論軌跡を打ち切って学習させ過剰思考を止める強化学習手法であり、出力短縮は学習による行動変化であって推論システム機構ではないため",
+      "source_url": "https://arxiv.org/abs/2509.23392",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 303
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f02",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

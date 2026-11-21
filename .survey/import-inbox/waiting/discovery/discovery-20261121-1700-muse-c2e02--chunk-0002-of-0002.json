@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2e02::chunk-0002-of-0002",
+  "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31619",
+      "identity_tokens": [
+        "arXiv:2609.31619",
+        "https://arxiv.org/abs/2609.31619"
+      ],
+      "title": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "reason": "推論途中の確信度を自己教師で学習させると生成トークンが最大25%減る現象を示すが、推論時の停止機構はなく効率化は学習の副次効果として現れるに留まる。",
+      "source_url": "https://arxiv.org/abs/2609.31619",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 203
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.31215",
+      "identity_tokens": [
+        "arXiv:2605.31215",
+        "https://arxiv.org/abs/2605.31215"
+      ],
+      "title": "Fixed-Point Masked Generative Modeling",
+      "reason": "マスク生成モデルのデノイザ一部を共有注意層上の固定点ソルバへ置換し適応深度と再利用で低予算生成の品質とコストを改善する、訓練から推論までの効率化枠組みである。",
+      "source_url": "https://arxiv.org/abs/2605.31215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 207
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07112",
+      "identity_tokens": [
+        "arXiv:2605.07112",
+        "https://arxiv.org/abs/2605.07112"
+      ],
+      "title": "Switchcraft: AI Model Router for Agentic Tool Calling",
+      "reason": "ツール呼び出し正確度を校正した分類器で最も安いモデルへ振り分けるSwitchcraftはレイテンシ予算内で動作するモデルルータであり、推論コストを59%下げるサービング機構である。",
+      "source_url": "https://arxiv.org/abs/2605.07112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11577",
+      "identity_tokens": [
+        "arXiv:2605.11577",
+        "https://arxiv.org/abs/2605.11577"
+      ],
+      "title": "BitLM: Unlocking Multi-Token Language Generation with Bitwise Continuous Diffusion",
+      "reason": "各トークンを二進符号化し軽量拡散ヘッドでブロック内複数トークンを並列生成するBitLMは、一トークンずつのボトルネックを解消して推論スループット向上を狙う生成方式である。",
+      "source_url": "https://arxiv.org/abs/2605.11577",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 209
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00930",
+      "identity_tokens": [
+        "arXiv:2606.00930",
+        "https://arxiv.org/abs/2606.00930"
+      ],
+      "title": "A Circuit, Not The Circuit: Non-Unique Causal Localisation of the Mamba-2 State Sink",
+      "reason": "Mamba-2の状態シンクをプローブと介入で解析するメカニズム解釈研究であり、回路同定の限界を示す分析のみで推論高速化やシステム機構の提案はない。",
+      "source_url": "https://arxiv.org/abs/2606.00930",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 210
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.06947",
+      "identity_tokens": [
+        "arXiv:2307.06947",
+        "https://arxiv.org/abs/2307.06947"
+      ],
+      "title": "Video-FocalNets: Spatio-Temporal Focal Modulation for Video Action Recognition",
+      "reason": "動画行動認識向けに焦点変調で時空間文脈を畳み込み処理するVideo-FocalNetは映像認識アーキテクチャであり、LLMの推論やデコードとは無関係な分野である。",
+      "source_url": "https://arxiv.org/abs/2307.06947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 211
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.12580",
+      "identity_tokens": [
+        "arXiv:2406.12580",
+        "https://arxiv.org/abs/2406.12580"
+      ],
+      "title": "Behavior-Dependent Linear Recurrent Units for Efficient Sequential Recommendation",
+      "reason": "行動依存線形再帰ユニットと専用CUDAカーネルで推薦モデルの低コスト推論を謳うが、対象は逐次推薦に特化しておりLLMサービングへの直接の適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2406.12580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 212
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.11123",
+      "identity_tokens": [
+        "arXiv:2502.11123",
+        "https://arxiv.org/abs/2502.11123"
+      ],
+      "title": "DuplexMamba: Enhancing Real-time Speech Conversations with Duplex and Streaming Capabilities",
+      "reason": "Mamba ベースの音声対話モデルで同時入出力の二重デコードを実現するDuplexMambaはストリーミング生成の要素を含むが、音声会話応用が主体で汎用LLM推論機構ではない。",
+      "source_url": "https://arxiv.org/abs/2502.11123",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 214
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.13364",
+      "identity_tokens": [
+        "arXiv:2603.13364",
+        "https://arxiv.org/abs/2603.13364"
+      ],
+      "title": "FineRMoE: Dimension Expansion for Finer-Grained Expert with Its Upcycling Approach",
+      "reason": "細粒度MoEを中間と出力の両次元へ拡張し二階層疎前方計算とルーティングで、プリフィル遅延281倍低減とデコードスループット136倍を主張するMoE推論向け設計である。",
+      "source_url": "https://arxiv.org/abs/2603.13364",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.14694",
+      "identity_tokens": [
+        "arXiv:2606.14694",
+        "https://arxiv.org/abs/2606.14694"
+      ],
+      "title": "AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization",
+      "reason": "入力ストリーム中に考える適応的推論と階層的方策最適化を提案するAdaSRは遅延配慮の計算配分を含むが、主体は強化学習による学習法であり推論システム機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2606.14694",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2e02",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2e06::chunk-0002-of-0002",
+  "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25626",
+      "identity_tokens": [
+        "arXiv:2510.25626",
+        "https://arxiv.org/abs/2510.25626"
+      ],
+      "title": "Are Language Models Efficient Reasoners? A Perspective from Logic Programming",
+      "reason": "論理プログラミングの観点から言語モデルの推論効率を無関係公理入りデータで評価する分析であり、効率の定義も証明の冗長性であって推論システムの機構提案ではない。",
+      "source_url": "https://arxiv.org/abs/2510.25626",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.17048",
+      "identity_tokens": [
+        "arXiv:2412.17048",
+        "https://arxiv.org/abs/2412.17048"
+      ],
+      "title": "Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective",
+      "reason": "音声言語モデルが意味的に一貫しない原因をモダリティ移行で分析する研究であり、学習上の示唆が中心で推論高速化やサービング等のシステム貢献は含まれていない。",
+      "source_url": "https://arxiv.org/abs/2412.17048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.16170",
+      "identity_tokens": [
+        "arXiv:2411.16170",
+        "https://arxiv.org/abs/2411.16170"
+      ],
+      "title": "CARE Transformer: Mobile-Friendly Linear Visual Transformer via Decoupled Dual Interaction",
+      "reason": "モバイル向け線形視覚TransformerのCARE注意を画像分類・検出で評価する研究であり、対象は純粋な視覚モデルでLLMやマルチモーダルLLMの推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2411.16170",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08611",
+      "identity_tokens": [
+        "arXiv:2608.08611",
+        "https://arxiv.org/abs/2608.08611"
+      ],
+      "title": "C2C-Explorer: An Exploration Framework for Chip-to-Chip Interconnect Architectures in LLM Cloud Computing Systems",
+      "reason": "LLMクラウド向けチップ間相互接続をトラフィック生成・シミュレーション・ベイズ探索で設計するC2C-Explorerであり、DeepSeek-R1推論ワークロードでgoodput改善を示す直接的なシステム貢献である。",
+      "source_url": "https://arxiv.org/abs/2608.08611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.10749",
+      "identity_tokens": [
+        "arXiv:2610.10749",
+        "https://arxiv.org/abs/2610.10749"
+      ],
+      "title": "Listen-to-Reason: Listen with Experts, Retrieve over a Graph, Reason with LLMs",
+      "reason": "凍結した専門家エンコーダとテキストLLMリーダーで音声質問に答える解釈可能なパイプラインL2Rであり、音声理解の応用構成が主体で推論システム技術ではない。",
+      "source_url": "https://arxiv.org/abs/2610.10749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.11392",
+      "identity_tokens": [
+        "arXiv:2305.11392",
+        "https://arxiv.org/abs/2305.11392"
+      ],
+      "title": "Fast-StrucTexT: An Efficient Hourglass Transformer with Modality-guided Dynamic Token Merge for Document Understanding",
+      "reason": "文書理解向けにモダリティ誘導の動的トークンマージで高速化するFast-StrucTexTであり、推論高速化の要素はあるが文書理解タスク特化の応用モデルとしての性格が強い。",
+      "source_url": "https://arxiv.org/abs/2305.11392",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.06587",
+      "identity_tokens": [
+        "arXiv:2508.06587",
+        "https://arxiv.org/abs/2508.06587"
+      ],
+      "title": "Hypergraph Neural Network with State Space Models for Node Classification",
+      "reason": "ハイパーグラフと状態空間モデルでノード分類を行うHGMNの提案であり、グラフ学習の表現学習が目的でLLM推論・注意カーネル等の対象技術とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2508.06587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.03765",
+      "identity_tokens": [
+        "arXiv:2302.03765",
+        "https://arxiv.org/abs/2302.03765"
+      ],
+      "title": "Transformer-based Models for Long-Form Document Matching: Challenges and Empirical Analysis",
+      "reason": "長文文書マッチングで単純なモデルがBERT系を上回るという実証分析であり、新しい推論機構の提案ではなくタスク性能と資源消費の比較評価に留まる研究である。",
+      "source_url": "https://arxiv.org/abs/2302.03765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05404",
+      "identity_tokens": [
+        "arXiv:2506.05404",
+        "https://arxiv.org/abs/2506.05404"
+      ],
+      "title": "AD-EE: Early Exiting for Fast and Reliable Vision-Language Models in Autonomous Driving",
+      "reason": "自動運転向け視覚言語モデルの早期終了AD-EEで遅延を最大57%削減するが、因果推論による終了層選択が運転ドメイン特性に依存する応用主体の最適化であり境界的である。",
+      "source_url": "https://arxiv.org/abs/2506.05404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.20322",
+      "identity_tokens": [
+        "arXiv:2503.20322",
+        "https://arxiv.org/abs/2503.20322"
+      ],
+      "title": "Dynamic Pyramid Network for Efficient Multimodal Large Language Model",
+      "reason": "MLLMの視覚特徴を階層的に段階圧縮し入力に応じて圧縮率を選ぶ動的ピラミッド網DPNでLLaVAのFLOPsを56%削減する、マルチモーダルLLM推論効率への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2503.20322",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:00:00+09:00",
+      "last_checked_at": "2026-11-21T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2e06",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

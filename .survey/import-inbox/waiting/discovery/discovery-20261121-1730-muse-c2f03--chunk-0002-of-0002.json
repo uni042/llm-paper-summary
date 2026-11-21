@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-c2f03::chunk-0002-of-0002",
+  "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.06753",
+      "identity_tokens": [
+        "arXiv:2604.06753",
+        "https://arxiv.org/abs/2604.06753"
+      ],
+      "title": "Select-then-Solve: Paradigm Routing as Inference-Time Optimization for LLM Agents",
+      "reason": "推論時の推論パラダイムを埋め込みルータでタスクごとに選ぶSelect-then-Solveは精度改善が主目的であり、遅延やコストといった推論システム指標の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2604.06753",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 353
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11610",
+      "identity_tokens": [
+        "arXiv:2604.11610",
+        "https://arxiv.org/abs/2604.11610"
+      ],
+      "title": "Self-Evolving LLM Memory Extraction Across Heterogeneous Tasks",
+      "reason": "異種タスクにわたるLLMメモリ抽出プロンプトをクラスタ単位で自己進化させる研究であり、対象は記憶抽出の精度であって推論機構や計算効率の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2604.11610",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02988",
+      "identity_tokens": [
+        "arXiv:2602.02988",
+        "https://arxiv.org/abs/2602.02988"
+      ],
+      "title": "NLI:Non-uniform Linear Interpolation Approximation of Nonlinear Operations for Efficient LLMs Inference",
+      "reason": "SiLUやRMSNorm、Softmax等の非線形演算を非一様線形補間で近似するNLIと専用計算ユニットを設計し、LLM推論の非線形層を4倍超効率化するハードウェア寄りの技術である。",
+      "source_url": "https://arxiv.org/abs/2602.02988",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.12701",
+      "identity_tokens": [
+        "arXiv:2111.12701",
+        "https://arxiv.org/abs/2111.12701"
+      ],
+      "title": "Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes",
+      "reason": "ベクトル量子化コードのトークンを離散拡散で並列予測し高解像度画像生成を高速化する手法だが、対象は画像生成でありLLMの投機的デコード等への直接の示唆は限定的である。",
+      "source_url": "https://arxiv.org/abs/2111.12701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 356
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17208",
+      "identity_tokens": [
+        "arXiv:2511.17208",
+        "https://arxiv.org/abs/2511.17208"
+      ],
+      "title": "A Simple Yet Strong Baseline for Long-Term Conversational Memory of LLM Agents",
+      "reason": "会話履歴を事象単位の命題としてグラフ化し検索する長期会話メモリのベースラインであり、QA文脈は短くなるものの本体はエージェントの記憶表現であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2511.17208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 358
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.07849",
+      "identity_tokens": [
+        "arXiv:2602.07849",
+        "https://arxiv.org/abs/2602.07849"
+      ],
+      "title": "LQA: A Lightweight Quantized-Adaptive Framework for Vision-Language Models on the Edge",
+      "reason": "モダリティを意識した選択的ハイブリッド量子化と勾配不要のテスト時適応を組み合わせ、エッジデバイス上のVLMでメモリを大幅に削減しつつ頑健に動作させる軽量枠組みである。",
+      "source_url": "https://arxiv.org/abs/2602.07849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 363
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15384",
+      "identity_tokens": [
+        "arXiv:2605.15384",
+        "https://arxiv.org/abs/2605.15384"
+      ],
+      "title": "Is One Score Enough? Rethinking the Evaluation of Sequentially Evolving LLM Memory",
+      "reason": "逐次進化するLLMメモリを忘却や負の転移まで含めて診断する評価枠組みSeqMem-Evalの提案であり、推論高速化の手法ではなくメモリ品質の評価のみを扱っている。",
+      "source_url": "https://arxiv.org/abs/2605.15384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32204",
+      "identity_tokens": [
+        "arXiv:2609.32204",
+        "https://arxiv.org/abs/2609.32204"
+      ],
+      "title": "DegreeSpar: Structured Degree Sparsity for Efficient Secure Transformer Inference",
+      "reason": "セキュアTransformer推論における非線形多項式の次数を構造的疎性として最適化し、近似対応学習と併せて2.29から6.63倍の高速化を達成する安全な推論圧縮技術である。",
+      "source_url": "https://arxiv.org/abs/2609.32204",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 365
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2109.10060",
+      "identity_tokens": [
+        "arXiv:2109.10060",
+        "https://arxiv.org/abs/2109.10060"
+      ],
+      "title": "DS-Net++: Dynamic Weight Slicing for Efficient Inference in CNNs and Transformers",
+      "reason": "入力難易度に応じて重みをスライスする動的推論でCNNとTransformerの計算を2から4倍削減するが、評価の中心は画像分類とViTでありLLMサービングへの適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2109.10060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.09424",
+      "identity_tokens": [
+        "arXiv:2509.09424",
+        "https://arxiv.org/abs/2509.09424"
+      ],
+      "title": "ENSI: Efficient Non-Interactive Secure Inference for Large Language Models",
+      "reason": "CKKS準同型暗号と軽量BitNetの協調設計、sigmoid注意への置換、RMSNorm内ブートストラップにより、LLMの非対話型セキュア推論を行列積8倍・softmax2.6倍に高速化している。",
+      "source_url": "https://arxiv.org/abs/2509.09424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T17:30:00+09:00",
+      "last_checked_at": "2026-11-21T17:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 369
+    }
+  ],
+  "parent_run_key": "muse-20261121-c2f03",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
