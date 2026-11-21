@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-494804e36c0aa9b8-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.16204",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.16204",
+    "identity_tokens": [
+      "arXiv:2607.16204"
+    ],
+    "reason": "マスク拡散モデルをエージェントRL用ワールドモデルとして使う応用研究であり、同等レイテンシの言及はあるものの推論システム側の新技術や効率実測が主題ではないため。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Masked Diffusion Language Models are Strong and Steerable Text-Based World Models for Agentic RL"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-494804e36c0a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

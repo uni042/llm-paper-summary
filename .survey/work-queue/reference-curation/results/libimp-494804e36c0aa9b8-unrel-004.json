@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-494804e36c0aa9b8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2205.08078",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2205.08078",
+    "identity_tokens": [
+      "arXiv:2205.08078"
+    ],
+    "reason": "ビジョントランスフォーマの注意機構を凸双対性で理論解析し解釈可能性を示す研究であり、LLMの推論処理やその効率化とは対象も貢献も重ならないため。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Unraveling Attention via Convex Duality: Analysis and Interpretations of Vision Transformers"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-494804e36c0a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

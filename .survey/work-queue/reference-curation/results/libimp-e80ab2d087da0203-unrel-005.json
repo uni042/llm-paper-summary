@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e80ab2d087da0203-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.15408",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.15408",
+    "identity_tokens": [
+      "arXiv:2604.15408"
+    ],
+    "reason": "剪定した視覚トランスフォーマー向けに可変長注意APIのディスパッチオーバーヘッドを下げたTritonカーネルを提案する研究であり、評価対象は画像入力のViTスループットに限られLLMデコードやサービングへの適用は要旨にないため対象外である。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Dispatch-Aware Ragged Attention for Pruned Vision Transformers"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e80ab2d087da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

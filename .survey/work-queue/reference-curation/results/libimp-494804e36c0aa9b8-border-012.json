@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-494804e36c0aa9b8-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01480",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01480",
+    "identity_tokens": [
+      "arXiv:2607.01480"
+    ],
+    "reason": "手続きメモリを方策の重みへ蒸留し推論時はメモリなしとするが、貢献はRLVR学習時の自己改善と精度向上であり、推論コストやスループットの改善を示していないため。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Procedural Memory Distillation: Online Reflection for Self-Improving Language Models"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-494804e36c0a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

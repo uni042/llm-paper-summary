@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1db18ac9508d629c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.07711",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.07711",
+    "identity_tokens": [
+      "arXiv:2411.07711"
+    ],
+    "reason": "外れ値重み付き層別プルーニングでLLMを圧縮する手法だが、較正と評価が自動運転の知覚・行動予測・言語理解へ特化した応用枠組みであり、汎用的なLLM推論システムとしての検証が要旨では薄いため保留とする。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OWLed: Outlier-weighed Layerwise Pruning for Efficient Autonomous Driving Framework"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1db18ac9508d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

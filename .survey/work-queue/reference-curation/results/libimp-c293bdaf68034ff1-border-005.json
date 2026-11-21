@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c293bdaf68034ff1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.02612",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.02612",
+    "identity_tokens": [
+      "arXiv:2611.02612"
+    ],
+    "reason": "検索文脈トークンを約10分の1に抑える企業向け会話メモリ基盤だが、主眼はパーソナライズ応用の精度と文脈効率の両立であり、LLM推論基盤の汎用技術ではないため。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scalaris: A Scalable Enterprise Memory Architecture for Conversational AI Assistants"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c293bdaf6803",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

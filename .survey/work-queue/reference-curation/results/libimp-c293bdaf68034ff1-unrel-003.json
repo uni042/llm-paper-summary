@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c293bdaf68034ff1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.14628",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.14628",
+    "identity_tokens": [
+      "arXiv:2512.14628"
+    ],
+    "reason": "構造化プルーニングで分散CNN学習のノード間通信を約60％削減する学習システムであり、対象はResNetの学習であってLLMの推論処理ではないため。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PruneX: A Hierarchical Communication-Efficient System for Distributed CNN Training with Structured Pruning"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c293bdaf6803",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2dd96f3a3f8305f-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.20278",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.20278",
+    "identity_tokens": [
+      "arXiv:2405.20278"
+    ],
+    "reason": "安定な状態空間モデルブロックを持つ深層SSMアーキテクチャについて入力長に依存しないPAC汎化 boundをRademacher収縮と安定性で導く純粋理論の研究であり、推論実行やLLMサービングへの具体的な機構・適用は要旨に示されていないため対象外である。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Length independent generalization bounds for deep SSM architectures via Rademacher contraction and stability constraints"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2dd96f3a3f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

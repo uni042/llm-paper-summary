@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-611f1453e312d044-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01737",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01737",
+    "identity_tokens": [
+      "arXiv:2607.01737"
+    ],
+    "reason": "長尺動画QAで不確実性に応じてキーフレームを追加選択するReQuestは、固定トークン予算下の選択的計算として推論効率と関係するが、主目的は動画質問応答の精度であり応用主体の手法のため保留とする。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ReQuest: Rethinking-based Question-Aware Frame Selection for Long-Form Video QA"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-611f1453e312",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

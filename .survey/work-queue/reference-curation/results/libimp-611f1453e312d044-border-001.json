@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-611f1453e312d044-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.11628",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.11628",
+    "identity_tokens": [
+      "arXiv:2604.11628"
+    ],
+    "reason": "対話エージェントの長期記憶を検索と生成のみで構成し、ターン分離検索とクエリ駆動プルーニングでトークンとレイテンシの効率も示すが、主題は会話記憶の精度であり推論システムの汎用技術としては応用寄りのため保留とする。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Back to Basics: Let Conversational Agents Remember with Just Retrieval and Generation"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-611f1453e312",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

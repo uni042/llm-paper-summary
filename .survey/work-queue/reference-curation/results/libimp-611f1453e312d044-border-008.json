@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-611f1453e312d044-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.20915",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.20915",
+    "identity_tokens": [
+      "arXiv:2405.20915"
+    ],
+    "reason": "早期終了ネットワークへリスク制御を適用し、品質目標を保ちながら計算を節約する枠組みを視覚と言語の課題で検証するが、LLM特化ではなく一般的なニューラルネット推論の手法であり、LLM推論への適用可能性が要旨では間接的なため保留とする。",
+    "first_checked_at": "2026-11-21T00:05:43+00:00",
+    "last_checked_at": "2026-11-21T00:05:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fast yet Safe: Early-Exiting with Risk Control"
+  },
+  "processed_at": "2026-11-21T00:05:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-611f1453e312",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
