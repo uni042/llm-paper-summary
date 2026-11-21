@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1181本）
+## 自動生成の論文一覧（1184本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -116,6 +116,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
 
+- **2026-02 · [ApET: Approximation-Error Guided Token Compression for Efficient VLMs](2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md)**  
+  実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：5  
+  視覚トークンの重要度を注意ではなく線形再構成の誤差で測って圧縮する学習不要の方式で、約9割のトークン削減でも性能をほぼ保ち、高速注意カーネルとも併用できる。
+
 - **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
   実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：5  
   端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
@@ -139,10 +143,6 @@
 - **2026-02 · [Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models](2026-2602.04399-swordsman-entropy-driven-adaptive-block-partition-for-efficient-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Swordsmanは、拡散言語モデル（Diffusion Language モデル、DLM）の生成速度と品質を改善するため、出力列を固定長で区切るブロック復号を、モデルの予測エントロピーに応じて動的に区切る方式へ変更する。
-
-- **2026-02 · [ApET: Approximation-Error Guided Token Compression for Efficient VLMs](2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md)**  
-  実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：4  
-  視覚トークンの重要度を注意ではなく線形再構成の誤差で測って圧縮する学習不要の方式で、約9割のトークン削減でも性能をほぼ保ち、高速注意カーネルとも併用できる。
 
 - **2026-01 · [Native LLM and MLLM Inference at Scale on Apple Silicon](2026-2601.19139-native-llm-and-mllm-inference-at-scale-on-apple-silicon.md)**  
   実装：[✓](https://github.com/waybarrios/vllm-mlx) ・ リポジトリ内被引用：4  
@@ -1926,6 +1926,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   MARR（Module-適応的 Residual Reconstruction）は、学習済みモデルを追加学習せず低ビットへ変換する学習後量子化（post-学習 量子化; PTQ）で、層をまたぐ量子化誤差の補正を強めすぎないための方法である。
 
+- **2026-05 · [LRCP: Low-Rank Compressibility Guided Visual Token Pruning for Efficient LVLMs](2026-2605.15621-lrcp-low-rank-compressibility-guided-visual-token-pruning-for-efficient-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚トークンの低ランク構造を主成分分析で捉え、支配的部分空間で説明できない射影残差の大きいトークンを残して他を統合することで、学習なしに視覚トークンを約9割削っても性能をほぼ保つ枝刈り方式。
+
 - **2026-05 · [LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding](2026-2605.27365-locateanything-fast-and-high-quality-vision-language-grounding-with-para.md)**  
   実装：[✓](https://github.com/NVlabs/Eagle/tree/main/Embodied) ・ リポジトリ内被引用：0  
   各矩形を、四つの量子化座標と構造トークンからなる長さ6のブロックで表し、ブロック内部は同時に予測する。
@@ -2562,6 +2566,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   そこで本論文は、モデルの確率分布に「適切な時点で終了する」兆候がすでに含まれているのかを調べ、その情報を取り出す生成方式と学習方式を設計する。
 
+- **2026-02 · [COMPOT: Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers Compression](2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-tra.md)**  
+  実装：[✓](https://github.com/mts-ai/COMPOT) ・ リポジトリ内被引用：0  
+  較正で白色化した重みを直交辞書と疎な係数の積へ分解し、辞書更新を閉形式のプロクルステス解、係数更新をハード閾値処理で解くことで、単一共有部分空間の低ランク圧縮より高い精度を訓練なしで保つ圧縮方式の研究。
+
 - **2026-02 · [BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling](2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-bl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   近似した行最大値での引き算を専用コア側へ寄せて注意スコアの差を八ビットのまま転送し、外れたブロックだけ高精度でやり直すことで、長文脈の単語抽出で高精度構成の六十四・八パーセントに対し六十四・〇パーセントを保ち、単純な八ビット化の五十四・〇パーセントへの崩れを防いだ。
@@ -2609,6 +2617,10 @@
 - **2026-01 · [SimMerge: Learning to Select Merge Operators from Similarity Signals](2026-2601.09473-simmerge-learning-to-select-merge-operators-from-similarity-signals.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の重みを一つのモデルへ統合するモデル結合（モデル merging）は、複数モデルを同時常駐させずに能力をまとめる方法だが、どの結合演算子を使うか、どのチェックポイントを選ぶか、どの順番で結合するかによって結果が大きく変わる。
+
+- **2026-01 · [SecMoE: Communication-Efficient Secure MoE Inference via Select-Then-Compute](2026-2601.06790-secmoe-communication-efficient-secure-moe-inference-via-select-then-comp.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門家の重みを暗号化された選択で1つだけ取り出してから計算することで、選択結果をサーバへ漏らさずに疎性を保ち、秘密保持推論の通信を最大約29.8倍減らした安全な専門家混合推論の研究。
 
 - **2026-01 · [S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference](2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2778,6 +2790,10 @@
   実装：[✓](https://github.com/tjbai/choreo) ・ リポジトリ内被引用：0  
   文章ごとの鍵と値の符号化を全体で共有し、各呼び出しが任意の文章を任意の順序で参照できるようにして、追加学習でずれを直すことで、最初のトークンまでの時間を二・〇倍から六・二倍、全体でも二・二倍超速くしたと報告した。
 
+- **2025-12 · [A Plan Reuse Mechanism for LLM-Driven Agent](2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  意図分類と重要パラメータ抽出でパラメータを除いた文面の類似度を測り、構造化計画へ現在のパラメータを差し込む再利用で、エージェントの計画生成遅延を93パーセント減らす計画キャッシュ方式。
+
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
@@ -2801,7 +2817,7 @@
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
@@ -3140,6 +3156,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデルの設計では、パラメータ数と学習トークン数を指定して学習損失を下げる方法が重視されてきた。
 
+- **2025-10 · [Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space](2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md)**  
+  実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：1  
+  視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
+
 - **2025-10 · [PatternKV: Flattening KV Representation Expands Quantization Headroom](2025-2510.05176-patternkv-flattening-kv-representation-expands-quantization-headroom.md)**  
   実装：[✓](https://github.com/HCOOOH/PatternKV) ・ リポジトリ内被引用：1  
   KVキャッシュを保持することで過去トークンの注意計算を省ける一方、文脈長、同時リクエスト数、複数回答を生成する推論時スケーリングに比例してキャッシュが膨らむ。著者は複数モデル平均でFP16との差が0.08%と要約するが、これは個別モデルの全タスクで差がゼロという意味ではない。
@@ -3159,6 +3179,10 @@
 - **2025-10 · [ARMOR: High-Performance Semi-Structured Pruning via Adaptive Matrix Factorization](2025-2510.05528-armor-high-performance-semi-structured-pruning-via-adaptive-matrix-facto.md)**  
   実装：[✓](https://github.com/LawrenceRLiu/ARMOR) ・ リポジトリ内被引用：1  
   一方、どの4要素からも2要素を消すという硬い制約は、同じ50%剪定率の非構造化剪定よりも言語モデルの品質を大きく悪化させやすい。ARMORは、この損失をマスク選択だけで解決するのではなく、疎行列の前後へ小さい学習可能な線形変換を配置して重み表現を変える方式である。
+
+- **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
+  実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：1  
+  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
 
 - **2025-10 · [Activation Quantization of Vision Encoders Needs Prefixing Registers](2025-2510.04547-activation-quantization-of-vision-encoders-needs-prefixing-registers.md)**  
   実装：[✓](https://github.com/spbob0418/RegCache) ・ リポジトリ内被引用：1  
@@ -3376,10 +3400,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   STaMP（Sequence Transformation and Mixed Precision）は、低ビット量子化の前に活性行列を系列方向へ直交変換し、情報が集中した少数の変換後トークンだけを8ビット、残りを4ビットで表現する方式である。
 
-- **2025-10 · [Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space](2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md)**  
-  実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
-  視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
-
 - **2025-10 · [MossNet: Mixture of State-Space Experts is a Multi-Head Attention](2025-2510.26182-mossnet-mixture-of-state-space-experts-is-a-multi-head-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の状態空間専門家の混合が線形化したmulti-head 注意機構の形に展開できることを示し、従来の単一状態のSSMより表現力を高める。8x200M+モデルは2.8兆トークン学習後、top-2（活性477M）で7課題平均53.5%、Qwen2.5-0.5Bの47.7%を上回るが、学習トークン数・モデル構造が異なる。
@@ -3439,10 +3459,6 @@
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
   従って「注意計算全体をゼロにする」方式ではない。著者の実測はCPUで平均1.2倍のエンドツーエンド（E2E）高速化、自己注意部分で平均2倍、GPUでE2E平均1.6倍、注意部分で平均3倍を報告する。
-
-- **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
-  実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：0  
-  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
 
 - **2025-10 · [APCE: Adaptive Progressive Context Expansion for Long Context Processing](2025-2510.12051-apce-adaptive-progressive-context-expansion-for-long-context-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4026,6 +4042,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
 
+- **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  論文はTransformer圧縮を、構造を保つ圧縮（量子化・知識蒸留）と、構造を変える圧縮（枝刈り・効率的なモデル構造）という二つの上位観点で整理する。
+
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   枝刈り、量子化、知識蒸留、低ランク近似、パラメータ共有、効率的構造設計の六系統を、圧縮後の性能だけでなく、圧縮を実行するための学習・較正費用から比較するサーベイ。
@@ -4033,10 +4053,6 @@
 - **2024-10 · [SIGMA: Secure GPT Inference with Function Secret Sharing](2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md)**  
   実装：[✓](https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma) ・ リポジトリ内被引用：7  
   SIGMAは関数秘密分散（Function Secret Sharing; FSS）によって複雑な非線形演算を二者間で実現し、事前に作った暗号鍵を使ってオンライン時の通信を抑える。代表結果は、系列長128の二者間オンライン推論において、既存のGPU秘匿計算系CrypTenより12.2～19倍短い実行時間である。
-
-- **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  論文はTransformer圧縮を、構造を保つ圧縮（量子化・知識蒸留）と、構造を変える圧縮（枝刈り・効率的なモデル構造）という二つの上位観点で整理する。
 
 - **2024-06 · [DeciMamba: Exploring the Length Extrapolation Potential of Mamba](2024-2406.14528-decimamba-exploring-the-length-extrapolation-potential-of-mamba.md)**  
   実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：6  
@@ -4460,13 +4476,13 @@
   実装：[✓](https://github.com/SALT-NLP/DyLAN) ・ リポジトリ内被引用：11  
   複数の大規模言語モデルエージェントを協調させる方式では、担当する役割や通信順序を固定すると、問題によっては不得意なエージェントの発言が増え、余計なモデル呼出しと品質低下を招く。原著のHumanEvalコード生成評価では、単一実行の正答率73.2%に対してDyLANは82.9%、平均モデルAPI呼出し数は16.85回だった。
 
+- **2023-07 · [PUMA: Secure Inference of LLaMA-7B in Five Minutes](2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md)**  
+  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：11  
+  従来の高速化方式が必要としたモデルの再学習や構造変更を避け、既存の学習済み重みをほぼそのまま秘密計算へ持ち込むことを狙う。
+
 - **2023-10 · [GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints](2023-075d73797107-gemini-fast-failure-recovery-in-distributed-training-with-in-memory-chec.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   保存頻度を増やせば故障前に失う学習進捗は減るが、遠隔ストレージの集約帯域が不足すると保存そのものが長くなり、学習を妨げる。提案は単なる「メモリへ保存する」という発想ではない。
-
-- **2023-07 · [PUMA: Secure Inference of LLaMA-7B in Five Minutes](2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md)**  
-  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：10  
-  従来の高速化方式が必要としたモデルの再学習や構造変更を避け、既存の学習済み重みをほぼそのまま秘密計算へ持ち込むことを狙う。
 
 - **2023-01 · [Alternating Updates for Efficient Transformers](2023-2301.13310-alternating-updates-for-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -4696,10 +4712,6 @@
   実装：✓ ・ リポジトリ内被引用：284  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
-- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：79  
-  Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
-
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
   実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：33  
   自己回帰型Transformerの注意機構は、過去の一定幅のトークンを参照して次のトークンを予測する。
@@ -4749,7 +4761,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：358  
+  実装：✓ ・ リポジトリ内被引用：359  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

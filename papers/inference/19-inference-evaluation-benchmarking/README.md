@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（177本）
+## 自動生成の論文一覧（178本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -485,6 +485,10 @@
 - **2026-01 · [FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning](2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意関数をSoftmax1へ替えて寄与の小さい推論文を生成されにくくする微調整方式で、トークンを約7割削りながら正解率を平均で改善した。
+
+- **2026-01 · [Forest Before Trees: Latent Superposition for Efficient Visual Reasoning](2026-2601.06803-forest-before-trees-latent-superposition-for-efficient-visual-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  残りの視覚推論経路全体を有効窓とし、隠れ状態を窓内の未来意味の重ね合わせへ合わせる学習で、早すぎる意味の収束を防ぎながら推論トークンを97パーセント超減らす潜在視覚推論方式。
 
 ### 2年前（2024-12〜2025-11）
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "9a6af4ef9c937fdcb98ad2941918cfaf28e223f7",
+  "base_commit": "27cccb63fbeadb7f8604aa81020666c0b684d6ba",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -208,6 +208,7 @@
     "2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via-shared-projection-and-block-skipping.json",
     "2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-decoding.json",
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
+    "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
@@ -220,6 +221,8 @@
     "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json",
     "2026-2601.03067-joint-encoding-of-kv-cache-blocks-for-scalable-llm-serving.json",
     "2026-2601.03928-focusui-efficient-ui-grounding-via-position-preserving-visual-token-selection.json",
+    "2026-2601.06790-secmoe-communication-efficient-secure-moe-inference-via-select-then-compute.json",
+    "2026-2601.06803-forest-before-trees-latent-superposition-for-efficient-visual-reasoning.json",
     "2026-2601.07212-mi-prun-optimize-large-language-model-pruning-via-mutual-information.json",
     "2026-2601.08670-parallel-context-of-experts-decoding-for-retrieval-augmented-generation.json",
     "2026-2601.09865-advancing-model-refinement-muon-optimized-distillation-and-quantization-for-llm.json",
@@ -265,6 +268,7 @@
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
     "2026-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficient-multimodal-large-language-models.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
+    "2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-transformers-compression.json",
     "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json",
     "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json",
     "2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.json",
@@ -388,6 +392,7 @@
     "2026-2605.14217-preft-prefill-only-finetuning-for-efficient-inference.json",
     "2026-2605.14310-cords-coreset-based-representative-and-diverse-selection-for-streaming-video-understanding.json",
     "2026-2605.14929-a-hardware-aware-per-layer-methodology-for-post-training-quantization-of-large-language-models.json",
+    "2026-2605.15621-lrcp-low-rank-compressibility-guided-visual-token-pruning-for-efficient-lvlms.json",
     "2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.json",
     "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json",
     "2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.json",
@@ -47054,6 +47059,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.21309": {
+      "order": [
+        "2026-11-21T22:37:33+00:00",
+        "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.06790": {
+      "order": [
+        "2026-11-21T22:38:33+00:00",
+        "2026-2601.06790-secmoe-communication-efficient-secure-moe-inference-via-select-then-compute.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.06803": {
+      "order": [
+        "2026-11-21T22:39:33+00:00",
+        "2026-2601.06803-forest-before-trees-latent-superposition-for-efficient-visual-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.15200": {
+      "order": [
+        "2026-11-21T22:40:34+00:00",
+        "2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-transformers-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.15621": {
+      "order": [
+        "2026-11-21T22:41:34+00:00",
+        "2026-2605.15621-lrcp-low-rank-compressibility-guided-visual-token-pruning-for-efficient-lvlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59111,6 +59161,21 @@
     "arxiv:2611.13641": [
       "papers/inference/99-other-inference-systems/2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transform.md",
       "papers/inference/99-other-inference-systems/2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transform.md"
+    ],
+    "arxiv:2512.21309": [
+      "papers/inference/99-other-inference-systems/2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.md"
+    ],
+    "arxiv:2601.06790": [
+      "papers/inference/99-other-inference-systems/2026-2601.06790-secmoe-communication-efficient-secure-moe-inference-via-select-then-comp.md"
+    ],
+    "arxiv:2601.06803": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2601.06803-forest-before-trees-latent-superposition-for-efficient-visual-reasoning.md"
+    ],
+    "arxiv:2602.15200": [
+      "papers/inference/99-other-inference-systems/2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-tra.md"
+    ],
+    "arxiv:2605.15621": [
+      "papers/inference/99-other-inference-systems/2026-2605.15621-lrcp-low-rank-compressibility-guided-visual-token-pruning-for-efficient-.md"
     ]
   }
 }
