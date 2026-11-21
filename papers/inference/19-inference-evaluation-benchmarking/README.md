@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（180本）
+## 自動生成の論文一覧（181本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -393,6 +393,10 @@
 - **2026-05 · [LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference](2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層対応の蒸留が早期終了の前提である表現の収束を潰す非両立性を特定し、中間層を最終層へ近づける制約を蒸留へ加えたLEAPで、蒸留モデルでも収束ベースの早期終了により1.61倍の実測高速化を得た研究。
+
+- **2026-05 · [Identifying and Mitigating Systemic Measurement Bias in Production LLM Inference Benchmarks](2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ベンチマーク用クライアントの単一プロセス構造が待ち行列となり遅延を水増しする測定バイアスを、待ち行列理論とシミュレータ相手の実測で示し、複数プロセスへの負荷分散と複合指標NTPOTによる是正策を提示した研究。
 
 - **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

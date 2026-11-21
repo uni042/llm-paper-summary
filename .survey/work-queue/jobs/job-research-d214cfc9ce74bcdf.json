@@ -35,10 +35,15 @@
   "selection_reason": "複数専門家LLMへのルーティングと集約を行うMixture-of-Agents実行を対象に、整数線形計画による専門家配置、予測出力長に基づくクエリ順序付け、合意時の集約LLM迂回を組み合わせたMOSAICが4GPUで2.7から3.4倍の高速化を示しており、推論スケジューリングへの直接貢献が具体的である。",
   "semantic_scholar_id": "d00d2936dbfb0f524913885d978f71a2b9cc2264",
   "source_url": "https://arxiv.org/abs/2606.03014",
-  "status": "ready",
+  "status": "superseded",
   "title": "MOSAIC: Efficient Mixture-of-Agent Scheduling via Adaptive Aggregation and Inference Concurrency",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T23:30:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-an.md",
+  "represented_canonical_id": "arXiv:2606.03014",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

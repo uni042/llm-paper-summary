@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ce34c806afd548717cb357cb58c4dd176b01142a",
+  "base_commit": "d80a6511ac54e5035448417ed0713fbca7eef802",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -278,7 +278,9 @@
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
     "2026-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficient-multimodal-large-language-models.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
+    "2026-2602.13680-allmem-a-memory-centric-recipe-for-efficient-long-context-modeling.json",
     "2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-transformers-compression.json",
+    "2026-2602.15521-expertweaver-unlocking-the-inherent-moe-in-dense-llms-with-glu-activation-patterns.json",
     "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json",
     "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json",
     "2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.json",
@@ -412,9 +414,11 @@
     "2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video.json",
     "2026-2605.23914-vinelm-trie-based-fine-grained-control-for-agentic-workflows.json",
     "2026-2605.24019-mgvq-synergizing-multi-dimensional-sensitivity-aware-and-gradient-hessian-fusion-for-vector-quantization.json",
+    "2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-inference-benchmarks.json",
     "2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.json",
     "2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inference.json",
     "2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-safe-to-reuse-an-answer.json",
+    "2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-aware-kv-sparsity.json",
     "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json",
     "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json",
     "2026-2605.31215-fixed-point-masked-generative-modeling.json",
@@ -426,6 +430,7 @@
     "2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-in-gui-vision-language-models.json",
     "2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compression.json",
     "2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted-recovery.json",
+    "2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-and-inference-concurrency.json",
     "2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-reasoning.json",
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
     "2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusion-large-language-models.json",
@@ -47331,6 +47336,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2602.13680": {
+      "order": [
+        "2026-11-21T23:22:28+00:00",
+        "2026-2602.13680-allmem-a-memory-centric-recipe-for-efficient-long-context-modeling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.15521": {
+      "order": [
+        "2026-11-21T23:23:55+00:00",
+        "2026-2602.15521-expertweaver-unlocking-the-inherent-moe-in-dense-llms-with-glu-activation-patterns.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.24217": {
+      "order": [
+        "2026-11-21T23:25:23+00:00",
+        "2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-inference-benchmarks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.28640": {
+      "order": [
+        "2026-11-21T23:26:50+00:00",
+        "2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-aware-kv-sparsity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.03014": {
+      "order": [
+        "2026-11-21T23:28:18+00:00",
+        "2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-and-inference-concurrency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59484,6 +59534,21 @@
     "arxiv:2601.03506": [
       "papers/inference/99-other-inference-systems/2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.md",
       "papers/inference/99-other-inference-systems/2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.md"
+    ],
+    "arxiv:2602.13680": [
+      "papers/inference/99-other-inference-systems/2026-2602.13680-allmem-a-memory-centric-recipe-for-efficient-long-context-modeling.md"
+    ],
+    "arxiv:2602.15521": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.15521-expertweaver-unlocking-the-inherent-moe-in-dense-llms-with-glu-activatio.md"
+    ],
+    "arxiv:2605.24217": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-i.md"
+    ],
+    "arxiv:2605.28640": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-a.md"
+    ],
+    "arxiv:2606.03014": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-an.md"
     ]
   }
 }
