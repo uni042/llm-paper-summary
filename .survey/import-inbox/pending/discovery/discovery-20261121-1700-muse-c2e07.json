@@ -1,0 +1,551 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261121-c2e07",
+ "reference_main_sha": "a1aa6de0ee0b6d2971e8cfbac312c502ad8fa5a9",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2511.20194",
+   "identity_tokens": [
+    "arXiv:2511.20194",
+    "https://arxiv.org/abs/2511.20194"
+   ],
+   "title": "In-Context Compositional Learning via Sparse Coding Transformer",
+   "reason": "スパース符号化で注意を再定式化しRAVEN等の構成的汎化を扱う学習・表現研究であり、推論サービングやデコード高速化への直接貢献は要旨にないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2511.20194",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 405
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2603.06797",
+   "identity_tokens": [
+    "arXiv:2603.06797",
+    "https://arxiv.org/abs/2603.06797"
+   ],
+   "title": "Best-of-Tails: Bridging Optimism and Pessimism in Inference-Time Alignment",
+   "reason": "推論時アライメントで複数候補生成と報酬モデル選択を扱うが、主眼は探索と報酬ハッキングのトレードオフであり、サービング機構やデコード効率の具体設計は示されていない。",
+   "source_url": "https://arxiv.org/abs/2603.06797",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 406
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.27910",
+   "identity_tokens": [
+    "arXiv:2603.27910",
+    "https://arxiv.org/abs/2603.27910"
+   ],
+   "title": "GAAMA: Graph Augmented Associative Memory for Agents",
+   "reason": "会話エージェントの長期記憶をトピック中心グラフとPageRank検索で組織化する応用研究であり、LLM自体の推論・KVキャッシュ・分散実行とは別領域であるため対象外である。",
+   "source_url": "https://arxiv.org/abs/2603.27910",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 407
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.01688",
+   "identity_tokens": [
+    "arXiv:2605.01688",
+    "https://arxiv.org/abs/2605.01688"
+   ],
+   "title": "GRAVITY: Architecture-Agnostic Structured Anchoring for Long-Horizon Conversational Memory",
+   "reason": "長期対話記憶をエンティティやイベントへ整理してプロンプト注入する生成時記憶層の提案であり、推論システムの実行効率やスケジューリングを扱っていないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2605.01688",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 409
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2609.03201",
+   "identity_tokens": [
+    "arXiv:2609.03201",
+    "https://arxiv.org/abs/2609.03201"
+   ],
+   "title": "MemoryLACE: Memory Lifecycle-Aware Consolidation and Evidence Retrieval",
+   "reason": "テキスト記憶のライフサイクル関係を明示し実行時間削減も報告するが、貢献の中心はエージェント記憶の推論品質であり、LLMサービング基盤への直接適用は限定的である。",
+   "source_url": "https://arxiv.org/abs/2609.03201",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 410
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.03354",
+   "identity_tokens": [
+    "arXiv:2605.03354",
+    "https://arxiv.org/abs/2605.03354"
+   ],
+   "title": "What Happens Inside Agent Memory? Circuit Analysis from Emergence to Diagnosis",
+   "reason": "エージェント記憶の失敗を回路解析で診断する解釈可能性研究であり、内部回路の知見は示すものの推論システムの高速化や資源管理手法そのものではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2605.03354",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 411
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2607.01241",
+   "identity_tokens": [
+    "arXiv:2607.01241",
+    "https://arxiv.org/abs/2607.01241"
+   ],
+   "title": "Mapping text to multiplex graph: Prompt compression as Lévy walk-guided graph pruning",
+   "reason": "多重グラフ剪定とLévy walkでプロンプトを4倍圧縮しLongBenchで既存圧縮法を上回る手法であり、入力トークン削減による推論コスト低減へ直接貢献する具体技術である。",
+   "source_url": "https://arxiv.org/abs/2607.01241",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 412
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.09348",
+   "identity_tokens": [
+    "arXiv:2610.09348",
+    "https://arxiv.org/abs/2610.09348"
+   ],
+   "title": "Relevance Is Not Sufficiency: What Actually Closes the Evidence Gap in Long-Term Memory QA",
+   "reason": "長期記憶QAで関連性ではなく十分性を満たす記憶集合を構築する検索研究であり、文脈超過対策の側面はあるがLLM推論実行系の機構ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2610.09348",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 413
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.03855",
+   "identity_tokens": [
+    "arXiv:2411.03855",
+    "https://arxiv.org/abs/2411.03855"
+   ],
+   "title": "MambaPEFT: Exploring Parameter-Efficient Fine-Tuning for Mamba",
+   "reason": "Mamba向けパラメータ効率ファインチューニングの探索的分析であり、学習・適応コストが主題で推論時の実行やサービング効率を扱っていないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2411.03855",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 415
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2511.12997",
+   "identity_tokens": [
+    "arXiv:2511.12997",
+    "https://arxiv.org/abs/2511.12997"
+   ],
+   "title": "WebCoach: Self-Evolving Web Agents with Cross-Session Memory Guidance",
+   "reason": "ウェブ閲覧エージェントに跨セッション記憶と助言注入を与える自己進化フレームワークであり、応用エージェントの成功率改善が目的で推論システム技術ではない。",
+   "source_url": "https://arxiv.org/abs/2511.12997",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 416
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2505.15304",
+   "identity_tokens": [
+    "arXiv:2505.15304",
+    "https://arxiv.org/abs/2505.15304"
+   ],
+   "title": "Saliency-Aware Quantized Imitation Learning for Efficient Robotic Control",
+   "reason": "顕著性で重要状態を重み付けする量子化模倣学習でVLAの4ビット化と高速化を示すが、対象はロボット制御ポリシーでありLLM推論向け量子化への一般性は要旨では限定的である。",
+   "source_url": "https://arxiv.org/abs/2505.15304",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 418
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.22406",
+   "identity_tokens": [
+    "arXiv:2602.22406",
+    "https://arxiv.org/abs/2602.22406"
+   ],
+   "title": "Towards Autonomous Memory Agents",
+   "reason": "記憶エージェントが外部知識を自律的に獲得・検証するU-Memの提案であり、コスト意識はあるものの主眼は知識キュレーションで推論実行系の貢献ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2602.22406",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2605.19972",
+   "identity_tokens": [
+    "arXiv:2605.19972",
+    "https://arxiv.org/abs/2605.19972"
+   ],
+   "title": "Block-Sphere Vector Quantization",
+   "reason": "回転ベース量子化を統一比較し球面ブロック量子化BlockQuantを提案して埋め込みと長文脈LLM推論で実利得を示しており、圧縮推論の基盤技術として直接該当する。",
+   "source_url": "https://arxiv.org/abs/2605.19972",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.05175",
+   "identity_tokens": [
+    "arXiv:2606.05175",
+    "https://arxiv.org/abs/2606.05175"
+   ],
+   "title": "Generic Triple-Latent Compression with Gated Associative Retrieval",
+   "reason": "三重潜在でトークン状態と対記憶を圧縮する系列モデルを検討するが、小規模ベースラインでの検証に留まり推論速度はむしろ遅く、推論システムへの具体的な利得が不明瞭である。",
+   "source_url": "https://arxiv.org/abs/2606.05175",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.10137",
+   "identity_tokens": [
+    "arXiv:2608.10137",
+    "https://arxiv.org/abs/2608.10137"
+   ],
+   "title": "The Parser Already Knows: Lightweight Bias Correction in Constrained Decoding",
+   "reason": "文法制約デコードでパーサ状態を用いて次トークン確率を軽量補正するSHIMにより、マスキング並みの速度で分布バイアスを改善しておりデコード機構への直接貢献である。",
+   "source_url": "https://arxiv.org/abs/2608.10137",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 422
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.01118",
+   "identity_tokens": [
+    "arXiv:2610.01118",
+    "https://arxiv.org/abs/2610.01118"
+   ],
+   "title": "Madeleine: Learning Involuntary Recall for Conversational Memory from Simulated Lives",
+   "reason": "会話記憶の連想想起を模擬生活データで学習するMadeleineの提案であり、LLM呼び出し削減を謳うが対象は記憶検索の応用層でモデル推論系ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2610.01118",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 423
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.15372",
+   "identity_tokens": [
+    "arXiv:2610.15372",
+    "https://arxiv.org/abs/2610.15372"
+   ],
+   "title": "Fewer Bits, More Tries: Recovering Capability Under Memory Constraints",
+   "reason": "メモリ制約下で小型・圧縮モデルを並列に複数回実行し検証付き再試行で大モデルの精度を回復する手法であり、局所推論のメモリ・速度・エネルギーのトレードオフを実測している。",
+   "source_url": "https://arxiv.org/abs/2610.15372",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 424
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.04003",
+   "identity_tokens": [
+    "arXiv:2611.04003",
+    "https://arxiv.org/abs/2611.04003"
+   ],
+   "title": "WASP-Mem: Let Agent Organize Procedural Memory. Human Spend Effort on Diagnosis",
+   "reason": "企業手続き向けに実行痕跡をWiki型手続き記憶へ蒸留するWASP-Memの研究であり、エージェントの業務自動化が主題でLLM推論システムの機構とは異なるため対象外である。",
+   "source_url": "https://arxiv.org/abs/2611.04003",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 425
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2503.09850",
+   "identity_tokens": [
+    "arXiv:2503.09850",
+    "https://arxiv.org/abs/2503.09850"
+   ],
+   "title": "TabNSA: Native Sparse Attention for Efficient Tabular Data Learning",
+   "reason": "Native Sparse Attentionで表形式データの二次複雑度を下げるTabNSAだが、適用先は表学習の訓練・表現でありLLM推論での注意カーネルやサービングへの検証はない。",
+   "source_url": "https://arxiv.org/abs/2503.09850",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 426
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2504.17892",
+   "identity_tokens": [
+    "arXiv:2504.17892",
+    "https://arxiv.org/abs/2504.17892"
+   ],
+   "title": "Token Sequence Compression for Efficient Multimodal Computing",
+   "reason": "視覚トークンの選択・マージを体系比較しクラスタ単位集約でマルチモーダル計算の冗長性を削る研究であり、LMM推論のトークン圧縮として計算量削減へ直接つながる。",
+   "source_url": "https://arxiv.org/abs/2504.17892",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 427
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2311.07625",
+   "identity_tokens": [
+    "arXiv:2311.07625",
+    "https://arxiv.org/abs/2311.07625"
+   ],
+   "title": "Activity Sparsity Complements Weight Sparsity for Efficient RNN Inference",
+   "reason": "活動スパース性と重みスパース性を組み合わせGRUで計算量を最大20倍削減するが、対象はRNNとニューロモルフィック実行であり現代のLLM推論系への適用は間接的である。",
+   "source_url": "https://arxiv.org/abs/2311.07625",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 428
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2307.10443",
+   "identity_tokens": [
+    "arXiv:2307.10443",
+    "https://arxiv.org/abs/2307.10443"
+   ],
+   "title": "Integrating a Heterogeneous Graph with Entity-aware Self-attention using Relative Position Labels for Reading Comprehension Model",
+   "reason": "異種グラフ知識をエンティティ認識自己注意へ統合する読解モデルであり、推論精度向上が目的でLLM推論の効率・サービング・デコード技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2307.10443",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 429
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2507.09514",
+   "identity_tokens": [
+    "arXiv:2507.09514",
+    "https://arxiv.org/abs/2507.09514"
+   ],
+   "title": "QuarterMap: Efficient Post-Training Token Pruning for Visual State Space Models",
+   "reason": "VMambaの四方向スキャン前に空間活性を剪定しスループットを上げるQuarterMapだが、対象は視覚SSMでありLLMや言語モデル推論への効果は要旨に示されていない。",
+   "source_url": "https://arxiv.org/abs/2507.09514",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 431
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2604.11594",
+   "identity_tokens": [
+    "arXiv:2604.11594",
+    "https://arxiv.org/abs/2604.11594"
+   ],
+   "title": "HumDial-EIBench: A Human-Recorded Multi-Turn Emotional Intelligence Benchmark for Audio Language Models",
+   "reason": "実録音の多ターン対話で音声言語モデルの感情知能を測るベンチマークHumDial-EIBenchであり、評価のみの研究で推論システムへの技術貢献はないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2604.11594",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 432
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.14065",
+   "identity_tokens": [
+    "arXiv:2608.14065",
+    "https://arxiv.org/abs/2608.14065"
+   ],
+   "title": "Rethinking Automated Program Repair: The Impact of Bug Complexity, Fault Localization, and LLM Cost-efficiency",
+   "reason": "バグ複雑度や欠陥局所化とLLM費用対効果の観点で自動プログラム修復を実証分析した研究であり、評価・分析が中心で推論サービング機構の提案ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2608.14065",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 433
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.02457",
+   "identity_tokens": [
+    "arXiv:2506.02457",
+    "https://arxiv.org/abs/2506.02457"
+   ],
+   "title": "SOVA-Bench: Benchmarking the Speech Conversation Ability for LLM-based Voice Assistant",
+   "reason": "音声対話アシスタントの理解・生成能力を測るSOVA-Benchという評価フレームワークであり、推論効率やデコード等のシステム技術を提案していないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2506.02457",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 434
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.15592",
+   "identity_tokens": [
+    "arXiv:2608.15592",
+    "https://arxiv.org/abs/2608.15592"
+   ],
+   "title": "When Entropy Is Not Enough: Reclaiming Lost Semantics in LLM Output Length Prediction",
+   "reason": "エントロピーと注意由来の意味表現をプリフィル時に得て出力長を予測するESTPを長さ考慮スケジューラへ統合し、スループット向上とパディング削減を実測したサービング技術である。",
+   "source_url": "https://arxiv.org/abs/2608.15592",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 436
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.28088",
+   "identity_tokens": [
+    "arXiv:2603.28088",
+    "https://arxiv.org/abs/2603.28088"
+   ],
+   "title": "GEMS: Agent-Native Multimodal Generation with Memory and Skills",
+   "reason": "記憶とスキルを持つエージェントループでマルチモーダル生成を反復改善するGEMSであり、生成応用の品質向上が主題でLLM推論システムの実行機構ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2603.28088",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 441
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.07287",
+   "identity_tokens": [
+    "arXiv:2512.07287",
+    "https://arxiv.org/abs/2512.07287"
+   ],
+   "title": "Experience-Evolving Multi-Turn Tool-Use Agent with Hybrid Episodic-Procedural Memory",
+   "reason": "ツール使用エージェントの成功経験をエピソード・手続き記憶として再利用するH-EPMであり、方策学習と推論時想起の応用研究で推論基盤技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2512.07287",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 442
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2506.22242",
+   "identity_tokens": [
+    "arXiv:2506.22242",
+    "https://arxiv.org/abs/2506.22242"
+   ],
+   "title": "4D-VLA: Spatiotemporal Vision-Language-Action Pretraining with Cross-Scene Calibration",
+   "reason": "RGB-Dと時間情報を統合するロボット向け視覚言語行動事前学習4D-VLAであり、ロボット制御の成功率改善が目的でLLM推論システムとは領域が異なるため対象外である。",
+   "source_url": "https://arxiv.org/abs/2506.22242",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:00:00+09:00",
+   "last_checked_at": "2026-11-21T17:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 445
+  }
+ ]
+}
