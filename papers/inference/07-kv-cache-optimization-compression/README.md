@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（625本）
+## 自動生成の論文一覧（626本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -2192,6 +2192,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-08 · [Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models](2025-2508.01261-unifying-mixture-of-experts-and-multi-head-latent-attention-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Unifying Mixture of エキスパート and Multi-Head Latent 注意機構 for Efficient Language Modelsは、小型言語モデルの計算量とKVキャッシュ量を同時に抑えるため、Mixture-of-Experts（MoE）、Multi-head Latent 注意機構（MLA）…
+
+- **2025-07 · [EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens](2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommend.md)**  
+  実装：[✓](https://doi.org/10.5281/zenodo.15553291) ・ リポジトリ内被引用：0  
+  入力の両端に置いたレジスタトークンへ浅い層で履歴情報を集約し、深い層ではプロンプトを捨ててレジスタだけを処理することで、生成推薦の推論を最大3.79倍速くしKVキャッシュを最大80.8パーセント削りながら推薦精度を保ち向上させる方式。
 
 - **2025-06 · [VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator](2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "量子化で生じるsoftmax出力の大きなバイアスを特定し、オフライン補正を量子化パラメータへ吸収させて推論時追加計算なしで8ビットsoftmaxの精度を改善する、生成モデルの推論向け量子化手法である。",
   "semantic_scholar_id": "002b4873bd937bebbcf7301c93b02a5460fc7d7e",
   "source_url": "https://arxiv.org/abs/2309.01729",
-  "status": "ready",
+  "status": "superseded",
   "title": "Softmax Bias Correction for Quantized Generative Models",
   "type": "research",
   "venue": "2023 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-11-21T23:05:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.md",
+  "represented_canonical_id": "arXiv:2309.01729",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

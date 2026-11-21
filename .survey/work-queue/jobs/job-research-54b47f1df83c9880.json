@@ -35,10 +35,15 @@
   "selection_reason": "生成推薦向けLLMの注意パターンの層別疎性反転と二重の注意シンクを分析し、初期層で情報をレジスタトークンへ圧縮して後段層はそれだけを見るEARNを提案し、KVキャッシュ80.8％削減と最大3.79倍高速化を一次要旨で示している。",
   "semantic_scholar_id": "1a767a3e12f5f87123f66a2b254660959264cf6f",
   "source_url": "https://arxiv.org/abs/2507.00715",
-  "status": "ready",
+  "status": "superseded",
   "title": "EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens",
   "type": "research",
   "venue": "Knowledge Discovery and Data Mining",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-21T23:05:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommend.md",
+  "represented_canonical_id": "arXiv:2507.00715",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

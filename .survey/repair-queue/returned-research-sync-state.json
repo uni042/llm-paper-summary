@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f8bc27faa939e4da5edfd38cb8228c4a0a8cefb7",
+  "base_commit": "155782601b6d9ca2a8f5cea530044f8420153588",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -39,6 +39,7 @@
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
     "2023-2306.01841-binary-and-ternary-natural-language-generation.json",
     "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json",
+    "2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.json",
     "2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language-models.json",
     "2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-encoder-decoder-language-models.json",
     "2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-large-language-models.json",
@@ -63,11 +64,13 @@
     "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
     "2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-target-language-text.json",
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
+    "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
+    "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-formats.json",
@@ -99,6 +102,7 @@
     "2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.json",
     "2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pretrained-llms.json",
     "2025-2502.02790-leveraging-the-true-depth-of-llms.json",
+    "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
     "2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-efficient-dense-llms.json",
     "2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.json",
     "2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.json",
@@ -151,6 +155,7 @@
     "2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitching.json",
     "2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intensive-operators.json",
     "2025-2506.23025-spectra-1-1-scaling-laws-and-efficient-inference-for-ternary-language-models.json",
+    "2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommendation-by-register-tokens.json",
     "2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and-dataflow-flexible-accelerator.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
@@ -47231,6 +47236,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2309.01729": {
+      "order": [
+        "2026-11-21T22:59:38+00:00",
+        "2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2406.15524": {
+      "order": [
+        "2026-11-21T23:00:39+00:00",
+        "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.00907": {
+      "order": [
+        "2026-11-21T23:01:42+00:00",
+        "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2502.10216": {
+      "order": [
+        "2026-11-21T23:02:43+00:00",
+        "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.00715": {
+      "order": [
+        "2026-11-21T23:03:43+00:00",
+        "2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommendation-by-register-tokens.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59344,6 +59394,21 @@
     "arxiv:2608.16425": [
       "papers/inference/99-other-inference-systems/2026-2608.16425-paratempo-efficient-parallel-reasoning-via-temporal-confidence.md",
       "papers/inference/99-other-inference-systems/2026-2608.16425-paratempo-efficient-parallel-reasoning-via-temporal-confidence.md"
+    ],
+    "arxiv:2309.01729": [
+      "papers/inference/99-other-inference-systems/2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.md"
+    ],
+    "arxiv:2406.15524": [
+      "papers/inference/99-other-inference-systems/2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-recons.md"
+    ],
+    "arxiv:2410.00907": [
+      "papers/inference/99-other-inference-systems/2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.md"
+    ],
+    "arxiv:2502.10216": [
+      "papers/inference/99-other-inference-systems/2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.md"
+    ],
+    "arxiv:2507.00715": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommend.md"
     ]
   }
 }

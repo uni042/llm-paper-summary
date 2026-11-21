@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1187本）
+## 自動生成の論文一覧（1191本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3856,6 +3856,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   キーの擬似平均を行列積で引くオンライン処理と最大値の補正で、フラッシュアテンション全体を半精度化しても桁あふれしないようにする数値安定化手法。実モデルで注意スコアの値域を半精度の範囲へ戻した。
 
+- **2025-02 · [Forget the Data and Fine-Tuning! Just Fold the Network to Compress](2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.md)**  
+  実装：[✓](https://github.com/nanguoyu/model-folding-universal) ・ リポジトリ内被引用：0  
+  同一ネットワーク内の似たニューロンを重みだけのk平均クラスタリングで統合し、統合で潰れる活性値の分散をデータなしの近似補正で直すことで、学習データもファインチューニングもなしにモデルを構造的に圧縮する方式。
+
 - **2025-02 · [FastCoder: Accelerating Repository-level Code Generation via Efficient Retrieval and Verification](2025-2502.17139-fastcoder-accelerating-repository-level-code-generation-via-efficient-re.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし既存方式RESTは汎用コードの固定データストアを用いるため、リポジトリ固有の命名規則を拾いにくく、検索が成功しない位置でも毎回CPU検索を行う。DeepSeek-Coder-1.3BのRepoEvalで19.91ms/トークンを7.88ms/トークンへ短縮し、2.53倍の速度を得た。
@@ -4214,6 +4218,10 @@
   実装：[✓](https://anonymous.4open.science/r/BranchyLLM-B870) ・ リポジトリ内被引用：1  
   通常の自己回帰型言語モデルは、生成するトークンが簡単か難しいかにかかわらず、全層を通して次トークンの確率を計算する。提案は二段階である。Pythia-2.8Bの実験では、LayerSkipの最良固定設定のドラフト受理率53.6%に対して、DSSDは閾値0.9で88.8%を報告した。
 
+- **2024-06 · [Rethinking Pruning Large Language Models: Benefits and Pitfalls of Reconstruction Error Minimization](2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-recons.md)**  
+  実装：[✓](https://github.com/LOG-postech/rethinking-LLM-pruning) ・ リポジトリ内被引用：1  
+  枝刈りの再構成誤差をブロック単位化と大域伝播とブロック間再構成で9割前後削減できる一方、誤差最小化の推し進めは小さい校正データへの過適合を招いて汎化を損なうことを示し、自己生成校正データによる緩和を提示した分析研究。
+
 - **2024-06 · [How Can We Effectively Expand the Vocabulary of LLMs with 0.01GB of Target Language Text?](2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-targ.md)**  
   実装：[✓](https://github.com/gucci-j/lowres-cve) ・ リポジトリ内被引用：1  
   対象言語の文三万件だけで語彙を拡張する条件で初期化法と学習戦略を比較し、分解平均による初期化と上下二層ずつの学習の組合せが要約で最大四・五八倍の生成高速化と元モデル並みの生成性能を両立することを示した。分類と原言語の低下は学習なしの事後手法で回復する。
@@ -4305,6 +4313,10 @@
 - **2024-10 · [AERO: Entropy-Guided Framework for Private LLM Inference](2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意エントロピーで非線形演算の役割を診断し、静的正規化とヘッド別エントロピー正則化で非線形を削っても学習が崩れないようにする、プライベート推論向けの設計枠組み。通信を3.4倍削減する。
+
+- **2024-10 · [Addition is All You Need for Energy-efficient Language Models](2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  浮動小数点乗算の仮数部の積を落として定数で補い、乗算を1回の整数加算で近似する L-Mul を提案し、fp8 乗算より少ないゲート数で同等以上の精度を示すとともに、注意機構への学習なし置換で bf16 との平均差0.07パーセントに収まることを言語モデルで確認した研究。
 
 - **2024-09 · [PASS: Pruning Attention Heads with Almost-sure Sparsity Targets](2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md)**  
   実装：[✓](https://github.com/DujianDing/PASS) ・ リポジトリ内被引用：0  
@@ -4417,7 +4429,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：318  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：319  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -4539,6 +4551,10 @@
 - **2023-09 · [Understanding the Impact of Post-Training Quantization on Large Language Models](2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化方式ごとに温度・生成長・topkへの生成品質の感度を6,300生成で実測した分析。4ビット量子化は温度に敏感で、方式の優劣はモデル系列で逆転する。
+
+- **2023-09 · [Softmax Bias Correction for Quantized Generative Models](2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ソフトマックスを8ビット量子化すると小さな確率がゼロへ丸められて確率の合計が崩れることを突き止め、そのずれを校正データで測って量子化のオフセットへ吸収することで、追加計算なしに量子化ソフトマックスの精度を回復する方式。
 
 - **2023-07 · [Scaling In-Context Demonstrations with Structured Attention](2023-2307.02690-scaling-in-context-demonstrations-with-structured-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4728,13 +4744,13 @@
   実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：33  
   自己回帰型Transformerの注意機構は、過去の一定幅のトークンを参照して次のトークンを予測する。
 
+- **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
+  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：19  
+  Q8BERTは、事前学習済みBERTを特定の自然言語処理課題へ微調整する段階で量子化誤差を模擬し、推論時の8ビット整数演算へ適応させる研究である。著者はBERTの重みの99%以上を占める埋め込み層と全結合層を8ビット整数へ対応させ、残りの数値的に敏感な演算は32ビット浮動小数点に残す。
+
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
   実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：19  
   翻訳文の長さを最初に予測し、最初の反復では全位置を同時に予測する。2019年の機械翻訳実験では、WMT14英語→ドイツ語において基礎CMLMの10反復が27.03 BLEU、同等規模の自己回帰Transformerが27.74 BLEUとなった。
-
-- **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
-  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：18  
-  Q8BERTは、事前学習済みBERTを特定の自然言語処理課題へ微調整する段階で量子化誤差を模擬し、推論時の8ビット整数演算へ適応させる研究である。著者はBERTの重みの99%以上を占める埋め込み層と全結合層を8ビット整数へ対応させ、残りの数値的に敏感な演算は32ビット浮動小数点に残す。
 
 - **2019-07 · [Large Memory Layers with Product Keys](2019-1907.05242-large-memory-layers-with-product-keys.md)**  
   実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：13  
@@ -4773,7 +4789,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：360  
+  実装：✓ ・ リポジトリ内被引用：361  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

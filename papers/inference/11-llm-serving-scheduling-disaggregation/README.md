@@ -2070,13 +2070,13 @@
   実装：✓ ・ リポジトリ内被引用：94  
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
+- **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：89  
+  根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
+
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：88  
   プリフィルとデコードを別実行単位へ分ける推論提供で、GPU / CPU上のKVキャッシュを実行単位横断で検索・共有・転送できる共通メモリプールを作り、過去接頭部の再利用と処理段階間KV移動を同じ仕組みで扱うシステム。
-
-- **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：88  
-  根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
   実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：86  
