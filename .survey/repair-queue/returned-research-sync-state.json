@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5f712209b6dd1fa6645918e63063ce92eab5ae20",
+  "base_commit": "e69bb25f19b59de741bdfc26f77988ef9c85f0d0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -190,6 +190,7 @@
     "2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.json",
     "2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reasoning.json",
     "2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effects.json",
+    "2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-training.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
     "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json",
     "2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.json",
@@ -206,6 +207,7 @@
     "2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-online-video-understanding.json",
     "2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via-shared-projection-and-block-skipping.json",
     "2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-decoding.json",
+    "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
@@ -245,6 +247,7 @@
     "2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-quantization.json",
     "2026-2602.02159-focus-dllm-accelerating-long-context-diffusion-llm-inference-via-confidence-guided-context-focusing.json",
     "2026-2602.02538-enhancing-post-training-quantization-via-future-activation-awareness.json",
+    "2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.json",
     "2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-token-pruning.json",
     "2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token-bypass.json",
     "2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.json",
@@ -255,6 +258,7 @@
     "2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistical-correction.json",
     "2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-context-inference.json",
     "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json",
+    "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
     "2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-large-language-models.json",
@@ -273,6 +277,7 @@
     "2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.json",
     "2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-llms.json",
     "2026-2603.02737-ouroboros-wafer-scale-sram-cim-with-token-grained-pipelining-for-llm-inference.json",
+    "2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-language-models.json",
     "2026-2603.04162-bielik-q2-sharp-a-comparative-study-of-extreme-2-bit-quantization-methods-for-a-polish-11b-language-model.json",
     "2026-2603.04460-vsprefill-vertical-slash-sparse-attention-with-lightweight-indexing-for-long-context-prefilling.json",
     "2026-2603.04514-progressive-refinement-regulation-for-accelerating-diffusion-language-model-decoding.json",
@@ -46714,6 +46719,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2511.03983": {
+      "order": [
+        "2026-11-21T05:55:34+00:00",
+        "2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-training.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.16238": {
+      "order": [
+        "2026-11-21T05:56:17+00:00",
+        "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.02711": {
+      "order": [
+        "2026-11-21T05:57:00+00:00",
+        "2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.09555": {
+      "order": [
+        "2026-11-21T05:57:43+00:00",
+        "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.02872": {
+      "order": [
+        "2026-11-21T05:58:26+00:00",
+        "2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58635,6 +58685,21 @@
     "arxiv:2510.14444": [
       "papers/inference/99-other-inference-systems/2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.md",
       "papers/inference/99-other-inference-systems/2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.md"
+    ],
+    "arxiv:2511.03983": [
+      "papers/inference/99-other-inference-systems/2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-tr.md"
+    ],
+    "arxiv:2512.16238": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large.md"
+    ],
+    "arxiv:2602.02711": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.md"
+    ],
+    "arxiv:2602.09555": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-model.md"
+    ],
+    "arxiv:2603.02872": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-l.md"
     ]
   }
 }

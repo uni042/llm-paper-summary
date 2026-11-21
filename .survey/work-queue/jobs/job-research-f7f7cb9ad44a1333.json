@@ -35,10 +35,15 @@
   "selection_reason": "DMRは多段LLM対話の各ステップの量子化感度を軽量ルータで予測し高精度・低精度モデルを切り替える混合精度ルーティングで、共有KVキャッシュ再利用により切替 overhead 1ms未満、デコード2.44倍高速化とメモリ39%削減を示す推論向け量子化機構であるため採用とする。",
   "semantic_scholar_id": "097f80430f1b84851c37fe24af7ef7359257a91a",
   "source_url": "https://arxiv.org/abs/2602.02711",
-  "status": "ready",
+  "status": "superseded",
   "title": "Dynamic Mixed-Precision Routing for Efficient Multi-step LLM Interaction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T05:59:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.md",
+  "represented_canonical_id": "arXiv:2602.02711",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

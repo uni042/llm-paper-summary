@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（615本）
+## 自動生成の論文一覧（617本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1619,6 +1619,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈のLLM推論では、各層・各注意ヘッドのKeyとValueを過去トークン分保持するKVキャッシュがメモリを圧迫する。トークン単位で古いKVを捨てる方法や、低ビット化する方法とは別に、Keyベクトルのチャネル方向の冗長性を利用する圧縮がある。
 
+- **2026-03 · [Think-as-You-See: Streaming Chain-of-Thought Reasoning for Large Vision-Language Models](2026-2603.02872-think-as-you-see-streaming-chain-of-thought-reasoning-for-large-vision-l.md)**  
+  実装：[✓](https://github.com/EIT-NLP/StreamingLLM/tree/main/TaYS) ・ リポジトリ内被引用：0  
+  動画を全て受け取ってから推論するバッチ型に対し、フレーム到着と並行して推論を進めるストリーミング推論を、ストリーミング注意マスク、分離型の位置符号化、視覚と推論を分離したデュアルKVキャッシュで実現し、初回トークンまでの時間をほぼゼロにした研究。
+
 - **2026-03 · [Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)](2026-2604.16395-stream2llm-overlap-context-streaming-and-prefill-for-reduced-time-to-fir.md)**  
   実装：[✓](https://github.com/rajveerb/stream2llm/) ・ リポジトリ内被引用：0  
   文脈の断片が届くたびにプリフィルを進めるストリーミング基盤で、費用考慮のスケジューリングと接頭辞一致による無効化削減を組み合わせ、TTFTを最大11倍改善しつつスループットを維持した。
@@ -1667,6 +1671,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/maxindian/HAE_for_VLMs) ・ リポジトリ内被引用：0  
   視覚と言語を同じ自己注意機構で処理するマルチモーダル大規模言語モデルでは、画像から展開された視覚トークンが大量の鍵・値キャッシュ（KVキャッシュ）を消費する。
 
+- **2026-02 · [Dynamic Mixed-Precision Routing for Efficient Multi-step LLM Interaction](2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントの臨界ステップが約1パーセントしかないという観測に基づき、最高精度のKVキャッシュを共有しながらステップごとにデコード精度を切り替えるDMRの研究。
+
 - **2026-02 · [CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse](2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   暗号化したまま再利用できるKVキャッシュと、プリフィルとデコードで使い分ける異種符号化により、安全な自己回帰生成のスケーリングを2次からほぼ線形へ変えた研究。
@@ -1706,7 +1714,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：131  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：132  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  

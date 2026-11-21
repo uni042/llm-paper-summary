@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（589本）
+## 自動生成の論文一覧（590本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1346,6 +1346,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   量子化、品質ゲート、SLO認定つき性能測定、ベイズ調整を1本の分散パイプラインへ自動化した企業向けLLM最適化基盤。GPU当たり最大2.87倍のスループットと、専門家工数の大幅削減を実運用で示す。
 
+- **2025-12 · [Trustworthy and Controllable Professional Knowledge Utilization in Large Language Models with TEE-GPU Execution](2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門知識を分離したアダプタとしてTEE内でだけ実行し、基盤モデルはGPUで実行する分割実行システムPKUSの研究。
+
 - **2025-12 · [ProServe: Unified Multi-Priority Request Scheduling for LLM Serving](2025-2512.12928-proserve-unified-multi-priority-request-scheduling-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   局所ではSlideBatchingが負荷に応じて期限順と利得密度順を切り替え、割り込みで必要になるKVキャッシュの退避・復元を計算と重ねる。Qwen2-7B・Qwen3-32BとAscend 910B上の評価で、比較スケジューラに対しシステム利得最大35%、SLO達成率最大52%の改善を報告した。
@@ -2167,7 +2171,7 @@
   本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
 
 - **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
-  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：18  
   VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
 
 - **2024-01 · [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](2024-2401.11240-caraserve-cpu-assisted-lora-serving.md)**  

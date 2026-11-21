@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（171本）
+## 自動生成の論文一覧（172本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -441,6 +441,10 @@
 - **2026-02 · [Architecture-Aware LLM Inference Optimization on AMD Instinct GPUs: A Comprehensive Benchmark and Deployment Study](2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-com.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MI325X 8台で2350億から1兆パラメータの4モデルを実測し、注意機構ごとにブロック大きさ・カーネル・KV方針・並列度を変える必要があること、テキストでは密モデル毎秒15,944トークンと活性37億の専門家混合モデル毎秒15,343トークンがほぼ並ぶこと、全モデルが同時約500件で帯域律速に飽和することを示した。
+
+- **2026-02 · [Adaptive Test-Time Compute Allocation for Block Diffusion Language Models in Complex Reasoning](2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブロック拡散言語モデルのテスト時計算配分として、信頼度の平均で閾値を上下限つきで適応させるデコードと、探索は大きいブロック・推敲は小さいブロックで生成する2段階方式を提案し、高速化と精度向上を両立させた研究。
 
 - **2026-02 · [1-Bit Wonder: Improving QAT Performance in the Low-Bit Regime through K-Means Quantization](2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-m.md)**  
   実装：[✓](https://github.com/Aleph-Alpha-Research/1-Bit-Wonder) ・ リポジトリ内被引用：0  

@@ -386,6 +386,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/al-jshen/flashmap) ・ リポジトリ内被引用：1  
   連続フローを流れ写像へ蒸留した下書き器で、ブロック内のトークン間依存を1回の計算で表し、独立予測の拡散型下書き器より全課題で速い最大6.1倍の無損失加速を得た。
 
+- **2026-10 · [EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures](2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  端末の統一メモリ向けに、CPUとGPUのゼロコピー協調実行、下書き予算の動的配分、道具待ちエージェントの退避を組み合わせ、複数エージェント推論を最大1.77倍高速化した実行系。
+
 - **2026-10 · [DLoop: Looped Speculative Decoding](2026-2610.07659-dloop-looped-speculative-decoding.md)**  
   実装：[✓](https://github.com/naver-ai/DLoop) ・ リポジトリ内被引用：1  
   DLoopは、投機的復号の「下書きモデルが候補を一段生成し、対象モデルが一回検証する」という交互構造を変更する方式である。原著のH100 80GB、bf16、8ベンチマークの平均では、既存のEAGLE-3、DFlash、Domino、DSpark、MTPにDLoopを追加したとき、壁時計時間に基づく高速化倍率が約5〜41%改善した。
@@ -719,10 +723,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [Factorization-Guided Training and Inference for Diffusion-Drafted Speculative Decoding](2026-2610.23935-factorization-guided-training-and-inference-for-diffusion-drafted-specul.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   位置別損失の分解から接頭辞受理に沿う学習レシピを、スループットの分解から受理長と遅延の釣り合いで推論構成を選ぶ方針を、それぞれ導く拡散ドラフター投機的デコードの研究。
-
-- **2026-10 · [EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures](2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  端末の統一メモリ向けに、CPUとGPUのゼロコピー協調実行、下書き予算の動的配分、道具待ちエージェントの退避を組み合わせ、複数エージェント推論を最大1.77倍高速化した実行系。
 
 - **2026-10 · [DRelay: Global Draft Context for Prefix-Aware Parallel Speculative Decoding Repair](2026-2610.01439-drelay-global-draft-context-for-prefix-aware-parallel-speculative-decodi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
