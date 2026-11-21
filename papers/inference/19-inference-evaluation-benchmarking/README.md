@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（175本）
+## 自動生成の論文一覧（176本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -241,6 +241,10 @@
 - **2026-09 · [From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving](2026-2609.23130-from-inference-engine-to-inference-control-plane-connecting-vllm-llm-d-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLM推論最適化の単位が単一推論エンジンのバッチ処理・KV管理から、分散したGPU群のルーティング、KV転送、プリフィル/デコード分離、入場制御、拡縮と耐障害性を束ねる制御面へ移行していることを整理したシステム統合レビュー。
+
+- **2026-09 · [FOCUS: Training-Free Decision-Preserving Context Compression for LLM Agents](2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェント履歴を推論・行動・観測の単位に分け、下書きモデルの将来計画が各単位をどれだけ頻繁に依存先として挙げるかで将来有用性を測り、学習なしでテスト時に残す単位を選ぶ圧縮方式を提案し、文脈量を減らしながら成功率を上げた研究。
 
 - **2026-09 · [FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure](2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

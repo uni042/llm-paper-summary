@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（290本）
+## 自動生成の論文一覧（291本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -369,6 +369,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   例えばQwen2.5-14Bの非圧縮キャッシュは1トークン当たり192 KiBを占め、8,000トークンの系列32本を同時に保持すると約48 GiBに達する。Qwen2.5-14Bの16K文脈では、提案法による4倍圧縮とSnapKVによる8分の1トークン保持を組み合わせ、復号時KV容量を32分の1にして質問応答精度0.531を得た。
+
+- **2026-09 · [Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling](2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本番LLM推論へ再起動なしに取り付けるオンデマンドプロファイリングと、非効率パターンの照合、AIエージェントによる統制実験を組み合わせた継続的最適化システムを提案した研究。
 
 - **2026-09 · [Hardware-Native Joint Sparse-Quantization for Trillion-Scale Mixture-of-Experts](2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

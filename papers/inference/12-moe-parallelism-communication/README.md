@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（77本）
+## 自動生成の論文一覧（78本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -126,6 +126,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-10 · [3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP](2026-2610.26991-3d-moe-complementarity-guided-hardware-software-co-design-for-moe-decode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパート負荷が打ち消し合う相補性でグループ化と近傍配置を行い、残る集中は重みを一度読んで近傍へ一斉配信する専用経路で受け、ずれは段階的な再配置で直すことで、3次元積層ニアメモリ上のMoEデコードの局所性と均衡を両立させる協調設計。
+
+- **2026-09 · [VarioPath: Workload-Aware All-to-All Communication for PCIe GPU Clusters](2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PCIe GPUクラスタ向けに、競合しない同時転送パターンをチャネルとしてオフラインにカタログ化し、オンラインでは偏って変化するAlltoAllv需要をボトルネック優先でチャネルの列へ分解することで、リンク競合と通信の尾を抑えたスケジューリング枠組み。
 
 - **2026-09 · [Scaling Inference Prefill with High-Radix Photonic Interconnects](2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -230,7 +234,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：34  
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  

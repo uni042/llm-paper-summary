@@ -35,10 +35,15 @@
   "selection_reason": "VarioPathはPCIe GPUクラスタでのMoE推論に不可欠なAlltoAllv通信をトポロジ解析と需要適応スケジューリングで最適化し、AlltoAllvを最大5.88倍高速化しQwen3推論遅延を最大27.2%削減する分散推論通信基盤への直接貢献であるため採用とする。",
   "semantic_scholar_id": "edf7350836d60d012ce94e2e098196ab211ab60d",
   "source_url": "https://arxiv.org/abs/2609.34340",
-  "status": "ready",
+  "status": "superseded",
   "title": "VarioPath: Workload-Aware All-to-All Communication for PCIe GPU Clusters",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T06:32:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.md",
+  "represented_canonical_id": "arXiv:2609.34340",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d35357b140cdb38700def7820dcb8f881971f132",
+  "base_commit": "1f7b138df6ab220e1aa13d9ca83035b34a9a4a93",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -580,6 +580,7 @@
     "2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pruning.json",
     "2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-precomputation-and-neutral-reconstruction.json",
     "2026-2609.34259-quantaspike-short-window-spike-driven-quantization-for-large-language-models.json",
+    "2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.json",
     "2026-2609.34370-spexis-speculative-lookahead-scheduling-for-llm-inference.json",
     "2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.json",
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
@@ -587,10 +588,13 @@
     "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json",
     "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json",
     "2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.json",
+    "2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisions.json",
     "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json",
     "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
     "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
+    "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json",
+    "2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-open-weight.json",
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
     "2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generalization-limits.json",
@@ -600,6 +604,7 @@
     "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json",
     "2026-2609.40093-efficient-expert-parallel-communication-on-pcie-connected-consumer-gpus.json",
     "2026-2609.40127-learning-functional-subspaces-for-neural-network-compression.json",
+    "2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-demand-profiling.json",
     "2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.json",
     "2026-2610.01160-serving-a-revisable-world-versioned-execution-for-interruptible-agents.json",
     "2026-2610.02233-budgeted-cache-repair-for-cross-context-kv-cache-reuse.json",
@@ -46864,6 +46869,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.34340": {
+      "order": [
+        "2026-11-21T06:24:45+00:00",
+        "2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.35569": {
+      "order": [
+        "2026-11-21T06:26:09+00:00",
+        "2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisions.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.37590": {
+      "order": [
+        "2026-11-21T06:27:33+00:00",
+        "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.37902": {
+      "order": [
+        "2026-11-21T06:28:57+00:00",
+        "2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-open-weight.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.40247": {
+      "order": [
+        "2026-11-21T06:30:21+00:00",
+        "2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-demand-profiling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -58845,6 +58895,21 @@
     "arxiv:2609.32900": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md"
+    ],
+    "arxiv:2609.34340": [
+      "papers/inference/12-moe-parallelism-communication/2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.md"
+    ],
+    "arxiv:2609.35569": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisio.md"
+    ],
+    "arxiv:2609.37590": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agen.md"
+    ],
+    "arxiv:2609.37902": [
+      "papers/inference/99-other-inference-systems/2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-.md"
+    ],
+    "arxiv:2609.40247": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-.md"
     ]
   }
 }

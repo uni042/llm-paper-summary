@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（591本）
+## 自動生成の論文一覧（592本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -16,13 +16,13 @@
   実装：✓ ・ リポジトリ内被引用：38  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
+- **2026-04 · [Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter](2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  KVキャッシュ量が小さいハイブリッド注意機構を利用し、長い未キャッシュ入力のプリフィルだけを遠隔GPU群へ振り分け、KVをデータセンター間転送して異種GPU資源の利用効率と処理能力を高める。
+
 - **2026-04 · [SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference](2026-2505.24095-skywalker-cross-region-load-balancer.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   地域ごとに異なるLLM推論需要を別地域へ逃がしつつ、接頭辞木でKVキャッシュ共有と要求待ち行列を見て経路を選び、同等処理量を9台で達成して費用を25%削減する。
-
-- **2026-04 · [Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter](2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  KVキャッシュ量が小さいハイブリッド注意機構を利用し、長い未キャッシュ入力のプリフィルだけを遠隔GPU群へ振り分け、KVをデータセンター間転送して異種GPU資源の利用効率と処理能力を高める。
 
 - **2025-12 · [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
@@ -540,6 +540,10 @@
   実装：[✓](https://github.com/Aravind0403/clairvoyant-scheduler) ・ リポジトリ内被引用：1  
   直列推論の先頭ブロッキングを、19個の語彙特徴による0.029ミリ秒の長さ予測と最短ジョブ優先の受付で解き、短いリクエストの中央値遅延を同時バーストで70から76パーセント、実トレースで最初のトークンまで83.6パーセント減らした。
 
+- **2026-05 · [When Is the Same Model Not the Same Service? A Measurement Study of Hosted Open-Weight LLM APIs](2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hoste.md)**  
+  実装：[✓](https://github.com/haoruilee/llm_api_measurement_study) ・ リポジトリ内被引用：1  
+  同じモデル名でも提供者ごとに価格・文脈・規約・遅延が大きく違うことを2025年第4四半期の実測で示し、運用単位はモデルではなく提供者別のサービスだと論じた測定研究。
+
 - **2026-05 · [VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?](2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md)**  
   実装：[✓](https://github.com/uw-syfi/vibe-serve) ・ リポジトリ内被引用：1  
   モデル・ワークロード・ハードウェアごとに複数AIエージェントがLLMサービング基盤を生成し、標準条件ではvLLM相当、特殊条件では予測出力・ハイブリッドキャッシュ・Apple Silicon特化などを自動実装して最大6.27倍高速化する。
@@ -930,6 +934,10 @@
   実装：[✓](https://github.com/zxzx9898/Token-service-share_Rebalancing_Engine) ・ リポジトリ内被引用：0  
   著者らは、要求1件当たりに供給される実効トークン処理能力を測り、モデルとSLOごとに定めた「健全なサービスの最低境界」で正規化するトークンサービス分配率（トークン Service Share: TSS）を設計する。二台の各4基A100 40 GBを備えた評価基盤で、AIBrixとvLLMのホット切替を利用し、3モデル・7種類の負荷トレースを測定した。
 
+- **2026-09 · [Beyond Energy: When Sustainability Dimensions Reshape LLM Serving Decisions](2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMサービングのエネルギー・炭素・水・生物多様性の4次元を統一会計で扱い、構成の順位はエネルギーで決まるが配置の順位は次元ごとに食い違うことを示し、最大後悔を抑える配置最適化を行う枠組みPRISMの研究。
+
 - **2026-09 · [Ask the Tool, Don't Guess: Agent Tool Calls Hold Their Progress, and the Serving System Should Read It](2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ツール実行中の進捗を副経路でKV管理へ伝え、vLLM上でLRU比p90ツール後TTFTを約21%削減する。
@@ -1162,10 +1170,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、対話型大規模言語モデル（LLM）のオンライン配信で、利用者が要求する最初のトークンまでの時間（TTFT）と、以降のトークン間隔（TBT）の期限を守りつつ、単位時間に処理できる要求数を増やすスケジューリング方式「SlidingServe」を提案する。
 
-- **2026-05 · [When Is the Same Model Not the Same Service? A Measurement Study of Hosted Open-Weight LLM APIs](2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hoste.md)**  
-  実装：[✓](https://github.com/haoruilee/llm_api_measurement_study) ・ リポジトリ内被引用：0  
-  同じモデル名でも提供者ごとに価格・文脈・規約・遅延が大きく違うことを2025年第4四半期の実測で示し、運用単位はモデルではなく提供者別のサービスだと論じた測定研究。
-
 - **2026-05 · [Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing](2026-2605.31367-trading-complexity-for-expressivity-through-structured-generalized-linea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、大規模言語モデルの長文脈処理で使う「過去のどの位置から情報を受け取るか」という接続構造を、注意機構と状態空間モデルの二者択一ではなく、一般化された線形再帰の設計問題として扱う。合成コピー課題では二次間隔型が99.66%、指数間隔型が92.63%、密な再帰型が100%である。
@@ -1381,7 +1385,7 @@
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
-  実装：✓ ・ リポジトリ内被引用：57  
+  実装：✓ ・ リポジトリ内被引用：58  
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
