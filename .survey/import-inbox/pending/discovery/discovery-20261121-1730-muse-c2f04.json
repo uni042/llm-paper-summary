@@ -1,0 +1,551 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261121-c2f04",
+ "reference_main_sha": "09a8fedaeb4219cc4361a23e716b47ae889c06c9",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2503.12964",
+   "identity_tokens": [
+    "arXiv:2503.12964",
+    "https://arxiv.org/abs/2503.12964"
+   ],
+   "title": "Training Video Foundation Models with NVIDIA NeMo",
+   "reason": "動画基盤モデルの学習パイプラインとNeMoによるデータ整備・並列学習が主体であり、LLM推論やサービングのシステム技術への直接貢献は要旨に示されていないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2503.12964",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 372
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.19470",
+   "identity_tokens": [
+    "arXiv:2603.19470",
+    "https://arxiv.org/abs/2603.19470"
+   ],
+   "title": "Adaptive Layerwise Perturbation: Unifying Off-Policy Corrections for LLM RL",
+   "reason": "LLM強化学習におけるオフポリシー補正と学習・推論ミスマッチの安定化が主題で、提案は学習更新側の摂動手法であり推論システム自体の高速化や運用技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2603.19470",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 374
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.04874",
+   "identity_tokens": [
+    "arXiv:2611.04874",
+    "https://arxiv.org/abs/2611.04874"
+   ],
+   "title": "OCR in the Foundation Model Era: From Specialist Models to Unified Models",
+   "reason": "基盤モデル時代のOCRの発展と文書認識手法を整理した応用分野のサーベイであり、生成OCRの推論コストへの言及はあるもののLLM推論システムの具体技術は扱わないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2611.04874",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 376
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.18283",
+   "identity_tokens": [
+    "arXiv:2602.18283",
+    "https://arxiv.org/abs/2602.18283"
+   ],
+   "title": "HyTRec: A Hybrid Temporal-Aware Attention Architecture for Long Behavior Sequential Recommendation",
+   "reason": "長期ユーザ行動系列に対する推薦モデルのハイブリッド注意アーキテクチャが主題で、対象は推薦精度とその推論速度でありLLMの推論・サービングとは異分野の応用のため対象外である。",
+   "source_url": "https://arxiv.org/abs/2602.18283",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 377
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2107.02239",
+   "identity_tokens": [
+    "arXiv:2107.02239",
+    "https://arxiv.org/abs/2107.02239"
+   ],
+   "title": "Vision Xformers: Efficient Attention for Image Classification",
+   "reason": "画像分類向けVision Transformerで線形注意を用いGPUメモリ削減を図る効率化であり、注意機構の効率化として関連はあるが対象が視覚分類でLLM推論への適用は要旨で不明瞭である。",
+   "source_url": "https://arxiv.org/abs/2107.02239",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 378
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2606.28361",
+   "identity_tokens": [
+    "arXiv:2606.28361",
+    "https://arxiv.org/abs/2606.28361"
+   ],
+   "title": "ConCise: Training-Free Conclusion-Chain State Compression for Cost-Efficient Multi-Step RAG Services",
+   "reason": "多段RAGサービスで蓄積する文書と推論痕跡を結論チェーンへ圧縮し累積トークンを二次から線形へ抑え、API課金・遅延・転送量を削減するサービング層の具体的な状態圧縮手法である。",
+   "source_url": "https://arxiv.org/abs/2606.28361",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 379
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2401.07788",
+   "identity_tokens": [
+    "arXiv:2401.07788",
+    "https://arxiv.org/abs/2401.07788"
+   ],
+   "title": "Activations and Gradients Compression for Model-Parallel Training",
+   "reason": "モデル並列学習における活性化と勾配のTopK・量子化圧縮と誤差補償の検証が主体であり、扱うのは分散学習の通信削減であって推論時の処理や配信の技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2401.07788",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 380
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2505.18824",
+   "identity_tokens": [
+    "arXiv:2505.18824",
+    "https://arxiv.org/abs/2505.18824"
+   ],
+   "title": "FlatAttention: Dataflow and Fabric Collectives Co-Optimization for Efficient Multi-Head Attention on Tile-Based Many-PE Accelerators",
+   "reason": "タイル型多数PEアクセラレータ向けに多頭注意のデータフローを再設計し、オンチップ集団通信でHBMアクセスを大幅に削減してFlashAttention系を上回る利用率を示す注意カーネル最適化である。",
+   "source_url": "https://arxiv.org/abs/2505.18824",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 381
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2407.19775",
+   "identity_tokens": [
+    "arXiv:2407.19775",
+    "https://arxiv.org/abs/2407.19775"
+   ],
+   "title": "Model Agnostic Hybrid Sharding For Heterogeneous Distributed Inference",
+   "reason": "分散推論をモデル非依存のシャーディングで異種ノードへ分散し、動的ブロック量子化などで転送とメモリを削減して消費者級ハードウェアでも推論可能にする分散推論フレームワークである。",
+   "source_url": "https://arxiv.org/abs/2407.19775",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 382
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.00359",
+   "identity_tokens": [
+    "arXiv:2602.00359",
+    "https://arxiv.org/abs/2602.00359"
+   ],
+   "title": "Position: Agentic Evolution is the Path to Evolving LLMs",
+   "reason": "デプロイ後のLLMをエージェントが自律的に進化させるべきとする立場論文と枠組みの主張であり、推論・サービング・デコード等のシステム技術の具体的な提案ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2602.00359",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 384
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.19195",
+   "identity_tokens": [
+    "arXiv:2603.19195",
+    "https://arxiv.org/abs/2603.19195"
+   ],
+   "title": "How Auditory Knowledge in LLM Backbones Shapes Audio Language Models: A Holistic Evaluation",
+   "reason": "テキストのみで学習したLLMバックボーンが持つ聴覚知識を音声言語モデルで比較する評価研究であり、推論システムの高速化や資源削減の手法提案は含まれないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2603.19195",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 385
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2604.25591",
+   "identity_tokens": [
+    "arXiv:2604.25591",
+    "https://arxiv.org/abs/2604.25591"
+   ],
+   "title": "Walking Through Uncertainty: An Empirical Study of Uncertainty Estimation for Audio-Aware Large Language Models",
+   "reason": "音声対応LLMの不確実性推定手法を複数モデルとベンチマークで実証比較した評価研究が主体で、適応推論への応用は探索的言及に留まり推論システム技術とは言えないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2604.25591",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 386
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.10199",
+   "identity_tokens": [
+    "arXiv:2605.10199",
+    "https://arxiv.org/abs/2605.10199"
+   ],
+   "title": "How Should LLMs Listen While Speaking? A Study of User-Stream Routing in Full-Duplex Spoken Dialogue",
+   "reason": "発話中もユーザ入力を聞き続ける全二重音声対話で、入力ストリームの融合かクロス注意かという経路設計を比較した研究であり、生成中の文脈保持に関連するが対話モデル構造が主体である。",
+   "source_url": "https://arxiv.org/abs/2605.10199",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 387
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2607.19215",
+   "identity_tokens": [
+    "arXiv:2607.19215",
+    "https://arxiv.org/abs/2607.19215"
+   ],
+   "title": "HACO: Hedged Agent Computing for Reliable LLM Systems",
+   "reason": "LLMエージェントの役割要求を実行環境ごとの品質・信頼性・遅延を踏まえて複数候補へヘッジ割り当てするランタイム制御を提案し、並列実行より低コストで信頼性を高めるシステム調停手法である。",
+   "source_url": "https://arxiv.org/abs/2607.19215",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 388
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2208.04347",
+   "identity_tokens": [
+    "arXiv:2208.04347",
+    "https://arxiv.org/abs/2208.04347"
+   ],
+   "title": "Investigating Efficiently Extending Transformers for Long Input Summarization",
+   "reason": "長入力要約向けにブロック局所注意と全体トークンを組み合わせたPEGASUS-Xの拡張と追加事前学習が主題で、長文処理の効率には関連するが要約タスクと学習が主体で推論系の寄与は薄い。",
+   "source_url": "https://arxiv.org/abs/2208.04347",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 389
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2509.20624",
+   "identity_tokens": [
+    "arXiv:2509.20624",
+    "https://arxiv.org/abs/2509.20624"
+   ],
+   "title": "FS-DFM: Fast and Accurate Long Text Generation with Few-Step Diffusion Language Models",
+   "reason": "離散フローマッチング生成でサンプリングステップ数を明示的に学習し、8ステップで1024ステップ相当の品質を保ちながら最大128倍の高速サンプリングを実現する生成・デコード高速化手法である。",
+   "source_url": "https://arxiv.org/abs/2509.20624",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 390
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2507.05177",
+   "identity_tokens": [
+    "arXiv:2507.05177",
+    "https://arxiv.org/abs/2507.05177"
+   ],
+   "title": "OpenS2S: Advancing Fully Open-Source End-to-End Empathetic Large Speech Language Model",
+   "reason": "共感音声言語モデルOpenS2Sの公開が主題で、ストリーミング交互デコードによる低遅延音声生成に触れるものの、主体は共感対話データ構築とモデル開発であり推論技術の詳細は薄い。",
+   "source_url": "https://arxiv.org/abs/2507.05177",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 391
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2410.00907",
+   "identity_tokens": [
+    "arXiv:2410.00907",
+    "https://arxiv.org/abs/2410.00907"
+   ],
+   "title": "Addition is All You Need for Energy-efficient Language Models",
+   "reason": "浮動小数点乗算を整数加算で近似するL-Mulを提案し、注意機構を含むテンソル演算のエネルギーと計算量を大幅に削減しつつ推論精度を維持する、推論向け演算カーネルレベルの効率化である。",
+   "source_url": "https://arxiv.org/abs/2410.00907",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 392
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.17184",
+   "identity_tokens": [
+    "arXiv:2508.17184",
+    "https://arxiv.org/abs/2508.17184"
+   ],
+   "title": "Towards Alignment-Centric Paradigm: A Survey of Instruction Tuning in Large Language Models",
+   "reason": "LLMのインストラクションチューニングについてデータ構築・微調整・評価を整理したサーベイであり、推論システムやサービング、デコード高速化の技術を扱う内容ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2508.17184",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 393
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.11140",
+   "identity_tokens": [
+    "arXiv:2505.11140",
+    "https://arxiv.org/abs/2505.11140"
+   ],
+   "title": "Follow the Path: Reasoning over Knowledge Graph Paths to Improve Large Language Model Factuality",
+   "reason": "知識グラフ経路で接地した推論痕跡を集めてLLMを微調整し事実性を高める手法であり、改善は学習データ側の工夫によるもので推論システムの処理効率や配信技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2505.11140",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 394
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2502.07004",
+   "identity_tokens": [
+    "arXiv:2502.07004",
+    "https://arxiv.org/abs/2502.07004"
+   ],
+   "title": "Demystifying Singular Defects in Large Language Models",
+   "reason": "LLM内部の高ノルムトークンと特異方向を理論・実証で解析し量子化方式の改善へ応用を示す研究であり、推論向け量子化に関連はするが主体は内部機構の解明でシステム手法は限定的である。",
+   "source_url": "https://arxiv.org/abs/2502.07004",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 395
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2601.02157",
+   "identity_tokens": [
+    "arXiv:2601.02157",
+    "https://arxiv.org/abs/2601.02157"
+   ],
+   "title": "Multi-fidelity graph-based neural networks architectures to learn Navier-Stokes solutions on non-parametrized 2D domains",
+   "reason": "非パラメトライズ領域でのNavier-Stokes方程式の解をグラフネットワークとTransformerやMambaで予測する流体力学の学習研究であり、LLM推論とは全く異なる分野のため対象外である。",
+   "source_url": "https://arxiv.org/abs/2601.02157",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 396
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.08652",
+   "identity_tokens": [
+    "arXiv:2608.08652",
+    "https://arxiv.org/abs/2608.08652"
+   ],
+   "title": "LegoLM: Structured Weight Sharing for Large Language Models",
+   "reason": "LLMの構造化重み共有圧縮LegoLMを提案し、外れ値の選択的保持などでMistral-7Bを4倍超に圧縮しながら劣化をほぼ抑え、8ビット量子化を上回る推論向けモデル圧縮を実現している。",
+   "source_url": "https://arxiv.org/abs/2608.08652",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 397
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.39835",
+   "identity_tokens": [
+    "arXiv:2610.39835",
+    "https://arxiv.org/abs/2610.39835"
+   ],
+   "title": "Aligning Medical Vision Language Models at the Capability Boundary with Entropy Adaptive Rubric Grounding",
+   "reason": "医療視覚言語モデルの境界事例への選好最適化とルーブリック接地強化学習によるアライメント研究であり、医療応用の学習手法が主体で推論システム技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2610.39835",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 398
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2207.02393",
+   "identity_tokens": [
+    "arXiv:2207.02393",
+    "https://arxiv.org/abs/2207.02393"
+   ],
+   "title": "Compute Cost Amortized Transformer for Streaming ASR",
+   "reason": "ストリーミングASR向けに推論時の計算経路を疎に動的選択して計算量を6割削減するTransformer-Transducerの研究であり、推論計算の償却という発想は関連するが対象は音声認識である。",
+   "source_url": "https://arxiv.org/abs/2207.02393",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 399
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2509.07820",
+   "identity_tokens": [
+    "arXiv:2509.07820",
+    "https://arxiv.org/abs/2509.07820"
+   ],
+   "title": "Certainty-Guided Reasoning in Large Language Models: A Dynamic Thinking Budget Approach",
+   "reason": "推論中の確信度を定期的に探って自信が閾値に達したら思考を早期終了するモデル非依存の適応推論手順を提案し、精度を保ちながら推論トークンと計算予算を削減する推論制御手法である。",
+   "source_url": "https://arxiv.org/abs/2509.07820",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 400
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2408.16803",
+   "identity_tokens": [
+    "arXiv:2408.16803",
+    "https://arxiv.org/abs/2408.16803"
+   ],
+   "title": "Efficient Hierarchical Transformers for Representing Log Data",
+   "reason": "階層的な辞書構造を持つログデータ向けの階層Transformerによる表現学習が主題で、メモリ削減はログ処理文脈のものでありLLM推論・サービングのシステム技術ではないため対象外である。",
+   "source_url": "https://arxiv.org/abs/2408.16803",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 401
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2403.04510",
+   "identity_tokens": [
+    "arXiv:2403.04510",
+    "https://arxiv.org/abs/2403.04510"
+   ],
+   "title": "Where does In-context Translation Happen in Large Language Models",
+   "reason": "LLMが文脈内翻訳へ移行する層をマスキング実験で特定し、その冗長性を利用してプロンプト時の計算を45パーセント削減できると示す解析であり、推論削減への示唆はあるが解析が主体である。",
+   "source_url": "https://arxiv.org/abs/2403.04510",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 403
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2108.09084",
+   "identity_tokens": [
+    "arXiv:2108.09084",
+    "https://arxiv.org/abs/2108.09084"
+   ],
+   "title": "Fastformer: Additive Attention Can Be All You Need",
+   "reason": "加算的注意で二次計算量を線形化したFastformerによるテキスト理解向け効率的Transformerの提案であり、注意効率化として関連はあるがLLMの生成推論やサービングへの適用は要旨で薄い。",
+   "source_url": "https://arxiv.org/abs/2108.09084",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 405
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2601.15296",
+   "identity_tokens": [
+    "arXiv:2601.15296",
+    "https://arxiv.org/abs/2601.15296"
+   ],
+   "title": "Entropy-Tree: Tree-Based Decoding with Entropy-Guided Exploration",
+   "reason": "LLMのデコードでエントロピーが高い不確実な位置でのみ探索木を分岐させるEntropy-Treeを提案し、多重サンプリングより高い精度と校正を単一の木探索デコード手順で実現するデコード手法である。",
+   "source_url": "https://arxiv.org/abs/2601.15296",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-21T17:30:00+09:00",
+   "last_checked_at": "2026-11-21T17:30:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 406
+  }
+ ]
+}
