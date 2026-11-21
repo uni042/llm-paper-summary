@@ -35,10 +35,15 @@
   "selection_reason": "エッジCPU向けLLM推論でチャネル毎の混合精度量子化とコンパイラによるレイアウト正規化を共同設計するPolyQで、SIMD・LUTカーネル生成によりビット予算に応じた遅延と消費電力を示した量子化基盤である。",
   "semantic_scholar_id": "e6d2d187d7c19c39acb2e4ae7e9c373033a77749",
   "source_url": "https://arxiv.org/abs/2607.14618",
-  "status": "ready",
+  "status": "superseded",
   "title": "PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-21T23:41:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cp.md",
+  "represented_canonical_id": "arXiv:2607.14618",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

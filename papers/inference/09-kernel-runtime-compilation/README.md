@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（295本）
+## 自動生成の論文一覧（297本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -474,9 +474,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   中間テンソルを実データでなく添字の対応関係として保持する仮想テンソルで全種類のデータ移動を消すコンパイラにより、既存系の最良比で最大一・九三倍、平均一・二八倍の高速化と最大六十パーセントのメモリ削減を得たと報告した。
 
+- **2026-07 · [PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference](2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cp.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  平均ビット予算に合わせてチャネルごとにビット幅を配り、並べ替えをコンパイル時に統合して実行時の配置費用を消すことで、小数ビット単位の量子化をCPU上で実用的に動かす量子化とコンパイラの共同設計の研究。
+
 - **2026-07 · [Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones](2026-2607.17419-kernelized-linear-attention-breaking-the-capacity-wall-with-symmetric-co.md)**  
   実装：[✓](https://github.com/ayghri/KATA) ・ リポジトリ内被引用：0  
   論文はこの「容量の壁」を単なる実装問題ではなく、特徴空間内で互いに区別可能なキー方向を何個置けるかという球面充填問題として扱う。KATA（Kernelized Linear 注意機構 活性値）は、注意重みの非負性を保証する対称錐の特徴写像を設計軸に置く。
+
+- **2026-07 · [Elastic Gang: Per-Token Membership Change for a Hard-Barriered LLM Inference Gang Co-Scheduled with OS Processes](2026-2607.04668-elastic-gang-per-token-membership-change-for-a-hard-barriered-llm-infere.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  バリア同期する推論ギャングの参加コアをトークンごとに確認応答で入れ替えられるようにし、推論出力をビット単位で保ったまま、遊んでいるコアを一般処理へ自動で貸し借りするカーネル内スケジューリングの研究。
 
 - **2026-07 · [Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs](2026-2607.11368-decomposing-runtime-kernel-and-quantization-speedups-via-a-matched-fp16-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

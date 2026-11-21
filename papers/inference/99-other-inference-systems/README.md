@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1194本）
+## 自動生成の論文一覧（1196本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -431,6 +431,10 @@
 - **2026-09 · [Low-Bit Recurrent States in Hybrid Language Models](2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   再帰状態の量子化誤差が減衰率に応じて蓄積する点に着目し、グラミアン由来の持続重みと正規化範囲でビット幅を混合配分することで、較正なしに平均4ビットで過剰な負の対数尤度を最良の比較対象比3.3から27.9倍削減した。
+
+- **2026-08 · [When Entropy Is Not Enough: Reclaiming Lost Semantics in LLM Output Length Prediction](2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-lengt.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  プリフィル中の注意から意味の重みを取り出し位置バイアスを除いた上で、エントロピーによる不確かさの重みと融合して出力長分布を予測し、長さに応じたスケジューリングのパディングと待ちを減らす研究。
 
 - **2026-08 · [Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs](2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-f.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1433,6 +1437,10 @@
 - **2026-08 · [Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting](2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   再順位付けと生成の間で律速が移動することを実測し、限界証拠被覆による証拠前倒しと待ち行列圧力に応じた予算削減を組み合わせ、HotpotQAでは半分の再順位付け件数で最終再現率を41.13から62.38へ上げた。
+
+- **2026-08 · [LegoLM: Structured Weight Sharing for Large Language Models](2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.md)**  
+  実装：[✓](https://anonymous.4open.science/r/legolm) ・ リポジトリ内被引用：0  
+  重み共有圧縮の失敗原因を尺度不一致と外れ値支配に分解し、スカラー化と外れ値の原文保持と境界層保護を組み合わせて、校正データなしで7Bモデルを4倍以上圧縮しても品質劣化をほぼゼロに抑える研究。
 
 - **2026-08 · [From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization](2026-2608.09595-from-sweep-to-seam-interleaved-cross-block-post-training-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3148,6 +3156,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   連続したニューロンの塊を単位に、重要度を推定遅延で割った効用で塊を選ぶ疎化と、連続分布に基づく遅延の見積もりにより、同等の精度でフラッシュ読み込みの遅延を二つの組み込み機器で平均二・一九倍と二・八九倍、最大四・六五倍と五・七六倍改善したと報告した。
 
+- **2025-11 · [T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization](2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
+
 - **2025-11 · [Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer](2025-2502.15779-rotate-clip-and-partition-towards-w2a4kv4-quantization-by-integrating-ro.md)**  
   実装：[✓](https://github.com/songsm921/RCP) ・ リポジトリ内被引用：1  
   重みを二ビット、活性値とキャッシュを四ビットにする極端な量子化では、単純な事後量子化や従来の量子化認識学習だけでは予測が崩れる場合がある。ピークメモリは13.48GBから2.55GBへ減り、約5.29倍の削減となる。
@@ -3359,10 +3371,6 @@
 - **2025-11 · [Test-Time Temporal Sampling for Efficient MLLM Video Understanding](2025-2511.17945-test-time-temporal-sampling-for-efficient-mllm-video-understanding.md)**  
   実装：[✓](https://github.com/kaibinwang3/T3S) ・ リポジトリ内被引用：0  
   一方、学習済みフレーム選択器や動画専用圧縮器は追加学習と前処理が必要で、既存のMLLMへそのまま組み込めるとは限らない。Qwen2.5-VL-7BでLongVideoBenchの正答率は59.2%から62.3%へ3.1ポイント改善し、論文が測る最初のトークンまでの遅延は2.04倍高速化した。
-
-- **2025-11 · [T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization](2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
 
 - **2025-11 · [Symbiosis: Multi-Adapter Inference and Fine-Tuning](2025-2507.03220-symbiosis-multi-adapter-inference-and-fine-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4745,7 +4753,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：362  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：363  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

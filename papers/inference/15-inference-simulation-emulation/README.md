@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（96本）
+## 自動生成の論文一覧（97本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -202,6 +202,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   ELiTeFormerは、言語モデルの注意機構と全結合層を個別に高速化するだけでは、再構成可能な論理回路（Field-Programmable Gate Array; FPGA）の特性を十分に利用できないという問題に取り組む。
 
+- **2026-07 · [C2C-Explorer: An Exploration Framework for Chip-to-Chip Interconnect Architectures in LLM Cloud Computing Systems](2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-arch.md)**  
+  実装：[✓](https://github.com/Selinaee/C2C-Explorer) ・ リポジトリ内被引用：0  
+  言語モデルの通信トレースからチップ間トラフィックを作り、512チップまで扱える混成シミュレータで評価し、ベイズ探索で接続構成を絞り込むことで、有効スループットとメモリを同時に改善する構成を短い反復で見つける設計探索の研究。
+
 - **2026-07 · [Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving](2026-2607.16488-auto-scaling-heterogeneous-neural-processing-units-for-energy-and-cost-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NeuScaleは、世代ごとに計算性能、メモリ帯域、メモリ容量、チップ間通信性能が異なるニューラル処理装置（NPU）を、LLM推論サービスに効率よく割り当てる制御方式である。複数モデルと複数要求系列にわたる均質構成の従来型自動伸縮方式との比較で、平均エネルギー効率1.13倍、金銭的費用効率1.43倍、サービス水準目標（SLO）達成率1.36倍を報告する。
@@ -367,7 +371,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
-  実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：28  
   入力はモデルの計算グラフと装置構成であり、出力は演算子別・推論段階別の遅延、チップ面積、製造費用の推定値である。性能推定と面積・費用推定を同一の設計空間で組み合わせるため、最速のチップだけでなく、価格に見合った推論性能を評価できる。
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  

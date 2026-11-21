@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "79f080bc51ee9ea4c4647d5ffc93e3c97a80d3b8",
+  "base_commit": "8af88108fc97e7b8b0e6f15956e4fd1bc1239bbc",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -477,6 +477,7 @@
     "2026-2607.02522-multi-turn-distributed-inference-with-mixture-of-experts-for-6g-edge-cloud-networks.json",
     "2026-2607.03050-omnifocus-query-guided-modality-balanced-token-compression-for-omni-modal-large-language-models.json",
     "2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inference.json",
+    "2026-2607.04668-elastic-gang-per-token-membership-change-for-a-hard-barriered-llm-inference-gang-co-scheduled-with-os-processes.json",
     "2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-in-mobile-llm-inference.json",
     "2026-2607.06202-ubep-re-architecting-expert-parallelism-communication-library-for-production-superpods.json",
     "2026-2607.06906-the-harness-effect-how-orchestration-design-sets-the-token-economics-of-enterprise-agentic-ai.json",
@@ -492,6 +493,7 @@
     "2026-2607.14327-prem-learning-what-to-preserve-and-when-to-refresh-for-context-compression.json",
     "2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.json",
     "2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsity-aware-truncation.json",
+    "2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cpu-llm-inference.json",
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
     "2026-2607.17486-salt-salience-aware-lexical-trie-for-long-context-compression.json",
@@ -535,12 +537,15 @@
     "2026-2608.06628-retrofitting-linear-attention-into-diffusion-language-models.json",
     "2026-2608.06630-the-sparsity-whisperer.json",
     "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json",
+    "2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-architectures-in-llm-cloud-computing-systems.json",
+    "2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-llm-agent.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
     "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json",
     "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json",
+    "2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-length-prediction.json",
     "2026-2608.16425-paratempo-efficient-parallel-reasoning-via-temporal-confidence.json",
     "2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceleration.json",
     "2026-2608.17616-mone-modular-neural-memory-for-efficient-long-context-inference.json",
@@ -47381,6 +47386,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.04668": {
+      "order": [
+        "2026-11-21T23:33:05+00:00",
+        "2026-2607.04668-elastic-gang-per-token-membership-change-for-a-hard-barriered-llm-inference-gang-co-scheduled-with-os-processes.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.14618": {
+      "order": [
+        "2026-11-21T23:34:33+00:00",
+        "2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cpu-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.08611": {
+      "order": [
+        "2026-11-21T23:36:01+00:00",
+        "2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-architectures-in-llm-cloud-computing-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.08652": {
+      "order": [
+        "2026-11-21T23:37:29+00:00",
+        "2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.15592": {
+      "order": [
+        "2026-11-21T23:38:57+00:00",
+        "2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-length-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59554,6 +59604,21 @@
     "arxiv:2606.03014": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-an.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-an.md"
+    ],
+    "arxiv:2607.04668": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.04668-elastic-gang-per-token-membership-change-for-a-hard-barriered-llm-infere.md"
+    ],
+    "arxiv:2607.14618": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cp.md"
+    ],
+    "arxiv:2608.08611": [
+      "papers/inference/15-inference-simulation-emulation/2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-arch.md"
+    ],
+    "arxiv:2608.08652": [
+      "papers/inference/99-other-inference-systems/2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.md"
+    ],
+    "arxiv:2608.15592": [
+      "papers/inference/99-other-inference-systems/2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-lengt.md"
     ]
   }
 }
