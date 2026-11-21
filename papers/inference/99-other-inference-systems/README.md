@@ -4352,13 +4352,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   重みを4ビット整数へ量子化すれば、各重みが取れる値は16種類に限られる。約2.5倍という代表値を、現在のGPUにおける推論遅延やトークン生成速度の改善と解釈してはならない。
 
+- **2023-07 · [A Survey of Techniques for Optimizing Transformer Inference](2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  本論文は、Transformer推論を軽量化・高速化する手法を、モデルを作り直す方法から演算器の設計まで横断的に整理した43ページの文献調査である。例えばCoFiは引用元研究で約95%の疎性と約10倍の高速化を報告し、HMC-TranはV100のテンソルコアを利用するBERT-baseの92%疎性で3.68倍を報告する。
+
 - **2023-01 · [Alternating Updates for Efficient Transformers](2023-2301.13310-alternating-updates-for-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   AltUp（Alternating Updates）は、表現の幅と層内部の演算幅を分離し、幅Kdの状態を保持しながら各層で実際にTransformerを通すのはd次元の部分ブロック一つに限る方式である。NeurIPS 2023採択論文のT5実験では、同じ予測精度を持つ密なTransformerに対して最大87%の相対速度向上を報告する。
-
-- **2023-07 · [A Survey of Techniques for Optimizing Transformer Inference](2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  本論文は、Transformer推論を軽量化・高速化する手法を、モデルを作り直す方法から演算器の設計まで横断的に整理した43ページの文献調査である。例えばCoFiは引用元研究で約95%の疎性と約10倍の高速化を報告し、HMC-TranはV100のテンソルコアを利用するBERT-baseの92%疎性で3.68倍を報告する。
 
 - **2022-12 · [Linearizing Transformer with Key-Value Memory](2022-2203.12644-linearizing-transformer-with-key-value-memory.md)**  
   実装：[✓](https://github.com/jcyk/memsizer) ・ リポジトリ内被引用：2  
@@ -4431,7 +4431,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：310  
+  実装：✓ ・ リポジトリ内被引用：311  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  

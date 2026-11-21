@@ -1429,7 +1429,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：420  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：421  
   EAGLEは、対象LLMの上位層特徴量と直前に標本化したトークンを小型デコーダへ与えて未来特徴量を予測し、元の言語モデル出力ヘッドと木構造検証で重み読出し回数を減らす。
 
 - **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
@@ -1693,7 +1693,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：746  
+  実装：✓ ・ リポジトリ内被引用：747  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  

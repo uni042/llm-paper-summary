@@ -987,7 +987,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   テンソル並列では、行列の列や行をGPUごとに分割して計算する。各GPUが自分の部分を処理しても、次の行列積が必要とする入力を集める全収集（AllGather）、あるいは計算結果を加算して分散する縮約散布（ReduceScatter）が必要になる。通信の完了を待ってから次の行列積を始めると、GPUが計算できない待機時間が生じる。
 
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
-  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：29  
   Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
 
 - **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
@@ -1089,7 +1089,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：614  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：615  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -1131,7 +1131,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：857  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：859  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -1149,7 +1149,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 6年前（2020-12〜2021-11）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：37  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
