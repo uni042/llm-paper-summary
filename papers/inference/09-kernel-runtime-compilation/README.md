@@ -872,6 +872,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：2  
   従来のLoRA配信は基盤重みに低ランク差分を加算する設計であり、ESFTで必要な「ルーティングが選んだ元専門家を、タスク固有の別重みに差し替える」動作には直接対応しない。単一64GB NPUで二つのアダプタを扱う際、個別mergedモデル方式のKVキャッシュ容量約6K トークンに対し、ExpertWeaveは572K トークン超を確保した。
 
+- **2025-08 · [APT-LLM: Exploiting Arbitrary-Precision Tensor Core Computing for LLM Acceleration](2025-2508.19087-apt-llm-exploiting-arbitrary-precision-tensor-core-computing-for-llm-acc.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  APT-LLMが解くのは、モデルをINT2やINT3まで量子化しても、GPUの行列積命令がその精度を直接サポートしないため、低ビット化した理論上の利点を実際の推論速度へ移しにくい問題である。
+
 - **2025-05 · [FlashBias: Fast Computation of Attention with Bias](2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.md)**  
   実装：[✓](https://github.com/thuml/FlashBias) ・ リポジトリ内被引用：2  
   注意バイアスを低ランク分解してクエリとキーへ埋め込み、二乗のメモリ読み込みを消すことでバイアス付き注意を無損失から近似まで含めて高速化した方式。
@@ -887,10 +891,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-08 · [FlexQ: Efficient Post-training INT6 Quantization for LLM Serving via Algorithm-System Co-Design](2025-2508.04405-flexq-efficient-post-training-int6-quantization-for-llm-serving-via-algo.md)**  
   実装：[✓](https://github.com/FlyFoxPlayer/FlexQ) ・ リポジトリ内被引用：1  
   FlexQは、LLMの重みと活性値を6bitへ量子化して品質を維持しつつ、GPU上で本当に高速に実行するための方式である。
-
-- **2025-08 · [APT-LLM: Exploiting Arbitrary-Precision Tensor Core Computing for LLM Acceleration](2025-2508.19087-apt-llm-exploiting-arbitrary-precision-tensor-core-computing-for-llm-acc.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  APT-LLMが解くのは、モデルをINT2やINT3まで量子化しても、GPUの行列積命令がその精度を直接サポートしないため、低ビット化した理論上の利点を実際の推論速度へ移しにくい問題である。
 
 - **2025-07 · [Cloud Native System for LLM Inference Serving](2025-2507.18007-cloud-native-system-for-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1091,7 +1091,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   従来のGPU注意カーネルは通常の一本の系列を想定し、クエリごとに必要なKVを集めるため、同じ接頭辞のKVを何度もGPU広帯域メモリから共有メモリへ運ぶ。DeFT（デコード with Flash Tree-注意機構）は、木構造のKVと複数クエリを一緒に分割する際の基準を逆転させる。
 
 - **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
-  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：15  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
 - **2024-09 · [CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification](2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md)**  
@@ -1161,11 +1161,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：631  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：633  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：125  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：126  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
@@ -1203,7 +1203,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：874  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：876  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
