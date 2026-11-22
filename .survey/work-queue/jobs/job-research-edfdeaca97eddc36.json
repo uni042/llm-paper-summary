@@ -35,10 +35,15 @@
   "selection_reason": "モデル更新をまたぐKVキャッシュ再利用をDeepSeek-V4-Flashで検証し、TTFTの2.10〜5.08倍高速化とFunctional Cache Divergenceによる振る舞い差の特徴付けを示しており、KVキャッシュ再利用という推論技法の可否を具体的に明らかにしているため。",
   "semantic_scholar_id": "dc96cc242e6d3ad9e71b07cdb425251ae1c52bb1",
   "source_url": "https://arxiv.org/abs/2611.14051",
-  "status": "ready",
+  "status": "superseded",
   "title": "Can KV Cache Be Reused Across Model Updates? A DeepSeek-V4-Flash Case Study",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:28:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-stu.md",
+  "represented_canonical_id": "arXiv:2611.14051",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

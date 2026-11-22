@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（641本）
+## 自動生成の論文一覧（642本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -762,6 +762,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [Coordinated Mixed-Precision KV Cache Quantization for Efficient LLM-based Multi-agent Systems](2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-base.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同時に常駐する複数エージェントのキャッシュへ、直近のクエリ・キー・バリューから推定した感度に基づき共有予算の下でビット幅を協調配分する量子化で、平均三ビットの平均正解率六八・三五パーセントと最強の比較対象比プラス〇・五九ポイント、別条件でキャッシュ最大容量の三二・〇八パーセント削減と一・三八倍の高速化を報告した。
+
+- **2026-11 · [Can KV Cache Be Reused Across Model Updates? A DeepSeek-V4-Flash Case Study](2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-stu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  旧モデルのKVキャッシュを更新後のモデルへ直接渡す再利用を四つの更新で測り、検索の保持、質問応答の高速化と品質低下、分布の発散の増え方がタスクで異なることを明らかにする分析。
 
 - **2026-11 · [BitDecoding-FP4: Native FP4 KV Cache Decoding via Algorithm-System Co-Design](2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-des.md)**  
   実装：[✓](https://github.com/OpenBitSys/BitDecoding-FP4) ・ リポジトリ内被引用：0  
