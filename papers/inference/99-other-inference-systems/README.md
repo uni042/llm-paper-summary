@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1269本）
+## 自動生成の論文一覧（1272本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -919,6 +919,10 @@
 - **2026-01 · [Dynamic Thinking-Token Selection for Efficient Reasoning in Large Reasoning Models](2026-2601.18383-dynamic-thinking-token-selection-for-efficient-reasoning-in-large-reason.md)**  
   実装：[✓](https://github.com/Robin930/DynTS) ・ リポジトリ内被引用：1  
   DynTS（動的 Thinking-Token Selection）は、長い思考列を生成する大規模推論モデル（Large Reasoning モデル; LRM）で、最終回答に必要な思考トークンのキー・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を残し、その他を推論途中に削除する方式である。
+
+- **2026-01 · [ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG](2026-2601.05038-arcaligner-adaptive-recursive-aligner-for-compressed-context-embeddings-.md)**  
+  実装：[✓](https://github.com/liunian-Jay/ArcAligner) ・ リポジトリ内被引用：1  
+  ArcAlignerは、検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した長文書を、少数の連続ベクトルへ圧縮した後の「情報が残っていても生成モデルが読めない」という問題を扱う。約24倍の文脈圧縮条件で、HotpotQAのF1は34.92、同じ論文で比較したCOCOMの16倍圧縮は31.77となった。
 
 - **2026-01 · [Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference](2026-2601.07667-adaptive-layer-selection-for-layer-wise-token-pruning-in-llm-inference.md)**  
   実装：[✓](https://github.com/TANIGUCHIREI/ASL) ・ リポジトリ内被引用：1  
@@ -2402,6 +2406,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   各層の入出力の活性の類似度を数学と非数学の探査で別々に測って冗長な層を順位付けする領域配慮の削除を提案し、削除率が小さい様相では層の選択が最も効くこと、率が上がると方式が収束し、高い率では削除の間隔という構造が支配すること、そして絶対精度の低下自体は一割削除でも大きいことを二モデル・七評価で示した。
 
+- **2026-03 · [The 1/W Law: An Analytical Study of Context-Length Routing Topology and GPU Generation Gains for LLM Inference Energy Efficiency](2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology-and-g.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文脈窓が2倍になるとワットあたりトークンが半分になる1/W則を解析的に導き、文脈長ルーティングがGPU世代交代より大きな省エネ手段であり、両者の利得が乗算で重なることを示す分析研究。
+
 - **2026-03 · [Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability](2026-2603.12038-slow-fast-inference-training-free-inference-acceleration-via-within-sent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   選択器は密注意のlogitから得た証拠と、KVに保存されたキーnorm・位置情報から得たpriorを統合する。Qwen3-4B、Qwen3-30B-A3B、Qwen3-235B-A22Bの長文脈デコードで、密注意と比較した実測スループットは文脈長に応じて約1.6〜14.4倍に増える。
@@ -2502,6 +2510,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   FP4の感度を射影の種類とブロックの深さで切り分けた診断研究で、MLPの上向き・下向き射影が全規模・両形式で最も敏感であり、感度は最終ブロックだけに集中しないことを示した。
 
+- **2026-03 · [Density-aware Soft Context Compression with Semi-Dynamic Compression Ratio](2026-2603.25926-density-aware-soft-context-compression-with-semi-dynamic-compression-rat.md)**  
+  実装：[✓](https://github.com/yuyijiong/semi-dynamic-context-compress) ・ リポジトリ内被引用：0  
+  文脈の情報密度を予測して離散的な圧縮率へ量子化する半動的ソフト圧縮で、完全動的化の崩壊を避けながら固定比率より高い正解率と圧縮率の両立を示す文脈圧縮方式。
+
 - **2026-03 · [CRISP: Compressed Reasoning via Iterative Self-Policy Distillation](2026-2603.05433-crisp-compressed-reasoning-via-iterative-self-policy-distillation.md)**  
   実装：[✓](https://github.com/HJSang/CRISP_Reasoning_Compression) ・ リポジトリ内被引用：0  
   CRISP（Compressed Reasoning via Iterative Self-Policy Distillation）は、この余分な思考を生成後に切り落とすのではなく、モデルが自発的に短い推論を出すように学習する方式である。
@@ -2517,6 +2529,10 @@
 - **2026-03 · [Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning](2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、小型言語モデル（SLM）にまず問題を解かせ、答えへの自己申告確信度が低いときだけ大型言語モデル（LLM）へ委譲する二段推論方式COREAを提案する。大型モデル単独との比較で、領域外の数理問題では推定費用21.5%減・正答率1.7ポイント減、非数理問題では16.8%減・正答率1.7ポイント減となった。
+
+- **2026-03 · [Compiling Code LLMs into Lightweight Executables](2026-2603.29813-compiling-code-llms-into-lightweight-executables.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブロック単位のコードブック量子化と、行列ベクトル積をBLASへ置き換えるLLVMパスを組み合わせ、7B級コードモデルを一般的なノートPCで最大10.5倍速く、6.4倍小さいメモリで動かす枠組み。
 
 - **2026-03 · [CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents](2026-2603.15421-clag-adaptive-memory-organization-via-agent-driven-clustering-for-small-.md)**  
   実装：[✓](https://github.com/dmis-lab/CLAG) ・ リポジトリ内被引用：0  
@@ -2878,10 +2894,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは前者を注意の過負荷、後者を注意の過少負荷と呼び、両者を注意重みの配分失敗として統一的に扱う。提案手法Lazy 注意機構は二つの機構からなる。340Mパラメータ・150億学習トークンの8課題平均は48.01%で、比較対象のGated DeltaNetの47.68%を上回る。
 
-- **2026-01 · [ArcAligner: Adaptive Recursive Aligner for Compressed Context Embeddings in RAG](2026-2601.05038-arcaligner-adaptive-recursive-aligner-for-compressed-context-embeddings-.md)**  
-  実装：[✓](https://github.com/liunian-Jay/ArcAligner) ・ リポジトリ内被引用：0  
-  ArcAlignerは、検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した長文書を、少数の連続ベクトルへ圧縮した後の「情報が残っていても生成モデルが読めない」という問題を扱う。約24倍の文脈圧縮条件で、HotpotQAのF1は34.92、同じ論文で比較したCOCOMの16倍圧縮は31.77となった。
-
 - **2026-01 · [APB-V: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention](2026-2601.21444-apb-v-accelerating-long-video-understanding-via-sequence-parallelism-awa.md)**  
   実装：[✓](https://github.com/thunlp/APB) ・ リポジトリ内被引用：0  
   入力を間引く方式では一瞬しか映らない文字・物体・順序の手掛かりを失いやすい。原著のQwen2.5VL-3B・64フレーム・1440p動画の条件では、APB-VはFlashAttention比12.72倍、ZigZagRing比1.70倍、先行APB比1.18倍の処理量を報告する。
@@ -3216,6 +3228,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   外部の判定模型を使わず、小さい模型のロジット最大値から段ごとの確信度を測り、混合正規分布の事後確率で次の段を小さい模型に任せるか大きい模型へ回すかを決める段単位の振り分けで、難関数学課題では大きい模型だけより正解率が二割上がり計算量が四八パーセント減ったと報告した。
 
+- **2025-11 · [CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning](2025-2511.18659-clara-bridging-retrieval-and-generation-with-continuous-latent-reasoning.md)**  
+  実装：[✓](https://github.com/apple/ml-clara) ・ リポジトリ内被引用：2  
+  CLaRa（Continuous Latent Reasoning）は、文書を少数の連続値メモリトークンへ圧縮し、その表現を文書検索と生成の双方に用いる。Mistral-7Bで16倍圧縮したSCPは、4質問応答課題の通常検索条件において平均CEM 38.96%を記録し、PISCOの37.83%を上回る。
+
 - **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
@@ -3347,10 +3363,6 @@
 - **2025-11 · [DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF](2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DeCoRLは、長い推論手順を単一の大規模言語モデル（LLM）が順番に生成する代わりに、役割の異なる小さな推論モジュールへ分解して同時に実行し、出力を統合する枠組みである。著者はNVIDIA A100を使った10段階の推論問題で、逐次実行1,202ミリ秒に対してDeCoRLが316ミリ秒となり、約3.8倍高速化したと報告する。
-
-- **2025-11 · [CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning](2025-2511.18659-clara-bridging-retrieval-and-generation-with-continuous-latent-reasoning.md)**  
-  実装：[✓](https://github.com/apple/ml-clara) ・ リポジトリ内被引用：1  
-  CLaRa（Continuous Latent Reasoning）は、文書を少数の連続値メモリトークンへ圧縮し、その表現を文書検索と生成の双方に用いる。Mistral-7Bで16倍圧縮したSCPは、4質問応答課題の通常検索条件において平均CEM 38.96%を記録し、PISCOの37.83%を上回る。
 
 - **2025-10 · [Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods](2025-2510.05901-untangling-component-imbalance-in-hybrid-linear-attention-conversion-met.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（603本）
+## 自動生成の論文一覧（604本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1329,6 +1329,10 @@
 - **2026-03 · [Parallel In-context Learning for Large Vision Language Models](2026-2603.16092-parallel-in-context-learning-for-large-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLaVA-OV-7BのMI-Bench-ICLで、例示数8→16→32に増やすと入力長は23,318→44,027→84,959トークン、平均遅延は1.004→2.376→3.479秒へ増加する。各群の予測を重み付き専門家積（weighted product of エキスパート、PoE）で統合し、全例示を一度に読んだときの分布を近似する。
+
+- **2026-03 · [Improving LLM performance through black-box online tuning: a case for inference-time optimization](2026-2603.11340-improving-llm-performance-through-black-box-online-tuning-a-case-for-inf.md)**  
+  実装：[✓](https://github.com/Seoulsim2/SLO-Tuner) ・ リポジトリ内被引用：0  
+  公開APIの測定だけを使うブラックボックスな山登り制御で同時実行・バッチ・投機幅を調整し、p99目標を満たす有効スループットを最大化するサービング調整器SLO-Tuner。
 
 - **2026-03 · [Duration Aware Scheduling for ASR Serving Under Workload Drift](2026-2603.11273-duration-aware-scheduling-for-asr-serving-under-workload-drift.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

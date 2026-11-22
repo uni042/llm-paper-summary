@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（200本）
+## 自動生成の論文一覧（201本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -437,6 +437,10 @@
 - **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   たとえば、画像内で目立つ動物より周辺の店名看板を尋ねているのに、初期層の注意が動物へ集中した結果、看板のトークンが枝刈りされ、モデルが架空の店名を答える。LLaVA-v1.5-7Bで画像トークンを576個から128個へ77.8%削減した条件では、七つの評価セットを正規化した平均性能を98.64%保持し、遅延を167.50ミリ秒から77.94ミリ秒へ短縮した。
+
+- **2026-04 · [The Detection-Extraction Gap: Models Know the Answer Before They Can Say It](2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md)**  
+  実装：[✓](https://github.com/EdWangLoDaSc/know2say) ・ リポジトリ内被引用：0  
+  答えが回収可能になる時点と強制抽出できる時点のずれを分布のずれとして定式化し、自由継続だけで検出と抽出を行う早期終了BAEEで直列生成を約7割減らしながら正解率も上げる、推論時計算の分析と手法。
 
 - **2026-04 · [SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs](2026-2604.23996-smoes-soft-modality-guided-expert-specialization-in-moe-vlms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

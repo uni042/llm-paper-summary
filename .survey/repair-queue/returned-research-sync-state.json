@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "16327737fcc90d2edc2a59201a67184692d20d34",
+  "base_commit": "e9b0796f219c91bb5b9b7b7d4b8004b471f18fe0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -382,12 +382,14 @@
     "2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-on-ai-accelerators.json",
     "2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-comprehensive-benchmark-and-deployment-study.json",
     "2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-future-without-generation.json",
+    "2026-2603.11340-slo-tuner-black-box-online-tuning-llm-performance.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
     "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json",
     "2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-visual-token-compression-in-vlms.json",
     "2026-2603.15954-mobilellm-flash-latency-guided-on-device-llm-design-for-industry-scale-deployment.json",
     "2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-for-llm-inference.json",
     "2026-2603.16219-specsteer-synergizing-local-context-and-global-reasoning-for-efficient-personalized-generation.json",
+    "2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology.json",
     "2026-2603.17891-ramp-reinforcement-adaptive-mixed-precision-quantization-for-efficient-on-device-llm-inference.json",
     "2026-2603.17946-care-covariance-aware-and-rank-enhanced-decomposition-for-enabling-multi-head-latent-attention.json",
     "2026-2603.18037-adapting-methods-for-domain-specific-japanese-small-lms-scale-architecture-and-quantization.json",
@@ -403,11 +405,13 @@
     "2026-2603.24680-rediprune-relevance-diversity-pre-projection-token-pruning-for-efficient-multimodal-llms.json",
     "2026-2603.25340-large-language-model-as-token-compressor-and-decompressor.json",
     "2026-2603.25385-glowq-group-shared-low-rank-approximation-for-quantized-llms.json",
+    "2026-2603.25926-density-aware-soft-context-compression-with-semi-dynamic-compression-ratio.json",
     "2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficient-llm-agents.json",
     "2026-2603.26365-dynamic-token-compression-for-efficient-video-understanding-through-reinforcement-learning.json",
     "2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-trade-offs-in-on-device-intelligence.json",
     "2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-and-capacity-constraints.json",
     "2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answering.json",
+    "2026-2603.29813-compiling-code-llms-into-lightweight-executables.json",
     "2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-coding.json",
     "2026-2604.01220-universal-yoco-for-efficient-depth-scaling.json",
     "2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-llm-compression.json",
@@ -424,6 +428,7 @@
     "2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-language-model-inference.json",
     "2026-2604.06330-stdec-spatio-temporal-stability-guided-decoding-for-dllms.json",
     "2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.json",
+    "2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-it.json",
     "2026-2604.06787-when-is-thinking-enough-early-exit-via-sufficiency-assessment-for-efficient-reasoning.json",
     "2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.json",
     "2026-2604.07173-infinilora-disaggregated-multi-lora-serving.json",
@@ -48846,6 +48851,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2603.11340": {
+      "order": [
+        "2026-11-22T09:55:53+00:00",
+        "2026-2603.11340-slo-tuner-black-box-online-tuning-llm-performance.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.17280": {
+      "order": [
+        "2026-11-22T09:57:22+00:00",
+        "2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.25926": {
+      "order": [
+        "2026-11-22T09:58:50+00:00",
+        "2026-2603.25926-density-aware-soft-context-compression-with-semi-dynamic-compression-ratio.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.29813": {
+      "order": [
+        "2026-11-22T10:00:18+00:00",
+        "2026-2603.29813-compiling-code-llms-into-lightweight-executables.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.06613": {
+      "order": [
+        "2026-11-22T10:01:47+00:00",
+        "2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-it.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61617,6 +61667,21 @@
     "arxiv:2603.10026": [
       "papers/inference/09-kernel-runtime-compilation/2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-.md"
+    ],
+    "arxiv:2603.11340": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.11340-improving-llm-performance-through-black-box-online-tuning-a-case-for-inf.md"
+    ],
+    "arxiv:2603.17280": [
+      "papers/inference/99-other-inference-systems/2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology-and-g.md"
+    ],
+    "arxiv:2603.25926": [
+      "papers/inference/99-other-inference-systems/2026-2603.25926-density-aware-soft-context-compression-with-semi-dynamic-compression-rat.md"
+    ],
+    "arxiv:2603.29813": [
+      "papers/inference/99-other-inference-systems/2026-2603.29813-compiling-code-llms-into-lightweight-executables.md"
+    ],
+    "arxiv:2604.06613": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md"
     ]
   }
 }
