@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-440bc2a7add6717b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.06564",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.06564",
+    "identity_tokens": [
+      "arXiv:2406.06564"
+    ],
+    "reason": "低ランク部分空間を切り替えながら事前学習・ファインチューニングを行うSwitchLoRAの研究であり、学習時のメモリ・通信削減が目的の学習単独の効率化であるため対象範囲外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SwitchLoRA: Switched Low-Rank Adaptation Can Learn Full-Rank Information"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-440bc2a7add6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

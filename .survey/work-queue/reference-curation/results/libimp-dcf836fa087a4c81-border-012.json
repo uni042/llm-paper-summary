@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dcf836fa087a4c81-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:d0476b6c6cee8cea5c41b47bf084e50c1504c9bf",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:d0476b6c6cee8cea5c41b47bf084e50c1504c9bf",
+    "identity_tokens": [
+      "SemanticScholar:d0476b6c6cee8cea5c41b47bf084e50c1504c9bf"
+    ],
+    "reason": "タイトル検索で得た一次資料の要旨では、LLMの深層プルーニングがファインチューニングやコード等の非伝統的ドメインへ一般化するかを検証し創発能力の減衰を報告する解析研究であり、新たな推論機構の提案か否かが判然としないため保留とした。",
+    "first_checked_at": "2026-11-22T22:45:02+00:00",
+    "last_checked_at": "2026-11-22T22:45:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The impact of LLM pruning for fine-tuning"
+  },
+  "processed_at": "2026-11-22T22:45:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dcf836fa087a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

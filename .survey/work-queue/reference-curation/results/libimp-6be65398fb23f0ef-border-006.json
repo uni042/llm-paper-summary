@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6be65398fb23f0ef-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.05400",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.05400",
+    "identity_tokens": [
+      "arXiv:2610.05400"
+    ],
+    "reason": "長尺動画エージェントにコスト考慮型の逐次停止判定CASEを差し込み、モデルトークンを約54%・実行時間を約54%削減するが、対象はVideoSeek等の動画エージェント固有の証拠収集過程であり、汎用LLMサービング機構との関係が薄いため保留とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CASE: Cost-Aware Stopping for Efficient Long-Video Agents"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6be65398fb23",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

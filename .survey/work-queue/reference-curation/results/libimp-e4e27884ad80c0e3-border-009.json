@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4e27884ad80c0e3-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f3915f14375346e69271a4a44fb55fd2f1ce6cad",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f3915f14375346e69271a4a44fb55fd2f1ce6cad",
+    "identity_tokens": [
+      "SemanticScholar:f3915f14375346e69271a4a44fb55fd2f1ce6cad"
+    ],
+    "reason": "LoRAとvLLM・Punica・S-LoRA・dLoRA等のマルチテナント配信を金融専門家エージェント向けに整理したセミナーレポート／サーベイであり、配信機構自体への新規な技術貢献ではなく応用領域の解説が主体のためborderlineとする。",
+    "first_checked_at": "2026-11-22T22:45:02+00:00",
+    "last_checked_at": "2026-11-22T22:45:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LoRA and Efficient LLM Serving for Financial Expert Agents"
+  },
+  "processed_at": "2026-11-22T22:45:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4e27884ad80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

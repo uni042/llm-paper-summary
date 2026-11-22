@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-902acf3bbcc6e737-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2604.18486",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2604.18486",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.18486",
+      "arXiv:2604.18486"
+    ],
+    "reason": "OneVLは自動運転VLAの自己回帰Chain-of-Thoughtの遅延を、潜在推論を1ステップ化して抑える手法だが、主目的は軌跡予測という運転応用であり、汎用LLM推論機構としての切り分けが要旨だけでは弱いため保留とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-902acf3bbcc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

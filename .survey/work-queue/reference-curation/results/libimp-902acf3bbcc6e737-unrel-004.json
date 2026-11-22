@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-902acf3bbcc6e737-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:55769ebfb0f1d5541ec7d6bc5d998b4be0f511d3",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:55769ebfb0f1d5541ec7d6bc5d998b4be0f511d3",
+    "identity_tokens": [
+      "SemanticScholar:55769ebfb0f1d5541ec7d6bc5d998b4be0f511d3",
+      "arXiv:2201.01410"
+    ],
+    "reason": "STTは視覚自己注意の内積計算をテンソル変換で置き換える画像分類・キャプション向けプラグインであり、対象が視覚タスクの注意モジュールでLLM推論への適用は確認できないため対象外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Synthesizing Tensor Transformations for Visual Self-attention"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-902acf3bbcc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

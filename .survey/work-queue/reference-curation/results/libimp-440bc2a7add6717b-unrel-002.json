@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-440bc2a7add6717b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.24563",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.24563",
+    "identity_tokens": [
+      "arXiv:2509.24563"
+    ],
+    "reason": "動画LLMの時間的理解を測るNeedle in a MontageタスクとNeMoBenchを構築した評価ベンチマークの研究であり、能力評価のみで推論高速化への貢献はないため対象範囲外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "NeMo: Needle in a Montage for Video-Language Understanding"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-440bc2a7add6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

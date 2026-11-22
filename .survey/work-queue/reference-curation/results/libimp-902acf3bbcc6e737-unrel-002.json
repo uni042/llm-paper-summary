@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-902acf3bbcc6e737-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:c43dfb8fd93a3493828d543c9ecac0bbace9a32f",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:c43dfb8fd93a3493828d543c9ecac0bbace9a32f",
+    "identity_tokens": [
+      "SemanticScholar:c43dfb8fd93a3493828d543c9ecac0bbace9a32f",
+      "arXiv:2107.01499"
+    ],
+    "reason": "候補の実体はBAGUAであり、量子化・分散化・通信遅延といったシステム緩和を分散データ並列学習の通信ライブラリで支え学習時間を短縮する研究で、対象が学習単独の高速化のため対象外とする。",
+    "first_checked_at": "2026-11-21T07:41:11+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "B ���� : Scaling up Distributed Learning with System Relaxations"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-902acf3bbcc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

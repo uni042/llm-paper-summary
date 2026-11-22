@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-902acf3bbcc6e737-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:e291d4fb66f0dc73ed110f798587a43f5d7db733",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:e291d4fb66f0dc73ed110f798587a43f5d7db733",
+    "identity_tokens": [
+      "SemanticScholar:e291d4fb66f0dc73ed110f798587a43f5d7db733"
+    ],
+    "reason": "SPvRは局所グルーピングと全域ランキングで事前学習ネットワークを構造化枝刈りし推論遅延の削減も示すが、評価はResNet等の画像分類モデル中心でLLM推論への適用が確認できないため保留とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SPvR: Structured Pruning via Ranking"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-902acf3bbcc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6be65398fb23f0ef-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.05593",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.05593",
+    "identity_tokens": [
+      "arXiv:2510.05593"
+    ],
+    "reason": "自己回帰型画像生成の視覚的過剰思考を抑えるため、簡潔なCoTへ報酬を与える強化学習フレームワークShortCoTIで推論長を54%削減するが、対象は画像生成応用で手法の中心も学習であり、テキストLLM推論への直接性が弱いため保留とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Improving Chain-of-Thought Efficiency for Autoregressive Image Generation"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6be65398fb23",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

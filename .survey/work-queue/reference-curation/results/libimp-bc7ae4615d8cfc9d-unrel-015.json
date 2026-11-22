@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc7ae4615d8cfc9d-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:10995250e1d29e8f17b9355fe3ddb1e72319f935",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:10995250e1d29e8f17b9355fe3ddb1e72319f935",
+    "identity_tokens": [
+      "SemanticScholar:10995250e1d29e8f17b9355fe3ddb1e72319f935",
+      "arXiv:2412.12636"
+    ],
+    "reason": "TrainMoverは大規模ML学習の中断に対し待機マシンのサンドボックス暖機と通信グループの差分切替でダウンタイムを約20秒に抑える学習ランタイムであり、対象が学習の継続性で推論ではないため対象外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "TrainMover: An Interruption-Resilient and Reliable ML Training Runtime"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc7ae4615d8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

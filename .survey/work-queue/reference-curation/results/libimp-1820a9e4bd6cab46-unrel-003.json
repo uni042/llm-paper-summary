@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1820a9e4bd6cab46-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.patcog.2026.113430",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.patcog.2026.113430",
+    "identity_tokens": [
+      "DOI:10.1016/j.patcog.2026.113430"
+    ],
+    "reason": "出版社ハイライトで確認した内容では、LLMの幻覚に起因する異常を候補回答選択とタスク分解による二戦略RAGで減らす応用手法であり、推論の速度・メモリ・サービング機構への貢献は示されていないため対象外とした。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Dual-strategy retrieval-augmented generation for anomaly recovery in large language models"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1820a9e4bd6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

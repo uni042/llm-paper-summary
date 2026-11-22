@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dcf836fa087a4c81-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:992c296b58537f027643a7f72342180af1b805fe",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:992c296b58537f027643a7f72342180af1b805fe",
+    "identity_tokens": [
+      "SemanticScholar:992c296b58537f027643a7f72342180af1b805fe",
+      "arXiv:2504.19232"
+    ],
+    "reason": "USENIX掲載ページで確認した要旨では、大規模モデル学習のパイプライン並列における通信ストラグラーによるバブルを、スケジュール適応とCPU側RDMAオフロードで抑えるPIPEMORPHを提案しており、学習システムの研究で推論への直接貢献はないため対象外とした。",
+    "first_checked_at": "2026-11-21T10:55:41+00:00",
+    "last_checked_at": "2026-11-22T22:45:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Attack of the Bubbles: Straggler-Resilient Pipeline Parallelism for Large Model Training"
+  },
+  "processed_at": "2026-11-22T22:45:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dcf836fa087a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

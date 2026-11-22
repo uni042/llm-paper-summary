@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a7e309bc63d8798-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icoecit68303.2026.11496789",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icoecit68303.2026.11496789",
+    "identity_tokens": [
+      "DOI:10.1109/icoecit68303.2026.11496789"
+    ],
+    "reason": "フロンティア／オープン／QLoRA微調整LLMをAmazon Reviewsの価格予測という数値回帰タスクで従来回帰器と比較する技術評価であり、能力評価と応用検証が主体で推論システムへの貢献はないため対象範囲外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Re-Imagining Supervised Learning with LLMs: A Technical Evaluation across Frontier, Open, and QLoRA-Fine-Tuned Models"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a7e309bc63d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

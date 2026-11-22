@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a7e309bc63d8798-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icpads67057.2025.11323035",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icpads67057.2025.11323035",
+    "identity_tokens": [
+      "DOI:10.1109/icpads67057.2025.11323035"
+    ],
+    "reason": "マルチテナント深層学習学習をサーバーレス関数チェーン化しgang-relaxedスケジューリングとα-fair資源配分を行うFEDeSは学習基盤の研究であり、推論への適用が確認できないため対象範囲外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FEDeS: Fair, Efficient, and Reliable Multi-Tenant Deep Learning Training with Serverless Computing"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a7e309bc63d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

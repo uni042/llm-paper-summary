@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6be65398fb23f0ef-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18677",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18677",
+    "identity_tokens": [
+      "arXiv:2609.18677"
+    ],
+    "reason": "音声言語モデルGLM-4-Voiceへ検証可能報酬の強化学習を適用し話し言葉の数学推論精度を上げる能力向上の学習研究であり、推論システムへの貢献はないため対象範囲外とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Voice of Reason: Reinforcement Learning for Spoken Math"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6be65398fb23",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

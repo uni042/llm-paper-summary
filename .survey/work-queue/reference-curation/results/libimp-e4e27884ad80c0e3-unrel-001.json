@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4e27884ad80c0e3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/978-3-032-29915-4_13",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/978-3-032-29915-4_13",
+    "identity_tokens": [
+      "DOI:10.1007/978-3-032-29915-4_13"
+    ],
+    "reason": "線形アテンション（GLA・DeltaNet・Mamba2・KDA等）をNCEP再解析データのジオポテンシャル高度予測へ適用する比較評価であり、対象は数値天気予報という異分野応用で、LLM推論システムへの貢献ではないため対象範囲外とする。",
+    "first_checked_at": "2026-11-22T22:45:02+00:00",
+    "last_checked_at": "2026-11-22T22:45:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Comparative Study of Linear Attention Architectures for Geopotential Height Forecasting"
+  },
+  "processed_at": "2026-11-22T22:45:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4e27884ad80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

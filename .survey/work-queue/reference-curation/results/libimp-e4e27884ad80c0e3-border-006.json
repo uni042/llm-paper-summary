@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4e27884ad80c0e3-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:94b2686a92cdaa973655d1da424a0ea2a5da2be8",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:94b2686a92cdaa973655d1da424a0ea2a5da2be8",
+    "identity_tokens": [
+      "SemanticScholar:94b2686a92cdaa973655d1da424a0ea2a5da2be8"
+    ],
+    "reason": "テスト時長尺動画理解に向け多視点情報検索と適応的ルーティングを組み合わせる枠組みとされるが、S2要旨は出版社により省略されOpenReviewも取得できず、推論効率への具体的な機構や削減量が一次要旨で確認できないため保留寄りのborderlineとする。",
+    "first_checked_at": "2026-11-22T22:45:02+00:00",
+    "last_checked_at": "2026-11-22T22:45:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MIRA: Multi-view Information Retrieval with Adaptive Routing for Test-time Long-video Comprehension"
+  },
+  "processed_at": "2026-11-22T22:45:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4e27884ad80",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

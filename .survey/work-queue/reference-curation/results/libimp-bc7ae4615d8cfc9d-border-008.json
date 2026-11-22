@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc7ae4615d8cfc9d-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.19972",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.19972",
+    "identity_tokens": [
+      "arXiv:2605.19972"
+    ],
+    "reason": "Block-Sphere Vector Quantizationは回転ベース量子化器の比較困難を解くベクトル量子化の基礎手法で、メモリ効率の良い保存・高速検索・圧縮推論を掲げるが、LLM推論への具体的な適用と効果が要旨で特定できないため保留とする。",
+    "first_checked_at": "2026-11-22T22:45:01+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Block-Sphere Vector Quantization"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc7ae4615d8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

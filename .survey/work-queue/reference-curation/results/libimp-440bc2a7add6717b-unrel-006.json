@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-440bc2a7add6717b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:4980a56bb05a8660e777f3fe6dd3574246d565b4",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:4980a56bb05a8660e777f3fe6dd3574246d565b4",
+    "identity_tokens": [
+      "SemanticScholar:4980a56bb05a8660e777f3fe6dd3574246d565b4",
+      "arXiv:2605.18457"
+    ],
+    "reason": "6G次世代ネットワークにおけるエッジ知覚を、センシング様式・エッジAI・統合センシング通信計算の観点から整理した無線ネットワーク分野のサーベイであり、LLM推論システムを対象としていないため対象範囲外とする。",
+    "first_checked_at": "2026-11-21T08:03:54+00:00",
+    "last_checked_at": "2026-11-22T22:45:01+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Sense Smarter, Think Better: Edge Perception for Next-Generation Networks"
+  },
+  "processed_at": "2026-11-22T22:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-440bc2a7add6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
