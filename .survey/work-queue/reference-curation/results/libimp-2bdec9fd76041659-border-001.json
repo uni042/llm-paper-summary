@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2bdec9fd76041659-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+    "identity_tokens": [
+      "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f"
+    ],
+    "reason": "Primary full text for 'E 2 -RAG: Towards Editable Efficient RAG by Editing Compressed KV Caches' (venue unknown) could not be obtained: Semantic Scholar lists no openAccessPdf for this paper and no other public full-text route was confirmed in the 2026-11-22 OA sweep. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-22T14:40:26+00:00",
+    "last_checked_at": "2026-11-22T14:40:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "E 2 -RAG: Towards Editable Efficient RAG by Editing Compressed KV Caches"
+  },
+  "processed_at": "2026-11-22T14:40:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2bdec9fd7604",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

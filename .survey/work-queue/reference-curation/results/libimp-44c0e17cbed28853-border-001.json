@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44c0e17cbed28853-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117",
+    "identity_tokens": [
+      "SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117"
+    ],
+    "reason": "Primary full text for 'P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE' (venue unknown) could not be obtained: Semantic Scholar lists no openAccessPdf for this paper and no other public full-text route was confirmed in the 2026-11-22 OA sweep. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-22T14:40:26+00:00",
+    "last_checked_at": "2026-11-22T14:40:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE"
+  },
+  "processed_at": "2026-11-22T14:40:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44c0e17cbed2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
