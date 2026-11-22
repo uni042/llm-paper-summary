@@ -1,0 +1,521 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261123-d04",
+ "reference_main_sha": "889d2e78108acd55b4e88919f3b1f0bb0b6fbcdd",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1007/s11390-026-5979-1",
+   "identity_tokens": [
+    "DOI:10.1007/s11390-026-5979-1"
+   ],
+   "title": "A Survey of Quantization in LLM: Unlocking Potential Hardware Efficiency",
+   "reason": "出版社ページで確認した要旨では、LLMの量子化を事前学習・学習後量子化・推論時量子化まで体系的に整理し、低精度カーネル生成やメモリ・計算削減によるデプロイ効率化を主題としており、量子化という推論システム中核技術のサーベイとして直接貢献が確認できる。",
+   "source_url": "https://doi.org/10.1007/s11390-026-5979-1",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 91
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:344e1908f8ca2dc1fe0d31fd90faac886fbe63c6",
+   "identity_tokens": [
+    "SemanticScholar:344e1908f8ca2dc1fe0d31fd90faac886fbe63c6"
+   ],
+   "title": "M INI D ISC : Minimal Distillation Schedule for Language Model Compression",
+   "reason": "言語モデルの蒸留スケジュールを最小化してモデル圧縮を図る研究とみられるが、Semantic Scholar APIの429と要旨未収録により一次要旨を取得できず、圧縮後の推論効率やデプロイへの具体的な貢献を確認できなかったため保留とした。",
+   "source_url": "https://www.semanticscholar.org/paper/344e1908f8ca2dc1fe0d31fd90faac886fbe63c6",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 92
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.neunet.2026.108720",
+   "identity_tokens": [
+    "DOI:10.1016/j.neunet.2026.108720"
+   ],
+   "title": "Generalized and group spherical linear interpolation for token-level context compression",
+   "reason": "要旨では球面線形補間によるトークンレベルの文脈圧縮で注意計算の系列長を削減するGSlerp-CCを提案しているが、対象はプロンプト文脈の圧縮手法そのもので、サービングやKVキャッシュ等の運用上の推論効率改善が具体的に示されていないため保留とした。",
+   "source_url": "https://doi.org/10.1016/j.neunet.2026.108720",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 93
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/ICPADS60453.2023.00087",
+   "identity_tokens": [
+    "DOI:10.1109/ICPADS60453.2023.00087"
+   ],
+   "title": "Hybrid Parallel Inference for Large Model on Heterogeneous Clusters for High Throughput",
+   "reason": "要旨では異種クラスタ上で大規模モデルの推論を高スループット化するため、データ並列とパイプライン並列の短所を補うハイブリッド並列推論を提案し通信量とメモリ制約の両立を図っており、分散推論への直接貢献が具体的である。",
+   "source_url": "https://doi.org/10.1109/ICPADS60453.2023.00087",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 94
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2610.31576",
+   "identity_tokens": [
+    "arXiv:2610.31576"
+   ],
+   "title": "What Makes a Good Unmasking Policy? A Controlled Study of Learned Unmasking in Diffusion Language Models",
+   "reason": "要旨は拡散言語モデルの学習済みアンマスキング方策を制御実験で分析し、デコードの速度・精度トレードオフや関数評価回数への影響を明らかにする内容で、デコード研究ではあるものの新規な推論システム機構の提案ではなく分析主体のため保留とした。",
+   "source_url": "https://arxiv.org/abs/2610.31576",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 95
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1515/nanoph-2025-0217",
+   "identity_tokens": [
+    "DOI:10.1515/nanoph-2025-0217"
+   ],
+   "title": "What is next for LLMs? Pushing the boundaries of next-gen AI computing hardware with photonic chips",
+   "reason": "要旨はフォトニックチップによる次世代AI計算ハードウェアのレビューで、LLMの計算需要を動機として集積フォトニクスによる行列演算高速化を論じているが、学習を含む汎用計算の展望が中心で推論システムへの具体的機構が示されていないため保留とした。",
+   "source_url": "https://doi.org/10.1515/nanoph-2025-0217",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 96
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.64898/2026.05.22.727119",
+   "identity_tokens": [
+    "DOI:10.64898/2026.05.22.727119"
+   ],
+   "title": "Carbon: Decoding the Language of Life",
+   "reason": "要旨はDNA配列理解・生成のためのゲノム基盤モデルを論じる内容で、LLMの手法を借用しているものの主題はゲノム科学への応用であり、LLM推論システムへの貢献は確認できないため対象外とした。",
+   "source_url": "https://doi.org/10.64898/2026.05.22.727119",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 97
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2607.14622",
+   "identity_tokens": [
+    "arXiv:2607.14622"
+   ],
+   "title": "ExaGEMM: Exploration Framework for CPU-Driven ML Inference via Associative In-Register Computing for Low-Bit GEMM",
+   "reason": "要旨では低ビットGEMMをCPU推論で実行するための探索フレームワークExaGEMMを提案し、レジスタ内LUT実行のハードウェア協調設計を論じているが、成果物は設計空間探索と新規ハードウェア機構の検討が中心で実推論システムでの検証範囲が限られるため保留とした。",
+   "source_url": "https://arxiv.org/abs/2607.14622",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 98
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/IJCNN54540.2023.10191515",
+   "identity_tokens": [
+    "DOI:10.1109/IJCNN54540.2023.10191515"
+   ],
+   "title": "Flexible BERT with Width- and Depth-dynamic Inference",
+   "reason": "要旨は幅・深さが動的に変わる柔軟なBERTの学習におけるサブネット干渉を層単位のニューラルグラフトで改善する内容で、動的推論を可能にするモデル側の工夫ではあるが、推論時の実行制御やサービングへの貢献は学習手法の範囲にとどまるため保留とした。",
+   "source_url": "https://doi.org/10.1109/IJCNN54540.2023.10191515",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 99
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.cor.2026.107568",
+   "identity_tokens": [
+    "DOI:10.1016/j.cor.2026.107568"
+   ],
+   "title": "Joint package design and compute resource allocation for large language model-as-a-service with endogenous consumer demand",
+   "reason": "LLM-as-a-serviceのパッケージ設計と計算資源配分を内生的需要のもとで扱う研究とみられるが、Crossref・Semantic Scholarとも要旨が未収録で一次要旨を取得できず、資源配分が推論サービング機構なのか価格・契約設計なのか判別できないため保留とした。",
+   "source_url": "https://doi.org/10.1016/j.cor.2026.107568",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 100
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:990d042905b8a41f601d3fdd975bc4051a852bcf",
+   "identity_tokens": [
+    "SemanticScholar:990d042905b8a41f601d3fdd975bc4051a852bcf"
+   ],
+   "title": "Data Movement Is All You Need: A Case Study of Transformer Networks",
+   "reason": "MLSys版の要旨で確認すると、Transformerの学習がデータ移動に律速されることを示しデータレイアウト最適化でBERT学習を高速化する内容であり、対象は学習スループットの改善のみで推論・サービングへの直接貢献はないため対象外とした。",
+   "source_url": "https://www.semanticscholar.org/paper/990d042905b8a41f601d3fdd975bc4051a852bcf",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 101
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:093cb3c296c4d4bc5a91f33b3c2266da0bef45c0",
+   "identity_tokens": [
+    "SemanticScholar:093cb3c296c4d4bc5a91f33b3c2266da0bef45c0"
+   ],
+   "title": "Can Transformers Solve Least Squares to High Precision?",
+   "reason": "タイトルが示すとおりTransformerが最小二乗問題を高精度に解けるかという表現能力・理論解析の研究であり、推論の実行効率やサービング機構とは無関係なため対象外とした。Semantic Scholarでも要旨は未収録だった。",
+   "source_url": "https://www.semanticscholar.org/paper/093cb3c296c4d4bc5a91f33b3c2266da0bef45c0",
+   "body_check": "title_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 102
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:4a54a4c8075264f8fc3dd6500499298e328ed3c4",
+   "identity_tokens": [
+    "SemanticScholar:4a54a4c8075264f8fc3dd6500499298e328ed3c4"
+   ],
+   "title": "Efficient Neural Network Based Systems on Mobile and Cloud Platforms",
+   "reason": "モバイル・クラウドプラットフォーム上の効率的なニューラルネットワークシステムを扱う学位論文とみられるが、Semantic Scholarに要旨がなく一次要旨を取得できなかったため、LLM推論への具体的な適用範囲を確認できず保留とした。",
+   "source_url": "https://www.semanticscholar.org/paper/4a54a4c8075264f8fc3dd6500499298e328ed3c4",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 103
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336",
+   "identity_tokens": [
+    "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336"
+   ],
+   "title": "Apple Intelligence Foundation Language Models",
+   "reason": "arXiv版要旨ではオンデバイスモデルでのKVキャッシュ共有や2ビット量子化対応学習、サーバーモデルのPT-MoEなど推論最適化も含むが、報告書の主体は基盤モデル自体の開発・学習・能力評価であり、推論システム単独の貢献としては切り分けが難しいため保留とした。",
+   "source_url": "https://www.semanticscholar.org/paper/e836ddc63fce4e3abdf453c8ad5821c4c1b4a336",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 104
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:d8a144b524524091006ea64e77e402e1740a3252",
+   "identity_tokens": [
+    "SemanticScholar:d8a144b524524091006ea64e77e402e1740a3252"
+   ],
+   "title": "DISTMM: Accelerating Distributed Multimodal Model Training",
+   "reason": "タイトルが明示するとおり分散マルチモーダルモデルの学習を高速化する研究であり、対象範囲外とする学習単独の高速化に該当するため対象外とした。要旨も取得を試みたが得られなかった。",
+   "source_url": "https://www.semanticscholar.org/paper/d8a144b524524091006ea64e77e402e1740a3252",
+   "body_check": "title_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 105
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2308.07470",
+   "identity_tokens": [
+    "arXiv:2308.07470"
+   ],
+   "title": "Symphony: Optimized DNN Model Serving using Deferred Batch Scheduling",
+   "reason": "要旨ではDNNモデルサービングで遅延制約を満たしながらバッチサイズを確保できない問題に対し、遅延バッチスケジューリングでスループットと効率を高めるサービングシステムSymphonyを提案しており、推論サービングのスケジューリングへの直接貢献が具体的である。",
+   "source_url": "https://arxiv.org/abs/2308.07470",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 106
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:252a64f3232786b80f4f74873fe27eb7fa1221be",
+   "identity_tokens": [
+    "SemanticScholar:252a64f3232786b80f4f74873fe27eb7fa1221be"
+   ],
+   "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+   "reason": "タイトルが明示するとおりエージェント強化学習のためのPyTorchネイティブ学習フレームワークであり、学習基盤の高速化が主題で推論サービングへの直接貢献は想定されないため対象外とした。",
+   "source_url": "https://www.semanticscholar.org/paper/252a64f3232786b80f4f74873fe27eb7fa1221be",
+   "body_check": "title_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 107
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:852513e5ee60ad8cd22110be384b47e3867c0241",
+   "identity_tokens": [
+    "SemanticScholar:852513e5ee60ad8cd22110be384b47e3867c0241"
+   ],
+   "title": "Optimized Linear Attention for TPU Hardware",
+   "reason": "TPUハードウェア向けに線形注意を最適化する研究とみられ推論カーネルへの応用可能性はあるが、Semantic Scholarの429等で一次要旨を取得できず、学習向けか推論向けかと最適化の具体的内容を確認できなかったため保留とした。",
+   "source_url": "https://www.semanticscholar.org/paper/852513e5ee60ad8cd22110be384b47e3867c0241",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 108
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ACCESS.2023.3299858",
+   "identity_tokens": [
+    "DOI:10.1109/ACCESS.2023.3299858"
+   ],
+   "title": "CE-BERT: Concise and Efficient BERT-Based Model for Detecting Rumors on Twitter",
+   "reason": "要旨はTwitter上のデマ検出のためにBERTのパラメータを削減したCE-BERTを提案する応用研究であり、効率化は検出タスクのモデル軽量化にとどまりLLM推論システムへの貢献ではないため対象外とした。",
+   "source_url": "https://doi.org/10.1109/ACCESS.2023.3299858",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 109
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/FMSys72110.2026.00012",
+   "identity_tokens": [
+    "DOI:10.1109/FMSys72110.2026.00012"
+   ],
+   "title": "MindFusion: Communication-Efficient Mobile-Cloud Orchestration for MLLMs",
+   "reason": "要旨ではモバイル端末とクラウドが協調してMLLMタスクを実行するMindFusionを提案し、生データを端末内に留める通信効率の高い編成でプライバシーと資源制約に対応しており、モバイル・クラウド推論オーケストレーションへの直接貢献が確認できる。",
+   "source_url": "https://doi.org/10.1109/FMSys72110.2026.00012",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 110
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1101/2024.09.30.615775",
+   "identity_tokens": [
+    "DOI:10.1101/2024.09.30.615775"
+   ],
+   "title": "SC-MAMBA2: Leveraging State-Space Models for Efficient Single-Cell Ultra-Long Transcriptome Modeling",
+   "reason": "要旨はシングルセル超長トランスクリプトームのモデリングに状態空間モデルMamba2を適用する研究であり、生命科学データへの応用が主題でLLM推論システムとは無関係なため対象外とした。",
+   "source_url": "https://doi.org/10.1101/2024.09.30.615775",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 111
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1007/s11760-025-04115-6",
+   "identity_tokens": [
+    "DOI:10.1007/s11760-025-04115-6"
+   ],
+   "title": "SelectGAN: Mamba based explicit selectivity GAN for generating structured content",
+   "reason": "タイトルが示すとおりMambaベースのGANで構造化コンテンツを生成するモデル研究であり、生成モデルのアーキテクチャ提案であって推論システムやサービングの効率化ではないため対象外とした。Semantic Scholarでも要旨は未収録だった。",
+   "source_url": "https://doi.org/10.1007/s11760-025-04115-6",
+   "body_check": "title_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 112
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b",
+   "identity_tokens": [
+    "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b"
+   ],
+   "title": "E NHANCED D YNAMIC M ODULATION WITH G LOBAL R E - CURRENT I NHIBITION N ETWORKS FOR M ULTI - TASK R EIN - FORCEMENT L EARNING",
+   "reason": "タイトルが明示するとおりマルチタスク強化学習のための動的変調ネットワークの研究であり、LLM推論とは異分野の学習アルゴリズムであるため対象外とした。要旨の取得も429で失敗した。",
+   "source_url": "https://www.semanticscholar.org/paper/39578fe80c3f2ce38aca71ca2b71751efe113a0b",
+   "body_check": "title_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 113
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198",
+   "identity_tokens": [
+    "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198"
+   ],
+   "title": "Practical Evaluation of Machine Learning Efficiency Requires Model Life Cycle Assessment",
+   "reason": "機械学習の効率評価にはモデルライフサイクル全体の評価が必要と論じる研究とみられ、推論効率の評価観点に関わりうるが、Semantic Scholarの429で一次要旨を取得できず、推論システムへの具体的な方法論的貢献を確認できなかったため保留とした。",
+   "source_url": "https://www.semanticscholar.org/paper/b640029df82f3a0a0d309023fa6c5a56499cd198",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 114
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/IISWC71020.2026.00028",
+   "identity_tokens": [
+    "DOI:10.1109/IISWC71020.2026.00028"
+   ],
+   "title": "LifeKV: Reducing SSD Write Amplification with Lifetime-Aware KV Cache Placement in Multi-Turn LLM Serving",
+   "reason": "要旨ではマルチターンLLMサービングでSSDをKVキャッシュの階層として使う際の書き込み増幅を、KVオブジェクトの寿命を意識した配置LifeKVで削減しサービング遅延への影響を抑える内容であり、KVキャッシュ配置への直接貢献が具体的である。",
+   "source_url": "https://doi.org/10.1109/IISWC71020.2026.00028",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 115
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/PESGM58988.2026.11693290",
+   "identity_tokens": [
+    "DOI:10.1109/PESGM58988.2026.11693290"
+   ],
+   "title": "Learning to Compress: Energy-Aware Large Language Model Serving via Adaptive KV Caching",
+   "reason": "要旨ではLLM推論の電力・炭素負荷に対し、KVキャッシュ圧縮を強化学習で適応的に制御するエネルギー配慮型サービングフレームワークを提案し、推論性能とエネルギー効率の両立を図っており、LLMサービングへの直接貢献が確認できる。",
+   "source_url": "https://doi.org/10.1109/PESGM58988.2026.11693290",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 116
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1145/3805621.3807628",
+   "identity_tokens": [
+    "DOI:10.1145/3805621.3807628"
+   ],
+   "title": "Reducing Language Model Inference Latency using CPU-Assisted Serving",
+   "reason": "要旨ではGPU不足下の言語モデル推論遅延を削減するため、遊休CPUノードからGPU仮想化で遠隔GPUへAPIコールを転送しCPU側計算と組み合わせるCPU支援サービングを提案しており、推論サービングの資源活用への直接貢献が具体的である。",
+   "source_url": "https://doi.org/10.1145/3805621.3807628",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 117
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e",
+   "identity_tokens": [
+    "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e"
+   ],
+   "title": "TAP: Efficient Derivation of Tensor Parallel Plans for Large Neural Networks",
+   "reason": "大規模ニューラルネットワーク向けにテンソル並列計画を効率的に導出するTAPは分散推論にも関わりうるが、Semantic Scholarに要旨がなく一次要旨を取得できなかったため、対象が学習主体か推論を含むか判別できず保留とした。",
+   "source_url": "https://www.semanticscholar.org/paper/e3a181af6e90848e9fa0cb7ef042e4ef678eab3e",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 118
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1145/3711896.3737865",
+   "identity_tokens": [
+    "DOI:10.1145/3711896.3737865"
+   ],
+   "title": "KDD 2025 Workshop on Inference Optimization for Generative AI",
+   "reason": "要旨は生成AI向け推論最適化をテーマとするKDDワークショップの開催趣旨と研究・実務の交流を述べる紹介文であり、技術的な研究成果そのものではないため対象外とした。",
+   "source_url": "https://doi.org/10.1145/3711896.3737865",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 119
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/TPDS.2023.3281931",
+   "identity_tokens": [
+    "DOI:10.1109/TPDS.2023.3281931"
+   ],
+   "title": "A Survey on Auto-Parallelism of Large-Scale Deep Learning Training",
+   "reason": "要旨は大規模深層学習の学習を対象に分散学習アルゴリズムの自動並列化を整理したサーベイであり、扱うのは学習時の並列化のみで推論・サービングへの直接貢献は確認できないため対象外とした。",
+   "source_url": "https://doi.org/10.1109/TPDS.2023.3281931",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T07:15:00+09:00",
+   "last_checked_at": "2026-11-23T07:15:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 120
+  }
+ ]
+}
