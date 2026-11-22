@@ -174,6 +174,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
 
+- **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
+  実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：2  
+  個々の鍵・値を主記憶から再読込する費用が再計算より安くても、再利用時までキャッシュに残っていなければ高速化は実現しない。一方、高い演算能力を持つH800では退避・再読込が一貫して不利であり、容量を増やせば必ず得になるわけではない。主張する93%の削減は再計算された入力トークン数についてであり、すべての計算費用やサービス料金が93%減ることを意味しない。
+
 - **2026-08 · [Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches](2026-2608.01657-prefixshield-admission-responsibility.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   共有KVキャッシュで新規ブロックを作った利用者に持続的な回収責任を持たせ、負債中の再利用昇格を抑えつつ、その利用者の低価値ブロックから追い出すことで、固定分割なしに他利用者の接頭辞再利用を守る方式。
@@ -201,10 +205,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
-
-- **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
-  実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：1  
-  個々の鍵・値を主記憶から再読込する費用が再計算より安くても、再利用時までキャッシュに残っていなければ高速化は実現しない。一方、高い演算能力を持つH800では退避・再読込が一貫して不利であり、容量を増やせば必ず得になるわけではない。主張する93%の削減は再計算された入力トークン数についてであり、すべての計算費用やサービス料金が93%減ることを意味しない。
 
 - **2026-08 · [SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding](2026-2608.07915-spectra-pushing-the-kv-cache-beyond-the-2-bit-cliff-via-spectral-transfo.md)**  
   実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：1  

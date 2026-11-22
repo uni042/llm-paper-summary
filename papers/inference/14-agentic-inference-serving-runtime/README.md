@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（94本）
+## 自動生成の論文一覧（95本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -45,13 +45,13 @@
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：13  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
 
+- **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
+
 - **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
-
-- **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
 - **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -62,12 +62,16 @@
   ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。
 
 - **2026-04 · [KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving](2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
 
 - **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   複数の言語モデルエージェントが計画、検索、コード生成、試験などを繰り返す処理では、一つの利用者要求が多段階の作業へ分かれ、途中結果によって分岐や再試行が発生する。個々の言語モデルの生成速度だけを改善しても、外部ツールの待機、複数エージェントの依存関係、GPUメモリに残る鍵・値キャッシュ、資源の偏りによって、要求全体の終了時間が長くなる。
+
+- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
 - **2026-05 · [Leyline: KV Cache Directives for Agentic Inference](2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -80,10 +84,6 @@
 - **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   AVOは進化的プログラム探索の変異演算子を固定的なLLM生成呼出しから、過去の実装、ハードウェア資料、実行・性能測定へ自律的にアクセスしてコードの修正・検証を反復するエージェントへ置き換える。NVIDIA B200上のBF16注意カーネルを7日間自律改善し、40の成功版を記録。
-
-- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
 - **2026-07 · [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md)**  
   実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：3  
@@ -116,6 +116,10 @@
 - **2026-01 · [Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents](2026-2601.01885-agentic-memory-learning-unified-long-term-and-short-term-memory-manageme.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長時間動作するLLMエージェントには、会話や作業をまたいで残す長期記憶（Long-Term メモリ; LTM）と、現在のプロンプト内で参照する短期記憶（Short-Term メモリ; STM）がある。従来は、長期記憶の追加・更新を外部の記憶管理器に任せ、短期文脈の検索・要約は一定間隔や文脈長しきい値で動かすことが多かった。
+
+- **2026-11 · [When Cache Pressure Becomes a Trap: Metastability in Agent Serving](2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  短い流入急増が接頭辞キャッシュの溢れとセッション滞留のフィードバックで持続障害になる準安定障害を実機で示し、流体モデルで脆弱条件を導いた上で、固定優先度・予測ピークによる受付制限・デコードメモリ貸し出しで防ぐ方式を提案した。
 
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -163,9 +167,9 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
-- **2026-11 · [When Cache Pressure Becomes a Trap: Metastability in Agent Serving](2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.md)**  
+- **2026-11 · [Bursts That Outlast Themselves: Persistent Degradation in Prefix-Cached Agent Serving](2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  短い流入急増が接頭辞キャッシュの溢れとセッション滞留のフィードバックで持続障害になる準安定障害を実機で示し、流体モデルで脆弱条件を導いた上で、固定優先度・予測ピークによる受付制限・デコードメモリ貸し出しで防ぐ方式を提案した。
+  数分のバーストがKVプールを溢れさせ、ヒット率約1割の劣化が負荷回復後も続く準安定故障を対照実験で示し、受付済みセッションの一時停止とKV需要の予算制御が回復と予防に効くことを示した研究。
 
 - **2026-10 · [Taking Tokenization off the Host for Agentic LLM Serving](2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md)**  
   実装：[✓](https://github.com/Msiavashi/GraphTok) ・ リポジトリ内被引用：0  

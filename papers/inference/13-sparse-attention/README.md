@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（211本）
+## 自動生成の論文一覧（212本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -277,6 +277,10 @@
 - **2026-11 · [Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention](2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-spar.md)**  
   実装：[✓](https://github.com/ArjunKrishnak/dsa-multi-layer-indexer) ・ リポジトリ内被引用：0  
   疎な注意の索引走査を注意の前から外し、前の層の選択で注意しながら自層の走査を裏で走らせる方式で、層間再利用と合成すると保持率二分の一で最大十四・五パーセント速くデコードでき、保持率を半分にしてもなお速いと報告した。
+
+- **2026-11 · [LeanSparse: Memory-Efficient Serving for Native Sparse-Attention LLMs](2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルの層単位ストリーミングと、積量子化コードによる粗密二段のインデクス探索で、インデクサキーのGPU常駐とプリフィルの一時メモリを削り、長文脈の同時実行数と応答開始を改善する疎注意サービング方式。
 
 - **2026-11 · [Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention](2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

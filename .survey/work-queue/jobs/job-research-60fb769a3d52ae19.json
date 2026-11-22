@@ -35,10 +35,15 @@
   "selection_reason": "ネイティブ疎注意LLM向けに、prefillでは層履歴を二つの再利用バッファでストリーミングしdecodeでは粗密二段の索引で候補を絞るLeanSparseをSGLangへ実装し、950K文脈で同時リクエスト2.95倍とdecodeスループット2.14倍を一次要旨で示している。",
   "semantic_scholar_id": "19ca57fe2ddf952c158f86a9985b0600a4e590c1",
   "source_url": "https://arxiv.org/abs/2611.04671",
-  "status": "ready",
+  "status": "superseded",
   "title": "LeanSparse: Memory-Efficient Serving for Native Sparse-Attention LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T05:30:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.md",
+  "represented_canonical_id": "arXiv:2611.04671",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

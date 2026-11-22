@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（636本）
+## 自動生成の論文一覧（637本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -205,6 +205,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/js-lee-AI/ByteCross) ・ リポジトリ内被引用：3  
   LLMの一トークン復号では、線形層の重みをメモリから読み込む費用と、過去文脈のKVキャッシュを読み込む費用が競合する。前者はモデルの構造でほぼ固定され、後者は文脈長に比例して増える。活性化疎化は現在の入力で活性化しているニューロンに対応する射影重みだけを読み込み、KV疎化は注意で参照する過去トークンを選んでキャッシュ読出しを減らす。
 
+- **2026-09 · [When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse](2026-2609.28870-when-fancy-eviction-fails-rethinking-cache-replacement-for-llm-prefix-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  接頭辞キャッシュ（prefix キャッシュ）は長文脈の事前充填（プリフィル）費用を下げる重要な機構だが、GPUの高帯域幅メモリ（HBM）には容量制限があるため、どのブロックを保持し、どれを退避するかを決める必要がある。
+
 - **2026-09 · [H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache](2026-2609.24197-h-spec-parallel-speculative-decoding-without-a-drafter-side-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   H-Specは、投機的復号（投機的復号）の軽量な候補生成器であるドラフターが、対象モデルの隠れ状態を各入力位置で別の鍵・値キャッシュ（KV キャッシュ）へ射影して保存する方式に対し、その追加キャッシュを廃止するための混成Mamba・注意ドラフターである。
@@ -313,9 +317,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/heejunkim00/ResidualQuant) ・ リポジトリ内被引用：2  
   最終ループのKVを参照に残し他ループの差分だけを2ビットで保存する残差量子化で、KV保存量を80.7パーセント減らしながらBF16に近い精度を保った。
 
-- **2026-09 · [When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse](2026-2609.28870-when-fancy-eviction-fails-rethinking-cache-replacement-for-llm-prefix-re.md)**  
+- **2026-09 · [The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems](2026-2609.27746-kv-cache-working-set-online-capacity-planning.md)**  
+  実装：[✓](https://github.com/llc-kc/kv_cache_capacity_estimator) ・ リポジトリ内被引用：2  
+  LRUのスタック距離をFenwick木で解析し、接頭辞KVキャッシュの目標ヒット率に必要な容量を1回の要求トレースからオンライン推定する。
+
+- **2026-09 · [Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation](2026-2609.02027-multi-turn-lru-hit-ratio-mean-field.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  接頭辞キャッシュ（prefix キャッシュ）は長文脈の事前充填（プリフィル）費用を下げる重要な機構だが、GPUの高帯域幅メモリ（HBM）には容量制限があるため、どのブロックを保持し、どれを退避するかを決める必要がある。
+  多ターン会話の最終使用時刻型鍵値キャッシュを確率モデル化し、メモリ容量と会話到着率からヒット率を推定する平均場式を導出。Qwen3-8B実機評価で到着率0.5〜2.0毎秒の条件において絶対誤差0.015未満・相対誤差7%未満を確認する。
 
 - **2026-09 · [ARC-KV: Amortizing Anchor Search for Reconstruction-Based KV Cache Compaction](2026-2609.36835-arc-kv-amortizing-anchor-search-for-reconstruction-based-kv-cache-compac.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -405,6 +413,14 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/ML-GSAI/ReFusion) ・ リポジトリ内被引用：2  
   応答をスロットへ分割し、スロット間は拡散的に選んでスロット内は自己回帰で埋め、並べ替えでKVキャッシュを全面再利用することで、拡散モデルの並列性と自己回帰モデルの一貫性を両立させた生成方式。
 
+- **2026-10 · [Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads](2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  セッションのKVキャッシュ所有先を固定し、実行先だけを待ち行列理論に基づく混雑価格付き目的関数でリクエストごとに選ぶことで、キャッシュ再利用と負荷分散を両立させる分散スケジューラ。
+
+- **2026-10 · [Understanding KV Residency in Production-Scale Agentic LLM Workloads](2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  1億2100万回超の本番呼出しを分析し、エージェントのKV保持がセッション規模と配置の両面で律速すること、休止上限と低精度複製の保持が再計算を大きく減らすことを示した。
+
 - **2026-10 · [Monte Carlo Estimation for KV Cache Eviction](2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   履歴が長くなるほどメモリ容量と転送帯域を圧迫するため、限られた保持枠に重要なトークンだけを残す削除方式が研究されている。一方、同じ条件のサンプル当たり実行時間はAnDProの7.8799秒に対し17.5342秒であり、速度向上ではない。
@@ -457,10 +473,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Superone77/UniCache) ・ リポジトリ内被引用：1  
   課題ごとに変わるKVキャッシュの種類構成と種類ごとの圧縮の好みを、オフライン較正による方針割当てと注意誘導型の予算配分で扱う学習不要の圧縮枠組みで、理解と編集で5倍の圧縮と最大1.78倍の高速化を得た。
 
-- **2026-09 · [The KV Cache Working Set: Online Capacity Planning for LLM Inference Systems](2026-2609.27746-kv-cache-working-set-online-capacity-planning.md)**  
-  実装：[✓](https://github.com/llc-kc/kv_cache_capacity_estimator) ・ リポジトリ内被引用：1  
-  LRUのスタック距離をFenwick木で解析し、接頭辞KVキャッシュの目標ヒット率に必要な容量を1回の要求トレースからオンライン推定する。
-
 - **2026-09 · [Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning](2026-2609.03430-random-attention-kv-cache-eviction.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/Random-Attention) ・ リポジトリ内被引用：1  
   Random 注意機構は、入力文を必ず保持し、生成した推論過程のKVだけをヘッド別に無作為保持することで、選択器の採点計算を省き、同じ容量で強い選択法に近い正答率と高い提供スループットを得る。
@@ -468,10 +480,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [PatchKV: Weight-Space Compensation of KV Cache](2026-2609.39329-patchkv-weight-space-compensation-of-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数の質問が同じ長い文書やコードベースを参照する場合、文脈を一度だけ読み込み、そのKVを再利用することで質問ごとの計算を減らせる。
-
-- **2026-09 · [Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation](2026-2609.02027-multi-turn-lru-hit-ratio-mean-field.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  多ターン会話の最終使用時刻型鍵値キャッシュを確率モデル化し、メモリ容量と会話到着率からヒット率を推定する平均場式を導出。Qwen3-8B実機評価で到着率0.5〜2.0毎秒の条件において絶対誤差0.015未満・相対誤差7%未満を確認する。
 
 - **2026-09 · [MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs](2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-black.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -755,6 +763,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   同時に常駐する複数エージェントのキャッシュへ、直近のクエリ・キー・バリューから推定した感度に基づき共有予算の下でビット幅を協調配分する量子化で、平均三ビットの平均正解率六八・三五パーセントと最強の比較対象比プラス〇・五九ポイント、別条件でキャッシュ最大容量の三二・〇八パーセント削減と一・三八倍の高速化を報告した。
 
+- **2026-11 · [BitDecoding-FP4: Native FP4 KV Cache Decoding via Algorithm-System Co-Design](2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-des.md)**  
+  実装：[✓](https://github.com/OpenBitSys/BitDecoding-FP4) ・ リポジトリ内被引用：0  
+  クエリの二重残差表現、確率のアンダーフロー対策、キーの外れ値対策と転置ソフトマックスを組み合わせ、FP4テンソルコアで直接デコードしながらBF16並みの精度と2.4倍から3.0倍のサービングスループットを得るFP4 KVキャッシュ方式。
+
 - **2026-10 · [ZipFusion: Fusing Lossless KV Decompression with Attention for Efficient LLM Decoding](2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   無損失圧縮したKVキャッシュを注意カーネルが直接読み、レジスタ内の簡単なビット演算で値を再構成することで、復元の受け渡しを消してデコードの帯域を下げ、空いたメモリを同時実行数の増加へ回す仕組み。
@@ -794,14 +806,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [VFold: Symmetry-Aware Cross-Layer Value Cache Compression](2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.md)**  
   実装：[✓](https://github.com/nverma1/vfold) ・ リポジトリ内被引用：0  
   注意の対称性で整列写像を重みへ畳み込み、関数を変えずに隣接層のバリューキャッシュを平均共有する層間圧縮。注意計算は無改変で、誤差はマージの瞬間だけに生じる。
-
-- **2026-10 · [Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads](2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  セッションのKVキャッシュ所有先を固定し、実行先だけを待ち行列理論に基づく混雑価格付き目的関数でリクエストごとに選ぶことで、キャッシュ再利用と負荷分散を両立させる分散スケジューラ。
-
-- **2026-10 · [Understanding KV Residency in Production-Scale Agentic LLM Workloads](2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  1億2100万回超の本番呼出しを分析し、エージェントのKV保持がセッション規模と配置の両面で律速すること、休止上限と低精度複製の保持が再計算を大きく減らすことを示した。
 
 - **2026-10 · [TwinPrune: Density-Aware Two-Phase Token Pruning for Vision-Language Models](2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-mode.md)**  
   実装：[✓](https://github.com/Kai-Liu001/TwinPrune) ・ リポジトリ内被引用：0  

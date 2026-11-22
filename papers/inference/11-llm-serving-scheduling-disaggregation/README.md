@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（600本）
+## 自動生成の論文一覧（601本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -24,13 +24,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   地域ごとに異なるLLM推論需要を別地域へ逃がしつつ、接頭辞木でKVキャッシュ共有と要求待ち行列を見て経路を選び、同等処理量を9台で達成して費用を25%削減する。
 
+- **2026-01 · [Concur: Proactive Agent-Level Admission Control for Efficient Agentic Batch Inference](2026-2601.22705-concur-agentic-admission-control.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  非同期エージェントのKV接頭辞がLRU追い出しと再計算を繰り返す中盤スラッシングを、KV使用率・ヒット率を混雑信号にしたエージェント単位の加算増加・乗算減少型受入れ制御で未然に抑える方式。
+
 - **2025-12 · [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   プリフィル・通信・デコードを共通の「トークン速度」で観測し、突発負荷では既存デコードGPUを一時的なプリフィル処理へ転用して、新規GPU起動の遅れを埋める自動スケーリング方式。
-
-- **2026-01 · [Concur: Proactive Agent-Level Admission Control for Efficient Agentic Batch Inference](2026-2601.22705-concur-agentic-admission-control.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  非同期エージェントのKV接頭辞がLRU追い出しと再計算を繰り返す中盤スラッシングを、KV使用率・ヒット率を混雑信号にしたエージェント単位の加算増加・乗算減少型受入れ制御で未然に抑える方式。
 
 - **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -236,6 +236,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   プリフィル時のMoEエキスパート活性化から署名を作り、似た署名の要求を同じデコードGPUへ集めて一括読込する専門家重みの種類を減らし、TPOTのばらつきを抑える。
 
+- **2026-06 · [Service-Induced Congestion in Memory-Constrained LLM Serving](2026-2606.15555-service-induced-congestion-memory-constrained-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  生成中にKVキャッシュが増えるため現時点で安全な受入れが将来の追い出し連鎖を作ることを力学系で示し、要求長の非同期化と受入れ率制限を安定化原理として導く。
+
 - **2026-06 · [ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving](2026-2606.18741-remp-runtime-model-parallelism-reconfiguration.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   TP/PP切替で重み・KV・通信群・ワーカーを作り直す代わりに、CPU共有重み、二次元KV移送、事前生成通信状態、待機ワーカーを再利用し、数秒で並列構成を変更できるLLMサービング方式。
@@ -304,9 +308,9 @@
   実装：✓ ・ リポジトリ内被引用：2  
   モデル・検証・実行先をワークフロー全体で共同選択し、混雑度別の事前計画を未送信部分だけ切り替えることで、品質を保ちながらエージェント処理の遅延と有効スループットを改善する。
 
-- **2026-06 · [Service-Induced Congestion in Memory-Constrained LLM Serving](2026-2606.15555-service-induced-congestion-memory-constrained-serving.md)**  
+- **2026-07 · [Metronome: Bound the Cache, Keep the Beat for Real-Time Interaction Model Serving](2026-2607.02640-metronome.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  生成中にKVキャッシュが増えるため現時点で安全な受入れが将来の追い出し連鎖を作ることを力学系で示し、要求長の非同期化と受入れ率制限を安定化原理として導く。
+  一方、自由生成の品質維持に重要な冒頭の注意シンク（注意機構 sink）トークンは固定保持する。
 
 - **2026-06 · [Recency/Frequency Adaptive KV Caching for Large Language Model Serving](2026-2606.21238-recency-frequency-adaptive-kv-caching-for-large-language-model-serving.md)**  
   実装：[✓](https://github.com/Y-aang/vllm-ARC) ・ リポジトリ内被引用：2  
@@ -488,10 +492,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   各デコードワーカーの将来バッチ枠とKV容量へ影価格を付け、SLO報酬が資源費を上回る要求だけをルーティングして、平均・末尾遅延とスループットの優先順位を切り替える。
 
-- **2026-07 · [Metronome: Bound the Cache, Keep the Beat for Real-Time Interaction Model Serving](2026-2607.02640-metronome.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  一方、自由生成の品質維持に重要な冒頭の注意シンク（注意機構 sink）トークンは固定保持する。
-
 - **2026-07 · [KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling](2026-2607.09153-kv-prm-efficient-process-reward-modeling-via-kv-cache-transfer-for-multi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ここで$d$は隠れ次元であり、KVの生成自体を省く方式ではない。NVIDIA GH200 120GBで8B・4096トークンの採点は172.0ミリ秒から4.6ミリ秒へ短縮した。
@@ -600,6 +600,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   GPU割当とプロンプト振り分けを構成別遅延モデルと双対価格で共同最適化し、同一クラスタでも配備構成がSLO下の達成品質を最大87%変えることを示す。
 
+- **2026-04 · [Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees](2026-2604.11001-flow-controlled-scheduling-stability.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  要求の実行開始率を流量制御し、出力長未知時は先入れ先出し受付と後入れ先出し追い出しを組み合わせ、KV容量超過確率を理論的に抑えながら処理量と尾部遅延を改善する。
+
 - **2026-04 · [Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving](2026-2604.08075-dual-pool-token-budget-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   短文が大半なのに全GPUを最長文脈向けに設定する無駄を、短文・長文の2群と自己較正する総トークン予算ルーティングで解き、KV容量の過剰予約、要求追い出し、GPU費用を同時に削減する。
@@ -693,6 +697,10 @@
 - **2026-11 · [Introducing Cluster Efficiency to LLM Serving: Pooling Economical Accelerators over Fast Interconnects](2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-acceler.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ドル当たりとジュール当たりのトークンで測るクラスタ効率を物差しに、安価なチップ三十二個を高速リンクで束ねたクラスタが、高性能装置八台のサーバーを全三十六条件で上回り、遅い通信の模擬では優位が全て消えることを示した。
+
+- **2026-11 · [Apto: Self-Adaptive CPU-GPU Hybrid MoE Inference on Shared PCs](2026-2611.01859-apto-self-adaptive-cpu-gpu-hybrid-moe-inference-on-shared-pcs.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分担を事前に決めず、両端キューからCPUとGPUが完了順にエキスパートを取り合う自己適応スケジューリングで、共有PCのCPU競合に分担自体を追随させるMoEハイブリッド推論方式。
 
 - **2026-10 · [Unlocking Structured Pruning for Reasoning Language Models via Attention-Preserving MLP Trimming](2026-2610.19121-unlocking-structured-pruning-for-reasoning-language-models-via-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1285,10 +1293,6 @@
 - **2026-04 · [Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale](2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   内部が見えない言語モデル接口の手前で利用者が行う制御を配分・順序付け・過負荷制御の三層に分け、出力長の粗い事前推定が無いと短い要求の尾遅延が約五・八倍に膨らむこと、三層の完全構成が均衡・高混雑で完了率と期限充足率をともに一〇〇パーセントに保つことを模擬提供者の実験で示した。
-
-- **2026-04 · [Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees](2026-2604.11001-flow-controlled-scheduling-stability.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  要求の実行開始率を流量制御し、出力長未知時は先入れ先出し受付と後入れ先出し追い出しを組み合わせ、KV容量超過確率を理論的に抑えながら処理量と尾部遅延を改善する。
 
 - **2026-04 · [Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference](2026-2604.07472-fast-heterogeneous-serving-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2337,7 +2341,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1862  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1863  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

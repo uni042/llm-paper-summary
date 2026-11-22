@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1e1c5efea9882dfee6ee0c765cf70cf07ef9f888",
+  "base_commit": "72cc8a4012e648c4e46175f7270bdc56ade3c872",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1062,6 +1062,7 @@
     "2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-inference.json",
     "2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decoding-for-vision-language-models.json",
     "2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-caching.json",
+    "2026-2611.01859-apto-self-adaptive-cpu-gpu-hybrid-moe-inference-on-shared-pcs.json",
     "2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.json",
     "2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inverted-file-index.json",
     "2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.json",
@@ -1076,6 +1077,7 @@
     "2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.json",
     "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
     "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json",
+    "2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.json",
     "2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-the-drafter.json",
     "2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reduction-in-moe-serving.json",
     "2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contextual-compatibility-in-non-prefix-reuse.json",
@@ -1087,9 +1089,11 @@
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
     "2026-2611.09225-fused-softmax-for-efficient-quantized-attention.json",
+    "2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-design.json",
     "2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-based-multi-agent-systems.json",
     "2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffusion-draft-trees.json",
     "2026-2611.13017-multi-future-drafting-mixture-block-drafters-for-tree-verified-speculative-decoding.json",
+    "2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-agent-serving.json",
     "2026-2611.13442-forespark-joint-draft-and-verification-budget-scheduling-for-parallel-speculative-decoding.json",
     "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
@@ -48306,6 +48310,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.01859": {
+      "order": [
+        "2026-11-22T05:24:56+00:00",
+        "2026-2611.01859-apto-self-adaptive-cpu-gpu-hybrid-moe-inference-on-shared-pcs.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04671": {
+      "order": [
+        "2026-11-22T05:26:04+00:00",
+        "2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.09825": {
+      "order": [
+        "2026-11-22T05:27:12+00:00",
+        "2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-design.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.13412": {
+      "order": [
+        "2026-11-22T05:28:19+00:00",
+        "2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-agent-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60861,6 +60901,18 @@
     "arxiv:2611.01450": [
       "papers/inference/09-kernel-runtime-compilation/2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-.md"
+    ],
+    "arxiv:2611.01859": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.01859-apto-self-adaptive-cpu-gpu-hybrid-moe-inference-on-shared-pcs.md"
+    ],
+    "arxiv:2611.04671": [
+      "papers/inference/13-sparse-attention/2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.md"
+    ],
+    "arxiv:2611.09825": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-des.md"
+    ],
+    "arxiv:2611.13412": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-a.md"
     ]
   }
 }

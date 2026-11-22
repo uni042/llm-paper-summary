@@ -56,6 +56,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   Context-Aware MoEは低頻度専門家をCXL接続NDP側で計算し、重要度に応じたGPU配置と1〜4ビット量子化で重み転送を減らす。
 
+- **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](2026-2609.13537-dynamic-hbm-repartitioning.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  専門家重みとKVキャッシュ間のHBM境界をCUDA VMMで動的再分割し、マルチターンMoEのprefix-キャッシュ cliffを緩和する。
+
 - **2026-09 · [Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs](2026-2609.11744-building-py-kvcache-a-performance-characterization-of-external-kv-caching-for-vllm-with-nvme-ssds.md)**  
   実装：[✓](https://github.com/atlarge-research/py-kvcache) ・ リポジトリ内被引用：2  
   GPU・CPU・NVMe間のKV再利用を実測し、非同期直接I/O、固定容量ステージング、待機列先読み、再計算との損益分岐判定を組み合わせたvLLM外部KVキャッシュを実装・評価する。
@@ -123,10 +127,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading](2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   専門家活性化の系列予測、期限付きプリフェッチ、将来予測キャッシュ、CUDA Graph互換実行を統合し、MoEオフロードの転送待ちと実行時オーバーヘッドを同時に削減する。
-
-- **2026-09 · [Dynamic HBM Repartitioning for Multi-Turn MoE Serving](2026-2609.13537-dynamic-hbm-repartitioning.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  専門家重みとKVキャッシュ間のHBM境界をCUDA VMMで動的再分割し、マルチターンMoEのprefix-キャッシュ cliffを緩和する。
 
 - **2026-08 · [The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks](2026-2608.12114-the-ingestion-tax-adopting-file-backed-weights-in-tensor-frameworks.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
