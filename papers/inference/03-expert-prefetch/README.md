@@ -71,7 +71,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   11GBのGPUメモリしか持たないRTX 1080Tiでは全専門家を常駐させられず、CPUメモリから必要な専門家を都度転送すると待機時間が発生する。加えて、先読みの外れやすい浅い層へGPUキャッシュを重点配分し、最近使った専門家と繰り返し使う専門家を適応的に残す。
 
 - **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   将来必要になる専門家を予測しても、その先読みがPCIe帯域を占有すると、現在必要な専門家の緊急転送が遅れる。LayerScopeは、先読み、必要時転送、CPUでの直接計算を複数バッチ・複数層の時間軸で一体的に計画する。
 
 - **2025-10 · [ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference](2025-2510.26730-expertflow-adaptive-prefetch.md)**  
@@ -85,13 +85,13 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：46  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 ### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：✓ ・ リポジトリ内被引用：105  
+  実装：✓ ・ リポジトリ内被引用：106  
   Pre-gated MoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリより大きな規模で動かす際、CPU主記憶から専門家重みを読み込む時間を削減するための、モデル側のルーティング変更と実行系の協調設計である。著者らは単一のA100 80GBと大容量CPU主記憶を使い、SwitchTransformerの複数規模を評価した。
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  
