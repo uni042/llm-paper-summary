@@ -33,7 +33,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：81  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：82  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
@@ -171,6 +171,10 @@
 - **2026-02 · [RRAttention: Dynamic Block Sparse Attention via Per-Head Round-Robin Shifts for Long-Context Inference](2026-2602.05853-rrattention-dynamic-block-sparse-attention-via-per-head-round-robin-shif.md)**  
   実装：[✓](https://github.com/PaddlePaddle/PaddleFleet) ・ リポジトリ内被引用：2  
   提案法は各 S トークン区間からヘッドごとに異なる問い合わせを一つ選び、鍵を区間単位で集約して重要度を計算する。Llama-3.1-8BとQwen2.5-7BのHELMETでは、注意ブロックの約半分を省略しながら全注意の平均性能の99%以上を再現した。
+
+- **2026-10 · [Accelerating Cross-Model LLM Inference via Attention Map Reuse](2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.md)**  
+  実装：[✓](https://github.com/PKU-DAIR/MapFlow) ・ リポジトリ内被引用：1  
+  異種モデル間でKV状態ではなく注意マップを再利用する提供基盤で、線形変換と部分再計算、疎圧縮と融合カーネルにより、品質を保ちながら初回トークン遅延を15から20パーセント減らしスループットを最大25パーセント高めた。
 
 - **2026-09 · [SparseEngine: Sparse-First Inference Engine](2026-2609.39068-sparseengine-sparse-first-inference-engine.md)**  
   実装：[✓](https://github.com/CURRENTF/SparseEngine) ・ リポジトリ内被引用：1  
@@ -365,10 +369,6 @@
 - **2026-10 · [Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy](2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarch.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定予算の階層型疎KVに対し、余剰HBMへの任意履歴の保持と負荷に応じた回収・再充填、検証クエリ間での欠落行の共有取得、窓有界のドラフトKVと再利用可能な検証用一時領域を加え、投機的デコードを階層型KVの上で正確に動かす方式。
-
-- **2026-10 · [Accelerating Cross-Model LLM Inference via Attention Map Reuse](2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.md)**  
-  実装：[✓](https://github.com/PKU-DAIR/MapFlow) ・ リポジトリ内被引用：0  
-  異種モデル間でKV状態ではなく注意マップを再利用する提供基盤で、線形変換と部分再計算、疎圧縮と融合カーネルにより、品質を保ちながら初回トークン遅延を15から20パーセント減らしスループットを最大25パーセント高めた。
 
 - **2026-09 · [SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures](2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterog.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -577,7 +577,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：188  
+  実装：✓ ・ リポジトリ内被引用：189  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
@@ -747,7 +747,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：351  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：352  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  

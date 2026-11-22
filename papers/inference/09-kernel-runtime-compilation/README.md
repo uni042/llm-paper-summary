@@ -188,6 +188,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   低ランク成分と残差成分の両方を量子化しやすい分布へ学習で作り替える4ビット量子化により、FP16に近い精度を保ちながら最大1.8倍の高速化を得た。
 
+- **2026-06 · [ReSET: Accurate Latency-Critical NVFP4 Reasoning via Step-Aware Temperature Scaling](2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperatu.md)**  
+  実装：[✓](https://github.com/aiha-lab/ReSET) ・ リポジトリ内被引用：1  
+  ステップ相対のエントロピー閾値でサンプリング温度を切り替えてNVFP4推論の正解率を最大2.6ポイント回復し、小バッチ向けCUDAコアカーネルでBF16比最大1.97倍のデコード高速化を実現する方式。
+
 - **2026-06 · [Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference](2026-2606.02823-qift-shift-friendly-no-zero-w2-post-training-quantization-for-rotated-w2.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Qiftは、大規模言語モデル（Large Language モデル; LLM）の推論を省メモリ化する際、2ビットの符号で表現できる四つの実数値をどこへ置くかを主題とする。通常の符号付き2ビット量子化は$\{-2,-1,0,+1\}$を復元値に使う。
@@ -586,10 +590,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   注意カーネルの固有空間で似たトークンをハッシュによりまとめ、プロンプトをモデル投入前に圧縮する訓練不要の方式。高圧縮で連続平均より品質を保つが、遅延では常に見劣りするため、圧縮率で経路を切り替える適応型が実用形になる。
 
-- **2026-06 · [ReSET: Accurate Latency-Critical NVFP4 Reasoning via Step-Aware Temperature Scaling](2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperatu.md)**  
-  実装：[✓](https://github.com/aiha-lab/ReSET) ・ リポジトリ内被引用：0  
-  ステップ相対のエントロピー閾値でサンプリング温度を切り替えてNVFP4推論の正解率を最大2.6ポイント回復し、小バッチ向けCUDAコアカーネルでBF16比最大1.97倍のデコード高速化を実現する方式。
-
 - **2026-06 · [P-Cast Precision in FP8 Attention: Sink-Induced Collapse and the Optimality of S=2^8](2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimali.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   アテンションシンク下でFP8変換により確率値がゼロへ落ちる崩壊を閉形式で定量化し、逆方向走査とスケール256のどちらでも解消でき、256が三条件を満たす最適な静的スケールであることを示す分析。
@@ -940,6 +940,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/thuml/FlashBias) ・ リポジトリ内被引用：2  
   注意バイアスを低ランク分解してクエリとキーへ埋め込み、二乗のメモリ読み込みを消すことでバイアス付き注意を無損失から近似まで含めて高速化した方式。
 
+- **2025-02 · [PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery](2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
+
 - **2025-11 · [You Had One Job: Per-Task Quantization Using LLMs’ Hidden Representations](2025-2511.06516-you-had-one-job-per-task-quantization-using-llms-hidden-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   一般的な学習後量子化（Post-学習 量子化; PTQ）は、言語モデルの重みを一律に4ビットへ圧縮したり、重み再構成誤差に基づいて精度を選んだりする。原著第4版では、Qwen2.5-7B-InstructのMMLU-Proで、TAQ-KLが35.35点・重み5.95GB、均一4ビットのAWQが23.54点・5.19GBだった。
@@ -991,10 +995,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-03 · [Maximum Redundancy Pruning: A Principle-Driven Layerwise Sparsity Allocation for LLMs](2025-2503.18377-maximum-redundancy-pruning-a-principle-driven-layerwise-sparsity-allocat.md)**  
   実装：[✓](https://github.com/Gaochang-bjtu/MRP) ・ リポジトリ内被引用：1  
   本論文は、大規模言語モデルの重み枝刈りで「全層に同じ疎度を設定すること」が精度を損ねる理由を実験的に調べ、その結果から層別疎度を決めるMaximum Redundancy Pruning（MRP）を提案する。特に全体の70%を削る高疎度では、ある層を削ると出力が急激に悪化する一方、別の層はさらに削っても影響が小さい。
-
-- **2025-02 · [PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery](2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
 
 - **2024-12 · [GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference](2024-2412.17560-gqsa-group-quantization-and-sparsity-for-accelerating-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1102,13 +1102,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：34  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
+- **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
+  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：31  
+  Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
+
 - **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
   実装：[✓](https://github.com/microsoft/T-MAC) ・ リポジトリ内被引用：30  
   重みのみを低ビット量子化した大規模言語モデルでは、重みは1〜4ビットでも活性値は8〜16ビット以上の精度を保つことが多い。論文はカーネルの最大6.6倍、平均3.6倍の改善、モデル全体で条件により2〜4倍の生成速度改善を報告する。
-
-- **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
-  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：30  
-  Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
 
 - **2024-06 · [FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion](2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md)**  
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：29  
@@ -1134,13 +1134,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：20  
   大規模言語モデルの推論では、特にバッチの小さい復号段階で重みを主記憶やGPUメモリから読み出す帯域が律速になりやすい。従来の二値化手法は、重要な重みを別扱いにしたり残差を追加したりして精度を回復するものの、重み当たり約1ビットの表現からさらに削る余地が残る。
 
+- **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
+  実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：17  
+  LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
+
 - **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
   実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：17  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
-
-- **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
-  実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：16  
-  LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
 
 - **2024-05 · [LeanAttention: Hardware-Aware Scalable Attention Mechanism for the Decode-Phase of Transformers](2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md)**  
   実装：[✓](https://github.com/microsoft/onnxruntime) ・ リポジトリ内被引用：16  

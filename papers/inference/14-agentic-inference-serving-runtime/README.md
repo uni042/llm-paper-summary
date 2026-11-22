@@ -41,13 +41,13 @@
   実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：14  
   エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
+- **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
+
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：13  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
-
-- **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  1350万GitHub Copilotセッションを解析し、直列的なLLM↔ツール連鎖、入力偏重、KVキャッシュの境界崩壊、長いターン間遊休を定量化してエージェント向け資源管理の設計根拠を示す。
 
 - **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -342,11 +342,11 @@
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
-  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/WujiangXu/A-mem-sys) ・ リポジトリ内被引用：38  
   従来の記憶システムでは、いつ保存し、どの形式で整理し、どの条件で取り出すかを開発者が固定する場合が多い。NeurIPS 2025正式掲載論文では、長期会話の質問応答データで六つの基盤モデルを評価し、特に時間推論や複数会話をまたぐ質問で改善を示した。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
-  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：36  
+  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：37  
   Mem0は、長期にわたり対話を続ける大規模言語モデル（LLM）エージェントに対し、毎回の質問で過去の全会話を読み直す代わりに、今後も必要になる事実だけを抽出・統合・検索する外部記憶基盤を提案する。
 
 - **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  

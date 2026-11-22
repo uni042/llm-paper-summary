@@ -17,7 +17,7 @@
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
 
 - **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
@@ -40,6 +40,10 @@
   実装：✓ ・ リポジトリ内被引用：9  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
+- **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
+
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
@@ -47,10 +51,6 @@
 - **2026-02 · [RelayCaching：協調LLMの生成KVキャッシュ再利用](2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
-
-- **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
 
 - **2026-04 · [Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding](2026-2604.12358-why-and-when-visual-token-pruning-fails-a-study-on-relevant-visual-infor.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -64,6 +64,14 @@
   実装：✓ ・ リポジトリ内被引用：7  
   視覚・言語・行動モデル（vision-language-action モデル; VLA）は、画像と自然言語の指示を統合し、ロボットの連続した操作を生成する。
 
+- **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  複数の専門言語モデルを順番に呼び出すエージェント型推論では、同じシステム指示、会話履歴、検索資料を何度も入力する。LLaMA-3.1-8Bを使うReAct型の8エージェント構成では、通常のモデル別KV方式に対して95パーセンタイル遅延（P95、遅い側5%に入る境界）を最大11.1倍短縮し、最大スループットを3.8倍に高めた。
+
+- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
+  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：7  
+  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
+
 - **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
@@ -76,10 +84,6 @@
   実装：✓ ・ リポジトリ内被引用：6  
   従来の対話方式では、利用者の発話が終わってからモデルが考え、応答が終わるまで次の入力を十分反映できない。著者のRTX 4090測定では、vLLMのINT4条件で毎秒212.3トークン、初回トークン遅延0.58秒、使用メモリ11GBを報告する。
 
-- **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  複数の専門言語モデルを順番に呼び出すエージェント型推論では、同じシステム指示、会話履歴、検索資料を何度も入力する。LLaMA-3.1-8Bを使うReAct型の8エージェント構成では、通常のモデル別KV方式に対して95パーセンタイル遅延（P95、遅い側5%に入る境界）を最大11.1倍短縮し、最大スループットを3.8倍に高めた。
-
 - **2026-02 · [HiFloat4 Format for Language Model Inference](2026-2602.11287-hifloat4-format-for-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   4ビット浮動小数点を使うとモデル容量とメモリ転送を削減できるが、4ビットの中で符号・指数・仮数をすべて表すと、精度と数値範囲の両立が難しい。そこで複数要素で尺度を共有するブロック浮動小数点（Block Floating-Point; BFP）を利用する。尺度が階層化されるため、外れ値が一部の要素だけにある場合も群全体の量子化刻みを粗くしすぎずに済む。
@@ -87,10 +91,6 @@
 - **2026-02 · [ApET: Approximation-Error Guided Token Compression for Efficient VLMs](2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md)**  
   実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：6  
   視覚トークンの重要度を注意ではなく線形再構成の誤差で測って圧縮する学習不要の方式で、約9割のトークン削減でも性能をほぼ保ち、高速注意カーネルとも併用できる。
-
-- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
-  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：6  
-  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
 
 - **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -208,6 +208,10 @@
   実装：[✓](https://github.com/peppery77/HAWK) ・ リポジトリ内被引用：3  
   画像の解像度や動画のフレーム数が増えると、入力長、注意計算、キー・値キャッシュの負荷が増える。視覚トークンを削減する既存方式には、画像特徴の類似性や注意得点で残すトークンを選ぶものがあるが、注意ヘッドを単純平均すると、画像理解に重要なヘッドとそうでないヘッドを同等に扱ってしまう。
 
+- **2026-04 · [Efficient Test-Time Scaling via Temporal Reasoning Aggregation](2026-2604.17304-efficient-test-time-scaling-via-temporal-reasoning-aggregation.md)**  
+  実装：[✓](https://github.com/qianfantianyuzhouzhou/TRACE) ・ リポジトリ内被引用：3  
+  推論時の計算量を増やすと難問の正答率を改善できる場合があるが、すべての問題で長い思考を最後まで生成することが効率的とは限らない。答えが既に定まった後も思考を続ける「過剰思考」は、トークン数と応答待ち時間を増やす。一方、途中の回答の確信度が高くなった瞬間に止めると、まだ検討が十分でない誤答を確定する危険がある。正答率も完全には維持していない。
+
 - **2026-04 · [Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling](2026-2604.04987-cactus-accelerating-auto-regressive-decoding-with-constrained-acceptance.md)**  
   実装：[✓](https://github.com/MANGA-UOFA/Cactus) ・ リポジトリ内被引用：3  
   検証器が毎トークンの計算を繰り返す必要を減らす一方、草案器が提案したトークンを確率的に棄却するため、草案器と検証器の分布が異なると効率が落ちる。Qwen3-14Bを検証器、0.6Bを草案器としたSpec-Benchの6種類の課題では、自己回帰生成に対する総合速度倍率がSpSの1.81倍からCactusの1.88倍へ改善した。
@@ -320,9 +324,17 @@
   実装：✓ ・ リポジトリ内被引用：2  
   FlashAttentionは、巨大な注意行列をGPUの高帯域メモリへ書き出さず、クエリ・キー・値を小さなブロックに分割してオンチップメモリで処理する。VFA（Vector Relieved Flash 注意機構）はこの残った部分に焦点を当てる。要旨ではC16V32という計算器構成を基準にC8V32、C4V32、C4V16で約2倍の高速化を報告する。
 
+- **2026-04 · [Towards Joint Quantization and Token Pruning of Vision-Language Models](2026-2604.17320-towards-joint-quantization-and-token-pruning-of-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  本論文は視覚言語モデル（VLM）の推論で、低ビット量子化と視覚トークン枝刈りを別々に設計すると品質が不安定になる問題を扱う。LLaVA-1.5-7B-hfで視覚トークンを最終30%まで削減した場合、6ベンチマークの完全精度モデルに対する平均性能保持率は95.65%だった。
+
 - **2026-04 · [Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling](2026-2604.18103-stability-implies-redundancy-delta-attention-selective-halting-for-effic.md)**  
   実装：[✓](https://github.com/verach3n/DASH) ・ リポジトリ内被引用：2  
   FlashAttentionは注意行列を外部メモリへ展開しないことで転送量を削減するが、入力トークンが多ければ必要な計算量自体は残る。DASH（Delta 注意機構 Selective Halting）は、各トークンの表現が層を進むにつれて更新されなくなる「意味的固定点」に着目する。
+
+- **2026-04 · [QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models](2026-2604.02816-qapruner-quantization-aware-vision-token-pruning-for-multimodal-large-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  視覚トークンの量子化のされにくさを群単位の模擬誤差と外れ値強度で測り、意味的な重要度と混ぜて残すトークンを選ぶことで、低ビット量子化と枝刈りを併用しても正解率が落ちにくい方式を示した。
 
 - **2026-04 · [MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs](2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -332,13 +344,13 @@
   実装：✓ ・ リポジトリ内被引用：2  
   動画の区間分割と静的トークンの統合、区間ごとの予算配分と多様性を最大化する選択、層の深さに応じた段階的な削減を組み合わせ、視覚トークンを10パーセントまで減らしても性能の9割以上を保つ階層型の枝刈り方式を示した。
 
-- **2026-04 · [Efficient Test-Time Scaling via Temporal Reasoning Aggregation](2026-2604.17304-efficient-test-time-scaling-via-temporal-reasoning-aggregation.md)**  
-  実装：[✓](https://github.com/qianfantianyuzhouzhou/TRACE) ・ リポジトリ内被引用：2  
-  推論時の計算量を増やすと難問の正答率を改善できる場合があるが、すべての問題で長い思考を最後まで生成することが効率的とは限らない。答えが既に定まった後も思考を続ける「過剰思考」は、トークン数と応答待ち時間を増やす。一方、途中の回答の確信度が高くなった瞬間に止めると、まだ検討が十分でない誤答を確定する危険がある。正答率も完全には維持していない。
-
 - **2026-04 · [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md)**  
   実装：[✓](https://github.com/nowazrabbani/moe_quantization) ・ リポジトリ内被引用：2  
   本研究は、混合専門家モデル（Mixture-of-Experts、MoE）の推論メモリを減らすため、全専門家を同じビット幅へ量子化する代わりに、専門家ごとに1〜3ビットなど異なる精度を割り当てる方式を提案する。Mixtral 8x7Bの8課題平均では、専門家平均2.5ビットの提案方式が68.38%、比較方式PMQが67.53%だった。
+
+- **2026-04 · [A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression](2026-2604.19572-a-self-evolving-framework-for-efficient-terminal-agents-via-observationa.md)**  
+  実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：2  
+  TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
 - **2026-03 · [TERMINATOR: Learning Optimal Exit Points for Early Stopping in Chain-of-Thought Reasoning](2026-2603.12529-terminator-learning-optimal-exit-points-for-early-stopping-in-chain-of-t.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -548,6 +560,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   拡散型言語モデルの量子化で、マスク状態ごとに活性変換を分け、注意出力へブロック単位の補償を入れて誤差の蓄積を抑える学習後量子化。4ビット条件で比較対象を上回り、最大1.69倍の高速化と3.14倍のメモリ削減を示した。
 
+- **2026-06 · [PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics](2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stre.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  残差ストリームの動態から量子化に弱い層を見つけ、その層だけ活性値を8ビットへ上げる混合精度方針。回転系の学習後量子化へそのまま重ねられ、4ビット設定のパープレキシティと下流精度を一貫して改善する。
+
 - **2026-06 · [P-MTP: Efficient Document Parsing via Multi-Token Prediction with Progressive Depth Scaling](2026-2606.24447-p-mtp-efficient-document-parsing-via-multi-token-prediction-with-progres.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数トークン予測（MTP）を使って将来のトークンを軽量に先読みし、基盤モデルで検証してまとめて確定できれば、同じ意味内容をより少ない大規模推論回数で生成できる。最も大きい5.24倍という数値は、Qwen3-VL-2BでPubTabNetの表解析を行う際の単体復号遅延26.71→5.10の比である。
@@ -624,10 +640,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   LoRP（Locality-Aware Redundancy Pruning）は、事前学習済み大規模言語モデルのTransformerブロックを、追加学習なしに削除する深さ枝刈り（depth 枝刈り）方式である。
 
-- **2026-05 · [GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding](2026-2605.15250-gqla-group-query-latent-attention-for-hardware-adaptive-large-language-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  多頭潜在注意（Multi-head Latent 注意機構; MLA）は鍵と値を共通の低ランク潜在ベクトルへまとめ、過去文脈から読み出すバイト数を大きく削減する。論文の中心的な「H20で3.4倍」は、文脈長8192・BF16・公開ピーク性能を入力した屋根線モデルによる注意部分の理論的処理量であり、実GPUで測ったモデル全体のトークン生成速度ではない。
-
 - **2026-05 · [Gated Subspace Inference for Transformer Acceleration](2026-2605.03109-gated-subspace-inference-for-transformer-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）のバッチサイズ1の逐次復号では、GPUの計算能力よりも重み行列を高帯域メモリ（HBM）から読む費用が律速になりやすい。Gated Subspace Inference（GSI）は、各層の活性化を低次元基底への射影と残差に分解し、残差が十分小さいトークンだけ、事前計算した低次元の重み像を使う方式である。
@@ -672,10 +684,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   実行時LoRA入力・NPU向け最適化・並行生成・自己投機的復号を統合し、Galaxy S24/S25で多用途LLMを単一グラフ展開する。
 
-- **2026-04 · [Towards Joint Quantization and Token Pruning of Vision-Language Models](2026-2604.17320-towards-joint-quantization-and-token-pruning-of-vision-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  本論文は視覚言語モデル（VLM）の推論で、低ビット量子化と視覚トークン枝刈りを別々に設計すると品質が不安定になる問題を扱う。LLaVA-1.5-7B-hfで視覚トークンを最終30%まで削減した場合、6ベンチマークの完全精度モデルに対する平均性能保持率は95.65%だった。
-
 - **2026-04 · [Tango: Taming Visual Signals for Efficient Video Large Language Models](2026-2604.09547-tango-taming-visual-signals-for-efficient-video-large-language-models.md)**  
   実装：[✓](https://github.com/xjtupanda/Tango) ・ リポジトリ内被引用：1  
   Tangoは、動画大規模言語モデル（Video LLM）へ渡す視覚トークンの数を削減する、学習不要の前処理方式である。LLaVA-OneVision-7Bの32フレーム評価では、視覚トークンを10%にしたとき元の4ベンチマーク平均性能の98.9%を保持し、実測推論速度は1.88倍となった。
@@ -699,10 +707,6 @@
 - **2026-04 · [R2-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction](2026-2604.18995-r2-dllm-accelerating-diffusion-large-language-models-via-spatio-temporal.md)**  
   実装：[✓](https://github.com/GATECH-EIC/R2-dLLM) ・ リポジトリ内被引用：1  
   拡散型モデルの復号に残る空間と時間の冗長さを、塊ごとの一括確定と安定トークンの早期確定、さらに冗長さの小さい軌跡での微調整で削り、歩数を最大88パーセント減らした。
-
-- **2026-04 · [QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models](2026-2604.02816-qapruner-quantization-aware-vision-token-pruning-for-multimodal-large-la.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  視覚トークンの量子化のされにくさを群単位の模擬誤差と外れ値強度で測り、意味的な重要度と混ぜて残すトークンを選ぶことで、低ビット量子化と枝刈りを併用しても正解率が落ちにくい方式を示した。
 
 - **2026-04 · [Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference](2026-2604.02985-prompt-compression-in-the-wild-measuring-latency-rate-adherence-and-qual.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -735,10 +739,6 @@
 - **2026-04 · [ART: Attention Run-time Termination for Efficient Large Language Model Decoding](2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-de.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ART（注意機構 Run-time Termination）は、大規模言語モデルの復号中に、注意計算の累積出力が十分安定したと判断できた時点で残りのキー・値（key-value; KV）ブロックへのアクセスを止める方式である。
-
-- **2026-04 · [A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression](2026-2604.19572-a-self-evolving-framework-for-efficient-terminal-agents-via-observationa.md)**  
-  実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：1  
-  TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
 - **2026-04 · [A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models](2026-2604.13440-a-kl-lens-on-quantization-fast-forward-only-sensitivity-for-mixed-precis.md)**  
   実装：[✓](https://github.com/jasonkongie/kl-ssm-quant) ・ リポジトリ内被引用：1  
@@ -867,6 +867,10 @@
 - **2026-02 · [MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models](2026-2602.06154-mose-mixture-of-slimmable-experts-for-efficient-and-adaptive-language-mo.md)**  
   実装：[✓](https://github.com/tnurbek/mose) ・ リポジトリ内被引用：1  
   MoSEは、混合専門家モデル（Mixture-of-Experts; MoE）の「専門家を何個選ぶか」に加え、「選んだ各専門家を何割の中間幅で実行するか」を推論時に変える研究である。主指標は一トークン当たり浮動小数点演算量（FLOPs/トークン）と品質であり、実機処理率は補助的な検証である。
+
+- **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
 
 - **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：1  
@@ -1858,10 +1862,6 @@
   実装：[✓](https://github.com/HengHugoZhao/ProbMoE) ・ リポジトリ内被引用：0  
   ProbMoEはMoEのtop-kルーティングを専門家部分集合の確率分布として定式化し、学習時に確率的に選択した専門家を実行しつつ、集合制約下の厳密な周辺確率を直通勾配の代理に使う。OLMoEのGSMでは従来45.94%に対し50.19%、Qwen1.5-MoEの翻訳では30.00に対し39.23。
 
-- **2026-06 · [PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics](2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stre.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  残差ストリームの動態から量子化に弱い層を見つけ、その層だけ活性値を8ビットへ上げる混合精度方針。回転系の学習後量子化へそのまま重ねられ、4ビット設定のパープレキシティと下流精度を一貫して改善する。
-
 - **2026-06 · [Orchestra-o1: Omnimodal Agent Orchestration](2026-2606.13707-orchestra-o1-omnimodal-agent-orchestration.md)**  
   実装：[✓](https://github.com/zfkarl/Orchestra-o1) ・ リポジトリ内被引用：0  
   Orchestra-o1は、文字・画像・音声・動画が同時に含まれる複雑な質問を、主エージェント（MainAgent）が複数の部分課題へ分解し、専門の副エージェント（SubAgent）へ割り当てて実行する全モダリティ対応のエージェント統括（omnimodal agent orchestration）方式である。
@@ -2189,6 +2189,10 @@
 - **2026-05 · [GRIP-VLM: Group-Relative Importance Pruning for Efficient Vision-Language Models](2026-2605.13375-grip-vlm-group-relative-importance-pruning-for-efficient-vision-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GRIP-VLM（Group-Relative Importance Pruning for Efficient Vision-Language Models）は、視覚言語モデル（VLM）へ渡す大量の画像トークンを、入力ごと・層ごと・保持予算ごとに選び直す手法である。
+
+- **2026-05 · [GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding](2026-2605.15250-gqla-group-query-latent-attention-for-hardware-adaptive-large-language-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多頭潜在注意（Multi-head Latent 注意機構; MLA）は鍵と値を共通の低ランク潜在ベクトルへまとめ、過去文脈から読み出すバイト数を大きく削減する。論文の中心的な「H20で3.4倍」は、文脈長8192・BF16・公開ピーク性能を入力した屋根線モデルによる注意部分の理論的処理量であり、実GPUで測ったモデル全体のトークン生成速度ではない。
 
 - **2026-05 · [Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs](2026-2605.15491-ghosted-layers-unconstrained-activation-alignment-for-recovering-layer-p.md)**  
   実装：[✓](https://github.com/daniel-eai/ghosted_layers_official_repository) ・ リポジトリ内被引用：0  
@@ -2746,10 +2750,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMの自己回帰復号では、生成トークンが増えるほど各層・各ヘッドが参照する過去のKey/Value（KV）キャッシュが増え、注意演算の読み出しと集約が高コストになる。従来の近似方式は過去の注意分布や代理スコアから重要KVを予測するため、変化したクエリに必要なトークンを落とす危険がある。
 
-- **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
-
 - **2026-02 · [Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey](2026-34369c1e45a2-minimizing-response-latency-in-llm-based-agent-systems-a-comprehensive-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   計画のための追加生成、メモリ検索、外部API、ツール結果の統合、複数エージェント間のメッセージ、推論サーバのキュー待ちが逐次・並列に組み合わさるためである。
@@ -3081,24 +3081,24 @@
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：55  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
+
+- **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
+  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：50  
+  そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
   実装：✓ ・ リポジトリ内被引用：49  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
-- **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
-  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：49  
-  そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
+- **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：44  
+  Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
   実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：43  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
-
-- **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：43  
-  Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：39  
@@ -3149,7 +3149,7 @@
   CODI（Continuous Chain-of-Thought via Self-Distillation）は、推論過程を自然言語の単語列として毎回生成する費用を減らすため、明示的な思考連鎖（Chain-of-Thought; CoT）を少数の連続潜在状態へ移す学習方式である。
 
 - **2024-12 · [NVILA: Efficient Frontier Visual Language Models](2024-2412.04468-nvila-efficient-frontier-visual-language-models.md)**  
-  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：21  
   NVILAは解像度を先に上げて必要な情報を取り込み、その後に空間・時間方向の冗長性を圧縮する「拡大してから圧縮する（scale-then-compress）」設計を採用する。
 
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
@@ -3161,7 +3161,7 @@
   本研究は、長いテキストをそのまま多数の言語トークンとして処理する代わりに、文書を二次元の画像として扱い、少数の視覚トークンへ圧縮できるかを検証する。英語文書のFox評価では、画像化した元テキストの約10倍圧縮に相当する視覚トークン数でも文字復元精度がおおむね97%に達する。
 
 - **2025-06 · [MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents](2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md)**  
-  実装：[✓](https://github.com/MIT-MI/MEM1) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/MIT-MI/MEM1) ・ リポジトリ内被引用：16  
   従来の全履歴追記方式では、過去の検索結果が毎ターンのプロンプトへ残るため、文脈長に比例して鍵値キャッシュの容量が増え、注意計算や再入力の費用も高くなる。16目標の多段質問応答では、Qwen2.5-14B-Instructの完全一致数0.567に対しMEM1は1.97、ピークトークン数は3,840に対し1,040、推論時間は29.7秒に対し8.70秒だった。
 
 - **2025-05 · [Llama-Nemotron: Efficient Reasoning Models](2025-2505.00949-llama-nemotron-efficient-reasoning-models.md)**  
@@ -3196,6 +3196,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
 
+- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
+
 - **2025-05 · [GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment](2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   GMSAは、原文を文字列として間引くのではなく、少数の連続表現トークン（soft トークン）へ変換する文脈圧縮方式である。NaturalQuestionsの4倍圧縮では完全一致（Exact Match、EM）が58.12%で、元文脈をそのまま与える条件の15.07%を上回った。
@@ -3215,10 +3219,6 @@
 - **2025-10 · [xLLM Technical Report](2025-2510.14686-xllm-technical-report.md)**  
   実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：5  
   原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
-
-- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
 
 - **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
   実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：5  
@@ -3308,6 +3308,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   長い動画の質問応答では、最初に少数のフレームを見て全体を把握し、必要な時間区間を細かく調べる「フレームを見ながら考える」方式が使われる。原著の観測では、動画トークンに対する注意スコアの90%以上が 10^-3 未満で、密に読み込んだフレームには冗長な情報が多い。
 
+- **2025-11 · [Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer](2025-2502.15779-rotate-clip-and-partition-towards-w2a4kv4-quantization-by-integrating-ro.md)**  
+  実装：[✓](https://github.com/songsm921/RCP) ・ リポジトリ内被引用：2  
+  重みを二ビット、活性値とキャッシュを四ビットにする極端な量子化では、単純な事後量子化や従来の量子化認識学習だけでは予測が崩れる場合がある。ピークメモリは13.48GBから2.55GBへ減り、約5.29倍の削減となる。
+
 - **2025-11 · [Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning](2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   外部の判定模型を使わず、小さい模型のロジット最大値から段ごとの確信度を測り、混合正規分布の事後確率で次の段を小さい模型に任せるか大きい模型へ回すかを決める段単位の振り分けで、難関数学課題では大きい模型だけより正解率が二割上がり計算量が四八パーセント減ったと報告した。
@@ -3355,6 +3359,10 @@
 - **2025-07 · [CCQ: Convolutional Code for Extreme Low-bit Quantization in LLMs](2025-2507.07145-ccq-convolutional-code-for-extreme-low-bit-quantization-in-llms.md)**  
   実装：[✓](https://github.com/PaddlePaddle/FastDeploy/tree/develop) ・ リポジトリ内被引用：2  
   2bit級の重み量子化では、単純な整数丸めでは表現可能な値が少なすぎて精度が大きく落ちる。原著Table 2ではDeepSeek-V3-0324の8bit版642GBに対し、CCQ 2.06bpw版は184GBで、GSM8K/C-Eval/MMLU平均が90.01から87.76へ低下する。
+
+- **2025-07 · [Activation Steering for Chain-of-Thought Compression](2025-2507.04742-activation-steering-for-chain-of-thought-compression.md)**  
+  実装：[✓](https://github.com/ArminAzizi98/ASC) ・ リポジトリ内被引用：2  
+  冗長な推論と簡潔な推論の活性の平均差を操舵ベクトルとして中間層へ注入し、分布のずれを距離予算で抑えながら思考連鎖を最大六七・四三パーセント短縮し、正解率を保って二・七三倍速くした。
 
 - **2025-06 · [Near-Optimal Online Deployment and Routing for Streaming LLMs](2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -3435,10 +3443,6 @@
 - **2025-11 · [T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization](2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
-
-- **2025-11 · [Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer](2025-2502.15779-rotate-clip-and-partition-towards-w2a4kv4-quantization-by-integrating-ro.md)**  
-  実装：[✓](https://github.com/songsm921/RCP) ・ リポジトリ内被引用：1  
-  重みを二ビット、活性値とキャッシュを四ビットにする極端な量子化では、単純な事後量子化や従来の量子化認識学習だけでは予測が崩れる場合がある。ピークメモリは13.48GBから2.55GBへ減り、約5.29倍の削減となる。
 
 - **2025-11 · [NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval](2025-2511.14096-neuropath-neurobiology-inspired-path-tracking-and-reflection-for-semanti.md)**  
   実装：[✓](https://github.com/KennyCaty/NeuroPath) ・ リポジトリ内被引用：1  
@@ -3551,10 +3555,6 @@
 - **2025-07 · [RAT: Bridging RNN Efficiency and Attention Accuracy via Chunk-based Sequence Modeling](2025-2507.04416-rat-bridging-rnn-efficiency-and-attention-accuracy-via-chunk-based-seque.md)**  
   実装：[✓](https://github.com/CLAIRE-Labo/RAT) ・ リポジトリ内被引用：1  
   全トークンに対するソフトマックス注意（softmax 注意機構）は、過去の任意の位置を直接参照できる一方、長文で注意演算量と鍵・値キャッシュ（KV キャッシュ）が増える。また、3072トークンの入力から1024トークンを生成する最大生成処理量では、1.3Bモデルで通常注意3152に対しRAT 31170トークン/秒、約10.2倍である。
-
-- **2025-07 · [Activation Steering for Chain-of-Thought Compression](2025-2507.04742-activation-steering-for-chain-of-thought-compression.md)**  
-  実装：[✓](https://github.com/ArminAzizi98/ASC) ・ リポジトリ内被引用：1  
-  冗長な推論と簡潔な推論の活性の平均差を操舵ベクトルとして中間層へ注入し、分布のずれを距離予算で抑えながら思考連鎖を最大六七・四三パーセント短縮し、正解率を保って二・七三倍速くした。
 
 - **2025-06 · [SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching](2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md)**  
   実装：[✓](https://github.com/mert-cemri/SPECS) ・ リポジトリ内被引用：1  
@@ -4303,7 +4303,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：112  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：113  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -4339,7 +4339,7 @@
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
-  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：37  
+  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：38  
   本手法は圧縮を単語の保持/削除の二値分類として定式化し、双方向encoderのXLM-RoBERTa-largeやmBERTに圧縮の目的を直接学習させる。V100-32GB上のMeetingBank遅延測定では、非圧縮エンドツーエンド14.9秒に対し、5倍圧縮時5.2秒（2.9倍高速）と報告する。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
@@ -4833,11 +4833,11 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：122  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：123  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：103  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -5175,11 +5175,11 @@
 ### 9年前（2017-12〜2018-11）
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：155  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：156  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：107  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：108  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  

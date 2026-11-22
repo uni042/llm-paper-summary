@@ -34,17 +34,21 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：17  
   プリフィル側だけに集中していたKVキャッシュのストレージ読出しをデコード側NICにも分散し、RDMA転送と負荷認識スケジューリングでエージェント型LLM推論のストレージ帯域ボトルネックを緩和する。
 
+- **2026-08 · [Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse](2026-2608.03893-cross-model-kv-cache-transfer.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
+
 - **2026-05 · [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   長い入力文脈や過去の会話を再利用する大規模言語モデル（LLM）の配信では、過去の入力を処理した際の鍵・値キャッシュ（KVキャッシュ）を保存しておけば、同じ接頭辞を再計算せずに済む。提案するのは、KVブロックに対応するGPU向けオブジェクト、GPUから非同期で要求を発行・完了確認する待ち行列、推論カーネルの実行余裕に応じて読み書きを配置する制御の三つである。
 
-- **2026-08 · [Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse](2026-2608.03893-cross-model-kv-cache-transfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
-
 - **2025-12 · [EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving](2025-2512.14946-evicpress-joint-compression-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
+
+- **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  CacheBridgeは出典モデルのKVを受信モデルのヘッド局所表現へ線形変換し、注意感度で係数を学習・GPU融合して、モデル切替時の再プリフィル計算と変換器容量を減らす方式。
 
 - **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
   実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：8  
@@ -73,10 +77,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：7  
   SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
-
-- **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  CacheBridgeは出典モデルのKVを受信モデルのヘッド局所表現へ線形変換し、注意感度で係数を学習・GPU融合して、モデル切替時の再プリフィル計算と変換器容量を減らす方式。
 
 - **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：6  
@@ -477,7 +477,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：204  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：206  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -535,6 +535,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：161  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：163  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 <!-- survey:auto:end -->

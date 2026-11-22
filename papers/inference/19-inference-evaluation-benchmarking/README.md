@@ -20,6 +20,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
 
+- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
+  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：3  
+  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
+
 - **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
   実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：3  
   既存の圧縮方式の多くは、視覚符号化器が全トークンを処理し終えた後に間引く。単一NVIDIA A100上のLLaVA-OneVision-7Bでは、言語モデルへ入る視覚トークンを元の10%に保つ条件で、最初のトークンまでの時間（Time to First Token; TTFT）が889.9ミリ秒から336.2ミリ秒へ短縮し、約2.65倍の逆数比となる。
@@ -39,10 +43,6 @@
 - **2026-05 · [When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference](2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   携帯端末でニューラル処理装置が常に速いわけではないことを段階別に実測し、入力処理では中央処理装置が最大1.6倍速く、逐次生成の実効加速も1.05から1.20倍にとどまり、全面任せでは電力が最大51パーセント増えることを示した。
-
-- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
-  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：2  
-  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
 
 - **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
   実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：2  
@@ -87,6 +87,10 @@
 - **2026-05 · [Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA](2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-with.md)**  
   実装：[✓](https://github.com/CodeGandee/flashinfer-bench-starter-kit/tree/main/solution/cuda) ・ リポジトリ内被引用：1  
   正しさを門番とする評価とハッキング禁止の下で複数コードエージェントが計画・実装・プロファイル・統合を分担し、人手のCUDAなしでMoEと疎注意のカーネルを参照実装比最大1101倍まで高速化した事例研究。
+
+- **2026-04 · [The Detection-Extraction Gap: Models Know the Answer Before They Can Say It](2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md)**  
+  実装：[✓](https://github.com/EdWangLoDaSc/know2say) ・ リポジトリ内被引用：1  
+  答えが回収可能になる時点と強制抽出できる時点のずれを分布のずれとして定式化し、自由継続だけで検出と抽出を行う早期終了BAEEで直列生成を約7割減らしながら正解率も上げる、推論時計算の分析と手法。
 
 - **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
   実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：1  
@@ -465,10 +469,6 @@
 - **2026-05 · [AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference](2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-model-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンはプリフィル前に学習済みスコアラーで強く枝刈りし、テキストトークンは予算超過時だけエビクションするという非対称な圧縮で、最大54%のFLOPs削減と文書・図表理解での精度向上を両立する視覚言語モデルの推論方式。
-
-- **2026-04 · [The Detection-Extraction Gap: Models Know the Answer Before They Can Say It](2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md)**  
-  実装：[✓](https://github.com/EdWangLoDaSc/know2say) ・ リポジトリ内被引用：0  
-  答えが回収可能になる時点と強制抽出できる時点のずれを分布のずれとして定式化し、自由継続だけで検出と抽出を行う早期終了BAEEで直列生成を約7割減らしながら正解率も上げる、推論時計算の分析と手法。
 
 - **2026-04 · [SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs](2026-2604.23996-smoes-soft-modality-guided-expert-specialization-in-moe-vlms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
