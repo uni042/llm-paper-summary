@@ -100,6 +100,20 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-22 — llama.cpp b12614〜b12633（開発ビルド）
+
+b12613の続き。対象期間の開発ビルドはb12614からb12633（2026-11-22 14:53 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。
+
+- **b12629: OpenCLにAdreno 850向けcoopmat GEMMを追加**。Q4_0 / Q5_0 / Q8_0 / Q4_K / Q5_K / Q6_K の量子化形式に対応する行列積で、対象はQualcomm Adreno 850のOpenCL経路に限られる。一般的な生成速度倍率は公表されていない。
+- **b12615: SYCLの融合演算とRMS norm最適化**。ADD・RMS_NORM・MULのfused演算と、連続メモリ向けRMS normのベクトル化を追加。対象はIntel系のSYCL経路で、デコード幅でのテストが追加された。
+- **b12621: SYCLのCONV_TRANSPOSE_1Dの入力反復に上限を設定**。出力がベースとバイト単位で一致することと test-backend-ops 116/116 が一次資料で確認されており、正確性・堅牢性の修正として扱う（速度倍率は一次資料にない）。
+- **b12622: モデル読み込みで `.scale` テンソルを自動適用**し、精度ポリシー（llama_prec_policy）を導入。MoE FFN構築まわりの整理を含む。
+- **b12619: mtmdがHibikiのリアルタイムduplexに対応**。音声系マルチモーダル経路の拡張であり、テキスト生成速度の改善ではない。
+- **Vulkan／WebGPUの非UMA・不整合メモリまわりの修正**: b12626（Vulkanのunaligned範囲memset修正）、b12628（Vulkan SCALEの非連続src対応）、b12631（WebGPUのGDN supports_op確認更新）、b12633（ggmlのWebGPU・非UMAデバイスでのnonzero clear修正）。いずれも対象backend固有の正確性修正である。
+- この範囲では新規backend追加や新規モデルアーキテクチャ対応の大きな発表はない。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12633 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12629 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12615
+
 ## 2026-11-21 — llama.cpp b12591〜b12613（開発ビルド）
 
 b12590の続き。対象期間の開発ビルドはb12591からb12613（2026-11-21 19:40 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。

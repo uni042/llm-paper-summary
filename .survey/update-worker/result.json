@@ -1,16 +1,16 @@
 {
-  "schema_version": 1,
-  "ok": true,
-  "attempt_id": "muse-fwllm-20261122",
-  "kind": "framework_llm_update",
-  "updated_paths": [
-    "framework-updates/inference-engines/llama-cpp/README.md",
-    "framework-updates/README.md"
-  ],
-  "created_paths": [],
-  "updated_existing_paths": [
-    "framework-updates/inference-engines/llama-cpp/README.md",
-    "framework-updates/README.md"
-  ],
-  "summary": "2026-11-21〜11-22: llama.cpp b12591-b12613 dev builds (Vulkan FA coopmat1 AMD Windows workaround b12613, RDNA4 MMVQ perf for Q3_K/Q5_K/IQ4_XS, tinyBLAS PPC alignment fix, fused lightning indexer ungated, SYCL Grouped XMX GEMM perf b12602); all other frameworks and LLM series: no primary-confirmed important updates in window. Direct-apply per skill §9 (Phase 1)."
+ "schema_version": 1,
+ "ok": true,
+ "attempt_id": "muse-fwllm-20261123",
+ "kind": "framework_llm_update",
+ "updated_paths": [
+  "framework-updates/inference-engines/llama-cpp/README.md",
+  "framework-updates/README.md"
+ ],
+ "created_paths": [],
+ "updated_existing_paths": [
+  "framework-updates/inference-engines/llama-cpp/README.md",
+  "framework-updates/README.md"
+ ],
+ "summary": "2026-11-22〜11-23: llama.cpp b12614-b12633 dev builds (OpenCL coopmat GEMM for Adreno 850 b12629, SYCL fused ADD/RMS_NORM/MUL + vectorized RMS norm b12615, SYCL CONV_TRANSPOSE_1D bounding b12621, automatic .scale tensor application + llama_prec_policy b12622, mtmd Hibiki realtime duplex b12619, Vulkan/WebGPU non-UMA correctness fixes b12626/b12628/b12631/b12633); vLLM v0.34.0, SGLang v0.5.23, TensorRT-LLM v1.3.0, Ollama v0.40.17 already recorded or no new release in window; all LLM series: no primary-confirmed important updates in window. Direct-apply per skill §9 (Phase 1)."
 }
