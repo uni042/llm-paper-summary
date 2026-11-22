@@ -1,0 +1,25 @@
+{
+ "artifact_type": "discovery_run",
+ "record_count": 1,
+ "records": [
+  {
+   "body_check": "research_fulltext_relevance_review: arXiv HTML全文を通読し、対象が学習済みDeiTの注意を多ヘッド双方向LSTMへブロック単位蒸留で置換する方式であること、評価がImageNetと下流の画像分類課題およびReRAMインメモリ計算の解析的遅延・エネルギー推定に限られ、言語モデルの推論やLLMサービングの評価がないことを確認した",
+   "canonical_id": "arXiv:2505.21535",
+   "classification": "borderline",
+   "first_checked_at": "2026-11-22T17:25:00+09:00",
+   "identity_tokens": [
+    "arXiv:2505.21535"
+   ],
+   "last_checked_at": "2026-11-22T17:25:00+09:00",
+   "linked_from": "research_prescreen",
+   "origin": "research_postread_relevance",
+   "reason": "視覚トランスフォーマーの注意置換とインメモリ計算向け推論が主題で、言語モデルへの言及は背景のみ、評価はDeiTと画像分類に限定されLLM推論システムへの直接貢献が確認できないため境界として記録する",
+   "source_url": "https://arxiv.org/abs/2505.21535",
+   "title": "FAR: Function-preserving Attention Replacement for IMC-friendly Inference"
+  }
+ ],
+ "reference_main_sha": "72c3e8c378bf4eb4ff1858c04a2dfa8eec8e2424",
+ "run_key": "muse-20261122-d2-postread-2505.21535",
+ "schema_version": 2,
+ "worker_id": "muse"
+}
