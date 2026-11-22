@@ -1,5 +1,5 @@
 ---
-canonical_id: "DOI:10.1145/3713082.3730392"
+canonical_id: DOI:10.1145/3713082.3730392
 arxiv_id: null
 doi: 10.1145/3713082.3730392
 openreview_id: null
@@ -9,7 +9,7 @@ arxiv_categories:
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 7382
 quality_method_chars: 2471
 quality_evaluation_chars: 1708
@@ -20,26 +20,26 @@ hardware_details: null
 quality_effect: null
 evidence_locations: []
 references:
-  - canonical_id: "arXiv:1512.03385"
-  - canonical_id: "arXiv:1910.02054"
-  - canonical_id: "arXiv:2006.16668"
-  - canonical_id: "arXiv:2012.00825"
-  - canonical_id: "arXiv:2105.04663"
-  - canonical_id: "arXiv:2305.09781"
-  - canonical_id: "arXiv:2310.01889"
-  - canonical_id: "arXiv:2401.02669"
-  - canonical_id: "arXiv:2401.02954"
-  - canonical_id: "arXiv:2407.00079"
-  - canonical_id: "arXiv:2409.19256"
-  - canonical_id: "arXiv:2412.19437"
-  - canonical_id: "arXiv:2501.01005"
-  - canonical_id: "arXiv:2501.12948"
+- canonical_id: arXiv:1512.03385
+- canonical_id: arXiv:1910.02054
+- canonical_id: arXiv:2006.16668
+- canonical_id: arXiv:2012.00825
+- canonical_id: arXiv:2105.04663
+- canonical_id: arXiv:2305.09781
+- canonical_id: arXiv:2310.01889
+- canonical_id: arXiv:2401.02669
+- canonical_id: arXiv:2401.02954
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2409.19256
+- canonical_id: arXiv:2412.19437
+- canonical_id: arXiv:2501.01005
+- canonical_id: arXiv:2501.12948
 references_checked_at: '2026-11-22'
 references_source: primary-reference-section
 references_total: 46
-title: "Towards ML System Extensibility"
-summary: "大規模言語モデルの分散実行は効率のためにテンソル並列やパイプライン並列などの複雑な実行戦略を固定化し、配置の柔軟性、システム間の相互運用性、ワークロード特化の最適化を同時に得にくくなっている。本論文は分散アクター、先行値、タスクからなるDAFTというプログラミング接口をアクセラレータ向けに拡張し、タスクを逐次実行する解釈型と、データフローグラフを凍結して制御判断をコンパイル時に寄せるコンパイル型の二つの実行方式を同じシステムで混ぜる構想を提案する位置づけ論文である。Rayを土台にしたコンパイル型の試作では、NVIDIA A100を4台使うLlama 3.1 8Bの推論でテンソル並列のスループットがSPMD方式のvLLMの12%以内まで近づき、パイプライン並列ではスループットが67%改善し、ResNet-152のデータ並列学習では通信と計算の重なりを入れた場合に毎秒107サンプルとPyTorch DDPの毎秒106サンプルと同等になった。"
-list_summary: "分散実行の固定化で失われる拡張性を、分散アクター・先行値・タスクの接口と解釈型・コンパイル型の二方式の併用で取り戻す構想を示し、Ray上の試作で推論と学習の双方でSPMD方式と同等の性能に届くことを示した位置づけ論文。"
+title: Towards ML System Extensibility
+summary: 大規模言語モデルの分散実行は効率のためにテンソル並列やパイプライン並列などの複雑な実行戦略を固定化し、配置の柔軟性、システム間の相互運用性、ワークロード特化の最適化を同時に得にくくなっている。本論文は分散アクター、先行値、タスクからなるDAFTというプログラミング接口をアクセラレータ向けに拡張し、タスクを逐次実行する解釈型と、データフローグラフを凍結して制御判断をコンパイル時に寄せるコンパイル型の二つの実行方式を同じシステムで混ぜる構想を提案する位置づけ論文である。Rayを土台にしたコンパイル型の試作では、NVIDIA A100を4台使うLlama 3.1 8Bの推論でテンソル並列のスループットがSPMD方式のvLLMの12%以内まで近づき、パイプライン並列ではスループットが67%改善し、ResNet-152のデータ並列学習では通信と計算の重なりを入れた場合に毎秒107サンプルとPyTorch DDPの毎秒106サンプルと同等になった。
+list_summary: 分散実行の固定化で失われる拡張性を、分散アクター・先行値・タスクの接口と解釈型・コンパイル型の二方式の併用で取り戻す構想を示し、Ray上の試作で推論と学習の双方でSPMD方式と同等の性能に届くことを示した位置づけ論文。
 authors:
 - Weixin Deng
 - Andy Ruan
@@ -49,26 +49,27 @@ authors:
 - Jack Tigar Humphries
 - Rui Qiao
 - Stephanie Wang
-authors_affiliations: "ワシントン大学（Weixin Deng、Andy Ruan、Megan Frisella、Stephanie Wang）、Anyscale在籍時（Kai-Hsun Chen、SangBin Cho、Jack Tigar Humphries、Rui Qiao、Stephanie Wang）"
+authors_affiliations: ワシントン大学（Weixin Deng、Andy Ruan、Megan Frisella、Stephanie Wang）、Anyscale在籍時（Kai-Hsun Chen、SangBin Cho、Jack Tigar Humphries、Rui Qiao、Stephanie Wang）
 published: 2025-05-14
-publication: "USENIX Workshop on Hot Topics in Operating Systems (HotOS 2025)"
+publication: USENIX Workshop on Hot Topics in Operating Systems (HotOS 2025)
 publication_type: Conference
 publication_status: Published
-lineage: ""
+lineage: ''
 topics: []
-importance: ""
-hardware_evaluation: ""
-source: "https://doi.org/10.1145/3713082.3730392"
+importance: ''
+hardware_evaluation: ''
+source: https://doi.org/10.1145/3713082.3730392
 sources:
-- "https://stephanie-wang.github.io/pdfs/hotos25-mlext.pdf"
-- "https://doi.org/10.1145/3713082.3730392"
-code: ""
-implementation: "コンパイル型DAFTの試作を、解釈型DAFTシステムであるRayを土台に構築した研究である。元のRayはCPU向けのオブジェクトストアを持ち、GPUオブジェクトとコンパイル型実行には対応していないと論文は述べる。論文中に公式コードの公開先は示されておらず、完成した汎用分散ランタイムの公開ではなく、試作による実現可能性の提示と未解決課題の整理が中心である"
+- https://stephanie-wang.github.io/pdfs/hotos25-mlext.pdf
+- https://doi.org/10.1145/3713082.3730392
+code: null
+implementation: コンパイル型DAFTの試作を、解釈型DAFTシステムであるRayを土台に構築した研究である。元のRayはCPU向けのオブジェクトストアを持ち、GPUオブジェクトとコンパイル型実行には対応していないと論文は述べる。論文中に公式コードの公開先は示されておらず、完成した汎用分散ランタイムの公開ではなく、試作による実現可能性の提示と未解決課題の整理が中心である
 last_checked: '2026-11-22'
-worker_id: "muse"
-worker_run_key: "muse-20261122-f4"
-worker_completed_at: "2026-11-22T23:31:59+09:00"
-reference_main_sha: "c3e9a81b6e4ad939d6cbf7ec4138372f2bfb6847"
+worker_id: muse
+worker_run_key: muse-20261122-f4
+worker_completed_at: '2026-11-22T23:31:59+09:00'
+reference_main_sha: c3e9a81b6e4ad939d6cbf7ec4138372f2bfb6847
+implementation_status: official-code-not-confirmed
 ---
 
 # Towards ML System Extensibility
