@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1302本）
+## 自動生成の論文一覧（1306本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1813,6 +1813,10 @@
 - **2026-07 · [Capturing Token Tendencies for Training-Free Token Pruning in Multimodal Large Language Models](2026-2607.28341-capturing-token-tendencies-for-training-free-token-pruning-in-multimodal.md)**  
   実装：[✓](https://github.com/JieMaMagic/Trend-aware-Pruning) ・ リポジトリ内被引用：0  
   本論文は、多モーダル大規模言語モデル（Multimodal Large Language モデル、MLLM）の推論時に、画像由来の視覚トークンを削減する学習不要の手法を提案する。LLaVA-v1.5-7Bの実験では、初期保持288/576トークンの条件で平均相対性能98.89%を維持し、計算量を元の55.10%へ削減した。
+
+- **2026-07 · [Anchoring the Cache: Mitigating Contextual Hallucination in KV-Compressed Long-Context Summarization](2026-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed.md)**  
+  実装：[✓](https://github.com/FYYFU/HeadKV) ・ リポジトリ内被引用：0  
+  KVキャッシュ圧縮が長文要約の幻覚を最大3.36倍に悪化させることと、その原因が検索ヘッドの注意の原文から生成文への移行であることを示し、デコード時に検索ヘッドの生成済みキャッシュだけを除くHalluKVで、Llama-3-8Bでは幻覚を平均5.48ポイント下げつつ要約品質も保った。
 
 - **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
   実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：0  
@@ -3932,6 +3936,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   SVD圧縮で失われる機能残差を、並列の学習可能な低ランク補正モジュールに学習させるLLM圧縮手法CALRを提案し、安定したFFNだけを選ぶ対象選択とあわせて圧縮率と性能保持の釣り合いを改善した研究。
 
+- **2025-07 · [Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs](2025-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quant.md)**  
+  実装：[✓](https://github.com/RazvanDu/LayerwiseQuant) ・ リポジトリ内被引用：0  
+  層の重要度を二つの単純な指標で測り、重要な層を高ビット、重要でない層を低ビットへ割り当てるメタ量子化で、基盤の量子化方式を問わず平均ビット数を下げながら精度を保つ方式。
+
 - **2025-07 · [The Case for Instance-Optimized LLMs in OLAP Databases](2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.md)**  
   実装：[✓](https://github.com/mpi-dsg/IOLM-DB) ・ リポジトリ内被引用：0  
   OLAPクエリごとに代表データで較正した量子化・疎化・構造的枝刈りで専用の軽量言語モデルを生成し、行単位の言語モデル呼び出しのスループットを最大3.31倍、フットプリントを最大76%削減するデータベース向け推論最適化の概念実証。
@@ -4220,6 +4228,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、Transformerの注意行列を推論時に疎化する際の品質劣化を、学習時に注意確率を少数の要素へ集中させておくことで抑える手法を提案する。理想マスクでの精度維持と、低コストのマスク予測器が同じ結果を達成できるかは別問題であり、Hyper-注意機構では正則化モデルの方が悪い条件も存在する。
 
+- **2025-02 · [SHAFT: Secure, Handy, Accurate and Fast Transformer Inference](2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md)**  
+  実装：[✓](https://github.com/andeskyl/SHAFT) ・ リポジトリ内被引用：0  
+  入力クリッピング付き常微分方程式による定数ラウンドのソフトマックスと、フーリエ級数近似のGELUで、秘密分散型のTransformer秘密推論を速く正確にし、Hugging Faceからそのまま持ち込めるようにした枠組みSHAFT。
+
 - **2025-02 · [Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference](2025-2502.15294-round-attention-a-novel-round-level-attention-mechanism-to-accelerate-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対話型LLMを長期間利用すると、過去の質問・回答を含むKVキャッシュが増え、GPUメモリ容量とCPUからの転送帯域が推論の制約になる。通常のトークン単位KV圧縮や選択は、注意スコアを層ごとに評価したり、小さなKV片を何度も転送したりする費用を生む。
@@ -4275,6 +4287,10 @@
 - **2025-01 · [Softplus Attention with Re-weighting Boosts Length Extrapolation in Large Language Models](2025-2501.13428-softplus-attention-with-re-weighting-boosts-length-extrapolation-in-larg.md)**  
   実装：[✓](https://github.com/iminfine/freeattn) ・ リポジトリ内被引用：0  
   提案するLSSAR（Length Scaled Softplus 注意機構 with Re-weighting）は、第一段でquery/keyの長さ依存正規化とSoftplusを用いて数値的に安定した重みを作り、第二段で重みを中心化して小さい値を抑え、残る大きな値をべき乗で強調する。
+
+- **2025-01 · [RQT: Hierarchical Residual Quantization for Multi-Model Compression](2025-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  似た微調整モデル同士で低ビット整数重みを木構造で共有し、根から葉への経路の和で重みを再構成する残差量子化木RQTにより、デルタの大きさに弱い従来のデルタ圧縮を避けながら16モデルを実効約2ビットへ圧縮する方式。
 
 - **2025-01 · [Rethinking Post-Training Quantization: Introducing a Statistical Pre-Calibration Approach](2025-2501.09107-rethinking-post-training-quantization-introducing-a-statistical-pre-cali.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4925,7 +4941,7 @@
   大規模言語モデルを配備する際、同じ品質・遅延・計算資源の要求を持つ利用者ばかりとは限らない。モデルを後から枝刈りして調整する方法では、新しいサイズごとに再学習や調整を要することもある。
 
 - **2023-07 · [PUMA: Secure Inference of LLaMA-7B in Five Minutes](2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md)**  
-  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：14  
   従来の高速化方式が必要としたモデルの再学習や構造変更を避け、既存の学習済み重みをほぼそのまま秘密計算へ持ち込むことを狙う。
 
 - **2023-10 · [A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration](2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md)**  
@@ -5181,7 +5197,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：291  
+  実装：✓ ・ リポジトリ内被引用：292  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

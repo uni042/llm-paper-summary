@@ -35,10 +35,15 @@
   "selection_reason": "共通基盤から個別微調整された複数LLMの重みを、ボトムアップのモデル類似性統合とトップダウンの残差量子化を行うResidual Quantization Treeで共有する。ACL Findings 2025公式一次要旨では数学・コード・チャット・中国語LLMの複数モデルに対し、実効約2bitで平均精度低下約3%と報告。複数モデルの保存・配備効率に直接関係するが、実サービスでのトークン毎遅延改善は別途確認が必要。",
   "semantic_scholar_id": "8f65800549e6ba0b4fd2a9aafdb798eb4bde022d",
   "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.554",
-  "status": "ready",
+  "status": "superseded",
   "title": "RQT: Hierarchical Residual Quantization for Multi-Model Compression",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T14:49:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.findings-acl.554",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

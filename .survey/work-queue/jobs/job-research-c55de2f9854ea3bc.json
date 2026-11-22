@@ -35,10 +35,15 @@
   "selection_reason": "ACL 2025一次出版要旨によれば、注意ヘッドごとにプロンプト内で注目するトークン群が異なる内在的クラスタ構造を観測窓から検出し、密度ベースの注意クラスタリングでprompt KV cacheを適応圧縮する訓練不要のClusterAttnを提案。1024トークン保持でメモリ10〜65%削減、遅延12〜23%短縮、スループット2.6〜4.8倍、単一A100 80GBで128k文脈対応を報告。LLM推論のKVキャッシュ管理に直接関係する。",
   "semantic_scholar_id": "75f8c6cff4e5e2179891ef7d281eca2609875eac",
   "source_url": "https://doi.org/10.18653/v1/2025.acl-long.703",
-  "status": "ready",
+  "status": "superseded",
   "title": "ClusterAttn: KV Cache Compression under Intrinsic Attention Clustering",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T14:49:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.acl-long.703",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

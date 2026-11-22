@@ -35,10 +35,15 @@
   "selection_reason": "ACL公式要旨は層の入出力埋め込み差や大振幅重み数で重要度を測り、重要層に高ビットを割り当てる可変層別量子化を提案。優先順位に従う場合は25〜50%の層を低精度化しても性能維持するが、無作為順序では5〜10%にとどまる。推論向け混合精度圧縮に直接該当。",
   "semantic_scholar_id": "5760a16be85faa9b4403670865a34418e9fe8f8d",
   "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.29",
-  "status": "ready",
+  "status": "superseded",
   "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T14:49:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quant.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

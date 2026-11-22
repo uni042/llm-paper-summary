@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a59b41ff37993a5c36629e92457e3c3491f9aeac",
+  "base_commit": "4640c94a76e0d5bf1b12c4da5de6f7c6123cc53a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -29,8 +29,13 @@
     "0-retry-research-b261f1661507--libfile_4a9d01a8e7088191929451077ffc2f06--2025-2505.00019-prompt-compression-empirical-study-research-20261024-0401-scheduled-cha.json",
     "0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-.json",
     "0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-202610.json",
+    "0000-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed-long-context-summarization.json",
+    "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json",
+    "0000-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quantize-llms.json",
     "0000-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models.json",
+    "0000-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.json",
     "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
+    "0000-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.json",
     "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json",
     "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json",
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
@@ -49499,6 +49504,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1542": {
+      "order": [
+        "2026-11-22T14:43:47+00:00",
+        "0000-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed-long-context-summarization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.14722/ndss.2025.242287": {
+      "order": [
+        "2026-11-22T14:44:46+00:00",
+        "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-acl.29": {
+      "order": [
+        "2026-11-22T14:45:45+00:00",
+        "0000-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quantize-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-acl.554": {
+      "order": [
+        "2026-11-22T14:46:44+00:00",
+        "0000-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.acl-long.703": {
+      "order": [
+        "2026-11-22T14:47:43+00:00",
+        "0000-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62540,6 +62590,21 @@
     "doi:10.1609/aaai.v40i27.39425": [
       "papers/inference/99-other-inference-systems/2026-2505.18413-latentllm-activation-aware-transform-to-multi-head-latent-attention.md",
       "papers/inference/99-other-inference-systems/2026-2505.18413-latentllm-activation-aware-transform-to-multi-head-latent-attention.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1542": [
+      "papers/inference/99-other-inference-systems/2026-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed.md"
+    ],
+    "doi:10.14722/ndss.2025.242287": [
+      "papers/inference/99-other-inference-systems/2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md"
+    ],
+    "doi:10.18653/v1/2025.findings-acl.29": [
+      "papers/inference/99-other-inference-systems/2025-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quant.md"
+    ],
+    "doi:10.18653/v1/2025.findings-acl.554": [
+      "papers/inference/99-other-inference-systems/2025-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.md"
+    ],
+    "doi:10.18653/v1/2025.acl-long.703": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.md"
     ]
   }
 }

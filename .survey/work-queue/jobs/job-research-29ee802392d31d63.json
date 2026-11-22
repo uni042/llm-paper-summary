@@ -35,10 +35,15 @@
   "selection_reason": "ACL 2026の出版社一次要旨を確認。長文脈要約でKVキャッシュを強く圧縮すると幻覚スコアが最大3.36倍になる問題を分析し、HalluKVとして復号段階でretrieval headの生成済みKV対を選択的に除去することで元文書への注意を保持する具体的なKV管理機構を提案。Llama-3-8B-Instructで幻覚指標の平均最大5.48ポイント改善を報告。推論時KVキャッシュ管理への直接的な技術貢献があるためaccept。要旨に記載された数値のみを使用し、本文・詳細実験表は未検証。",
   "semantic_scholar_id": "be48a5c491a88836550bea082b1121051e71f37a",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1542",
-  "status": "ready",
+  "status": "superseded",
   "title": "Anchoring the Cache: Mitigating Contextual Hallucination in KV-Compressed Long-Context Summarization",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T14:49:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.1542",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

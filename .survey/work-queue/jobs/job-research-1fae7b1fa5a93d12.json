@@ -35,10 +35,15 @@
   "selection_reason": "SHAFTは秘密分散に基づくプライバシー保護Transformer推論を対象に、入力クリッピングと常微分方程式を組み合わせる定数ラウンドsoftmaxと、フーリエ級数に基づく高精度GELUプロトコルを導入。NDSS公式一次論文ではSIGMA比通信量25〜41%削減、BumbleBee比LANで4.6〜5.3倍、WANで2.9〜4.4倍高速化を報告。暗号化推論システムとして関連。",
   "semantic_scholar_id": "cd4e4ed6dc6f6d7658943a2c0267e788eca9f145",
   "source_url": "https://doi.org/10.14722/ndss.2025.242287",
-  "status": "ready",
+  "status": "superseded",
   "title": "SHAFT: Secure, Handy, Accurate and Fast Transformer Inference",
   "type": "research",
   "venue": "Network and Distributed System Security Symposium",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T14:49:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md",
+  "represented_canonical_id": "DOI:10.14722/ndss.2025.242287",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
