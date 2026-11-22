@@ -269,7 +269,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
@@ -427,7 +427,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [Language model compression with weighted low-rank factorization](2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md)**  
-  実装：✓ ・ リポジトリ内被引用：55  
+  実装：✓ ・ リポジトリ内被引用：56  
   本論文は、事前学習・タスク別微調整を終えた言語モデルの大きな線形層を、低ランクの二つの行列に置き換える圧縮方法を扱う。著者らは、特異値が小さい成分を除去しても必ずしもタスクへの影響が小さくないことをBERTの実験で示した。
 
 - **2022-03 · [Overcoming Oscillations in Quantization-Aware Training](2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md)**  

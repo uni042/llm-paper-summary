@@ -192,6 +192,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   注意計算と専門家FFNを別のGPU群へ配置すると、計算とメモリの資源配分を独立に調整できる。しかしトークンの往復通信が新しい上限を作り、専門家側のGPUを増やすほど全体の演算利用率が下がる場合がある。本研究はその成立条件を数式と実測に基づいて整理する。
 
+- **2025-12 · [Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs](2025-2512.20210-predictive-lora-serverless-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LoRA要求の時系列から次に必要なアダプタを先読みし、重みを2MB固定ページへ分割して異種rankの断片化を抑えることで、1000アダプタ時にS-LoRA比1.52倍のスループットと高負荷TTFT 35%短縮を達成する。
+
 - **2025-12 · [Learned Prefix Caching for Efficient LLM Inference](2025-dac9d9c660d5-learned-prefix-caching-for-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/yangdsh/LPC) ・ リポジトリ内被引用：4  
   特に複数ターンの会話では、それまでの会話履歴が次の質問にも含まれるため、同じ履歴を再計算しない価値が大きい。一方、GPUメモリは有限で、実行中の要求がKV領域を増やすと保存済みの接頭辞を退避しなければならない。原著のH100・Qwen3-32B-FP8評価では、LRUと同等のヒット率に必要なキャッシュ容量を18〜47%削減した。
@@ -287,10 +291,6 @@
 - **2026-01 · [EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend](2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   マルチモーダル推論をエンコード・事前充填・復号へ三分離し、段階間の非同期特徴量/KV転送、モダリティ別ルーティング、物理同居を組み合わせて、異種段階の干渉を抑えながらSLOと資源効率を改善する。
-
-- **2025-12 · [Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs](2025-2512.20210-predictive-lora-serverless-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  LoRA要求の時系列から次に必要なアダプタを先読みし、重みを2MB固定ページへ分割して異種rankの断片化を抑えることで、1000アダプタ時にS-LoRA比1.52倍のスループットと高負荷TTFT 35%短縮を達成する。
 
 - **2026-09 · [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1588,6 +1588,10 @@
   実装：✓ ・ リポジトリ内被引用：14  
   対話型リクエストの遅延目標を守りながら余ったGPU容量をバッチリクエストへ使うため、各GPUで同時処理するリクエスト数を素早く増減する制御と、クラスタ全体のGPUインスタンス数を遅い周期で増減する制御を分けたLLM自動スケーラ。
 
+- **2025-06 · [SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving](2025-2506.09397-sled-a-speculative-llm-decoding-framework-for-efficient-edge-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
+
 - **2025-04 · [Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving](2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md)**  
   実装：[✓](https://github.com/eddiegaoo/Apt-Serve) ・ リポジトリ内被引用：13  
   KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。
@@ -1595,10 +1599,6 @@
 - **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：13  
   固定した最大周波数でGPUを動かすと低負荷時に余分な電力を使うが、単純に周波数を下げると同時要求数やKVキャッシュ量が増えたとき遅延が悪化する。著者らは、要求の生成長を予測し、将来の各復号反復におけるバッチサイズとKVキャッシュ使用量を推定する。
-
-- **2025-06 · [SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving](2025-2506.09397-sled-a-speculative-llm-decoding-framework-for-efficient-edge-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
 
 - **2025-06 · [Beyond the Buzz: A Pragmatic Take on Inference Disaggregation](2025-2506.05508-beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -1876,6 +1876,10 @@
   実装：[✓](https://github.com/BokwaiHo/COLA) ・ リポジトリ内被引用：2  
   量子化・剪定はLLMの重み容量や演算量を減らすが、圧縮前の校正データの選び方で、残る能力の種類が変わる。LLaMA3-8B-InstructのSparseGPT 50%剪定では、WikiTextのランダム校正による常識推論41.85%に対しCOLAは44.23%を報告する。
 
+- **2025-08 · [Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation](2025-2508.07675-semantic-caching-for-low-cost-llm-serving-from-offline-learning-to-onlin.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  LLMサービングでは、同じ質問への回答を保存する通常の応答キャッシュによって再計算を減らせる。原著の評価は合成データ上の費用・後悔・切替回数が中心であり、実際の生成品質やGPU推論速度の実測改善と混同してはならない。
+
 - **2025-07 · [Towards Resource-Efficient Serverless LLM Inference with SLINFER](2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   SLINFERは、個別モデルへの要求が少なく断続的に発生する私設大規模言語モデル（LLM）サービスを対象に、CPUとGPUの両方を推論実行先として扱い、同一ノードで複数モデルを弾力的に共有するシステムである。論文の事前調査では、ServerlessLLMで各インスタンスへGPU全体を割り当てたときの平均GPUメモリ利用率が23%にとどまる条件が示される。
@@ -1931,10 +1935,6 @@
 - **2025-09 · [A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving](2025-2509.23384-synergysched-predictive-two-layer-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   オンライン性能モデルをエンジン内SLO対応処理群形成とクラスタ先読み配送の共通信号にし、二層間の情報断絶を閉じて動的・異種LLM配信の遅延とSLO達成率を改善する。
-
-- **2025-08 · [Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation](2025-2508.07675-semantic-caching-for-low-cost-llm-serving-from-offline-learning-to-onlin.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  LLMサービングでは、同じ質問への回答を保存する通常の応答キャッシュによって再計算を減らせる。原著の評価は合成データ上の費用・後悔・切替回数が中心であり、実際の生成品質やGPU推論速度の実測改善と混同してはならない。
 
 - **2025-08 · [Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics](2025-2508.18736-rethinking-caching-for-llm-serving-systems-beyond-traditional-heuristics.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2067,15 +2067,15 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：822  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：824  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：720  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：723  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：567  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：568  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2361,11 +2361,11 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1873  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1879  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：593  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：594  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
@@ -2385,7 +2385,7 @@
   一覧用要約：スポットGPUの回収・獲得に合わせて並列構成を再最適化し、既存の重みとKVキャッシュを最大限再利用する配置・移行と、トークン単位の状態付き途中再開によって分散LLMの長尾遅延と運用費を抑える。
 
 - **2023-10 · [Punica: Multi-Tenant LoRA Serving](2023-2310.18547-punica-multitenant-lora-serving.md)**  
-  実装：[✓](https://github.com/punica-ai/punica) ・ リポジトリ内被引用：59  
+  実装：[✓](https://github.com/punica-ai/punica) ・ リポジトリ内被引用：60  
   異なるLoRAアダプタの要求をSGMVカーネルで同一バッチ処理し、基盤LLMを共有したまま多テナント推論を集約するサービング基盤。固定GPU資源で最大12倍のスループットを報告。
 
 - **2023-05 · [Response Length Perception and Sequence Scheduling: An LLM-Empowered LLM Inference Pipeline](2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md)**  
@@ -2411,7 +2411,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：722  
+  実装：✓ ・ リポジトリ内被引用：724  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

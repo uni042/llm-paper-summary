@@ -1794,7 +1794,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：143  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：145  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
@@ -1814,7 +1814,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   TurboQuantは、高次元ベクトルを入力データセットに合わせて学習し直さずに低ビット化する、オンライン量子化方式である。理論面では、復元二乗誤差と内積誤差の両方について、ビット幅bに対して概ね4のマイナスb乗で減る上界を示し、情報理論的な下限との差が最大約2.7倍の定数内であると証明する。
 
 - **2025-05 · [dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching](2025-2506.06295-dllm-cache-adaptive-caching.md)**  
-  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：74  
+  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：75  
   プロンプトの長間隔キャッシュとV類似度による応答トークン選択更新で、拡散LLM推論の再計算を学習なしに削減する。
 
 - **2025-05 · [dKV-Cache: The Cache for Diffusion Language Models](2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md)**  
@@ -2049,6 +2049,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：5  
   意味的に近い別プロンプトをトークンLSHで対応付け、位置補正と層別再計算により完全一致なしでもKVを選択再利用する。
 
+- **2025-07 · [Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling](2025-2508.00904-forecasting-llm-inference-performance-via-hardware-agnostic-analytical-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  入力長、出力長、注意機構、量子化、演算融合、カーネルの効率が時間とともに変わるためである。Llama2-7Bを対象に、プレフィル（プリフィル）で入力長256から65,536へ増やすと、行列積（GEMM）の計算量構成比が99.0%から27.5%へ下がり、バッチ行列積（BMM）が1.0%から71.6%へ増えると推計した（表4）。
+
 - **2025-06 · [MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference](2025-2506.15724-madakv-adaptive-modality-perception-kv-cache-eviction-for-efficient-mult.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   MadaKVは、各注意ヘッドが画像と文字のどちらへ注意を向けているかを測り、モダリティごとに異なるKV保持予算を割り当てるModality Preference Adaptation（MPA）と、層ごとの圧縮過不足を後続層へ補償するHierarchical Compression Compensation（HCC）を組み合わせる。
@@ -2081,10 +2085,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：4  
   著者はKV圧縮を、重要なトークンを選んで残す方式、K/Vのビット幅を下げる量子化、注意構造やヘッドの冗長性を利用する方式、複数の技術を組み合わせる方式に分類する。
 
-- **2025-07 · [Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling](2025-2508.00904-forecasting-llm-inference-performance-via-hardware-agnostic-analytical-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  入力長、出力長、注意機構、量子化、演算融合、カーネルの効率が時間とともに変わるためである。Llama2-7Bを対象に、プレフィル（プリフィル）で入力長256から65,536へ増やすと、行列積（GEMM）の計算量構成比が99.0%から27.5%へ下がり、バッチ行列積（BMM）が1.0%から71.6%へ増えると推計した（表4）。
-
 - **2025-05 · [KVmix: Gradient-Based Layer Importance-Aware Mixed-Precision Quantization for KV Cache](2025-2506.08018-kvmix-gradient-based-layer-importance-aware-mixed-precision-quantization.md)**  
   実装：[✓](https://github.com/LfLab-AI/KVmix) ・ リポジトリ内被引用：4  
   KVmixは、長い文脈や多数の同時要求でGPUメモリを圧迫するKVキャッシュを、モデルの品質に影響しやすい層と影響しにくい層に分けて量子化する方式である。RTX 4090 24GBで入力688トークン・最大生成1024トークンの実験では、最大バッチサイズを増やせることを含めた処理率が194.06から1032.06 トークン/sへ上昇する。
@@ -2092,6 +2092,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-05 · [FreqKV: Key-Value Compression in Frequency Domain for Context Window Extension](2025-2505.00570-freqkv-key-value-compression-in-frequency-domain-for-context-window-exte.md)**  
   実装：[✓](https://github.com/LUMIA-Group/FreqKV) ・ リポジトリ内被引用：4  
   全履歴を保持する方式では文脈長に応じてKV容量が増え、長い事前入力では注意の計算量も増える。
+
+- **2025-03 · [Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention](2025-2503.08640-efficient-many-shot-in-context-learning-with-dynamic-block-sparse-attent.md)**  
+  実装：[✓](https://github.com/millix19/dbsa) ・ リポジトリ内被引用：4  
+  通常の多数例ICLは、同じモデルを複数の分類課題へ転用できる反面、数千件の入力・正解ラベル例を毎要求の文脈へ入れるため推論が高価になる。動的 Block-Sparse 注意機構（DBSA）はこの二者を分離する。第2段階では、BM25によって要求に関連するブロックを30%検索し、保存したKV断片を連結し直してから新しい要求を生成する。
 
 - **2025-11 · [FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference](2025-2511.05534-flowmm-cross-modal-information-flow-guided-kv-cache-merging-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2129,10 +2133,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：3  
   AhaKVは、LLM推論でKVキャッシュを固定予算へ圧縮するとき、過去トークンの重要度を累積注意スコアだけで決めることの偏りを修正する方式である。
 
-- **2025-03 · [Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention](2025-2503.08640-efficient-many-shot-in-context-learning-with-dynamic-block-sparse-attent.md)**  
-  実装：[✓](https://github.com/millix19/dbsa) ・ リポジトリ内被引用：3  
-  通常の多数例ICLは、同じモデルを複数の分類課題へ転用できる反面、数千件の入力・正解ラベル例を毎要求の文脈へ入れるため推論が高価になる。動的 Block-Sparse 注意機構（DBSA）はこの二者を分離する。第2段階では、BM25によって要求に関連するブロックを30%検索し、保存したKV断片を連結し直してから新しい要求を生成する。
-
 - **2025-02 · [Compression Barriers in Autoregressive Transformers](2025-2502.15955-compression-barriers-in-autoregressive-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   近年のKV圧縮は重要トークンの選択、疎性、低次元表現、クラスタリング等で保存量を削減しているが、これらの成功が任意の入力でも保証できるかは別問題である。
@@ -2165,6 +2165,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   GraphKVは、長文脈のKVキャッシュ削減で「注意スコアの上位をそのまま残すと、互いに似た情報を持つトークンが重複して選ばれる」という問題を扱う。一方、QMSumのデコード遅延はPyramidKV単独5.133秒に対して併用5.265秒と2.5%悪化しており、すべての既存方式を高速化するという主張は成立しない。
 
+- **2025-07 · [ReasonCache: Accelerating Large Reasoning Model Serving through KV Cache Sharing](2025-2507.21433-reasoncache-accelerating-large-reasoning-model-serving-through-kv-cache-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  生成トークンが増えると、過去のトークンに対応するキー・バリュー（KV）キャッシュも伸び、GPUメモリを圧迫する。ReasonCacheは似た思考ステップに対応するKVブロックが内部表現上も似ているという観測を利用し、既に保持している物理ブロックを新しい論理位置から参照することで、KVの実体数を減らす方式である。
+
 - **2025-07 · [Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing](2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   対話ごとの注意類似度から層間の鍵・値共有を動的選択し、注意類似度計算を中央処理装置と画像処理装置へ分担、圧縮後の再計算とロードを層間パイプラインで重畳してマルチターン状態復元を高速・省容量化する。
@@ -2192,10 +2196,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-08 · [Spotlight Attention: Towards Efficient LLM Generation via Non-linear Hashing-based KV Cache Retrieval](2025-2508.19740-spotlight-attention-towards-efficient-llm-generation-via-non-linear-hash.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Spotlight 注意機構は、大規模言語モデル（LLM）の長文脈生成で、過去の鍵・値キャッシュ（KV キャッシュ）のうち現在の問い合わせに重要な少数トークンだけを取り出して注意計算を行う方式である。A100単体で512Kトークンに対するハッシュ検索を100マイクロ秒未満とし、通常の全注意デコードに比べ端から端まで最大約3倍のスループットを示した。
-
-- **2025-07 · [ReasonCache: Accelerating Large Reasoning Model Serving through KV Cache Sharing](2025-2507.21433-reasoncache-accelerating-large-reasoning-model-serving-through-kv-cache-.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  生成トークンが増えると、過去のトークンに対応するキー・バリュー（KV）キャッシュも伸び、GPUメモリを圧迫する。ReasonCacheは似た思考ステップに対応するKVブロックが内部表現上も似ているという観測を利用し、既に保持している物理ブロックを新しい論理位置から参照することで、KVの実体数を減らす方式である。
 
 - **2025-07 · [FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression](2025-2507.20030-faedkv-infinite-window-fourier-transform-for-unbiased-kv-cache-compressi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2288,7 +2288,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：577  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：579  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -2324,7 +2324,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   GEARは、自己回帰生成で増え続けるKVキャッシュを高い圧縮率で保持しつつ、単純な低ビット量子化で生じる生成品質の崩壊を抑えるための圧縮法である。
 
 - **2024-05 · [MiniCache: KV Cache Compression in Depth Dimension for Large Language Models](2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/AkideLiu/MiniCache) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/AkideLiu/MiniCache) ・ リポジトリ内被引用：109  
   MiniCacheは層内のトークン選別や低ビット化だけでなく、隣り合う層のあいだにも冗長性があると観察し、中層以降で同じ位置のKV状態を共有表現へ統合する。
 
 - **2024-03 · [Jamba: A Hybrid Transformer-Mamba Language Model](2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md)**  
@@ -2566,11 +2566,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：835  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：836  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：782  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：784  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  

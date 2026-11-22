@@ -88,6 +88,14 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：1  
   これを低ビット化するとGPUメモリ使用量を減らせるものの、活性値や重みに少数の大きな外れ値があると、均一な量子化の刻み幅が粗くなり、特に4ビット級で精度が悪化する。主要評価はPhi-mini-MoE-Instruct、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral 8×7Bを対象とする。
 
+- **2026-03 · [inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference](2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-fo.md)**  
+  実装：[✓](https://github.com/vllm-project/semantic-router) ・ リポジトリ内被引用：1  
+  待ち行列の解析近似と離散イベント検証を組み合わせ、P99遅延の品質目標を満たす最小費用のGPU台数・機種・二プール分割を実機なしで探索する容量計画シミュレータで、単純な分析が誤る計画判断を事例で示した。
+
+- **2026-03 · [FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism](2026-2603.16514-fleetopt-analytical-fleet-provisioning-for-llm-inference-with-compress-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FleetOptは、長文脈LLM推論のGPUをすべて最大入力長に合わせて確保すると、多くの短い要求に対してKVキャッシュ枠が過大になる問題を扱う。境界をわずかに超えた要求は、推論エンジンへ入れる前にゲートウェイで文章を抽出圧縮し、短文脈プールへ移せるようにする。
+
 - **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
@@ -95,6 +103,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [Asynchronous Verified Semantic Caching for Tiered LLM Architectures](2026-2602.13165-asynchronous-verified-semantic-caching-for-tiered-llm-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   著者は、事前に人手や大規模モデルで検証した回答を持つ静的キャッシュと、通常の要求を処理しながら生成回答を保存する動的キャッシュを分離する構成を前提とする。原著のトレース駆動シミュレーションでは、会話要求における静的由来回答の割合が8.2%から19.4%、検索要求では2.2%から8.6%へ増えた。
+
+- **2026-01 · [SynPerf: A Hybrid Analytical-ML Framework for GPU Performance Prediction](2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  カーネルをタスクへ分解し命令パイプラインごとの需要を解析してから学習モデルで実行時間を予測するGPU性能モデルで、11種のGPUでカーネル誤差6.1パーセントまで下げ、性能上限の診断で融合MoEを最大1.7倍速くした。
 
 - **2026-01 · [QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design](2026-2601.14549-qmc-efficient-slm-edge-inference-via-outlier-aware-quantization-and-emer.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -262,14 +274,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   地理的に離れた複数のデータセンターへ大規模言語モデル（LLM）の推論要求を割り振るとき、要求の到着場所、GPUの処理能力、通信遅延だけでなく、各拠点の外気温も運用費を左右する。本論文は、これらをLLM推論要求の配置問題に統合する。ただし原著は主要結果をSplitwise比で正規化した図として示し、本文中に個別指標の絶対値・改善率・信頼区間を列挙していない。
 
-- **2026-03 · [inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference](2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-fo.md)**  
-  実装：[✓](https://github.com/vllm-project/semantic-router) ・ リポジトリ内被引用：0  
-  待ち行列の解析近似と離散イベント検証を組み合わせ、P99遅延の品質目標を満たす最小費用のGPU台数・機種・二プール分割を実機なしで探索する容量計画シミュレータで、単純な分析が誤る計画判断を事例で示した。
-
-- **2026-03 · [FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism](2026-2603.16514-fleetopt-analytical-fleet-provisioning-for-llm-inference-with-compress-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  FleetOptは、長文脈LLM推論のGPUをすべて最大入力長に合わせて確保すると、多くの短い要求に対してKVキャッシュ枠が過大になる問題を扱う。境界をわずかに超えた要求は、推論エンジンへ入れる前にゲートウェイで文章を抽出圧縮し、短文脈プールへ移せるようにする。
-
 - **2026-02 · [TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design](2026-2602.12962-trigen-npu-architecture-for-end-to-end-acceleration-of-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TriGenは、モバイルや組込み機器のようにSRAM容量とDRAM帯域が厳しく制限される環境で、Transformer型LLMの線形演算だけでなくRMSNorm、softmax、SiLUなどの非線形演算を含むモデル全体を一つのNPU設計で実行する研究である。
@@ -277,10 +281,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの推論ではモデル重みだけでなく、各層で生じる活性化と、長い入力履歴を保持する鍵・値キャッシュ（KVキャッシュ）がメモリ容量・帯域・演算器の面積を消費する。重みだけを4ビット整数へ量子化しても、活性化がFP16のままでは浮動小数点と整数の混合積和演算を処理する回路が必要になる。
-
-- **2026-01 · [SynPerf: A Hybrid Analytical-ML Framework for GPU Performance Prediction](2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  カーネルをタスクへ分解し命令パイプラインごとの需要を解析してから学習モデルで実行時間を予測するGPU性能モデルで、11種のGPUでカーネル誤差6.1パーセントまで下げ、性能上限の診断で融合MoEを最大1.7倍速くした。
 
 - **2026-01 · [Mugi: Value Level Parallelism For Efficient LLMs](2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md)**  
   実装：[✓](https://zenodo.org/records/18063514) ・ リポジトリ内被引用：0  
@@ -312,13 +312,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：5  
   本研究は、一つの大規模言語モデル（LLM）を高速化するのではなく、複数のモデル推論・外部検索・ツール実行を含むエージェント全体を、異なる計算特性を持つ装置へ配置することを目的とする。音声対話エージェントを例にすると、音声認識、文脈検索、LLMによる応答生成、検索API、音声合成は互いに依存するが、同じGPUを使う必要はない。
 
+- **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
+  実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：4  
+  大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
+
 - **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：4  
   大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
-
-- **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
-  実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：3  
-  大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
@@ -383,7 +383,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：78  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
@@ -399,11 +399,11 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   APEXは、大規模言語モデル（LLM）を複数GPUで提供する際に、どの並列化方式を組み合わせるべきかを実機へ総当たりで配備せず、CPU上のシミュレーションで比較するシステムである。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
-  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：14  
   演算子-階層 ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式から計算/メモリ/ネットワーク要件を逆算するGenZ。
 
 - **2024-08 · [LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference](2024-2408.06003-lut-tensor-core-a-software-hardware-co-design-for-lut-based-low-bit-llm-.md)**  
-  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：12  
   重みを1〜4ビットに量子化した大規模言語モデル（LLM）では、重みの転送量は小さくなる一方、活性化はFP16やINT8など比較的高い精度で保持される。ISCA 2025の原著は、従来のLUTアクセラレータに比べて計算密度とエネルギー効率を1.44倍改善し、低ビットLLMの推論をモデル単位のシミュレーションで2.06〜5.51倍高速化したと報告する。
 
 - **2024-09 · [TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation](2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md)**  

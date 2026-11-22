@@ -553,7 +553,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：43  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
@@ -576,13 +576,13 @@
   実装：✓ ・ リポジトリ内被引用：24  
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
 
+- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
+
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
   実装：[✓](https://github.com/Gen-Verse/LatentMAS) ・ リポジトリ内被引用：17  
   LatentMASはこの境界を変え、エージェントが最終層の隠れ状態を連続表現のまま自己回帰生成し、層ごとの鍵・値キャッシュ（KVキャッシュ）を共有作業メモリとして次のエージェントへ渡す。著者は既存モデルを追加学習しない訓練不要方式として設計し、入力埋め込みと最終層隠れ状態の分布の違いを補正する線形写像を組み込む。
-
-- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：17  
