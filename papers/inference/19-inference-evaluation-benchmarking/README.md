@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（188本）
+## 自動生成の論文一覧（189本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -397,6 +397,10 @@
 - **2026-05 · [Linear Scaling Video VLMs for Long Video Understanding](2026-2605.31598-linear-scaling-video-vlms-for-long-video-understanding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い動画を視覚言語モデル（Vision-Language モデル; VLM）へ入力すると、映像から得られる視覚トークンが時間とともに増え、各フレームが過去の全フレームへ自己注意（self-注意機構）を計算する通常の実装では、全映像を処理する事前充填（プリフィル）の計算量がフレーム数 N に対して二次的に増える。
+
+- **2026-05 · [LensVLM: Selective Context Expansion for Compressed Visual Representation of Text](2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation.md)**  
+  実装：[✓](https://github.com/apple-aiml-research/ml-lensvlm) ・ リポジトリ内被引用：0  
+  テキストを画像化して圧縮し、根拠画像だけを未圧縮へ展開する道具使用を教師あり学習と強化学習で教え、実効圧縮4.3倍で全文並みの精度を保つ視覚言語モデルの推論枠組み。
 
 - **2026-05 · [LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference](2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

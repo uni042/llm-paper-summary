@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1222本）
+## 自動生成の論文一覧（1225本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1934,6 +1934,10 @@
   実装：[✓](https://github.com/stanfordnlp/preft) ・ リポジトリ内被引用：0  
   アダプタを入力処理時だけに適用し生成では捨てることで、多アダプタ提供の生成費用を消し、512アダプタ・Llama 3.1 70Bでスループット1.9倍を実測しつつ、下流性能は教師あり学習で同等、強化学習でもほぼ同等を保った。
 
+- **2026-05 · [Predict-then-Diffuse: Adaptive Response Length for Compute-Budgeted Inference in Diffusion LLMs](2026-2605.04215-predict-then-diffuse-adaptive-response-length-for-compute-budgeted-infer.md)**  
+  実装：[✓](https://github.com/mchl-labs/predict-then-diffuse) ・ リポジトリ内被引用：0  
+  拡散型言語モデルの固定応答長を、推論前に軽量予測器で入力ごとに見積もって安全余裕を加えることで置き換え、埋め草計算を省いて既定推論比で計算量を99.34パーセント減らす枠組み。
+
 - **2026-05 · [Policy-Guided Stepwise Model Routing for Cost-Effective Reasoning](2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   思考連鎖の中間状態ごとに小型モデル継続か大型モデルへの昇格かを決める段階的ルーティングを制約つき決定問題として定式化し、小型制御ポリシーの強化学習と閾値較正を同時に行うことで、過程報酬モデルなしに精度とコストのトレードオフを改善した研究。
@@ -2089,6 +2093,10 @@
 - **2026-05 · [Code Generation by Differential Test Time Scaling](2026-2605.20473-code-generation-by-differential-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コード生成の推論時計算量拡張（Test-Time Scaling、TTS）では、一つの問題に対して複数のコードを生成し、その中から正しい候補を選ぶ。従来の選択方式には、公開テストを実行するもの、別のLLMにテスト入力を生成させるもの、LLM評価器に候補を比較させるものがある。
+
+- **2026-05 · [Cascade Token Selection for Transformer Attention Acceleration](2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  前層の代表トークン集合を継承し相互グラムで検証と微修正だけを行うことで、注意圧縮の選択費用を二乗量から系列長×代表数へ下げ、グラム演算を22〜63パーセント削減するカスケード選択方式。
 
 - **2026-05 · [BlockBatch: Multi-Scale Consensus Decoding for Efficient Diffusion Language Model Inference](2026-2605.29233-blockbatch-multi-scale-consensus-decoding-for-efficient-diffusion-langua.md)**  
   実装：[✓](https://github.com/Laurence-Wu/BlockBatch) ・ リポジトリ内被引用：0  
@@ -2261,6 +2269,10 @@
 - **2026-04 · [ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving](2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。
+
+- **2026-04 · [Efficient Matrix Implementation for Rotary Position Embedding](2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.md)**  
+  実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  
+  回転位置埋め込みの分割と結合を一つの構造化行列変換へ書き換える数学的に等価な再定式化で、多次元版まで統一し演算子単体で最大約3.7倍、モデル全体でも数パーセントの高速化と大幅な実装簡素化を得る方式。
 
 - **2026-04 · [Early Decisions Matter: Proximity Bias and Initial Trajectory Shaping in Non-Autoregressive Diffusion Language Models](2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping-in-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2877,7 +2889,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：138  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：139  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -4589,7 +4601,7 @@
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：36  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
@@ -4723,7 +4735,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：199  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：200  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  

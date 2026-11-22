@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1e1c77f221c33d325072d818962e2f3bd6c3c575",
+  "base_commit": "80914bd7b4243e4a1a3afdc9b9220e80d08fcbcd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -381,6 +381,7 @@
     "2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthesis-for-cold-start.json",
     "2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.json",
     "2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.json",
+    "2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.json",
     "2026-2604.09975-encformer-secure-and-efficient-transformer-inference-over-encrypted-data.json",
     "2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping.json",
     "2026-2604.10898-zoomr-memory-efficient-reasoning-through-multi-granularity-key-value-retrieval.json",
@@ -406,13 +407,16 @@
     "2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-memory-architecture.json",
     "2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.json",
     "2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-context-attention-serving.json",
+    "2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-llm-based-attribute-value-extraction.json",
     "2026-2604.26378-coquant-joint-weight-activation-subspace-projection-for-mixed-precision-llms.json",
     "2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consumer-grade-llm-inference.json",
     "2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inference.json",
     "2026-2605.01858-decouple-and-cache-kv-cache-construction-for-streaming-video-understanding.json",
     "2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hosted-open-weight-llm-apis.json",
+    "2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.json",
     "2026-2605.04075-retentivekv-state-space-memory-for-uncertainty-aware-multimodal-kv-cache-eviction.json",
     "2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm-compression.json",
+    "2026-2605.04215-predict-then-diffuse-adaptive-response-length-for-compute-budgeted-inference-in-diffusion-llms.json",
     "2026-2605.04450-when-kv-meets-embeddings-dynamic-gpu-memory-allocation-for-accelerating-generative.json",
     "2026-2605.05225-macs-modality-aware-capacity-scaling-for-efficient-multimodal-moe-inference.json",
     "2026-2605.05699-when-quantization-is-free-an-int4-kv-cache-that-outruns-fp16-on-apple-silicon.json",
@@ -420,6 +424,7 @@
     "2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.json",
     "2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-bit-language-models.json",
     "2026-2605.06850-shadow-mask-distillation-for-memory-efficient-alignment-in-rl-post-training.json",
+    "2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation-of-text.json",
     "2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-caching.json",
     "2026-2605.08044-fast-byte-latent-transformer.json",
     "2026-2605.08985-llava-uhd-v4-what-makes-efficient-visual-encoding-in-mllms.json",
@@ -47906,6 +47911,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.09742": {
+      "order": [
+        "2026-11-22T04:12:02+00:00",
+        "2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.26209": {
+      "order": [
+        "2026-11-22T04:13:03+00:00",
+        "2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-llm-based-attribute-value-extraction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.03110": {
+      "order": [
+        "2026-11-22T04:14:03+00:00",
+        "2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.04215": {
+      "order": [
+        "2026-11-22T04:15:04+00:00",
+        "2026-2605.04215-predict-then-diffuse-adaptive-response-length-for-compute-budgeted-inference-in-diffusion-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.07019": {
+      "order": [
+        "2026-11-22T04:16:05+00:00",
+        "2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation-of-text.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60301,6 +60351,21 @@
     "arxiv:2604.08964": [
       "papers/inference/99-other-inference-systems/2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffu.md",
       "papers/inference/99-other-inference-systems/2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffu.md"
+    ],
+    "arxiv:2604.09742": [
+      "papers/inference/99-other-inference-systems/2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.md"
+    ],
+    "arxiv:2604.26209": [
+      "papers/inference/05-speculative-decoding-moe/2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-.md"
+    ],
+    "arxiv:2605.03110": [
+      "papers/inference/99-other-inference-systems/2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.md"
+    ],
+    "arxiv:2605.04215": [
+      "papers/inference/99-other-inference-systems/2026-2605.04215-predict-then-diffuse-adaptive-response-length-for-compute-budgeted-infer.md"
+    ],
+    "arxiv:2605.07019": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation.md"
     ]
   }
 }

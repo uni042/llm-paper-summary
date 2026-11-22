@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMの固定長生成という制約に対し応答長を事前予測して計算予算に応じた推論を行うPredict-then-Diffuseを提案し、パディング浪費と再計算を避けてFLOPを削減しており、拡散型LLM推論の効率化への直接貢献が具体的であるため。",
   "semantic_scholar_id": "81f6858d2554b87fc3e639cdbef402a6e4656abb",
   "source_url": "https://arxiv.org/abs/2605.04215",
-  "status": "ready",
+  "status": "superseded",
   "title": "Predict-then-Diffuse: Adaptive Response Length for Compute-Budgeted Inference in Diffusion LLMs",
   "type": "research",
   "venue": "IEEE International Joint Conference on Neural Network",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T04:17:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.04215-predict-then-diffuse-adaptive-response-length-for-compute-budgeted-infer.md",
+  "represented_canonical_id": "arXiv:2605.04215",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

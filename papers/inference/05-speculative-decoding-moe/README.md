@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（421本）
+## 自動生成の論文一覧（422本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -995,6 +995,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation](2026-2605.27390-evospec-evolving-speculative-decoding-via-real-time-vocabulary-and-param.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号は、小さな草稿モデルが先行して候補トークンを生成し、大きなターゲットモデルがまとめて検証することで自己回帰生成を高速化する。
+
+- **2026-04 · [Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction](2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-.md)**  
+  実装：[✓](https://github.com/networkslab/HPD) ・ リポジトリ内被引用：0  
+  属性値が文書条件付きで独立であることを使い、位置番号に間隔を空けて複数値を同時デコードし、文書重ね合わせで最大96トークン並列化して抽出費用を最大13.8倍下げる方式。
 
 - **2026-03 · [SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation](2026-2603.16219-specsteer-synergizing-local-context-and-global-reasoning-for-efficient-p.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
