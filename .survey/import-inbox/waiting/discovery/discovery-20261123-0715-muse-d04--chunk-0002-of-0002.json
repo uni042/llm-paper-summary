@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d04::chunk-0002-of-0002",
+  "reference_main_sha": "889d2e78108acd55b4e88919f3b1f0bb0b6fbcdd",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2024.09.30.615775",
+      "identity_tokens": [
+        "DOI:10.1101/2024.09.30.615775"
+      ],
+      "title": "SC-MAMBA2: Leveraging State-Space Models for Efficient Single-Cell Ultra-Long Transcriptome Modeling",
+      "reason": "要旨はシングルセル超長トランスクリプトームのモデリングに状態空間モデルMamba2を適用する研究であり、生命科学データへの応用が主題でLLM推論システムとは無関係なため対象外とした。",
+      "source_url": "https://doi.org/10.1101/2024.09.30.615775",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11760-025-04115-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-025-04115-6"
+      ],
+      "title": "SelectGAN: Mamba based explicit selectivity GAN for generating structured content",
+      "reason": "タイトルが示すとおりMambaベースのGANで構造化コンテンツを生成するモデル研究であり、生成モデルのアーキテクチャ提案であって推論システムやサービングの効率化ではないため対象外とした。Semantic Scholarでも要旨は未収録だった。",
+      "source_url": "https://doi.org/10.1007/s11760-025-04115-6",
+      "body_check": "title_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b",
+      "identity_tokens": [
+        "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b"
+      ],
+      "title": "E NHANCED D YNAMIC M ODULATION WITH G LOBAL R E - CURRENT I NHIBITION N ETWORKS FOR M ULTI - TASK R EIN - FORCEMENT L EARNING",
+      "reason": "タイトルが明示するとおりマルチタスク強化学習のための動的変調ネットワークの研究であり、LLM推論とは異分野の学習アルゴリズムであるため対象外とした。要旨の取得も429で失敗した。",
+      "source_url": "https://www.semanticscholar.org/paper/39578fe80c3f2ce38aca71ca2b71751efe113a0b",
+      "body_check": "title_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 113
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198",
+      "identity_tokens": [
+        "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198"
+      ],
+      "title": "Practical Evaluation of Machine Learning Efficiency Requires Model Life Cycle Assessment",
+      "reason": "機械学習の効率評価にはモデルライフサイクル全体の評価が必要と論じる研究とみられ、推論効率の評価観点に関わりうるが、Semantic Scholarの429で一次要旨を取得できず、推論システムへの具体的な方法論的貢献を確認できなかったため保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/b640029df82f3a0a0d309023fa6c5a56499cd198",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 114
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IISWC71020.2026.00028",
+      "identity_tokens": [
+        "DOI:10.1109/IISWC71020.2026.00028"
+      ],
+      "title": "LifeKV: Reducing SSD Write Amplification with Lifetime-Aware KV Cache Placement in Multi-Turn LLM Serving",
+      "reason": "要旨ではマルチターンLLMサービングでSSDをKVキャッシュの階層として使う際の書き込み増幅を、KVオブジェクトの寿命を意識した配置LifeKVで削減しサービング遅延への影響を抑える内容であり、KVキャッシュ配置への直接貢献が具体的である。",
+      "source_url": "https://doi.org/10.1109/IISWC71020.2026.00028",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 115
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/PESGM58988.2026.11693290",
+      "identity_tokens": [
+        "DOI:10.1109/PESGM58988.2026.11693290"
+      ],
+      "title": "Learning to Compress: Energy-Aware Large Language Model Serving via Adaptive KV Caching",
+      "reason": "要旨ではLLM推論の電力・炭素負荷に対し、KVキャッシュ圧縮を強化学習で適応的に制御するエネルギー配慮型サービングフレームワークを提案し、推論性能とエネルギー効率の両立を図っており、LLMサービングへの直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.1109/PESGM58988.2026.11693290",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 116
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3805621.3807628",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807628"
+      ],
+      "title": "Reducing Language Model Inference Latency using CPU-Assisted Serving",
+      "reason": "要旨ではGPU不足下の言語モデル推論遅延を削減するため、遊休CPUノードからGPU仮想化で遠隔GPUへAPIコールを転送しCPU側計算と組み合わせるCPU支援サービングを提案しており、推論サービングの資源活用への直接貢献が具体的である。",
+      "source_url": "https://doi.org/10.1145/3805621.3807628",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 117
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e",
+      "identity_tokens": [
+        "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e"
+      ],
+      "title": "TAP: Efficient Derivation of Tensor Parallel Plans for Large Neural Networks",
+      "reason": "大規模ニューラルネットワーク向けにテンソル並列計画を効率的に導出するTAPは分散推論にも関わりうるが、Semantic Scholarに要旨がなく一次要旨を取得できなかったため、対象が学習主体か推論を含むか判別できず保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/e3a181af6e90848e9fa0cb7ef042e4ef678eab3e",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 118
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3711896.3737865",
+      "identity_tokens": [
+        "DOI:10.1145/3711896.3737865"
+      ],
+      "title": "KDD 2025 Workshop on Inference Optimization for Generative AI",
+      "reason": "要旨は生成AI向け推論最適化をテーマとするKDDワークショップの開催趣旨と研究・実務の交流を述べる紹介文であり、技術的な研究成果そのものではないため対象外とした。",
+      "source_url": "https://doi.org/10.1145/3711896.3737865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 119
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPDS.2023.3281931",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2023.3281931"
+      ],
+      "title": "A Survey on Auto-Parallelism of Large-Scale Deep Learning Training",
+      "reason": "要旨は大規模深層学習の学習を対象に分散学習アルゴリズムの自動並列化を整理したサーベイであり、扱うのは学習時の並列化のみで推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.1109/TPDS.2023.3281931",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 120
+    }
+  ],
+  "parent_run_key": "muse-20261123-d04",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d02::chunk-0002-of-0002",
+  "reference_main_sha": "889d2e78108acd55b4e88919f3b1f0bb0b6fbcdd",
+  "record_count": 6,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00129",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00129"
+      ],
+      "title": "Chimera: An Efficient Multimodal Embodied Inference Framework with Complexity-Aware Edge-Cloud Routing",
+      "reason": "複雑度に応じたエッジ・クラウド間のルーティングを持つマルチモーダル身体性推論フレームワークであり推論配置の最適化を含む一方、主題はロボティクス等の身体性応用側に寄っており汎用LLMサービングへの寄与の度合いが不明瞭なため微妙な候補とした。",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00129",
+      "body_check": "crossref_metadata_only; abstract_not_available_in_crossref; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562",
+      "identity_tokens": [
+        "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562"
+      ],
+      "title": "GREYHOUND: Hunting Fail-Slows in Hybrid-Parallel Training at Scale",
+      "reason": "大規模ハイブリッド並列学習におけるfail-slow障害の検出を扱う研究であり、対象は学習クラスタの運用・信頼性のみで推論サービングの障害検出や実行系への貢献は確認できないため対象外とした。",
+      "source_url": "https://www.semanticscholar.org/paper/315d4039a67318e1a87f7560ed1e8b5d34984562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 56
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3819518.3819565",
+      "identity_tokens": [
+        "DOI:10.14778/3819518.3819565"
+      ],
+      "title": "MGRAG: Semantic Subgraph Matching and Graph-Aware Caching for Multimodal Retrieval-Augmented Generation",
+      "reason": "マルチモーダル文書コーパスへの複雑な問合せに対し、意味的サブグラフマッチングとグラフ認識キャッシュで証拠検索とコンテキスト提供を効率化するRAGシステムであり、LLM推論コアではなく検索・提供側の最適化のため微妙な候補とした。",
+      "source_url": "https://doi.org/10.14778/3819518.3819565",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562728",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562728"
+      ],
+      "title": "LOKI: An LLM Accelerator with Optimized KV Cache and In-Memory Computing Cores",
+      "reason": "最適化したKVキャッシュとインメモリコンピューティングコアを備えたLLMアクセラレータのハードウェア提案であり、タイトルが示すとおりKVキャッシュ処理と推論加速を一体で扱う推論ハードウェアへの直接貢献であるため収録対象とした。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562728",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 58
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WCNC65185.2026.11555375",
+      "identity_tokens": [
+        "DOI:10.1109/WCNC65185.2026.11555375"
+      ],
+      "title": "Adaptive LLM Inference in 6G Vehicular Networks via Layer Pruning and Offloading",
+      "reason": "6G車両ネットワークにおいて層プルーニングとオフロードでLLM推論を適応させる研究であり推論実行の分割自体は対象範囲に触れるが、主眼は車両ネットワーク固有の通信・資源条件への適用であるため微妙な候補として保留した。",
+      "source_url": "https://doi.org/10.1109/WCNC65185.2026.11555375",
+      "body_check": "crossref_metadata_only; abstract_not_available_in_crossref; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3698038.3698521",
+      "identity_tokens": [
+        "DOI:10.1145/3698038.3698521"
+      ],
+      "title": "MoEsaic: Shared Mixture of Experts",
+      "reason": "複数MoEデプロイメント間で同一エキスパートを自動で重複排除・共有し、同一エキスパート宛リクエストをバッチ化することでGPUメモリとサービングコストを下げ、Mixtral-8x7Bで7倍のインスタンスを serving できると示すMoEサービングシステムであるため収録対象とした.",
+      "source_url": "https://doi.org/10.1145/3698038.3698521",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 60
+    }
+  ],
+  "parent_run_key": "muse-20261123-d02",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 26
+}

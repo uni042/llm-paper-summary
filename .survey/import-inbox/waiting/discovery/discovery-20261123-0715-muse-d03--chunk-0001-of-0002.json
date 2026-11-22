@@ -1,0 +1,358 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d03::chunk-0001-of-0002",
+  "reference_main_sha": "889d2e78108acd55b4e88919f3b1f0bb0b6fbcdd",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-0884",
+      "identity_tokens": [
+        "DOI:10.52202/079017-0884"
+      ],
+      "title": "Rethinking Memory and Communication Costs for Efficient Data Parallel Training of Large Language Models",
+      "reason": "要旨はデータ並列学習のメモリ・通信コストを再考しPaROによる学習高速化を提案する内容で、対象はLLMの学習スループットのみであり、推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.52202/079017-0884",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 61
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/LCA.2025.3646622",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2025.3646622"
+      ],
+      "title": "Enabling Cost-Efficient LLM Inference on Mid-Tier GPUs With NMP DIMMs",
+      "reason": "要旨では中位GPUでのLLM推論がデコード段階でメモリ帯域とAllReduceのI/O帯域に律速されることを示し、NMP DIMMへのオフロードとINT8通信量子化でコスト効率の高い推論を実現すると述べており、推論システムへの直接貢献が具体的である。",
+      "source_url": "https://doi.org/10.1109/LCA.2025.3646622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 62
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3805621.3807631",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807631"
+      ],
+      "title": "Balancing Compute in LLM Inference: Model Selection, Quantization, and Test-Time Scaling",
+      "reason": "要旨はQwen3系列を対象にモデル選択、学習後量子化、テスト時計算スケーリングの3軸でLLM推論の精度・スループット・エネルギー・メモリのバランスを実測し、適応的思考による推論計算配分まで示しており、推論最適化への直接的な知見である。",
+      "source_url": "https://doi.org/10.1145/3805621.3807631",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3801553",
+      "identity_tokens": [
+        "DOI:10.1145/3801553"
+      ],
+      "title": "A High-Parallelism Softmax Hardware-Software Co-Design for Fast and Efficient LLM Inference",
+      "reason": "要旨はLLM推論の自己注意で律速となるSoftmaxについて、和の推定で指数演算を削減する高並列なハードウェア・ソフトウェア協調設計を提案し、遅延とエネルギーの削減を実測しており、推論高速化への直接貢献が明確である。",
+      "source_url": "https://doi.org/10.1145/3801553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 64
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748273.3749213",
+      "identity_tokens": [
+        "DOI:10.1145/3748273.3749213"
+      ],
+      "title": "LLMs on Edge: Network Traffic Characteristics of Distributed Inference under the Loupe",
+      "reason": "要旨はエッジ環境における分散LLMフレームワークのネットワークトラフィック特性を実機テストベッドで計測した分析であり、分散推論の配置に関わるものの、新たな推論機構やサービング方式の提案ではなく計測主体のため保留とした。",
+      "source_url": "https://doi.org/10.1145/3748273.3749213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3680344",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3680344"
+      ],
+      "title": "Improving Machine Translation With PPO and Token-Adaptive Early Exit in Transformer-Based Models",
+      "reason": "要旨はMarianMT等の機械翻訳モデルに対しトークン適応型早期終了で自己回帰デコードの推論コストを下げる枠組みだが、対象はLLMではなく翻訳専用モデルで、LLMサービングへの適用可能性は要旨からは限定的なため保留とした。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3680344",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISPASS69572.2026.00067",
+      "identity_tokens": [
+        "DOI:10.1109/ISPASS69572.2026.00067"
+      ],
+      "title": "TTX: Towards Autotuning Triton Kernels via Latency Prediction with XGBoost",
+      "reason": "要旨はTritonカーネルの自動チューニングをXGBoostによる遅延予測で効率化する汎用GPUカーネル最適化であり、行列積等の演算子が対象だがLLM推論に特化した機構ではなく、推論システムへの直接性が弱いため保留とした。",
+      "source_url": "https://doi.org/10.1109/ISPASS69572.2026.00067",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1801",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1801"
+      ],
+      "title": "Uncertainty-Aware Routing for Principled Alignment with MoE Dynamics",
+      "reason": "要旨はMoEの学習ダイナミクスとアラインメントを不確実性認識ルーティングで改善する研究であり、評価軸もperplexityや専門家分化といった学習・モデル品質側で、MoE推論やサービングの機構への貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2405.20799",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2405.20799",
+        "arXiv:2405.20799"
+      ],
+      "title": "Rough Transformers: Lightweight Continuous-Time Sequence Modelling with Path Signatures",
+      "reason": "要旨は不規則サンプリング時系列向けにパス署名を用いるRough Transformerという系列モデリング手法であり、対象タスクは時系列処理で、LLM推論システムへの直接貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.48550/arXiv.2405.20799",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2207.05022",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2207.05022",
+        "arXiv:2207.05022"
+      ],
+      "title": "Efficient NLP Inference at the Edge via Elastic Pipelining",
+      "reason": "要旨はモバイル端末上のNLP推論で遅延とメモリの緊張を、モデルシャーディングと弾力的パイプライン計画によるSTIで解消するオンデバイス推論システムであり、Transformer推論の実行方式への直接貢献が具体的である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2207.05022",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/qub2.69",
+      "identity_tokens": [
+        "DOI:10.1002/qub2.69"
+      ],
+      "title": "Foundation models for bioinformatics",
+      "reason": "要旨はバイオインフォマティクスへの基盤モデルの応用を論じる展望論文であり、異分野応用が主体で、LLM推論・サービング機構への貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.1002/qub2.69",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+      "identity_tokens": [
+        "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+        "arXiv:2105.03801"
+      ],
+      "title": "Long-Span Dependencies in Transformer-based Summarization Systems",
+      "reason": "要旨（arXiv版で確認）は長文要約タスクにおける局所自己注意と明示的内容選択による長距離依存への対処であり、要約能力の手法が主体で、LLM推論システムの機構への直接貢献は確認できないため対象外とした。",
+      "source_url": "https://www.semanticscholar.org/paper/2d097ebde47e9b620f5236d2d5c57c12794f159f",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b",
+      "identity_tokens": [
+        "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b"
+      ],
+      "title": "Scalable Hierarchical Self-Attention with Learnable Hierarchy for Long-Range Interactions",
+      "reason": "要旨はグラフ構造データ向けに学習可能な階層で自己注意を疎化するSequoiaの提案であり、評価も長距離グラフベンチマークが主体で、LLM推論への直接適用を示す内容ではないため対象外とした。",
+      "source_url": "https://www.semanticscholar.org/paper/0fa6bd29f51b82c3fe6e275129e4518ba646b59b",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a7e4db09a5387fec8dc6dcfd1deb6b7a44076fbb",
+      "identity_tokens": [
+        "SemanticScholar:a7e4db09a5387fec8dc6dcfd1deb6b7a44076fbb"
+      ],
+      "title": "Finding the Winning Ticket of BERT for Binary Text Classification via Adaptive Layer Truncation before Fine-tuning",
+      "reason": "要旨は二値テキスト分類向けにBERTの上位層を適応的に切り捨てて微調整と推論の時間・メモリを削減する圧縮法だが、対象はBERTの特定タスク向け微調整であり、LLM推論システム一般への直接性は限られるため保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/a7e4db09a5387fec8dc6dcfd1deb6b7a44076fbb",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770854.3780279",
+      "identity_tokens": [
+        "DOI:10.1145/3770854.3780279"
+      ],
+      "title": "How to Train Your Mamba for Time Series Forecasting",
+      "reason": "要旨は時系列予測向けMamba／状態空間モデルの理論的解釈と構成アブレーションを扱う内容で、時系列という異分野タスクが主体であり、LLM推論システムへの貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.1145/3770854.3780279",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSVT.2025.3637139",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2025.3637139"
+      ],
+      "title": "Complexity-Aware Policy via Heterogeneous Experts for Robotic Manipulation",
+      "reason": "タイトルと要旨から、ロボットマニピュレーションのポリシー学習に異種専門家混合を用いる研究であり、対象はロボット制御タスクで、LLM推論システムとは分野が異なるため対象外とした。",
+      "source_url": "https://doi.org/10.1109/TCSVT.2025.3637139",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JSTARS.2026.3674206",
+      "identity_tokens": [
+        "DOI:10.1109/JSTARS.2026.3674206"
+      ],
+      "title": "Multilevel Spatial Spectral Difference and Geometric Constraint Model for Airborne Snapshot Spectral Imaging",
+      "reason": "タイトルが明白に空中スナップショット分光イメージングというリモートセンシング分野の再構成モデルを示しており、要旨もハイパースペクトル画像再構成が主体で、LLM推論とは無関係なため対象外とした。",
+      "source_url": "https://doi.org/10.1109/JSTARS.2026.3674206",
+      "body_check": "title_screen_only; abstract_also_checked; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7849991e628f4a6b28bcebc6a676589f884383fc",
+      "identity_tokens": [
+        "SemanticScholar:7849991e628f4a6b28bcebc6a676589f884383fc"
+      ],
+      "title": "Turbocharge Interactive NLP at the Edge",
+      "reason": "Semantic Scholar APIの429と代替検索でも一次要旨を取得できず、タイトルが示すエッジでの対話型NLP高速化がLLM推論にどう関わるか機構を確認できなかったため、断定せず保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/7849991e628f4a6b28bcebc6a676589f884383fc",
+      "body_check": "abstract_not_retrieved; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/MRAI70020.2026.11621074",
+      "identity_tokens": [
+        "DOI:10.1109/MRAI70020.2026.11621074"
+      ],
+      "title": "CacheCast: Learning-Guided KV Cache Placement for Multi-Tenant Cloud LLM Serving",
+      "reason": "要旨はマルチテナントのクラウドLLMサービング向けに、文脈再利用可能性等を学習してKVキャッシュをGPU・CPU・SSD階層へ配置するCacheCastを提案し、vLLM実環境でP95遅延とTTFTの改善を示しており、KVキャッシュ管理への直接貢献が明確である。",
+      "source_url": "https://doi.org/10.1109/MRAI70020.2026.11621074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IISWC66894.2025.00016",
+      "identity_tokens": [
+        "DOI:10.1109/IISWC66894.2025.00016"
+      ],
+      "title": "Understanding Distributed Training of Large Language Models with Unified Virtual Memory",
+      "reason": "要旨は統合仮想メモリを用いたLLM分散学習の並列戦略を分析する研究であり、対象は学習時のメモリ過剰割当と並列化のみで、推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "source_url": "https://doi.org/10.1109/IISWC66894.2025.00016",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:15:00+09:00",
+      "last_checked_at": "2026-11-23T07:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 81
+    }
+  ],
+  "parent_run_key": "muse-20261123-d03",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 29
+}
