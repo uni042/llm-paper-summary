@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（312本）
+## 自動生成の論文一覧（315本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -526,6 +526,14 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   中間テンソルを実データでなく添字の対応関係として保持する仮想テンソルで全種類のデータ移動を消すコンパイラにより、既存系の最良比で最大一・九三倍、平均一・二八倍の高速化と最大六十パーセントのメモリ削減を得たと報告した。
 
+- **2026-07 · [TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters](2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  タイルを解析単位にして資源ベクトル、依存スケジューリング、再利用距離によるキャッシュ推定、通信段階費用を一つの第一原理モデルでつなぎ、単一カーネルから32GPUのvLLMサービングまで二桁前半の誤差で遅延を予測するGPU性能モデル。
+
+- **2026-07 · [Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment](2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardwa.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小型視覚言語モデルの量子化を視覚エンコーダ・プロジェクタ・言語基盤へ分けてJetson 2機で測り、感度は規模でなくMoEか密かで決まること、SigLIPのINT8遅延異常、INT4のVRAM減と速度悪化の交換を実証した配置指針の研究。
+
 - **2026-07 · [PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference](2026-2607.14618-polyq-codesigning-end-to-end-quantization-framework-for-scalable-edge-cp.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   平均ビット予算に合わせてチャネルごとにビット幅を配り、並べ替えをコンパイル時に統合して実行時の配置費用を消すことで、小数ビット単位の量子化をCPU上で実用的に動かす量子化とコンパイラの共同設計の研究。
@@ -605,6 +613,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [XFP: Quality-Targeted Adaptive Codebook Quantization with Sparse Outlier Separation for LLM Inference](2026-2605.14844-xfp-quality-targeted-adaptive-codebook-quantization-with-sparse-outlier-.md)**  
   実装：[✓](https://github.com/flash7777/vllm/tree/multiquant) ・ リポジトリ内被引用：0  
   XFPは、大規模言語モデルの重みを低ビット化する際に、最初からINT4やINT3などのビット幅を固定するのではなく、各層の重み再構成品質を満たす最小のビット幅を自動で選ぶ推論向け量子化方式である。後者を2ビットへ落としやすくすることで、モデルの全専門家を削除せず、2枚の96GBワークステーションGPUへ397B規模の重みを収める構成を探索する。
+
+- **2026-05 · [Tile-Level Activation Overlap for Efficient LLM Inference](2026-2607.02521-tile-level-activation-overlap-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SwiGLUの中間テンソルのメモリ往復をタイル単位の融合で消し、計算と読み込みや保存を重ねる二つのカーネルで、H100上でPyTorch比最大2.47倍と高い数値精度を得る研究。
 
 - **2026-05 · [SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification](2026-2607.20475-sonicsampler-unified-tile-aware-kernels-for-llm-sampling-and-speculative.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1103,7 +1115,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
-  実装：[✓](https://github.com/HazyResearch/ThunderKittens) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/HazyResearch/ThunderKittens) ・ リポジトリ内被引用：22  
   各演算ごとに大量のCUDA制御コードを書く代わりに、タイル演算と「ロード・計算・保存・終了」の4段階を指定し、共有メモリの配置や同期の多くを共通部品に任せる。さらに、行列積の段数を1から4へ増やすと260→760 TFLOPS、L2再利用を意識したブロック順序では805対392 TFLOPSという差があり、性能改善の機構を個別に検証している。
 
 - **2024-08 · [STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "26e78d5b050127a0d041c44a0d5a56d655cfaf3e",
+  "base_commit": "501bcf65e0531cc65c52abb3f58d088a18db70c1",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -582,6 +582,7 @@
     "2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branch-routing.json",
     "2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-scoring.json",
     "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json",
+    "2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-efficient-rag.json",
     "2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-robotic-vlms-and-vlas.json",
     "2026-2606.30005-llm-agents-are-latent-context-managers.json",
     "2026-2606.30553-cosm-a-cooperative-scheduling-framework-for-concurrent-pim-and-cpu-execution-on-mobile-devices.json",
@@ -589,6 +590,7 @@
     "2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.json",
     "2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.json",
     "2026-2607.01308-cache-merging-as-a-convergent-replicated-state-for-multi-agent-latent-reasoning.json",
+    "2026-2607.02521-tile-level-activation-overlap-for-efficient-llm-inference.json",
     "2026-2607.02522-multi-turn-distributed-inference-with-mixture-of-experts-for-6g-edge-cloud-networks.json",
     "2026-2607.03050-omnifocus-query-guided-modality-balanced-token-compression-for-omni-modal-large-language-models.json",
     "2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inference.json",
@@ -599,6 +601,7 @@
     "2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-empowered-edge-intelligence.json",
     "2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.json",
     "2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.json",
+    "2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardware-aware.json",
     "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json",
     "2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-inference-on-amd-s-xdna-npu.json",
     "2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.json",
@@ -613,11 +616,13 @@
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
     "2026-2607.17486-salt-salience-aware-lexical-trie-for-long-context-compression.json",
+    "2026-2607.18839-hpd-parsing-hierarchical-parallel-document-parsing.json",
     "2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantization-of-mllms.json",
+    "2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-model.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-optimization.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
@@ -49046,6 +49051,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.28361": {
+      "order": [
+        "2026-11-22T10:30:55+00:00",
+        "2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-efficient-rag.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.02521": {
+      "order": [
+        "2026-11-22T10:31:38+00:00",
+        "2026-2607.02521-tile-level-activation-overlap-for-efficient-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.08029": {
+      "order": [
+        "2026-11-22T10:32:22+00:00",
+        "2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardware-aware.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.18839": {
+      "order": [
+        "2026-11-22T10:33:05+00:00",
+        "2026-2607.18839-hpd-parsing-hierarchical-parallel-document-parsing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.22432": {
+      "order": [
+        "2026-11-22T10:33:48+00:00",
+        "2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61897,6 +61947,21 @@
     "arxiv:2606.22976": [
       "papers/inference/99-other-inference-systems/2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffu.md",
       "papers/inference/99-other-inference-systems/2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffu.md"
+    ],
+    "arxiv:2606.28361": [
+      "papers/inference/99-other-inference-systems/2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-effici.md"
+    ],
+    "arxiv:2607.02521": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.02521-tile-level-activation-overlap-for-efficient-llm-inference.md"
+    ],
+    "arxiv:2607.08029": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardwa.md"
+    ],
+    "arxiv:2607.18839": [
+      "papers/inference/99-other-inference-systems/2026-2607.18839-hpd-parsing-hierarchical-parallel-document-parsing.md"
+    ],
+    "arxiv:2607.22432": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-mod.md"
     ]
   }
 }

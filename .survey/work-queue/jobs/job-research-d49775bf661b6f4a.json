@@ -35,10 +35,15 @@
   "selection_reason": "3B未満の小規模VLMを対象に、視覚エンコーダ・射影・LLM骨格を分離した構成要素別量子化をJetson Orin上で六構成で計測し、INT4のVRAM削減と逆量子化による生成遅延、MoEと密モデルの感度差などエッジ配備に直結する知見を示している。",
   "semantic_scholar_id": "864c65f31a58190788044b0d9fa3ddb0e6f40f41",
   "source_url": "https://arxiv.org/abs/2607.08029",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:35:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardwa.md",
+  "represented_canonical_id": "arXiv:2607.08029",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

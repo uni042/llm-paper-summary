@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1277本）
+## 自動生成の論文一覧（1279本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -132,6 +132,10 @@
   実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：5  
   端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
 
+- **2026-07 · [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](2026-2607.04884-hunyuanocr-1-5-making-lightweight-ocr-vlms-faster-and-better.md)**  
+  実装：[✓](https://github.com/Tencent-Hunyuan/HunyuanOCR) ・ リポジトリ内被引用：4  
+  原著の研究全体は、認識精度を改善するデータ構築・学習と、出力生成を高速化する推論機構の二本立てである。OmniDocBenchの単一要求評価で、同じHunyuanOCR-1.5の自己回帰復号と比較した平均ページ遅延は、Transformersで34.850秒から5.474秒、vLLMで3.032秒から1.408秒になった。
+
 - **2026-06 · [Models Take Notes at Prefill: KV Cache Can Be Editable and Composable](2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md)**  
   実装：[✓](https://github.com/19PINE-AI/programmable-kv) ・ リポジトリ内被引用：4  
   プリフィル済みKVキャッシュを結論メモとして捉え、追記訂正による編集とRoPE再配置による部品合成で再プリフィルを回避する。
@@ -171,10 +175,6 @@
 - **2026-07 · [LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference](2026-2607.27704-lightrot-a-light-weighted-rotation-scheme-and-architecture-for-accurate-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   低ビットLLM推論では重みだけでなく、推論時に生成される入力活性（IA）とKVキャッシュを4ビットへ量子化したい。
-
-- **2026-07 · [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](2026-2607.04884-hunyuanocr-1-5-making-lightweight-ocr-vlms-faster-and-better.md)**  
-  実装：[✓](https://github.com/Tencent-Hunyuan/HunyuanOCR) ・ リポジトリ内被引用：3  
-  原著の研究全体は、認識精度を改善するデータ構築・学習と、出力生成を高速化する推論機構の二本立てである。OmniDocBenchの単一要求評価で、同じHunyuanOCR-1.5の自己回帰復号と比較した平均ページ遅延は、Transformersで34.850秒から5.474秒、vLLMで3.032秒から1.408秒になった。
 
 - **2026-06 · [Posterior Refinement: Fast Language Generation via Any-Order Flow Maps](2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md)**  
   実装：[✓](https://github.com/MananAg007/posterior-refinement) ・ リポジトリ内被引用：3  
@@ -539,6 +539,10 @@
 - **2026-06 · [STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models](2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   拡散型言語モデルの量子化で、マスク状態ごとに活性変換を分け、注意出力へブロック単位の補償を入れて誤差の蓄積を抑える学習後量子化。4ビット条件で比較対象を上回り、最大1.69倍の高速化と3.14倍のメモリ削減を示した。
+
+- **2026-06 · [P-MTP: Efficient Document Parsing via Multi-Token Prediction with Progressive Depth Scaling](2026-2606.24447-p-mtp-efficient-document-parsing-via-multi-token-prediction-with-progres.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  複数トークン予測（MTP）を使って将来のトークンを軽量に先読みし、基盤モデルで検証してまとめて確定できれば、同じ意味内容をより少ない大規模推論回数で生成できる。最も大きい5.24倍という数値は、Qwen3-VL-2BでPubTabNetの表解析を行う際の単体復号遅延26.71→5.10の比である。
 
 - **2026-06 · [Multi-Token Residual Prediction](2026-2605.18817-multi-token-residual-prediction.md)**  
   実装：[✓](https://github.com/heavyball-research/multi-token-residual-prediction) ・ リポジトリ内被引用：1  
@@ -1674,6 +1678,10 @@
   実装：[✓](https://github.com/rch0wdhury/llm-io-profiler) ・ リポジトリ内被引用：0  
   LLMデコードのデータ移動を重み・KVキャッシュ・活性の三I/O流へ分解し、量子化からSSD/CXL/統合メモリまでをルーフライン上で統一して、最適化を積むと支配ボトルネックが移動することを定量化したサーベイ。
 
+- **2026-07 · [HPD-Parsing: Hierarchical Parallel Document Parsing](2026-2607.18839-hpd-parsing-hierarchical-parallel-document-parsing.md)**  
+  実装：[✓](https://github.com/PaddlePaddle/PaddleOCR) ・ リポジトリ内被引用：0  
+  文書のレイアウト協調とブロック内容の局所性を使い、主分岐が内容分岐を動的に起こして共有プリフィックスKVを再利用する階層並列デコードと分岐内の複数トークン予測で、自己回帰の土台比3.06倍のスループットと統合型最高の解析精度を両立する文書解析モデル。
+
 - **2026-07 · [HACO: Hedged Agent Computing for Reliable LLM Systems](2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   役割呼び出しごとに品質・成功確率・遅延の見積もりから目標信頼度を満たす最小の冗長実行集合を選び、実行痕跡で候補と回線の見積もりを更新することで、劣化した実行ゾーンから自動で離れるエージェント実行制御の研究。
@@ -1782,10 +1790,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   残差ストリームの動態から量子化に弱い層を見つけ、その層だけ活性値を8ビットへ上げる混合精度方針。回転系の学習後量子化へそのまま重ねられ、4ビット設定のパープレキシティと下流精度を一貫して改善する。
 
-- **2026-06 · [P-MTP: Efficient Document Parsing via Multi-Token Prediction with Progressive Depth Scaling](2026-2606.24447-p-mtp-efficient-document-parsing-via-multi-token-prediction-with-progres.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  複数トークン予測（MTP）を使って将来のトークンを軽量に先読みし、基盤モデルで検証してまとめて確定できれば、同じ意味内容をより少ない大規模推論回数で生成できる。最も大きい5.24倍という数値は、Qwen3-VL-2BでPubTabNetの表解析を行う際の単体復号遅延26.71→5.10の比である。
-
 - **2026-06 · [Orchestra-o1: Omnimodal Agent Orchestration](2026-2606.13707-orchestra-o1-omnimodal-agent-orchestration.md)**  
   実装：[✓](https://github.com/zfkarl/Orchestra-o1) ・ リポジトリ内被引用：0  
   Orchestra-o1は、文字・画像・音声・動画が同時に含まれる複雑な質問を、主エージェント（MainAgent）が複数の部分課題へ分解し、専門の副エージェント（SubAgent）へ割り当てて実行する全モダリティ対応のエージェント統括（omnimodal agent orchestration）方式である。
@@ -1885,6 +1889,10 @@
 - **2026-06 · [CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search](2026-2606.01544-crepe-convolution-aware-relative-importance-in-post-training-pruning-wit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   相対重要度へ二次元近傍の項と適応係数を加えた学習後枝刈り。係数探索はジニ係数の代理指標で約11時間から約20分へ短縮し、多モデルで従来スコアより低いパープレキシティを一貫して示した。
+
+- **2026-06 · [ConCise: Training-Free Conclusion-Chain State Compression for Cost-Efficient Multi-Step RAG Services](2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-effici.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多段階RAGで生テキストの蓄積を構造化結論の追加専用チェーンへ置き換え、融合生成と合わせて累積トークンの伸びを二乗から線形へ落とし、平均64.63%のトークン削減を得る学習不要の状態管理方式。
 
 - **2026-06 · [Communication-Efficient Verifiable Attention for LLM Inference](2026-2606.16352-communication-efficient-verifiable-attention-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3088,13 +3096,13 @@
   実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：20  
   NVILAは解像度を先に上げて必要な情報を取り込み、その後に空間・時間方向の冗長性を圧縮する「拡大してから圧縮する（scale-then-compress）」設計を採用する。
 
+- **2025-10 · [DeepSeek-OCR: Contexts Optical Compression](2025-2510.18234-deepseek-ocr-contexts-optical-compression.md)**  
+  実装：[✓](https://github.com/deepseek-ai/DeepSeek-OCR) ・ リポジトリ内被引用：17  
+  本研究は、長いテキストをそのまま多数の言語トークンとして処理する代わりに、文書を二次元の画像として扱い、少数の視覚トークンへ圧縮できるかを検証する。英語文書のFox評価では、画像化した元テキストの約10倍圧縮に相当する視覚トークン数でも文字復元精度がおおむね97%に達する。
+
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
   実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：17  
   入力とモデル重みをそれぞれ秘匿したままBERT、GPT-2、LLaMA-7B、ViTを実行し、従来方式に比べて実測の転送量と実行時間を改善する。
-
-- **2025-10 · [DeepSeek-OCR: Contexts Optical Compression](2025-2510.18234-deepseek-ocr-contexts-optical-compression.md)**  
-  実装：[✓](https://github.com/deepseek-ai/DeepSeek-OCR) ・ リポジトリ内被引用：16  
-  本研究は、長いテキストをそのまま多数の言語トークンとして処理する代わりに、文書を二次元の画像として扱い、少数の視覚トークンへ圧縮できるかを検証する。英語文書のFox評価では、画像化した元テキストの約10倍圧縮に相当する視覚トークン数でも文字復元精度がおおむね97%に達する。
 
 - **2025-06 · [MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents](2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md)**  
   実装：[✓](https://github.com/MIT-MI/MEM1) ・ リポジトリ内被引用：15  
