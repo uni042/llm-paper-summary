@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-22T14:57:51+00:00`
+Generated: `2026-11-22T15:08:52+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-11-22T14:57:51+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **46** / 未claim総数: **46** / このworker向け: **15**
+ready総数: **41** / 未claim総数: **41** / このworker向け: **14**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -24,14 +24,13 @@ ready総数: **46** / 未claim総数: **46** / このworker向け: **15**
 | 5 | 22 | research | DOI:10.1145/3603269.3610856 | Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing | [primary](https://doi.org/10.1145/3603269.3610856) | `papers/inference/99-other-inference-systems/2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.md` |
 | 6 | 16 | research | DOI:10.18653/v1/2025.findings-emnlp.645 | Revisiting Pruning vs Quantization for Small Language Models | [primary](https://doi.org/10.18653/v1/2025.findings-emnlp.645) | `papers/inference/99-other-inference-systems/0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.md` |
 | 7 | 12 | research | DOI:10.18653/v1/2026.acl-long.819 | Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising | [primary](https://doi.org/10.18653/v1/2026.acl-long.819) | `papers/inference/99-other-inference-systems/0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.md` |
-| 8 | 11 | research | DOI:10.18653/v1/2026.acl-long.285 | UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware | [primary](https://doi.org/10.18653/v1/2026.acl-long.285) | `papers/inference/99-other-inference-systems/0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.md` |
-| 9 | 10 | research | DOI:10.65405/cn221159 | GreenScheduler: Coordinated Two-Tier Energy Optimization for Disaggregated LLM Serving | [primary](https://doi.org/10.65405/cn221159) | `papers/inference/99-other-inference-systems/2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.md` |
-| 10 | 10 | research | DOI:10.18653/v1/2026.acl-long.403 | SCVQ: Sparse-Compensated Vector Quantization for Large Language Models | [primary](https://doi.org/10.18653/v1/2026.acl-long.403) | `papers/inference/99-other-inference-systems/0000-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.md` |
-| 11 | 10 | research | arXiv:2512.24713 | FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference | [primary](https://arxiv.org/abs/2512.24713) | `papers/inference/99-other-inference-systems/2025-2512.24713-fpga-co-design-for-efficient-n-m-sparse-and-quantized-model-inference.md` |
-| 12 | 3 | research | DOI:10.24963/ijcai.2025/920 | MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching | [primary](https://doi.org/10.24963/ijcai.2025/920) | `papers/inference/99-other-inference-systems/2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.md` |
-| 13 | 1 | research | DOI:10.1145/3759441.3759448 | EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference | [primary](https://doi.org/10.1145/3759441.3759448) | `papers/inference/99-other-inference-systems/2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.md` |
-| 14 | 0 | research | DOI:10.63317/3mnfp3i37gy2 | Distribution-aware Low-bitwidth Quantization for Large Language Models | [primary](https://doi.org/10.63317/3mnfp3i37gy2) | `papers/inference/99-other-inference-systems/0000-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.md` |
-| 15 | 0 | research | DOI:10.18653/v1/2025.findings-acl.1035 | ShortGPT: Layers in Large Language Models are More Redundant Than You Expect | [primary](https://aclanthology.org/2025.findings-acl.1035/) | `papers/inference/99-other-inference-systems/0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.md` |
+| 8 | 10 | research | arXiv:2610.09212 | CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search | [primary](https://arxiv.org/abs/2610.09212) | `papers/inference/99-other-inference-systems/2026-2610.09212-curvetq-rotation-free-trellis-quantization-of-llm-weights-via-curvature-weighted-search.md` |
+| 9 | 10 | research | DOI:10.18653/v1/2026.acl-long.1971 | ACBQ: Adaptive Cross-Block Quantization of Large Language Models | [primary](https://doi.org/10.18653/v1/2026.acl-long.1971) | `papers/inference/99-other-inference-systems/0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md` |
+| 10 | 10 | research | arXiv:2512.24713 | FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference | [primary](https://arxiv.org/abs/2512.24713) | `papers/inference/99-other-inference-systems/2025-2512.24713-fpga-co-design-for-efficient-n-m-sparse-and-quantized-model-inference.md` |
+| 11 | 3 | research | DOI:10.1007/s11432-024-4144-y | CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts | [primary](https://doi.org/10.1007/s11432-024-4144-y) | `papers/inference/99-other-inference-systems/2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.md` |
+| 12 | 1 | research | DOI:10.63317/55jabgg3m92d | On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization | [primary](https://doi.org/10.63317/55jabgg3m92d) | `papers/inference/99-other-inference-systems/2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.md` |
+| 13 | 0 | research | DOI:10.1145/3713082.3730392 | Towards ML System Extensibility | [primary](https://doi.org/10.1145/3713082.3730392) | `papers/inference/99-other-inference-systems/2025-af96f29ab97d-towards-ml-system-extensibility.md` |
+| 14 | 0 | research | DOI:10.1109/INFOCOM59046.2026.11571463 | BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests | [primary](https://doi.org/10.1109/INFOCOM59046.2026.11571463) | `papers/inference/99-other-inference-systems/2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.md` |
 
 ## リスト入り判定待ち Discovery候補
 

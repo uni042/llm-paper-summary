@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-22T14:57:51+00:00`
+Generated: `2026-11-22T15:08:52+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-11-22T14:57:51+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **46** / 未claim総数: **46** / このworker向け: **15**
+ready総数: **41** / 未claim総数: **41** / このworker向け: **13**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -23,15 +23,13 @@ ready総数: **46** / 未claim総数: **46** / このworker向け: **15**
 | 4 | 28 | research | arXiv:2410.10456 | Ada-K Routing: Boosting the Efficiency of MoE-based LLMs | [primary](https://arxiv.org/abs/2410.10456) | `papers/inference/99-other-inference-systems/2024-2410.10456-ada-k-routing-boosting-the-efficiency-of-moe-based-llms.md` |
 | 5 | 17 | research | DOI:10.18653/v1/2025.findings-acl.1356 | Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval | [primary](https://doi.org/10.18653/v1/2025.findings-acl.1356) | `papers/inference/99-other-inference-systems/0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.md` |
 | 6 | 16 | research | DOI:10.52202/085713-5740 | SmartCache: Context-aware Semantic Cache for Efficient Multi-turn LLM Inference | [primary](https://doi.org/10.52202/085713-5740) | `papers/inference/99-other-inference-systems/0000-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inference.md` |
-| 7 | 12 | research | DOI:10.18653/v1/2025.findings-emnlp.1054 | Beyond Fixed-Length Calibration for Post-Training Compression of LLMs | [primary](https://doi.org/10.18653/v1/2025.findings-emnlp.1054) | `papers/inference/99-other-inference-systems/0000-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.md` |
-| 8 | 11 | research | DOI:10.18653/v1/2026.findings-acl.1335 | CLARO: Controlled Attribute-Driven Reasoning Optimization for Efficient Chain-of-Thought | [primary](https://doi.org/10.18653/v1/2026.findings-acl.1335) | `papers/inference/99-other-inference-systems/0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.md` |
-| 9 | 10 | research | DOI:10.36227/techrxiv.177205041.14536362/v1 | Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores | [primary](https://doi.org/10.36227/techrxiv.177205041.14536362/v1) | `papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md` |
-| 10 | 10 | research | DOI:10.18653/v1/2026.findings-acl.1062 | LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference | [primary](https://doi.org/10.18653/v1/2026.findings-acl.1062) | `papers/inference/99-other-inference-systems/0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.md` |
-| 11 | 10 | research | DOI:10.18653/v1/2025.findings-emnlp.957 | Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication | [primary](https://doi.org/10.18653/v1/2025.findings-emnlp.957) | `papers/inference/99-other-inference-systems/0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.md` |
-| 12 | 3 | research | DOI:10.1007/s11432-024-4144-y | CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts | [primary](https://doi.org/10.1007/s11432-024-4144-y) | `papers/inference/99-other-inference-systems/2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.md` |
-| 13 | 1 | research | DOI:10.63317/55jabgg3m92d | On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization | [primary](https://doi.org/10.63317/55jabgg3m92d) | `papers/inference/99-other-inference-systems/2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.md` |
-| 14 | 0 | research | DOI:10.5753/eniac.2025.12304 | Accelerating RAG Systems: A Performance-Oriented Systematic Mapping | [primary](https://doi.org/10.5753/eniac.2025.12304) | `papers/inference/99-other-inference-systems/2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md` |
-| 15 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
+| 7 | 11 | research | DOI:10.18653/v1/2026.acl-long.1977 | JW-SVD: Bridging the Cross-Modal Mismatch in Post-Training MLLM Compression | [primary](https://doi.org/10.18653/v1/2026.acl-long.1977) | `papers/inference/99-other-inference-systems/0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.md` |
+| 8 | 10 | research | DOI:10.65405/cn221159 | GreenScheduler: Coordinated Two-Tier Energy Optimization for Disaggregated LLM Serving | [primary](https://doi.org/10.65405/cn221159) | `papers/inference/99-other-inference-systems/2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.md` |
+| 9 | 10 | research | DOI:10.18653/v1/2026.findings-acl.1062 | LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference | [primary](https://doi.org/10.18653/v1/2026.findings-acl.1062) | `papers/inference/99-other-inference-systems/0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.md` |
+| 10 | 5 | research | DOI:10.63317/3k5cxvg7k92d | How Speculative Can Speculative Decoding Be? | [primary](https://doi.org/10.63317/3k5cxvg7k92d) | `papers/inference/99-other-inference-systems/2024-468b43887ef3-how-speculative-can-speculative-decoding-be.md` |
+| 11 | 1 | research | DOI:10.3724/2096-7004.di.2025.0077 | Lightweighting Large Models: A Review of Model Compression Techniques | [primary](https://doi.org/10.3724/2096-7004.di.2025.0077) | `papers/inference/99-other-inference-systems/2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md` |
+| 12 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
+| 13 | 0 | research | DOI:10.18653/v1/2025.findings-acl.1035 | ShortGPT: Layers in Large Language Models are More Redundant Than You Expect | [primary](https://aclanthology.org/2025.findings-acl.1035/) | `papers/inference/99-other-inference-systems/0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.md` |
 
 ## リスト入り判定待ち Discovery候補
 

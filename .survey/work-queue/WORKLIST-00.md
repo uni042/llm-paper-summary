@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-22T14:57:51+00:00`
+Generated: `2026-11-22T15:08:52+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-11-22T14:57:51+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **46** / 未claim総数: **46** / このworker向け: **16**
+ready総数: **41** / 未claim総数: **41** / このworker向け: **14**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -24,15 +24,13 @@ ready総数: **46** / 未claim総数: **46** / このworker向け: **16**
 | 5 | 27 | research | arXiv:2505.11415 | MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems | [primary](https://arxiv.org/abs/2505.11415) | `papers/inference/99-other-inference-systems/2025-2505.11415-moe-cap-benchmarking-cost-accuracy-and-performance-of-sparse-mixture-of-experts-systems.md` |
 | 6 | 17 | research | DOI:10.18653/v1/2025.naacl-long.467 | DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models | [primary](https://doi.org/10.18653/v1/2025.naacl-long.467) | `papers/inference/99-other-inference-systems/0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.md` |
 | 7 | 12 | research | DOI:10.18653/v1/2026.acl-long.25 | Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning | [primary](https://doi.org/10.18653/v1/2026.acl-long.25) | `papers/inference/99-other-inference-systems/0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.md` |
-| 8 | 11 | research | DOI:10.18653/v1/2026.acl-long.1977 | JW-SVD: Bridging the Cross-Modal Mismatch in Post-Training MLLM Compression | [primary](https://doi.org/10.18653/v1/2026.acl-long.1977) | `papers/inference/99-other-inference-systems/0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.md` |
-| 9 | 10 | research | arXiv:2610.09212 | CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search | [primary](https://arxiv.org/abs/2610.09212) | `papers/inference/99-other-inference-systems/2026-2610.09212-curvetq-rotation-free-trellis-quantization-of-llm-weights-via-curvature-weighted-search.md` |
-| 10 | 10 | research | DOI:10.18653/v1/2026.acl-long.1971 | ACBQ: Adaptive Cross-Block Quantization of Large Language Models | [primary](https://doi.org/10.18653/v1/2026.acl-long.1971) | `papers/inference/99-other-inference-systems/0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md` |
-| 11 | 10 | research | DOI:10.18653/v1/2026.findings-eacl.320 | Task-aware Block Pruning with Output Distribution Signals for Large Language Models | [primary](https://doi.org/10.18653/v1/2026.findings-eacl.320) | `papers/inference/99-other-inference-systems/0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.md` |
-| 12 | 5 | research | DOI:10.63317/3k5cxvg7k92d | How Speculative Can Speculative Decoding Be? | [primary](https://doi.org/10.63317/3k5cxvg7k92d) | `papers/inference/99-other-inference-systems/2024-468b43887ef3-how-speculative-can-speculative-decoding-be.md` |
-| 13 | 1 | research | DOI:10.3724/2096-7004.di.2025.0077 | Lightweighting Large Models: A Review of Model Compression Techniques | [primary](https://doi.org/10.3724/2096-7004.di.2025.0077) | `papers/inference/99-other-inference-systems/2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md` |
-| 14 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
-| 15 | 0 | research | DOI:10.1145/3713082.3730392 | Towards ML System Extensibility | [primary](https://doi.org/10.1145/3713082.3730392) | `papers/inference/99-other-inference-systems/2025-af96f29ab97d-towards-ml-system-extensibility.md` |
-| 16 | 0 | research | DOI:10.1109/INFOCOM59046.2026.11571463 | BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests | [primary](https://doi.org/10.1109/INFOCOM59046.2026.11571463) | `papers/inference/99-other-inference-systems/2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.md` |
+| 8 | 11 | research | DOI:10.18653/v1/2026.acl-long.285 | UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware | [primary](https://doi.org/10.18653/v1/2026.acl-long.285) | `papers/inference/99-other-inference-systems/0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.md` |
+| 9 | 10 | research | DOI:10.36227/techrxiv.177205041.14536362/v1 | Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores | [primary](https://doi.org/10.36227/techrxiv.177205041.14536362/v1) | `papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md` |
+| 10 | 10 | research | DOI:10.18653/v1/2026.findings-eacl.320 | Task-aware Block Pruning with Output Distribution Signals for Large Language Models | [primary](https://doi.org/10.18653/v1/2026.findings-eacl.320) | `papers/inference/99-other-inference-systems/0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.md` |
+| 11 | 3 | research | DOI:10.24963/ijcai.2025/920 | MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching | [primary](https://doi.org/10.24963/ijcai.2025/920) | `papers/inference/99-other-inference-systems/2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.md` |
+| 12 | 1 | research | DOI:10.1145/3759441.3759448 | EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference | [primary](https://doi.org/10.1145/3759441.3759448) | `papers/inference/99-other-inference-systems/2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.md` |
+| 13 | 0 | research | DOI:10.5753/eniac.2025.12304 | Accelerating RAG Systems: A Performance-Oriented Systematic Mapping | [primary](https://doi.org/10.5753/eniac.2025.12304) | `papers/inference/99-other-inference-systems/2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md` |
+| 14 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
 
 ## リスト入り判定待ち Discovery候補
 
