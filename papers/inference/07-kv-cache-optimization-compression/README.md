@@ -2133,6 +2133,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：3  
   近年のKV圧縮は重要トークンの選択、疎性、低次元表現、クラスタリング等で保存量を削減しているが、これらの成功が任意の入力でも保証できるかは別問題である。
 
+- **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
+  実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：3  
+  大規模言語モデル（LLM）のKVキャッシュ圧縮は、通常のGPU推論では過去トークンの一部を削除・選択することで注意計算量とメモリを減らす。さらに粗いクラスタから細かいクラスタへ選択を絞り、近接Transformer層の選択インデックスを共有することで、MPC特有の比較と秘密インデックスgatherの費用を削減する。
+
 - **2024-12 · [XKV: Personalized KV Cache Memory Reduction for Long-Context LLM Inference](2024-2412.05896-xkv-personalized-kv-cache-memory-reduction-for-long-context-llm-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   トークンの重要度に基づいて一部のKVを捨てる方式はあるが、各Transformer層へ同じ容量を割り当てたり、層位置に応じてあらかじめ決めたピラミッド形の容量を割り当てたりすると、入力とタスクごとに変わる重要度分布を捉えきれない。
@@ -2164,10 +2168,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [CalibQuant: 1-Bit KV Cache Quantization for Multimodal LLMs](2025-2502.14882-calibquant-1-bit-kv-cache-quantization-for-multimodal-llms.md)**  
   実装：[✓](https://github.com/insuhan/calibquant) ・ リポジトリ内被引用：2  
   主張は、視覚トークンのKVキャッシュを圧縮し、限られたメモリ予算下でバッチ数を増やしてデコードスループットを上げることであり、モデル重みを1bit化する方式ではない。主結果はCOCO Caption、DocVQA、MMBench-VideoとH100 80GBでのスループット評価である。
-
-- **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
-  実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：2  
-  大規模言語モデル（LLM）のKVキャッシュ圧縮は、通常のGPU推論では過去トークンの一部を削除・選択することで注意計算量とメモリを減らす。さらに粗いクラスタから細かいクラスタへ選択を絞り、近接Transformer層の選択インデックスを共有することで、MPC特有の比較と秘密インデックスgatherの費用を削減する。
 
 - **2024-12 · [EMS: Adaptive Evict-then-Merge Strategy for Head-wise KV Cache Compression Based on Global-Local Importance](2024-2412.08521-ems-adaptive-evict-then-merge-strategy-for-head-wise-kv-cache-compressio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -2500,7 +2500,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   キャッシュがGPUメモリを圧迫すると、同時に処理できる要求数が減り、長文脈の生成処理量も低下する。ある層では先頭の少数トークン（注意機構 sink）と直近の窓だけに注意が集中する。
 
 - **2024-09 · [Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU](2024-2409.09086-inf-mllm-efficient-streaming-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   著者らは注意得点の時間的な構造を観察し、直近トークンだけでなく、離れた過去にある重要トークンを固定容量キャッシュへ残す方法を提案する。
 
 - **2024-06 · [Optimised Grouped-Query Attention Mechanism for Transformers](2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md)**  

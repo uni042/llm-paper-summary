@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（422本）
+## 自動生成の論文一覧（423本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -274,6 +274,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/comeusr/diversed) ・ リポジトリ内被引用：3  
   投機的復号（投機的復号）は、小型のドラフトモデルが複数トークンを先読みし、大型の対象モデルがそれらをまとめて検証することで、逐次生成の待ち時間を短縮する。
 
+- **2026-01 · [WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching](2026-2601.11652-wisp-distributed-speculative-serving-edge.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  WISPは、エッジで最初の棄却位置を予測して下書きを止め、サーバーでSLO余裕と検証時間から異種要求をバッチ分離し、無駄計算と干渉を減らす。
+
 - **2026-01 · [Overcoming Joint Intractability with Lossless Hierarchical Speculative Decoding](2026-2601.05724-overcoming-joint-intractability-with-lossless-hierarchical-speculative-d.md)**  
   実装：[✓](https://github.com/ZhouYuxuanYX/Hierarchical-Speculative-Decoding) ・ リポジトリ内被引用：3  
   HSDは利用可能な草案の枝だけから局所的な確率質量を計算し、階層をまたいで過不足を補正することで、この問題を回避する。主要実験はQwen2.5-0.5Bを草案とし、14B・32B・72Bを目標に使った比較で、トークン単位検証に対する復号速度の平均改善は約6.7%、一部条件では11%前後に達した。
@@ -353,10 +357,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [PACER: Blockwise Pre-verification for Speculative Decoding with Adaptive Length](2026-2602.01274-pacer-blockwise-pre-verification-for-speculative-decoding-with-adaptive-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   PACERは、投機的復号（投機的復号）において、小型の草稿モデルが何個の候補トークンを生成してから大型の目標モデルに検証を依頼するかを、復号の各段階で動的に決める方式である。Llama-2 7B/70BのHumanEvalでは自己回帰復号約9.1トークン/秒に対して24.2トークン/秒、すなわち2.66倍である。
-
-- **2026-01 · [WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching](2026-2601.11652-wisp-distributed-speculative-serving-edge.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  WISPは、エッジで最初の棄却位置を予測して下書きを止め、サーバーでSLO余裕と検証時間から異種要求をバッチ分離し、無駄計算と干渉を減らす。
 
 - **2026-01 · [TriSpec: Ternary Speculative Decoding via Lightweight Proxy Verification](2026-2601.23180-trispec-ternary-speculative-decoding-via-lightweight-proxy-verification.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -995,6 +995,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation](2026-2605.27390-evospec-evolving-speculative-decoding-via-real-time-vocabulary-and-param.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号は、小さな草稿モデルが先行して候補トークンを生成し、大きなターゲットモデルがまとめて検証することで自己回帰生成を高速化する。
+
+- **2026-04 · [ConfigSpec: Profiling-Based Configuration Selection for Distributed Edge--Cloud Speculative LLM Serving](2026-2604.09722-configspec-profiling-based-configuration-selection-for-distributed-edge-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エッジデバイスのドラフト速度・受理率・電力を実測し、ドラフトモデルと量子化と投機長の全組合せを有効スループット・費用・エネルギーで解析評価すると、目的ごとに最適設定が構造的に食い違うことを示す、分散投機的サービングの設定選択の枠組み。
 
 - **2026-04 · [Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction](2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-.md)**  
   実装：[✓](https://github.com/networkslab/HPD) ・ リポジトリ内被引用：0  
@@ -1663,11 +1667,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：547  
+  実装：✓ ・ リポジトリ内被引用：548  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
-  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：232  
+  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：233  
   SpecInferは、小型モデル群が先に作る複数候補を共通接頭辞の木へまとめ、対象LLMを1回で木構造検証することで、逐次デコードの対象重み読出しとGPU間通信を減らし、複数トークンを確定する。
 
 - **2023-09 · [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](2023-2309.08168-draft-verify.md)**  

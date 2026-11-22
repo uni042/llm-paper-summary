@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（604本）
+## 自動生成の論文一覧（606本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1290,9 +1290,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU通信へ無損失圧縮を融合し、点対点通信の分割送信とNCCL内融合によって通信量と余分なメモリアクセスを減らす方式。
 
+- **2026-04 · [SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving](2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  落下する設定を制約違反として学習へ組み込む二段の自動調整で、vLLM設定探索の最良遅延は変えずに、固定の試行予算を速い領域へ一貫して配分できるようにする研究。
+
 - **2026-04 · [Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale](2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   内部が見えない言語モデル接口の手前で利用者が行う制御を配分・順序付け・過負荷制御の三層に分け、出力長の粗い事前推定が無いと短い要求の尾遅延が約五・八倍に膨らむこと、三層の完全構成が均衡・高混雑で完了率と期限充足率をともに一〇〇パーセントに保つことを模擬提供者の実験で示した。
+
+- **2026-04 · [Privacy-Preserving LLMs Routing](2026-2604.15728-privacy-preserving-llms-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  埋め込み型のモデル選択を秘密分散のマルチパーティ計算で実行し、エンコーダの非線形演算の置き換え、多段階蒸留、定数ラウンドのトップk探索で、平文と同等のルーティング品質と素朴な暗号実装の約20倍の高速化を両立する枠組み。
 
 - **2026-04 · [Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference](2026-2604.07472-fast-heterogeneous-serving-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1528,6 +1536,10 @@
   実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：18  
   モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
 
+- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
+
 - **2025-10 · [Pie: A Programmable Serving System for Emerging LLM Applications](2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md)**  
   実装：[✓](https://github.com/pie-project/pie) ・ リポジトリ内被引用：17  
   生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。
@@ -1535,10 +1547,6 @@
 - **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
   実装：[✓](https://github.com/ykcombat/sglang/tree/slo_config) ・ リポジトリ内被引用：17  
   前者は大きな行列積を実行しやすい一方、後者は各反復で重みとキャッシュを読み出すためメモリ帯域の制約を受けやすい。両段階を別々のGPUへ割り当てる分離配信は干渉を避けられるが、要求が片方に偏ると計算資源が遊休し、キャッシュの保存先も分かれる。
-
-- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
 
 - **2025-06 · [WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling](2025-8e0fd88d7ddc-windserve-efficient-phase-disaggregated-llm-serving-with-stream-based-dy.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
@@ -1744,6 +1752,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   しかし固定バッチ方式では、バッチに含まれる要求のうち最も長い生成が終わるまで、そのバッチ全体が実行資源を占有する。2026年改訂版の実測では、単一A100 80GB上のllama.cppでDollyワークロードを処理し、推定長8ビンが固定バッチの273.53生成トークン/秒から684.02生成トークン/秒へ改善する。
 
+- **2025-10 · [When to Reason: Semantic Router for vLLM](2025-2510.08731-when-to-reason-semantic-router-for-vllm.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  問い合わせの処理をGPU上で実行するモデル内部へ直接埋め込むのではなく、HTTP要求の経路に配置できる点が設計上の特徴である。
+
 - **2025-10 · [BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure](2025-2510.13223-banaserve-dynamic-module-migration.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   分離サービングの固定GPU配分と接頭辞キャッシュ偏在を、層単位の重み移動・注意ヘッド単位のKV移動・CPU/SSD共有KVストアで切り離し、負荷だけを見た再配置とルーティングを可能にする。
@@ -1776,10 +1788,6 @@
   実装：✓ ・ リポジトリ内被引用：4  
   前者は行列積が多く演算性能に依存しやすい一方、後者はモデル重みと鍵値キャッシュ（Key-Value キャッシュ; KVキャッシュ）の読み出しが支配的になり、メモリ帯域に依存しやすい。Cauchyは、計算能力とメモリ帯域が異なるGPUを、プリフィルとデコードへ適切に割り当てる大規模言語モデル配信基盤である。
 
-- **2025-10 · [When to Reason: Semantic Router for vLLM](2025-2510.08731-when-to-reason-semantic-router-for-vllm.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  問い合わせの処理をGPU上で実行するモデル内部へ直接埋め込むのではなく、HTTP要求の経路に配置できる点が設計上の特徴である。
-
 - **2025-09 · [Cannikin: No Lagger of SLO in Concurrent Multiple LoRA LLM Serving](2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   低ランク適応（Low-Rank Adaptation; LoRA）では大きな基盤モデルを共有し、サービスごとに小さなアダプタだけを切り替えられる。実トレース評価では、各LoRAサービスのSLO達成率を90%超に維持したまま、既存multi-LoRAサービング基盤に対して最大3.6倍高い要求到着率、または2.8倍大きいバースト性を処理できると報告する。
@@ -1795,6 +1803,10 @@
 - **2025-06 · [PCDVQ: Enhancing Vector Quantization for Large Language Models via Polar Coordinate Decoupling](2025-2506.05432-pcdvq-enhancing-vector-quantization-for-large-language-models-via-polar-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   PCDVQは、大規模言語モデルの重みを2ビット前後まで圧縮する重み専用のベクトル量子化を扱う。著者らの観測では、LLaMA-2-7Bの重みベクトルを方向と長さへ分けて片方ずつ量子化した際、方向の量子化によるゼロショット課題の正答率低下は46.5%、長さの量子化では2.3%だった。
+
+- **2025-05 · [ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs](2025-2505.14468-serverlesslora-latency-cost-lora-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LoRAサーバレス推論で基盤重みだけを独立関数間でゼロコピー共有し、到着予測に基づく事前読み込み、SLO適応バッチ、動的退避を組み合わせ、コールドスタートとGPU重複保持を同時に削減する。
 
 - **2025-05 · [MemOS: An Operating System for Memory-Augmented Generation (MAG) in Large Language Models](2025-2505.22101-memos-an-operating-system-for-memory-augmented-generation-mag-in-large-l.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1847,10 +1859,6 @@
 - **2025-05 · [Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately](2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   SARTは、推論分岐を必要数より多く開始し、必要な本数が完成したら残りを停止する冗長サンプリング（redundant sampling with early stopping）と、過程報酬モデル（process reward モデル、PRM）で低品質の分岐を段階的に削る動的枝刈りを組み合わせる。
-
-- **2025-05 · [ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs](2025-2505.14468-serverlesslora-latency-cost-lora-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  LoRAサーバレス推論で基盤重みだけを独立関数間でゼロコピー共有し、到着予測に基づく事前読み込み、SLO適応バッチ、動的退避を組み合わせ、コールドスタートとGPU重複保持を同時に削減する。
 
 - **2025-04 · [SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference](2025-2504.15720-seallm-service-aware-and-latency-optimized-resource-sharing-for-large-la.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2199,7 +2207,7 @@
   本論文は、大規模言語モデル（Large Language モデル、LLM）の推論サービスを効率化するシステム研究を整理した総説である。
 
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：25  
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
@@ -2227,7 +2235,7 @@
   本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
 
 - **2024-01 · [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](2024-2401.11240-caraserve-cpu-assisted-lora-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   LoRA読込中にCPUでプリフィル計算を先行し、ランク依存のバッチ遅延を予測してSLO違反が少ないサーバへ配分することで、多数アダプタ提供のコールドスタートを隠す。
 
 - **2024-06 · [Enabling Efficient Batch Serving for LMaaS via Generation Length Prediction](2024-2406.04785-enabling-efficient-batch-serving-for-lmaas-via-generation-length-prediction.md)**  

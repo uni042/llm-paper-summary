@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "be79582edbe86be1e042aacdafe0793057bfaa2a",
+  "base_commit": "e7efde13a093e04ea262e837694b48a608f8f766",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -436,20 +436,25 @@
     "2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthesis-for-cold-start.json",
     "2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.json",
     "2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.json",
+    "2026-2604.09722-configspec-profiling-based-configuration-selection-for-distributed-edge-cloud-speculative-llm-serving.json",
     "2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.json",
     "2026-2604.09975-encformer-secure-and-efficient-transformer-inference-over-encrypted-data.json",
     "2026-2604.10567-early-decisions-matter-proximity-bias-and-initial-trajectory-shaping.json",
     "2026-2604.10898-zoomr-memory-efficient-reasoning-through-multi-granularity-key-value-retrieval.json",
     "2026-2604.11080-respinquant-efficient-layer-wise-llm-quantization-via-subspace-residual-rotation-approximation.json",
+    "2026-2604.11128-technology-solutions-targeting-performance-of-gen-ai-inference.json",
     "2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compression-for-latent-multi-agent-llm-collaboration.json",
     "2026-2604.13440-a-kl-lens-on-quantization-fast-forward-only-sensitivity-for-mixed-precision-ssm-transformer-models.json",
     "2026-2604.13556-yoco-enhancing-yoco-with-kv-residual-connections-for-efficient-llm-inference.json",
     "2026-2604.15188-vispco-visual-token-pruning-configuration-optimization-via-budget-aware-pareto-frontier-learning-for-vision-language-models.json",
     "2026-2604.15464-ragged-paged-attention-a-high-performance-and-flexible-llm-inference-kernel-for-tpu.json",
+    "2026-2604.15728-privacy-preserving-llms-routing.json",
     "2026-2604.15732-accuracy-is-speed-towards-long-context-aware-routing-for-distributed-llm-serving.json",
     "2026-2604.16395-stream2llm-overlap-context-streaming-and-prefill-for-reduced-time-to-first-token-ttft.json",
+    "2026-2604.16583-polar-online-learning-for-lora-adapter-caching-and-routing-in-edge-llm-serving.json",
     "2026-2604.16734-reducing-peak-memory-usage-for-modern-multimodal-large-language-model-pipelines.json",
     "2026-2604.17068-stability-weighted-decoding-for-diffusion-language-models.json",
+    "2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-llm-servi.json",
     "2026-2604.18995-r2-dllm-accelerating-diffusion-large-language-models-via-spatio-temporal-redundancy-reduction.json",
     "2026-2604.19145-st-prune-training-free-spatio-temporal-token-pruning-for-vision-language-models-in-autonomous-driving.json",
     "2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.json",
@@ -48896,6 +48901,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.09722": {
+      "order": [
+        "2026-11-22T10:06:31+00:00",
+        "2026-2604.09722-configspec-profiling-based-configuration-selection-for-distributed-edge-cloud-speculative-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.11128": {
+      "order": [
+        "2026-11-22T10:07:42+00:00",
+        "2026-2604.11128-technology-solutions-targeting-performance-of-gen-ai-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.15728": {
+      "order": [
+        "2026-11-22T10:08:53+00:00",
+        "2026-2604.15728-privacy-preserving-llms-routing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.16583": {
+      "order": [
+        "2026-11-22T10:10:04+00:00",
+        "2026-2604.16583-polar-online-learning-for-lora-adapter-caching-and-routing-in-edge-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.17627": {
+      "order": [
+        "2026-11-22T10:11:15+00:00",
+        "2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-llm-servi.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61687,6 +61737,21 @@
     "arxiv:2604.06613": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2604.06613-the-detection-extraction-gap-models-know-the-answer-before-they-can-say-.md"
+    ],
+    "arxiv:2604.09722": [
+      "papers/inference/05-speculative-decoding-moe/2026-2604.09722-configspec-profiling-based-configuration-selection-for-distributed-edge-.md"
+    ],
+    "arxiv:2604.11128": [
+      "papers/inference/99-other-inference-systems/2026-2604.11128-technology-solutions-targeting-the-performance-of-gen-ai-inference-in-re.md"
+    ],
+    "arxiv:2604.15728": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15728-privacy-preserving-llms-routing.md"
+    ],
+    "arxiv:2604.16583": [
+      "papers/inference/15-inference-simulation-emulation/2026-2604.16583-polar-online-learning-for-lora-adapter-caching-and-routing-in-edge-llm-s.md"
+    ],
+    "arxiv:2604.17627": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-l.md"
     ]
   }
 }

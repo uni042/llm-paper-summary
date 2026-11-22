@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1272本）
+## 自動生成の論文一覧（1273本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2222,6 +2222,10 @@
   実装：[✓](https://github.com/geniucos/recurrent-transformer) ・ リポジトリ内被引用：0  
   通常の自己回帰Transformerでは、ある層のトークン位置$i$に対する鍵・値は、その層に入力された表現から計算される。重要なのは、固定サイズの再帰状態へ過去を押し込む方式ではないことだ。
 
+- **2026-04 · [Technology solutions targeting the performance of gen-AI inference in resource constrained platforms](2026-2604.11128-technology-solutions-targeting-the-performance-of-gen-ai-inference-in-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末推論のメモリ圧迫に対し、高帯域ストレージと接合型SRAMチップレットを階層ルーフラインの解析モデルで評価し、帯域・遅延の要求条件とデータ配置の指針を示すハードウェア技術の分析。
+
 - **2026-04 · [Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios](2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthes.md)**  
   実装：[✓](https://github.com/less-and-less-bugs/ColdStartLLMRouter) ・ リポジトリ内被引用：0  
   ドメイン内学習データがないコールドスタートでもLLMルーティングを可能にするため、階層タスク分類から質問応答データを合成して学習し、潜在タスクタイプ変数と分類由来の事前分布による正則化で回帰型ルーターの汎化を高めた研究。
@@ -3104,6 +3108,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   PLD+（プロンプト Lookup Decoding+）は、入力文脈の一部がそのまま出力にも現れる場合に、過去の入力トークン列を将来の出力候補として再利用する投機的復号法である。例えばコード編集で改行やインデント、識別子が何度も現れると、従来のPLDが最長の局所的な文字列一致だけで候補を選ぶと、同じ記号が出る別の場所を誤選択し、検証に失敗する。
 
+- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
+
 - **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
@@ -3119,10 +3127,6 @@
 - **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：6  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
-
-- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
 
 - **2024-12 · [WebLLM: A High-Performance In-Browser LLM Inference Engine](2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md)**  
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：6  
@@ -4227,7 +4231,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：98  
+  実装：✓ ・ リポジトリ内被引用：99  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -4753,7 +4757,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：100  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：101  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  

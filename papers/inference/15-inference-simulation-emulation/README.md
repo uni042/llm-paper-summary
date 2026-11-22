@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（100本）
+## 自動生成の論文一覧（101本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -237,6 +237,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization](2026-2604.23577-routenlp-closed-loop-llm-routing-with-conformal-cascading-and-distillati.md)**  
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
+
+- **2026-04 · [POLAR: Online Learning for LoRA Adapter Caching and Routing in Edge LLM Serving](2026-2604.16583-polar-online-learning-for-lora-adapter-caching-and-routing-in-edge-llm-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LoRAアダプタの常駐集合をエポック単位で入れ替え、各リクエストはコールドパスの罰則を差し引くLinUCBで振り分ける二時間スケールのオンライン学習で、エッジのサービングでキャッシュ同定とルーティング学習を劣線形の後悔で両立させる方式。
 
 - **2026-04 · [FusionCIM: Accelerating LLM Inference with Fusion-Driven Computing-in-Memory Architecture](2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

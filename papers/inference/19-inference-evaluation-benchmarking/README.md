@@ -576,13 +576,13 @@
   実装：[✓](https://github.com/Gen-Verse/LatentMAS) ・ リポジトリ内被引用：17  
   LatentMASはこの境界を変え、エージェントが最終層の隠れ状態を連続表現のまま自己回帰生成し、層ごとの鍵・値キャッシュ（KVキャッシュ）を共有作業メモリとして次のエージェントへ渡す。著者は既存モデルを追加学習しない訓練不要方式として設計し、入力埋め込みと最終層隠れ状態の分布の違いを補正する線形写像を組み込む。
 
+- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
+
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：17  
   著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
-
-- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
 - **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
   実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：13  
@@ -801,7 +801,7 @@
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
-  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：15  
   しかし実際のサービスでは、数学問題、法務文書、要約、常識質問など、タスクごとに得意なモデルが異なる。常に最も大きいモデルを呼ぶ方式は品質を得やすい反面、必要以上の推論計算を消費する。これらは品質と必要なモデル呼出し回数の評価であり、実際のGPU実行時間・請求金額の削減倍率を測定したものではない（原著§5、表1・2）。
 
 - **2023-05 · [A Quantitative Review on Language Model Efficiency Research](2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md)**  

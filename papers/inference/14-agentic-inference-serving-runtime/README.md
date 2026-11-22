@@ -358,7 +358,7 @@
   この構造は能力を上げる一方、通常の単一ターン推論を前提に設計されたGPUサービングでは、長い逐次依存、外部ツール待ち、繰り返しプリフィル、可変長生成を生み、平均利用率だけでは実コストを捉えにくい。代表結果では、HotpotQAやMATHのCPU・外部ツール待ちが実行時間の最大54.5%を占める条件があり、LLM実行中も復号がGPU時間の74.1%を占める。
 
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
-  実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：12  
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
 
 - **2025-05 · [HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
