@@ -397,6 +397,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/ponytaill/HeteroCache) ・ リポジトリ内被引用：2  
   注意ヘッドの安定性と層内冗長性に応じてKV予算を細粒度配分し、代表ヘッドの注意ドリフト検知時だけCPUから非同期取得することで、224K文脈の復号を完全注意計算比約3倍高速化する。
 
+- **2025-12 · [V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval](2025-2512.12284-v-rex-real-time-streaming-video-llm-acceleration-via-dynamic-kv-cache-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  過去の映像を後から質問される可能性があるため、不要に見えるKVを永久削除する方式は会話の整合性を損なう。論文のエッジ向けV-Rex8構成は、KV長1K〜40KのCOIN動画でフレーム当たり121〜254 ms、すなわち3.9〜8.3 FPSを報告する。
+
 - **2025-12 · [ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding](2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-d.md)**  
   実装：[✓](https://github.com/ML-GSAI/ReFusion) ・ リポジトリ内被引用：2  
   応答をスロットへ分割し、スロット間は拡散的に選んでスロット内は自己回帰で埋め、並べ替えでKVキャッシュを全面再利用することで、拡散モデルの並列性と自己回帰モデルの一貫性を両立させた生成方式。
@@ -645,6 +649,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/ChenHong30/NestedKV) ・ リポジトリ内被引用：1  
   学習不要のKV圧縮では、注意重みが大きいトークン、最近のトークン、鍵ベクトルが平均から離れたトークンなどを残す方法が使われる。Qwen3-4B、RULERの4,000トークン文脈、KVの75%を削除する条件でNestedKVは79.32点、単一の全文平均方向を使うKeyDiffは60.22点だった。
 
+- **2026-05 · [MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering](2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video-questio.md)**  
+  実装：[✓](https://github.com/IMBALDY/MuKV) ・ リポジトリ内被引用：1  
+  動画を区間・フレーム・パッチの3粒度のKVキャッシュで保持し、自己注意と周波数の二信号で圧縮して半階層検索する方式で、保存量を増やさずにストリーミング動画質問応答の精度を代表方式から数ポイント引き上げた。
+
 - **2026-05 · [CONF-KV: Confidence-Aware KV Cache Eviction with Mixed-Precision Storage for Long-Horizon LLM Inference](2026-2605.24786-conf-kv-confidence-aware-kv-cache-eviction-with-mixed-precision-storage-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   過去の注意重みに基づく方式は、重要そうなトークンを選別できる反面、将来どの情報が必要になるかを正確には予測できない。
@@ -712,10 +720,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [Beyond Speedup -- Utilizing KV Cache for Sampling and Reasoning](2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.md)**  
   実装：[✓](https://github.com/cmd2001/ICLR2026_KV-Embedding) ・ リポジトリ内被引用：1  
   保持済みのKVキャッシュを表現として再利用し、自己評価と難易度予測による思考切替を行い、追加計算ほぼなしで生成トークンを最大5.7倍削減した。
-
-- **2025-12 · [V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval](2025-2512.12284-v-rex-real-time-streaming-video-llm-acceleration-via-dynamic-kv-cache-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  過去の映像を後から質問される可能性があるため、不要に見えるKVを永久削除する方式は会話の整合性を損なう。論文のエッジ向けV-Rex8構成は、KV長1K〜40KのCOIN動画でフレーム当たり121〜254 ms、すなわち3.9〜8.3 FPSを報告する。
 
 - **2025-12 · [KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models](2025-2512.06727-kv-car-kv-cache-compression-using-autoencoders-and-kv-reuse-in-large-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1575,10 +1579,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   NIKAが対象とするのは、入力プロンプトを一括処理する事前入力（プリフィル）と、出力トークンを逐次生成する復号（デコード）を別のGPUへ割り当てる分離型推論である。CLOSER 2026の8ページ論文では、vLLM 0.8.4の分離型構成を改造し、全KV転送の基準方式に対してTTFT最大54%減を報告した。
 
-- **2026-05 · [MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering](2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video-questio.md)**  
-  実装：[✓](https://github.com/IMBALDY/MuKV) ・ リポジトリ内被引用：0  
-  動画を区間・フレーム・パッチの3粒度のKVキャッシュで保持し、自己注意と周波数の二信号で圧縮して半階層検索する方式で、保存量を増やさずにストリーミング動画質問応答の精度を代表方式から数ポイント引き上げた。
-
 - **2026-05 · [Moment-KV: Momentum-Based Decode-Time KV Cache Compression for Long Generation](2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-gener.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルを凍結し、デコード側KVだけをモメンタム付き注意集約の累積重要度で管理する圧縮法。瞬時注意の見落としと固定直近ウィンドウの無駄を同時に避け、長生成ベンチマークで比較対象を上回る。
@@ -1837,13 +1837,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/abdelfattah-lab/xKV) ・ リポジトリ内被引用：36  
   xKVは、隣接層のキー・バリュー（Key-Value; KV）キャッシュをトークンごとに直接似ているとみなすのではなく、複数層が共有する支配的な特異ベクトルをまとめて抽出する。プリフィル時に複数層を横連結して共有低ランク基底へ因子分解し、デコード時はクエリに重要なトークンだけを選択的に再構成する。
 
+- **2025-02 · [KVTuner: Sensitivity-Aware Layer-Wise Mixed-Precision KV Cache Quantization for Efficient and Nearly Lossless LLM Inference](2025-2502.04420-kvtuner-sensitivity-aware-layer-wise-mixed-precision-kv-cache-quantizati.md)**  
+  実装：[✓](https://github.com/cmd2001/KVTuner) ・ リポジトリ内被引用：34  
+  KVTunerは、大規模言語モデル（LLM）の鍵・値キャッシュ（key-value キャッシュ; KVキャッシュ）を、層ごとに異なるビット幅で量子化するための自動設定方式である。またKIVI-KV8を基準に、文脈長を変えた実験で最大21.25%の推論処理量改善を報告する。
+
 - **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
   実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：33  
   FlashDLMは拡散言語モデル（Diffusion Language モデル; DLM）の遅さを、1回のノイズ除去で再計算し過ぎる問題と、何回ノイズ除去を繰り返すかという問題に分ける。FreeCacheは前者を、Guided Diffusionは後者を削り、二つを組み合わせて大きな端末間高速化を得る。
-
-- **2025-02 · [KVTuner: Sensitivity-Aware Layer-Wise Mixed-Precision KV Cache Quantization for Efficient and Nearly Lossless LLM Inference](2025-2502.04420-kvtuner-sensitivity-aware-layer-wise-mixed-precision-kv-cache-quantizati.md)**  
-  実装：[✓](https://github.com/cmd2001/KVTuner) ・ リポジトリ内被引用：33  
-  KVTunerは、大規模言語モデル（LLM）の鍵・値キャッシュ（key-value キャッシュ; KVキャッシュ）を、層ごとに異なるビット幅で量子化するための自動設定方式である。またKIVI-KV8を基準に、文脈長を変えた実験で最大21.25%の推論処理量改善を報告する。
 
 - **2025-10 · [Cache-to-Cache: Direct Semantic Communication Between Large Language Models](2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md)**  
   実装：[✓](https://github.com/thu-nics/C2C) ・ リポジトリ内被引用：32  
@@ -1913,13 +1913,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：17  
   Acon（Agent Context Optimization）は、過去の行動・観測をまとめた履歴と、新たに届いた長いツール観測の両方をLLMで圧縮する。圧縮の指針を人手で固定せず、同じ課題で非圧縮なら成功したのに圧縮後は失敗した実行軌跡を比較し、失われた重要情報を分析して自然言語の圧縮指示を改善する。
 
+- **2025-06 · [InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding](2025-2506.15745-infinipot-v-memory-constrained-kv-cache-compression-for-streaming-video-.md)**  
+  実装：[✓](https://github.com/aiha-lab/InfiniPot-V) ・ リポジトリ内被引用：17  
+  InfiniPot-Vは、動画を順次処理する映像言語モデルの鍵・値キャッシュ（KVキャッシュ）が、視聴時間とともに増加する問題を扱う。全映像のKVキャッシュをいったん構築してから圧縮する方式は、圧縮前の瞬間最大メモリが装置容量を超える。主要評価では、Qwen-2-VL-7Bの50Kトークン相当の動画文脈を6Kへ縮小しても、MLVU平均65.8を維持した。
+
 - **2025-02 · [CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective](2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md)**  
   実装：[✓](https://github.com/FFY0/DefensiveKV) ・ リポジトリ内被引用：17  
   KVキャッシュ追い出しを「注意出力摂動の最小化」として定式化し、注意重み×出力射影後の値状態ノルムで重要KVを選ぶ二段階方式により、既存3方式の圧縮損失を29データセット平均で半分超削減する。
-
-- **2025-06 · [InfiniPot-V: Memory-Constrained KV Cache Compression for Streaming Video Understanding](2025-2506.15745-infinipot-v-memory-constrained-kv-cache-compression-for-streaming-video-.md)**  
-  実装：[✓](https://github.com/aiha-lab/InfiniPot-V) ・ リポジトリ内被引用：16  
-  InfiniPot-Vは、動画を順次処理する映像言語モデルの鍵・値キャッシュ（KVキャッシュ）が、視聴時間とともに増加する問題を扱う。全映像のKVキャッシュをいったん構築してから圧縮する方式は、圧縮前の瞬間最大メモリが装置容量を超える。主要評価では、Qwen-2-VL-7Bの50Kトークン相当の動画文脈を6Kへ縮小しても、MLVU平均65.8を維持した。
 
 - **2025-09 · [d²Cache: Accelerating Diffusion-Based LLMs via Dual Adaptive Caching](2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md)**  
   実装：[✓](https://github.com/Kamichanw/d2Cache) ・ リポジトリ内被引用：15  
@@ -2268,11 +2268,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：436  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：437  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：410  
+  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：411  
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
@@ -2332,7 +2332,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   文脈が長くなるほどKVキャッシュは大きくなり、GPUメモリへ収まらない場合にはCPUメモリへの退避と転送が必要になる。Llama-3.1-8Bの128K文脈を用いたInfiniteBenchでは、過去トークンの1/10だけを選択する条件で平均スコア46.80を報告し、比較方式に対する改善は+4.60%である。
 
 - **2024-05 · [ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification](2024-2405.14256-zipcache.md)**  
-  実装：[✓](https://github.com/ThisisBillhe/ZipCache) ・ リポジトリ内被引用：69  
+  実装：[✓](https://github.com/ThisisBillhe/ZipCache) ・ リポジトリ内被引用：70  
   ZipCacheは、長文脈推論で肥大化する鍵・値キャッシュ（KV キャッシュ）を、重要トークンの識別と混合精度量子化によって圧縮する手法である。そこでZipCacheは最近5%とランダム5%のプローブトークンの注意スコアだけを求め、残りのトークンは高速注意経路を維持する。
 
 - **2024-05 · [PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference](2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md)**  

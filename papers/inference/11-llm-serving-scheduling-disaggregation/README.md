@@ -116,6 +116,10 @@
   実装：[✓](https://github.com/Picomp-lab/Flying-Serving) ・ リポジトリ内被引用：6  
   同じGPU常駐重みとKV物理プールをゼロコピーの論理ビューでDP↔TP切替し、15msのオンライン再構成で高負荷時のDP処理量と低負荷・長文時のTP遅延/容量を使い分ける方式。
 
+- **2026-02 · [BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization](2026-2602.10729-boute-heterogeneous-model-gpu-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。
+
 - **2026-01 · [A Universal Load Balancing Principle and Its Application to Large Language Model Serving](2026-2601.17855-universal-load-balancing-principle-llm-serving.md)**  
   実装：[✓](https://github.com/Echoscd/Load-Balancing-Release) ・ リポジトリ内被引用：6  
   同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。
@@ -143,10 +147,6 @@
 - **2026-02 · [GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving](2026-2602.11688-gorgo-online-tuning-for-cross-region-network-aware-llm-serving.md)**  
   実装：[✓](https://github.com/atoniolo76/GORGO) ・ リポジトリ内被引用：5  
   接頭辞再利用率だけを最大化すると負荷が一部のサーバーへ集中し、空いているサーバーを選ぶだけでは長い接頭辞を再計算してしまう。地域間の通信遅延が数十〜数百ミリ秒以上変動する場合、二つの指標だけを考慮する方式では、最初のトークンが返るまでの時間を適切に見積もれない。
-
-- **2026-02 · [BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization](2026-2602.10729-boute-heterogeneous-model-gpu-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。
 
 - **2025-12 · [WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving](2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md)**  
   実装：[✓](https://github.com/LLMServe/WarmServe) ・ リポジトリ内被引用：5  
@@ -2055,7 +2055,7 @@
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：564  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：565  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2075,7 +2075,7 @@
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
 - **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
-  実装：✓ ・ リポジトリ内被引用：125  
+  実装：✓ ・ リポジトリ内被引用：126  
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
@@ -2186,13 +2186,13 @@
   実装：✓ ・ リポジトリ内被引用：27  
   本論文は、大規模言語モデル（Large Language モデル、LLM）の推論サービスを効率化するシステム研究を整理した総説である。
 
+- **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
+  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：24  
+  常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
+
 - **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
   最も速い設定を常用すると、利用者の遅延制約に余裕がある時間帯でも電力を浪費する可能性がある。新しいGPUカーネルや省電力推論アルゴリズムを提案する論文ではなく、既存基盤の運用設定が作る性能・エネルギーの交換条件を定量化する研究である。
-
-- **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：23  
-  常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-03 · [DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
   実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：22  
@@ -2206,13 +2206,13 @@
   実装：✓ ・ リポジトリ内被引用：20  
   SLO予測付きトークン調整・層単位プリエンプション・増分KV退避で、オンライン遅延を守りながら遊休GPUをオフライン推論へ回す共同サービング方式。
 
+- **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
+  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：19  
+  VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
+
 - **2024-11 · [Context Parallelism for Scalable Million-Token Inference](2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
   本研究は、巨大な言語モデルの推論において、長い入力を処理する最初の一回の待ち時間を短縮する文脈並列（context parallelism）の実装を扱う。提案の中心は、リング状の通信で鍵・値を巡回させるpass-KVと、逆に問い合わせを巡回させるpass-Qを、推論段階と既存キャッシュの割合に応じて切り替えることである。
-
-- **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
-  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：18  
-  VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
 
 - **2024-01 · [CaraServe: CPU-Assisted and Rank-Aware LoRA Serving for Generative LLM Inference](2024-2401.11240-caraserve-cpu-assisted-lora-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -2337,7 +2337,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1860  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1861  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

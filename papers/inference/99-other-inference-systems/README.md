@@ -3080,6 +3080,10 @@
   実装：[✓](https://github.com/Yrdal3910/dMLLM-Visual-Token-Redundancy-Analysis) ・ リポジトリ内被引用：4  
   本論文は、画像・動画を扱う離散拡散型マルチモーダル大規模言語モデル（discrete diffusion-based Multimodal Large Language Models、dMLLM）に、自己回帰型の視覚トークン枝刈りをそのまま移植しても期待通り高速化しない理由を実験的に分析する。
 
+- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
+
 - **2025-10 · [Mixed-Precision Quantization for Language Models: Techniques and Prospects](2025-2510.16805-mixed-precision-quantization-for-language-models-techniques-and-prospect.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   量子化はモデル重み・活性・KVキャッシュの数値精度を下げてメモリ・帯域・演算費用を抑える。一方、平均2bitの一部方式ではPPLがFP16比55%以上悪化する。
@@ -3103,10 +3107,6 @@
 - **2025-11 · [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](2025-2511.18890-nemotron-flash-towards-latency-optimal-hybrid-small-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   GPUで1トークンずつ復号する際、層を何回順に通過するか、どの演算子が起動されるか、状態やKVをどれだけ転送するかが遅延を決める。Nemotron-Flashは、モデルの大きさよりも実際のGPU上での遅延制約を第一の設計目標とする。
-
-- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
 
 - **2025-10 · [Not All Bits Are Equal: Scale-Dependent Memory Optimization Strategies for Reasoning Models](2025-2510.10964-not-all-bits-are-equal-scale-dependent-memory-optimization-strategies-fo.md)**  
   実装：[✓](https://github.com/krafton-ai/not-all-bits-are-equal) ・ リポジトリ内被引用：3  
@@ -4609,7 +4609,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：99  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：100  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  

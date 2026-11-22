@@ -17,7 +17,7 @@
   映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
 
 - **2026-04 · [Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures](2026-2604.09048-watt-counts-energy-aware-benchmark-for-sustainable-llm-inference-on-hete.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
 
 - **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
@@ -557,7 +557,7 @@
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
 
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
@@ -584,6 +584,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   端末で簡単な要求を処理し、必要な時だけクラウドを呼ぶ方式は自然だが、呼出し回数が増えれば往復遅延が支配的になる。
 
+- **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
+
 - **2025-01 · [Resource-efficient Algorithms and Systems of Foundation Models: A Survey](2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Xu・Cai・Yin・Wang・Jin・Liuによる39ページの査読付きサーベイは、基盤モデルの「効率」を単一のモデル圧縮率やGPU演算速度として扱わず、モデル構造、学習・圧縮・推論アルゴリズム、実行システムという異なる介入点に分解する。
@@ -591,10 +595,6 @@
 - **2025-11 · [Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications](2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。
-
-- **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
 
 - **2025-09 · [Training Matryoshka Mixture-of-Experts for Elastic Inference-Time Expert Utilization](2025-2509.26520-training-matryoshka-mixture-of-experts-for-elastic-inference-time-expert.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -769,7 +769,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：36  
+  実装：✓ ・ リポジトリ内被引用：37  
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  

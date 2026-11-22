@@ -68,13 +68,13 @@
   実装：[✓](https://github.com/qhfan/FlashPrefill) ・ リポジトリ内被引用：9  
   FlashPrefillは、長文脈の大規模言語モデル（LLM）が入力全体を一度に処理するプリフィル段階を高速化する、動的な疎注意（sparse 注意機構）の方式である。原著のQwen3-30B-A3B-Instruct-2507を用いた注意演算子比較では、密なFlashAttentionに対して4Kで1.71倍、256Kで27.78倍の高速化を報告する。
 
-- **2026-02 · [ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference](2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-contex.md)**  
-  実装：[✓](https://github.com/CURRENTF/ResidualKV) ・ リポジトリ内被引用：8  
-  遠く離れた類似トークンを参照として引き、残差だけを小さく符号化して保存するKVキャッシュ圧縮で、捨てずに保存率を13から16パーセントまで下げ、選ばれたトークンだけを復元して計算も3割に抑えた。
-
 - **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   HySparseは、長文脈言語モデルの注意計算と鍵・値キャッシュ（KVキャッシュ）を同時に削減するため、少数の全体注意層を後続の疎注意層の情報供給源として再利用する混合注意アーキテクチャである。従来の動的疎注意は、重要なトークンを予測する補助選択器が必要になり、選択誤差と計算費用が生じる。HySparseでは一つの全体注意層の後ろに複数の疎注意層を配置する。
+
+- **2026-02 · [ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference](2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-contex.md)**  
+  実装：[✓](https://github.com/CURRENTF/ResidualKV) ・ リポジトリ内被引用：7  
+  遠く離れた類似トークンを参照として引き、残差だけを小さく符号化して保存するKVキャッシュ圧縮で、捨てずに保存率を13から16パーセントまで下げ、選ばれたトークンだけを復元して計算も3割に抑えた。
 
 - **2026-02 · [Double-P: Hierarchical Top-P Sparse Attention for Long-Context LLMs](2026-2602.05191-double-p-hierarchical-top-p-sparse-attention-for-long-context-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -589,7 +589,7 @@
   自己類似度を使って重要ブロックを予測し、残ったブロックにもGPUワープ単位のsoftmax判定を適用する学習不要の疎注意演算子。近似誤差の許容範囲を層ごとに調整し、言語・画像・動画で実測性能と品質を比較する。
 
 - **2024-12 · [SCBench: A KV Cache-Centric Analysis of Long-Context Methods](2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md)**  
-  実装：✓ ・ リポジトリ内被引用：43  
+  実装：✓ ・ リポジトリ内被引用：44  
   共有長文脈を複数ターンで再利用する12タスクを用い、KV生成・圧縮・検索・読み込みの各方式が初回だけでなく後続要求でどう崩れるかを比較する。
 
 - **2025-02 · [Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning](2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md)**  

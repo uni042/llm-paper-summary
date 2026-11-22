@@ -149,6 +149,10 @@
   実装：[✓](https://anonymous.4open.science/r/CUCo-06EC/) ・ リポジトリ内被引用：1  
   既存の分散処理では、行列積や注意計算を高速化する担当と、NCCL通信を高速化する担当が分離されやすい。続いて性能探索の低速経路（slow-path）で、コンパイル・数値照合・実機ベンチマークを通した候補だけを残し、進化的な探索で転送と計算の重なり方を改善する。
 
+- **2026-02 · [LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding](2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.md)**  
+  実装：[✓](https://github.com/qiujihao19/LongVideo-R1) ・ リポジトリ内被引用：1  
+  長尺動画を階層木として粗い要約から掘り下げ、答えに足りると判断したら探索を止めるエージェントで、網羅処理より大幅に少ないモデル呼出しでLVBench最高水準の正解率を得た。
+
 - **2026-02 · [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybr.md)**  
   実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：1  
   大規模モデルの最初の1トークンの隠れ状態で関数検索と小規模モデルの生成を誘導し、固定構文はテンプレート注入で済ませる方式で、BFCL精度80.1パーセントと最速の0.828秒を両立した。
@@ -306,10 +310,6 @@
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重要なのはモデル内部の注意計算を高速化することではなく、モデルが外部情報を収集するための逐次対話回数と検索の依存鎖を減らす点にある。Qwen3-30B-A3B-Instruct-2507を基盤として学習したSMTL-300は、BrowseComp 48.6%、GAIA 75.7%、XBench-DeepSearch 82.0%を報告する。
-
-- **2026-02 · [LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding](2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.md)**  
-  実装：[✓](https://github.com/qiujihao19/LongVideo-R1) ・ リポジトリ内被引用：0  
-  長尺動画を階層木として粗い要約から掘り下げ、答えに足りると判断したら探索を止めるエージェントで、網羅処理より大幅に少ないモデル呼出しでLVBench最高水準の正解率を得た。
 
 - **2026-02 · [LatentMem: Customizing Latent Memory for Multi-Agent Systems](2026-2602.03036-latentmem-customizing-latent-memory-for-multi-agent-systems.md)**  
   実装：[✓](https://github.com/KANABOON1/LatentMem) ・ リポジトリ内被引用：0  

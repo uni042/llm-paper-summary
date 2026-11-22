@@ -67,7 +67,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [DivPrune: Diversity-based Visual Token Pruning for Large Multimodal Models](2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md)**  
-  実装：[✓](https://github.com/vbdi/divprune) ・ リポジトリ内被引用：97  
+  実装：[✓](https://github.com/vbdi/divprune) ・ リポジトリ内被引用：98  
   提案方式は、情報量が高そうな個々のトークンを選ぶのではなく、選んだトークン同士が似過ぎないようにすることで、短い視覚列に異なる意味的領域を残そうとする。提案された距離選択を、言語モデルの最初の層より前、または途中層の視覚対応隠れ状態へ挿入できるが、主要な実験で最も良好だったのは最初の層の前に削減する構成である。
 
 - **2025-02 · [Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More](2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md)**  
@@ -240,6 +240,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：7  
   この観察に「深い層で必要になる重要トークンは浅い層でも必要である」という仮定を加え、層別の保持率を浅い側から決める貪欲探索（Greedy Search、G-Search）を提案する。
 
+- **2024-05 · [VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos](2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md)**  
+  実装：[✓](https://github.com/Ziyang412/VideoTree) ・ リポジトリ内被引用：7  
+  高関連クラスタだけを再分割して細部を調べるため、動画全体を均一に密な説明文へ変換する方式より、不要なフレーム説明や冗長な言語入力を減らせる。原著の主な根拠は、EgoSchema検証部分集合で66.2%の正答率、LLoVi-bestの61.2%に対して20.1秒対24.8秒という比較である。
+
 - **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   大規模言語モデルの逐次生成では、要求ごとの同時処理数が小さいと、フィードフォワード網の大きな重み行列をGPUメモリから読み出す費用が律速になる。入力によってゼロになる中間活性を事前に予測できれば、その活性に対応する行の重み読込みと行列ベクトル積を省略できる。しかし、一般的なLLaMAの滑らかな活性化関数であるSiLUでは、負の値も厳密にはゼロになりにくい。
@@ -251,10 +255,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2024-10 · [MoH: Multi-Head Attention as Mixture-of-Head Attention](2024-2410.11842-moh-mixture-of-head-attention.md)**  
   実装：[✓](https://github.com/SkyworkAI/MoH) ・ リポジトリ内被引用：6  
   注意ヘッドを共有ヘッドとTop-Kルーティングヘッドに分け、トークンごとに必要なヘッドだけ使うMoH。LLaMA3-8Bで75%利用・14評価平均64.0%を達成。
-
-- **2024-05 · [VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos](2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md)**  
-  実装：[✓](https://github.com/Ziyang412/VideoTree) ・ リポジトリ内被引用：6  
-  高関連クラスタだけを再分割して細部を調べるため、動画全体を均一に密な説明文へ変換する方式より、不要なフレーム説明や冗長な言語入力を減らせる。原著の主な根拠は、EgoSchema検証部分集合で66.2%の正答率、LLoVi-bestの61.2%に対して20.1秒対24.8秒という比較である。
 
 - **2024-10 · [CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation](2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
