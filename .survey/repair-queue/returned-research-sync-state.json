@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d7c94652564d7a313129cf7c570a441e5f1d86df",
+  "base_commit": "7a4547549df61ec6c6b755dd2a76fffa3940e3dd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -44,8 +44,13 @@
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
     "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json",
     "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
+    "0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.json",
+    "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json",
+    "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
+    "0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.json",
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
+    "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
     "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json",
     "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json",
@@ -49599,6 +49604,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-eacl.320": {
+      "order": [
+        "2026-11-22T14:58:37+00:00",
+        "0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.645": {
+      "order": [
+        "2026-11-22T14:59:29+00:00",
+        "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1977": {
+      "order": [
+        "2026-11-22T15:00:20+00:00",
+        "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-acl.1356": {
+      "order": [
+        "2026-11-22T15:01:12+00:00",
+        "0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-acl.1062": {
+      "order": [
+        "2026-11-22T15:02:04+00:00",
+        "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62680,6 +62730,21 @@
     "doi:10.18653/v1/2025.findings-emnlp.957": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md"
+    ],
+    "doi:10.18653/v1/2026.findings-eacl.320": [
+      "papers/inference/99-other-inference-systems/2026-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-lang.md"
+    ],
+    "doi:10.18653/v1/2025.findings-emnlp.645": [
+      "papers/inference/99-other-inference-systems/2025-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1977": [
+      "papers/inference/99-other-inference-systems/2026-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compressi.md"
+    ],
+    "doi:10.18653/v1/2025.findings-acl.1356": [
+      "papers/inference/99-other-inference-systems/2025-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-ca.md"
+    ],
+    "doi:10.18653/v1/2026.findings-acl.1062": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-.md"
     ]
   }
 }

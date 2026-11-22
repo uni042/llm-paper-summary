@@ -35,10 +35,15 @@
   "selection_reason": "ACL Findings 2025本文§4〜5・表2を確認。モンテカルロ木探索と過程報酬モデルを組み合わせ、各探索段階で4Kトークン相当の関連KVを検索する。32K全文注意との比較で推論文脈を縮小しながら多段QAのF1を改善。ただし木探索の追加試行費用を含めた総遅延優位は別途検証が必要。",
   "semantic_scholar_id": "685d5c1d94d1908d9bf45058bfc5088250e1d30e",
   "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1356",
-  "status": "ready",
+  "status": "superseded",
   "title": "Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:03:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-ca.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.findings-acl.1356",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

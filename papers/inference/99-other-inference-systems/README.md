@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1309本）
+## 自動生成の論文一覧（1313本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1766,6 +1766,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   巨大な言語モデルでは重みをVRAMにすべて置けない場合、llama.cppの層単位オフロードではCPU側の層計算が直列経路の律速になりやすい。RTX 3080 Ti 12GBとRTX 4090 24GBを用いた実機で、活性化疎性を持つ複数の7B～66B級モデルを評価した。
 
+- **2026-07 · [JW-SVD: Bridging the Cross-Modal Mismatch in Post-Training MLLM Compression](2026-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compressi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テキスト専用に最適化した特異値分解が視覚情報を潰す問題を、テキストと画像の共同共分散による白化と視覚塔からバックボーンへの予算移転で解き、保持率40%でも知覚性能の大幅な回復とテキスト性能の維持を両立するマルチモーダル圧縮方式。
+
 - **2026-07 · [I/o for LLM inference: a survey of storage and memory bottlenecks](2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md)**  
   実装：[✓](https://github.com/rch0wdhury/llm-io-profiler) ・ リポジトリ内被引用：0  
   LLMデコードのデータ移動を重み・KVキャッシュ・活性の三I/O流へ分解し、量子化からSSD/CXL/統合メモリまでをルーフライン上で統一して、最適化を積むと支配ボトルネックが移動することを定量化したサーベイ。
@@ -2533,6 +2537,10 @@
 - **2026-03 · [The 1/W Law: An Analytical Study of Context-Length Routing Topology and GPU Generation Gains for LLM Inference Energy Efficiency](2026-2603.17280-the-1-w-law-an-analytical-study-of-context-length-routing-topology-and-g.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文脈窓が2倍になるとワットあたりトークンが半分になる1/W則を解析的に導き、文脈長ルーティングがGPU世代交代より大きな省エネ手段であり、両者の利得が乗算で重なることを示す分析研究。
+
+- **2026-03 · [Task-aware Block Pruning with Output Distribution Signals for Large Language Models](2026-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-lang.md)**  
+  実装：[✓](https://github.com/Song-haJo/TaBP) ・ リポジトリ内被引用：0  
+  各ブロック前後の出力分布の統計的変化を複数選択式質問応答の較正データで集約して重要度を測るブロック枝刈りTaBPを提案し、LLaMA-3-8Bで25%のブロックを削除しても平均正解率60.93%を保ち、感度分析型の比較対象56.6%前後を上回った。
 
 - **2026-03 · [Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability](2026-2603.12038-slow-fast-inference-training-free-inference-acceleration-via-within-sent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3712,6 +3720,10 @@
   実装：[✓](https://github.com/stanford-ppl/step_artifact) ・ リポジトリ内被引用：0  
   SDAは演算器とメモリをチップ上へ分散配置し、演算間を先入先出のストリームで接続する。著者はMixtral-8x7B、Qwen3-30B-A3BのMoE層と全モデル、AzureLLMInferenceDataset由来のKV長分布を用い、サイクル近似シミュレータで評価する。
 
+- **2025-11 · [Revisiting Pruning vs Quantization for Small Language Models](2025-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小型言語モデル6種で枝刈り2方式と量子化2方式を7言語・7課題で統一比較し、同等圧縮率では量子化が忠実度と精度を大きく保ち、大規模モデルでの枝刈りの優劣関係が小型モデルでは逆転することを示した分析研究。
+
 - **2025-11 · [Re-FORC: Adaptive Reward Prediction for Efficient Chain-of-Thought Reasoning](2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reason.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   追加の思考トークンに対する期待報酬の曲線を予測し、ギッティンズ指標で早期停止、モデル選択、テスト時スケーリングを統一的に決める計算配分手法。
@@ -3963,6 +3975,10 @@
 - **2025-07 · [Smooth Reading: Bridging the Gap of Recurrent LLM to Self-Attention LLM on Long-Context Tasks](2025-2507.19353-smooth-reading-bridging-the-gap-of-recurrent-llm-to-self-attention-llm-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし一度に大量の文書を読み込ませると、必要な情報が後続トークンによって上書き・圧縮され、長文質問応答や要約の精度が下がりやすい。主な評価ではSWA-3B-4k-SRがLongBenchで自己注意のQwen2.5-3Bの平均を3.61ポイント上回る。
+
+- **2025-07 · [Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval](2025-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-ca.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈の多段質問応答を、モンテカルロ木探索による段ごとの探索、段ごとに4千トークンぶんの重要KVを取り出す動的検索、自動ラベル学習の過程報酬モデルで解き、8Bモデルで70Bモデルの直接応答を上回るF1を示した枠組み。
 
 - **2025-07 · [MGAA: Multi-Granular Adaptive Allocation fof Low-Rank Compression of LLMs](2025-2507.03294-mgaa-multi-granular-adaptive-allocation-fof-low-rank-compression-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

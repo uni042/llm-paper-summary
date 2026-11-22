@@ -35,10 +35,15 @@
   "selection_reason": "ACL Anthologyの正式要旨を確認。0.5〜3.8Bの小型言語モデル6種、7言語・7下流タスクでSparseGPT/Wandaによる事後枝刈りとGPTQ/AWQによる量子化を比較。量子化は概してモデル忠実度・多言語perplexity・推論正答率の保持で有利だが、OpenBookQA等では優位性が縮小する。新カーネルの速度測定ではなく、端末配備向け圧縮方式選択に直接関わる実証研究。",
   "semantic_scholar_id": "320288a4e571e95061d86180e1a1c1cf79eb8ce6",
   "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.645",
-  "status": "ready",
+  "status": "superseded",
   "title": "Revisiting Pruning vs Quantization for Small Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:03:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.645",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

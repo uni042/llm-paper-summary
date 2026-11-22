@@ -35,10 +35,15 @@
   "selection_reason": "ACL Anthologyの正式一次abstractを確認。端末常駐するエキスパートの頻度認識初期化、欠損エキスパートの類似性に基づくリダイレクト、タスク単位の粗粒度エキスパート交換により、エッジMoE推論でI/Oを抑えつつ精度を改善する。静的枝刈り比平均4.3ポイント、動的スワップ比2.4ポイントの精度改善を報告。LLM推論のエキスパート常駐・交換管理へ直接寄与するためaccept。GitHub既収録arXiv:2603.12645の「LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing」は著者・正式タイトル・手法が異なる別論文であり、名前だけで統合しない。",
   "semantic_scholar_id": "8e9bf0985767d060d6ece470c708b918a05ed904",
   "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1062",
-  "status": "ready",
+  "status": "superseded",
   "title": "LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T15:03:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.findings-acl.1062",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
