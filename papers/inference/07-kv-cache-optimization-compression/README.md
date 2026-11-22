@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（633本）
+## 自動生成の論文一覧（634本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1406,6 +1406,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [HyQuant: Hybrid-Precision Quantization for LLM Attention](2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.md)**  
   実装：[✓](https://github.com/jerrysfls/HyQuant) ・ リポジトリ内被引用：0  
   注意質量が集中する縦線位置と直近窓だけを全精度に残し残りを4ビット化する混合精度量子化を提案し、長さ32768で生成核3.58倍・生成全体1.17倍の高速化と全精度に近い長文脈精度を示した。
+
+- **2026-08 · [Faithfulness Is Not Free: Auditing Offline KV-Cache Quantization in Retrieval-Augmented Generation](2026-2608.30996-faithfulness-is-not-free-auditing-offline-kv-cache-quantization-in-retri.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  オフラインKVキャッシュ量子化を正確さと忠実さの両面で監査し、4ビットでは正解のまま根拠への裏付けが静かに失われ、正確さだけの評価では検出できないことを示す研究。
 
 - **2026-08 · [Entropy-Constrained Adaptive Stochastic Quantization](2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

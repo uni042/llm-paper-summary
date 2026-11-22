@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1231本）
+## 自動生成の論文一覧（1232本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1285,6 +1285,10 @@
 - **2026-09 · [Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference](2026-2609.07786-signed-rescue-routing-harm-aware-cascades-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の多段推論では、全問い合わせを高価な大型モデルへ送る代わりに、まず小型モデルで回答し、難しいと判断したものだけ大型モデルへ送る。大型モデルの呼出し回数に予算があるとき、純利得が大きい問い合わせから優先して切り替える。
+
+- **2026-09 · [ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding](2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-underst.md)**  
+  実装：[✓](https://github.com/CURRENTF/ShallowStream) ・ リポジトリ内被引用：0  
+  流入フレームは浅い層だけで処理してKVを履歴索引とし、質問時だけ浅い層の注意で証拠を選んで全層計算することで、ストリーミング動画理解のプリフィル遅延を最大52.1倍下げる深さ分離方式。
 
 - **2026-09 · [SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans](2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

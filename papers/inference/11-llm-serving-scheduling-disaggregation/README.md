@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（597本）
+## 自動生成の論文一覧（599本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -986,6 +986,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長い共通コンテキストを持つ要求では、過去に計算した接頭辞のKVキャッシュを別サーバから再利用することでプリフィル再計算を減らせる。実機構成を用いた評価では、読込みが単一リクエストのTTFTの90%超になるケース、ICLを1.2 QPSで処理するときの平均TTFT 81.3%超の短縮、同条件でのSLO達成率61.67%向上などを報告する。
 
+- **2026-08 · [TokenPowerSandbox: Evidence-Gated CPU-First Screening for Energy-Aware LLM Serving](2026-2608.18149-tokenpowersandbox-evidence-gated-cpu-first-screening-for-energy-aware-ll.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CPU投影、短いGPUプローブ、完全検証の三段階を測定前凍結と証拠ゲートで束ね、範囲外では予測を出さず棄却する、エネルギー配慮サービング向けの選別手順。H100でのエネルギー予測誤差は6〜7パーセント台だった。
+
 - **2026-08 · [TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure](2026-2608.06007-tensorcast-tensor-as-a-service.md)**  
   実装：[✓](https://github.com/tensorcast-ai/tensorcast) ・ リポジトリ内被引用：0  
   モデル重み・KV・チェックポイントをArtifact/Operation/Planとして統一管理し、配置・移動・変換・実体化を実行エンジンから分離することで、個別専用基盤に近い性能と横断的な状態管理方針の合成を両立する分散テンソル基盤。
@@ -1057,6 +1061,10 @@
 - **2026-08 · [Connex: Endpoint Mobility Primitives for Dynamic LLM Serving](2026-04a3072fd610-connex-endpoint-mobility-primitives-for-dynamic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Connexは、分離型プリフィル・デコードやパイプライン並列化を使う大規模言語モデル（LLM）のオンライン推論で、GPUワーカーの追加・離脱・故障・移動を通信経路を全面再構築せずに扱うための通信基盤である。構成変更中の中負荷では要求完了率100%を保ち、比較対象は条件によって0～28%まで低下する。
+
+- **2026-08 · [CacheRouter: A Dual-Path Tool Routing Architecture with Cache-Preserving Main-Model Isolation for Long-Tail Tool Discovery](2026-2608.22708-cacherouter-a-dual-path-tool-routing-architecture-with-cache-preserving-.md)**  
+  実装：[✓](https://github.com/qingyiwanchen/CacheRouter) ・ リポジトリ内被引用：0  
+  主モデルには固定した中核道具だけを見せ、長尾道具はルーター副モデルが検索・実行して結果だけを返す二重経路で、プロンプトキャッシュのヒット率を91〜95パーセントまで保ち入力費用を約1割へ下げる方式。
 
 - **2026-08 · [AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation](2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md)**  
   実装：[✓](https://github.com/kvcache-ai/AFD-Ledger) ・ リポジトリ内被引用：0  
@@ -2035,7 +2043,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：816  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：817  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2325,7 +2333,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1859  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1860  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2365,7 +2373,7 @@
   LLMCarbonは、大規模言語モデル（LLM）を設計・運用する前に、モデル構造とハードウェア、データセンター条件から二酸化炭素換算排出量（CO2eq）を推定するシステムである。T5、GPT-3、GShard、Switch、XLMの5モデルで既報の学習運用排出量と比較すると、LLMCarbonの推定誤差は-3.54%～+8.2%の範囲だった。
 
 - **2023-05 · [Large Language Models as Tool Makers](2023-2305.17126-large-language-models-as-tool-makers.md)**  
-  実装：[✓](https://github.com/ctlllll/LLM-ToolMaker) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/ctlllll/LLM-ToolMaker) ・ リポジトリ内被引用：3  
   大規模言語モデルへ複雑な推論を毎回直接依頼すると、同じ種類の問題に対して高価な推論を繰り返すことになる。Large Language Models as Tool Makers（LATM）は、問題の解き方をPython関数として保存する機能キャッシュ（functional キャッシュ）を提案する。
 
 - **2023-05 · [PruMUX: Augmenting Data Multiplexing with Model Compression](2023-2305.14706-prumux-augmenting-data-multiplexing-with-model-compression.md)**  

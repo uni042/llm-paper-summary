@@ -35,10 +35,15 @@
   "selection_reason": "主モデルの接頭辞を固定してプロンプトキャッシュを保持しつつ別経路でツールを探索するCacheRouterを実装し、キャッシュヒット率90%以上と入力コスト大幅削減を示しており、プレフィックスキャッシュを活かすサービング設計への直接貢献であるため。",
   "semantic_scholar_id": "9f1ab91046129d5499dcebb379c3221e20f2dc9c",
   "source_url": "https://arxiv.org/abs/2608.22708",
-  "status": "ready",
+  "status": "superseded",
   "title": "CacheRouter: A Dual-Path Tool Routing Architecture with Cache-Preserving Main-Model Isolation for Long-Tail Tool Discovery",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T05:04:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.22708-cacherouter-a-dual-path-tool-routing-architecture-with-cache-preserving-.md",
+  "represented_canonical_id": "arXiv:2608.22708",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

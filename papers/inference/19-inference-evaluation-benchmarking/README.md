@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（192本）
+## 自動生成の論文一覧（193本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -293,6 +293,10 @@
 - **2026-08 · [RUTA: Principled Visual Token Allocation via Rate-Utility Optimization](2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.md)**  
   実装：[✓](https://github.com/Multimedia-Analytics-Laboratory/RUTA) ・ リポジトリ内被引用：0  
   視覚トークンの削減を率と効用の最適化として定式化し、質問に合わせて候補を絞り、保持確率の合計への罰則で入力ごとに個数を学ばせ、落とした分の情報を錨へ吸収させることで、全トークンの数パーセントで性能の9割前後を保つ削減方式。
+
+- **2026-08 · [RLCascadeRouter: Quality-Estimator-Free Cascade Routing via Reinforcement Learning](2026-2608.15817-rlcascaderouter-quality-estimator-free-cascade-routing-via-reinforcement.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  品質推定器を使わず、停止とモデル選択を強化学習の方策として直接学ぶカスケードルーティングで、予測誤差と決定損失のずれを解消し、性能とコストの釣り合いを改善する。
 
 - **2026-08 · [Ripple-Pivot Search: Active Parallel Decoding for Diffusion Large Language Models](2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
