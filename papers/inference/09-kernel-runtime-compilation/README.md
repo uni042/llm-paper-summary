@@ -908,6 +908,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：2  
   APT-LLMが解くのは、モデルをINT2やINT3まで量子化しても、GPUの行列積命令がその精度を直接サポートしないため、低ビット化した理論上の利点を実際の推論速度へ移しにくい問題である。
 
+- **2025-06 · [MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators](2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  削減次元が小さく帯域律速へ転じた計算集約演算子の連鎖を、タイル式の完全な探索空間とグラフ解析による冗長転送の除去、解析的性能模型による高速な探索で融合し、カーネルを最大五・九倍速くし調整時間を七十倍以上短縮した。
+
 - **2025-05 · [FlashBias: Fast Computation of Attention with Bias](2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.md)**  
   実装：[✓](https://github.com/thuml/FlashBias) ・ リポジトリ内被引用：2  
   注意バイアスを低ランク分解してクエリとキーへ埋め込み、二乗のメモリ読み込みを消すことでバイアス付き注意を無損失から近似まで含めて高速化した方式。
@@ -935,10 +939,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [BlindSight: Harnessing Sparsity for Efficient Vision-Language Models](2025-2507.09071-blindsight-harnessing-sparsity-for-efficient-vision-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/BlindSight-AFDC) ・ リポジトリ内被引用：1  
   各ヘッドをDense（密）、Sink（境界シンク）、Intra-Image（同じ画像内）、Intra-Image+Sink（画像内と境界シンク）の4種類へ割り当て、実行時には画像境界位置だけから固定的な疎注意マスクを作る。
-
-- **2025-06 · [MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators](2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  削減次元が小さく帯域律速へ転じた計算集約演算子の連鎖を、タイル式の完全な探索空間とグラフ解析による冗長転送の除去、解析的性能模型による高速な探索で融合し、カーネルを最大五・九倍速くし調整時間を七十倍以上短縮した。
 
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1067,7 +1067,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：65  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：66  
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
@@ -1239,7 +1239,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：886  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：888  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -1281,11 +1281,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-12〜2019-11）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：213  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：214  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：55  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-12〜2018-11）

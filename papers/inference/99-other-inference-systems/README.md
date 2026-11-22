@@ -3120,6 +3120,10 @@
   実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：5  
   原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
 
+- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
+  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：5  
+  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
+
 - **2025-08 · [Towards Efficient and Practical GPU Multitasking in the Era of LLM](2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md)**  
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
   この論文は、GPUの単独実行（Singletasking）から多重実行（Multitasking）への移行を主張する設計論・立場論文（Position Paper）である。本文の「10%まで下がる利用率」やGPU世代間の成長率は背景の参考値であり、提案法がGPU使用率を何ポイント改善したという実験結果ではない。
@@ -3143,10 +3147,6 @@
 - **2025-10 · [Mixed-Precision Quantization for Language Models: Techniques and Prospects](2025-2510.16805-mixed-precision-quantization-for-language-models-techniques-and-prospect.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   量子化はモデル重み・活性・KVキャッシュの数値精度を下げてメモリ・帯域・演算費用を抑える。一方、平均2bitの一部方式ではPPLがFP16比55%以上悪化する。
-
-- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
-  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：4  
-  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
 
 - **2025-09 · [Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs](2025-2509.15940-efficient-pre-training-of-llms-via-topology-aware-communication-alignmen.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -4211,11 +4211,11 @@
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：104  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：105  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：97  
+  実装：✓ ・ リポジトリ内被引用：98  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -4223,11 +4223,11 @@
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：68  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：69  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
-  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：49  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
@@ -4286,6 +4286,14 @@
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：13  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
 
+- **2024-10 · [AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models](2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md)**  
+  実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：12  
+  重み行列の固有値分布の裾の重さで層の学習度を測り、よく学んだ層ほど少なく刈る層別疎率の配分法で、疎率80%のLLaMA-7Bで従来の層別配分より困惑度を304.31下げ、CPU推論3.06倍を実測した。
+
+- **2023-12 · [Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference](2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md)**  
+  実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：12  
+  大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
+
 - **2024-06 · [Hybrid SLM and LLM for Edge-Cloud Collaborative Inference](2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   本研究は、端末側で短い草稿を作り、クラウド側で草稿中のトークンをまとめて検証することで、品質と計算費用の間の連続的な選択肢を作る。GSM8KではLlama-2-7B単独の正答率21.68%、70B単独53.07%に対し、対数閾値−0.5の協調方式は52.24%を達成した。
@@ -4298,17 +4306,9 @@
   実装：✓ ・ リポジトリ内被引用：11  
   各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
 
-- **2024-10 · [AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models](2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md)**  
-  実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：10  
-  重み行列の固有値分布の裾の重さで層の学習度を測り、よく学んだ層ほど少なく刈る層別疎率の配分法で、疎率80%のLLaMA-7Bで従来の層別配分より困惑度を304.31下げ、CPU推論3.06倍を実測した。
-
 - **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
   実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：10  
   従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
-
-- **2023-12 · [Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference](2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md)**  
-  実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：10  
-  大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
 
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：9  
@@ -4438,6 +4438,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈LLMのKVキャッシュは系列長に比例して大きくなるため、重み量子化とは別にKVの保存精度を下げる必要がある。
 
+- **2024-02 · [Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers](2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformer.md)**  
+  実装：[✓](https://github.com/SamsungLabs/aespa) ・ リポジトリ内被引用：2  
+  量子化は層ごとに実行しながら誤差の物差しを注意全体の再構成に置き、目的関数を事前計算可能な形へ変形することで、二ビットでも崩壊せず、ブロック型より桁違いに速い学習後量子化を実現した。
+
 - **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
   実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：2  
   枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
@@ -4517,10 +4521,6 @@
 - **2024-02 · [Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers](2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）は多数のTransformer層を積み重ねることで表現能力を獲得する。重要な限定条件は、すべて分類タスク向けに再微調整した後の結果である。
-
-- **2024-02 · [Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers](2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformer.md)**  
-  実装：[✓](https://github.com/SamsungLabs/aespa) ・ リポジトリ内被引用：1  
-  量子化は層ごとに実行しながら誤差の物差しを注意全体の再構成に置き、目的関数を事前計算可能な形へ変形することで、二ビットでも崩壊せず、ブロック型より桁違いに速い学習後量子化を実現した。
 
 - **2024-02 · [RepQuant: Towards Accurate Post-Training Quantization of Large Transformer Models via Scale Reparameterization](2024-2402.05628-repquant-towards-accurate-post-training-quantization-of-large-transforme.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -4729,7 +4729,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：337  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：341  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -4973,7 +4973,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：99  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：100  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -4993,7 +4993,7 @@
   教師と生徒の注意頭数を揃える制約を外し、Query・Key・Valueのトークン間関係を共通の「関係頭」で比較する。推論速度の改善は蒸留後の小型モデルによるもので、実行時に教師を参照する方式ではない。
 
 - **2021-03 · [Softermax: Hardware/Software Co-Design of an Efficient Softmax for Transformers](2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：15  
   Transformerの自己注意機構では、クエリとキーの積から得た各スコアをsoftmaxで正規化し、値ベクトルへの重みを生成する。原著のTSMC 7nm設計評価では、非正規化部の面積0.25倍・エネルギー0.10倍、正規化部の面積0.65倍・エネルギー0.39倍、MAC等を含む演算器全体の面積0.90倍・エネルギー0.43倍を報告する。
 
 - **2021-11 · [SimpleTRON: Simple Transformer with O(N) Complexity](2021-2111.15588-simpletron-simple-transformer-with-o-n-complexity.md)**  
@@ -5045,7 +5045,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：369  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：370  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -5079,7 +5079,7 @@
 ### 9年前（2017-12〜2018-11）
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：154  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：155  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
@@ -5101,7 +5101,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：366  
+  実装：✓ ・ リポジトリ内被引用：367  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）
