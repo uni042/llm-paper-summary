@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a2656b24ca479c2bb0ce40ddc38c5840783b2c33",
+  "base_commit": "9c845681518e5c012e17510ff6cb1499c9798102",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -51,7 +51,12 @@
     "0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.json",
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
+    "0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.json",
+    "0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.json",
+    "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json",
+    "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
+    "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json",
     "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json",
     "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json",
     "1802.05799-horovod.json",
@@ -22608,38 +22613,11 @@
     },
     "DOI:10.18653/v1/2025.findings-acl.1035": {
       "order": [
-        "2026-10-27T17:00:43+00:00",
-        "retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245.json"
+        "2026-11-22T15:06:13+00:00",
+        "0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "7639060587e86f6c3f7f7291eb5a5b72a4d00d8f661a861cefff3b071a15ee17",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245-scheduled-chat-45-r01.md",
-        "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
-        "worker_completed_at": "2026-10-27T22:45:00+09:00",
-        "worker_run_key": "20261027-2245-scheduled-chat-45/r01",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 5673,
-          "body_paragraphs": 29,
-          "method_chars": 1283,
-          "method_paragraphs": 7,
-          "evaluation_chars": 197,
-          "limitation_chars": 841,
-          "insufficiency_flags": [
-            "評価説明量 197 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 197 < 500"
-        ],
-        "processed_at": "2026-10-27T17:00:43+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 2
     },
     "arXiv:2601.14279": {
@@ -49649,6 +49627,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.25": {
+      "order": [
+        "2026-11-22T15:07:41+00:00",
+        "0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.285": {
+      "order": [
+        "2026-11-22T15:09:10+00:00",
+        "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.52202/085713-4538": {
+      "order": [
+        "2026-11-22T15:10:38+00:00",
+        "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.819": {
+      "order": [
+        "2026-11-22T15:12:07+00:00",
+        "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62750,6 +62764,21 @@
     "doi:10.18653/v1/2026.findings-acl.1062": [
       "papers/inference/08-edge-on-device-llm-systems/2026-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-.md",
       "papers/inference/08-edge-on-device-llm-systems/2026-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-.md"
+    ],
+    "doi:10.18653/v1/2025.findings-acl.1035": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.25": [
+      "papers/inference/99-other-inference-systems/2026-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-prun.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.285": [
+      "papers/inference/05-speculative-decoding-moe/2026-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-a.md"
+    ],
+    "doi:10.52202/085713-4538": [
+      "papers/inference/99-other-inference-systems/2025-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-thro.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.819": [
+      "papers/inference/99-other-inference-systems/2026-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-s.md"
     ]
   }
 }

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（426本）
+## 自動生成の論文一覧（427本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -895,6 +895,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting](2026-2607.10661-unlocking-parallelism-in-autoregressive-language-models-via-speculative-.md)**  
   実装：[✓](https://github.com/MINE-USTC/PTD) ・ リポジトリ内被引用：0  
   投機的復号は複数候補を一度に検証して、正しい連続部分をまとめて確定させるが、別の小型ドラフトモデルを使う方式ではモデルのロード・通信・同期・追加学習の費用が生じる。
+
+- **2026-07 · [UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware](2026-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  学習不要の投機的デコーディングを、装置ごとに下書きサイズを実測較正し、検証モデルの確率でnグラム候補へ信頼度を付けて選び、木の第1層を広げて低品質節点を落とすことで、言語とハードウェアを問わず最大約2.6倍まで安定させる方式UniSpec。
 
 - **2026-07 · [Training-Free Adaptive Speculative Decoding via Linguistic Priors](2026-2ad70212cfe6-training-free-adaptive-speculative-decoding-via-linguistic-priors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

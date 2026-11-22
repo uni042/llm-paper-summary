@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1313本）
+## 自動生成の論文一覧（1316本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1670,6 +1670,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   品質劣化の予算の下で速度を最大化する層ビット配分として、感度プロファイルに基づきGemma-3-1Bの全結合・注意・語彙射影をブロック単位でW8A8化し、RTX 5090実測で全結合と語彙射影は速くなり短文脈の注意は遅くなることと、品質保持下で11.0%の遅延削減を示す研究。
 
+- **2026-07 · [Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning](2026-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-prun.md)**  
+  実装：[✓](https://github.com/HammerScholar/SGP-CoT) ・ リポジトリ内被引用：0  
+  推論モデルの冗長な思考を、外部監督ではなくモデル自身の尤度で測った答えへの影響と一貫性への影響で切り分け、不要な推論単位だけを外した選好学習で、長さを20〜50%削りながら正解率を保つ自己誘導型枝刈り方式。
+
 - **2026-07 · [What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents](2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVキャッシュ、入力プロンプト、固定長内部状態、エージェント記憶の圧縮を率歪み最適化で統一し、7軸分類とCOMPACT-Benchを提案するサーベイ。RTX 4060・Qwen2.5-1.5Bの参照実験では、KV保持予算約25%未満でneedle検索がほぼ失敗し、反復要約の事実再現率0.33〜0.56に対して検索可能な原文アーカイブは約0.95だった。
@@ -1677,6 +1681,10 @@
 - **2026-07 · [Variable Bit-width Quantization: Learning Per-Group Precision for 'Bigger-but-Smaller' Language Models](2026-2607.02893-variable-bit-width-quantization-learning-per-group-precision-for-bigger-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化は重みの容量を減らすが、通常の方法では全重みに同じ4bitや2bitを割り当てる。Gumbel-Softmaxの連続緩和と交互最適化で精度選択を学習すると、グループの69%が1bitへ落ちる一方、最初のMLPブロックや頻出語彙の出力行は高い精度を要求する。
+
+- **2026-07 · [Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising](2026-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの無駄な再計算を、固定しきい値ではなく直近3ステップの信頼度軌跡のクラスタリングで意味的に安定したトークンを検出して凍結することで削り、品質を保ちながら短文脈で平均約4倍、長文脈で平均41倍高速化する方式Ada-DLM。
 
 - **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3920,6 +3928,10 @@
   実装：[✓](https://github.com/noMushroomw/Effective-model-pruning) ・ リポジトリ内被引用：0  
   ニューラルネットワークの枝刈りでは、重要度の低い重みや注意ヘッドを削除するためにMagnitude、Wanda、勾配感度などのスコアを用いる。例えばLLMで全層一律50%の非構造化枝刈りを指定すると、スコアの分布が集中している層と均一な層へ同じ予算を押し付ける。
 
+- **2025-09 · [Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective](2025-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-thro.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパートの重要度を協力ゲームのシャープレイ値で測り、ルーター誘導のモンテカルロ標本化と早期打ち切りで近似して枝刈りするShapley-MoE。Qwen2-57B-A14Bのエキスパートを25%削ってもパープレキシティ増加0.92で平均精度の96.4%以上を維持する。
+
 - **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
@@ -4419,7 +4431,7 @@
   本手法は圧縮を単語の保持/削除の二値分類として定式化し、双方向encoderのXLM-RoBERTa-largeやmBERTに圧縮の目的を直接学習させる。V100-32GB上のMeetingBank遅延測定では、非圧縮エンドツーエンド14.9秒に対し、5倍圧縮時5.2秒（2.9倍高速）と報告する。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
-  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：36  
   全パラメータ数を大きくしても活性化する部分を限定できるが、実機では選択された専門家へのトークン転送、専門家ごとの負荷の偏り、GPU間の全対全通信、巨大な専門家重みの配置・退避が新たな律速になる。
 
 - **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
@@ -4582,6 +4594,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   Platoは、長い回答を1トークンずつ逐次生成する代わりに、質問を意味的な小課題（node）へ分割し、その間の依存関係を有向非巡回グラフ（DAG）として表現することで、依存しない部分を並列生成するLLM推論システムである。
 
+- **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
+  実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：3  
+  枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
+
 - **2023-12 · [DSFormer: Effective Compression of Text-Transformers by Dense-Sparse Weight Factorization](2023-2312.13211-dsformer-effective-compression-of-text-transformers-by-dense-sparse-weig.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   DSFormerは、事前学習済みTransformerの大きな線形変換行列を、密な基底行列と半構造化された疎な係数行列の積に置き換える圧縮手法である。原著Table 1のGLUE開発セットでは、BERT-baseの8タスク単純平均82.05に対して、DSFormerの2倍圧縮が83.13、2.8倍圧縮が81.85、3.57倍圧縮が79.80である。
@@ -4617,10 +4633,6 @@
 - **2024-02 · [Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers](2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformer.md)**  
   実装：[✓](https://github.com/SamsungLabs/aespa) ・ リポジトリ内被引用：2  
   量子化は層ごとに実行しながら誤差の物差しを注意全体の再構成に置き、目的関数を事前計算可能な形へ変形することで、二ビットでも崩壊せず、ブロック型より桁違いに速い学習後量子化を実現した。
-
-- **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
-  実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：2  
-  枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
 
 - **2023-12 · [Mini-GPTs: Efficient Large Language Models through Contextual Pruning](2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md)**  
   実装：[✓](https://github.com/tval2/contextual-pruning) ・ リポジトリ内被引用：2  

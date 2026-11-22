@@ -35,10 +35,15 @@
   "selection_reason": "ACL 2026本文§3〜4・表1と遅延分析を確認。モデル自身の尤度で冗長な推論段落を特定し、選好学習により思考トークンを削減する。AIME・GPQA・MATH・GSM8Kで正答率を維持しつつ推論長を概ね15〜50%短縮、実測遅延も報告。推論効率に明確に関係するが学習を要する。",
   "semantic_scholar_id": "de809f0ed8625182413f6f33260f03cbfb4a1351",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.25",
-  "status": "ready",
+  "status": "superseded",
   "title": "Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T15:14:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-prun.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.25",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

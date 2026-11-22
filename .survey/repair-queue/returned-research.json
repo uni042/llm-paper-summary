@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-22T12:05:32+00:00",
+  "generated_at": "2026-11-22T15:14:34+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 8,
+  "count": 7,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -68,33 +68,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea06f8d4c71a--libfile_71f9a98d20a4819184da9d1e539fea98--2025-2505.07861-caprese-low-rank-distillation-research-20261025-1945-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ea06f8d4c71a--libfile_71f9a98d20a4819184da9d1e539fea98--2025-2505.07861-caprese-low-rank-distillation-research-20261025-1945-scheduled-chat-45-r0.json",
       "worker_run_key": "20261025-1945-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
-      "title": null,
-      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1035",
-      "returned_at": "2026-10-27T17:00:43+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 197 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5673,
-        "body_paragraphs": 29,
-        "method_chars": 1283,
-        "method_paragraphs": 7,
-        "evaluation_chars": 197,
-        "limitation_chars": 841,
-        "insufficiency_flags": [
-          "評価説明量 197 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245.json",
-      "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2404.04759",
