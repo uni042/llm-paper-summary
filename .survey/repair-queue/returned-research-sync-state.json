@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a2b2f51ad400adea4943fd133fb930bf094f82f7",
+  "base_commit": "c3929af2d82b13204de60e4f9b61b97e15096a39",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -751,6 +751,7 @@
     "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json",
     "2026-2609.31975-model-casting-and-low-parameter-gating-towards-more-sparsely-activated-ffns.json",
     "2026-2609.32114-empowering-hybrid-attention-models-on-npus.json",
+    "2026-2609.32204-degreespar-structured-degree-sparsity-for-efficient-secure-transformer-inference.json",
     "2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agent-llms.json",
     "2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.json",
     "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json",
@@ -764,6 +765,7 @@
     "2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pruning.json",
     "2026-2609.34054-precache-efficient-kv-cache-sharing-for-multi-lora-agents-via-low-rank-precomputation-and-neutral-reconstruction.json",
     "2026-2609.34259-quantaspike-short-window-spike-driven-quantization-for-large-language-models.json",
+    "2026-2609.34319-text-vision-synergistic-token-caching-a-training-free-framework-for-efficient-vision-language-action-inference.json",
     "2026-2609.34340-variopath-workload-aware-all-to-all-communication-for-pcie-gpu-clusters.json",
     "2026-2609.34370-spexis-speculative-lookahead-scheduling-for-llm-inference.json",
     "2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.json",
@@ -774,6 +776,7 @@
     "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json",
     "2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.json",
     "2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisions.json",
+    "2026-2609.35579-output-aware-residual-stream-pruning-for-large-language-models.json",
     "2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.json",
     "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json",
     "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
@@ -782,6 +785,7 @@
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json",
     "2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-open-weight.json",
+    "2026-2609.37924-time-anchored-diffusion-language-models-latent-space-caching-for-fast-generation.json",
     "2026-2609.38006-harissa-inference-time-self-checks-for-efficient-and-safe-local-language-model-deployment.json",
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
@@ -790,6 +794,7 @@
     "2026-2609.39334-taming-speculative-search-for-test-time-scaling-in-llm-serving.json",
     "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json",
     "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json",
+    "2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.json",
     "2026-2609.40093-efficient-expert-parallel-communication-on-pcie-connected-consumer-gpus.json",
     "2026-2609.40127-learning-functional-subspaces-for-neural-network-compression.json",
     "2026-2609.40247-herschel-continuous-optimization-of-production-llm-inference-through-on-demand-profiling.json",
@@ -49196,6 +49201,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.32204": {
+      "order": [
+        "2026-11-22T11:00:38+00:00",
+        "2026-2609.32204-degreespar-structured-degree-sparsity-for-efficient-secure-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34319": {
+      "order": [
+        "2026-11-22T11:01:27+00:00",
+        "2026-2609.34319-text-vision-synergistic-token-caching-a-training-free-framework-for-efficient-vision-language-action-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.35579": {
+      "order": [
+        "2026-11-22T11:02:16+00:00",
+        "2026-2609.35579-output-aware-residual-stream-pruning-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.37924": {
+      "order": [
+        "2026-11-22T11:03:05+00:00",
+        "2026-2609.37924-time-anchored-diffusion-language-models-latent-space-caching-for-fast-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.39859": {
+      "order": [
+        "2026-11-22T11:03:54+00:00",
+        "2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62107,6 +62157,21 @@
     "arxiv:2609.15992": [
       "papers/inference/99-other-inference-systems/2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-large-langua.md",
       "papers/inference/99-other-inference-systems/2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-large-langua.md"
+    ],
+    "arxiv:2609.32204": [
+      "papers/inference/99-other-inference-systems/2026-2609.32204-degreespar-structured-degree-sparsity-for-efficient-secure-transformer-i.md"
+    ],
+    "arxiv:2609.34319": [
+      "papers/inference/15-inference-simulation-emulation/2026-2609.34319-text-vision-synergistic-token-caching-a-training-free-framework-for-effi.md"
+    ],
+    "arxiv:2609.35579": [
+      "papers/inference/99-other-inference-systems/2026-2609.35579-output-aware-residual-stream-pruning-for-large-language-models.md"
+    ],
+    "arxiv:2609.37924": [
+      "papers/inference/99-other-inference-systems/2026-2609.37924-time-anchored-diffusion-language-models-latent-space-caching-for-fast-ge.md"
+    ],
+    "arxiv:2609.39859": [
+      "papers/inference/99-other-inference-systems/2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.md"
     ]
   }
 }

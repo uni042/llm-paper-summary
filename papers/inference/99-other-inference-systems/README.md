@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1285本）
+## 自動生成の論文一覧（1289本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1310,6 +1310,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、LLM推論の省エネルギー化を単一のGPUカーネルや量子化手法に閉じず、分散サービングの制御面（control plane）が担う複合意思決定として再定義するシステムサーベイ兼研究課題提案である。原著の表にある2〜4倍の処理量等はPagedAttentionなど引用元の既存研究の数値であり、SICPを動かした結果ではない。
 
+- **2026-09 · [Time-Anchored Diffusion Language Models: Latent-Space Caching for Fast Generation](2026-2609.37924-time-anchored-diffusion-language-models-latent-space-caching-for-fast-ge.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの潜在表現が近傍の拡散時刻で再利用できる性質を使い、高価なアンカーネットワークの出力をキャッシュして軽いデノイザーと融合する潜在空間キャッシングで、DiffusionGemmaのスループットを最大1.79倍にし、事前学習版では層計算を最大38%削減する研究。
+
 - **2026-09 · [ThinQuant: Scalable Rotation Learning for Weight and Activation Quantization of LLMs](2026-2609.36120-thinquant-scalable-rotation-learning-for-weight-and-activation-quantizat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット量子化では、重みと活性の外れ値が量子化範囲を広げ、通常の小さい値に割り当てられる表現精度を低下させる。Llama-3-70BのW4A4KV4ではDartQuantのWikiText-2困惑度7.55に対して5.63へ改善し、校正時間は111分から11分57秒へ、保存データは960GiBから0.51GiBへ削減する。
@@ -1369,6 +1373,10 @@
 - **2026-09 · [Post-Training Ternarization of Qwen3-4B: Capability, Effective Bit Budget, Storage Compression, and Deployment](2026-2609.01962-post-training-ternarization-of-qwen3-4b-capability-effective-bit-budget-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen3-4Bの線形重み81.62%を既存の回転・残差三値化・誤差補償で事後変換し、対象重みの実効1.641ビット、保存容量8.29→3.96GiBを実証。圧縮、能力保持、実行速度を分離して検証する。
+
+- **2026-09 · [Output-aware Residual Stream Pruning for Large Language Models](2026-2609.35579-output-aware-residual-stream-pruning-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  残差ストリーム枝刈りで残す方向の選び方を、活性値の再構成誤差だけでなく出力KLへの感度で重み付けする基準へ変え、感度重み付き共分散の固有分解で解くことで、SliceGPTより全モデル・全疎性でパープレキシティと下流精度を改善する研究。
 
 - **2026-09 · [One Distribution, Two Channels: Coverage-Calibrated KV Retention and Compensation](2026-2610.02235-one-distribution-two-channels-coverage-calibrated-kv-retention-and-compe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1438,6 +1446,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   注意の共同目的で再構成とビット配分を統一するJABを検証し、注意だけでは感度配分が効く一方、全モデルでは行列の役割に基づく単純なオフセット規則が曲率基準を上回ることを示した混合精度量子化の分析研究。
 
+- **2026-09 · [Fork-dLLM: Avoiding the Flexibility Trap in Diffusion Language Models](2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの信頼度型サンプラが分岐位置を後回しにして多様性を失う問題に対し、不確かなフォールバックステップでのみ左端確定の自己回帰順序へ切り替える混成サンプラで、自己回帰型と同等のpass@kを2〜3倍少ないモデル評価で達成し、同じ原理をGRPO後学習にも広げる研究。
+
 - **2026-09 · [FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward](2026-2609.33410-foldattention-declared-reference-softmax-for-fast-decode-and-determinist.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の自己回帰デコードでは、次の一トークンを作るたびに伸び続けるKVキャッシュを参照する。後方計算では、CTAごとの部分勾配を共通整数格子へ丸めて加算することで、加算順序に依存しない決定的な勾配を得る。
@@ -1457,6 +1469,10 @@
 - **2026-09 · [DimPO: Dimensionality Reduction for Attention using Preference Optimization](2026-2609.32579-dimpo-dimensionality-reduction-for-attention-using-preference-optimizati.md)**  
   実装：[✓](https://github.com/lanzv/dimpo) ・ リポジトリ内被引用：0  
   DimPOは、大規模言語モデル（LLM）の注意計算におけるクエリとキーのベクトル次元を縮める際、元の注意重みを数値的に完全再現することと、モデルの下流課題性能を保つことは別の目的だと実証する研究である。提案は、事前学習済みモデルを追加学習し直す方式ではなく、各層に一つの小さな線形写像をオフラインで学習する方式である。
+
+- **2026-09 · [DegreeSpar: Structured Degree Sparsity for Efficient Secure Transformer Inference](2026-2609.32204-degreespar-structured-degree-sparsity-for-efficient-secure-transformer-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  セキュアなトランスフォーマー推論の圧縮を、非線形多項式の次数という共通空間で構造化し、次数削減とトークン・次元の計算除去を一体で最適化して、精度を保ちながら基礎方式比2.29〜6.63倍の高速化を得る研究。
 
 - **2026-09 · [Compression Beyond the Uncompressed: A Two-Stage Training Recipe for Soft Context Compression in RAG](2026-2609.05152-compression-beyond-the-uncompressed-a-two-stage-training-recipe-for-soft.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3037,7 +3053,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：146  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：148  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -3220,6 +3236,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   本研究の対象は、同じ大規模言語モデルを複数のGPUインスタンスで提供するとき、各要求をどのインスタンスへ送るかという負荷分散である。1インスタンス内のバッチ形成を改善する研究と異なり、要求がいったん不適切なインスタンスへ送られると、その内部のスケジューラだけでは混在負荷による干渉を解消しにくい。
 
+- **2025-02 · [CipherPrune: Efficient and Scalable Private Transformer Inference](2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.md)**  
+  実装：[✓](https://github.com/UCF-Lou-Lab-PET/cipher-prune-inference) ・ リポジトリ内被引用：4  
+  暗号化されたまま重要度を計算して不要トークンを層ごとに段階的に捨て、低重要度トークンには低次多項式を割り当てることで、秘匿推論を入力128トークンで約6.1倍、512トークンで約10.6倍高速化した。
+
 - **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
@@ -3267,10 +3287,6 @@
 - **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
   実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：3  
   ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
-
-- **2025-02 · [CipherPrune: Efficient and Scalable Private Transformer Inference](2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.md)**  
-  実装：[✓](https://github.com/UCF-Lou-Lab-PET/cipher-prune-inference) ・ リポジトリ内被引用：3  
-  暗号化されたまま重要度を計算して不要トークンを層ごとに段階的に捨て、低重要度トークンには低次多項式を割り当てることで、秘匿推論を入力128トークンで約6.1倍、512トークンで約10.6倍高速化した。
 
 - **2025-11 · [Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding](2025-2512.00805-thinking-with-drafts-speculative-temporal-reasoning-for-efficient-long-v.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
