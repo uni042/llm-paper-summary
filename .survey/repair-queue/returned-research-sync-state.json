@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3cce0674ab8f2e9c53dd0385b0b4d321128217fa",
+  "base_commit": "85531b4c0721244d2c79128bbafab08966c2909b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -652,6 +652,7 @@
     "2026-2608.01847-focus-fp4-optimization-via-coupled-relaxation-and-dual-granularity-scaling.json",
     "2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-edge-llm-inference.json",
     "2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus-retrieval-via-o-1-ssm-state-injection.json",
+    "2026-2608.02611-kernelbrain-coarse-to-fine-budget-aware-search-for-agentic-gpu-kernel.json",
     "2026-2608.02947-atflash-per-rope-wavelength-attention-windows-for-compute-memory-efficient-llm-inference.json",
     "2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.json",
     "2026-2608.03812-omnipack-unified-token-compression-for-efficient-omni-modal-large-language-models.json",
@@ -662,12 +663,15 @@
     "2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energy-via-hybrid-analytical-machine-learning-predict.json",
     "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json",
     "2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-architectures-in-llm-cloud-computing-systems.json",
+    "2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-context-modeling.json",
     "2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-language-models.json",
     "2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-llm-agent.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
+    "2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transport.json",
+    "2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-streaming-vlms.json",
     "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json",
     "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json",
     "2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-length-prediction.json",
@@ -676,6 +680,7 @@
     "2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceleration.json",
     "2026-2608.17616-mone-modular-neural-memory-for-efficient-long-context-inference.json",
     "2026-2608.18149-tokenpowersandbox-evidence-gated-cpu-first-screening-for-energy-aware-llm-serving.json",
+    "2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.json",
     "2026-2608.20359-self-speculation-for-faster-reasoning-models.json",
     "2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-routing-for-agentic-llms-on-unified-memory.json",
     "2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context-transformers.json",
@@ -49096,6 +49101,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.02611": {
+      "order": [
+        "2026-11-22T10:42:53+00:00",
+        "2026-2608.02611-kernelbrain-coarse-to-fine-budget-aware-search-for-agentic-gpu-kernel.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.08630": {
+      "order": [
+        "2026-11-22T10:43:45+00:00",
+        "2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-context-modeling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.13226": {
+      "order": [
+        "2026-11-22T10:44:36+00:00",
+        "2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transport.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.13416": {
+      "order": [
+        "2026-11-22T10:45:28+00:00",
+        "2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-streaming-vlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.20210": {
+      "order": [
+        "2026-11-22T10:46:19+00:00",
+        "2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61967,6 +62017,21 @@
     "arxiv:2607.22432": [
       "papers/inference/09-kernel-runtime-compilation/2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-mod.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-mod.md"
+    ],
+    "arxiv:2608.02611": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.02611-kernelbrain-coarse-to-fine-budget-aware-search-for-agentic-gpu-kernel-op.md"
+    ],
+    "arxiv:2608.08630": [
+      "papers/inference/99-other-inference-systems/2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-contex.md"
+    ],
+    "arxiv:2608.13226": [
+      "papers/inference/99-other-inference-systems/2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transpo.md"
+    ],
+    "arxiv:2608.13416": [
+      "papers/inference/99-other-inference-systems/2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-strea.md"
+    ],
+    "arxiv:2608.20210": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.md"
     ]
   }
 }

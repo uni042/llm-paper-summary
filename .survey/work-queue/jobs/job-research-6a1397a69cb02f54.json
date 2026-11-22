@@ -35,10 +35,15 @@
   "selection_reason": "3D VLMの膨大な視覚トークンによる推論ボトルネックに対し推論時トークン剪定を最適輸送問題として定式化しFSTコストと空間誘導貪欲選択で積極的剪定でも性能を保つCoverPruneはVLM推論効率化の直接の機構である。",
   "semantic_scholar_id": "a693b0ccce8b447c63f50a404544505a02eef301",
   "source_url": "https://arxiv.org/abs/2608.13226",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport",
   "type": "research",
   "venue": "European Conference on Computer Vision",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:47:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transpo.md",
+  "represented_canonical_id": "arXiv:2608.13226",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

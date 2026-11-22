@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（315本）
+## 自動生成の論文一覧（316本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -506,6 +506,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   Vitamin-Eは、カーネル起動時のバイナリ・グリッド・ブロック・依存順序を固定したまま、各起動を利用可能な物理SM集合へ遅延結合する。2026年8月5日のarXiv v4で題名・方式が更新された同一論文である。v4はH20/H200で実機評価し、固定構造で決定的な処理のビット単位一致を確認した。
 
+- **2026-08 · [Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference](2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CPUでのバッチ1デコードを先に固定し、18層中12層を状態が2ステップで一定の短い畳み込みへ置き換えてKVキャッシュの読み直しを消すことで、文脈2048で全注意の同規模対照より1.76倍速く、品質は同等以上を保つ小型ハイブリッドモデル。
+
 - **2026-08 · [CoRun: Padding is Simple and Efficient for Deterministic LLM Inference](2026-2608.14376-corun-padding-is-simple-and-efficient-for-deterministic-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   再現性が重要なモデル比較や強化学習のロールアウトでは、単なる見かけのゆらぎではなく運用上の問題となる。しかしこれではGPUが入力形状に応じて分割を最適化できず、行列積や注意機構の並列分割を制限する。
@@ -801,7 +805,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：229  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：230  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  

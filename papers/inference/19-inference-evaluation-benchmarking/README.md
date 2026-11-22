@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（202本）
+## 自動生成の論文一覧（203本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -430,6 +430,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   層対応の蒸留が早期終了の前提である表現の収束を潰す非両立性を特定し、中間層を最終層へ近づける制約を蒸留へ加えたLEAPで、蒸留モデルでも収束ベースの早期終了により1.61倍の実測高速化を得た研究。
 
+- **2026-05 · [KernelBrain: Coarse-to-Fine, Budget-Aware Search for Agentic GPU Kernel Optimization](2026-2608.02611-kernelbrain-coarse-to-fine-budget-aware-search-for-agentic-gpu-kernel-op.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Tritonカーネルの自動最適化を、専門家誘導の多様な候補生成と多忠実度のふるいとプロファイラ診断付き変異で回し、PyTorch比最大6.72倍と最先端エージェント比最大1.4倍を最適化時間最大48%減で得るエージェント研究。
+
 - **2026-05 · [Identifying and Mitigating Systemic Measurement Bias in Production LLM Inference Benchmarks](2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ベンチマーク用クライアントの単一プロセス構造が待ち行列となり遅延を水増しする測定バイアスを、待ち行列理論とシミュレータ相手の実測で示し、複数プロセスへの負荷分散と複合指標NTPOTによる是正策を提示した研究。
@@ -569,7 +573,7 @@
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：26  
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  

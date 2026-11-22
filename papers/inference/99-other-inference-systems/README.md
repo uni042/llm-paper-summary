@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1279本）
+## 自動生成の論文一覧（1282本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1458,6 +1458,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   VoiceMemは、音声対話システムの過去会話記憶を、応答を遅らせずに少数の関連記憶へ絞るための索引・更新・検索方式である。
 
+- **2026-08 · [VLZip: Unified Visual and Textual Compression for Interleaved Long-Context Modeling](2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-contex.md)**  
+  実装：[✓](https://github.com/ShareLab-SII/VLZip) ・ リポジトリ内被引用：0  
+  画像とテキストの両方をチャンク単位で層別ソフトプレフィックスへ蒸留し全デコーダ層へ注入することで系列を25分の1級に縮め、学習120K・推論280K超を可能にする視覚言語モデルの統合圧縮方式。
+
 - **2026-08 · [Unifying Depth and Width Pruning for LLMs via Binary Knapsack Optimization](2026-2608.12953-unifying-depth-and-width-pruning-for-llms-via-binary-knapsack-optimizati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの構造化枝刈りは、注意ブロック、MLP、層、チャネルなど、行列の形状を維持できるまとまった単位を取り除く。
@@ -1477,6 +1481,10 @@
 - **2026-08 · [Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection](2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文書を隠れ状態として事前に保存し質問時に初期状態へ注入することで、検索付き生成の入力処理を約27秒から6ミリ秒未満へ短縮し、質問応答の品質が文脈内検索とほぼ一致することを示した。
+
+- **2026-08 · [StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs](2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-strea.md)**  
+  実装：[✓](https://github.com/zeyun-zhong/StreamTTT) ・ リポジトリ内被引用：0  
+  長期履歴を注意の外の高速重みへ書き込み、注意は直近専用の短いスライディングKVキャッシュに絞る二重メモリで、ストリーミング視覚言語モデルの知覚と想起の競合を解く方式。
 
 - **2026-08 · [Speculative Probing: LLM Monitoring at Speculative-Decoding Cost](2026-2608.28099-speculative-probing-llm-monitoring-at-speculative-decoding-cost.md)**  
   実装：[✓](https://github.com/collinzrj/SpeculativeProbing) ・ リポジトリ内被引用：0  
@@ -1569,6 +1577,10 @@
 - **2026-08 · [CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights](2026-2608.06763-cubicquant-parametric-non-uniform-codebooks-for-high-throughput-llm-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究が扱うのは、大規模言語モデル（LLM）の重みをGPUメモリに置き、自己回帰復号の各段階で行列演算に供給する際の表現形式である。提案形式は、1〜8ビットの重み符号を連続したビット列へ保存し、重み群ごとに尺度 s と二つの形状係数 a,b を付加する。
+
+- **2026-08 · [CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport](2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transpo.md)**  
+  実装：[✓](https://github.com/Brucess/CoverPrune) ・ リポジトリ内被引用：0  
+  3次元視覚言語モデルの視覚トークン枝刈りを多様性最大化から視覚的証拠の被覆保存へ転換し、特徴・空間・時間のコストと情報量容量を持つ最適輸送と貪欲近似で、保持率5%でも崩れにくい学習不要の枝刈りを実現する研究。
 
 - **2026-08 · [COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models](2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruni.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

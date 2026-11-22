@@ -35,10 +35,15 @@
   "selection_reason": "画像とテキストが交互する超長文脈VLM向けに視覚・テキスト区間を層固有のソフトプレフィックスへ階層的に蒸留して注意系列を短縮するVLZipは、推論280Kトークン超と大幅なメモリ削減、最大2Mトークンまでの拡張性を示しており、長文脈推論の圧縮機構として直接的である。",
   "semantic_scholar_id": "176e969573ff202f3c93cf5098eb35ff8a79b967",
   "source_url": "https://arxiv.org/abs/2608.08630",
-  "status": "ready",
+  "status": "superseded",
   "title": "VLZip: Unified Visual and Textual Compression for Interleaved Long-Context Modeling",
   "type": "research",
   "venue": "European Conference on Computer Vision",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:47:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-contex.md",
+  "represented_canonical_id": "arXiv:2608.08630",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

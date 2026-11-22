@@ -35,10 +35,15 @@
   "selection_reason": "CPU単一ユーザー推論を前提に注意を6ブロックに限定し残りを短い畳み込みで置換してキャッシュ増大を避ける小型言語モデルを設計し、4ビット化と共に2048文脈で1.76倍のデコード高速化を実測したオンデバイス推論向けアーキテクチャである。",
   "semantic_scholar_id": "2f2d2a3268f326c4e79ce11b12a8172578a27b12",
   "source_url": "https://arxiv.org/abs/2608.20210",
-  "status": "ready",
+  "status": "superseded",
   "title": "Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:47:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.md",
+  "represented_canonical_id": "arXiv:2608.20210",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
