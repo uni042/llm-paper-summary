@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1298本）
+## 自動生成の論文一覧（1300本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2414,6 +2414,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LBLLMは、既存の大規模言語モデルを極端な低ビット表現へ変換する際、重みと活性化を一度に量子化して学習すると誤差が増幅し、蒸留が不安定になる問題を扱う。LLaMA-2-7Bの同等ビット幅で、LBLLMのWikiText-2困惑度は9.18、C4困惑度は10.91、六つの常識推論課題の平均正答率は54.91%となった。
 
+- **2026-04 · [Layer-wise heterogeneity-guided heterogeneous pruning: An LLM compression method](2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層ごとのフィッシャー重要度で感度を測り、層・チャネル・重みという三つの枝刈り粒度とスパース率を層ごとに割り当て、サロゲート関数で探索を高速化することで、精度と推論速度の調整可能な両立を狙う異種混合の枝刈り方式。
+
 - **2026-04 · [Latent-Condensed Transformer for Efficient Long Context Modeling](2026-2604.12452-latent-condensed-transformer-for-efficient-long-context-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   多頭潜在注意（multi-head latent 注意機構、MLA）はトークンごとのKVを低次元潜在へ圧縮するが、文脈の全トークンを保持し、注意計算も全長に対して行う。
@@ -3968,6 +3972,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文脈を要約代理する小さなL1 KVキャッシュと詳細なL2 KVキャッシュに分け、質問との注意スコアで必要なL2区間だけをL1へ戻してデコードすることで、原生窓を超える長文脈を少ないGPUメモリと遅延で扱う二層キャッシュ方式。
 
+- **2025-07 · [Automated Fine-Grained Mixture-of-Experts Quantization](2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md)**  
+  実装：[✓](https://github.com/cei1ing4/Fine-Grained-MoE-Quantization) ・ リポジトリ内被引用：0  
+  エキスパートの重みで外れ値が偏るチャネルと、誤差に弱いダウンプロジェクションを観測し、分散・大きさ・外れ値割合から作る感度スコアでチャネルごとに2ビットと4ビットを自動配分して、MoEの学習後量子化の精度低下を抑える方式。
+
 - **2025-07 · [Assigning Distinct Roles to Quantized and Low-Rank Matrices Toward Optimal Weight Decomposition](2025-2506.02077-assigning-distinct-roles-to-quantized-and-low-rank-matrices-toward-optim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CALDERAなどの方式はWを量子化行列Qと低ランク行列積LRの和、すなわちW ≈ Q + LRで近似し、Qの量子化とLRの更新を交互に行う。一方、同じ条件のARC-Easy正答率は66.35%から65.49%へ下がり、すべての下流タスクを改善するわけではない。
@@ -4841,7 +4849,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：344  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：346  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5217,7 +5225,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：367  
+  実装：✓ ・ リポジトリ内被引用：368  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

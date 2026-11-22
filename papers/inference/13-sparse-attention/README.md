@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（215本）
+## 自動生成の論文一覧（216本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -385,6 +385,10 @@
 - **2026-09 · [RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention](2026-2609.07306-routerelay-cross-layer-route-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動的疎注意の前層経路IDを監視候補付きで再利用し、変化した行だけ再ルーティングして経路スコア計算を約38～52%へ削減するが、現CPU実装は未融合処理で逆に低速。
+
+- **2026-09 · [Reasoning-Aware Error-Bounded KV-Cache Compression and Sparse Attention for Long-Context LLMs](2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論段階で後から効く証拠を効用スコアで守り、捨てた注意質量から導く誤差上限でキャッシュ予算を自動調整し、残した中からもクエリに必要な部分だけを読むことで、KVキャッシュと注意計算を協調して削減する方式。合成トレースの制御実験で占有65.5%減と重要証拠の全件保持を示した。
 
 - **2026-09 · [RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models](2026-2609.20971-rbs-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -755,7 +759,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：239  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：240  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

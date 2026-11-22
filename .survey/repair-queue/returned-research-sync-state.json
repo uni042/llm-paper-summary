@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "128078835e6ecdb5645bf8fb6d66b6bc1d7c05cb",
+  "base_commit": "520fb4419abe5bfb507a30cd960a5cab7e4f0858",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -287,7 +287,9 @@
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
     "2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-architectures.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
+    "2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-candidate-tree.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
+    "2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.json",
     "2025-d1489180a09a-attention-level-speculation.json",
     "2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning.json",
     "2025-keeping-up-with-large-language-models-holistic-methodology.json",
@@ -1208,6 +1210,7 @@
     "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
+    "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -49456,6 +49459,33 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.acl-long.486": {
+      "order": [
+        "2026-11-22T12:00:34+00:00",
+        "2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-candidate-tree.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-acl.1386": {
+      "order": [
+        "2026-11-22T12:01:35+00:00",
+        "2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1007/s44443-026-00724-4": {
+      "order": [
+        "2026-11-22T12:03:38+00:00",
+        "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62470,6 +62500,15 @@
     "semanticscholar:a7357f16453d8c3e07aca694efa00df6f2e4352c": [
       "papers/inference/99-other-inference-systems/2020-2010.03688-axformer-accuracy-driven-approximation-of-transformers-for-faster-smalle.md",
       "papers/inference/99-other-inference-systems/2020-2010.03688-axformer-accuracy-driven-approximation-of-transformers-for-faster-smalle.md"
+    ],
+    "doi:10.18653/v1/2025.acl-long.486": [
+      "papers/inference/05-speculative-decoding-moe/2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-cand.md"
+    ],
+    "doi:10.18653/v1/2025.findings-acl.1386": [
+      "papers/inference/99-other-inference-systems/2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md"
+    ],
+    "doi:10.1007/s44443-026-00724-4": [
+      "papers/inference/99-other-inference-systems/2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression.md"
     ]
   }
 }
