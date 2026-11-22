@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（609本）
+## 自動生成の論文一覧（610本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1185,6 +1185,10 @@
 - **2026-06 · [Generation Quality-Latency Tradeoff-Aware Inference Offloading for Multimodal LLMs in Cloud-Edge Continuum](2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   生成品質と応答遅延をタスクとノードの組ごとに事前予測し、その予測を状態に使う強化学習でクラウドとエッジへのオフロードを決める枠組み。実機収集のベンチマーク上で、完了率を保ちながら遅延を最大58.14パーセント削減する。
+
+- **2026-06 · [Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory](2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-g.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMサービングのTTFTとTBTの期限保証を、リアルタイム理論の最悪応答時間上限と容量条件と受入制御で与え、過負荷時でも受入済みの違反ゼロを維持する枠組みChronos。
 
 - **2026-06 · [FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location](2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

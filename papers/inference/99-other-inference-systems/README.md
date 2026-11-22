@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1300本）
+## 自動生成の論文一覧（1302本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -115,6 +115,10 @@
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   LLaVA-v1.5では1画像576トークン、LLaVA-NeXTの高解像度入力では最大2,880トークンとなり、画像の背景や類似領域にも長い系列を割り当てる。LLaVA-v1.5-7Bの8課題では、視覚トークンを平均576個から32個へ削減しても、元モデルを100%とした平均相対性能94.8%を維持した。
+
+- **2026-03 · [LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention](2026-2505.18413-latentllm-activation-aware-transform-to-multi-head-latent-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  学習済みの多頭注意を、活性値共分散の平方根による最適な前処理、単位ブロック化する接続行列、クエリ・キーの共同分解で多頭潜在注意型へ学習なしに変換し、KVキャッシュと計算を減らす圧縮方式LatentLLM。
 
 - **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：5  
@@ -2877,6 +2881,10 @@
 - **2026-01 · [Superlinear Multi-Step Attention](2026-2601.18401-superlinear-multi-step-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMの標準的なcausal self-注意機構は、系列長をLとするとプリフィル・学習時の注意計算が概ねO(L²)、1トークンの逐次デコードでも過去L個のKVを読むためO(L)となる。
+
+- **2026-01 · [SPRINT: Scalable Secure & Differentially Private Inference for Transformers](2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.md)**  
+  実装：[✓](https://github.com/SAP/sprint) ・ リポジトリ内被引用：0  
+  差分プライバシー付き微調整と秘密計算推論を、MPCの近似を微調整へ織り込む設計、固定型LoRA、平文パラメータの活用、安定な非線形近似で統合し、精度差1ポイント未満で先行方式より最大1.6倍速い秘匿推論方式SPRINT。
 
 - **2026-01 · [SimMerge: Learning to Select Merge Operators from Similarity Signals](2026-2601.09473-simmerge-learning-to-select-merge-operators-from-similarity-signals.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

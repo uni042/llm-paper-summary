@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1559702945654969e7e27f87ead569c611ded956",
+  "base_commit": "9594220cc41712677de2a536a457b012157463c8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1211,7 +1211,11 @@
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
+    "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
+    "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json",
+    "2026-c303fad14871-latentllm-activation-aware-transform-to-multi-head-latent-attention.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
+    "2026-component-aware-self-speculative-decoding-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
     "2026-satoru-proactive-length-aware-scheduling-for-high-throughput-batch-llm-serving.json",
@@ -10342,8 +10346,8 @@
     },
     "DOI:10.1016/j.compeleceng.2026.111505": {
       "order": [
-        "2026-11-18T00:17:24+00:00",
-        "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json"
+        "2026-11-22T12:10:34+00:00",
+        "2026-component-aware-self-speculative-decoding-hybrid-language-models.json"
       ],
       "status": "already_represented",
       "result": null,
@@ -49468,6 +49472,33 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.3389/fcomp.2026.1873627": {
+      "order": [
+        "2026-11-22T12:07:35+00:00",
+        "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.56553/popets-2026-0008": {
+      "order": [
+        "2026-11-22T12:08:46+00:00",
+        "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1609/aaai.v40i27.39425": {
+      "order": [
+        "2026-11-22T12:09:57+00:00",
+        "2026-c303fad14871-latentllm-activation-aware-transform-to-multi-head-latent-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62497,6 +62528,15 @@
     ],
     "doi:10.21203/rs.3.rs-10952127/v1": [
       "papers/inference/13-sparse-attention/2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-.md"
+    ],
+    "doi:10.3389/fcomp.2026.1873627": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-g.md"
+    ],
+    "doi:10.56553/popets-2026-0008": [
+      "papers/inference/99-other-inference-systems/2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.md"
+    ],
+    "doi:10.1609/aaai.v40i27.39425": [
+      "papers/inference/99-other-inference-systems/2026-2505.18413-latentllm-activation-aware-transform-to-multi-head-latent-attention.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論の形式的可スケジューリング分析Chronos。TTFT期限つきのプリフィルジョブとTBT上限つきのデコードタスクという2相タスクモデルから、最悪応答時間の閉形式の上限と容量条件、プリフィル・デコード干渉の分析を導く実時間スケジューリング理論の枠組み。推論基盤のスケジューリングそのもの。",
   "semantic_scholar_id": "16d17822c15aafe29103ed7af439768e12ea5599",
   "source_url": "https://doi.org/10.3389/fcomp.2026.1873627",
-  "status": "ready",
+  "status": "superseded",
   "title": "Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory",
   "type": "research",
   "venue": "Frontiers of Computer Science",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T12:12:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-g.md",
+  "represented_canonical_id": "DOI:10.3389/fcomp.2026.1873627",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
