@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-21T17:57:50+00:00",
-  "record_count": 13440,
+  "updated_at": "2026-11-22T22:32:31+00:00",
+  "record_count": 13472,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -5131,20 +5131,6 @@
         "discovery web search"
       ],
       "title": "DataStates-LLM: Lazy Asynchronous Checkpointing for Large Language Models"
-    },
-    "arXiv:2409.01143": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2409.01143",
-      "identity_tokens": [
-        "arXiv:2409.01143"
-      ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: 異種GPU上でdata/pipeline/tensor parallelismの非対称分割を自動配置し、LLM学習throughputを直接改善する。",
-      "first_checked_at": "2026-09-30T09:51:41+00:00",
-      "last_checked_at": "2026-09-30T09:51:41+00:00",
-      "linked_from": [
-        "worker-worklist-30 discovery_review rank 250"
-      ],
-      "title": "HexiScale: Facilitating Large Language Model Training over Heterogeneous Hardware"
     },
     "arXiv:2411.01288": {
       "classification": "unrelated",
@@ -178725,18 +178711,6 @@
       "linked_from": [],
       "title": "MambaStereo: enhancing stereo matching accuracy in ill-posed regions via Mamba-based cost volume"
     },
-    "arXiv:2105.14636": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2105.14636",
-      "identity_tokens": [
-        "arXiv:2105.14636"
-      ],
-      "reason": "学習可能な閾値と正則化でBERT-baseの非構造・構造・混合枝刈りを行う研究。実験はQQP/MNLI/SQuADの分類・抽出課題であり、自己回帰LLMのトークン生成、KV管理、推論基盤の実測性能を扱わない。一般的な圧縮技術として隣接するが現行LLM生成推論サーベイの直接対象外。",
-      "first_checked_at": "2026-10-18T04:43:17+00:00",
-      "last_checked_at": "2026-10-18T04:43:17+00:00",
-      "linked_from": [],
-      "title": "LEAP: Learnable Pruning for Transformer-based Models"
-    },
     "DOI:10.1007/s11432-020-3245-7": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1007/s11432-020-3245-7",
@@ -193255,6 +193229,488 @@
         "worker-worklist discovery_review"
       ],
       "title": "Natively Trainable Sparse Attention for Hierarchical Point Cloud Datasets"
+    },
+    "DOI:10.1145/3767295.3803606": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3767295.3803606",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3803606"
+      ],
+      "reason": "要旨はパイプライン並列学習におけるパラメータ更新をGPU・CPU協調で効率化するCrimsonの提案であり、対象はLLMの学習スループットのみで、推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:30+00:00",
+      "last_checked_at": "2026-11-22T22:32:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Crimson: Collaborative Parameter Updates for Efficient Pipeline Training of Large Language Models"
+    },
+    "DOI:10.1109/hpca68181.2026.11408533": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca68181.2026.11408533",
+      "identity_tokens": [
+        "DOI:10.1109/hpca68181.2026.11408533"
+      ],
+      "reason": "要旨は異種デバイス混在クラスタでのLLM学習向けに非対称分割を自動探索するAutoHAAPの提案であり、対象は学習時の並列化戦略のみで、推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:30+00:00",
+      "last_checked_at": "2026-11-22T22:32:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "AutoHAAP: Automated Heterogeneity-Aware Asymmetric Partitioning for LLM Training"
+    },
+    "DOI:10.1109/ispass69572.2026.00030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ispass69572.2026.00030",
+      "identity_tokens": [
+        "DOI:10.1109/ispass69572.2026.00030"
+      ],
+      "reason": "タイトルが示す主題は音声神経補綴（speech neuroprosthesis）アプリケーションの異種ハードウェアへのマッピングであり、LLM推論・サービングとは無関係な生体医工学応用であるため、タイトル段階で対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Heterogeneous Mapping of a Speech Neuroprosthesis Application"
+    },
+    "SemanticScholar:673eab676242b4d0fe2f6ae993dd56d8d2eb92d1": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:673eab676242b4d0fe2f6ae993dd56d8d2eb92d1",
+      "identity_tokens": [
+        "SemanticScholar:673eab676242b4d0fe2f6ae993dd56d8d2eb92d1"
+      ],
+      "reason": "LLMを用いたAI検索・情報検索エージェントのサーベイであり、扱うのは検索アーキテクチャや検索品質の整理であって、推論高速化・サービング・KVキャッシュ等の推論システムへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Survey on AI Search with Large Language Models"
+    },
+    "DOI:10.18653/v1/2026.eacl-industry.30": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-industry.30",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.eacl-industry.30"
+      ],
+      "reason": "長尺動画理解を段階的推論で解くマルチモーダル理解手法であり、主題は動画理解の能力そのもので、LLM推論システムやサービング効率への貢献ではないため、タイトル段階で対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "VideoMind: Thinking in Steps for Long Video Understanding"
+    },
+    "DOI:10.23919/cje.2024.00.070": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.23919/cje.2024.00.070",
+      "identity_tokens": [
+        "DOI:10.23919/cje.2024.00.070"
+      ],
+      "reason": "GPUクラスタにおけるDLおよびLLMの学習ジョブのスケジューリングに関するサーベイであり、対象は学習ジョブ管理のみで推論・サービングのスケジューリングではないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Survey on the Scheduling of DL and LLM Training Jobs in GPU Clusters"
+    },
+    "SemanticScholar:c9961a2a9ff24872ca4f6905d4ac209d58994b65": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:c9961a2a9ff24872ca4f6905d4ac209d58994b65",
+      "identity_tokens": [
+        "SemanticScholar:c9961a2a9ff24872ca4f6905d4ac209d58994b65",
+        "arXiv:2409.01143"
+      ],
+      "reason": "異種GPU環境でのLLM学習を非対称なデータ・パイプライン・テンソル並列で割り当てる学習システムであり、要旨全体が学習スループットとMFUの話で推論への転用は示されていないため対象外とした。",
+      "first_checked_at": "2026-09-30T09:51:41+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review",
+        "worker-worklist-30 discovery_review rank 250"
+      ],
+      "title": "HexiScale: Accommodating Large Language Model Training over Heterogeneous Environment"
+    },
+    "DOI:10.1145/3731599.3767407": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3731599.3767407",
+      "identity_tokens": [
+        "DOI:10.1145/3731599.3767407"
+      ],
+      "reason": "ウェハスケールプロセッサ上でのMoE学習をバッチタイリングで効率化する研究であり、タイトルどおり対象は学習のみでMoE推論やサービングへの貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Batch Tiling on Attention: Efficient Mixture of Experts Training on Wafer-Scale Processors"
+    },
+    "DOI:10.1145/3767295.3803623": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3767295.3803623",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3803623"
+      ],
+      "reason": "共有クラスタにおける3D並列LLM学習ジョブの高品質な再スケジューリング手法であり、対象は学習ジョブの配置変更のみで推論ワークロードのスケジューリングではないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Suika: Efficient and High-quality Re-scheduling of 3D-parallelized LLM Training Jobs in Shared Clusters"
+    },
+    "DOI:10.48550/arxiv.2311.18735": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2311.18735",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.18735",
+        "arXiv:2311.18735"
+      ],
+      "reason": "次元混合という観点からCNNやTransformer等の汎用DNNアーキテクチャと構造化スパース性を論じる一般的手法であり、LLM推論の高速化やサービングへの具体的な適用は要旨に示されていないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Dimension Mixer: A Generalized Method for Structured Sparsity in Deep Neural Networks"
+    },
+    "DOI:10.48550/arxiv.2302.00247": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2302.00247",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.00247",
+        "arXiv:2302.00247"
+      ],
+      "reason": "大規模DNN学習のためのテンソル自動並列化の探索を高速化する研究であり、要旨が扱うのは学習時の並列戦略導出のみで、推論時のテンソル並列実行への貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "TAP: Accelerating Large-Scale DNN Training Through Tensor Automatic Parallelisation"
+    },
+    "SemanticScholar:bc44c21579ae87e909b9a8beb86f68ea91fa9d67": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:bc44c21579ae87e909b9a8beb86f68ea91fa9d67",
+      "identity_tokens": [
+        "SemanticScholar:bc44c21579ae87e909b9a8beb86f68ea91fa9d67"
+      ],
+      "reason": "早期終了付きLLMのクラス認識型重み初期化を提案するが、その目的は要旨で事前学習の高速化と明示されており、推論時の早期終了機構そのものではなく学習単独の高速化に当たるため対象範囲外とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Class-aware Initialization of Early Exits for Pre-training Large Language Models"
+    },
+    "DOI:10.64898/2026.05.22.727119": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.05.22.727119",
+      "identity_tokens": [
+        "DOI:10.64898/2026.05.22.727119"
+      ],
+      "reason": "要旨はDNA配列理解・生成のためのゲノム基盤モデルを論じる内容で、LLMの手法を借用しているものの主題はゲノム科学への応用であり、LLM推論システムへの貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Carbon: Decoding the Language of Life"
+    },
+    "SemanticScholar:990d042905b8a41f601d3fdd975bc4051a852bcf": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:990d042905b8a41f601d3fdd975bc4051a852bcf",
+      "identity_tokens": [
+        "SemanticScholar:990d042905b8a41f601d3fdd975bc4051a852bcf"
+      ],
+      "reason": "MLSys版の要旨で確認すると、Transformerの学習がデータ移動に律速されることを示しデータレイアウト最適化でBERT学習を高速化する内容であり、対象は学習スループットの改善のみで推論・サービングへの直接貢献はないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Data Movement Is All You Need: A Case Study of Transformer Networks"
+    },
+    "SemanticScholar:093cb3c296c4d4bc5a91f33b3c2266da0bef45c0": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:093cb3c296c4d4bc5a91f33b3c2266da0bef45c0",
+      "identity_tokens": [
+        "SemanticScholar:093cb3c296c4d4bc5a91f33b3c2266da0bef45c0"
+      ],
+      "reason": "タイトルが示すとおりTransformerが最小二乗問題を高精度に解けるかという表現能力・理論解析の研究であり、推論の実行効率やサービング機構とは無関係なため対象外とした。Semantic Scholarでも要旨は未収録だった。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Can Transformers Solve Least Squares to High Precision?"
+    },
+    "SemanticScholar:d8a144b524524091006ea64e77e402e1740a3252": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:d8a144b524524091006ea64e77e402e1740a3252",
+      "identity_tokens": [
+        "SemanticScholar:d8a144b524524091006ea64e77e402e1740a3252"
+      ],
+      "reason": "タイトルが明示するとおり分散マルチモーダルモデルの学習を高速化する研究であり、対象範囲外とする学習単独の高速化に該当するため対象外とした。要旨も取得を試みたが得られなかった。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "DISTMM: Accelerating Distributed Multimodal Model Training"
+    },
+    "SemanticScholar:252a64f3232786b80f4f74873fe27eb7fa1221be": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:252a64f3232786b80f4f74873fe27eb7fa1221be",
+      "identity_tokens": [
+        "SemanticScholar:252a64f3232786b80f4f74873fe27eb7fa1221be"
+      ],
+      "reason": "タイトルが明示するとおりエージェント強化学習のためのPyTorchネイティブ学習フレームワークであり、学習基盤の高速化が主題で推論サービングへの直接貢献は想定されないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning"
+    },
+    "DOI:10.1109/access.2023.3299858": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2023.3299858",
+      "identity_tokens": [
+        "DOI:10.1109/access.2023.3299858"
+      ],
+      "reason": "要旨はTwitter上のデマ検出のためにBERTのパラメータを削減したCE-BERTを提案する応用研究であり、効率化は検出タスクのモデル軽量化にとどまりLLM推論システムへの貢献ではないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "CE-BERT: Concise and Efficient BERT-Based Model for Detecting Rumors on Twitter"
+    },
+    "DOI:10.52202/079017-0884": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-0884",
+      "identity_tokens": [
+        "DOI:10.52202/079017-0884"
+      ],
+      "reason": "要旨はデータ並列学習のメモリ・通信コストを再考しPaROによる学習高速化を提案する内容で、対象はLLMの学習スループットのみであり、推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Rethinking Memory and Communication Costs for Efficient Data Parallel Training of Large Language Models"
+    },
+    "DOI:10.18653/v1/2026.acl-long.1801": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1801",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1801"
+      ],
+      "reason": "要旨はMoEの学習ダイナミクスとアラインメントを不確実性認識ルーティングで改善する研究であり、評価軸もperplexityや専門家分化といった学習・モデル品質側で、MoE推論やサービングの機構への貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Uncertainty-Aware Routing for Principled Alignment with MoE Dynamics"
+    },
+    "DOI:10.48550/arxiv.2405.20799": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2405.20799",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.20799",
+        "arXiv:2405.20799"
+      ],
+      "reason": "要旨は不規則サンプリング時系列向けにパス署名を用いるRough Transformerという系列モデリング手法であり、対象タスクは時系列処理で、LLM推論システムへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Rough Transformers: Lightweight Continuous-Time Sequence Modelling with Path Signatures"
+    },
+    "DOI:10.1002/qub2.69": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/qub2.69",
+      "identity_tokens": [
+        "DOI:10.1002/qub2.69"
+      ],
+      "reason": "要旨はバイオインフォマティクスへの基盤モデルの応用を論じる展望論文であり、異分野応用が主体で、LLM推論・サービング機構への貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Foundation models for bioinformatics"
+    },
+    "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+      "identity_tokens": [
+        "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+        "arXiv:2105.03801"
+      ],
+      "reason": "要旨（arXiv版で確認）は長文要約タスクにおける局所自己注意と明示的内容選択による長距離依存への対処であり、要約能力の手法が主体で、LLM推論システムの機構への直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Long-Span Dependencies in Transformer-based Summarization Systems"
+    },
+    "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b",
+      "identity_tokens": [
+        "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b"
+      ],
+      "reason": "要旨はグラフ構造データ向けに学習可能な階層で自己注意を疎化するSequoiaの提案であり、評価も長距離グラフベンチマークが主体で、LLM推論への直接適用を示す内容ではないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Scalable Hierarchical Self-Attention with Learnable Hierarchy for Long-Range Interactions"
+    },
+    "DOI:10.1145/3770854.3780279": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770854.3780279",
+      "identity_tokens": [
+        "DOI:10.1145/3770854.3780279"
+      ],
+      "reason": "要旨は時系列予測向けMamba／状態空間モデルの理論的解釈と構成アブレーションを扱う内容で、時系列という異分野タスクが主体であり、LLM推論システムへの貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "How to Train Your Mamba for Time Series Forecasting"
+    },
+    "DOI:10.1109/tcsvt.2025.3637139": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3637139",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3637139"
+      ],
+      "reason": "タイトルと要旨から、ロボットマニピュレーションのポリシー学習に異種専門家混合を用いる研究であり、対象はロボット制御タスクで、LLM推論システムとは分野が異なるため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Complexity-Aware Policy via Heterogeneous Experts for Robotic Manipulation"
+    },
+    "DOI:10.1109/jstars.2026.3674206": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jstars.2026.3674206",
+      "identity_tokens": [
+        "DOI:10.1109/jstars.2026.3674206"
+      ],
+      "reason": "タイトルが明白に空中スナップショット分光イメージングというリモートセンシング分野の再構成モデルを示しており、要旨もハイパースペクトル画像再構成が主体で、LLM推論とは無関係なため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Multilevel Spatial Spectral Difference and Geometric Constraint Model for Airborne Snapshot Spectral Imaging"
+    },
+    "DOI:10.1109/iiswc66894.2025.00016": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iiswc66894.2025.00016",
+      "identity_tokens": [
+        "DOI:10.1109/iiswc66894.2025.00016"
+      ],
+      "reason": "要旨は統合仮想メモリを用いたLLM分散学習の並列戦略を分析する研究であり、対象は学習時のメモリ過剰割当と並列化のみで、推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Understanding Distributed Training of Large Language Models with Unified Virtual Memory"
+    },
+    "DOI:10.1101/2024.09.30.615775": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2024.09.30.615775",
+      "identity_tokens": [
+        "DOI:10.1101/2024.09.30.615775"
+      ],
+      "reason": "要旨はシングルセル超長トランスクリプトームのモデリングに状態空間モデルMamba2を適用する研究であり、生命科学データへの応用が主題でLLM推論システムとは無関係なため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SC-MAMBA2: Leveraging State-Space Models for Efficient Single-Cell Ultra-Long Transcriptome Modeling"
+    },
+    "DOI:10.1007/s11760-025-04115-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11760-025-04115-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-025-04115-6"
+      ],
+      "reason": "タイトルが示すとおりMambaベースのGANで構造化コンテンツを生成するモデル研究であり、生成モデルのアーキテクチャ提案であって推論システムやサービングの効率化ではないため対象外とした。Semantic Scholarでも要旨は未収録だった。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SelectGAN: Mamba based explicit selectivity GAN for generating structured content"
+    },
+    "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b",
+      "identity_tokens": [
+        "SemanticScholar:39578fe80c3f2ce38aca71ca2b71751efe113a0b"
+      ],
+      "reason": "タイトルが明示するとおりマルチタスク強化学習のための動的変調ネットワークの研究であり、LLM推論とは異分野の学習アルゴリズムであるため対象外とした。要旨の取得も429で失敗した。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "E NHANCED D YNAMIC M ODULATION WITH G LOBAL R E - CURRENT I NHIBITION N ETWORKS FOR M ULTI - TASK R EIN - FORCEMENT L EARNING"
+    },
+    "DOI:10.1145/3711896.3737865": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3711896.3737865",
+      "identity_tokens": [
+        "DOI:10.1145/3711896.3737865"
+      ],
+      "reason": "要旨は生成AI向け推論最適化をテーマとするKDDワークショップの開催趣旨と研究・実務の交流を述べる紹介文であり、技術的な研究成果そのものではないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "KDD 2025 Workshop on Inference Optimization for Generative AI"
+    },
+    "DOI:10.1109/tpds.2023.3281931": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpds.2023.3281931",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2023.3281931"
+      ],
+      "reason": "要旨は大規模深層学習の学習を対象に分散学習アルゴリズムの自動並列化を整理したサーベイであり、扱うのは学習時の並列化のみで推論・サービングへの直接貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Survey on Auto-Parallelism of Large-Scale Deep Learning Training"
+    },
+    "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562",
+      "identity_tokens": [
+        "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562"
+      ],
+      "reason": "大規模ハイブリッド並列学習におけるfail-slow障害の検出を扱う研究であり、対象は学習クラスタの運用・信頼性のみで推論サービングの障害検出や実行系への貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "GREYHOUND: Hunting Fail-Slows in Hybrid-Parallel Training at Scale"
     }
   }
 }

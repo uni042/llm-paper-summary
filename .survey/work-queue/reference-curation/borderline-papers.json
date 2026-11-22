@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-22T14:43:19+00:00",
-  "record_count": 7186,
+  "updated_at": "2026-11-22T22:32:31+00:00",
+  "record_count": 7226,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -110934,6 +110934,608 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators"
+    },
+    "DOI:10.1109/icccbda64898.2025.11030536": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccbda64898.2025.11030536",
+      "identity_tokens": [
+        "DOI:10.1109/icccbda64898.2025.11030536"
+      ],
+      "reason": "要旨はLLaVAの活性化疎性を利用したニューロンクラスタリングでMoEマルチモーダルLLMを小型化するモデル構造の提案であり、パラメータ削減はあるものの推論サービング機構ではなく学習戦略を含むモデル側の工夫のため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:30+00:00",
+      "last_checked_at": "2026-11-22T22:32:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cluster-LLaVA: Mixture of Experts Multimodal LLMs Can Also be Small"
+    },
+    "DOI:10.1145/3676536.3676660": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3676536.3676660",
+      "identity_tokens": [
+        "DOI:10.1145/3676536.3676660"
+      ],
+      "reason": "要旨は固有分解に基づく疎なTransformerをRRAM・SRAMハイブリッドのインメモリ計算で高速化するAESHAだが、評価対象はBERTやViT等の汎用Transformerであり、LLM推論に特化した機構ではないため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:30+00:00",
+      "last_checked_at": "2026-11-22T22:32:30+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AESHA: Accelerating Eigen-Decomposition-Based Sparse Transformer with Hybrid RRAM-SRAM Architecture"
+    },
+    "SemanticScholar:d6a96f6f998caa9e37258bac564b10430e834b6d": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d6a96f6f998caa9e37258bac564b10430e834b6d",
+      "identity_tokens": [
+        "SemanticScholar:d6a96f6f998caa9e37258bac564b10430e834b6d"
+      ],
+      "reason": "CD-LMは検索モジュールで複数トークンのチャンクを1デコードステップで生成しトークン単位生成の非効率に触れるが、主眼は言語モデリング手法と知識適応でありサービング機構ではないため、デコード関連の微妙な候補として保留した。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Token Generation: Adaptive Chunk-Distilled Language Modeling"
+    },
+    "DOI:10.1007/s42486-025-00227-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42486-025-00227-7",
+      "identity_tokens": [
+        "DOI:10.1007/s42486-025-00227-7"
+      ],
+      "reason": "エッジLLMの包括的サーベイで、資源効率的なモデル設計からランタイム推論最適化やオンデバイス応用までを扱い推論最適化の整理を含む一方、対象範囲がライフサイクル全体に広くサーベイ自体の新規システム貢献はないため微妙な候補とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge large language models: a comprehensive survey"
+    },
+    "SemanticScholar:a74b9cc3b08d2a088d6f0b0c037188ccfd1ceaf4": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a74b9cc3b08d2a088d6f0b0c037188ccfd1ceaf4",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2105.14636",
+        "SemanticScholar:a74b9cc3b08d2a088d6f0b0c037188ccfd1ceaf4",
+        "arXiv:2105.14636"
+      ],
+      "reason": "LEAP／MLPruningはTransformer系モデルの多段階構造化プルーニングでメモリと計算コスト削減を狙うが、対象は汎用の事前学習言語モデルでありLLMサービング固有の機構ではないため、推論圧縮寄りの微妙な候補として保留した。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MLPruning: A Multilevel Structured Pruning Framework for Transformer-based Models"
+    },
+    "SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1",
+      "identity_tokens": [
+        "SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1"
+      ],
+      "reason": "小型言語モデルの限界を探る研究で、FFN構造の再パラメータ化による短系列タスクでの推論速度改善や知識蒸留を検討するが、中心はモデル能力と学習側の検討であり推論システムとしての寄与が限定的なため微妙な候補とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring the Limits of Small Language Models"
+    },
+    "DOI:10.63317/2chievqfwus3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.63317/2chievqfwus3",
+      "identity_tokens": [
+        "DOI:10.63317/2chievqfwus3"
+      ],
+      "reason": "P-pruningは構造化プルーニングでモデルサイズ削減と推論速度向上に言及するが、主目的はファインチューニング前の圧縮による学習コスト削減であり、評価もBERTやGPT-2等の小型事前学習モデル中心のため微妙な候補とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pruning before Fine-tuning: A Retraining-free Compression Framework for Pre-trained Language Models"
+    },
+    "SemanticScholar:896d9c8c3ee5c40d327061d9258f27f83eed2b0e": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:896d9c8c3ee5c40d327061d9258f27f83eed2b0e",
+      "identity_tokens": [
+        "SemanticScholar:896d9c8c3ee5c40d327061d9258f27f83eed2b0e"
+      ],
+      "reason": "Adaptive Retentionは層ごとの確率的トークン選択で保持表現を絞りピークメモリ35〜45％削減とスループット最大1.8倍を報告するが、対象はエンコーダ型モデルの分類・QA・要約タスクでありLLMデコーダのサービング機構ではないため微妙な候補とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning What to Remember: Adaptive Probabilistic Memory Retention for Memory-Efficient Language Models A Probabilistic Framework for Memory-Constrained Language Modeling"
+    },
+    "DOI:10.1016/j.neucom.2026.134349": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134349",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134349"
+      ],
+      "reason": "残差融合とヘッド単位ゲーティングによるTransformer言語モデルの改良をうたうアーキテクチャ論文であり、推論効率への寄与の有無が入手できたメタデータだけでは判別できず、Crossrefにも要旨がなかったため微妙な候補として保留した。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-band residual fusion with per-head gating for enhanced transformer language models"
+    },
+    "SemanticScholar:387dd3f727a00598400bc9d3fe59ac585b691082": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:387dd3f727a00598400bc9d3fe59ac585b691082",
+      "identity_tokens": [
+        "SemanticScholar:387dd3f727a00598400bc9d3fe59ac585b691082"
+      ],
+      "reason": "候補タイトルがUSENIX OSDI論文集の定型文になっており論文自体の題名が復元できず、Semantic Scholarでも要旨がnullで一次要旨を取得できなかったため、推論システムへの貢献の有無を判定できず保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "This paper is included in the Proceedings of the 18th USENIX Symposium on Operating Systems Design and Implementation."
+    },
+    "DOI:10.1145/3788089": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3788089",
+      "identity_tokens": [
+        "DOI:10.1145/3788089"
+      ],
+      "reason": "複数リクエストのワークフローにおけるLLM推論の性能とエネルギーのトレードオフを系統的に特性評価した研究で、サービング性能の計測とワークロード提示が中心であり、新しい推論・サービング機構の提案は要旨で確認できないため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Characterizing Performance–Energy Trade-offs of Large Language Models in Multi-Request Workflows"
+    },
+    "SemanticScholar:a98eb33754dc46c80ba9da1b0825575e953a681c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a98eb33754dc46c80ba9da1b0825575e953a681c",
+      "identity_tokens": [
+        "SemanticScholar:a98eb33754dc46c80ba9da1b0825575e953a681c"
+      ],
+      "reason": "モバイル・エッジデバイス上でのLLM実行をMELT等の基盤で性能・メモリ・エネルギー面から評価した研究とみられ、オンデバイス推論の実測知見はあるものの新規の推論機構ではなく評価主体であるため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mobile and Edge Evaluation of Large Language Models"
+    },
+    "SemanticScholar:bd396985656d2987199a420efe64068ae9ecd514": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:bd396985656d2987199a420efe64068ae9ecd514",
+      "identity_tokens": [
+        "SemanticScholar:bd396985656d2987199a420efe64068ae9ecd514"
+      ],
+      "reason": "プライバシー保護機械学習一般を対象にMPCプロトコルと秘密分散方式間の変換を体系化したSoKであり、安全な推論と隣接するもののLLM推論システムに特化した機構や評価は要旨から確認できず関連が薄いため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SoK: Connecting the Dots in Privacy-Preserving ML - Systematization of MPC Protocols and Conversions Between Secret Sharing Schemes"
+    },
+    "SemanticScholar:a193c34e70d597896a00cf34cda67329f0474365": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a193c34e70d597896a00cf34cda67329f0474365",
+      "identity_tokens": [
+        "SemanticScholar:a193c34e70d597896a00cf34cda67329f0474365"
+      ],
+      "reason": "SymbolicLight V1はスパイク駆動の二経路言語モデルを新規学習するアーキテクチャ研究で、活性化スパース性は高いものの生成スループットは密なベースラインより低く、LLM推論システムへの直接的な高速化貢献は要旨で確認できないため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SymbolicLight V1: Spike-Gated Dual-Path Language Modeling at High Activation Sparsity"
+    },
+    "DOI:10.1109/bigdatasecurity69476.2026.00026": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bigdatasecurity69476.2026.00026",
+      "identity_tokens": [
+        "DOI:10.1109/bigdatasecurity69476.2026.00026"
+      ],
+      "reason": "FASTIは高速で正確な安全なTransformer推論を掲げる2026年の会議論文だが、Crossref・OpenAlex・検索のいずれでも一次要旨を取得できず、MPC等の具体的な機構やLLM規模での評価を要旨で確認できないため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FASTI: Fast and Accurate Secure Transformer Inference"
+    },
+    "SemanticScholar:7dbd42d852d192a41e04ee78747d6f64ac1b1ed4": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7dbd42d852d192a41e04ee78747d6f64ac1b1ed4",
+      "identity_tokens": [
+        "SemanticScholar:7dbd42d852d192a41e04ee78747d6f64ac1b1ed4"
+      ],
+      "reason": "深層学習タスクをエッジとクラウドへ最適配置する一般的なDNN配置問題を扱う研究とみられ、推論配置の観点はあるもののLLM特有のプリフィル・デコードやKVキャッシュを扱わず関連が薄いため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Optimal Placement of Deep Learning Tasks Over Edge and Cloud Infrastructures"
+    },
+    "DOI:10.1016/j.eswa.2026.132982": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.132982",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.132982"
+      ],
+      "reason": "Transformerの周波数領域にハイブリッドなスペクトルゲーティングを導入するモデルアーキテクチャ側の研究で、一次要旨を取得できず、推論システムやデコード高速化への直接貢献が確認できないため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unlocking the frequency domain in transformers via hybrid spectral gating"
+    },
+    "SemanticScholar:fb09869b0133ef6cd984e1ce9c7fa1bb6d67ab14": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:fb09869b0133ef6cd984e1ce9c7fa1bb6d67ab14",
+      "identity_tokens": [
+        "SemanticScholar:fb09869b0133ef6cd984e1ce9c7fa1bb6d67ab14"
+      ],
+      "reason": "候補タイトルが「the 2023 USENIX」という断片のみで論文の題名が復元できず、Semantic Scholarでも要旨がnullで一次要旨を取得できなかったため、対象範囲への該当性を判定できず保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "the 2023 USENIX"
+    },
+    "DOI:10.52202/068431-1028": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/068431-1028",
+      "identity_tokens": [
+        "DOI:10.52202/068431-1028"
+      ],
+      "reason": "事前学習Transformerを4ビット量子化と構造的スパース化で16倍圧縮する研究だが、対象はBERT・Wav2vec2.0・ViTでLLMではなく、量子化・スパース化もファインチューニング前提の汎用圧縮であるためLLM推論への関連は間接的で保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deep Compression of Pre-trained Transformer Models"
+    },
+    "DOI:10.1109/ted.2026.3670094": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ted.2026.3670094",
+      "identity_tokens": [
+        "DOI:10.1109/ted.2026.3670094"
+      ],
+      "reason": "強誘電体デバイスを用いた3次元KVキャッシュ用メモリを掲げるIEEE TEDのデバイス論文で、長文脈LLM推論向けという位置づけはあるものの一次要旨を取得できず、システムレベルの推論機構や評価が確認できないため保留とする。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "3-D 1T-nC-1T Ferroelectric-Based KV Cache for Efficient Long-Context LLM Inference"
+    },
+    "SemanticScholar:344e1908f8ca2dc1fe0d31fd90faac886fbe63c6": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:344e1908f8ca2dc1fe0d31fd90faac886fbe63c6",
+      "identity_tokens": [
+        "SemanticScholar:344e1908f8ca2dc1fe0d31fd90faac886fbe63c6"
+      ],
+      "reason": "言語モデルの蒸留スケジュールを最小化してモデル圧縮を図る研究とみられるが、Semantic Scholar APIの429と要旨未収録により一次要旨を取得できず、圧縮後の推論効率やデプロイへの具体的な貢献を確認できなかったため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "M INI D ISC : Minimal Distillation Schedule for Language Model Compression"
+    },
+    "DOI:10.1016/j.neunet.2026.108720": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108720",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.108720"
+      ],
+      "reason": "要旨では球面線形補間によるトークンレベルの文脈圧縮で注意計算の系列長を削減するGSlerp-CCを提案しているが、対象はプロンプト文脈の圧縮手法そのもので、サービングやKVキャッシュ等の運用上の推論効率改善が具体的に示されていないため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Generalized and group spherical linear interpolation for token-level context compression"
+    },
+    "arXiv:2610.31576": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.31576",
+      "identity_tokens": [
+        "arXiv:2610.31576"
+      ],
+      "reason": "要旨は拡散言語モデルの学習済みアンマスキング方策を制御実験で分析し、デコードの速度・精度トレードオフや関数評価回数への影響を明らかにする内容で、デコード研究ではあるものの新規な推論システム機構の提案ではなく分析主体のため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Makes a Good Unmasking Policy? A Controlled Study of Learned Unmasking in Diffusion Language Models"
+    },
+    "DOI:10.1515/nanoph-2025-0217": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1515/nanoph-2025-0217",
+      "identity_tokens": [
+        "DOI:10.1515/nanoph-2025-0217"
+      ],
+      "reason": "要旨はフォトニックチップによる次世代AI計算ハードウェアのレビューで、LLMの計算需要を動機として集積フォトニクスによる行列演算高速化を論じているが、学習を含む汎用計算の展望が中心で推論システムへの具体的機構が示されていないため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What is next for LLMs? Pushing the boundaries of next-gen AI computing hardware with photonic chips"
+    },
+    "arXiv:2607.14622": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14622",
+      "identity_tokens": [
+        "arXiv:2607.14622"
+      ],
+      "reason": "要旨では低ビットGEMMをCPU推論で実行するための探索フレームワークExaGEMMを提案し、レジスタ内LUT実行のハードウェア協調設計を論じているが、成果物は設計空間探索と新規ハードウェア機構の検討が中心で実推論システムでの検証範囲が限られるため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ExaGEMM: Exploration Framework for CPU-Driven ML Inference via Associative In-Register Computing for Low-Bit GEMM"
+    },
+    "DOI:10.1109/ijcnn54540.2023.10191515": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ijcnn54540.2023.10191515",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn54540.2023.10191515"
+      ],
+      "reason": "要旨は幅・深さが動的に変わる柔軟なBERTの学習におけるサブネット干渉を層単位のニューラルグラフトで改善する内容で、動的推論を可能にするモデル側の工夫ではあるが、推論時の実行制御やサービングへの貢献は学習手法の範囲にとどまるため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Flexible BERT with Width- and Depth-dynamic Inference"
+    },
+    "DOI:10.1016/j.cor.2026.107568": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cor.2026.107568",
+      "identity_tokens": [
+        "DOI:10.1016/j.cor.2026.107568"
+      ],
+      "reason": "LLM-as-a-serviceのパッケージ設計と計算資源配分を内生的需要のもとで扱う研究とみられるが、Crossref・Semantic Scholarとも要旨が未収録で一次要旨を取得できず、資源配分が推論サービング機構なのか価格・契約設計なのか判別できないため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Joint package design and compute resource allocation for large language model-as-a-service with endogenous consumer demand"
+    },
+    "SemanticScholar:4a54a4c8075264f8fc3dd6500499298e328ed3c4": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4a54a4c8075264f8fc3dd6500499298e328ed3c4",
+      "identity_tokens": [
+        "SemanticScholar:4a54a4c8075264f8fc3dd6500499298e328ed3c4"
+      ],
+      "reason": "モバイル・クラウドプラットフォーム上の効率的なニューラルネットワークシステムを扱う学位論文とみられるが、Semantic Scholarに要旨がなく一次要旨を取得できなかったため、LLM推論への具体的な適用範囲を確認できず保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Neural Network Based Systems on Mobile and Cloud Platforms"
+    },
+    "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336",
+      "identity_tokens": [
+        "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336"
+      ],
+      "reason": "arXiv版要旨ではオンデバイスモデルでのKVキャッシュ共有や2ビット量子化対応学習、サーバーモデルのPT-MoEなど推論最適化も含むが、報告書の主体は基盤モデル自体の開発・学習・能力評価であり、推論システム単独の貢献としては切り分けが難しいため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Apple Intelligence Foundation Language Models"
+    },
+    "SemanticScholar:852513e5ee60ad8cd22110be384b47e3867c0241": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:852513e5ee60ad8cd22110be384b47e3867c0241",
+      "identity_tokens": [
+        "SemanticScholar:852513e5ee60ad8cd22110be384b47e3867c0241"
+      ],
+      "reason": "TPUハードウェア向けに線形注意を最適化する研究とみられ推論カーネルへの応用可能性はあるが、Semantic Scholarの429等で一次要旨を取得できず、学習向けか推論向けかと最適化の具体的内容を確認できなかったため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimized Linear Attention for TPU Hardware"
+    },
+    "DOI:10.1145/3748273.3749213": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748273.3749213",
+      "identity_tokens": [
+        "DOI:10.1145/3748273.3749213"
+      ],
+      "reason": "要旨はエッジ環境における分散LLMフレームワークのネットワークトラフィック特性を実機テストベッドで計測した分析であり、分散推論の配置に関わるものの、新たな推論機構やサービング方式の提案ではなく計測主体のため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLMs on Edge: Network Traffic Characteristics of Distributed Inference under the Loupe"
+    },
+    "DOI:10.1109/access.2026.3680344": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2026.3680344",
+      "identity_tokens": [
+        "DOI:10.1109/access.2026.3680344"
+      ],
+      "reason": "要旨はMarianMT等の機械翻訳モデルに対しトークン適応型早期終了で自己回帰デコードの推論コストを下げる枠組みだが、対象はLLMではなく翻訳専用モデルで、LLMサービングへの適用可能性は要旨からは限定的なため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Machine Translation With PPO and Token-Adaptive Early Exit in Transformer-Based Models"
+    },
+    "DOI:10.1109/ispass69572.2026.00067": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ispass69572.2026.00067",
+      "identity_tokens": [
+        "DOI:10.1109/ispass69572.2026.00067"
+      ],
+      "reason": "要旨はTritonカーネルの自動チューニングをXGBoostによる遅延予測で効率化する汎用GPUカーネル最適化であり、行列積等の演算子が対象だがLLM推論に特化した機構ではなく、推論システムへの直接性が弱いため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TTX: Towards Autotuning Triton Kernels via Latency Prediction with XGBoost"
+    },
+    "SemanticScholar:a7e4db09a5387fec8dc6dcfd1deb6b7a44076fbb": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a7e4db09a5387fec8dc6dcfd1deb6b7a44076fbb",
+      "identity_tokens": [
+        "SemanticScholar:a7e4db09a5387fec8dc6dcfd1deb6b7a44076fbb"
+      ],
+      "reason": "要旨は二値テキスト分類向けにBERTの上位層を適応的に切り捨てて微調整と推論の時間・メモリを削減する圧縮法だが、対象はBERTの特定タスク向け微調整であり、LLM推論システム一般への直接性は限られるため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Finding the Winning Ticket of BERT for Binary Text Classification via Adaptive Layer Truncation before Fine-tuning"
+    },
+    "SemanticScholar:7849991e628f4a6b28bcebc6a676589f884383fc": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7849991e628f4a6b28bcebc6a676589f884383fc",
+      "identity_tokens": [
+        "SemanticScholar:7849991e628f4a6b28bcebc6a676589f884383fc"
+      ],
+      "reason": "Semantic Scholar APIの429と代替検索でも一次要旨を取得できず、タイトルが示すエッジでの対話型NLP高速化がLLM推論にどう関わるか機構を確認できなかったため、断定せず保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Turbocharge Interactive NLP at the Edge"
+    },
+    "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198",
+      "identity_tokens": [
+        "SemanticScholar:b640029df82f3a0a0d309023fa6c5a56499cd198"
+      ],
+      "reason": "機械学習の効率評価にはモデルライフサイクル全体の評価が必要と論じる研究とみられ、推論効率の評価観点に関わりうるが、Semantic Scholarの429で一次要旨を取得できず、推論システムへの具体的な方法論的貢献を確認できなかったため保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Practical Evaluation of Machine Learning Efficiency Requires Model Life Cycle Assessment"
+    },
+    "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e",
+      "identity_tokens": [
+        "SemanticScholar:e3a181af6e90848e9fa0cb7ef042e4ef678eab3e"
+      ],
+      "reason": "大規模ニューラルネットワーク向けにテンソル並列計画を効率的に導出するTAPは分散推論にも関わりうるが、Semantic Scholarに要旨がなく一次要旨を取得できなかったため、対象が学習主体か推論を含むか判別できず保留とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TAP: Efficient Derivation of Tensor Parallel Plans for Large Neural Networks"
+    },
+    "DOI:10.1109/2575-8411.2026.00129": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00129",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00129"
+      ],
+      "reason": "複雑度に応じたエッジ・クラウド間のルーティングを持つマルチモーダル身体性推論フレームワークであり推論配置の最適化を含む一方、主題はロボティクス等の身体性応用側に寄っており汎用LLMサービングへの寄与の度合いが不明瞭なため微妙な候補とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chimera: An Efficient Multimodal Embodied Inference Framework with Complexity-Aware Edge-Cloud Routing"
+    },
+    "DOI:10.14778/3819518.3819565": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3819518.3819565",
+      "identity_tokens": [
+        "DOI:10.14778/3819518.3819565"
+      ],
+      "reason": "マルチモーダル文書コーパスへの複雑な問合せに対し、意味的サブグラフマッチングとグラフ認識キャッシュで証拠検索とコンテキスト提供を効率化するRAGシステムであり、LLM推論コアではなく検索・提供側の最適化のため微妙な候補とした。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MGRAG: Semantic Subgraph Matching and Graph-Aware Caching for Multimodal Retrieval-Augmented Generation"
+    },
+    "DOI:10.1109/wcnc65185.2026.11555375": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/wcnc65185.2026.11555375",
+      "identity_tokens": [
+        "DOI:10.1109/wcnc65185.2026.11555375"
+      ],
+      "reason": "6G車両ネットワークにおいて層プルーニングとオフロードでLLM推論を適応させる研究であり推論実行の分割自体は対象範囲に触れるが、主眼は車両ネットワーク固有の通信・資源条件への適用であるため微妙な候補として保留した。",
+      "first_checked_at": "2026-11-22T22:32:31+00:00",
+      "last_checked_at": "2026-11-22T22:32:31+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive LLM Inference in 6G Vehicular Networks via Layer Pruning and Offloading"
     }
   }
 }

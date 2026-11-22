@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97eb6a762c62eb11-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.14622",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.14622",
+    "identity_tokens": [
+      "arXiv:2607.14622"
+    ],
+    "reason": "要旨では低ビットGEMMをCPU推論で実行するための探索フレームワークExaGEMMを提案し、レジスタ内LUT実行のハードウェア協調設計を論じているが、成果物は設計空間探索と新規ハードウェア機構の検討が中心で実推論システムでの検証範囲が限られるため保留とした。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ExaGEMM: Exploration Framework for CPU-Driven ML Inference via Associative In-Register Computing for Low-Bit GEMM"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97eb6a762c62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

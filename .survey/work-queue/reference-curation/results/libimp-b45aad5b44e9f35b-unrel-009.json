@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b45aad5b44e9f35b-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b",
+    "identity_tokens": [
+      "SemanticScholar:0fa6bd29f51b82c3fe6e275129e4518ba646b59b"
+    ],
+    "reason": "要旨はグラフ構造データ向けに学習可能な階層で自己注意を疎化するSequoiaの提案であり、評価も長距離グラフベンチマークが主体で、LLM推論への直接適用を示す内容ではないため対象外とした。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Scalable Hierarchical Self-Attention with Learnable Hierarchy for Long-Range Interactions"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b45aad5b44e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

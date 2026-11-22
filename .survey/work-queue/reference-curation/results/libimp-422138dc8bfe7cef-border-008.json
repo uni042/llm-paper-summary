@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-422138dc8bfe7cef-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1",
+    "identity_tokens": [
+      "SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1"
+    ],
+    "reason": "小型言語モデルの限界を探る研究で、FFN構造の再パラメータ化による短系列タスクでの推論速度改善や知識蒸留を検討するが、中心はモデル能力と学習側の検討であり推論システムとしての寄与が限定的なため微妙な候補とした。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Limits of Small Language Models"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-422138dc8bfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

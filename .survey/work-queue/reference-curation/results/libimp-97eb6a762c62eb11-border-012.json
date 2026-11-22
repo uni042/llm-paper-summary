@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97eb6a762c62eb11-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336",
+    "identity_tokens": [
+      "SemanticScholar:e836ddc63fce4e3abdf453c8ad5821c4c1b4a336"
+    ],
+    "reason": "arXiv版要旨ではオンデバイスモデルでのKVキャッシュ共有や2ビット量子化対応学習、サーバーモデルのPT-MoEなど推論最適化も含むが、報告書の主体は基盤モデル自体の開発・学習・能力評価であり、推論システム単独の貢献としては切り分けが難しいため保留とした。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Apple Intelligence Foundation Language Models"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97eb6a762c62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

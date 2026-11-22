@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edc97e32f87763b7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562",
+    "identity_tokens": [
+      "SemanticScholar:315d4039a67318e1a87f7560ed1e8b5d34984562"
+    ],
+    "reason": "大規模ハイブリッド並列学習におけるfail-slow障害の検出を扱う研究であり、対象は学習クラスタの運用・信頼性のみで推論サービングの障害検出や実行系への貢献は確認できないため対象外とした。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "GREYHOUND: Hunting Fail-Slows in Hybrid-Parallel Training at Scale"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edc97e32f877",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

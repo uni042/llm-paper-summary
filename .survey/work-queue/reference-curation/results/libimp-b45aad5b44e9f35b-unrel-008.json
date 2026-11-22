@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b45aad5b44e9f35b-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+    "identity_tokens": [
+      "SemanticScholar:2d097ebde47e9b620f5236d2d5c57c12794f159f",
+      "arXiv:2105.03801"
+    ],
+    "reason": "要旨（arXiv版で確認）は長文要約タスクにおける局所自己注意と明示的内容選択による長距離依存への対処であり、要約能力の手法が主体で、LLM推論システムの機構への直接貢献は確認できないため対象外とした。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Long-Span Dependencies in Transformer-based Summarization Systems"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b45aad5b44e9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

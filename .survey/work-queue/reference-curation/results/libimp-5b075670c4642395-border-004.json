@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b075670c4642395-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:bd396985656d2987199a420efe64068ae9ecd514",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:bd396985656d2987199a420efe64068ae9ecd514",
+    "identity_tokens": [
+      "SemanticScholar:bd396985656d2987199a420efe64068ae9ecd514"
+    ],
+    "reason": "プライバシー保護機械学習一般を対象にMPCプロトコルと秘密分散方式間の変換を体系化したSoKであり、安全な推論と隣接するもののLLM推論システムに特化した機構や評価は要旨から確認できず関連が薄いため保留とする。",
+    "first_checked_at": "2026-11-22T22:32:31+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SoK: Connecting the Dots in Privacy-Preserving ML - Systematization of MPC Protocols and Conversions Between Secret Sharing Schemes"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b075670c464",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

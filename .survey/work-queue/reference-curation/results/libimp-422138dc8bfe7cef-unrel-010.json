@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-422138dc8bfe7cef-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:c9961a2a9ff24872ca4f6905d4ac209d58994b65",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:c9961a2a9ff24872ca4f6905d4ac209d58994b65",
+    "identity_tokens": [
+      "SemanticScholar:c9961a2a9ff24872ca4f6905d4ac209d58994b65",
+      "arXiv:2409.01143"
+    ],
+    "reason": "異種GPU環境でのLLM学習を非対称なデータ・パイプライン・テンソル並列で割り当てる学習システムであり、要旨全体が学習スループットとMFUの話で推論への転用は示されていないため対象外とした。",
+    "first_checked_at": "2026-09-30T09:51:41+00:00",
+    "last_checked_at": "2026-11-22T22:32:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review",
+      "worker-worklist-30 discovery_review rank 250"
+    ],
+    "title": "HexiScale: Accommodating Large Language Model Training over Heterogeneous Environment"
+  },
+  "processed_at": "2026-11-22T22:32:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-422138dc8bfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
