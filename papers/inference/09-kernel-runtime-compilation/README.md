@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（311本）
+## 自動生成の論文一覧（312本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -581,6 +581,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression](2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compre.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合精度量子化と構造的枝刈りの二値マスクを、エンドツーエンド損失で学習するハイパーネットワークで同時最適化する圧縮手法。超低ビットで先行手法を上回り、実測でもプリフィル高速化とメモリ削減を示す。
+
+- **2026-06 · [FuseFSS: Efficient Secure LLM Inference with Function Secret Sharing](2026-2606.09551-fusefss-efficient-secure-llm-inference-with-function-secret-sharing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  2サーバ秘匿推論の非線形演算を演算子ごとの手作りプロトコルから、区間と多項式片と述語の仕様を2回の関数秘密分散評価へ落とす単一コンパイラへ置き換え、精度を保って1.24から1.50倍高速化する研究。
 
 - **2026-06 · [Demystifying Numerical Instability in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL](2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducib.md)**  
   実装：[✓](https://github.com/ucla-systems/HEAL) ・ リポジトリ内被引用：0  
@@ -1197,7 +1201,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：641  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：642  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

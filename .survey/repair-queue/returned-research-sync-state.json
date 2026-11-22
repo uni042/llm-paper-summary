@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "73e24bb075193ee989e6757b178933fde7611a37",
+  "base_commit": "664bf81d9d13c597df3c6d5b646fe84448bb07fa",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -516,6 +516,7 @@
     "2026-2605.19506-eventprune-cascaded-event-assisted-token-pruning-for-efficient-first-person-dynamic-spatial-reasoning.json",
     "2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video.json",
     "2026-2605.22428-exploiting-multicast-for-accelerating-collective-communication.json",
+    "2026-2605.23057-requestrouter-request-boundary-routing-for-efficient-single-gpu-llm-inference.json",
     "2026-2605.23914-vinelm-trie-based-fine-grained-control-for-agentic-workflows.json",
     "2026-2605.24019-mgvq-synergizing-multi-dimensional-sensitivity-aware-and-gradient-hessian-fusion-for-vector-quantization.json",
     "2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-inference-benchmarks.json",
@@ -526,6 +527,7 @@
     "2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-safe-to-reuse-an-answer.json",
     "2026-2605.28213-klineage-recovering-the-missing-when-of-kernel-optimization-by-deoptimizing-experts.json",
     "2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-aware-kv-sparsity.json",
+    "2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-models.json",
     "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json",
     "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json",
     "2026-2605.31215-fixed-point-masked-generative-modeling.json",
@@ -550,6 +552,8 @@
     "2026-2606.08511-look-less-reason-more-block-wise-attention-skipping-for-efficient-multimodal-llms.json",
     "2026-2606.08891-palute-processing-in-memory-acceleration-via-lookup-table-for-edge-llm-inference.json",
     "2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-model-inference.json",
+    "2026-2606.09551-fusefss-efficient-secure-llm-inference-with-function-secret-sharing.json",
+    "2026-2606.09937-rksc-reasoning-aware-kv-cache-sharing-and-confident-early-exit.json",
     "2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-llm-inference.json",
     "2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stream-dynamics.json",
     "2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperature-scaling.json",
@@ -568,6 +572,7 @@
     "2026-2606.21428-does-mixture-of-experts-actually-help-inference-on-consumer-and-edge-hardware-an-empirical-study.json",
     "2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-inference.json",
     "2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-api-serving.json",
+    "2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffusion.json",
     "2026-2606.23961-forget-without-compromise-nexus-sampling-for-streaming-kv-cache-eviction-under-fixed-budgets.json",
     "2026-2606.24156-accelerating-multimodal-large-language-models-with-prior-corrected-token-reduction.json",
     "2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-models.json",
@@ -48996,6 +49001,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.23057": {
+      "order": [
+        "2026-11-22T10:24:47+00:00",
+        "2026-2605.23057-requestrouter-request-boundary-routing-for-efficient-single-gpu-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.29535": {
+      "order": [
+        "2026-11-22T10:25:32+00:00",
+        "2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.09551": {
+      "order": [
+        "2026-11-22T10:26:18+00:00",
+        "2026-2606.09551-fusefss-efficient-secure-llm-inference-with-function-secret-sharing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.09937": {
+      "order": [
+        "2026-11-22T10:27:03+00:00",
+        "2026-2606.09937-rksc-reasoning-aware-kv-cache-sharing-and-confident-early-exit.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.22976": {
+      "order": [
+        "2026-11-22T10:27:49+00:00",
+        "2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffusion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61827,6 +61877,21 @@
     "arxiv:2605.16941": [
       "papers/inference/99-other-inference-systems/2026-2605.16941-roll-out-and-roll-back-diffusion-llms-are-their-own-efficiency-teachers.md",
       "papers/inference/99-other-inference-systems/2026-2605.16941-roll-out-and-roll-back-diffusion-llms-are-their-own-efficiency-teachers.md"
+    ],
+    "arxiv:2605.23057": [
+      "papers/inference/05-speculative-decoding-moe/2026-2605.23057-requestrouter-request-boundary-routing-for-efficient-single-gpu-llm-infe.md"
+    ],
+    "arxiv:2605.29535": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-model-inf.md"
+    ],
+    "arxiv:2606.09551": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.09551-fusefss-efficient-secure-llm-inference-with-function-secret-sharing.md"
+    ],
+    "arxiv:2606.09937": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.09937-rksc-reasoning-aware-kv-cache-sharing-and-confident-early-exit-for-multi.md"
+    ],
+    "arxiv:2606.22976": [
+      "papers/inference/99-other-inference-systems/2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffu.md"
     ]
   }
 }

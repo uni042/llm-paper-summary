@@ -35,10 +35,15 @@
   "selection_reason": "多分岐推論で接頭辞KVを意味的類似度に基づき共有するASKS、確信度で検証パスを省略・早期終了するCGEE、注意重み付きエビクションを組み合わせ、vLLM相当の接頭辞キャッシュ比1.66倍の高速化を示す、LLM推論フレームワークへの直接貢献である。",
   "semantic_scholar_id": "9a2e23ad3b8f12adbe74f70d270807823a480d1d",
   "source_url": "https://arxiv.org/abs/2606.09937",
-  "status": "ready",
+  "status": "superseded",
   "title": "RKSC: Reasoning-Aware KV Cache Sharing and Confident Early Exit for Multi-Step LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:29:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.09937-rksc-reasoning-aware-kv-cache-sharing-and-confident-early-exit-for-multi.md",
+  "represented_canonical_id": "arXiv:2606.09937",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

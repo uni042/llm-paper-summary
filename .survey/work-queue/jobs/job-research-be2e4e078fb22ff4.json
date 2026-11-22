@@ -35,10 +35,15 @@
   "selection_reason": "単一GPUのLLM推論向けに、リクエスト特徴からFP16・量子化・投機的デコード・プレフィックスキャッシュ・連続バッチング等の固定モードをリクエスト境界で選択するRequestRouterをvLLM上で評価し、遅延とエネルギーの改善を示している。",
   "semantic_scholar_id": "e001aaaec588196726e2b3e05f025c0d486d48e3",
   "source_url": "https://arxiv.org/abs/2605.23057",
-  "status": "ready",
+  "status": "superseded",
   "title": "RequestRouter: Request-Boundary Routing for Efficient Single-GPU LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:29:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2605.23057-requestrouter-request-boundary-routing-for-efficient-single-gpu-llm-infe.md",
+  "represented_canonical_id": "arXiv:2605.23057",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

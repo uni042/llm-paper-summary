@@ -35,10 +35,15 @@
   "selection_reason": "2サーバ安全LLM推論向けFuseFSSは関数秘密分散の非線形演算を単一コンパイルパイプライン化し、述語ビットの一括比較と区間ルックアップでBERTやGPT系モデルの端末間推論を1.24〜1.50倍高速化し通信も削減する、セキュア推論基盤への直接貢献である。",
   "semantic_scholar_id": "e09b86c762c14ac06437ae4f8f241a772a3aa041",
   "source_url": "https://arxiv.org/abs/2606.09551",
-  "status": "ready",
+  "status": "superseded",
   "title": "FuseFSS: Efficient Secure LLM Inference with Function Secret Sharing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:29:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.09551-fusefss-efficient-secure-llm-inference-with-function-secret-sharing.md",
+  "represented_canonical_id": "arXiv:2606.09551",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
