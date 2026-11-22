@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-22T03:06:55+00:00",
+  "generated_at": "2026-11-22T03:07:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 11,
+  "count": 9,
   "entries": [
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -261,60 +261,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-560f30a2d561--file_00000000cc1081fd8cfab916b8df4e36--2025-reward-shifted-speculative-sampling-returned-repair-20261106-2030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-560f30a2d561--file_00000000cc1081fd8cfab916b8df4e36--2025-reward-shifted-speculative-sampling-returned-repair-20261106-2030-scheduled-chat-30-r01.json",
       "worker_run_key": "20261106-2030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2610.03296",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2610.03296",
-      "returned_at": "2026-11-22T00:21:37+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 499 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4095,
-        "body_paragraphs": 20,
-        "method_chars": 1799,
-        "method_paragraphs": 4,
-        "evaluation_chars": 499,
-        "limitation_chars": 255,
-        "insufficiency_flags": [
-          "評価説明量 499 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5389fb9f40ed--2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5389fb9f40ed--2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json",
-      "worker_run_key": "muse-20261122-b3"
-    },
-    {
-      "canonical_id": "arXiv:2607.19215",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2607.19215",
-      "returned_at": "2026-11-22T00:21:39+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 481 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3926,
-        "body_paragraphs": 18,
-        "method_chars": 1645,
-        "method_paragraphs": 4,
-        "evaluation_chars": 481,
-        "limitation_chars": 250,
-        "insufficiency_flags": [
-          "評価説明量 481 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-767781c9a9dd--2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-767781c9a9dd--2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
-      "worker_run_key": "muse-20261122-b1"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2a245b75eac2c38413fb8067448b6e00bdad9bc4",
+  "base_commit": "5ef69239d2b71dd8bad56346e4232283c550729e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -47204,38 +47204,11 @@
     },
     "arXiv:2607.19215": {
       "order": [
-        "2026-11-22T00:21:39+00:00",
-        "retry-research-767781c9a9dd--2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json"
+        "2026-11-22T03:03:57+00:00",
+        "2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "c8e84f73242d18b7781256f54f2b4fb032b87959a88b9bebb96c1d7f560a9191",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-767781c9a9dd--2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md",
-        "canonical_id": "arXiv:2607.19215",
-        "worker_completed_at": "2026-11-22T07:22:31+09:00",
-        "worker_run_key": "muse-20261122-b1",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 3926,
-          "body_paragraphs": 18,
-          "method_chars": 1645,
-          "method_paragraphs": 4,
-          "evaluation_chars": 481,
-          "limitation_chars": 250,
-          "insufficiency_flags": [
-            "評価説明量 481 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 481 < 500"
-        ],
-        "processed_at": "2026-11-22T00:21:39+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2607.22583": {
@@ -47546,38 +47519,11 @@
     },
     "arXiv:2610.03296": {
       "order": [
-        "2026-11-22T00:21:37+00:00",
-        "retry-research-5389fb9f40ed--2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json"
+        "2026-11-22T03:05:04+00:00",
+        "2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "ce575a30ea3a1f7b7bb0dc4d869507d5a683fb3d8228491cdd646008a025b360",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5389fb9f40ed--2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md",
-        "canonical_id": "arXiv:2610.03296",
-        "worker_completed_at": "2026-11-22T07:57:40+09:00",
-        "worker_run_key": "muse-20261122-b3",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 4095,
-          "body_paragraphs": 20,
-          "method_chars": 1799,
-          "method_paragraphs": 4,
-          "evaluation_chars": 499,
-          "limitation_chars": 255,
-          "insufficiency_flags": [
-            "評価説明量 499 < 500"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 評価説明量 499 < 500"
-        ],
-        "processed_at": "2026-11-22T00:21:37+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2610.14162": {
@@ -59929,6 +59875,12 @@
     "arxiv:2611.09225": [
       "papers/inference/09-kernel-runtime-compilation/2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md"
+    ],
+    "arxiv:2607.19215": [
+      "papers/inference/99-other-inference-systems/2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md"
+    ],
+    "arxiv:2610.03296": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md"
     ]
   }
 }
