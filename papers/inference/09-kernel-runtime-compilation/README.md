@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（305本）
+## 自動生成の論文一覧（307本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -37,7 +37,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
-  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：27  
   演算子単位の多数カーネル起動をSM粒度の依存グラフへ分解し、単一常駐巨大カーネル内の分散スケジューラで演算・通信・タスク間パイプラインを重ね、vLLM/SGLang比で最大1.7倍の推論遅延改善を示す。
 
 - **2026-03 · [Mamba-3: Improved Sequence Modeling using State Space Principles](2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md)**  
@@ -49,7 +49,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   SonicMoEは混合専門家モデル（Mixture-of-Experts、MoE）の学習を対象に、専門家の細粒度化と高疎性化によって生じる三種類の非効率を同時に減らす。ICLR 2026正式版では、7B級の細粒度MoEでScatterMoEに対する活性値メモリ削減45%、Hopper世代GPUでの計算処理量1.86倍を報告する。
 
 - **2026-04 · [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](2026-2604.13327-event-tensor-dynamic-megakernel-generation.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   タイル依存関係を記号形状のイベントテンソルとして表し、可変形状とMoEのデータ依存分岐を再コンパイルせず静的・動的メガカーネルへ変換するコンパイラ抽象。
 
 - **2026-01 · [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md)**  
@@ -378,6 +378,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/zeraix/imparo) ・ リポジトリ内被引用：0  
   AdaSparkは、投機的復号の草案器が一度に提案した複数候補を、大きな教師モデルが何行まとめて検証するかを実行時に決めるスケジューラである。4モデル・6公開データセットの会話で、llama.cppのDSparkより復号速度が約1.5〜3.1倍となった。
 
+- **2026-09 · [Weave: Fine-Grained Dynamic SM Scheduling in an MoE Megakernel for Compute-Communication Overlap](2026-2609.21483-weave-fine-grained-dynamic-sm-scheduling-in-an-moe-megakernel-for-comput.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ルーティング結果が判明した直後に、永続メガカーネル内のコストモデルで層ごとGPUごとに通信用と計算用のSM分割と実行順を動的に決め、MoE層を幾何平均2.89倍高速化する重ね合わせ方式。
+
 - **2026-09 · [WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse](2026-2609.35263-wavepp-high-throughput-pipeline-parallel-llm-prefill-under-prefix-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   再利用できる範囲の合意、キャッシュを削除されないように保護する処理、未計算部分のメモリ確保を同期的に行うと、GPUに次の入力を供給する頻度が下がり、段の間に空き時間が発生する。準備が整った要求は処理波（wave）に分割し、パイプラインを埋めるように波の大きさを動的に選ぶ。
@@ -397,6 +401,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study](2026-2609.21264-programming-amd-xdna-npus-with-open-source-compiler-tools-a-flashattenti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   XDNAは複数の計算タイルと小さな局所メモリ、共有メモリタイル（MemTile）、外部メモリとの入出力を担うshimタイルから構成され、DMAとストリームの経路をソフトウェアが明示的に設計する。
+
+- **2026-09 · [Model Casting and Low-Parameter Gating: Towards More Sparsely Activated FFNs](2026-2609.31975-model-casting-and-low-parameter-gating-towards-more-sparsely-activated-f.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  中間訓練で活性化を替えて全結合層の中間活性を目標どおり疎にし、低ランク化したゲートで理論上限3倍を超え、同一品質で学習不要方式の2倍の計算削減を得る方式。
 
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -797,8 +805,12 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   タイル中心プリミティブから計算・通信融合カーネルを生成し、8×H800で非重畳比1.17〜20.76倍、8モデルのエンドツーエンドでPyTorch比平均1.32倍を達成する。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
-  実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：16  
   分散MoE全体を単一の常駐GPUカーネルへ融合し、装置起点通信とタイル単位スケジューリングでCPU起動・同期待ちを除き、8基H100で最大6.4倍の遅延改善と5.7倍のスループットを示す。
+
+- **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
+  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：12  
+  GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
 - **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
   実装：[✓](https://github.com/SakanaAI/robust-kbench) ・ リポジトリ内被引用：11  
@@ -808,9 +820,9 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/Anjiang-Wei/Astra) ・ リポジトリ内被引用：11  
   高水準PyTorchからCUDAを一から生成するのではなく、SGLangに既に存在する正しいCUDAカーネルを出発点にし、試験・プロファイル・計画・実装を別々の大規模言語モデル（Large Language モデル; LLM）エージェントへ分担する。
 
-- **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：11  
-  GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
+- **2025-04 · [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-vi.md)**  
+  実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：9  
+  FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
 
 - **2025-04 · [70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DFloat11)](2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md)**  
   実装：[✓](https://github.com/LeanModels/DFloat11) ・ リポジトリ内被引用：9  
@@ -819,10 +831,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-06 · [LittleBit: Ultra Low-Bit Quantization via Latent Factorization](2025-2506.13771-littlebit-ultra-low-bit-quantization-via-latent-factorization.md)**  
   実装：[✓](https://github.com/SamsungLabs/LittleBit) ・ リポジトリ内被引用：8  
   大規模言語モデルの重みを4ビットへ量子化すると、FP16と比べて保存量を大きく減らせる。Llama2-13Bの0.1 BPWでは重み保存量をFP16の26.06GBから0.84GBへ縮小し、31.02倍の圧縮を報告する。
-
-- **2025-04 · [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-vi.md)**  
-  実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：8  
-  FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
 
 - **2025-08 · [Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md)**  
   実装：[✓](https://github.com/yansikuan/memory-r1) ・ リポジトリ内被引用：6  
@@ -844,6 +852,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：4  
   LiquidGEMM は、重みを4ビット、活性を8ビットに量子化するW4A8構成の一般行列積（General Matrix Multiplication; GEMM）を高速化するGPUカーネルである。
 
+- **2025-05 · [FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference](2025-2505.22758-flashformer-whole-model-kernels-for-efficient-low-batch-inference.md)**  
+  実装：[✓](https://github.com/cheetah-lang) ・ リポジトリ内被引用：4  
+  FlashFormerは、LLMをバッチ1で1トークンずつ復号する際、層ごとのカーネル起動と重み・KVキャッシュのメモリ転送が実行時間を支配するという状況に特化したGPUカーネル設計である。
+
 - **2025-04 · [SD2: Self-Distilled Sparse Drafters](2025-2504.08838-sd2-self-distilled-sparse-drafters.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   投機的復号では、小さなドラフトモデルが数トークンを先に生成し、大きなターゲットモデルが候補をまとめて検証する。ドラフトが軽くてもターゲットと予測が合わなければ、受理されるトークン数が減り、高速化の利得が消える。逆に高精度なドラフトが重すぎれば、候補生成の逐次時間が支配的になる。受理長、理論MAC削減、実機の遅延改善は異なる評価軸として区別する。
@@ -859,10 +871,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [BlockBPE: Parallel BPE Tokenization](2025-2507.11941-blockbpe-parallel-bpe-tokenization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   BlockBPEは正規表現による事前分割を廃止し、Rustで入力をバイト列と特殊トークンへ分けた後、各文字列を一つのGPUスレッドブロックへ割り当てる。高バッチではtiktokenに対して最大2倍、HuggingFace Tokenizersに対して最大2.5倍の字句分割処理量を報告した。
-
-- **2025-05 · [FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference](2025-2505.22758-flashformer-whole-model-kernels-for-efficient-low-batch-inference.md)**  
-  実装：[✓](https://github.com/cheetah-lang) ・ リポジトリ内被引用：3  
-  FlashFormerは、LLMをバッチ1で1トークンずつ復号する際、層ごとのカーネル起動と重み・KVキャッシュのメモリ転送が実行時間を支配するという状況に特化したGPUカーネル設計である。
 
 - **2025-11 · [Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants](2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md)**  
   実装：[✓](https://github.com/bozhiyou/pytorch-flashlight) ・ リポジトリ内被引用：2  

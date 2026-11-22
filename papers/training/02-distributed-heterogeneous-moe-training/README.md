@@ -51,7 +51,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 3年前（2023-12〜2024-11）
 
 - **2024-04 · [Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping](2024-2404.19429-lancet.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   MoE学習の全対全通信をエキスパートだけでなく非MoE計算と重み勾配計算まで学習グラフ全体で重ね、最大1.3倍高速化する。
 
 ### 4年前（2022-12〜2023-11）

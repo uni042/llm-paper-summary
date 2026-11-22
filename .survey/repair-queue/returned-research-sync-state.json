@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "8f05225556688afe2964ce059b1bb0767ced3bde",
+  "base_commit": "ca2b10d6d923c4556490dfb405184caaa59b9141",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -636,6 +636,7 @@
     "2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-cot-compression.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
+    "2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context-serving.json",
     "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
     "2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.json",
     "2026-2609.09989-stable-answers-unfinished-reasoning-self-consensus-early-exit-signal.json",
@@ -647,6 +648,7 @@
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
     "2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-energy-and-performance-of-llm-test-time-scaling.json",
+    "2026-2609.21483-weave-fine-grained-dynamic-sm-scheduling-in-an-moe-megakernel-for-compute-communication-overlap.json",
     "2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-language-models.json",
     "2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-agentic-programs.json",
     "2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-llm-serving.json",
@@ -662,6 +664,7 @@
     "2026-2609.30884-cachereforge-bounded-recovery-for-stale-kv-caches-under-evolving-adapters.json",
     "2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.json",
     "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json",
+    "2026-2609.31975-model-casting-and-low-parameter-gating-towards-more-sparsely-activated-ffns.json",
     "2026-2609.32114-empowering-hybrid-attention-models-on-npus.json",
     "2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agent-llms.json",
     "2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.json",
@@ -682,9 +685,11 @@
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
     "2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterogeneous-pim-architectures.json",
     "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json",
+    "2026-2609.34867-p4q-co-designing-token-pruning-and-quantization-for-vision-language-model-acceleration.json",
     "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json",
     "2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.json",
     "2026-2609.35569-beyond-energy-when-sustainability-dimensions-reshape-llm-serving-decisions.json",
+    "2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.json",
     "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json",
     "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
     "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json",
@@ -48156,6 +48161,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.07008": {
+      "order": [
+        "2026-11-22T05:06:13+00:00",
+        "2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.21483": {
+      "order": [
+        "2026-11-22T05:06:59+00:00",
+        "2026-2609.21483-weave-fine-grained-dynamic-sm-scheduling-in-an-moe-megakernel-for-compute-communication-overlap.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.31975": {
+      "order": [
+        "2026-11-22T05:07:44+00:00",
+        "2026-2609.31975-model-casting-and-low-parameter-gating-towards-more-sparsely-activated-ffns.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34867": {
+      "order": [
+        "2026-11-22T05:08:29+00:00",
+        "2026-2609.34867-p4q-co-designing-token-pruning-and-quantization-for-vision-language-model-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.35817": {
+      "order": [
+        "2026-11-22T05:09:13+00:00",
+        "2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60651,6 +60701,21 @@
     "arxiv:2609.02780": [
       "papers/inference/99-other-inference-systems/2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-underst.md",
       "papers/inference/99-other-inference-systems/2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-underst.md"
+    ],
+    "arxiv:2609.07008": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context.md"
+    ],
+    "arxiv:2609.21483": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.21483-weave-fine-grained-dynamic-sm-scheduling-in-an-moe-megakernel-for-comput.md"
+    ],
+    "arxiv:2609.31975": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.31975-model-casting-and-low-parameter-gating-towards-more-sparsely-activated-f.md"
+    ],
+    "arxiv:2609.34867": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.34867-p4q-co-designing-token-pruning-and-quantization-for-vision-language-mode.md"
+    ],
+    "arxiv:2609.35817": [
+      "papers/inference/99-other-inference-systems/2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.md"
     ]
   }
 }

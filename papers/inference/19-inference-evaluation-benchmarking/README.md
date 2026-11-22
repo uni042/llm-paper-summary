@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（193本）
+## 自動生成の論文一覧（194本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -221,6 +221,10 @@
 - **2026-09 · [PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving](2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21725505) ・ リポジトリ内被引用：0  
   単一H100 NVL上でvLLMとTensorRT-LLMへ同じ要求列を送り、接頭辞キャッシュそのものの効果、容量超過、要求スケジューリングの差を切り分ける実測ベンチマーク。
+
+- **2026-09 · [P4Q: Co-designing Token Pruning and Quantization for Vision-Language Model Acceleration](2026-2609.34867-p4q-co-designing-token-pruning-and-quantization-for-vision-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疑似量子化した射影特徴で視覚トークンを選び、同じ選択で量子化調整を行う共同設計により、4ビット化と88.9パーセント枝刈りを併用しても性能を保ちながら推論を2.8倍速くする方式。
 
 - **2026-09 · [Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving](2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

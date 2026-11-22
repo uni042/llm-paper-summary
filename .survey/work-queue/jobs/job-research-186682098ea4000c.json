@@ -35,10 +35,15 @@
   "selection_reason": "専門並列MoE推論のメガカーネル内で層ごと・GPUごとにルーティング結果から通信と計算のSM配分を動的に決めるWeaveが、H100×4でMoE層2.89倍・端到端1.33倍の高速化を示す、MoE推論スケジューリングへの直接の技術的貢献である。",
   "semantic_scholar_id": "4b143899db653ab727b92443b728e73a8749fdc4",
   "source_url": "https://arxiv.org/abs/2609.21483",
-  "status": "ready",
+  "status": "superseded",
   "title": "Weave: Fine-Grained Dynamic SM Scheduling in an MoE Megakernel for Compute-Communication Overlap",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T05:10:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.21483-weave-fine-grained-dynamic-sm-scheduling-in-an-moe-megakernel-for-comput.md",
+  "represented_canonical_id": "arXiv:2609.21483",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

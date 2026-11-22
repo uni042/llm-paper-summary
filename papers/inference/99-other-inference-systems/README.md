@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1232本）
+## 自動生成の論文一覧（1233本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1337,6 +1337,10 @@
 - **2026-09 · [Maverick: Private and Verifiable LLM Inference Made Practical via Matrix-Vector Multiplication Delegation](2026-2609.10264-maverick-private-and-verifiable-llm-inference-made-practical-via-matrix-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行列ベクトル積の委譲に、符号とスパースチャレンジによる情報理論的に健全な検証とLPN系マスクのプライバシーを組み合わせ、サーバ負担ほぼゼロで私的かつ検証可能なLLM推論を実現するMaverickの研究。
+
+- **2026-09 · [Less Uniform Discrete Diffusion is More Powerful and Scalable](2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.md)**  
+  実装：[✓](https://github.com/FMD-NEXT/LUDI) ・ リポジトリ内被引用：0  
+  一様拡散の損失から一様化項を取り除いたLess Uniform損失とトークン単位の時刻埋め込みで、一様拡散言語モデルを7B規模の複雑な推論まで拡張可能にした枠組み。
 
 - **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

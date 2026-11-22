@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（599本）
+## 自動生成の論文一覧（600本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -857,6 +857,10 @@
 - **2026-09 · [Rethinking Heterogeneous System Disaggregation for Subquadratic Attention](2026-2609.13134-subquadratic-attention-heterogeneous-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SQDは劣二次注意LLMを状態の文脈依存性で分割し、増大KV処理をDRAM GPU、固定状態の劣二次注意+FFNをSRAM専用ASICへ置いて低遅延推論の電力効率を高める。
+
+- **2026-09 · [RedKnot-MLA: Multi-Head Offline-Online Reuse for DeepSeek-V4 Long-Context Serving](2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context.md)**  
+  実装：[✓](https://github.com/rednote-machine-learning/RedKnot) ・ リポジトリ内被引用：0  
+  潜在KVを割らずに論理頭の寄与をオフライン成果物化し、位置直しと大域頭の再計算で結合する再利用方式で、長文脈の初回遅延を最大3.84倍速くする設計と証拠境界の報告。
 
 - **2026-09 · [QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching](2026-2609.36760-quantmla-function-aligned-dual-path-quantization-for-low-bit-mla-kv-cach.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2043,7 +2047,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：817  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：818  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  

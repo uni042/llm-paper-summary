@@ -234,7 +234,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：36  
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
@@ -344,7 +344,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：59  
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
