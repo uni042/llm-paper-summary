@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-22T03:48:20+00:00",
-  "record_count": 6850,
+  "updated_at": "2026-11-22T04:02:08+00:00",
+  "record_count": 6851,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -106496,6 +106496,29 @@
       ],
       "borderline_recheck_count": 0,
       "title": "What Dense Graph Do You Need for Self-Attention?"
+    },
+    "arXiv:2606.09019": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.09019",
+      "identity_tokens": [
+        "arXiv:2606.09019"
+      ],
+      "reason": "パッチ化による大域KVキャッシュ削減と自己回帰ステップ削減は推論効率の機構だが、対象は音声コーデックトークンのテキスト音声合成専用で、評価も単語誤り率と話者類似度であり、言語モデル推論基盤への直接の適用証拠がないため境界として保留する",
+      "first_checked_at": "2026-11-22T04:02:08+00:00",
+      "last_checked_at": "2026-11-22T04:02:08+00:00",
+      "linked_from": [
+        "_",
+        "a",
+        "c",
+        "e",
+        "h",
+        "n",
+        "p",
+        "r",
+        "s"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TLDR: Compressing Audio Tokens for Efficient Autoregressive Text-to-Speech"
     }
   }
 }

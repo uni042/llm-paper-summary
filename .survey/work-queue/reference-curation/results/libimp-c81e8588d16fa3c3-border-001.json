@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c81e8588d16fa3c3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.09019",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.09019",
+    "identity_tokens": [
+      "arXiv:2606.09019"
+    ],
+    "reason": "パッチ化による大域KVキャッシュ削減と自己回帰ステップ削減は推論効率の機構だが、対象は音声コーデックトークンのテキスト音声合成専用で、評価も単語誤り率と話者類似度であり、言語モデル推論基盤への直接の適用証拠がないため境界として保留する",
+    "first_checked_at": "2026-11-22T04:02:08+00:00",
+    "last_checked_at": "2026-11-22T04:02:08+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TLDR: Compressing Audio Tokens for Efficient Autoregressive Text-to-Speech"
+  },
+  "processed_at": "2026-11-22T04:02:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c81e8588d16f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
