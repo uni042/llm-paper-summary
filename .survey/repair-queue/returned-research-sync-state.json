@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d4aa71e147203ac56fe6d203c57ffdf3d77fb865",
+  "base_commit": "8ecc141a65bd91c87bddcbfc14fe85a5e3f80bfd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -58,6 +58,7 @@
     "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json",
     "2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-models.json",
     "2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.json",
+    "2024-2405.17052-selfcp-compressing-over-limit-prompt-via-the-frozen-large-language-model-itself.json",
     "2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-language-models-using-second-order-matrix-derivative-in.json",
     "2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.json",
     "2024-2406.00030-large-language-model-pruning.json",
@@ -156,6 +157,7 @@
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
     "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json",
     "2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.json",
+    "2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retraining.json",
     "2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.json",
     "2025-2506.10446-fast-on-the-easy-deep-on-the-hard-efficient-reasoning-via-powered-length-penalty.json",
     "2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trails-and-preference-optimization.json",
@@ -167,6 +169,7 @@
     "2025-2506.23025-spectra-1-1-scaling-laws-and-efficient-inference-for-ternary-language-models.json",
     "2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommendation-by-register-tokens.json",
     "2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and-dataflow-flexible-accelerator.json",
+    "2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-with-optimal-feature-efficiency.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
     "2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.json",
@@ -187,6 +190,7 @@
     "2025-2509.13201-scaling-up-throughput-oriented-llm-inference-applications-on-heterogeneous-opportunistic.json",
     "2025-2509.15148-atts-asynchronous-test-time-scaling-via-conformal-prediction.json",
     "2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-for-parameter-efficient-fine-tuning-on-large-language-models.json",
+    "2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-augmented-generation.json",
     "2025-2509.20624-fs-dfm-fast-and-accurate-long-text-generation-with-few-step-diffusion-language-models.json",
     "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
     "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json",
@@ -256,6 +260,7 @@
     "2026-2601.11200-faq-mitigating-quantization-error-via-regenerating-calibration-data-with-family-aware-quantization.json",
     "2026-2601.11553-percache-predictive-hierarchical-cache-for-rag-applications-on-mobile-devices.json",
     "2026-2601.12247-plan-verify-and-fill-a-structured-parallel-decoding-approach-for-diffusion-language-models.json",
+    "2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-batch-llm-acceleration-on-edge-device.json",
     "2026-2601.12698-a-two-stage-gpu-kernel-tuner-combining-semantic-refactoring-and-search-based-optimization.json",
     "2026-2601.14277-which-quantization-should-i-use-unified-evaluation-of-llamacpp-quantization.json",
     "2026-2601.14549-qmc-efficient-slm-edge-inference-via-outlier-aware-quantization-and-emergent-memories-co-design.json",
@@ -47806,6 +47811,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2405.17052": {
+      "order": [
+        "2026-11-22T03:56:25+00:00",
+        "2024-2405.17052-selfcp-compressing-over-limit-prompt-via-the-frozen-large-language-model-itself.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.08436": {
+      "order": [
+        "2026-11-22T03:57:16+00:00",
+        "2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retraining.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.03340": {
+      "order": [
+        "2026-11-22T03:58:07+00:00",
+        "2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-with-optimal-feature-efficiency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.17486": {
+      "order": [
+        "2026-11-22T03:58:58+00:00",
+        "2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-augmented-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.12298": {
+      "order": [
+        "2026-11-22T03:59:49+00:00",
+        "2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-batch-llm-acceleration-on-edge-device.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60161,6 +60211,21 @@
     "arxiv:2602.13595": [
       "papers/inference/09-kernel-runtime-compilation/2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasonin.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasonin.md"
+    ],
+    "arxiv:2405.17052": [
+      "papers/inference/99-other-inference-systems/2024-2405.17052-selfcp-compressing-over-limit-prompt-via-the-frozen-large-language-model.md"
+    ],
+    "arxiv:2506.08436": [
+      "papers/inference/99-other-inference-systems/2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retr.md"
+    ],
+    "arxiv:2507.03340": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-wit.md"
+    ],
+    "arxiv:2509.17486": [
+      "papers/inference/99-other-inference-systems/2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-aug.md"
+    ],
+    "arxiv:2601.12298": [
+      "papers/inference/17-pim-near-data-acceleration/2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-b.md"
     ]
   }
 }

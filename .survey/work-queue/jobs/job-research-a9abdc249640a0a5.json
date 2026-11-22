@@ -35,10 +35,15 @@
   "selection_reason": "SelfCPは凍結したLLM自身で過長プロンプトを密ベクトルトークンへ圧縮し、12倍のプロンプトを置換してメモリコスト削減と推論スループット向上を両立させているため。",
   "semantic_scholar_id": "3e8d7d78b30246a01b0ec7423d154982428fd25d",
   "source_url": "https://arxiv.org/abs/2405.17052",
-  "status": "ready",
+  "status": "superseded",
   "title": "SelfCP: Compressing over-limit prompt via the frozen large language model itself",
   "type": "research",
   "venue": "Information Processing & Management",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-22T04:01:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2405.17052-selfcp-compressing-over-limit-prompt-via-the-frozen-large-language-model.md",
+  "represented_canonical_id": "arXiv:2405.17052",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

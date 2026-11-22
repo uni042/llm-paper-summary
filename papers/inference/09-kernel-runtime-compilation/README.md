@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（301本）
+## 自動生成の論文一覧（302本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -987,6 +987,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [PoTPTQ: A Two-step Power-of-Two Post-training for LLMs](2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みを2の冪で表す量子化のスケールを、重みだけのグリッド探索と少量較正での残差学習の2段で決め、ビット操作の逆量子化で推論も速くする学習後量子化。3.25ビットで一様量子化の最先端を上回り、逆量子化は最大3.67倍高速。
+
+- **2025-07 · [Degrees of Freedom for Linear Attention: Distilling Softmax Attention with Optimal Feature Efficiency](2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-wit.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意カーネルの統計的自由度から層ごとの実効次元を推定し、同じ計算予算のまま線形注意の特徴次元を層別に配分し直すことで、ソフトマックス注意から線形注意への蒸留精度を上げる次元選択法。
 
 - **2025-06 · [Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models](2025-2506.23025-spectra-1-1-scaling-laws-and-efficient-inference-for-ternary-language-mo.md)**  
   実装：[✓](https://github.com/NolanoOrg/TriRun) ・ リポジトリ内被引用：0  

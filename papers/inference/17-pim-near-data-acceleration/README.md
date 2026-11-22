@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（38本）
+## 自動生成の論文一覧（39本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -114,6 +114,10 @@
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
+
+- **2026-01 · [CD-PIM: A High-Bandwidth and Compute-Efficient LPDDR5-Based PIM for Low-Batch LLM Acceleration on Edge-Device](2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-b.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LPDDR5の各バンクを4疑似バンクへ分割して内部帯域を広げ、行列ベクトル積と行列積の同時実行モードと非対称なKVキャッシュ配置を組み合わせ、端末の低バッチ推論のデコードを高速化するメモリ内計算アーキテクチャ。
 
 - **2025-12 · [Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference](2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

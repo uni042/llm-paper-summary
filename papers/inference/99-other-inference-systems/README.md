@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1216本）
+## 自動生成の論文一覧（1219本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3628,6 +3628,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
 
+- **2025-09 · [AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation](2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-aug.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  中間層の注意で文書の関連度を測り、累積注意が閾値へ達するまでだけ文書を残す適応型圧縮で、検索拡張生成の正解率を無圧縮より上げながら入力を17倍に圧縮し遅延を半分にする方式。
+
 - **2025-09 · [Amdahl's Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization](2025-d58c83365862-amdahl-s-law-for-llms-a-throughput-centric-analysis-of-extreme-llm-quant.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者はTransformerの演算を、極端な量子化で行列乗算を置換できる射影部分と、置換しにくい注意ヘッド内部に分ける。さらにAmdahl則で「改善できる部分が元の実行時間の何割か」を明示し、13種類のGPT・OPT・LLaMA構成を、クラウド向け256×256およびエッジ向け32×32のシストリック配列でサイクル精度解析した。
@@ -3739,6 +3743,10 @@
 - **2025-06 · [Power Law Guided Dynamic Sifting for Efficient Attention](2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意スコアの分位点が冪乗則で減衰する性質を使い、ウォームアップで当てはめた曲線からしきい値を予測して注意を間引く手法。上位k件の選択を要素ごとの比較へ置き換え、値ベクトルの転送量を31パーセント削減した。
+
+- **2025-06 · [Olica: Efficient Structured Pruning of Large Language Models without Retraining](2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retr.md)**  
+  実装：[✓](https://github.com/BetterTMrR/LLM-Olica) ・ リポジトリ内被引用：0  
+  注意機構の二つの行列積を一体として主成分分析で圧縮し、フィードフォワードの残差誤差を低ランク線形較正で戻すことで、再学習なしに大規模言語モデルを構造化枝刈りする方式。
 
 - **2025-06 · [MoTE: Mixture of Ternary Experts for Memory-efficient Large Multimodal Models](2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4470,6 +4478,10 @@
   実装：[✓](https://github.com/ybai-nlp/CItruS) ・ リポジトリ内被引用：0  
   文書文脈の注意だけで状態を追い出すと課題に要る情報が落ちる問題を示し、最終の指示文の注意で選ぶ専用または共有のキャッシュを併設することで、百万トークン文書の合言葉検索を全件成功させ、針探し課題のルージ一を標準方式の十五・二から六十三・五へ改善したと報告した。
 
+- **2024-05 · [SelfCP: Compressing Over-Limit Prompt via the Frozen Large Language Model Itself](2024-2405.17052-selfcp-compressing-over-limit-prompt-via-the-frozen-large-language-model.md)**  
+  実装：[✓](https://github.com/jungao1106/SelfCP) ・ リポジトリ内被引用：0  
+  凍結した対象モデル自身に超過分だけを12倍のメモリトークンへ圧縮させ、残りは無加工で読ませることで、学習可能パラメータ17Mのまま長文プロンプトの品質と処理可能量を回復する圧縮方式。
+
 - **2024-05 · [OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning](2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md)**  
   実装：[✓](https://github.com/OpenNLG/OpenBA-v2) ・ リポジトリ内被引用：0  
   OpenBA-V2は、中国語・英語を中心に学習したencoder-decoder型のOpenBA（15Bパラメータ）を、3.4Bへ縮小するための多段階圧縮・継続事前学習の研究である。元モデルから約77.3%のパラメータを削除しながら、層単位、行列の幅方向、語彙埋め込みという異なる削減対象を順番に処理する。
@@ -4545,11 +4557,11 @@
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：97  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：98  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：78  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：79  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
