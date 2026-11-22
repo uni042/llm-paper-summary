@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cefd95198eeb6a0f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.10525",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.10525",
+    "identity_tokens": [
+      "arXiv:2506.10525"
+    ],
+    "reason": "AdaptiveLLMは推論モデルの思考連鎖の長さから課題難易度を推定し、CodeBERTとXGBoostでコード生成ごとに費用対効果の良いモデルを選ぶモデル選択・ルーティングの研究であり、ComplexityNet比でpass@1が7.86%向上し資源消費が88.9%減るなどの結果も、選択される側のモデルの品質と価格の比較である。LLM推論システム自体（サービング基盤、KVキャッシュ、スケジューリング、バッチ処理、並列実行、カーネル）の機構を新しく提案も測定もしておらず、推論システムへの直接貢献はないため、読解後の境界事例としてDiscoveryへ回す。",
+    "first_checked_at": "2026-11-22T08:19:50+00:00",
+    "last_checked_at": "2026-11-22T08:19:50+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdaptiveLLM: A Framework for Selecting Optimal Cost-Efficient LLM for Code-Generation Based on CoT Length"
+  },
+  "processed_at": "2026-11-22T08:19:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cefd95198eeb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

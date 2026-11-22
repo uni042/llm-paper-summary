@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52f673a33394c658-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.22992",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.22992",
+    "identity_tokens": [
+      "arXiv:2509.22992"
+    ],
+    "reason": "T-Tamerは多モデルカスケードと早期終了における精度と遅延のトレードオフを、recall付き方策の最適性として証明する一般的な理論枠組みであり、対象はvisionとNLPのearly-exit workloadと合成データが中心で、LLM推論システムへの直接の機構的・システム的貢献（デコード、キャッシュ、スケジューリングの実測改善）はないため境界と判断した",
+    "first_checked_at": "2026-11-22T08:19:49+00:00",
+    "last_checked_at": "2026-11-22T08:19:49+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "T-TAMER: Provably Taming Trade-offs in ML Serving"
+  },
+  "processed_at": "2026-11-22T08:19:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52f673a33394",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
