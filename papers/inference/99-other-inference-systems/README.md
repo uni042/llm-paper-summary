@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1273本）
+## 自動生成の論文一覧（1276本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -64,6 +64,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   視覚・言語・行動モデル（vision-language-action モデル; VLA）は、画像と自然言語の指示を統合し、ロボットの連続した操作を生成する。
 
+- **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
+
 - **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
   実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：6  
   入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
@@ -83,10 +87,6 @@
 - **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：6  
   コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
-
-- **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
 
 - **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1982,6 +1982,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ブロックごとの拡大率、層ごとの符号帳の組の探索、活性で重み付けた類似度による昇格配分を組み合わせた学習後量子化の方法論で、推奨動作点では六・五ビットで八・〇ビットの八ビット基準より重み再構成誤差が低く、一・五ビット節約できた。完全な評価は別論文に委ねられる。
 
+- **2026-05 · [Roll Out and Roll Back: Diffusion LLMs are Their Own Efficiency Teachers](2026-2605.16941-roll-out-and-roll-back-diffusion-llms-are-their-own-efficiency-teachers.md)**  
+  実装：[✓](https://github.com/Feng-Hong/WINO-DLLM/tree/WINO-plus) ・ リポジトリ内被引用：0  
+  拡散言語モデルの並列デコードを取り消し可能にし、検証で得た確定順序を学習へ戻すことで、GSM8Kで正解率を上げながらデコードステップを約7分の1へ減らす二段の効率化。
+
 - **2026-05 · [Remember to Forget: Gated Adaptive Positional Encoding](2026-2605.10414-remember-to-forget-gated-adaptive-positional-encoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   回転幾何を変えず、クエリ側の収縮ゲートで不要な遠方文脈を指数的に弱め、キー側のランドマーク保護で必要な遠方トークンを残す位置符号化で、八倍の文脈外挿とヤーン併用時の一万六千トークン検索の大幅な改善を示した。
@@ -2089,6 +2093,10 @@
 - **2026-05 · [InfoQuant: Shaping Activation Distributions for Low-Bit LLM Quantization](2026-2605.26175-infoquant-shaping-activation-distributions-for-low-bit-llm-quantization.md)**  
   実装：[✓](https://github.com/LLIKKE/InfoQuant) ・ リポジトリ内被引用：0  
   InfoQuantは、LLMの低ビット事後量子化（post-学習 量子化; PTQ）における活性値の量子化誤差を、単純な外れ値除去ではなく、量子化器に入力する分布の形から最適化する方式である。
+
+- **2026-05 · [Importance-Guided Basis Selection for Low-Rank Decomposition of Large Language Models](2026-2605.01627-importance-guided-basis-selection-for-low-rank-decomposition-of-large-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ランク圧縮の基底選択を特異値の大きさから、勾配とヘッセ対角で推定する損失増加の重要度へ置き換え、深い圧縮でも正解率の崩れを緩やかにする基底選択方式BSI。
 
 - **2026-05 · [HybridServe: Stall-Free Distributed Disaggregated LLM Inference with Hybrid KVCache Buffering](2026-1e016ba4edaa-hybridserve-stall-free-distributed-disaggregated-llm-inference-with-hybr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2329,6 +2337,10 @@
 - **2026-04 · [HeadRouter: Dynamic Head-Weight Routing for Task-Adaptive Audio Token Pruning in Large Audio Language Models](2026-2604.23717-headrouter-dynamic-head-weight-routing-for-task-adaptive-audio-token-pru.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声トークン枝刈りで全ヘッド平均をやめ、ヘッド選択性のばらつきから入力の意味系・音響系の度合いを推定してヘッド重みを動的に混合する学習不要の方式を提案し、30パーセント削除でも未圧縮を上回る品質を示した研究。
+
+- **2026-04 · [Folding Tensor and Sequence Parallelism for Memory-Efficient Transformers](2026-2604.26294-folding-tensor-and-sequence-parallelism-for-memory-efficient-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テンソル並列と系列並列を一つの装置軸へ折り畳み、各装置が重みと系列の両方を分割保持することで、長文脈ほど効くメモリ削減とスループット改善を得る並列化方式。
 
 - **2026-04 · [Faster LLM Inference via Sequential Monte Carlo](2026-2604.15672-faster-llm-inference-via-sequential-monte-carlo.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/smcsd) ・ リポジトリ内被引用：0  
@@ -2989,7 +3001,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：143  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：144  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -5061,11 +5073,11 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：370  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：371  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：290  
+  実装：✓ ・ リポジトリ内被引用：291  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

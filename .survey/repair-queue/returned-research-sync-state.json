@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fe513a9d84dea3de2e5f53aaab69457d5b547e54",
+  "base_commit": "1a6822423ba3c379df65f43253fc02c0066005e0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -468,12 +468,15 @@
     "2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.json",
     "2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-context-attention-serving.json",
     "2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-llm-based-attribute-value-extraction.json",
+    "2026-2604.26294-folding-tensor-and-sequence-parallelism-for-memory-efficient-transformers.json",
     "2026-2604.26378-coquant-joint-weight-activation-subspace-projection-for-mixed-precision-llms.json",
     "2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consumer-grade-llm-inference.json",
     "2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inference.json",
+    "2026-2605.01627-bsi-importance-guided-basis-selection-for-low-rank-decomposition.json",
     "2026-2605.01858-decouple-and-cache-kv-cache-construction-for-streaming-video-understanding.json",
     "2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hosted-open-weight-llm-apis.json",
     "2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.json",
+    "2026-2605.03644-adapshot-adaptive-many-shot-in-context-learning-with-semantic-aware-kv-cache-reuse.json",
     "2026-2605.04075-retentivekv-state-space-memory-for-uncertainty-aware-multimodal-kv-cache-eviction.json",
     "2026-2605.04084-fasq-flexible-accelerated-subspace-quantization-for-calibration-free-llm-compression.json",
     "2026-2605.04215-predict-then-diffuse-adaptive-response-length-for-compute-budgeted-inference-in-diffusion-llms.json",
@@ -499,10 +502,12 @@
     "2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.json",
     "2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation-decomposition-for-efficient-llm-inference.json",
     "2026-2605.14217-preft-prefill-only-finetuning-for-efficient-inference.json",
+    "2026-2605.14305-fef-dllm-factorization-error-free-discrete-diffusion-language-model-via-speculative-decoding.json",
     "2026-2605.14310-cords-coreset-based-representative-and-diverse-selection-for-streaming-video-understanding.json",
     "2026-2605.14929-a-hardware-aware-per-layer-methodology-for-post-training-quantization-of-large-language-models.json",
     "2026-2605.15621-lrcp-low-rank-compressibility-guided-visual-token-pruning-for-efficient-lvlms.json",
     "2026-2605.15913-towards-generalization-of-block-attention-via-automatic-segmentation-and-block-distillation.json",
+    "2026-2605.16941-roll-out-and-roll-back-diffusion-llms-are-their-own-efficiency-teachers.json",
     "2026-2605.17653-llmforge-multi-backend-hardware-aware-neural-architecture-search-with-infinite-head-attention-for-edge-language-models.json",
     "2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.json",
     "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json",
@@ -48946,6 +48951,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.26294": {
+      "order": [
+        "2026-11-22T10:15:22+00:00",
+        "2026-2604.26294-folding-tensor-and-sequence-parallelism-for-memory-efficient-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.01627": {
+      "order": [
+        "2026-11-22T10:16:31+00:00",
+        "2026-2605.01627-bsi-importance-guided-basis-selection-for-low-rank-decomposition.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.03644": {
+      "order": [
+        "2026-11-22T10:17:40+00:00",
+        "2026-2605.03644-adapshot-adaptive-many-shot-in-context-learning-with-semantic-aware-kv-cache-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.14305": {
+      "order": [
+        "2026-11-22T10:18:48+00:00",
+        "2026-2605.14305-fef-dllm-factorization-error-free-discrete-diffusion-language-model-via-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.16941": {
+      "order": [
+        "2026-11-22T10:19:57+00:00",
+        "2026-2605.16941-roll-out-and-roll-back-diffusion-llms-are-their-own-efficiency-teachers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61757,6 +61807,21 @@
     "arxiv:2604.17627": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-l.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-l.md"
+    ],
+    "arxiv:2604.26294": [
+      "papers/inference/99-other-inference-systems/2026-2604.26294-folding-tensor-and-sequence-parallelism-for-memory-efficient-transformer.md"
+    ],
+    "arxiv:2605.01627": [
+      "papers/inference/99-other-inference-systems/2026-2605.01627-importance-guided-basis-selection-for-low-rank-decomposition-of-large-la.md"
+    ],
+    "arxiv:2605.03644": [
+      "papers/inference/13-sparse-attention/2026-2605.03644-adapshot-adaptive-many-shot-in-context-learning-with-semantic-aware-kv-c.md"
+    ],
+    "arxiv:2605.14305": [
+      "papers/inference/05-speculative-decoding-moe/2026-2605.14305-factorization-error-free-discrete-diffusion-language-model-via-speculati.md"
+    ],
+    "arxiv:2605.16941": [
+      "papers/inference/99-other-inference-systems/2026-2605.16941-roll-out-and-roll-back-diffusion-llms-are-their-own-efficiency-teachers.md"
     ]
   }
 }

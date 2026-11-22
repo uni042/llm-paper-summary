@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（213本）
+## 自動生成の論文一覧（214本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -509,6 +509,10 @@
 - **2026-05 · [CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection](2026-2605.16839-compactattention-accelerating-chunked-prefill-with-block-union-kv-select.md)**  
   実装：[✓](https://github.com/jiwonsong-dev/CompactAttention) ・ リポジトリ内被引用：0  
   CompactAttentionは、長文脈の大規模言語モデル（LLM）の分割入力処理（chunked プリフィル）を高速化するため、疎注意（sparse 注意機構）の「どのKVブロックを選ぶか」と「選んだKVをどのカーネルで計算するか」を切り離す方式である。
+
+- **2026-05 · [AdapShot: Adaptive Many-Shot In-Context Learning with Semantic-Aware KV Cache Reuse](2026-2605.03644-adapshot-adaptive-many-shot-in-context-learning-with-semantic-aware-kv-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プローブの出力エントロピーでクエリごとに最小ショット数を決め、意味的関連度で並べ替えた例示のKVキャッシュを位置再符号化で再利用することで、多ショット文脈内学習の精度と速度を同時に上げる推論方式。
 
 - **2026-04 · [Stream-CQSA: Exact Out-of-Memory Recovery for Attention](2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
