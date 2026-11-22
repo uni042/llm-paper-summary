@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Secure Transformer Inference Protocol",
+      "source_url": "https://arxiv.org/abs/2312.00025",
+      "year": 2023,
+      "published": "2023-11-14",
+      "venue": null,
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Security of model parameters and user data is critical for Transformer-based services, such as ChatGPT. While recent strides in secure two-party protocols have successfully addressed security concerns in serving Transformer models, their adoption is practically infeasible due to the prohibitive cryptographic overheads involved. Drawing insights from our hands-on experience in developing two real-world Transformer-based services, we identify the inherent efficiency bottleneck in the two-party assumption. To overcome this limitation, we propose a novel three-party threat model. Within this framework, we design a semi-symmetric permutation-based protection scheme and present STIP, the first secure Transformer inference protocol without any inference accuracy loss. Experiments on representative Transformer models in real systems show that STIP has practical security and outperforms state-of-the-art secure two-party protocols in efficiency by millions of times.",
+      "identifiers": [
+        "SemanticScholar:8d0de988c4fff37a06e7d5ec73e61595702fd780"
+      ],
+      "semantic_scholar_id": "8d0de988c4fff37a06e7d5ec73e61595702fd780",
+      "canonical_id": "arXiv:2312.00025",
+      "arxiv_id": "2312.00025",
+      "authors": [
+        "Mu Yuan",
+        "Lan Zhang",
+        "Xiang-yang Li"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SYMPHONY: Improving Memory Management for LLM Inference Workloads",
+      "source_url": "https://arxiv.org/abs/2412.16434",
+      "year": 2024,
+      "published": "2024-12-21",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly being deployed in applications such as chatbots, code editors, and conversational agents. A key feature of LLMs is their ability to engage in multi-turn interactions with humans or external tools, enabling a wide range of tasks. Each new request in a multi-turn interaction depends on the intermediate state, specifically the key-value (K,V) caches, from previous requests in the ongoing interaction. Existing serving engines either recompute the K,V caches or offload them to main memory. Profiling reveals that recomputation can result in over 99% of processed tokens being redundant. On the other hand, offloading K,V caches from GPU memory makes inference serving stateful, leading to load imbalances across the cluster. To address these challenges, we developed SYMPHONY. SYMPHONY leverages the observation that multi-turn work loads provide additional hints that allow K,V caches to be migrated off the critical serving path. By utilizing these hints, SYMPHONY dynamically migrates K,V caches to enable finegrained scheduling of inference requests. Our experiments demonstrate that SYMPHONY can handle over 8x the number of requests compared to state-of-the-art baselines, with a similar latency profile.",
+      "identifiers": [
+        "SemanticScholar:b0a8cf33c94ba3d951ce599ac4760a2eded16997"
+      ],
+      "semantic_scholar_id": "b0a8cf33c94ba3d951ce599ac4760a2eded16997",
+      "canonical_id": "arXiv:2412.16434",
+      "arxiv_id": "2412.16434",
+      "doi": "10.48550/arXiv.2412.16434",
+      "authors": [
+        "Saurabh Agarwal",
+        "Anyong Mao",
+        "Aditya Akella",
+        "S. Venkataraman"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 701,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Inference for Large Multimodal Models",
+      "source_url": "https://www.semanticscholar.org/paper/fccae56fabf060d73cec004e485ac401bfefae8e",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e"
+      ],
+      "semantic_scholar_id": "fccae56fabf060d73cec004e485ac401bfefae8e",
+      "canonical_id": "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e",
+      "authors": [
+        "Chao-Qun Yang",
+        "Yuan-Dao Zhang",
+        "Xi-Ying Huang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大規模マルチモーダルモデルの推論がLLMバックボーンの自己回帰デコードで遅い問題に対し、視覚埋め込みやKVキャッシュ等のマルチモーダル情報を活用した投機的デコードとドラフトモデルの整合技術を適用する研究で、推論高速化への直接貢献が要旨で確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5b075670c464",
+    "round": "libimp-5b075670c4642395-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5b075670c4642395-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5b075670c4642395-pre01.json",
+    "receipt": "sha256:db79f089e04c0e277541a52563698933b974657662a68470f29c625e0e34ad88"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5b075670c464",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

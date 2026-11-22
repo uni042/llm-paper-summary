@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Survey of Quantization in LLM: Unlocking Potential Hardware Efficiency",
+      "source_url": "https://doi.org/10.1007/s11390-026-5979-1",
+      "year": 2026,
+      "published": "2026-03-28",
+      "venue": "Journal of Computational Science and Technology",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:78b6b09e4c1ff709e0d557b22a0fa6cdee148af6"
+      ],
+      "semantic_scholar_id": "78b6b09e4c1ff709e0d557b22a0fa6cdee148af6",
+      "doi": "10.1007/s11390-026-5979-1",
+      "canonical_id": "DOI:10.1007/s11390-026-5979-1",
+      "authors": [
+        "Yi-Dong Chen",
+        "Kai Zheng",
+        "Zhen-Hua Guo",
+        "Qi-hao Zhang",
+        "Yonghua Zhang",
+        "Ji-Dong Zhai"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "出版社ページで確認した要旨では、LLMの量子化を事前学習・学習後量子化・推論時量子化まで体系的に整理し、低精度カーネル生成やメモリ・計算削減によるデプロイ効率化を主題としており、量子化という推論システム中核技術のサーベイとして直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MindFusion: Communication-Efficient Mobile-Cloud Orchestration for MLLMs",
+      "source_url": "https://doi.org/10.1109/FMSys72110.2026.00012",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "2026 IEEE 3rd International Workshop on Foundation Models for Cyber-Physical Systems & Internet of Things (FMSys)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-modal large language models (MLLMs) are transforming mobile devices, paving the way for revolutionary applications, such as intelligent personal assistants and innovative human-computer interaction paradigms. However, due to the resource constraints of mobile devices, existing approaches upload raw user data (e.g., images, videos) to remote servers for processing, raising critical privacy concerns, as multimedia data can inadvertently expose sensitive information, including users’ identities (e.g., facial features) and personal details (e.g., location, residential address). To address this, we propose MindFusion, a mobile-cloud cooperative paradigm that executes MLLM tasks while confining raw user data to local devices. MindFusion partitions MLLMs into mobile-resident frontend modules (processing raw inputs) and cloud-hosted backend modules (generating responses), transmitting only intermediate features to cloud servers. To mitigate communication overhead during collaborative inference, MindFusion introduces a decoding shortcut to eliminate per-token round-trip interactions and a representation compression module to reduce the traffic volume of intermediate results. We implement MindFusion on diverse hardware platforms. Evaluation results show that, compared to on-device inference, MindFusion reduces first-token latency by 87% and achieves up to 25 speedup in decoding. MindFusion reduces network overhead×by 70% without degrading model accuracy. Experimental results show that MindFusion presents a practical MLLM inference framework for mobile-cloud orchestration.",
+      "identifiers": [
+        "SemanticScholar:72f88421d4dc4594590e0acbc69744568bff17bd"
+      ],
+      "semantic_scholar_id": "72f88421d4dc4594590e0acbc69744568bff17bd",
+      "doi": "10.1109/FMSys72110.2026.00012",
+      "canonical_id": "DOI:10.1109/FMSys72110.2026.00012",
+      "authors": [
+        "Xuwang Zeng",
+        "Qian-Yi Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨ではモバイル端末とクラウドが協調してMLLMタスクを実行するMindFusionを提案し、生データを端末内に留める通信効率の高い編成でプライバシーと資源制約に対応しており、モバイル・クラウド推論オーケストレーションへの直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Symphony: Optimized DNN Model Serving using Deferred Batch Scheduling",
+      "source_url": "https://arxiv.org/abs/2308.07470",
+      "year": 2023,
+      "published": "2023-08-14",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Having large batch sizes is one of the most critical aspects of increasing the accelerator efficiency and the performance of DNN model inference. However, existing model serving systems cannot achieve adequate batch sizes while meeting latency objectives as these systems eagerly dispatch requests to accelerators to minimize the accelerator idle time. We propose Symphony, a DNN serving system that explores deferred batch scheduling to optimize system efficiency and throughput. Further, unlike other prior systems, Symphony's GPU usage is load-proportional: it consolidates workloads on the appropriate number of GPUs and works smoothly with cluster auto-scaling tools. Symphony consists of two core design points. First, Symphony defines a schedulable window in which a batch of inference requests can be dispatched. This window is computed in order to improve accelerator efficiency while meeting the request's SLO. Second, Symphony implements a scalable, low-latency, fine-grained coordination scheme across accelerators to dispatch and execute requests in the schedulable window. Through extensive scheduler-only benchmarks, we demonstrate that Symphony can schedule millions of requests per second and coordinate thousands of GPUs while also enabling robust autoscaling that adapts to workload changes. Symphony outperforms prior systems by achieving 5x higher goodput when given the same number of GPUs and 60% reduction in GPUs when given the same workload.",
+      "identifiers": [
+        "SemanticScholar:f10cc66ecc90a9d6dd2d8704e0faa941fbb6348d"
+      ],
+      "semantic_scholar_id": "f10cc66ecc90a9d6dd2d8704e0faa941fbb6348d",
+      "canonical_id": "arXiv:2308.07470",
+      "arxiv_id": "2308.07470",
+      "authors": [
+        "Lequn Chen",
+        "Wei-Xin Deng",
+        "Anirudh Canumalla",
+        "Yu Xin",
+        "Dan-Yang Zhuo",
+        "M. Philipose",
+        "Arvind Krishnamurthy"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1196,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨ではDNNモデルサービングで遅延制約を満たしながらバッチサイズを確保できない問題に対し、遅延バッチスケジューリングでスループットと効率を高めるサービングシステムSymphonyを提案しており、推論サービングのスケジューリングへの直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hybrid Parallel Inference for Large Model on Heterogeneous Clusters for High Throughput",
+      "source_url": "https://doi.org/10.1109/ICPADS60453.2023.00087",
+      "year": 2023,
+      "published": "2023-12-17",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In high-throughput intelligent computing scenarios, multi-device parallelism strategies based on data parallelism or pipeline parallelism have been extensively utilized to accelerate large deep neural network model inference. Data parallelism offers nearly linear improvement in inference speed, but it is limited by the memory capacity of a single device which constrains the model size. On the other hand, pipeline parallelism can support larger models, but the total communication of the activations among devices is high, which limits the improvement of the inference speed. To address the demand for efficient model inference in high-throughput heterogeneous scenarios, we proposes a hybrid parallelism strategy that combines data parallelism and pipeline parallelism. The strategy involves grouping heterogeneous device clusters and then employing inter-group data parallelism along with intra-group pipeline parallelism. Moreover, we propose an algorithm to find an optimal hybrid parallel inference strategy with maximum throughput. The control variables of the strategy includes the number of groups, group-device assignments and model partition ratios. Our experimental evaluation demonstrates that compared to PipeEdge, a pipeline parallel inference framework for heterogeneous cluster, our strategy can achieve 1.7× −3.4× acceleration in an 8-device heterogeneous cluster without loss of accuracy.",
+      "identifiers": [
+        "SemanticScholar:652fdd6c1a4e8d8dce488257b3855939be160e82"
+      ],
+      "semantic_scholar_id": "652fdd6c1a4e8d8dce488257b3855939be160e82",
+      "doi": "10.1109/ICPADS60453.2023.00087",
+      "canonical_id": "DOI:10.1109/ICPADS60453.2023.00087",
+      "authors": [
+        "Chaonong Xu",
+        "Weiming Kong",
+        "Min Liu",
+        "Mingming Zhang",
+        "Chao Li",
+        "Luqi Gong"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1071,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨では異種クラスタ上で大規模モデルの推論を高スループット化するため、データ並列とパイプライン並列の短所を補うハイブリッド並列推論を提案し通信量とメモリ制約の両立を図っており、分散推論への直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-97eb6a762c62",
+    "round": "libimp-97eb6a762c62eb11-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-97eb6a762c62eb11-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-97eb6a762c62eb11-pre01.json",
+    "receipt": "sha256:7cfc572b25c35093fdea912d54bfc86b2a704f8a0d5e02ba076ebbb6ed777a85"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-97eb6a762c62",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

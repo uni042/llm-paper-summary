@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Toward Adaptive Large Language Models Structured Pruning via Hybrid-grained Weight Importance Assessment",
+      "source_url": "https://arxiv.org/abs/2403.10799",
+      "year": 2024,
+      "published": "2024-03-16",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning for large language models (LLMs) has garnered significant academic interest due to its ability to efficiently compress and accelerate LLMs by eliminating redundant weight groups at a coarse-grained granularity. Current structured pruning methods for LLMs typically depend on a singular granularity for assessing weight importance, resulting in notable performance degradation in downstream tasks. Intriguingly, our empirical investigations reveal that utilizing unstructured pruning, which achieves better performance retention by pruning weights at a finer granularity, \\emph{i.e.}, individual weights, yields significantly varied sparse LLM structures when juxtaposed to structured pruning. This suggests that evaluating both holistic and individual assessments for weight importance are essential for LLM pruning. Building on this insight, we introduce the Hybrid-grained Weight Importance Assessment (HyWIA), a novel method that merges fine-grained and coarse-grained evaluations of weight importance for the pruning of LLMs. Leveraging an attention mechanism, HyWIA adaptively determines the optimal blend of granularity in weight importance assessments in an end-to-end pruning manner. Extensive experiments on LLaMA-V1/V2, Vicuna, Baichuan, and Bloom across various benchmarks demonstrate the effectiveness of HyWIA in pruning LLMs. For example, HyWIA surpasses the cutting-edge LLM-Pruner by an average margin of 2.82% in accuracy across seven downstream tasks when pruning LLaMA-7B by 50%.",
+      "identifiers": [
+        "SemanticScholar:9582f42b1d6f65551ff0f8ef0642b517d1476eb8"
+      ],
+      "semantic_scholar_id": "9582f42b1d6f65551ff0f8ef0642b517d1476eb8",
+      "canonical_id": "arXiv:2403.10799",
+      "arxiv_id": "2403.10799",
+      "doi": "10.1609/aaai.v39i18.34078",
+      "authors": [
+        "Jun Liu",
+        "Zhenglun Kong",
+        "Pu Zhao",
+        "Chang-Di Yang",
+        "Xuan Shen",
+        "Hao Tang",
+        "G. Yuan",
+        "Wei Niu",
+        "Wen-Bin Zhang",
+        "Xue Lin",
+        "Dong Huang",
+        "Yan-Zhi Wang"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 981,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの構造化プルーニングを対象とし、粒度の異なる重み重要度評価を融合して冗長な重みグループを除去することでLLMを効率的に圧縮・高速化すると要旨が明示しており、推論時の圧縮・加速への直接貢献が確認できるため収録対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "STIP: Efficient and Secure Non-Interactive Transformer Inference via Compact Packing",
+      "source_url": "https://www.semanticscholar.org/paper/361873f9956b08ea9243a96c481c9cd2f2c2ac50",
+      "year": 2026,
+      "published": null,
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:361873f9956b08ea9243a96c481c9cd2f2c2ac50"
+      ],
+      "semantic_scholar_id": "361873f9956b08ea9243a96c481c9cd2f2c2ac50",
+      "canonical_id": "SemanticScholar:361873f9956b08ea9243a96c481c9cd2f2c2ac50",
+      "authors": [
+        "Zi-Hao Wang",
+        "Rong-Mao Chen",
+        "Xinwen Gao",
+        "Yi Wang",
+        "Lin Liu",
+        "Zixin Lan",
+        "Zhao-Yu Wang",
+        "Shao-Jing Fu",
+        "Qiong Wang",
+        "Xin-Yi Huang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      },
+      "reason": "セキュアなTransformer推論を対象とし、コンパクトパッキング等の手法でプライバシー保護推論の効率を高める研究であり、推論実行そのものへの直接的なシステム貢献が要旨・タイトルから具体的に確認できるため収録対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Deploy Efficient Large Language Model Distributed Inference Pipeline for Heterogeneous GPUs",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143255",
+      "year": 2025,
+      "published": "2025-07-02",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:41781255f1398cd7a86bd06adfde0b95d0251d14"
+      ],
+      "semantic_scholar_id": "41781255f1398cd7a86bd06adfde0b95d0251d14",
+      "doi": "10.1109/IWQoS65803.2025.11143255",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143255",
+      "authors": [
+        "Jun-Yang Zhang",
+        "Jia-Hui Hou",
+        "Bo-Wen Zhang",
+        "Xiang Li"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種GPU上でPrefillとDecodeを分離するP-D分離型のLLM分散推論システムを設計し、異種GPU間のデータ互換モジュールと並列戦略・インスタンス配分の共同最適化を提案しており、分散推論パイプラインへの直接貢献が確認できるため収録対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ContextCache: Task-Aware Lifecycle Management for Memory-Efficient LLM Agent Deployment",
+      "source_url": "https://doi.org/10.1109/IROS60139.2025.11247595",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based agents have demonstrated remarkable capabilities in multi-step reasoning and task execution across domains such as robotics and autonomous systems. However, deploying these agents on resource-constrained platforms presents a fundamental challenge: minimizing latency while optimizing memory usage. Existing caching techniques (KVCache, PrefixCache, PromptCache) improve inference speed by reusing cached context but overlook LLM dependency relationships in agent workflows, leading to excessive memory usage or redundant recomputation across LLM calls. To address this, we propose ContextCache, a task-aware lifecycle management framework that optimizes context fragment caching for multi-step LLM agents. ContextCache predicts the lifespan of each context fragment and dynamically allocates and releases GPU memory accordingly. We evaluate our approach on a newly constructed dataset, covering logistics coordination, assembly tasks, and health management. Experimental results demonstrate a 15% reduction in memory usage compared to state-of-the-art caching strategies, with no loss in inference efficiency, making our approach well-suited for real-world deployment in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:7ef3be2472cd38400a9e2b98697fd80f1938b7b5"
+      ],
+      "semantic_scholar_id": "7ef3be2472cd38400a9e2b98697fd80f1938b7b5",
+      "doi": "10.1109/IROS60139.2025.11247595",
+      "canonical_id": "DOI:10.1109/IROS60139.2025.11247595",
+      "authors": [
+        "Tao Liu",
+        "Ping Guo",
+        "Dong Feng",
+        "Peng Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 399,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMエージェントのワークフロー依存を踏まえたタスク認識型のキャッシュ断片ライフサイクル管理により、KVキャッシュ等の既存キャッシュのメモリ使用を約15％削減しつつ推論効率を維持する枠組みであり、キャッシュ管理への直接貢献が確認できるため収録対象とした。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-422138dc8bfe",
+    "round": "libimp-422138dc8bfe7cef-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-422138dc8bfe7cef-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-422138dc8bfe7cef-pre01.json",
+    "receipt": "sha256:eb910ad1c460d3f4a8e4a3929493b4d296bbba03986861a9b34ab16006dfefb5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-422138dc8bfe",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

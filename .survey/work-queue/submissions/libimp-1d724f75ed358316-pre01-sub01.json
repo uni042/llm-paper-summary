@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression",
+      "source_url": "https://arxiv.org/abs/2606.02559",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training compression of Large Language Models (LLMs) removes entire architectural components, either deleting them or replacing them with fitted modules. Existing replacement-based methods share two design constraints: full-layer granularity and contiguous selection. We argue that this is overly restrictive: in fact, redundancy in pretrained transformers is not confined to contiguous regions, nor does it evenly distribute between Attention and FeedForward outputs, implying that different strategies best approximate different submodule types and that removable components need not cluster within contiguous depth ranges. Based on this intuition, we introduce SubFit (Submodule-level Fitted residual replacement), which compresses LLMs at the submodule level: Attention and FeedForward submodules are selected non-contiguously, and each receives its own lightweight fitted residual bypass. SubFit operates post-training and requires only calibration data. Across ten LLMs (five base, five instruction-tuned), five sparsity levels from 12.5% to 37.5%, and four replacement-based baselines, SubFit achieves the best aggregate perplexity-accuracy trade-off across the evaluated sparsity levels, with larger gains under aggressive compression. At 25% sparsity, it retains 84.6% of dense downstream accuracy and incurs 2.42x perplexity degradation, against 81.6% and 4.34x for the strongest baselines, while delivering measurable inference speedup and KV-cache savings. Code is available at https://github.com/eliacunegatti/SubFit.",
+      "identifiers": [
+        "SemanticScholar:1babedbbe0055a3a9fe83757d547f3aef889d38d"
+      ],
+      "semantic_scholar_id": "1babedbbe0055a3a9fe83757d547f3aef889d38d",
+      "canonical_id": "arXiv:2606.02559",
+      "arxiv_id": "2606.02559",
+      "doi": "10.48550/arXiv.2606.02559",
+      "authors": [
+        "Elia Cunegatti",
+        "Marcus Vukojevic",
+        "Erik Nielsen",
+        "Giovanni Iacca"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "要旨は置換型LLM圧縮をサブモジュール粒度へ細分化するSubFitを提案し、校正データのみで圧縮しながら推論高速化とKVキャッシュ削減を実測で示しており、LLM圧縮と推論効率への直接貢献が明確である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Echo: Error-Compensated 4-Bit Tensor-Parallel Communication for LLM Training and Inference",
+      "source_url": "https://arxiv.org/abs/2610.14277",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tensor parallelism ends every layer with an all-reduce that sits between two dependent matrix multiplications, so its cost cannot be hidden and grows as compute outpaces interconnect bandwidth. Sending 4-bit instead of 16-bit values would cut this cost by nearly 4x, but the all-reduce must add the values it carries, and rounding the sum injects an error at every call. Model quality depends on how these errors accumulate over layers, yet existing methods treat each call on its own. We present Echo, a 4-bit all-reduce for training and inference that controls the accumulated error. Echo moves data in 4 bits and sums in high precision, so each value is quantized at most twice per call for any number of GPUs. The summation reveals each injected error, and Echo feeds it back into later calls, so old errors cancel instead of accumulating. We prove that the accumulated error stays bounded independently of depth. On A100 GPUs, Echo is 2.09x faster than the 16-bit NCCL all-reduce on 1 GB messages. It speeds up the time to first token by up to 1.16x and the training step by up to 1.09x on an idle interconnect, and by up to 1.44x and 1.38x as background traffic grows. It keeps the average accuracy over seven benchmarks within 0.4 points of 16-bit inference on Qwen3-8B. In 10B-token pretraining, its final loss is less than 0.9% above that of 16-bit training. Echo needs no FP8 or FP4 hardware.",
+      "identifiers": [
+        "SemanticScholar:f2a82af504e35215c1690bad476bb9a23f81993d"
+      ],
+      "semantic_scholar_id": "f2a82af504e35215c1690bad476bb9a23f81993d",
+      "canonical_id": "arXiv:2610.14277",
+      "arxiv_id": "2610.14277",
+      "authors": [
+        "Xing-Yu Xie",
+        "Xiao-Yong Xie",
+        "Zhou-Chen Lin",
+        "K. Toh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨はテンソル並列の全reduceを4ビット化し誤差補償で累積誤差を抑えるEchoを提案し、学習だけでなく推論でもTTFT高速化と精度維持を実測しており、分散推論の通信機構への直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "IMI: In-memory Multi-job Inference Acceleration for Large Language Models",
+      "source_url": "https://doi.org/10.1145/3673038.3673053",
+      "year": 2024,
+      "published": "2024-08-12",
+      "venue": "International Conference on Parallel Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly used in various applications but are computationally complex and energy-consuming due to the high volume of off-chip memory accesses. Processing-in-Memory (PIM) has emerged as a potential solution for efficient inference. However, existing PIM accelerators designed for deep neural networks (DNNs) aren’t suitable for LLMs because of differences in operations, input sizes, and job completion times. This leads to performance issues like head-of-line blocking where an earlier job can monopolize resources at the expense of later jobs, and low resource utilization. To improve efficiency, a time-multiplex solution and job colocation accelerator could be beneficial. However, facilitating multi-job execution with in-memory acceleration is challenging due to limitations in memristor architecture, inefficiency of non-stationary weight programming, difficulty in dynamic partitioning of hardware resources, and complexity in dynamic job scheduling. This work proposes a PIM-based LLM accelerator to enable the concurrent LLM inference job execution. The experiment shows that IMI can significantly improve resource utilization as well as the rate of satisfying the service level requirements of jobs.",
+      "identifiers": [
+        "SemanticScholar:5b319f00b281cf2e4b7155942a5b5a1aa7e34da9"
+      ],
+      "semantic_scholar_id": "5b319f00b281cf2e4b7155942a5b5a1aa7e34da9",
+      "doi": "10.1145/3673038.3673053",
+      "canonical_id": "DOI:10.1145/3673038.3673053",
+      "authors": [
+        "Bin Gao",
+        "Zhehui Wang",
+        "Zhuo-Min He",
+        "Tao Luo",
+        "Weng-Fai Wong",
+        "Zhi Zhou"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 832,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨はPIM ベースで複数ジョブのLLM推論を同時実行するIMIアクセラレータを提案し、ジョブ共置による資源利用率とサービスレベル充足率の改善を示しており、推論アクセラレーションとスケジューリングへの直接貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "StreamDQ: HBM-Integrated On-the-Fly DeQuantization via Memory Load for Large Language Models",
+      "source_url": "https://doi.org/10.1109/LCA.2025.3626929",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "IEEE computer architecture letters",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) scale, their memory and computation demands increase, making weight-only quantization a widely adopted technique to reduce memory footprint with minimal accuracy loss. However, CUDA core–based dequantization introduces significant instruction overhead, memory traffic, and pipeline stalls across all batch sizes, and critically remains a persistent bottleneck even in large-batch, cloud-scale LLM serving. To address these challenges, we propose StreamDQ, a lightweight architectural enhancement for cloud-scale LLM inference that enables on-the-fly dequantization within the memory subsystem by integrating compact DeQuantization Blocks (DQBs) into the base-die of high-bandwidth memory (HBM). StreamDQ leverages reserved address bits for control signaling, requiring no modifications to the ISA or compiler. Our design minimizes data movement, offloads computation from CUDA cores, and delivers dequantized weights directly to tensor cores for general matrix multiplication (GEMM) execution. StreamDQ achieves up to 83.57% reduction in inference latency and 5.15 × improvement in tokens-per-second throughput, with only 0.013 <inline-formula><tex-math notation=\"LaTeX\">${\\mathrm{mm}}^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow><mml:mi> mm </mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"kim-ieq1-3626929.gif\"/></alternatives></inline-formula> area and 0.17 W power overhead per DQB. The design is scalable, software-transparent, and well-suited for high-throughput LLM inference on modern HBM-enabled GPU platforms.",
+      "identifiers": [
+        "SemanticScholar:c6c7590e56c2ef73558fa1c4fc0c86156eb5fdc2"
+      ],
+      "semantic_scholar_id": "c6c7590e56c2ef73558fa1c4fc0c86156eb5fdc2",
+      "doi": "10.1109/LCA.2025.3626929",
+      "canonical_id": "DOI:10.1109/LCA.2025.3626929",
+      "authors": [
+        "Minki Jeong",
+        "Daegun Yoon",
+        "Soohong Ahn",
+        "Seungyong Lee",
+        "Jooyoung Kim",
+        "J. Jeon",
+        "Joonseop Sim",
+        "Youngpyo Joo",
+        "Hoshik Kim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨は重みのみ量子化の逆量子化をHBM基板側のブロックでオンザフライに行うStreamDQを提案し、大規模バッチのクラウドLLMサービングでも推論遅延削減とスループット改善を示しており、量子化推論の実行機構への直接貢献が明確である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accelerating 1-Bit Llms Via in-Memory Computing Architectures",
+      "source_url": "https://doi.org/10.1109/MWSCAS53549.2025.11244527",
+      "year": 2025,
+      "published": "2025-08-10",
+      "venue": "Midwest Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we present a novel hybrid computing architecture designed to accelerate inference in 1-bit large language models (LLMs). Our approach combines the strengths of analog in-memory computing (IMC) and digital systolic arrays to address the diverse precision requirements across different layers of 1-bit LLMs. Specifically, we utilize analog IMC to accelerate low-precision matrix multiplication (MatMul) operations within the projection layers, which are naturally amenable to extreme quantization. Meanwhile, digital systolic arrays are employed to efficiently handle high-precision MatMul operations in the attention heads, preserving accuracy where precision is most critical. By partitioning the computational workload based on precision needs, our hybrid architecture increases throughput and energy efficiency. Experimental evaluations demonstrate that our design delivers up to an $80 \\times$ improvement in tokens processed per second and achieves a 70 % increase in energy efficiency (tokens per joule) when compared to conventional digital hardware accelerators.",
+      "identifiers": [
+        "SemanticScholar:708c352f58fb0cfa916c24dad773f416e3d69a03"
+      ],
+      "semantic_scholar_id": "708c352f58fb0cfa916c24dad773f416e3d69a03",
+      "doi": "10.1109/MWSCAS53549.2025.11244527",
+      "canonical_id": "DOI:10.1109/MWSCAS53549.2025.11244527",
+      "authors": [
+        "Jinendra Malekar",
+        "Ramtin Zand"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 469,
+        "matched_prestigious_venue": null
+      },
+      "reason": "要旨は1ビットLLMの推論をアナログインメモリ計算とデジタルシストリックアレイのハイブリッド構成で高速化し、層ごとの精度要求に応じて処理を振り分けてスループットとエネルギー効率の大幅改善を示しており、量子化LLM推論への直接貢献が明確である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1d724f75ed35",
+    "round": "libimp-1d724f75ed358316-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1d724f75ed358316-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1d724f75ed358316-pre01.json",
+    "receipt": "sha256:8747f2d26a829a76078078710c745fe415120414ebf6c8997e2d61f86e6dbfa1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1d724f75ed35",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
