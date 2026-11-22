@@ -1,0 +1,405 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3a7e309bc63d8798-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3a7e309bc63d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/itc-cscc66376.2025.11137588",
+    "DOI:10.1109/jiot.2025.3560382",
+    "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+    "arXiv:2510.19385"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "287799c65f9e235bb406119736dbe5a8d3ce453f",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-22T22:47:13.452049+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/itc-cscc66376.2025.11137588",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/jiot.2025.3560382",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.19385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Uniform SVD: Dual-Level Optimization across Columns and Modules for LLM Compression",
+      "source_url": "https://arxiv.org/abs/2510.19385",
+      "year": 2025,
+      "published": "2025-10-22",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank decomposition, particularly Singular Value Decomposition (SVD), is a pivotal technique for mitigating the storage and computational demands of Large Language Models (LLMs). However, prevalent SVD-based approaches overlook the critical phenomenon that decomposition errors exhibit significant disparity across different components of the parameter matrix, often leading to suboptimal approximation. Furthermore, existing methods lack a direct metric to evaluate the importance of individual weight matrices. To address these limitations, we propose Duo-SVD (Dual-level Optimization SVD), a novel training-free framework that synergizes optimization at both the column and the module levels. First, Duo-SVD incorporates a Column-Preserving Strategy that explicitly retains columns exhibiting high decomposition errors, while applying low-rank approximation solely to those with lower errors. Second, at the module level, we employ a Module-Adaptive Allocation Strategy that formulates ratio allocation as a global constrained optimization problem based on perturbation-induced model deviation. Extensive experiments demonstrate that Duo-SVD consistently outperforms state-of-the-art SVD-based baselines and structured pruning methods, establishing it as a superior paradigm for efficient LLM compression.",
+      "identifiers": [
+        "SemanticScholar:1b85c60c4e0d6dc171c0b9b1774223f8c9229ae4"
+      ],
+      "semantic_scholar_id": "1b85c60c4e0d6dc171c0b9b1774223f8c9229ae4",
+      "canonical_id": "arXiv:2510.19385",
+      "arxiv_id": "2510.19385",
+      "doi": "10.18653/v1/2026.findings-acl.912",
+      "authors": [
+        "Lin Xv",
+        "Xian Gao",
+        "Ting Liu",
+        "Yu-Zhuo Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 396,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Latency-Critical Quantized Inference With Transformer Decoders on ARM and RISC-V CPUs",
+      "source_url": "https://doi.org/10.1109/JIOT.2025.3560382",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "IEEE Internet of Things Journal",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are transforming industries but face challenges due to their high computational and energy demands. Model compression via quantization mitigates these barriers by reducing the bit precision of parameters and arithmetic operations, enabling deployment on resource-constrained devices like smartphones and edge platforms. This article focuses on quantization applied to transformer decoders, which are critical for tasks, such as text generation and conversational artificial intelligence. Unlike encoders, decoders are constrained by memory due to their sequential processing nature and low arithmetic intensity. We propose optimizations targeting inference on low-power CPUs, emphasizing efficient linear layers with quantized data/arithmetic and cache optimization. Using two representative ARM and RISC-V platforms, we present optimized mixed-precision implementations of the matrix multiplication that outperform the instance of that computational kernel in popular libraries, such as basic linear algebra subprograms infrastructure software, XNNPACK and ARMCL. This work thus advances the understanding of the impact of quantization on transformer decoder efficiency, energy consumption and precision in edge environments.",
+      "identifiers": [
+        "SemanticScholar:85e9d51a378047611a0d5d3fe83eebbcd0c22014"
+      ],
+      "semantic_scholar_id": "85e9d51a378047611a0d5d3fe83eebbcd0c22014",
+      "doi": "10.1109/JIOT.2025.3560382",
+      "canonical_id": "DOI:10.1109/JIOT.2025.3560382",
+      "authors": [
+        "Héctor Martínez",
+        "Sandra Catalán",
+        "Adrián Castelló",
+        "José I. Mestre",
+        "E. Quintana-ortí"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Outlier Matters: A Statistical Analysis of LLM Tensor Distributions and Quantization Effects",
+      "source_url": "https://doi.org/10.1109/ITC-CSCC66376.2025.11137588",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "2025 International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As transformer-based Large Language Models (LLMs) grow, deploying them under resource constraints has become increasingly complex, making quantization a vital technique for efficient inference. However, unlike convolutional neural networks (CNNs), LLMs exhibit unique tensor distribution characteristics, particularly in activations, significantly hindering low-bit quantization. This paper uses a statistical analysis grounded in standard distribution theory to reveal that LLM activations contain rare but high-magnitude outliers significantly influencing model performance. Our empirical findings show that these outliers are not merely noise but contain semantically critical information, and their improper handling during quantization leads to severe accuracy degradation. To address this, we propose an efficient Outlier-Rescaled quantization method that preserves expressive outlier representations using a lightweight shift-based mechanism within a 4-bit format. Evaluations demonstrate that our method substantially restores performance lost under INT4 quantization, particularly in LLMs, without requiring additional hardware or mixed-precision schemes. This study underscores the importance of activation-aware design in LLM quantization and provides a practical path forward for ultra-low-bit deployment.",
+      "identifiers": [
+        "SemanticScholar:8dfd02f88fdc6f1fc74e29b48cc8c33c31389e8a"
+      ],
+      "semantic_scholar_id": "8dfd02f88fdc6f1fc74e29b48cc8c33c31389e8a",
+      "doi": "10.1109/ITC-CSCC66376.2025.11137588",
+      "canonical_id": "DOI:10.1109/ITC-CSCC66376.2025.11137588",
+      "authors": [
+        "Taein Kim",
+        "Seongwook Kim",
+        "Sukhyun Han",
+        "Woojin Cho",
+        "Youngjae Choi",
+        "Youngseok Bae",
+        "Seokin Hong"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Position-Adaptive Temporal Sparsity for KV Caches in Long-Context LLMs",
+      "source_url": "https://www.semanticscholar.org/paper/2814c6db036b63ad79dfe5374d5212faf3aab85c",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c"
+      ],
+      "semantic_scholar_id": "2814c6db036b63ad79dfe5374d5212faf3aab85c",
+      "canonical_id": "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+      "authors": [
+        "Mahmoud Abumandour",
+        "A. Alameldeen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.19385",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.912",
+        "id:SemanticScholar:1b85c60c4e0d6dc171c0b9b1774223f8c9229ae4",
+        "id:arXiv:2510.19385",
+        "title:beyond uniform svd duallevel optimization across columns and modules for llm compression",
+        "url:https://arxiv.org/abs/2510.19385"
+      ],
+      "record": {
+        "title": "Beyond Uniform SVD: Dual-Level Optimization across Columns and Modules for LLM Compression",
+        "source_url": "https://arxiv.org/abs/2510.19385",
+        "year": 2025,
+        "published": "2025-10-22",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-rank decomposition, particularly Singular Value Decomposition (SVD), is a pivotal technique for mitigating the storage and computational demands of Large Language Models (LLMs). However, prevalent SVD-based approaches overlook the critical phenomenon that decomposition errors exhibit significant disparity across different components of the parameter matrix, often leading to suboptimal approximation. Furthermore, existing methods lack a direct metric to evaluate the importance of individual weight matrices. To address these limitations, we propose Duo-SVD (Dual-level Optimization SVD), a novel training-free framework that synergizes optimization at both the column and the module levels. First, Duo-SVD incorporates a Column-Preserving Strategy that explicitly retains columns exhibiting high decomposition errors, while applying low-rank approximation solely to those with lower errors. Second, at the module level, we employ a Module-Adaptive Allocation Strategy that formulates ratio allocation as a global constrained optimization problem based on perturbation-induced model deviation. Extensive experiments demonstrate that Duo-SVD consistently outperforms state-of-the-art SVD-based baselines and structured pruning methods, establishing it as a superior paradigm for efficient LLM compression.",
+        "identifiers": [
+          "SemanticScholar:1b85c60c4e0d6dc171c0b9b1774223f8c9229ae4"
+        ],
+        "semantic_scholar_id": "1b85c60c4e0d6dc171c0b9b1774223f8c9229ae4",
+        "canonical_id": "arXiv:2510.19385",
+        "arxiv_id": "2510.19385",
+        "doi": "10.18653/v1/2026.findings-acl.912",
+        "authors": [
+          "Lin Xv",
+          "Xian Gao",
+          "Ting Liu",
+          "Yu-Zhuo Fu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 396,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jiot.2025.3560382",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2025.3560382",
+        "id:SemanticScholar:85e9d51a378047611a0d5d3fe83eebbcd0c22014",
+        "title:latencycritical quantized inference with transformer decoders on arm and riscv cpus",
+        "url:https://doi.org/10.1109/JIOT.2025.3560382"
+      ],
+      "record": {
+        "title": "Latency-Critical Quantized Inference With Transformer Decoders on ARM and RISC-V CPUs",
+        "source_url": "https://doi.org/10.1109/JIOT.2025.3560382",
+        "year": 2025,
+        "published": "2025-07-01",
+        "venue": "IEEE Internet of Things Journal",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are transforming industries but face challenges due to their high computational and energy demands. Model compression via quantization mitigates these barriers by reducing the bit precision of parameters and arithmetic operations, enabling deployment on resource-constrained devices like smartphones and edge platforms. This article focuses on quantization applied to transformer decoders, which are critical for tasks, such as text generation and conversational artificial intelligence. Unlike encoders, decoders are constrained by memory due to their sequential processing nature and low arithmetic intensity. We propose optimizations targeting inference on low-power CPUs, emphasizing efficient linear layers with quantized data/arithmetic and cache optimization. Using two representative ARM and RISC-V platforms, we present optimized mixed-precision implementations of the matrix multiplication that outperform the instance of that computational kernel in popular libraries, such as basic linear algebra subprograms infrastructure software, XNNPACK and ARMCL. This work thus advances the understanding of the impact of quantization on transformer decoder efficiency, energy consumption and precision in edge environments.",
+        "identifiers": [
+          "SemanticScholar:85e9d51a378047611a0d5d3fe83eebbcd0c22014"
+        ],
+        "semantic_scholar_id": "85e9d51a378047611a0d5d3fe83eebbcd0c22014",
+        "doi": "10.1109/JIOT.2025.3560382",
+        "canonical_id": "DOI:10.1109/JIOT.2025.3560382",
+        "authors": [
+          "Héctor Martínez",
+          "Sandra Catalán",
+          "Adrián Castelló",
+          "José I. Mestre",
+          "E. Quintana-ortí"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 509,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/itc-cscc66376.2025.11137588",
+      "identity_tokens": [
+        "id:DOI:10.1109/itc-cscc66376.2025.11137588",
+        "id:SemanticScholar:8dfd02f88fdc6f1fc74e29b48cc8c33c31389e8a",
+        "title:outlier matters a statistical analysis of llm tensor distributions and quantization effects",
+        "url:https://doi.org/10.1109/ITC-CSCC66376.2025.11137588"
+      ],
+      "record": {
+        "title": "Outlier Matters: A Statistical Analysis of LLM Tensor Distributions and Quantization Effects",
+        "source_url": "https://doi.org/10.1109/ITC-CSCC66376.2025.11137588",
+        "year": 2025,
+        "published": "2025-07-07",
+        "venue": "2025 International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As transformer-based Large Language Models (LLMs) grow, deploying them under resource constraints has become increasingly complex, making quantization a vital technique for efficient inference. However, unlike convolutional neural networks (CNNs), LLMs exhibit unique tensor distribution characteristics, particularly in activations, significantly hindering low-bit quantization. This paper uses a statistical analysis grounded in standard distribution theory to reveal that LLM activations contain rare but high-magnitude outliers significantly influencing model performance. Our empirical findings show that these outliers are not merely noise but contain semantically critical information, and their improper handling during quantization leads to severe accuracy degradation. To address this, we propose an efficient Outlier-Rescaled quantization method that preserves expressive outlier representations using a lightweight shift-based mechanism within a 4-bit format. Evaluations demonstrate that our method substantially restores performance lost under INT4 quantization, particularly in LLMs, without requiring additional hardware or mixed-precision schemes. This study underscores the importance of activation-aware design in LLM quantization and provides a practical path forward for ultra-low-bit deployment.",
+        "identifiers": [
+          "SemanticScholar:8dfd02f88fdc6f1fc74e29b48cc8c33c31389e8a"
+        ],
+        "semantic_scholar_id": "8dfd02f88fdc6f1fc74e29b48cc8c33c31389e8a",
+        "doi": "10.1109/ITC-CSCC66376.2025.11137588",
+        "canonical_id": "DOI:10.1109/ITC-CSCC66376.2025.11137588",
+        "authors": [
+          "Taein Kim",
+          "Seongwook Kim",
+          "Sukhyun Han",
+          "Woojin Cho",
+          "Youngjae Choi",
+          "Youngseok Bae",
+          "Seokin Hong"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 503,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+      "identity_tokens": [
+        "id:SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+        "title:positionadaptive temporal sparsity for kv caches in longcontext llms",
+        "url:https://www.semanticscholar.org/paper/2814c6db036b63ad79dfe5374d5212faf3aab85c"
+      ],
+      "record": {
+        "title": "Position-Adaptive Temporal Sparsity for KV Caches in Long-Context LLMs",
+        "source_url": "https://www.semanticscholar.org/paper/2814c6db036b63ad79dfe5374d5212faf3aab85c",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c"
+        ],
+        "semantic_scholar_id": "2814c6db036b63ad79dfe5374d5212faf3aab85c",
+        "canonical_id": "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+        "authors": [
+          "Mahmoud Abumandour",
+          "A. Alameldeen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c7d5ff8f9f01bc42a6602d0c319133852125b5ef0b64102290942ba3ff768bf3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

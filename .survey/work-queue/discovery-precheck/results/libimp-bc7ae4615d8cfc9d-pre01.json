@@ -1,0 +1,426 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bc7ae4615d8cfc9d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bc7ae4615d8c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/percomworkshops65533.2025.00078",
+    "SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565",
+    "arXiv:2001.05136",
+    "arXiv:2407.11717"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "287799c65f9e235bb406119736dbe5a8d3ce453f",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-22T22:47:13.443141+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/percomworkshops65533.2025.00078",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2001.05136",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.11717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Parallel Machine Translation with Disentangled Context Transformer",
+      "source_url": "https://arxiv.org/abs/2001.05136",
+      "year": 2020,
+      "published": "2020-01-15",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 36,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-of-the-art neural machine translation models generate a translation from left to right and every step is conditioned on the previously generated tokens. The sequential nature of this generation process causes fundamental latency in inference since we cannot generate multiple tokens in each sentence in parallel. We propose an attention-masking based model, called Disentangled Context (DisCo) transformer, that simultaneously generates all tokens given different contexts. The DisCo transformer is trained to predict every output token given an arbitrary subset of the other reference tokens. We also develop the parallel easy-first inference algorithm, which iteratively refines every token in parallel and reduces the number of required iterations. Our extensive experiments on 7 directions with varying data sizes demonstrate that our model achieves competitive, if not better, performance compared to the state of the art in non-autoregressive machine translation while significantly reducing decoding time on average.",
+      "identifiers": [
+        "SemanticScholar:024731a02ab455ae202dab12f404e0a4350f1dec"
+      ],
+      "semantic_scholar_id": "024731a02ab455ae202dab12f404e0a4350f1dec",
+      "canonical_id": "arXiv:2001.05136",
+      "arxiv_id": "2001.05136",
+      "doi": "10.48550/arXiv.2001.05136",
+      "authors": [
+        "Jungo Kasai",
+        "James Cross",
+        "Marjan Ghazvininejad",
+        "Jiatao Gu"
+      ],
+      "priority": 46,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 36,
+        "citation_count": 36,
+        "total": 46,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2503,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Turbo: Informativity-Driven Acceleration Plug-In for Vision-Language Large Models",
+      "source_url": "https://arxiv.org/abs/2407.11717",
+      "year": 2024,
+      "published": "2024-07-16",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Large Models (VLMs) recently become primary backbone of AI, due to the impressive performance. However, their expensive computation costs, i.e., throughput and delay, impede potentials in the real-world scenarios. To achieve acceleration for VLMs, most existing methods focus on the model perspective: pruning, distillation, quantization, but completely overlook the data-perspective redundancy. To fill the overlook, this paper pioneers the severity of data redundancy, and designs one plug-and-play Turbo module guided by information degree to prune inefficient tokens from visual or textual data. In pursuit of efficiency-performance trade-offs, information degree takes two crucial factors into consideration: mutual redundancy and semantic value. Concretely, the former evaluates data duplication between sequential tokens; while the latter evaluates each token by its contribution to the overall semantics. As a result, tokens with high information degree carry less redundancy and stronger semantics. For VLMs' calculation, Turbo works as a user-friendly plug-in that sorts data referring to information degree, utilizing only top-level ones to save costs. Its advantages are multifaceted, e.g., being generally compatible to various VLMs across understanding and generation, simple use without re-training and trivial engineering efforts. On multiple VLMs benchmarks, we fully experiment to demonstrate the good acceleration of Turbo, under negligible performance drop.",
+      "identifiers": [
+        "SemanticScholar:9d249b49d636ede21a988585bfd81a959aae10e3"
+      ],
+      "semantic_scholar_id": "9d249b49d636ede21a988585bfd81a959aae10e3",
+      "canonical_id": "arXiv:2407.11717",
+      "arxiv_id": "2407.11717",
+      "doi": "10.48550/arXiv.2407.11717",
+      "authors": [
+        "Chen Ju",
+        "Haicheng Wang",
+        "Hao-Zhe Cheng",
+        "Xu Chen",
+        "Zhonghua Zhai",
+        "Weilin Huang",
+        "Jin-Song Lan",
+        "Shuai Xiao",
+        "Bo Zheng"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 859,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Distributed VLMs: Efficient Vision-Language Processing through Cloud-Edge Collaboration",
+      "source_url": "https://doi.org/10.1109/PerComWorkshops65533.2025.00078",
+      "year": 2025,
+      "published": "2025-03-17",
+      "venue": "2025 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision Language models (VLMs) have transformed Generative AI by enabling systems to interpret and respond to multi-modal data in real-time. While advancements in edge computing have made it possible to deploy smaller Large Language Models (LLMs) on smartphones and laptops, deploying competent VLMs on edge devices remains challenging due to their high computational demands. Furthermore, cloud-only deployments fail to utilize the evolving processing capabilities at the edge and limit responsiveness. This paper introduces a distributed architecture for VLMs that addresses these limitations by partitioning model components between edge devices and central servers. In this setup, vision components run on edge devices for immediate processing, while language generation of the VLM is handled by a centralized server, resulting in up to 33% improvement in throughput over traditional cloud-only solutions. Moreover, our approach enhances the computational efficiency of off-the-shelf VLM models without the need for model compression techniques. This work demonstrates the scalability and efficiency of a hybrid architecture for VLM deployment and contributes to the discussion on how distributed approaches can improve VLM performance.",
+      "identifiers": [
+        "SemanticScholar:293e4236c3ff16c30d580e9d754e42c3b1c9efb8"
+      ],
+      "semantic_scholar_id": "293e4236c3ff16c30d580e9d754e42c3b1c9efb8",
+      "doi": "10.1109/PerComWorkshops65533.2025.00078",
+      "canonical_id": "DOI:10.1109/PerComWorkshops65533.2025.00078",
+      "authors": [
+        "Yuyang Li",
+        "Devika Gumaste",
+        "M. Turkcan",
+        "Javad Ghaderi",
+        "G. Zussman",
+        "Z. Kostić"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 615,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards A Reconfigurable Systolic Array with Multi-Level Packing for Transformers",
+      "source_url": "https://www.semanticscholar.org/paper/58b37e820234c82c91ce78f71cfafc1e0216a565",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565"
+      ],
+      "semantic_scholar_id": "58b37e820234c82c91ce78f71cfafc1e0216a565",
+      "canonical_id": "SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565",
+      "authors": [
+        "Tiandong Zhao",
+        "Si-Yuan Miao",
+        "Jialin Cao",
+        "Shaoqiang Lu",
+        "Jun Qiu",
+        "Xiao Shi",
+        "Kun Wang",
+        "Lei He"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1240,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2001.05136",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2001.05136",
+        "id:SemanticScholar:024731a02ab455ae202dab12f404e0a4350f1dec",
+        "id:arXiv:2001.05136",
+        "title:parallel machine translation with disentangled context transformer",
+        "url:https://arxiv.org/abs/2001.05136"
+      ],
+      "record": {
+        "title": "Parallel Machine Translation with Disentangled Context Transformer",
+        "source_url": "https://arxiv.org/abs/2001.05136",
+        "year": 2020,
+        "published": "2020-01-15",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 36,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-of-the-art neural machine translation models generate a translation from left to right and every step is conditioned on the previously generated tokens. The sequential nature of this generation process causes fundamental latency in inference since we cannot generate multiple tokens in each sentence in parallel. We propose an attention-masking based model, called Disentangled Context (DisCo) transformer, that simultaneously generates all tokens given different contexts. The DisCo transformer is trained to predict every output token given an arbitrary subset of the other reference tokens. We also develop the parallel easy-first inference algorithm, which iteratively refines every token in parallel and reduces the number of required iterations. Our extensive experiments on 7 directions with varying data sizes demonstrate that our model achieves competitive, if not better, performance compared to the state of the art in non-autoregressive machine translation while significantly reducing decoding time on average.",
+        "identifiers": [
+          "SemanticScholar:024731a02ab455ae202dab12f404e0a4350f1dec"
+        ],
+        "semantic_scholar_id": "024731a02ab455ae202dab12f404e0a4350f1dec",
+        "canonical_id": "arXiv:2001.05136",
+        "arxiv_id": "2001.05136",
+        "doi": "10.48550/arXiv.2001.05136",
+        "authors": [
+          "Jungo Kasai",
+          "James Cross",
+          "Marjan Ghazvininejad",
+          "Jiatao Gu"
+        ],
+        "priority": 46,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 36,
+          "citation_count": 36,
+          "total": 46,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2503,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.11717",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.11717",
+        "id:SemanticScholar:9d249b49d636ede21a988585bfd81a959aae10e3",
+        "id:arXiv:2407.11717",
+        "title:turbo informativitydriven acceleration plugin for visionlanguage large models",
+        "url:https://arxiv.org/abs/2407.11717"
+      ],
+      "record": {
+        "title": "Turbo: Informativity-Driven Acceleration Plug-In for Vision-Language Large Models",
+        "source_url": "https://arxiv.org/abs/2407.11717",
+        "year": 2024,
+        "published": "2024-07-16",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Large Models (VLMs) recently become primary backbone of AI, due to the impressive performance. However, their expensive computation costs, i.e., throughput and delay, impede potentials in the real-world scenarios. To achieve acceleration for VLMs, most existing methods focus on the model perspective: pruning, distillation, quantization, but completely overlook the data-perspective redundancy. To fill the overlook, this paper pioneers the severity of data redundancy, and designs one plug-and-play Turbo module guided by information degree to prune inefficient tokens from visual or textual data. In pursuit of efficiency-performance trade-offs, information degree takes two crucial factors into consideration: mutual redundancy and semantic value. Concretely, the former evaluates data duplication between sequential tokens; while the latter evaluates each token by its contribution to the overall semantics. As a result, tokens with high information degree carry less redundancy and stronger semantics. For VLMs' calculation, Turbo works as a user-friendly plug-in that sorts data referring to information degree, utilizing only top-level ones to save costs. Its advantages are multifaceted, e.g., being generally compatible to various VLMs across understanding and generation, simple use without re-training and trivial engineering efforts. On multiple VLMs benchmarks, we fully experiment to demonstrate the good acceleration of Turbo, under negligible performance drop.",
+        "identifiers": [
+          "SemanticScholar:9d249b49d636ede21a988585bfd81a959aae10e3"
+        ],
+        "semantic_scholar_id": "9d249b49d636ede21a988585bfd81a959aae10e3",
+        "canonical_id": "arXiv:2407.11717",
+        "arxiv_id": "2407.11717",
+        "doi": "10.48550/arXiv.2407.11717",
+        "authors": [
+          "Chen Ju",
+          "Haicheng Wang",
+          "Hao-Zhe Cheng",
+          "Xu Chen",
+          "Zhonghua Zhai",
+          "Weilin Huang",
+          "Jin-Song Lan",
+          "Shuai Xiao",
+          "Bo Zheng"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 859,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/percomworkshops65533.2025.00078",
+      "identity_tokens": [
+        "id:DOI:10.1109/percomworkshops65533.2025.00078",
+        "id:SemanticScholar:293e4236c3ff16c30d580e9d754e42c3b1c9efb8",
+        "title:distributed vlms efficient visionlanguage processing through cloudedge collaboration",
+        "url:https://doi.org/10.1109/PerComWorkshops65533.2025.00078"
+      ],
+      "record": {
+        "title": "Distributed VLMs: Efficient Vision-Language Processing through Cloud-Edge Collaboration",
+        "source_url": "https://doi.org/10.1109/PerComWorkshops65533.2025.00078",
+        "year": 2025,
+        "published": "2025-03-17",
+        "venue": "2025 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision Language models (VLMs) have transformed Generative AI by enabling systems to interpret and respond to multi-modal data in real-time. While advancements in edge computing have made it possible to deploy smaller Large Language Models (LLMs) on smartphones and laptops, deploying competent VLMs on edge devices remains challenging due to their high computational demands. Furthermore, cloud-only deployments fail to utilize the evolving processing capabilities at the edge and limit responsiveness. This paper introduces a distributed architecture for VLMs that addresses these limitations by partitioning model components between edge devices and central servers. In this setup, vision components run on edge devices for immediate processing, while language generation of the VLM is handled by a centralized server, resulting in up to 33% improvement in throughput over traditional cloud-only solutions. Moreover, our approach enhances the computational efficiency of off-the-shelf VLM models without the need for model compression techniques. This work demonstrates the scalability and efficiency of a hybrid architecture for VLM deployment and contributes to the discussion on how distributed approaches can improve VLM performance.",
+        "identifiers": [
+          "SemanticScholar:293e4236c3ff16c30d580e9d754e42c3b1c9efb8"
+        ],
+        "semantic_scholar_id": "293e4236c3ff16c30d580e9d754e42c3b1c9efb8",
+        "doi": "10.1109/PerComWorkshops65533.2025.00078",
+        "canonical_id": "DOI:10.1109/PerComWorkshops65533.2025.00078",
+        "authors": [
+          "Yuyang Li",
+          "Devika Gumaste",
+          "M. Turkcan",
+          "Javad Ghaderi",
+          "G. Zussman",
+          "Z. Kostić"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 615,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565",
+      "identity_tokens": [
+        "id:SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565",
+        "title:towards a reconfigurable systolic array with multilevel packing for transformers",
+        "url:https://www.semanticscholar.org/paper/58b37e820234c82c91ce78f71cfafc1e0216a565"
+      ],
+      "record": {
+        "title": "Towards A Reconfigurable Systolic Array with Multi-Level Packing for Transformers",
+        "source_url": "https://www.semanticscholar.org/paper/58b37e820234c82c91ce78f71cfafc1e0216a565",
+        "year": 2023,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565"
+        ],
+        "semantic_scholar_id": "58b37e820234c82c91ce78f71cfafc1e0216a565",
+        "canonical_id": "SemanticScholar:58b37e820234c82c91ce78f71cfafc1e0216a565",
+        "authors": [
+          "Tiandong Zhao",
+          "Si-Yuan Miao",
+          "Jialin Cao",
+          "Shaoqiang Lu",
+          "Jun Qiu",
+          "Xiao Shi",
+          "Kun Wang",
+          "Lei He"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1240,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:14a91075ad50a7630b33acdc238a88fdcb3f41c256d67b7675c2321d50670213",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
