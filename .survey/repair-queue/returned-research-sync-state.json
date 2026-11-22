@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "520fb4419abe5bfb507a30cd960a5cab7e4f0858",
+  "base_commit": "1559702945654969e7e27f87ead569c611ded956",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -15038,38 +15038,11 @@
     },
     "DOI:10.1145/3771563": {
       "order": [
-        "2026-10-30T09:13:11+00:00",
-        "libfile_b88d4237354881919bed2d461bc14e72--2025-doi-10.1145-3771563-apple-silicon-llm-inference-quantization-characterization-research-20261030-1633-scheduled-ch.json"
+        "2026-11-22T11:59:32+00:00",
+        "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "2a87977d243ddf99f9f79ae960d402fd3b1e719c27ef5f82320310124a1edca5",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/libfile_b88d4237354881919bed2d461bc14e72--2025-doi-10.1145-3771563-apple-silicon-llm-inference-quantization-characterization-research-20261030-1633-scheduled-chat-30-r01-v2.md",
-        "canonical_id": "DOI:10.1145/3771563",
-        "worker_completed_at": "2026-10-30T16:33:35+09:00",
-        "worker_run_key": "20261030-1633-scheduled-chat-30/r01",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 5420,
-          "body_paragraphs": 23,
-          "method_chars": 0,
-          "method_paragraphs": 0,
-          "evaluation_chars": 1668,
-          "limitation_chars": 962,
-          "insufficiency_flags": [
-            "手法説明量 0 < 700"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 手法説明量 0 < 700"
-        ],
-        "processed_at": "2026-10-30T09:13:11+00:00"
-      },
+      "status": "already_represented",
+      "result": null,
       "return_count": 3
     },
     "arXiv:2503.18292": {
@@ -49486,6 +49459,15 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.21203/rs.3.rs-10952127/v1": {
+      "order": [
+        "2026-11-22T12:02:37+00:00",
+        "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62502,13 +62484,19 @@
       "papers/inference/99-other-inference-systems/2020-2010.03688-axformer-accuracy-driven-approximation-of-transformers-for-faster-smalle.md"
     ],
     "doi:10.18653/v1/2025.acl-long.486": [
+      "papers/inference/05-speculative-decoding-moe/2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-cand.md",
       "papers/inference/05-speculative-decoding-moe/2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-cand.md"
     ],
     "doi:10.18653/v1/2025.findings-acl.1386": [
+      "papers/inference/99-other-inference-systems/2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md",
       "papers/inference/99-other-inference-systems/2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md"
     ],
     "doi:10.1007/s44443-026-00724-4": [
+      "papers/inference/99-other-inference-systems/2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression.md",
       "papers/inference/99-other-inference-systems/2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression.md"
+    ],
+    "doi:10.21203/rs.3.rs-10952127/v1": [
+      "papers/inference/13-sparse-attention/2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-.md"
     ]
   }
 }
