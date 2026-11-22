@@ -138,6 +138,10 @@
   実装：[✓](https://github.com/zhangsq-nju/EdgeRazor) ・ リポジトリ内被引用：1  
   対象は単なる事後量子化ではなく、量子化した生徒モデルを教師モデルで監督して再学習する混合精度量子化対応蒸留（Mixed-Precision Quantization-Aware Distillation; MPQAD）である。
 
+- **2026-04 · [Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers](2026-2604.23475-supernodes-and-halos-loss-critical-hubs-in-llm-feed-forward-layers.md)**  
+  実装：[✓](https://github.com/KempnerInstitute/nodelens) ・ リポジトリ内被引用：1  
+  この研究は、LLMのフィードフォワード層（feed-順伝播 network、FFN）の中間チャネルを丸ごと削除する構造化枝刈り（structured 枝刈り）で、ある削除はほとんど害がないのに、別の削除はモデル品質を急激に崩壊させる理由を調べる。
+
 - **2026-04 · [Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate](2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DASH-Qは、学習済み大規模言語モデル（LLM）の重みを2〜4ビットへ圧縮する際、少量の較正入力から推定した相関情報を過信すると量子化後の回答品質が壊れるという問題を扱う。
@@ -323,10 +327,6 @@
 - **2026-05 · [BCJR-QAT: A Differentiable Relaxation of Trellis-Coded Weight Quantization](2026-2605.10655-bcjr-qat-a-differentiable-relaxation-of-trellis-coded-weight-quantizatio.md)**  
   実装：[✓](https://github.com/Venugopalan2610/quant-2bit) ・ リポジトリ内被引用：0  
   BCJR-QATは、トレリス符号化量子化（Trellis-Coded Quantization; TCQ）を使うLLMの2ビット重み表現に対し、量子化認識学習（Quantization-Aware 学習; QAT）を適用する方法である。
-
-- **2026-04 · [Supernodes and Halos: Loss-Critical Hubs in LLM Feed-Forward Layers](2026-2604.23475-supernodes-and-halos-loss-critical-hubs-in-llm-feed-forward-layers.md)**  
-  実装：[✓](https://github.com/KempnerInstitute/nodelens) ・ リポジトリ内被引用：0  
-  この研究は、LLMのフィードフォワード層（feed-順伝播 network、FFN）の中間チャネルを丸ごと削除する構造化枝刈り（structured 枝刈り）で、ある削除はほとんど害がないのに、別の削除はモデル品質を急激に崩壊させる理由を調べる。
 
 - **2026-04 · [Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization](2026-2604.08118-initialisation-determines-the-basin-efficient-codebook-optimisation-for-.md)**  
   実装：[✓](https://github.com/kenno94-IK/aqlm-oaem) ・ リポジトリ内被引用：0  

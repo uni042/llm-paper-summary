@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1229本）
+## 自動生成の論文一覧（1231本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -315,6 +315,10 @@
 - **2026-04 · [PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding](2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-co.md)**  
   実装：[✓](https://github.com/OPPO-Mente-Lab/PixelPrune) ・ リポジトリ内被引用：2  
   画素の重複を予測符号化で検出し、視覚符号器へ入れる前に重複ブロックを落とす学習不要の方式で、文書では精度をほぼ保ちながら推論を最大4.2倍速くした。
+
+- **2026-04 · [MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs](2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficien.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  注意の吸い込み（注意機構 Sink）、位置偏り、複数注意ヘッドの役割差、画像全体で目立つ物体への偏りがある。さらに64トークンのPOPE効率測定では、質問関連性だけを使うλ=1の構成が77.06ms、13.93GBであり、VisPrunerの89.48ms、14.35GBより小さい。
 
 - **2026-04 · [HieraVid: Hierarchical Token Pruning for Fast Video Large Language Models](2026-2604.01881-hieravid-hierarchical-token-pruning-for-fast-video-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -663,10 +667,6 @@
 - **2026-04 · [Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA](2026-2604.02965-open-loop-planning-closed-loop-verification-speculative-verification-for.md)**  
   実装：[✓](https://github.com/edsad122/SV-VLA) ・ リポジトリ内被引用：1  
   本論文は、計画は重いモデルで低頻度に実施し、計画が依然として妥当かの検査だけを軽いモデルで毎制御時刻に実施するSV-VLA（投機的 検証 for VLA Control）を提案する。
-
-- **2026-04 · [MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs](2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficien.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  注意の吸い込み（注意機構 Sink）、位置偏り、複数注意ヘッドの役割差、画像全体で目立つ物体への偏りがある。さらに64トークンのPOPE効率測定では、質問関連性だけを使うλ=1の構成が77.06ms、13.93GBであり、VisPrunerの89.48ms、14.35GBより小さい。
 
 - **2026-04 · [MemoSight: Unifying Context Compression and Multi Token Prediction for Reasoning Acceleration](2026-2604.14889-memosight-unifying-context-compression-and-multi-token-prediction-for-re.md)**  
   実装：[✓](https://github.com/helldog-star/MemoSight) ・ リポジトリ内被引用：1  
@@ -1458,6 +1458,10 @@
   実装：[✓](https://github.com/RowanSu/OmniPack) ・ リポジトリ内被引用：0  
   全モーダルモデル向けに、モデル前段の構造的圧縮とモデル内段の質問条件付き圧縮を統一した学習不要の2段トークン圧縮で、計算量を約6分の1にしながら性能の98パーセントを保った。
 
+- **2026-08 · [Multi-Level Modeling of Large Language Model Inference Latency and Energy via Hybrid Analytical-Machine-Learning Predictors](2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energ.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  基本演算の解析推定、ブロック単位の機械学習予測、全体集約の三層で推論の遅延とエネルギーを予測するHYMELL。H100でLLaMA 3 8Bの誤差はプリフィルとデコードとも5パーセント未満だった。
+
 - **2026-08 · [MARCH: Scaling Recurrent Memory with Content-Routed State Anchors](2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MARCHは、再帰型言語モデルの「過去を固定サイズの状態に圧縮するため、後から古い情報を取り出しにくい」という問題を、累積再帰状態の履歴保存と内容に基づく検索で緩和する構造である。過去状態の読出しには追加費用があり、128KではTop-4の疎ルーティングが密なMARCHの学習処理量を2倍超に改善する。
@@ -1549,6 +1553,10 @@
 - **2026-07 · [Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs](2026-2607.23046-structured-redundancy-modeling-for-efficient-visual-token-pruning-in-hig.md)**  
   実装：[✓](https://github.com/cvsp-lab/SFPruner) ・ リポジトリ内被引用：0  
   後段の言語モデルがそれらすべてを処理すると、注意演算とKVキャッシュの負担が増えるため、重要な視覚トークンだけを残す枝刈りが有効である。Qwen2.5-VL-7Bで平均512トークンを残す条件では、CDPrunerの選択時間112.4msに対し2.5msで、約110msを選択段階から削減する。
+
+- **2026-07 · [STEEL: Sparsity-Aware Fused Attention for Energy-Efficient Long-Sequence Inference on AMD's XDNA NPU](2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-.md)**  
+  実装：[✓](https://github.com/amd/iron) ・ リポジトリ内被引用：0  
+  FlashAttentionをデータフロー化して三段階パイプラインでニューラル処理装置へ載せ、因果マスクの疎性を意識した配置で負荷の偏りを均すSTEEL。CPU比でエネルギーを9.17分の1まで減らした。
 
 - **2026-07 · [ST-Veto: Spatio-Temporal Token Veto for Diffusion MLLMs via Taylor Prediction and Visual Grounding](2026-2607.17884-st-veto-spatio-temporal-token-veto-for-diffusion-mllms-via-taylor-predic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3212,6 +3220,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
 
+- **2025-03 · [Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity](2025-2503.11164-towards-extreme-pruning-of-llms-with-plug-and-play-mixed-sparsity.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  大規模言語モデルの重みを学習後に削減する際、既存のMagnitude、SparseGPT、Wandaなどは、重みを残す重要度の測り方を工夫してきた。その後、各層の疎度を遺伝的アルゴリズムに似た進化的探索で調整する。代表例はLLaMA-13B、WikiText、75%削減、ブロック幅M=4のWandaである。
+
 - **2025-03 · [RSQ: Learning from Important Tokens Leads to Better Quantized LLMs](2025-2503.01820-rsq-learning-from-important-tokens-leads-to-better-quantized-llms.md)**  
   実装：[✓](https://github.com/ylsung/rsq) ・ リポジトリ内被引用：2  
   GPTQなどの事後量子化（Post-学習 量子化; PTQ）は、元の重みを低ビットへ丸めるとき、少数の校正データで量子化前後の層出力を比較して誤差を補償する。2bit条件ではQuaRotの平均35.3%に対しRSQは40.6%となる。
@@ -3395,10 +3407,6 @@
 - **2025-03 · [Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer](2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md)**  
   実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
   本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
-
-- **2025-03 · [Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity](2025-2503.11164-towards-extreme-pruning-of-llms-with-plug-and-play-mixed-sparsity.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  大規模言語モデルの重みを学習後に削減する際、既存のMagnitude、SparseGPT、Wandaなどは、重みを残す重要度の測り方を工夫してきた。その後、各層の疎度を遺伝的アルゴリズムに似た進化的探索で調整する。代表例はLLaMA-13B、WikiText、75%削減、ブロック幅M=4のWandaである。
 
 - **2025-03 · [STADE: Standard Deviation as a Pruning Metric](2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md)**  
   実装：[✓](https://github.com/Coello-dev/STADE) ・ リポジトリ内被引用：1  
@@ -4342,6 +4350,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   実験は画像分類用の視覚Transformer（ViT）であり、LLMのKVキャッシュ圧縮やGPU推論時間の改善を直接実証したものではない。
 
+- **2024-10 · [FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs](2024-2410.16663-fastattention-extend-flashattention2-to-npus-and-low-resource-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FlashAttentionは注意重み行列をGPUの外部メモリに全量書き出さず、タイル単位の行列積とオンラインsoftmaxによって中間データの移動を抑える。
+
 - **2024-10 · [ESPACE: Dimensionality Reduction of Activations for Model Compression](2024-2410.05437-espace-dimensionality-reduction-of-activations-for-model-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ESPACEはこの順序を逆転させ、入力活性化を較正済みの低次元空間へ射影してから元の重みで学習し、推論時だけ結合則で圧縮重みへ置き換える。GPT3、Llama2、Nemotron4の複数モデルで、20〜55%程度の圧縮に対するPPL、下流精度、GEMMレイテンシ、プリフィル TTFTを評価する。
@@ -4433,10 +4445,6 @@
 - **2024-10 · [Two are better than one: Context window extension with multi-grained self-injection](2024-2410.19318-two-are-better-than-one-context-window-extension-with-multi-grained-self.md)**  
   実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  
   一方、単純に過去文脈を一様圧縮すると、質問に必要な細かい事実まで失われやすい。論文要旨の速度改善（ストリーミング型比約2倍、エンコーダ・デコーダ型比約3倍）は対象実装・装置での比較であり、一般的なLLM推論のトークン/s改善倍率と同一視しない。
-
-- **2024-10 · [FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs](2024-2410.16663-fastattention-extend-flashattention2-to-npus-and-low-resource-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  FlashAttentionは注意重み行列をGPUの外部メモリに全量書き出さず、タイル単位の行列積とオンラインsoftmaxによって中間データの移動を抑える。
 
 - **2024-10 · [Efficiently Deploying LLMs with Controlled Risk](2024-2410.02173-efficiently-deploying-llms-with-controlled-risk.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

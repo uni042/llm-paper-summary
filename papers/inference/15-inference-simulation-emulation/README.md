@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（97本）
+## 自動生成の論文一覧（98本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -201,6 +201,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-07 · [ELiTeFormer: An Efficient Transformer for FPGAs](2026-2607.03652-eliteformer-an-efficient-transformer-for-fpgas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ELiTeFormerは、言語モデルの注意機構と全結合層を個別に高速化するだけでは、再構成可能な論理回路（Field-Programmable Gate Array; FPGA）の特性を十分に利用できないという問題に取り組む。
+
+- **2026-07 · [Characterizing LLM Kernel Access and Memory Interaction in Multi-Partition NUMA GPUs](2026-2607.28824-characterizing-llm-kernel-access-and-memory-interaction-in-multi-partiti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MI300Xの実カーネルトレースからワークグループ間の共有を全共有・部分共有・専有へ分類し、NUMA配置の遅延影響がデコードで最大1.79倍、計算律速なプリフィルでは1.09倍にとどまることと、類型ごとに対策が違うことを示した分析研究。
 
 - **2026-07 · [C2C-Explorer: An Exploration Framework for Chip-to-Chip Interconnect Architectures in LLM Cloud Computing Systems](2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-arch.md)**  
   実装：[✓](https://github.com/Selinaee/C2C-Explorer) ・ リポジトリ内被引用：0  

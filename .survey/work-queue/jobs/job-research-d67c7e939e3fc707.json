@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMの並列デコードで中エントロピーのピボットを先に確定させる波及効果を利用し、先読み評価でトークンを決めるRipple-Pivot SearchによりKVキャッシュ併用で最大18倍高速化している。",
   "semantic_scholar_id": "4cfd9fbcd4c156f0ebc0bc8c98122fbbde18cd0b",
   "source_url": "https://arxiv.org/abs/2608.11742",
-  "status": "ready",
+  "status": "superseded",
   "title": "Ripple-Pivot Search: Active Parallel Decoding for Diffusion Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T04:44:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-languag.md",
+  "represented_canonical_id": "arXiv:2608.11742",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "649a8b46db8a62d81d4b8f4f2b43abb44d2175d6",
+  "base_commit": "562b15f33bbd5be772843b2bc4fd7734cacc1bc5",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -530,6 +530,7 @@
     "2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.json",
     "2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.json",
     "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json",
+    "2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-inference-on-amd-s-xdna-npu.json",
     "2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.json",
     "2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-language-models.json",
     "2026-2607.11211-fasttps-an-optimized-method-for-llm-token-phase-for-ai-accelerators.json",
@@ -546,6 +547,7 @@
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
+    "2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantization-of-mllms.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-optimization.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
@@ -561,6 +563,7 @@
     "2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-context-attention.json",
     "2026-2607.28166-commit-locally-exit-globally-coordinating-adaptive-sampling-and-early-exit-in-diffusion-language-models.json",
     "2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruning.json",
+    "2026-2607.28824-characterizing-llm-kernel-access-and-memory-interaction-in-multi-partition-numa-gpus.json",
     "2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.json",
     "2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-question-answering.json",
     "2026-2608.00573-trimmoe-a-communication-aware-and-adaptive-depth-framework-for-distributed-edge-inference.json",
@@ -581,11 +584,13 @@
     "2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.json",
     "2026-2608.06628-retrofitting-linear-attention-into-diffusion-language-models.json",
     "2026-2608.06630-the-sparsity-whisperer.json",
+    "2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energy-via-hybrid-analytical-machine-learning-predict.json",
     "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json",
     "2026-2608.08611-c2c-explorer-an-exploration-framework-for-chip-to-chip-interconnect-architectures-in-llm-cloud-computing-systems.json",
     "2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
+    "2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-language-models.json",
     "2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-llm-agent.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
     "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json",
@@ -48056,6 +48061,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.09385": {
+      "order": [
+        "2026-11-22T04:37:29+00:00",
+        "2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-inference-on-amd-s-xdna-npu.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.21076": {
+      "order": [
+        "2026-11-22T04:38:40+00:00",
+        "2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantization-of-mllms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.28824": {
+      "order": [
+        "2026-11-22T04:39:50+00:00",
+        "2026-2607.28824-characterizing-llm-kernel-access-and-memory-interaction-in-multi-partition-numa-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.06723": {
+      "order": [
+        "2026-11-22T04:41:01+00:00",
+        "2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energy-via-hybrid-analytical-machine-learning-predict.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.11742": {
+      "order": [
+        "2026-11-22T04:42:11+00:00",
+        "2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60511,6 +60561,21 @@
     "arxiv:2607.01127": [
       "papers/inference/99-other-inference-systems/2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.md",
       "papers/inference/99-other-inference-systems/2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.md"
+    ],
+    "arxiv:2607.09385": [
+      "papers/inference/99-other-inference-systems/2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-.md"
+    ],
+    "arxiv:2607.21076": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantiz.md"
+    ],
+    "arxiv:2607.28824": [
+      "papers/inference/15-inference-simulation-emulation/2026-2607.28824-characterizing-llm-kernel-access-and-memory-interaction-in-multi-partiti.md"
+    ],
+    "arxiv:2608.06723": [
+      "papers/inference/99-other-inference-systems/2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energ.md"
+    ],
+    "arxiv:2608.11742": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-languag.md"
     ]
   }
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（190本）
+## 自動生成の論文一覧（192本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -294,6 +294,10 @@
   実装：[✓](https://github.com/Multimedia-Analytics-Laboratory/RUTA) ・ リポジトリ内被引用：0  
   視覚トークンの削減を率と効用の最適化として定式化し、質問に合わせて候補を絞り、保持確率の合計への罰則で入力ごとに個数を学ばせ、落とした分の情報を錨へ吸収させることで、全トークンの数パーセントで性能の9割前後を保つ削減方式。
 
+- **2026-08 · [Ripple-Pivot Search: Active Parallel Decoding for Diffusion Large Language Models](2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-languag.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  中エントロピーの位置を先に確定する波及効果を使い、ピボット位置と置くトークンの両方を先読みで探す学習不要の探索で、拡散言語モデルの並列デコードを4〜10倍速くする方式。
+
 - **2026-08 · [PaDoc: Layout-Grounded Parallel Decoding for Document Parsing](2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.md)**  
   実装：[✓](https://github.com/Longin-Yu/Padoc) ・ リポジトリ内被引用：0  
   配置を枝分かれ構造とみなし、ページ画像を共有したまま領域ごとの内容生成を同時に進める因数分解で、逐次生成の深さを最長の配置と内容の経路まで縮め、品質を保ったまま処理量を最大2倍超にした文書解析方式。
@@ -349,6 +353,10 @@
 - **2026-07 · [CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents](2026-2607.22711-corvus-context-optimization-and-reduction-via-underlying-synchronization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コード編集を行う大規模言語モデル（LLM）エージェントは、ファイル読込み、編集、試験、再読込みを何度も繰り返す。従来の追記専用履歴では、読込み時のファイル本文が道具の観測結果として永久に残り、後で同じファイルが変更されても古い本文は削除されない。エージェントがその古い記述を使って修正すると、適用位置の不一致や失敗が起こり、さらに再読込みと再試行を繰り返す。
+
+- **2026-07 · [C-PTQ: Fisher-weighted Channel-wise Sensitivity for Post-training Quantization of MLLMs](2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantiz.md)**  
+  実装：[✓](https://github.com/renaissanceee/cptq) ・ リポジトリ内被引用：0  
+  対角フィッシャー情報でチャネルごとの量子化残差を重み付け、感度の粒度とスケーリングの粒度を揃えるマルチモーダルモデルの学習後量子化C-PTQ。補助モジュールなしで最良水準の精度を保つ。
 
 - **2026-07 · [Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX](2026-2607.19353-benchmarking-confidential-gpu-inference-on-nvidia-h100-under-intel-tdx.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
