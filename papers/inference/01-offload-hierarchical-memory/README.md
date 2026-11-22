@@ -164,6 +164,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/deepshnv/pipeshard-mlsys26-ae) ・ リポジトリ内被引用：1  
   大きなLLMをVRAM容量が不足する単一GPUで動かすには、モデル重みの一部をシステムメモリ（システム RAM）へ置き、中央処理装置（CPU）で計算するか、必要な時点でグラフィックス処理装置（GPU）へ転送する必要がある。
 
+- **2026-03 · [FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding](2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md)**  
+  実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：1  
+  すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
+
 - **2026-01 · [Making MoE-based LLM Inference Resilient with TARRAGON](2026-2601.01310-tarragon-resilient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意側とエキスパート側を別故障領域に分け、動的エキスパート経路、増分KVチェックポイント、影エキスパートで故障ワーカーだけを自己修復し、MoE推論の全体再起動を避ける。
@@ -333,10 +337,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-04 · [DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference](2026-2604.26074-dak-direct-access-gpu-memory-offloading.md)**  
   実装：[✓](https://github.com/shouxulin/DirectAccessKernel) ・ リポジトリ内被引用：0  
   DAKはCPUメモリの重み・KVをGPU HBMへ先読みせずTMAで共有メモリへ直接運び、演算別オフロード率・輻輳制御・マルチキャストでHBM中継と帯域競合を減らす。
-
-- **2026-03 · [FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding](2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md)**  
-  実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：0  
-  すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
 
 - **2026-02 · [DynSplit-KV: Dynamic Semantic Splitting for KVCache Compression in Efficient Long-Context LLM Inference](2026-2602.03184-dynsplit-kv-dynamic-semantic-splitting-for-kvcache-compression-in-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
