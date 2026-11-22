@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1212本）
+## 自動生成の論文一覧（1216本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2566,6 +2566,10 @@
   実装：[✓](https://github.com/haojinw0027/Mentorcollab) ・ リポジトリ内被引用：0  
   大型推論モデルは複雑な問題を解ける反面、解答までの思考列が長く、生成トークンの費用が増える。大型モデルが出力するトークンを小型モデルへ逐次注入する従来の協調方式では、大型モデルの「考え直し」「前段階への後戻り」まで取り込んでしまい、小型モデルの簡潔さを損なう場合がある。メンター由来のトークンが最終生成列に占める割合は平均18.4%と記述される。
 
+- **2026-02 · [LQA: A Lightweight Quantized-Adaptive Framework for Vision-Language Models on the Edge](2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画像・テキストで量子化器を分け敏感な層を高精度に残す量子化と、正負の特徴キャッシュで勾配なしに適応する仕組みを組み合わせ、端末向け視覚言語モデルの精度を保ちながらメモリを最大19.9倍削減する方式。
+
 - **2026-02 · [LLM-CoOpt: A Co-Design and Optimization Framework for Efficient LLM Inference on Heterogeneous Platforms](2026-2602.09323-llm-coopt-a-co-design-and-optimization-framework-for-efficient-llm-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLM-CoOptは、一般的なGPUとはメモリ階層や実行単位が異なる計算装置にvLLMを移植したときの推論効率を改善するシステム最適化である。本文第4.3節の5種類のLLaMA系GPTQモデルでは、生成処理量が5.72～12.13%増加し、推論遅延が4.82～6.75%短縮した。
@@ -2573,6 +2577,10 @@
 - **2026-02 · [LATMiX: Learnable Affine Transformations for Microscaling Quantization of LLMs](2026-2602.17681-latmix-learnable-affine-transformations-for-microscaling-quantization-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LATMiXは、低ビット量子化で問題になる活性値の外れ値を、量子化する前の可逆な座標変換によって緩和する事後量子化手法である。Qwen3-4BのMXFP4では単純GPTQの7課題平均62.11%に対しLATMiX-LUは64.74%、MXINT4では55.09%に対し63.63%である。
+
+- **2026-02 · [Krause Synchronization Transformers](2026-2602.11534-krause-synchronization-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  内積と全体正規化を、距離に基づく動径基底関数と局所近傍・上位k選択へ置き換え、多クラスタ同期を保ちながら注意の計算量を線形化し精度も上げるKrause注意の提案。
 
 - **2026-02 · [Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models](2026-2602.01428-improving-the-trade-off-between-watermark-strength-and-speculative-sampl.md)**  
   実装：[✓](https://github.com/hwq0726/watermark-tradeoff) ・ リポジトリ内被引用：0  
@@ -2750,6 +2758,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   標準的な思考の連鎖は、最終解答の正誤だけでは途中の推論ステップの有用性を直接測れず、冗長な言い換えや誤った分岐を含みやすい。CoT-Flowは、問題xと時点iまでの生成列sを持つ状態Iiにおいて、正解yの負の対数確率 D(Ii)=-log p(y\|Ii) を難しさと定義する。
 
+- **2026-01 · [DIP: Dynamic In-Context Planner For Diffusion Language Models](2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/wmd3i/DIP) ・ リポジトリ内被引用：0  
+  拡散言語モデルのブロック境界で、平均検証信頼度が落ちたときだけ文脈内例を段階的に挿入し、固定プロンプト比で最大1.59倍高速化する学習不要の文脈最適化方式。
+
 - **2026-01 · [Context Tokens are Anchors: Understanding the Repetition Curse in dMLLMs from an Information Flow Perspective](2026-2601.20520-context-tokens-are-anchors-understanding-the-repetition-curse-in-dmllms-.md)**  
   実装：[✓](https://github.com/ErikZ719/CoTA) ・ リポジトリ内被引用：0  
   拡散型マルチモーダルモデルでキャッシュが引き起こす反復現象を、文脈トークンがアンカーであるという情報フロー分析で説明し、注意強化とエントロピー誘導投票のCoTAで隣接反復率を大幅に減らした研究。
@@ -2781,6 +2793,10 @@
 - **2025-12 · [StreamingAssistant: Efficient Visual Token Pruning for Accelerating Online Video Understanding](2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-onlin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   隣接トークンとの類似度で空間冗長性を測り、市松マスクで安全に並列枝刈りする動画向けトークン削減方式で、9割超のトークンを落としても精度をほぼ保った。
+
+- **2025-12 · [SparseSwaps: Tractable LLM Pruning Mask Refinement at Scale](2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.md)**  
+  実装：[✓](https://github.com/ZIB-IOL/SparseSwaps) ・ リポジトリ内被引用：0  
+  行単位の疎制約でマスク選択を行ごとに分離し、グラム行列で1件交換の正確な効果を定数時間評価して既存枝刈りマスクを単調改善し、層誤差を最大60パーセント減らす後付け改良法。
 
 - **2025-12 · [SASQ: Static Activation Scaling for Quantization-Aware Training in Large Language Models](2025-2512.14481-sasq-static-activation-scaling-for-quantization-aware-training-in-large-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4757,7 +4773,7 @@
   本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
 
 - **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
-  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：21  
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  

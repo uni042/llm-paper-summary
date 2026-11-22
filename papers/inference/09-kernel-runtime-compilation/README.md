@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（300本）
+## 自動生成の論文一覧（301本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -693,6 +693,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization](2026-2603.28342-kernel-smith-a-unified-recipe-for-evolutionary-kernel-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLM推論エンジンの実効性能は、モデル演算そのものだけでなく、GPU上で実行される個別カーネルの融合、メモリ移動、起動費用、並列化に左右される。しかし一度だけコードを生成する方式は、コンパイルできても数値が間違っていたり、正しくても実測速度が遅かったりする。
+
+- **2026-02 · [The Quantization Trap: Breaking Linear Scaling Laws in Multi-Hop Reasoning](2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasonin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多段推論では逆量子化のキャスティング費用が段数だけ積み上がり、8ビット化がかえってエネルギーを4倍に増やす量子化の罠を、理論分解と0.6Bから72B・6種GPUの実測で示した分析。
 
 - **2026-02 · [RaBiT: Residual-Aware Binarization Training for Accurate and Efficient LLMs](2026-2602.05367-rabit-residual-aware-binarization-training-for-accurate-and-efficient-ll.md)**  
   実装：[✓](https://github.com/SamsungLabs/RaBiT) ・ リポジトリ内被引用：0  

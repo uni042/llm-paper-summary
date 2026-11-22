@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデルのブロック単位KVキャッシュを活かし、生成信頼度が低い時だけ文脈内事例を動的に挿入するDIPにより、固定プロンプト比で最大1.59倍の高速化を品質維持で達成する推論時文脈最適化技術である。",
   "semantic_scholar_id": "ec22d57217704dd6e555330a64971a70d291c86e",
   "source_url": "https://arxiv.org/abs/2601.03199",
-  "status": "ready",
+  "status": "superseded",
   "title": "DIP: Dynamic In-Context Planner For Diffusion Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T03:54:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2601.03199",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

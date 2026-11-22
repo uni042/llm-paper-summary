@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e1f8eab9060b3b7e80e34b350958e9d3ca49a8ab",
+  "base_commit": "497ddb8a9ae00116359b382286d2f6707aae3c3e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -225,6 +225,7 @@
     "2025-2512.06989-flash-multi-head-feed-forward-network.json",
     "2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-energy-debugging.json",
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
+    "2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.json",
     "2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-memory-growth-for-efficient-llm-inference.json",
     "2025-2512.11534-hfs-holistic-query-aware-frame-selection-for-efficient-video-understanding.json",
     "2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-online-video-understanding.json",
@@ -244,6 +245,7 @@
     "2025-pqcache-product-quantization-based-kvcache-for-long-context-llm-inference.json",
     "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json",
     "2026-2601.03067-joint-encoding-of-kv-cache-blocks-for-scalable-llm-serving.json",
+    "2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.json",
     "2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.json",
     "2026-2601.03928-focusui-efficient-ui-grounding-via-position-preserving-visual-token-selection.json",
     "2026-2601.06790-secmoe-communication-efficient-secure-moe-inference-via-select-then-compute.json",
@@ -284,14 +286,17 @@
     "2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-with-hypothesis-path-expansion-and-reduction.json",
     "2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-foundation-models.json",
     "2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistical-correction.json",
+    "2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-models-on-the-edge.json",
     "2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-context-inference.json",
     "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json",
     "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
     "2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-large-language-models.json",
+    "2026-2602.11534-krause-synchronization-transformers.json",
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
     "2026-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficient-multimodal-large-language-models.json",
+    "2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasoning.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
     "2026-2602.13680-allmem-a-memory-centric-recipe-for-efficient-long-context-modeling.json",
     "2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-transformers-compression.json",
@@ -47756,6 +47761,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.10922": {
+      "order": [
+        "2026-11-22T03:48:04+00:00",
+        "2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.03199": {
+      "order": [
+        "2026-11-22T03:49:12+00:00",
+        "2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.07849": {
+      "order": [
+        "2026-11-22T03:50:20+00:00",
+        "2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-models-on-the-edge.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.11534": {
+      "order": [
+        "2026-11-22T03:51:28+00:00",
+        "2026-2602.11534-krause-synchronization-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.13595": {
+      "order": [
+        "2026-11-22T03:52:36+00:00",
+        "2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60091,6 +60141,21 @@
     "arxiv:2510.19644": [
       "papers/inference/99-other-inference-systems/2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.md",
       "papers/inference/99-other-inference-systems/2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.md"
+    ],
+    "arxiv:2512.10922": [
+      "papers/inference/99-other-inference-systems/2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.md"
+    ],
+    "arxiv:2601.03199": [
+      "papers/inference/99-other-inference-systems/2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.md"
+    ],
+    "arxiv:2602.07849": [
+      "papers/inference/99-other-inference-systems/2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-model.md"
+    ],
+    "arxiv:2602.11534": [
+      "papers/inference/99-other-inference-systems/2026-2602.11534-krause-synchronization-transformers.md"
+    ],
+    "arxiv:2602.13595": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasonin.md"
     ]
   }
 }
