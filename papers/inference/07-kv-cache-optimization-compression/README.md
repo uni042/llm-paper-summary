@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（634本）
+## 自動生成の論文一覧（635本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -225,6 +225,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：3  
   保存精度を下げれば容量を削減できるが、鍵と値の数値的な再構成誤差が小さいことと、注意機構の出力が変化しないことは同義ではない。約5.82倍の鍵値キャッシュ圧縮時に、原著の標準誤差による判定では、両モデルの主要18評価セルすべてで非圧縮基準との統計的な区別がつかないと報告する。
 
+- **2026-07 · [Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding](2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md)**  
+  実装：[✓](https://github.com/kuleshov-group/setdlms) ・ リポジトリ内被引用：3  
+  マスクを復元する拡散モデルは多数の位置を並列に予測できるが、双方向の注意と固定長の生成領域を前提とするため、復号中に一部だけを確定して計算結果を長期再利用する設計が難しい。
+
 - **2026-07 · [ResKV: Reconstructing Omitted Attention Contributions for Fixed-Budget KV Cache Compression](2026-2607.29591-reskv-reconstructing-omitted-attention-contributions-for-fixed-budget-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   重要トークンへ削除側の情報を混ぜ込む方式もあるが、厳密に保持したい鍵・値自体が改変され、特定箇所の検索に悪影響を与える場合がある。
@@ -336,10 +340,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [When Efficiency Meets Safety: A Benchmark Security Analysis of KV Cache Compression in Large Language Models](2026-2deb03505de5-when-efficiency-meets-safety-a-benchmark-security-analysis-of-kv-cache-c.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈推論では、過去の鍵・値（key-value; KV）をキャッシュすることで各生成ステップの再計算を減らすが、保存するトークンが増えるとGPUメモリ容量と帯域を圧迫する。反対に、CAMのような統合では浅い層の過度な値の重畳が深い層の注意を乱し、LLaMA-2の文脈内攻撃でASRが非圧縮0%から34%へ上がった。
-
-- **2026-07 · [Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding](2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md)**  
-  実装：[✓](https://github.com/kuleshov-group/setdlms) ・ リポジトリ内被引用：2  
-  マスクを復元する拡散モデルは多数の位置を並列に予測できるが、双方向の注意と固定長の生成領域を前提とするため、復号中に一部だけを確定して計算結果を長期再利用する設計が難しい。
 
 - **2026-07 · [HqeKV: Towards Hybrid Quantization and Eviction for KV Cache in Long-Context LLM Inference](2026-ec9fa0b99268-hqekv-towards-hybrid-quantization-and-eviction-for-kv-cache-in-long-cont.md)**  
   実装：[✓](https://github.com/skywclouds/HqeKV) ・ リポジトリ内被引用：2  
@@ -1247,6 +1247,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   注意KVに加えて再帰層の持続状態パッケージまでを4Bから9Bへ移し、接頭辞を再処理せずに本来の9Bの文脈利益の91.8パーセントを回復した、ハイブリッドモデル間の状態引継ぎの実証研究。
 
+- **2026-09 · [KVFetch: Temporal Prefetching for the Missing Half of KV Cache Compression](2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compressio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  内容ではなく位置で思い出す低温層と読みポインタによる先読みで、KV圧縮で途切れる逐語複写を同一予算のまま0.8から78.4へ回復させる学習不要の枠組み。
+
 - **2026-09 · [KVCMAS: Efficient KV cache Correction for Shared Context in Multi-Agent Systems](2026-2609.34060-kvcmas-efficient-kv-cache-correction-for-shared-context-in-multi-agent-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   完全に再計算すると入力処理が何度も必要になる。一方、先行エージェントのキャッシュを無修正で使うと、注意機構が本来と異なる内部状態を参照して回答品質が大きく落ちる。著者のvLLM実装によるA100 80GBの同時要求試験では、共有文脈32Kトークン、毎秒8要求、キャッシュ再利用率約0.8で、初回トークン待ち時間（TTFT）の中央値が61.95秒であった。
@@ -1778,7 +1782,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：140  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：141  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  

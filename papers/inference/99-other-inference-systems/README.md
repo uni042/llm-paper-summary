@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1233本）
+## 自動生成の論文一覧（1236本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -36,6 +36,10 @@
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：9  
   動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
 
+- **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
+  実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：9  
+  入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
+
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
@@ -43,10 +47,6 @@
 - **2026-02 · [RelayCaching：協調LLMの生成KVキャッシュ再利用](2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
-
-- **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
-  実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：8  
-  入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
 
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -124,6 +124,10 @@
   実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：5  
   端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
 
+- **2026-05 · [Language Modeling with Hyperspherical Flows](2026-2605.11125-language-modeling-with-hyperspherical-flows.md)**  
+  実装：[✓](https://github.com/jdeschena/s-flm) ・ リポジトリ内被引用：4  
+  S-FLMは代わりに次元 d の単位超球面 S^{d-1} 上へトークンを配置し、雑音ベクトルから正しい単語埋め込みへ回転する経路を学習する。
+
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   LLaVA-v1.5では1画像576トークン、LLaVA-NeXTの高解像度入力では最大2,880トークンとなり、画像の背景や類似領域にも長い系列を割り当てる。LLaVA-v1.5-7Bの8課題では、視覚トークンを平均576個から32個へ削減しても、元モデルを100%とした平均相対性能94.8%を維持した。
@@ -168,6 +172,10 @@
   実装：[✓](https://github.com/Tencent-Hunyuan/HunyuanOCR) ・ リポジトリ内被引用：3  
   原著の研究全体は、認識精度を改善するデータ構築・学習と、出力生成を高速化する推論機構の二本立てである。OmniDocBenchの単一要求評価で、同じHunyuanOCR-1.5の自己回帰復号と比較した平均ページ遅延は、Transformersで34.850秒から5.474秒、vLLMで3.032秒から1.408秒になった。
 
+- **2026-06 · [Posterior Refinement: Fast Language Generation via Any-Order Flow Maps](2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md)**  
+  実装：[✓](https://github.com/MananAg007/posterior-refinement) ・ リポジトリ内被引用：3  
+  フローマップにマスク型条件付けを入れて全体生成と事後確信度を両立させ、確信の低いトークンだけを再生成する反復で、関数評価を最大32分の1にしながら拡散系比較対象に並ぶ非自己回帰生成方式。
+
 - **2026-06 · [Models Take Notes at Prefill: KV Cache Can Be Editable and Composable](2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md)**  
   実装：[✓](https://github.com/19PINE-AI/programmable-kv) ・ リポジトリ内被引用：3  
   プリフィル済みKVキャッシュを結論メモとして捉え、追記訂正による編集とRoPE再配置による部品合成で再プリフィルを回避する。
@@ -187,10 +195,6 @@
 - **2026-05 · [Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU](2026-2605.20706-llamaweb.md)**  
   実装：[✓](https://github.com/ggml-org/llama.cpp) ・ リポジトリ内被引用：3  
   LlamaWebは静的メモリ計画、端末適応型WebGPUカーネル、量子化対応をllama.cppへ統合し、ブラウザ推論のメモリ消費とデコード性能を改善する。
-
-- **2026-05 · [Language Modeling with Hyperspherical Flows](2026-2605.11125-language-modeling-with-hyperspherical-flows.md)**  
-  実装：[✓](https://github.com/jdeschena/s-flm) ・ リポジトリ内被引用：3  
-  S-FLMは代わりに次元 d の単位超球面 S^{d-1} 上へトークンを配置し、雑音ベクトルから正しい単語埋め込みへ回転する経路を学習する。
 
 - **2026-05 · [Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models](2026-2605.28051-beyond-surrogate-gradients-fully-differentiable-token-pruning-for-vision.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -263,10 +267,6 @@
 - **2026-07 · [Combating Textual Noise and Redundancy: Entropy-Aware Dense Visual Token Pruning](2026-2607.02484-combating-textual-noise-and-redundancy-entropy-aware-dense-visual-token-.md)**  
   実装：[✓](https://github.com/SJTU-DeepVisionLab/EADP) ・ リポジトリ内被引用：2  
   画像を含むVision-Language モデル（VLM）では、画像エンコーダが作る多数のパッチトークンがLLMの入力を長くし、事前充填の注意演算とメモリ転送を増やす。EADP（Entropy-Aware Dense Pruning）はこの二段階の失敗を分離する。
-
-- **2026-06 · [Posterior Refinement: Fast Language Generation via Any-Order Flow Maps](2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.md)**  
-  実装：[✓](https://github.com/MananAg007/posterior-refinement) ・ リポジトリ内被引用：2  
-  フローマップにマスク型条件付けを入れて全体生成と事後確信度を両立させ、確信の低いトークンだけを再生成する反復で、関数評価を最大32分の1にしながら拡散系比較対象に並ぶ非自己回帰生成方式。
 
 - **2026-06 · [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](2026-2606.06036-memory-is-reconstructed-not-retrieved-graph-memory-for-llm-agents.md)**  
   実装：[✓](https://github.com/Ji-shuo/MRAgent) ・ リポジトリ内被引用：2  
@@ -1130,6 +1130,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   サムネイルの多様さで画像ごとの予算を動かし、質問との類似度でクロップへ配分し、共有空間で測った偏り除去済みの質問スコアと視覚的顕著性を融合して視覚トークンを選ぶ学習不要の階層型枝刈りで、保持率25パーセントで未枝刈り比98.0パーセントの性能と2.0倍のスループットを得た。
 
+- **2026-10 · [From Patching to Pruning Visual Computation in Vision Language Models](2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  活性パッチングの診断を推論へ転用し、視覚トークンの射影を中立な代理活性へ置換できる安全な層を検証で特定して、トークンを消さずに視覚計算の55パーセントを削減する方式。
+
 - **2026-10 · [Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference](2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みの格子を半オクターブの分数冪へ細かくし、活性値は一様整数のまま、ルート2倍を加算器1個で近似して誤差を較正で吸収することで、乗算器なしのシフト加算実行を保ったまま4ビットで一様整数に近い精度を得る量子化。
@@ -1197,6 +1201,10 @@
 - **2026-10 · [Content-Aware Adaptive Token Pruning for Video-Language Models](2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンの相関の固有値の減衰率から動画ごとの冗長度を測って保持率を動画ごとに決める学習不要の枝刈りで、平均保持率10パーセントでも固定保持率より動画説明の正解率を7.48ポイント高く保ち、言語モデルの演算量を約95.5パーセント減らす。
+
+- **2026-10 · [Clock Diffusion: Efficient Semi-Autoregressive Continuous Diffusion Language Models](2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  位置依存のノイズスケジュールでトークンごとに拡散の時計をずらし、可変長生成とKVキャッシュを連続拡散言語モデルへ持ち込んだ半自己回帰型の枠組みで、拡散モデル最良のパープレキシティ19.5を達成する。
 
 - **2026-10 · [Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data](2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-d.md)**  
   実装：[✓](https://github.com/AidenGeunGeun/calibration-free-moe) ・ リポジトリ内被引用：0  
@@ -1373,6 +1381,10 @@
 - **2026-09 · [Green AI: Cost of LLM-Based Code Completion](2026-2609.33918-green-ai-cost-of-llm-based-code-completion.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21971227) ・ リポジトリ内被引用：0  
   コード補完のためにLLMをローカル実行する場合、モデルの正答率や生成速度だけでなく、入力文脈を処理するためのGPUエネルギーと、出力を逐次生成するためのGPUエネルギーを分けて評価する必要がある。量子化モデル、とくにQ4は同一モデル系のFP16に比べて省エネルギーな傾向があり、品質とエネルギーのPareto前線へ頻繁に現れる。
+
+- **2026-09 · [GleanVID: Complementary Token Selection for Efficient Video Large Language Models](2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-languag.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  時間的新しさでフレームへ予算を配り、局所代表性と既存選択に対する部分空間の補完性でトークンを選ぶことで、視覚トークン25パーセントで性能の98.6パーセントを保つ動画モデル向け圧縮方式。
 
 - **2026-09 · [From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models](2026-2609.26484-from-token-importance-to-conditional-removability-rethinking-visual-toke.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2925,7 +2937,7 @@
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：118  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：119  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  

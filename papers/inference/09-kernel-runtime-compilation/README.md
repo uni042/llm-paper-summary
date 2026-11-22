@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（307本）
+## 自動生成の論文一覧（308本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -317,6 +317,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication](2026-2610.39999-phosv1-efficient-scaling-of-model-sleeping-on-a-single-server-for-autosc.md)**  
   実装：[✓](https://github.com/blitz-serving/PhoenixOSv1) ・ リポジトリ内被引用：0  
   休眠モデルの図形処理装置文脈の重複を中央の常駐プログラムで取り除き、二十三モデル分の文脈容量を九十八・一パーセント減らしながら休眠と同等の起動時間を保ち、複数モデル提供で最初のトークンまでの平均時間を八十七パーセント短くしたと報告した。
+
+- **2026-10 · [Mosaic: GPU Sharing with Latency Guarantees through Kernel-Level Interference Prediction](2026-2610.07504-mosaic-gpu-sharing-with-latency-guarantees-through-kernel-level-interfer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  干渉源をスレッドブロック配置、メモリ階層競合、SM内競合へ分解してカーネル単位で減速を予測し、受付制御と同居方式選択で高優先処理のP99遅延のSLOを守るGPU共有方式。
 
 - **2026-10 · [MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning](2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-oppor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

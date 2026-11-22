@@ -35,10 +35,15 @@
   "selection_reason": "動画LLM向けに、フレームごとの時間的新規性で全体のトークン予算を配分し局所代表性と部分空間の補完性を jointly 考慮して視覚トークンを選択する学習不要な推論高速化GleanVIDを提案し、トークン25%保持でプリフィル遅延を44.7%削減している。",
   "semantic_scholar_id": "944a8f922d4f83286f0c1ebcc245b929665375de",
   "source_url": "https://arxiv.org/abs/2609.37042",
-  "status": "ready",
+  "status": "superseded",
   "title": "GleanVID: Complementary Token Selection for Efficient Video Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T05:16:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-languag.md",
+  "represented_canonical_id": "arXiv:2609.37042",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

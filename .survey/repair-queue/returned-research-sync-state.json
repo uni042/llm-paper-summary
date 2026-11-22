@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5e9d9361c143391b060f4608c3a02201a99bb4cb",
+  "base_commit": "cfb340152d32aaee89b4a849607c64fa4d8bdf4a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -692,6 +692,7 @@
     "2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.json",
     "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json",
     "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
+    "2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-language-models.json",
     "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json",
@@ -710,6 +711,7 @@
     "2026-2610.00267-therme-predictive-management-of-shared-thermal-headroom-for-sustained-llm-inference-on-thermally-constrained-edge-socs.json",
     "2026-2610.00497-gumbel-straight-flow-distilling-autoregressive-models-into-one-step-flow-maps.json",
     "2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.json",
+    "2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-language-models.json",
     "2026-2610.01160-serving-a-revisable-world-versioned-execution-for-interruptible-agents.json",
     "2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persistent-scheduling.json",
     "2026-2610.02233-budgeted-cache-repair-for-cross-context-kv-cache-reuse.json",
@@ -726,6 +728,7 @@
     "2026-2610.03198-kv2-a-self-refining-kv-cache.json",
     "2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-experts.json",
     "2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json",
+    "2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.json",
     "2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent-systems-on-cpu-gpu-unified-memory-architectures.json",
     "2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.json",
     "2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-on-intel-gpus.json",
@@ -755,6 +758,7 @@
     "2026-2610.07350-trajectory-retrieval-speculative-decoding-when-does-a-models-own-history-help.json",
     "2026-2610.07443-a-shape-adaptive-architecture-with-disaggregated-quantization-for-efficient-llm-serving.json",
     "2026-2610.07457-alignquant-tile-aligned-mixed-precision-quantization-for-efficient-llm-generation.json",
+    "2026-2610.07504-mosaic-gpu-sharing-with-latency-guarantees-through-kernel-level-interference-prediction.json",
     "2026-2610.07522-activation-denoising-a-robustness-view-on-parallel-vs-sequential-llm-quantization.json",
     "2026-2610.07742-cleave-scaling-tensor-program-optimization-via-decoupled-algebraic-search-and-operator-scheduling.json",
     "2026-2610.07780-apex-speculate-smarter-not-deeper.json",
@@ -767,6 +771,7 @@
     "2026-2610.08373-eco-energy-oriented-configuration-optimization-for-attention-ffn-disaggregated-llm-serving.json",
     "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
     "2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.json",
+    "2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compression.json",
     "2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.json",
     "2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inference.json",
     "2026-2610.09202-few-bits-one-law-toward-w2a4kv2.json",
@@ -48206,6 +48211,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.37042": {
+      "order": [
+        "2026-11-22T05:12:03+00:00",
+        "2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.00894": {
+      "order": [
+        "2026-11-22T05:12:45+00:00",
+        "2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.03389": {
+      "order": [
+        "2026-11-22T05:13:27+00:00",
+        "2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07504": {
+      "order": [
+        "2026-11-22T05:14:10+00:00",
+        "2026-2610.07504-mosaic-gpu-sharing-with-latency-guarantees-through-kernel-level-interference-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.08811": {
+      "order": [
+        "2026-11-22T05:14:52+00:00",
+        "2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60721,6 +60771,21 @@
     "arxiv:2609.35817": [
       "papers/inference/99-other-inference-systems/2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.md",
       "papers/inference/99-other-inference-systems/2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.md"
+    ],
+    "arxiv:2609.37042": [
+      "papers/inference/99-other-inference-systems/2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-languag.md"
+    ],
+    "arxiv:2610.00894": [
+      "papers/inference/99-other-inference-systems/2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-langu.md"
+    ],
+    "arxiv:2610.03389": [
+      "papers/inference/99-other-inference-systems/2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.md"
+    ],
+    "arxiv:2610.07504": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.07504-mosaic-gpu-sharing-with-latency-guarantees-through-kernel-level-interfer.md"
+    ],
+    "arxiv:2610.08811": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compressio.md"
     ]
   }
 }
