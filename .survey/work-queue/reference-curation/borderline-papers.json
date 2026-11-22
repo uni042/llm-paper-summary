@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-22T03:17:42+00:00",
-  "record_count": 6848,
+  "updated_at": "2026-11-22T03:32:29+00:00",
+  "record_count": 6849,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -106450,6 +106450,29 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Only 5% Attention Is All You Need: Efficient Long-range Document-level Neural Machine Translation"
+    },
+    "arXiv:2507.21522": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.21522",
+      "identity_tokens": [
+        "arXiv:2507.21522"
+      ],
+      "reason": "投機的デコード自体はLLM推論の基幹技術だが、本論文の対象と評価はWhisperによる音声認識に限定され、保守作業の定型文や車載コマンドのような低パープレキシティな音声ドメインでのみ検証されており、LLMのテキスト推論サービングへの評価がないため境界事例として扱う。",
+      "first_checked_at": "2026-11-22T03:32:29+00:00",
+      "last_checked_at": "2026-11-22T03:32:29+00:00",
+      "linked_from": [
+        "_",
+        "a",
+        "c",
+        "e",
+        "h",
+        "n",
+        "p",
+        "r",
+        "s"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Model-Free Speculative Decoding for Transformer-Based ASR with Token Map Drafting"
     }
   }
 }

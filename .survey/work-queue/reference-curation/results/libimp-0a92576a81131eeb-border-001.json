@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a92576a81131eeb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.21522",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.21522",
+    "identity_tokens": [
+      "arXiv:2507.21522"
+    ],
+    "reason": "投機的デコード自体はLLM推論の基幹技術だが、本論文の対象と評価はWhisperによる音声認識に限定され、保守作業の定型文や車載コマンドのような低パープレキシティな音声ドメインでのみ検証されており、LLMのテキスト推論サービングへの評価がないため境界事例として扱う。",
+    "first_checked_at": "2026-11-22T03:32:29+00:00",
+    "last_checked_at": "2026-11-22T03:32:29+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Model-Free Speculative Decoding for Transformer-Based ASR with Token Map Drafting"
+  },
+  "processed_at": "2026-11-22T03:32:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a92576a8113",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
