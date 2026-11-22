@@ -35,10 +35,15 @@
   "selection_reason": "モデル間KVキャッシュ再利用の安全性不整合を体系評価し、再利用した値テンソルを層・ヘッド別のアフィン写像で受け手モデルに整合させるVReparoにより攻撃成功率を下げつつTTFT削減85.62%を維持する、クロスモデルKVキャッシュ共有への直接のシステム貢献である。",
   "semantic_scholar_id": "7bf5f1a731cfd1e353534472f77fe5449dce4768",
   "source_url": "https://arxiv.org/abs/2610.15721",
-  "status": "ready",
+  "status": "superseded",
   "title": "To Cache or Not to Cache: Understanding and Mitigating Safety Incompatibility in Cross-Model KV Cache Reuse",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T00:04:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibi.md",
+  "represented_canonical_id": "arXiv:2610.15721",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1199本）
+## 自動生成の論文一覧（1201本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1026,6 +1026,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Attic-KV（Attic）は、長い文書を一度だけプリフィルしてKVキャッシュを保存し、将来の多数の質問に使い回す環境で、質問がまだ分からない段階でKVを圧縮する方式である。最終的なKV位置の重要度は再読時の注意機構・出力寄与から決め、保持率3～5%という厳しい条件でも事実を残しやすくする。
 
+- **2026-10 · [RECAP: Calibrating Low-Bit Reasoning Models on the History They Read](2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.md)**  
+  実装：[✓](https://github.com/AI-Efficiency/RECAP) ・ リポジトリ内被引用：0  
+  長い推論履歴を現在の量子化器で再生成した接頭辞を読みながら短いブロックを回転させて再構成し、キャッシュ誤差を後続の注意への影響で重み付けて較正することで、低ビット推論モデルの精度低下を抑える学習後量子化。
+
 - **2026-10 · [RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models](2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続拡散の言語モデルの長さ外挿へ、局所の窓と遠方の要約と内容検索を一つの注意に統合し、位置の再配置と条件付け注意の補正と段階に応じた窓を組み合わせる学習不要の方式で、中規模基盤の生成長八千でパープレキシティを百六十五・九三から三十二・一三へ、繰り返し率を七・七パーセントから一・二パーセントへ下げたと報告した。
@@ -1049,6 +1053,10 @@
 - **2026-10 · [OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization](2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp.md)**  
   実装：[✓](https://github.com/neriahbd/OSFP4) ・ リポジトリ内被引用：0  
   NVFP4量子化で、射影ごとの対角平滑化とブロック尺度を、ディザ付き量子化の損失で共同最適化し、最後に決定的尺度を探し直す学習後量子化。同条件の比較手法中で最高の平均精度を保ちながらネイティブ実行の効率をほぼ維持する。
+
+- **2026-10 · [Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation](2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.md)**  
+  実装：[✓](https://github.com/HazyResearch/ncm) ・ リポジトリ内被引用：0  
+  テキストを残差量子化の粗から細への離散コード階層へ符号化し、レベル単位で全コードを並列予測することで、拡散モデルより少ない関数評価と短い処理時間で並列生成する二段階の言語モデル。
 
 - **2026-10 · [MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration](2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-.md)**  
   実装：[✓](https://github.com/KULeuven-MICAS/MX-Like-for-LLM-Inference) ・ リポジトリ内被引用：0  
@@ -2980,6 +2988,10 @@
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
   この論文は、GPUの単独実行（Singletasking）から多重実行（Multitasking）への移行を主張する設計論・立場論文（Position Paper）である。本文の「10%まで下がる利用率」やGPU世代間の成長率は背景の参考値であり、提案法がGPU使用率を何ポイント改善したという実験結果ではない。
 
+- **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
+  実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：5  
+  しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
+
 - **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
@@ -3003,10 +3015,6 @@
 - **2025-08 · [Breaking the Layer Barrier: Remodeling Private Transformer Inference with Hybrid CKKS and MPC](2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   層を演算子へ分解して隣り合う線形演算を境界を越えて融合し、近似数向け準同型暗号の安全な変換と回転の少ない行列積を組み合わせることで、秘匿推論の通信をボルト比で最大21倍、遅延を画像処理装置利用時13倍まで削減した。
-
-- **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
-  実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：4  
-  しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
 
 - **2025-03 · [Performance Aware LLM Load Balancer for Mixed Workloads](2025-e32383a452cd-performance-aware-llm-load-balancer-for-mixed-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -4627,7 +4635,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：315  
+  実装：✓ ・ リポジトリ内被引用：316  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  

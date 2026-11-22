@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2f558dff9d31eddc90098d4f9665a66405cc8988",
+  "base_commit": "0d7cabb3cac05aa0c3d7804940b3c5b17118e4ca",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -665,6 +665,7 @@
     "2026-2610.03088-coda-exploiting-admission-flexibility-for-coding-agent-serving.json",
     "2026-2610.03198-kv2-a-self-refining-kv-cache.json",
     "2026-2610.03203-afore-attention-ffn-disaggregation-with-overlapped-reconfiguration-of-experts.json",
+    "2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json",
     "2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent-systems-on-cpu-gpu-unified-memory-architectures.json",
     "2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.json",
     "2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-on-intel-gpus.json",
@@ -734,12 +735,14 @@
     "2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization-for-llms.json",
     "2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.json",
     "2026-2610.13990-dosa-dots-sparse-attention.json",
+    "2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.json",
     "2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-benchmarks-reasoning-modes-and-hardware.json",
     "2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.json",
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
     "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json",
     "2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.json",
+    "2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.json",
     "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
     "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
@@ -747,6 +750,7 @@
     "2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggregated-llm-inference.json",
     "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json",
     "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json",
+    "2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibility-in-cross-model-kv-cache-reuse.json",
     "2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-across-gpu-architectures.json",
     "2026-2610.15921-fast-and-accurate-improving-personalized-llm-performance-by-semantic-concentration-inspired-workload-split-between-rag-and-fine-tuning.json",
     "2026-2610.16165-think-before-you-speak-training-free-latent-communication-between-language-models.json",
@@ -764,6 +768,7 @@
     "2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.json",
     "2026-2610.17868-prefilling-dllm-v2-learned-chunk-routing-for-long-context-diffusion-language-models.json",
     "2026-2610.17917-batch-paced-fixed-budget-batch-decoding-in-discrete-diffusion-language-models.json",
+    "2026-2610.17948-haloblock-faster-and-better-decoding-for-diffusion-large-language-models.json",
     "2026-2610.17959-virtual-head-attention.json",
     "2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-rank-allocation.json",
     "2026-2610.17970-alignpred-error-controlled-kv-cache-compression-via-alignment-and-predictive-coding.json",
@@ -47531,6 +47536,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.03296": {
+      "order": [
+        "2026-11-21T23:58:25+00:00",
+        "2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "ce575a30ea3a1f7b7bb0dc4d869507d5a683fb3d8228491cdd646008a025b360",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md",
+        "canonical_id": "arXiv:2610.03296",
+        "worker_completed_at": "2026-11-22T07:57:40+09:00",
+        "worker_run_key": "muse-20261122-b3",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4095,
+          "body_paragraphs": 20,
+          "method_chars": 1799,
+          "method_paragraphs": 4,
+          "evaluation_chars": 499,
+          "limitation_chars": 255,
+          "insufficiency_flags": [
+            "評価説明量 499 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 499 < 500"
+        ],
+        "processed_at": "2026-11-21T23:58:25+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2610.14162": {
+      "order": [
+        "2026-11-21T23:59:25+00:00",
+        "2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15259": {
+      "order": [
+        "2026-11-22T00:00:25+00:00",
+        "2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15721": {
+      "order": [
+        "2026-11-22T00:01:26+00:00",
+        "2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibility-in-cross-model-kv-cache-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.17948": {
+      "order": [
+        "2026-11-22T00:02:26+00:00",
+        "2026-2610.17948-haloblock-faster-and-better-decoding-for-diffusion-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59764,6 +59841,18 @@
     "arxiv:2610.02229": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persis.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persis.md"
+    ],
+    "arxiv:2610.14162": [
+      "papers/inference/99-other-inference-systems/2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.md"
+    ],
+    "arxiv:2610.15259": [
+      "papers/inference/99-other-inference-systems/2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.md"
+    ],
+    "arxiv:2610.15721": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibi.md"
+    ],
+    "arxiv:2610.17948": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.17948-haloblock-faster-and-better-decoding-for-diffusion-large-language-models.md"
     ]
   }
 }
