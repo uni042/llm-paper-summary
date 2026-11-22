@@ -36,6 +36,10 @@
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：9  
   動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
 
+- **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
+
 - **2026-02 · [RelayCaching：協調LLMの生成KVキャッシュ再利用](2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
@@ -55,10 +59,6 @@
 - **2026-03 · [AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models](2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md)**  
   実装：[✓](https://github.com/cvsp-lab/AgilePruner) ・ リポジトリ内被引用：7  
   従来の注意重視方式は画像符号化器のクラス・トークンが強く注目する領域を残す。LLaVA-1.5-7B、TextVQA、RTX 4090の単一GPU評価で、64個を残す設定は576個を残す基準に対して推論計算量3.14→0.48兆FLOPs、1画像遅延172→115 ms、GPUメモリ13.60→13.30 GBとなった。
-
-- **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
 
 - **2026-02 · [QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models](2026-2602.20309-quantvla-scale-calibrated-post-training-quantization-for-vision-language.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -140,6 +140,10 @@
   実装：[✓](https://github.com/MedHK23/AutoSelect) ・ リポジトリ内被引用：4  
   重要度の低いトークンを削除する既存手法は、注意重み、類似度、固定削減比などの代理指標を使うことが多く、最終回答に必要な情報を最適に残せるとは限らない。LLaVA-1.5-7Bの576視覚トークンを64個へ削減した条件で、10ベンチマークの平均性能維持率96.5%を報告する。
 
+- **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：4  
+  重みと活性値を低ビット化すればメモリ使用量を抑えられるが、量子化誤差の影響は画像と文章という二つのモダリティの間だけでなく、同じモダリティ内の各トークンや層によっても異なる。著者はこれを1.60%の改善と説明するが、表の数値としては1.60ポイントの上昇である。
+
 - **2026-03 · [Characterizing Performance-Energy Trade-offs of Large Language Models in Multi-Request Workflows](2026-2604.09611-characterizing-performance-energy-trade-offs-of-large-language-models-in.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   新しい推論カーネルの提案ではなく、既存の推論基盤をどの条件でどう設定すると効率が変わるかを調べる。A100 40GB上でLlama-2-7Bを使い、入力長、出力長、バッチサイズ、GPU電力上限を変える。
@@ -199,10 +203,6 @@
 - **2026-04 · [Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling](2026-2604.04987-cactus-accelerating-auto-regressive-decoding-with-constrained-acceptance.md)**  
   実装：[✓](https://github.com/MANGA-UOFA/Cactus) ・ リポジトリ内被引用：3  
   検証器が毎トークンの計算を繰り返す必要を減らす一方、草案器が提案したトークンを確率的に棄却するため、草案器と検証器の分布が異なると効率が落ちる。Qwen3-14Bを検証器、0.6Bを草案器としたSpec-Benchの6種類の課題では、自己回帰生成に対する総合速度倍率がSpSの1.81倍からCactusの1.88倍へ改善した。
-
-- **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：3  
-  重みと活性値を低ビット化すればメモリ使用量を抑えられるが、量子化誤差の影響は画像と文章という二つのモダリティの間だけでなく、同じモダリティ内の各トークンや層によっても異なる。著者はこれを1.60%の改善と説明するが、表の数値としては1.60ポイントの上昇である。
 
 - **2026-03 · [EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs](2026-2603.03681-evoprune-early-stage-visual-token-pruning-for-efficient-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -740,6 +740,10 @@
   実装：[✓](https://github.com/FujitsuResearch/OneCompression) ・ リポジトリ内被引用：1  
   大規模言語モデル（Large Language モデル; LLM）の重み量子化では、同じ平均ビット幅でも層ごとの感度、較正用入力の分布、丸め誤差の伝播、量子化後の品質回復方法によって性能が大きく変わる。Llama-3-8BとQwen3系の実験では、感度に応じた混合ビット幅割当や誤差伝播補正が量子化後の困惑度を改善した。
 
+- **2026-03 · [MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models](2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md)**  
+  実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：1  
+  通常の文章向け平滑化量子化は、チャネルごとに一つのスケールを決め、活性の外れ値を重み側へ移して低ビット表現の誤差を減らす。
+
 - **2026-03 · [Keeping the Evidence Chain: Semantic Evidence Allocation for Training-Free Token Pruning in Video Temporal Grounding](2026-2603.05663-keeping-the-evidence-chain-semantic-evidence-allocation-for-training-fre.md)**  
   実装：[✓](https://github.com/JiaqiLi404/SemVID) ・ リポジトリ内被引用：1  
   動画の時刻特定向けに、フレーム別予算配分と物体・運動・文脈の3役割の選択で証拠の連鎖を残す学習不要の枝刈りを行い、トークン12.5パーセントで精度の95.4パーセント保持と入力処理5.8倍高速化を両立した。
@@ -803,6 +807,10 @@
 - **2026-02 · [ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments](2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   単一NPU障害時にサービング全体を再起動せず、要求状態・KVブロック表・MoE重み・通信領域・実行グラフを局所修復して大規模MoE推論を高速復旧する。
+
+- **2026-02 · [Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization](2026-2602.24059-quant-experts-token-aware-adaptive-error-reconstruction-with-mixture-of-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  画像・テキストを統合処理するVision-Language モデル（VLM）を低ビットで推論する際、量子化された重み行列と活性値の積には誤差が生じる。
 
 - **2026-02 · [OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport](2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md)**  
   実装：[✓](https://github.com/xiwenc1/OTPrune) ・ リポジトリ内被引用：1  
@@ -2406,10 +2414,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   4ビット重み・8ビット活性（W4A8）の推論では、活性の少数の極端な値が量子化範囲を支配する。結果として小さな重みの丸め誤差が増え、活性側の改善を重み側の劣化が相殺する。
 
-- **2026-03 · [MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models](2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md)**  
-  実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：0  
-  通常の文章向け平滑化量子化は、チャネルごとに一つのスケールを決め、活性の外れ値を重み側へ移して低ビット表現の誤差を減らす。
-
 - **2026-03 · [LooComp: Leverage Leave-One-Out Strategy to Encoder-only Transformer for Efficient Query-aware Context Compression](2026-2603.09222-loocomp-leverage-leave-one-out-strategy-to-encoder-only-transformer-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし検索件数を増やすと、無関係な文章も入力され、事前充填の計算量、入力トークン費用、モデルの注意の分散が問題になる。生成型の圧縮器は文書を短い文章へ書き換えられるが、圧縮器自体がトークンを逐次生成するため遅延が大きくなる。
@@ -2573,10 +2577,6 @@
 - **2026-02 · [Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization](2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-.md)**  
   実装：[✓](https://github.com/zhoustan/VQRound) ・ リポジトリ内被引用：0  
   適応型丸めの丸め行列をコードブックで表し直し、学習量を最大で元の0.2パーセント程度まで削る量子化。初期化の工夫と合わせて、2ビットでも崩壊を避ける。
-
-- **2026-02 · [Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization](2026-2602.24059-quant-experts-token-aware-adaptive-error-reconstruction-with-mixture-of-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  画像・テキストを統合処理するVision-Language モデル（VLM）を低ビットで推論する際、量子化された重み行列と活性値の積には誤差が生じる。
 
 - **2026-02 · [QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs](2026-2602.10431-qtale-quantization-robust-token-adaptive-layer-execution-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2913,7 +2913,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：140  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：141  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -2968,13 +2968,13 @@
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：30  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
+- **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
+  実装：✓ ・ リポジトリ内被引用：26  
+  Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
+
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
   大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
-
-- **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
-  Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
 
 - **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
@@ -3080,6 +3080,10 @@
   実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：4  
   通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
 
+- **2025-09 · [Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs](2025-2509.15940-efficient-pre-training-of-llms-via-topology-aware-communication-alignmen.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  一般的なクラスタスケジューラが空きGPUを近い位置に詰めても、実際に頻繁に通信するDP/PPグループが別のスイッチ配下に分散すれば帯域競合と通信待ちが発生する。トレース駆動シミュレーションでは比較方式に対し通信グループの重み付き最大広がりを最大1.67倍改善し、実クラスタでは208 GPUで学習処理量5.7%、9600超GPUで10.6%改善した。
+
 - **2025-08 · [Breaking the Layer Barrier: Remodeling Private Transformer Inference with Hybrid CKKS and MPC](2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   層を演算子へ分解して隣り合う線形演算を境界を越えて融合し、近似数向け準同型暗号の安全な変換と回転の少ない行列積を組み合わせることで、秘匿推論の通信をボルト比で最大21倍、遅延を画像処理装置利用時13倍まで削減した。
@@ -3099,10 +3103,6 @@
 - **2025-10 · [Not All Bits Are Equal: Scale-Dependent Memory Optimization Strategies for Reasoning Models](2025-2510.10964-not-all-bits-are-equal-scale-dependent-memory-optimization-strategies-fo.md)**  
   実装：[✓](https://github.com/krafton-ai/not-all-bits-are-equal) ・ リポジトリ内被引用：3  
   長い思考列を出力する推論モデルでは、量子化してモデル重みを小さくすれば常に省メモリで高性能になる、という通常の指針が成立しない。原著のQwen3-4Bでは、4bit重みが2.49 GBであるのに対し、32kトークン相当のKVキャッシュは4.42 GBと約1.8倍に達する（原著§1）。
-
-- **2025-09 · [Efficient Pre-Training of LLMs via Topology-Aware Communication Alignment on More Than 9600 GPUs](2025-2509.15940-efficient-pre-training-of-llms-via-topology-aware-communication-alignmen.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  一般的なクラスタスケジューラが空きGPUを近い位置に詰めても、実際に頻繁に通信するDP/PPグループが別のスイッチ配下に分散すれば帯域競合と通信待ちが発生する。トレース駆動シミュレーションでは比較方式に対し通信グループの重み付き最大広がりを最大1.67倍改善し、実クラスタでは208 GPUで学習処理量5.7%、9600超GPUで10.6%改善した。
 
 - **2025-08 · [AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance](2025-2508.06084-adaptinfer-adaptive-token-pruning-for-vision-language-model-inference-vi.md)**  
   実装：[✓](https://github.com/weiczh02/AdaptInfer-base) ・ リポジトリ内被引用：3  
@@ -3272,6 +3272,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   対象は、草案トークンを安く先読みし、より高品質なターゲットモデルで検証する投機的復号だけでなく、複数位置を仮置きして反復修正するJacobi型方式や、検索・n-gramによる草案再利用まで含む。付録A1では公開実装を用い、単一NVIDIA A100 80GB、バッチ1、貪欲復号という条件で11方式を六課題比較した。
 
+- **2025-11 · [Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models](2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本研究は、大規模言語モデルを2〜3ビット程度の重み精度に縮小するとき、少数の高感度な重みが量子化誤差を増幅する問題を扱う。
+
 - **2025-11 · [DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF](2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DeCoRLは、長い推論手順を単一の大規模言語モデル（LLM）が順番に生成する代わりに、役割の異なる小さな推論モジュールへ分解して同時に実行し、出力を統合する枠組みである。著者はNVIDIA A100を使った10段階の推論問題で、逐次実行1,202ミリ秒に対してDeCoRLが316ミリ秒となり、約3.8倍高速化したと報告する。
@@ -3327,6 +3331,10 @@
 - **2025-09 · [LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models](2025-2509.23729-luq-layerwise-ultra-low-bit-quantization-for-multimodal-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LUQ（Layerwise Ultra-Low Bit Quantization）は、視覚言語モデル（VLM/MLLM）の各Transformer層が低ビット量子化に耐える度合いは一様でないことに着目し、層の出力活性entropyが低い順に1bit系量子化へ切り替える方式である。
+
+- **2025-09 · [IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs](2025-2509.06274-ipr-intelligent-prompt-routing-with-user-controlled-quality-cost-trade-o.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  入力文だけから各候補モデルの応答品質を連続値で予測し、利用者が許容度で決める閾値以上の候補から最も安いものを選ぶ振り分けで、クロード系列で最強モデルと品質同等を保ちながら費用を四十三・九パーセント削減し、新モデル追加も凍結した符号器への軽い適合だけで済むようにしたと報告した。
 
 - **2025-09 · [CompLLM: Compression for Long Context Q&A](2025-2509.19228-compllm-compression-for-long-context-q-a.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -3479,10 +3487,6 @@
 - **2025-11 · [R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization](2025-2511.21736-r2q-towards-robust-2-bit-large-language-models-via-residual-refinement-q.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   R2Q（Residual Refinement Quantization）は、2ビットの重み量子化を1回の4値への丸めではなく、元重みを二値近似した後、その残差をさらに二値近似する2段階へ分解する方式である。2ビットで品質を完全に保てる方式ではなく、比較対象の崩壊が極端な条件で改善幅が大きく見える点を区別する必要がある。
-
-- **2025-11 · [Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models](2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究は、大規模言語モデルを2〜3ビット程度の重み精度に縮小するとき、少数の高感度な重みが量子化誤差を増幅する問題を扱う。
 
 - **2025-11 · [Focused Chain-of-Thought: Efficient LLM Reasoning via Structured Input Information](2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3639,10 +3643,6 @@
 - **2025-09 · [Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance](2025-2509.15704-pyramid-token-pruning-for-high-resolution-large-vision-language-models-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Pyramid Token Pruning（PTP）は、追加学習なしで、画像全体に対するタイルの重要度、タイル内部のパッチ重要度、ユーザーの指示文に対するパッチ関連度を三段階で組み合わせる方式である。
-
-- **2025-09 · [IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs](2025-2509.06274-ipr-intelligent-prompt-routing-with-user-controlled-quality-cost-trade-o.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  入力文だけから各候補モデルの応答品質を連続値で予測し、利用者が許容度で決める閾値以上の候補から最も安いものを選ぶ振り分けで、クロード系列で最強モデルと品質同等を保ちながら費用を四十三・九パーセント削減し、新モデル追加も凍結した符号器への軽い適合だけで済むようにしたと報告した。
 
 - **2025-09 · [HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs](2025-2509.23967-hipo-hybrid-policy-optimization-for-dynamic-reasoning-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4589,7 +4589,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：331  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：332  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -4657,7 +4657,7 @@
   大規模言語モデルを配備する際、同じ品質・遅延・計算資源の要求を持つ利用者ばかりとは限らない。モデルを後から枝刈りして調整する方法では、新しいサイズごとに再学習や調整を要することもある。
 
 - **2023-07 · [PUMA: Secure Inference of LLaMA-7B in Five Minutes](2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md)**  
-  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：13  
   従来の高速化方式が必要としたモデルの再学習や構造変更を避け、既存の学習済み重みをほぼそのまま秘密計算へ持ち込むことを狙う。
 
 - **2023-10 · [A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration](2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md)**  
@@ -4775,7 +4775,7 @@
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-11 · [Iron: Private Inference on Transformers](2022-0ed2662d9eee-iron-private-inference-on-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   この構成では、サーバーは入力内容を読めるため、医療文書や企業機密をそのまま送信したくない利用者には問題がある。Ironはこの二つの律速点に特化した手順を設計する。従来の行列・ベクトル積を行ごとに繰り返す方式と比較し、一般の行列形状で出力行数の平方根程度の通信削減を理論的に示す。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
@@ -4821,7 +4821,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：96  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：97  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -4893,7 +4893,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：364  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：365  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -4927,11 +4927,11 @@
 ### 9年前（2017-12〜2018-11）
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：153  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：154  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：103  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：104  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
@@ -4939,7 +4939,7 @@
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
-  実装：[✓](https://github.com/uber/horovod) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/uber/horovod) ・ リポジトリ内被引用：22  
   GPU数を増やすと勾配転送と集約のために通信が集中し、著者らの128 GPU試験では、計算資源のほぼ半分を効率的に使えていなかった。提案の価値は通信アルゴリズムだけではない。
 
 - **2018-02 · [Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement](2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md)**  
