@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67f30abb61e08cda-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2309.14174",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2309.14174",
+    "identity_tokens": [
+      "arXiv:2309.14174"
+    ],
+    "reason": "全文は文書レベル神経機械翻訳の翻訳品質を保ちながら注意計算を削減するLasformerの研究であり、対象は大規模言語モデルの推論サービングやKVキャッシュ管理ではなく、翻訳モデル固有の符号器・復号器と交差注意の効率化であるため境界事例として扱う。",
+    "first_checked_at": "2026-11-22T03:17:41+00:00",
+    "last_checked_at": "2026-11-22T03:17:41+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Only 5% Attention Is All You Need: Efficient Long-range Document-level Neural Machine Translation"
+  },
+  "processed_at": "2026-11-22T03:17:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67f30abb61e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
