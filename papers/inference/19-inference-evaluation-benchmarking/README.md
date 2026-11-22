@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（207本）
+## 自動生成の論文一覧（208本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -137,6 +137,10 @@
 - **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
   新旧のデータセンター向け図形処理装置を二つの独立クラスタで横断測定し、新装置が畳み込みで最大五・六倍、七百億の言語モデル推論で二十四から二十七パーセント遅い一方で大きな行列積の負荷では速いこと、遅さは基板電力の低さからカーネルごとの費用に帰着すること、同一半導体でも提供基盤の版で最初のトークンまでの時間が二・一倍変わることを示した。
+
+- **2026-11 · [AutoEMatic: Runtime-Adaptive Mixed-Precision LLM Inference via Automatic Exponent-Mantissa Refinement](2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  次トークンの不確かさと層の更新量を実行時に観測して層ごとの精度を2、4、6ビットから選び、単一のNVFP4表現から全精度を導く形式とカーネルで、精度と速度を両立させる実行時適応型の混合精度推論。
 
 - **2026-10 · [VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware](2026-2610.34717-vla-hwbench-where-the-time-goes-when-vla-models-run-on-edge-hardware.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
