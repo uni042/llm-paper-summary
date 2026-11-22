@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f183e48d8725e87-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b",
+    "identity_tokens": [
+      "SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b"
+    ],
+    "reason": "Primary full text for 'HAP-E: H ESSIAN -A WARE S TRUCTURED P RUNING OF LLM S FOR E FFICIENT I NFERENCE' (venue unknown) could not be obtained: Semantic Scholar lists no openAccessPdf for this paper and no other public full-text route was confirmed in the 2026-11-22 OA sweep. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-22T14:34:00+00:00",
+    "last_checked_at": "2026-11-22T14:34:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "HAP-E: H ESSIAN -A WARE S TRUCTURED P RUNING OF LLM S FOR E FFICIENT I NFERENCE"
+  },
+  "processed_at": "2026-11-22T14:34:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f183e48d872",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c3c23d619e8c735-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3774904.3793001",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3774904.3793001",
+    "identity_tokens": [
+      "DOI:10.1145/3774904.3793001"
+    ],
+    "reason": "Primary full text for 'Fair and Carbon-Aware LLM Routing for Web Services' (The Web Conference) could not be obtained: OpenAlex has no resolvable record for this DOI (HTTP 404 on 2026-11-22 check), so no OA PDF or landing page was available, and no other public full-text route was confirmed. Recorded as borderline via the research prescreen route because Research requires a readable primary full text; re-check only if a new public copy appears.",
+    "first_checked_at": "2026-11-22T14:34:00+00:00",
+    "last_checked_at": "2026-11-22T14:34:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Fair and Carbon-Aware LLM Routing for Web Services"
+  },
+  "processed_at": "2026-11-22T14:34:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c3c23d619e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
