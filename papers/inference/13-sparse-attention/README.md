@@ -809,7 +809,7 @@
   LM-Infiniteは、短い系列で学習した大規模言語モデルを追加学習なしで長文脈へ外挿するため、推論時の注意範囲と位置距離の扱いだけを変更する方式である。論文は元の完全注意に対してデコードを約2.7倍高速化し、GPUメモリを最大7.5倍削減したと報告する。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
-  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：48  
+  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：49  
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
@@ -825,7 +825,7 @@
   局所性鋭敏ハッシュで注意行列の大きな要素を効率的に見つけ、残りの小さい成分をサンプリングで近似する。全注意行列を作らずに正規化と値の加重和を計算し、長文脈での計算量を削減する。
 
 - **2023-05 · [Unlimiformer: Long-Range Transformers with Unlimited Length Input](2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md)**  
-  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：19  
   文書が長いほど参照すべきキーと値の数が増え、推論時のメモリ使用量と注意計算が膨らむ。長文専用の注意構造へモデルを変更する方式は再事前学習や追加の位置埋め込み学習を要する場合がある。
 
 - **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  

@@ -1158,13 +1158,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：2  
   前者は8ビット整数（int8）へ量子化すると、整数積和演算器を高密度に並べたシストリック配列（systolic array）で効率よく実行できる。比較する既存FPGA研究に対してエンドツーエンド処理量最大1.45倍、DSP当たりの効率最大2.29倍、GPUとの比較ではRTX 4090に対し特定BERT条件で電力効率2.19倍を示す。
 
+- **2024-11 · [Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM](2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md)**  
+  実装：[✓](https://github.com/VITA-MLLM/Freeze-Omni) ・ リポジトリ内被引用：2  
+  さらに、音声認識、文章生成、音声合成を独立したシステムとして直列に接続すると、応答開始までの待ち時間が積み重なる。主要結果として、音声入力によるWebQuestionsの正答率は44.73%で、同じ基盤LLMに文章を入力した45.13%と近い。
+
 - **2024-06 · [Optimized Speculative Sampling for GPU Hardware Accelerators](2024-2406.11016-optimized-speculative-sampling-for-gpu-hardware-accelerators.md)**  
   実装：[✓](https://github.com/dwgnr/optimized-speculative-sampling) ・ リポジトリ内被引用：2  
   投機的復号では、小型のドラフトモデルが生成した複数の候補トークンを大型のターゲットモデルが並列に検証する。確率的な投機的標本化（投機的 sampling）では、ドラフト分布とターゲット分布から候補の受理確率を計算し、拒否した位置では補正分布から再標本化する。本論文は、モデルを変更せず、投機的標本化の検証・補正部分をGPU向けに再実装する。
-
-- **2024-11 · [Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM](2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md)**  
-  実装：[✓](https://github.com/VITA-MLLM/Freeze-Omni) ・ リポジトリ内被引用：1  
-  さらに、音声認識、文章生成、音声合成を独立したシステムとして直列に接続すると、応答開始までの待ち時間が積み重なる。主要結果として、音声入力によるWebQuestionsの正答率は44.73%で、同じ基盤LLMに文章を入力した45.13%と近い。
 
 - **2024-10 · [MatMamba: A Matryoshka State Space Model](2024-2410.06718-matmamba-a-matryoshka-state-space-model.md)**  
   実装：[✓](https://github.com/ScaledFoundations/MatMamba) ・ リポジトリ内被引用：1  
@@ -1283,6 +1283,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-12〜2018-11）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：76  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：77  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->

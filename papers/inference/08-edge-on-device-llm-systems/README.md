@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（104本）
+## 自動生成の論文一覧（105本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -249,6 +249,10 @@
 - **2026-02 · [Quantization-Aware Collaborative Inference for Large Embodied AI Models](2026-2602.13052-quantization-aware-collaborative-inference-for-large-embodied-ai-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末側の計算能力・電池・通信帯域には制約があるため、端末側モデルを量子化して計算負荷を減らすことが有効である。実機はJetson AGX Orin 64GBとRTX 3090を2枚備えたサーバを無線LANで接続した構成で、遅延制約が強いと高周波数、エネルギー制約が強いと低周波数が有利になることを確認する。
+
+- **2026-01 · [SwiftKV: An Edge-Oriented Attention Algorithm and Multi-Head Accelerator for Fast, Efficient LLM Decoding](2026-2601.10953-swiftkv-an-edge-oriented-attention-algorithm-and-multi-head-accelerator-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVキャッシュを一度だけ走査する単一パス注意と、注意と行列ベクトル積を同じ演算器で担う多ヘッドFPGA加速器で、エッジデコードの注意遅延を43パーセントから3.19パーセントへ下げる。
 
 - **2026-01 · [Advancing Model Refinement: Muon-Optimized Distillation and Quantization for LLM Deployment](2026-2601.09865-advancing-model-refinement-muon-optimized-distillation-and-quantization-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

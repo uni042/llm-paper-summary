@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "118525ae3db56a7cb13987f2b2e7c85e3a64d677",
+  "base_commit": "cbd18114d5c9660d17a00aebf938a77de5e80c10",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -64,6 +64,7 @@
     "2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-language-models-using-second-order-matrix-derivative-in.json",
     "2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.json",
     "2024-2406.00030-large-language-model-pruning.json",
+    "2024-2406.02376-retaining-key-information-under-high-compression-ratios-query-guided-compressor-for-llms.json",
     "2024-2406.06571-subllm-a-novel-efficient-architecture-with-token-sequence-subsampling-for-llm.json",
     "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
     "2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-target-language-text.json",
@@ -277,6 +278,8 @@
     "2026-2601.07212-mi-prun-optimize-large-language-model-pruning-via-mutual-information.json",
     "2026-2601.08670-parallel-context-of-experts-decoding-for-retrieval-augmented-generation.json",
     "2026-2601.09865-advancing-model-refinement-muon-optimized-distillation-and-quantization-for-llm.json",
+    "2026-2601.10274-queueing-aware-optimization-of-reasoning-tokens-for-accuracy-latency-trade-offs-in-llm-servers.json",
+    "2026-2601.10953-swiftkv-an-edge-oriented-attention-algorithm-and-multi-head-accelerator.json",
     "2026-2601.11200-faq-mitigating-quantization-error-via-regenerating-calibration-data-with-family-aware-quantization.json",
     "2026-2601.11553-percache-predictive-hierarchical-cache-for-rag-applications-on-mobile-devices.json",
     "2026-2601.12247-plan-verify-and-fill-a-structured-parallel-decoding-approach-for-diffusion-language-models.json",
@@ -285,7 +288,9 @@
     "2026-2601.14277-which-quantization-should-i-use-unified-evaluation-of-llamacpp-quantization.json",
     "2026-2601.14549-qmc-efficient-slm-edge-inference-via-outlier-aware-quantization-and-emergent-memories-co-design.json",
     "2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.json",
+    "2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.json",
     "2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-long-context-inference.json",
+    "2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.json",
     "2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasoning.json",
     "2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.json",
     "2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.json",
@@ -48546,6 +48551,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2406.02376": {
+      "order": [
+        "2026-11-22T08:59:08+00:00",
+        "2024-2406.02376-retaining-key-information-under-high-compression-ratios-query-guided-compressor-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.10274": {
+      "order": [
+        "2026-11-22T09:00:39+00:00",
+        "2026-2601.10274-queueing-aware-optimization-of-reasoning-tokens-for-accuracy-latency-trade-offs-in-llm-servers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.10953": {
+      "order": [
+        "2026-11-22T09:02:10+00:00",
+        "2026-2601.10953-swiftkv-an-edge-oriented-attention-algorithm-and-multi-head-accelerator.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.15296": {
+      "order": [
+        "2026-11-22T09:03:39+00:00",
+        "2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.17902": {
+      "order": [
+        "2026-11-22T09:05:09+00:00",
+        "2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61197,6 +61247,21 @@
     "arxiv:2601.14260": [
       "papers/inference/07-kv-cache-optimization-compression/2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-archite.md",
       "papers/inference/07-kv-cache-optimization-compression/2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-archite.md"
+    ],
+    "arxiv:2406.02376": [
+      "papers/inference/99-other-inference-systems/2024-2406.02376-retaining-key-information-under-high-compression-ratios-query-guided-com.md"
+    ],
+    "arxiv:2601.10274": [
+      "papers/inference/99-other-inference-systems/2026-2601.10274-queueing-aware-optimization-of-reasoning-tokens-for-accuracy-latency-tra.md"
+    ],
+    "arxiv:2601.10953": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2601.10953-swiftkv-an-edge-oriented-attention-algorithm-and-multi-head-accelerator-.md"
+    ],
+    "arxiv:2601.15296": [
+      "papers/inference/99-other-inference-systems/2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.md"
+    ],
+    "arxiv:2601.17902": [
+      "papers/inference/99-other-inference-systems/2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.md"
     ]
   }
 }

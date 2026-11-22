@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1245本）
+## 自動生成の論文一覧（1249本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2778,6 +2778,10 @@
   実装：[✓](https://github.com/michaelfeil/radix-mlp) ・ リポジトリ内被引用：0  
   RadixMLPは、同一バッチに入った複数の系列が長い接頭辞を共有している場合、共有部分の多層パーセプトロン（MLP）、層正規化（LayerNorm）、線形射影、埋め込みなどを何度も実行する無駄を削減する方式である。
 
+- **2026-01 · [Queueing-Aware Optimization of Reasoning Tokens for Accuracy-Latency Trade-offs in LLM Servers](2026-2601.10274-queueing-aware-optimization-of-reasoning-tokens-for-accuracy-latency-tra.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論トークン予算をタスク種別ごとに割り当てる問題をM/G/1待ち行列で定式化し、精度と平均システム時間の目的関数が強凹で最適配分が一意になることを示し、不動点反復と射影勾配法で解く、待ち行列を意識した予算最適化の理論研究。
+
 - **2026-01 · [QA-Merging: Query-Adaptive Reasoning via Layer Selective Model Merging](2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.md)**  
   実装：[✓](https://github.com/Zephyr-Zhong/QA-Merging) ・ リポジトリ内被引用：0  
   長い思考過程を出すモデルと短い思考過程を出すモデルについて、両者の隠れ状態が大きく分かれる層だけを特徴合わせで較正し、残りの層は閉形式の隠れ状態補正で済ませて統合することで、難しい問いには長く、簡単な問いには短く答える単一モデルを作る統合方式。
@@ -2822,6 +2826,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   同系統の大モデルに較正文を書き直させ、競合選択と正規化で整えた較正データで通常の量子化を行うことで、八十億級モデルで全精度との精度差を最大二八・五パーセント縮めたと報告した。
 
+- **2026-01 · [Entropy-Tree: Tree-Based Decoding with Entropy-Guided Exploration](2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  トークンのエントロピーと注意による重要度で分岐位置を選び、接頭辞を共有する木で推論経路を探索するEntropy-Treeは、同じ葉数の独立サンプリングより高いpass@kと良い不確実性推定を多くの条件で示すデコード手法。
+
 - **2026-01 · [Elastic Spectral State Space Models for Train-Once Budgeted Inference](2026-2601.22488-elastic-spectral-state-space-models-for-train-once-budgeted-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   異なるGPUや端末で同じ系列モデルを提供する場合、計算予算ごとに別の小型モデルを学習する方法は、学習費用とモデル管理の両方を増やす。学習済みの幅・層数を後から単純に削っても、小型化された部分が単独で有効な予測器になるとは限らない。学習後は成分の接頭辞を物理的に切り出し、別の学習やチャネル選別を行わずに、複数のパラメータ数・実行予算に対応する。
@@ -2829,6 +2837,10 @@
 - **2026-01 · [Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models](2026-2601.09260-efficient-paths-and-dense-rewards-probabilistic-flow-reasoning-for-large.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   標準的な思考の連鎖は、最終解答の正誤だけでは途中の推論ステップの有用性を直接測れず、冗長な言い換えや誤った分岐を含みやすい。CoT-Flowは、問題xと時点iまでの生成列sを持つ状態Iiにおいて、正解yの負の対数確率 D(Ii)=-log p(y\|Ii) を難しさと定義する。
+
+- **2026-01 · [dLLM-ASR: A Faster Diffusion LLM-based Framework for Speech Recognition](2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CTCの事前認識で拡散デコーダの開始点と生成長を与え、パディングの早期除去と信頼度によるトークン単位の早期退出で、音声認識の拡散デコードの冗長計算を削る枠組み。
 
 - **2026-01 · [DIP: Dynamic In-Context Planner For Diffusion Language Models](2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/wmd3i/DIP) ・ リポジトリ内被引用：0  
@@ -2941,7 +2953,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：142  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：143  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -2981,7 +2993,7 @@
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：35  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
@@ -4574,6 +4586,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルのメモリと通信の問題は重みだけではない。既存のGPTQやAWQは主に重み、1-bit Adamや1-bit LAMBは主に学習勾配を対象にしており、各テンソル種別に異なる圧縮手法を組み合わせる必要がある。原著は重み約25GBとKV約7.2GBを4つのメモリ約8GBの装置へ分割し、長文脈推論を成立させる構成を示す。
 
+- **2024-06 · [Retaining Key Information under High Compression Ratios: Query-Guided Compressor for LLMs](2024-2406.02376-retaining-key-information-under-high-compression-ratios-query-guided-com.md)**  
+  実装：[✓](https://github.com/DeepLearnXMU/QGC) ・ リポジトリ内被引用：0  
+  問い合わせと文書を一緒に符号化し、関連度で重み付けしたnグラムプーリングと見直し層で重要情報を残す文脈圧縮器で、高い圧縮率でも質問応答の精度を保ち、圧縮率とスループットを従来の文脈圧縮より大きく改善する方式。
+
 - **2024-06 · [On Efficient Language and Vision Assistants for Visually-Situated Natural Language Understanding: What Matters in Reading and Reasoning](2024-2406.11823-on-efficient-language-and-vision-assistants-for-visually-situated-natura.md)**  
   実装：[✓](https://github.com/naver-ai/elva) ・ リポジトリ内被引用：0  
   本論文は、視覚と言語を組み合わせた助手（Vision-Language Assistant; VLA）が文書画像を理解する際の推論資源を削減しながら、画像中の文字を読み取る精度を維持するためのモデル設計を調べる。
@@ -4649,7 +4665,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：135  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：136  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -4661,11 +4677,11 @@
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：98  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：99  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：79  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：80  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
@@ -4696,13 +4712,13 @@
   実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：21  
   従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
 
+- **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
+  実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：18  
+  Xu、Shi、ChoiによるRECOMPは、検索拡張言語モデル（Retrieval-Augmented Language モデル、RALM）の推論時に、検索した文書をそのままモデルの文脈へ連結する方式を改める。原著は文脈トークン数を主要な効率指標とするため、文書量が5%になったという数値をGPU実行時間が20倍速くなったと読み替えてはならない。
+
 - **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
   実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：18  
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
-
-- **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
-  実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：17  
-  Xu、Shi、ChoiによるRECOMPは、検索拡張言語モデル（Retrieval-Augmented Language モデル、RALM）の推論時に、検索した文書をそのままモデルの文脈へ連結する方式を改める。原著は文脈トークン数を主要な効率指標とするため、文書量が5%になったという数値をGPU実行時間が20倍速くなったと読み替えてはならない。
 
 - **2023-05 · [Tabi: An Efficient Multi-Level Inference System for Large Language Models](2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
