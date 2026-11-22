@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "caee92f2840eff2dfac0dd3008f402ca094be115",
+  "base_commit": "851a859d7f20e003bb474229a510e27ea4858545",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1248,6 +1248,10 @@
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
     "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json",
+    "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json",
+    "2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.json",
+    "2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.json",
+    "2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.json",
     "2026-c303fad14871-latentllm-activation-aware-transform-to-multi-head-latent-attention.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-component-aware-self-speculative-decoding-hybrid-language-models.json",
@@ -20894,10 +20898,10 @@
     },
     "DOI:10.1109/INFOCOM59046.2026.11571463": {
       "order": [
-        "2026-10-30T04:00:45+00:00",
-        "libfile_32e973e59cd88191b205013da7618b5c--2026-doi-10.1109-infocom59046.2026.11571463-bros-hybrid-rt-be-serving-research-20261030-1157-scheduled-chat-00-r01.json"
+        "2026-11-22T15:42:39+00:00",
+        "2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.json"
       ],
-      "status": "already_represented",
+      "status": "imported",
       "result": null,
       "return_count": 0
     },
@@ -49813,6 +49817,33 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.65405/cn221159": {
+      "order": [
+        "2026-11-22T15:41:28+00:00",
+        "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3774904.3792337": {
+      "order": [
+        "2026-11-22T15:43:16+00:00",
+        "2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.24963/ijcai.2026/176": {
+      "order": [
+        "2026-11-22T15:44:28+00:00",
+        "2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62990,6 +63021,15 @@
     "doi:10.61784/adsj3036": [
       "papers/inference/15-inference-simulation-emulation/2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.md",
       "papers/inference/15-inference-simulation-emulation/2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.md"
+    ],
+    "doi:10.65405/cn221159": [
+      "papers/inference/15-inference-simulation-emulation/2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregate.md"
+    ],
+    "doi:10.1109/infocom59046.2026.11571463": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.0959-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.md"
+    ],
+    "doi:10.24963/ijcai.2026/176": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.md"
     ]
   }
 }

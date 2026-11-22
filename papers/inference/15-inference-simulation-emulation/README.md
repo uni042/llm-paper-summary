@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（104本）
+## 自動生成の論文一覧（105本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -277,6 +277,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-03 · [Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization](2026-2603.07810-temperature-aware-scheduling-of-llm-inference-in-large-scale-geo-distrib.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   地理的に離れた複数のデータセンターへ大規模言語モデル（LLM）の推論要求を割り振るとき、要求の到着場所、GPUの処理能力、通信遅延だけでなく、各拠点の外気温も運用費を左右する。本論文は、これらをLLM推論要求の配置問題に統合する。ただし原著は主要結果をSplitwise比で正規化した図として示し、本文中に個別指標の絶対値・改善率・信頼区間を列挙していない。
+
+- **2026-03 · [GreenScheduler: Coordinated Two-Tier Energy Optimization for Disaggregated LLM Serving](2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregate.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分離型LLMサービングで、分単位のプール配置と基準周波数を決める階層と、プリフィルにはモデル予測制御、デコードにはスラック適応でミリ秒単位に周波数を動かす階層を協調させ、SLOを保ちながらGPUエネルギーをDistServe比で45.2%削減するGreenScheduler。
 
 - **2026-02 · [TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design](2026-2602.12962-trigen-npu-architecture-for-end-to-end-acceleration-of-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

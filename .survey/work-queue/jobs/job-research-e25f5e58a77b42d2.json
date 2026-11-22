@@ -35,10 +35,15 @@
   "selection_reason": "prefill/decode分離環境でGPU配置とDVFSを時間スケールの異なる二層で協調制御するGreenSchedulerを提案。分単位の予測プロビジョニングと、prefillのMPC・decodeのslack対応周波数制御を組み合わせる。出版社要旨はAzureトレースによるH100評価とSLO維持下の省電力を述べるが、詳細数値や独立再現は要旨だけでは検証不能でありResearch昇格時に厳密な確認が必要。",
   "semantic_scholar_id": "2dd8ee54b1240817f924fca3261bb94f28680137",
   "source_url": "https://doi.org/10.65405/cn221159",
-  "status": "ready",
+  "status": "superseded",
   "title": "GreenScheduler: Coordinated Two-Tier Energy Optimization for Disaggregated LLM Serving",
   "type": "research",
   "venue": "مجلة العلوم الشاملة",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T15:46:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregate.md",
+  "represented_canonical_id": "DOI:10.65405/cn221159",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
