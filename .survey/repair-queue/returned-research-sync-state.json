@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "062c4f8568cee15a445032ef032a749eb13d2099",
+  "base_commit": "d923b24375b175a05d0ff4d11b9026bff02c2057",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -135,12 +135,14 @@
     "2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.json",
     "2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-llm-inference-algorithms-and-numerical-analysis.json",
     "2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-all-you-need-for-mha.json",
+    "2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.json",
     "2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe-inference.json",
     "2025-2503.09657-tyr-the-pruner-structural-pruning-via-global-sparsity-distribution.json",
     "2025-2503.11426-text-compression-for-efficient-language-generation.json",
     "2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-to-faster-inference.json",
     "2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.json",
     "2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decomposition.json",
+    "2025-2503.20322-dynamic-pyramid-network-for-efficient-multimodal-large-language-models.json",
     "2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.json",
     "2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.json",
     "2025-2504.02118-llmpi-optimizing-llms-for-high-throughput-on-raspberry-pi.json",
@@ -205,6 +207,7 @@
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
     "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
+    "2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-without-retraining.json",
     "2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-llm-layer-compression.json",
     "2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with-hybrid-ckks-and-mpc.json",
     "2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dynamic-grouping.json",
@@ -233,6 +236,7 @@
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-attention-transformer-models.json",
     "2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.json",
+    "2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adaptation-of-moe-models.json",
     "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
     "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
@@ -375,6 +379,7 @@
     "2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-architectures-for-ai-accelerators.json",
     "2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysis-of-nvfp4-and-mxfp4.json",
     "2026-2603.09215-spar-k-scheduled-periodic-alternating-early-exit-for-spoken-language-models.json",
+    "2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-on-ai-accelerators.json",
     "2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-comprehensive-benchmark-and-deployment-study.json",
     "2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-future-without-generation.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
@@ -48796,6 +48801,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2503.06184": {
+      "order": [
+        "2026-11-22T09:45:02+00:00",
+        "2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2503.20322": {
+      "order": [
+        "2026-11-22T09:46:31+00:00",
+        "2025-2503.20322-dynamic-pyramid-network-for-efficient-multimodal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.15828": {
+      "order": [
+        "2026-11-22T09:48:00+00:00",
+        "2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-without-retraining.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.14853": {
+      "order": [
+        "2026-11-22T09:49:29+00:00",
+        "2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adaptation-of-moe-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.10026": {
+      "order": [
+        "2026-11-22T09:50:58+00:00",
+        "2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-on-ai-accelerators.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61547,6 +61597,21 @@
     "arxiv:2502.11832": [
       "papers/inference/99-other-inference-systems/2025-2502.11832-haan-a-holistic-approach-for-accelerating-normalization-operations-in-la.md",
       "papers/inference/99-other-inference-systems/2025-2502.11832-haan-a-holistic-approach-for-accelerating-normalization-operations-in-la.md"
+    ],
+    "arxiv:2503.06184": [
+      "papers/inference/99-other-inference-systems/2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.md"
+    ],
+    "arxiv:2503.20322": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.20322-dynamic-pyramid-network-for-efficient-multimodal-large-language-models.md"
+    ],
+    "arxiv:2508.15828": [
+      "papers/inference/99-other-inference-systems/2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-w.md"
+    ],
+    "arxiv:2510.14853": [
+      "papers/inference/99-other-inference-systems/2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adapt.md"
+    ],
+    "arxiv:2603.10026": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-.md"
     ]
   }
 }

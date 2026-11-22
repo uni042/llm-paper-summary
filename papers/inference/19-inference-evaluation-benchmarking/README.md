@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（199本）
+## 自動生成の論文一覧（200本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -715,6 +715,10 @@
 - **2025-04 · [Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features](2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   交差注意の重みが一部の画像特徴へ偏り層間でも変わらない観測に基づき、最初の層で注意頭ごとの上位特徴の和集合だけを残して残り層のキャッシュと計算を減らす追加学習なしの方式で、特徴を約半分にしても性能同等を保ちバッチ三二の遅延を二六パーセント減らした。
+
+- **2025-03 · [Dynamic Pyramid Network for Efficient Multimodal Large Language Models](2025-2503.20322-dynamic-pyramid-network-for-efficient-multimodal-large-language-models.md)**  
+  実装：[✓](https://github.com/aihao2000/DPN-LLaVA) ・ リポジトリ内被引用：0  
+  視覚トークンの圧縮を言語モデルの外から内側の階層構造へ移し、深さとともに段階的に圧縮しながら、サンプルごとにプーリング率を動的に選ぶことで、LLaVAの演算量を最大56%削りつつ性能を保つマルチモーダル推論の高速化。
 
 - **2025-02 · [Leveraging the true depth of LLMs](2025-2502.02790-leveraging-the-true-depth-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

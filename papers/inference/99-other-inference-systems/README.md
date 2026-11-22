@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1266本）
+## 自動生成の論文一覧（1269本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3412,6 +3412,10 @@
   実装：[✓](https://github.com/ekwek1/COMPACT) ・ リポジトリ内被引用：1  
   COMPACTは、推論用の大規模言語モデルを圧縮するとき、Transformerの層数や隠れ次元を一律に削るのでなく、語彙表に結び付くパラメータとフィードフォワード網（FFN）の中間チャネルを別々に制御する手法である。
 
+- **2025-08 · [Z-Pruner: Post-Training Pruning of Large Language Models for Efficiency without Retraining](2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-w.md)**  
+  実装：[✓](https://github.com/sazzadadib/Z-Pruner) ・ リポジトリ内被引用：1  
+  重みの行・列正規化から作るゼットスコアの三乗とモデル族別の活性値スケーリングで重要度を決め、再学習も重み更新もなしに50%枝刈りして、大規模モデルで最低のパープレキシティと最速級の枝刈り時間を両立する学習後枝刈り。
+
 - **2025-08 · [DualSparse-MoE: Coordinating Tensor/Neuron-Level Sparsity with Expert Partition and Reconstruction](2025-2508.18376-dualsparse-moe-coordinating-tensor-neuron-level-sparsity-with-expert-par.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DualSparse-MoEはこの二種類の疎性を同時に使い、重要なニューロンの計算を残しながら、影響の小さいトークン・専門家演算を省くシステムである。原著のSGLang/H20評価では、約25%のMoE演算省略に対しMixtral・OLMoE・DeepSeekの平均精度低下は0.08〜0.28ポイントにとどまる。
@@ -3603,6 +3607,10 @@
 - **2025-10 · [SQS: Bayesian DNN Compression through Sparse Quantized Sub-distributions](2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.md)**  
   実装：[✓](https://nan-jiang-group.github.io/SQS/) ・ リポジトリ内被引用：0  
   スパイク・アンド・スラブ型の変分分布で枝刈りと量子化を同時に学習し、別々に圧縮するより高い圧縮率を同程度の性能低下で得るベイズ型の統合圧縮方式。
+
+- **2025-10 · [Rewiring Experts on the Fly: Continuous Rerouting for Better Online Adaptation in Mixture-of-Expert models](2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adapt.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門家混合モデルのルータを、外部データなしで生成中の文脈そのものを使って繰り返し直し、コード生成で最大6.7ポイントの改善を外部参照を使う従来法より少ない計算で得るテスト時再ルーティング。
 
 - **2025-10 · [MossNet: Mixture of State-Space Experts is a Multi-Head Attention](2025-2510.26182-mossnet-mixture-of-state-space-experts-is-a-multi-head-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4052,6 +4060,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文を一つの埋め込みへ圧縮し、完了した文の埋め込みをキャッシュして生成する階層型モデルで、小規模領域で計算量最大約10倍と速度最大3倍の効率を得る一方、品質の代償も測る研究。
 
+- **2025-03 · [Sample-aware Adaptive Structured Pruning for Large Language Models](2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.md)**  
+  実装：[✓](https://github.com/JunKong5/AdaPruner) ・ リポジトリ内被引用：0  
+  構造化枝刈りの成否を分けるキャリブレーションデータと重要度指標の組み合わせを、ベイズ最適化でサンプルを意識して自動探索するAdaPrunerで、枝刈り率20%で未枝刈りモデルの97%の性能を保つ。
+
 - **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
   実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
   Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
@@ -4243,7 +4255,7 @@
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：25  
   線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
@@ -4378,6 +4390,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   低bitのLLM推論では、すべての重みや活性を同じ低精度へ変換するより、精度低下に敏感な部分を高精度で残す混合量子化が有効になる場合がある。
 
+- **2024-06 · [MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations](2024-2406.07017-moreaupruner-robust-pruning-of-large-language-models-against-weight-pert.md)**  
+  実装：[✓](https://github.com/ShiningSord/MoreauPruner) ・ リポジトリ内被引用：3  
+  LLaMA-13Bでは回復微調整後の7課題平均が元64.97に対しMoreauPruner-GSで64.94まで近づく。一方、LLaMA3-8Bでは元70.33に対し同方式の20%剪定後が65.37で、性能損失が残る。
+
 - **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：3  
   大規模言語モデルの圧縮では、重みを0にする枝刈りや、浮動小数点数を整数へ変換する量子化が、生成文をどの時点から変えてしまうかを把握する必要がある。この指標を使って行列ごとの枝刈り率を配分すると、Llama-2-13Bを全体75%疎化したとき、同じ平均疎化率の一様な大きさ基準の枝刈りより、WikiText2のPPLを13.512から8.101へ抑えられる。
@@ -4413,10 +4429,6 @@
 - **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：2  
   通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
-
-- **2024-06 · [MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations](2024-2406.07017-moreaupruner-robust-pruning-of-large-language-models-against-weight-pert.md)**  
-  実装：[✓](https://github.com/ShiningSord/MoreauPruner) ・ リポジトリ内被引用：2  
-  LLaMA-13Bでは回復微調整後の7課題平均が元64.97に対しMoreauPruner-GSで64.94まで近づく。一方、LLaMA3-8Bでは元70.33に対し同方式の20%剪定後が65.37で、性能損失が残る。
 
 - **2024-05 · [STAT: Shrinking Transformers After Training](2024-2406.00061-stat-shrinking-transformers-after-training.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -4717,7 +4729,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：336  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：337  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5089,7 +5101,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：365  
+  実装：✓ ・ リポジトリ内被引用：366  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

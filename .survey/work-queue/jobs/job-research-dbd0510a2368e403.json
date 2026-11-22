@@ -35,10 +35,15 @@
   "selection_reason": "AIアクセラレータ向けにsafe softmaxとGEMMのような連鎖リダクションを単一ループへ融合するRedFuserを提案し、増分計算形式で融合カーネルを自動生成して注意機構等のワークロードでコンパイラ比2〜5倍の高速化を示す、注意・カーネルへの直接貢献である。",
   "semantic_scholar_id": "04e30a7f22b68eb238dcfdd7976be4fb80be893f",
   "source_url": "https://arxiv.org/abs/2603.10026",
-  "status": "ready",
+  "status": "superseded",
   "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
   "type": "research",
   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T09:53:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-.md",
+  "represented_canonical_id": "arXiv:2603.10026",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

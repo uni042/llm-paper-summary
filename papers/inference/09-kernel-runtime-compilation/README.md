@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（310本）
+## 自動生成の論文一覧（311本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -726,6 +726,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   多段推論では逆量子化のキャスティング費用が段数だけ積み上がり、8ビット化がかえってエネルギーを4倍に増やす量子化の罠を、理論分解と0.6Bから72B・6種GPUの実測で示した分析。
 
+- **2026-02 · [RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators](2026-2603.10026-redfuser-an-automatic-operator-fusion-framework-for-cascaded-reductions-.md)**  
+  実装：[✓](https://github.com/alibaba/redfuser) ・ リポジトリ内被引用：0  
+  連鎖した集約演算を集約木の連鎖として形式化し、融合条件と増分計算を自動で導いて単一カーネルを生成することで、注意や量子化付き行列積で既存コンパイラの2倍から5倍、手書きカーネル同等の性能を得る自動融合の枠組み。
+
 - **2026-02 · [RaBiT: Residual-Aware Binarization Training for Accurate and Efficient LLMs](2026-2602.05367-rabit-residual-aware-binarization-training-for-accurate-and-efficient-ll.md)**  
   実装：[✓](https://github.com/SamsungLabs/RaBiT) ・ リポジトリ内被引用：0  
   RaBiT（Residual-Aware Binarization 学習）は、複数の二値行列の和によって全精度の重みを近似する残差二値化（residual binarization）を、量子化認識学習（量子化-aware 学習; QAT）で安定させる方式である。
@@ -781,7 +785,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：228  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：229  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -797,7 +801,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   大規模な混合専門家モデルの多数の専門家重みをCPUメモリに常駐させ、注意機構などをGPUで処理する異種混成推論基盤。CPUの行列演算命令を算術強度に応じて使い分け、非同期の実行制御と専門家計算の遅延反映によってCPU・GPUの相互待ちを減らす。低同時実行の巨大モデルを主対象とし、評価した環境は二基の高性能XeonとA100またはRTX 4080である。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
-  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：26  
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-04 · [Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler](2025-2504.19442-triton-distributed.md)**  
@@ -1193,7 +1197,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：640  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：641  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
