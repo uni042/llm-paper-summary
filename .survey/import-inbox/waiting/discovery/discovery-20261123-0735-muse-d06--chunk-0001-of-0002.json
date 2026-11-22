@@ -1,0 +1,357 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d06::chunk-0001-of-0002",
+  "reference_main_sha": "889d2e78108acd55b4e88919f3b1f0bb0b6fbcdd",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-032-29915-4_13",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-032-29915-4_13"
+      ],
+      "title": "Comparative Study of Linear Attention Architectures for Geopotential Height Forecasting",
+      "reason": "線形アテンション（GLA・DeltaNet・Mamba2・KDA等）をNCEP再解析データのジオポテンシャル高度予測へ適用する比較評価であり、対象は数値天気予報という異分野応用で、LLM推論システムへの貢献ではないため対象範囲外とする。",
+      "source_url": "https://doi.org/10.1007/978-3-032-29915-4_13",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 151
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:63b5226b5cea33e7b862f737d5bf1a766ea3281a",
+      "identity_tokens": [
+        "SemanticScholar:63b5226b5cea33e7b862f737d5bf1a766ea3281a"
+      ],
+      "title": "Two-Stage Movie Script Summarization: An Efficient Method For Low-Resource Long Document Summarization",
+      "reason": "COLING 2022共有タスクの映画脚本要約システムで、ヒューリスティック抽出で入力を66%短縮しLongformer-Encoder-Decoderを微調整する長文要約の応用研究であり、LLM推論システムの機構ではないため対象範囲外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/63b5226b5cea33e7b862f737d5bf1a766ea3281a",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 152
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571473",
+      "identity_tokens": [
+        "DOI:10.1109/INFOCOM59046.2026.11571473"
+      ],
+      "title": "xCCLTuner: Treating xCCL as Black-Box and Automatically Tuning",
+      "reason": "集合通信ライブラリxCCLのパラメータをベイズ最適化で自動調整するxCCLTunerだが、要旨が明示する対象は分散学習システムの学習時間短縮であり、推論への適用は確認できない学習単独の高速化のため対象範囲外とする。",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2412.10338",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2412.10338",
+        "arXiv:2412.10338"
+      ],
+      "title": "XYScanNet: An Interpretable State Space Model for Perceptual Image Deblurring",
+      "reason": "Mamba系状態空間モデルにスライス・アンド・スキャン戦略を導入したXYScanNetは単一画像のデブラーリングという低レベル視覚タスク専用であり、LLM推論とは無関係なため対象範囲外とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2412.10338",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 154
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIP.2025.3612281",
+      "identity_tokens": [
+        "DOI:10.1109/TIP.2025.3612281"
+      ],
+      "title": "Hyperbolic Self-Paced Multi-Expert Network for Cross-Domain Few-Shot Facial Expression Recognition",
+      "reason": "双曲空間にMoE層を置くHSM-Netによる跨ドメイン少数ショット表情認識の研究で、対象は顔画像分類でありLLM推論システムとは無関係なため対象範囲外とする。",
+      "source_url": "https://doi.org/10.1109/TIP.2025.3612281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 155
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:94b2686a92cdaa973655d1da424a0ea2a5da2be8",
+      "identity_tokens": [
+        "SemanticScholar:94b2686a92cdaa973655d1da424a0ea2a5da2be8"
+      ],
+      "title": "MIRA: Multi-view Information Retrieval with Adaptive Routing for Test-time Long-video Comprehension",
+      "reason": "テスト時長尺動画理解に向け多視点情報検索と適応的ルーティングを組み合わせる枠組みとされるが、S2要旨は出版社により省略されOpenReviewも取得できず、推論効率への具体的な機構や削減量が一次要旨で確認できないため保留寄りのborderlineとする。",
+      "source_url": "https://www.semanticscholar.org/paper/94b2686a92cdaa973655d1da424a0ea2a5da2be8",
+      "body_check": "abstract_not_retrieved; s2_abstract_elided; openreview_blocked; title_and_venue_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2025-1343",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2025-1343"
+      ],
+      "title": "REB-former: RWKV-enhanced E-branchformer for Speech Recognition",
+      "reason": "RWKV層をE-Branchformerへ挟み計算複雑度を下げるREB-formerはLibriSpeech音声認識のWER改善が目的のASRアーキテクチャであり、LLM推論システムではないため対象範囲外とする。",
+      "source_url": "https://doi.org/10.21437/interspeech.2025-1343",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 157
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:45abd9509141a125c857508d978a944843328dc8",
+      "identity_tokens": [
+        "SemanticScholar:45abd9509141a125c857508d978a944843328dc8"
+      ],
+      "title": "T HE H UMAN G ENOMICS L ONG -R ANGE B ENCHMARK : A DVANCING DNA L ANGUAGE M ODELS",
+      "reason": "DNA言語モデルの長距離依存能力を9つのヒトゲノム課題で測るHuman Genomics Long-Range Benchmarkの提案と評価であり、異分野モデルの能力評価のみでLLM推論への貢献はないため対象範囲外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/45abd9509141a125c857508d978a944843328dc8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 158
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:b8e9cdbf4d758de1a7c471d900c1d8e70618bcd1",
+      "identity_tokens": [
+        "SemanticScholar:b8e9cdbf4d758de1a7c471d900c1d8e70618bcd1",
+        "arXiv:2410.02745"
+      ],
+      "title": "AVG-LL A VA: A M ULTIMODAL L ARGE M ODEL WITH A DAPTIVE V ISUAL G RANULARITY",
+      "reason": "高解像度画像で膨らむ視覚トークンを、複数プーリングで粒度階層化し視覚粒度ルーターが画像と指示に応じて適応選択するAVG-LLaVAは、視覚トークンを85.3%削減し推論を2.53倍高速化しており、マルチモーダルLLM推論のトークン圧縮として直接貢献する。",
+      "source_url": "https://www.semanticscholar.org/paper/b8e9cdbf4d758de1a7c471d900c1d8e70618bcd1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 159
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICC59461.2026.11587792",
+      "identity_tokens": [
+        "DOI:10.1109/ICC59461.2026.11587792"
+      ],
+      "title": "Collaborative Edge Inference for Large Language Models with Speculative Decoding",
+      "reason": "異種エッジノード上の小・大モデルを協調させる投機的デコード型LLMサービング枠組みで、パイプライン並列のバッチ化と無線資源配分を共同最適化しサービング遅延を最大23.1%削減しており、エッジLLM推論への直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.1109/ICC59461.2026.11587792",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 160
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IJCNN69854.2026.11729215",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN69854.2026.11729215"
+      ],
+      "title": "MESO: Memory-Efficient Speculative Offloading for Large Language Model Inference",
+      "reason": "投機的デコードのドラフトモデル自体をオフロードし細粒度の非同期コンポーネントロードとピン留めメモリ最適化を行うMESOは、SpecOffload比でピークGPUメモリを50%以上削減しメモリ効率を平均1.35倍にする、リソース制約下LLM推論の直接的機構である。",
+      "source_url": "https://doi.org/10.1109/IJCNN69854.2026.11729215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 161
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3731599.3767396",
+      "identity_tokens": [
+        "DOI:10.1145/3731599.3767396"
+      ],
+      "title": "WAGES: Workload-Aware GPU Sharing System for Energy-Efficient Serverless LLM Serving",
+      "reason": "サーバーレスLLMサービング向けWAGESはNVIDIA MPSで複数LLMを1GPUへ同居させ、SM分割とクロックをワークロードに応じて動的調整しモデル/KV移行を実行と重ねることで、エネルギー最大26%削減とSLO達成率改善を両立するGPU共有システムである。",
+      "source_url": "https://doi.org/10.1145/3731599.3767396",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 162
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f3915f14375346e69271a4a44fb55fd2f1ce6cad",
+      "identity_tokens": [
+        "SemanticScholar:f3915f14375346e69271a4a44fb55fd2f1ce6cad"
+      ],
+      "title": "LoRA and Efficient LLM Serving for Financial Expert Agents",
+      "reason": "LoRAとvLLM・Punica・S-LoRA・dLoRA等のマルチテナント配信を金融専門家エージェント向けに整理したセミナーレポート／サーベイであり、配信機構自体への新規な技術貢献ではなく応用領域の解説が主体のためborderlineとする。",
+      "source_url": "https://www.semanticscholar.org/paper/f3915f14375346e69271a4a44fb55fd2f1ce6cad",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1283",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1283"
+      ],
+      "title": "OptiCo: Adaptive Distributed Training Optimization via Collaborative Agent Reasoning",
+      "reason": "LLMエージェント群の協調推論で分散学習の戦略設定を自動化するOptiCoは、対象が大規模モデルの学習構成最適化であり推論システムの高速化ではないため、学習単独として対象範囲外とする。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1283",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3563766.3564096",
+      "identity_tokens": [
+        "DOI:10.1145/3563766.3564096"
+      ],
+      "title": "Efficient flow scheduling in distributed deep learning training with echelon formation",
+      "reason": "分散深層学習学習の計算パターンに合わせフロー終了時刻を制御するEchelonFlowは学習ジョブのネットワークスケジューリング抽象であり、推論への適用が確認できないため対象範囲外とする。",
+      "source_url": "https://doi.org/10.1145/3563766.3564096",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 165
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICSP69961.2026.11540876",
+      "identity_tokens": [
+        "DOI:10.1109/ICSP69961.2026.11540876"
+      ],
+      "title": "Design of an FPGA-Based High-Throughput Matrix Multiplication Accelerator for Transformers",
+      "reason": "LLMのTransformer推論で計算負荷の80%以上を占める行列乗算を対象に、階層ループ分割でメモリポート競合を解消しリフレッシュ可能パイプラインで境界オーバーヘッドを削るFPGAアクセラレータで、基準比2.52倍・20.5 GOPs/Wを達成しており推論カーネル／ハードウェアへの直接貢献である。",
+      "source_url": "https://doi.org/10.1109/ICSP69961.2026.11540876",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 166
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37336",
+      "identity_tokens": [
+        "arXiv:2610.37336"
+      ],
+      "title": "CoS-VQ: Coordinated Shared-Scale Vector Quantization for Large Language Models",
+      "reason": "低次元コードワードを保ちながらハードインデックスと共有スケールを位置横断で共同最適化するベクトル量子化CoS-VQは、スケール誘起の結合を接線分離可能な上限で解き、Qwen系でQTIP・LLVQを上回るLLM重み量子化手法であり推論向け圧縮に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2610.37336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 167
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISOCC66390.2025.11329799",
+      "identity_tokens": [
+        "DOI:10.1109/ISOCC66390.2025.11329799"
+      ],
+      "title": "Reducing Data Transfer Overhead with CXL-Based Near-Data Processing for LLM Inference",
+      "reason": "KVキャッシュをCXLメモリへオフロードしNear-Data Processingで精度影響の大きいKVエントリだけを選んで転送する方式は、CXL帯域制約下の転送オーバーヘッドを抑えGPU＋CXL基準比で平均1.45倍高速化する、LLM推論の階層メモリ機構である。",
+      "source_url": "https://doi.org/10.1109/ISOCC66390.2025.11329799",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 168
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCSVT.2025.3567138",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2025.3567138"
+      ],
+      "title": "DiViCo: Disentangled Visual Token Compression for Efficient Large Vision-Language Model",
+      "reason": "視覚トークンの非分離圧縮DiViCoは注意スコア上位トークンを選び、選択トークンとの差分を変分的に予測してKLで情報量を保持することで、大規模視覚言語モデルの推論時視覚トークン膨張を抑える直接的な効率化機構である。",
+      "source_url": "https://doi.org/10.1109/TCSVT.2025.3567138",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TPAMI.2022.3194044",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2022.3194044"
+      ],
+      "title": "DS-Net++: Dynamic Weight Slicing for Efficient Inference in CNNs and Vision Transformers",
+      "reason": "入力難易度に応じて重みスライスを段階的に使う動的重みスライシングDS-Net++はCNNとVision Transformer向けの動的推論一般論であり、LLM推論への具体的な適用や検証が要旨で確認できないためborderlineとする。",
+      "source_url": "https://doi.org/10.1109/TPAMI.2022.3194044",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 170
+    }
+  ],
+  "parent_run_key": "muse-20261123-d06",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

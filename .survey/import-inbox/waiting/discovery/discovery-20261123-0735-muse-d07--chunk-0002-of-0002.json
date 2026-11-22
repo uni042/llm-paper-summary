@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d07::chunk-0002-of-0002",
+  "reference_main_sha": "889d2e78108acd55b4e88919f3b1f0bb0b6fbcdd",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e291d4fb66f0dc73ed110f798587a43f5d7db733",
+      "identity_tokens": [
+        "SemanticScholar:e291d4fb66f0dc73ed110f798587a43f5d7db733"
+      ],
+      "title": "SPvR: Structured Pruning via Ranking",
+      "reason": "SPvRは局所グルーピングと全域ランキングで事前学習ネットワークを構造化枝刈りし推論遅延の削減も示すが、評価はResNet等の画像分類モデル中心でLLM推論への適用が確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/e291d4fb66f0dc73ed110f798587a43f5d7db733",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 201
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:c43dfb8fd93a3493828d543c9ecac0bbace9a32f",
+      "identity_tokens": [
+        "SemanticScholar:c43dfb8fd93a3493828d543c9ecac0bbace9a32f",
+        "arXiv:2107.01499"
+      ],
+      "title": "B ���� : Scaling up Distributed Learning with System Relaxations",
+      "reason": "候補の実体はBAGUAであり、量子化・分散化・通信遅延といったシステム緩和を分散データ並列学習の通信ライブラリで支え学習時間を短縮する研究で、対象が学習単独の高速化のため対象外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/c43dfb8fd93a3493828d543c9ecac0bbace9a32f",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 202
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/DLCV65218.2025.11088632",
+      "identity_tokens": [
+        "DOI:10.1109/DLCV65218.2025.11088632"
+      ],
+      "title": "TSM-ATTN: A Hybrid Time Series Forecasting Model Combining Attention Mechanism with Mamba",
+      "reason": "TSM-ATTNは注意機構とMambaを組み合わせた時系列予測モデルであり、対象が時系列予測でLLM推論システムへの貢献は確認できないため対象外とする。",
+      "source_url": "https://doi.org/10.1109/DLCV65218.2025.11088632",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 203
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:55769ebfb0f1d5541ec7d6bc5d998b4be0f511d3",
+      "identity_tokens": [
+        "SemanticScholar:55769ebfb0f1d5541ec7d6bc5d998b4be0f511d3",
+        "arXiv:2201.01410"
+      ],
+      "title": "Synthesizing Tensor Transformations for Visual Self-attention",
+      "reason": "STTは視覚自己注意の内積計算をテンソル変換で置き換える画像分類・キャプション向けプラグインであり、対象が視覚タスクの注意モジュールでLLM推論への適用は確認できないため対象外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/55769ebfb0f1d5541ec7d6bc5d998b4be0f511d3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 204
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b772699cb3c4d25efe34fa75373d4dcc06d5aae2",
+      "identity_tokens": [
+        "SemanticScholar:b772699cb3c4d25efe34fa75373d4dcc06d5aae2"
+      ],
+      "title": "Ternary Momentum For Quantized Training",
+      "reason": "Ternary Momentum For Quantized Trainingは題名とTMLR掲載情報から量子化学習の最適化手法とみられるが、Semantic Scholarが429で要旨を取得できず、推論への具体的適用を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/b772699cb3c4d25efe34fa75373d4dcc06d5aae2",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 205
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2604.18486",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2604.18486",
+        "arXiv:2604.18486"
+      ],
+      "title": "OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation",
+      "reason": "OneVLは自動運転VLAの自己回帰Chain-of-Thoughtの遅延を、潜在推論を1ステップ化して抑える手法だが、主目的は軌跡予測という運転応用であり、汎用LLM推論機構としての切り分けが要旨だけでは弱いため保留とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2604.18486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 206
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323008",
+      "identity_tokens": [
+        "DOI:10.1109/ICPADS67057.2025.11323008"
+      ],
+      "title": "Unlocking Agentic AI Service Deployment Complexity: Simulation-Guided Strategy Orchestration and Optimization",
+      "reason": "エージェントAIサービスの配置複雑性に対しシミュレーション誘導の閉ループでフレームワークからネットワークまでの戦略を編成・最適化する枠組みだが、対象に学習も含み推論配置の具体機構と効果が要旨で不明瞭なため保留とする。",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 207
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-3111",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3111"
+      ],
+      "title": "Scaling Up Parameter Generation: A Recurrent Diffusion Approach",
+      "reason": "RPGはパラメータをトークン化し再帰機構と拡散過程で大規模ネットワークの重み自体を生成する研究であり、生成対象がモデルパラメータで推論実行の効率化ではないため対象外とする。",
+      "source_url": "https://doi.org/10.52202/085713-3111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44267-025-00083-0",
+      "identity_tokens": [
+        "DOI:10.1007/s44267-025-00083-0"
+      ],
+      "title": "DehazeMamba: large multi-modal model guided single image dehazing via mamba",
+      "reason": "DehazeMambaは大規模マルチモーダルモデルの誘導とMambaで単一画像の霞除去を行う画像復元研究であり、応用先が画像処理でLLM推論システムへの貢献はないため対象外とする。",
+      "source_url": "https://doi.org/10.1007/s44267-025-00083-0",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 209
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2211.14466",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2211.14466",
+        "arXiv:2211.14466"
+      ],
+      "title": "SKDBERT: Compressing BERT via Stochastic Knowledge Distillation",
+      "reason": "SKDBERTは複数容量の教師アンサンブルから確率的に蒸留してコンパクトなBERTを得る圧縮手法であり、対象が小型BERTの学習による圧縮で、LLM推論システムとしての機構や評価は要旨で確認できないため保留とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2211.14466",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T07:35:00+09:00",
+      "last_checked_at": "2026-11-23T07:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 210
+    }
+  ],
+  "parent_run_key": "muse-20261123-d07",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
