@@ -296,6 +296,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   要求の残りSLO遅延を実行順とKVのHBM・CPU DRAM・NVMe配置へ共通予算として配り、復元・先読み・保持・再計算を切り替えて、処理量と長文脈要求の公平性を両立するサービング。
 
+- **2026-07 · [Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime](2026-2607.02942-dyserve-agentic-physical-plan-runtime.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  モデル・検証・実行先をワークフロー全体で共同選択し、混雑度別の事前計画を未送信部分だけ切り替えることで、品質を保ちながらエージェント処理の遅延と有効スループットを改善する。
+
 - **2026-06 · [Service-Induced Congestion in Memory-Constrained LLM Serving](2026-2606.15555-service-induced-congestion-memory-constrained-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   生成中にKVキャッシュが増えるため現時点で安全な受入れが将来の追い出し連鎖を作ることを力学系で示し、要求長の非同期化と受入れ率制限を安定化原理として導く。
@@ -476,10 +480,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   単発要求の待ち時間やGPU利用率だけを最適化する方式は、ツールを使うエージェントの連続呼出しには必ずしも適さない。機構を無効化したラウンド型基準と比較し、セッション完了時間の中央値を1000秒から189秒、95パーセンタイルを2296秒から867秒へ短縮した。
 
-- **2026-07 · [Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime](2026-2607.02942-dyserve-agentic-physical-plan-runtime.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  モデル・検証・実行先をワークフロー全体で共同選択し、混雑度別の事前計画を未送信部分だけ切り替えることで、品質を保ちながらエージェント処理の遅延と有効スループットを改善する。
-
 - **2026-07 · [OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving (Operational Systems)](2026-a3ac377502ac-opentela-unifying-decentralized-computing-resources-for-heterogeneous-ll.md)**  
   実装：[✓](https://github.com/eth-easl/opentela) ・ リポジトリ内被引用：1  
   中央の特権的なクラスタ管理者を置かず、既存のHPCジョブ管理方式を変えずに導入できることが設計目標である。GH200でQwen3-1.7Bを提供した実験では、入口での認証・選択・転送等の制御面による追加TTFTが到着率1/4/16 RPSで約1.69/1.68/1.42msであり、制御面が存在する代償を実測している。
@@ -563,6 +563,10 @@
 - **2026-05 · [MinT: Managed Infrastructure for Training and Serving Millions of LLMs](2026-2605.13779-mint-managed-infrastructure-for-training-and-serving-millions-of-llms.md)**  
   実装：[✓](https://github.com/MindLab-Research/mindlab-toolkit) ・ リポジトリ内被引用：1  
   低ランク適応（LoRA）は更新パラメータを小さくできるが、学習後に基盤モデルへ統合して全量チェックポイントを再配布してしまうと、この利点を運用全体で失う。
+
+- **2026-05 · [Mind the Delay: Latency-aware Query Routing for Heterogeneous LLM pools](2026-2607.18253-mind-the-delay-latency-aware-query-routing-for-heterogeneous-llm-pools.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  従来のモデルルータは入力質問の難しさを見て品質と費用を比較し、負荷分散器はモデルが決まった後にキュー長などからインスタンスを選ぶことが多い。しかし、この二段階の分離では、能力が高くても現在混雑しているモデルへ要求を送り、初回トークン遅延（Time To First Token、TTFT）の期限を破る場合がある。
 
 - **2026-05 · [HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling](2026-2605.16637-hexagent-workflow-heterogeneity-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1209,10 +1213,6 @@
 - **2026-05 · [Regulating Branch Parallelism in LLM Serving](2026-2605.06914-taper-regulating-branch-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   各デコードステップの残余SLO余裕から追加分岐の遅延予算を作り、予算内だけを動的に実行することで、分岐並列化による他要求の遅延悪化を防ぎつつQwen3-32Bで有効スループットを最大1.77倍へ高める。
-
-- **2026-05 · [Mind the Delay: Latency-aware Query Routing for Heterogeneous LLM pools](2026-2607.18253-mind-the-delay-latency-aware-query-routing-for-heterogeneous-llm-pools.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  従来のモデルルータは入力質問の難しさを見て品質と費用を比較し、負荷分散器はモデルが決まった後にキュー長などからインスタンスを選ぶことが多い。しかし、この二段階の分離では、能力が高くても現在混雑しているモデルへ要求を送り、初回トークン遅延（Time To First Token、TTFT）の期限を破る場合がある。
 
 - **2026-05 · [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](2026-2609.05425-cotail.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2031,7 +2031,7 @@
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：713  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：714  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
@@ -2174,13 +2174,13 @@
   実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：22  
   また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
 
+- **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
+  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：21  
+  常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
+
 - **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
   本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
-
-- **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：20  
-  常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-10 · [ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving](2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
@@ -2317,7 +2317,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1846  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1847  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
