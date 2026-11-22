@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-11-22T09:07:50.594623+00:00",
-  "status": "passed",
+  "checked_at": "2026-11-22T09:47:13.565451+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 36528,
-  "checked_file_count": 36528,
+  "inventory_file_count": 36606,
+  "checked_file_count": 36606,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,6 +26,12 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 5030,
-  "findings": []
+  "external_url_count": 5014,
+  "findings": [
+    {
+      "code": "invalid_yaml",
+      "path": ".survey/import-inbox/pending/research/2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-exponent-mantissa-refinement.md",
+      "detail": "while scanning a simple key\n  in \"<unicode string>\", line 22, column 1:\n    references:[]\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 23, column 1:\n    references_checked_at: '2026-11-22'\n    ^"
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T09:34:02+00:00",
-  "paper_count": 4920,
-  "edge_count": 65132,
+  "generated_at": "2026-11-22T09:42:24+00:00",
+  "paper_count": 4925,
+  "edge_count": 65135,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 29,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -1683,7 +1683,7 @@
     "papers/inference/09-kernel-runtime-compilation/2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md": 3,
     "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md": 11,
     "papers/inference/09-kernel-runtime-compilation/2025-2509.21081-typhoonmla-a-mixed-naive-absorb-mla-kernel-for-shared-prefix.md": 0,
-    "papers/inference/09-kernel-runtime-compilation/2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md": 2,
+    "papers/inference/09-kernel-runtime-compilation/2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md": 3,
     "papers/inference/09-kernel-runtime-compilation/2025-2510.01718-accelerating-attention-with-basis-decomposition.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2025-2510.03267-pt2-llm-post-training-ternarization-for-large-language-models.md": 4,
     "papers/inference/09-kernel-runtime-compilation/2025-2510.04008-race-attention-a-strictly-linear-time-attention-layer-for-training-on-ou.md": 0,
@@ -3136,7 +3136,7 @@
     "papers/inference/16-weight-quantization-compression/2023-2310.15929-e-sparse-boosting-the-large-language-model-inference-through-entropy-bas.md": 3,
     "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md": 27,
     "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md": 153,
-    "papers/inference/16-weight-quantization-compression/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md": 88,
+    "papers/inference/16-weight-quantization-compression/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md": 89,
     "papers/inference/16-weight-quantization-compression/2023-2312.07950-cbq-cross-block-quantization-for-large-language-models.md": 20,
     "papers/inference/16-weight-quantization-compression/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md": 7,
     "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md": 54,
@@ -3221,6 +3221,7 @@
     "papers/inference/16-weight-quantization-compression/2026-2601.19320-stableqat-stable-quantization-aware-training-at-ultra-low-bitwidths.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md": 1,
     "papers/inference/16-weight-quantization-compression/2026-2601.22716-breaking-the-blocks-continuous-low-rank-decomposed-scaling-for-unified-l.md": 0,
+    "papers/inference/16-weight-quantization-compression/2026-2602.00165-benford-s-law-as-a-distributional-prior-for-post-training-quantization-o.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2602.00372-post-training-probability-manifold-correction-via-structured-svd-pruning.md": 0,
     "papers/inference/16-weight-quantization-compression/2026-2602.01027-sfmp-fine-grained-hardware-friendly-and-search-free-mixed-precision-quan.md": 1,
     "papers/inference/16-weight-quantization-compression/2026-2602.02538-enhancing-post-training-quantization-via-future-activation-awareness.md": 0,
@@ -4109,7 +4110,7 @@
     "papers/inference/99-other-inference-systems/2025-2510.18234-deepseek-ocr-contexts-optical-compression.md": 16,
     "papers/inference/99-other-inference-systems/2025-2510.18245-scaling-laws-meet-model-architecture-toward-inference-efficient-llms.md": 1,
     "papers/inference/99-other-inference-systems/2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md": 4,
-    "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md": 1,
+    "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md": 2,
     "papers/inference/99-other-inference-systems/2025-2510.19482-elutq-optimizing-quantization-accuracy-under-lut-based-computation-for-e.md": 0,
     "papers/inference/99-other-inference-systems/2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network.md": 0,
     "papers/inference/99-other-inference-systems/2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.md": 0,
@@ -4269,8 +4270,10 @@
     "papers/inference/99-other-inference-systems/2026-2602.02680-flexrank-nested-low-rank-knowledge-decomposition-for-adaptive-model-depl.md": 1,
     "papers/inference/99-other-inference-systems/2026-2602.02707-every-bit-counts-a-theoretical-study-of-precision-expressivity-tradeoffs.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.02891-tracenas-zero-shot-llm-pruning-via-gradient-trace-correlation.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2602.02988-nli-non-uniform-linear-interpolation-approximation-of-nonlinear-operator.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2602.03359-meki-memory-based-expert-knowledge-injection-for-efficient-llm-scaling.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.03563-acl-aligned-contrastive-learning-improves-bert-and-multi-exit-bert-fine-.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.03681-neural-attention-search-linear-towards-adaptive-token-level-hybrid-atten.md": 1,
     "papers/inference/99-other-inference-systems/2026-2602.03769-reasoning-with-latent-tokens-in-diffusion-language-models.md": 2,
@@ -4287,6 +4290,7 @@
     "papers/inference/99-other-inference-systems/2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-w.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-found.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistica.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.07596-astro-activation-guided-structured-regularization-for-outlier-robust-llm.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.07804-pruning-as-a-cooperative-game-surrogate-assisted-layer-contribution-esti.md": 2,
     "papers/inference/99-other-inference-systems/2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-model.md": 0,
@@ -4298,6 +4302,7 @@
     "papers/inference/99-other-inference-systems/2026-2602.09953-attnpo-attention-guided-process-supervision-for-efficient-reasoning.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.10431-qtale-quantization-robust-token-adaptive-layer-execution-for-llms.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffus.md": 1,
+    "papers/inference/99-other-inference-systems/2026-2602.11008-rocket-rapid-optimization-via-calibration-guided-knapsack-enhanced-trunc.md": 0,
     "papers/inference/99-other-inference-systems/2026-2602.11192-melinoe-fine-tuning-enables-memory-efficient-inference-for-mixture-of-ex.md": 4,
     "papers/inference/99-other-inference-systems/2026-2602.11287-hifloat4-format-for-language-model-inference.md": 6,
     "papers/inference/99-other-inference-systems/2026-2602.11534-krause-synchronization-transformers.md": 0,
@@ -58094,6 +58099,7 @@
       "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md",
       "papers/inference/99-other-inference-systems/2024-2411.17426-clover-cross-layer-orthogonal-vectors-pruning-and-fine-tuning.md"
     ],
+    "papers/inference/16-weight-quantization-compression/2026-2602.00165-benford-s-law-as-a-distributional-prior-for-post-training-quantization-o.md": [],
     "papers/inference/16-weight-quantization-compression/2026-2602.00372-post-training-probability-manifold-correction-via-structured-svd-pruning.md": [
       "papers/inference/09-kernel-runtime-compilation/2022-2205.14135-flashattention.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2307.08691-flashattention-2.md",
@@ -71070,6 +71076,7 @@
       "papers/inference/21-static-structured-pruning/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md",
       "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-2602.02988-nli-non-uniform-linear-interpolation-approximation-of-nonlinear-operator.md": [],
     "papers/inference/99-other-inference-systems/2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token.md": [
       "papers/inference/04-conditional-computation/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
       "papers/inference/04-conditional-computation/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
@@ -71096,6 +71103,7 @@
       "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
       "papers/inference/99-other-inference-systems/2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-2602.03359-meki-memory-based-expert-knowledge-injection-for-efficient-llm-scaling.md": [],
     "papers/inference/99-other-inference-systems/2026-2602.03563-acl-aligned-contrastive-learning-improves-bert-and-multi-exit-bert-fine-.md": [
       "papers/inference/04-conditional-computation/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
       "papers/inference/04-conditional-computation/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
@@ -71291,6 +71299,7 @@
       "papers/inference/21-static-structured-pruning/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
       "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.md": [],
     "papers/inference/99-other-inference-systems/2026-2602.07596-astro-activation-guided-structured-regularization-for-outlier-robust-llm.md": [
       "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
@@ -71434,6 +71443,11 @@
       "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
       "papers/inference/07-kv-cache-optimization-compression/2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md",
       "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
+    "papers/inference/99-other-inference-systems/2026-2602.11008-rocket-rapid-optimization-via-calibration-guided-knapsack-enhanced-trunc.md": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md",
+      "papers/inference/16-weight-quantization-compression/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+      "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2602.11192-melinoe-fine-tuning-enables-memory-efficient-inference-for-mixture-of-ex.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
