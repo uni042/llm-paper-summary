@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（204本）
+## 自動生成の論文一覧（207本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -130,6 +130,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパート削減によるMoE高速化が精度をほぼ保ったまま拒否だけを弱めることを実測で示し、原因が応答の冒頭にあることを特定して、冒頭だけ全エキスパートで計算するSafeStartで高速化の大半と拒否の両方を保つ対策を与えた研究。
 
+- **2026-11 · [R^2-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation](2026-2611.03247-r-2-omni-reducing-structural-and-precision-redundancy-in-omni-llms-for-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  質問への注意ではなく時空間類似と局所連続性でマルチモーダルトークンを統合し、残したKVキャッシュの値の精度を注意出力誤差と音声映像の整合で配分することで、長文生成の品質を保ちながらメモリを約5倍削減する手法。
+
 - **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
   新旧のデータセンター向け図形処理装置を二つの独立クラスタで横断測定し、新装置が畳み込みで最大五・六倍、七百億の言語モデル推論で二十四から二十七パーセント遅い一方で大きな行列積の負荷では速いこと、遅さは基板電力の低さからカーネルごとの費用に帰着すること、同一半導体でも提供基盤の版で最初のトークンまでの時間が二・一倍変わることを示した。
@@ -201,6 +205,14 @@
 - **2026-10 · [How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs](2026-2610.40039-how-far-are-we-from-on-device-vlm-inference-a-measurement-study-on-edge-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末の神経処理装置で六つの視覚言語モデルをカーネル単位で測り、注意はソフトマックスが支配して行列装置が空転すること、線形注意の利得は配置変換で消えること、逐次生成の勝敗は注意の行列並列度で決まることを示し、課題ごとの甘い解像度を提案した測定研究である。
+
+- **2026-10 · [DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning](2026-2610.18862-doubtless-training-free-contrastive-decoding-for-efficient-reasoning.md)**  
+  実装：[✓](https://github.com/leoluolol/DoubtLess) ・ リポジトリ内被引用：0  
+  小さい推論モデルに簡潔な読みと冗長な読みの二通りで途中経過を読ませ、そのロジット差で大きいモデルを毎ステップ誘導し、学習なしで思考連鎖を31%短縮しながら正解率を保つ対照デコード。
+
+- **2026-10 · [CALM: Consistency-Aware Logit Masking in Decoding Space for Mitigating Overthinking of Large Reasoning Models](2026-2610.25908-calm-consistency-aware-logit-masking-in-decoding-space-for-mitigating-ov.md)**  
+  実装：[✓](https://github.com/szu-tera/CALM.git) ・ リポジトリ内被引用：0  
+  試行回答の連続一致を検出した後も生成を打ち切らず、行動遷移点トークンのロジットを抑えることで冗長な再検討を減らし、トークンを約2割削減しながら精度を保つ学習不要のデコード手法。
 
 - **2026-09 · [Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization](2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -561,7 +573,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：44  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
@@ -628,6 +640,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   このサーベイは、複数の独立した大規模言語モデル（LLM）を一つのサービスで使い分ける際、どの要求をどのモデルへ送り、どの条件で上位モデルへ再実行するかを推論システムの最適化問題として整理する。本文中の最大98%費用削減などの値は引用した個別研究の結果であり、このサーベイの独立した再現実験ではない。
 
+- **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
+  実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：2  
+  従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
+
 - **2024-12 · [A Survey of RWKV](2024-2412.14847-a-survey-of-rwkv.md)**  
   実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：2  
   RWKVは、過去の情報を固定形状の再帰状態へ畳み込むことで、生成時に全トークンのKVを保持しない設計を取る。
@@ -635,10 +651,6 @@
 - **2025-11 · [TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding](2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md)**  
   実装：[✓](https://github.com/xiaomi-research/timeviper) ・ リポジトリ内被引用：1  
   1時間の動画を毎秒1枚、1フレーム768トークンで表現すると約276万トークンになり、通常の全注意では処理費用とメモリが大きい。TimeViperは、状態空間モデル（State Space モデル; SSM）のMamba-2とTransformerの注意層を混ぜた基盤を使い、さらに言語モデルの途中で視覚トークンを圧縮する。
-
-- **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
-  実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：1  
-  従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
 
 - **2025-11 · [MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning](2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md)**  
   実装：[✓](https://github.com/icip-cas/MemSearcher) ・ リポジトリ内被引用：1  

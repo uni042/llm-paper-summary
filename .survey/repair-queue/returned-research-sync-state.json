@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "dc6af3416f3cd241a83ed104701ad27533f39f24",
+  "base_commit": "08a9aae8750c371a3fce0cc4a741094278940986",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -944,6 +944,7 @@
     "2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.json",
     "2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.json",
     "2026-2610.18690-just-respect-the-semantics-image-token-compression-via-pre-llm-semantic-variable-resolution-tokenization-and-in-llm-rele.json",
+    "2026-2610.18862-doubtless-training-free-contrastive-decoding-for-efficient-reasoning.json",
     "2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reuse.json",
     "2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.json",
     "2026-2610.19210-titan-llama-retrofitting-pre-trained-llms-with-external-neural-memory-modules.json",
@@ -999,6 +1000,7 @@
     "2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inference.json",
     "2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-large-language-models.json",
     "2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-expert-pruning-for-mixture-of-experts-models.json",
+    "2026-2610.25908-calm-consistency-aware-logit-masking-in-decoding-space-for-mitigating-overthinking.json",
     "2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-software-co-design-exploration.json",
     "2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.json",
     "2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.json",
@@ -1097,6 +1099,7 @@
     "2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-inference-serving.json",
     "2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-personal-devices.json",
     "2026-2610.38303-don-t-ask-the-llm-visual-token-pruning-with-spectral-structure-and-semantic-relevance.json",
+    "2026-2610.38331-multi-token-prediction-done-right.json",
     "2026-2610.38355-flatcake-a-flat-kvcache-storage-architecture-for-llm-serving.json",
     "2026-2610.38809-causal-attention-on-cpu-a-cache-aware-and-load-balanced-scheduling-kernel-for-prefill.json",
     "2026-2610.38822-copyloop-fast-looped-transformer-decoding-via-context-copying-and-shallow-screening.json",
@@ -1147,6 +1150,7 @@
     "2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attention.json",
     "2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.json",
     "2026-2611.00051-tenonagent-virtualizing-execution-residency-for-memory-oversubscribed-llm-agents.json",
+    "2026-2611.00058-causalprune-counterfactual-causal-token-pruning-for-efficient-large-vision-language-models.json",
     "2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.json",
     "2026-2611.00486-integer-exact-microscaling-running-mxfp4-language-models-on-int8-matrix-units.json",
     "2026-2611.00495-understanding-gpu-megakernels-why-residency-can-mislead.json",
@@ -1162,6 +1166,7 @@
     "2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inverted-file-index.json",
     "2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.json",
     "2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-accelerators-over-fast-interconnects.json",
+    "2026-2611.03247-r2-omni-reducing-structural-and-precision-redundancy-in-omni-llms.json",
     "2026-2611.03517-ask-dont-equip-question-driven-coding-agents-for-deep-kernel-optimization.json",
     "2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-sparse-attention.json",
     "2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-and-rl.json",
@@ -49296,6 +49301,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.18862": {
+      "order": [
+        "2026-11-22T11:18:43+00:00",
+        "2026-2610.18862-doubtless-training-free-contrastive-decoding-for-efficient-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.25908": {
+      "order": [
+        "2026-11-22T11:19:35+00:00",
+        "2026-2610.25908-calm-consistency-aware-logit-masking-in-decoding-space-for-mitigating-overthinking.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.38331": {
+      "order": [
+        "2026-11-22T11:20:26+00:00",
+        "2026-2610.38331-multi-token-prediction-done-right.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.00058": {
+      "order": [
+        "2026-11-22T11:21:18+00:00",
+        "2026-2611.00058-causalprune-counterfactual-causal-token-pruning-for-efficient-large-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.03247": {
+      "order": [
+        "2026-11-22T11:22:10+00:00",
+        "2026-2611.03247-r2-omni-reducing-structural-and-precision-redundancy-in-omni-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62247,6 +62297,21 @@
     "arxiv:2610.15509": [
       "papers/inference/99-other-inference-systems/2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-h.md",
       "papers/inference/99-other-inference-systems/2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-h.md"
+    ],
+    "arxiv:2610.18862": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.18862-doubtless-training-free-contrastive-decoding-for-efficient-reasoning.md"
+    ],
+    "arxiv:2610.25908": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.25908-calm-consistency-aware-logit-masking-in-decoding-space-for-mitigating-ov.md"
+    ],
+    "arxiv:2610.38331": [
+      "papers/inference/99-other-inference-systems/2026-2610.38331-multi-token-prediction-done-right.md"
+    ],
+    "arxiv:2611.00058": [
+      "papers/inference/99-other-inference-systems/2026-2611.00058-causalprune-counterfactual-causal-token-pruning-for-efficient-large-visi.md"
+    ],
+    "arxiv:2611.03247": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.03247-r-2-omni-reducing-structural-and-precision-redundancy-in-omni-llms-for-l.md"
     ]
   }
 }
