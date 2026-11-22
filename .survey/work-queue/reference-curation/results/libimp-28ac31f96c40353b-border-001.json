@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28ac31f96c40353b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2205.14014",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2205.14014",
+    "identity_tokens": [
+      "arXiv:2205.14014"
+    ],
+    "reason": "自己注意をグラフ上の情報伝達として捉え直し、正規化情報ペイロードで疎な注意パターンを比較し、計算量が系列長の対数オーダーの超立方体注意を提案する点は推論効率と関係するが、評価は小規模モデルの学習と微調整が中心で、大規模言語モデルの推論基盤やサービングでの検証がないため境界と判断した。",
+    "first_checked_at": "2026-11-22T03:48:20+00:00",
+    "last_checked_at": "2026-11-22T03:48:20+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "What Dense Graph Do You Need for Self-Attention?"
+  },
+  "processed_at": "2026-11-22T03:48:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28ac31f96c40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
