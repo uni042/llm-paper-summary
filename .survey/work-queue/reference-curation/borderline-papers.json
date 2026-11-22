@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-22T08:19:50+00:00",
-  "record_count": 6853,
+  "updated_at": "2026-11-22T08:35:20+00:00",
+  "record_count": 6855,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -106565,6 +106565,52 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AdaptiveLLM: A Framework for Selecting Optimal Cost-Efficient LLM for Code-Generation Based on CoT Length"
+    },
+    "arXiv:2505.21535": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.21535",
+      "identity_tokens": [
+        "arXiv:2505.21535"
+      ],
+      "reason": "視覚トランスフォーマーの注意置換とインメモリ計算向け推論が主題で、言語モデルへの言及は背景のみ、評価はDeiTと画像分類に限定されLLM推論システムへの直接貢献が確認できないため境界として記録する",
+      "first_checked_at": "2026-11-22T08:35:19+00:00",
+      "last_checked_at": "2026-11-22T08:35:19+00:00",
+      "linked_from": [
+        "_",
+        "a",
+        "c",
+        "e",
+        "h",
+        "n",
+        "p",
+        "r",
+        "s"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FAR: Function-preserving Attention Replacement for IMC-friendly Inference"
+    },
+    "arXiv:2211.04076": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.04076",
+      "identity_tokens": [
+        "arXiv:2211.04076"
+      ],
+      "reason": "学習可能な順伝播カーネルで自己注意を線形計算量へ近似する方式だが、評価は小規模なエンコーダ型モデルのLong Range Arena分類課題3件の正解率のみで、大規模言語モデルの推論、生成、サービング、遅延・スループット・メモリの実測といったLLM推論システムへの直接の証拠がなく、推論システムの収録基準に対しては境界域と判断した",
+      "first_checked_at": "2026-11-22T08:35:20+00:00",
+      "last_checked_at": "2026-11-22T08:35:20+00:00",
+      "linked_from": [
+        "_",
+        "a",
+        "c",
+        "e",
+        "h",
+        "n",
+        "p",
+        "r",
+        "s"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Linear Self-attention Approximation via Trainable Feedforward Kernel"
     }
   }
 }
