@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（184本）
+## 自動生成の論文一覧（186本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -636,6 +636,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、こうした複雑さをブラックボックスの「モデルサイズから学習時間を推定する式」だけで扱うのではなく、演算・通信プリミティブの実測回帰器と、実行依存関係を反映した時間軸モデルを組み合わせることで、実際の学習反復時間を予測する手法を提案する。
 
+- **2025-09 · [Certainty-Guided Reasoning in Large Language Models: A Dynamic Thinking Budget Approach](2025-2509.07820-certainty-guided-reasoning-in-large-language-models-a-dynamic-thinking-b.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  思考途中で最終回答を試行生成し、回答トークン確率の最小値が閾値を超えたら早期終了する確実性誘導推論で、固定予算の正解率をほぼ保ちながら思考トークンを削減する方式。
+
 - **2025-08 · [TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill and Decode Inference](2025-2508.15881-tpla-tensor-parallel-latent-attention-for-efficient-disaggregated-prefil.md)**  
   実装：[✓](https://github.com/fxmeng/TransMLA) ・ リポジトリ内被引用：0  
   TPLA（テンソル-Parallel Latent 注意機構）は、DeepSeek系列などで使われるMulti-Head Latent 注意機構（MLA）のKVキャッシュをGPUごとに複製する問題を解消するテンソル parallel（TP）方式である。
@@ -667,6 +671,10 @@
 - **2025-02 · [KVCrush: Key value cache size-reduction using similarity in head-behaviour](2025-2503.00022-kvcrush-key-value-cache-size-reduction-using-similarity-in-head-behaviou.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVCrushは、長文脈のLLM推論でKVキャッシュを縮小する際に、重要度の高いトークンだけを残す既存方式の弱点を補う手法である。平均KV削減率約4倍の条件でも精度低下を小さく抑えられる一方、すべての個別課題でFullKVに勝つわけではない。
+
+- **2024-12 · [Pruning All-Rounder: Rethinking and Improving Inference Efficiency for Large Vision Language Models](2024-2412.06458-pruning-all-rounder-rethinking-and-improving-inference-efficiency-for-la.md)**  
+  実装：[✓](https://github.com/ASGO-MM/Pruning-All-Rounder) ・ リポジトリ内被引用：0  
+  層の冗長性とトークンの冗長性が連動する実証に基づき、軽量メタ・ルーターが落とす視覚トークンと飛ばす層を入力適応に決め、本体を再学習せず計算量をほぼ半減する視覚言語モデルの枝刈り方式。
 
 ### 3年前（2023-12〜2024-11）
 

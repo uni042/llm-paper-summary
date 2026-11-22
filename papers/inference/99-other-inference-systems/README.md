@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1206本）
+## 自動生成の論文一覧（1208本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3796,6 +3796,10 @@
   実装：[✓](https://github.com/inclusionAI/PromptCoT) ・ リポジトリ内被引用：0  
   KVキャッシュを持たないMamba-2の状態空間双対層だけで推論モデルを構成し、PromptCoTの合成データによる2段階カリキュラムで鍛えた研究。7Bで27B級の推論性能と、メモリ制限下で最大3.66倍のスループットを示した。
 
+- **2025-05 · [QwenLong-CPRS: Towards ∞-LLMs with Dynamic Context Optimization](2025-2505.18092-qwenlong-cprs-towards-llms-with-dynamic-context-optimization.md)**  
+  実装：[✓](https://github.com/Tongyi-Zhiwen/QwenLong-CPRS) ・ リポジトリ内被引用：0  
+  生成モデルの前段で、自然言語の指示に沿って長文脈から必要なトークンだけを多粒度で残す圧縮モデルにより、プリフィル費用を下げながら長文脈性能を上げる方式。
+
 - **2025-05 · [QStore: Quantization-Aware Compressed Model Storage](2025-2505.04081-qstore-quantization-aware-compressed-model-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低精度モデルと復元用の条件付き情報だけを保持する無損失の統合保管形式で、量子化関数と量子化後の値による二重のグループ化で条件付き情報を圧縮し、六つのモデルで保管量を最大で無圧縮の二・二分の一、読み込みを最大で一・八倍速くしたと報告した。
@@ -3879,6 +3883,10 @@
 - **2025-03 · [RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm](2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algo.md)**  
   実装：[✓](https://github.com/FFTYYY/RaanA) ・ リポジトリ内被引用：0  
   層の最終出力への感度からビット配分を整数計画で最適化し、アダマール変換で高速化したベクトル量子化で重みを圧縮する学習後量子化。較正は5件か合成文1件で足り、70Bでも約55分で量子化できる。
+
+- **2025-03 · [NM-SpMM: Accelerating Matrix Multiplication Using N:M Sparsity with GPGPU](2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.md)**  
+  実装：[✓](https://github.com/M-H482/NM-SpMM) ・ リポジトリ内被引用：0  
+  N:Mスパース行列積について疎性で計算律速からメモリ律速へ移ることを分析し、階層的ブロッキングと疎性に応じたパッキングおよびパイプラインで、汎用実装nmSPARSEより2.1倍速くするGPUカーネル。
 
 - **2025-03 · [Large Language Model Compression via the Nested Activation-Aware Decomposition](2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decompo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4797,7 +4805,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：285  
+  実装：✓ ・ リポジトリ内被引用：286  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

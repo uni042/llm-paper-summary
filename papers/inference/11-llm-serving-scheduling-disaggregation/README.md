@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（595本）
+## 自動生成の論文一覧（596本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2019,6 +2019,10 @@
 - **2025-03 · [Alchemist: Towards the Design of Efficient Online Continual Learning System](2025-2503.01066-alchemist-towards-the-design-of-efficient-online-continual-learning-syst.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Alchemistは、LLMのサービングとオンライン継続学習を別々のGPUやプロセスで実行すると、サービングのプリフィルで既に計算した中間活性を学習側が再計算してしまうことに着目したシステムである。著者らの分析では、この重複した順伝播計算がオンライン学習時間の30～42%を占める。
+
+- **2025-02 · [TranSQL+: Serving Large Language Models with SQL on Low-Resource Hardware](2025-2502.02818-transql-serving-large-language-models-with-sql-on-low-resource-hardware.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  計算グラフを純粋なSQLへ変換し関係データベースを推論エンジンとして使うことで、GPUなし・低メモリ機器でも大規模言語モデルを動かすコード生成方式。
 
 - **2025-01 · [Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models](2025-2501.18154-mixed-precision-graph-neural-quantization-for-low-bit-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
