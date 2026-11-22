@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59eaab172cecf509-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df",
+    "identity_tokens": [
+      "SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df"
+    ],
+    "reason": "Primary full text for 'GEAR: An Efficient Error Reduction Framework for KV Cache Compression in LLM Inference' (ENLSP) could not be obtained: Semantic Scholar lists no openAccessPdf for this paper and no other public full-text route was confirmed in the 2026-11-22 OA sweep. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-22T14:38:18+00:00",
+    "last_checked_at": "2026-11-22T14:38:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "GEAR: An Efficient Error Reduction Framework for KV Cache Compression in LLM Inference"
+  },
+  "processed_at": "2026-11-22T14:38:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59eaab172cec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

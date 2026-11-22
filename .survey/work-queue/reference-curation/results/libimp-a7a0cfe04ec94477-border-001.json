@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7a0cfe04ec94477-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/isscc49663.2026.11408953",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/isscc49663.2026.11408953",
+    "identity_tokens": [
+      "DOI:10.1109/isscc49663.2026.11408953"
+    ],
+    "reason": "Primary full text for 'A 28nm Speculative-Decoding LLM Processor Achieving 105-to-685µs/Token Latency for Billion-Parameter Models' (IEEE International Solid-State Circuits Conference) could not be obtained: the work is closed access (OpenAlex oa_status=closed, no OA location or PDF), and no public publisher, repository, or author copy was found in the 2026-11-22 OA sweep. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if an OA copy appears.",
+    "first_checked_at": "2026-11-22T14:38:18+00:00",
+    "last_checked_at": "2026-11-22T14:38:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A 28nm Speculative-Decoding LLM Processor Achieving 105-to-685µs/Token Latency for Billion-Parameter Models"
+  },
+  "processed_at": "2026-11-22T14:38:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7a0cfe04ec9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

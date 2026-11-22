@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58054b469e28fc15-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+    "identity_tokens": [
+      "DOI:10.1016/j.sysarc.2026.103839"
+    ],
+    "reason": "Primary full text for 'AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs' (Journal of systems architecture) could not be obtained: OpenAlex marks this DOI as green OA yet exposes no PDF URL in any location, and no author/repository copy was confirmed in the 2026-11-22 OA sweep. Without a readable primary full text the paper cannot enter Research, so it is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-22T14:38:18+00:00",
+    "last_checked_at": "2026-11-22T14:38:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs"
+  },
+  "processed_at": "2026-11-22T14:38:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58054b469e28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
