@@ -35,10 +35,15 @@
   "selection_reason": "著者公開のHOTOS 2025原著PDFを確認。LLM推論でTP/PP、KVキャッシュ移動、prefill/decode分離など異なる分散実行形態を容易に構成するため、分散actor・future・task（DAFT）APIとinterpreted/compiled二モードを提案し、Ray上でcompiled実行を試作。原著Figure 2の4台A100 SXM 80GB・Llama 3.1 8B・ShareGPTの実測ではcompiled DAFTはTPでSPMD版vLLMの12%以内のthroughputに接近し、PPではSPMD版より67%高いthroughputを報告。LLM推論基盤の実行制御と効率に直接寄与するためaccept。提案・プロトタイプ段階であり、全面的な実運用保証ではない。",
   "semantic_scholar_id": "6dc33387854a34fcd41388921d17edb86fa372d9",
   "source_url": "https://doi.org/10.1145/3713082.3730392",
-  "status": "ready",
+  "status": "superseded",
   "title": "Towards ML System Extensibility",
   "type": "research",
   "venue": "USENIX Workshop on Hot Topics in Operating Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:39:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-af96f29ab97d-towards-ml-system-extensibility.md",
+  "represented_canonical_id": "DOI:10.1145/3713082.3730392",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

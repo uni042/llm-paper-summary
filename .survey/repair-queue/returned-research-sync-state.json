@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ae02c860696fa055f0f9f82ccfb0bdb60ab8ef40",
+  "base_commit": "80dc7b76548e84d9a46f20a9ef9b9080be74f5d2",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -317,11 +317,16 @@
     "2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
     "2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.json",
+    "2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.json",
     "2025-9cce4f3ac879-faster-speculative-decoding-via-effective-draft-decoder-with-pruned-candidate-tree.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
+    "2025-af96f29ab97d-towards-ml-system-extensibility.json",
+    "2025-bb64608d032b-paco-predictive-auto-configuration-for-slo-constrained-large-language-model-inference-serving.json",
     "2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.json",
     "2025-d1489180a09a-attention-level-speculation.json",
+    "2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.json",
     "2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning.json",
+    "2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.json",
     "2025-keeping-up-with-large-language-models-holistic-methodology.json",
     "2025-lesft-unlocking-edge-fine-tuning-sample-efficient-language-empowered-split-fine-tuning.json",
     "2025-oraclekv-question-independent-kv-cache-eviction.json",
@@ -49763,6 +49768,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.1038/s41598-025-92586-5": {
+      "order": [
+        "2026-11-22T15:34:12+00:00",
+        "2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3713082.3730392": {
+      "order": [
+        "2026-11-22T15:35:04+00:00",
+        "2025-af96f29ab97d-towards-ml-system-extensibility.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.61784/its3024": {
+      "order": [
+        "2026-11-22T15:35:56+00:00",
+        "2025-bb64608d032b-paco-predictive-auto-configuration-for-slo-constrained-large-language-model-inference-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.5753/eniac.2025.12304": {
+      "order": [
+        "2026-11-22T15:36:49+00:00",
+        "2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.61784/adsj3036": {
+      "order": [
+        "2026-11-22T15:37:41+00:00",
+        "2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62920,6 +62970,21 @@
     "doi:10.3724/2096-7004.di.2025.0077": [
       "papers/inference/99-other-inference-systems/2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md",
       "papers/inference/99-other-inference-systems/2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md"
+    ],
+    "doi:10.1038/s41598-025-92586-5": [
+      "papers/inference/99-other-inference-systems/2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-langua.md"
+    ],
+    "doi:10.1145/3713082.3730392": [
+      "papers/inference/99-other-inference-systems/2025-af96f29ab97d-towards-ml-system-extensibility.md"
+    ],
+    "doi:10.61784/its3024": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-bb64608d032b-paco-predictive-auto-configuration-for-slo-constrained-large-language-mo.md"
+    ],
+    "doi:10.5753/eniac.2025.12304": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md"
+    ],
+    "doi:10.61784/adsj3036": [
+      "papers/inference/15-inference-simulation-emulation/2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.md"
     ]
   }
 }

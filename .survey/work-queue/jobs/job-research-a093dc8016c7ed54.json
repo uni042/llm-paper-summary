@@ -35,10 +35,15 @@
   "selection_reason": "LLMサービング向け水平オートスケーラTEAS。負荷をリクエスト数でなく位相重み付き実効トークンで測り、レプリカのコールドスタート時間を見越して負荷を予測し、トークン量とエネルギーでスケール判断する。GPUレプリカ数の運用を決めるサービング基盤の機構。",
   "semantic_scholar_id": "2150c3e9b29756166493be9dda6601f9770ec3b3",
   "source_url": "https://doi.org/10.61784/adsj3036",
-  "status": "ready",
+  "status": "superseded",
   "title": "TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING",
   "type": "research",
   "venue": "AI and Data Science Journal",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:39:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.md",
+  "represented_canonical_id": "DOI:10.61784/adsj3036",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

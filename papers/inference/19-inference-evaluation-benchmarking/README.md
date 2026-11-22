@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（209本）
+## 自動生成の論文一覧（210本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -724,6 +724,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   思考途中で最終回答を試行生成し、回答トークン確率の最小値が閾値を超えたら早期終了する確実性誘導推論で、固定予算の正解率をほぼ保ちながら思考トークンを削減する方式。
 
+- **2025-09 · [Accelerating RAG Systems: A Performance-Oriented Systematic Mapping](2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RAG高速化研究147件を性能志向のシステマティックマッピングで34件へ絞って分類し、焦点が検索精度からプリフィックス対応KV再利用やGPU加速などのサービング効率へ移る一方、評価指標の不統一と多言語対応の不足が残ることを示したサーベイ。
+
 - **2025-08 · [TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill and Decode Inference](2025-2508.15881-tpla-tensor-parallel-latent-attention-for-efficient-disaggregated-prefil.md)**  
   実装：[✓](https://github.com/fxmeng/TransMLA) ・ リポジトリ内被引用：0  
   TPLA（テンソル-Parallel Latent 注意機構）は、DeepSeek系列などで使われるMulti-Head Latent 注意機構（MLA）のKVキャッシュをGPUごとに複製する問題を解消するテンソル parallel（TP）方式である。
@@ -771,7 +775,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [BurstGPT: A Real-world Workload Dataset to Optimize LLM Serving Systems](2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md)**  
-  実装：[✓](https://github.com/HPMLL/BurstGPT) ・ リポジトリ内被引用：83  
+  実装：[✓](https://github.com/HPMLL/BurstGPT) ・ リポジトリ内被引用：84  
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  

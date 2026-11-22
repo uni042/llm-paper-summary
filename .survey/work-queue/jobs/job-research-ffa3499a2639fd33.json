@@ -35,10 +35,15 @@
   "selection_reason": "SBCのENIAC 2025公式掲載ページおよび公開PDF本文（12ページ、237–248頁）を一次資料として確認。Kitchenham/Chartersの系統的文献調査手順とParsifalを用い、ACM Digital Library、IEEE Xplore、ScienceDirect、Scopus、arXiv、Google Scholarの6情報源からRAGのTTFT・遅延・KVキャッシュ・推論性能最適化研究を選別。本文では147件の候補から34件を最終対象と記し、KVキャッシュ再利用・圧縮、非同期検索、GPU実行、パイプライン最適化を整理し、TTFT/throughputの測定標準化不足と多言語評価の欠落を指摘。LLM推論・サービングシステムの性能最適化が調査の直接主題でありaccept。ただし本文4節の選別フローに「全文審査53件から30件除外した結果34件」と算術的に一致しない記述（53-30=23）があり、34件の母数と採択フローは後続Researchで原表・PRISMA図を再監査する必要がある。引用された他論文の高速化倍率は本論文自身の測定結果ではなく、二次引用値として扱う。",
   "semantic_scholar_id": "8b54ee3ee2e4699a652720c12c70ddbce859bf8e",
   "source_url": "https://doi.org/10.5753/eniac.2025.12304",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accelerating RAG Systems: A Performance-Oriented Systematic Mapping",
   "type": "research",
   "venue": "Anais do XXII Encontro Nacional de Inteligência Artificial e Computacional (ENIAC 2025)",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:39:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md",
+  "represented_canonical_id": "DOI:10.5753/eniac.2025.12304",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

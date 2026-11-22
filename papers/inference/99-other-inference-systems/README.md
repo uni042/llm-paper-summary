@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1323本）
+## 自動生成の論文一覧（1325本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4152,6 +4152,10 @@
   実装：[✓](https://github.com/flobk/TRIM) ・ リポジトリ内被引用：0  
   ワンショット枝刈りの疎率を層内一律から出力次元ごとに変え、次元別品質（出力のコサイン類似度）に基づく反復調整で配分を最適化し、70〜80パーセントの極端な疎率でもパープレキシティの崩壊を抑えるTRIMを提案した研究。
 
+- **2025-05 · [Towards ML System Extensibility](2025-af96f29ab97d-towards-ml-system-extensibility.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分散実行の固定化で失われる拡張性を、分散アクター・先行値・タスクの接口と解釈型・コンパイル型の二方式の併用で取り戻す構想を示し、Ray上の試作で推論と学習の双方でSPMD方式と同等の性能に届くことを示した位置づけ論文。
+
 - **2025-05 · [SwiftPrune: Hessian-Free Weight Pruning for Large Language Models](2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ヘッセ行列を寄与指標の近似で置き換え、指数加重移動平均で行ごとの並べ替えも省くことで、七十億級モデルの枝刈りを七・七三秒で終え、従来方式の平均十二・二九倍の高速化と疎性五十パーセントでの性能維持を両立したと報告した。
@@ -4279,6 +4283,10 @@
 - **2025-03 · [Large Language Model Compression via the Nested Activation-Aware Decomposition](2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decompo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   活性考慮型の特異値分解に元の重みへの近似を担う第2段を入れ子に重ね、較正分布と異なる言語やタスクでも劣化しにくい低ランク圧縮。圧縮率30から50パーセントで平均13から18パーセントのパープレキシティ削減。
+
+- **2025-03 · [Efficient self-attention with smart pruning for sustainable large language models](2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  埋め込みと全結合層の重みを凍結とゼロ化で削り、自己注意のクエリとキーを行の同一化で、バリューを対角化で圧縮する枝刈り手法。GPT-2で全体約70%圧縮しながら分類精度の低下を約2.5ポイントに抑え、推論を2.5倍に高速化したと報告する。
 
 - **2025-03 · [ClusComp: A Simple Paradigm for Model Compression and Efficient Finetuning](2025-2503.13089-cluscomp-a-simple-paradigm-for-model-compression-and-efficient-finetunin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4945,7 +4953,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：123  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：124  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  

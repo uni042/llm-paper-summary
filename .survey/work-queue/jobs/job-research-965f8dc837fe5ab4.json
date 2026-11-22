@@ -35,10 +35,15 @@
   "selection_reason": "出版社Scientific Reportsの一次本文で、埋め込み・FFNにForward Propagation Pruning、注意のQ/KにIdentical Row Compression、VにDiagonal Weight Compressionを組み合わせる手法を確認。LLaMA2-7B、OPT-175B、TinyLLaMA-1Bなどで圧縮率・推論高速化を比較しており、LLMの重み・注意計算を直接軽量化する研究。数値は論文記載条件に限り、他のLLMへの一般化は未検証。",
   "semantic_scholar_id": "6a75b227672ac3ee14e1167f8f6498c7e0abe122",
   "source_url": "https://doi.org/10.1038/s41598-025-92586-5",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient self-attention with smart pruning for sustainable large language models",
   "type": "research",
   "venue": "Scientific Reports",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:39:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-langua.md",
+  "represented_canonical_id": "DOI:10.1038/s41598-025-92586-5",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

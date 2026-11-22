@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（103本）
+## 自動生成の論文一覧（104本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -289,6 +289,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-01 · [Mugi: Value Level Parallelism For Efficient LLMs](2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md)**  
   実装：[✓](https://zenodo.org/records/18063514) ・ リポジトリ内被引用：0  
   Mugiは、値レベル並列性（Value Level Parallelism; VLP）という、数値が一致する複数の演算に対して中間結果を共有するハードウェア方式を、LLMの推論へ適用した研究である。
+
+- **2025-12 · [TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING](2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMサービングの台数制御を、実効トークンによる負荷計測、コールドスタート先を見た予測と実測誤差の余裕、バースト度に応じた目標利用率、エネルギー損益分岐に基づく縮小遅延で作り替え、バースト時にSLO達成率を大きく守るオートスケーラTEAS。
 
 - **2025-12 · [SQ-format: A Unified Sparse-Quantized Hardware-friendly Data Format for LLMs](2025-2512.05409-sq-format-a-unified-sparse-quantized-hardware-friendly-data-format-for-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
