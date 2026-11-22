@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-22T22:41:29+00:00`
+Generated: `2026-11-22T22:50:27+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -518,7 +518,7 @@ ready総数: **14** / 未claim総数: **14** / このworker向け: **4**
 | 487 | 101 | 2 | 6 | arXiv:2512.20291 | Mixture-of-Experts with Gradient Conflict-Driven Subspace Topology Pruning for Emergent Modularity | 2025-12-23 | arXiv.org | 1 | 6 | MoE routing / expert choice / heterogeneous conditional computation, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2512.20291) |
 | 488 | 106 | 2 | 6 | arXiv:2604.00136 | ParetoBandit: Budget-Paced Adaptive Routing for Non-Stationary LLM Serving | 2026-03-31 | arXiv.org | 6 | 8 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2604.00136) |
 | 489 | 10 | 2 | 6 | arXiv:2607.19349 | FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads | 2026-04-17 | arXiv.org | 0 | 6 | LLM Serving / Scheduling / Disaggregation, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2607.19349) |
-| 490 | 4 | 2 | 6 | DOI:10.3390/su172310473 | A Deployment-Aware Framework for Carbon- and Water- Efficient LLM Serving | 2025-11-22 | Sustainability | 4 | 6 | KV cache compression / cross-layer state merging, inference-systems | [source](https://doi.org/10.3390/su172310473) |
+| 490 | 7 | 2 | 6 | DOI:10.3390/su172310473 | A Deployment-Aware Framework for Carbon- and Water- Efficient LLM Serving | 2025-11-22 | Sustainability | 7 | 6 | KV cache compression / cross-layer state merging, inference-systems | [source](https://doi.org/10.3390/su172310473) |
 | 491 | 0 | 2 | 6 | SemanticScholar:b45ccd679b79aef67865ec79fd54d361a8edbe9e | CacheBridge: Efficient Cross-Model KV Cache Transfer |  |  | 0 | 6 | Prefill/Decode Disaggregation / Selective KV Transfer, kv-cache-offload-recomputation | [source](https://www.semanticscholar.org/paper/b45ccd679b79aef67865ec79fd54d361a8edbe9e) |
 | 492 | 42 | 2 | 6 | arXiv:2403.13358 | GeRM: A Generalist Robotic Model with Mixture-of-experts for Quadruped Robot | 2024-03-20 | IEEE/RJS International Conference on Intelligent RObots and Systems | 42 | 6 | 99-other-inference-systems, MoE routing / expert choice / heterogeneous conditional computation, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2403.13358) |
 | 493 | 10 | 2 | 6 | arXiv:2607.02119 | An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation | 2026-07-02 | Interspeech | 0 | 6 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2607.02119) |
