@@ -35,10 +35,15 @@
   "selection_reason": "動画MLLM向けFlashGazeはViT符号化前にピクセル差と四分木動的計画法でパッチの削除・統合・保持を決める学習不要プルーニングで、ViT符号化を最大5.4倍、MLLMのprefillを17倍高速化しピークメモリも削減する、推論前処理への直接貢献である。",
   "semantic_scholar_id": "70b87a8089ed262b81197d0e2fd30114d0b6afc3",
   "source_url": "https://arxiv.org/abs/2610.04225",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashGaze: Training-Free Multi-Scale Patch Pruning For Efficient Video Understanding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:16:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.04225-flashgaze-training-free-multi-scale-patch-pruning-for-efficient-video-un.md",
+  "represented_canonical_id": "arXiv:2610.04225",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

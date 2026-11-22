@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "11b1a40e4eaf17f9e0d9c828eb5486a706d1b22f",
+  "base_commit": "558fffb62a4ae142b8df8f90b4e82c303b680683",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -821,6 +821,7 @@
     "2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.json",
     "2026-2610.03394-edgeagent-orchestrating-on-device-llm-inference-for-end-user-multi-agent-systems-on-cpu-gpu-unified-memory-architectures.json",
     "2026-2610.03955-adaptive-co-serving-llm-watermarking-on-modern-inference-engines.json",
+    "2026-2610.04225-flashgaze-training-free-multi-scale-patch-pruning-for-efficient-video-understanding.json",
     "2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-on-intel-gpus.json",
     "2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurations.json",
     "2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-unified-memory.json",
@@ -854,6 +855,7 @@
     "2026-2610.07780-apex-speculate-smarter-not-deeper.json",
     "2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buys-and-when-you-can-tell.json",
     "2026-2610.07822-nucleus-speculative-decoding-plausibility-aware-verification-beyond-exact-distribution.json",
+    "2026-2610.07863-refold-training-free-reversible-inter-turn-context-folding-for-long-horizon-agents.json",
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
     "2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp4-quantization.json",
     "2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-depth-synchronized-batching.json",
@@ -872,6 +874,7 @@
     "2026-2610.10135-attention-via-black-box-vector-search.json",
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
+    "2026-2610.10552-freeze-the-decoder-heal-the-encoder-parameter-efficient-adaptation-for-svd-based-kv-cache-compression.json",
     "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json",
     "2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.json",
     "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
@@ -898,11 +901,13 @@
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
     "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json",
     "2026-2610.14804-agentweave-efficient-distributed-agent-serving-via-flow-decomposition.json",
+    "2026-2610.14934-fidelityq-preserving-predictive-fidelity-in-ultra-low-bit-language-model-quantization.json",
     "2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.json",
     "2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.json",
     "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
     "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
+    "2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-handoff.json",
     "2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-structured-llm-pruning.json",
     "2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggregated-llm-inference.json",
     "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json",
@@ -49246,6 +49251,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.04225": {
+      "order": [
+        "2026-11-22T11:07:54+00:00",
+        "2026-2610.04225-flashgaze-training-free-multi-scale-patch-pruning-for-efficient-video-understanding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07863": {
+      "order": [
+        "2026-11-22T11:09:27+00:00",
+        "2026-2610.07863-refold-training-free-reversible-inter-turn-context-folding-for-long-horizon-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.10552": {
+      "order": [
+        "2026-11-22T11:10:59+00:00",
+        "2026-2610.10552-freeze-the-decoder-heal-the-encoder-parameter-efficient-adaptation-for-svd-based-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14934": {
+      "order": [
+        "2026-11-22T11:12:31+00:00",
+        "2026-2610.14934-fidelityq-preserving-predictive-fidelity-in-ultra-low-bit-language-model-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15509": {
+      "order": [
+        "2026-11-22T11:14:02+00:00",
+        "2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-handoff.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62177,6 +62227,21 @@
     "arxiv:2609.39859": [
       "papers/inference/99-other-inference-systems/2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.md",
       "papers/inference/99-other-inference-systems/2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.md"
+    ],
+    "arxiv:2610.04225": [
+      "papers/inference/99-other-inference-systems/2026-2610.04225-flashgaze-training-free-multi-scale-patch-pruning-for-efficient-video-un.md"
+    ],
+    "arxiv:2610.07863": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.07863-refold-training-free-reversible-inter-turn-context-folding-for-long-hori.md"
+    ],
+    "arxiv:2610.10552": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.10552-freeze-the-decoder-heal-the-encoder-parameter-efficient-adaptation-for-s.md"
+    ],
+    "arxiv:2610.14934": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.14934-fidelityq-preserving-predictive-fidelity-in-ultra-low-bit-language-model.md"
+    ],
+    "arxiv:2610.15509": [
+      "papers/inference/99-other-inference-systems/2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-h.md"
     ]
   }
 }

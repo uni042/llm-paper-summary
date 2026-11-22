@@ -35,10 +35,15 @@
   "selection_reason": "事後SVDによるKVキャッシュ圧縮で鍵値重みを低ランク化し、デコーダを凍結してエンコーダのみを回復学習する低メモリな適用レシピを、学習率交絡を正して検証したKVキャッシュ圧縮研究である。",
   "semantic_scholar_id": "eac265b164e624a55b6779d1e2ae7cdba3ee3cce",
   "source_url": "https://arxiv.org/abs/2610.10552",
-  "status": "ready",
+  "status": "superseded",
   "title": "Freeze the Decoder, Heal the Encoder: Parameter-Efficient Adaptation for SVD-Based KV-Cache Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:16:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.10552-freeze-the-decoder-heal-the-encoder-parameter-efficient-adaptation-for-s.md",
+  "represented_canonical_id": "arXiv:2610.10552",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

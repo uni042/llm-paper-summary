@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（607本）
+## 自動生成の論文一覧（608本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -762,6 +762,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ワークフロー構造、モデル割当て、配置構成とモデル再利用を、現在のクラスタ状態に基づいてタスク配置時に一体で選ぶ提供システム。制約の評価順序を使った段階的剪定で列挙なしに探索し、有効スループットとコストを大きく改善した研究。
 
+- **2026-10 · [FidelityQ: Preserving Predictive Fidelity in Ultra-Low-Bit Language Model Quantization](2026-2610.14934-fidelityq-preserving-predictive-fidelity-in-ultra-low-bit-language-model.md)**  
+  実装：[✓](https://github.com/AI-Efficiency/FidelityQ) ・ リポジトリ内被引用：0  
+  鏡像型の四水準を二つの符号基底へ分解する解析符号化と、予測の乖離が大きい系列へ較正を集中させる仕組みで、2ビットのスカラー量子化でも予測の忠実さを保ち最良水準のパープレキシティを得る量子化。
+
 - **2026-10 · [Experts Exhibit Structured Redundancy: Structure-Preserving Expert Pruning for Sparse Mixture-of-Experts Large Language Models](2026-2610.41236-experts-exhibit-structured-redundancy-structure-preserving-expert-prunin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家出力の実効次元と分布モード数が総数より小さい冗長性を測り、部分空間を保つ射影エネルギー最大化と分布を保つ被覆誤差最小化の二つの貪欲選択で専門家を削ると、保持率七十五パーセントの数学推論で従来最良を三点五ポイント上回り未圧縮との差が一点三ポイントにとどまったと報告した。
@@ -1441,7 +1445,7 @@
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
-  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：56  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  

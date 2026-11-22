@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（203本）
+## 自動生成の論文一覧（204本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -20,6 +20,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
 
+- **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
+  実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：3  
+  既存の圧縮方式の多くは、視覚符号化器が全トークンを処理し終えた後に間引く。単一NVIDIA A100上のLLaVA-OneVision-7Bでは、言語モデルへ入る視覚トークンを元の10%に保つ条件で、最初のトークンまでの時間（Time to First Token; TTFT）が889.9ミリ秒から336.2ミリ秒へ短縮し、約2.65倍の逆数比となる。
+
 - **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   既存の手法はフレーム内の空間圧縮とフレーム間の時間圧縮を順番に適用するものが多いが、保持率を5%以下まで下げると、先に決めた各段階の予算配分が適切でなくなり、質問に必要な短い出来事や小さな物体を落としやすい。
@@ -39,10 +43,6 @@
 - **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
   実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：2  
   PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
-
-- **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
-  実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：2  
-  既存の圧縮方式の多くは、視覚符号化器が全トークンを処理し終えた後に間引く。単一NVIDIA A100上のLLaVA-OneVision-7Bでは、言語モデルへ入る視覚トークンを元の10%に保つ条件で、最初のトークンまでの時間（Time to First Token; TTFT）が889.9ミリ秒から336.2ミリ秒へ短縮し、約2.65倍の逆数比となる。
 
 - **2026-04 · [Early Stopping for Large Reasoning Models via Confidence Dynamics](2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.md)**  
   実装：[✓](https://github.com/sudoparsa/CoDE-Stop) ・ リポジトリ内被引用：2  
@@ -145,6 +145,10 @@
 - **2026-10 · [Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing](2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ベンチマークの実行順序・再起動・ウォームアップ・間隔を統制する順次分離プロトコルで、推論測定のrun間変動係数を15.2パーセントから2.2パーセントへ下げ、回帰テストに使える再現性を得る方法と実測。
+
+- **2026-10 · [ReFold: Training-Free Reversible Inter-Turn Context Folding for Long-Horizon Agents](2026-2610.07863-refold-training-free-reversible-inter-turn-context-folding-for-long-hori.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  土台の履歴を残したまま見せる文脈だけを畳み、表示済みの重複と読み終えたターンを可逆に除くことで、トークンを最大2.5倍減らしKVキャッシュを半減させるエージェントの文脈管理。
 
 - **2026-10 · [Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference](2026-2610.39562-raincheck-deferred-multimodal-prefill-for-efficient-multi-turn-mllm-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

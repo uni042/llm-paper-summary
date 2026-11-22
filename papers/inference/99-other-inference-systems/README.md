@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1289本）
+## 自動生成の論文一覧（1291本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -24,6 +24,10 @@
   実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：12  
   LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
 
+- **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
+  実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：10  
+  入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
+
 - **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
   実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：10  
   再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
@@ -35,10 +39,6 @@
 - **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：9  
   動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
-
-- **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
-  実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：9  
-  入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
 
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -200,6 +200,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   DiffPruneは、視覚言語モデル（Vision-Language モデル、VLM）の入力画像を多数の視覚トークンへ展開した後、どのトークンだけを言語モデルへ渡すかを学習する方式である。一次論文のLLaVA-1.5-7B評価では、576個の視覚トークンから64個だけを保持する88.9%削減時、10課題の正規化平均性能が元モデルの96.5%となった。
 
+- **2026-04 · [PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding](2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-co.md)**  
+  実装：[✓](https://github.com/OPPO-Mente-Lab/PixelPrune) ・ リポジトリ内被引用：3  
+  画素の重複を予測符号化で検出し、視覚符号器へ入れる前に重複ブロックを落とす学習不要の方式で、文書では精度をほぼ保ちながら推論を最大4.2倍速くした。
+
 - **2026-04 · [HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models](2026-2604.07812-hawk-head-importance-aware-visual-token-pruning-in-multimodal-models.md)**  
   実装：[✓](https://github.com/peppery77/HAWK) ・ リポジトリ内被引用：3  
   画像の解像度や動画のフレーム数が増えると、入力長、注意計算、キー・値キャッシュの負荷が増える。視覚トークンを削減する既存方式には、画像特徴の類似性や注意得点で残すトークンを選ぶものがあるが、注意ヘッドを単純平均すると、画像理解に重要なヘッドとそうでないヘッドを同等に扱ってしまう。
@@ -319,10 +323,6 @@
 - **2026-04 · [Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling](2026-2604.18103-stability-implies-redundancy-delta-attention-selective-halting-for-effic.md)**  
   実装：[✓](https://github.com/verach3n/DASH) ・ リポジトリ内被引用：2  
   FlashAttentionは注意行列を外部メモリへ展開しないことで転送量を削減するが、入力トークンが多ければ必要な計算量自体は残る。DASH（Delta 注意機構 Selective Halting）は、各トークンの表現が層を進むにつれて更新されなくなる「意味的固定点」に着目する。
-
-- **2026-04 · [PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding](2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-co.md)**  
-  実装：[✓](https://github.com/OPPO-Mente-Lab/PixelPrune) ・ リポジトリ内被引用：2  
-  画素の重複を予測符号化で検出し、視覚符号器へ入れる前に重複ブロックを落とす学習不要の方式で、文書では精度をほぼ保ちながら推論を最大4.2倍速くした。
 
 - **2026-04 · [MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs](2026-2604.03072-mi-pruner-crossmodal-mutual-information-guided-token-pruner-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -620,6 +620,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   LoRP（Locality-Aware Redundancy Pruning）は、事前学習済み大規模言語モデルのTransformerブロックを、追加学習なしに削除する深さ枝刈り（depth 枝刈り）方式である。
 
+- **2026-05 · [GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding](2026-2605.15250-gqla-group-query-latent-attention-for-hardware-adaptive-large-language-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  多頭潜在注意（Multi-head Latent 注意機構; MLA）は鍵と値を共通の低ランク潜在ベクトルへまとめ、過去文脈から読み出すバイト数を大きく削減する。論文の中心的な「H20で3.4倍」は、文脈長8192・BF16・公開ピーク性能を入力した屋根線モデルによる注意部分の理論的処理量であり、実GPUで測ったモデル全体のトークン生成速度ではない。
+
 - **2026-05 · [Gated Subspace Inference for Transformer Acceleration](2026-2605.03109-gated-subspace-inference-for-transformer-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）のバッチサイズ1の逐次復号では、GPUの計算能力よりも重み行列を高帯域メモリ（HBM）から読む費用が律速になりやすい。Gated Subspace Inference（GSI）は、各層の活性化を低次元基底への射影と残差に分解し、残差が十分小さいトークンだけ、事前計算した低次元の重み像を使う方式である。
@@ -771,6 +775,10 @@
 - **2026-03 · [OneComp: One-Line Revolution for Generative AI Model Compression](2026-2603.28845-onecomp-one-line-revolution-for-generative-ai-model-compression.md)**  
   実装：[✓](https://github.com/FujitsuResearch/OneCompression) ・ リポジトリ内被引用：1  
   大規模言語モデル（Large Language モデル; LLM）の重み量子化では、同じ平均ビット幅でも層ごとの感度、較正用入力の分布、丸め誤差の伝播、量子化後の品質回復方法によって性能が大きく変わる。Llama-3-8BとQwen3系の実験では、感度に応じた混合ビット幅割当や誤差伝播補正が量子化後の困惑度を改善した。
+
+- **2026-03 · [Multi-Head Low-Rank Attention](2026-2603.02188-multi-head-low-rank-attention.md)**  
+  実装：[✓](https://github.com/SongtaoLiu0823/MLRA) ・ リポジトリ内被引用：1  
+  長文脈の自己回帰型言語モデルでは、次トークンを出すたびに過去トークンのキー・値（KV）キャッシュを高帯域メモリ（HBM）から演算器近傍へ読み込む。多頭潜在注意（Multi-Head Latent 注意機構; MLA）はKVを低次元の潜在状態へ圧縮することで転送量を減らすが、元のMLAでは潜在KVが一つの共有状態として保持される。
 
 - **2026-03 · [MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models](2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md)**  
   実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：1  
@@ -1174,6 +1182,10 @@
   実装：[✓](https://github.com/OmniJev/flide) ・ リポジトリ内被引用：0  
   決断要求の木構造をGPUメタデータへ分離し、共有状態を1回だけ計算して全質問を厳密に分岐させる推論エンジンで、確率をずらさず最大9.5倍の高速化と負荷によらない安定した答えを得た。
 
+- **2026-10 · [FlashGaze: Training-Free Multi-Scale Patch Pruning For Efficient Video Understanding](2026-2610.04225-flashgaze-training-free-multi-scale-patch-pruning-for-efficient-video-un.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画素差を情報損失の代理にし、四分木の動的計画法でパッチの削除と統合と保持を予算内で決めることで、符号化の前に動画の冗長性を削りプリフィルを最大17倍速くする学習不要の方式。
+
 - **2026-10 · [FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization](2026-2610.30480-figflex-a-mixed-precision-fp-int-gemm-accelerator-co-designed-with-low-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みのビット数が下がるほど計算が速くなる基数4のFP-INTデータパスと、GPTQの補償後誤差でビット配分を決める量子化器を協調設計し、低ビット化をメモリだけでなく計算の利得へ変えたアクセラレータ。
@@ -1241,6 +1253,10 @@
 - **2026-10 · [Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data](2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-d.md)**  
   実装：[✓](https://github.com/AidenGeunGeun/calibration-free-moe) ・ リポジトリ内被引用：0  
   MoEデコードのチャネル選択では較正しきい値は読み出し量も精度も保証しないことを示し、上位k件への置き換えと、重みだけから作る三値スケッチと低ランク回復を持つ読み手で、読み出し17.8パーセントでも精度の98.1パーセントを保つ。
+
+- **2026-10 · [CacheLink: Functional KV Transport for Zero-Prefill Cross-Model Context Handoff](2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-h.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVキャッシュの再構成誤差ではなく受け手の注意と予測の振る舞いを学習信号にして、別モデルへプリフィルなしで文脈を引き継ぐCacheLinkを提案し、4モデルペア全てで最良の平均性能と32Kで最大7.27倍の引き継ぎ高速化を示す研究。
 
 - **2026-10 · [Breaking the Space Barrier and its Application to Language Model Inference](2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2162,10 +2178,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GRIP-VLM（Group-Relative Importance Pruning for Efficient Vision-Language Models）は、視覚言語モデル（VLM）へ渡す大量の画像トークンを、入力ごと・層ごと・保持予算ごとに選び直す手法である。
 
-- **2026-05 · [GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding](2026-2605.15250-gqla-group-query-latent-attention-for-hardware-adaptive-large-language-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  多頭潜在注意（Multi-head Latent 注意機構; MLA）は鍵と値を共通の低ランク潜在ベクトルへまとめ、過去文脈から読み出すバイト数を大きく削減する。論文の中心的な「H20で3.4倍」は、文脈長8192・BF16・公開ピーク性能を入力した屋根線モデルによる注意部分の理論的処理量であり、実GPUで測ったモデル全体のトークン生成速度ではない。
-
 - **2026-05 · [Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs](2026-2605.15491-ghosted-layers-unconstrained-activation-alignment-for-recovering-layer-p.md)**  
   実装：[✓](https://github.com/daniel-eai/ghosted_layers_official_repository) ・ リポジトリ内被引用：0  
   大規模言語モデルの深さ方向の構造的枝刈りは、トランスフォーマーの復号層を丸ごと削除し、特殊な疎行列カーネルを必要とせずにモデルの演算と重みを減らせる。LLaMA-3.1-8Bで32層中7層をLLM-Streamlineにより削除した場合、9課題平均正答率は無補正の42.60%から60.01%へ回復する。
@@ -2505,10 +2517,6 @@
 - **2026-03 · [Pooling Engram Conditional Memory in Large Language Models using CXL](2026-2603.10087-pooling-engram-conditional-memory-in-large-language-models-using-cxl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   条件付き記憶は言語モデルの条件付き記憶を、通常のTransformer計算から分離した大規模なN-gram埋め込み表で保持する。
-
-- **2026-03 · [Multi-Head Low-Rank Attention](2026-2603.02188-multi-head-low-rank-attention.md)**  
-  実装：[✓](https://github.com/SongtaoLiu0823/MLRA) ・ リポジトリ内被引用：0  
-  長文脈の自己回帰型言語モデルでは、次トークンを出すたびに過去トークンのキー・値（KV）キャッシュを高帯域メモリ（HBM）から演算器近傍へ読み込む。多頭潜在注意（Multi-Head Latent 注意機構; MLA）はKVを低次元の潜在状態へ圧縮することで転送量を減らすが、元のMLAでは潜在KVが一つの共有状態として保持される。
 
 - **2026-03 · [Mixture of Chapters: Scaling Learnt Memory in Transformers](2026-2603.21096-mixture-of-chapters-scaling-learnt-memory-in-transformers.md)**  
   実装：[✓](https://github.com/Tasmay-Tibrewal/Memory) ・ リポジトリ内被引用：0  
