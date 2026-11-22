@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（103本）
+## 自動生成の論文一覧（104本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -339,6 +339,10 @@
 - **2025-11 · [DisCEdge: Distributed Context Management for Large Language Models at the Edge](2025-2511.22599-discedge-distributed-context-management-for-large-language-models-at-the.md)**  
   実装：[✓](https://github.com/ChaosRez/llm-context-management) ・ リポジトリ内被引用：0  
   会話文脈をトークン列としてエッジノード間に複製し、ターンカウンタで版を照合して整合性を保つ分散文脈管理 DisCEdge を実装し、生テキスト方式より応答の中央値を最大14.46パーセント短縮し、クライアント保持方式より要求サイズの中央値を90パーセント減らした実機研究。
+
+- **2025-10 · [ShishuLM: Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models](2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-atten.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  後半層の注意の冗長性に基づき、上位層を全結合だけのブロックへ置き換えて事前学習する効率的な言語モデル。注意を約3分の2残す構成で土台と同等の品質と生成効率の改善を示し、重み共有でさらに容量を削る。
 
 - **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：0  

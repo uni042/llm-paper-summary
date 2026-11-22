@@ -664,13 +664,13 @@
   実装：[✓](https://github.com/wangitu/CherryQ) ・ リポジトリ内被引用：6  
   大規模言語モデル（LLM）の重みを一律に低ビットへ量子化すると、保存容量を減らせる反面、ごく少数の重要な重みに発生した誤差が出力品質を大きく損なう。
 
+- **2024-02 · [SparseLLM: Towards Global Pruning for Pre-trained Language Models](2024-2402.17946-sparsellm-towards-global-pruning-for-pre-trained-language-models.md)**  
+  実装：[✓](https://github.com/BaiTheBest/SparseLLM) ・ リポジトリ内被引用：6  
+  大規模言語モデルの重みを間引く非構造化枝刈りは、モデルの保存容量と演算の理論上の非ゼロ要素数を減らせる。原著のOPT-1.3B、WikiText2、重みの80%を疎化した条件では、SparseGPTの困惑度69.67に対しSparseLLMは58.92である。
+
 - **2024-06 · [LLMEasyQuant: Scalable Quantization for Parallel and Distributed LLM Inference](2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md)**  
   実装：[✓](https://github.com/NoakLiu/LLMEasyQuant) ・ リポジトリ内被引用：5  
   LLMEasyQuantは、大規模言語モデル（LLM）の学習後量子化を研究・実行するための統合基盤である。論文は、量子化方式の品質だけを比較しても、実行時のメモリ転送や通信、逆量子化が遅ければ推論の速度向上につながらないと考える。
-
-- **2024-02 · [SparseLLM: Towards Global Pruning for Pre-trained Language Models](2024-2402.17946-sparsellm-towards-global-pruning-for-pre-trained-language-models.md)**  
-  実装：[✓](https://github.com/BaiTheBest/SparseLLM) ・ リポジトリ内被引用：5  
-  大規模言語モデルの重みを間引く非構造化枝刈りは、モデルの保存容量と演算の理論上の非ゼロ要素数を減らせる。原著のOPT-1.3B、WikiText2、重みの80%を疎化した条件では、SparseGPTの困惑度69.67に対しSparseLLMは58.92である。
 
 - **2024-05 · [ReALLM: A general framework for LLM compression and fine-tuning](2024-2405.13155-reallm-a-general-framework-for-llm-compression-and-fine-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -699,7 +699,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：371  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：372  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  

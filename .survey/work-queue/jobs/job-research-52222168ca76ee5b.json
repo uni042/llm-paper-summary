@@ -35,10 +35,15 @@
   "selection_reason": "Processing-in-MemoryによるTransformer高速化は注意とフィードフォワードのデータ移動を再構成し、KVキャッシュの動的圧縮・プルーニングと連想メモリとしての注意再解釈を組み合わせ、GPUや専用アクセラレータ比でエネルギー効率とレイテンシの改善を示す推論ハードウェア貢献である。",
   "semantic_scholar_id": "eb5725525f057c6b4ce6704df79f1a06692ea387",
   "source_url": "https://arxiv.org/abs/2601.14260",
-  "status": "ready",
+  "status": "superseded",
   "title": "End-to-End Transformer Acceleration Through Processing-in-Memory Architectures",
   "type": "research",
   "venue": "International Congress of Mathematicans",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T08:56:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-archite.md",
+  "represented_canonical_id": "arXiv:2601.14260",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

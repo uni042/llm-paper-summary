@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（197本）
+## 自動生成の論文一覧（198本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -671,6 +671,10 @@
 - **2025-09 · [PLaMo 2 Technical Report](2025-2509.04897-plamo-2-technical-report.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PLaMo 2 Technical Reportは、Preferred Networksが開発した日本語向け大規模言語モデル系列のアーキテクチャ、学習・蒸留、長文脈対応、推論実装と量子化をまとめた技術報告である。推論側では、31BモデルのBF16重みが約63GB、KVキャッシュが約110KB/トークンであり、32K文脈だけで約3.6GBのKVを使う。
+
+- **2025-09 · [HIVTP: A Training-Free Method to Improve VLMs Efficiency via Hierarchical Visual Token Pruning Using Middle-Layer-Based Importance Score](2025-2509.23663-hivtp-a-training-free-method-to-improve-vlms-efficiency-via-hierarchical.md)**  
+  実装：[✓](https://github.com/Blacktower27/HIVTP) ・ リポジトリ内被引用：0  
+  視覚エンコーダ中間層の注意で視覚トークンの重要度を測り、領域単位の大域保持と窓単位の局所保持の二段で間引く学習不要の枝刈りで、LLaVA系の初回トークン時間を最大で約半分にしスループットを最大6割上げる。
 
 - **2025-09 · [Efficient Fine-Grained GPU Performance Modeling for Distributed Deep Learning of LLM](2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

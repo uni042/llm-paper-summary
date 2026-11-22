@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1243本）
+## 自動生成の論文一覧（1245本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3124,6 +3124,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   本研究の対象は、同じ大規模言語モデルを複数のGPUインスタンスで提供するとき、各要求をどのインスタンスへ送るかという負荷分散である。1インスタンス内のバッチ形成を改善する研究と異なり、要求がいったん不適切なインスタンスへ送られると、その内部のスケジューラだけでは混在負荷による干渉を解消しにくい。
 
+- **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
+
 - **2025-11 · [Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models](2025-2511.18890-nemotron-flash-towards-latency-optimal-hybrid-small-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   GPUで1トークンずつ復号する際、層を何回順に通過するか、どの演算子が起動されるか、状態やKVをどれだけ転送するかが遅延を決める。Nemotron-Flashは、モデルの大きさよりも実際のGPU上での遅延制約を第一の設計目標とする。
@@ -3171,10 +3175,6 @@
 - **2025-02 · [CipherPrune: Efficient and Scalable Private Transformer Inference](2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.md)**  
   実装：[✓](https://github.com/UCF-Lou-Lab-PET/cipher-prune-inference) ・ リポジトリ内被引用：3  
   暗号化されたまま重要度を計算して不要トークンを層ごとに段階的に捨て、低重要度トークンには低次多項式を割り当てることで、秘匿推論を入力128トークンで約6.1倍、512トークンで約10.6倍高速化した。
-
-- **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
 
 - **2025-11 · [Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding](2025-2512.00805-thinking-with-drafts-speculative-temporal-reasoning-for-efficient-long-v.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -3275,6 +3275,10 @@
 - **2025-02 · [Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs](2025-2502.06766-exploiting-sparsity-for-long-context-inference-million-token-contexts-on.md)**  
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：2  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
+
+- **2025-01 · [A Proximal Operator for Inducing 2:4-Sparsity](2025-2501.18015-a-proximal-operator-for-inducing-2-4-sparsity.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
 
 - **2025-11 · [VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking](2025-2511.18692-vlm-in-a-flash-i-o-efficient-sparsification-of-vision-language-model-via.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -3496,10 +3500,6 @@
   実装：[✓](https://github.com/jerry-chee/DiscQuant) ・ リポジトリ内被引用：1  
   DiscQuantは、事前学習済みLLMの重みを低ビット化する際、量子化格子を設計した後の「各重みを上側と下側のどちらへ丸めるか」という問題を解く。原著の代表例では、Phi-3-mini-4k-instructを平均3.25ビットで量子化したGSM8kの正答率が、DiscQuant64%、GPTQ54%、RTN31%、無量子化84%である。
 
-- **2025-01 · [A Proximal Operator for Inducing 2:4-Sparsity](2025-2501.18015-a-proximal-operator-for-inducing-2-4-sparsity.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
-
 - **2025-11 · [TwIST: Rigging the Lottery in Transformers with Independent Subnetwork Training](2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-tr.md)**  
   実装：[✓](https://anonymous.4open.science/r/twist2-373F) ・ リポジトリ内被引用：0  
   部分ネットワークの並行学習と定期的な集約・再抽選により、学習後の回復処理なしで取り出せる構造化枝刈り済みモデルを学習過程で作る分散学習の枠組みで、高い疎率で学習後枝刈りを上回った研究。
@@ -3531,6 +3531,10 @@
 - **2025-11 · [FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing](2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   特異値切断をフェルミゲートで連続化し全層ランクを一括最適化するFermiGradと、因子の超過を無損失に消すゲージ固定PivGaによるSVD圧縮。感度方式より良い配分を70B規模まで示す。
+
+- **2025-11 · [FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models](2025-2511.11505-farskip-collective-unhobbling-blocking-communication-in-mixture-of-exper.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  残差の結線を変えて集合通信の結果を次の層へ後付けにし、古い・部分的な活性値で計算を先行させることで通信と計算を重ねる専門家混合の変換法で、109Bまでの全層変換と自己蒸留による精度回復、推論と学習の両方での重なりを実証する。
 
 - **2025-11 · [DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams](2025-2511.17693-deepcot-deep-continual-transformers-for-real-time-inference-on-data-stre.md)**  
   実装：[✓](https://github.com/Atamarado/deepcot) ・ リポジトリ内被引用：0  
@@ -3643,6 +3647,10 @@
 - **2025-09 · [Vocabulary Customization for Efficient Domain-Specific LLM Deployment](2025-2509.26124-vocabulary-customization-for-efficient-domain-specific-llm-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ドメイン固有トークンを語彙へ追加し、マージ操作の末尾追加によりトークン数が決して増えないことを保証しながら、入力系列を最大20パーセント短縮しスループットを20〜30パーセント高める語彙カスタマイズを、電子商取引の実務タスクで検証した研究。
+
+- **2025-09 · [UniPruning: Unifying Local Metric and Global Feedback for Scalable Sparse LLM Inference](2025-2510.03291-unipruning-unifying-local-metric-and-global-feedback-for-scalable-sparse.md)**  
+  実装：[✓](https://github.com/RainbowQTT/UniPruning) ・ リポジトリ内被引用：0  
+  重み更新なしで、層ごとの顕著性と鏡像降下による全体の予算再配分を統一し、非構造型と二対四を含む半構造型の両方で高スパーシティでも崩れにくい学習後枝刈りを実現する方式。
 
 - **2025-09 · [Thinking-Free Policy Initialization Makes Distilled Reasoning Models More Effective and Efficient Reasoners](2025-2509.26226-thinking-free-policy-initialization-makes-distilled-reasoning-models-mor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4637,7 +4645,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：334  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：335  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -4997,7 +5005,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：363  
+  実装：✓ ・ リポジトリ内被引用：364  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

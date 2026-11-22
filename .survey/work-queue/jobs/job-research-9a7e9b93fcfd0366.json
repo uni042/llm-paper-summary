@@ -35,10 +35,15 @@
   "selection_reason": "上位デコーダ層をMLPのみのブロックへ置換し隣接層でパラメータ共有するShishuLMにより、生成遅延を10〜60%改善しスループットを最大5倍にする言語モデル推論効率化アーキテクチャである。",
   "semantic_scholar_id": "ce4d81618659faf8400bf86a46ff766b62e68ebc",
   "source_url": "https://arxiv.org/abs/2510.13860",
-  "status": "ready",
+  "status": "superseded",
   "title": "ShishuLM : Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T08:56:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-atten.md",
+  "represented_canonical_id": "arXiv:2510.13860",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
