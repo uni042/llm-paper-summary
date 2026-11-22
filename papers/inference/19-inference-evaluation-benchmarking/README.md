@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（182本）
+## 自動生成の論文一覧（183本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -181,6 +181,10 @@
 - **2026-10 · [Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures](2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-acr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続バッチングのデコードスケジューラ8方針を6モデルと3種のGPUで実機比較し、優劣がハードウェアで入れ替わることを示した評価研究。
+
+- **2026-10 · [JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs](2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  タスクグラフの各ノードへの実行モデルの割当てと、有料検証を行うノードの選択を、予算と遅延の制約の下でクエリごとの混合整数計画として同時に決め、検証結果で品質推定をオンラインに学ぶ枠組み。
 
 - **2026-10 · [ixi-sLM: On-Device sLM for AI Call Agent Service](2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
