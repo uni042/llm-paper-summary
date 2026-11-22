@@ -554,13 +554,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://yuzhenmao.github.io/IceFormer/) ・ リポジトリ内被引用：8  
   一般keyを最近傍探索可能な空間へ写像し、重要な注意先だけをPrioritized DCIで選んで、再学習なしにCPU長文注意を高速化する方式。
 
+- **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  大規模言語モデル（LLM）の推論負荷を下げるために重みの一部をゼロにしても、非構造化疎行列を通常のGPU行列積で実行すると必ずしも高速にならない。事前学習済みの重みから一度だけ枝刈りし、元の学習目的で追加の勾配学習を行わない「一回限りの事後構造化枝刈り」である。
+
 - **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
-
-- **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  大規模言語モデル（LLM）の推論負荷を下げるために重みの一部をゼロにしても、非構造化疎行列を通常のGPU行列積で実行すると必ずしも高速にならない。事前学習済みの重みから一度だけ枝刈りし、元の学習目的で追加の勾配学習を行わない「一回限りの事後構造化枝刈り」である。
 
 - **2024-05 · [MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

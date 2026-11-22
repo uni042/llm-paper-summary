@@ -632,13 +632,13 @@
   実装：[✓](https://github.com/ChengZhang-98/lqer) ・ リポジトリ内被引用：16  
   大規模言語モデルの重みを4ビットへ圧縮しても、実行時に半精度へ逆量子化してから行列積を計算するなら、重みの保存容量削減がそのまま演算器の省資源化につながるとは限らない。
 
+- **2024-05 · [I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models](2024-2405.17849-i-llm-efficient-integer-only-inference-for-fully-quantized-low-bit-large.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  I-LLMは、LLMの重みと活性値を低ビットへ量子化するだけでなく、注意機構のSoftmax、ゲート付き活性化のSwiGLU、RMSNormなどの非線形演算も整数演算へ置き換える学習後量子化（PTQ）方式である。
+
 - **2024-02 · [Accurate LoRA-Finetuning Quantization of LLMs via Information Retention](2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md)**  
   実装：[✓](https://github.com/AI-Efficiency/IR-QLoRA) ・ リポジトリ内被引用：10  
   大規模言語モデルの重みを16ビットから4ビット以下へ縮めると、重みの保存量と推論時に必要な重み転送量を減らせる。量子化後の基盤重みを固定し、小さな低ランク適応行列だけを微調整するQLoRA系の方法でも、失われた情報を十分に取り戻せない場合がある。
-
-- **2024-05 · [I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models](2024-2405.17849-i-llm-efficient-integer-only-inference-for-fully-quantized-low-bit-large.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  I-LLMは、LLMの重みと活性値を低ビットへ量子化するだけでなく、注意機構のSoftmax、ゲート付き活性化のSwiGLU、RMSNormなどの非線形演算も整数演算へ置き換える学習後量子化（PTQ）方式である。
 
 - **2024-04 · [Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization](2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md)**  
   実装：[✓](https://github.com/aninrusimha/qat-pretrain) ・ リポジトリ内被引用：9  
@@ -676,13 +676,13 @@
   実装：✓ ・ リポジトリ内被引用：3  
   元の行列を16ビットで保存する代わりに、学習済みの小型デコーダ、量子化した埋め込み、コードブック、必要な逆置換、低ランク行列とスケールを保存する。
 
+- **2024-02 · [FlattenQuant: Breaking Through the Inference Compute-bound for Large Language Models with Per-tensor Quantization](2024-2402.17985-flattenquant-breaking-through-the-inference-compute-bound-for-large-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  FlattenQuantは、大規模言語モデル（LLM）の推論で、重みだけを低ビット化しても行列演算が半精度のまま残るという問題を解く後学習量子化（post-学習 量子化; PTQ）方式である。難点は、LLMの活性値に他のチャネルより20〜100倍程度大きい外れ値チャネルが存在することだ。
+
 - **2024-10 · [SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators](2024-2410.10714-seedlm-compressing-llm-weights-into-seeds-of-pseudo-random-generators.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデルの自己回帰生成では、1トークンを生成するたびに大量の重みを読み出す必要があり、演算器の理論性能よりもDRAM帯域が制約になる場合がある。通常の低ビット量子化は、FP16などの重みを整数値へ写像して読み出し量を減らす。速度については、専用FPGA上の行列ベクトル積でFP16基準比3.67〜3.98倍のサイクル数削減を報告する。
-
-- **2024-02 · [FlattenQuant: Breaking Through the Inference Compute-bound for Large Language Models with Per-tensor Quantization](2024-2402.17985-flattenquant-breaking-through-the-inference-compute-bound-for-large-lang.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  FlattenQuantは、大規模言語モデル（LLM）の推論で、重みだけを低ビット化しても行列演算が半精度のまま残るという問題を解く後学習量子化（post-学習 量子化; PTQ）方式である。難点は、LLMの活性値に他のチャネルより20〜100倍程度大きい外れ値チャネルが存在することだ。
 
 - **2024-10 · [Error Diffusion: Post Training Quantization with Block-Scaled Number Formats for Neural Networks](2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-form.md)**  
   実装：[✓](https://github.com/ROCm/tensorcast) ・ リポジトリ内被引用：0  
@@ -699,7 +699,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：368  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：369  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
@@ -763,7 +763,7 @@
   提案するPEQA（パラメータ-Efficient and 量子化-aware Adaptation）は、事前学習済みの重みを3～4ビットなどの整数表現へ量子化した後、整数値を凍結し、量子化尺度だけを学習する。
 
 - **2023-10 · [Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs](2023-2310.08915-dynamic-sparse-no-training-training-free-fine-tuning-for-sparse-llms.md)**  
-  実装：[✓](https://github.com/zyxxmu/DSnoT) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/zyxxmu/DSnoT) ・ リポジトリ内被引用：22  
   DSnoT（動的 Sparse No 学習）は、既存の枝刈り手法で疎化した大規模言語モデル（Large Language モデル、LLM）を、勾配逆伝播も重み値の更新も行わずに改善する方法である。
 
 - **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
@@ -785,7 +785,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：773  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：774  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  

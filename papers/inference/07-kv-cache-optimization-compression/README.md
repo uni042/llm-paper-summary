@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（637本）
+## 自動生成の論文一覧（638本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -2244,6 +2244,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-06 · [VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator](2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   各トークンの適応しきい値による投票でKVキャッシュを追い出し、内積・外積切替可能なデータフローと要素直列スケジューリングで生成フェーズを高速化するエッジ向けアクセラレータ。エビクションで注意が最大10倍高速になる。
+
+- **2025-05 · [SubGCache: Accelerating Graph-based RAG with Subgraph-level KV Cache](2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  バッチ内のクエリを検索部分グラフの埋め込みでクラスタリングし、クラスタ代表部分グラフのKVキャッシュを共有することで、グラフ型検索拡張生成の初回トークン時間を最大6.68倍短縮するサブグラフ単位のキャッシュ。
 
 - **2025-04 · [UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference](2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-prun.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

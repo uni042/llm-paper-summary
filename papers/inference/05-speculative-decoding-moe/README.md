@@ -1162,6 +1162,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/hao-ai-lab/LookaheadReasoning) ・ リポジトリ内被引用：9  
   従来の投機的復号（投機的復号）は小型モデルが未来のトークンを先行提案し、大型目標モデルが複数位置をまとめて検証する。しかし草稿長を増やすほど全トークンが連続して受理される確率が下がり、目標モデルの検証計算も増えるため、速度向上が頭打ちになる。
 
+- **2025-04 · [DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding](2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md)**  
+  実装：[✓](https://github.com/hoenza/DEL) ・ リポジトリ内被引用：9  
+  一般的な投機的復号は、軽い下書きモデルが複数トークンを予測し、重い目標モデルが一括検証する。実測ではLLaMA3-8Bで通常復号比2.62倍、LLaMA2-7Bで2.50倍、LLaMA2-70Bで2.41倍の全体高速化を報告する。
+
 - **2025-04 · [Adaptive Draft-Verification for Efficient Large Language Model Decoding](2025-2407.12021-adaptive-draft-verification-for-efficient-large-language-model-decoding.md)**  
   実装：[✓](https://github.com/liuxukun2000/Adaptix) ・ リポジトリ内被引用：9  
   単一トークンずつの逐次処理は、モデル重みの読み込みやメモリ帯域の費用が大きい。投機的復号（投機的復号）は軽量な提案器で複数の候補トークンを先に作り、対象モデルの一括検証で正しい接頭辞を確定することで、この逐次実行回数を減らす。論文図3は自己回帰比で約1.8〜2.5倍の処理量向上を示す。
@@ -1173,10 +1177,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-09 · [Bridging Draft Policy Misalignment: Group Tree Optimization for Speculative Decoding](2025-2509.22134-bridging-draft-policy-misalignment-group-tree-optimization-for-speculati.md)**  
   実装：[✓](https://github.com/hsj576/GTO) ・ リポジトリ内被引用：8  
   投機的復号では小型草稿モデルが複数の次トークン候補を先に予測し、大型の対象モデルがまとめて検証する。LLaMA-3.1-8B、Vicuna-13B、DeepSeek-R1-Distill-LLaMA-8B、LLaMA-3.3-70Bなどの対話・コード・数学評価で、EAGLE-3比の平均追加高速化は温度0で7.7%、温度1で5.6%と報告される。
-
-- **2025-04 · [DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding](2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md)**  
-  実装：[✓](https://github.com/hoenza/DEL) ・ リポジトリ内被引用：8  
-  一般的な投機的復号は、軽い下書きモデルが複数トークンを予測し、重い目標モデルが一括検証する。実測ではLLaMA3-8Bで通常復号比2.62倍、LLaMA2-7Bで2.50倍、LLaMA2-70Bで2.41倍の全体高速化を報告する。
 
 - **2025-03 · [ML-SpecQD: Multi-Level Speculative Decoding with Quantized Drafts](2025-2503.13565-ml-specqd-multi-level-speculative-decoding-quantized-drafts.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -1671,7 +1671,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   SpecInferは、小型モデル群が先に作る複数候補を共通接頭辞の木へまとめ、対象LLMを1回で木構造検証することで、逐次デコードの対象重み読出しとGPU間通信を減らし、複数トークンを確定する。
 
 - **2023-09 · [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](2023-2309.08168-draft-verify.md)**  
-  実装：[✓](https://openreview.net/attachment?id=ACC2nQYzPYS&name=software) ・ リポジトリ内被引用：181  
+  実装：[✓](https://openreview.net/attachment?id=ACC2nQYzPYS&name=software) ・ リポジトリ内被引用：182  
   元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  

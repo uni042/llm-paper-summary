@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "cbb4ed6331b5ef8ce2041c2699713c8a5a36a2a5",
+  "base_commit": "62c1c6ed6b6f7647d34a5adc14766ee9823cdd54",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -111,6 +111,7 @@
     "2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-parallel.json",
     "2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.json",
     "2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pretrained-llms.json",
+    "2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decomposition.json",
     "2025-2502.02790-leveraging-the-true-depth-of-llms.json",
     "2025-2502.02818-transql-serving-large-language-models-with-sql-on-low-resource-hardware.json",
     "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
@@ -146,6 +147,7 @@
     "2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.json",
     "2025-2505.10118-why-1-1-1-in-visual-token-pruning-beyond-naive-integration-via-multi-objective-balanced-covering.json",
     "2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-generation.json",
+    "2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.json",
     "2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.json",
     "2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing-for-efficient-llm-mllm-reasoning.json",
     "2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.json",
@@ -175,11 +177,14 @@
     "2025-2507.00715-earn-efficient-inference-acceleration-for-llm-based-generative-recommendation-by-register-tokens.json",
     "2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and-dataflow-flexible-accelerator.json",
     "2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-with-optimal-feature-efficiency.json",
+    "2025-2507.04517-dotresize-reducing-llm-width-via-discrete-optimal-transport-based-neuron-merging.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
+    "2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.json",
     "2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-oriented-prefix-caching.json",
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
     "2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.json",
     "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json",
+    "2025-2507.17618-simlens-for-early-exit-in-large-language-models.json",
     "2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-inference.json",
     "2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-communication.json",
     "2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in-efficient-llm-reasoning.json",
@@ -48446,6 +48451,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2502.00899": {
+      "order": [
+        "2026-11-22T08:37:35+00:00",
+        "2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decomposition.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.10951": {
+      "order": [
+        "2026-11-22T08:38:20+00:00",
+        "2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.04517": {
+      "order": [
+        "2026-11-22T08:39:04+00:00",
+        "2025-2507.04517-dotresize-reducing-llm-width-via-discrete-optimal-transport-based-neuron-merging.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.04967": {
+      "order": [
+        "2026-11-22T08:39:48+00:00",
+        "2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.17618": {
+      "order": [
+        "2026-11-22T08:40:32+00:00",
+        "2025-2507.17618-simlens-for-early-exit-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61057,6 +61107,21 @@
     "arxiv:2512.15973": [
       "papers/inference/99-other-inference-systems/2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-sel.md",
       "papers/inference/99-other-inference-systems/2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-sel.md"
+    ],
+    "arxiv:2502.00899": [
+      "papers/inference/99-other-inference-systems/2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decompos.md"
+    ],
+    "arxiv:2505.10951": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.md"
+    ],
+    "arxiv:2507.04517": [
+      "papers/inference/99-other-inference-systems/2025-2507.04517-dotresize-reducing-llm-width-via-discrete-optimal-transport-based-neuron.md"
+    ],
+    "arxiv:2507.04967": [
+      "papers/inference/99-other-inference-systems/2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.md"
+    ],
+    "arxiv:2507.17618": [
+      "papers/inference/99-other-inference-systems/2025-2507.17618-simlens-for-early-exit-in-large-language-models-eliciting-accurate-laten.md"
     ]
   }
 }

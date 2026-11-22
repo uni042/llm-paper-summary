@@ -35,10 +35,15 @@
   "selection_reason": "グラフRAGで類似サブグラフのKVキャッシュをクラスタ代表で事前計算し再利用することで、生成品質を保ちながらTTFTを最大6.68倍短縮する明確なKVキャッシュ技術である。",
   "semantic_scholar_id": "1d32cc29c4934cf5065d0d4b5bd34bbba70ca64b",
   "source_url": "https://arxiv.org/abs/2505.10951",
-  "status": "ready",
+  "status": "superseded",
   "title": "SubGCache: Accelerating Graph-based RAG with Subgraph-level KV Cache",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T08:41:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.md",
+  "represented_canonical_id": "arXiv:2505.10951",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

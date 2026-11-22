@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1239本）
+## 自動生成の論文一覧（1243本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3388,6 +3388,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   しかし均一に1～2bitへ量子化すると、外れ値や重要なチャネルの情報が失われ、出力活性が層を通るたびにずれていく。Squeeze10-LLMは、すべての重みをいきなり1bitにせず、まず4bitへ変換してから重要度を測定し、80%を1bit、残り20%を4bitで保存する段階的な重み専用post-学習 量子化（PTQ）を提案する。
 
+- **2025-07 · [SimLens for Early Exit in Large Language Models: Eliciting Accurate Latent Predictions with One More Token](2025-2507.17618-simlens-for-early-exit-in-large-language-models-eliciting-accurate-laten.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  中間層で開始トークンと候補回答トークンの2個だけを残して上位層へ通す学習不要の読み出しと、それを蒸留した線形監視器によるエントロピー早期終了で、単一トークン決定課題の推論を速くする方式。
+
 - **2025-07 · [RAT: Bridging RNN Efficiency and Attention Accuracy via Chunk-based Sequence Modeling](2025-2507.04416-rat-bridging-rnn-efficiency-and-attention-accuracy-via-chunk-based-seque.md)**  
   実装：[✓](https://github.com/CLAIRE-Labo/RAT) ・ リポジトリ内被引用：1  
   全トークンに対するソフトマックス注意（softmax 注意機構）は、過去の任意の位置を直接参照できる一方、長文で注意演算量と鍵・値キャッシュ（KV キャッシュ）が増える。また、3072トークンの入力から1024トークンを生成する最大生成処理量では、1.3Bモデルで通常注意3152に対しRAT 31170トークン/秒、約10.2倍である。
@@ -3748,6 +3752,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   SVD圧縮で失われる機能残差を、並列の学習可能な低ランク補正モジュールに学習させるLLM圧縮手法CALRを提案し、安定したFFNだけを選ぶ対象選択とあわせて圧縮率と性能保持の釣り合いを改善した研究。
 
+- **2025-07 · [The Case for Instance-Optimized LLMs in OLAP Databases](2025-2507.04967-the-case-for-instance-optimized-llms-in-olap-databases.md)**  
+  実装：[✓](https://github.com/mpi-dsg/IOLM-DB) ・ リポジトリ内被引用：0  
+  OLAPクエリごとに代表データで較正した量子化・疎化・構造的枝刈りで専用の軽量言語モデルを生成し、行単位の言語モデル呼び出しのスループットを最大3.31倍、フットプリントを最大76%削減するデータベース向け推論最適化の概念実証。
+
 - **2025-07 · [SpeLLM: Character-Level Multi-Head Decoding](2025-2507.16323-spellm-character-level-multi-head-decoding.md)**  
   実装：[✓](https://github.com/schwartz-lab-NLP/SpeLLM) ・ リポジトリ内被引用：0  
   SpeLLMは入力のBPE語彙を残したまま、出力の予測表現だけを文字単位に分離する。4つの公開モデルを変換した実験では、教師の上位5候補のいずれかと文字列が完全一致する割合が平均91.75%、AutoCorrectありでは94.93%となった。
@@ -3771,6 +3779,10 @@
 - **2025-07 · [GeLaCo: An Evolutionary Approach to Layer Compression](2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層崩壊の融合案を進化的に探索する圧縮手法。残差寄与の類似度とKLを適応度に、融合係数まで含めて最適化し、圧縮率と品質のパレート前線も推定する。Llama系で比較対象をほぼ一貫して上回る。
+
+- **2025-07 · [DOTResize: Reducing LLM Width via Discrete Optimal Transport-based Neuron Merging](2025-2507.04517-dotresize-reducing-llm-width-via-discrete-optimal-transport-based-neuron.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  捨てるはずのニューロンの信号を、活性の近さに基づく最適輸送の写像で残すニューロンへ混ぜ込んでから幅を縮める、学習不要の幅圧縮。枝刈りの上乗せとしてパープレキシティと下流精度の損失を回復する。
 
 - **2025-07 · [CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs](2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4027,6 +4039,10 @@
 - **2025-02 · [MaskPrune: Mask-based LLM Pruning for Layer-wise Uniform Structures](2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   マスクと層共通の削減数をミニマックス最適化で同時学習し、全層で同じ形を保ったまま構造化枝刈りを行うことで、推論配置しやすい均一な圧縮モデルを得る方式。
+
+- **2025-02 · [HASSLE-free: A unified Framework for Sparse plus Low-Rank Matrix Decomposition for LLMs](2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decompos.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みの疎＋低ランク分解について、層ごとの再構成誤差を緩和せず直接解く交互最小化の統一枠組みを提示し、従来法がその緩和であることを示して、Llama系でパープレキシティとゼロショット精度の両方を改善するワンショット圧縮。
 
 - **2025-02 · [Forget the Data and Fine-Tuning! Just Fold the Network to Compress](2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.md)**  
   実装：[✓](https://github.com/nanguoyu/model-folding-universal) ・ リポジトリ内被引用：0  
@@ -4330,6 +4346,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
 
+- **2024-07 · [Accelerating Large Language Model Inference with Self-Supervised Early Exits](2024-2407.21082-accelerating-large-language-model-inference-with-self-supervised-early-e.md)**  
+  実装：[✓](https://anonymous.4open.science/r/BranchyLLM-B870) ・ リポジトリ内被引用：2  
+  通常の自己回帰型言語モデルは、生成するトークンが簡単か難しいかにかかわらず、全層を通して次トークンの確率を計算する。提案は二段階である。Pythia-2.8Bの実験では、LayerSkipの最良固定設定のドラフト受理率53.6%に対して、DSSDは閾値0.9で88.8%を報告した。
+
 - **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：2  
   通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
@@ -4393,10 +4413,6 @@
 - **2024-07 · [Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners](2024-2407.15508-compensate-quantization-errors-quantized-models-are-inquisitive-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Compensate Quantization Errors+（CQE+）は、学習済み大規模言語モデルの重みを2〜4ビットへ量子化する際、量子化の整数格子に適した重み分布へ調整する方法を提案する。
-
-- **2024-07 · [Accelerating Large Language Model Inference with Self-Supervised Early Exits](2024-2407.21082-accelerating-large-language-model-inference-with-self-supervised-early-e.md)**  
-  実装：[✓](https://anonymous.4open.science/r/BranchyLLM-B870) ・ リポジトリ内被引用：1  
-  通常の自己回帰型言語モデルは、生成するトークンが簡単か難しいかにかかわらず、全層を通して次トークンの確率を計算する。提案は二段階である。Pythia-2.8Bの実験では、LayerSkipの最良固定設定のドラフト受理率53.6%に対して、DSSDは閾値0.9で88.8%を報告した。
 
 - **2024-06 · [Rethinking Pruning Large Language Models: Benefits and Pitfalls of Reconstruction Error Minimization](2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-recons.md)**  
   実装：[✓](https://github.com/LOG-postech/rethinking-LLM-pruning) ・ リポジトリ内被引用：1  
@@ -4621,7 +4637,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：332  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：333  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
