@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（194本）
+## 自動生成の論文一覧（195本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -181,6 +181,10 @@
 - **2026-10 · [Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures](2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-acr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続バッチングのデコードスケジューラ8方針を6モデルと3種のGPUで実機比較し、優劣がハードウェアで入れ替わることを示した評価研究。
+
+- **2026-10 · [Just Respect the Semantics: Image-Token Compression via Pre-LLM Semantic Variable-Resolution Tokenization and In-LLM Relevance Pruning](2026-2610.18690-just-respect-the-semantics-image-token-compression-via-pre-llm-semantic-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  物体境界と文字らしさで解像度を配る前段の可変解像度トークン化と、中盤の学習型関連性枝刈りを組み合わせ、画像トークンを5.56パーセントまで減らしても性能を86から92パーセント保持する視覚トークン圧縮方式。
 
 - **2026-10 · [JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs](2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

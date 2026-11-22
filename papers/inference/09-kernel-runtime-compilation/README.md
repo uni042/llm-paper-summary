@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（308本）
+## 自動生成の論文一覧（309本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -273,6 +273,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-11 · [EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL](2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   アダプタの下向き射影を先に走らせ低精度の行列積の本体と重ね、上向き射影を行列積の書き出し段で加える方式で、単一アダプタのトークン当たり時間を最大二十四パーセント短縮し、同じ八ビット重みでの訓練により二百七十億級が四十八ギガバイト一台で訓練可能になったと報告した。
+
+- **2026-11 · [CipherFlow: Compiling AI Programs for Efficient Cryptographically Secure Inference](2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-.md)**  
+  実装：[✓](https://github.com/loopleap-lab/CipherFlow) ・ リポジトリ内被引用：0  
+  暗号プリミティブの実測コストと暗号文の状態まで含めた計画探索で、準同型暗号とマルチパーティ計算の配置・変換・維持を自動決定し、静的配置より最大22倍速いセキュア推論プログラムを生成するコンパイラ。
 
 - **2026-11 · [CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching](2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

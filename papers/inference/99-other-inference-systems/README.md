@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1236本）
+## 自動生成の論文一覧（1237本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1233,6 +1233,10 @@
 - **2026-10 · [Balanced State Subspaces with Spectral Rank Allocation for Mamba-2 State Compression](2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Mamba-2の再帰状態を座標ではなくバランス部分空間で切り詰め、ランク予算をハンケルスペクトルで層ごとに配り直すことで、状態半減でもパープレキシティ増加0.3ポイントと検索性能の97パーセント保持を両立させた学習後圧縮。
+
+- **2026-10 · [Attention via Black-Box Vector Search](2026-2610.10135-attention-via-black-box-vector-search.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブラックボックスの最大内積探索だけで注意を近似するときの取得キー数の限界を優先サンプリングで統一的に示し、1次元拡張で文脈長に依存しない取得を実現する理論と実装。
 
 - **2026-10 · [Advancing SVD-based LLM Compression via Layer-Wise Error Model Search](2026-2610.32878-advancing-svd-based-llm-compression-via-layer-wise-error-model-search.md)**  
   実装：[✓](https://lems-svd.github.io) ・ リポジトリ内被引用：0  

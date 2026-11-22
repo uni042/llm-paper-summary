@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（93本）
+## 自動生成の論文一覧（94本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -182,6 +182,10 @@
 - **2026-10 · [Context as Infrastructure: Knowledge Compilation for Retrieval in Agentic Systems with Harnesses](2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic.md)**  
   実装：[✓](https://github.com/infiniflow/ragflow) ・ リポジトリ内被引用：0  
   取り込み時に主張と逐語証拠の組などを用意する知識編纂を供給層として提案し、構造だけでは正確さが上がらない一方で、証拠の置換は総トークンを証拠が足りる場合に九十一パーセント、平均で三十八パーセント減らし、損益分岐の充足率は約二パーセントだと実測と費用模型で示した。
+
+- **2026-10 · [AgentWeave: Efficient Distributed Agent Serving via Flow Decomposition](2026-2610.14804-agentweave-efficient-distributed-agent-serving-via-flow-decomposition.md)**  
+  実装：[✓](https://github.com/Guodanding/agentweave) ・ リポジトリ内被引用：0  
+  集約型配置のブロッキングを、データを単位とする意味保存型のフロー分解と利得と費用を釣り合わせる適応スケジューラで解き、4種のエージェントでスループットを最大1.81倍へ上げる分散サービング方式。
 
 - **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

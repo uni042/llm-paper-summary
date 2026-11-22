@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（635本）
+## 自動生成の論文一覧（636本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -701,6 +701,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：1  
   マスク拡散デコードで事後分布が安定した位置をロックして以降の計算を止め、キーとバリューはキャッシュから読ませることで理論計算量を30から50パーセント減らした研究。
 
+- **2026-02 · [CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse](2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  暗号化したまま再利用できるKVキャッシュと、プリフィルとデコードで使い分ける異種符号化により、安全な自己回帰生成のスケーリングを2次からほぼ線形へ変えた研究。
+
 - **2026-01 · [Singular Proxies for Adaptive Caching in Diffusion Language Models](2026-2602.02544-singular-proxies-for-adaptive-caching-in-diffusion-language-models.md)**  
   実装：[✓](https://github.com/wenhao728/spa-cache) ・ リポジトリ内被引用：1  
   自己注意（self-注意機構）が双方向であるため、ある位置のトークンを更新すると別の位置の隠れ状態にも影響が及び、自己回帰型モデルのように過去の鍵・値（KV）を常に固定したまま再利用することはできない。LLaDA-8BのMBPPでは通常復号5.75トークン/秒に対し46.12トークン/秒（8.0倍）で、正解率は39.20から39.00へ変化した。
@@ -1090,6 +1094,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Cache Engineering for Agents](2026-2610.28577-cache-engineering-for-agents.md)**  
   実装：[✓](https://github.com/thu-nics/AKV) ・ リポジトリ内被引用：0  
   履歴テキストを書き換えずにKVキャッシュ自体を削除・再配置して有効文脈を制御する方式と、その履歴依存性に対応する提供基盤で、要約方式より成績を上げながら費用を27.7パーセント削減した。
+
+- **2026-10 · [Budgeted KV-Cache Repair for Evolving Contexts](2026-2610.17338-budgeted-kv-cache-repair-for-evolving-contexts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  削除後に汚れたKVを、凍結埋め込みで選んだクエリ関連のテキスト領域だけ予算内で再計算して直す意味単位リフレッシュと、分散した修復を一回の走行で処理する層詰め実行器の提案。
 
 - **2026-10 · [BitNest: Bit-Nested Speculative Decoding for Memory-Efficient LLM Inference Acceleration](2026-2610.02800-bitnest-bit-nested-speculative-decoding-for-memory-efficient-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1742,10 +1750,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-02 · [Dynamic Mixed-Precision Routing for Efficient Multi-step LLM Interaction](2026-2602.02711-dynamic-mixed-precision-routing-for-efficient-multi-step-llm-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントの臨界ステップが約1パーセントしかないという観測に基づき、最高精度のKVキャッシュを共有しながらステップごとにデコード精度を切り替えるDMRの研究。
-
-- **2026-02 · [CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse](2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  暗号化したまま再利用できるKVキャッシュと、プリフィルとデコードで使い分ける異種符号化により、安全な自己回帰生成のスケーリングを2次からほぼ線形へ変えた研究。
 
 - **2026-02 · [Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices](2026-2602.08060-compiler-assisted-speculative-sampling-for-accelerated-llm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

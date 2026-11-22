@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6c0ab37b0d33bb5147ae619deca196110e624c73",
+  "base_commit": "b5e8ceed6251c6feb1d2c7b8681991b617a2cc23",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -779,6 +779,7 @@
     "2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.json",
     "2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-for-regression-testing.json",
     "2026-2610.10058-cache-the-encoder-within-compact-reusable-memory-across-llm-queries.json",
+    "2026-2610.10135-attention-via-black-box-vector-search.json",
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
     "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json",
@@ -806,6 +807,7 @@
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
     "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json",
+    "2026-2610.14804-agentweave-efficient-distributed-agent-serving-via-flow-decomposition.json",
     "2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.json",
     "2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.json",
     "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
@@ -824,6 +826,7 @@
     "2026-2610.17191-freesolo-linear-time-sparse-attention-with-zero-shot-length-extrapolation.json",
     "2026-2610.17202-mlafication-efficiently-enabling-high-fidelity-mla-for-modern-llms.json",
     "2026-2610.17321-gpu-goldmines-tunable-webgpu-kernels-for-edge-llm-inference.json",
+    "2026-2610.17338-budgeted-kv-cache-repair-for-evolving-contexts.json",
     "2026-2610.17355-wire-weight-space-implicit-representation-encoding-of-frozen-video-llms.json",
     "2026-2610.17436-schemaweaver-accelerating-on-device-mobile-agentic-ai-via-schema-guided-parallel-llm-decoding.json",
     "2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-models.json",
@@ -845,6 +848,7 @@
     "2026-2610.18451-fasteep-fast-intra-instance-elastic-scaling-for-expert-parallel-moe-serving.json",
     "2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.json",
     "2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.json",
+    "2026-2610.18690-just-respect-the-semantics-image-token-compression-via-pre-llm-semantic-variable-resolution-tokenization-and-in-llm-rele.json",
     "2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reuse.json",
     "2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.json",
     "2026-2610.19210-titan-llama-retrofitting-pre-trained-llms-with-external-neural-memory-modules.json",
@@ -1055,6 +1059,7 @@
     "2026-2611.00646-when-shards-fly-cross-tensor-in-flight-conversion-for-low-latency-low-memory-weight-updates-in-disaggregated-rl.json",
     "2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attention.json",
     "2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.json",
+    "2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-inference.json",
     "2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decoding-for-vision-language-models.json",
     "2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-caching.json",
     "2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.json",
@@ -48256,6 +48261,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.10135": {
+      "order": [
+        "2026-11-22T05:17:56+00:00",
+        "2026-2610.10135-attention-via-black-box-vector-search.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14804": {
+      "order": [
+        "2026-11-22T05:18:49+00:00",
+        "2026-2610.14804-agentweave-efficient-distributed-agent-serving-via-flow-decomposition.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.17338": {
+      "order": [
+        "2026-11-22T05:19:41+00:00",
+        "2026-2610.17338-budgeted-kv-cache-repair-for-evolving-contexts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.18690": {
+      "order": [
+        "2026-11-22T05:20:34+00:00",
+        "2026-2610.18690-just-respect-the-semantics-image-token-compression-via-pre-llm-semantic-variable-resolution-tokenization-and-in-llm-rele.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.01450": {
+      "order": [
+        "2026-11-22T05:21:26+00:00",
+        "2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60791,6 +60841,21 @@
     "arxiv:2610.08811": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compressio.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compressio.md"
+    ],
+    "arxiv:2610.10135": [
+      "papers/inference/99-other-inference-systems/2026-2610.10135-attention-via-black-box-vector-search.md"
+    ],
+    "arxiv:2610.14804": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2610.14804-agentweave-efficient-distributed-agent-serving-via-flow-decomposition.md"
+    ],
+    "arxiv:2610.17338": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.17338-budgeted-kv-cache-repair-for-evolving-contexts.md"
+    ],
+    "arxiv:2610.18690": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.18690-just-respect-the-semantics-image-token-compression-via-pre-llm-semantic-.md"
+    ],
+    "arxiv:2611.01450": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-.md"
     ]
   }
 }
