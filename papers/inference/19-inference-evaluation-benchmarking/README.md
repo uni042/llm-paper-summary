@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（198本）
+## 自動生成の論文一覧（199本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -538,10 +538,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   残りの視覚推論経路全体を有効窓とし、隠れ状態を窓内の未来意味の重ね合わせへ合わせる学習で、早すぎる意味の収束を防ぎながら推論トークンを97パーセント超減らす潜在視覚推論方式。
 
+- **2026-01 · [EntroCut: Entropy-Guided Adaptive Truncation for Efficient Chain-of-Thought Reasoning in Small-scale Large Reasoning Models](2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thoug.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  反省トークンの地点で探査文字列への続きのエントロピーを測り、確信が十分なら思考を打ち切って応答段階へ移す学習不要の適応的打ち切りで、小規模な推論モデルのトークンを最大約40%削りながら精度をほぼ保つ方式。
+
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：42  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  

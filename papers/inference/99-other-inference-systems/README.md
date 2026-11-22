@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1254本）
+## 自動生成の論文一覧（1258本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2814,6 +2814,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   vLLMとLMCacheのKVキャッシュを4種類のCXLメモリへ退避して実機比較し、DRAM型・プール型CXLが長文脈でシステムDRAMに近い性能を保ち、122K入力でGPU VRAM比約9倍の要求スループットを示す。
 
+- **2026-01 · [FourierSampler: Unlocking Non-Autoregressive Potential in Diffusion Language Models via Frequency-Guided Generation](2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-langu.md)**  
+  実装：[✓](https://github.com/ShirleYoung/FourierSampler) ・ リポジトリ内被引用：0  
+  拡散言語モデルの隠れ状態で低周波が構造、高周波が詳細を担うという発見に基づき、周波数窓を滑らせて構造から詳細へ復号順序を誘導し、LLaDAとSDARで数学とコードの精度を一貫して上げる学習不要のサンプラー。
+
 - **2026-01 · [Float8@2bits: Entropy Coding Enables Data-Free Model Compression](2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.md)**  
   実装：[✓](https://github.com/merantix-momentum/entquant) ・ リポジトリ内被引用：0  
   8ビット形式の表現力を保ったまま重みのエントロピーを下げて無損失圧縮し、実効2ビット台の保存量をデータなしで実現する圧縮方式で、較正手法並みの品質を保ちながら70Bを10分未満で圧縮した。
@@ -3848,6 +3852,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは115Mから10B総パラメータまでの構成、Mamba、Mamba2、Gated DeltaNet、注意機構とのハイブリッドであるSambaを評価する。
 
+- **2025-06 · [Pruning General Large Language Models into Customized Expert Models](2025-2506.02561-pruning-general-large-language-models-into-customized-expert-models.md)**  
+  実装：[✓](https://github.com/zhaoyiran924/Custom-Prune) ・ リポジトリ内被引用：0  
+  言語・分野・タスクの各コーパスで無関係なニューロンを測り、その共通部分だけを後学習なしで除去することで、特定用途に合わせた軽量な専門家モデルを作る枝刈り手法。
+
 - **2025-06 · [Principled SVD-based Delta Compression via Quantization Error Minimization](2025-2506.11087-principled-svd-based-delta-compression-via-quantization-error-minimizati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PRINMIXは、同じ基盤LLMから多数の微調整済みモデルを提供する場面を想定し、各モデルに固有の差分重みΔWだけを圧縮する方式である。
@@ -4024,6 +4032,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   重みに所属ビットを足して四つの自由な代表値を持たせ期待値最大化法で決め、活性値の四ビットを四つの一ビットへ分解して内積を論理演算で計算する学習後量子化で、実質二ビット・四ビット設定の困惑度を七十億モデルで八・五八まで抑え、行列積カーネルで従来カーネルの約三倍の高速化を報告した。
 
+- **2025-03 · [Text Compression for Efficient Language Generation](2025-2503.11426-text-compression-for-efficient-language-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文を一つの埋め込みへ圧縮し、完了した文の埋め込みをキャッシュして生成する階層型モデルで、小規模領域で計算量最大約10倍と速度最大3倍の効率を得る一方、品質の代償も測る研究。
+
 - **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
   実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
   Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
@@ -4035,6 +4047,10 @@
 - **2025-03 · [NM-SpMM: Accelerating Matrix Multiplication Using N:M Sparsity with GPGPU](2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.md)**  
   実装：[✓](https://github.com/M-H482/NM-SpMM) ・ リポジトリ内被引用：0  
   N:Mスパース行列積について疎性で計算律速からメモリ律速へ移ることを分析し、階層的ブロッキングと疎性に応じたパッキングおよびパイプラインで、汎用実装nmSPARSEより2.1倍速くするGPUカーネル。
+
+- **2025-03 · [Lifting the Veil on Visual Information Flow in MLLMs: Unlocking Pathways to Faster Inference](2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-.md)**  
+  実装：[✓](https://github.com/ustc-hyin/HiMAP) ・ リポジトリ内被引用：0  
+  画像トークンの視覚情報フローが浅い層では指示トークンへの注入、深い層では画像トークン同士の集約へ転換することを突き止め、層ごとに違う重要度基準で二段階に画像トークンを落とすHiMAPで計算量を約65%以上減らすマルチモーダル推論の高速化。
 
 - **2025-03 · [Large Language Model Compression via the Nested Activation-Aware Decomposition](2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decompo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4187,7 +4203,7 @@
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
-  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：39  
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
@@ -4677,7 +4693,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：119  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：120  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
@@ -5041,7 +5057,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：364  
+  実装：✓ ・ リポジトリ内被引用：365  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

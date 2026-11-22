@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0211b26797838d33aa23fccdec3f36f5293e785e",
+  "base_commit": "f5bb59d746ee41eacaa8ba94e364e3debf3983a0",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -132,6 +132,8 @@
     "2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-all-you-need-for-mha.json",
     "2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe-inference.json",
     "2025-2503.09657-tyr-the-pruner-structural-pruning-via-global-sparsity-distribution.json",
+    "2025-2503.11426-text-compression-for-efficient-language-generation.json",
+    "2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-to-faster-inference.json",
     "2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.json",
     "2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decomposition.json",
     "2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.json",
@@ -167,6 +169,7 @@
     "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json",
     "2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-llm-inference.json",
     "2025-2505.22425-scaling-reasoning-without-attention.json",
+    "2025-2506.02561-pruning-general-large-language-models-into-customized-expert-models.json",
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
     "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json",
     "2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.json",
@@ -303,8 +306,10 @@
     "2026-2601.20520-context-tokens-are-anchors-repetition-curse-in-dmllms-information-flow-perspective.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
+    "2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thought-reasoning-in-small-scale-large-reasoning-models.json",
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
     "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json",
+    "2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-language-models.json",
     "2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.json",
     "2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-for-multimodal.json",
     "2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-block-aware-precision-rescaling.json",
@@ -48646,6 +48651,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2503.11426": {
+      "order": [
+        "2026-11-22T09:20:41+00:00",
+        "2025-2503.11426-text-compression-for-efficient-language-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2503.13108": {
+      "order": [
+        "2026-11-22T09:21:33+00:00",
+        "2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-to-faster-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.02561": {
+      "order": [
+        "2026-11-22T09:22:26+00:00",
+        "2025-2506.02561-pruning-general-large-language-models-into-customized-expert-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.22617": {
+      "order": [
+        "2026-11-22T09:23:17+00:00",
+        "2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thought-reasoning-in-small-scale-large-reasoning-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.23182": {
+      "order": [
+        "2026-11-22T09:24:09+00:00",
+        "2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61337,6 +61387,21 @@
     "arxiv:2410.12982": [
       "papers/inference/99-other-inference-systems/2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence.md",
       "papers/inference/99-other-inference-systems/2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence.md"
+    ],
+    "arxiv:2503.11426": [
+      "papers/inference/99-other-inference-systems/2025-2503.11426-text-compression-for-efficient-language-generation.md"
+    ],
+    "arxiv:2503.13108": [
+      "papers/inference/99-other-inference-systems/2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-.md"
+    ],
+    "arxiv:2506.02561": [
+      "papers/inference/99-other-inference-systems/2025-2506.02561-pruning-general-large-language-models-into-customized-expert-models.md"
+    ],
+    "arxiv:2601.22617": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thoug.md"
+    ],
+    "arxiv:2601.23182": [
+      "papers/inference/99-other-inference-systems/2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-langu.md"
     ]
   }
 }
