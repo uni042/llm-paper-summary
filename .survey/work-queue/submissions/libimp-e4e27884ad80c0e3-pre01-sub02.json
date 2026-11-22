@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CoS-VQ: Coordinated Shared-Scale Vector Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.37336",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require substantial memory, motivating low-bit weight quantization for efficient deployment. Existing vector quantization (VQ) methods often improve accuracy by increasing the effective coding dimension, which can complicate independent lookup and local codeword updates. We propose CoS-VQ (Coordinated Shared-Scale Vector Quantization), which preserves low-dimensional codewords while jointly optimizing hard indices and their shared scale across positions. The key challenge is scale-induced coupling: the optimal scale depends on the entire codeword combination and, in turn, changes candidate rankings across positions, so pointwise updates can stall even after scale re-optimization. CoS-VQ collects candidates at multiple probe scales and constructs a tangent separable upper bound for the residual-aware quadratic objective. By reducing candidate comparisons to lower envelopes of lines over positive scales, it identifies finitely many representative intervals for joint index--scale updates without exhaustively enumerating codeword combinations. On Qwen3.8-27B, CoS-VQ outperforms QTIP and LLVQ on the evaluated language modeling, coding, and reasoning benchmarks. Ablations from the same initialization further show larger gains from joint updates than from scale-only refinement, highlighting joint selection as an alternative to increasing codeword dimensionality. The code is available at https://github.com/xzktx003/Cos_VQ.",
+      "identifiers": [
+        "SemanticScholar:83617c9a0faa52bccbb92f7b798b20f82b403966"
+      ],
+      "semantic_scholar_id": "83617c9a0faa52bccbb92f7b798b20f82b403966",
+      "canonical_id": "arXiv:2610.37336",
+      "arxiv_id": "2610.37336",
+      "authors": [
+        "Zu-Kang Xu",
+        "Zhi-Xiong Zhao",
+        "Xing Hu",
+        "Zhe Jiang",
+        "Xing-Peng Si",
+        "Da-Wei Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低次元コードワードを保ちながらハードインデックスと共有スケールを位置横断で共同最適化するベクトル量子化CoS-VQは、スケール誘起の結合を接線分離可能な上限で解き、Qwen系でQTIP・LLVQを上回るLLM重み量子化手法であり推論向け圧縮に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WAGES: Workload-Aware GPU Sharing System for Energy-Efficient Serverless LLM Serving",
+      "source_url": "https://doi.org/10.1145/3731599.3767396",
+      "year": 2025,
+      "published": "2025-11-15",
+      "venue": "SC25-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serverless LLM serving reduces operational costs by elastically provisioning GPUs and charging users only for actual usage. However, existing systems mainly optimize cold-start latency while overlooking two inefficiencies: (i) static, exclusive GPU allocation that over-provisions compute resources, lowering utilization and inflating hardware costs, and (ii) reliance on hardware-controlled clock frequencies, wasting energy. Our measurements show that many LLM workloads can meet SLOs with partial SM allocations and reduced clock speeds, enabling opportunities for GPU multiplexing and dynamic clock scaling to reduce energy consumption.We propose WAGES, a workload-aware GPU-sharing system for energy-efficient serverless LLM serving. WAGES uses NVIDIA MPS to co-locate multiple LLMs on a single GPU, dynamically tuning SM partitions and clock speeds to match workload demands while preserving SLOs. A two-tier scheduling framework coordinates global GPU consolidation and local SLO-aware scheduling with on-the-fly tuning. It also overlaps model/KV migration with execution to reduce reconfiguration overheads. On real-world LLM traces, WAGES improves SLO attainment by up to 4% over state-of-the-art GPU sharing while cutting energy use by up to 26%, showing that fine-grained, workload-aware sharing can improve SLO attainment and reduce energy consumption simultaneously.CCS Concepts• Computing methodologies → Self-organization; Planning and scheduling.",
+      "identifiers": [
+        "SemanticScholar:922bcc98ee19e6b998f0db08464ac2ce55930fa1"
+      ],
+      "semantic_scholar_id": "922bcc98ee19e6b998f0db08464ac2ce55930fa1",
+      "doi": "10.1145/3731599.3767396",
+      "canonical_id": "DOI:10.1145/3731599.3767396",
+      "authors": [
+        "Tian-Yu Wang",
+        "Gourav Rattihalli",
+        "Aditya Dhakal",
+        "Xu-Long Tang",
+        "D. Milojičić"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 372,
+        "matched_prestigious_venue": null
+      },
+      "reason": "サーバーレスLLMサービング向けWAGESはNVIDIA MPSで複数LLMを1GPUへ同居させ、SM分割とクロックをワークロードに応じて動的調整しモデル/KV移行を実行と重ねることで、エネルギー最大26%削減とSLO達成率改善を両立するGPU共有システムである。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reducing Data Transfer Overhead with CXL-Based Near-Data Processing for LLM Inference",
+      "source_url": "https://doi.org/10.1109/ISOCC66390.2025.11329799",
+      "year": 2025,
+      "published": "2025-10-15",
+      "venue": "International SoC Design Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In Large Language Models (LLMs), the Key-Value (KV) cache demands a substantial memory footprint as the input sequence length grows. Such memory requirements can exceed the size of model parameters and become unmanageable within limited GPU memory. In this paper, we offload the KV cache to Compute Express Link (CXL) memory and leverage Near-Data Processing (NDP) to select and transfer only the KV cache entries that highly affect model accuracy. Our approach reduces the data transfer overhead caused by limited CXL bandwidth and achieves an average 1.45× speedup over the baseline GPU with CXL memory.",
+      "identifiers": [
+        "SemanticScholar:cda0a8cde6abb2fde7154f3ba955d920e17d404c"
+      ],
+      "semantic_scholar_id": "cda0a8cde6abb2fde7154f3ba955d920e17d404c",
+      "doi": "10.1109/ISOCC66390.2025.11329799",
+      "canonical_id": "DOI:10.1109/ISOCC66390.2025.11329799",
+      "authors": [
+        "Woo Hyun Kim",
+        "Han Sol Kim",
+        "Tae Hee Han"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュをCXLメモリへオフロードしNear-Data Processingで精度影響の大きいKVエントリだけを選んで転送する方式は、CXL帯域制約下の転送オーバーヘッドを抑えGPU＋CXL基準比で平均1.45倍高速化する、LLM推論の階層メモリ機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e4e27884ad80",
+    "round": "libimp-e4e27884ad80c0e3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e4e27884ad80c0e3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e4e27884ad80c0e3-pre01.json",
+    "receipt": "sha256:b62e714744a6f5c6b57593a371a4b50d3adc0d6b811688f78cbdd8b8b489f4b7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e4e27884ad80",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

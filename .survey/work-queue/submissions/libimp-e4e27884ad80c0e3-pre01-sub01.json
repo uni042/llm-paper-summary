@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DiViCo: Disentangled Visual Token Compression for Efficient Large Vision-Language Model",
+      "source_url": "https://doi.org/10.1109/TCSVT.2025.3567138",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models have drawn much attention and become increasingly applicable in complicated multimodal tasks such as visual question answering, video grounding, etc. However, it still suffers from inefficiency problem during the inference stage due to the computational overhead brought by the large number of visual tokens. Existing works either utilize an attention score (or visual-text relevance) to filter out the less significant visual tokens, or insert learnable projection layers to directly compress the tokens, which neglects the informative details in visual signals and introduces information loss, resulting in poor generalizability to test data. To solve these problems, in this paper we propose a novel Disentangled Visual Token Compression module, i.e., DiViCo, that effectively compresses the visual tokens and maintains good performance simultaneously. In concrete, we first select the top $\\tau \\%$ visual tokens according to their average attention scores, then predict the gap between these selected tokens and the original information by employing the chosen tokens in a disentangled and variational manner. Specifically, we model the mean and variance, sampling the predicted gap from the Gaussian prior. We further keep the informativeness of the compressed visual tokens via KL divergence, which ensures the generalizability of the model. Extensive experiments demonstrate the advantage of our proposed DiViCo module against several state-of-the-art baselines over various real-world datasets. Most notably, LLaVA-v1.5-7b equipped with DiViCo is able to reduce 67.7% FLOPs and save 51.7% time while maintaining 95.6% of the accuracy for LLaVA-v1.5-7b without any compression.",
+      "identifiers": [
+        "SemanticScholar:6b3bfbdd28ae6068b370bdfb96134660a94d1d20"
+      ],
+      "semantic_scholar_id": "6b3bfbdd28ae6068b370bdfb96134660a94d1d20",
+      "doi": "10.1109/TCSVT.2025.3567138",
+      "canonical_id": "DOI:10.1109/TCSVT.2025.3567138",
+      "authors": [
+        "Xin Wang",
+        "Zi-Rui Pan",
+        "Hong Chen",
+        "Wen-Wu Zhu"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚トークンの非分離圧縮DiViCoは注意スコア上位トークンを選び、選択トークンとの差分を変分的に予測してKLで情報量を保持することで、大規模視覚言語モデルの推論時視覚トークン膨張を抑える直接的な効率化機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AVG-LLaVA: An Efficient Large Multimodal Model with Adaptive Visual Granularity",
+      "source_url": "https://arxiv.org/abs/2410.02745",
+      "year": 2024,
+      "published": "2024-09-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, large multimodal models (LMMs) have achieved significant advancements. When dealing with high-resolution images, dominant LMMs typically divide them into multiple local images and a global image, leading to a large number of visual tokens. In this work, we introduce AVG-LLaVA, an LMM that can adaptively select the appropriate visual granularity based on the input image and instruction. Specifically, we first apply the multiple pooling layers to obtain visual tokens at different granularities. Then we propose a visual granularity router, which includes a Transformer layer, an MLP layer, and a voter layer, used to select the appropriate visual granularity based on the image and instruction. Furthermore, we put forward RGLF, a novel training paradigm that aims at aligning the granularity predicted by the router with the preferences of the LMM, without the need for additional manually annotated data. Extensive experiments and analysis show that AVG-LLaVA achieves superior performance across 11 benchmarks, as well as significantly reduces the number of visual tokens and speeds up inference (e.g., an 85.3% reduction in visual tokens and a 2.53$\\times$ increase in inference speed on the AI2D benchmark).",
+      "identifiers": [
+        "SemanticScholar:0ee553f0ddd5419a8d0365c9a469c6d9ac657bac"
+      ],
+      "semantic_scholar_id": "0ee553f0ddd5419a8d0365c9a469c6d9ac657bac",
+      "canonical_id": "arXiv:2410.02745",
+      "arxiv_id": "2410.02745",
+      "doi": "10.18653/v1/2025.findings-acl.865",
+      "authors": [
+        "Zhi-Bin Lan",
+        "Li-Qiang Niu",
+        "Fan-Dong Meng",
+        "Wen-Bo Li",
+        "Jie Zhou",
+        "Jinsong Su"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 793,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Design of an FPGA-Based High-Throughput Matrix Multiplication Accelerator for Transformers",
+      "source_url": "https://doi.org/10.1109/ICSP69961.2026.11540876",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "International Conference on the Software Process",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Matrix multiplication operations in large language models (LLMs) account for over 80% of the computational load in Transformer inference. Existing FPGA accelerators suffer from significant bottlenecks in on-chip memory access efficiency and pipeline throughput. This paper proposes a high-throughput matrix multiplication accelerator specifically designed for resource-constrained FPGAs. A hierarchical loop partitioning strategy eliminates memory port contention during block accesses; a refreshable pipeline mechanism substantially reduces loop boundary overhead; and a merged access pattern maximizes off-chip memory bandwidth utilization. Implemented on a Xilinx XCZU15EG FPGA and validated through RTL co-simulation, this design achieves 2.52x acceleration over an optimized baseline, with 85% DSP utilization and energy efficiency of 20.5 GOPs/W—delivering up to 15.9x higher performance than the NVIDIA V100S GPU.",
+      "identifiers": [
+        "SemanticScholar:f51ac5ad11e58b4b674c92a3e8a5e711acbcc34b"
+      ],
+      "semantic_scholar_id": "f51ac5ad11e58b4b674c92a3e8a5e711acbcc34b",
+      "doi": "10.1109/ICSP69961.2026.11540876",
+      "canonical_id": "DOI:10.1109/ICSP69961.2026.11540876",
+      "authors": [
+        "Kaigeng Tang",
+        "C. Shao",
+        "Hui-Yun Li",
+        "Zhi-Min Tang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのTransformer推論で計算負荷の80%以上を占める行列乗算を対象に、階層ループ分割でメモリポート競合を解消しリフレッシュ可能パイプラインで境界オーバーヘッドを削るFPGAアクセラレータで、基準比2.52倍・20.5 GOPs/Wを達成しており推論カーネル／ハードウェアへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Collaborative Edge Inference for Large Language Models with Speculative Decoding",
+      "source_url": "https://doi.org/10.1109/ICC59461.2026.11587792",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "ICC 2026 - IEEE International Conference on Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing edge-based large language model (LLM) serving systems primarily rely on autoregressive decoding (AD) to generate inference results, generating only one output token per forward pass. The AD process underutilizes GPUs’ parallel processing capabilities and inherently introduces high serving latency, thereby hindering efficient LLM serving in resource-constrained edge networks. To address this challenge, we propose a speculative decoding (SD)-based LLM serving framework that coordinates small and large models deployed on heterogeneous edge nodes to accelerate output token generation and thus reduce serving latency. To improve resource utilization of edge nodes, we introduce pipeline parallelism that groups multiple inference tasks into batches and processes them in a pipelined manner. Building on this framework, we derive the total serving latency that jointly considers communication and inference latencies. We then formulate a joint task batching and wireless communication resource allocation problem to minimize the total serving latency under computing and communication resource constraints. To solve this problem, we derive closed-form solutions for wireless communication resource allocation, and develop an efficient algorithm to obtain optimal task batching strategies. Simulation results show that the proposed LLM serving framework outperforms benchmarks, achieving up to 23.1% latency reduction.",
+      "identifiers": [
+        "SemanticScholar:5f0322354127fb64c0ac3cdf51cca8c3a436b46d"
+      ],
+      "semantic_scholar_id": "5f0322354127fb64c0ac3cdf51cca8c3a436b46d",
+      "doi": "10.1109/ICC59461.2026.11587792",
+      "canonical_id": "DOI:10.1109/ICC59461.2026.11587792",
+      "authors": [
+        "Bingjie Zhu",
+        "Zhi-Xiong Chen",
+        "Li-Qiang Zhao",
+        "Hyundong Shin",
+        "A. Nallanathan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種エッジノード上の小・大モデルを協調させる投機的デコード型LLMサービング枠組みで、パイプライン並列のバッチ化と無線資源配分を共同最適化しサービング遅延を最大23.1%削減しており、エッジLLM推論への直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MESO: Memory-Efficient Speculative Offloading for Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/IJCNN69854.2026.11729215",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In resource-constrained devices, Large Language Model (LLM) inference faces significant challenges due to limited GPU memory resources. Existing studies, such as SpecOffload, combine offloading with speculative decoding to utilize a draft model for generating candidate tokens, thereby improving LLM generation throughput. However, they require the draft model to reside permanently in GPU memory. In resource-constrained devices, it tends to introduce high fixed overheads, resulting in low memory efficiency, which can be measured by the throughput gain per unit of GPU memory usage. To address this limitation, we propose MESO, a framework that specializes in improving memory efficiency. Specifically, MESO achieves high memory efficiency by offloading the draft model, enabling fine-grained asynchronous component loading, and leveraging pinned memory optimization. Experimental results show that compared to the selected baselines, MESO achieves 1.35× memory efficiency on average across various scenarios, and delivers up to 2.25× memory efficiency. Additionally, MESO reduces peak GPU memory usage by more than 50% compared to SpecOffload. Quantitative and qualitative analyses further validate the effectiveness of MESO.",
+      "identifiers": [
+        "SemanticScholar:aca1697729844d9c525f124217b7415bad87bd5b"
+      ],
+      "semantic_scholar_id": "aca1697729844d9c525f124217b7415bad87bd5b",
+      "doi": "10.1109/IJCNN69854.2026.11729215",
+      "canonical_id": "DOI:10.1109/IJCNN69854.2026.11729215",
+      "authors": [
+        "Qing-Xiao Zhang",
+        "Xiao-Peng Li",
+        "Bing Ji",
+        "Xiao-Dong Liu",
+        "Jie Yu",
+        "Long Peng",
+        "Hao Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的デコードのドラフトモデル自体をオフロードし細粒度の非同期コンポーネントロードとピン留めメモリ最適化を行うMESOは、SpecOffload比でピークGPUメモリを50%以上削減しメモリ効率を平均1.35倍にする、リソース制約下LLM推論の直接的機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e4e27884ad80",
+    "round": "libimp-e4e27884ad80c0e3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e4e27884ad80c0e3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e4e27884ad80c0e3-pre01.json",
+    "receipt": "sha256:b62e714744a6f5c6b57593a371a4b50d3adc0d6b811688f78cbdd8b8b489f4b7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e4e27884ad80",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
