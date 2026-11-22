@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5ef69239d2b71dd8bad56346e4232283c550729e",
+  "base_commit": "dd3ee70ffb6f602b368875c478cccc82d6f89b1b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -51,6 +51,7 @@
     "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
     "2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-linear-and-back.json",
     "2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.json",
+    "2024-2404.05843-softmax-attention-with-constant-cost-per-token.json",
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
     "2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.json",
     "2024-2405.05525-ditto-quantization-aware-secure-inference-of-transformers-upon-mpc.json",
@@ -66,11 +67,14 @@
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
     "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
+    "2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
+    "2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retrieval.json",
     "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
     "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
+    "2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-dropout-and-separate-quantization.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-formats.json",
@@ -83,6 +87,7 @@
     "2024-2411.00889-mess-energy-optimal-inferencing-in-language-model-zoos-with-service-level-guarantees.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
+    "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
@@ -47606,6 +47611,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2404.05843": {
+      "order": [
+        "2026-11-22T03:18:59+00:00",
+        "2024-2404.05843-softmax-attention-with-constant-cost-per-token.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2407.19775": {
+      "order": [
+        "2026-11-22T03:20:26+00:00",
+        "2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2408.14906": {
+      "order": [
+        "2026-11-22T03:21:53+00:00",
+        "2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retrieval.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.08666": {
+      "order": [
+        "2026-11-22T03:23:20+00:00",
+        "2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-dropout-and-separate-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2411.14345": {
+      "order": [
+        "2026-11-22T03:24:46+00:00",
+        "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59881,6 +59931,21 @@
     ],
     "arxiv:2610.03296": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md"
+    ],
+    "arxiv:2404.05843": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2404.05843-softmax-attention-with-constant-cost-per-token.md"
+    ],
+    "arxiv:2407.19775": [
+      "papers/inference/99-other-inference-systems/2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.md"
+    ],
+    "arxiv:2408.14906": [
+      "papers/inference/99-other-inference-systems/2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retriev.md"
+    ],
+    "arxiv:2410.08666": [
+      "papers/inference/99-other-inference-systems/2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-.md"
+    ],
+    "arxiv:2411.14345": [
+      "papers/inference/99-other-inference-systems/2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.md"
     ]
   }
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（183本）
+## 自動生成の論文一覧（184本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -722,6 +722,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   内側の層同士で注意行列が似るという観測に基づき、似た層の注意計算を共有する生徒モデルを知識蒸留と継続学習で作り、パラメータ削減と推論・学習の高速化を品質維持と両立させた研究。
 
+- **2024-04 · [Softmax Attention with Constant Cost per Token](2024-2404.05843-softmax-attention-with-constant-cost-per-token.md)**  
+  実装：[✓](https://github.com/glassroom/heinsen_attention) ・ リポジトリ内被引用：0  
+  クエリとキーの類似度を指数の内積の対数へ変えて注意を線形化し、固定サイズの隠れ状態の更新だけでトークンあたり定数費用の注意を実現する方式。
+
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
@@ -749,6 +753,6 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：127  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：128  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

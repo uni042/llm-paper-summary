@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1202本）
+## 自動生成の論文一覧（1206本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4314,6 +4314,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   提案は、共通の基盤重みを残したまま、出口ごとに独立した低階数適応器（Low-Rank Adaptation; LoRA）を配置する方式である。
 
+- **2024-11 · [Layer Pruning With Consensus: A Triple-Win Solution](2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.md)**  
+  実装：[✓](https://github.com/CarolinaTavaresDuarte/Consensus-Layer-Pruning/) ・ リポジトリ内被引用：0  
+  複数の類似度指標の順位を合議して、除いても特徴表現が最も変わらない層を繰り返し削除する層枝刈りで、演算を最大78.8パーセント減らしながら精度と敵対的頑健性を保つ方式。
+
 - **2024-11 · [Interactions Across Blocks in Post-Training Quantization of Large Language Models](2024-2411.03934-interactions-across-blocks-in-post-training-quantization-of-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、LLMの学習後量子化（PTQ）でよく使われる各Transformerブロックを独立に最適化する手法が、どこまで妥当かを実験的に検証する。
@@ -4341,6 +4345,10 @@
 - **2024-10 · [Efficiently Deploying LLMs with Controlled Risk](2024-2410.02173-efficiently-deploying-llms-with-controlled-risk.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの運用費用を下げるために、小型モデルで簡単な質問へ回答し、難しい質問だけを大型モデルへ渡す階層的ルーティングが利用される。しかし、従来の費用最適化型ルータは「自信がないときには回答しない」という選択的予測の運用要件を、ルーティングの設計変数として十分に扱っていなかった。
+
+- **2024-10 · [DeltaDQ: Ultra-High Delta Compression for Fine-Tuned LLMs via Group-wise Dropout and Separate Quantization](2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  デルタ重みの中間積が均衡する性質を使い、グループ単位ドロップアウトで疎化し値域別に分離量子化することで、微調整モデルの差分を最大512倍まで圧縮する方式。
 
 - **2024-10 · [Correlation-Aware Select and Merge Attention for Efficient Fine-Tuning and Context Length Extension](2024-2410.04211-correlation-aware-select-and-merge-attention-for-efficient-fine-tuning-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4374,9 +4382,17 @@
   実装：[✓](https://github.com/Juntongkuki/Hyper-Compression) ・ リポジトリ内被引用：0  
   学習済み大規模言語モデルの重み容量を小さくする一般的な方法は、低ビット量子化、枝刈り、低ランク分解である。LLaMA2-7Bでは原著Table 5で保存容量12.50GB→4.80GB（2.60倍圧縮）、8課題の平均正答率65.88%→64.89%（0.99ポイント低下）を報告する。
 
+- **2024-08 · [Writing in the Margins: Better Inference Pattern for Long Context Retrieval](2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retriev.md)**  
+  実装：[✓](https://github.com/writer/writing-in-the-margins) ・ リポジトリ内被引用：0  
+  チャンク化プリフィルの各区間で質問関連部分を欄外メモとして抽出・分類し、残したメモだけを文脈末尾へ集約して再提示することで、中盤忘却を抑えて長文脈の多段推論と集約を改善するKVキャッシュ対応の推論パターン。
+
 - **2024-08 · [Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference](2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層を分割する代わりに小さい副層を並列度ぶん並べて集約を層一回に減らし、その結果を次層の全結合部まで遅らせることで通信を注意計算に重ね、実機で最初のトークンまでの時間を標準構造より幾何平均三十五・六パーセント短縮したと報告した。
+
+- **2024-07 · [Model Agnostic Hybrid Sharding For Heterogeneous Distributed Inference](2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデルをブロック列へ分けて位相と能力を見て選んだ分散ノード列へ順に配置し、量子化で転送とメモリを減らす、モデル非依存の分散推論シャーディング方式。
 
 - **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
   実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  
@@ -4477,7 +4493,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：133  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：134  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -4489,11 +4505,11 @@
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：96  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：97  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：78  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
@@ -4655,7 +4671,7 @@
   ソフトマックス注意の最大値、指数和、値の重み付き和を逐次更新し、全注意行列を実体化せず同じ数学的出力を得る。理論上の省メモリ算法と、TPU向けのチャンク並列実装、再計算を使った微分を示す。
 
 - **2022-07 · [FNet: Mixing Tokens with Fourier Transforms](2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/f_net) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/f_net) ・ リポジトリ内被引用：24  
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
@@ -4781,7 +4797,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：284  
+  実装：✓ ・ リポジトリ内被引用：285  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "ファインチューニング済みLLMのデルタ重みに対しグループ単位ドロップアウトと分離量子化を組み合わせ、16倍から512倍の超高圧縮を精度維持しつつ達成し複数モデルの展開オーバーヘッドを削減する圧縮手法であるため",
   "semantic_scholar_id": "4411966278b0ed2f50fce16f131d73cee067d74f",
   "source_url": "https://arxiv.org/abs/2410.08666",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeltaDQ: Ultra-High Delta Compression for Fine-Tuned LLMs via Group-wise Dropout and Separate Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-22T03:27:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-.md",
+  "represented_canonical_id": "arXiv:2410.08666",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
