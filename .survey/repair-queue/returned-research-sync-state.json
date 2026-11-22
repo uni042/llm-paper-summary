@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "123d1c97e043b3f1703e38ffcc749b1ff45dd4d5",
+  "base_commit": "05c86f487c73274f1c300cbe71883b5422bec06b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -297,6 +297,7 @@
     "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
+    "2026-2602.11133-just-on-time-token-level-early-stopping-for-diffusion-language-models.json",
     "2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-large-language-models.json",
     "2026-2602.11534-krause-synchronization-transformers.json",
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
@@ -313,6 +314,7 @@
     "2026-2602.20515-fast-prefill-fpga-accelerated-sparse-attention-for-long-context-llm-prefill.json",
     "2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.json",
     "2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.json",
+    "2026-2602.21652-sparsity-induction-for-accurate-post-training-pruning-of-large-language-models.json",
     "2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-serving.json",
     "2026-2603.00188-st-lite-training-free-kv-cache-compression-with-spatio-trajectory-guidance-for-long-horizon-gui-agents.json",
     "2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.json",
@@ -331,6 +333,7 @@
     "2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-comprehensive-benchmark-and-deployment-study.json",
     "2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-future-without-generation.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
+    "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json",
     "2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-visual-token-compression-in-vlms.json",
     "2026-2603.15954-mobilellm-flash-latency-guided-on-device-llm-design-for-industry-scale-deployment.json",
     "2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-for-llm-inference.json",
@@ -341,6 +344,7 @@
     "2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-on-the-fly.json",
     "2026-2603.20275-understanding-pruning-regimes-in-vision-language-models-through-domain-aware-layer-selection.json",
     "2026-2603.20492-ae-llm-adaptive-efficiency-optimization-for-large-language-models.json",
+    "2026-2603.20991-structural-sensitivity-in-compressed-transformers-relative-error-propagation-and-layer-removal.json",
     "2026-2603.21105-resprune-text-conditioned-subspace-reconstruction-for-visual-token-pruning-in-large-vision-language-models.json",
     "2026-2603.21237-consroute-consistency-aware-adaptive-query-routing-for-cloud-edge-device-llms.json",
     "2026-2603.22324-daq-delta-aware-quantization-for-post-training-llm-weight-compression.json",
@@ -373,6 +377,7 @@
     "2026-2604.06787-when-is-thinking-enough-early-exit-via-sufficiency-assessment-for-efficient-reasoning.json",
     "2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.json",
     "2026-2604.07173-infinilora-disaggregated-multi-lora-serving.json",
+    "2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffusion-large-language-models.json",
     "2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthesis-for-cold-start.json",
     "2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.json",
     "2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.json",
@@ -47856,6 +47861,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2602.11133": {
+      "order": [
+        "2026-11-22T04:03:35+00:00",
+        "2026-2602.11133-just-on-time-token-level-early-stopping-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.21652": {
+      "order": [
+        "2026-11-22T04:04:44+00:00",
+        "2026-2602.21652-sparsity-induction-for-accurate-post-training-pruning-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.13364": {
+      "order": [
+        "2026-11-22T04:05:52+00:00",
+        "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.20991": {
+      "order": [
+        "2026-11-22T04:07:01+00:00",
+        "2026-2603.20991-structural-sensitivity-in-compressed-transformers-relative-error-propagation-and-layer-removal.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.08964": {
+      "order": [
+        "2026-11-22T04:08:09+00:00",
+        "2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffusion-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60231,6 +60281,21 @@
     "arxiv:2601.12298": [
       "papers/inference/17-pim-near-data-acceleration/2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-b.md",
       "papers/inference/17-pim-near-data-acceleration/2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-b.md"
+    ],
+    "arxiv:2602.11133": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2602.11133-just-on-time-token-level-early-stopping-for-diffusion-language-models.md"
+    ],
+    "arxiv:2602.21652": [
+      "papers/inference/99-other-inference-systems/2026-2602.21652-sparsity-induction-for-accurate-post-training-pruning-of-large-language-.md"
+    ],
+    "arxiv:2603.13364": [
+      "papers/inference/99-other-inference-systems/2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling.md"
+    ],
+    "arxiv:2603.20991": [
+      "papers/inference/16-weight-quantization-compression/2026-2603.20991-structural-sensitivity-in-compressed-transformers-relative-error-propaga.md"
+    ],
+    "arxiv:2604.08964": [
+      "papers/inference/99-other-inference-systems/2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffu.md"
     ]
   }
 }

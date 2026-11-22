@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（196本）
+## 自動生成の論文一覧（197本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -335,6 +335,10 @@
 - **2026-03 · [TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly](2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化の較正を配置前に済ませる前提をやめ、プロンプト自身の活性値からその場で尺度を決めることで、ドメインシフトに弱い静的量子化を、較正データなしで適応できる量子化へ変えた方式。
+
+- **2026-03 · [Structural Sensitivity in Compressed Transformers: Relative Error Propagation and Layer Removal](2026-2603.20991-structural-sensitivity-in-compressed-transformers-relative-error-propaga.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層ごとの誤差の収縮率を測って圧縮誤差の伝播を説明し、その1からの距離で層削除を順位付ける訓練不要の物差しで、LLaMA-2-7Bの8層削除でパープレキシティをShortGPT比1.6倍低くし物理削除で1.22倍高速化する分析と手法。
 
 - **2026-03 · [HALO: Hardware-Aware Quantization with Low Critical-Path-Delay Weights for LLM Acceleration](2026-2502.19662-halo-hardware-aware-quantization-with-low-critical-path-delay-weights-fo.md)**  
   実装：[✓](https://github.com/ecolab-nus/HALO) ・ リポジトリ内被引用：0  

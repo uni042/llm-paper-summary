@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（187本）
+## 自動生成の論文一覧（188本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -473,6 +473,10 @@
 - **2026-02 · [On the Optimal Reasoning Length for RL-Trained Language Models](2026-2602.09591-on-the-optimal-reasoning-length-for-rl-trained-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長くすることで最頻回答が正解になる問題は増えるが、その正解周辺に個々の標本が集中しなくなるため、単発回答の成功率が下がり得る。
+
+- **2026-02 · [Just on Time: Token-Level Early Stopping for Diffusion Language Models](2026-2602.11133-just-on-time-token-level-early-stopping-for-diffusion-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの各位置で上位2確率の比を確信度として測り、確定済み近傍に近い位置ほど閾値を下げる空間変調付きの学習不要なトークン単位早期終了で、生成ステップを大幅に減らす方式。
 
 - **2026-02 · [Architecture-Aware LLM Inference Optimization on AMD Instinct GPUs: A Comprehensive Benchmark and Deployment Study](2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-com.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
