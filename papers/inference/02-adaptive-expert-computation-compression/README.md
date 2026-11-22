@@ -390,6 +390,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/Y-Research-SBU/SeqTopK) ・ リポジトリ内被引用：3  
   系列全体で同じ総エキスパート予算を保ちながら、容易なトークンから難しいトークンへ計算を再配分し、高スパースMoEの品質を改善するSeqTopKを提案。
 
+- **2025-05 · [Mixture of Lookup Experts](2025-2503.15798-mixture-of-lookup-experts.md)**  
+  実装：[✓](https://github.com/JieShibo/MoLE) ・ リポジトリ内被引用：3  
+  学習時エキスパート入力を語彙埋め込みへ固定して推論前にFFN出力を検索表化し、巨大エキスパート重みではなく小さな出力ベクトルだけをストレージから読むことでMoEのVRAMと転送遅延を削減する。
+
 - **2025-10 · [Expert Merging in Sparse Mixture of Experts with Nash Bargaining](2025-2510.16138-namex-nash-expert-merging.md)**  
   実装：[✓](https://github.com/anh147/NAMEx) ・ リポジトリ内被引用：2  
   専門家差分をナッシュ交渉で重み付けして統合し、複素運動量で層間伝播を加速することで、言語・画像・14〜16B級MoEで既存統合を上回る。
@@ -397,10 +401,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-09 · [Ban&Pick: Enhancing Performance and Efficiency of MoE-LLMs via Smarter Routing](2025-2509.06346-ban-pick-smarter-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   重要専門家をKL影響度でPickし、層・トークン感度に応じて冗長専門家をBanする学習不要のMoE推論時ルーティング補正。
-
-- **2025-05 · [Mixture of Lookup Experts](2025-2503.15798-mixture-of-lookup-experts.md)**  
-  実装：[✓](https://github.com/JieShibo/MoLE) ・ リポジトリ内被引用：2  
-  学習時エキスパート入力を語彙埋め込みへ固定して推論前にFFN出力を検索表化し、巨大エキスパート重みではなく小さな出力ベクトルだけをストレージから読むことでMoEのVRAMと転送遅延を削減する。
 
 - **2025-10 · [MoE-Prism: Model and System Support for Request-Level Compute Elasticity in MoE Serving](2025-2510.19366-moe-prism-elastic-services.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

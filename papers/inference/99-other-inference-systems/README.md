@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1282本）
+## 自動生成の論文一覧（1285本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -508,6 +508,10 @@
   実装：[✓](https://github.com/tie-pilot-qxw/specfloor) ・ リポジトリ内被引用：1  
   投機的復号では、小型の草案モデルが将来のトークンを提案し、元のターゲットモデルがそれを検証する。Qwen3-4B、7位置の草案では、完全並列方式の最終位置で情報下限が0.286に達する一方、直前の実トークン1個だけを見せるとこの下限の86〜100%が解消した。
 
+- **2026-08 · [A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models](2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-qual.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  量子化の情報保持をSQNRで、速度利得をルーフライン型の解析予測で測り、重み付きで統合する層重要度指標を提案し、再実行なしの速度予測が平均誤差約3.4パーセントで実測と合うことを示した。
+
 - **2026-07 · [Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models](2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-languag.md)**  
   実装：[✓](https://github.com/Lzy-dot/SpecFlow) ・ リポジトリ内被引用：1  
   特徴類似グラフ上の熱拡散で重要度を領域単位に平滑化し、四分木の領域配分と捨てる側のシンク凝縮で被覆と統計を守る学習不要の視覚トークン圧縮で、約9割削減でも性能の約96パーセントを保った。
@@ -555,6 +559,10 @@
 - **2026-06 · [Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery](2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted.md)**  
   実装：[✓](https://github.com/brain-lab-research/quantized-reasoning) ・ リポジトリ内被引用：1  
   2ビット推論の失敗を推論過程の崩れとして診断し、半精度の計画と繰り返し救済を崩れた領域だけへ入れることで、MATH-500の正解率を8Bで17.2から74.2パーセントへ、32Bで65.0から87.2パーセントへ回復させた。
+
+- **2026-06 · [Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study](2026-2606.21428-does-mixture-of-experts-actually-help-inference-on-consumer-and-edge-har.md)**  
+  実装：[✓](https://github.com/Analytics-Everywhere-Lab/edge-moe) ・ リポジトリ内被引用：1  
+  専門家モデルの疎な活性化が辺縁実機で効くかを同一条件で実測し、Jetsonでは同じ有効規模の密モデルより約31パーセント遅く電力2.1倍・メモリ天井到達となり、費用は有効ではなく総パラメータに追随すること、経路選択は計算の9パーセント未満で主因でないことを示した。
 
 - **2026-06 · [Do Transformers Need Three Projections? Systematic Study of QKV Variants](2026-2606.04032-do-transformers-need-three-projections-systematic-study-of-qkv-variants.md)**  
   実装：[✓](https://github.com/anushamadan02/Do-Transformers-Need-3-Projections) ・ リポジトリ内被引用：1  
@@ -1374,6 +1382,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   行列ベクトル積の委譲に、符号とスパースチャレンジによる情報理論的に健全な検証とLPN系マスクのプライバシーを組み合わせ、サーバ負担ほぼゼロで私的かつ検証可能なLLM推論を実現するMaverickの研究。
 
+- **2026-09 · [LILA: Data-Free Structured Pruning of LLMs via Latent Spectral Geometry](2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.md)**  
+  実装：[✓](https://anonymous.4open.science/r/LILA-33CB) ・ リポジトリ内被引用：0  
+  重みの非負行列因子分解と特異値分布のコルモゴロフ・スミルノフ距離だけで全結合ニューロンの重要度を決めるデータ不要の構造化枝刈りで、キャリブレーション済み手法を上回る精度と最大1.64倍の推論高速化を示す。
+
 - **2026-09 · [Less Uniform Discrete Diffusion is More Powerful and Scalable](2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.md)**  
   実装：[✓](https://github.com/FMD-NEXT/LUDI) ・ リポジトリ内被引用：0  
   一様拡散の損失から一様化項を取り除いたLess Uniform損失とトークン単位の時刻埋め込みで、一様拡散言語モデルを7B規模の複雑な推論まで拡張可能にした枠組み。
@@ -1602,9 +1614,9 @@
   実装：[✓](https://github.com/taeilkim2465/agentic_memory_distillation) ・ リポジトリ内被引用：0  
   提案手法AMD（Agent メモリ Distillation）は、教師が成功した道具呼び出し軌跡から、作業全体の戦略を示す作業手順記憶（Workflow メモリ）、実際の道具呼び出し列を示す部分作業記憶（Subtask メモリ）、個別関数の呼び方を示す関数記憶（Function メモリ）を別々に構築する。
 
-- **2026-08 · [A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models](2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-qual.md)**  
+- **2026-08 · [A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint](2026-2608.28003-a-method-for-layer-bit-width-allocation-in-llm-quantization-via-performa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  量子化の情報保持をSQNRで、速度利得をルーフライン型の解析予測で測り、重み付きで統合する層重要度指標を提案し、再実行なしの速度予測が平均誤差約3.4パーセントで実測と合うことを示した。
+  品質劣化の予算の下で速度を最大化する層ビット配分として、感度プロファイルに基づきGemma-3-1Bの全結合・注意・語彙射影をブロック単位でW8A8化し、RTX 5090実測で全結合と語彙射影は速くなり短文脈の注意は遅くなることと、品質保持下で11.0%の遅延削減を示す研究。
 
 - **2026-07 · [What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents](2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1665,6 +1677,10 @@
 - **2026-07 · [Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers](2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.md)**  
   実装：[✓](https://github.com/jlognn/depth-recurrent-convergence) ・ リポジトリ内被引用：0  
   深さ再帰型トランスフォーマーの再帰状態がトークンごとに異なる深さで不動点へ収束することを直接測定し、収束を読み取る学習不要の終了規則が一様深さの品質を平均深さ38パーセント減で達成した研究。
+
+- **2026-07 · [Optimal Model Activation Policies for Inference Networks of Large Language Models](2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-large-langua.md)**  
+  実装：[✓](https://github.com/anonym-conf/inf-nets) ・ リポジトリ内被引用：0  
+  安いモデルを先に呼び確信度がしきい値未満のときだけ高いモデルへ委ねる方策が、直列の専門家モデル構成では最適であることを証明し、分類と生成で費用削減を実証する推論ネットワークの理論研究。
 
 - **2026-07 · [OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models](2026-2607.23193-omniscope-modality-decoupled-token-compression-for-omnimodal-large-langu.md)**  
   実装：[✓](https://github.com/MAC-AutoML/OmniScope) ・ リポジトリ内被引用：0  
@@ -1885,10 +1901,6 @@
 - **2026-06 · [Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding](2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対象側の過去注意とドラフト側の先読み注意を融合し、少数の意味検索ヘッドだけで検証用KVを選ぶことで、長文投機的デコードのKV読込を削減する。
-
-- **2026-06 · [Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study](2026-2606.21428-does-mixture-of-experts-actually-help-inference-on-consumer-and-edge-har.md)**  
-  実装：[✓](https://github.com/Analytics-Everywhere-Lab/edge-moe) ・ リポジトリ内被引用：0  
-  専門家モデルの疎な活性化が辺縁実機で効くかを同一条件で実測し、Jetsonでは同じ有効規模の密モデルより約31パーセント遅く電力2.1倍・メモリ天井到達となり、費用は有効ではなく総パラメータに追随すること、経路選択は計算の9パーセント未満で主因でないことを示した。
 
 - **2026-06 · [Do Value Vectors in Deep Layers Need Context from the Residual Stream?](2026-2606.02780-do-value-vectors-in-deep-layers-need-context-from-the-residual-stream.md)**  
   実装：[✓](https://github.com/RiddleHe/nanochat) ・ リポジトリ内被引用：0  

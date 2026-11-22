@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0eebbae26cf9ef23b8ad86f1eb9afca97d7115a0",
+  "base_commit": "6b5171f32d28b445c0680154cb7fca7c13c1cba7",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -699,6 +699,7 @@
     "2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.json",
     "2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
+    "2026-2608.28003-a-method-for-layer-bit-width-allocation-in-llm-quantization-via-performance-maximization-under-a-quality-degradation-constraint.json",
     "2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference.json",
     "2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficient-reasoning.json",
     "2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.json",
@@ -708,11 +709,13 @@
     "2026-2608.30996-faithfulness-is-not-free-auditing-offline-kv-cache-quantization-in-retrieval-augmented-generation.json",
     "2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.json",
     "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json",
+    "2026-2609.00643-revise-validity-guided-recovery-for-online-revisions-in-agent-workflows.json",
     "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01224-s2prune-spatially-structured-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json",
     "2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-understanding.json",
     "2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.json",
+    "2026-2609.04238-budgeting-bytes-a-windowed-storage-roofline-and-dual-budget-architecture.json",
     "2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-cot-compression.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
@@ -723,7 +726,9 @@
     "2026-2609.10264-maverick-private-and-verifiable-llm-inference-made-practical-via-matrix-vector.json",
     "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
+    "2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.json",
     "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
+    "2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-llms.json",
     "2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybrid-ckks-tfhe.json",
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
@@ -49146,6 +49151,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.28003": {
+      "order": [
+        "2026-11-22T10:50:23+00:00",
+        "2026-2608.28003-a-method-for-layer-bit-width-allocation-in-llm-quantization-via-performance-maximization-under-a-quality-degradation-constraint.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.00643": {
+      "order": [
+        "2026-11-22T10:51:51+00:00",
+        "2026-2609.00643-revise-validity-guided-recovery-for-online-revisions-in-agent-workflows.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.04238": {
+      "order": [
+        "2026-11-22T10:53:20+00:00",
+        "2026-2609.04238-budgeting-bytes-a-windowed-storage-roofline-and-dual-budget-architecture.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.11163": {
+      "order": [
+        "2026-11-22T10:54:48+00:00",
+        "2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.15992": {
+      "order": [
+        "2026-11-22T10:56:17+00:00",
+        "2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62037,6 +62087,21 @@
     "arxiv:2608.20210": [
       "papers/inference/09-kernel-runtime-compilation/2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.md"
+    ],
+    "arxiv:2608.28003": [
+      "papers/inference/99-other-inference-systems/2026-2608.28003-a-method-for-layer-bit-width-allocation-in-llm-quantization-via-performa.md"
+    ],
+    "arxiv:2609.00643": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.00643-revise-validity-guided-recovery-for-online-revisions-in-agent-workflows.md"
+    ],
+    "arxiv:2609.04238": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04238-budgeting-bytes-a-windowed-storage-roofline-and-dual-budget-architecture.md"
+    ],
+    "arxiv:2609.11163": [
+      "papers/inference/99-other-inference-systems/2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.md"
+    ],
+    "arxiv:2609.15992": [
+      "papers/inference/99-other-inference-systems/2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-large-langua.md"
     ]
   }
 }

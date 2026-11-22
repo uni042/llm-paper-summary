@@ -35,10 +35,15 @@
   "selection_reason": "Gemma-3-1Bを対象にTensorRT-LLM上で層ごとにビット幅を割り当てる量子化手法を提案し、品質劣化制約のもとでFFNとlm_headの量子化により遅延を最大19.1%削減した推論向け量子化である。",
   "semantic_scholar_id": "ed689fb91f6fa09bcf3226d46529a012de47e222",
   "source_url": "https://arxiv.org/abs/2608.28003",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Method for Layer Bit-Width Allocation in LLM Quantization via Performance Maximization Under a Quality-Degradation Constraint",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T10:58:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.28003-a-method-for-layer-bit-width-allocation-in-llm-quantization-via-performa.md",
+  "represented_canonical_id": "arXiv:2608.28003",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
