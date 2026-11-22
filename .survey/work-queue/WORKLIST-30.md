@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-22T15:08:52+00:00`
+Generated: `2026-11-22T18:17:28+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,29 +13,20 @@ Generated: `2026-11-22T15:08:52+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **41** / 未claim総数: **41** / このworker向け: **14**
+ready総数: **14** / 未claim総数: **14** / このworker向け: **5**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 116 | research | DOI:10.61784/its3024 | PACO: PREDICTIVE AUTO-CONFIGURATION FOR SLO-CONSTRAINED LARGE LANGUAGE MODEL INFERENCE SERVING | [primary](https://doi.org/10.61784/its3024) | `papers/inference/99-other-inference-systems/2025-bb64608d032b-paco-predictive-auto-configuration-for-slo-constrained-large-language-model-inference-serving.md` |
-| 2 | 102 | research | DOI:10.24963/ijcai.2026/176 | Gradient Enhancement Task Aware Post-training Quantization | [primary](https://doi.org/10.24963/ijcai.2026/176) | `papers/inference/99-other-inference-systems/2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.md` |
-| 3 | 74 | audit | arXiv:2503.03777 | FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference | [primary](https://arxiv.org/abs/2503.03777) | `papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md` |
-| 4 | 29 | research | DOI:10.52202/085713-4538 | Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective | [primary](https://doi.org/10.52202/085713-4538) | `papers/inference/99-other-inference-systems/0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.md` |
-| 5 | 22 | research | DOI:10.1145/3603269.3610856 | Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing | [primary](https://doi.org/10.1145/3603269.3610856) | `papers/inference/99-other-inference-systems/2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.md` |
-| 6 | 16 | research | DOI:10.18653/v1/2025.findings-emnlp.645 | Revisiting Pruning vs Quantization for Small Language Models | [primary](https://doi.org/10.18653/v1/2025.findings-emnlp.645) | `papers/inference/99-other-inference-systems/0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.md` |
-| 7 | 12 | research | DOI:10.18653/v1/2026.acl-long.819 | Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising | [primary](https://doi.org/10.18653/v1/2026.acl-long.819) | `papers/inference/99-other-inference-systems/0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.md` |
-| 8 | 10 | research | arXiv:2610.09212 | CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search | [primary](https://arxiv.org/abs/2610.09212) | `papers/inference/99-other-inference-systems/2026-2610.09212-curvetq-rotation-free-trellis-quantization-of-llm-weights-via-curvature-weighted-search.md` |
-| 9 | 10 | research | DOI:10.18653/v1/2026.acl-long.1971 | ACBQ: Adaptive Cross-Block Quantization of Large Language Models | [primary](https://doi.org/10.18653/v1/2026.acl-long.1971) | `papers/inference/99-other-inference-systems/0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md` |
-| 10 | 10 | research | arXiv:2512.24713 | FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference | [primary](https://arxiv.org/abs/2512.24713) | `papers/inference/99-other-inference-systems/2025-2512.24713-fpga-co-design-for-efficient-n-m-sparse-and-quantized-model-inference.md` |
-| 11 | 3 | research | DOI:10.1007/s11432-024-4144-y | CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts | [primary](https://doi.org/10.1007/s11432-024-4144-y) | `papers/inference/99-other-inference-systems/2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.md` |
-| 12 | 1 | research | DOI:10.63317/55jabgg3m92d | On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization | [primary](https://doi.org/10.63317/55jabgg3m92d) | `papers/inference/99-other-inference-systems/2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.md` |
-| 13 | 0 | research | DOI:10.1145/3713082.3730392 | Towards ML System Extensibility | [primary](https://doi.org/10.1145/3713082.3730392) | `papers/inference/99-other-inference-systems/2025-af96f29ab97d-towards-ml-system-extensibility.md` |
-| 14 | 0 | research | DOI:10.1109/INFOCOM59046.2026.11571463 | BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests | [primary](https://doi.org/10.1109/INFOCOM59046.2026.11571463) | `papers/inference/99-other-inference-systems/2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.md` |
+| 1 | 104 | research | DOI:10.1109/TON.2025.3645806 | Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling | [primary](https://doi.org/10.1109/TON.2025.3645806) | `papers/inference/99-other-inference-systems/0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.md` |
+| 2 | 74 | audit | arXiv:2503.03777 | FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference | [primary](https://arxiv.org/abs/2503.03777) | `papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md` |
+| 3 | 27 | research | arXiv:2505.11415 | MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems | [primary](https://arxiv.org/abs/2505.11415) | `papers/inference/99-other-inference-systems/2025-2505.11415-moe-cap-benchmarking-cost-accuracy-and-performance-of-sparse-mixture-of-experts-systems.md` |
+| 4 | 10 | research | arXiv:2512.24713 | FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference | [primary](https://arxiv.org/abs/2512.24713) | `papers/inference/99-other-inference-systems/2025-2512.24713-fpga-co-design-for-efficient-n-m-sparse-and-quantized-model-inference.md` |
+| 5 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128859** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122597** / 監査再投入 **0** / 機械規則適用後 **125233** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128872** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122609** / 監査再投入 **0** / 機械規則適用後 **125246** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

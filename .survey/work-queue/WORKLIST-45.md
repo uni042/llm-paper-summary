@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-22T15:08:52+00:00`
+Generated: `2026-11-22T18:17:28+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,28 +13,19 @@ Generated: `2026-11-22T15:08:52+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **41** / 未claim総数: **41** / このworker向け: **13**
+ready総数: **14** / 未claim総数: **14** / このworker向け: **4**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
-| 2 | 102 | research | arXiv:2604.06798 | MoBiE: Efficient Inference of Mixture of Binary Experts under Post-Training Quantization | [primary](https://arxiv.org/abs/2604.06798) | `papers/inference/99-other-inference-systems/2026-2604.06798-mobie-efficient-inference-of-mixture-of-binary-experts-under-post-training-quantization.md` |
-| 3 | 72 | audit | arXiv:2504.03775 | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | [primary](https://arxiv.org/abs/2504.03775) | `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md` |
-| 4 | 28 | research | arXiv:2410.10456 | Ada-K Routing: Boosting the Efficiency of MoE-based LLMs | [primary](https://arxiv.org/abs/2410.10456) | `papers/inference/99-other-inference-systems/2024-2410.10456-ada-k-routing-boosting-the-efficiency-of-moe-based-llms.md` |
-| 5 | 17 | research | DOI:10.18653/v1/2025.findings-acl.1356 | Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval | [primary](https://doi.org/10.18653/v1/2025.findings-acl.1356) | `papers/inference/99-other-inference-systems/0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.md` |
-| 6 | 16 | research | DOI:10.52202/085713-5740 | SmartCache: Context-aware Semantic Cache for Efficient Multi-turn LLM Inference | [primary](https://doi.org/10.52202/085713-5740) | `papers/inference/99-other-inference-systems/0000-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inference.md` |
-| 7 | 11 | research | DOI:10.18653/v1/2026.acl-long.1977 | JW-SVD: Bridging the Cross-Modal Mismatch in Post-Training MLLM Compression | [primary](https://doi.org/10.18653/v1/2026.acl-long.1977) | `papers/inference/99-other-inference-systems/0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.md` |
-| 8 | 10 | research | DOI:10.65405/cn221159 | GreenScheduler: Coordinated Two-Tier Energy Optimization for Disaggregated LLM Serving | [primary](https://doi.org/10.65405/cn221159) | `papers/inference/99-other-inference-systems/2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.md` |
-| 9 | 10 | research | DOI:10.18653/v1/2026.findings-acl.1062 | LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference | [primary](https://doi.org/10.18653/v1/2026.findings-acl.1062) | `papers/inference/99-other-inference-systems/0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.md` |
-| 10 | 5 | research | DOI:10.63317/3k5cxvg7k92d | How Speculative Can Speculative Decoding Be? | [primary](https://doi.org/10.63317/3k5cxvg7k92d) | `papers/inference/99-other-inference-systems/2024-468b43887ef3-how-speculative-can-speculative-decoding-be.md` |
-| 11 | 1 | research | DOI:10.3724/2096-7004.di.2025.0077 | Lightweighting Large Models: A Review of Model Compression Techniques | [primary](https://doi.org/10.3724/2096-7004.di.2025.0077) | `papers/inference/99-other-inference-systems/2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md` |
-| 12 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
-| 13 | 0 | research | DOI:10.18653/v1/2025.findings-acl.1035 | ShortGPT: Layers in Large Language Models are More Redundant Than You Expect | [primary](https://aclanthology.org/2025.findings-acl.1035/) | `papers/inference/99-other-inference-systems/0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.md` |
+| 1 | 102 | research | arXiv:2604.06798 | MoBiE: Efficient Inference of Mixture of Binary Experts under Post-Training Quantization | [primary](https://arxiv.org/abs/2604.06798) | `papers/inference/99-other-inference-systems/2026-2604.06798-mobie-efficient-inference-of-mixture-of-binary-experts-under-post-training-quantization.md` |
+| 2 | 72 | audit | arXiv:2504.03775 | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | [primary](https://arxiv.org/abs/2504.03775) | `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md` |
+| 3 | 10 | research | arXiv:2610.09212 | CurveTQ: Rotation-Free Trellis Quantization of LLM Weights via Curvature-Weighted Search | [primary](https://arxiv.org/abs/2610.09212) | `papers/inference/99-other-inference-systems/2026-2610.09212-curvetq-rotation-free-trellis-quantization-of-llm-weights-via-curvature-weighted-search.md` |
+| 4 | 1 | research | DOI:10.1145/3759441.3759448 | EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference | [primary](https://doi.org/10.1145/3759441.3759448) | `papers/inference/99-other-inference-systems/2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128859** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122597** / 監査再投入 **0** / 機械規則適用後 **125233** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128872** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122609** / 監査再投入 **0** / 機械規則適用後 **125246** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

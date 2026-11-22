@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-22T15:08:52+00:00`
+Generated: `2026-11-22T18:17:27+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,29 +13,20 @@ Generated: `2026-11-22T15:08:52+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **41** / 未claim総数: **41** / このworker向け: **14**
+ready総数: **14** / 未claim総数: **14** / このworker向け: **5**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 123 | research | DOI:10.61784/adsj3036 | TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING | [primary](https://doi.org/10.61784/adsj3036) | `papers/inference/99-other-inference-systems/2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.md` |
-| 2 | 104 | research | DOI:10.1109/TON.2025.3645806 | Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling | [primary](https://doi.org/10.1109/TON.2025.3645806) | `papers/inference/99-other-inference-systems/0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.md` |
-| 3 | 101 | research | DOI:10.1145/3774904.3792337 | Energy-Efficient and Dequantization-Free Quantization of LLMs: A Spiking Neural Network Approach to Salient Value Mitigation | [primary](https://doi.org/10.1145/3774904.3792337) | `papers/inference/99-other-inference-systems/2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.md` |
-| 4 | 45 | research | DOI:10.1038/s41598-025-92586-5 | Efficient self-attention with smart pruning for sustainable large language models | [primary](https://doi.org/10.1038/s41598-025-92586-5) | `papers/inference/99-other-inference-systems/2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.md` |
-| 5 | 27 | research | arXiv:2505.11415 | MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems | [primary](https://arxiv.org/abs/2505.11415) | `papers/inference/99-other-inference-systems/2025-2505.11415-moe-cap-benchmarking-cost-accuracy-and-performance-of-sparse-mixture-of-experts-systems.md` |
-| 6 | 17 | research | DOI:10.18653/v1/2025.naacl-long.467 | DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models | [primary](https://doi.org/10.18653/v1/2025.naacl-long.467) | `papers/inference/99-other-inference-systems/0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.md` |
-| 7 | 12 | research | DOI:10.18653/v1/2026.acl-long.25 | Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning | [primary](https://doi.org/10.18653/v1/2026.acl-long.25) | `papers/inference/99-other-inference-systems/0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.md` |
-| 8 | 11 | research | DOI:10.18653/v1/2026.acl-long.285 | UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware | [primary](https://doi.org/10.18653/v1/2026.acl-long.285) | `papers/inference/99-other-inference-systems/0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.md` |
-| 9 | 10 | research | DOI:10.36227/techrxiv.177205041.14536362/v1 | Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores | [primary](https://doi.org/10.36227/techrxiv.177205041.14536362/v1) | `papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md` |
-| 10 | 10 | research | DOI:10.18653/v1/2026.findings-eacl.320 | Task-aware Block Pruning with Output Distribution Signals for Large Language Models | [primary](https://doi.org/10.18653/v1/2026.findings-eacl.320) | `papers/inference/99-other-inference-systems/0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.md` |
-| 11 | 3 | research | DOI:10.24963/ijcai.2025/920 | MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching | [primary](https://doi.org/10.24963/ijcai.2025/920) | `papers/inference/99-other-inference-systems/2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.md` |
-| 12 | 1 | research | DOI:10.1145/3759441.3759448 | EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference | [primary](https://doi.org/10.1145/3759441.3759448) | `papers/inference/99-other-inference-systems/2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.md` |
-| 13 | 0 | research | DOI:10.5753/eniac.2025.12304 | Accelerating RAG Systems: A Performance-Oriented Systematic Mapping | [primary](https://doi.org/10.5753/eniac.2025.12304) | `papers/inference/99-other-inference-systems/2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.md` |
-| 14 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
+| 1 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
+| 2 | 101 | research | DOI:10.1145/3774904.3792337 | Energy-Efficient and Dequantization-Free Quantization of LLMs: A Spiking Neural Network Approach to Salient Value Mitigation | [primary](https://doi.org/10.1145/3774904.3792337) | `papers/inference/99-other-inference-systems/2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.md` |
+| 3 | 28 | research | arXiv:2410.10456 | Ada-K Routing: Boosting the Efficiency of MoE-based LLMs | [primary](https://arxiv.org/abs/2410.10456) | `papers/inference/99-other-inference-systems/2024-2410.10456-ada-k-routing-boosting-the-efficiency-of-moe-based-llms.md` |
+| 4 | 10 | research | DOI:10.36227/techrxiv.177205041.14536362/v1 | Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores | [primary](https://doi.org/10.36227/techrxiv.177205041.14536362/v1) | `papers/inference/99-other-inference-systems/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.md` |
+| 5 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128859** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122597** / 監査再投入 **0** / 機械規則適用後 **125233** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128872** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122609** / 監査再投入 **0** / 機械規則適用後 **125246** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
