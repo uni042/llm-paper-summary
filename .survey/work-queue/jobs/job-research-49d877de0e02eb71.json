@@ -35,10 +35,15 @@
   "selection_reason": "FP8注意計算におけるP行列のキャスト精度について、アテンションシンクによるP崩壊をKVブロック走査順序と静的スケールS=256で防ぐ解析を与え、FlashAttention系カーネルの精度損失予測と実カーネル更新に結び付けた注意カーネル量子化の研究である。",
   "semantic_scholar_id": "ba69eed7647970536edf75464a8e8873322a8d96",
   "source_url": "https://arxiv.org/abs/2606.06521",
-  "status": "ready",
+  "status": "superseded",
   "title": "P-Cast Precision in FP8 Attention: Sink-Induced Collapse and the Optimality of S=2^8",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T04:35:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimali.md",
+  "represented_canonical_id": "arXiv:2606.06521",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "26c5b605dc058d1290a02561640d22cc99cf8ffc",
+  "base_commit": "a0484ae280ba8e2d4dc0518c1ac30ccc197aa047",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -456,8 +456,10 @@
     "2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-inference-benchmarks.json",
     "2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.json",
     "2026-2605.25716-an-efficient-and-privacy-preserving-architecture-for-cross-institutional-collaborative-rag.json",
+    "2026-2605.27428-e3-agent-an-executable-and-evolving-agent-for-resource-management-of-edge-generative-inference.json",
     "2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inference.json",
     "2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-safe-to-reuse-an-answer.json",
+    "2026-2605.28213-klineage-recovering-the-missing-when-of-kernel-optimization-by-deoptimizing-experts.json",
     "2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-aware-kv-sparsity.json",
     "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json",
     "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json",
@@ -475,6 +477,7 @@
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
     "2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusion-large-language-models.json",
     "2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approximation-for-quantized-gated-deltanet.json",
+    "2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimality-of-s-2-8.json",
     "2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-inference.json",
     "2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.json",
     "2026-2606.07581-behavioral-consistency-in-machine-learning.json",
@@ -484,6 +487,7 @@
     "2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-model-inference.json",
     "2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-llm-inference.json",
     "2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stream-dynamics.json",
+    "2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperature-scaling.json",
     "2026-2606.13361-can-i-buy-your-kv-cache.json",
     "2026-2606.14277-one-layer-s-trash-is-another-layer-s-treasure-adaptive-layer-wise-visual-token-selection-in-lvlms.json",
     "2026-2606.14782-last-but-not-least-boundary-attention-calibration-for-multimodal-kv-cache-compression.json",
@@ -513,6 +517,7 @@
     "2026-2606.30553-cosm-a-cooperative-scheduling-framework-for-concurrent-pim-and-cpu-execution-on-mobile-devices.json",
     "2026-2606.30709-hierarchical-global-attention-hga.json",
     "2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.json",
+    "2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.json",
     "2026-2607.01308-cache-merging-as-a-convergent-replicated-state-for-multi-agent-latent-reasoning.json",
     "2026-2607.02522-multi-turn-distributed-inference-with-mixture-of-experts-for-6g-edge-cloud-networks.json",
     "2026-2607.03050-omnifocus-query-guided-modality-balanced-token-compression-for-omni-modal-large-language-models.json",
@@ -48006,6 +48011,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.27428": {
+      "order": [
+        "2026-11-22T04:27:06+00:00",
+        "2026-2605.27428-e3-agent-an-executable-and-evolving-agent-for-resource-management-of-edge-generative-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.28213": {
+      "order": [
+        "2026-11-22T04:28:33+00:00",
+        "2026-2605.28213-klineage-recovering-the-missing-when-of-kernel-optimization-by-deoptimizing-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.06521": {
+      "order": [
+        "2026-11-22T04:30:00+00:00",
+        "2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimality-of-s-2-8.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.13233": {
+      "order": [
+        "2026-11-22T04:31:27+00:00",
+        "2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperature-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.01127": {
+      "order": [
+        "2026-11-22T04:32:55+00:00",
+        "2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60441,6 +60491,21 @@
     "arxiv:2605.25716": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.25716-an-efficient-and-privacy-preserving-architecture-for-cross-institutional.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.25716-an-efficient-and-privacy-preserving-architecture-for-cross-institutional.md"
+    ],
+    "arxiv:2605.27428": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2605.27428-e3-agent-an-executable-and-evolving-agent-for-resource-management-of-edg.md"
+    ],
+    "arxiv:2605.28213": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2605.28213-klineage-recovering-the-missing-when-of-kernel-optimization-by-deoptimiz.md"
+    ],
+    "arxiv:2606.06521": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimali.md"
+    ],
+    "arxiv:2606.13233": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperatu.md"
+    ],
+    "arxiv:2607.01127": [
+      "papers/inference/99-other-inference-systems/2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "大規模推論モデルのNVFP4量子化で生じる不確実性の歪みを推論ステップのエントロピーで捉え温度を適応させるReSETと、小さいM向けCUDAコアNVFP4カーネルによりvLLM比最大2.5倍のカーネル高速化を出す、量子化推論とデコード高速化への直接貢献である。",
   "semantic_scholar_id": "1dfdc9b6399982187aa07b25a822e809ae7b1a7f",
   "source_url": "https://arxiv.org/abs/2606.13233",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReSET: Accurate Latency-Critical NVFP4 Reasoning via Step-Aware Temperature Scaling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T04:35:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperatu.md",
+  "represented_canonical_id": "arXiv:2606.13233",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

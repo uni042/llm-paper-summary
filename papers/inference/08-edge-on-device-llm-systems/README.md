@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（101本）
+## 自動生成の論文一覧（102本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -201,6 +201,10 @@
 - **2026-05 · [Intelligence Delivery Network: Toward an Internet Architecture for the AI Age](2026-2605.13235-intelligence-delivery-network-toward-an-internet-architecture-for-the-ai.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案のIntelligence Delivery Network（IDN）は、CDNが人気コンテンツを需要の近くへ配置する発想を、AIの「能力」へ拡張する。
+
+- **2026-05 · [E3-Agent: An Executable and Evolving Agent for Resource Management of Edge Generative Inference](2026-2605.27428-e3-agent-an-executable-and-evolving-agent-for-resource-management-of-edg.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  高速経路ルーターと出来事駆動の言語モデルメタ制御を分離し、処理時間をオンライン推定しながらリスク遮断と再校正で体制変化へ適応するエッジ生成推論の資源管理エージェントで、静的方式より平均遅延を65〜73パーセント減らす。
 
 - **2026-05 · [CR^2: Cost-Aware Risk-Controlled Routing for Wireless Device-Edge LLM Inference](2026-2605.12001-cr-2-cost-aware-risk-controlled-routing-for-wireless-device-edge-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

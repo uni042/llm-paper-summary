@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（302本）
+## 自動生成の論文一覧（305本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -538,9 +538,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   注意カーネルの固有空間で似たトークンをハッシュによりまとめ、プロンプトをモデル投入前に圧縮する訓練不要の方式。高圧縮で連続平均より品質を保つが、遅延では常に見劣りするため、圧縮率で経路を切り替える適応型が実用形になる。
 
+- **2026-06 · [ReSET: Accurate Latency-Critical NVFP4 Reasoning via Step-Aware Temperature Scaling](2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperatu.md)**  
+  実装：[✓](https://github.com/aiha-lab/ReSET) ・ リポジトリ内被引用：0  
+  ステップ相対のエントロピー閾値でサンプリング温度を切り替えてNVFP4推論の正解率を最大2.6ポイント回復し、小バッチ向けCUDAコアカーネルでBF16比最大1.97倍のデコード高速化を実現する方式。
+
 - **2026-06 · [Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference](2026-2606.02823-qift-shift-friendly-no-zero-w2-post-training-quantization-for-rotated-w2.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qiftは、大規模言語モデル（Large Language モデル; LLM）の推論を省メモリ化する際、2ビットの符号で表現できる四つの実数値をどこへ置くかを主題とする。通常の符号付き2ビット量子化は$\{-2,-1,0,+1\}$を復元値に使う。
+
+- **2026-06 · [P-Cast Precision in FP8 Attention: Sink-Induced Collapse and the Optimality of S=2^8](2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimali.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アテンションシンク下でFP8変換により確率値がゼロへ落ちる崩壊を閉形式で定量化し、逆方向走査とスケール256のどちらでも解消でき、256が三条件を満たす最適な静的スケールであることを示す分析。
 
 - **2026-06 · [Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression](2026-2606.07819-joint-structural-pruning-and-mixed-precision-quantization-for-llm-compre.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -585,6 +593,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [Litespark Inference For CPUs: Ultra-Fast SIMD Framework for Ternary (1.58-bit) Language Models](2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-.md)**  
   実装：[✓](https://github.com/Mindbeam-AI/Litespark-Inference) ・ リポジトリ内被引用：0  
   三値重みを8ビット整数のままSIMDドット積命令へ流し、乗算なしで線形層を計算するCPU推論フレームワーク。プラットフォーム別カーネルの自動振り分けで、PyTorch比18倍から97倍のスループットと約6倍のメモリ削減を実測した。
+
+- **2026-05 · [KLineage: Recovering the Missing When of Kernel Optimization by Deoptimizing Experts](2026-2605.28213-klineage-recovering-the-missing-when-of-kernel-optimization-by-deoptimiz.md)**  
+  実装：[✓](https://github.com/ict-agent/klineage) ・ リポジトリ内被引用：0  
+  専門家カーネルを検証付きで脱最適化し、受理ステップの逆操作を前提条件付きスキルとして蓄えることで、言語モデルへ最適化の適用条件を教え、供給元比1.12倍のカーネルを全組で正しく生成する枠組み。
 
 - **2026-05 · [Kaczmarz Linear Attention](2026-2605.08587-kaczmarz-linear-attention.md)**  
   実装：[✓](https://github.com/anonymous-kla-review/kla-anonymous) ・ リポジトリ内被引用：0  
@@ -753,7 +765,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：225  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：226  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -1031,11 +1043,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：216  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：217  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：64  
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  

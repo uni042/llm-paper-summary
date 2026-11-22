@@ -153,6 +153,10 @@
   実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：1  
   大規模モデルの最初の1トークンの隠れ状態で関数検索と小規模モデルの生成を誘導し、固定構文はテンプレート注入で済ませる方式で、BFCL精度80.1パーセントと最速の0.828秒を両立した。
 
+- **2026-01 · [A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization](2026-2601.12698-a-two-stage-gpu-kernel-tuner-combining-semantic-refactoring-and-search-b.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  カーネルを意味を保つテンプレートへ書き換えてから資源制約下でパラメータ探索を行う二段階方式で、SGLangの実カーネルを最大3.55倍まで高速化した。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-11 · [When Cache Pressure Becomes a Trap: Metastability in Agent Serving](2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.md)**  
@@ -319,10 +323,6 @@
   実装：[✓](https://github.com/OpenDataLab/AgenticOCR) ・ リポジトリ内被引用：0  
   AgenticOCRは、画像を含む長いPDF文書から回答を生成する検索拡張生成（Retrieval-Augmented Generation、RAG）において、検索されたページを丸ごと大規模な生成モデルへ渡す代わりに、質問に必要な領域を選んで拡大・回転・文字認識する方式である。
 
-- **2026-01 · [A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization](2026-2601.12698-a-two-stage-gpu-kernel-tuner-combining-semantic-refactoring-and-search-b.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  カーネルを意味を保つテンプレートへ書き換えてから資源制約下でパラメータ探索を行う二段階方式で、SGLangの実カーネルを最大3.55倍まで高速化した。
-
 - **2025-12 · [Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness](2025-d84a0fae3606-transcending-cost-quality-tradeoff-in-agent-serving-via-session-awarenes.md)**  
   実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：0  
   従来の単純な接頭辞一致キャッシュや最近使用順の退避では、この特徴を活かしにくい。NeurIPS 2025の実機評価では、AWエージェントでGPT-4oと近い品質を16.5%の費用で達成し、同一費用の費用・品質曲線に対して1.8倍の品質を報告する。
@@ -385,13 +385,13 @@
   実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：5  
   長期間にわたってウェブ操作やソフトウェア修正を行う大規模言語モデル（LLM）エージェントは、過去に成功した手順を別の課題で再発見したり、既に失敗した操作を繰り返したりする。過去の実行軌跡を丸ごと検索する方式では、現在の課題に関係ない画面遷移や局所的な操作が混ざる。
 
+- **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
+  実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：2  
+  機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
+
 - **2025-11 · [Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse](2025-2511.00413-tree-training-accelerating-agentic-llms-training-via-shared-prefix-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   エージェント型大規模言語モデルの学習軌跡が共有接頭辞を持つ木になることを利用し、各枝を独立学習する際の順伝播・逆伝播の重複を除く。深さ優先直列化、木に沿った注意・状態伝播、枝数に応じた損失重み付け、微分可能な分割境界を組み合わせ、学習目的を保ちながら計算を一度にする。
-
-- **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
-  実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：1  
-  機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
 
 - **2025-10 · [Staircase Streaming for Low-Latency Multi-Agent Inference](2025-2510.05059-staircase-streaming-for-low-latency-multi-agent-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
