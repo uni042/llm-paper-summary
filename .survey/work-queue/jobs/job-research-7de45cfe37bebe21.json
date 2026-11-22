@@ -35,10 +35,15 @@
   "selection_reason": "ACL SRW公式PDFによると、凍結LLMとLoRAだけを更新し、merged weightをfake W4A4量子化して誤差を補償する。低bitモデルの品質維持に直接関係するが、native INT4 Tensor Coreの実機推論速度は別のCOLM workshop論文であり本論文の実測値と混同しない。",
   "semantic_scholar_id": "cc6aa654a67ffa0de860d3a50db16a3139c0f200",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-srw.63",
-  "status": "ready",
+  "status": "superseded",
   "title": "PE-QAT: Parameter-Efficient Quantization-Aware Training for Large Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:57:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-languag.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-srw.63",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

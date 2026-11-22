@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1294本）
+## 自動生成の論文一覧（1298本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1694,6 +1694,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   従来の層スキップ手法は、経験的な層番号や余弦類似度などを用いて処理を省略していたが、表現が似ていることと出力品質が保たれることは同義ではない。
 
+- **2026-07 · [SharVeT: Similarity-aware Parameter Sharing with Vector-based Tuning for Efficient LLM Compression](2026-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-.md)**  
+  実装：[✓](https://github.com/snudatalab/SharVeT) ・ リポジトリ内被引用：0  
+  重みと活性値の両面から似たモジュールだけを集めて特異値分解の基底を共有し、グループのばらつきに応じてランクを配分し、二つの軽量ベクトルと知識蒸留で共有のずれを直すことで、同じ圧縮率で既存のパラメータ共有法より精度を保つ圧縮方式。
+
 - **2026-07 · [SepPrune: A Separator-based Pruning Framework for Efficient Multimodal Large Language Models](2026-2607.25818-sepprune-a-separator-based-pruning-framework-for-efficient-multimodal-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SepPruneはVLMの画像トークン直後に置かれるmodality separatorを単一queryとして用い、視覚トークンのkeyとの内積から重要度を線形時間で推定してLLM プリフィル前に削減する学習不要手法。
@@ -1725,6 +1729,10 @@
 - **2026-07 · [Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers](2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.md)**  
   実装：[✓](https://github.com/jlognn/depth-recurrent-convergence) ・ リポジトリ内被引用：0  
   深さ再帰型トランスフォーマーの再帰状態がトークンごとに異なる深さで不動点へ収束することを直接測定し、収束を読み取る学習不要の終了規則が一様深さの品質を平均深さ38パーセント減で達成した研究。
+
+- **2026-07 · [PE-QAT: Parameter-Efficient Quantization-Aware Training for Large Language Models](2026-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-languag.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  凍結した基底モデルへ低ランクアダプタを統合した重みに疑似量子化をかけ、平滑化係数とクリッピング閾値も一緒に学習することで、学習可能パラメータ約1%で重み・活性値4ビット量子化の精度低下を補う量子化認識学習。
 
 - **2026-07 · [Optimal Model Activation Policies for Inference Networks of Large Language Models](2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-large-langua.md)**  
   実装：[✓](https://github.com/anonym-conf/inf-nets) ・ リポジトリ内被引用：0  
@@ -3956,6 +3964,10 @@
   実装：[✓](https://github.com/haoyun-jiang/CateKV) ・ リポジトリ内被引用：0  
   プリフィルからデコードまで注意先が安定するヘッドだけKVを強く削減し、動的ヘッドは大半を保持するハイブリッドKVキャッシュで、精度を保ちながら長文推論のメモリ・デコード・バッチ性能を改善する。
 
+- **2025-07 · [Boosting Long-Context Information Seeking via Query-Guided Activation Refilling](2025-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文脈を要約代理する小さなL1 KVキャッシュと詳細なL2 KVキャッシュに分け、質問との注意スコアで必要なL2区間だけをL1へ戻してデコードすることで、原生窓を超える長文脈を少ないGPUメモリと遅延で扱う二層キャッシュ方式。
+
 - **2025-07 · [Assigning Distinct Roles to Quantized and Low-Rank Matrices Toward Optimal Weight Decomposition](2025-2506.02077-assigning-distinct-roles-to-quantized-and-low-rank-matrices-toward-optim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CALDERAなどの方式はWを量子化行列Qと低ランク行列積LRの和、すなわちW ≈ Q + LRで近似し、Qの量子化とLRの更新を交互に行う。一方、同じ条件のARC-Easy正答率は66.35%から65.49%へ下がり、すべての下流タスクを改善するわけではない。
@@ -5137,6 +5149,10 @@
 - **2020-09 · [Efficient Sparse Collective Communication and its application to Accelerate Distributed Deep Learning](2020-e4ac6d84ba9c-efficient-sparse-collective-communication-and-its-application-to-acceler.md)**  
   実装：[✓](https://github.com/sands-lab/omnireduce) ・ リポジトリ内被引用：2  
   この集団通信（collective 通信）は計算機を増やすほど相対的に重くなり、特に多数の埋め込み表を持つモデルではゼロ要素の転送が無駄になる。各ワーカーが次の非ゼロブロックの位置を通知するため、集約器は全ワーカーの進行を調整し、誰も値を持たない領域を安全に飛ばせる。
+
+- **2020-10 · [AxFormer: Accuracy-driven Approximation of Transformers for Faster, Smaller and more Accurate NLP Models](2020-2010.03688-axformer-accuracy-driven-approximation-of-transformers-for-faster-smalle.md)**  
+  実装：[✓](https://github.com/amrnag/Specialized-Transformers) ・ リポジトリ内被引用：1  
+  微調整済みTransformerについて、検証損失を実際に下げる要素だけを階層的に枝刈りし、効く層だけ注意を上位K件へ絞ることで、再学習なしに精度・速度・サイズを同時に改善するタスク特化型の近似計算フレームワーク。
 
 - **2020-08 · [ConvBERT: Improving BERT with Span-based Dynamic Convolution](2020-2008.02496-convbert-improving-bert-with-span-based-dynamic-convolution.md)**  
   実装：[✓](https://github.com/yitu-opensource/ConvBert) ・ リポジトリ内被引用：0  

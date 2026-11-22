@@ -35,10 +35,15 @@
   "selection_reason": "ACL 2026本文§3〜4と表2・3を確認。層間類似度で共有群を作り、群ごとにパラメータ割当を変え、蒸留と軽量ベクトル補正で共有誤差を低減。LLaMA3-8B・TinyLlama・Mistralで圧縮率別の困惑度・少数例精度を測定。重み共有による推論メモリ削減に直結する。",
   "semantic_scholar_id": "b3813855a20d773bbc2fe61cde6a7f24386e9e55",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.2213",
-  "status": "ready",
+  "status": "superseded",
   "title": "SharVeT: Similarity-aware Parameter Sharing with Vector-based Tuning for Efficient LLM Compression",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:57:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.2213",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

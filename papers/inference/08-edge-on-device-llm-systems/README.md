@@ -316,13 +316,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   MoE²（Mixture-of-Edge-Experts）は、単一の大規模言語モデル内部に小さな専門家層を並べる方式ではなく、独立した端末・サーバーに配置された複数の大規模言語モデルそのものを専門家として扱う協調推論基盤である。
 
+- **2025-08 · [End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost](2025-2509.00031-end-to-end-on-device-quantization-aware-training-for-llms-at-inference-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
+
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   提案方式の中核は、品質制約の下で消費エネルギーが小さい専門家集合を探す動的専門家選択（動的 専門家 Selection; DES）と、無線資源割当まで結合した共同専門家・副搬送波割当（Joint 専門家 and Subcarrier Allocation; JESA）である。
-
-- **2025-08 · [End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost](2025-2509.00031-end-to-end-on-device-quantization-aware-training-for-llms-at-inference-c.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
 
 - **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

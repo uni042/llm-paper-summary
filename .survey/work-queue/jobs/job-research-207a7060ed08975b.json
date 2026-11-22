@@ -35,10 +35,15 @@
   "selection_reason": "ACL Findings EMNLP 2024の正式PDF要旨を確認。INT8のweight-activation量子化において、等価変換により重みと活性の量子化誤差を分離して抑え、重みのin-feature次元量子化と補償、活性の正規範囲化を組み合わせる。LLMの推論時メモリと演算効率に直接関連し、著者はほぼ損失のない精度を主張。具体的な推論速度倍率は要旨から未確認。",
   "semantic_scholar_id": "82fcdbe7decbc0610013ad78400b0250d70ad14a",
   "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.1001",
-  "status": "ready",
+  "status": "superseded",
   "title": "ATQ: Activation Transformation forWeight-Activation Quantization of Large Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-22T11:57:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2024-ebb210d8b588-atq-activation-transformation-for-weight-activation-quantization-of-larg.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.1001",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

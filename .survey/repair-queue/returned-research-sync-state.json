@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "45cc0544d2ae9a274aa503b47b9cc862ef366981",
+  "base_commit": "80234522e08981b54e011dcbebfd9e48d4de8dd4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -35,7 +35,12 @@
     "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json",
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
+    "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
+    "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
+    "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json",
+    "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json",
     "1802.05799-horovod.json",
+    "2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.json",
     "2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-and-far-field-attention.json",
     "2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transformer.json",
     "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json",
@@ -49406,6 +49411,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-srw.63": {
+      "order": [
+        "2026-11-22T11:50:46+00:00",
+        "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.acl-long.465": {
+      "order": [
+        "2026-11-22T11:52:02+00:00",
+        "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2024.findings-emnlp.1001": {
+      "order": [
+        "2026-11-22T11:53:18+00:00",
+        "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.2213": {
+      "order": [
+        "2026-11-22T11:54:34+00:00",
+        "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c": {
+      "order": [
+        "2026-11-22T11:55:50+00:00",
+        "2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62400,6 +62450,21 @@
     "doi:10.14722/ndss.2026.230035": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-tra.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-tra.md"
+    ],
+    "doi:10.18653/v1/2026.acl-srw.63": [
+      "papers/inference/99-other-inference-systems/2026-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-languag.md"
+    ],
+    "doi:10.18653/v1/2025.acl-long.465": [
+      "papers/inference/99-other-inference-systems/2025-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-re.md"
+    ],
+    "doi:10.18653/v1/2024.findings-emnlp.1001": [
+      "papers/inference/16-weight-quantization-compression/2024-ebb210d8b588-atq-activation-transformation-for-weight-activation-quantization-of-larg.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.2213": [
+      "papers/inference/99-other-inference-systems/2026-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-.md"
+    ],
+    "semanticscholar:a7357f16453d8c3e07aca694efa00df6f2e4352c": [
+      "papers/inference/99-other-inference-systems/2020-2010.03688-axformer-accuracy-driven-approximation-of-transformers-for-faster-smalle.md"
     ]
   }
 }
