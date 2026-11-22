@@ -35,10 +35,15 @@
   "selection_reason": "ACM Digital Libraryの著者abstractに基づく。PipeLLMは計算能力が異なる複数デバイスへLLM層を分配し、入力系列をトークン次元で分割して層処理を並列化する、ローカル小規模設備向けの異種デバイスパイプライン推論方式。要旨はLLM推論高速化の可能性を示すが、定量的な速度・通信オーバーヘッドは記載していない。LLM分散推論の実行方式に直接貢献するためaccept。",
   "semantic_scholar_id": "191bcafadd65ac6eddd7806170068105b43a0f75",
   "source_url": "https://doi.org/10.1145/3603269.3610856",
-  "status": "ready",
+  "status": "superseded",
   "title": "Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing",
   "type": "research",
   "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-11-22T15:21:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequ.md",
+  "represented_canonical_id": "DOI:10.1145/3603269.3610856",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

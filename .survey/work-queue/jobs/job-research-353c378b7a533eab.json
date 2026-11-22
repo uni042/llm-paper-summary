@@ -35,10 +35,15 @@
   "selection_reason": "ACL 2026本文の方式と表1・表5を確認。注意機構とFFNを別の量子化単位として扱い、ブロック間の誤差伝播を抑制する適応的事後量子化。LLaMA系列のW4A4とW2の精度を評価し、従来CBQとの処理時間・メモリ比較も提示。重み・活性化圧縮の実装上の寄与が明確。",
   "semantic_scholar_id": "dc5db32a5ad304a5636163d03272e911f1ff728f",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1971",
-  "status": "ready",
+  "status": "superseded",
   "title": "ACBQ: Adaptive Cross-Block Quantization of Large Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T15:21:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.1971",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

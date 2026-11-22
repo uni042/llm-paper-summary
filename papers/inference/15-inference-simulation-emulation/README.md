@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（102本）
+## 自動生成の論文一覧（103本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -429,6 +429,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-11 · [SoftmAP: Software-Hardware Co-design for Integer-Only Softmax on Associative Processors](2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ソフトマックスの指数関数を整数のみの2次多項式近似へ置き換え、ビットシリアル・ワードパラレルな連想プロセッサへ写像する協調設計SoftmAPの研究。精度が保てる混合精度の選定と、GPU比で最大3桁のエネルギー削減見積もりを示した。
+
+- **2024-09 · [CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts](2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  進化計算で専門家の配置・数・次元を探し、粒子群最適化でメモリ内計算ハードウェアを合わせる入れ子の協調探索CMNで、端末向けMoEのエネルギー・遅延・大きさを制約ごとに最適化する。
 
 ### 4年前（2022-12〜2023-11）
 

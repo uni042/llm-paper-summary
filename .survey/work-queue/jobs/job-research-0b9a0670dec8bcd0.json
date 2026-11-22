@@ -35,10 +35,15 @@
   "selection_reason": "NeurIPS 2025公式一次abstractを確認。会話文脈に依存したSemantic Forestとattentionによるtopic-shift検出、cross-session KV共有・semantic-aware evictionを統合するLLMサービングキャッシュ。CoQA/SQuADでprefix caching比KV使用量最大59.1%削減、TTFT最大78.0%削減と報告。サービング効率を直接評価するためaccept。",
   "semantic_scholar_id": "3b130131979f3dca14ad20837f4a06f26d7d19c5",
   "source_url": "https://doi.org/10.52202/085713-5740",
-  "status": "ready",
+  "status": "superseded",
   "title": "SmartCache: Context-aware Semantic Cache for Efficient Multi-turn LLM Inference",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T15:21:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inf.md",
+  "represented_canonical_id": "DOI:10.52202/085713-5740",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

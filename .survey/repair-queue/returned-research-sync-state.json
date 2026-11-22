@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c829a9d1e2b18dc850064b19443d3b61cf4cd1e0",
+  "base_commit": "a89cc96349f7cab76a184c82fda1b9d2ef864437",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -57,8 +57,11 @@
     "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
     "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json",
+    "0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.json",
     "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json",
+    "0000-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inference.json",
     "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json",
+    "0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.json",
     "1802.05799-horovod.json",
     "2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.json",
     "2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-and-far-field-attention.json",
@@ -78,6 +81,7 @@
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
     "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json",
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
+    "2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
@@ -141,6 +145,7 @@
     "2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-awareness.json",
     "2024-2412.15750-extracting-interpretable-task-specific-circuits-from-large-language-models-for-faster-inference.json",
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
+    "2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
@@ -49663,6 +49668,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1971": {
+      "order": [
+        "2026-11-22T15:16:35+00:00",
+        "0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.52202/085713-5740": {
+      "order": [
+        "2026-11-22T15:17:27+00:00",
+        "0000-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.naacl-long.467": {
+      "order": [
+        "2026-11-22T15:18:18+00:00",
+        "0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3603269.3610856": {
+      "order": [
+        "2026-11-22T15:19:10+00:00",
+        "2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1007/s11432-024-4144-y": {
+      "order": [
+        "2026-11-22T15:20:02+00:00",
+        "2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62784,6 +62834,21 @@
     "doi:10.18653/v1/2026.acl-long.819": [
       "papers/inference/99-other-inference-systems/2026-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-s.md",
       "papers/inference/99-other-inference-systems/2026-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-s.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1971": [
+      "papers/inference/99-other-inference-systems/2026-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md"
+    ],
+    "doi:10.52202/085713-5740": [
+      "papers/inference/99-other-inference-systems/2025-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inf.md"
+    ],
+    "doi:10.18653/v1/2025.naacl-long.467": [
+      "papers/inference/99-other-inference-systems/2025-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-l.md"
+    ],
+    "doi:10.1145/3603269.3610856": [
+      "papers/inference/99-other-inference-systems/2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequ.md"
+    ],
+    "doi:10.1007/s11432-024-4144-y": [
+      "papers/inference/15-inference-simulation-emulation/2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-.md"
     ]
   }
 }
