@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1320本）
+## 自動生成の論文一覧（1323本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3908,6 +3908,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Pyramid Token Pruning（PTP）は、追加学習なしで、画像全体に対するタイルの重要度、タイル内部のパッチ重要度、ユーザーの指示文に対するパッチ関連度を三段階で組み合わせる方式である。
 
+- **2025-09 · [MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching](2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混合指標の監督、低ランク代理行列による要素ごとの適応丸め、クリッピング係数の事前格子探索を組み合わせ、2〜4ビット級の学習後量子化でも分布のずれと丸め誤差を抑える枠組みMPPQ。
+
+- **2025-09 · [Lightweighting Large Models: A Review of Model Compression Techniques](2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデル圧縮を資源予算付きの最適化として定義し、枝刈り・量子化・知識蒸留・低ランク分解・パラメータ共有の5手法を圧縮率・性能保持・効率・難易度・構造変更の有無で比較し、キー・バリューキャッシュと視覚トークンという構造固有の律速まで整理したサーベイ。
+
 - **2025-09 · [HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs](2025-2509.23967-hipo-hybrid-policy-optimization-for-dynamic-reasoning-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HiPO（Hybrid Policy Optimization）は、各入力に対して詳細推論を行うThink-onと直接回答するThink-offを選ぶ能力をモデル自体に学習させる方式である。
@@ -4877,6 +4885,10 @@
 - **2024-05 · [OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning](2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md)**  
   実装：[✓](https://github.com/OpenNLG/OpenBA-v2) ・ リポジトリ内被引用：0  
   OpenBA-V2は、中国語・英語を中心に学習したencoder-decoder型のOpenBA（15Bパラメータ）を、3.4Bへ縮小するための多段階圧縮・継続事前学習の研究である。元モデルから約77.3%のパラメータを削除しながら、層単位、行列の幅方向、語彙埋め込みという異なる削減対象を順番に処理する。
+
+- **2024-05 · [On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization](2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  微調整データなしで、層ごとの量子化感度をロジットの距離で測ってパレートフロンティアで層を選び、事前学習コーパスで較正することで、言語トランスフォーマーの95%以上を8ビット整数化しても正解率の低下を0.02%以内に抑える学習後量子化の研究。
 
 - **2024-05 · [Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information](2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

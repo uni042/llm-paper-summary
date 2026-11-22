@@ -35,10 +35,15 @@
   "selection_reason": "ACL Anthologyの正式会議要旨を確認。タスク固有の校正データなしでTransformerの重み・活性の少なくとも95%をINT8へ量子化し、性能低下を0.02%以内に抑えるPTQ手順を報告する。モデル縮小と推論遅延削減を直接目的とするため推論用量子化に該当する。",
   "semantic_scholar_id": "485abda4ff27c752ae533bdfa8d15779e4708d3b",
   "source_url": "https://doi.org/10.63317/55jabgg3m92d",
-  "status": "ready",
+  "status": "superseded",
   "title": "On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization",
   "type": "research",
   "venue": "International Conference on Language Resources and Evaluation",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-22T15:32:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cr.md",
+  "represented_canonical_id": "DOI:10.63317/55jabgg3m92d",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
