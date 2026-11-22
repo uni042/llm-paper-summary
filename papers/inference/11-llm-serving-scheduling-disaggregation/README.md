@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（610本）
+## 自動生成の論文一覧（611本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2003,6 +2003,10 @@
 - **2025-11 · [Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms](2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   デコード専用GPUの遊休SMへPEFT微調整を同居させ、KVキャッシュの空き領域の貸し出しと遅延予測に基づくSM配分で、推論QoSを守りつつ微調整スループットを平均46.2パーセント高めるサービング方式。
+
+- **2025-11 · [Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication](2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルの巨大な活性値転送がデコードを待たせる競合を、転送のチャンク分割と重み付き優先スケジューリング、空き時間に合わせたチャンク量の即時決定、マイクロバッチ拡張で解く分散サービングMoLinkを提案し、RTX 4090の3台構成でTTFTを最大46%削減した。
 
 - **2025-11 · [C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning](2025-2511.07396-c3po-optimized-large-language-model-cascades-with-probabilistic-cost-con.md)**  
   実装：[✓](https://github.com/AntonValk/C3PO-LLM) ・ リポジトリ内被引用：0  

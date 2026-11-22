@@ -35,10 +35,15 @@
   "selection_reason": "低ビットのベクトル量子化でコードブック保存・索引検索の費用と精度劣化が大きい問題に対し、顕著性重み付きK-meansと、外れ値・重要重み・残差を一つの疎補償行列に統合するSCVQを提案。2bitのLLaMA-2-7BでWikiText-2 PPL 5.78、既存方式比end-to-end推論1.4倍を報告。ACL 2026公式要旨で確認。",
   "semantic_scholar_id": "61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.403",
-  "status": "ready",
+  "status": "superseded",
   "title": "SCVQ: Sparse-Compensated Vector Quantization for Large Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T14:56:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.403",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

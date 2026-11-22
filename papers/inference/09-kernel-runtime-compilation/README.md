@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（317本）
+## 自動生成の論文一覧（318本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -545,6 +545,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-07 · [TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters](2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   タイルを解析単位にして資源ベクトル、依存スケジューリング、再利用距離によるキャッシュ推定、通信段階費用を一つの第一原理モデルでつなぎ、単一カーネルから32GPUのvLLMサービングまで二桁前半の誤差で遅延を予測するGPU性能モデル。
+
+- **2026-07 · [SCVQ: Sparse-Compensated Vector Quantization for Large Language Models](2026-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  顕著さ重み付きK平均と対称性制約でコードブックを縮め、外れ値と顕著な重みと残差を一つのスパース行列で補償するベクトル量子化SCVQを提案し、LLaMA-2-7Bの2ビットでパープレキシティ5.87とA100上でFP16比2.3倍のデコード処理量を達成した。
 
 - **2026-07 · [Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment](2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardwa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

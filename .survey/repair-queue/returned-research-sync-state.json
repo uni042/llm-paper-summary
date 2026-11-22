@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a991d0be674f8d72c404414fbdbfa3dabf0ad829",
+  "base_commit": "70486a60e974a160e2a2d617ba181ec957e29e45",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -37,8 +37,13 @@
     "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
     "0000-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.json",
     "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json",
+    "0000-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.json",
     "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json",
+    "0000-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.json",
+    "0000-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.json",
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
+    "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json",
+    "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
@@ -49549,6 +49554,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.403": {
+      "order": [
+        "2026-11-22T14:51:33+00:00",
+        "0000-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.1054": {
+      "order": [
+        "2026-11-22T14:52:26+00:00",
+        "0000-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.63317/3mnfp3i37gy2": {
+      "order": [
+        "2026-11-22T14:53:19+00:00",
+        "0000-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-acl.1335": {
+      "order": [
+        "2026-11-22T14:54:11+00:00",
+        "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.957": {
+      "order": [
+        "2026-11-22T14:55:04+00:00",
+        "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62610,6 +62660,21 @@
     "doi:10.18653/v1/2025.acl-long.703": [
       "papers/inference/07-kv-cache-optimization-compression/2025-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.md",
       "papers/inference/07-kv-cache-optimization-compression/2025-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.403": [
+      "papers/inference/09-kernel-runtime-compilation/2026-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.md"
+    ],
+    "doi:10.18653/v1/2025.findings-emnlp.1054": [
+      "papers/inference/99-other-inference-systems/2025-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.md"
+    ],
+    "doi:10.63317/3mnfp3i37gy2": [
+      "papers/inference/99-other-inference-systems/2026-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.md"
+    ],
+    "doi:10.18653/v1/2026.findings-acl.1335": [
+      "papers/inference/99-other-inference-systems/2026-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-c.md"
+    ],
+    "doi:10.18653/v1/2025.findings-emnlp.957": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md"
     ]
   }
 }

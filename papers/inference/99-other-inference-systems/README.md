@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1306本）
+## 自動生成の論文一覧（1309本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1806,6 +1806,10 @@
   実装：[✓](https://ming053l.github.io/c4-dllm.github.io/) ・ リポジトリ内被引用：0  
   拡散言語モデルの局所確定加速と大域早期終了を、改訂履歴に適応する停止規則で協調させる学習不要の枠組み。ステップを最大95パーセント削り、実測で最大18.6倍高速化する。
 
+- **2026-07 · [CLARO: Controlled Attribute-Driven Reasoning Optimization for Efficient Chain-of-Thought](2026-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-c.md)**  
+  実装：[✓](https://github.com/odedsc/CLARO) ・ リポジトリ内被引用：0  
+  思考連鎖の長さではなく、読みやすさ・数式密度・統語圧縮・低冗長さという言語構造の属性を正解条件付きの報酬で強化学習し、トークン予算内での精度を最大で相対63.6%改善する効率的推論方式CLAROと、その即効版である属性誘導プロンプト。
+
 - **2026-07 · [CausalGate: Causal Importance Distillation for Transformer Module Pruning](2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   サブ層をゼロ化する介入で測った因果的重要度を静的ゲートへ蒸留し、実行時オーバーヘッドなしでモジュールを飛ばす枝刈り手法。観測的指標より大きな削除率まで品質を保つ。
@@ -2253,6 +2257,10 @@
 - **2026-05 · [Dropping the Anchor: Statistical Context Summarization for Distributed Systems via Pulsar Attention](2026-2607.20457-dropping-the-anchor-statistical-context-summarization-for-distributed-sy.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存のStar 注意機構は、系列を連続ブロックに分けて各GPUで並列符号化し、生成時には各GPUの注意結果を統合する。しかし、長い文書の後半を担当するGPUにも、文書の先頭しか参照できないアンカーを繰り返し処理させることになり、局所入力が本来のブロックの約2倍になる。
+
+- **2026-05 · [Distribution-aware Low-bitwidth Quantization for Large Language Models](2026-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLM重みの2〜3ビット学習後量子化を、重み分布を保つKLDキャリブレーション、ノイズ置換による学習可能なコードブック最適化、分布類似度による層グループ化の3機構で実現し、量子化後ファインチューニングなしで先行手法と競合する精度を示した研究。
 
 - **2026-05 · [Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression](2026-2605.08568-different-prompts-different-ranks-prompt-aware-dynamic-rank-selection-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3347,6 +3355,10 @@
 - **2025-11 · [CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning](2025-2511.18659-clara-bridging-retrieval-and-generation-with-continuous-latent-reasoning.md)**  
   実装：[✓](https://github.com/apple/ml-clara) ・ リポジトリ内被引用：2  
   CLaRa（Continuous Latent Reasoning）は、文書を少数の連続値メモリトークンへ圧縮し、その表現を文書検索と生成の双方に用いる。Mistral-7Bで16倍圧縮したSCPは、4質問応答課題の通常検索条件において平均CEM 38.96%を記録し、PISCOの37.83%を上回る。
+
+- **2025-11 · [Beyond Fixed-Length Calibration for Post-Training Compression of LLMs](2025-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  圧縮用の較正データの長さが手法ごとに効き方が違うことを四モデル六手法で示し、正規化された隠れ状態では最初のトークンが後続と反対向きになる観測から、その状態だけ先頭の一部を使う較正で、追加費用なしに圧縮後の品質を概ね改善する方式。
 
 - **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

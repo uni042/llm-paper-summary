@@ -35,10 +35,15 @@
   "selection_reason": "MoLinkは民生GPU間のprefill大量通信を分割し、decode要求との送信公平性と分割量を動的に決める。分散LLMサービングのTTFT・TPOT・遅延に直接寄与する。",
   "semantic_scholar_id": "16754f216922ae6363a49445f76721eddf26e9dc",
   "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.957",
-  "status": "ready",
+  "status": "superseded",
   "title": "Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T14:56:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.957",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
