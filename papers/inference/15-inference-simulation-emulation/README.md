@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（98本）
+## 自動生成の論文一覧（99本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -363,6 +363,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-05 · [Serve Programs, Not Prompts](2025-2510.25412-serve-programs-not-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、LLMサービングの基本単位を「プロンプトを受け取ってトークン列を返すリクエスト」から、LLM推論プログラム（LLM Inference Program, LIP）へ変えるというシステム設計を提案する。
+
+- **2025-05 · [FlatAttention: Dataflow and Fabric Collectives Co-Optimization for Efficient Multi-Head Attention on Tile-Based Many-PE Accelerators](2025-2505.18824-flatattention-dataflow-and-fabric-collectives-co-optimization-for-effici.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  タイル型アクセラレータ向けに、注意計算をタイル群へ平坦に割り当てチップ内集合通信で中間結果を回すことでHBMアクセスを16分の1にし、利用率89.3%と最大4.1倍の高速化を得るデータフローと、その共同探索。
 
 - **2025-03 · [Fake Runs, Real Fixes - Analyzing xPU Performance Through Simulation](2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

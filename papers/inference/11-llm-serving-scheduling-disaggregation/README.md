@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（601本）
+## 自動生成の論文一覧（602本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2333,6 +2333,10 @@
 - **2024-05 · [Turnip: A "Nondeterministic" GPU Runtime with CPU RAM Offload](2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   計算グラフを依存関係だけのグラフへ変換し、CPUオフロードの転送完了順に実行順をその場で適応させるGPUランタイム。固定順序より速く、厳しいメモリ制約でも動作する。
+
+- **2024-03 · [SEVEN: Pruning Transformer Model by Reserving Sentinels](2024-2403.12688-seven-pruning-transformer-model-by-reserving-sentinels.md)**  
+  実装：[✓](https://github.com/xiaojinying/SEVEN) ・ リポジトリ内被引用：0  
+  勾配ノイズに惑わされず一貫して感度が高い重みを見張りとして残すTransformer向け非構造化枝刈りで、学習前と学習中の二形式を持ち、CLIPとBERTの多課題で疎さが高いほど先行手法との差が広がることを示した研究。
 
 - **2023-12 · [Linear Attention via Orthogonal Memory](2023-2312.11135-linear-attention-via-orthogonal-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

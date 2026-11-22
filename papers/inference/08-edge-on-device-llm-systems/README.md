@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（102本）
+## 自動生成の論文一覧（103本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -401,6 +401,10 @@
 - **2024-08 · [Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models](2024-2408.15518-squid-long-context-as-a-new-modality-for-energy-efficient-on-device-lang.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Squidは、長文脈を扱う言語モデルの入力処理を小型モデルへ移し、回答を生成する大型モデルには短い潜在表現だけを渡す方式である。原著は単一のNVIDIA A100 80GB上で、直接Qwen2-7Bへ入力する方式の平均推論時間20.71秒に対してSquidは4.32秒、比率4.79倍を報告する。
+
+- **2024-07 · [Co-Designing Binarized Transformer and Hardware Accelerator for Efficient End-to-End Edge Deployment](2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficien.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  二値化TransformerのモデルBMTと専用アクセラレータBATを設計空間探索で共同最適化し、GLUEの精度をほぼ保ったままFPGA上で先行アクセラレータ比スループット最大49.37倍とエネルギー効率最大88.53倍を実測したエッジ向け共同設計。
 
 ### 4年前（2022-12〜2023-11）
 

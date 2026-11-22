@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（212本）
+## 自動生成の論文一覧（213本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -876,10 +876,14 @@
   実装：✓ ・ リポジトリ内被引用：5  
   本論文は、Transformerの注意機構が系列長に対して二次の計算・記憶費用を持つという問題を起点に、モデル一般に使える効率化とTransformer固有の構造を変更する効率化を区別して、研究成果を整理した文献調査である。
 
+- **2021-08 · [Smart Bird: Learnable Sparse Attention for Efficient and Effective Transformer](2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transf.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低次元Transformerで注意の下書き行列を作り、対数の逆数の二乗による確率的サンプリングでヘッドごとに重要なトークン対を選ぶ学習可能な疎注意で、6データセット全てで先行する疎注意手法を上回る性能と長文での学習時間の優位を示した研究。
+
 ### 7年前（2019-12〜2020-11）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：260  
+  実装：✓ ・ リポジトリ内被引用：261  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
