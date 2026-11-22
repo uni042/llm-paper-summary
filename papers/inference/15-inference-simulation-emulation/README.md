@@ -415,7 +415,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   提案手法は、画像・言語の意味理解を約4.2億〜13億パラメータの小型マルチモーダル基盤モデルへ、連続行動の生成を拡散方策（diffusion policy）復号器へ分担させる。実機のFranka単腕ロボット5タスクでは、最大構成TinyVLA-Hの平均成功率が94.0%、OpenVLAが68.3%であり、差は25.7パーセントポイントだった。
 
 - **2024-11 · [DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution](2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md)**  
-  実装：[✓](https://github.com/yueyang130/DeeR-VLA) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/yueyang130/DeeR-VLA) ・ リポジトリ内被引用：4  
   DeeR-VLA（動的 Early-Exit for Robotic Multimodal Large Language Models）は、画像と自然言語の指示からロボットの行動を決める視覚・言語・行動モデルに、複数の中間出口（early exit）を設ける推論時の計算資源配分方式である。
 
 - **2024-11 · [Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format](2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md)**  
