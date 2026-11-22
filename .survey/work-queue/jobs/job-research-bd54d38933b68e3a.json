@@ -35,10 +35,15 @@
   "selection_reason": "低精度行列演算に比べベクトル演算がボトルネック化する注意のsoftmaxを近似してGEMMへ畳み込むFused-Softmaxは、AMD MI355X上でMXFP8からMXFP4のカーネルがBF16注意比最大3.2倍を達成しMLPerf Inference提出にも使われており、量子化注意カーネルの直接貢献が明確である。",
   "semantic_scholar_id": "f07a2545578b386a1e96fd58334192fb3d055c3e",
   "source_url": "https://arxiv.org/abs/2611.09225",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fused-Softmax for efficient quantized attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T00:20:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md",
+  "represented_canonical_id": "arXiv:2611.09225",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

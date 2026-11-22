@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（420本）
+## 自動生成の論文一覧（421本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -19,7 +19,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   対象 隠れ featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機ドラフト自身の逐次待ちを除くDFlash。
 
 - **2026-07 · [DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation](2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md)**  
-  実装：[✓](https://github.com/deepseek-ai/DeepSpec) ・ リポジトリ内被引用：65  
+  実装：[✓](https://github.com/deepseek-ai/DeepSpec) ・ リポジトリ内被引用：66  
   並列ドラフトの後半受理率低下を軽量な逐次ヘッドで抑え、較正した接頭辞生存確率と実機処理能力から検証長を負荷適応で配分し、実トラフィックで同等処理能力時のユーザー当たり生成速度を57〜85%改善する。
 
 - **2026-05 · [Domino: Decoupling Causal Modeling from Autoregressive Drafting in Speculative Decoding](2026-2605.29707-domino-speculative-decoding.md)**  
@@ -563,6 +563,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-11 · [TraceSpec: Understanding and Improving Speculative Decoding for LLM Agents](2026-2610.41177-tracespec-understanding-and-improving-speculative-decoding-for-llm-agent.md)**  
   実装：[✓](https://github.com/Robot2050/TraceSpec) ・ リポジトリ内被引用：0  
   エージェント軌跡を中間の判断単位で残すコーパスと再生評価で、集約受入の上昇の裏で遅い閲覧行動の受入が下がる逆転を示し、全ターンを教師候補にして状態条件付きの受入隔たりで固定予算を配る学習により、再生スループットを基盤より十二・五から二十二・六パーセント改善したと報告した。
+
+- **2026-11 · [Testing Processor Contracts in Speculative Decoding Engines](2026-2611.04042-testing-processor-contracts-in-speculative-decoding-engines.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的デコードの無損失保証が依るプロセッサ接頭辞契約を定式化し、列挙参照と差分検定のBADCで実エンジンの2つの違反原因を確認した一方、診断手法としての優位性は示されなかったことを正直に報告した検証研究。
 
 - **2026-11 · [Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models](2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decodi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1655,7 +1659,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：544  
+  実装：✓ ・ リポジトリ内被引用：545  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

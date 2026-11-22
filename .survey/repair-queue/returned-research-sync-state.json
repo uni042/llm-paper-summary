@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fb3007c97fc1aeafd7644860401ed01527af55b1",
+  "base_commit": "25c60ef465930662e3b57ff5f9e928c341e5d354",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -782,6 +782,7 @@
     "2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.json",
     "2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reuse.json",
     "2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.json",
+    "2026-2610.19210-titan-llama-retrofitting-pre-trained-llms-with-external-neural-memory-modules.json",
     "2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-conversion.json",
     "2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.json",
     "2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.json",
@@ -986,6 +987,7 @@
     "2026-2611.00486-integer-exact-microscaling-running-mxfp4-language-models-on-int8-matrix-units.json",
     "2026-2611.00495-understanding-gpu-megakernels-why-residency-can-mislead.json",
     "2026-2611.00506-weights-that-stay-on-chip-megakernels-for-serial-heads-in-speculative-decoding.json",
+    "2026-2611.00646-when-shards-fly-cross-tensor-in-flight-conversion-for-low-latency-low-memory-weight-updates-in-disaggregated-rl.json",
     "2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attention.json",
     "2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.json",
     "2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decoding-for-vision-language-models.json",
@@ -999,6 +1001,7 @@
     "2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-and-rl.json",
     "2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.json",
     "2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configuration.json",
+    "2026-2611.04042-testing-processor-contracts-in-speculative-decoding-engines.json",
     "2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-models.json",
     "2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.json",
     "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
@@ -1009,9 +1012,11 @@
     "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
     "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json",
     "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json",
+    "2026-2611.07256-triattention-unified-sparse-mixed-precision-attention-for-long-context-llm-inference.json",
     "2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.json",
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
+    "2026-2611.09225-fused-softmax-for-efficient-quantized-attention.json",
     "2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-based-multi-agent-systems.json",
     "2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffusion-draft-trees.json",
     "2026-2611.13017-multi-future-drafting-mixture-block-drafters-for-tree-verified-speculative-decoding.json",
@@ -47608,6 +47613,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.19210": {
+      "order": [
+        "2026-11-22T00:14:01+00:00",
+        "2026-2610.19210-titan-llama-retrofitting-pre-trained-llms-with-external-neural-memory-modules.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.00646": {
+      "order": [
+        "2026-11-22T00:15:11+00:00",
+        "2026-2611.00646-when-shards-fly-cross-tensor-in-flight-conversion-for-low-latency-low-memory-weight-updates-in-disaggregated-rl.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04042": {
+      "order": [
+        "2026-11-22T00:16:20+00:00",
+        "2026-2611.04042-testing-processor-contracts-in-speculative-decoding-engines.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07256": {
+      "order": [
+        "2026-11-22T00:17:30+00:00",
+        "2026-2611.07256-triattention-unified-sparse-mixed-precision-attention-for-long-context-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.09225": {
+      "order": [
+        "2026-11-22T00:18:39+00:00",
+        "2026-2611.09225-fused-softmax-for-efficient-quantized-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -59857,6 +59907,21 @@
     "arxiv:2610.17948": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.17948-haloblock-faster-and-better-decoding-for-diffusion-large-language-models.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.17948-haloblock-faster-and-better-decoding-for-diffusion-large-language-models.md"
+    ],
+    "arxiv:2610.19210": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.19210-titan-llama-retrofitting-pre-trained-llms-with-external-neural-memory-mo.md"
+    ],
+    "arxiv:2611.00646": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.00646-when-shards-fly-cross-tensor-in-flight-conversion-for-low-latency-low-me.md"
+    ],
+    "arxiv:2611.04042": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.04042-testing-processor-contracts-in-speculative-decoding-engines.md"
+    ],
+    "arxiv:2611.07256": [
+      "papers/inference/13-sparse-attention/2026-2611.07256-triattention-unified-sparse-mixed-precision-attention-for-long-context-l.md"
+    ],
+    "arxiv:2611.09225": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md"
     ]
   }
 }

@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（632本）
+## 自動生成の論文一覧（633本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -34,7 +34,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-09 · [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   CED・CSA2の層間KV再利用・FP4 KV・SWA限定再実行を統合し、100万トークン対応552B MoEのグローバルKVを890 bytes/トークン、永続KVを前世代比約1/8へ圧縮する。
 
 - **2026-01 · [Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction](2026-2601.17668-fast-kvzip-efficient-and-accurate-llm-inference-with-gated-kv-eviction.md)**  
@@ -794,6 +794,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [To Cache or Not to Cache: Understanding and Mitigating Safety Incompatibility in Cross-Model KV Cache Reuse](2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibi.md)**  
   実装：[✓](https://github.com/Snakinya/VReparo) ・ リポジトリ内被引用：0  
   別モデルのKVキャッシュ再利用が受け手の安全行動を変える現象を体系的に測り、バリューが主因であることを示したうえで、層とヘッドごとのアフィン補正で攻撃成功率を平均57.28パーセントから39.21パーセントへ下げつつ時間短縮を保った研究。
+
+- **2026-10 · [Titan-Llama: Retrofitting Pre-trained LLMs with External Neural Memory Modules](2026-2610.19210-titan-llama-retrofitting-pre-trained-llms-with-external-neural-memory-mo.md)**  
+  実装：[✓](https://github.com/sarahpannn/titans-pytorch) ・ リポジトリ内被引用：0  
+  事前学習済みモデルの初期層をブロック注意へ換え、遠い履歴をテスト時学習で更新する固定サイズのニューラルメモリへ圧縮することで、土台を凍結したまま長文脈の正解率を分割注意から大きく回復し、デコードの速度とメモリも改善した研究。
 
 - **2026-10 · [TideKV: Delayed KV eviction via layer-wise chunked prefill for memory-efficient long-context LLM inference](2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2260,7 +2264,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：435  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：436  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
