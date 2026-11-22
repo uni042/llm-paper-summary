@@ -35,10 +35,15 @@
   "selection_reason": "NDSS公式一次論文は三者分離と準対称置換により秘密性を保ちながら、通常のLLM推論と同等の計算を実行するSTIPを提案。LLaMA2-7Bで31.7ms、70B実運用3か月で保護なし比12%の追加遅延を報告し、秘匿推論の効率評価に直接該当する。",
   "semantic_scholar_id": "d0d9c53fdb42deb82e0dd3af4c874ded2c68f0d0",
   "source_url": "https://doi.org/10.14722/ndss.2026.230035",
-  "status": "ready",
+  "status": "superseded",
   "title": "STIP: Three-Party Privacy-Preserving and Lossless Inference for Large Transformers in Production",
   "type": "research",
   "venue": "Network and Distributed System Security Symposium",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:48:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-tra.md",
+  "represented_canonical_id": "DOI:10.14722/ndss.2026.230035",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

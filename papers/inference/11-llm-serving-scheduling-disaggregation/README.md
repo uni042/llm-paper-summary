@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（608本）
+## 自動生成の論文一覧（609本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1393,6 +1393,10 @@
 - **2026-02 · [Bit-serial Acceleration of LLM Inference with Mixture-of-Datatype Quantization](2026-be8124062d48-bit-serial-acceleration-of-llm-inference-with-mixture-of-datatype-quanti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、言語モデルの重みと鍵・値キャッシュ（KVキャッシュ）の双方を3〜4ビット程度に圧縮しても推論品質を保ち、その圧縮表現を16ビット浮動小数点へ全面展開せず計算できる専用ハードウェアを設計する研究である。端末向け単一バッチでは、損失なしの設定でFP16専用アクセラレータに対し識別課題2.1倍、生成課題2.4倍の平均高速化を報告する。
+
+- **2026-01 · [STIP: Three-Party Privacy-Preserving and Lossless Inference for Large Transformers in Production](2026-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-tra.md)**  
+  実装：[✓](https://github.com/yuanmu97/secure-transformer-inference) ・ リポジトリ内被引用：0  
+  モデル開発者、クラウド、利用者の三者構成で、重みと埋め込みを特徴空間のランダム置換で変換してクラウドへ渡し、暗号計算なしに無損失でプライバシーを守り、本番でも遅延増12%で動く推論方式。
 
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

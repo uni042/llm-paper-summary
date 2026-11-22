@@ -35,10 +35,15 @@
   "selection_reason": "MLWQは小規模言語モデルの事後量子化で、層間の損失と層内の重要度を同時に使ってビット幅を割り当て、層内重要度を細粒度に分割して量子化パラメータを調整する。資源制約端末への推論配備で容量・計算負荷を下げながら精度を維持する直接的な重み量子化方式。",
   "semantic_scholar_id": "5c5e5cc24d90701cba3cfa6b2496e5ed09a6c047",
   "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.408",
-  "status": "ready",
+  "status": "superseded",
   "title": "MLWQ: Efficient Small Language Model Deployment via Multi-Level Weight Quantization",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T11:48:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-qu.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.emnlp-main.408",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

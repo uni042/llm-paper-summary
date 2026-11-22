@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（198本）
+## 自動生成の論文一覧（199本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -501,6 +501,10 @@
 - **2025-05 · [Optimal Formats for Weight Quantisation](2025-2505.12988-optimal-formats-for-weight-quantisation.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   低ビット重み量子化では、整数、浮動小数点、非一様コードブック、ブロック単位のスケーリング、外れ値の高精度保持など、数値表現の選択肢が多数ある。
+
+- **2025-11 · [MLWQ: Efficient Small Language Model Deployment via Multi-Level Weight Quantization](2025-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-qu.md)**  
+  実装：[✓](https://github.com/hudevictor/mlwq) ・ リポジトリ内被引用：0  
+  層ごとの量子化損失でビット予算を全局的に配り、層内では重要度を三段階に分けて精度を割り当て、群ごとに量子化パラメータを微調整することで、平均約3ビットでも小規模モデルの品質を守る学習後量子化。
 
 - **2025-11 · [Adaptive Layer-Wise Transformations for Post-Training Quantization of Large Language Models](2025-2511.17809-adaptive-layer-wise-transformations-for-post-training-quantization-of-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

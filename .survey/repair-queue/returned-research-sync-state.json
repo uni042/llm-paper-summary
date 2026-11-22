@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5c5ee21be603e08dd10ce89ad740bdb46b10858f",
+  "base_commit": "9e627472e529dbf2540565799147ca53cf7862be",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -29,6 +29,10 @@
     "0-retry-research-b261f1661507--libfile_4a9d01a8e7088191929451077ffc2f06--2025-2505.00019-prompt-compression-empirical-study-research-20261024-0401-scheduled-cha.json",
     "0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-.json",
     "0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-202610.json",
+    "0000-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models.json",
+    "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
+    "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json",
+    "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json",
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
     "1802.05799-horovod.json",
@@ -49366,6 +49370,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1631": {
+      "order": [
+        "2026-11-22T11:43:50+00:00",
+        "0000-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.530": {
+      "order": [
+        "2026-11-22T11:44:43+00:00",
+        "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.emnlp-main.408": {
+      "order": [
+        "2026-11-22T11:45:36+00:00",
+        "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.14722/ndss.2026.230035": {
+      "order": [
+        "2026-11-22T11:46:29+00:00",
+        "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -62344,6 +62384,18 @@
     ],
     "arxiv:2611.10165": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1631": [
+      "papers/inference/99-other-inference-systems/2026-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-infere.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.530": [
+      "papers/inference/13-sparse-attention/2026-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm.md"
+    ],
+    "doi:10.18653/v1/2025.emnlp-main.408": [
+      "papers/inference/16-weight-quantization-compression/2025-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-qu.md"
+    ],
+    "doi:10.14722/ndss.2026.230035": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-tra.md"
     ]
   }
 }

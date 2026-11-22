@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1293本）
+## 自動生成の論文一覧（1294本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1738,6 +1738,10 @@
   実装：[✓](https://github.com/icip-cas/OmniFocus) ・ リポジトリ内被引用：0  
   質問との類似度を映像と音声で独立に測って区間予算を配り、連関と顕著性の二重得点でトークンを選ぶ学習不要の圧縮で、保持率25パーセントでも正解率を保ちプリフィルを1.38倍にした。
 
+- **2026-07 · [Octopus: Gated Selective Attention for Memory-Bounded Long-Context Inference in Large Language Models](2026-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-infere.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  事前学習済みモデルの各層へ学習可能なゲートを付け、トークンごとの効用をKVヘッド単位で予測して高効用のKV状態だけを固定予算へ残すことで、履歴を一つの状態へ圧縮せずにメモリ有界な長文脈推論を実現する方式。
+
 - **2026-07 · [LogbQuant: Quantizing Language Models in Logarithmic Space](2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重み行列ごとに対数コードブックを作りエネルギー基準の枝刈りで範囲を絞る重み量子化で、4ビットで崩壊する線形量子化に対し正解率とパープレキシティを大きく保ちメモリを最大65パーセント減らす方式。
@@ -3165,7 +3169,7 @@
   従来の全履歴追記方式では、過去の検索結果が毎ターンのプロンプトへ残るため、文脈長に比例して鍵値キャッシュの容量が増え、注意計算や再入力の費用も高くなる。16目標の多段質問応答では、Qwen2.5-14B-Instructの完全一致数0.567に対しMEM1は1.97、ピークトークン数は3,840に対し1,040、推論時間は29.7秒に対し8.70秒だった。
 
 - **2025-05 · [Llama-Nemotron: Efficient Reasoning Models](2025-2505.00949-llama-nemotron-efficient-reasoning-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   Nano（80億）、Super（490億）、Ultra（2530億）の3規模を提供し、通常の会話と詳細な推論を同じモデルで切り替えられる。実測ではSuperが単一H100上、バッチ256の指定条件で元のLlama 3.3-70Bに対して5倍のスループットを報告し、Ultraは8枚のH100で元のLlama 3.1-405Bに対して1.71倍の遅延改善を得た。
 
 - **2025-08 · [Huawei Cloud Model-as-a-Service on the CloudMatrix384 SuperPod](2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md)**  
@@ -4303,7 +4307,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：113  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：114  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -4514,6 +4518,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   AdaCM²は、長時間動画を言語モデルへ渡す際、すべてのフレームの視覚特徴を保存し続ける代わりに、テキスト質問と強く関連する視覚トークンだけを古いキャッシュから残す方式である。
 
+- **2024-10 · [Taipan: Efficient and Expressive State Space Language Models with Selective Attention](2024-2410.18572-taipan-efficient-and-expressive-state-space-language-models-with-selecti.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  Taipanはこの弱点を、すべてのトークンへ全面的な注意を適用するのではなく、軽量な二値ゲートで選別したトークンの表現だけを補強することで緩和する。学習時には選択率が目標値15%へ近づく損失を加え、選別の離散性をStraight-Through Gumbel-Softmaxで扱う。
+
 - **2024-08 · [Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations](2024-2408.03130-inference-optimizations-for-large-language-models-effects-challenges-and.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
@@ -4557,10 +4565,6 @@
 - **2024-10 · [Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs](2024-2410.14570-understanding-the-difficulty-of-low-precision-post-training-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMの重みを2〜4bitへ圧縮すると、GPUメモリ使用量を減らせる可能性がある一方、言語モデルの予測品質が大きく落ちることがある。
-
-- **2024-10 · [Taipan: Efficient and Expressive State Space Language Models with Selective Attention](2024-2410.18572-taipan-efficient-and-expressive-state-space-language-models-with-selecti.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  Taipanはこの弱点を、すべてのトークンへ全面的な注意を適用するのではなく、軽量な二値ゲートで選別したトークンの表現だけを補強することで緩和する。学習時には選択率が目標値15%へ近づく損失を加え、選別の離散性をStraight-Through Gumbel-Softmaxで扱う。
 
 - **2024-10 · [Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study](2024-2410.17980-scaling-stick-breaking-attention-an-efficient-implementation-and-in-dept.md)**  
   実装：[✓](https://github.com/shawntan/stickbreaking-attention) ・ リポジトリ内被引用：1  
@@ -4829,7 +4833,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：136  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：137  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  

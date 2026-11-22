@@ -35,10 +35,15 @@
   "selection_reason": "Cross-Step AccumulationとCross-Layer Propagationでtoken重要度を逐次更新し、毎stepの再計算を削減。ACL一次要旨はattention latency最大5.36倍、end-to-end decoding最大2.33倍を報告。",
   "semantic_scholar_id": "525178dd862ed432e6d5d31c1f1ab62ba9ce9f84",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.530",
-  "status": "ready",
+  "status": "superseded",
   "title": "Evolving Sparsity: Leveraging Token Importance Dynamics for Efficient LLM Decoding with Sparse Attention",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-22T11:48:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.530",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

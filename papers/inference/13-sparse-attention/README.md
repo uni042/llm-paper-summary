@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（214本）
+## 自動生成の論文一覧（215本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -470,6 +470,10 @@
   実装：[✓](https://github.com/DeepSoftwareAnalytics/SabreCoder) ・ リポジトリ内被引用：0  
   長いコードを補完する言語モデルでは、入力コードを一度に処理する事前計算（プリフィル）の注意演算が入力長の二乗に応じて増える。コード特有の関数・識別子・import文を考慮しない疎注意は重要な依存を失って補完精度が落ちやすい。次に同一チャンク内、明示的依存、埋め込み類似、グローバル参照という四つの規則を合成して注意マスクを作る。
 
+- **2026-07 · [Evolving Sparsity: Leveraging Token Importance Dynamics for Efficient LLM Decoding with Sparse Attention](2026-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm.md)**  
+  実装：[✓](https://github.com/iLearn-Lab/ACL26-EvoSparse) ・ リポジトリ内被引用：0  
+  デコード中の注意スコアを減衰付きで蓄積して長期的に重要なトークンを残し、少数の検索特化ヘッドが見つけた位置を後続層へ伝播させることで、毎ステップ全キャッシュを測り直さずにスパース注意の精度と速度を両立させる方式。
+
 - **2026-07 · [BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs](2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   BOSCH（Black-Box Binary Optimization for Short-Context 注意機構-Head Selection）は、すでに学習された大規模言語モデル（LLM）を、全域因果注意（global causal self-注意機構）とスライディングウィンドウ注意（Sliding Window 注意機構…
@@ -747,7 +751,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：352  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：354  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -783,7 +787,7 @@
   SampleAttentionは、長い入力文脈を持つ大規模言語モデル（Large Language モデル、LLM）の事前計算（プリフィル）を高速化するため、注意（注意機構）行列の重要な位置だけを実行時に選ぶ構造化疎注意方式である。
 
 - **2024-10 · [TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention](2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md)**  
-  実装：[✓](https://github.com/DerrickYLJ/TidalDecode) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/DerrickYLJ/TidalDecode) ・ リポジトリ内被引用：21  
   系列が長くなるほど鍵値キャッシュは線形に増えるため、1トークンずつ生成する復号では演算より高帯域メモリからの読出しが律速になりやすい。論文の例ではLLaMA-2-7Bを半精度、128K文脈で使うと鍵値キャッシュだけで64GBになる。疎注意（sparse 注意機構）は全過去トークンの一部だけを注意計算へ入れることで、この読出し量を減らす。
 
 - **2024-10 · [ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity](2024-2410.08584-zipvl-accelerating-vision-language-models-through-dynamic-token-sparsity.md)**  
@@ -817,7 +821,7 @@
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
-  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：49  
   目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
