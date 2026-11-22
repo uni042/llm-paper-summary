@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1258本）
+## 自動生成の論文一覧（1262本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2602,6 +2602,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   状態空間モデル向けにチャネル分割と状態キャッシュで同期を減らすテンソル並列設計。Mambaで4GPU時に最大4.0倍のスループットと4倍のプロンプト長を実現した。
 
+- **2026-02 · [ROCKET: Rapid Optimization via Calibration-guided Knapsack Enhanced Truncation for Efficient Model Compression](2026-2602.11008-rocket-rapid-optimization-via-calibration-guided-knapsack-enhanced-trunc.md)**  
+  実装：[✓](https://github.com/mts-ai/ROCKET/tree/main) ・ リポジトリ内被引用：0  
+  辞書学習を閉形式の1パスで置き換えた疎な行列因数分解と、層別圧縮配分の多選択ナップサック最適化を組み合わせ、学習なしで高圧縮でも性能を保つモデル圧縮方式。
+
 - **2026-02 · [Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization](2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-.md)**  
   実装：[✓](https://github.com/zhoustan/VQRound) ・ リポジトリ内被引用：0  
   適応型丸めの丸め行列をコードブックで表し直し、学習量を最大で元の0.2パーセント程度まで削る量子化。初期化の工夫と合わせて、2ビットでも崩壊を避ける。
@@ -2630,6 +2634,14 @@
   実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：0  
   本研究は大規模言語モデルの層を丸ごと削る深さ方向の枝刈り（層 枝刈り）が、分類課題と生成型推論課題で異なる品質低下を起こす原因を調べる。主な実験では、層の約25%を除去し、元モデルが生成した回答を教師にして再学習する。
 
+- **2026-02 · [On the Importance of a Multi-Scale Calibration for Quantization](2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定長キャリブレーションが落とす入力長依存の活性値分布を、複数長の系列を長さ正規化して系列単位で等しく混ぜるMaCaでヘッセ行列へ取り込み、低ビット量子化の精度を同一トークン予算で改善する。
+
+- **2026-02 · [NLI: Non-uniform Linear Interpolation Approximation of Nonlinear Operators](2026-2602.02988-nli-non-uniform-linear-interpolation-approximation-of-nonlinear-operator.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  非線形関数の区間分割を動的計画法で最適化した非一様線形補間の参照表と、二段アドレス変換の専用ユニットで、精度をほぼ落とさず非線形演算を四倍超効率化する方式。
+
 - **2026-02 · [Near-Oracle KV Selection via Pre-hoc Sparsity for Long-Context Inference](2026-2602.08329-near-oracle-kv-selection-via-pre-hoc-sparsity-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMの自己回帰復号では、生成トークンが増えるほど各層・各ヘッドが参照する過去のKey/Value（KV）キャッシュが増え、注意演算の読み出しと集約が高コストになる。従来の近似方式は過去の注意分布や代理スコアから重要KVを予測するため、変化したクエリに必要なトークンを落とす危険がある。
@@ -2645,6 +2657,10 @@
 - **2026-02 · [MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models](2026-2602.05307-mentorcollab-large-to-small-inference-time-mentorship-for-concise-reason.md)**  
   実装：[✓](https://github.com/haojinw0027/Mentorcollab) ・ リポジトリ内被引用：0  
   大型推論モデルは複雑な問題を解ける反面、解答までの思考列が長く、生成トークンの費用が増える。大型モデルが出力するトークンを小型モデルへ逐次注入する従来の協調方式では、大型モデルの「考え直し」「前段階への後戻り」まで取り込んでしまい、小型モデルの簡潔さを損なう場合がある。メンター由来のトークンが最終生成列に占める割合は平均18.4%と記述される。
+
+- **2026-02 · [MeKi: Memory-based Expert Knowledge Injection for Efficient LLM Scaling](2026-2602.03359-meki-memory-based-expert-knowledge-injection-for-efficient-llm-scaling.md)**  
+  実装：[✓](https://github.com/ningding-o/MeKi) ・ リポジトリ内被引用：0  
+  知識を読み出し専用メモリの参照表へ逃がし、有効計算を増やさずに容量だけを広げる端末向けスケーリングで、一点七ビーが密な四ビー級の品質へ同速度のまま迫る方式。
 
 - **2026-02 · [LQA: A Lightweight Quantized-Adaptive Framework for Vision-Language Models on the Edge](2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3204,6 +3220,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
 
+- **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
+  実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：2  
+  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
+
 - **2025-09 · [Ultra-Fast Language Generation via Discrete Diffusion Divergence Instruct](2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruc.md)**  
   実装：[✓](https://github.com/haoyangzheng-ai/didi-instruct) ・ リポジトリ内被引用：2  
   拡散言語モデルの全雑音水準の分布を教師へ一致させる蒸留で少数ステップ生成を実現し、16回の評価で1024回の教師のパープレキシティを上回った方式。
@@ -3363,10 +3383,6 @@
 - **2025-10 · [ARMOR: High-Performance Semi-Structured Pruning via Adaptive Matrix Factorization](2025-2510.05528-armor-high-performance-semi-structured-pruning-via-adaptive-matrix-facto.md)**  
   実装：[✓](https://github.com/LawrenceRLiu/ARMOR) ・ リポジトリ内被引用：1  
   一方、どの4要素からも2要素を消すという硬い制約は、同じ50%剪定率の非構造化剪定よりも言語モデルの品質を大きく悪化させやすい。ARMORは、この損失をマスク選択だけで解決するのではなく、疎行列の前後へ小さい学習可能な線形変換を配置して重み表現を変える方式である。
-
-- **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
-  実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：1  
-  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
 
 - **2025-10 · [Activation Quantization of Vision Encoders Needs Prefixing Registers](2025-2510.04547-activation-quantization-of-vision-encoders-needs-prefixing-registers.md)**  
   実装：[✓](https://github.com/spbob0418/RegCache) ・ リポジトリ内被引用：1  
