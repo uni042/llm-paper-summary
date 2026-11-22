@@ -35,10 +35,15 @@
   "selection_reason": "オンラインログ解析でのLLM推論遅延をボトルネックと捉え、ICL例の順序をプレフィックスキャッシュ効率に合わせて改良し、vLLMのスケジューリング設定をメタ学習で調整する推論最適化である。",
   "semantic_scholar_id": "da156ec149acbf473174f457292b8b4652938704",
   "source_url": "https://arxiv.org/abs/2507.08523",
-  "status": "ready",
+  "status": "superseded",
   "title": "InferLog: Accelerating LLM Inference for Online Log Parsing via ICL-oriented Prefix Caching",
   "type": "research",
   "venue": "Proceedings of the 2026 IEEE/ACM 48th International Conference on Software Engineering",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-22T08:35:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-orien.md",
+  "represented_canonical_id": "arXiv:2507.08523",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（196本）
+## 自動生成の論文一覧（197本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -643,6 +643,10 @@
 - **2025-11 · [Iris: First-Class Multi-GPU Programming Experience in Triton](2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.md)**  
   実装：[✓](https://github.com/ROCm/iris) ・ リポジトリ内被引用：0  
   対称メモリをTritonのタイル抽象へ持ち込み、計算と通信をタイル単位で重ねる融合カーネルを純粋なPythonとTritonで書ける複数GPU通信ライブラリ。集合通信比で平均1.21倍の高速化。
+
+- **2025-11 · [CoEdge-RAG: Optimizing Hierarchical Scheduling for Retrieval-Augmented LLMs in Collaborative Edge Computing](2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-ll.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分散した私的コーパスを持つエッジノード群について、方策学習でクエリのドメインを推定し、ノード間とノード内の二層で負荷とメモリを配分することで、遅延制約の下で検索拡張生成の品質を上げる階層スケジューリング。
 
 - **2025-11 · [Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions](2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

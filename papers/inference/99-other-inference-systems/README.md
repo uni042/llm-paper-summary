@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1237本）
+## 自動生成の論文一覧（1239本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2918,6 +2918,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   推論の中核は、回転位置埋め込み（Rotary Position Embedding; RoPE）を適用する前のKVをフレームごとに保存し、次の行動では必要な過去フレームのKVだけを選択して連続した位置IDで再回転する仕組みである。
 
+- **2025-12 · [Dynamic Rank Reinforcement Learning for Adaptive Low-Rank Multi-Head Self-Attention in Large Language Models](2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-sel.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の低ランク近似のランクを、摂動上界の安全検査付き強化学習で入力と層ごとに動的に選び、長系列で演算量を4割減らしながら全ランクに近い精度を保つ。
+
 - **2025-12 · [Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling](2025-2512.19905-demystifying-llm-as-a-judge-analytically-tractable-model-for-inference-t.md)**  
   実装：[✓](https://github.com/I-Halder/Demystifying-LLM-as-a-Judge-Analytically-Tractable-Model-for-Inference-Time-Scaling) ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の推論時に複数の回答を生成し、別の評価モデル（LLM-as-a-Judge）が良い回答を選ぶ方式は、学習済みのモデル重みを変更せずに品質を改善する手段である。
@@ -3347,6 +3351,10 @@
 - **2025-10 · [Activation Quantization of Vision Encoders Needs Prefixing Registers](2025-2510.04547-activation-quantization-of-vision-encoders-needs-prefixing-registers.md)**  
   実装：[✓](https://github.com/spbob0418/RegCache) ・ リポジトリ内被引用：1  
   しかし、CLIPやSigLIPなどの視覚Transformerでは、一部トークンの活性値が他より極端に大きくなり、活性値の量子化範囲を押し広げて精度を損なう。
+
+- **2025-09 · [Toward Robust and Efficient ML-Based GPU Caching for Modern Inference](2025-2509.20979-toward-robust-and-efficient-ml-based-gpu-caching-for-modern-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  予測を盲信せず、正確なら最適へ近づき外れればLRUへ戻る保証を持つ学習拡張LRUと、そのGPUキャッシュ実装LCRで、尾遅延とスループットを改善しながら予測劣化への頑健さを示す研究。
 
 - **2025-09 · [PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation](2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md)**  
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  
@@ -4917,7 +4925,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：365  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：366  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

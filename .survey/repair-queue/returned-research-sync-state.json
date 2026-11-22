@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3a40b51d7c1db9b38ce519bfdd7d2ed51dbd9968",
+  "base_commit": "efad78c7719bbbc090ec2e89d728a48066539b07",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -176,6 +176,7 @@
     "2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and-dataflow-flexible-accelerator.json",
     "2025-2507.03340-degrees-of-freedom-for-linear-attention-distilling-softmax-attention-with-optimal-feature-efficiency.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
+    "2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-oriented-prefix-caching.json",
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
     "2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.json",
     "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json",
@@ -197,6 +198,7 @@
     "2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-for-parameter-efficient-fine-tuning-on-large-language-models.json",
     "2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-augmented-generation.json",
     "2025-2509.20624-fs-dfm-fast-and-accurate-long-text-generation-with-few-step-diffusion-language-models.json",
+    "2025-2509.20979-toward-robust-and-efficient-ml-based-gpu-caching-for-modern-inference.json",
     "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
     "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json",
     "2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruct.json",
@@ -222,11 +224,13 @@
     "2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reasoning.json",
     "2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effects.json",
     "2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-training.json",
+    "2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-generation.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
     "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json",
     "2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.json",
     "2025-2511.18692-vlm-in-a-flash-io-efficient-sparsification-of-vision-language-model-via-neuron-chunking.json",
     "2025-2511.19518-towards-efficient-vlms-information-theoretic-driven-compression-via-adaptive-structural-pruning.json",
+    "2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weight-matrix-multiplication.json",
     "2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-information.json",
     "2025-2511.22599-discedge-distributed-context-management-for-large-language-models-at-the-edge.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
@@ -240,6 +244,7 @@
     "2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-online-video-understanding.json",
     "2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via-shared-projection-and-block-skipping.json",
     "2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-decoding.json",
+    "2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-self-attention.json",
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
@@ -48396,6 +48401,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2507.08523": {
+      "order": [
+        "2026-11-22T08:30:06+00:00",
+        "2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-oriented-prefix-caching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.20979": {
+      "order": [
+        "2026-11-22T08:31:08+00:00",
+        "2025-2509.20979-toward-robust-and-efficient-ml-based-gpu-caching-for-modern-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.05915": {
+      "order": [
+        "2026-11-22T08:32:09+00:00",
+        "2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.21910": {
+      "order": [
+        "2026-11-22T08:33:10+00:00",
+        "2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weight-matrix-multiplication.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.15973": {
+      "order": [
+        "2026-11-22T08:34:12+00:00",
+        "2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-self-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60987,6 +61037,21 @@
     "arxiv:2505.21919": [
       "papers/inference/19-inference-evaluation-benchmarking/2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-ll.md",
       "papers/inference/19-inference-evaluation-benchmarking/2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-ll.md"
+    ],
+    "arxiv:2507.08523": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-orien.md"
+    ],
+    "arxiv:2509.20979": [
+      "papers/inference/99-other-inference-systems/2025-2509.20979-toward-robust-and-efficient-ml-based-gpu-caching-for-modern-inference.md"
+    ],
+    "arxiv:2511.05915": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-ll.md"
+    ],
+    "arxiv:2511.21910": [
+      "papers/inference/15-inference-simulation-emulation/2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weigh.md"
+    ],
+    "arxiv:2512.15973": [
+      "papers/inference/99-other-inference-systems/2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-sel.md"
     ]
   }
 }

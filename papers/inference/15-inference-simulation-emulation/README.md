@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（99本）
+## 自動生成の論文一覧（100本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -332,6 +332,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービングの性能は、モデルのプリフィルとデコードだけでなく、RAGの検索、KVキャッシュの再利用、ネットワーク転送、スケジューリング、異なるモデルを使う複数クライアントなどの組合せで決まる。しかし異なるベンダーを跨いだプリフィル/デコード（PD）分離を、実際の統一サービングスタックで検証できないことが多い。
 
+- **2025-11 · [Platinum: Path-Adaptable LUT-Based Accelerator Tailored for Low-Bit Weight Matrix Multiplication](2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weigh.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ルックアップテーブルの構築経路を最小全域木でオフライン生成して動的探索回路を消し、三値重みの対称性と三進パック圧縮を組み合わせた低ビット重み行列積ASICで、BitNet b1.58-3Bのプリフィルで先行ASIC比最大73.6倍の高速化を0.96平方ミリメートルで示した研究。
+
 - **2025-11 · [Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism](2025-832f2fc32711-multiplexed-heterogeneous-llm-serving-via-stage-aligned-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ParaFlexは、規模や必要メモリが異なる複数の大規模言語モデル（LLM）を、同じGPU群上で効率よく同時提供するための推論サービングシステムである。原著は異種モデルの混合負荷で、テンソル並列型の多重化と比べ中央値遅延を最大63%削減、処理量を最大4.7倍に改善し、共有パイプライン型の既存方式に対して処理量を最大1.6倍に改善したと報告する。
@@ -395,7 +399,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   演算子-階層 ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式から計算/メモリ/ネットワーク要件を逆算するGenZ。
 
 - **2024-08 · [LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference](2024-2408.06003-lut-tensor-core-a-software-hardware-co-design-for-lut-based-low-bit-llm-.md)**  
-  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：11  
   重みを1〜4ビットに量子化した大規模言語モデル（LLM）では、重みの転送量は小さくなる一方、活性化はFP16やINT8など比較的高い精度で保持される。ISCA 2025の原著は、従来のLUTアクセラレータに比べて計算密度とエネルギー効率を1.44倍改善し、低ビットLLMの推論をモデル単位のシミュレーションで2.06〜5.51倍高速化したと報告する。
 
 - **2024-09 · [TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation](2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md)**  
