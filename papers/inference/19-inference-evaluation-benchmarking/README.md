@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（186本）
+## 自動生成の論文一覧（187本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -619,6 +619,10 @@
 - **2025-10 · [RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model](2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a.md)**  
   実装：[✓](https://github.com/harutaro/rcpu) ・ リポジトリ内被引用：0  
   構造化枝刈りの出力誤差を、ノルムと内積を保つ回転だけの閉形式更新で補正し、入力分散を掛けた列スコアで主方向の列を残す RCPU を提案し、Llama系で枝刈り率30パーセントまで Wanda-sp と FLAP をパープレキシティと平均精度で上回った研究。
+
+- **2025-10 · [LLM Routing with Dueling Feedback](2025-2510.00841-llm-routing-with-dueling-feedback.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ルーティングを文脈付き決闘バンディットとして定式化し、カテゴリ校正ファインチューニングで作ったモデル埋め込みとFeel-Good Thompson Samplingを組み合わせ、pairwise選好だけから性能とコストを両立するモデル選択をオンライン学習する方式。
 
 - **2025-10 · [Higher-order Linear Attention](2025-2510.27258-higher-order-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1208本）
+## 自動生成の論文一覧（1212本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2984,6 +2984,10 @@
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：6  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
 
+- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
+
 - **2024-12 · [WebLLM: A High-Performance In-Browser LLM Inference Engine](2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md)**  
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：6  
   新しい注意機構や学習アルゴリズムではなく、ブラウザで効率的な言語モデル実行を成立させるシステム統合が主要な貢献である。ブラウザ版はネイティブ版より遅いが、復号処理率の約71.2～79.6%を保持した。
@@ -2995,10 +2999,6 @@
 - **2025-08 · [Towards Efficient and Practical GPU Multitasking in the Era of LLM](2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md)**  
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
   この論文は、GPUの単独実行（Singletasking）から多重実行（Multitasking）への移行を主張する設計論・立場論文（Position Paper）である。本文の「10%まで下がる利用率」やGPU世代間の成長率は背景の参考値であり、提案法がGPU使用率を何ポイント改善したという実験結果ではない。
-
-- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
 
 - **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -3456,6 +3456,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   STaMP（Sequence Transformation and Mixed Precision）は、低ビット量子化の前に活性行列を系列方向へ直交変換し、情報が集中した少数の変換後トークンだけを8ビット、残りを4ビットで表現する方式である。
 
+- **2025-10 · [SQS: Bayesian DNN Compression through Sparse Quantized Sub-distributions](2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.md)**  
+  実装：[✓](https://nan-jiang-group.github.io/SQS/) ・ リポジトリ内被引用：0  
+  スパイク・アンド・スラブ型の変分分布で枝刈りと量子化を同時に学習し、別々に圧縮するより高い圧縮率を同程度の性能低下で得るベイズ型の統合圧縮方式。
+
 - **2025-10 · [MossNet: Mixture of State-Space Experts is a Multi-Head Attention](2025-2510.26182-mossnet-mixture-of-state-space-experts-is-a-multi-head-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の状態空間専門家の混合が線形化したmulti-head 注意機構の形に展開できることを示し、従来の単一状態のSSMより表現力を高める。8x200M+モデルは2.8兆トークン学習後、top-2（活性477M）で7課題平均53.5%、Qwen2.5-0.5Bの47.7%を上回るが、学習トークン数・モデル構造が異なる。
@@ -3511,6 +3515,10 @@
 - **2025-10 · [Deconstructing Attention: Investigating Design Principles for Effective Language Modeling](2025-2510.11602-deconstructing-attention-investigating-design-principles-for-effective-l.md)**  
   実装：[✓](https://github.com/HUIYINXUE/DeconAttn) ・ リポジトリ内被引用：0  
   標準Transformerの注意機構は、現在のトークンが過去のトークンから情報を集めるために、現在層のhidden stateからQ・K・Vを生成し、QK内積をsoftmaxで正規化してVを混合する。
+
+- **2025-10 · [CoRoVA: Compressed Representations for Vector-Augmented Code Completion](2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.md)**  
+  実装：[✓](https://anonymous.4open.science/r/CoRoVA) ・ リポジトリ内被引用：0  
+  検索した別ファイル断片を1件1ベクトルへ圧縮して射影し、10トークンだけを入力へ足すことで、コード補完の品質を保ちながら最初のトークンまでの時間を20パーセントから38パーセント減らす方式。
 
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
@@ -3583,6 +3591,10 @@
 - **2025-09 · [Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation](2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Koel-TTSとNanoCodecを使ったLibriTTS評価では、積層係数2で自己回帰型が従来の非積層・全コード並列方式の2.1倍、MaskGIT型が3.1倍の推論処理量を示した。
+
+- **2025-09 · [ENSI: Efficient Non-Interactive Secure Inference for Large Language Models](2025-2509.09424-ensi-efficient-non-interactive-secure-inference-for-large-language-model.md)**  
+  実装：[✓](https://github.com/sugarhh/ENSI) ・ リポジトリ内被引用：0  
+  CKKSとBitNetの共同設計で、乗算なしの行列積、再学習不要のシグモイド注意、RMSNorm内蔵のブートストラップにより、非対話型の秘匿推論を高速化する枠組み。
 
 - **2025-09 · [Enhancing Linear Attention with Residual Learning](2025-2509.25223-enhancing-linear-attention-with-residual-learning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3908,6 +3920,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   キーの擬似平均を行列積で引くオンライン処理と最大値の補正で、フラッシュアテンション全体を半精度化しても桁あふれしないようにする数値安定化手法。実モデルで注意スコアの値域を半精度の範囲へ戻した。
 
+- **2025-02 · [MaskPrune: Mask-based LLM Pruning for Layer-wise Uniform Structures](2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マスクと層共通の削減数をミニマックス最適化で同時学習し、全層で同じ形を保ったまま構造化枝刈りを行うことで、推論配置しやすい均一な圧縮モデルを得る方式。
+
 - **2025-02 · [Forget the Data and Fine-Tuning! Just Fold the Network to Compress](2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.md)**  
   実装：[✓](https://github.com/nanguoyu/model-folding-universal) ・ リポジトリ内被引用：0  
   同一ネットワーク内の似たニューロンを重みだけのk平均クラスタリングで統合し、統合で潰れる活性値の分散をデータなしの近似補正で直すことで、学習データもファインチューニングもなしにモデルを構造的に圧縮する方式。
@@ -4051,7 +4067,7 @@
   線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
-  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：21  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
@@ -4306,6 +4322,10 @@
   実装：[✓](https://github.com/SamsungLabs/aespa) ・ リポジトリ内被引用：1  
   量子化は層ごとに実行しながら誤差の物差しを注意全体の再構成に置き、目的関数を事前計算可能な形へ変形することで、二ビットでも崩壊せず、ブロック型より桁違いに速い学習後量子化を実現した。
 
+- **2024-02 · [NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models](2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md)**  
+  実装：[✓](https://github.com/Lucius-lsr/NutePrune) ・ リポジトリ内被引用：1  
+  無傷のモデル1個にマスクとLoRAを取り替えて多数の教師を演じさせることで、メモリ追加なしに漸進的蒸留を構造化プルーニングへ適用したNutePruneの研究。教師と生徒のスパース率の差を一定に保ち、能力差による蒸留の難化を抑える。
+
 - **2024-01 · [With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation](2024-2401.11504-with-greater-text-comes-greater-necessity-inference-time-training-helps-.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Temp-LoRA) ・ リポジトリ内被引用：1  
   本論文が扱うのは、数十万トークン規模の小説生成や長編翻訳を、短い注意窓しか持たない言語モデルで継続するときに発生する「古い情報の消失」と「長い鍵・値キャッシュ（KVキャッシュ）の費用」の両立問題である。近い文脈は通常の注意機構で直接読み、古い情報は一時的に変化した重みを介して利用する。
@@ -4482,10 +4502,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   これらへ単一の量子化尺度や単純な2進対数量子化を直接適用すると、4ビット付近では重要な情報が失われやすい。
 
-- **2024-02 · [NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models](2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md)**  
-  実装：[✓](https://github.com/Lucius-lsr/NutePrune) ・ リポジトリ内被引用：0  
-  無傷のモデル1個にマスクとLoRAを取り替えて多数の教師を演じさせることで、メモリ追加なしに漸進的蒸留を構造化プルーニングへ適用したNutePruneの研究。教師と生徒のスパース率の差を一定に保ち、能力差による蒸留の難化を抑える。
-
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
   従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
@@ -4497,7 +4513,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：326  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：327  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  

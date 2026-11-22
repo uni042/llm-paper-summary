@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "88356ec267cb33624f8b0943e62b51a38bf9e832",
+  "base_commit": "e32ac989c730c80911911a3adb375619d3867dae",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -111,6 +111,7 @@
     "2025-2502.02818-transql-serving-large-language-models-with-sql-on-low-resource-hardware.json",
     "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
     "2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-efficient-dense-llms.json",
+    "2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.json",
     "2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.json",
     "2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.json",
     "2025-2502.18627-pacq-a-simt-microarchitecture-for-efficient-dataflow-in-hyper-asymmetric-gemms.json",
@@ -181,6 +182,7 @@
     "2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dynamic-grouping.json",
     "2025-2509.06274-ipr-intelligent-prompt-routing-with-user-controlled-quality-cost-trade-offs.json",
     "2025-2509.07820-certainty-guided-reasoning-in-large-language-models-a-dynamic-thinking-budget-approach.json",
+    "2025-2509.09424-ensi-efficient-non-interactive-secure-inference-for-large-language-models.json",
     "2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit-slice-enabled-sparsity-and-repetitiveness.json",
     "2025-2509.13201-scaling-up-throughput-oriented-llm-inference-applications-on-heterogeneous-opportunistic.json",
     "2025-2509.15148-atts-asynchronous-test-time-scaling-via-conformal-prediction.json",
@@ -190,10 +192,12 @@
     "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json",
     "2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruct.json",
     "2025-2509.26124-vocabulary-customization-for-efficient-domain-specific-llm-deployment.json",
+    "2025-2510.00841-llm-routing-with-dueling-feedback.json",
     "2025-2510.02249-explore-briefly-then-decide-mitigating-llm-overthinking-via-cumulative-entropy-regulation.json",
     "2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-low-batch-llm-inference.json",
     "2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-diffusion.json",
     "2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a-large-language-model.json",
+    "2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.json",
     "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
@@ -201,6 +205,7 @@
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
     "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json",
+    "2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.json",
     "2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-language-models.json",
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.00315-language-modeling-with-factorization-memory.json",
@@ -47706,6 +47711,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2502.14008": {
+      "order": [
+        "2026-11-22T03:41:06+00:00",
+        "2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.09424": {
+      "order": [
+        "2026-11-22T03:41:59+00:00",
+        "2025-2509.09424-ensi-efficient-non-interactive-secure-inference-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.00841": {
+      "order": [
+        "2026-11-22T03:42:51+00:00",
+        "2025-2510.00841-llm-routing-with-dueling-feedback.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.08999": {
+      "order": [
+        "2026-11-22T03:43:43+00:00",
+        "2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.19644": {
+      "order": [
+        "2026-11-22T03:44:35+00:00",
+        "2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60021,6 +60071,21 @@
     "arxiv:2509.07820": [
       "papers/inference/19-inference-evaluation-benchmarking/2025-2509.07820-certainty-guided-reasoning-in-large-language-models-a-dynamic-thinking-b.md",
       "papers/inference/19-inference-evaluation-benchmarking/2025-2509.07820-certainty-guided-reasoning-in-large-language-models-a-dynamic-thinking-b.md"
+    ],
+    "arxiv:2502.14008": [
+      "papers/inference/99-other-inference-systems/2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.md"
+    ],
+    "arxiv:2509.09424": [
+      "papers/inference/99-other-inference-systems/2025-2509.09424-ensi-efficient-non-interactive-secure-inference-for-large-language-model.md"
+    ],
+    "arxiv:2510.00841": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2510.00841-llm-routing-with-dueling-feedback.md"
+    ],
+    "arxiv:2510.08999": [
+      "papers/inference/99-other-inference-systems/2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.md"
+    ],
+    "arxiv:2510.19644": [
+      "papers/inference/99-other-inference-systems/2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.md"
     ]
   }
 }
