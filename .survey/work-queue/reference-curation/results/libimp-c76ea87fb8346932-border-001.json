@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c76ea87fb8346932-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2207.10284",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2207.10284",
+    "identity_tokens": [
+      "arXiv:2207.10284"
+    ],
+    "reason": "多重解像度解析とウェーブレットで自己注意を近似し計算量を下げる方式だが、評価はRoBERTa規模のエンコーダ型モデルの事前学習・分類課題とLong Range Arena、注意モジュール単体の学習ステップ計測が中心で、大規模言語モデルの生成推論、デコード、キャッシュ、サービングといったLLM推論システムへの直接の証拠がなく、推論システムの収録基準に対しては境界域と判断した",
+    "first_checked_at": "2026-11-22T09:07:18+00:00",
+    "last_checked_at": "2026-11-22T09:07:18+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multi Resolution Analysis (MRA) for Approximate Self-Attention"
+  },
+  "processed_at": "2026-11-22T09:07:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c76ea87fb834",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

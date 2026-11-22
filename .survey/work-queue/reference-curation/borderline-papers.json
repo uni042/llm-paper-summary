@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-22T08:35:20+00:00",
-  "record_count": 6855,
+  "updated_at": "2026-11-22T09:07:18+00:00",
+  "record_count": 6857,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -106611,6 +106611,52 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Linear Self-attention Approximation via Trainable Feedforward Kernel"
+    },
+    "arXiv:2609.06320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06320",
+      "identity_tokens": [
+        "arXiv:2609.06320"
+      ],
+      "reason": "FrankenReportは長文レポート生成で節ごとに計算の期待値を予測して早期終了する応用レベルの編成とインタフェースの研究であり、低予算でランダム配分比最大4倍という結果も生成パイプラインの予算配分シミュレーションと利用者研究に基づくもので、LLM推論システムへの直接の機構的・システム的貢献（デコード、キャッシュ、スケジューリングの実測改善）はないため境界と判断した",
+      "first_checked_at": "2026-11-22T09:07:18+00:00",
+      "last_checked_at": "2026-11-22T09:07:18+00:00",
+      "linked_from": [
+        "_",
+        "a",
+        "c",
+        "e",
+        "h",
+        "n",
+        "p",
+        "r",
+        "s"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FrankenReport: Early Exiting in Long-Form Generation Using Expected Value of Computation"
+    },
+    "arXiv:2207.10284": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2207.10284",
+      "identity_tokens": [
+        "arXiv:2207.10284"
+      ],
+      "reason": "多重解像度解析とウェーブレットで自己注意を近似し計算量を下げる方式だが、評価はRoBERTa規模のエンコーダ型モデルの事前学習・分類課題とLong Range Arena、注意モジュール単体の学習ステップ計測が中心で、大規模言語モデルの生成推論、デコード、キャッシュ、サービングといったLLM推論システムへの直接の証拠がなく、推論システムの収録基準に対しては境界域と判断した",
+      "first_checked_at": "2026-11-22T09:07:18+00:00",
+      "last_checked_at": "2026-11-22T09:07:18+00:00",
+      "linked_from": [
+        "_",
+        "a",
+        "c",
+        "e",
+        "h",
+        "n",
+        "p",
+        "r",
+        "s"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi Resolution Analysis (MRA) for Approximate Self-Attention"
     }
   }
 }

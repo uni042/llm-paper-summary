@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-894515a84c281e4a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.06320",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.06320",
+    "identity_tokens": [
+      "arXiv:2609.06320"
+    ],
+    "reason": "FrankenReportは長文レポート生成で節ごとに計算の期待値を予測して早期終了する応用レベルの編成とインタフェースの研究であり、低予算でランダム配分比最大4倍という結果も生成パイプラインの予算配分シミュレーションと利用者研究に基づくもので、LLM推論システムへの直接の機構的・システム的貢献（デコード、キャッシュ、スケジューリングの実測改善）はないため境界と判断した",
+    "first_checked_at": "2026-11-22T09:07:18+00:00",
+    "last_checked_at": "2026-11-22T09:07:18+00:00",
+    "linked_from": [
+      "_",
+      "a",
+      "c",
+      "e",
+      "h",
+      "n",
+      "p",
+      "r",
+      "s"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FrankenReport: Early Exiting in Long-Form Generation Using Expected Value of Computation"
+  },
+  "processed_at": "2026-11-22T09:07:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-894515a84c28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
