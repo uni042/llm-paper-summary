@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-22T00:20:35+00:00",
+  "generated_at": "2026-11-22T00:21:40+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -263,38 +263,11 @@
       "worker_run_key": "20261106-2030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2607.19215",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2607.19215",
-      "returned_at": "2026-11-21T22:51:59+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 481 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3926,
-        "body_paragraphs": 18,
-        "method_chars": 1645,
-        "method_paragraphs": 4,
-        "evaluation_chars": 481,
-        "limitation_chars": 250,
-        "insufficiency_flags": [
-          "評価説明量 481 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
-      "worker_run_key": "muse-20261122-b1"
-    },
-    {
       "canonical_id": "arXiv:2610.03296",
-      "title": null,
+      "title": "JOVE: Joint Execution and Verification for Resource-Aware LLM Task Graphs",
       "source_url": "https://arxiv.org/abs/2610.03296",
-      "returned_at": "2026-11-21T23:58:25+00:00",
-      "return_count": 2,
+      "returned_at": "2026-11-22T00:21:37+00:00",
+      "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -312,9 +285,36 @@
           "評価説明量 499 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md",
-      "import_result_path": ".survey/import-inbox/results/research/2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5389fb9f40ed--2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5389fb9f40ed--2026-2610.03296-jove-joint-execution-and-verification-for-resource-aware-llm-task-graphs.json",
       "worker_run_key": "muse-20261122-b3"
+    },
+    {
+      "canonical_id": "arXiv:2607.19215",
+      "title": "HACO: Hedged Agent Computing for Reliable LLM Systems",
+      "source_url": "https://arxiv.org/abs/2607.19215",
+      "returned_at": "2026-11-22T00:21:39+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 481 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3926,
+        "body_paragraphs": 18,
+        "method_chars": 1645,
+        "method_paragraphs": 4,
+        "evaluation_chars": 481,
+        "limitation_chars": 250,
+        "insufficiency_flags": [
+          "評価説明量 481 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-767781c9a9dd--2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-767781c9a9dd--2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
+      "worker_run_key": "muse-20261122-b1"
     }
   ]
 }
