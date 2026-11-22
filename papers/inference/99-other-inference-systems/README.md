@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1225本）
+## 自動生成の論文一覧（1228本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -17,7 +17,7 @@
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
 
 - **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
@@ -2002,6 +2002,10 @@
   実装：[✓](https://github.com/NVlabs/Eagle/tree/main/Embodied) ・ リポジトリ内被引用：0  
   各矩形を、四つの量子化座標と構造トークンからなる長さ6のブロックで表し、ブロック内部は同時に予測する。
 
+- **2026-05 · [LLMForge: Multi-Backend Hardware-Aware Neural Architecture Search with Infinite-Head Attention for Edge Language Models](2026-2605.17653-llmforge-multi-backend-hardware-aware-neural-architecture-search-with-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ヘッド数と次元を層ごとに独立化した注意で探索空間を約400倍に広げ、代理モデルと複数費用モデルで基板ごとに異なる最適形を求める端末向け構造探索で、300M級で検証損失2.798とエネルギー40パーセント減を両立する方式。
+
 - **2026-05 · [LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?](2026-2605.08985-llava-uhd-v4-what-makes-efficient-visual-encoding-in-mllms.md)**  
   実装：[✓](https://github.com/THUMAI-Lab/LLaVA-UHD-v4) ・ リポジトリ内被引用：0  
   切り分け符号化が全体符号化を上回ることを示し、視覚符号器の浅い層に窓注意と重み再利用で初期化した圧縮部を入れて内部から四倍圧縮することで、視覚符号化の演算量を五五・七五パーセント減らしながら十六倍圧縮でも精度をほぼ保った。
@@ -2058,6 +2062,10 @@
   実装：[✓](https://github.com/andreamiele/fp-mgm/) ・ リポジトリ内被引用：0  
   デノイザー中央を重み共有の不動点ブロックへ置き換えて実効深さを可変にし、跨ステップ一貫性と三状態再利用を組み合わせ、パラメータと学習費用を減らしながら低予算生成の品質を上げるマスク生成方式。
 
+- **2026-05 · [Exploiting Multicast for Accelerating Collective Communication](2026-2605.22428-exploiting-multicast-for-accelerating-collective-communication.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  宛先をパケットへ埋め込み中継ノードで複製する書き込み意味論MultiWriteで多対多集合通信の重複送信をなくし、Ascend NPUでAllGatherとAlltoAllの遅延を最大33パーセント減らす方式。
+
 - **2026-05 · [EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning](2026-2605.19506-eventprune-cascaded-event-assisted-token-pruning-for-efficient-first-per.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   イベントカメラの動き信号で場面の固定とトークンの濾過と注意の補正を段階的に行う学習なし削減を提案し、2割の保持で全トークンを上回る精度と1.89倍の高速化、演算量52パーセント減を示した。
@@ -2105,6 +2113,10 @@
 - **2026-05 · [BlockBatch: Multi-Scale Consensus Decoding for Efficient Diffusion Language Model Inference](2026-2605.29233-blockbatch-multi-scale-consensus-decoding-for-efficient-diffusion-langua.md)**  
   実装：[✓](https://github.com/Laurence-Wu/BlockBatch) ・ リポジトリ内被引用：0  
   局所更新で古くなったKVキャッシュは定期的な全系列再計算で補正する。学習済みモデルの重みを変更しない推論時方式である。著者はLLaDA系2モデルとDream系1モデル、算数・数学・コード生成の4課題を用い、Fast-dLLMの二重キャッシュ方式と比較して、モデル呼出し回数（NFE）を平均26.6%削減し、実測生成時間を平均1.33倍高速化したと報告する。
+
+- **2026-05 · [BitLM: Unlocking Multi-Token Language Generation with Bitwise Continuous Diffusion](2026-2605.11577-bitlm-unlocking-multi-token-language-generation-with-bitwise-continuous-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  トークンを18ビットの二進コードで表し、ブロック内は拡散ヘッドで複数トークンを共同にノイズ除去し、ブロック間は因果的注意を保つことで、語彙ソフトマックスを介さない複数トークン生成を実現する言語モデル。
 
 - **2026-05 · [Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers](2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4573,7 +4585,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：118  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：119  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  

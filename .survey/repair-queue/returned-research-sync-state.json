@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "763fe046b6a613dd1f2018623feeb2bde6a0343e",
+  "base_commit": "dc28721a9c488ab0cb1a8fd2626eb531ace6d84f",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -425,6 +425,7 @@
     "2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-bit-language-models.json",
     "2026-2605.06850-shadow-mask-distillation-for-memory-efficient-alignment-in-rl-post-training.json",
     "2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation-of-text.json",
+    "2026-2605.07112-switchcraft-ai-model-router-for-agentic-tool-calling.json",
     "2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-caching.json",
     "2026-2605.08044-fast-byte-latent-transformer.json",
     "2026-2605.08985-llava-uhd-v4-what-makes-efficient-visual-encoding-in-mllms.json",
@@ -433,6 +434,7 @@
     "2026-2605.10414-remember-to-forget-gated-adaptive-positional-encoding.json",
     "2026-2605.10905-tlx-hardware-native-evolvable-mimw-gpu-compiler-for-large-scale-production-environments.json",
     "2026-2605.10980-leap-unlocking-dllm-parallelism-via-lookahead-early-convergence-token-detection.json",
+    "2026-2605.11577-bitlm-unlocking-multi-token-language-generation-with-bitwise-continuous-diffusion.json",
     "2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimodal-large-language-models.json",
     "2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.json",
     "2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation-decomposition-for-efficient-llm-inference.json",
@@ -441,16 +443,19 @@
     "2026-2605.14929-a-hardware-aware-per-layer-methodology-for-post-training-quantization-of-large-language-models.json",
     "2026-2605.15621-lrcp-low-rank-compressibility-guided-visual-token-pruning-for-efficient-lvlms.json",
     "2026-2605.15913-towards-generalization-of-block-attention-via-automatic-segmentation-and-block-distillation.json",
+    "2026-2605.17653-llmforge-multi-backend-hardware-aware-neural-architecture-search-with-infinite-head-attention-for-edge-language-models.json",
     "2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.json",
     "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json",
     "2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.json",
     "2026-2605.19322-dynatok-temporally-adaptive-and-positional-bias-aware-token-compression-for-video-llms.json",
     "2026-2605.19506-eventprune-cascaded-event-assisted-token-pruning-for-efficient-first-person-dynamic-spatial-reasoning.json",
     "2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video.json",
+    "2026-2605.22428-exploiting-multicast-for-accelerating-collective-communication.json",
     "2026-2605.23914-vinelm-trie-based-fine-grained-control-for-agentic-workflows.json",
     "2026-2605.24019-mgvq-synergizing-multi-dimensional-sensitivity-aware-and-gradient-hessian-fusion-for-vector-quantization.json",
     "2026-2605.24217-identifying-and-mitigating-systemic-measurement-bias-in-production-llm-inference-benchmarks.json",
     "2026-2605.24930-h2mt-semantic-hierarchy-aware-hierarchical-memory-transformer.json",
+    "2026-2605.25716-an-efficient-and-privacy-preserving-architecture-for-cross-institutional-collaborative-rag.json",
     "2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inference.json",
     "2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-safe-to-reuse-an-answer.json",
     "2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-aware-kv-sparsity.json",
@@ -47956,6 +47961,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.07112": {
+      "order": [
+        "2026-11-22T04:19:46+00:00",
+        "2026-2605.07112-switchcraft-ai-model-router-for-agentic-tool-calling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.11577": {
+      "order": [
+        "2026-11-22T04:20:38+00:00",
+        "2026-2605.11577-bitlm-unlocking-multi-token-language-generation-with-bitwise-continuous-diffusion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.17653": {
+      "order": [
+        "2026-11-22T04:21:29+00:00",
+        "2026-2605.17653-llmforge-multi-backend-hardware-aware-neural-architecture-search-with-infinite-head-attention-for-edge-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.22428": {
+      "order": [
+        "2026-11-22T04:22:21+00:00",
+        "2026-2605.22428-exploiting-multicast-for-accelerating-collective-communication.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.25716": {
+      "order": [
+        "2026-11-22T04:23:12+00:00",
+        "2026-2605.25716-an-efficient-and-privacy-preserving-architecture-for-cross-institutional-collaborative-rag.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -60371,6 +60421,21 @@
     "arxiv:2605.07019": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation.md"
+    ],
+    "arxiv:2605.07112": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.07112-switchcraft-ai-model-router-for-agentic-tool-calling.md"
+    ],
+    "arxiv:2605.11577": [
+      "papers/inference/99-other-inference-systems/2026-2605.11577-bitlm-unlocking-multi-token-language-generation-with-bitwise-continuous-.md"
+    ],
+    "arxiv:2605.17653": [
+      "papers/inference/99-other-inference-systems/2026-2605.17653-llmforge-multi-backend-hardware-aware-neural-architecture-search-with-in.md"
+    ],
+    "arxiv:2605.22428": [
+      "papers/inference/99-other-inference-systems/2026-2605.22428-exploiting-multicast-for-accelerating-collective-communication.md"
+    ],
+    "arxiv:2605.25716": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.25716-an-efficient-and-privacy-preserving-architecture-for-cross-institutional.md"
     ]
   }
 }

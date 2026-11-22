@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（189本）
+## 自動生成の論文一覧（190本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -385,6 +385,10 @@
 - **2026-06 · [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md)**  
   実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  
   本研究は、長期にわたり複数のセッションをまたいで稼働する大規模言語モデル（LLM）エージェントの「記憶」を、回答品質を高める機能としてだけでなく、計算・メモリ・入出力・スケジューリングの対象となる実行時システムとして捉え直す。後者は前者の約26.5倍である。
+
+- **2026-05 · [Switchcraft: AI Model Router for Agentic Tool Calling](2026-2605.07112-switchcraft-ai-model-router-for-agentic-tool-calling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  道具呼出しごとの厳密な正しさを予測する較正済みDistilBERT分類器で、予算内で最も安い正解見込みモデルを選び不可能な要求は棄却することで、単一最良モデルより59パーセント安く高い正解率を出すエージェント向けモデルルーター。
 
 - **2026-05 · [PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding](2026-2605.30126-parcel-pool-anchored-resampling-with-conditioned-elastic-queries-for-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
