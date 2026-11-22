@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1bc69e910e4d8f5fb068ec3eb8cdb406d79f98e8",
+  "base_commit": "c25383b3073d0f348374a6694213f98dfb71383d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -34,7 +34,9 @@
     "1802.05799-horovod.json",
     "2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-and-far-field-attention.json",
     "2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transformer.json",
+    "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
+    "2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.json",
     "2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-research-and-deployment.json",
     "2023-2304.11520-processing-natural-language-on-embedded-devices-how-well-do-transformer-models-perform.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
@@ -45,6 +47,7 @@
     "2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-encoder-decoder-language-models.json",
     "2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-large-language-models.json",
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
+    "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json",
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
@@ -79,10 +82,12 @@
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
     "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
+    "2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prompt-compression.json",
     "2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-dropout-and-separate-quantization.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-formats.json",
+    "2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence-models.json",
     "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic.json",
@@ -48596,6 +48601,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2203.00748": {
+      "order": [
+        "2026-11-22T09:10:06+00:00",
+        "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2212.07634": {
+      "order": [
+        "2026-11-22T09:11:35+00:00",
+        "2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2311.15269": {
+      "order": [
+        "2026-11-22T09:13:03+00:00",
+        "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.04139": {
+      "order": [
+        "2026-11-22T09:14:32+00:00",
+        "2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prompt-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.12982": {
+      "order": [
+        "2026-11-22T09:16:02+00:00",
+        "2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -61267,6 +61317,21 @@
     "arxiv:2601.17902": [
       "papers/inference/99-other-inference-systems/2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.md",
       "papers/inference/99-other-inference-systems/2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.md"
+    ],
+    "arxiv:2203.00748": [
+      "papers/inference/99-other-inference-systems/2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.md"
+    ],
+    "arxiv:2212.07634": [
+      "papers/inference/99-other-inference-systems/2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.md"
+    ],
+    "arxiv:2311.15269": [
+      "papers/inference/99-other-inference-systems/2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-s.md"
+    ],
+    "arxiv:2410.04139": [
+      "papers/inference/99-other-inference-systems/2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prom.md"
+    ],
+    "arxiv:2410.12982": [
+      "papers/inference/99-other-inference-systems/2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence.md"
     ]
   }
 }

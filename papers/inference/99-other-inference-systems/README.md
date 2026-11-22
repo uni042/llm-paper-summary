@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1249本）
+## 自動生成の論文一覧（1254本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4514,6 +4514,14 @@
   実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  
   一方、単純に過去文脈を一様圧縮すると、質問に必要な細かい事実まで失われやすい。論文要旨の速度改善（ストリーミング型比約2倍、エンコーダ・デコーダ型比約3倍）は対象実装・装置での比較であり、一般的なLLM推論のトークン/s改善倍率と同一視しない。
 
+- **2024-10 · [From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression](2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prom.md)**  
+  実装：[✓](https://github.com) ・ リポジトリ内被引用：0  
+  複数文書リーダーのクロス注意を重要度としてチャンクと文の二段でプロンプトを間引く圧縮法で、疑似ラベルなしに全体文脈を捉え、5倍から6倍の圧縮で精度首位と最速級の圧縮速度を両立する方式。
+
+- **2024-10 · [Flash Inference: Near Linear Time Inference for Long Convolution Sequence Models and Beyond](2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い畳み込みの推論を、寄与をタイルへまとめて高速フーリエ変換で処理することで二乗時間から準線形時間へ落とす厳密な推論法で、Hyenaで位置混合110倍、全体7.8倍の高速化を示す研究。
+
 - **2024-10 · [Efficiently Deploying LLMs with Controlled Risk](2024-2410.02173-efficiently-deploying-llms-with-controlled-risk.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの運用費用を下げるために、小型モデルで簡単な質問へ回答し、難しい質問だけを大型モデルへ渡す階層的ルーティングが利用される。しかし、従来の費用最適化型ルータは「自信がないときには回答しない」という選択的予測の運用要件を、ルーティングの設計変数として十分に扱っていなかった。
@@ -4772,6 +4780,10 @@
   実装：[✓](https://github.com/MohammadrezaBanaei/auto-encoder-based-transformer-compression) ・ リポジトリ内被引用：1  
   本研究は、既に学習されたTransformerの重み行列を、事前学習モデル全体の再訓練や蒸留を行わずに小さくする「オフライン圧縮」を対象とする。
 
+- **2023-11 · [Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search](2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  演算子配置を入力に、繰り返し部分であるリピーテンドの構築と前後の時間最適な補完という二段階探索で分散実行スケジュールを自動生成し、学習で最大5.5倍、推論でも遅延とスループットの改善を得るスケジュール探索システム。
+
 - **2023-11 · [AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models](2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化の難しさを範囲の比で定義し直し、活性値と重みの範囲を各チャネルで一致させる等化と、偏り誤差の統計的補正を組み合わせた学習不要量子化。8ビットと超低ビットの両方で既存手法を上回る。
@@ -4823,6 +4835,10 @@
 - **2023-01 · [AttMemo: Accelerating Self-Attention with Memoization on Big Memory Systems](2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerの自己注意（self-注意機構）は、入力系列内のトークン間関係を行列として計算する。BERT、RoBERTa、DeBERTa、GPT-2（いずれも約1億パラメータ）を48コアのXeon CPUとDRAM/Optaneの合計最大1.6TBメモリで測定し、著者は平均22%、最大68%の推論速度向上を報告する。
+
+- **2022-12 · [Gradient-based Intra-attention Pruning on Pre-trained Language Models](2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.md)**  
+  実装：[✓](https://github.com/airaria/GRAIN) ・ リポジトリ内被引用：0  
+  注意ヘッド内部の次元を勾配重要度で反復的に落とし、構造正則化と勾配分離つき知識蒸留、埋め込み因数分解を組み合わせて、密度5%で教師の93〜99%の性能と6〜7倍の高速化を得る事前学習言語モデルの構造化枝刈り。
 
 ### 5年前（2021-12〜2022-11）
 
@@ -4881,6 +4897,10 @@
 - **2022-10 · [QuaLA-MiniLM: a Quantized Length Adaptive MiniLM](2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md)**  
   実装：[✓](https://github.com/intel/intel-extension-for-transformers/tree/main/examples/huggingface/pytorch/question-answering/dynamic) ・ リポジトリ内被引用：0  
   MiniLMv2の自己注意関係蒸留、層別トークン削減と復元、INT8事後量子化を統合し、SQuAD1.1の質問応答でBERT-base比8.8倍のCPU推論高速化をF1低下約0.90ポイントで達成した研究。
+
+- **2022-03 · [E-LANG: Energy-Based Joint Inferencing of Super and Swift Language Models](2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大きなSuperと小さなSwiftを、Swiftの自由エネルギーで入力ごとに振り分ける動的推論で、再学習なしにT5で最大3.3倍、BERTで3.2倍の計算量削減とSuper同等以上の精度を両立する方式。
 
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4965,7 +4985,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：367  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：368  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

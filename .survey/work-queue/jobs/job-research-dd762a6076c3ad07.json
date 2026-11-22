@@ -35,10 +35,15 @@
   "selection_reason": "事前学習言語モデル向けGRAINは勾配に基づき注意ヘッド内部の構造まで細粒度にプルーニングし蒸留と組み合わせ、GLUE等で性能の93〜99%を保持しながら6〜7倍の高速化を達成しており、モデル圧縮による推論レイテンシ削減への直接貢献が確認できる。",
   "semantic_scholar_id": "41b044f8cf8ade197b182586a8cc1cb53733e31d",
   "source_url": "https://arxiv.org/abs/2212.07634",
-  "status": "ready",
+  "status": "superseded",
   "title": "Gradient-based Intra-attention Pruning on Pre-trained Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-11-22T09:18:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.md",
+  "represented_canonical_id": "arXiv:2212.07634",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
