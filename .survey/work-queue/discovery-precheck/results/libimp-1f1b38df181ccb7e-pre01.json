@@ -1,0 +1,223 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1f1b38df181ccb7e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1f1b38df181c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.26562/irjcs.2026.v1306.03",
+    "arXiv:2611.06956"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "05f376946e05f4b665b735d10a7740b5b43faee2",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:25:40.072127+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.26562/irjcs.2026.v1306.03",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.06956",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A Comparative Study of KV-Cache Quantisation Methods for Large Language Model Inference",
+      "source_url": "https://doi.org/10.26562/irjcs.2026.v1306.03",
+      "year": 2026,
+      "published": "2026-06-06",
+      "venue": "International Research Journal of Computer Science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A four-billion-parameter language model accumulates several gigabytes of key–value (KV) cache at a context of 32K tokens, often exceeding the size of the model weights. Quantising this cache reduces the memory footprint, but five published methods take different routes to that goal, with non-obvious trade-offs between them. This paper compares six KV-cache representations an uncompressed bf16 reference, KIVI, KVQuant, QuaRot, QJL, and Turbo Quant along five criteria including bit budget, calibration requirement, and decode-time key reconstruction. All numerical figures are taken from the corresponding source publications. Two findings follow. Reported compression ratios range from 2.6× (KIVI at 2-bit) to 6.4× (KVQuant at 2-bit non-uniform), and the gap between nominal bit budget and reported ratio reflects the cost of per-block metadata. QJL and TurboQuant share two properties absent from KIVI, KVQuant, and QuaRot: they require no calibration data, and they compute attention without reconstructing keys. This combination is most valuable in deployments where calibration prompts are unstable or unavailable, or where the same compressed cache spans multiple model variants.",
+      "identifiers": [
+        "SemanticScholar:43affa5431106110d5b969d45b8389a0fc4a2d65"
+      ],
+      "semantic_scholar_id": "43affa5431106110d5b969d45b8389a0fc4a2d65",
+      "doi": "10.26562/irjcs.2026.v1306.03",
+      "canonical_id": "DOI:10.26562/irjcs.2026.v1306.03",
+      "authors": [
+        "Chinmay C. S."
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2611.06956",
+      "year": 2026,
+      "published": "2026-11-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep search and long-horizon reasoning unfold as branching trajectories that pursue parallel sub-queries, abandon dead-end detours, and cross-check sibling findings. Yet modern serving engines, harnesses, and RL trainers execute episodes as flat, append-only sequences: stretching a context window leaves failed detours that dilute attention, in-place edits break KV caching and recurrent states, and all-layer cache splicing overwrites hybrid recurrent working memory and triggers hijacking. We introduce Octopus, a co-designed serving runtime, memory manager, and RL framework executing episodes as a GPU-resident DAG over radix cursors (89.6% KV hit rate). Agents coordinate via five primitives: fork shares parent KV prefixes in $O(1)$ with isolated 32K budgets, rewind restores recurrent checkpoints, read_thread mounts sibling KV pages in zero copy, and wait and done synchronize results. Octopus splices sibling KV pages only into full-attention layers under monotonic position offsets while recurrent layers skip mounted spans, retaining 92.2% of full-text answer information and cutting hijacking $21\\times$ ($57.9\\% \\to 2.7\\%$) with zero new KV pages. During RL, our packed DAG kernel and DAG-GRPO objective deduplicate shared prefixes via loss masks while keeping mounted KV edges differentiable, cutting rollout-training KL divergence $32\\times$ and routing reader gradients into producer KV projections. Trained on Qwen3.5-4B with binary rewards, Octopus self-organizes a commander-worker hierarchy and latent KV mesh, lifting BrowseComp-Plus accuracy under BM25 from 26.0% (32K ReAct) and 32.1% (143K GRPO) to 49.6% (+17.5 pts; 51.2% on OpenResearcher), surpassing 9B context-editing RL (42.5%), matching o3 (49.3%), and outperforming dense-retrieval agents up to $250\\times$ larger: Tongyi-DeepResearch (44.5%), DeepSeek-R1 (16.4%), Kimi-K2 (35.4%), GPT-4.1 (36.4%), and Claude 4 Opus (36.8%).",
+      "identifiers": [
+        "SemanticScholar:3bfb38122165c4a5545d375b6d72aa0512e04c67"
+      ],
+      "semantic_scholar_id": "3bfb38122165c4a5545d375b6d72aa0512e04c67",
+      "canonical_id": "arXiv:2611.06956",
+      "arxiv_id": "2611.06956",
+      "authors": [
+        "Tian-Ming Sha",
+        "Jun-Nan Li",
+        "Si-Qi Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.26562/irjcs.2026.v1306.03",
+      "identity_tokens": [
+        "id:DOI:10.26562/irjcs.2026.v1306.03",
+        "id:SemanticScholar:43affa5431106110d5b969d45b8389a0fc4a2d65",
+        "title:a comparative study of kvcache quantisation methods for large language model inference",
+        "url:https://doi.org/10.26562/irjcs.2026.v1306.03"
+      ],
+      "record": {
+        "title": "A Comparative Study of KV-Cache Quantisation Methods for Large Language Model Inference",
+        "source_url": "https://doi.org/10.26562/irjcs.2026.v1306.03",
+        "year": 2026,
+        "published": "2026-06-06",
+        "venue": "International Research Journal of Computer Science",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A four-billion-parameter language model accumulates several gigabytes of key–value (KV) cache at a context of 32K tokens, often exceeding the size of the model weights. Quantising this cache reduces the memory footprint, but five published methods take different routes to that goal, with non-obvious trade-offs between them. This paper compares six KV-cache representations an uncompressed bf16 reference, KIVI, KVQuant, QuaRot, QJL, and Turbo Quant along five criteria including bit budget, calibration requirement, and decode-time key reconstruction. All numerical figures are taken from the corresponding source publications. Two findings follow. Reported compression ratios range from 2.6× (KIVI at 2-bit) to 6.4× (KVQuant at 2-bit non-uniform), and the gap between nominal bit budget and reported ratio reflects the cost of per-block metadata. QJL and TurboQuant share two properties absent from KIVI, KVQuant, and QuaRot: they require no calibration data, and they compute attention without reconstructing keys. This combination is most valuable in deployments where calibration prompts are unstable or unavailable, or where the same compressed cache spans multiple model variants.",
+        "identifiers": [
+          "SemanticScholar:43affa5431106110d5b969d45b8389a0fc4a2d65"
+        ],
+        "semantic_scholar_id": "43affa5431106110d5b969d45b8389a0fc4a2d65",
+        "doi": "10.26562/irjcs.2026.v1306.03",
+        "canonical_id": "DOI:10.26562/irjcs.2026.v1306.03",
+        "authors": [
+          "Chinmay C. S."
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.06956",
+      "identity_tokens": [
+        "id:SemanticScholar:3bfb38122165c4a5545d375b6d72aa0512e04c67",
+        "id:arXiv:2611.06956",
+        "title:octopus one brain many branches for latentkv multiagent reinforcement learning",
+        "url:https://arxiv.org/abs/2611.06956"
+      ],
+      "record": {
+        "title": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2611.06956",
+        "year": 2026,
+        "published": "2026-11-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep search and long-horizon reasoning unfold as branching trajectories that pursue parallel sub-queries, abandon dead-end detours, and cross-check sibling findings. Yet modern serving engines, harnesses, and RL trainers execute episodes as flat, append-only sequences: stretching a context window leaves failed detours that dilute attention, in-place edits break KV caching and recurrent states, and all-layer cache splicing overwrites hybrid recurrent working memory and triggers hijacking. We introduce Octopus, a co-designed serving runtime, memory manager, and RL framework executing episodes as a GPU-resident DAG over radix cursors (89.6% KV hit rate). Agents coordinate via five primitives: fork shares parent KV prefixes in $O(1)$ with isolated 32K budgets, rewind restores recurrent checkpoints, read_thread mounts sibling KV pages in zero copy, and wait and done synchronize results. Octopus splices sibling KV pages only into full-attention layers under monotonic position offsets while recurrent layers skip mounted spans, retaining 92.2% of full-text answer information and cutting hijacking $21\\times$ ($57.9\\% \\to 2.7\\%$) with zero new KV pages. During RL, our packed DAG kernel and DAG-GRPO objective deduplicate shared prefixes via loss masks while keeping mounted KV edges differentiable, cutting rollout-training KL divergence $32\\times$ and routing reader gradients into producer KV projections. Trained on Qwen3.5-4B with binary rewards, Octopus self-organizes a commander-worker hierarchy and latent KV mesh, lifting BrowseComp-Plus accuracy under BM25 from 26.0% (32K ReAct) and 32.1% (143K GRPO) to 49.6% (+17.5 pts; 51.2% on OpenResearcher), surpassing 9B context-editing RL (42.5%), matching o3 (49.3%), and outperforming dense-retrieval agents up to $250\\times$ larger: Tongyi-DeepResearch (44.5%), DeepSeek-R1 (16.4%), Kimi-K2 (35.4%), GPT-4.1 (36.4%), and Claude 4 Opus (36.8%).",
+        "identifiers": [
+          "SemanticScholar:3bfb38122165c4a5545d375b6d72aa0512e04c67"
+        ],
+        "semantic_scholar_id": "3bfb38122165c4a5545d375b6d72aa0512e04c67",
+        "canonical_id": "arXiv:2611.06956",
+        "arxiv_id": "2611.06956",
+        "authors": [
+          "Tian-Ming Sha",
+          "Jun-Nan Li",
+          "Si-Qi Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:637289168ad1bd4e3f16f7c671a880915343ab2c60a638e82bac84ceb136c08d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

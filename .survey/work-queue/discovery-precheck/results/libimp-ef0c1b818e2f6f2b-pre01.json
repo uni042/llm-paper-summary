@@ -1,0 +1,936 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ef0c1b818e2f6f2b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ef0c1b818e2f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.neunet.2025.107855",
+    "DOI:10.1109/iiswc71020.2026.00031",
+    "DOI:10.1109/wcnc65185.2026.11555243",
+    "DOI:10.1145/3625549.3658654",
+    "DOI:10.1145/3832783.3834362",
+    "DOI:10.1631/fitee.2400453",
+    "DOI:10.23919/date69613.2026.11539338",
+    "DOI:10.34190/icair.5.1.4367",
+    "arXiv:2512.05597",
+    "arXiv:2602.12609"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "05f376946e05f4b665b735d10a7740b5b43faee2",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:25:40.091640+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.neunet.2025.107855",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iiswc71020.2026.00031",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/wcnc65185.2026.11555243",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3625549.3658654",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3832783.3834362",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1631/fitee.2400453",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539338",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.34190/icair.5.1.4367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.05597",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.12609",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "QuEPT: Quantized Elastic Precision Transformers with One-Shot Calibration for Multi-Bit Switching",
+      "source_url": "https://arxiv.org/abs/2602.12609",
+      "year": 2026,
+      "published": "2026-02-13",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Elastic precision quantization enables multi-bit deployment via a single optimization pass, fitting diverse quantization scenarios. Yet, the high storage and optimization costs associated with the Transformer architecture, research on elastic quantization remains limited, particularly for large language models. This paper proposes QuEPT, an efficient post-training scheme that reconstructs block-wise multi-bit errors with one-shot calibration on a small data slice. It can dynamically adapt to various predefined bit-widths by cascading different low-rank adapters, and supports real-time switching between uniform quantization and mixed precision quantization without repeated optimization. To enhance accuracy and robustness, we introduce Multi-Bit Token Merging (MB-ToMe) to dynamically fuse token features across different bit-widths, improving robustness during bit-width switching. Additionally, we propose Multi-Bit Cascaded Low-Rank adapters (MB-CLoRA) to strengthen correlations between bit-width groups, further improve the overall performance of QuEPT. Extensive experiments demonstrate that QuEPT achieves comparable or better performance to existing state-of-the-art post-training quantization methods.",
+      "identifiers": [
+        "SemanticScholar:2a6e2be3ae25b59ce3e664ebf72506d75a5b0d0d"
+      ],
+      "semantic_scholar_id": "2a6e2be3ae25b59ce3e664ebf72506d75a5b0d0d",
+      "canonical_id": "arXiv:2602.12609",
+      "arxiv_id": "2602.12609",
+      "doi": "10.1609/aaai.v40i32.39945",
+      "authors": [
+        "Ke Xu",
+        "Yixin Wang",
+        "Zhong-Cheng Li",
+        "Haowen Cui",
+        "Jin-Shui Hu",
+        "Xingyi Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quantization Methods for Energy Efficient LLM Deployments",
+      "source_url": "https://doi.org/10.34190/icair.5.1.4367",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "International Conference on AI Research",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large language models (LLMs) in production environments faces significant challenges due to computational and energy requirements during inference. This paper presents a comprehensive empirical analysis of quantization methods applied to the Qwen3 model family, ranging from 0.6B to 32B parameters. We evaluate six quantization approaches: GPTQ 4-bit, GPTQ 8-bit, AWQ, FP8 W8A8 and INT8 W8A8, and the original FP16 baseline across six established benchmarks (MMLU, HumanEval, TruthfulQA, MetaBench, GSM8K, ARC Challenge). Our analysis examines the relationship between model size, quantization method, accuracy preservation, energy consumption, and inference performance across various context lengths. We demonstrate that larger Qwen3 models exhibit increased resilience to quantization-induced accuracy degradation, while aggressive quantization methods provide substantial energy savings with acceptable trade-offs in model performance. These findings provide crucial insights for optimizing LLM deployments in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:93e0bfc224feb745f9bcb46033caa0960e5b3dee"
+      ],
+      "semantic_scholar_id": "93e0bfc224feb745f9bcb46033caa0960e5b3dee",
+      "doi": "10.34190/icair.5.1.4367",
+      "canonical_id": "DOI:10.34190/icair.5.1.4367",
+      "authors": [
+        "Tomislav Šubić"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 354,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction",
+      "source_url": "https://arxiv.org/abs/2512.05597",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent perception-generalist approaches based on language models have achieved state-of-the-art results across diverse tasks, including 3D scene layout estimation and 3D object detection, via unified architecture and interface. However, these approaches rely on autoregressive next-token prediction, which is inherently slow. In this work, we introduce Fast SceneScript, a novel structured language model for accurate and efficient 3D scene understanding. Our method employs multi-token prediction (MTP) to reduce the number of autoregressive iterations and significantly accelerate inference. While MTP improves speed, unreliable token predictions can significantly reduce accuracy. To filter out unreliable tokens, we adapt self-speculative decoding (SSD) for structured language models and introduce confidence-guided decoding (CGD) with an improved scoring mechanism for token reliability. Furthermore, we design a parameter-efficient mechanism that reduces the parameter overhead of MTP. Extensive experiments on synthetic and real-world benchmarks demonstrate that Fast SceneScript can generate up to 9 tokens per decoder inference step without compromising accuracy, while adding only $\\sim7.5\\%$ additional parameters.",
+      "identifiers": [
+        "SemanticScholar:9d214e385f8d3490e27bcb13ff8e11b4458999c5"
+      ],
+      "semantic_scholar_id": "9d214e385f8d3490e27bcb13ff8e11b4458999c5",
+      "canonical_id": "arXiv:2512.05597",
+      "arxiv_id": "2512.05597",
+      "authors": [
+        "Rui-Hong Yin",
+        "Xuepeng Shi",
+        "O. Bailo",
+        "Marco Manfredi",
+        "T. Gevers"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 353,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PT-BitNet: Scaling up the 1-Bit large language model with post-training quantization",
+      "source_url": "https://doi.org/10.1016/j.neunet.2025.107855",
+      "year": 2025,
+      "published": "2025-07-09",
+      "venue": "Neural Networks",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) has been constrained by their substantial hardware requirements and associated costs. Quantization techniques have emerged as a promising solution to address these challenges. Recently, BitNet [Wang et al., 2023] proposed to use ternary values (+1, 0, -1) for weight quantization showing particular promise in eliminating multiplication operations, further significantly reducing the latency and energy consumption. However, BitNet's requirement for training models from scratch limits its scalability to models larger than 3 billion parameters. This paper introduces PT-BitNet, a novel post-training quantization method that extends the benefits of BitNet's ternary quantization to large-scale language models up to 70B parameters. To effectively quantize the model parameters down to ±1,0, we propose a two-stage algorithm. In the first stage, we transform the weight distribution to a quantization-friendly one, and in the second stage, we optimize the weight elements in a block-wise manner. We demonstrate the effectiveness of PT-BitNet through comprehensive experiments on various model sizes and downstream tasks. Our results show that PT-BitNet achieves substantial reductions in model size and inference time, with minimal impact on task performance. For example, PT-BitNet scales to 70B parameters LLM with 61 % average downstream accuracy, significantly outperforming the BitNet b.158 with 51.2 % average accuracy.",
+      "identifiers": [
+        "SemanticScholar:2d6d79fd50774fea3b72951bfb25798380dc6a76"
+      ],
+      "semantic_scholar_id": "2d6d79fd50774fea3b72951bfb25798380dc6a76",
+      "doi": "10.1016/j.neunet.2025.107855",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.107855",
+      "authors": [
+        "Yu-Fei Guo",
+        "Zecheng Hao",
+        "Jiahang Shao",
+        "Jie Zhou",
+        "Xiao-De Liu",
+        "Xin Tong",
+        "Yu-Han Zhang",
+        "Yuan-Pei Chen",
+        "Wei-Hang Peng",
+        "Zhe Ma"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 502,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Drift-Plus-Penalty Based Queue Management for Edge LLM Inference with Repeated Sampling",
+      "source_url": "https://doi.org/10.1109/WCNC65185.2026.11555243",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "IEEE Wireless Communications and Networking Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inspired by recent advances in inference scaling laws, this paper proposes a novel edge large language model (LLM) inference framework that leverages repeated sampling to improve generation quality using relatively lightweight LLMs. However, excessive repeated sampling may lead to intolerable delays due to the limited computing capacity of edge servers. To address this tradeoff, this paper aims to develop a queue management scheme that carefully balances generation quality and delay. The system is modeled as multiple queues for batch processing, each consisting of sub-tasks representing individual samples and categorized based on output token lengths. The queue management problem is then formulated to maximize a time-averaged metric associated with generation quality under queue stability constraints. Applying the drift-plus-penalty method, the problem is decomposed into two subproblems: repeated sampling decision and queue scheduling, which are formulated as independent integer programs and admit efficient closed-form solutions. Simulation results demonstrate that the proposed algorithm adapts to task arrival rates within the feasible region, ensures generation quality, and provides a controllable tradeoff between delay and generation quality through an adjustable parameter.",
+      "identifiers": [
+        "SemanticScholar:fea4b16a8c2dc39a55b3bfeaa8ea201bfedf89f2"
+      ],
+      "semantic_scholar_id": "fea4b16a8c2dc39a55b3bfeaa8ea201bfedf89f2",
+      "doi": "10.1109/WCNC65185.2026.11555243",
+      "canonical_id": "DOI:10.1109/WCNC65185.2026.11555243",
+      "authors": [
+        "Hong-Tao Li",
+        "Feng-Xian Guo",
+        "Rui-Hong Jiang",
+        "Mu-Gen Peng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HINT: A Hybrid SRAM–MRAM Compute-In-Memory with INput-aware Skipping SAR-ADC for Energy Efficient Ternary LLMs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539338",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large language models (LLMs) show remarkable performance in natural language processing tasks, their deployment on resource-constrained devices remains challenging due to a substantial memory footprint and high-energy consumption. To address these challenges, low-bit and ternary quantization reduce the model size, while hardware approaches such as compute-in-memory (CIM) alleviate the overhead of external memory accesses. However, billions of parameters of LLMs still cause significant data movement, and existing ternary CIM suffers from a low-density bitcell as well as accuracy degradation due to cut-off analog-to-digital converters (ADCs). In this paper, we propose HINT, a CIM architecture incorporating two energy efficient techniques. First, hybrid ternary bitcell leverages the reliability of SRAM and the high-density of MRAM, reducing area and energy overhead. Second, input-aware skipping SAR-ADC exploits input sparsity to skip unnecessary conversion cycles without sacrificing accuracy. On BitNet b1.58 (700M), compared to SRAM-based and eDRAM-based CIM baselines, HINT improves bitcell density by 1.85× and achieves up to 2.67× higher energy efficiency, respectively. By skipping up to 21% of conversion cycles, the proposed ADC improves energy efficiency up to 1.27× while maintaining model accuracy.",
+      "identifiers": [
+        "SemanticScholar:89d5e5a11507a3e5d83b5f921b84e58d5755d5d3"
+      ],
+      "semantic_scholar_id": "89d5e5a11507a3e5d83b5f921b84e58d5755d5d3",
+      "doi": "10.23919/DATE69613.2026.11539338",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539338",
+      "authors": [
+        "Jaebeom Park",
+        "Seung-Eon Hwang",
+        "Jongsun Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hardware Characterization of Diffusion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks",
+      "source_url": "https://doi.org/10.1109/IISWC71020.2026.00031",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "IEEE International Symposium on Workload Characterization",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) language models dominate today’s LLM deployments. Masked diffusion language models (MDLMs) have recently achieved quality comparable to similarly scaled AR models, yet their inference behavior on modern GPUs remains largely uncharacterized. We present a hardware-level characterization of representative diffusion language models and show that, although MDLMs and AR models share similar Transformer building blocks, diffusion inference exhibits fundamentally different bottlenecks at the hardware level, breaking the assumptions underlying modern AR serving architectures and systems.First, we find that each denoising forward pass is compute-bound and operates near the GPU roofline, shifting the bottleneck from HBM bandwidth in AR decode to tensor-core throughput. Second, under standard (uncached) implementation, diffusion inference is activation-dominated rather than KV-cache-dominated. Third, block diffusion interpolates between AR and full-sequence diffusion behavior. In particular, block size emerges as a hardware operating parameter that allows block diffusion models to be tuned to match the available system resources. Lastly, several AR-inherited optimizations exhibit qualitatively different behavior under diffusion workloads. Building on these observations, we analyze the transferability of the modern AR optimization stack to diffusion workloads and identify emerging hardware and system optimization directions for diffusion-oriented inference accelerators.",
+      "identifiers": [
+        "SemanticScholar:a0f51b8f8e1b9360b049c26e96b75f01d81dd471"
+      ],
+      "semantic_scholar_id": "a0f51b8f8e1b9360b049c26e96b75f01d81dd471",
+      "doi": "10.1109/IISWC71020.2026.00031",
+      "canonical_id": "DOI:10.1109/IISWC71020.2026.00031",
+      "authors": [
+        "Zhen-Xing Fan",
+        "Kevin Skadron"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SimServing: Native-Execution Simulation for Evolution-Resilient LLM Serving Configuration Tuning",
+      "source_url": "https://doi.org/10.1145/3832783.3834362",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": "Proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) services expose a large configuration space that critically affects performance, yet tuning these configurations on hardware (e.g., NVIDIA GPUs) is prohibitively expensive. Simulation offers a scalable alternative, but state-of-the-art simulators suffer from a fundamental software engineering pitfall: they re-implement the serving framework's complex control logic (e.g., request scheduling and memory management), creating a semantic copy that inevitably diverges from the rapidly evolving upstream software. Our empirical study across eight consecutive vLLM versions confirms this fidelity drift, with prediction errors widening as the framework evolves. We observe that the serving management software dominates performance fidelity yet accounts for less than 10% of total execution time, with GPU computation consuming over 90%. This asymmetry motivates SimServing, a hybrid simulation framework that executes the native, unmodified serving software while replacing GPU computation with a pluggable latency estimator. This design preserves the serving management software's control flow by executing it rather than modeling it, thereby automatically inheriting upstream updates and substantially reducing the maintenance burden associated with re-implementation. Integrating SimServing with Particle Swarm Optimization for configuration tuning, our evaluation shows that it reduces throughput prediction error from 13.8% to 4.9%, achieves up to 21.18× simulation speedup, and discovers configurations that improve throughput by up to 10.2% over existing baselines.",
+      "identifiers": [
+        "SemanticScholar:278918eef05e348a7809000e6fd34c8f7b6e4eb2"
+      ],
+      "semantic_scholar_id": "278918eef05e348a7809000e6fd34c8f7b6e4eb2",
+      "doi": "10.1145/3832783.3834362",
+      "canonical_id": "DOI:10.1145/3832783.3834362",
+      "authors": [
+        "Yu-Jie Huang",
+        "Jia-Zhen Gu",
+        "Zhihan Jiang",
+        "Michael R. Lyu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ElasticRoom: Multi-Tenant DNN Inference Engine via Co-design with Resource-constrained Compilation and Strong Priority Scheduling",
+      "source_url": "https://doi.org/10.1145/3625549.3658654",
+      "year": 2024,
+      "published": "2024-06-03",
+      "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GPU partition mechanisms in run-time software have been widely used in job scheduler and multi-tenant computing system to improve resource utilization and throughput. The latency requirements of different DNN requests, such as real-time and best-effort requests, often exhibit variations in computational systems that handle batch tasks for DNN inference. However, the existing GPU partition mechanisms and state-of-the-art scheduling approaches face challenges in effectively promising both high throughput and low latency for real-time requests. The current limitation lies in the inability of existing GPU partition mechanisms to enhance GPU resource utilization and ensure job priority simultaneously. In this paper, we present an innovative multi-tenant DNN inference engine, ElasticRoom, which relies on the co-design with resource-constrained compilation and strong priority scheduling to achieve high GPU utilization and low latency of real-time requests simultaneously. To ensure portability across diverse manufacturers' accelerator hardware, ElasticRoom does not rely on any customization or pre-set features in the hardware or operating system. To quantify the ability of DNN inference computing systems to process and meet performance requirements for a batch of real-time DNN inference requests within a valid time, we define the concept of Goodput for each batch of inference requests. The performance of ElasticRoom was assessed on both NVIDIA GPUs (A100) and AMD GPUs (MI100), revealing significant enhancements in Goodput ranging from 14% to 49% compared to well-established state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:13d57014737a0af7d8d0991cfcfd27b49015dd52"
+      ],
+      "semantic_scholar_id": "13d57014737a0af7d8d0991cfcfd27b49015dd52",
+      "doi": "10.1145/3625549.3658654",
+      "canonical_id": "DOI:10.1145/3625549.3658654",
+      "authors": [
+        "Lixian Ma",
+        "Haoruo Chen",
+        "En Shao",
+        "Le-Ping Wang",
+        "Quan Chen",
+        "Guang-Ming Tan"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 903,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Minimizing transformer inference overhead using controlling element on Shenwei AI accelerator",
+      "source_url": "https://doi.org/10.1631/FITEE.2400453",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "Frontiers of Information Technology & Electronic Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have become a cornerstone of various natural language processing (NLP) tasks. However, the substantial computational overhead during the inference remains a significant challenge, limiting their deployment in practical applications. In this study, we address this challenge by minimizing the inference overhead in transformer models using the controlling element on artificial intelligence (AI) accelerators. Our work is anchored by four key contributions. First, we conduct a comprehensive analysis of the overhead composition within the transformer inference process, identifying the primary bottlenecks. Second, we leverage the management processing element (MPE) of the Shenwei AI (SWAI) accelerator, implementing a three-tier scheduling framework that significantly reduces the number of host-device launches to approximately 1/10 000 of the original PyTorch-GPU setup. Third, we introduce a zero-copy memory management technique using segment-page fusion, which significantly reduces memory access latency and improves overall inference efficiency. Finally, we develop a fast model loading method that eliminates redundant computations during model verification and initialization, reducing the total loading time for large models from 22 128.31 ms to 1041.72 ms. Our contributions significantly enhance the optimization of transformer models, enabling more efficient and expedited inference processes on AI accelerators.",
+      "identifiers": [
+        "SemanticScholar:9e44dcb5b5c38dbce58ab6ad53db1dc1b4e08551"
+      ],
+      "semantic_scholar_id": "9e44dcb5b5c38dbce58ab6ad53db1dc1b4e08551",
+      "doi": "10.1631/FITEE.2400453",
+      "canonical_id": "DOI:10.1631/FITEE.2400453",
+      "authors": [
+        "Yulong Zhao",
+        "Chun-Feng Wu",
+        "Yizhu Wang",
+        "Lu-Fei Zhang",
+        "Ya-Guang Zhang",
+        "Wen-Yuan Shen",
+        "Hao Fan",
+        "Han Fang",
+        "Yi Qin",
+        "Xin Liu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 601,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.12609",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v40i32.39945",
+        "id:SemanticScholar:2a6e2be3ae25b59ce3e664ebf72506d75a5b0d0d",
+        "id:arXiv:2602.12609",
+        "title:quept quantized elastic precision transformers with oneshot calibration for multibit switching",
+        "url:https://arxiv.org/abs/2602.12609"
+      ],
+      "record": {
+        "title": "QuEPT: Quantized Elastic Precision Transformers with One-Shot Calibration for Multi-Bit Switching",
+        "source_url": "https://arxiv.org/abs/2602.12609",
+        "year": 2026,
+        "published": "2026-02-13",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Elastic precision quantization enables multi-bit deployment via a single optimization pass, fitting diverse quantization scenarios. Yet, the high storage and optimization costs associated with the Transformer architecture, research on elastic quantization remains limited, particularly for large language models. This paper proposes QuEPT, an efficient post-training scheme that reconstructs block-wise multi-bit errors with one-shot calibration on a small data slice. It can dynamically adapt to various predefined bit-widths by cascading different low-rank adapters, and supports real-time switching between uniform quantization and mixed precision quantization without repeated optimization. To enhance accuracy and robustness, we introduce Multi-Bit Token Merging (MB-ToMe) to dynamically fuse token features across different bit-widths, improving robustness during bit-width switching. Additionally, we propose Multi-Bit Cascaded Low-Rank adapters (MB-CLoRA) to strengthen correlations between bit-width groups, further improve the overall performance of QuEPT. Extensive experiments demonstrate that QuEPT achieves comparable or better performance to existing state-of-the-art post-training quantization methods.",
+        "identifiers": [
+          "SemanticScholar:2a6e2be3ae25b59ce3e664ebf72506d75a5b0d0d"
+        ],
+        "semantic_scholar_id": "2a6e2be3ae25b59ce3e664ebf72506d75a5b0d0d",
+        "canonical_id": "arXiv:2602.12609",
+        "arxiv_id": "2602.12609",
+        "doi": "10.1609/aaai.v40i32.39945",
+        "authors": [
+          "Ke Xu",
+          "Yixin Wang",
+          "Zhong-Cheng Li",
+          "Haowen Cui",
+          "Jin-Shui Hu",
+          "Xingyi Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 283,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.34190/icair.5.1.4367",
+      "identity_tokens": [
+        "id:DOI:10.34190/icair.5.1.4367",
+        "id:SemanticScholar:93e0bfc224feb745f9bcb46033caa0960e5b3dee",
+        "title:quantization methods for energy efficient llm deployments",
+        "url:https://doi.org/10.34190/icair.5.1.4367"
+      ],
+      "record": {
+        "title": "Quantization Methods for Energy Efficient LLM Deployments",
+        "source_url": "https://doi.org/10.34190/icair.5.1.4367",
+        "year": 2025,
+        "published": "2025-12-04",
+        "venue": "International Conference on AI Research",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of large language models (LLMs) in production environments faces significant challenges due to computational and energy requirements during inference. This paper presents a comprehensive empirical analysis of quantization methods applied to the Qwen3 model family, ranging from 0.6B to 32B parameters. We evaluate six quantization approaches: GPTQ 4-bit, GPTQ 8-bit, AWQ, FP8 W8A8 and INT8 W8A8, and the original FP16 baseline across six established benchmarks (MMLU, HumanEval, TruthfulQA, MetaBench, GSM8K, ARC Challenge). Our analysis examines the relationship between model size, quantization method, accuracy preservation, energy consumption, and inference performance across various context lengths. We demonstrate that larger Qwen3 models exhibit increased resilience to quantization-induced accuracy degradation, while aggressive quantization methods provide substantial energy savings with acceptable trade-offs in model performance. These findings provide crucial insights for optimizing LLM deployments in resource-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:93e0bfc224feb745f9bcb46033caa0960e5b3dee"
+        ],
+        "semantic_scholar_id": "93e0bfc224feb745f9bcb46033caa0960e5b3dee",
+        "doi": "10.34190/icair.5.1.4367",
+        "canonical_id": "DOI:10.34190/icair.5.1.4367",
+        "authors": [
+          "Tomislav Šubić"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 354,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.05597",
+      "identity_tokens": [
+        "id:SemanticScholar:9d214e385f8d3490e27bcb13ff8e11b4458999c5",
+        "id:arXiv:2512.05597",
+        "title:fast scenescript fast and accurate languagebased 3d scene understanding via multitoken prediction",
+        "url:https://arxiv.org/abs/2512.05597"
+      ],
+      "record": {
+        "title": "Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction",
+        "source_url": "https://arxiv.org/abs/2512.05597",
+        "year": 2025,
+        "published": "2025-12-05",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent perception-generalist approaches based on language models have achieved state-of-the-art results across diverse tasks, including 3D scene layout estimation and 3D object detection, via unified architecture and interface. However, these approaches rely on autoregressive next-token prediction, which is inherently slow. In this work, we introduce Fast SceneScript, a novel structured language model for accurate and efficient 3D scene understanding. Our method employs multi-token prediction (MTP) to reduce the number of autoregressive iterations and significantly accelerate inference. While MTP improves speed, unreliable token predictions can significantly reduce accuracy. To filter out unreliable tokens, we adapt self-speculative decoding (SSD) for structured language models and introduce confidence-guided decoding (CGD) with an improved scoring mechanism for token reliability. Furthermore, we design a parameter-efficient mechanism that reduces the parameter overhead of MTP. Extensive experiments on synthetic and real-world benchmarks demonstrate that Fast SceneScript can generate up to 9 tokens per decoder inference step without compromising accuracy, while adding only $\\sim7.5\\%$ additional parameters.",
+        "identifiers": [
+          "SemanticScholar:9d214e385f8d3490e27bcb13ff8e11b4458999c5"
+        ],
+        "semantic_scholar_id": "9d214e385f8d3490e27bcb13ff8e11b4458999c5",
+        "canonical_id": "arXiv:2512.05597",
+        "arxiv_id": "2512.05597",
+        "authors": [
+          "Rui-Hong Yin",
+          "Xuepeng Shi",
+          "O. Bailo",
+          "Marco Manfredi",
+          "T. Gevers"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 353,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.neunet.2025.107855",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neunet.2025.107855",
+        "id:SemanticScholar:2d6d79fd50774fea3b72951bfb25798380dc6a76",
+        "title:ptbitnet scaling up the 1bit large language model with posttraining quantization",
+        "url:https://doi.org/10.1016/j.neunet.2025.107855"
+      ],
+      "record": {
+        "title": "PT-BitNet: Scaling up the 1-Bit large language model with post-training quantization",
+        "source_url": "https://doi.org/10.1016/j.neunet.2025.107855",
+        "year": 2025,
+        "published": "2025-07-09",
+        "venue": "Neural Networks",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) has been constrained by their substantial hardware requirements and associated costs. Quantization techniques have emerged as a promising solution to address these challenges. Recently, BitNet [Wang et al., 2023] proposed to use ternary values (+1, 0, -1) for weight quantization showing particular promise in eliminating multiplication operations, further significantly reducing the latency and energy consumption. However, BitNet's requirement for training models from scratch limits its scalability to models larger than 3 billion parameters. This paper introduces PT-BitNet, a novel post-training quantization method that extends the benefits of BitNet's ternary quantization to large-scale language models up to 70B parameters. To effectively quantize the model parameters down to ±1,0, we propose a two-stage algorithm. In the first stage, we transform the weight distribution to a quantization-friendly one, and in the second stage, we optimize the weight elements in a block-wise manner. We demonstrate the effectiveness of PT-BitNet through comprehensive experiments on various model sizes and downstream tasks. Our results show that PT-BitNet achieves substantial reductions in model size and inference time, with minimal impact on task performance. For example, PT-BitNet scales to 70B parameters LLM with 61 % average downstream accuracy, significantly outperforming the BitNet b.158 with 51.2 % average accuracy.",
+        "identifiers": [
+          "SemanticScholar:2d6d79fd50774fea3b72951bfb25798380dc6a76"
+        ],
+        "semantic_scholar_id": "2d6d79fd50774fea3b72951bfb25798380dc6a76",
+        "doi": "10.1016/j.neunet.2025.107855",
+        "canonical_id": "DOI:10.1016/j.neunet.2025.107855",
+        "authors": [
+          "Yu-Fei Guo",
+          "Zecheng Hao",
+          "Jiahang Shao",
+          "Jie Zhou",
+          "Xiao-De Liu",
+          "Xin Tong",
+          "Yu-Han Zhang",
+          "Yuan-Pei Chen",
+          "Wei-Hang Peng",
+          "Zhe Ma"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 502,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/wcnc65185.2026.11555243",
+      "identity_tokens": [
+        "id:DOI:10.1109/wcnc65185.2026.11555243",
+        "id:SemanticScholar:fea4b16a8c2dc39a55b3bfeaa8ea201bfedf89f2",
+        "title:driftpluspenalty based queue management for edge llm inference with repeated sampling",
+        "url:https://doi.org/10.1109/WCNC65185.2026.11555243"
+      ],
+      "record": {
+        "title": "Drift-Plus-Penalty Based Queue Management for Edge LLM Inference with Repeated Sampling",
+        "source_url": "https://doi.org/10.1109/WCNC65185.2026.11555243",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "IEEE Wireless Communications and Networking Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inspired by recent advances in inference scaling laws, this paper proposes a novel edge large language model (LLM) inference framework that leverages repeated sampling to improve generation quality using relatively lightweight LLMs. However, excessive repeated sampling may lead to intolerable delays due to the limited computing capacity of edge servers. To address this tradeoff, this paper aims to develop a queue management scheme that carefully balances generation quality and delay. The system is modeled as multiple queues for batch processing, each consisting of sub-tasks representing individual samples and categorized based on output token lengths. The queue management problem is then formulated to maximize a time-averaged metric associated with generation quality under queue stability constraints. Applying the drift-plus-penalty method, the problem is decomposed into two subproblems: repeated sampling decision and queue scheduling, which are formulated as independent integer programs and admit efficient closed-form solutions. Simulation results demonstrate that the proposed algorithm adapts to task arrival rates within the feasible region, ensures generation quality, and provides a controllable tradeoff between delay and generation quality through an adjustable parameter.",
+        "identifiers": [
+          "SemanticScholar:fea4b16a8c2dc39a55b3bfeaa8ea201bfedf89f2"
+        ],
+        "semantic_scholar_id": "fea4b16a8c2dc39a55b3bfeaa8ea201bfedf89f2",
+        "doi": "10.1109/WCNC65185.2026.11555243",
+        "canonical_id": "DOI:10.1109/WCNC65185.2026.11555243",
+        "authors": [
+          "Hong-Tao Li",
+          "Feng-Xian Guo",
+          "Rui-Hong Jiang",
+          "Mu-Gen Peng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539338",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539338",
+        "id:SemanticScholar:89d5e5a11507a3e5d83b5f921b84e58d5755d5d3",
+        "title:hint a hybrid srammram computeinmemory with inputaware skipping saradc for energy efficient ternary llms",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539338"
+      ],
+      "record": {
+        "title": "HINT: A Hybrid SRAM–MRAM Compute-In-Memory with INput-aware Skipping SAR-ADC for Energy Efficient Ternary LLMs",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539338",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although large language models (LLMs) show remarkable performance in natural language processing tasks, their deployment on resource-constrained devices remains challenging due to a substantial memory footprint and high-energy consumption. To address these challenges, low-bit and ternary quantization reduce the model size, while hardware approaches such as compute-in-memory (CIM) alleviate the overhead of external memory accesses. However, billions of parameters of LLMs still cause significant data movement, and existing ternary CIM suffers from a low-density bitcell as well as accuracy degradation due to cut-off analog-to-digital converters (ADCs). In this paper, we propose HINT, a CIM architecture incorporating two energy efficient techniques. First, hybrid ternary bitcell leverages the reliability of SRAM and the high-density of MRAM, reducing area and energy overhead. Second, input-aware skipping SAR-ADC exploits input sparsity to skip unnecessary conversion cycles without sacrificing accuracy. On BitNet b1.58 (700M), compared to SRAM-based and eDRAM-based CIM baselines, HINT improves bitcell density by 1.85× and achieves up to 2.67× higher energy efficiency, respectively. By skipping up to 21% of conversion cycles, the proposed ADC improves energy efficiency up to 1.27× while maintaining model accuracy.",
+        "identifiers": [
+          "SemanticScholar:89d5e5a11507a3e5d83b5f921b84e58d5755d5d3"
+        ],
+        "semantic_scholar_id": "89d5e5a11507a3e5d83b5f921b84e58d5755d5d3",
+        "doi": "10.23919/DATE69613.2026.11539338",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539338",
+        "authors": [
+          "Jaebeom Park",
+          "Seung-Eon Hwang",
+          "Jongsun Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iiswc71020.2026.00031",
+      "identity_tokens": [
+        "id:DOI:10.1109/iiswc71020.2026.00031",
+        "id:SemanticScholar:a0f51b8f8e1b9360b049c26e96b75f01d81dd471",
+        "title:hardware characterization of diffusion vs autoregressive language model inference compute vs memory bottlenecks",
+        "url:https://doi.org/10.1109/IISWC71020.2026.00031"
+      ],
+      "record": {
+        "title": "Hardware Characterization of Diffusion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks",
+        "source_url": "https://doi.org/10.1109/IISWC71020.2026.00031",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "IEEE International Symposium on Workload Characterization",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive (AR) language models dominate today’s LLM deployments. Masked diffusion language models (MDLMs) have recently achieved quality comparable to similarly scaled AR models, yet their inference behavior on modern GPUs remains largely uncharacterized. We present a hardware-level characterization of representative diffusion language models and show that, although MDLMs and AR models share similar Transformer building blocks, diffusion inference exhibits fundamentally different bottlenecks at the hardware level, breaking the assumptions underlying modern AR serving architectures and systems.First, we find that each denoising forward pass is compute-bound and operates near the GPU roofline, shifting the bottleneck from HBM bandwidth in AR decode to tensor-core throughput. Second, under standard (uncached) implementation, diffusion inference is activation-dominated rather than KV-cache-dominated. Third, block diffusion interpolates between AR and full-sequence diffusion behavior. In particular, block size emerges as a hardware operating parameter that allows block diffusion models to be tuned to match the available system resources. Lastly, several AR-inherited optimizations exhibit qualitatively different behavior under diffusion workloads. Building on these observations, we analyze the transferability of the modern AR optimization stack to diffusion workloads and identify emerging hardware and system optimization directions for diffusion-oriented inference accelerators.",
+        "identifiers": [
+          "SemanticScholar:a0f51b8f8e1b9360b049c26e96b75f01d81dd471"
+        ],
+        "semantic_scholar_id": "a0f51b8f8e1b9360b049c26e96b75f01d81dd471",
+        "doi": "10.1109/IISWC71020.2026.00031",
+        "canonical_id": "DOI:10.1109/IISWC71020.2026.00031",
+        "authors": [
+          "Zhen-Xing Fan",
+          "Kevin Skadron"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3832783.3834362",
+      "identity_tokens": [
+        "id:DOI:10.1145/3832783.3834362",
+        "id:SemanticScholar:278918eef05e348a7809000e6fd34c8f7b6e4eb2",
+        "title:simserving nativeexecution simulation for evolutionresilient llm serving configuration tuning",
+        "url:https://doi.org/10.1145/3832783.3834362"
+      ],
+      "record": {
+        "title": "SimServing: Native-Execution Simulation for Evolution-Resilient LLM Serving Configuration Tuning",
+        "source_url": "https://doi.org/10.1145/3832783.3834362",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": "Proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) services expose a large configuration space that critically affects performance, yet tuning these configurations on hardware (e.g., NVIDIA GPUs) is prohibitively expensive. Simulation offers a scalable alternative, but state-of-the-art simulators suffer from a fundamental software engineering pitfall: they re-implement the serving framework's complex control logic (e.g., request scheduling and memory management), creating a semantic copy that inevitably diverges from the rapidly evolving upstream software. Our empirical study across eight consecutive vLLM versions confirms this fidelity drift, with prediction errors widening as the framework evolves. We observe that the serving management software dominates performance fidelity yet accounts for less than 10% of total execution time, with GPU computation consuming over 90%. This asymmetry motivates SimServing, a hybrid simulation framework that executes the native, unmodified serving software while replacing GPU computation with a pluggable latency estimator. This design preserves the serving management software's control flow by executing it rather than modeling it, thereby automatically inheriting upstream updates and substantially reducing the maintenance burden associated with re-implementation. Integrating SimServing with Particle Swarm Optimization for configuration tuning, our evaluation shows that it reduces throughput prediction error from 13.8% to 4.9%, achieves up to 21.18× simulation speedup, and discovers configurations that improve throughput by up to 10.2% over existing baselines.",
+        "identifiers": [
+          "SemanticScholar:278918eef05e348a7809000e6fd34c8f7b6e4eb2"
+        ],
+        "semantic_scholar_id": "278918eef05e348a7809000e6fd34c8f7b6e4eb2",
+        "doi": "10.1145/3832783.3834362",
+        "canonical_id": "DOI:10.1145/3832783.3834362",
+        "authors": [
+          "Yu-Jie Huang",
+          "Jia-Zhen Gu",
+          "Zhihan Jiang",
+          "Michael R. Lyu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3625549.3658654",
+      "identity_tokens": [
+        "id:DOI:10.1145/3625549.3658654",
+        "id:SemanticScholar:13d57014737a0af7d8d0991cfcfd27b49015dd52",
+        "title:elasticroom multitenant dnn inference engine via codesign with resourceconstrained compilation and strong priority scheduling",
+        "url:https://doi.org/10.1145/3625549.3658654"
+      ],
+      "record": {
+        "title": "ElasticRoom: Multi-Tenant DNN Inference Engine via Co-design with Resource-constrained Compilation and Strong Priority Scheduling",
+        "source_url": "https://doi.org/10.1145/3625549.3658654",
+        "year": 2024,
+        "published": "2024-06-03",
+        "venue": "IEEE International Symposium on High-Performance Parallel Distributed Computing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "GPU partition mechanisms in run-time software have been widely used in job scheduler and multi-tenant computing system to improve resource utilization and throughput. The latency requirements of different DNN requests, such as real-time and best-effort requests, often exhibit variations in computational systems that handle batch tasks for DNN inference. However, the existing GPU partition mechanisms and state-of-the-art scheduling approaches face challenges in effectively promising both high throughput and low latency for real-time requests. The current limitation lies in the inability of existing GPU partition mechanisms to enhance GPU resource utilization and ensure job priority simultaneously. In this paper, we present an innovative multi-tenant DNN inference engine, ElasticRoom, which relies on the co-design with resource-constrained compilation and strong priority scheduling to achieve high GPU utilization and low latency of real-time requests simultaneously. To ensure portability across diverse manufacturers' accelerator hardware, ElasticRoom does not rely on any customization or pre-set features in the hardware or operating system. To quantify the ability of DNN inference computing systems to process and meet performance requirements for a batch of real-time DNN inference requests within a valid time, we define the concept of Goodput for each batch of inference requests. The performance of ElasticRoom was assessed on both NVIDIA GPUs (A100) and AMD GPUs (MI100), revealing significant enhancements in Goodput ranging from 14% to 49% compared to well-established state-of-the-art methods.",
+        "identifiers": [
+          "SemanticScholar:13d57014737a0af7d8d0991cfcfd27b49015dd52"
+        ],
+        "semantic_scholar_id": "13d57014737a0af7d8d0991cfcfd27b49015dd52",
+        "doi": "10.1145/3625549.3658654",
+        "canonical_id": "DOI:10.1145/3625549.3658654",
+        "authors": [
+          "Lixian Ma",
+          "Haoruo Chen",
+          "En Shao",
+          "Le-Ping Wang",
+          "Quan Chen",
+          "Guang-Ming Tan"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 903,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1631/fitee.2400453",
+      "identity_tokens": [
+        "id:DOI:10.1631/fitee.2400453",
+        "id:SemanticScholar:9e44dcb5b5c38dbce58ab6ad53db1dc1b4e08551",
+        "title:minimizing transformer inference overhead using controlling element on shenwei ai accelerator",
+        "url:https://doi.org/10.1631/FITEE.2400453"
+      ],
+      "record": {
+        "title": "Minimizing transformer inference overhead using controlling element on Shenwei AI accelerator",
+        "source_url": "https://doi.org/10.1631/FITEE.2400453",
+        "year": 2025,
+        "published": "2025-04-01",
+        "venue": "Frontiers of Information Technology & Electronic Engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models have become a cornerstone of various natural language processing (NLP) tasks. However, the substantial computational overhead during the inference remains a significant challenge, limiting their deployment in practical applications. In this study, we address this challenge by minimizing the inference overhead in transformer models using the controlling element on artificial intelligence (AI) accelerators. Our work is anchored by four key contributions. First, we conduct a comprehensive analysis of the overhead composition within the transformer inference process, identifying the primary bottlenecks. Second, we leverage the management processing element (MPE) of the Shenwei AI (SWAI) accelerator, implementing a three-tier scheduling framework that significantly reduces the number of host-device launches to approximately 1/10 000 of the original PyTorch-GPU setup. Third, we introduce a zero-copy memory management technique using segment-page fusion, which significantly reduces memory access latency and improves overall inference efficiency. Finally, we develop a fast model loading method that eliminates redundant computations during model verification and initialization, reducing the total loading time for large models from 22 128.31 ms to 1041.72 ms. Our contributions significantly enhance the optimization of transformer models, enabling more efficient and expedited inference processes on AI accelerators.",
+        "identifiers": [
+          "SemanticScholar:9e44dcb5b5c38dbce58ab6ad53db1dc1b4e08551"
+        ],
+        "semantic_scholar_id": "9e44dcb5b5c38dbce58ab6ad53db1dc1b4e08551",
+        "doi": "10.1631/FITEE.2400453",
+        "canonical_id": "DOI:10.1631/FITEE.2400453",
+        "authors": [
+          "Yulong Zhao",
+          "Chun-Feng Wu",
+          "Yizhu Wang",
+          "Lu-Fei Zhang",
+          "Ya-Guang Zhang",
+          "Wen-Yuan Shen",
+          "Hao Fan",
+          "Han Fang",
+          "Yi Qin",
+          "Xin Liu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 601,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:54acc877f5273f1372ca198fc0757664e3785d8fd93aa19f12e067f3ada3c79c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,676 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4ad3c45df0074246-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4ad3c45df007",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11463423",
+    "DOI:10.1109/ispass69572.2026.00038",
+    "DOI:10.1109/tmc.2026.3650838",
+    "DOI:10.1145/3446640",
+    "DOI:10.1145/3617689",
+    "DOI:10.18653/v1/2026.knowfm-1.11",
+    "arXiv:2610.20686"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "05f376946e05f4b665b735d10a7740b5b43faee2",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:25:38.149561+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11463423",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ispass69572.2026.00038",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tmc.2026.3650838",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3446640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3617689",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.knowfm-1.11",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Joint Optimization of Dynamic Batching and Adaptive Partitioning for Distributed LLMs Inference in Mobile Edge Computing",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3650838",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are revolutionizing various fields due to their powerful generation capabilities. However, their immense computational complexity poses significant challenges in resource consumption, inference latency, and data privacy for traditional cloud-centric deployments. Edge artificial intelligence (Edge-AI) offers promising LLMs deployment solutions by leveraging distributed resources at the network edge. However, existing approaches struggle to adapt to dynamic workloads and efficiently utilize heterogeneous resources in Mobile Edge Computing (MEC) environments. This paper proposes a Dynamic Batching and Adaptive Partitioning (DyBAP) scheme for LLMs deployment, which utilizes ubiquitous geo-distributed resources via end-edge-cloud collaboration. Firstly, we formulate a collaboration deployment optimization problem to minimize inference latency and resource usage under heterogeneous resource and user requirements for latency and accuracy constraints, which is NP-hard. Secondly, to solve this, we develop a dynamic batch fusion optimization algorithm that optimizes the batch size of inference by utilizing the parallel processing power of computing units to balance the latency and resource usage. A block-aware partition optimization algorithm based on multi-agent reinforcement learning (MARL) is proposed for efficient transformer block allocation, integrating mobility awareness for optimal partitioning across dynamic network environments. Simulation results demonstrate the superiority of DyBAP over other benchmarks, reducing inference latency by 17.94% and saving 11.12% in memory resource consumption compared to the end-edge-cloud collaboration approaches.",
+      "identifiers": [
+        "SemanticScholar:985cf3edc77898fb47d408557a2351a5af276118"
+      ],
+      "semantic_scholar_id": "985cf3edc77898fb47d408557a2351a5af276118",
+      "doi": "10.1109/TMC.2026.3650838",
+      "canonical_id": "DOI:10.1109/TMC.2026.3650838",
+      "authors": [
+        "Tong Zheng",
+        "Yuan-Guo Bi",
+        "Guang-Jie Han",
+        "Tian-Ao Xiang",
+        "Le-Xi Xu",
+        "Qiang He",
+        "Liang Zhao"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Acceptance-Guided Adaptive Speculative Decoding for Efficient Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463423",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a12314e5f826e074def27ac310e537239e0169dd"
+      ],
+      "semantic_scholar_id": "a12314e5f826e074def27ac310e537239e0169dd",
+      "doi": "10.1109/icassp55912.2026.11463423",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463423",
+      "authors": [
+        "Wei-Yang Sun",
+        "Zi-Feng Zhu",
+        "Yi-Xian Dai",
+        "Bing-Hui Guo",
+        "Yi-Fan Sun",
+        "Feng Zhou"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention",
+      "source_url": "https://arxiv.org/abs/2610.20686",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-head latent attention (MLA) compresses the content of a key-value cache into a shared latent per token, making low-bit storage attractive for long-context inference. At two bits, errors in this representation perturb both attention matching and value readout, with effects that depend on error direction and reconstruction scale. We introduce RoLaQ (Rotation-calibrated Latent Quantization), an offline method for joint rotation and range calibration. RoLaQ refines a shared rotation within subspaces defined by the frozen key and value projections, and jointly learns quantization ranges whose thresholds and reconstruction gains are coupled to control the shared signal's response. Prediction matching and attention-output supervision guide calibration with model weights frozen. Across three MLA models and six benchmarks, RoLaQ achieves the highest average accuracy among the compared 2-bit methods both without and with token protection. On DeepSeek-V2-Lite, an SGLang implementation provides 3.96 times the BF16 KV capacity under the same memory budget and 2.51 times its decode throughput with 256K input tokens.",
+      "identifiers": [
+        "SemanticScholar:accf43a4b3dcc580fadb3890e716f3cc7e3ac96a"
+      ],
+      "semantic_scholar_id": "accf43a4b3dcc580fadb3890e716f3cc7e3ac96a",
+      "canonical_id": "arXiv:2610.20686",
+      "arxiv_id": "2610.20686",
+      "authors": [
+        "Shi-Yu Ji",
+        "Peng-Yang Ling",
+        "Cheng-Xing Lin",
+        "Shu-Peng Li",
+        "Yixuan Wang",
+        "Qing-Fu Zhu",
+        "W. Che"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TPrune",
+      "source_url": "https://doi.org/10.1145/3446640",
+      "year": 2021,
+      "published": "2021-04-01",
+      "venue": "ACM Trans. Cyber Phys. Syst.",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The invention of Transformer model structure boosts the performance of Neural Machine Translation (NMT) tasks to an unprecedented level. Many previous works have been done to make the Transformer model more execution-friendly on resource-constrained platforms. These researches can be categorized into three key fields: Model Pruning, Transfer Learning, and Efficient Transformer Variants. The family of model pruning methods are popular for their simplicity in practice and promising compression rate and have achieved great success in the field of convolution neural networks (CNNs) for many vision tasks. Nonetheless, previous Transformer pruning works did not perform a thorough model analysis and evaluation on each Transformer component on off-the-shelf mobile devices. In this work, we analyze and prune transformer models at the line-wise granularity and also implement our pruning method on real mobile platforms. We explore the properties of all Transformer components as well as their sparsity features, which are leveraged to guide Transformer model pruning. We name our whole Transformer analysis and pruning pipeline as TPrune. In TPrune, we first propose Block-wise Structured Sparsity Learning (BSSL) to analyze Transformer model property. Then, based on the characters derived from BSSL, we apply Structured Hoyer Square (SHS) to derive the final pruned models. Comparing with the state-of-the-art Transformer pruning methods, TPrune is able to achieve a higher model compression rate with less performance degradation. Experimental results show that our pruned models achieve 1.16×–1.92× speedup on mobile devices with 0%–8% BLEU score degradation compared with the original Transformer model.",
+      "identifiers": [
+        "SemanticScholar:e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7"
+      ],
+      "semantic_scholar_id": "e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7",
+      "doi": "10.1145/3446640",
+      "canonical_id": "DOI:10.1145/3446640",
+      "authors": [
+        "Jia-Chen Mao",
+        "Huan-Rui Yang",
+        "Ang Li",
+        "H. Li",
+        "Yi-Ran Chen"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 27,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2062,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Improving Computation and Memory Efficiency for Real-world Transformer Inference on GPUs",
+      "source_url": "https://doi.org/10.1145/3617689",
+      "year": 2023,
+      "published": "2023-08-26",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have emerged as a leading approach in the field of natural language processing (NLP) and are increasingly being deployed in production environments. Graphic processing units (GPUs) have become a popular choice for the transformer deployment and often rely on the batch processing technique to ensure high hardware performance. Nonetheless, the current practice for transformer inference encounters computational and memory redundancy due to the heavy-tailed distribution of sequence lengths in NLP scenarios, resulting in low practical performance. In this article, we propose a unified solution for improving both computation and memory efficiency of the real-world transformer inference on GPUs. The solution eliminates the redundant computation and memory footprint across a transformer model. At first, a GPU-oriented computation approach is proposed to process the self-attention module in a fine-grained manner, eliminating its redundant computation. Next, the multi-layer perceptron module continues to use the word-accumulation approach to eliminate its redundant computation. Then, to better unify the fine-grained approach and the word-accumulation approach, it organizes the data layout of the self-attention module in block granularity. Since aforementioned approaches make the required memory size largely reduce and constantly fluctuate, we propose the chunk-based approach to enable a better balance between memory footprint and allocation/free efficiency. Our experimental results show that our unified solution achieves a decrease of average latency by 28% on the entire transformer model, 63.8% on the self-attention module, and reduces memory footprint of intermediate results by 7.8×, compared with prevailing frameworks.",
+      "identifiers": [
+        "SemanticScholar:7d95aae54152e157c35dfc0de01caa9ce4b85440"
+      ],
+      "semantic_scholar_id": "7d95aae54152e157c35dfc0de01caa9ce4b85440",
+      "doi": "10.1145/3617689",
+      "canonical_id": "DOI:10.1145/3617689",
+      "authors": [
+        "Jiang-Su Du",
+        "Jia-Zhi Jiang",
+        "Jiang Zheng",
+        "Hongbin Zhang",
+        "Dan-E Huang",
+        "Yu-Tong Lu"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1185,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "An Empirical Study of LLM Serving in Confidential GPUs",
+      "source_url": "https://doi.org/10.1109/ISPASS69572.2026.00038",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed to serve user prompts, raising significant concerns regarding the security and privacy of user data. Confidential computing (CC) offers a practical approach for securing workloads within untrusted cloud environments. While CPU technologies such as Intel TDX and AMD SEV-SNP enable confidential virtual machines (CVMs) that isolate and attest software execution, recent advancements in NVIDIA GPUs have extended these security guarantees to accelerators. LLM serving frameworks, notably vLLM and SGLang, have emerged as the de facto infrastructure for large-scale deployment, orchestrating complex operations including batching, scheduling, KV-cache management, and kernel execution across heterogeneous CPU–GPU architectures. Although CC in GPU is known to impose overhead through encrypted CPU-GPU communication, its actual impact on these end-to-end LLM serving has not been evaluated in depth, considering the scheduling and optimizations in the serving frameworks, motivating a systematic characterization of how CC reshapes end-to-end LLM serving performance. This paper presents a comprehensive performance study of two popular serving frameworks, vLLM and SGLang, across machines utilizing AMD SEV and Intel TDX. Our evaluation demonstrates that offline throughput overhead varies notably by framework: vLLM exhibits a $\\mathbf{1 - 1 3 \\%}$ overhead across models, whereas SGLang frequently exceeds 20%, with a range of $3-66 \\%$. In online scenarios, queuing delays further amplify CC penalties. Even when large batch sizes provide sufficient throughput, the CC overhead for end-to-end latency is often $2 \\times$ larger than CC overhead observed for offline throughput. Furthermore, optimizations designed for standard environments do not always yield performance gains under CC. While kernel fusion via torch.compile improves throughput for both frameworks in non-confidential settings, SGLang’s static-graph and maxautotune design result in a performance degradation under CC. Additionally, chunked prefill increases CC overhead due to the requirement for additional encrypted communication rounds. Similarly, KV-cache swapping can increase end-to-end latency by as much as 50% compared to recomputation, and model offloading incurs a throughput overhead exceeding 150% under CC.",
+      "identifiers": [
+        "SemanticScholar:81d606ef9793de86bc6f1f27029a0c069e7f90fe"
+      ],
+      "semantic_scholar_id": "81d606ef9793de86bc6f1f27029a0c069e7f90fe",
+      "doi": "10.1109/ISPASS69572.2026.00038",
+      "canonical_id": "DOI:10.1109/ISPASS69572.2026.00038",
+      "authors": [
+        "Eunseon Park",
+        "Timo Thans",
+        "Vishnu Kumar Kalidasan",
+        "Qing-Hao Hu",
+        "Wenjie Xiong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RSCE: Training-Free Residual Stream Encoding for Persistent Context Amortization",
+      "source_url": "https://doi.org/10.18653/v1/2026.knowfm-1.11",
+      "year": 2026,
+      "published": null,
+      "venue": "Proceedings of the 4th Workshop on Towards Knowledgeable Foundation Models (KnowFM 2026)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:d4bc1618ee9bdd1b1037093c62b5541150357e7a"
+      ],
+      "semantic_scholar_id": "d4bc1618ee9bdd1b1037093c62b5541150357e7a",
+      "doi": "10.18653/v1/2026.knowfm-1.11",
+      "canonical_id": "DOI:10.18653/v1/2026.knowfm-1.11",
+      "authors": [
+        "A. Kamel",
+        "Eric Z. Xu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3650838",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3650838",
+        "id:SemanticScholar:985cf3edc77898fb47d408557a2351a5af276118",
+        "title:joint optimization of dynamic batching and adaptive partitioning for distributed llms inference in mobile edge computing",
+        "url:https://doi.org/10.1109/TMC.2026.3650838"
+      ],
+      "record": {
+        "title": "Joint Optimization of Dynamic Batching and Adaptive Partitioning for Distributed LLMs Inference in Mobile Edge Computing",
+        "source_url": "https://doi.org/10.1109/TMC.2026.3650838",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "IEEE Transactions on Mobile Computing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are revolutionizing various fields due to their powerful generation capabilities. However, their immense computational complexity poses significant challenges in resource consumption, inference latency, and data privacy for traditional cloud-centric deployments. Edge artificial intelligence (Edge-AI) offers promising LLMs deployment solutions by leveraging distributed resources at the network edge. However, existing approaches struggle to adapt to dynamic workloads and efficiently utilize heterogeneous resources in Mobile Edge Computing (MEC) environments. This paper proposes a Dynamic Batching and Adaptive Partitioning (DyBAP) scheme for LLMs deployment, which utilizes ubiquitous geo-distributed resources via end-edge-cloud collaboration. Firstly, we formulate a collaboration deployment optimization problem to minimize inference latency and resource usage under heterogeneous resource and user requirements for latency and accuracy constraints, which is NP-hard. Secondly, to solve this, we develop a dynamic batch fusion optimization algorithm that optimizes the batch size of inference by utilizing the parallel processing power of computing units to balance the latency and resource usage. A block-aware partition optimization algorithm based on multi-agent reinforcement learning (MARL) is proposed for efficient transformer block allocation, integrating mobility awareness for optimal partitioning across dynamic network environments. Simulation results demonstrate the superiority of DyBAP over other benchmarks, reducing inference latency by 17.94% and saving 11.12% in memory resource consumption compared to the end-edge-cloud collaboration approaches.",
+        "identifiers": [
+          "SemanticScholar:985cf3edc77898fb47d408557a2351a5af276118"
+        ],
+        "semantic_scholar_id": "985cf3edc77898fb47d408557a2351a5af276118",
+        "doi": "10.1109/TMC.2026.3650838",
+        "canonical_id": "DOI:10.1109/TMC.2026.3650838",
+        "authors": [
+          "Tong Zheng",
+          "Yuan-Guo Bi",
+          "Guang-Jie Han",
+          "Tian-Ao Xiang",
+          "Le-Xi Xu",
+          "Qiang He",
+          "Liang Zhao"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11463423",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11463423",
+        "id:SemanticScholar:a12314e5f826e074def27ac310e537239e0169dd",
+        "title:acceptanceguided adaptive speculative decoding for efficient large language model inference",
+        "url:https://doi.org/10.1109/icassp55912.2026.11463423"
+      ],
+      "record": {
+        "title": "Acceptance-Guided Adaptive Speculative Decoding for Efficient Large Language Model Inference",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11463423",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a12314e5f826e074def27ac310e537239e0169dd"
+        ],
+        "semantic_scholar_id": "a12314e5f826e074def27ac310e537239e0169dd",
+        "doi": "10.1109/icassp55912.2026.11463423",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11463423",
+        "authors": [
+          "Wei-Yang Sun",
+          "Zi-Feng Zhu",
+          "Yi-Xian Dai",
+          "Bing-Hui Guo",
+          "Yi-Fan Sun",
+          "Feng Zhou"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.20686",
+      "identity_tokens": [
+        "id:SemanticScholar:accf43a4b3dcc580fadb3890e716f3cc7e3ac96a",
+        "id:arXiv:2610.20686",
+        "title:rolaq joint rotation and range calibration for 2bit kv caches in multihead latent attention",
+        "url:https://arxiv.org/abs/2610.20686"
+      ],
+      "record": {
+        "title": "RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention",
+        "source_url": "https://arxiv.org/abs/2610.20686",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-head latent attention (MLA) compresses the content of a key-value cache into a shared latent per token, making low-bit storage attractive for long-context inference. At two bits, errors in this representation perturb both attention matching and value readout, with effects that depend on error direction and reconstruction scale. We introduce RoLaQ (Rotation-calibrated Latent Quantization), an offline method for joint rotation and range calibration. RoLaQ refines a shared rotation within subspaces defined by the frozen key and value projections, and jointly learns quantization ranges whose thresholds and reconstruction gains are coupled to control the shared signal's response. Prediction matching and attention-output supervision guide calibration with model weights frozen. Across three MLA models and six benchmarks, RoLaQ achieves the highest average accuracy among the compared 2-bit methods both without and with token protection. On DeepSeek-V2-Lite, an SGLang implementation provides 3.96 times the BF16 KV capacity under the same memory budget and 2.51 times its decode throughput with 256K input tokens.",
+        "identifiers": [
+          "SemanticScholar:accf43a4b3dcc580fadb3890e716f3cc7e3ac96a"
+        ],
+        "semantic_scholar_id": "accf43a4b3dcc580fadb3890e716f3cc7e3ac96a",
+        "canonical_id": "arXiv:2610.20686",
+        "arxiv_id": "2610.20686",
+        "authors": [
+          "Shi-Yu Ji",
+          "Peng-Yang Ling",
+          "Cheng-Xing Lin",
+          "Shu-Peng Li",
+          "Yixuan Wang",
+          "Qing-Fu Zhu",
+          "W. Che"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3446640",
+      "identity_tokens": [
+        "id:DOI:10.1145/3446640",
+        "id:SemanticScholar:e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7",
+        "title:tprune",
+        "url:https://doi.org/10.1145/3446640"
+      ],
+      "record": {
+        "title": "TPrune",
+        "source_url": "https://doi.org/10.1145/3446640",
+        "year": 2021,
+        "published": "2021-04-01",
+        "venue": "ACM Trans. Cyber Phys. Syst.",
+        "citation_count": 27,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The invention of Transformer model structure boosts the performance of Neural Machine Translation (NMT) tasks to an unprecedented level. Many previous works have been done to make the Transformer model more execution-friendly on resource-constrained platforms. These researches can be categorized into three key fields: Model Pruning, Transfer Learning, and Efficient Transformer Variants. The family of model pruning methods are popular for their simplicity in practice and promising compression rate and have achieved great success in the field of convolution neural networks (CNNs) for many vision tasks. Nonetheless, previous Transformer pruning works did not perform a thorough model analysis and evaluation on each Transformer component on off-the-shelf mobile devices. In this work, we analyze and prune transformer models at the line-wise granularity and also implement our pruning method on real mobile platforms. We explore the properties of all Transformer components as well as their sparsity features, which are leveraged to guide Transformer model pruning. We name our whole Transformer analysis and pruning pipeline as TPrune. In TPrune, we first propose Block-wise Structured Sparsity Learning (BSSL) to analyze Transformer model property. Then, based on the characters derived from BSSL, we apply Structured Hoyer Square (SHS) to derive the final pruned models. Comparing with the state-of-the-art Transformer pruning methods, TPrune is able to achieve a higher model compression rate with less performance degradation. Experimental results show that our pruned models achieve 1.16×–1.92× speedup on mobile devices with 0%–8% BLEU score degradation compared with the original Transformer model.",
+        "identifiers": [
+          "SemanticScholar:e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7"
+        ],
+        "semantic_scholar_id": "e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7",
+        "doi": "10.1145/3446640",
+        "canonical_id": "DOI:10.1145/3446640",
+        "authors": [
+          "Jia-Chen Mao",
+          "Huan-Rui Yang",
+          "Ang Li",
+          "H. Li",
+          "Yi-Ran Chen"
+        ],
+        "priority": 27,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 27,
+          "citation_count": 27,
+          "total": 27,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2062,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3617689",
+      "identity_tokens": [
+        "id:DOI:10.1145/3617689",
+        "id:SemanticScholar:7d95aae54152e157c35dfc0de01caa9ce4b85440",
+        "title:improving computation and memory efficiency for realworld transformer inference on gpus",
+        "url:https://doi.org/10.1145/3617689"
+      ],
+      "record": {
+        "title": "Improving Computation and Memory Efficiency for Real-world Transformer Inference on GPUs",
+        "source_url": "https://doi.org/10.1145/3617689",
+        "year": 2023,
+        "published": "2023-08-26",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models have emerged as a leading approach in the field of natural language processing (NLP) and are increasingly being deployed in production environments. Graphic processing units (GPUs) have become a popular choice for the transformer deployment and often rely on the batch processing technique to ensure high hardware performance. Nonetheless, the current practice for transformer inference encounters computational and memory redundancy due to the heavy-tailed distribution of sequence lengths in NLP scenarios, resulting in low practical performance. In this article, we propose a unified solution for improving both computation and memory efficiency of the real-world transformer inference on GPUs. The solution eliminates the redundant computation and memory footprint across a transformer model. At first, a GPU-oriented computation approach is proposed to process the self-attention module in a fine-grained manner, eliminating its redundant computation. Next, the multi-layer perceptron module continues to use the word-accumulation approach to eliminate its redundant computation. Then, to better unify the fine-grained approach and the word-accumulation approach, it organizes the data layout of the self-attention module in block granularity. Since aforementioned approaches make the required memory size largely reduce and constantly fluctuate, we propose the chunk-based approach to enable a better balance between memory footprint and allocation/free efficiency. Our experimental results show that our unified solution achieves a decrease of average latency by 28% on the entire transformer model, 63.8% on the self-attention module, and reduces memory footprint of intermediate results by 7.8×, compared with prevailing frameworks.",
+        "identifiers": [
+          "SemanticScholar:7d95aae54152e157c35dfc0de01caa9ce4b85440"
+        ],
+        "semantic_scholar_id": "7d95aae54152e157c35dfc0de01caa9ce4b85440",
+        "doi": "10.1145/3617689",
+        "canonical_id": "DOI:10.1145/3617689",
+        "authors": [
+          "Jiang-Su Du",
+          "Jia-Zhi Jiang",
+          "Jiang Zheng",
+          "Hongbin Zhang",
+          "Dan-E Huang",
+          "Yu-Tong Lu"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1185,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ispass69572.2026.00038",
+      "identity_tokens": [
+        "id:DOI:10.1109/ispass69572.2026.00038",
+        "id:SemanticScholar:81d606ef9793de86bc6f1f27029a0c069e7f90fe",
+        "title:an empirical study of llm serving in confidential gpus",
+        "url:https://doi.org/10.1109/ISPASS69572.2026.00038"
+      ],
+      "record": {
+        "title": "An Empirical Study of LLM Serving in Confidential GPUs",
+        "source_url": "https://doi.org/10.1109/ISPASS69572.2026.00038",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly deployed to serve user prompts, raising significant concerns regarding the security and privacy of user data. Confidential computing (CC) offers a practical approach for securing workloads within untrusted cloud environments. While CPU technologies such as Intel TDX and AMD SEV-SNP enable confidential virtual machines (CVMs) that isolate and attest software execution, recent advancements in NVIDIA GPUs have extended these security guarantees to accelerators. LLM serving frameworks, notably vLLM and SGLang, have emerged as the de facto infrastructure for large-scale deployment, orchestrating complex operations including batching, scheduling, KV-cache management, and kernel execution across heterogeneous CPU–GPU architectures. Although CC in GPU is known to impose overhead through encrypted CPU-GPU communication, its actual impact on these end-to-end LLM serving has not been evaluated in depth, considering the scheduling and optimizations in the serving frameworks, motivating a systematic characterization of how CC reshapes end-to-end LLM serving performance. This paper presents a comprehensive performance study of two popular serving frameworks, vLLM and SGLang, across machines utilizing AMD SEV and Intel TDX. Our evaluation demonstrates that offline throughput overhead varies notably by framework: vLLM exhibits a $\\mathbf{1 - 1 3 \\%}$ overhead across models, whereas SGLang frequently exceeds 20%, with a range of $3-66 \\%$. In online scenarios, queuing delays further amplify CC penalties. Even when large batch sizes provide sufficient throughput, the CC overhead for end-to-end latency is often $2 \\times$ larger than CC overhead observed for offline throughput. Furthermore, optimizations designed for standard environments do not always yield performance gains under CC. While kernel fusion via torch.compile improves throughput for both frameworks in non-confidential settings, SGLang’s static-graph and maxautotune design result in a performance degradation under CC. Additionally, chunked prefill increases CC overhead due to the requirement for additional encrypted communication rounds. Similarly, KV-cache swapping can increase end-to-end latency by as much as 50% compared to recomputation, and model offloading incurs a throughput overhead exceeding 150% under CC.",
+        "identifiers": [
+          "SemanticScholar:81d606ef9793de86bc6f1f27029a0c069e7f90fe"
+        ],
+        "semantic_scholar_id": "81d606ef9793de86bc6f1f27029a0c069e7f90fe",
+        "doi": "10.1109/ISPASS69572.2026.00038",
+        "canonical_id": "DOI:10.1109/ISPASS69572.2026.00038",
+        "authors": [
+          "Eunseon Park",
+          "Timo Thans",
+          "Vishnu Kumar Kalidasan",
+          "Qing-Hao Hu",
+          "Wenjie Xiong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 211,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.knowfm-1.11",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.knowfm-1.11",
+        "id:SemanticScholar:d4bc1618ee9bdd1b1037093c62b5541150357e7a",
+        "title:rsce trainingfree residual stream encoding for persistent context amortization",
+        "url:https://doi.org/10.18653/v1/2026.knowfm-1.11"
+      ],
+      "record": {
+        "title": "RSCE: Training-Free Residual Stream Encoding for Persistent Context Amortization",
+        "source_url": "https://doi.org/10.18653/v1/2026.knowfm-1.11",
+        "year": 2026,
+        "published": null,
+        "venue": "Proceedings of the 4th Workshop on Towards Knowledgeable Foundation Models (KnowFM 2026)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:d4bc1618ee9bdd1b1037093c62b5541150357e7a"
+        ],
+        "semantic_scholar_id": "d4bc1618ee9bdd1b1037093c62b5541150357e7a",
+        "doi": "10.18653/v1/2026.knowfm-1.11",
+        "canonical_id": "DOI:10.18653/v1/2026.knowfm-1.11",
+        "authors": [
+          "A. Kamel",
+          "Eric Z. Xu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2f491d653ef652ae6e339a60848e9a7a2214a01282a5e23f1aa73aecf436fe51",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

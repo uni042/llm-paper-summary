@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b6523f6be28a8128-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b6523f6be28a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11461309",
+    "DOI:10.1109/icpads67057.2025.11323112"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "05f376946e05f4b665b735d10a7740b5b43faee2",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:26:08.582725+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11461309",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icpads67057.2025.11323112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AODMS: Adaptive Online Edge-Cloud Collaborative Inference with Dynamic Model Switching and Resource Allocation",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323112",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cloud inference consumes massive amounts of resources and carbon emissions, which has prompted edge-cloud inference to become a new paradigm. However, constrained by limited edge resources, existing approaches predominantly adopt periodic model switching strategies, overlooking the heterogeneity of application requirements and the highly dynamic nature of task demands in large-scale edge-cloud environments. To address these challenges, this paper proposes an Adaptive Online Dynamic Model Switching (AODMS) framework, which jointly optimizes real-time model switching, cross-layer resource allocation, and edge-cloud collaborative inference to minimize long-term system cost, including task execution time and carbon emissions. First, an average saving cost evaluation mechanism is developed to determine optimal model switching points, coupled with a matrix-constrained pairwise search strategy for efficient exploration of feasible edge model loading. And then a distributed iterative optimization scheme is proposed for joint resource allocation and edge-cloud task scheduling. Extensive experimental evaluations demonstrate that AODMS can significantly reduce model switching frequency, average inference time, and Carbon Footprint (CF), offering a scalable and adaptive solution for the sustainable edge-cloud system.",
+      "identifiers": [
+        "SemanticScholar:ac4540a2cf58fefbee415a4fbcb55c398d9976c4"
+      ],
+      "semantic_scholar_id": "ac4540a2cf58fefbee415a4fbcb55c398d9976c4",
+      "doi": "10.1109/ICPADS67057.2025.11323112",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323112",
+      "authors": [
+        "Lulu Zuo",
+        "Qing-Fang Zheng",
+        "Zhe-Ming Yang",
+        "Wen Ji"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Vocalnet-M2: Advancing Low-Latency Spoken Language Modeling via Integrated Multi-Codebook Tokenization and Multi-Token Prediction",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11461309",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:1b3a97557f11e537bee409963df14cf43451e8b0"
+      ],
+      "semantic_scholar_id": "1b3a97557f11e537bee409963df14cf43451e8b0",
+      "doi": "10.1109/icassp55912.2026.11461309",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461309",
+      "authors": [
+        "Yu-Hao Wang",
+        "Zi-Yang Cheng",
+        "He-Yang Liu",
+        "Rong-Hua Wu",
+        "Qun-Shan Gu",
+        "Yan-Feng Wang",
+        "Yu Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/icpads67057.2025.11323112",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpads67057.2025.11323112",
+        "id:SemanticScholar:ac4540a2cf58fefbee415a4fbcb55c398d9976c4",
+        "title:aodms adaptive online edgecloud collaborative inference with dynamic model switching and resource allocation",
+        "url:https://doi.org/10.1109/ICPADS67057.2025.11323112"
+      ],
+      "record": {
+        "title": "AODMS: Adaptive Online Edge-Cloud Collaborative Inference with Dynamic Model Switching and Resource Allocation",
+        "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323112",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "International Conference on Parallel and Distributed Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cloud inference consumes massive amounts of resources and carbon emissions, which has prompted edge-cloud inference to become a new paradigm. However, constrained by limited edge resources, existing approaches predominantly adopt periodic model switching strategies, overlooking the heterogeneity of application requirements and the highly dynamic nature of task demands in large-scale edge-cloud environments. To address these challenges, this paper proposes an Adaptive Online Dynamic Model Switching (AODMS) framework, which jointly optimizes real-time model switching, cross-layer resource allocation, and edge-cloud collaborative inference to minimize long-term system cost, including task execution time and carbon emissions. First, an average saving cost evaluation mechanism is developed to determine optimal model switching points, coupled with a matrix-constrained pairwise search strategy for efficient exploration of feasible edge model loading. And then a distributed iterative optimization scheme is proposed for joint resource allocation and edge-cloud task scheduling. Extensive experimental evaluations demonstrate that AODMS can significantly reduce model switching frequency, average inference time, and Carbon Footprint (CF), offering a scalable and adaptive solution for the sustainable edge-cloud system.",
+        "identifiers": [
+          "SemanticScholar:ac4540a2cf58fefbee415a4fbcb55c398d9976c4"
+        ],
+        "semantic_scholar_id": "ac4540a2cf58fefbee415a4fbcb55c398d9976c4",
+        "doi": "10.1109/ICPADS67057.2025.11323112",
+        "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323112",
+        "authors": [
+          "Lulu Zuo",
+          "Qing-Fang Zheng",
+          "Zhe-Ming Yang",
+          "Wen Ji"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 344,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11461309",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11461309",
+        "id:SemanticScholar:1b3a97557f11e537bee409963df14cf43451e8b0",
+        "title:vocalnetm2 advancing lowlatency spoken language modeling via integrated multicodebook tokenization and multitoken prediction",
+        "url:https://doi.org/10.1109/icassp55912.2026.11461309"
+      ],
+      "record": {
+        "title": "Vocalnet-M2: Advancing Low-Latency Spoken Language Modeling via Integrated Multi-Codebook Tokenization and Multi-Token Prediction",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11461309",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:1b3a97557f11e537bee409963df14cf43451e8b0"
+        ],
+        "semantic_scholar_id": "1b3a97557f11e537bee409963df14cf43451e8b0",
+        "doi": "10.1109/icassp55912.2026.11461309",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11461309",
+        "authors": [
+          "Yu-Hao Wang",
+          "Zi-Yang Cheng",
+          "He-Yang Liu",
+          "Rong-Hua Wu",
+          "Qun-Shan Gu",
+          "Yan-Feng Wang",
+          "Yu Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0e9419c647863fb1e9ce37030197793d75c334279566f044c10e5d3a6e712932",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
