@@ -1,0 +1,258 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f02b69c6c2fa3168-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f02b69c6c2fa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.06220",
+    "arXiv:2610.07987"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "76c8d06b99f13bb63d714f44392b942b891c41fe",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T22:48:22.075454+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.06220",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07987",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs",
+      "source_url": "https://arxiv.org/abs/2610.07987",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models have become the dominant paradigm for visual understanding, but incur substantial costs by encoding inputs into dense, fixed-size patch tokens. However, visual information is unevenly distributed: some regions require fine-grained detail, while others admit compact representations. Downsampling sacrifices this detail, while existing token pruning and adaptive approaches remain limited in content-adaptive granularity, task generalization, and integration with modern MLLMs and serving infrastructure. Overcoming these limitations calls for foundation models that learn, end to end, where-and at what granularity-to allocate visual representations, a native capability we term elastic visual representation weaving. We introduce VisionWeave, establishing this capability in frontier-level MLLMs through large-scale training. It combines two components: a gated spatial pooler constructs coarse-grained representations alongside native fine-grained representations within a shared MRoPE coordinate, while a granularity router learns their content-adaptive allocation. Through self-distillation alone, we validate this capability on Qwen3.5-4B and scale to Qwen3.8-27B with over 30K A100 GPU-hours. Based on Qwen3.8-27B, VisionWeave adaptively adjusts token savings to visual content, saving 43.0% tokens on average while retaining 98.9% native performance across eight benchmarks, versus only 88% performance preserved for token pruning baselines with a fixed 50% savings target. Extensive evaluations confirm robust efficiency-quality trade-offs across diverse tasks, resolutions and video frames. When deployed on SGLang serving engine, our method achieves a 2.3x throughput gain while reducing mean TTFT by 54.4% and mean TPOT by 60.6%. Together, we believe these results position elastic visual weaving as a promising capability for next-generation multimodal models.",
+      "identifiers": [
+        "SemanticScholar:cc30e8bcd8ca8da3af8273846661cc17422d11bb"
+      ],
+      "semantic_scholar_id": "cc30e8bcd8ca8da3af8273846661cc17422d11bb",
+      "canonical_id": "arXiv:2610.07987",
+      "arxiv_id": "2610.07987",
+      "authors": [
+        "Yuan Feng",
+        "Qi-Ze Yang",
+        "Rui-Zhe Chen",
+        "Si-Bo Song",
+        "Haolin He",
+        "Mu-Zhi Zhu",
+        "Zi-Han Liu",
+        "Yun-Fei Chu",
+        "Xi-Ze Cheng",
+        "Yuxuan Wang",
+        "Jin Xu",
+        "Xi-Ke Xie"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 48,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition",
+      "source_url": "https://arxiv.org/abs/2503.06220",
+      "year": 2025,
+      "published": "2025-03-08",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 61,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of real-world human-AI interaction applications, such as AI assistants, the need for Streaming Video Dialogue is critical. To address this need, we introduce StreamMind, a video LLM framework that achieves ultra-FPS streaming video processing (100 fps on a single A100) and enables proactive, always-on responses in real time, without explicit user intervention. To solve the key challenge of the contradiction between linear video streaming speed and quadratic transformer computation cost, we propose a novel perception-cognition interleaving paradigm named “event-gated LLM invocation”, in contrast to the existing per-time-step LLM invocation. By introducing a Cognition Gate network between the video encoder and the LLM, LLM is only invoked when relevant events occur. To realize the event feature extraction with constant cost, we propose Event-Preserving Feature Extractor (EPFE) based on state-space method, generating a single perception token for spatiotemporal features. These techniques enable the video LLM with full-FPS perception and real-time cognition response. Experiments on Ego4D and SoccerNet streaming tasks, as well as standard offline benchmarks, demonstrate state-of-the-art performance in both model capability and realtime efficiency, paving the way for ultra-high-FPS applications, such as Game AI Copilot and interactive media. The code and data is available at https://aka.ms/StreamMind.",
+      "identifiers": [
+        "SemanticScholar:226f859f2470e83b63e4deb38dd6a1e4e5d5264b"
+      ],
+      "semantic_scholar_id": "226f859f2470e83b63e4deb38dd6a1e4e5d5264b",
+      "canonical_id": "arXiv:2503.06220",
+      "arxiv_id": "2503.06220",
+      "doi": "10.1109/ICCV51701.2025.01249",
+      "authors": [
+        "Xin Ding",
+        "Hao Wu",
+        "Yi-Fan Yang",
+        "Shi-Qi Jiang",
+        "Qian-Xi Zhang",
+        "Dong-Lin Bai",
+        "Zhi-Bo Chen",
+        "Ting Cao"
+      ],
+      "priority": 61,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 61,
+        "citation_count": 61,
+        "total": 61,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 625,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.07987",
+      "identity_tokens": [
+        "id:SemanticScholar:cc30e8bcd8ca8da3af8273846661cc17422d11bb",
+        "id:arXiv:2610.07987",
+        "title:visionweave weaving elastic visual representations as a native capability of mllms",
+        "url:https://arxiv.org/abs/2610.07987"
+      ],
+      "record": {
+        "title": "VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs",
+        "source_url": "https://arxiv.org/abs/2610.07987",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models have become the dominant paradigm for visual understanding, but incur substantial costs by encoding inputs into dense, fixed-size patch tokens. However, visual information is unevenly distributed: some regions require fine-grained detail, while others admit compact representations. Downsampling sacrifices this detail, while existing token pruning and adaptive approaches remain limited in content-adaptive granularity, task generalization, and integration with modern MLLMs and serving infrastructure. Overcoming these limitations calls for foundation models that learn, end to end, where-and at what granularity-to allocate visual representations, a native capability we term elastic visual representation weaving. We introduce VisionWeave, establishing this capability in frontier-level MLLMs through large-scale training. It combines two components: a gated spatial pooler constructs coarse-grained representations alongside native fine-grained representations within a shared MRoPE coordinate, while a granularity router learns their content-adaptive allocation. Through self-distillation alone, we validate this capability on Qwen3.5-4B and scale to Qwen3.8-27B with over 30K A100 GPU-hours. Based on Qwen3.8-27B, VisionWeave adaptively adjusts token savings to visual content, saving 43.0% tokens on average while retaining 98.9% native performance across eight benchmarks, versus only 88% performance preserved for token pruning baselines with a fixed 50% savings target. Extensive evaluations confirm robust efficiency-quality trade-offs across diverse tasks, resolutions and video frames. When deployed on SGLang serving engine, our method achieves a 2.3x throughput gain while reducing mean TTFT by 54.4% and mean TPOT by 60.6%. Together, we believe these results position elastic visual weaving as a promising capability for next-generation multimodal models.",
+        "identifiers": [
+          "SemanticScholar:cc30e8bcd8ca8da3af8273846661cc17422d11bb"
+        ],
+        "semantic_scholar_id": "cc30e8bcd8ca8da3af8273846661cc17422d11bb",
+        "canonical_id": "arXiv:2610.07987",
+        "arxiv_id": "2610.07987",
+        "authors": [
+          "Yuan Feng",
+          "Qi-Ze Yang",
+          "Rui-Zhe Chen",
+          "Si-Bo Song",
+          "Haolin He",
+          "Mu-Zhi Zhu",
+          "Zi-Han Liu",
+          "Yun-Fei Chu",
+          "Xi-Ze Cheng",
+          "Yuxuan Wang",
+          "Jin Xu",
+          "Xi-Ke Xie"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 48,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.06220",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.01249",
+        "id:SemanticScholar:226f859f2470e83b63e4deb38dd6a1e4e5d5264b",
+        "id:arXiv:2503.06220",
+        "title:streammind unlocking full frame rate streaming video dialogue through eventgated cognition",
+        "url:https://arxiv.org/abs/2503.06220"
+      ],
+      "record": {
+        "title": "StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition",
+        "source_url": "https://arxiv.org/abs/2503.06220",
+        "year": 2025,
+        "published": "2025-03-08",
+        "venue": "IEEE International Conference on Computer Vision",
+        "citation_count": 61,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rise of real-world human-AI interaction applications, such as AI assistants, the need for Streaming Video Dialogue is critical. To address this need, we introduce StreamMind, a video LLM framework that achieves ultra-FPS streaming video processing (100 fps on a single A100) and enables proactive, always-on responses in real time, without explicit user intervention. To solve the key challenge of the contradiction between linear video streaming speed and quadratic transformer computation cost, we propose a novel perception-cognition interleaving paradigm named “event-gated LLM invocation”, in contrast to the existing per-time-step LLM invocation. By introducing a Cognition Gate network between the video encoder and the LLM, LLM is only invoked when relevant events occur. To realize the event feature extraction with constant cost, we propose Event-Preserving Feature Extractor (EPFE) based on state-space method, generating a single perception token for spatiotemporal features. These techniques enable the video LLM with full-FPS perception and real-time cognition response. Experiments on Ego4D and SoccerNet streaming tasks, as well as standard offline benchmarks, demonstrate state-of-the-art performance in both model capability and realtime efficiency, paving the way for ultra-high-FPS applications, such as Game AI Copilot and interactive media. The code and data is available at https://aka.ms/StreamMind.",
+        "identifiers": [
+          "SemanticScholar:226f859f2470e83b63e4deb38dd6a1e4e5d5264b"
+        ],
+        "semantic_scholar_id": "226f859f2470e83b63e4deb38dd6a1e4e5d5264b",
+        "canonical_id": "arXiv:2503.06220",
+        "arxiv_id": "2503.06220",
+        "doi": "10.1109/ICCV51701.2025.01249",
+        "authors": [
+          "Xin Ding",
+          "Hao Wu",
+          "Yi-Fan Yang",
+          "Shi-Qi Jiang",
+          "Qian-Xi Zhang",
+          "Dong-Lin Bai",
+          "Zhi-Bo Chen",
+          "Ting Cao"
+        ],
+        "priority": 61,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 61,
+          "citation_count": 61,
+          "total": 61,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 625,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:23b94ae29788fc188728f22b0c6559b858ae550656457b4f9ec4c9f6411e22ba",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

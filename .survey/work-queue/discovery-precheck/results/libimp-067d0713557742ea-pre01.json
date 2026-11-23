@@ -1,0 +1,516 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-067d0713557742ea-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-067d07135577",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icdew67478.2025.00020",
+    "arXiv:2602.22556",
+    "arXiv:2605.09806",
+    "arXiv:2605.18697",
+    "arXiv:2610.38578"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "76c8d06b99f13bb63d714f44392b942b891c41fe",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T22:48:20.071342+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icdew67478.2025.00020",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.22556",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.09806",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18697",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.38578",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Stable Adaptive Thinking via Advantage Shaping and Length-Aware Gradient Regulation",
+      "source_url": "https://arxiv.org/abs/2602.22556",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) achieve strong performance through extended reasoning traces, but they often exhibit overthinking behavior for low-complexity queries. Existing efforts to mitigate this issue are fundamentally limited by unstable accuracy-efficiency trade-offs and poor robustness to heterogeneous reasoning behaviors. To address these challenges, we propose a two-stage framework for stable adaptive thinking in LRMs. The framework first applies Hybrid Fine-Tuning to expose the model to both thinking and no-thinking behaviors, establishing well-conditioned initialization. It then performs adaptive reinforcement learning with Correctness-Preserving Advantage Shaping (CPAS) to avoid suppressing correct long-chain reasoning, and Length-Aware Gradient Regulation (LAGR) to stabilize optimization under severe reasoning-length heterogeneity. Extensive experiments on Qwen2.5-1.5B and 7B show consistent improvements over strong baselines, achieving up to +3.7/+3.6 accuracy points while reducing generated tokens by 40.6%/43.9%. Further analyses across varying problem difficulties and out-of-distribution tasks confirm the robustness and generalization of our approach.",
+      "identifiers": [
+        "SemanticScholar:3e0970bb84bda44db64a246a264889cde1ffeccf"
+      ],
+      "semantic_scholar_id": "3e0970bb84bda44db64a246a264889cde1ffeccf",
+      "canonical_id": "arXiv:2602.22556",
+      "arxiv_id": "2602.22556",
+      "doi": "10.48550/arXiv.2602.22556",
+      "authors": [
+        "Zi-Hang Xu",
+        "Hao-Zhi Xie",
+        "Zi-Qi Miao",
+        "Wuxuan Gong",
+        "Chen Qian",
+        "Li-Jun Li"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "LEAD: Length-Efficient Adaptive and Dynamic Reasoning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2605.09806",
+      "year": 2026,
+      "published": "2026-05-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models, such as OpenAI o1 and DeepSeek-R1, tend to become increasingly verbose as their reasoning capabilities improve. These inflated Chain-of-Thought (CoT) trajectories often exceed what the underlying problems require, wasting compute, latency, and context budgets. While introducing length-based efficiency rewards during reinforcement learning offers a natural remedy, existing methods struggle with two fundamental challenges: the optimal balance between correctness and efficiency is non-stationary throughout training, and intrinsic reasoning budgets vary drastically across problems. Relying on static reward weights and global length constraints inevitably forces a compromise between degraded accuracy and unrealized compression. To overcome these limitations, we propose LEAD (Length-Efficient Adaptive and Dynamic reasoning), a method that replaces static heuristics with online, self-adaptive mechanisms. LEAD dynamically calibrates the correctness--efficiency trade-off at each step using a Potential-Scaled Instability, directing optimization capacity to the most informative learning signal. Furthermore, it estimates an adaptive per-problem target length online based on the model's own correct rollouts, applying a symmetric efficiency reward that penalizes both overthinking and over-compression. Evaluated on five mathematical reasoning benchmarks, LEAD achieves the highest accuracy and Accuracy-Efficiency Score among RL-trained efficient-reasoning methods in our matched comparisons while producing substantially shorter outputs than the base model.",
+      "identifiers": [
+        "SemanticScholar:c4917c2e80d009ff50c382bb271d3ecda1aca834"
+      ],
+      "semantic_scholar_id": "c4917c2e80d009ff50c382bb271d3ecda1aca834",
+      "canonical_id": "arXiv:2605.09806",
+      "arxiv_id": "2605.09806",
+      "doi": "10.48550/arXiv.2605.09806",
+      "authors": [
+        "Song-Tao Wei",
+        "Yi Li",
+        "Zhikai Li",
+        "Xu-Yang Hu",
+        "Yue-De Ji",
+        "Guan-Peng Li",
+        "Feng Chen",
+        "Carl Yang",
+        "Zhi-Chun Guo",
+        "Bing-Zhe Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PopPy: Opportunistically Exploiting Parallelism in Python Agentic Workflows",
+      "source_url": "https://arxiv.org/abs/2605.18697",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workflows, which compose calls to ML models using a general-purpose programming language like Python, are widely used for a variety of user-facing tasks, from software engineering to enterprise automation, making their end-to-end latency a critical bottleneck. To improve their latency, developers can either manually parallelize them or use restricted agentic frameworks that cannot express or exploit all forms of parallelization. We address this by developing PopPy, a system that parallelizes external calls, e.g., AI models, in agentic workflows written in a very expressive subset of Python. PopPy combines an ahead-of-time compiler with a runtime, addressing three key challenges in extracting parallelism from Python applications: language complexity, dynamic dispatch, and variable mutation. On a set of real-world agentic workflows, PopPy achieves up to $6.7\\times$ speedups in end-to-end execution time, compared to standard Python execution and several agentic frameworks, while preserving the sequential program semantics.",
+      "identifiers": [
+        "SemanticScholar:1cea3529a62ba0629181740234e937f989d182fa"
+      ],
+      "semantic_scholar_id": "1cea3529a62ba0629181740234e937f989d182fa",
+      "canonical_id": "arXiv:2605.18697",
+      "arxiv_id": "2605.18697",
+      "authors": [
+        "Stephen Mell",
+        "David Mell",
+        "Harry Y. H. Li",
+        "Zhi-Hao Jia",
+        "Konstantinos Kallas",
+        "Steve Zdancewic",
+        "Osbert Bastani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dual DeltaNet: Value-Side Memory Reorganization for Linear Attention",
+      "source_url": "https://arxiv.org/abs/2610.38578",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention and state space models (SSMs) offer efficient alternatives to softmax attention by maintaining a fixed-size recurrent state, but this design requires careful management to preserve useful historical associations and limit interference. The delta rule helps reduce interference through correction of the value associated with each key, but it does not explicitly account for how related value features are distributed across the state. We observe that a state $\\boldsymbol{S}\\in\\mathbb{R}^{d_k\\times d_v}$ can be viewed as a bank of $d_k$ addresses storing $d_v$-dimensional values. While a key-side read $\\boldsymbol{S}^\\top\\boldsymbol{k}$ retrieves the value associated with $\\boldsymbol{k}$, a value-side read $\\boldsymbol{S}\\boldsymbol{e}$ aggregates addresses whose stored value features match the selector $\\boldsymbol{e}$. Based on this observation, we propose Dual DeltaNet (DDN), which extends Kimi Delta Attention (KDA) with a two-sided delta rule. The key-side delta rule reads with the current key to correct its associated value, while the complementary value-side delta rule reads with selected features of the current value to reorganize the addresses it occupies. We derive a chunkwise parallel training algorithm and a rank-2 recurrence that increases arithmetic intensity during inference. Compared with KDA, GDN-2, and Mamba-3, DDN achieves the strongest overall performance across language modeling, zero-shot downstream tasks, and retrieval, while incurring modest training and inference overhead relative to KDA. Code: https://github.com/ReichtumQian/DualDeltaNet",
+      "identifiers": [
+        "SemanticScholar:f02aec99eb494955ae9572b0ec68411b93c2d6f4"
+      ],
+      "semantic_scholar_id": "f02aec99eb494955ae9572b0ec68411b93c2d6f4",
+      "canonical_id": "arXiv:2610.38578",
+      "arxiv_id": "2610.38578",
+      "authors": [
+        "Yi-Xiao Qian",
+        "Ya-Xin Zhang",
+        "Song Chen",
+        "Jia-Xu Liu",
+        "Sheng-Ze Cai",
+        "Chao Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM-MS: A Multi-Model LLM Search Engine",
+      "source_url": "https://doi.org/10.1109/ICDEW67478.2025.00020",
+      "year": 2025,
+      "published": "2025-05-19",
+      "venue": "2025 IEEE 41st International Conference on Data Engineering Workshops (ICDEW)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6acec5516ff579e9696b28b9b3e145519f983c78"
+      ],
+      "semantic_scholar_id": "6acec5516ff579e9696b28b9b3e145519f983c78",
+      "doi": "10.1109/ICDEW67478.2025.00020",
+      "canonical_id": "DOI:10.1109/ICDEW67478.2025.00020",
+      "authors": [
+        "Konstantin Krasovitskiy",
+        "Stelios Christou",
+        "D. Zeinalipour-Yazti"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 553,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.22556",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.22556",
+        "id:SemanticScholar:3e0970bb84bda44db64a246a264889cde1ffeccf",
+        "id:arXiv:2602.22556",
+        "title:stable adaptive thinking via advantage shaping and lengthaware gradient regulation",
+        "url:https://arxiv.org/abs/2602.22556"
+      ],
+      "record": {
+        "title": "Stable Adaptive Thinking via Advantage Shaping and Length-Aware Gradient Regulation",
+        "source_url": "https://arxiv.org/abs/2602.22556",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) achieve strong performance through extended reasoning traces, but they often exhibit overthinking behavior for low-complexity queries. Existing efforts to mitigate this issue are fundamentally limited by unstable accuracy-efficiency trade-offs and poor robustness to heterogeneous reasoning behaviors. To address these challenges, we propose a two-stage framework for stable adaptive thinking in LRMs. The framework first applies Hybrid Fine-Tuning to expose the model to both thinking and no-thinking behaviors, establishing well-conditioned initialization. It then performs adaptive reinforcement learning with Correctness-Preserving Advantage Shaping (CPAS) to avoid suppressing correct long-chain reasoning, and Length-Aware Gradient Regulation (LAGR) to stabilize optimization under severe reasoning-length heterogeneity. Extensive experiments on Qwen2.5-1.5B and 7B show consistent improvements over strong baselines, achieving up to +3.7/+3.6 accuracy points while reducing generated tokens by 40.6%/43.9%. Further analyses across varying problem difficulties and out-of-distribution tasks confirm the robustness and generalization of our approach.",
+        "identifiers": [
+          "SemanticScholar:3e0970bb84bda44db64a246a264889cde1ffeccf"
+        ],
+        "semantic_scholar_id": "3e0970bb84bda44db64a246a264889cde1ffeccf",
+        "canonical_id": "arXiv:2602.22556",
+        "arxiv_id": "2602.22556",
+        "doi": "10.48550/arXiv.2602.22556",
+        "authors": [
+          "Zi-Hang Xu",
+          "Hao-Zhi Xie",
+          "Zi-Qi Miao",
+          "Wuxuan Gong",
+          "Chen Qian",
+          "Li-Jun Li"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 270,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09806",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09806",
+        "id:SemanticScholar:c4917c2e80d009ff50c382bb271d3ecda1aca834",
+        "id:arXiv:2605.09806",
+        "title:lead lengthefficient adaptive and dynamic reasoning for large language models",
+        "url:https://arxiv.org/abs/2605.09806"
+      ],
+      "record": {
+        "title": "LEAD: Length-Efficient Adaptive and Dynamic Reasoning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2605.09806",
+        "year": 2026,
+        "published": "2026-05-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models, such as OpenAI o1 and DeepSeek-R1, tend to become increasingly verbose as their reasoning capabilities improve. These inflated Chain-of-Thought (CoT) trajectories often exceed what the underlying problems require, wasting compute, latency, and context budgets. While introducing length-based efficiency rewards during reinforcement learning offers a natural remedy, existing methods struggle with two fundamental challenges: the optimal balance between correctness and efficiency is non-stationary throughout training, and intrinsic reasoning budgets vary drastically across problems. Relying on static reward weights and global length constraints inevitably forces a compromise between degraded accuracy and unrealized compression. To overcome these limitations, we propose LEAD (Length-Efficient Adaptive and Dynamic reasoning), a method that replaces static heuristics with online, self-adaptive mechanisms. LEAD dynamically calibrates the correctness--efficiency trade-off at each step using a Potential-Scaled Instability, directing optimization capacity to the most informative learning signal. Furthermore, it estimates an adaptive per-problem target length online based on the model's own correct rollouts, applying a symmetric efficiency reward that penalizes both overthinking and over-compression. Evaluated on five mathematical reasoning benchmarks, LEAD achieves the highest accuracy and Accuracy-Efficiency Score among RL-trained efficient-reasoning methods in our matched comparisons while producing substantially shorter outputs than the base model.",
+        "identifiers": [
+          "SemanticScholar:c4917c2e80d009ff50c382bb271d3ecda1aca834"
+        ],
+        "semantic_scholar_id": "c4917c2e80d009ff50c382bb271d3ecda1aca834",
+        "canonical_id": "arXiv:2605.09806",
+        "arxiv_id": "2605.09806",
+        "doi": "10.48550/arXiv.2605.09806",
+        "authors": [
+          "Song-Tao Wei",
+          "Yi Li",
+          "Zhikai Li",
+          "Xu-Yang Hu",
+          "Yue-De Ji",
+          "Guan-Peng Li",
+          "Feng Chen",
+          "Carl Yang",
+          "Zhi-Chun Guo",
+          "Bing-Zhe Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18697",
+      "identity_tokens": [
+        "id:SemanticScholar:1cea3529a62ba0629181740234e937f989d182fa",
+        "id:arXiv:2605.18697",
+        "title:poppy opportunistically exploiting parallelism in python agentic workflows",
+        "url:https://arxiv.org/abs/2605.18697"
+      ],
+      "record": {
+        "title": "PopPy: Opportunistically Exploiting Parallelism in Python Agentic Workflows",
+        "source_url": "https://arxiv.org/abs/2605.18697",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic workflows, which compose calls to ML models using a general-purpose programming language like Python, are widely used for a variety of user-facing tasks, from software engineering to enterprise automation, making their end-to-end latency a critical bottleneck. To improve their latency, developers can either manually parallelize them or use restricted agentic frameworks that cannot express or exploit all forms of parallelization. We address this by developing PopPy, a system that parallelizes external calls, e.g., AI models, in agentic workflows written in a very expressive subset of Python. PopPy combines an ahead-of-time compiler with a runtime, addressing three key challenges in extracting parallelism from Python applications: language complexity, dynamic dispatch, and variable mutation. On a set of real-world agentic workflows, PopPy achieves up to $6.7\\times$ speedups in end-to-end execution time, compared to standard Python execution and several agentic frameworks, while preserving the sequential program semantics.",
+        "identifiers": [
+          "SemanticScholar:1cea3529a62ba0629181740234e937f989d182fa"
+        ],
+        "semantic_scholar_id": "1cea3529a62ba0629181740234e937f989d182fa",
+        "canonical_id": "arXiv:2605.18697",
+        "arxiv_id": "2605.18697",
+        "authors": [
+          "Stephen Mell",
+          "David Mell",
+          "Harry Y. H. Li",
+          "Zhi-Hao Jia",
+          "Konstantinos Kallas",
+          "Steve Zdancewic",
+          "Osbert Bastani"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 189,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.38578",
+      "identity_tokens": [
+        "id:SemanticScholar:f02aec99eb494955ae9572b0ec68411b93c2d6f4",
+        "id:arXiv:2610.38578",
+        "title:dual deltanet valueside memory reorganization for linear attention",
+        "url:https://arxiv.org/abs/2610.38578"
+      ],
+      "record": {
+        "title": "Dual DeltaNet: Value-Side Memory Reorganization for Linear Attention",
+        "source_url": "https://arxiv.org/abs/2610.38578",
+        "year": 2026,
+        "published": "2026-10-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention and state space models (SSMs) offer efficient alternatives to softmax attention by maintaining a fixed-size recurrent state, but this design requires careful management to preserve useful historical associations and limit interference. The delta rule helps reduce interference through correction of the value associated with each key, but it does not explicitly account for how related value features are distributed across the state. We observe that a state $\\boldsymbol{S}\\in\\mathbb{R}^{d_k\\times d_v}$ can be viewed as a bank of $d_k$ addresses storing $d_v$-dimensional values. While a key-side read $\\boldsymbol{S}^\\top\\boldsymbol{k}$ retrieves the value associated with $\\boldsymbol{k}$, a value-side read $\\boldsymbol{S}\\boldsymbol{e}$ aggregates addresses whose stored value features match the selector $\\boldsymbol{e}$. Based on this observation, we propose Dual DeltaNet (DDN), which extends Kimi Delta Attention (KDA) with a two-sided delta rule. The key-side delta rule reads with the current key to correct its associated value, while the complementary value-side delta rule reads with selected features of the current value to reorganize the addresses it occupies. We derive a chunkwise parallel training algorithm and a rank-2 recurrence that increases arithmetic intensity during inference. Compared with KDA, GDN-2, and Mamba-3, DDN achieves the strongest overall performance across language modeling, zero-shot downstream tasks, and retrieval, while incurring modest training and inference overhead relative to KDA. Code: https://github.com/ReichtumQian/DualDeltaNet",
+        "identifiers": [
+          "SemanticScholar:f02aec99eb494955ae9572b0ec68411b93c2d6f4"
+        ],
+        "semantic_scholar_id": "f02aec99eb494955ae9572b0ec68411b93c2d6f4",
+        "canonical_id": "arXiv:2610.38578",
+        "arxiv_id": "2610.38578",
+        "authors": [
+          "Yi-Xiao Qian",
+          "Ya-Xin Zhang",
+          "Song Chen",
+          "Jia-Xu Liu",
+          "Sheng-Ze Cai",
+          "Chao Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icdew67478.2025.00020",
+      "identity_tokens": [
+        "id:DOI:10.1109/icdew67478.2025.00020",
+        "id:SemanticScholar:6acec5516ff579e9696b28b9b3e145519f983c78",
+        "title:llmms a multimodel llm search engine",
+        "url:https://doi.org/10.1109/ICDEW67478.2025.00020"
+      ],
+      "record": {
+        "title": "LLM-MS: A Multi-Model LLM Search Engine",
+        "source_url": "https://doi.org/10.1109/ICDEW67478.2025.00020",
+        "year": 2025,
+        "published": "2025-05-19",
+        "venue": "2025 IEEE 41st International Conference on Data Engineering Workshops (ICDEW)",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6acec5516ff579e9696b28b9b3e145519f983c78"
+        ],
+        "semantic_scholar_id": "6acec5516ff579e9696b28b9b3e145519f983c78",
+        "doi": "10.1109/ICDEW67478.2025.00020",
+        "canonical_id": "DOI:10.1109/ICDEW67478.2025.00020",
+        "authors": [
+          "Konstantin Krasovitskiy",
+          "Stelios Christou",
+          "D. Zeinalipour-Yazti"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 553,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bd385538473c7934d41f405feb51d3c53726269190c31c52d47105ddb912d6e3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

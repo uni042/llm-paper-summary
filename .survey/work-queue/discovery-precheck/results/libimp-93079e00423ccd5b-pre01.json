@@ -1,0 +1,579 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-93079e00423ccd5b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-93079e00423c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cicc63670.2025.10982870",
+    "DOI:10.1109/tpds.2023.3269530",
+    "DOI:10.3390/electronics13071376",
+    "arXiv:2604.07716",
+    "arXiv:2607.19456",
+    "arXiv:2610.14448"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "76c8d06b99f13bb63d714f44392b942b891c41fe",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T22:48:50.288114+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cicc63670.2025.10982870",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tpds.2023.3269530",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/electronics13071376",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.07716",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.19456",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14448",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MoA-Structured Decode Attention DNF Derivation, KV-Cache Accumulation, GQA/MQA, and OpenACC Kernel",
+      "source_url": "https://arxiv.org/abs/2607.19456",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We derive four memory-optimal inference artifacts for transformer attention using the Mathematics of Arrays (MoA), each following directly from the forward-pass Denotational Normal Form (DNF) of with the query-row index fixed to the current decode step. The artifacts are: (1)~a single-query decode DNF in which the $\\psi$-reduction eliminates the $K^\\top$ buffer algebraically, achieving $(d_k + nd_k+ nd_v+ d_v)\\times4\\,{B}$ Dynamic Random Access Memory (DRAM) traffic result numerically verified to $\\|{err}\\|_\\leq2\\times10^{-7}$; (2)~a C/OpenACC Graphics Processing Unit (GPU) kernel with Operational Normal Form (ONF) stride arithmetic and hardware-coalesced memory access, verified to $\\|\\mathrm{err}\\|_\\infty=0$ (exact IEEE-754 floating-point arithmetic); (3)~a multi-step KV-cache with $O(d_k+d_v)$ per-step append via MoA concatenation $\\#$; and (4)~Grouped-Query Attention (GQA) and Multi-Query Attention (MQA) derived via $\\psi$-selection, achieving a proven $\\frac {h_q} { h_{kv} }$ reduction in KV traffic. All programs are verified against PyTorch scaled_dot_product_attention.",
+      "identifiers": [
+        "SemanticScholar:091c8353ef2be1fd9f2cce733ed0de71cdf79c6c"
+      ],
+      "semantic_scholar_id": "091c8353ef2be1fd9f2cce733ed0de71cdf79c6c",
+      "canonical_id": "arXiv:2607.19456",
+      "arxiv_id": "2607.19456",
+      "doi": "10.48550/arXiv.2607.19456",
+      "authors": [
+        "Lenore M. Restifo Mullin",
+        "Gaétan Hains"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 125,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Breaking the KV Cache Bottleneck: Fan Duality Model Achieves O(1) Decode Memory with Superior Associative Recall",
+      "source_url": "https://arxiv.org/abs/2604.07716",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present FDM (Fan Duality Model), a linear sequence architecture that resolves the fundamental tension between memory efficiency and associative recall in sequence modeling. FDM separates sequence processing into two components: a wave component (recurrent scan via phase-preserving Givens rotations) that compresses long-range patterns into a fixed-size complex hidden state, and a particle component (local-global cache) that retrieves specific tokens via learned associative addressing with W+K=272 slots independent of sequence length N. This yields strictly O(1) decode memory: 867 MB fixed across all prompt lengths 128-8,192 tokens, versus Transformer's 853-4,247 MB (4.9x reduction at N=8,192). Beyond the architecture, we discover that jointly training the wave and particle components leads to suboptimal convergence. We propose Freeze-Scan, a two-phase training strategy that freezes the recurrent scan and optimizes the cache jointly with embeddings, achieving PPL=64.9 on WikiText-103 in 44K steps -- a 7.5x improvement over full fine-tuning (PPL=487). On Multi-Query Associative Recall (MQAR), FDM achieves 0.966 accuracy, surpassing Transformer (0.606) by 59.5%, while pure scan without cache scores only 0.011, confirming the necessity of the particle component. Finally, we introduce Holographic Reference Beam Decoding, interpreting the complex hidden state h_t as a holographic plate encoding the entire temporal history. Using the current input x_t as a reference beam to modulate h_t reduces PPL by up to 2.13 points (PPL=62.79) with a 4-head orthogonal reference beam using only 1.3M additional parameters, providing empirical support for the holographic interpretation. Code and pretrained weights: https://github.com/YasongFan/FDM",
+      "identifiers": [
+        "SemanticScholar:bcf48507691b81e502ccc1afb2a9f1333704d961"
+      ],
+      "semantic_scholar_id": "bcf48507691b81e502ccc1afb2a9f1333704d961",
+      "canonical_id": "arXiv:2604.07716",
+      "arxiv_id": "2604.07716",
+      "doi": "10.48550/arXiv.2604.07716",
+      "authors": [
+        "Yasong Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KV4-RL: Unlocking Faster Asynchronous Rollouts for RLVR with INT4 KV Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2610.14448",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Asynchronous rollout improves the efficiency of reinforcement learning with verifiable rewards (RLVR) by reducing under-utilization during long-tail generation. Sustained concurrency also concentrates context processing into fewer decode steps, increasing the KV workload per step. We characterize this \\emph{KV concentration} and find that KV cache quantization delivers substantially greater acceleration than weight-only and weight-activation quantization in our matched-workload comparisons. However, INT4 KV rollout can degrade learning even with token-level truncated importance sampling (TIS). We propose \\emph{KV4-RL}, which combines calibration-free INT4 KV quantization with selective INT8 protection of attention sinks and recent context. Protecting a bounded number of positions reduces sampler mismatch while retaining most of the speedup from INT4. Across 400 iterations of Qwen3-8B-Base GRPO training, KV4-RL achieves $1.80\\times$ cumulative rollout speedup and $1.27\\times$ cumulative full-iteration speedup over BF16 rollout, reaching $1.97\\times$ rollout speedup over the final 50 iterations. Under a common BF16 evaluator, its final six-benchmark mean accuracy is within 0.5 percentage points of BF16-rollout training for both Qwen3-4B-Base and Qwen3-8B-Base.",
+      "identifiers": [
+        "SemanticScholar:68d22b7f2560dafec74c2bb25913c4ccafd6b2c1"
+      ],
+      "semantic_scholar_id": "68d22b7f2560dafec74c2bb25913c4ccafd6b2c1",
+      "canonical_id": "arXiv:2610.14448",
+      "arxiv_id": "2610.14448",
+      "authors": [
+        "Sihwan Park",
+        "Sung-Yub Kim",
+        "Doohyuk Jang",
+        "Eunho Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NIOT: A Novel Inference Optimization of Transformers on Modern CPUs",
+      "source_url": "https://doi.org/10.1109/TPDS.2023.3269530",
+      "year": 2023,
+      "published": "2023-06-01",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the machine learning era, model inference efficiency is one of the most important issues for machine learning systems. It is a major challenge to find the optimal configuration in a huge search space as the combinations of kernel fusion, memory tiling, and thread allocation strategies result in highly variable and unpredictable inference performance. The problem is particularly pronounced in models with large parameter matrices such as Transformers. In this article, we aim to develop a general and powerful framework for inference optimization, called NIOT, to achieve desirable efficiency for the prevailing Transformer-like models on CPUs. To take full advantage of modern CPU features such as SIMD and cache hierarchy, NIOT employs various methods to provide promising strategies tailored to the target Transformer model. Our C++ implementation of NIOT shows significant performance improvements over popular well-optimized model-serving runtimes such as PyTorch and ONNXRuntime.",
+      "identifiers": [
+        "SemanticScholar:1073cb4c4bf75d825587db09bf003deaa83f47cc"
+      ],
+      "semantic_scholar_id": "1073cb4c4bf75d825587db09bf003deaa83f47cc",
+      "doi": "10.1109/TPDS.2023.3269530",
+      "canonical_id": "DOI:10.1109/TPDS.2023.3269530",
+      "authors": [
+        "Zi-Ning Zhang",
+        "Yao Chen",
+        "Bing-Sheng He",
+        "Zhen-Jie Zhang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1271,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A 52.03TOPS/W DCIM-Based Accelerator with FlashAttention and Sparsity-Aware Alignment for LLMs",
+      "source_url": "https://doi.org/10.1109/CICC63670.2025.10982870",
+      "year": 2025,
+      "published": "2025-04-13",
+      "venue": "IEEE Custom Integrated Circuits Conference",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decoder-based large language models (LLMs) are designed specifically for text generation, consisting primarily of multiple decoder layers that utilize unidirectional attention mechanism [1], as shown in Fig. 1. Due to the enormous number of parameters and the complexity of the attention mechanism, LLMs require substantial computational and memory resources in deployment for resource-constrained edge devices. Algorithms and model compression methods such as KV Cache and pruning have been proposed to reduce the workload, achieving remarkable success [2], [3]. However, high-efficient hardware implementation such as sparsity exploitation [14] still remains unexplored. Meanwhile, Digital Computing-in-Memory (DCIM) can reduce the computation and memory demands by minimizing data movement and enabling more efficient parallel processing directly within the memory, making it suitable for memory-bound LLMs [6–9, 11–13]. Designing DCIM-based LLM accelerators faces the following challenges: 1) The KV Cache size scales linearly with the context length, which induces a mismatch between high storage demand and on-chip memory size, as well as frequent external memory access. 2) Scaling the CIM Macro size can reduce computation complexity from the FlashAttention (FA) mechanism [4], [5], but tiling size in FA introduces imbalanced workload distribution in CIM Macro computation stages, exacerbating inefficiencies in resource utilization. 3) Unstructured sparsity brought by model pruning causes low spatial and temporal utilization of CIM Macro, which compromises hardware efficiency.",
+      "identifiers": [
+        "SemanticScholar:896d5a81f2861b79776a57379a115da85485338f"
+      ],
+      "semantic_scholar_id": "896d5a81f2861b79776a57379a115da85485338f",
+      "doi": "10.1109/CICC63670.2025.10982870",
+      "canonical_id": "DOI:10.1109/CICC63670.2025.10982870",
+      "authors": [
+        "Bo Liu",
+        "Xingyuan Xu",
+        "Yang Zhang",
+        "Xi-Long Kang",
+        "Qing-Wen Wei",
+        "Zi-Han Zou",
+        "Jun Yang",
+        "Hao Cai",
+        "Xin Si"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 589,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Large Language Model Inference Acceleration Based on Hybrid Model Branch Prediction",
+      "source_url": "https://doi.org/10.3390/electronics13071376",
+      "year": 2024,
+      "published": "2024-04-05",
+      "venue": "Electronics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the size of deep learning models continues to expand, the elongation of inference time has gradually evolved into a significant challenge to efficiency and practicality for autoregressive models. This work introduces a hybrid model acceleration strategy based on branch prediction, which accelerates autoregressive model inference without requiring retraining and ensures output consistency with the original model. Specifically, the algorithm employs two models with different parameter sizes aimed at the same task. The smaller model generates a series of potential tokens that are then parallelly validated by the larger model to determine their acceptability. By orchestrating the workflow of the large and small models through a branch-prediction strategy, the algorithm conceals the validation time of the larger model when predictions are successful, thereby accelerating inference. We propose a binomial distribution-based prediction function that blends theoretical principles with empirical evidence, specifically designed for the nuanced requirements of accelerating inference within a hybrid model framework. The entire algorithm was designed and implemented on the llama model for text generation and translation tasks. The experimental results indicate significant improvements. The proposed algorithm achieves a 1.2× to 3.4× increase in inference speed compared to the original model, consistently outperforming the speculative sampling inference acceleration algorithm.",
+      "identifiers": [
+        "SemanticScholar:26383d988a7ea5239ca4711100d20ab1fc84c662"
+      ],
+      "semantic_scholar_id": "26383d988a7ea5239ca4711100d20ab1fc84c662",
+      "doi": "10.3390/electronics13071376",
+      "canonical_id": "DOI:10.3390/electronics13071376",
+      "authors": [
+        "Gaoxiang Duan",
+        "Jiajie Chen",
+        "Yue-Ying Zhou",
+        "Xiao-Ying Zheng",
+        "Yong-Xin Zhu"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 962,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.19456",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.19456",
+        "id:SemanticScholar:091c8353ef2be1fd9f2cce733ed0de71cdf79c6c",
+        "id:arXiv:2607.19456",
+        "title:moastructured decode attention dnf derivation kvcache accumulation gqamqa and openacc kernel",
+        "url:https://arxiv.org/abs/2607.19456"
+      ],
+      "record": {
+        "title": "MoA-Structured Decode Attention DNF Derivation, KV-Cache Accumulation, GQA/MQA, and OpenACC Kernel",
+        "source_url": "https://arxiv.org/abs/2607.19456",
+        "year": 2026,
+        "published": "2026-07-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We derive four memory-optimal inference artifacts for transformer attention using the Mathematics of Arrays (MoA), each following directly from the forward-pass Denotational Normal Form (DNF) of with the query-row index fixed to the current decode step. The artifacts are: (1)~a single-query decode DNF in which the $\\psi$-reduction eliminates the $K^\\top$ buffer algebraically, achieving $(d_k + nd_k+ nd_v+ d_v)\\times4\\,{B}$ Dynamic Random Access Memory (DRAM) traffic result numerically verified to $\\|{err}\\|_\\leq2\\times10^{-7}$; (2)~a C/OpenACC Graphics Processing Unit (GPU) kernel with Operational Normal Form (ONF) stride arithmetic and hardware-coalesced memory access, verified to $\\|\\mathrm{err}\\|_\\infty=0$ (exact IEEE-754 floating-point arithmetic); (3)~a multi-step KV-cache with $O(d_k+d_v)$ per-step append via MoA concatenation $\\#$; and (4)~Grouped-Query Attention (GQA) and Multi-Query Attention (MQA) derived via $\\psi$-selection, achieving a proven $\\frac {h_q} { h_{kv} }$ reduction in KV traffic. All programs are verified against PyTorch scaled_dot_product_attention.",
+        "identifiers": [
+          "SemanticScholar:091c8353ef2be1fd9f2cce733ed0de71cdf79c6c"
+        ],
+        "semantic_scholar_id": "091c8353ef2be1fd9f2cce733ed0de71cdf79c6c",
+        "canonical_id": "arXiv:2607.19456",
+        "arxiv_id": "2607.19456",
+        "doi": "10.48550/arXiv.2607.19456",
+        "authors": [
+          "Lenore M. Restifo Mullin",
+          "Gaétan Hains"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 125,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.07716",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.07716",
+        "id:SemanticScholar:bcf48507691b81e502ccc1afb2a9f1333704d961",
+        "id:arXiv:2604.07716",
+        "title:breaking the kv cache bottleneck fan duality model achieves o1 decode memory with superior associative recall",
+        "url:https://arxiv.org/abs/2604.07716"
+      ],
+      "record": {
+        "title": "Breaking the KV Cache Bottleneck: Fan Duality Model Achieves O(1) Decode Memory with Superior Associative Recall",
+        "source_url": "https://arxiv.org/abs/2604.07716",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present FDM (Fan Duality Model), a linear sequence architecture that resolves the fundamental tension between memory efficiency and associative recall in sequence modeling. FDM separates sequence processing into two components: a wave component (recurrent scan via phase-preserving Givens rotations) that compresses long-range patterns into a fixed-size complex hidden state, and a particle component (local-global cache) that retrieves specific tokens via learned associative addressing with W+K=272 slots independent of sequence length N. This yields strictly O(1) decode memory: 867 MB fixed across all prompt lengths 128-8,192 tokens, versus Transformer's 853-4,247 MB (4.9x reduction at N=8,192). Beyond the architecture, we discover that jointly training the wave and particle components leads to suboptimal convergence. We propose Freeze-Scan, a two-phase training strategy that freezes the recurrent scan and optimizes the cache jointly with embeddings, achieving PPL=64.9 on WikiText-103 in 44K steps -- a 7.5x improvement over full fine-tuning (PPL=487). On Multi-Query Associative Recall (MQAR), FDM achieves 0.966 accuracy, surpassing Transformer (0.606) by 59.5%, while pure scan without cache scores only 0.011, confirming the necessity of the particle component. Finally, we introduce Holographic Reference Beam Decoding, interpreting the complex hidden state h_t as a holographic plate encoding the entire temporal history. Using the current input x_t as a reference beam to modulate h_t reduces PPL by up to 2.13 points (PPL=62.79) with a 4-head orthogonal reference beam using only 1.3M additional parameters, providing empirical support for the holographic interpretation. Code and pretrained weights: https://github.com/YasongFan/FDM",
+        "identifiers": [
+          "SemanticScholar:bcf48507691b81e502ccc1afb2a9f1333704d961"
+        ],
+        "semantic_scholar_id": "bcf48507691b81e502ccc1afb2a9f1333704d961",
+        "canonical_id": "arXiv:2604.07716",
+        "arxiv_id": "2604.07716",
+        "doi": "10.48550/arXiv.2604.07716",
+        "authors": [
+          "Yasong Fan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 228,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14448",
+      "identity_tokens": [
+        "id:SemanticScholar:68d22b7f2560dafec74c2bb25913c4ccafd6b2c1",
+        "id:arXiv:2610.14448",
+        "title:kv4rl unlocking faster asynchronous rollouts for rlvr with int4 kv cache quantization",
+        "url:https://arxiv.org/abs/2610.14448"
+      ],
+      "record": {
+        "title": "KV4-RL: Unlocking Faster Asynchronous Rollouts for RLVR with INT4 KV Cache Quantization",
+        "source_url": "https://arxiv.org/abs/2610.14448",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Asynchronous rollout improves the efficiency of reinforcement learning with verifiable rewards (RLVR) by reducing under-utilization during long-tail generation. Sustained concurrency also concentrates context processing into fewer decode steps, increasing the KV workload per step. We characterize this \\emph{KV concentration} and find that KV cache quantization delivers substantially greater acceleration than weight-only and weight-activation quantization in our matched-workload comparisons. However, INT4 KV rollout can degrade learning even with token-level truncated importance sampling (TIS). We propose \\emph{KV4-RL}, which combines calibration-free INT4 KV quantization with selective INT8 protection of attention sinks and recent context. Protecting a bounded number of positions reduces sampler mismatch while retaining most of the speedup from INT4. Across 400 iterations of Qwen3-8B-Base GRPO training, KV4-RL achieves $1.80\\times$ cumulative rollout speedup and $1.27\\times$ cumulative full-iteration speedup over BF16 rollout, reaching $1.97\\times$ rollout speedup over the final 50 iterations. Under a common BF16 evaluator, its final six-benchmark mean accuracy is within 0.5 percentage points of BF16-rollout training for both Qwen3-4B-Base and Qwen3-8B-Base.",
+        "identifiers": [
+          "SemanticScholar:68d22b7f2560dafec74c2bb25913c4ccafd6b2c1"
+        ],
+        "semantic_scholar_id": "68d22b7f2560dafec74c2bb25913c4ccafd6b2c1",
+        "canonical_id": "arXiv:2610.14448",
+        "arxiv_id": "2610.14448",
+        "authors": [
+          "Sihwan Park",
+          "Sung-Yub Kim",
+          "Doohyuk Jang",
+          "Eunho Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2023.3269530",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2023.3269530",
+        "id:SemanticScholar:1073cb4c4bf75d825587db09bf003deaa83f47cc",
+        "title:niot a novel inference optimization of transformers on modern cpus",
+        "url:https://doi.org/10.1109/TPDS.2023.3269530"
+      ],
+      "record": {
+        "title": "NIOT: A Novel Inference Optimization of Transformers on Modern CPUs",
+        "source_url": "https://doi.org/10.1109/TPDS.2023.3269530",
+        "year": 2023,
+        "published": "2023-06-01",
+        "venue": "IEEE Transactions on Parallel and Distributed Systems",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In the machine learning era, model inference efficiency is one of the most important issues for machine learning systems. It is a major challenge to find the optimal configuration in a huge search space as the combinations of kernel fusion, memory tiling, and thread allocation strategies result in highly variable and unpredictable inference performance. The problem is particularly pronounced in models with large parameter matrices such as Transformers. In this article, we aim to develop a general and powerful framework for inference optimization, called NIOT, to achieve desirable efficiency for the prevailing Transformer-like models on CPUs. To take full advantage of modern CPU features such as SIMD and cache hierarchy, NIOT employs various methods to provide promising strategies tailored to the target Transformer model. Our C++ implementation of NIOT shows significant performance improvements over popular well-optimized model-serving runtimes such as PyTorch and ONNXRuntime.",
+        "identifiers": [
+          "SemanticScholar:1073cb4c4bf75d825587db09bf003deaa83f47cc"
+        ],
+        "semantic_scholar_id": "1073cb4c4bf75d825587db09bf003deaa83f47cc",
+        "doi": "10.1109/TPDS.2023.3269530",
+        "canonical_id": "DOI:10.1109/TPDS.2023.3269530",
+        "authors": [
+          "Zi-Ning Zhang",
+          "Yao Chen",
+          "Bing-Sheng He",
+          "Zhen-Jie Zhang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1271,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cicc63670.2025.10982870",
+      "identity_tokens": [
+        "id:DOI:10.1109/cicc63670.2025.10982870",
+        "id:SemanticScholar:896d5a81f2861b79776a57379a115da85485338f",
+        "title:a 5203topsw dcimbased accelerator with flashattention and sparsityaware alignment for llms",
+        "url:https://doi.org/10.1109/CICC63670.2025.10982870"
+      ],
+      "record": {
+        "title": "A 52.03TOPS/W DCIM-Based Accelerator with FlashAttention and Sparsity-Aware Alignment for LLMs",
+        "source_url": "https://doi.org/10.1109/CICC63670.2025.10982870",
+        "year": 2025,
+        "published": "2025-04-13",
+        "venue": "IEEE Custom Integrated Circuits Conference",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decoder-based large language models (LLMs) are designed specifically for text generation, consisting primarily of multiple decoder layers that utilize unidirectional attention mechanism [1], as shown in Fig. 1. Due to the enormous number of parameters and the complexity of the attention mechanism, LLMs require substantial computational and memory resources in deployment for resource-constrained edge devices. Algorithms and model compression methods such as KV Cache and pruning have been proposed to reduce the workload, achieving remarkable success [2], [3]. However, high-efficient hardware implementation such as sparsity exploitation [14] still remains unexplored. Meanwhile, Digital Computing-in-Memory (DCIM) can reduce the computation and memory demands by minimizing data movement and enabling more efficient parallel processing directly within the memory, making it suitable for memory-bound LLMs [6–9, 11–13]. Designing DCIM-based LLM accelerators faces the following challenges: 1) The KV Cache size scales linearly with the context length, which induces a mismatch between high storage demand and on-chip memory size, as well as frequent external memory access. 2) Scaling the CIM Macro size can reduce computation complexity from the FlashAttention (FA) mechanism [4], [5], but tiling size in FA introduces imbalanced workload distribution in CIM Macro computation stages, exacerbating inefficiencies in resource utilization. 3) Unstructured sparsity brought by model pruning causes low spatial and temporal utilization of CIM Macro, which compromises hardware efficiency.",
+        "identifiers": [
+          "SemanticScholar:896d5a81f2861b79776a57379a115da85485338f"
+        ],
+        "semantic_scholar_id": "896d5a81f2861b79776a57379a115da85485338f",
+        "doi": "10.1109/CICC63670.2025.10982870",
+        "canonical_id": "DOI:10.1109/CICC63670.2025.10982870",
+        "authors": [
+          "Bo Liu",
+          "Xingyuan Xu",
+          "Yang Zhang",
+          "Xi-Long Kang",
+          "Qing-Wen Wei",
+          "Zi-Han Zou",
+          "Jun Yang",
+          "Hao Cai",
+          "Xin Si"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 589,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics13071376",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics13071376",
+        "id:SemanticScholar:26383d988a7ea5239ca4711100d20ab1fc84c662",
+        "title:large language model inference acceleration based on hybrid model branch prediction",
+        "url:https://doi.org/10.3390/electronics13071376"
+      ],
+      "record": {
+        "title": "Large Language Model Inference Acceleration Based on Hybrid Model Branch Prediction",
+        "source_url": "https://doi.org/10.3390/electronics13071376",
+        "year": 2024,
+        "published": "2024-04-05",
+        "venue": "Electronics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the size of deep learning models continues to expand, the elongation of inference time has gradually evolved into a significant challenge to efficiency and practicality for autoregressive models. This work introduces a hybrid model acceleration strategy based on branch prediction, which accelerates autoregressive model inference without requiring retraining and ensures output consistency with the original model. Specifically, the algorithm employs two models with different parameter sizes aimed at the same task. The smaller model generates a series of potential tokens that are then parallelly validated by the larger model to determine their acceptability. By orchestrating the workflow of the large and small models through a branch-prediction strategy, the algorithm conceals the validation time of the larger model when predictions are successful, thereby accelerating inference. We propose a binomial distribution-based prediction function that blends theoretical principles with empirical evidence, specifically designed for the nuanced requirements of accelerating inference within a hybrid model framework. The entire algorithm was designed and implemented on the llama model for text generation and translation tasks. The experimental results indicate significant improvements. The proposed algorithm achieves a 1.2× to 3.4× increase in inference speed compared to the original model, consistently outperforming the speculative sampling inference acceleration algorithm.",
+        "identifiers": [
+          "SemanticScholar:26383d988a7ea5239ca4711100d20ab1fc84c662"
+        ],
+        "semantic_scholar_id": "26383d988a7ea5239ca4711100d20ab1fc84c662",
+        "doi": "10.3390/electronics13071376",
+        "canonical_id": "DOI:10.3390/electronics13071376",
+        "authors": [
+          "Gaoxiang Duan",
+          "Jiajie Chen",
+          "Yue-Ying Zhou",
+          "Xiao-Ying Zheng",
+          "Yong-Xin Zhu"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 962,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:966b125b33230a02012e13810b4b746bcef43e1430f5466445e8976ec1abf6da",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
