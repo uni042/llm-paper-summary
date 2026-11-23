@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（318本）
+## 自動生成の論文一覧（319本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1059,6 +1059,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [Turning LLM Activations Quantization-Friendly](2025-2506.01967-turning-llm-activations-quantization-friendly.md)**  
   実装：[✓](https://github.com/czakop/smooth-rot-exper) ・ リポジトリ内被引用：0  
   LLMの重み-only量子化は重み転送量を削減する一方、活性がFP16/BF16のままなら、行列演算を低bit整数だけで完結させることはできない。
+
+- **2025-05 · [QuantX: A Framework for Hardware-Aware Quantization of Generative AI Workloads](2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-work.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み分布・外れ値・注意マップの歪みを層ごとに観測して均一／非一様量子化とビット幅を選び、ハードウェア制約も入れるレシピ集で、LLaVA-v1.6を3ビット化してFP16比6パーセント以内の精度低下に収める研究。
 
 - **2025-05 · [M-Wanda: Improving One-Shot Pruning for Multilingual LLMs](2025-2505.21171-m-wanda-improving-one-shot-pruning-for-multilingual-llms.md)**  
   実装：[✓](https://github.com/RochelleChoenni/M-Wanda) ・ リポジトリ内被引用：0  

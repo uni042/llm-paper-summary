@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0561e31296fb39742a2388029b7ee58725a0ba7b",
+  "base_commit": "4901395b8fe6e145211702b8699ca99c407a9f08",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -111,6 +111,7 @@
     "2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchronization-traversal.json",
     "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
+    "2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.json",
     "2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models-for-code.json",
     "2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-large-models.json",
     "2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficient-end-to-end-edge-deployment.json",
@@ -142,12 +143,14 @@
     "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
+    "2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.json",
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
     "2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.json",
     "2024-2412.06458-pruning-all-rounder-rethinking-and-improving-inference-efficiency-for-large-vision-language-models.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
     "2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.json",
     "2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.json",
+    "2024-2412.13236-cosee-consistency-oriented-signal-based-early-exiting-via-calibrated-sample-weighting-mechanism.json",
     "2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-awareness.json",
     "2024-2412.15750-extracting-interpretable-task-specific-circuits-from-large-language-models-for-faster-inference.json",
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
@@ -180,6 +183,7 @@
     "2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-llm-inference-algorithms-and-numerical-analysis.json",
     "2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-all-you-need-for-mha.json",
     "2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.json",
+    "2025-2503.07657-splitquantv2-enhancing-low-bit-quantization-of-llms-without-gpus.json",
     "2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe-inference.json",
     "2025-2503.09657-tyr-the-pruner-structural-pruning-via-global-sparsity-distribution.json",
     "2025-2503.11426-text-compression-for-efficient-language-generation.json",
@@ -203,6 +207,7 @@
     "2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.json",
     "2025-2505.03810-grouped-sequency-arranged-rotation-optimizing-rotation-transformation-for-quantization-for-free.json",
     "2025-2505.04081-qstore-quantization-aware-compressed-model-storage.json",
+    "2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-workloads.json",
     "2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.json",
     "2025-2505.10118-why-1-1-1-in-visual-token-pruning-beyond-naive-integration-via-multi-objective-balanced-covering.json",
     "2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-generation.json",
@@ -50134,6 +50139,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2407.00029": {
+      "order": [
+        "2026-11-23T18:00:18+00:00",
+        "2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.01042": {
+      "order": [
+        "2026-11-23T18:01:49+00:00",
+        "2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.13236": {
+      "order": [
+        "2026-11-23T18:03:20+00:00",
+        "2024-2412.13236-cosee-consistency-oriented-signal-based-early-exiting-via-calibrated-sample-weighting-mechanism.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2503.07657": {
+      "order": [
+        "2026-11-23T18:04:50+00:00",
+        "2025-2503.07657-splitquantv2-enhancing-low-bit-quantization-of-llms-without-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.07531": {
+      "order": [
+        "2026-11-23T18:06:20+00:00",
+        "2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63439,6 +63489,21 @@
     "arxiv:2604.17228": [
       "papers/inference/99-other-inference-systems/2026-2604.17228-revisiting-auxiliary-losses-for-conditional-depth-routing-an-empirical-s.md",
       "papers/inference/99-other-inference-systems/2026-2604.17228-revisiting-auxiliary-losses-for-conditional-depth-routing-an-empirical-s.md"
+    ],
+    "arxiv:2407.00029": [
+      "papers/inference/99-other-inference-systems/2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.md"
+    ],
+    "arxiv:2412.01042": [
+      "papers/inference/15-inference-simulation-emulation/2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.md"
+    ],
+    "arxiv:2412.13236": [
+      "papers/inference/99-other-inference-systems/2024-2412.13236-cosee-consistency-oriented-signal-based-early-exiting-via-calibrated-sam.md"
+    ],
+    "arxiv:2503.07657": [
+      "papers/inference/99-other-inference-systems/2025-2503.07657-splitquantv2-enhancing-low-bit-quantization-of-llms-without-gpus.md"
+    ],
+    "arxiv:2505.07531": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-work.md"
     ]
   }
 }

@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（106本）
+## 自動生成の論文一覧（107本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -395,6 +395,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-03 · [Fake Runs, Real Fixes - Analyzing xPU Performance Through Simulation](2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本番実行の機械語トレースをハードウェア設計用シミュレータで再生し、DMAの待ちやメモリ断片化を命令単位で解析して最適化を自動提案する性能解析手法。再コンパイル不要で本番設定のまま使える。
+
+- **2024-12 · [TruncFormer: Private LLM Inference Using Only Truncations](2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  非線形演算を加算・乗算・切り捨ての列へ展開し、切り捨てを溢れが起きる場所だけへ静的に置くことで、任意の言語モデルへ使えるプライベート推論の変換枠組み。
 
 ### 3年前（2023-12〜2024-11）
 

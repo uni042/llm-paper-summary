@@ -35,10 +35,15 @@
   "selection_reason": "微分可能なLLM非線形関数を加算・乗算・切捨ての列で近似し、切捨て位置を静的に決めて乗算ごとの切捨て強制を避けるTruncFormerは、秘匿LLM推論の遅延を下げる枠組みでありプライバシー保護推論の効率化への直接貢献が確認できる。",
   "semantic_scholar_id": "46050043f172585af197db04abae12e46f92cf16",
   "source_url": "https://arxiv.org/abs/2412.01042",
-  "status": "ready",
+  "status": "superseded",
   "title": "TruncFormer: Private LLM Inference Using Only Truncations",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-23T18:08:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.md",
+  "represented_canonical_id": "arXiv:2412.01042",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

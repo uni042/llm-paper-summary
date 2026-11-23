@@ -35,10 +35,15 @@
   "selection_reason": "メモリ制約のある機器へLLMを載せるためCPU上での分散推論最適化を提案し、第5世代Xeon上で72Bパラメータモデルを1トークン当たり140msで生成した実測を示す、CPU分散推論という推論実行基盤への直接貢献である。",
   "semantic_scholar_id": "33286b2d58a8a70382b3fd0a93bb87102ba21671",
   "source_url": "https://arxiv.org/abs/2407.00029",
-  "status": "ready",
+  "status": "superseded",
   "title": "Distributed Inference Performance Optimization for LLMs on CPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-23T18:08:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.md",
+  "represented_canonical_id": "arXiv:2407.00029",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

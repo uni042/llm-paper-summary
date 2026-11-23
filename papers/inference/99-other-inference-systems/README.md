@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1346本）
+## 自動生成の論文一覧（1349本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4324,6 +4324,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文を一つの埋め込みへ圧縮し、完了した文の埋め込みをキャッシュして生成する階層型モデルで、小規模領域で計算量最大約10倍と速度最大3倍の効率を得る一方、品質の代償も測る研究。
 
+- **2025-03 · [SplitQuantV2: Enhancing Low-Bit Quantization of LLMs Without GPUs](2025-2503.07657-splitquantv2-enhancing-low-bit-quantization-of-llms-without-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みをk平均法で三つの層へ等価分割して値域を狭め、基本的な線形量子化の分解能を上げるGPU不要の前処理で、Llama 3.2 1BのINT4正解率を11.76ポイント改善し浮動小数点モデルにほぼ並ばせる研究。
+
 - **2025-03 · [Sample-aware Adaptive Structured Pruning for Large Language Models](2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/JunKong5/AdaPruner) ・ リポジトリ内被引用：0  
   構造化枝刈りの成否を分けるキャリブレーションデータと重要度指標の組み合わせを、ベイズ最適化でサンプルを意識して自動探索するAdaPrunerで、枝刈り率20%で未枝刈りモデルの97%の性能を保つ。
@@ -4463,6 +4467,10 @@
 - **2024-12 · [CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models](2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-f.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層の感度を相関・枝刈り・摂動の3方法で測り、16・8・4ビットを層ごとに割り当てる混合精度の学習後量子化。最大4倍圧縮でも精度低下をFP16より小さく抑える。
+
+- **2024-12 · [COSEE: Consistency-Oriented Signal-Based Early Exiting via Calibrated Sample Weighting Mechanism](2024-2412.13236-cosee-consistency-oriented-signal-based-early-exiting-via-calibrated-sam.md)**  
+  実装：[✓](https://github.com/He-Jianing/COSEE) ・ リポジトリ内被引用：0  
+  学習時に複数の閾値で終了過程を模擬し、サンプルが終了しやすい層の近くの分類器へ損失の重みを寄せることで、高速化率を推論時に変えられるまま学習と推論の一致を取る早期終了の学習枠組み。
 
 - **2024-12 · [Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners](2024-2412.04917-continuous-speech-tokens-makes-llms-robust-multi-modality-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4973,6 +4981,10 @@
 - **2024-05 · [On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization](2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   微調整データなしで、層ごとの量子化感度をロジットの距離で測ってパレートフロンティアで層を選び、事前学習コーパスで較正することで、言語トランスフォーマーの95%以上を8ビット整数化しても正解率の低下を0.02%以内に抑える学習後量子化の研究。
+
+- **2024-05 · [Distributed Inference Performance Optimization for LLMs on CPUs](2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CPUだけの分散推論で、トークンIDのブロードキャスト、層あたり1回の同期、計算と通信の間のゼロコピーの三つにより通信を削り、Xeon 4台で72Bモデルをトークンあたり140ミリ秒で生成する実践報告。
 
 - **2024-05 · [Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information](2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
