@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-23 17:02:18 JST**
+> 自動生成: **2026-11-23 18:23:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **1378** |
 | 未claim Research job | **1378** |
-| 直近24hのResearch処理完了 | **160** |
+| 直近24hのResearch処理完了 | **74** |
 | 最終Research処理完了 | **11-22 23:55:00 JST** |
-| 最終Discovery探索完了 | **11-23 16:49:31 JST** |
+| 最終Discovery探索完了 | **11-23 18:20:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -67,14 +67,14 @@
 | 機械規則による暫定隔離 | **2205** |
 | 拡張機械規則による追加隔離 | **1418** |
 | 機械規則通過後 | **123779** |
-| 系統内前方引用スコアによる選抜保留 | **117590** |
-| 暫定隔離合計 | **121213** |
-| **読解可能候補（隔離後）** | **6189** |
+| 系統内前方引用スコアによる選抜保留 | **92834** |
+| 暫定隔離合計 | **96457** |
+| **読解可能候補（隔離後）** | **30945** |
 | 前方引用が同一系統で2本以上の候補 | **7889** |
 | 前方引用が同一系統で3本以上の候補 | **422** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6189件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **25.0%** / 目標 **30945件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-23 13:06:21 JST（3時間55分前）** |
+| 最終maintenance完了 | **11-23 13:06:21 JST（5時間17分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **47** |
-| 直近6hのDiscovery本文確認・分類 | **700** |
+| 直近6hのDiscovery run | **55** |
+| 直近6hのDiscovery本文確認・分類 | **830** |
 | 最終Research完了 | **11-22 23:55:00 JST** |
-| 最終Discovery完了 | **11-23 16:49:31 JST** |
+| 最終Discovery完了 | **11-23 18:20:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-22 23:55:00 JST** / worker — / run muse-20261122-f1 / 成果 **9件**
   - evidence: .survey/import-inbox/results/research/0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json
-- Discovery: **11-23 16:49:31 JST** / worker muse / run muse-20261123-d37::chunk-0002-of-0002
-  - 本文確認・分類 **10件** / accept **0件** / unrelated+borderline **10件**
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261123-1630-muse-d37--chunk-0002-of-0002.json
+- Discovery: **11-23 18:20:00 JST** / worker muse / run muse-20261123-d41::chunk-0001-of-0002
+  - 本文確認・分類 **20件** / accept **3件** / unrelated+borderline **17件**
+  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261123-1630-muse-d41--chunk-0001-of-0002.json
 
 ### Codex探索成果の反映状況
 

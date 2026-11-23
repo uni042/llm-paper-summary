@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-23T07:59:55+00:00`
+Generated: `2026-11-23T09:29:07+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -87,7 +87,7 @@ ready総数: **199** / 未claim総数: **199** / このworker向け: **66**
 ## リスト入り判定待ち Discovery候補
 
 未判定総数: **127897** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121683** / 監査再投入 **0** / 機械規則適用後 **124269** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+事前選別: **quarantine** / 暫定隔離 **96829** / 監査再投入 **0** / 機械規則適用後 **124269** / 選抜率 **25.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
