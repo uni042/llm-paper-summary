@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DABO: Difficulty-Aware Binary Offloading for Collaborative Large-Small Model Inference",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3724635",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-small model collaboration, as an emerging paradigm for efficient language model inference, plays a significant role in balancing inference quality and service efficiency in cloud-edge intelligence systems. By combining the strong generalization capability of cloud-side large language models (LLMs) with the low-latency inference capability of edge-side small language models (SLMs), this paradigm provides a practical way to serve heterogeneous language requests. However, existing collaborative inference methods still face a critical challenge: forwarding all requests to the cloud leads to high latency and unnecessary service cost, while relying only on edge-side SLMs may degrade prediction quality for difficult inputs. Therefore, we propose DABO, a calibration-aware binary offloading method for collaborative large–small model inference. Specifically, the edge-side SLM first performs lightweight probe inference and produces a prediction confidence distribution. DABO then calibrates the confidence through temperature scaling and converts it into a label-space-normalized difficulty score. Based on a model–task-specific operating threshold selected under an explicit accuracy constraint, reliable requests are answered locally by the edge-side SLM, whereas uncertain requests are selectively escalated to the cloud-side LLM. Extensive experiments demonstrate that DABO maintains competitive end-to-end accuracy while processing an average of 83.72% of requests at the edge, reducing expected calibration error by 31.08%, and decreasing mean latency by 84.24% compared with Cloud-only inference in a controlled workstation-based edge simulation.",
+      "identifiers": [
+        "SemanticScholar:d823ec0fbeec6f2fca110becff45051690f4be2b"
+      ],
+      "semantic_scholar_id": "d823ec0fbeec6f2fca110becff45051690f4be2b",
+      "doi": "10.1109/ACCESS.2026.3724635",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3724635",
+      "authors": [
+        "Chen Zhu",
+        "Yi-Ming Su",
+        "Chenwenjie Mao",
+        "Yu-Hao Wu",
+        "Yu-Zhe Gao",
+        "Cheng-Bao Yan",
+        "Ran Tao"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "クラウドの大規模モデルとエッジの小規模モデルによる協調推論において、エッジ側の軽量なプローブ推論の信頼度を較正して難易度を推定し、リクエストのオフロード先を二値決定するDABOを提案しており、大規模・小規模モデル協調推論の振り分け機構への直接の貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cbcb1dbc371b",
+    "round": "libimp-cbcb1dbc371b335d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cbcb1dbc371b335d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cbcb1dbc371b335d-pre01.json",
+    "receipt": "sha256:b4407839c4761299ecbf356c94dca190f35273485ac8ff3fc8894e0486ca966a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cbcb1dbc371b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

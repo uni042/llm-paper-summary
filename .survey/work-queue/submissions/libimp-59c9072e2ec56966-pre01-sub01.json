@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient Token Pruning for LLaDA-V",
+      "source_url": "https://arxiv.org/abs/2601.20168",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large multimodal models, such as LLaDA-V, have demonstrated impressive capabilities in vision-language understanding and generation. However, their bidirectional attention mechanism and diffusion-style iterative denoising paradigm introduce significant computational overhead, as visual tokens are repeatedly processed across all layers and denoising steps. In this work, we conduct an in-depth attention analysis and reveal that, unlike autoregressive decoders, LLaDA-V aggregates cross-modal information predominantly in middle-to-late layers, leading to delayed semantic alignment. Motivated by this observation, we propose a structured token pruning strategy inspired by FastV, selectively removing a proportion of visual tokens at designated layers to reduce FLOPs while preserving critical semantic information. To the best of our knowledge, this is the first work to investigate structured token pruning in diffusion-based large multimodal models. Unlike FastV, which focuses on shallow-layer pruning, our method targets the middle-to-late layers of the first denoising step to align with LLaDA-V's delayed attention aggregation to maintain output quality, and the first-step pruning strategy reduces the computation across all subsequent steps. Our framework provides an empirical basis for efficient LLaDA-V inference and highlights the potential of vision-aware pruning in diffusion-based multimodal models. Across multiple benchmarks, our best configuration reduces computational cost by up to 65% while preserving an average of 95% task performance.",
+      "identifiers": [
+        "SemanticScholar:2c2d0b0be6c3836427abe850e768bbd19841bd00"
+      ],
+      "semantic_scholar_id": "2c2d0b0be6c3836427abe850e768bbd19841bd00",
+      "canonical_id": "arXiv:2601.20168",
+      "arxiv_id": "2601.20168",
+      "doi": "10.48550/arXiv.2601.20168",
+      "authors": [
+        "Zhewen Wan",
+        "Tian-Chen Song",
+        "Chen-Long Lin",
+        "Zhi-Yong Zhao",
+        "Xianpeng Lang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散型マルチモーダルモデルLLaDA-Vの反復デノイジング推論において、中〜後層でクロスモーダル集約が起きる注意分析に基づき指定層で視覚トークンを構造的に剪定し、FLOPsと推論コストを削減する直接的な推論効率化手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OnePiece: A Large-Scale Distributed Inference System with RDMA for Complex AI-Generated Content (AIGC) Workflows",
+      "source_url": "https://arxiv.org/abs/2601.20655",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of AI-generated content (AIGC) has enabled high-quality creative production across diverse domains, yet existing systems face critical inefficiencies in throughput, resource utilization, and scalability under concurrent workloads. This paper introduces OnePiece, a large-scale distributed inference system with RDMA optimized for multi-stage AIGC workflows. By decomposing pipelines into fine-grained microservices and leveraging one-sided RDMA communication, OnePiece significantly reduces inter-node latency and CPU overhead while improving GPU utilization. The system incorporates a novel double-ring buffer design to resolve deadlocks in RDMA-aware memory access without CPU involvement. Additionally, a dynamic Node Manager allocates resources elastically across workflow stages in response to real-time load. Experimental results demonstrate that OnePiece reduces GPU resource consumption by 16x in Wan2.1 image-to-video generation compared to monolithic inference pipelines, offering a scalable, fault-tolerant, and efficient solution for production AIGC environments.",
+      "identifiers": [
+        "SemanticScholar:8715aa1ed829ab52e2d29ec70c5d7916f434a5e5"
+      ],
+      "semantic_scholar_id": "8715aa1ed829ab52e2d29ec70c5d7916f434a5e5",
+      "canonical_id": "arXiv:2601.20655",
+      "arxiv_id": "2601.20655",
+      "doi": "10.48550/arXiv.2601.20655",
+      "authors": [
+        "Jun-Da Chen",
+        "N. Xu",
+        "G.-S. Huang",
+        "Bo Zhou",
+        "Stephen Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多段AIGCワークフロー向けにパイプラインをマイクロサービス分解し片方向RDMA通信・ダブルリングバッファ・動的リソース配分でノード間遅延とCPU負荷を削減しGPU利用率を高める大規模分散推論システムであり、分散推論基盤への直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dolphium: Co-Optimizing Quantization Dataflow and Paradigms on Poly-Hierarchical NPUs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539577",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Poly-hierarchical NPUs integrate distributed memory modules with heterogeneous computation units, posing significant challenges for mapping quantized operators. The difficulty arises from the need to coordinate data transfers across memory hierarchies and to assign diverse operations to suitable computation units. In this work, we systematically construct the mapping space from quantization to dataflows by addressing three key aspects: generation of NPU-friendly computation flows, integrated operation–data co-mapping, and determination of transfer granularity and frequency. Building on this foundation, we further exploit quantization dataflows to guide the selection of quantization paradigms. Compared with the state-of-the-art quantization compiler, our mapping achieves a 1.67–2.03× speedup. Moreover, the selected quantization paradigms deliver an average 2.18× efficiency improvement on NPUs without accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c"
+      ],
+      "semantic_scholar_id": "da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c",
+      "doi": "10.23919/DATE69613.2026.11539577",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539577",
+      "authors": [
+        "Xiu-Ping Cui",
+        "Cheng-Rui Zhang",
+        "Xiang Chen",
+        "Yun Liang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多階層NPU上で量子化演算子のデータフロー生成・演算とデータの共同マッピング・転送粒度を体系化し、量子化パラダイム選択まで協調最適化して量子化コンパイラ比1.67〜2.03倍の高速化を示す、推論向け量子化とハードウェア実行の直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-59c9072e2ec5",
+    "round": "libimp-59c9072e2ec56966-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-59c9072e2ec56966-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-59c9072e2ec56966-pre01.json",
+    "receipt": "sha256:78f5a49cc87734b27dbd47b5697b54a18d4ba71ecba11a8cb563fed806a50ecf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-59c9072e2ec5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
