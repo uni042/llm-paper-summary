@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n06::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10532",
+      "identity_tokens": [
+        "arXiv:2606.10532"
+      ],
+      "title": "ActiveMem: Distributed Active Memory for Long-Horizon LLM Reasoning",
+      "reason": "長期LLM推論向けにプランナと分散メモリを分離するActiveMemで文脈過負荷と情報損失のトレードオフを扱うが、要旨の主眼はエージェントの推論精度と記憶整理であり推論基盤としての効率指標は不明確である。",
+      "source_url": "https://arxiv.org/abs/2606.10532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21562",
+      "identity_tokens": [
+        "arXiv:2606.21562"
+      ],
+      "title": "Compressing History into Memory: Distilling Transformers into Recurrent Transformers",
+      "reason": "全履歴Transformerを固定サイズメモリの再帰型Transformerへ蒸留し履歴圧縮を学ばせる内容だが、対象応用は長期ストリーミング視覚・ロボティクスでありLLMのKVキャッシュや文脈圧縮への直接適用は要旨で示されていない。",
+      "source_url": "https://arxiv.org/abs/2606.21562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.02851",
+      "identity_tokens": [
+        "arXiv:2311.02851"
+      ],
+      "title": "Improving Machine Translation with Large Language Models: A Preliminary Study with Cooperative Decoding",
+      "reason": "NMTを前翻訳としLLMが困難事例を補う協調デコーディングCoDecで機械翻訳品質と効率を狙うが、主目的は翻訳応用であり汎用LLMデコード高速化の機構としての寄与は限定的である。",
+      "source_url": "https://arxiv.org/abs/2311.02851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TASLP.2023.3289303",
+      "identity_tokens": [
+        "DOI:10.1109/TASLP.2023.3289303"
+      ],
+      "title": "Uncertainty-Driven Knowledge Distillation for Language Model Compression",
+      "reason": "不確実性駆動の知識蒸留による言語モデル圧縮という題目でモデル圧縮には関わるが、Crossrefで要旨を取得できず圧縮対象や推論時効果を確認できない。",
+      "source_url": "https://doi.org/10.1109/TASLP.2023.3289303",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.62836/jcmea.v3i1.030107",
+      "identity_tokens": [
+        "DOI:10.62836/jcmea.v3i1.030107"
+      ],
+      "title": "Optimizing Transformer Models for Resource-Constrained Environments: A Study on Model Compression Techniques",
+      "reason": "資源制約環境向けに量子化・低ランク近似・知識蒸留・プルーニングを組み合わせて評価する研究だが、一次要旨では対象がコンピュータビジョン用TransformerでありLLM推論への直接貢献ではない。",
+      "source_url": "https://doi.org/10.62836/jcmea.v3i1.030107",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.03460",
+      "identity_tokens": [
+        "arXiv:2502.03460"
+      ],
+      "title": "Adapt-Pruner: Adaptive Structural Pruning for Efficient Small Language Model Training",
+      "reason": "小規模言語モデルを効率的に得るため構造化プルーニングと学習を交互に行うAdapt-Prunerで、主眼はSLMの学習・作成コストであり推論サービング時の効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2502.03460",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.07839",
+      "identity_tokens": [
+        "arXiv:2601.07839"
+      ],
+      "title": "Hierarchical Sparse Plus Low Rank Compression of LLM",
+      "reason": "LLM重みを疎行列と階層的低ランク因子分解に分けるHSS圧縮で、LLaMA-7Bの注意射影を対象にハードウェアフレンドリーな行列ベクトル積と大きなメモリ削減を perplexity を保ちつつ示しており、配置向け圧縮として具体的である。",
+      "source_url": "https://arxiv.org/abs/2601.07839",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 319
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.23089",
+      "identity_tokens": [
+        "arXiv:2607.23089"
+      ],
+      "title": "Compiler-Grounded Hierarchical Diagnosis for LLM-Based Triton Kernel Optimization",
+      "reason": "LLMを用いてTritonカーネルをコンパイラ根拠で診断・最適化しNPUベンチで高速化する枠組みだが、対象カーネルは汎用NPUカーネルでありLLM推論カーネル自体の改善かどうかは要旨で特定できない。",
+      "source_url": "https://arxiv.org/abs/2607.23089",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 320
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29343",
+      "identity_tokens": [
+        "arXiv:2609.29343"
+      ],
+      "title": "Speech Block Influence: Component-Specific Layer Scoring for Pruning Speech LLMs",
+      "reason": "音声LLMの層プルーニング向けにエンコーダ／デコーダ別指標SBIを提案し、音声トークン支配を避けた層選定で資源制約下の配置コスト削減を3種の音声LLMで検証しており、LLM系モデルの推論向けプルーニングとして具体的である。",
+      "source_url": "https://arxiv.org/abs/2609.29343",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.18200",
+      "identity_tokens": [
+        "arXiv:2610.18200"
+      ],
+      "title": "A Few More Tokens Ahead: Reinforcing Parallelism in Diffusion LLMs",
+      "reason": "拡散LLMの並列生成を強化学習ReParaで強化しデノイジング予算削減下の数学・コード精度を上げる内容だが、主眼は生成精度と学習ステップ高速化であり推論デコード並列化のシステム機構は不明確である。",
+      "source_url": "https://arxiv.org/abs/2610.18200",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:00:00+09:00",
+      "last_checked_at": "2026-11-23T20:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    }
+  ],
+  "parent_run_key": "muse-20261123-n06",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
