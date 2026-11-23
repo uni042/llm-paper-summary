@@ -1,0 +1,521 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261123-n33",
+ "reference_main_sha": "43a88cd2",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.sysarc.2026.103975",
+   "identity_tokens": [
+    "DOI:10.1016/j.sysarc.2026.103975"
+   ],
+   "title": "A survey of edge–cloud collaborative large language models for discrete manufacturing: Architectures, technologies, and applications",
+   "reason": "離散製造向けedge-cloud協調LLMのサーベイで、配置アーキテクチャは推論基盤に関連するが、Crossref・OpenAlexで要旨を取得できず製造応用と推論機構の比重を確認できないため保留する。",
+   "source_url": "https://doi.org/10.1016/j.sysarc.2026.103975",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 401
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2605.09806",
+   "identity_tokens": [
+    "arXiv:2605.09806"
+   ],
+   "title": "LEAD: Length-Efficient Adaptive and Dynamic Reasoning for Large Language Models",
+   "reason": "LEADは推論モデルの冗長なCoTを問題ごとに適応的な目標長で抑え、計算量・レイテンシ・コンテキスト予算の浪費を減らす長さ効率化手法であり、強化学習は推論効率化を目的とする内部手段である。",
+   "source_url": "https://arxiv.org/abs/2605.09806",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 402
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:4a9db7fe6864d29754b34cf05b80a27054ca275d",
+   "identity_tokens": [
+    "SemanticScholar:4a9db7fe6864d29754b34cf05b80a27054ca275d"
+   ],
+   "title": "Streamlining Language Models via Semantic Basis Analysis",
+   "reason": "意味基底解析による言語モデルのstreamliningは圧縮・効率化に関連し得るが、要旨を取得できず対象機構と推論への直接貢献を確認できないため保留する。",
+   "source_url": "https://www.semanticscholar.org/paper/4a9db7fe6864d29754b34cf05b80a27054ca275d",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 403
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/ICDEW67478.2025.00020",
+   "identity_tokens": [
+    "DOI:10.1109/ICDEW67478.2025.00020"
+   ],
+   "title": "LLM-MS: A Multi-Model LLM Search Engine",
+   "reason": "LLM-MSはクエリ特性に応じて複数LLMを動的に選択しトークン配分を最適化することで、単一モデル比でトークン使用量と応答時間を削減するマルチモデルサービング機構である。",
+   "source_url": "https://doi.org/10.1109/ICDEW67478.2025.00020",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 404
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.00299",
+   "identity_tokens": [
+    "arXiv:2504.00299"
+   ],
+   "title": "Collaborative LLM Numerical Reasoning with Local Data Protection",
+   "reason": "ローカルデータ保護下で遠隔モデルと協調する数値推論の枠組みで、目的は文書数値推論の精度とプライバシーであり、LLM推論システムの効率化への直接貢献はない。",
+   "source_url": "https://arxiv.org/abs/2504.00299",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 405
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:c767afad1bfadc87176bcd537918dfb8bb26b24c",
+   "identity_tokens": [
+    "SemanticScholar:c767afad1bfadc87176bcd537918dfb8bb26b24c"
+   ],
+   "title": "MoE-ERAS : Expert Residency Aware Scheduling",
+   "reason": "MoE-ERASはエキスパート常駐を意識したスケジューリングを標榜しMoE推論に直結し得るが、要旨を取得できずタイトルだけではacceptを確定できないため保留する。",
+   "source_url": "https://www.semanticscholar.org/paper/c767afad1bfadc87176bcd537918dfb8bb26b24c",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 406
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:3de1ba425687c8951daf142921fc58c6bf20c18b",
+   "identity_tokens": [
+    "SemanticScholar:3de1ba425687c8951daf142921fc58c6bf20c18b"
+   ],
+   "title": "LoRACoE: Improving Large Language Models via Composition-based LoRA Expert",
+   "reason": "LoRAエキスパートの合成によるLLM改善は適応手法寄りで、推論時合成か学習時手法か要旨を取得できず機構が不明瞭なため保留する。",
+   "source_url": "https://www.semanticscholar.org/paper/3de1ba425687c8951daf142921fc58c6bf20c18b",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 407
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:8cc34c690007a5c01247e56e8239bf71912b8416",
+   "identity_tokens": [
+    "SemanticScholar:8cc34c690007a5c01247e56e8239bf71912b8416"
+   ],
+   "title": "Research for Enhancing Processing and Computational Efficiency in LLM",
+   "reason": "LLMの処理・計算効率の向上を掲げるが題目が総論的で、要旨を取得できず具体的な推論機構や対象を確認できないため保留する。",
+   "source_url": "https://www.semanticscholar.org/paper/8cc34c690007a5c01247e56e8239bf71912b8416",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 408
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.07624",
+   "identity_tokens": [
+    "arXiv:2602.07624"
+   ],
+   "title": "M2A: Multimodal Memory Agent with Dual-Layer Hybrid Memory for Long-Term Personalized Interactions",
+   "reason": "M2Aは長期対話のパーソナライズ質問応答向けに生ログと意味記憶の二層メモリをエージェントが更新する仕組みで、LLM推論やKVキャッシュ等の推論システム効率化ではない。",
+   "source_url": "https://arxiv.org/abs/2602.07624",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 409
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.16285",
+   "identity_tokens": [
+    "arXiv:2606.16285"
+   ],
+   "title": "HiMPO: Hindsight-Informed Memory Policy Optimization for Less-Entangled Credit in Long-Horizon Agents",
+   "reason": "HiMPOは長期エージェントのメモリ書き込みへの信用割当をhindsightで補う強化学習手法で、目的はエージェントのタスク性能であり推論システムへの直接貢献はない。",
+   "source_url": "https://arxiv.org/abs/2606.16285",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 410
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.10282",
+   "identity_tokens": [
+    "arXiv:2512.10282"
+   ],
+   "title": "Neuronal Attention Circuit (NAC) for Representation Learning",
+   "reason": "NACはC. elegans神経回路由来の連続時間注意を時系列・予測・自動運転等の表現学習に使う機構で、LLM推論システムを対象としていない。",
+   "source_url": "https://arxiv.org/abs/2512.10282",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 411
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.48550/arXiv.2605.18697",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2605.18697"
+   ],
+   "title": "PopPy: Opportunistically Exploiting Parallelism in Python Compound AI Applications",
+   "reason": "PopPyはPython製compound AI／エージェントワークフローの外部モデル呼び出しの並列性をコンパイラとランタイムで抽出し、逐次意味論を保ちつつエンドツーエンドレイテンシを最大6.7倍改善するシステムである。",
+   "source_url": "https://doi.org/10.48550/arXiv.2605.18697",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 412
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "SemanticScholar:3ca2c1376acac9d2a7d5bccd05501660fd718873",
+   "identity_tokens": [
+    "SemanticScholar:3ca2c1376acac9d2a7d5bccd05501660fd718873"
+   ],
+   "title": "TopoOpt: Optimizing the Network Topology for Distributed DNN Training",
+   "reason": "TopoOptは分散DNN学習のネットワークトポロジ最適化であり、タイトル上も学習専用でLLM推論への直接貢献はない。",
+   "source_url": "https://www.semanticscholar.org/paper/3ca2c1376acac9d2a7d5bccd05501660fd718873",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 413
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.07304",
+   "identity_tokens": [
+    "arXiv:2510.07304"
+   ],
+   "title": "Cocoon: A System Architecture for Differentially Private Training with Correlated Noises",
+   "reason": "Cocoonは相関ノイズを用いる差分プライベート学習をCPU/GPU/ニアメモリで高速化する学習システムであり、推論サービングではなく学習単独の高速化である。",
+   "source_url": "https://arxiv.org/abs/2510.07304",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 414
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.38578",
+   "identity_tokens": [
+    "arXiv:2610.38578"
+   ],
+   "title": "Dual DeltaNet: Value-Side Memory Reorganization for Linear Attention",
+   "reason": "Dual DeltaNetは線形注意の固定サイズ再帰状態に対しキー側と値側の二方向デルタ則で値特徴の配置を再編し干渉を抑える注意機構で、効率的な注意・状態管理への直接貢献である。",
+   "source_url": "https://arxiv.org/abs/2610.38578",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 415
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ICASSP49660.2025.10889802",
+   "identity_tokens": [
+    "DOI:10.1109/ICASSP49660.2025.10889802"
+   ],
+   "title": "Advancing Streaming ASR with Chunk-wise Attention and Trans-chunk Selective State Spaces",
+   "reason": "チャンク単位注意と選択的状態空間によるストリーミングASRの改善で、対象は音声認識でありLLM推論システムではない。",
+   "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10889802",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 416
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/CVPRW67362.2025.00314",
+   "identity_tokens": [
+    "DOI:10.1109/CVPRW67362.2025.00314"
+   ],
+   "title": "CARN: Complexity-Aware Routing Network for Efficient and Adaptive Inference",
+   "reason": "CARNは入力複雑度に応じて計算経路を変える適応推論で計算コストを削減するが、評価はCIFAR等の画像DNNでありLLM推論への適用は確認できないため保留する。",
+   "source_url": "https://doi.org/10.1109/CVPRW67362.2025.00314",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 417
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.04295",
+   "identity_tokens": [
+    "arXiv:2510.04295"
+   ],
+   "title": "Hypernetwork-Driven Low-Rank Adaptation Across Attention Heads",
+   "reason": "HyRAはハイパーネットワークで全注意ヘッド分のLoRA行列を生成するパラメータ効率ファインチューニング手法で、推論時ではなく学習時の適応が目的である。",
+   "source_url": "https://arxiv.org/abs/2510.04295",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 418
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2602.22556",
+   "identity_tokens": [
+    "arXiv:2602.22556"
+   ],
+   "title": "Stable Adaptive Thinking via Advantage Shaping and Length-Aware Gradient Regulation",
+   "reason": "Stable Adaptive Thinkingは思考／非思考のハイブリッド微調整と長さ配慮型強化学習で過剰思考を抑え、精度を上げつつ生成トークンを約40％削減する推論効率化手法である。",
+   "source_url": "https://arxiv.org/abs/2602.22556",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2603.02112",
+   "identity_tokens": [
+    "arXiv:2603.02112"
+   ],
+   "title": "Recursive Models for Long-Horizon Reasoning",
+   "reason": "再帰モデルはモデル自身を隔離コンテキストで再帰呼び出しし長文脈推論の能動コンテキストを小さく保つ枠組みだが、主目的は長期間推論能力であり推論システム機構としての具体性が薄いため保留する。",
+   "source_url": "https://arxiv.org/abs/2603.02112",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.24143",
+   "identity_tokens": [
+    "arXiv:2606.24143"
+   ],
+   "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
+   "reason": "AsyncOPDはon-policy蒸留の非同期学習でロールアウト生成がボトルネックになる問題と陳腐化を扱うが、対象は事後学習パイプラインであり推論サービングへの直接貢献は限定的なため保留する。",
+   "source_url": "https://arxiv.org/abs/2606.24143",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2601.21358",
+   "identity_tokens": [
+    "arXiv:2601.21358"
+   ],
+   "title": "Latent Chain-of-Thought as Planning: Decoupling Reasoning from Verbalization",
+   "reason": "PLaTは潜在思考による計画と発話デコードを分離し問題依存の潜在ステップ数で止める潜在推論枠組みだが、効率改善より推論方式・精度の検討が中心で推論システム貢献が不明瞭なため保留する。",
+   "source_url": "https://arxiv.org/abs/2601.21358",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 422
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2601.22357",
+   "identity_tokens": [
+    "arXiv:2601.22357"
+   ],
+   "title": "Small Talk, Big Impact: The Energy Cost of Thanking AI",
+   "reason": "感謝メッセージ等の短い入力について入力長・出力長・モデルサイズとエネルギー消費を実測する研究で、LLM推論の計測としては関連するが効率化機構の提案はないため保留する。",
+   "source_url": "https://arxiv.org/abs/2601.22357",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 423
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.08979",
+   "identity_tokens": [
+    "arXiv:2512.08979"
+   ],
+   "title": "What Happens When: Learning Temporal Orders of Events in Videos",
+   "reason": "動画内イベントの時間順序を測るVECTORベンチマークとマルチイベント指示チューニングの研究で、ビデオ理解の能力評価・学習が目的であり推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2512.08979",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 424
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.18804",
+   "identity_tokens": [
+    "arXiv:2512.18804"
+   ],
+   "title": "Tempo as the Stable Cue: Hierarchical Mixture of Tempo and Beat Experts for Music to 3D Dance Generation",
+   "reason": "音楽から3Dダンス生成を行うTempoMoEはテンポ階層型MoE拡散モデルで、主題はダンス生成でありLLM推論とは異分野である。",
+   "source_url": "https://arxiv.org/abs/2512.18804",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 425
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2604.10500",
+   "identity_tokens": [
+    "arXiv:2604.10500"
+   ],
+   "title": "Visual Enhanced Depth Scaling for Multimodal Latent Reasoning",
+   "reason": "視覚リプレイと深さルーティングでマルチモーダル潜在推論の視覚最適化不足を補う手法で、推論レイテンシ低減を掲げる潜在推論だが主眼は表現・推論品質のため保留する。",
+   "source_url": "https://arxiv.org/abs/2604.10500",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 426
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.22057",
+   "identity_tokens": [
+    "arXiv:2605.22057"
+   ],
+   "title": "FlyRoute: Self-Evolving Agent Profiling via Data Flywheel for Adaptive Task Routing",
+   "reason": "FlyRouteは企業向けエージェントの能力プロファイルを実トラフィックから自己進化させタスクルーティング精度を上げる枠組みで、モデル推論の効率やサービング機構ではない。",
+   "source_url": "https://arxiv.org/abs/2605.22057",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 427
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2601.22790",
+   "identity_tokens": [
+    "arXiv:2601.22790"
+   ],
+   "title": "Conditional Performance Guarantee for Large Reasoning Models",
+   "reason": "G-PAC推論は入力空間を分割しグループ条件付きのリスク保証の下で思考モデルと非思考モデルを適応的に切り替え、計算コストを削減する効率的推論フレームワークである。",
+   "source_url": "https://arxiv.org/abs/2601.22790",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 428
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2605.11301",
+   "identity_tokens": [
+    "arXiv:2605.11301"
+   ],
+   "title": "LatentRouter: Can We Choose the Right Multimodal Model Before Seeing Its Answer?",
+   "reason": "LatentRouterは画像質問入力と候補MLLMの能力から反実仮想効用を予測し、性能重視と性能対コストのルーティングを行うマルチモデル推論選択機構である。",
+   "source_url": "https://arxiv.org/abs/2605.11301",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 429
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.17346",
+   "identity_tokens": [
+    "arXiv:2609.17346"
+   ],
+   "title": "Where Should a Document Live: Context, Representations, or Parameters?",
+   "reason": "文書知識の注入先としてコンテキスト・潜在表現・パラメータを比較し、KVキャッシュ ベースのCartridgesやCompactionの精度・圧縮率・忘却を評価した研究で、KVキャッシュ活用への直接の知見である。",
+   "source_url": "https://arxiv.org/abs/2609.17346",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 430
+  }
+ ]
+}
