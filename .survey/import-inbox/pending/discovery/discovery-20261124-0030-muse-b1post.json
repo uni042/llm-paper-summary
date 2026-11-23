@@ -1,0 +1,28 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261124-b1-postread",
+ "reference_main_sha": "18a294ab",
+ "record_count": 1,
+ "origin": "research_postread_relevance",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2202.01699",
+   "identity_tokens": [
+    "arXiv:2202.01699"
+   ],
+   "title": "DistrEdge: Speeding up Convolutional Neural Network Inference on Distributed Edge Devices",
+   "reason": "全文読解の結果、対象はCNN推論をエッジデバイス群へ分散する方式であり、LLM推論システムへの直接の技術的貢献は確認できないため、サーベイ対象外と判定した。",
+   "source_url": "https://arxiv.org/abs/2202.01699",
+   "body_check": "research_fulltext_relevance_review: arXiv HTML全文を読解し、対象がCNN推論のエッジ分散でありLLM推論システムの範囲外であることを確認した",
+   "first_checked_at": "2026-11-24T00:30:00+09:00",
+   "last_checked_at": "2026-11-24T00:30:00+09:00",
+   "linked_from": [
+    "worker-worklist research_audit"
+   ],
+   "origin": "research_postread_relevance"
+  }
+ ]
+}
