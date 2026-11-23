@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1366本）
+## 自動生成の論文一覧（1370本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1902,6 +1902,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンを既選択分を条件に1個ずつ選び、学習した終了動作で個数も決める逐次選択方式で、固定比率の枝刈りを全削減水準で上回り、約9割削減でも精度の94.6パーセントを保った。
 
+- **2026-06 · [Speculative Pre-Positioning: Decoding Stateful Sessions to the Next Decision Point Off the Critical Path](2026-2606.29565-speculative-pre-positioning-decoding-stateful-sessions-to-the-next-decis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  状態保持セッションの待ち時間に次の決定点まで対象モデルで先行デコードし出力分布をキャッシュすることで、最初のトークンをP50で1.01ミリ秒へ短縮するが、ゲート発火は自信のある大きいモデルに限られる方式。
+
 - **2026-06 · [SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions](2026-2606.16332-smepilot-characterizing-and-optimizing-llm-inference-with-scalable-matrix-extensions.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU内のSMEと通常コアを共有帯域込みのルーフラインで使い分け、タイル分割・注意パイプライン・配置再利用によりLLM推論をllama.cpp比最大3.94倍高速化する。
@@ -1913,6 +1917,10 @@
 - **2026-06 · [Signed Symmetric Quantization for Few-Bit Integers](2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対称量子化のスケールの符号をグループごとに選び、余分な整数水準を支配的な外れ値側へ回すことで、ゼロ点なしのまま切り捨て誤差を減らし、2ビットでパープレキシティを103.1から17.8へ改善する。
+
+- **2026-06 · [SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling](2026-2606.19755-safespec-fast-and-safe-llm-via-dynamic-reflective-sampling.md)**  
+  実装：[✓](https://github.com/HaotianXu1/SafeSpec) ・ リポジトリ内被引用：0  
+  投機的デコードの検証へ安全ヘッドによる二重検証を組み込み、危険な区間は巻き戻しと反省付き多重サンプリングで回復することで、Qwen3-32Bで攻撃成功率を下げながら2.06倍の高速化を保つ安全化。
 
 - **2026-06 · [Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data](2026-2606.04238-recover-lora-for-aggressive-quantization-reclaiming-accuracy-in-2-bit-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1997,6 +2005,10 @@
 - **2026-06 · [From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression](2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-ll.md)**  
   実装：[✓](https://github.com/eliacunegatti/SubFit) ・ リポジトリ内被引用：0  
   層単位で連続範囲を置換する従来の圧縮を、注意とフィードフォワードのサブモジュール単位で非連続に選び分ける方式へ変え、疎性25パーセントで精度保持84.6パーセントとパープレキシティ悪化2.42倍を両立する置換型圧縮。
+
+- **2026-06 · [From Awareness to Adherence: Bridging the Context Gap in Spoken Dialogue Systems via Context-Aware Decoding](2026-2606.16472-from-awareness-to-adherence-bridging-the-context-gap-in-spoken-dialogue-.md)**  
+  実装：[✓](https://github.com/saga1214/AudioCAD) ・ リポジトリ内被引用：0  
+  音声対話モデル内部の注意から鍵となる過去ラウンドを抽出し、その文脈がある場合とない場合の出力差を増幅するデコードで、履歴を忘れていないのに守れない失敗を、追加学習なしに改善する方式。
 
 - **2026-06 · [Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs](2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-.md)**  
   実装：[✓](https://github.com/Junzhou-Chen/ST_Merge) ・ リポジトリ内被引用：0  
@@ -2149,6 +2161,10 @@
 - **2026-05 · [ProxyKV: Cross-Model Proxy Pruning for Efficient Long-Context LLM Inference](2026-2605.16360-proxykv-cross-model-proxy-pruning-for-efficient-long-context-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ProxyKVは、長文脈LLMのKVキャッシュを圧縮するとき、どのトークンを残すかを高精度に決める計算を大型モデル自身にさせず、同じモデル系列の小型モデルへ委譲する方式である。Llama-3.1-8Bではdual-GPU構成で最大3.21倍のプレフィル高速化、同一GPU上でCUDA ストリームを共有する構成では約1.5倍を報告する。
+
+- **2026-05 · [ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression](2026-2606.00494-projq-project-and-quantize-for-adapter-aware-llm-compression.md)**  
+  実装：[✓](https://github.com/yy9301/ProjQ) ・ リポジトリ内被引用：0  
+  量子化ノイズを直交射影でLoRAが直せる低ランク部分空間へ閉じ込め、補正不能な残差を最小化してから共分散-awareな閉形式でアダプタを初期化することで、3ビットで4ビット級の性能を出す量子化枠組み。
 
 - **2026-05 · [Probabilistic Tiny Recursive Model](2026-2605.19943-probabilistic-tiny-recursive-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5097,7 +5113,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：104  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：105  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "97daf83fa504d2ab9e5a102f9fae844aeee877ca",
+  "base_commit": "802a906c23c58c7aeee5edc7a33c94c0fcb7a05f",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -639,6 +639,7 @@
     "2026-2605.30580-speculative-decoding-and-the-curse-of-multilinguality.json",
     "2026-2605.31215-fixed-point-masked-generative-modeling.json",
     "2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-inference.json",
+    "2026-2606.00494-projq-project-and-quantize-for-adapter-aware-llm-compression.json",
     "2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.json",
     "2026-2606.01544-crepe-convolution-aware-relative-importance-in-post-training-pruning-with-efficient-search.json",
     "2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.json",
@@ -651,6 +652,7 @@
     "2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-reasoning.json",
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
     "2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusion-large-language-models.json",
+    "2026-2606.05232-differentiable-efficient-operator-search.json",
     "2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approximation-for-quantized-gated-deltanet.json",
     "2026-2606.06521-p-cast-precision-in-fp8-attention-sink-induced-collapse-and-the-optimality-of-s-2-8.json",
     "2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-inference.json",
@@ -672,8 +674,10 @@
     "2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multimodal-llms-in-cloud-edge-continuum.json",
     "2026-2606.15805-mean-field-parallel-decoding-for-discrete-diffusion-language-models.json",
     "2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.json",
+    "2026-2606.16472-from-awareness-to-adherence-bridging-the-context-gap-in-spoken-dialogue-systems-via-context-aware-decoding.json",
     "2026-2606.17421-bifrost-hybrid-tee-fhe-inference-for-privacy-preserving-transformer-and-llm-serving.json",
     "2026-2606.18681-moving-beyond-diversity-visual-token-pruning-as-subspace-reconstruction-for-efficient-vlms.json",
+    "2026-2606.19755-safespec-fast-and-safe-llm-via-dynamic-reflective-sampling.json",
     "2026-2606.19993-activation-and-influence-aware-ranks-air-function-preserving-svd-compression-for-llms.json",
     "2026-2606.20474-ultraquant-4-bit-kv-caching-for-context-heavy-agents.json",
     "2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducible-inference-for-mission-critical-tasks-with-hea.json",
@@ -693,6 +697,7 @@
     "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json",
     "2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-efficient-rag.json",
     "2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-robotic-vlms-and-vlas.json",
+    "2026-2606.29565-speculative-pre-positioning-decoding-stateful-sessions-to-the-next-decision-point-off-the-critical-path.json",
     "2026-2606.30005-llm-agents-are-latent-context-managers.json",
     "2026-2606.30553-cosm-a-cooperative-scheduling-framework-for-concurrent-pim-and-cpu-execution-on-mobile-devices.json",
     "2026-2606.30709-hierarchical-global-attention-hga.json",
@@ -50561,6 +50566,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.00494": {
+      "order": [
+        "2026-11-23T19:11:58+00:00",
+        "2026-2606.00494-projq-project-and-quantize-for-adapter-aware-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.05232": {
+      "order": [
+        "2026-11-23T19:13:09+00:00",
+        "2026-2606.05232-differentiable-efficient-operator-search.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.16472": {
+      "order": [
+        "2026-11-23T19:14:19+00:00",
+        "2026-2606.16472-from-awareness-to-adherence-bridging-the-context-gap-in-spoken-dialogue-systems-via-context-aware-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.19755": {
+      "order": [
+        "2026-11-23T19:15:29+00:00",
+        "2026-2606.19755-safespec-fast-and-safe-llm-via-dynamic-reflective-sampling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.29565": {
+      "order": [
+        "2026-11-23T19:16:39+00:00",
+        "2026-2606.29565-speculative-pre-positioning-decoding-stateful-sessions-to-the-next-decision-point-off-the-critical-path.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64022,6 +64072,21 @@
     "arxiv:2605.30580": [
       "papers/inference/05-speculative-decoding-moe/2026-2605.30580-speculative-decoding-across-languages.md",
       "papers/inference/05-speculative-decoding-moe/2026-2605.30580-speculative-decoding-across-languages.md"
+    ],
+    "arxiv:2606.00494": [
+      "papers/inference/99-other-inference-systems/2026-2606.00494-projq-project-and-quantize-for-adapter-aware-llm-compression.md"
+    ],
+    "arxiv:2606.05232": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2606.05232-differentiable-efficient-operator-search.md"
+    ],
+    "arxiv:2606.16472": [
+      "papers/inference/99-other-inference-systems/2026-2606.16472-from-awareness-to-adherence-bridging-the-context-gap-in-spoken-dialogue-.md"
+    ],
+    "arxiv:2606.19755": [
+      "papers/inference/99-other-inference-systems/2026-2606.19755-safespec-fast-and-safe-llm-via-dynamic-reflective-sampling.md"
+    ],
+    "arxiv:2606.29565": [
+      "papers/inference/99-other-inference-systems/2026-2606.29565-speculative-pre-positioning-decoding-stateful-sessions-to-the-next-decis.md"
     ]
   }
 }
