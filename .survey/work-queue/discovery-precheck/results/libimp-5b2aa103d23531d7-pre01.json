@@ -1,0 +1,740 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5b2aa103d23531d7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5b2aa103d235",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.03245",
+    "arXiv:2512.09927",
+    "arXiv:2512.14052",
+    "arXiv:2606.19755",
+    "arXiv:2607.08779",
+    "arXiv:2607.19686",
+    "arXiv:2611.00652"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d21e6cfb132fde5e430499c3d3b499649cfde374",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T11:21:44.163057+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.03245",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09927",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.14052",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.19755",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.08779",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.19686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.00652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Token Expand-Merge: Training-Free Token Compression for Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2512.09927",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "IEEE Robotics and Automation Letters",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models pretrained on large-scale multimodal datasets have emerged as powerful foundations for robotic perception and control. However, their massive scale, often billions of parameters, poses significant challenges for real-time deployment, as inference becomes computationally expensive and latency-sensitive in dynamic environments. To address this, we propose Token Expand-and-Merge-VLA (TEAM-VLA), a training-free token compression framework that accelerates VLA inference while preserving task performance. TEAM-VLA introduces a dynamic token expansion mechanism that identifies and samples additional informative tokens in the spatial vicinity of attention-highlighted regions, enhancing contextual completeness. These expanded tokens are then selectively merged in deeper layers under action-aware guidance, effectively reducing redundancy while maintaining semantic coherence. By coupling expansion and merging within a single feed-forward pass, TEAM-VLA achieves a balanced trade-off between efficiency and effectiveness, without any retraining or parameter updates. Extensive experiments on LIBERO benchmark demonstrate that TEAM-VLA consistently improves inference speed while maintaining or even surpassing the task success rate of full VLA models.",
+      "identifiers": [
+        "SemanticScholar:4ad3c6efa71194d6692d665e245e58776624053e"
+      ],
+      "semantic_scholar_id": "4ad3c6efa71194d6692d665e245e58776624053e",
+      "canonical_id": "arXiv:2512.09927",
+      "arxiv_id": "2512.09927",
+      "doi": "10.1109/LRA.2026.3703265",
+      "authors": [
+        "Yi-Fan Ye",
+        "Jia-Qi Ma",
+        "Jun Cen",
+        "Zhi-He Lu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices",
+      "source_url": "https://arxiv.org/abs/2512.14052",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current multimodal large lanauge models possess strong perceptual and reasoning capabilities, however high computational and memory requirements make them difficult to deploy directly on on-device environments. While small-parameter models are progressively endowed with strong general capabilities, standard Vision Transformer (ViT) encoders remain a critical bottleneck, suffering from excessive latency and memory consumption when processing high-resolution inputs.To address these challenges, we introduce HyperVL, an efficient multimodal large language model tailored for on-device inference. HyperVL adopts an image-tiling strategy to cap peak memory usage and incorporates two novel techniques: (1) a Visual Resolution Compressor (VRC) that adaptively predicts optimal encoding resolutions to eliminate redundant computation, and (2) Dual Consistency Learning (DCL), which aligns multi-scale ViT encoders within a unified framework, enabling dynamic switching between visual branches under a shared LLM. Extensive experiments demonstrate that HyperVL achieves state-of-the-art performance among models of comparable size across multiple benchmarks. Furthermore, it significantly significantly reduces latency and power consumption on real mobile devices, demonstrating its practicality for on-device multimodal inference.",
+      "identifiers": [
+        "SemanticScholar:8a042e010f2e122d0ed4fe397b07f9cdf6a8b04c"
+      ],
+      "semantic_scholar_id": "8a042e010f2e122d0ed4fe397b07f9cdf6a8b04c",
+      "canonical_id": "arXiv:2512.14052",
+      "arxiv_id": "2512.14052",
+      "doi": "10.48550/arXiv.2512.14052",
+      "authors": [
+        "Yu-Chen Liu",
+        "Kai Han",
+        "Zhi-Qiang Xia",
+        "Yu-Dong Zhang",
+        "Chenyu Song",
+        "Kangyu Tang",
+        "Jia-Ming Xu",
+        "Xiushi Feng",
+        "Wenxuan Yu",
+        "Li Peng",
+        "Ming-Yang Wang",
+        "Kai Wang",
+        "Changpeng Yang",
+        "Yang Li",
+        "Hao Lu",
+        "Hao Wang",
+        "Bing Xu",
+        "Guang-Xu Liu",
+        "Long-Hang Huang",
+        "Kai-Bin Guo",
+        "Jin-Yang Wu",
+        "Dan Wu",
+        "Hong-Zhen Wang",
+        "Peng Zhou",
+        "Shuai Nie",
+        "Shan-shan Wang",
+        "Run-Yu Shi",
+        "Ying Huang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 342,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Signed Symmetric Quantization for Few-Bit Integers",
+      "source_url": "https://arxiv.org/abs/2607.08779",
+      "year": 2026,
+      "published": "2026-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The signed integer alphabet contains one more negative representable value than positive. Yet, by convention, the standard symmetric integer quantizer fixes its scale to be strictly positive, which assigns this extra representable value to the negative tail and can force clipping of positive outliers. In this work, we show that, at few-bit precision, such clipping is a non-trivial source of quantization error. Asymmetric quantization addresses this problem with a zero point, shifting the grid toward the observed data range; however, this flexibility is well-known to carry a runtime penalty. For example, in llama.cpp on an AMD EPYC(TM)\"Turin\"CPU, a 4-bit symmetric format uses up to 9% less memory with up to 2.45$\\times$ higher throughput than its asymmetric counterpart. We highlight signed symmetric quantization as a third option that retains the runtime profile of symmetric quantization without the penalty of the asymmetric format: our signed absmax grid places the extra representable value on the dominant-outlier tail through a principled and lightweight sign selection rule while keeping the zero point at zero. Our theoretical analysis offers two main results. First, we establish the signed absmax grid as conditionally bound-optimal on $\\ell_2$ quantization error, and show that the condition holds for 88-99% of weight groups across pre-trained large language models (LLMs) at low bit widths. Second, we show that negating the scale of a standard symmetric quantizer is analytically equivalent to a unit zero point shift on the same signed integer alphabet. We empirically validate our proposal on models from the Qwen3, Qwen3.5, and Llama3 families, and observe improvement in perplexity and downstream few-shot accuracy over the standard unsigned symmetric quantizer at no extra inference cost",
+      "identifiers": [
+        "SemanticScholar:e330c51a4dc57e017b79f5b21ed2d98ba395e024"
+      ],
+      "semantic_scholar_id": "e330c51a4dc57e017b79f5b21ed2d98ba395e024",
+      "canonical_id": "arXiv:2607.08779",
+      "arxiv_id": "2607.08779",
+      "doi": "10.48550/arXiv.2607.08779",
+      "authors": [
+        "Ian Colbert",
+        "Eashan Dash",
+        "Pablo Monteagudo-Lago",
+        "J. Amboage",
+        "N. Srinidhi",
+        "Giuseppe Franco",
+        "Nicholas J. Fraser",
+        "Arun Ramachandran"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Mask Diffusion Language Models for Few-Step Generation",
+      "source_url": "https://arxiv.org/abs/2607.19686",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion models (MDMs) are a promising family of language generators, but achieving high-quality few-step generation remains challenging. In MDMs, all forward trajectories collapse to a single fully masked state, leaving no terminal entropy for consistency-style few-step generation. While recent few-step alternatives based on uniform-state diffusion avoid this degeneracy, it becomes harder to distinguish clean tokens from noise than MDMs, which usually harms modeling quality and training efficiency. In this work, we propose a multi-mask diffusion model (MultiMDM) that preserves the masking structure towards few-step generation. In the forward process, each clean token is first pushed towards a designated mask and then gradually mixes over the mask set. As a result, the backward process has a drafting capability by predicting a designated mask before refining to a clean token. We derive a closed-form ELBO training objective for MultiMDM that supports continual training from pretrained MDMs. In addition, we formulate a purely discrete-state consistency distillation scheme, with a shared-Gumbel coupling to reduce pathwise entropy. Experiments on pretraining and distillation show that MultiMDM provides an effective foundation for principled few-step generation.",
+      "identifiers": [
+        "SemanticScholar:bd8afd433922a7409c93a2e7bd90971c1c75fadd"
+      ],
+      "semantic_scholar_id": "bd8afd433922a7409c93a2e7bd90971c1c75fadd",
+      "canonical_id": "arXiv:2607.19686",
+      "arxiv_id": "2607.19686",
+      "doi": "10.48550/arXiv.2607.19686",
+      "authors": [
+        "Sijin Chen",
+        "Yinuo Ren",
+        "He-Yang Zhao",
+        "Zi-Heng Cheng",
+        "Quan-Quan Gu",
+        "Le-Xing Ying"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 124,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Inference First, Training Underneath: Layer-Granular LoRA Co-Serving with LayerLoom",
+      "source_url": "https://arxiv.org/abs/2611.00652",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving and fine-tuning a large language model on the same GPUs can turn the idle capacity between inference bursts into training progress, and low-rank adaptation (LoRA) makes this co-location cheap because both workloads read a single frozen copy of the base weights. The difficulty lies in the fine-tuning backward pass, which has no counterpart in inference. Current co-serving systems schedule backward work per serving iteration: each iteration carries a fixed backward budget, and requests that arrive in the meantime wait for it to finish, so fine-tuning dictates inference latency whenever load spikes. We observe that the backward pass of a LoRA microbatch decomposes into per-layer tasks over the same weights that the inference forward pass visits, which allows backward work to be scheduled at layer rather than iteration granularity. Building on this observation, LayerLoom attaches same-layer backward tasks to the inference forward pass and, at each layer, runs only as many of them as the latency slack of in-flight requests permits. To keep a ready task at every layer, LayerLoom maintains a wavefront of fine-tuning microbatches staggered across layers, and it bounds the wavefront's activation memory by offloading microbatch state to host memory and prefetching it ahead of the layer where the scheduler plans to use it. A fused kernel serves the paired forward and backward GEMMs from a single read of each base weight. Because all backward work of an iteration finishes within its forward pass, new requests join the next iteration as in continuous batching. On an RTX 4090 GPU running Llama-3.1-8B under a bursty production trace, LayerLoom raises joint SLO attainment by 13.5-21.8 points over prior works with fine-tuning throughput that is comparable or up to 12% higher, and it reaches the same training losses.",
+      "identifiers": [
+        "SemanticScholar:2c178aec41a193387dbd9e5695f61e57b2f43388"
+      ],
+      "semantic_scholar_id": "2c178aec41a193387dbd9e5695f61e57b2f43388",
+      "canonical_id": "arXiv:2611.00652",
+      "arxiv_id": "2611.00652",
+      "authors": [
+        "Zong-Pu Zhang",
+        "Yi-Shu Yin",
+        "Xue-Hai Qian"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling",
+      "source_url": "https://arxiv.org/abs/2606.19755",
+      "year": 2026,
+      "published": "2026-06-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative inference accelerates large language model (LLM) decoding but provides no inherent safety guarantees. Existing safety defenses are largely incompatible with speculative inference: they either introduce additional computation or disrupt the draft-verify mechanism, negating acceleration benefits. This reveals a fundamental incompatibility between current safety methods and speculative decoding. We propose SafeSpec, a safety-aware speculative inference framework that integrates risk estimation directly into the verification process. SafeSpec attaches a lightweight latent safety head to the target model to jointly evaluate semantic validity and safety in a single forward pass. When unsafe generations are detected, SafeSpec applies rollback and safety-guided reflective multi-sampling to recover safe continuations rather than terminating generation. We model jailbreak attacks as distributional shifts over generative trajectories, where adversarial prompts increase the probability of harmful continuations without eliminating safe ones. Under this model, SafeSpec performs risk-aware trajectory recovery within the speculative decoding process. Across multiple models and adversarial benchmarks, SafeSpec achieves a substantially improved safety-efficiency trade-off. On Qwen3-32B, SafeSpec reduces attack success rates by 15% while preserving a 2.06x inference speedup on benign workloads, demonstrating that speculative acceleration and inference-time safety can be jointly optimized.",
+      "identifiers": [
+        "SemanticScholar:a1a2c0357c2216bc2f796870beec1b10d22d47aa"
+      ],
+      "semantic_scholar_id": "a1a2c0357c2216bc2f796870beec1b10d22d47aa",
+      "canonical_id": "arXiv:2606.19755",
+      "arxiv_id": "2606.19755",
+      "doi": "10.48550/arXiv.2606.19755",
+      "authors": [
+        "Haotian Xu",
+        "Zeyang Zhang",
+        "Linbao Li",
+        "Hua-Di Zheng",
+        "Yu Li",
+        "Cheng-Xiang Zhuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Decoupled Multi-Predictor Optimization for Inference-Efficient Model Tuning",
+      "source_url": "https://arxiv.org/abs/2511.03245",
+      "year": 2025,
+      "published": "2025-10-19",
+      "venue": "IEEE International Conference on Computer Vision",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, remarkable progress has been made in largescale pre-trained model tuning, and inference efficiency is becoming more crucial for practical deployment. Early exiting in conjunction with multi-stage predictors, when cooperated with a parameter-efficient fine-tuning strategy, offers a straightforward way to achieve an inference-efficient model. However, a key challenge remains unresolved: How can early stages provide low-level fundamental features to deep stages while simultaneously supplying high-level discriminative features to early-stage predictors? To address this problem, we propose a Decoupled Multi-Predictor Optimization (DMPO) method to effectively decouple the low-level representative ability and high-level discriminative ability in early stages. First, in terms of architecture, we introduce a lightweight bypass module into multi-stage predictors for functional decomposition of shallow features from early stages, while a high-order statistics-based predictor is developed for early stages to effectively enhance their discriminative ability. To reasonably train our multipredictor architecture, a decoupled optimization is proposed to allocate two-phase loss weights for multi-stage predictors during model tuning, where the initial training phase enables the model to prioritize the acquisition of discriminative ability of deep stages via emphasizing representative ability of early stages, and the latter training phase drives discriminative ability towards earlier stages as much as possible. As such, our DMPO can effectively decouple representative and discriminative abilities in early stages in terms of architecture design and model optimization. Experiments across various datasets and pre-trained backbones demonstrate that DMPO clearly outperforms its counterparts when reducing computational cost. Particularly, DMPO with 30% FLOPs is comparable with or even suppresses counterparts with 70% FLOPs.",
+      "identifiers": [
+        "SemanticScholar:181970d33dfe5ba5d2c7e3b122b866656b028286"
+      ],
+      "semantic_scholar_id": "181970d33dfe5ba5d2c7e3b122b866656b028286",
+      "canonical_id": "arXiv:2511.03245",
+      "arxiv_id": "2511.03245",
+      "doi": "10.1109/ICCV51701.2025.00346",
+      "authors": [
+        "Liwei Luo",
+        "Shuai Li",
+        "Dong-Wei Ren",
+        "Qi-Long Wang",
+        "Peng-Fei Zhu",
+        "Qing-Hua Hu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.09927",
+      "identity_tokens": [
+        "id:DOI:10.1109/lra.2026.3703265",
+        "id:SemanticScholar:4ad3c6efa71194d6692d665e245e58776624053e",
+        "id:arXiv:2512.09927",
+        "title:token expandmerge trainingfree token compression for visionlanguageaction models",
+        "url:https://arxiv.org/abs/2512.09927"
+      ],
+      "record": {
+        "title": "Token Expand-Merge: Training-Free Token Compression for Vision-Language-Action Models",
+        "source_url": "https://arxiv.org/abs/2512.09927",
+        "year": 2025,
+        "published": "2025-12-10",
+        "venue": "IEEE Robotics and Automation Letters",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models pretrained on large-scale multimodal datasets have emerged as powerful foundations for robotic perception and control. However, their massive scale, often billions of parameters, poses significant challenges for real-time deployment, as inference becomes computationally expensive and latency-sensitive in dynamic environments. To address this, we propose Token Expand-and-Merge-VLA (TEAM-VLA), a training-free token compression framework that accelerates VLA inference while preserving task performance. TEAM-VLA introduces a dynamic token expansion mechanism that identifies and samples additional informative tokens in the spatial vicinity of attention-highlighted regions, enhancing contextual completeness. These expanded tokens are then selectively merged in deeper layers under action-aware guidance, effectively reducing redundancy while maintaining semantic coherence. By coupling expansion and merging within a single feed-forward pass, TEAM-VLA achieves a balanced trade-off between efficiency and effectiveness, without any retraining or parameter updates. Extensive experiments on LIBERO benchmark demonstrate that TEAM-VLA consistently improves inference speed while maintaining or even surpassing the task success rate of full VLA models.",
+        "identifiers": [
+          "SemanticScholar:4ad3c6efa71194d6692d665e245e58776624053e"
+        ],
+        "semantic_scholar_id": "4ad3c6efa71194d6692d665e245e58776624053e",
+        "canonical_id": "arXiv:2512.09927",
+        "arxiv_id": "2512.09927",
+        "doi": "10.1109/LRA.2026.3703265",
+        "authors": [
+          "Yi-Fan Ye",
+          "Jia-Qi Ma",
+          "Jun Cen",
+          "Zhi-He Lu"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.14052",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.14052",
+        "id:SemanticScholar:8a042e010f2e122d0ed4fe397b07f9cdf6a8b04c",
+        "id:arXiv:2512.14052",
+        "title:hypervl an efficient and dynamic multimodal large language model for edge devices",
+        "url:https://arxiv.org/abs/2512.14052"
+      ],
+      "record": {
+        "title": "HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices",
+        "source_url": "https://arxiv.org/abs/2512.14052",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current multimodal large lanauge models possess strong perceptual and reasoning capabilities, however high computational and memory requirements make them difficult to deploy directly on on-device environments. While small-parameter models are progressively endowed with strong general capabilities, standard Vision Transformer (ViT) encoders remain a critical bottleneck, suffering from excessive latency and memory consumption when processing high-resolution inputs.To address these challenges, we introduce HyperVL, an efficient multimodal large language model tailored for on-device inference. HyperVL adopts an image-tiling strategy to cap peak memory usage and incorporates two novel techniques: (1) a Visual Resolution Compressor (VRC) that adaptively predicts optimal encoding resolutions to eliminate redundant computation, and (2) Dual Consistency Learning (DCL), which aligns multi-scale ViT encoders within a unified framework, enabling dynamic switching between visual branches under a shared LLM. Extensive experiments demonstrate that HyperVL achieves state-of-the-art performance among models of comparable size across multiple benchmarks. Furthermore, it significantly significantly reduces latency and power consumption on real mobile devices, demonstrating its practicality for on-device multimodal inference.",
+        "identifiers": [
+          "SemanticScholar:8a042e010f2e122d0ed4fe397b07f9cdf6a8b04c"
+        ],
+        "semantic_scholar_id": "8a042e010f2e122d0ed4fe397b07f9cdf6a8b04c",
+        "canonical_id": "arXiv:2512.14052",
+        "arxiv_id": "2512.14052",
+        "doi": "10.48550/arXiv.2512.14052",
+        "authors": [
+          "Yu-Chen Liu",
+          "Kai Han",
+          "Zhi-Qiang Xia",
+          "Yu-Dong Zhang",
+          "Chenyu Song",
+          "Kangyu Tang",
+          "Jia-Ming Xu",
+          "Xiushi Feng",
+          "Wenxuan Yu",
+          "Li Peng",
+          "Ming-Yang Wang",
+          "Kai Wang",
+          "Changpeng Yang",
+          "Yang Li",
+          "Hao Lu",
+          "Hao Wang",
+          "Bing Xu",
+          "Guang-Xu Liu",
+          "Long-Hang Huang",
+          "Kai-Bin Guo",
+          "Jin-Yang Wu",
+          "Dan Wu",
+          "Hong-Zhen Wang",
+          "Peng Zhou",
+          "Shuai Nie",
+          "Shan-shan Wang",
+          "Run-Yu Shi",
+          "Ying Huang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 342,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08779",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.08779",
+        "id:SemanticScholar:e330c51a4dc57e017b79f5b21ed2d98ba395e024",
+        "id:arXiv:2607.08779",
+        "title:signed symmetric quantization for fewbit integers",
+        "url:https://arxiv.org/abs/2607.08779"
+      ],
+      "record": {
+        "title": "Signed Symmetric Quantization for Few-Bit Integers",
+        "source_url": "https://arxiv.org/abs/2607.08779",
+        "year": 2026,
+        "published": "2026-06-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The signed integer alphabet contains one more negative representable value than positive. Yet, by convention, the standard symmetric integer quantizer fixes its scale to be strictly positive, which assigns this extra representable value to the negative tail and can force clipping of positive outliers. In this work, we show that, at few-bit precision, such clipping is a non-trivial source of quantization error. Asymmetric quantization addresses this problem with a zero point, shifting the grid toward the observed data range; however, this flexibility is well-known to carry a runtime penalty. For example, in llama.cpp on an AMD EPYC(TM)\"Turin\"CPU, a 4-bit symmetric format uses up to 9% less memory with up to 2.45$\\times$ higher throughput than its asymmetric counterpart. We highlight signed symmetric quantization as a third option that retains the runtime profile of symmetric quantization without the penalty of the asymmetric format: our signed absmax grid places the extra representable value on the dominant-outlier tail through a principled and lightweight sign selection rule while keeping the zero point at zero. Our theoretical analysis offers two main results. First, we establish the signed absmax grid as conditionally bound-optimal on $\\ell_2$ quantization error, and show that the condition holds for 88-99% of weight groups across pre-trained large language models (LLMs) at low bit widths. Second, we show that negating the scale of a standard symmetric quantizer is analytically equivalent to a unit zero point shift on the same signed integer alphabet. We empirically validate our proposal on models from the Qwen3, Qwen3.5, and Llama3 families, and observe improvement in perplexity and downstream few-shot accuracy over the standard unsigned symmetric quantizer at no extra inference cost",
+        "identifiers": [
+          "SemanticScholar:e330c51a4dc57e017b79f5b21ed2d98ba395e024"
+        ],
+        "semantic_scholar_id": "e330c51a4dc57e017b79f5b21ed2d98ba395e024",
+        "canonical_id": "arXiv:2607.08779",
+        "arxiv_id": "2607.08779",
+        "doi": "10.48550/arXiv.2607.08779",
+        "authors": [
+          "Ian Colbert",
+          "Eashan Dash",
+          "Pablo Monteagudo-Lago",
+          "J. Amboage",
+          "N. Srinidhi",
+          "Giuseppe Franco",
+          "Nicholas J. Fraser",
+          "Arun Ramachandran"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 164,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.19686",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.19686",
+        "id:SemanticScholar:bd8afd433922a7409c93a2e7bd90971c1c75fadd",
+        "id:arXiv:2607.19686",
+        "title:multimask diffusion language models for fewstep generation",
+        "url:https://arxiv.org/abs/2607.19686"
+      ],
+      "record": {
+        "title": "Multi-Mask Diffusion Language Models for Few-Step Generation",
+        "source_url": "https://arxiv.org/abs/2607.19686",
+        "year": 2026,
+        "published": "2026-07-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion models (MDMs) are a promising family of language generators, but achieving high-quality few-step generation remains challenging. In MDMs, all forward trajectories collapse to a single fully masked state, leaving no terminal entropy for consistency-style few-step generation. While recent few-step alternatives based on uniform-state diffusion avoid this degeneracy, it becomes harder to distinguish clean tokens from noise than MDMs, which usually harms modeling quality and training efficiency. In this work, we propose a multi-mask diffusion model (MultiMDM) that preserves the masking structure towards few-step generation. In the forward process, each clean token is first pushed towards a designated mask and then gradually mixes over the mask set. As a result, the backward process has a drafting capability by predicting a designated mask before refining to a clean token. We derive a closed-form ELBO training objective for MultiMDM that supports continual training from pretrained MDMs. In addition, we formulate a purely discrete-state consistency distillation scheme, with a shared-Gumbel coupling to reduce pathwise entropy. Experiments on pretraining and distillation show that MultiMDM provides an effective foundation for principled few-step generation.",
+        "identifiers": [
+          "SemanticScholar:bd8afd433922a7409c93a2e7bd90971c1c75fadd"
+        ],
+        "semantic_scholar_id": "bd8afd433922a7409c93a2e7bd90971c1c75fadd",
+        "canonical_id": "arXiv:2607.19686",
+        "arxiv_id": "2607.19686",
+        "doi": "10.48550/arXiv.2607.19686",
+        "authors": [
+          "Sijin Chen",
+          "Yinuo Ren",
+          "He-Yang Zhao",
+          "Zi-Heng Cheng",
+          "Quan-Quan Gu",
+          "Le-Xing Ying"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 124,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.00652",
+      "identity_tokens": [
+        "id:SemanticScholar:2c178aec41a193387dbd9e5695f61e57b2f43388",
+        "id:arXiv:2611.00652",
+        "title:inference first training underneath layergranular lora coserving with layerloom",
+        "url:https://arxiv.org/abs/2611.00652"
+      ],
+      "record": {
+        "title": "Inference First, Training Underneath: Layer-Granular LoRA Co-Serving with LayerLoom",
+        "source_url": "https://arxiv.org/abs/2611.00652",
+        "year": 2026,
+        "published": "2026-10-31",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving and fine-tuning a large language model on the same GPUs can turn the idle capacity between inference bursts into training progress, and low-rank adaptation (LoRA) makes this co-location cheap because both workloads read a single frozen copy of the base weights. The difficulty lies in the fine-tuning backward pass, which has no counterpart in inference. Current co-serving systems schedule backward work per serving iteration: each iteration carries a fixed backward budget, and requests that arrive in the meantime wait for it to finish, so fine-tuning dictates inference latency whenever load spikes. We observe that the backward pass of a LoRA microbatch decomposes into per-layer tasks over the same weights that the inference forward pass visits, which allows backward work to be scheduled at layer rather than iteration granularity. Building on this observation, LayerLoom attaches same-layer backward tasks to the inference forward pass and, at each layer, runs only as many of them as the latency slack of in-flight requests permits. To keep a ready task at every layer, LayerLoom maintains a wavefront of fine-tuning microbatches staggered across layers, and it bounds the wavefront's activation memory by offloading microbatch state to host memory and prefetching it ahead of the layer where the scheduler plans to use it. A fused kernel serves the paired forward and backward GEMMs from a single read of each base weight. Because all backward work of an iteration finishes within its forward pass, new requests join the next iteration as in continuous batching. On an RTX 4090 GPU running Llama-3.1-8B under a bursty production trace, LayerLoom raises joint SLO attainment by 13.5-21.8 points over prior works with fine-tuning throughput that is comparable or up to 12% higher, and it reaches the same training losses.",
+        "identifiers": [
+          "SemanticScholar:2c178aec41a193387dbd9e5695f61e57b2f43388"
+        ],
+        "semantic_scholar_id": "2c178aec41a193387dbd9e5695f61e57b2f43388",
+        "canonical_id": "arXiv:2611.00652",
+        "arxiv_id": "2611.00652",
+        "authors": [
+          "Zong-Pu Zhang",
+          "Yi-Shu Yin",
+          "Xue-Hai Qian"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.19755",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.19755",
+        "id:SemanticScholar:a1a2c0357c2216bc2f796870beec1b10d22d47aa",
+        "id:arXiv:2606.19755",
+        "title:safespec fast and safe llm via dynamic reflective sampling",
+        "url:https://arxiv.org/abs/2606.19755"
+      ],
+      "record": {
+        "title": "SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling",
+        "source_url": "https://arxiv.org/abs/2606.19755",
+        "year": 2026,
+        "published": "2026-06-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative inference accelerates large language model (LLM) decoding but provides no inherent safety guarantees. Existing safety defenses are largely incompatible with speculative inference: they either introduce additional computation or disrupt the draft-verify mechanism, negating acceleration benefits. This reveals a fundamental incompatibility between current safety methods and speculative decoding. We propose SafeSpec, a safety-aware speculative inference framework that integrates risk estimation directly into the verification process. SafeSpec attaches a lightweight latent safety head to the target model to jointly evaluate semantic validity and safety in a single forward pass. When unsafe generations are detected, SafeSpec applies rollback and safety-guided reflective multi-sampling to recover safe continuations rather than terminating generation. We model jailbreak attacks as distributional shifts over generative trajectories, where adversarial prompts increase the probability of harmful continuations without eliminating safe ones. Under this model, SafeSpec performs risk-aware trajectory recovery within the speculative decoding process. Across multiple models and adversarial benchmarks, SafeSpec achieves a substantially improved safety-efficiency trade-off. On Qwen3-32B, SafeSpec reduces attack success rates by 15% while preserving a 2.06x inference speedup on benign workloads, demonstrating that speculative acceleration and inference-time safety can be jointly optimized.",
+        "identifiers": [
+          "SemanticScholar:a1a2c0357c2216bc2f796870beec1b10d22d47aa"
+        ],
+        "semantic_scholar_id": "a1a2c0357c2216bc2f796870beec1b10d22d47aa",
+        "canonical_id": "arXiv:2606.19755",
+        "arxiv_id": "2606.19755",
+        "doi": "10.48550/arXiv.2606.19755",
+        "authors": [
+          "Haotian Xu",
+          "Zeyang Zhang",
+          "Linbao Li",
+          "Hua-Di Zheng",
+          "Yu Li",
+          "Cheng-Xiang Zhuo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 158,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.03245",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccv51701.2025.00346",
+        "id:SemanticScholar:181970d33dfe5ba5d2c7e3b122b866656b028286",
+        "id:arXiv:2511.03245",
+        "title:decoupled multipredictor optimization for inferenceefficient model tuning",
+        "url:https://arxiv.org/abs/2511.03245"
+      ],
+      "record": {
+        "title": "Decoupled Multi-Predictor Optimization for Inference-Efficient Model Tuning",
+        "source_url": "https://arxiv.org/abs/2511.03245",
+        "year": 2025,
+        "published": "2025-10-19",
+        "venue": "IEEE International Conference on Computer Vision",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, remarkable progress has been made in largescale pre-trained model tuning, and inference efficiency is becoming more crucial for practical deployment. Early exiting in conjunction with multi-stage predictors, when cooperated with a parameter-efficient fine-tuning strategy, offers a straightforward way to achieve an inference-efficient model. However, a key challenge remains unresolved: How can early stages provide low-level fundamental features to deep stages while simultaneously supplying high-level discriminative features to early-stage predictors? To address this problem, we propose a Decoupled Multi-Predictor Optimization (DMPO) method to effectively decouple the low-level representative ability and high-level discriminative ability in early stages. First, in terms of architecture, we introduce a lightweight bypass module into multi-stage predictors for functional decomposition of shallow features from early stages, while a high-order statistics-based predictor is developed for early stages to effectively enhance their discriminative ability. To reasonably train our multipredictor architecture, a decoupled optimization is proposed to allocate two-phase loss weights for multi-stage predictors during model tuning, where the initial training phase enables the model to prioritize the acquisition of discriminative ability of deep stages via emphasizing representative ability of early stages, and the latter training phase drives discriminative ability towards earlier stages as much as possible. As such, our DMPO can effectively decouple representative and discriminative abilities in early stages in terms of architecture design and model optimization. Experiments across various datasets and pre-trained backbones demonstrate that DMPO clearly outperforms its counterparts when reducing computational cost. Particularly, DMPO with 30% FLOPs is comparable with or even suppresses counterparts with 70% FLOPs.",
+        "identifiers": [
+          "SemanticScholar:181970d33dfe5ba5d2c7e3b122b866656b028286"
+        ],
+        "semantic_scholar_id": "181970d33dfe5ba5d2c7e3b122b866656b028286",
+        "canonical_id": "arXiv:2511.03245",
+        "arxiv_id": "2511.03245",
+        "doi": "10.1109/ICCV51701.2025.00346",
+        "authors": [
+          "Liwei Luo",
+          "Shuai Li",
+          "Dong-Wei Ren",
+          "Qi-Long Wang",
+          "Peng-Fei Zhu",
+          "Qing-Hua Hu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3dcfe1ea958deca267a231655dd10a4e28ae6068ee8fdb2934d7a3fc94e12850",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

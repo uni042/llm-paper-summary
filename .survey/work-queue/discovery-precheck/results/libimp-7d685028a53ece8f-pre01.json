@@ -1,0 +1,142 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7d685028a53ece8f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7d685028a53e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3805621.3807641"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d21e6cfb132fde5e430499c3d3b499649cfde374",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T11:21:44.139031+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3805621.3807641",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Before the First Token: Benchmarking Data Preprocessing in Vision-Language Models",
+      "source_url": "https://doi.org/10.1145/3805621.3807641",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While vision-language models (VLMs) become widely used for video understanding, the sheer volume of spatiotemporal data they process presents a critical computational challenge. Current efforts have been mainly focused on accelerating token generation by large language models (LLMs), overlooking the preprocessing required for preparing the input data. In this paper, we systematically benchmark and analyze the performance of the end-to-end VLM pipeline. Through a stage-by-stage latency characterization across diverse real-world datasets, we reveal that data preprocessing, spanning both CPU-bound video decoding and GPU-bound vision encoder, represents frequently a critical performance bottleneck for VLM inference. Moreover, this data preprocessing overhead stays significant under varying input characteristics and hardware specifications. Our results underscore the urgent need for holistic, end-to-end performance optimizations for VLM pipelines.",
+      "identifiers": [
+        "SemanticScholar:51b3121e0dfbfb06279336d6ed21fff86415234f"
+      ],
+      "semantic_scholar_id": "51b3121e0dfbfb06279336d6ed21fff86415234f",
+      "doi": "10.1145/3805621.3807641",
+      "canonical_id": "DOI:10.1145/3805621.3807641",
+      "authors": [
+        "Sepideh Zohdi",
+        "Lin Wang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3805621.3807641",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807641",
+        "id:SemanticScholar:51b3121e0dfbfb06279336d6ed21fff86415234f",
+        "title:before the first token benchmarking data preprocessing in visionlanguage models",
+        "url:https://doi.org/10.1145/3805621.3807641"
+      ],
+      "record": {
+        "title": "Before the First Token: Benchmarking Data Preprocessing in Vision-Language Models",
+        "source_url": "https://doi.org/10.1145/3805621.3807641",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While vision-language models (VLMs) become widely used for video understanding, the sheer volume of spatiotemporal data they process presents a critical computational challenge. Current efforts have been mainly focused on accelerating token generation by large language models (LLMs), overlooking the preprocessing required for preparing the input data. In this paper, we systematically benchmark and analyze the performance of the end-to-end VLM pipeline. Through a stage-by-stage latency characterization across diverse real-world datasets, we reveal that data preprocessing, spanning both CPU-bound video decoding and GPU-bound vision encoder, represents frequently a critical performance bottleneck for VLM inference. Moreover, this data preprocessing overhead stays significant under varying input characteristics and hardware specifications. Our results underscore the urgent need for holistic, end-to-end performance optimizations for VLM pipelines.",
+        "identifiers": [
+          "SemanticScholar:51b3121e0dfbfb06279336d6ed21fff86415234f"
+        ],
+        "semantic_scholar_id": "51b3121e0dfbfb06279336d6ed21fff86415234f",
+        "doi": "10.1145/3805621.3807641",
+        "canonical_id": "DOI:10.1145/3805621.3807641",
+        "authors": [
+          "Sepideh Zohdi",
+          "Lin Wang"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:37d172ad8cd3523bb7536299c556214a10c7bccd5b8d9758a12bce1f790c3cc4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

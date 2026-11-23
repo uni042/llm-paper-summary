@@ -1,0 +1,1078 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dea5984d43788f79-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dea5984d4378",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/a-sscc67472.2025.11349430",
+    "DOI:10.1109/cicc63670.2025.10983594",
+    "DOI:10.1109/icfec69006.2026.00011",
+    "DOI:10.1109/icici68867.2026.11565014",
+    "DOI:10.1109/iscsic67494.2025.11351976",
+    "DOI:10.1145/3579990.3580015",
+    "DOI:10.1145/3808707.3808864",
+    "DOI:10.23919/date69613.2026.11539302",
+    "DOI:10.3390/electronics15071533",
+    "arXiv:2604.11530",
+    "arXiv:2610.15372"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d21e6cfb132fde5e430499c3d3b499649cfde374",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T11:21:44.813797+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/a-sscc67472.2025.11349430",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/cicc63670.2025.10983594",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icfec69006.2026.00011",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icici68867.2026.11565014",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscsic67494.2025.11351976",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3579990.3580015",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3808707.3808864",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/electronics15071533",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.11530",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15372",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Evolving LLMs from Next-Token Prediction to Multi-Token Prediction via Self-Distillation",
+      "source_url": "https://doi.org/10.3390/electronics15071533",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "Electronics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mainstream Large Language Models (LLMs) work under the paradigm of Next-Token Prediction (NTP). Multi-Token Prediction (MTP) is motivated by higher decoding efficiency, extending NTP to enable LLMs to draft multiple tokens during each forward pass. However, existing MTP approaches pretrain MTP along with the target LLM, making it difficult to unlock MTP for LLMs without official support. In this work, we propose a post-hoc approach to training an MTP module for a target LLM, providing an efficient way to evolve the LLM from NTP to MTP. The proposed approach features two main characteristics. (1) No changes to the target LLM, since it is frozen during MTP training. (2) Efficient MTP training via self-distillation from the target LLM’s native NTP capability. Results show that our approach can post-hoc train a performant MTP module via lightweight pretraining.",
+      "identifiers": [
+        "SemanticScholar:99c90b4eaf1e9bfbc07ae0fb4fb6c007309a7167"
+      ],
+      "semantic_scholar_id": "99c90b4eaf1e9bfbc07ae0fb4fb6c007309a7167",
+      "doi": "10.3390/electronics15071533",
+      "canonical_id": "DOI:10.3390/electronics15071533",
+      "authors": [
+        "Yang Xu",
+        "W. Che"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Attention Scores: SVD-Based Vision Token Pruning for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.11530",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have revolutionized multi-modal learning by jointly processing visual and textual information. Yet, they face significant challenges due to the high computational and memory demands of processing long sequences of vision tokens. Many existing methods rely on local heuristics, such as attention scores or token norms. However, these criteria suffer from positional bias and information dispersion, limiting their ability to preserve essential content at high pruning ratios and leading to performance degradation on visually detailed images. To address these issues, we propose SVD-Prune, a training-free, plug-and-play token pruning method based on Singular Value Decomposition. It decomposes the vision token feature matrix and selects the top-k tokens using statistical leverage scores, ensuring only tokens contributing most to the dominant global variance are preserved. Experiments show that SVD-Prune consistently outperforms prior pruning methods under extreme vision token budgets, maintaining strong performance even with 32 and 16 vision tokens.",
+      "identifiers": [
+        "SemanticScholar:1dda723f9d8dccc63fdfa9a11eea489ea3afa0b3"
+      ],
+      "semantic_scholar_id": "1dda723f9d8dccc63fdfa9a11eea489ea3afa0b3",
+      "canonical_id": "arXiv:2604.11530",
+      "arxiv_id": "2604.11530",
+      "authors": [
+        "Yvon Apedo",
+        "M. Poreba",
+        "M. Szczepanski",
+        "S. Bouchafa"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Deep Neural Networks on Mobile Multicore NPUs",
+      "source_url": "https://doi.org/10.1145/3579990.3580015",
+      "year": 2023,
+      "published": "2023-02-17",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Neural processing units (NPUs) have become indispensable parts of mobile SoCs. Furthermore, integrating multiple NPU cores into a single chip becomes a promising solution for ever-increasing computing power demands in mobile devices. This paper addresses techniques to maximize the utilization of NPU cores and reduce the latency of on-device inference. Mobile NPUs typically have a small amount of local memory (or scratch pad memory, SPM) that provides space only enough for input/output tensors and weights of one layer operation in deep neural networks (DNNs). Even in multicore NPUs, such local memories are distributed across the cores. In such systems, executing network layer operations in parallel is the primary vehicle to achieve performance. By partitioning a layer of DNNs into multiple sub-layers, we can execute them in parallel on multicore NPUs. Within a core, we can also employ pipelined execution to reduce the execution time of a sub-layer. In this execution model, synchronizing parallel execution and loading/storing intermediate tensors in global memory are the main bottlenecks. To alleviate these problems, we propose novel optimization techniques which carefully consider partitioning direction, execution order, synchronization, and global memory access. Using six popular convolutional neural networks (CNNs), we evaluate our optimization techniques in a flagship mobile SoC with three cores. Compared to the highest-performing partitioning approach, our techniques improve performance by 23%, achieving a speedup of 2.1x over single-core systems.",
+      "identifiers": [
+        "SemanticScholar:d3bb06607e7ba13d26621d0824b139361d6c9f74"
+      ],
+      "semantic_scholar_id": "d3bb06607e7ba13d26621d0824b139361d6c9f74",
+      "doi": "10.1145/3579990.3580015",
+      "canonical_id": "DOI:10.1145/3579990.3580015",
+      "authors": [
+        "Hanwoong Jung",
+        "He-Xiang Ji",
+        "A. Pushchin",
+        "Maxim Ostapenko",
+        "Wenlong Niu",
+        "Ilya Palachev",
+        "Yutian Qu",
+        "Pavel Fedin",
+        "Yuri Gribov",
+        "Heewoo Nam",
+        "Dongguen Lim",
+        "Hyunjun Kim",
+        "Joonho Song",
+        "Seungwon Lee",
+        "Hwansoo Han"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1375,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Domestic NPU-Cluster-Based Large Language Model Service Platform: Construction, Optimization, and Evaluation",
+      "source_url": "https://doi.org/10.1145/3808707.3808864",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "Proceedings of the 2nd International Conference on Digital Management and Information Technology",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This article introduces a large language model (LLM) service platform based on a domestic NPU cluster, aiming to meet the key challenges such as insufficient computing resources, complex maintenance, and hallucinations in on-premises deployment. The platform adopts a heterogeneous model architecture, where computational nodes utilize the Ascend 910B NPU for independent model execution (such as Qwen3 series for complex reasoning and multimodal tasks), reducing cross-node synchronization overhead and enriching LLM service types. Through W8A8 quantization and resource isolation, it demonstrates excellent reliability (92.60% request success rate, vs. 90.90% for the single-cluster approach) and delay reduction (TTFT 2.69 seconds, a 40% decrease from 4.51 seconds) in an empirical verification of 200 concurrent requests. Equipped with a standardized API management platform, it realizes unified interface encapsulation, efficient reuse of computing resources, and fine-grained usage control, significantly lowering the threshold for service invocation. This service platform also expands the knowledge scope of LLMs through RAG technology and enables scenario-specific customization of general models. This work provides a repeatable engineering blueprint for artificial intelligence infrastructure, significantly improving service efficiency and quality.",
+      "identifiers": [
+        "SemanticScholar:dba6bb21412550ffef4dcdb595cda3ada2a703dd"
+      ],
+      "semantic_scholar_id": "dba6bb21412550ffef4dcdb595cda3ada2a703dd",
+      "doi": "10.1145/3808707.3808864",
+      "canonical_id": "DOI:10.1145/3808707.3808864",
+      "authors": [
+        "Lin Shi",
+        "Ling Du",
+        "Jinrong Huang",
+        "Gang Wang",
+        "Zhibin Luo",
+        "Guang-Shen Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 290,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FLARE: Finetuning ReLU With FIRE for Efficient Long-Context Inference",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539302",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on resource-constrained edge devices, such as mobile phones or IoT devices, is highly desirable for enabling secure, personalized on-device AI. However, there are significant challenges due to these models’ high computational and memory demands. A key bottleneck lies in the Transformer’s attention block, especially when handling long contexts. Techniques like model architectures with Rectified Linear Unit (ReLU) activations for Softmax and FIRE positional encoding (a resource-efficient, automatic context-length-scaling alternative to Rotary Positional Embedding (RoPE)) have each independently shown promise in reducing the computational complexity of the attention block, but the proper alchemy for combining their benefits remains underexplored. In this paper, we show a method for combining FIRE and ReLU that maintains low-validation loss at long contexts. We also introduce FLARE, a new algorithm that further improves efficiency by removing operations from the learned relative position encoding in FIRE. Our approach leads to faster inference on long sequences, robust generalization to varying context lengths, and lower validation loss compared to baseline models. FLARE achieves a significant reduction in power and area consumption. On custom hardware, it achieves a 6× higher operating frequency than Softmax, while occupying 57× less silicon area (measured under different throughput settings) and consuming 600× less energy. Our results indicate that FLARE represents a significant step towards deploying powerful LLMs efficiently on resource-limited devices. Code and hardware designs are publicly available at: https://github.com/ReaLLMASIC/nanoGPT.",
+      "identifiers": [
+        "SemanticScholar:3502a2fe013e561dd162ae8294ff33c2c7c8c3a0"
+      ],
+      "semantic_scholar_id": "3502a2fe013e561dd162ae8294ff33c2c7c8c3a0",
+      "doi": "10.23919/DATE69613.2026.11539302",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539302",
+      "authors": [
+        "Michael Moffatt",
+        "Jun-Yi Luo",
+        "Haoran Cheng",
+        "Qi-Long Wang",
+        "Xin Jiang",
+        "Guan-Chen Tao",
+        "Shi-Wei Liu",
+        "Kauna Lei",
+        "Gregory Kielian",
+        "Mehdi Saligane"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hybrid Compression of Large Language Models using Structured Pruning and Quantization",
+      "source_url": "https://doi.org/10.1109/ICICI68867.2026.11565014",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "International Conference Intelligent Data Communication Technologies and Internet Things",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The evolution of Large Language Models (LLMs) such as GPT has been incredible, and natural language generation is the area that these models have almost entirely taken over. Their huge size and number of parameters—over a billion—still create problems related to storage, memory, and computation, especially when it comes to deploying at the edge. Compression techniques such as pruning and quantization greatly help with these issues, but picking one often implies giving up some accuracy, efficiency, and the ability to generalize. A new hybrid compression technique is proposed in this study, which combines the two: structured pruning and quantization. The structure is first pruned by getting rid of the whole low-importance attention heads and neurons, among which the biggest part of the computational cost is. After the pruning, quantization is applied to weights and activations to convert them into low-bit representation. This representation greatly increases memory saving and speeds up the process. Quantization of this type secures that it will only take place on the most vital parts, thus, the least accuracy will be lost and, in the opposite, the size of the compression will be the most. The experimental results on the GPT-2 model confirm our method leads to a remarkable reduction in the number of parameters, and inference times along with a slight drop in performance, thus enabling the application of large models on resource-limited platforms.",
+      "identifiers": [
+        "SemanticScholar:7dd6b4fd4cd104fc12330bb1fdcc080880e7d6d1"
+      ],
+      "semantic_scholar_id": "7dd6b4fd4cd104fc12330bb1fdcc080880e7d6d1",
+      "doi": "10.1109/ICICI68867.2026.11565014",
+      "canonical_id": "DOI:10.1109/ICICI68867.2026.11565014",
+      "authors": [
+        "Priyanka Shivaramaiah",
+        "Roopesh Ramesh",
+        "Khushboo Pandey",
+        "Kalyan Nagraj"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Layer-Wise Weight Sharing for Efficient Transformer on SoCs",
+      "source_url": "https://doi.org/10.1109/ICFEC69006.2026.00011",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "International Conference on Fog and Edge Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models such as BERT have achieved remarkable success across a wide range of natural language processing tasks. However, deploying them on resource-constrained devices, including System-on-Chips (SoCs), remains challenging due to limited memory and computational capacity of these devices. Weight sharing has proved to be an effective approach for significantly reducing model size, yet designing an efficient layer-wise weight sharing framework that achieves high compression while maintaining model performance and low latency is not a trivial task. In this paper, we systematically analyze the impact of key weight sharing hyperparameters on model performance, model size, and latency, and propose a Genetic Algorithm-based optimization framework to automatically identify the optimal configuration for each layer—balancing performance, compression ratio, and inference speed. Additionally, through targeted modifications and efficient on-the-fly decompression, we demonstrate that the proposed weight sharing framework introduces no additional latency overhead and can even reduce inference time. Compared to uniform compression, our approach makes transformer blocks with substantially lower memory requirements and reduced latency while maintaining competitive performance across evaluation metrics.",
+      "identifiers": [
+        "SemanticScholar:f95bee05b9d59b84b8da220c2c18980e04299e92"
+      ],
+      "semantic_scholar_id": "f95bee05b9d59b84b8da220c2c18980e04299e92",
+      "doi": "10.1109/ICFEC69006.2026.00011",
+      "canonical_id": "DOI:10.1109/ICFEC69006.2026.00011",
+      "authors": [
+        "Saeed Khalilian",
+        "Hang Xu",
+        "N. Meratnia",
+        "Anuj Pathania"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fewer Bits, More Tries: Recovering Capability Under Memory Constraints",
+      "source_url": "https://arxiv.org/abs/2610.15372",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are generally more capable than smaller ones, but their memory requirements can make local deployment difficult. We ask whether part of this capability gap can instead be recovered by running a smaller or more compressed model multiple times and selecting among its outputs using public or model-generated tests. Single-user local inference can leave hardware underutilized, allowing parallel candidate generation to trade additional test-time computation for accuracy at modest latency cost. Across four code-generation benchmarks, verified retry recovers substantial accuracy lost to model size or compression. A 7B Qwen model with eight parallel attempts essentially matches a 32B model on MBPP+ and exceeds it on the other three benchmarks, while using about $4\\times$ less model memory, running up to $6\\times$ faster, and using less energy, as measured on Nvidia GPU. We observe similar tradeoff across model sizes, compression levels and hardware choices, although exact benefit depends on the hardware profile and problem setting. These results show that model capacity can be traded for verified test-time computation when correct solutions remain reachable within a modest retry budget.",
+      "identifiers": [
+        "SemanticScholar:6e58b9d9196d50ac080461eb396443dcdf882ddc"
+      ],
+      "semantic_scholar_id": "6e58b9d9196d50ac080461eb396443dcdf882ddc",
+      "canonical_id": "arXiv:2610.15372",
+      "arxiv_id": "2610.15372",
+      "authors": [
+        "Tomer Galanti",
+        "J. Susskind",
+        "Eran Malach"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Analog-AI Hardware Accelerators for Low-Latency Transformer-Based Language Models (Invited)",
+      "source_url": "https://doi.org/10.1109/CICC63670.2025.10983594",
+      "year": 2025,
+      "published": "2025-04-13",
+      "venue": "IEEE Custom Integrated Circuits Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Analog Non-Volatile Memory-based accelerators offer highthroughput and energy-efficient Multiply-Accumulate operations for the large Fully-Connected layers that dominate Transformer-based Large Language Models (LLMs). We describe recent chip-demo and architectural efforts, quantify the unique benefits of Fully- (rather than Partially-) Weight-Stationary systems, and discuss factors affecting latency of token-processing and generation.",
+      "identifiers": [
+        "SemanticScholar:962262f387198f4df664dde083fc2bb0b6c40058"
+      ],
+      "semantic_scholar_id": "962262f387198f4df664dde083fc2bb0b6c40058",
+      "doi": "10.1109/CICC63670.2025.10983594",
+      "canonical_id": "DOI:10.1109/CICC63670.2025.10983594",
+      "authors": [
+        "G. Burr",
+        "H. Tsai",
+        "I. Boybat",
+        "W. Simon",
+        "J. Büchel",
+        "A. Vasilopoulos",
+        "P. Narayanan",
+        "A. Fasoli",
+        "K. Hosokawa",
+        "M. Le Gallo",
+        "M. Ishii",
+        "Y. Kohda",
+        "A. Okazaki",
+        "A. Chen",
+        "C. Mackin",
+        "E. Ferro",
+        "K. El Maghraoui",
+        "H. Benmeziane",
+        "T. Philicelli",
+        "C. Lammie",
+        "A. Friz",
+        "J. Luquin",
+        "S. Jain",
+        "A. Sebastian",
+        "V. Narayanan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 589,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MC-MLA: Accelerating Multi-Head Latent Attention on RISC-V Many-Core Chips",
+      "source_url": "https://doi.org/10.1109/ISCSIC67494.2025.11351976",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "International Symposium on Computer Science and Intelligent Control",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the core mechanism of the DeepSeek-V3 model, Multi-Head Latent Attention (MLA) significantly reduces the computational complexity by low-rank matrix factorization. However, the memory access overhead and computing bottlenecks are becoming increasingly prominent as the sequence length continues to grow. The performance of this mechanism is severely limited by the efficiency of memory access. Meanwhile, existing research on MLA acceleration mostly relies on NVIDIA GPUs and the CUDA ecosystem, which significantly constrains the expansion of its application scenario. Given this, this paper proposes Many-Core Optimized Multi-Head Latent Attention (MC-MLA), which is committed to achieving efficient parallel acceleration of MLA on a many-core RISC-V architecture. The scheme includes two core optimizations: (1) KV Reuse-Oriented Parallel Dataflow Optimization: For the matrix absorption characteristics in MLA, we design an online transposition dataflow that absorbs value matrices into key matrices. This approach ensures efficient reuse of KV-Cache while achieving pipeline overlap between data movement and computation, thereby reducing memory access pressure and hiding latency for KV-Cache load operations. (2) Balanced Tree-like Inter-Core Reduction Algorithm based on Semaphore: This algorithm resolves workload imbalance in high-parallel scenarios, significantly promoting many-core collaboration efficiency. The experimental results demonstrate that MC-MLA can enhance the computational efficiency of MLA under various configurations of batch size, number of heads, and sequence length. Final comparison results reveal that MC-MLA effectively alleviates key bottlenecks: load imbalance in reduction operations and NoC congestion in memory accesses, achieving up to $1.69 \\times$ performance improvement and 76 % of bandwidth utilization. This competitive implementation provides a reference for MLA adaptation and performance optimization on similar many-core architectures.",
+      "identifiers": [
+        "SemanticScholar:287eb4514e597b2405de539dc1549b543cf2ca99"
+      ],
+      "semantic_scholar_id": "287eb4514e597b2405de539dc1549b543cf2ca99",
+      "doi": "10.1109/ISCSIC67494.2025.11351976",
+      "canonical_id": "DOI:10.1109/ISCSIC67494.2025.11351976",
+      "authors": [
+        "Xi-Fu Qian",
+        "Qi-Bin Chen",
+        "Xin-Xin Zhao",
+        "Min Liu",
+        "Qi-Sheng Tong",
+        "Kai Jiang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 423,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PDAcc: A 541 Tokens/s@Llama-1.2B Effective Throughput Prefill-Decode Disaggregated MCM-based Accelerator for Multi-task Large Language Model Applications",
+      "source_url": "https://doi.org/10.1109/a-sscc67472.2025.11349430",
+      "year": 2025,
+      "published": "2025-11-02",
+      "venue": "International Symposium on Security in Computing and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Abstrack: Large Language Models (LLMs) have emerged as the backbone of many modern AI applications. LLM inference has two stages: prefill processes the full input at once, which is compute heavy and relatively time-consuming; in contrast, decode then generates tokens autoregressively with little per-step work. The two stages require markedly different resources, and unpredictable task arrivals and sequence lengths often force them to run concurrently in multi-tenant inference, as shown in Fig. 1. Co-optimization must therefore be considered to preserve effective throughput (ETPS)-tokens per second over the full request (prefill and decode combined). Aggregating the prefill and decode stages into a mixed batch enhances weight utilization [1–3]. However, the execution time of prefill and decode accumulates, causing longer latency and preventing separate optimization strategies for the two stages.",
+      "identifiers": [
+        "SemanticScholar:0f4fed0daa2513bef58f25061283f0eb1c801a14"
+      ],
+      "semantic_scholar_id": "0f4fed0daa2513bef58f25061283f0eb1c801a14",
+      "doi": "10.1109/a-sscc67472.2025.11349430",
+      "canonical_id": "DOI:10.1109/a-sscc67472.2025.11349430",
+      "authors": [
+        "Huan-Yu Wang",
+        "Yang Wang",
+        "Jia-Xin Yang",
+        "Shaojun Wei",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15071533",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15071533",
+        "id:SemanticScholar:99c90b4eaf1e9bfbc07ae0fb4fb6c007309a7167",
+        "title:evolving llms from nexttoken prediction to multitoken prediction via selfdistillation",
+        "url:https://doi.org/10.3390/electronics15071533"
+      ],
+      "record": {
+        "title": "Evolving LLMs from Next-Token Prediction to Multi-Token Prediction via Self-Distillation",
+        "source_url": "https://doi.org/10.3390/electronics15071533",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": "Electronics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mainstream Large Language Models (LLMs) work under the paradigm of Next-Token Prediction (NTP). Multi-Token Prediction (MTP) is motivated by higher decoding efficiency, extending NTP to enable LLMs to draft multiple tokens during each forward pass. However, existing MTP approaches pretrain MTP along with the target LLM, making it difficult to unlock MTP for LLMs without official support. In this work, we propose a post-hoc approach to training an MTP module for a target LLM, providing an efficient way to evolve the LLM from NTP to MTP. The proposed approach features two main characteristics. (1) No changes to the target LLM, since it is frozen during MTP training. (2) Efficient MTP training via self-distillation from the target LLM’s native NTP capability. Results show that our approach can post-hoc train a performant MTP module via lightweight pretraining.",
+        "identifiers": [
+          "SemanticScholar:99c90b4eaf1e9bfbc07ae0fb4fb6c007309a7167"
+        ],
+        "semantic_scholar_id": "99c90b4eaf1e9bfbc07ae0fb4fb6c007309a7167",
+        "doi": "10.3390/electronics15071533",
+        "canonical_id": "DOI:10.3390/electronics15071533",
+        "authors": [
+          "Yang Xu",
+          "W. Che"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 231,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.11530",
+      "identity_tokens": [
+        "id:SemanticScholar:1dda723f9d8dccc63fdfa9a11eea489ea3afa0b3",
+        "id:arXiv:2604.11530",
+        "title:beyond attention scores svdbased vision token pruning for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2604.11530"
+      ],
+      "record": {
+        "title": "Beyond Attention Scores: SVD-Based Vision Token Pruning for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2604.11530",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have revolutionized multi-modal learning by jointly processing visual and textual information. Yet, they face significant challenges due to the high computational and memory demands of processing long sequences of vision tokens. Many existing methods rely on local heuristics, such as attention scores or token norms. However, these criteria suffer from positional bias and information dispersion, limiting their ability to preserve essential content at high pruning ratios and leading to performance degradation on visually detailed images. To address these issues, we propose SVD-Prune, a training-free, plug-and-play token pruning method based on Singular Value Decomposition. It decomposes the vision token feature matrix and selects the top-k tokens using statistical leverage scores, ensuring only tokens contributing most to the dominant global variance are preserved. Experiments show that SVD-Prune consistently outperforms prior pruning methods under extreme vision token budgets, maintaining strong performance even with 32 and 16 vision tokens.",
+        "identifiers": [
+          "SemanticScholar:1dda723f9d8dccc63fdfa9a11eea489ea3afa0b3"
+        ],
+        "semantic_scholar_id": "1dda723f9d8dccc63fdfa9a11eea489ea3afa0b3",
+        "canonical_id": "arXiv:2604.11530",
+        "arxiv_id": "2604.11530",
+        "authors": [
+          "Yvon Apedo",
+          "M. Poreba",
+          "M. Szczepanski",
+          "S. Bouchafa"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3579990.3580015",
+      "identity_tokens": [
+        "id:DOI:10.1145/3579990.3580015",
+        "id:SemanticScholar:d3bb06607e7ba13d26621d0824b139361d6c9f74",
+        "title:accelerating deep neural networks on mobile multicore npus",
+        "url:https://doi.org/10.1145/3579990.3580015"
+      ],
+      "record": {
+        "title": "Accelerating Deep Neural Networks on Mobile Multicore NPUs",
+        "source_url": "https://doi.org/10.1145/3579990.3580015",
+        "year": 2023,
+        "published": "2023-02-17",
+        "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Neural processing units (NPUs) have become indispensable parts of mobile SoCs. Furthermore, integrating multiple NPU cores into a single chip becomes a promising solution for ever-increasing computing power demands in mobile devices. This paper addresses techniques to maximize the utilization of NPU cores and reduce the latency of on-device inference. Mobile NPUs typically have a small amount of local memory (or scratch pad memory, SPM) that provides space only enough for input/output tensors and weights of one layer operation in deep neural networks (DNNs). Even in multicore NPUs, such local memories are distributed across the cores. In such systems, executing network layer operations in parallel is the primary vehicle to achieve performance. By partitioning a layer of DNNs into multiple sub-layers, we can execute them in parallel on multicore NPUs. Within a core, we can also employ pipelined execution to reduce the execution time of a sub-layer. In this execution model, synchronizing parallel execution and loading/storing intermediate tensors in global memory are the main bottlenecks. To alleviate these problems, we propose novel optimization techniques which carefully consider partitioning direction, execution order, synchronization, and global memory access. Using six popular convolutional neural networks (CNNs), we evaluate our optimization techniques in a flagship mobile SoC with three cores. Compared to the highest-performing partitioning approach, our techniques improve performance by 23%, achieving a speedup of 2.1x over single-core systems.",
+        "identifiers": [
+          "SemanticScholar:d3bb06607e7ba13d26621d0824b139361d6c9f74"
+        ],
+        "semantic_scholar_id": "d3bb06607e7ba13d26621d0824b139361d6c9f74",
+        "doi": "10.1145/3579990.3580015",
+        "canonical_id": "DOI:10.1145/3579990.3580015",
+        "authors": [
+          "Hanwoong Jung",
+          "He-Xiang Ji",
+          "A. Pushchin",
+          "Maxim Ostapenko",
+          "Wenlong Niu",
+          "Ilya Palachev",
+          "Yutian Qu",
+          "Pavel Fedin",
+          "Yuri Gribov",
+          "Heewoo Nam",
+          "Dongguen Lim",
+          "Hyunjun Kim",
+          "Joonho Song",
+          "Seungwon Lee",
+          "Hwansoo Han"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1375,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3808707.3808864",
+      "identity_tokens": [
+        "id:DOI:10.1145/3808707.3808864",
+        "id:SemanticScholar:dba6bb21412550ffef4dcdb595cda3ada2a703dd",
+        "title:a domestic npuclusterbased large language model service platform construction optimization and evaluation",
+        "url:https://doi.org/10.1145/3808707.3808864"
+      ],
+      "record": {
+        "title": "A Domestic NPU-Cluster-Based Large Language Model Service Platform: Construction, Optimization, and Evaluation",
+        "source_url": "https://doi.org/10.1145/3808707.3808864",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "Proceedings of the 2nd International Conference on Digital Management and Information Technology",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This article introduces a large language model (LLM) service platform based on a domestic NPU cluster, aiming to meet the key challenges such as insufficient computing resources, complex maintenance, and hallucinations in on-premises deployment. The platform adopts a heterogeneous model architecture, where computational nodes utilize the Ascend 910B NPU for independent model execution (such as Qwen3 series for complex reasoning and multimodal tasks), reducing cross-node synchronization overhead and enriching LLM service types. Through W8A8 quantization and resource isolation, it demonstrates excellent reliability (92.60% request success rate, vs. 90.90% for the single-cluster approach) and delay reduction (TTFT 2.69 seconds, a 40% decrease from 4.51 seconds) in an empirical verification of 200 concurrent requests. Equipped with a standardized API management platform, it realizes unified interface encapsulation, efficient reuse of computing resources, and fine-grained usage control, significantly lowering the threshold for service invocation. This service platform also expands the knowledge scope of LLMs through RAG technology and enables scenario-specific customization of general models. This work provides a repeatable engineering blueprint for artificial intelligence infrastructure, significantly improving service efficiency and quality.",
+        "identifiers": [
+          "SemanticScholar:dba6bb21412550ffef4dcdb595cda3ada2a703dd"
+        ],
+        "semantic_scholar_id": "dba6bb21412550ffef4dcdb595cda3ada2a703dd",
+        "doi": "10.1145/3808707.3808864",
+        "canonical_id": "DOI:10.1145/3808707.3808864",
+        "authors": [
+          "Lin Shi",
+          "Ling Du",
+          "Jinrong Huang",
+          "Gang Wang",
+          "Zhibin Luo",
+          "Guang-Shen Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 290,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539302",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539302",
+        "id:SemanticScholar:3502a2fe013e561dd162ae8294ff33c2c7c8c3a0",
+        "title:flare finetuning relu with fire for efficient longcontext inference",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539302"
+      ],
+      "record": {
+        "title": "FLARE: Finetuning ReLU With FIRE for Efficient Long-Context Inference",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539302",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) on resource-constrained edge devices, such as mobile phones or IoT devices, is highly desirable for enabling secure, personalized on-device AI. However, there are significant challenges due to these models’ high computational and memory demands. A key bottleneck lies in the Transformer’s attention block, especially when handling long contexts. Techniques like model architectures with Rectified Linear Unit (ReLU) activations for Softmax and FIRE positional encoding (a resource-efficient, automatic context-length-scaling alternative to Rotary Positional Embedding (RoPE)) have each independently shown promise in reducing the computational complexity of the attention block, but the proper alchemy for combining their benefits remains underexplored. In this paper, we show a method for combining FIRE and ReLU that maintains low-validation loss at long contexts. We also introduce FLARE, a new algorithm that further improves efficiency by removing operations from the learned relative position encoding in FIRE. Our approach leads to faster inference on long sequences, robust generalization to varying context lengths, and lower validation loss compared to baseline models. FLARE achieves a significant reduction in power and area consumption. On custom hardware, it achieves a 6× higher operating frequency than Softmax, while occupying 57× less silicon area (measured under different throughput settings) and consuming 600× less energy. Our results indicate that FLARE represents a significant step towards deploying powerful LLMs efficiently on resource-limited devices. Code and hardware designs are publicly available at: https://github.com/ReaLLMASIC/nanoGPT.",
+        "identifiers": [
+          "SemanticScholar:3502a2fe013e561dd162ae8294ff33c2c7c8c3a0"
+        ],
+        "semantic_scholar_id": "3502a2fe013e561dd162ae8294ff33c2c7c8c3a0",
+        "doi": "10.23919/DATE69613.2026.11539302",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539302",
+        "authors": [
+          "Michael Moffatt",
+          "Jun-Yi Luo",
+          "Haoran Cheng",
+          "Qi-Long Wang",
+          "Xin Jiang",
+          "Guan-Chen Tao",
+          "Shi-Wei Liu",
+          "Kauna Lei",
+          "Gregory Kielian",
+          "Mehdi Saligane"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icici68867.2026.11565014",
+      "identity_tokens": [
+        "id:DOI:10.1109/icici68867.2026.11565014",
+        "id:SemanticScholar:7dd6b4fd4cd104fc12330bb1fdcc080880e7d6d1",
+        "title:hybrid compression of large language models using structured pruning and quantization",
+        "url:https://doi.org/10.1109/ICICI68867.2026.11565014"
+      ],
+      "record": {
+        "title": "Hybrid Compression of Large Language Models using Structured Pruning and Quantization",
+        "source_url": "https://doi.org/10.1109/ICICI68867.2026.11565014",
+        "year": 2026,
+        "published": "2026-04-24",
+        "venue": "International Conference Intelligent Data Communication Technologies and Internet Things",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The evolution of Large Language Models (LLMs) such as GPT has been incredible, and natural language generation is the area that these models have almost entirely taken over. Their huge size and number of parameters—over a billion—still create problems related to storage, memory, and computation, especially when it comes to deploying at the edge. Compression techniques such as pruning and quantization greatly help with these issues, but picking one often implies giving up some accuracy, efficiency, and the ability to generalize. A new hybrid compression technique is proposed in this study, which combines the two: structured pruning and quantization. The structure is first pruned by getting rid of the whole low-importance attention heads and neurons, among which the biggest part of the computational cost is. After the pruning, quantization is applied to weights and activations to convert them into low-bit representation. This representation greatly increases memory saving and speeds up the process. Quantization of this type secures that it will only take place on the most vital parts, thus, the least accuracy will be lost and, in the opposite, the size of the compression will be the most. The experimental results on the GPT-2 model confirm our method leads to a remarkable reduction in the number of parameters, and inference times along with a slight drop in performance, thus enabling the application of large models on resource-limited platforms.",
+        "identifiers": [
+          "SemanticScholar:7dd6b4fd4cd104fc12330bb1fdcc080880e7d6d1"
+        ],
+        "semantic_scholar_id": "7dd6b4fd4cd104fc12330bb1fdcc080880e7d6d1",
+        "doi": "10.1109/ICICI68867.2026.11565014",
+        "canonical_id": "DOI:10.1109/ICICI68867.2026.11565014",
+        "authors": [
+          "Priyanka Shivaramaiah",
+          "Roopesh Ramesh",
+          "Khushboo Pandey",
+          "Kalyan Nagraj"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 213,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icfec69006.2026.00011",
+      "identity_tokens": [
+        "id:DOI:10.1109/icfec69006.2026.00011",
+        "id:SemanticScholar:f95bee05b9d59b84b8da220c2c18980e04299e92",
+        "title:layerwise weight sharing for efficient transformer on socs",
+        "url:https://doi.org/10.1109/ICFEC69006.2026.00011"
+      ],
+      "record": {
+        "title": "Layer-Wise Weight Sharing for Efficient Transformer on SoCs",
+        "source_url": "https://doi.org/10.1109/ICFEC69006.2026.00011",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "International Conference on Fog and Edge Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models such as BERT have achieved remarkable success across a wide range of natural language processing tasks. However, deploying them on resource-constrained devices, including System-on-Chips (SoCs), remains challenging due to limited memory and computational capacity of these devices. Weight sharing has proved to be an effective approach for significantly reducing model size, yet designing an efficient layer-wise weight sharing framework that achieves high compression while maintaining model performance and low latency is not a trivial task. In this paper, we systematically analyze the impact of key weight sharing hyperparameters on model performance, model size, and latency, and propose a Genetic Algorithm-based optimization framework to automatically identify the optimal configuration for each layer—balancing performance, compression ratio, and inference speed. Additionally, through targeted modifications and efficient on-the-fly decompression, we demonstrate that the proposed weight sharing framework introduces no additional latency overhead and can even reduce inference time. Compared to uniform compression, our approach makes transformer blocks with substantially lower memory requirements and reduced latency while maintaining competitive performance across evaluation metrics.",
+        "identifiers": [
+          "SemanticScholar:f95bee05b9d59b84b8da220c2c18980e04299e92"
+        ],
+        "semantic_scholar_id": "f95bee05b9d59b84b8da220c2c18980e04299e92",
+        "doi": "10.1109/ICFEC69006.2026.00011",
+        "canonical_id": "DOI:10.1109/ICFEC69006.2026.00011",
+        "authors": [
+          "Saeed Khalilian",
+          "Hang Xu",
+          "N. Meratnia",
+          "Anuj Pathania"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 206,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15372",
+      "identity_tokens": [
+        "id:SemanticScholar:6e58b9d9196d50ac080461eb396443dcdf882ddc",
+        "id:arXiv:2610.15372",
+        "title:fewer bits more tries recovering capability under memory constraints",
+        "url:https://arxiv.org/abs/2610.15372"
+      ],
+      "record": {
+        "title": "Fewer Bits, More Tries: Recovering Capability Under Memory Constraints",
+        "source_url": "https://arxiv.org/abs/2610.15372",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are generally more capable than smaller ones, but their memory requirements can make local deployment difficult. We ask whether part of this capability gap can instead be recovered by running a smaller or more compressed model multiple times and selecting among its outputs using public or model-generated tests. Single-user local inference can leave hardware underutilized, allowing parallel candidate generation to trade additional test-time computation for accuracy at modest latency cost. Across four code-generation benchmarks, verified retry recovers substantial accuracy lost to model size or compression. A 7B Qwen model with eight parallel attempts essentially matches a 32B model on MBPP+ and exceeds it on the other three benchmarks, while using about $4\\times$ less model memory, running up to $6\\times$ faster, and using less energy, as measured on Nvidia GPU. We observe similar tradeoff across model sizes, compression levels and hardware choices, although exact benefit depends on the hardware profile and problem setting. These results show that model capacity can be traded for verified test-time computation when correct solutions remain reachable within a modest retry budget.",
+        "identifiers": [
+          "SemanticScholar:6e58b9d9196d50ac080461eb396443dcdf882ddc"
+        ],
+        "semantic_scholar_id": "6e58b9d9196d50ac080461eb396443dcdf882ddc",
+        "canonical_id": "arXiv:2610.15372",
+        "arxiv_id": "2610.15372",
+        "authors": [
+          "Tomer Galanti",
+          "J. Susskind",
+          "Eran Malach"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cicc63670.2025.10983594",
+      "identity_tokens": [
+        "id:DOI:10.1109/cicc63670.2025.10983594",
+        "id:SemanticScholar:962262f387198f4df664dde083fc2bb0b6c40058",
+        "title:analogai hardware accelerators for lowlatency transformerbased language models invited",
+        "url:https://doi.org/10.1109/CICC63670.2025.10983594"
+      ],
+      "record": {
+        "title": "Analog-AI Hardware Accelerators for Low-Latency Transformer-Based Language Models (Invited)",
+        "source_url": "https://doi.org/10.1109/CICC63670.2025.10983594",
+        "year": 2025,
+        "published": "2025-04-13",
+        "venue": "IEEE Custom Integrated Circuits Conference",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Analog Non-Volatile Memory-based accelerators offer highthroughput and energy-efficient Multiply-Accumulate operations for the large Fully-Connected layers that dominate Transformer-based Large Language Models (LLMs). We describe recent chip-demo and architectural efforts, quantify the unique benefits of Fully- (rather than Partially-) Weight-Stationary systems, and discuss factors affecting latency of token-processing and generation.",
+        "identifiers": [
+          "SemanticScholar:962262f387198f4df664dde083fc2bb0b6c40058"
+        ],
+        "semantic_scholar_id": "962262f387198f4df664dde083fc2bb0b6c40058",
+        "doi": "10.1109/CICC63670.2025.10983594",
+        "canonical_id": "DOI:10.1109/CICC63670.2025.10983594",
+        "authors": [
+          "G. Burr",
+          "H. Tsai",
+          "I. Boybat",
+          "W. Simon",
+          "J. Büchel",
+          "A. Vasilopoulos",
+          "P. Narayanan",
+          "A. Fasoli",
+          "K. Hosokawa",
+          "M. Le Gallo",
+          "M. Ishii",
+          "Y. Kohda",
+          "A. Okazaki",
+          "A. Chen",
+          "C. Mackin",
+          "E. Ferro",
+          "K. El Maghraoui",
+          "H. Benmeziane",
+          "T. Philicelli",
+          "C. Lammie",
+          "A. Friz",
+          "J. Luquin",
+          "S. Jain",
+          "A. Sebastian",
+          "V. Narayanan"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 589,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscsic67494.2025.11351976",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscsic67494.2025.11351976",
+        "id:SemanticScholar:287eb4514e597b2405de539dc1549b543cf2ca99",
+        "title:mcmla accelerating multihead latent attention on riscv manycore chips",
+        "url:https://doi.org/10.1109/ISCSIC67494.2025.11351976"
+      ],
+      "record": {
+        "title": "MC-MLA: Accelerating Multi-Head Latent Attention on RISC-V Many-Core Chips",
+        "source_url": "https://doi.org/10.1109/ISCSIC67494.2025.11351976",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "International Symposium on Computer Science and Intelligent Control",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the core mechanism of the DeepSeek-V3 model, Multi-Head Latent Attention (MLA) significantly reduces the computational complexity by low-rank matrix factorization. However, the memory access overhead and computing bottlenecks are becoming increasingly prominent as the sequence length continues to grow. The performance of this mechanism is severely limited by the efficiency of memory access. Meanwhile, existing research on MLA acceleration mostly relies on NVIDIA GPUs and the CUDA ecosystem, which significantly constrains the expansion of its application scenario. Given this, this paper proposes Many-Core Optimized Multi-Head Latent Attention (MC-MLA), which is committed to achieving efficient parallel acceleration of MLA on a many-core RISC-V architecture. The scheme includes two core optimizations: (1) KV Reuse-Oriented Parallel Dataflow Optimization: For the matrix absorption characteristics in MLA, we design an online transposition dataflow that absorbs value matrices into key matrices. This approach ensures efficient reuse of KV-Cache while achieving pipeline overlap between data movement and computation, thereby reducing memory access pressure and hiding latency for KV-Cache load operations. (2) Balanced Tree-like Inter-Core Reduction Algorithm based on Semaphore: This algorithm resolves workload imbalance in high-parallel scenarios, significantly promoting many-core collaboration efficiency. The experimental results demonstrate that MC-MLA can enhance the computational efficiency of MLA under various configurations of batch size, number of heads, and sequence length. Final comparison results reveal that MC-MLA effectively alleviates key bottlenecks: load imbalance in reduction operations and NoC congestion in memory accesses, achieving up to $1.69 \\times$ performance improvement and 76 % of bandwidth utilization. This competitive implementation provides a reference for MLA adaptation and performance optimization on similar many-core architectures.",
+        "identifiers": [
+          "SemanticScholar:287eb4514e597b2405de539dc1549b543cf2ca99"
+        ],
+        "semantic_scholar_id": "287eb4514e597b2405de539dc1549b543cf2ca99",
+        "doi": "10.1109/ISCSIC67494.2025.11351976",
+        "canonical_id": "DOI:10.1109/ISCSIC67494.2025.11351976",
+        "authors": [
+          "Xi-Fu Qian",
+          "Qi-Bin Chen",
+          "Xin-Xin Zhao",
+          "Min Liu",
+          "Qi-Sheng Tong",
+          "Kai Jiang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 423,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/a-sscc67472.2025.11349430",
+      "identity_tokens": [
+        "id:DOI:10.1109/a-sscc67472.2025.11349430",
+        "id:SemanticScholar:0f4fed0daa2513bef58f25061283f0eb1c801a14",
+        "title:pdacc a 541 tokenssllama12b effective throughput prefilldecode disaggregated mcmbased accelerator for multitask large language model applications",
+        "url:https://doi.org/10.1109/a-sscc67472.2025.11349430"
+      ],
+      "record": {
+        "title": "PDAcc: A 541 Tokens/s@Llama-1.2B Effective Throughput Prefill-Decode Disaggregated MCM-based Accelerator for Multi-task Large Language Model Applications",
+        "source_url": "https://doi.org/10.1109/a-sscc67472.2025.11349430",
+        "year": 2025,
+        "published": "2025-11-02",
+        "venue": "International Symposium on Security in Computing and Communications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Abstrack: Large Language Models (LLMs) have emerged as the backbone of many modern AI applications. LLM inference has two stages: prefill processes the full input at once, which is compute heavy and relatively time-consuming; in contrast, decode then generates tokens autoregressively with little per-step work. The two stages require markedly different resources, and unpredictable task arrivals and sequence lengths often force them to run concurrently in multi-tenant inference, as shown in Fig. 1. Co-optimization must therefore be considered to preserve effective throughput (ETPS)-tokens per second over the full request (prefill and decode combined). Aggregating the prefill and decode stages into a mixed batch enhances weight utilization [1–3]. However, the execution time of prefill and decode accumulates, causing longer latency and preventing separate optimization strategies for the two stages.",
+        "identifiers": [
+          "SemanticScholar:0f4fed0daa2513bef58f25061283f0eb1c801a14"
+        ],
+        "semantic_scholar_id": "0f4fed0daa2513bef58f25061283f0eb1c801a14",
+        "doi": "10.1109/a-sscc67472.2025.11349430",
+        "canonical_id": "DOI:10.1109/a-sscc67472.2025.11349430",
+        "authors": [
+          "Huan-Yu Wang",
+          "Yang Wang",
+          "Jia-Xin Yang",
+          "Shaojun Wei",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 386,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:86726bbeaf1b1a00d66c45f98dffdb6f928331cf496cb2d767b40c3c3b49bc89",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

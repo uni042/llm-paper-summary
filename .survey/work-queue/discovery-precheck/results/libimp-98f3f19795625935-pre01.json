@@ -1,0 +1,285 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-98f3f19795625935-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-98f3f1979562",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2307.03712",
+    "arXiv:2607.04443"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d21e6cfb132fde5e430499c3d3b499649cfde374",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T11:21:44.474323+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2307.03712",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04443",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "source_url": "https://arxiv.org/abs/2607.04443",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+      "identifiers": [
+        "SemanticScholar:30b429e9ce6a5afacd2cb8c887a28b1cab72d2f9"
+      ],
+      "semantic_scholar_id": "30b429e9ce6a5afacd2cb8c887a28b1cab72d2f9",
+      "canonical_id": "arXiv:2607.04443",
+      "arxiv_id": "2607.04443",
+      "doi": "10.48550/arXiv.2607.04443",
+      "authors": [
+        "Liang-Hua Huang",
+        "Zhi-Fan Wu",
+        "Yu-Peng Shi",
+        "Wei Wang",
+        "Mengyang Feng",
+        "Jun-Jie He",
+        "Chen-Wei Xie",
+        "Yu Liu",
+        "Jing-Ren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Bao-Le Ai",
+        "Chen Liang",
+        "Cheng Yu",
+        "Chong-Yang Zhong",
+        "Jin-Wei Qi",
+        "Kai Zhu",
+        "Pan-Deng Li",
+        "Peng Zhang",
+        "Wen-Yuan Zhang",
+        "Xin-Hua Cheng",
+        "Yi-Tong Huang",
+        "Yun Zheng",
+        "Yu-Xiang Bao",
+        "Yu-Zheng Wang",
+        "Zou-Bin Bi"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 141,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "INT-FP-QSim: Mixed Precision and Formats For Large Language Models and Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2307.03712",
+      "year": 2023,
+      "published": "2023-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The recent rise of large language models (LLMs) has resulted in increased efforts towards running LLMs at reduced precision. Running LLMs at lower precision supports resource constraints and furthers their democratization, enabling users to run billion-parameter LLMs on their personal devices. To supplement this ongoing effort, we propose INT-FP-QSim: an open-source simulator that enables flexible evaluation of LLMs and vision transformers at various numerical precisions and formats. INT-FP-QSim leverages existing open-source repositories such as TensorRT, QPytorch and AIMET for a combined simulator that supports various floating point and integer formats. With the help of our simulator, we survey the impact of different numerical formats on the performance of LLMs and vision transformers at 4-bit weights and 4-bit or 8-bit activations. We also compare recently proposed methods like Adaptive Block Floating Point, SmoothQuant, GPTQ and RPTQ on the model performances. We hope INT-FP-QSim will enable researchers to flexibly simulate models at various precisions to support further research in quantization of LLMs and vision transformers.",
+      "identifiers": [
+        "SemanticScholar:3bade55fb2ebe46fd1140c89e31f52b6a508463c"
+      ],
+      "semantic_scholar_id": "3bade55fb2ebe46fd1140c89e31f52b6a508463c",
+      "canonical_id": "arXiv:2307.03712",
+      "arxiv_id": "2307.03712",
+      "doi": "10.48550/arXiv.2307.03712",
+      "authors": [
+        "Lakshmi Nair",
+        "Mikhail Bernadskiy",
+        "Arulselvan Madhavan",
+        "C. Chan",
+        "Ayon Basumallik",
+        "D. Bunandar"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1235,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.04443",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04443",
+        "id:SemanticScholar:30b429e9ce6a5afacd2cb8c887a28b1cab72d2f9",
+        "id:arXiv:2607.04443",
+        "title:wanstreamer v02 higher resolution same latency",
+        "url:https://arxiv.org/abs/2607.04443"
+      ],
+      "record": {
+        "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+        "source_url": "https://arxiv.org/abs/2607.04443",
+        "year": 2026,
+        "published": "2026-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Wan-Streamer v0.2, a latency-preserving upgrade of the native-streaming, end-to-end audio-visual interaction model. v0.2 keeps the v0.1 modeling formulation, but raises the interactive output stream from 192x336 to 640x368 while preserving approximately 200 ms model-side signal-to-signal latency at 25 FPS. The higher-resolution stream supports scene-grounded mid-shot agents whose posture, gaze, hands, nearby objects, and local scene layout remain legible during real-time conversation. To support the larger visual stream without adding user-visible delay, v0.2 keeps the thinker as a single-GPU low-latency path for streaming perception, the short language/state Transformer pass that builds the generation cache, and final decoding. The performer becomes a multi-GPU Ulysses-style context-parallel group for the expensive next-unit latent generation. Each performer rank writes incoming K/V into a pre-sharded local cache. The long high-resolution latent video sequence is split across ranks for denoising and gathered through Ulysses communication, while the much shorter audio latent sequence is generated without sequence sharding. In this split, the thinker's language/state computation reaches the performer only as K/V conditioning, so no separate language sequence has to be communicated inside the performer group. This concentrates additional hardware on visual generation while preserving the compact thinker-performer boundary, keeping total remote interaction latency at approximately 550 ms when a 350 ms bidirectional network budget is included.",
+        "identifiers": [
+          "SemanticScholar:30b429e9ce6a5afacd2cb8c887a28b1cab72d2f9"
+        ],
+        "semantic_scholar_id": "30b429e9ce6a5afacd2cb8c887a28b1cab72d2f9",
+        "canonical_id": "arXiv:2607.04443",
+        "arxiv_id": "2607.04443",
+        "doi": "10.48550/arXiv.2607.04443",
+        "authors": [
+          "Liang-Hua Huang",
+          "Zhi-Fan Wu",
+          "Yu-Peng Shi",
+          "Wei Wang",
+          "Mengyang Feng",
+          "Jun-Jie He",
+          "Chen-Wei Xie",
+          "Yu Liu",
+          "Jing-Ren Zhou",
+          "Ang Wang",
+          "Bang Zhang",
+          "Bao-Le Ai",
+          "Chen Liang",
+          "Cheng Yu",
+          "Chong-Yang Zhong",
+          "Jin-Wei Qi",
+          "Kai Zhu",
+          "Pan-Deng Li",
+          "Peng Zhang",
+          "Wen-Yuan Zhang",
+          "Xin-Hua Cheng",
+          "Yi-Tong Huang",
+          "Yun Zheng",
+          "Yu-Xiang Bao",
+          "Yu-Zheng Wang",
+          "Zou-Bin Bi"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 141,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2307.03712",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2307.03712",
+        "id:SemanticScholar:3bade55fb2ebe46fd1140c89e31f52b6a508463c",
+        "id:arXiv:2307.03712",
+        "title:intfpqsim mixed precision and formats for large language models and vision transformers",
+        "url:https://arxiv.org/abs/2307.03712"
+      ],
+      "record": {
+        "title": "INT-FP-QSim: Mixed Precision and Formats For Large Language Models and Vision Transformers",
+        "source_url": "https://arxiv.org/abs/2307.03712",
+        "year": 2023,
+        "published": "2023-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The recent rise of large language models (LLMs) has resulted in increased efforts towards running LLMs at reduced precision. Running LLMs at lower precision supports resource constraints and furthers their democratization, enabling users to run billion-parameter LLMs on their personal devices. To supplement this ongoing effort, we propose INT-FP-QSim: an open-source simulator that enables flexible evaluation of LLMs and vision transformers at various numerical precisions and formats. INT-FP-QSim leverages existing open-source repositories such as TensorRT, QPytorch and AIMET for a combined simulator that supports various floating point and integer formats. With the help of our simulator, we survey the impact of different numerical formats on the performance of LLMs and vision transformers at 4-bit weights and 4-bit or 8-bit activations. We also compare recently proposed methods like Adaptive Block Floating Point, SmoothQuant, GPTQ and RPTQ on the model performances. We hope INT-FP-QSim will enable researchers to flexibly simulate models at various precisions to support further research in quantization of LLMs and vision transformers.",
+        "identifiers": [
+          "SemanticScholar:3bade55fb2ebe46fd1140c89e31f52b6a508463c"
+        ],
+        "semantic_scholar_id": "3bade55fb2ebe46fd1140c89e31f52b6a508463c",
+        "canonical_id": "arXiv:2307.03712",
+        "arxiv_id": "2307.03712",
+        "doi": "10.48550/arXiv.2307.03712",
+        "authors": [
+          "Lakshmi Nair",
+          "Mikhail Bernadskiy",
+          "Arulselvan Madhavan",
+          "C. Chan",
+          "Ayon Basumallik",
+          "D. Bunandar"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1235,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:09e578ef0928a33886828510d0e76244f735432755c9080e633db0f631b0edc9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

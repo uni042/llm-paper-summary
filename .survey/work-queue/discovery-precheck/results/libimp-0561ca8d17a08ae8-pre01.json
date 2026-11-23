@@ -1,0 +1,327 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0561ca8d17a08ae8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0561ca8d17a0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00094",
+    "arXiv:2603.11603",
+    "arXiv:2610.02251"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d21e6cfb132fde5e430499c3d3b499649cfde374",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T11:21:44.128077+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00094",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.11603",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.02251",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AutoScout: Structured Optimization for Automating ML System Configuration",
+      "source_url": "https://arxiv.org/abs/2603.11603",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Machine learning (ML) systems expose a rapidly expanding configuration space spanning model-parallelism strategies, communication optimizations, and low-level runtime parameters. End-to-end system efficiency is highly sensitive to these choices, yet identifying high-performance configurations is challenging due to heterogeneous feature types (e.g., sparse and dense parameters), conditional dependencies (e.g., valid execution parameters only under specific upstream decisions), and the high search (profiling) cost. Existing approaches either optimize a narrow subset of configuration dimensions or rely on ad-hoc heuristics that fail to generalize as configuration spaces continue to grow. We present AutoScout, a general-purpose systems configurator for ML training, fine-tuning, and inference. It formulates the system configuration as a mixed-discrete/continuous optimization problem with hierarchical dependencies and introduces a hybrid optimization framework that jointly refines sparse structural decisions and dense execution parameters. To reduce profiling cost, AutoScout adaptively prioritizes high-impact configuration features and ensembles simulators with varying fidelity. Across diverse models, hardware platforms, and deployment objectives, AutoScout consistently identifies high-performance configurations, achieving 2.7-3.0$\\times$ training speedup over expert-tuned settings.",
+      "identifiers": [
+        "SemanticScholar:9261b86d456f62d9a7fa3f4cbc5878b278f7fe51"
+      ],
+      "semantic_scholar_id": "9261b86d456f62d9a7fa3f4cbc5878b278f7fe51",
+      "canonical_id": "arXiv:2603.11603",
+      "arxiv_id": "2603.11603",
+      "doi": "10.48550/arXiv.2603.11603",
+      "authors": [
+        "Jimmy Shong",
+        "Yuhan Ding",
+        "Yi-Hang Jiang",
+        "Liheng Jing",
+        "Hao-Nan Chen",
+        "Gao-Kai Zhang",
+        "Aditya Akella",
+        "Fan Lai"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RoCC: Harnessing Raster Operations Pipeline for Efficient Tensor Collective Communication",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00094",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces RoCC, which enables finegrained overlapping between compute and collective communication (CC) phases of LLM computing on GPUs, by offloading the CC to underutilized raster operations pipelines (ROPs). ROPs can provide fruitful performance for CC as they reside near the memory and have reduction computation capability. We first reverse engineer the ROP microarchitecture of two GPU architectures to model ROPs and add small logics to enable asynchronous computing and messaging for CC. We also decompose any CC operations into a sequence of ROP microoperations. In our cycle-level simulations of a 4- to 8-GPU node with LLM training workloads, RoCC delivers an average of 51% and 23% speedups over the non-overlapping baseline and oracle kernel fusion, with only $\\mathbf{2. 4 \\%} \\mathbf{L2}$ cache worth of area. On larger systems with 32 to 256 GPUs, RoCC consistently achieves speedups from 13-21%.",
+      "identifiers": [
+        "SemanticScholar:704ef35b27fd851851ded3e56beba820bdbd7cb4"
+      ],
+      "semantic_scholar_id": "704ef35b27fd851851ded3e56beba820bdbd7cb4",
+      "doi": "10.1109/ISCA66397.2026.00094",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00094",
+      "authors": [
+        "Yuan Feng",
+        "Daniel Wong",
+        "Hyeran Jeon"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Rank-Aware Speculative Sampling for Diffusion Draft Trees",
+      "source_url": "https://arxiv.org/abs/2610.02251",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative sampling accelerates diffusion generation by verifying inexpensive draft states in parallel while preserving the target law. Recent tree-based methods allocate the parallel compute budget more effectively than single-chain drafts, as demonstrated by Diffusion Greedy Rejection Sampling (D-GRS). D-GRS generates $K$ conditionally independent candidates per node, and sequentially tests them in their generation order. Yet the sampled candidates admit an informative ranking without additional target-model evaluations. To exploit this, we introduce Rank-Aware Speculative Sampling (RASS), a verification rule for speculative draft trees based on rank-aware list coupling. RASS orders draft candidates along the proposal-target mean displacement and samples a rank with weights optimized to minimize total variation between the selected-proposal and target laws. Finally, the selected candidate is maximally coupled with the target, with residual correction ensuring exact sampling for any choice of rank weights. We evaluate RASS on a Gaussian-mixture target, unconditional pixel-space generation on FFHQ, conditional generation on CIFAR-10, and latent diffusion with Stable Diffusion 3.5 using COCO2014 prompts. Measured by the ratio of standard to speculative sampling's target-model evaluation counts, RASS improves on D-GRS across the evaluated settings, with gains reaching approximately 20% on CIFAR-10 at matched compute budgets.",
+      "identifiers": [
+        "SemanticScholar:85c97ac5170b057587e9ca4779d3dada95534819"
+      ],
+      "semantic_scholar_id": "85c97ac5170b057587e9ca4779d3dada95534819",
+      "canonical_id": "arXiv:2610.02251",
+      "arxiv_id": "2610.02251",
+      "authors": [
+        "Marcello Bullo",
+        "Yan-Xiao Liu",
+        "Öykü Sıla Güner",
+        "Arpan Mukherjee",
+        "Deniz Gündüz"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.11603",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.11603",
+        "id:SemanticScholar:9261b86d456f62d9a7fa3f4cbc5878b278f7fe51",
+        "id:arXiv:2603.11603",
+        "title:autoscout structured optimization for automating ml system configuration",
+        "url:https://arxiv.org/abs/2603.11603"
+      ],
+      "record": {
+        "title": "AutoScout: Structured Optimization for Automating ML System Configuration",
+        "source_url": "https://arxiv.org/abs/2603.11603",
+        "year": 2026,
+        "published": "2026-03-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Machine learning (ML) systems expose a rapidly expanding configuration space spanning model-parallelism strategies, communication optimizations, and low-level runtime parameters. End-to-end system efficiency is highly sensitive to these choices, yet identifying high-performance configurations is challenging due to heterogeneous feature types (e.g., sparse and dense parameters), conditional dependencies (e.g., valid execution parameters only under specific upstream decisions), and the high search (profiling) cost. Existing approaches either optimize a narrow subset of configuration dimensions or rely on ad-hoc heuristics that fail to generalize as configuration spaces continue to grow. We present AutoScout, a general-purpose systems configurator for ML training, fine-tuning, and inference. It formulates the system configuration as a mixed-discrete/continuous optimization problem with hierarchical dependencies and introduces a hybrid optimization framework that jointly refines sparse structural decisions and dense execution parameters. To reduce profiling cost, AutoScout adaptively prioritizes high-impact configuration features and ensembles simulators with varying fidelity. Across diverse models, hardware platforms, and deployment objectives, AutoScout consistently identifies high-performance configurations, achieving 2.7-3.0$\\times$ training speedup over expert-tuned settings.",
+        "identifiers": [
+          "SemanticScholar:9261b86d456f62d9a7fa3f4cbc5878b278f7fe51"
+        ],
+        "semantic_scholar_id": "9261b86d456f62d9a7fa3f4cbc5878b278f7fe51",
+        "canonical_id": "arXiv:2603.11603",
+        "arxiv_id": "2603.11603",
+        "doi": "10.48550/arXiv.2603.11603",
+        "authors": [
+          "Jimmy Shong",
+          "Yuhan Ding",
+          "Yi-Hang Jiang",
+          "Liheng Jing",
+          "Hao-Nan Chen",
+          "Gao-Kai Zhang",
+          "Aditya Akella",
+          "Fan Lai"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00094",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00094",
+        "id:SemanticScholar:704ef35b27fd851851ded3e56beba820bdbd7cb4",
+        "title:rocc harnessing raster operations pipeline for efficient tensor collective communication",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00094"
+      ],
+      "record": {
+        "title": "RoCC: Harnessing Raster Operations Pipeline for Efficient Tensor Collective Communication",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00094",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces RoCC, which enables finegrained overlapping between compute and collective communication (CC) phases of LLM computing on GPUs, by offloading the CC to underutilized raster operations pipelines (ROPs). ROPs can provide fruitful performance for CC as they reside near the memory and have reduction computation capability. We first reverse engineer the ROP microarchitecture of two GPU architectures to model ROPs and add small logics to enable asynchronous computing and messaging for CC. We also decompose any CC operations into a sequence of ROP microoperations. In our cycle-level simulations of a 4- to 8-GPU node with LLM training workloads, RoCC delivers an average of 51% and 23% speedups over the non-overlapping baseline and oracle kernel fusion, with only $\\mathbf{2. 4 \\%} \\mathbf{L2}$ cache worth of area. On larger systems with 32 to 256 GPUs, RoCC consistently achieves speedups from 13-21%.",
+        "identifiers": [
+          "SemanticScholar:704ef35b27fd851851ded3e56beba820bdbd7cb4"
+        ],
+        "semantic_scholar_id": "704ef35b27fd851851ded3e56beba820bdbd7cb4",
+        "doi": "10.1109/ISCA66397.2026.00094",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00094",
+        "authors": [
+          "Yuan Feng",
+          "Daniel Wong",
+          "Hyeran Jeon"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.02251",
+      "identity_tokens": [
+        "id:SemanticScholar:85c97ac5170b057587e9ca4779d3dada95534819",
+        "id:arXiv:2610.02251",
+        "title:rankaware speculative sampling for diffusion draft trees",
+        "url:https://arxiv.org/abs/2610.02251"
+      ],
+      "record": {
+        "title": "Rank-Aware Speculative Sampling for Diffusion Draft Trees",
+        "source_url": "https://arxiv.org/abs/2610.02251",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative sampling accelerates diffusion generation by verifying inexpensive draft states in parallel while preserving the target law. Recent tree-based methods allocate the parallel compute budget more effectively than single-chain drafts, as demonstrated by Diffusion Greedy Rejection Sampling (D-GRS). D-GRS generates $K$ conditionally independent candidates per node, and sequentially tests them in their generation order. Yet the sampled candidates admit an informative ranking without additional target-model evaluations. To exploit this, we introduce Rank-Aware Speculative Sampling (RASS), a verification rule for speculative draft trees based on rank-aware list coupling. RASS orders draft candidates along the proposal-target mean displacement and samples a rank with weights optimized to minimize total variation between the selected-proposal and target laws. Finally, the selected candidate is maximally coupled with the target, with residual correction ensuring exact sampling for any choice of rank weights. We evaluate RASS on a Gaussian-mixture target, unconditional pixel-space generation on FFHQ, conditional generation on CIFAR-10, and latent diffusion with Stable Diffusion 3.5 using COCO2014 prompts. Measured by the ratio of standard to speculative sampling's target-model evaluation counts, RASS improves on D-GRS across the evaluated settings, with gains reaching approximately 20% on CIFAR-10 at matched compute budgets.",
+        "identifiers": [
+          "SemanticScholar:85c97ac5170b057587e9ca4779d3dada95534819"
+        ],
+        "semantic_scholar_id": "85c97ac5170b057587e9ca4779d3dada95534819",
+        "canonical_id": "arXiv:2610.02251",
+        "arxiv_id": "2610.02251",
+        "authors": [
+          "Marcello Bullo",
+          "Yan-Xiao Liu",
+          "Öykü Sıla Güner",
+          "Arpan Mukherjee",
+          "Deniz Gündüz"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b43ca21906501cdf512db2d3729e141c3bb8936a79c5360c8010fd9a0fe7b6e2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
