@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c963894a2d8c6069-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:ea3126b88dc191200ea0bf275f092cb70cbad319",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:ea3126b88dc191200ea0bf275f092cb70cbad319",
+    "identity_tokens": [
+      "SemanticScholar:ea3126b88dc191200ea0bf275f092cb70cbad319"
+    ],
+    "reason": "題目上はKVキャッシュ中心のLLMチャットボットサービングアーキテクチャで中核対象に合致するが、429で要旨未取得のため一次要旨による確認ができず保留とする。",
+    "first_checked_at": "2026-11-23T03:11:09+00:00",
+    "last_checked_at": "2026-11-23T03:11:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mooncake: Trading More Storage for Less Computation - A KVCache-centric Architecture for Serving LLM Chatbot"
+  },
+  "processed_at": "2026-11-23T03:11:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c963894a2d8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

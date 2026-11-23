@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbfbca2627baf2bf-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:afb67e38c04b0380a8800a242ef9afb43ac121b1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:afb67e38c04b0380a8800a242ef9afb43ac121b1",
+    "identity_tokens": [
+      "SemanticScholar:afb67e38c04b0380a8800a242ef9afb43ac121b1"
+    ],
+    "reason": "多変量時系列向けの2次元シーケンスモデル設計を扱う論文であり、対象は時系列予測であってLLMの推論サービングやデコード機構ではないため対象外とする。",
+    "first_checked_at": "2026-11-23T03:11:09+00:00",
+    "last_checked_at": "2026-11-23T03:11:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "E FFECTIVELY D ESIGNING 2-D IMENSIONAL S EQUENCE M ODELS FOR M ULTIVARIATE T IME S ERIES"
+  },
+  "processed_at": "2026-11-23T03:11:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbfbca2627ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

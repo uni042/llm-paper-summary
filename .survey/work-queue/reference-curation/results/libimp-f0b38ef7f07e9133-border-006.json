@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0b38ef7f07e9133-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:ad7709e2b539433605b98dbe32a760f0c44708c6",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:ad7709e2b539433605b98dbe32a760f0c44708c6",
+    "identity_tokens": [
+      "SemanticScholar:ad7709e2b539433605b98dbe32a760f0c44708c6"
+    ],
+    "reason": "Llamaを用いたLLMの効率的学習・推論技術という題名で推論技術も含む可能性はあるが、要旨を取得できず総説・解説類か新規の推論システム機構かが判別できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:11:10+00:00",
+    "last_checked_at": "2026-11-23T03:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Training and Inference: Techniques for Large Language Models Using Llama"
+  },
+  "processed_at": "2026-11-23T03:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0b38ef7f07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbfbca2627baf2bf-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:f8665a1a5dcf4c771c146edc67c353f007355911",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:f8665a1a5dcf4c771c146edc67c353f007355911",
+    "identity_tokens": [
+      "SemanticScholar:f8665a1a5dcf4c771c146edc67c353f007355911"
+    ],
+    "reason": "音声処理への事前学習モデルの活用を扱う論文であり、対象は音声分野であってLLMのサービング、デコード、KVキャッシュ等の推論システムではないため対象外とする。",
+    "first_checked_at": "2026-11-23T03:11:09+00:00",
+    "last_checked_at": "2026-11-23T03:11:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Leveraging Pre-training Models for Speech Processing"
+  },
+  "processed_at": "2026-11-23T03:11:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbfbca2627ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

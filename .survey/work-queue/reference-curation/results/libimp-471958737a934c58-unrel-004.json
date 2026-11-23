@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-471958737a934c58-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:5861636a1c3c0e9ccf6f683fe70b3b5182ef1697",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:5861636a1c3c0e9ccf6f683fe70b3b5182ef1697",
+    "identity_tokens": [
+      "SemanticScholar:5861636a1c3c0e9ccf6f683fe70b3b5182ef1697"
+    ],
+    "reason": "Whaleは深層学習モデルの学習を兆パラメータ規模へスケールさせる学習システムであり、タイトルとメタデータ上も学習基盤に限定されLLM推論への具体的な適用は確認できないため対象外である",
+    "first_checked_at": "2026-11-23T03:11:09+00:00",
+    "last_checked_at": "2026-11-23T03:11:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Whale: Scaling Deep Learning Model Training to the Trillions"
+  },
+  "processed_at": "2026-11-23T03:11:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-471958737a93",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

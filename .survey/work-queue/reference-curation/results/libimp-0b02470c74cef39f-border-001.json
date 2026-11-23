@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b02470c74cef39f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:3966c8baf94f2bc1340c8c0be7de3526e2b2930a",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:3966c8baf94f2bc1340c8c0be7de3526e2b2930a",
+    "identity_tokens": [
+      "SemanticScholar:3966c8baf94f2bc1340c8c0be7de3526e2b2930a",
+      "arXiv:2407.06483"
+    ],
+    "reason": "知識編集・モデル圧縮・機械忘却というテスト時介入の合成可能性を評価する枠組みであり、圧縮は扱うものの主目的は介入間の相互作用測定で、推論システムやサービングへの直接的な機構提案ではないため保留とする。",
+    "first_checked_at": "2026-11-18T06:39:32+00:00",
+    "last_checked_at": "2026-11-23T03:11:08+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "C OMPOSING K NOWLEDGE AND C OMPRESSION I NTER - VENTIONS FOR L ANGUAGE M ODELS"
+  },
+  "processed_at": "2026-11-23T03:11:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b02470c74ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

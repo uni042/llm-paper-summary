@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b02470c74cef39f-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:119a9595b10e9713031adf2aabd2bd7de78468ad",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:119a9595b10e9713031adf2aabd2bd7de78468ad",
+    "identity_tokens": [
+      "SemanticScholar:119a9595b10e9713031adf2aabd2bd7de78468ad"
+    ],
+    "reason": "注意層の二次ボトルネックを攻めるという題名から注意高速化ハードウェアの可能性はあるが、同名・類似名の既存研究と混在して一次要旨を特定できず、対象モデルや機構の詳細を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:11:08+00:00",
+    "last_checked_at": "2026-11-23T03:11:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ATTACC the Quadratic Bottleneck of Attention Layers"
+  },
+  "processed_at": "2026-11-23T03:11:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b02470c74ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

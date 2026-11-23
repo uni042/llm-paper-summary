@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0b38ef7f07e9133-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:40e033dee20c6c2051ce6330b8bf53576d3b91be",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:40e033dee20c6c2051ce6330b8bf53576d3b91be",
+    "identity_tokens": [
+      "SemanticScholar:40e033dee20c6c2051ce6330b8bf53576d3b91be"
+    ],
+    "reason": "抽象的思考連鎖による潜在推論の学習は推論過程の表現・能力を改善する学習手法であり、デコードやサービング、KVキャッシュ等の推論システム機構を扱うものではないため対象外とする。",
+    "first_checked_at": "2026-11-23T03:11:10+00:00",
+    "last_checked_at": "2026-11-23T03:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "L EARNING E FFICIENT L ATENT R EASONING W ITH A BSTRACT C HAIN - OF -T HOUGHT"
+  },
+  "processed_at": "2026-11-23T03:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0b38ef7f07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

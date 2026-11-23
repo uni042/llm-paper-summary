@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0b38ef7f07e9133-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:7dd6eb79aaac7c9f7c83168c631420ab8f19257c",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:7dd6eb79aaac7c9f7c83168c631420ab8f19257c",
+    "identity_tokens": [
+      "SemanticScholar:7dd6eb79aaac7c9f7c83168c631420ab8f19257c",
+      "arXiv:2601.02553"
+    ],
+    "reason": "LLMエージェント向け生涯メモリSimpleMemは意味圧縮と検索で推論時トークン消費を減らすが、対象はエージェントの対話履歴管理という応用層であり、KVキャッシュ等の推論システム機構ではないため関連が薄く保留とする。",
+    "first_checked_at": "2026-10-10T20:47:29+00:00",
+    "last_checked_at": "2026-11-23T03:11:10+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "E FFICIENT L IFELONG M EMORY FOR LLM"
+  },
+  "processed_at": "2026-11-23T03:11:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0b38ef7f07e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
