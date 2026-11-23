@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "c53dc3c1d0fb8a46cd211fa567b66838fd511058945b7f89ffce5cfd8ee82b47",
-  "canonical_id": "arXiv:2503.19876",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.19876-sla-awareness-for-ai-assisted-coding.md",
-  "lineage": "11-llm-serving-scheduling-disaggregation",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/2025-2503.19876-sla-awareness-for-ai-assisted-coding.md",
+  "canonical_id": "arXiv:2503.19876",
   "worker_completed_at": "2026-11-24T05:30:00+09:00",
   "worker_run_key": "muse-20261124-b7w1",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 210,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-11-23T20:12:45+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.19876-sla-awareness-for-ai-assisted-coding.md と 12 段落 / 3964文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-11-23T22:17:00+00:00"
 }
