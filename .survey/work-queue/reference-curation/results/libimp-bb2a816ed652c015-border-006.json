@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb2a816ed652c015-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.06666",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.06666",
+    "identity_tokens": [
+      "arXiv:2610.06666"
+    ],
+    "reason": "flow matchingによる潜在推論は推論計算で洗練可能で明示的CoTより効率的と主張するが、中心は潜在推論の学習方法の分析でありサービングやKVキャッシュ等の推論システム機構は不明瞭なため保留とする。",
+    "first_checked_at": "2026-11-23T03:23:08+00:00",
+    "last_checked_at": "2026-11-23T03:23:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "What Matters for Latent Reasoning with Flow Matching"
+  },
+  "processed_at": "2026-11-23T03:23:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb2a816ed652",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

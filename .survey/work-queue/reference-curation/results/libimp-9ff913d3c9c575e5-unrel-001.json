@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ff913d3c9c575e5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icnp65844.2025.11192443",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icnp65844.2025.11192443",
+    "identity_tokens": [
+      "DOI:10.1109/icnp65844.2025.11192443"
+    ],
+    "reason": "ZeRO-3による分散学習の集合通信をCPU・GPU協調メモリ管理で効率化するMAZ3であり、対象はLLMの分散学習時の通信とOOM回避であって、推論時の分散実行やサービングではないため対象外とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MAZ3: Memory-Assisted ZeRO-3 for Efficient Collective Communication"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ff913d3c9c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

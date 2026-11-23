@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a3631e0eb6216cf-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:0a33fdcf1a9a2ec119add2903a344e01b19be634",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:0a33fdcf1a9a2ec119add2903a344e01b19be634",
+    "identity_tokens": [
+      "SemanticScholar:0a33fdcf1a9a2ec119add2903a344e01b19be634"
+    ],
+    "reason": "LLM圧縮のための層除去と特異値選択を組み合わせたハイブリッド枝刈りという題名で推論向け圧縮に直結し得るが、要旨未取得のため圧縮率や推論高速化の具体的な機構と効果を確認できず保留とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Layer Removal: A Hybrid Pruning Framework Combining Layer Removal and Singular Value Selection for Efficient LLM Compression"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a3631e0eb62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

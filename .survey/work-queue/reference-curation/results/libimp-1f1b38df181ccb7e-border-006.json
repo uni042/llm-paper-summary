@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f1b38df181ccb7e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:1bc8acb3911b492dc58f778dc453bcebcf1b39a2",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:1bc8acb3911b492dc58f778dc453bcebcf1b39a2",
+    "identity_tokens": [
+      "SemanticScholar:1bc8acb3911b492dc58f778dc453bcebcf1b39a2"
+    ],
+    "reason": "言語モデルデコードにおける並列性の表現と活用を扱う題名で並列デコードによる推論高速化に直結し得るが、要旨未取得のため具体的なデコード機構と効果を確認できず保留とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "E XPRESSING AND E XPLOITING P ARALLELISM IN L ANGUAGE M ODEL D ECODING"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f1b38df181c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef0c1b818e2f6f2b-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icccworkshops67136.2025.11148149",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icccworkshops67136.2025.11148149",
+    "identity_tokens": [
+      "DOI:10.1109/icccworkshops67136.2025.11148149"
+    ],
+    "reason": "意味通信と出力長予測を組み合わせた効率的LLM推論枠組みを提案するが、主目的はエッジネットワーク上の意味通信であり、推論スケジューリングはその適応制御の一部にとどまり推論システムとしての機構が薄いため保留とする。",
+    "first_checked_at": "2026-11-23T03:23:08+00:00",
+    "last_checked_at": "2026-11-23T03:23:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Joint Semantic Communication and Output Length Prediction for Efficient Large Language Model Inference"
+  },
+  "processed_at": "2026-11-23T03:23:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef0c1b818e2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

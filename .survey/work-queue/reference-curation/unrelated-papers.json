@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-23T03:11:10+00:00",
-  "record_count": 13676,
+  "updated_at": "2026-11-23T03:23:08+00:00",
+  "record_count": 13723,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -196589,6 +196589,669 @@
         "worker-worklist discovery_review"
       ],
       "title": "Optimizing Dropout in LLM Training: Performance Comparison of Fusion and Overlap"
+    },
+    "SemanticScholar:1c53d27c742fb4658fa03085c7c2ca014a122385": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:1c53d27c742fb4658fa03085c7c2ca014a122385",
+      "identity_tokens": [
+        "SemanticScholar:1c53d27c742fb4658fa03085c7c2ca014a122385"
+      ],
+      "reason": "自己教師あり学習でタンパク質配列という生命のコードを解読するProtTransの研究で、生物学応用向け言語モデルの学習が対象でありLLM推論システムの機構とは無関係なため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ProtTrans: Towards Cracking the Language of Life’s Code Through Self-Supervised Learning"
+    },
+    "DOI:10.48550/arxiv.2407.13772": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2407.13772",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.13772",
+        "arXiv:2407.13772"
+      ],
+      "reason": "画像分類や物体検出向けの視覚状態空間モデルGroupMambaのパラメータ効率化が対象で、コンピュータビジョン用アーキテクチャでありLLM推論の実行やサービングを扱っていないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "GroupMamba: Parameter-Efficient and Accurate Group Visual State Space Model"
+    },
+    "DOI:10.1109/most69733.2026.00042": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/most69733.2026.00042",
+      "identity_tokens": [
+        "DOI:10.1109/most69733.2026.00042"
+      ],
+      "reason": "デバイス制約下でリアルタイムスパム検出を行うエッジ知能の研究で、用途特化の分類タスク向け実装でありLLM推論システムの汎用機構を扱っていないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "TinyLite: Efficient Edge Intelligence for Real-Time Spam Detection Under Device Constraints"
+    },
+    "DOI:10.1109/icaide65466.2025.11189454": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icaide65466.2025.11189454",
+      "identity_tokens": [
+        "DOI:10.1109/icaide65466.2025.11189454"
+      ],
+      "reason": "視覚Mambaアーキテクチャの構成を概観するサーベイで、対象は画像向け状態空間モデルの系統整理でありLLM推論のサービングやデコード機構とは関係しないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Survey on the Architecture of Visual Mamba"
+    },
+    "SemanticScholar:7a78688c8acb61dd38b902e3741cb4e06a0696cf": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7a78688c8acb61dd38b902e3741cb4e06a0696cf",
+      "identity_tokens": [
+        "SemanticScholar:7a78688c8acb61dd38b902e3741cb4e06a0696cf"
+      ],
+      "reason": "Wikipedia要旨を題材にフロンティアモデル同士の通信効率をlog質問ゲームで測る研究で、モデル間通信の能力評価が中心でありLLM推論システムの実行機構を提案するものではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Playing log( N )-Questions over Wikipedia Abstracts: Communication Efficiency Between Paired Frontier Models"
+    },
+    "SemanticScholar:de9f8adb665468e75ee058d72cbf39ad64e76c84": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:de9f8adb665468e75ee058d72cbf39ad64e76c84",
+      "identity_tokens": [
+        "SemanticScholar:de9f8adb665468e75ee058d72cbf39ad64e76c84"
+      ],
+      "reason": "研究室の責任ある信頼できるAIへの取り組みを紹介する概説であり、特定のLLM推論機構やサービング手法の提案・評価を含まないため本サーベイの収録対象には当たらない。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Responsible and Reliable AI at PICUS Lab"
+    },
+    "DOI:10.1109/icca59364.2023.10401818": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icca59364.2023.10401818",
+      "identity_tokens": [
+        "DOI:10.1109/icca59364.2023.10401818"
+      ],
+      "reason": "LLMのアーキテクチャ選択とスケーリング、専門モデルが大規模モデルを上回る条件を比較する論考であり、サービングやデコード、KVキャッシュ等の推論システムへの機構的貢献は要旨に示されていないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "How Big Can It Get? A comparative analysis of LLMs in architecture and scaling"
+    },
+    "DOI:10.1109/itms64072.2024.10741950": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/itms64072.2024.10741950",
+      "identity_tokens": [
+        "DOI:10.1109/itms64072.2024.10741950"
+      ],
+      "reason": "BERT・GPT・T5のアーキテクチャと相違を概説する文献レビューであり、推論高速化やサービング、メモリ削減といった推論システム上の具体的な手法・計測の提案がないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A short-dive into transformer based language models: A literature review"
+    },
+    "SemanticScholar:8dd04dd93055d1f084bebb13795852c72f0e74ce": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:8dd04dd93055d1f084bebb13795852c72f0e74ce",
+      "identity_tokens": [
+        "SemanticScholar:8dd04dd93055d1f084bebb13795852c72f0e74ce"
+      ],
+      "reason": "大規模モデル学習向けの集合通信効率化であり、対象は学習時の通信であってLLM推論のサービングやデコードではない。要旨はS2の429で取得できず、タイトルとメタデータでも学習専用であることが明確なため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ZeRO++: Extremely Efficient Collective Communication for Large Model Training"
+    },
+    "DOI:10.1109/isca66397.2026.00152": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00152",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00152"
+      ],
+      "reason": "パイプラインを意識した集合通信合成でリンク利用率を高めるが、要旨が明示する対象は分散学習であり、LLM推論時の通信や分散推論スケジューリングへの適用は示されていないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "PipeComm: Maximizing Link Utilization Through Pipeline-Aware Collective Communication Synthesis"
+    },
+    "DOI:10.1109/icndsa68777.2026.11652134": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icndsa68777.2026.11652134",
+      "identity_tokens": [
+        "DOI:10.1109/icndsa68777.2026.11652134"
+      ],
+      "reason": "スパイキングニューラルネットワークによる自己進化型ニューロモルフィックエージェントとエネルギー適応的認知の研究であり、LLMの推論サービングやデコード機構とは対象も基盤も異なるため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Toward Self-Evolving AI with Neuromorphic Agents and Energy-Aware Cognition"
+    },
+    "SemanticScholar:c9c90c25bd73b68cf264b74ca2398dcecdc304a5": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:c9c90c25bd73b68cf264b74ca2398dcecdc304a5",
+      "identity_tokens": [
+        "SemanticScholar:c9c90c25bd73b68cf264b74ca2398dcecdc304a5"
+      ],
+      "reason": "動的グラフ表現のためのスペクトル変換に関する研究であり、LLM推論システムとの接点はタイトルとメタデータ上見当たらない。要旨はS2の429で未取得だが、対象分野が明確に異なるため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Well-Conditioned Spectral Transforms for Dynamic Graph Representation"
+    },
+    "DOI:10.1109/apsipaasc63619.2025.10849163": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/apsipaasc63619.2025.10849163",
+      "identity_tokens": [
+        "DOI:10.1109/apsipaasc63619.2025.10849163"
+      ],
+      "reason": "自己回帰型音声認識モデルの早期終了を改善する再学習手法であり、対象はASRという異分野応用で、LLMのデコードやサービング一般への機構的貢献は要旨に示されていないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Block Refinement Learning for Improving Early Exit in Autoregressive ASR"
+    },
+    "SemanticScholar:42fcf9ee97c13235f5b8003725395a65beaa6cbb": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:42fcf9ee97c13235f5b8003725395a65beaa6cbb",
+      "identity_tokens": [
+        "SemanticScholar:42fcf9ee97c13235f5b8003725395a65beaa6cbb"
+      ],
+      "reason": "一人称視点の生活支援アシスタントという応用システムの研究であり、LLM推論の高速化やサービング機構への貢献はタイトルとメタデータ上確認できない。要旨はS2の429で未取得だが応用主目的が明確なため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "EgoLife: Towards Egocentric Life Assistant The EgoLife Team"
+    },
+    "SemanticScholar:7cbe8fcf71732a7c2d2015051afa25add4273070": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7cbe8fcf71732a7c2d2015051afa25add4273070",
+      "identity_tokens": [
+        "SemanticScholar:7cbe8fcf71732a7c2d2015051afa25add4273070"
+      ],
+      "reason": "LLM学習時の障害を検出する事前信頼性指標が対象で、推論サービングやデコードではなく学習運用の障害検知であり、本サーベイのLLM推論システムの範囲外であるため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Proactive Reliability Metric for Detecting Failures in Large Language Model Training"
+    },
+    "DOI:10.1109/icdcs63083.2025.00085": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icdcs63083.2025.00085",
+      "identity_tokens": [
+        "DOI:10.1109/icdcs63083.2025.00085"
+      ],
+      "reason": "分散ニューラルネットワーク学習のチェックポイント保存を帯域配慮で並列化する研究で、対象は学習時チェックポイントでありLLM推論の実行やサービングとは目的が異なるため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "RapidScribe: Bandwidth-aware Parallel Checkpoint for Distributed Neural-Network Training"
+    },
+    "DOI:10.5220/0010372703810389": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5220/0010372703810389",
+      "identity_tokens": [
+        "DOI:10.5220/0010372703810389"
+      ],
+      "reason": "情報組織化のためのTransformerアーキテクチャを論じる2021年の研究で、LLMの推論実行、デコード、キャッシュやサービングの機構を扱っておらず本サーベイの対象範囲には入らないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Informer, an Information Organization Transformer Architecture"
+    },
+    "DOI:10.48550/arxiv.2606.04484": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2606.04484",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.04484",
+        "arXiv:2606.04484"
+      ],
+      "reason": "エージェント強化学習のための分散スウォーム学習基盤で、サーバ・クライアント分離や文脈追跡は学習時の最適化高速化が目的であり、LLM推論サービングの提供機構ではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning"
+    },
+    "DOI:10.1145/3722219": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3722219",
+      "identity_tokens": [
+        "DOI:10.1145/3722219"
+      ],
+      "reason": "グラフ注意ネットワークの注意計算とグラフ処理を共同最適化して高速化する研究で、対象はGNNでありLLMの自己注意や推論サービングの機構とは異なるため本サーベイの対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Gator: Accelerating Graph Attention Networks by Jointly Optimizing Attention and Graph Processing"
+    },
+    "SemanticScholar:f90f41416534efbd13a368d6383865b252584aec": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:f90f41416534efbd13a368d6383865b252584aec",
+      "identity_tokens": [
+        "SemanticScholar:f90f41416534efbd13a368d6383865b252584aec"
+      ],
+      "reason": "512トークンを超える文書マッチング向けのSiamese多深度Transformerエンコーダであり、用途は文書照合タスクでLLM生成推論のサービングやデコード機構を扱っていないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Beyond 512 Tokens: Siamese Multi-depth Transformer-based Hierarchical Encoder for Document Matching"
+    },
+    "SemanticScholar:f38070dfe9dadf77ca58ac4e71ac903eef931508": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:f38070dfe9dadf77ca58ac4e71ac903eef931508",
+      "identity_tokens": [
+        "SemanticScholar:f38070dfe9dadf77ca58ac4e71ac903eef931508"
+      ],
+      "reason": "量子Transformerの手法、利点、課題を概観するサーベイで、古典的なLLM推論システムの実行機構ではなく量子計算上のモデル展望が中心であり本サーベイの範囲外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A Survey of Quantum Transformers: Approaches, Advantages, Challenges, and Future Directions"
+    },
+    "DOI:10.48550/arxiv.2305.10788": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2305.10788",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.10788",
+        "arXiv:2305.10788"
+      ],
+      "reason": "Whisper音声認識モデルを知識蒸留と量子化で軽量化する研究で、5倍超の小型化はASR向け圧縮であり対象がLLMではなく音声認識モデルの推論であるため本サーベイの対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Whisper-KDQ: A Lightweight Whisper via Guided Knowledge Distillation and Quantization for Efficient ASR"
+    },
+    "DOI:10.1109/icnp65844.2025.11192443": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icnp65844.2025.11192443",
+      "identity_tokens": [
+        "DOI:10.1109/icnp65844.2025.11192443"
+      ],
+      "reason": "ZeRO-3による分散学習の集合通信をCPU・GPU協調メモリ管理で効率化するMAZ3であり、対象はLLMの分散学習時の通信とOOM回避であって、推論時の分散実行やサービングではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "MAZ3: Memory-Assisted ZeRO-3 for Efficient Collective Communication"
+    },
+    "DOI:10.1007/s42113-025-00253-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s42113-025-00253-9",
+      "identity_tokens": [
+        "DOI:10.1007/s42113-025-00253-9"
+      ],
+      "reason": "人間のワーキングメモリを組み込んだ生物学着想のTime-Local Transformerアーキテクチャであり、認知科学的な系列処理の研究であって、LLM推論の高速化やメモリ効率を扱う推論システムではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Time-Local Transformer"
+    },
+    "DOI:10.1109/tnse.2026.3694151": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnse.2026.3694151",
+      "identity_tokens": [
+        "DOI:10.1109/tnse.2026.3694151"
+      ],
+      "reason": "インテリサイズネットワークにおけるRAG型LLMの意味情報伝送に関するレビューと資源配分枠組みであり、対象はネットワーク側の意味通信応用であって、LLM推論サービングや推論実行機構そのものではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "RAG-Based LLM in Intellicise Networks: A Comprehensive Review and a Semantic Information Transmission Framework"
+    },
+    "DOI:10.1145/3691621.3694952": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3691621.3694952",
+      "identity_tokens": [
+        "DOI:10.1145/3691621.3694952"
+      ],
+      "reason": "LLM搭載スマートフォンの市場・機能・セキュリティ・利用者認識を概観する調査であり、推論サービングやデコード、KVキャッシュ等の推論システム機構への具体的な貢献は要旨から確認できないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "A First Look at LLM-powered Smartphones"
+    },
+    "DOI:10.1109/icassp55912.2026.11461483": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461483",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461483"
+      ],
+      "reason": "音声言語モデルが意味的に一貫した出力を生成できない要因をモダリティ移行の観点から分析する研究であり、推論遅延やスループットを改善するサービング・デコード機構の提案ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective"
+    },
+    "DOI:10.1109/access.2025.3608445": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2025.3608445",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3608445"
+      ],
+      "reason": "SQUADは量子化対応学習におけるfake quantization演算を高速化するハードウェアアクセラレータであり、対象は学習時のオーバーヘッド削減であってLLM推論時の量子化実行やサービングではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "SQUAD: A Scalable Quantization Accelerator Toward Energy-Efficient On-Device Quantization-Aware Training"
+    },
+    "DOI:10.48550/arxiv.2505.11982": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2505.11982",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.11982",
+        "arXiv:2505.11982"
+      ],
+      "reason": "FedHQは連合学習のクライアントごとに訓練時量子化と量子化対応学習を使い分けて学習を高速化する枠組みであり、LLM推論時の量子化やオフロード機構の提案ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FedHQ: Hybrid Runtime Quantization for Federated Learning"
+    },
+    "DOI:10.1145/3797954": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3797954",
+      "identity_tokens": [
+        "DOI:10.1145/3797954"
+      ],
+      "reason": "引用推薦のために逐次協調信号とテキスト意味を整合させる推薦モデルであり、学術支援プラットフォーム向けの推薦タスクが対象で、LLM推論サービングやデコード機構とは無関係なため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Align Sequential Collaborative Signals and Text Semantics for Citation Recommendation: A Hybrid Perspective"
+    },
+    "DOI:10.64898/2026.06.03.729879": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.03.729879",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.03.729879"
+      ],
+      "reason": "抗体構造予測を言語モデル並みに高速化するFlashABBとFlashpoint Attentionの提案だが、主対象はタンパク質構造予測という異分野応用であり、LLM推論システムへの直接貢献ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Modelling antibody structures at the speed of language"
+    },
+    "DOI:10.1145/3488560.3498442": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3488560.3498442",
+      "identity_tokens": [
+        "DOI:10.1145/3488560.3498442"
+      ],
+      "reason": "BERTベースの意味マッチングにおける柔軟な文脈相互作用でQAや検索のマッチング精度と効率を扱うタスクモデルであり、LLM推論システムの機構提案ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Fast Semantic Matching via Flexible Contextualized Interaction"
+    },
+    "DOI:10.1016/j.asoc.2026.114809": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.114809",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.114809"
+      ],
+      "reason": "太陽光発電量予測に大域畳み込みと双方向Mambaモデリングを適用する異分野の時系列予測研究であり、タイトルからLLM推論システムとの関連がないことが明確なため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Robust photovoltaic power forecasting via noise-suppressive structured global convolution and bidirectional mamba modeling"
+    },
+    "arXiv:2608.31005": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.31005",
+      "identity_tokens": [
+        "arXiv:2608.31005"
+      ],
+      "reason": "長尺動画エージェントの証拠取得を意図ルータで方策誘導する検索手法であり、対象は動画理解エージェントの検索行動であってLLM推論の実行基盤やスケジューリング機構ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "From Intent to Evidence: Policy-Steered Multi-Strategy Retrieval for Long-Video Agents"
+    },
+    "arXiv:2609.20828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20828",
+      "identity_tokens": [
+        "arXiv:2609.20828"
+      ],
+      "reason": "アクセント付き会話ASRにおける固有名詞とフィラーの再現率をLoRA適応とデータ精選で改善する音声認識の能力向上研究であり、推論システムの遅延や資源効率の機構提案ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Beyond WER: Entity and Disfluency Recall in Accented Conversational ASR"
+    },
+    "arXiv:2609.39446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39446",
+      "identity_tokens": [
+        "arXiv:2609.39446"
+      ],
+      "reason": "全二重音声システムの割り込みや先行発話などの対話行動を評価するベンチマークの提案であり、能力・行動評価のみを扱い推論サービングやデコード高速化の機構は含まないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "DuplexAct-Bench: Broadening Full-Duplex Speech Evaluation toward Proactive Interaction across Diverse Behavioral Requirements"
+    },
+    "arXiv:2610.18162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.18162",
+      "identity_tokens": [
+        "arXiv:2610.18162"
+      ],
+      "reason": "LoOPSDは層実行順序を変えた自己教師からオンポリシー自己蒸留を行う学習手法であり、推論時の層実行最適化やサービング高速化ではなく学習単独の改善であるため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "LoOPSD: On-Policy Self-Distillation with Looped Teachers"
+    },
+    "arXiv:2610.30181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.30181",
+      "identity_tokens": [
+        "arXiv:2610.30181"
+      ],
+      "reason": "実世界のWeb環境で深層検索エージェントの多段階検索能力を評価するタスクOpenDSの提案であり、評価設定の構築が中心でLLM推論システムの実行機構への貢献はないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Deep Search in Real-World Web Environments"
+    },
+    "arXiv:2503.21772": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21772",
+      "identity_tokens": [
+        "arXiv:2503.21772"
+      ],
+      "reason": "LoCoReは画像検索の再ランキングに長文脈系列モデルとスライディングウィンドウを用いるコンピュータビジョン応用であり、LLM推論システムの注意やキャッシュ機構の提案ではないため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "LoCoRe: Image Re-Ranking with Long-Context Sequence Modeling"
+    },
+    "DOI:10.1007/s11390-024-3872-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11390-024-3872-3",
+      "identity_tokens": [
+        "DOI:10.1007/s11390-024-3872-3"
+      ],
+      "reason": "深層学習の学習向けパイプラインモデル並列の進展を概説するレビューであり、対象は学習並列化であってLLM推論ではない。要旨は未取得だがタイトルが学習専用の概説であることを明確に示すため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Advances of Pipeline Model Parallelism for Deep Learning Training: An Overview"
+    },
+    "SemanticScholar:f1562d1415b44245538f3680b68e34534831adda": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:f1562d1415b44245538f3680b68e34534831adda",
+      "identity_tokens": [
+        "SemanticScholar:f1562d1415b44245538f3680b68e34534831adda"
+      ],
+      "reason": "本番LLM学習のビット単位デバッグを支援するツールであり、対象は学習パイプラインの正確性検証であって推論サービングではない。要旨はS2の429で未取得だがタイトル上も学習専用が明確なため対象外である。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "OpGuard: Bitwise Alignment for Precise and General Debugging of Production LLM Training"
+    },
+    "DOI:10.1109/tc.2026.3657493": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tc.2026.3657493",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2026.3657493"
+      ],
+      "reason": "CXLメモリプールへのテンソルオフロードだが対象はZeRO-Infinity系の大規模学習であり、メモリ不均衡やNVMe帯域の解消も学習コスト削減が目的で、LLM推論サービングへの適用は要旨で確認できないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Efficient Tensor Offloading Based on CXL Memory Pool for Extreme Scale Deep Learning"
+    },
+    "DOI:10.48550/arxiv.2504.20446": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2504.20446",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.20446",
+        "arXiv:2504.20446"
+      ],
+      "reason": "MoE構造を使うが対象はエッジネットワークの障害検出・分類というフォールトトレラント計算の応用モデルであり、専門家並列や推論サービング、デコード等の推論システム機構は扱っていないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FT-MoE: Sustainable-learning Mixture of Experts Model for Fault-Tolerant Computing with Multiple Tasks"
+    },
+    "DOI:10.1145/3620665.3640375": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3620665.3640375",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640375"
+      ],
+      "reason": "異種GPUクラスタにおける弾力的な深層学習学習ジョブのスケジューリング高速化が対象であり、扱うのは学習のスケーリング効率とジョブ完了時間であって、LLM推論サービングや推論実行ではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Heet: Accelerating Elastic Training in Heterogeneous Deep Learning Clusters"
+    },
+    "DOI:10.3390/app142110025": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app142110025",
+      "identity_tokens": [
+        "DOI:10.3390/app142110025"
+      ],
+      "reason": "深層ニューラルネットワークの低精度学習における行列計算要因の系統的分析であり、対象は学習時の量子化ノイズや蓄積精度であって、推論向け量子化やLLM推論実行の高速化ではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Systematic Analysis of Low-Precision Training in Deep Neural Networks: Factors Influencing Matrix Computations"
+    },
+    "DOI:10.1109/access.2024.3425638": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2024.3425638",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3425638"
+      ],
+      "reason": "長い入力系列に対するTransformer学習を注意スパース化で高速化する研究であり、動的に特定したスパースパターンを学習へ転用するもので、推論時の注意計算やKVキャッシュの削減ではないため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Exploring Attention Sparsity to Accelerate Transformer Training on GPUs"
+    },
+    "DOI:10.1109/taslp.2024.3374062": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/taslp.2024.3374062",
+      "identity_tokens": [
+        "DOI:10.1109/taslp.2024.3374062"
+      ],
+      "reason": "注意の偏りをバランス型スパース正則化で抑えるTransformerアーキテクチャの汎化性能改善が主眼であり、推論遅延やメモリ削減を評価する推論システム手法ではなく、音声言語処理系のモデル改良であるため対象外とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "BaSFormer: A Balanced Sparsity Regularized Attention Network for Transformer"
     }
   }
 }

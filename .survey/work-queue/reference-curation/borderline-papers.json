@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-23T03:11:10+00:00",
-  "record_count": 7385,
+  "updated_at": "2026-11-23T03:23:08+00:00",
+  "record_count": 7424,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -113938,6 +113938,595 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Efficient Training and Inference: Techniques for Large Language Models Using Llama"
+    },
+    "DOI:10.48550/arxiv.2312.14972": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2312.14972",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.14972",
+        "arXiv:2312.14972"
+      ],
+      "reason": "本番機能でGPT-4を自己ホスト型小規模言語モデルへ置換する費用対効果をSLaMツールで評価する研究で、デプロイ判断の計測にはなるが推論システム自体の新しい機構提案ではないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:06+00:00",
+      "last_checked_at": "2026-11-23T03:23:06+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Down to Scale Up: A Cost-Benefit Analysis of Replacing OpenAI's GPT-4 with Self-Hosted Open Source SLMs in Production"
+    },
+    "SemanticScholar:1bc8acb3911b492dc58f778dc453bcebcf1b39a2": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:1bc8acb3911b492dc58f778dc453bcebcf1b39a2",
+      "identity_tokens": [
+        "SemanticScholar:1bc8acb3911b492dc58f778dc453bcebcf1b39a2"
+      ],
+      "reason": "言語モデルデコードにおける並列性の表現と活用を扱う題名で並列デコードによる推論高速化に直結し得るが、要旨未取得のため具体的なデコード機構と効果を確認できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "E XPRESSING AND E XPLOITING P ARALLELISM IN L ANGUAGE M ODEL D ECODING"
+    },
+    "DOI:10.48550/arxiv.2305.11862": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2305.11862",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.11862",
+        "arXiv:2305.11862"
+      ],
+      "reason": "編集スパン予測により文法訂正等の局所変換タスクで生成系列長と推論計算量を削減するが、主目的はタスク性能と指示チューニングであり、汎用LLMデコードやサービング機構への適用は副次的で限定的なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reducing Sequence Length by Predicting Edit Operations with Large Language Models"
+    },
+    "SemanticScholar:855f232253f4d0ccd0887a8abb97bf52dcce9dfb": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:855f232253f4d0ccd0887a8abb97bf52dcce9dfb",
+      "identity_tokens": [
+        "SemanticScholar:855f232253f4d0ccd0887a8abb97bf52dcce9dfb"
+      ],
+      "reason": "Mambaモデル全体を1.58ビットへ量子化する圧縮手法とみられるが、S2 APIの429により要旨を取得できず、推論時の速度・メモリ効果やLLM推論への適用範囲を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Slender-Mamba: Fully Quantized Mamba in 1.58 Bits From Head to Toe"
+    },
+    "SemanticScholar:c3e41ba202316feea245e67627e66f455ca5c75f": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:c3e41ba202316feea245e67627e66f455ca5c75f",
+      "identity_tokens": [
+        "SemanticScholar:c3e41ba202316feea245e67627e66f455ca5c75f"
+      ],
+      "reason": "タイトルが学術誌名そのもので論文固有の題目になっておらず、S2 APIの429により要旨も取得できないため、対象・機構・LLM推論システムへの適用のいずれも判定材料がなく保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pattern Recognition Letters"
+    },
+    "DOI:10.14722/ndss.2026.242812": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14722/ndss.2026.242812",
+      "identity_tokens": [
+        "DOI:10.14722/ndss.2026.242812"
+      ],
+      "reason": "LLMサービングフレームワークのキャッシュ関連セキュリティ脅威を扱いKVキャッシュやプリフィックスキャッシュに触れる可能性があるが、Crossref・OpenAlexとも要旨がなく機構の詳細を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks"
+    },
+    "DOI:10.1016/j.future.2026.108889": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.future.2026.108889",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2026.108889"
+      ],
+      "reason": "効率的なLLMサービングのための適応的実行混合サービスアーキテクチャと題するが、Crossref・OpenAlexとも要旨が提供されておらず、スケジューリング等の具体的な機構を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AMESA: Adaptive Mixture-of-Execution Service Architecture for efficient LLM serving"
+    },
+    "SemanticScholar:0a33fdcf1a9a2ec119add2903a344e01b19be634": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0a33fdcf1a9a2ec119add2903a344e01b19be634",
+      "identity_tokens": [
+        "SemanticScholar:0a33fdcf1a9a2ec119add2903a344e01b19be634"
+      ],
+      "reason": "LLM圧縮のための層除去と特異値選択を組み合わせたハイブリッド枝刈りという題名で推論向け圧縮に直結し得るが、要旨未取得のため圧縮率や推論高速化の具体的な機構と効果を確認できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Layer Removal: A Hybrid Pruning Framework Combining Layer Removal and Singular Value Selection for Efficient LLM Compression"
+    },
+    "DOI:10.1145/3709661": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3709661",
+      "identity_tokens": [
+        "DOI:10.1145/3709661"
+      ],
+      "reason": "RAG向けにディスク上の近似近傍探索とLLM生成を品質配慮型パイプラインでつなぐ研究で生成基盤に隣接するが、要旨で確認できる主眼は知識検索側の処理であり推論サービング自体への直接貢献が薄いため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AquaPipe: A Quality-Aware Pipeline for Knowledge Retrieval and Large Language Models"
+    },
+    "DOI:10.1109/iiswc55918.2022.00019": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iiswc55918.2022.00019",
+      "identity_tokens": [
+        "DOI:10.1109/iiswc55918.2022.00019"
+      ],
+      "reason": "GPU上で複合スパース注意を高速化するスライス手法という題名で注意カーネル最適化に当たり得るが、要旨未取得のためLLM推論への適用条件や対象モデルが確認できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Slice and Dice Approach to Accelerate Compound Sparse Attention on GPU"
+    },
+    "DOI:10.1109/access.2022.3229055": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2022.3229055",
+      "identity_tokens": [
+        "DOI:10.1109/access.2022.3229055"
+      ],
+      "reason": "特徴空間変換による確率分布マッチングで注意計算を効率化するPro-Attentionの提案だが、要旨未取得のためLLM推論での利用形態やKV処理との関係が不明瞭であり保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pro-Attention: Efficient Probability Distribution Matching-Based Attention Through Feature Space Conversion"
+    },
+    "DOI:10.1109/wf-iot62078.2024.10811332": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/wf-iot62078.2024.10811332",
+      "identity_tokens": [
+        "DOI:10.1109/wf-iot62078.2024.10811332"
+      ],
+      "reason": "IoT向けに時分割オンライン投機的推論でコスト効率を狙う題名で投機的デコード系に該当し得るが、要旨未取得のため検証モデルや推論機構の具体性を確認できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Time-Division Online Speculative Inference for Cost-Effective Intelligent Internet of Things"
+    },
+    "DOI:10.1109/lcn65610.2025.11146353": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lcn65610.2025.11146353",
+      "identity_tokens": [
+        "DOI:10.1109/lcn65610.2025.11146353"
+      ],
+      "reason": "フローブロックによるLLMトラフィックの負荷分散という題名で推論サービングのスケジューリングに直結し得るが、要旨未取得のため分散機構や評価対象の具体性を確認できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Load Balancing for LLM Traffic via Flow Block"
+    },
+    "SemanticScholar:dcccd31d2b84d76c193e0ea78a4ea4763dd6b875": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:dcccd31d2b84d76c193e0ea78a4ea4763dd6b875",
+      "identity_tokens": [
+        "SemanticScholar:dcccd31d2b84d76c193e0ea78a4ea4763dd6b875"
+      ],
+      "reason": "生成型リランキングを単一パスデコードで行うLLM手法という題名でデコード効率に関わり得るが、要旨未取得のため通常のリランキング推論に対する高速化機構が不明瞭であり保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "H LLM: S INGLE P ASS D ECODING FOR G ENERATIVE R ERANKING"
+    },
+    "DOI:10.18653/v1/2026.findings-acl.1684": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1684",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1684"
+      ],
+      "reason": "思考連鎖の枝刈りによる効率的な推論蒸留を狙う研究で、生成トークン削減を通じ推論効率に関わり得るが主眼は蒸留学習側にありサービング機構への直接貢献が要旨なしでは判断できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pru-CoT: Towards Efficient Reasoning Distillation via Pruning Chain-of-Thought"
+    },
+    "SemanticScholar:194de19b4882a2ed74e8887f64bce6953886011c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:194de19b4882a2ed74e8887f64bce6953886011c",
+      "identity_tokens": [
+        "SemanticScholar:194de19b4882a2ed74e8887f64bce6953886011c"
+      ],
+      "reason": "非構造・半構造スパース性をメモリ効率よく扱う圧縮スパースタイルの提案という題名で推論カーネルに転用し得るが、要旨未取得のためLLM推論への適用や対象演算が確認できず保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "C OMPRESSED SPARSE TILES FOR MEMORY - EFFICIENT UNSTRUCTURED AND SEMI - STRUCTURED SPARSITY"
+    },
+    "DOI:10.48550/arxiv.2604.18738": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2604.18738",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.18738",
+        "arXiv:2604.18738"
+      ],
+      "reason": "マスク拡散言語モデルの推論時補正として低信頼トークンを再マスク化する手法だが、狙いは生成品質の改善であり、推論速度やメモリ、サービング効率への効果が要旨で示されず推論システムとの関連が薄いため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Remask, Don't Replace: Token-to-Mask Refinement in Masked Diffusion Language Models"
+    },
+    "DOI:10.18653/v1/2026.eacl-long.104": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-long.104",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.eacl-long.104"
+      ],
+      "reason": "MoE型LLMの専門家協調を辞書学習で分析し専門家削減による圧縮可能性も示すが、主眼は内部機構の解釈分析であり、MoE推論の実行方式やスケジューリングを提案するものではないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Specialization through Collaboration: Understanding Expert Interaction in Mixture-of-Expert Large Language Models"
+    },
+    "arXiv:2504.17892": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.17892",
+      "identity_tokens": [
+        "arXiv:2504.17892"
+      ],
+      "reason": "マルチモーダルモデルの視覚トークン選択・マージを比較しクラスタ単位集約が有効と示すトークン圧縮の分析だが、対象は視覚エンコーダ側の冗長性が中心で、LLM推論システムへの直接の機構提案か不明瞭なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Token Sequence Compression for Efficient Multimodal Computing"
+    },
+    "DOI:10.48550/arxiv.2507.21394": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2507.21394",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.21394",
+        "arXiv:2507.21394"
+      ],
+      "reason": "状態空間モデルの推論をシストリックアレイで加速する専用ハードウェアだが、対象は長系列の汎用SSMであり、LLMとしての言語モデル推論への適用やTransformer系サービングとの関係が要旨だけでは限定的なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Systolic Array-based Accelerator for State-Space Models"
+    },
+    "DOI:10.1109/iseda65950.2025.11100398": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iseda65950.2025.11100398",
+      "identity_tokens": [
+        "DOI:10.1109/iseda65950.2025.11100398"
+      ],
+      "reason": "半導体ウエハ欠陥検出という応用目的でエッジLLM配置、モデル圧縮とハードウェア配慮最適化に言及するが、主目的は製造応用であり推論システム機構の具体性が要旨では不明瞭なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deploying Edge LLMs for Wafer Defect Detection in Chip Manufacturing"
+    },
+    "SemanticScholar:22cd3832d19cb655c9f23cb8313a8e553bbcaf39": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:22cd3832d19cb655c9f23cb8313a8e553bbcaf39",
+      "identity_tokens": [
+        "SemanticScholar:22cd3832d19cb655c9f23cb8313a8e553bbcaf39"
+      ],
+      "reason": "知識グラフ経路上の推論でLLMの事実性を改善する手法と題するが、Semantic Scholar APIが429を返し要旨を取得できず、推論システムへの機構的な貢献を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:07+00:00",
+      "last_checked_at": "2026-11-23T03:23:07+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "F OLLOW THE P ATH : R EASONING OVER K NOWLEDGE G RAPH P ATHS TO I MPROVE LLM F ACTUALITY"
+    },
+    "DOI:10.1007/s10664-025-10714-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10664-025-10714-1",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-025-10714-1"
+      ],
+      "reason": "エッジAIのブラックボックス配置戦略が遅延とモデル性能へ与える影響を扱う点は推論配置に関連し得るが、CrossrefとOpenAlexで要旨を取得できず機構を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the impact of black-box deployment strategies for edge AI on latency and model performance"
+    },
+    "DOI:10.1007/s12650-024-00985-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s12650-024-00985-z",
+      "identity_tokens": [
+        "DOI:10.1007/s12650-024-00985-z"
+      ],
+      "reason": "BERTの注意ヘッド剪定を支援する視覚分析システムと題するが、CrossrefとOpenAlexで要旨を取得できず、剪定による推論高速化の機構や効果を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BHPVAS: visual analysis system for pruning attention heads in BERT model"
+    },
+    "SemanticScholar:62864343e96cecc5ed6fd19ca394cef247411dac": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:62864343e96cecc5ed6fd19ca394cef247411dac",
+      "identity_tokens": [
+        "SemanticScholar:62864343e96cecc5ed6fd19ca394cef247411dac"
+      ],
+      "reason": "Efficient Attentionと題するのみで、Semantic Scholar APIが429を返し要旨を取得できず、注意機構の具体的な計算量削減やLLM推論への適用を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Attention"
+    },
+    "DOI:10.1007/s10489-022-04197-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10489-022-04197-6",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-022-04197-6"
+      ],
+      "reason": "制御可能な長文生成のための固定グローバルメモリと題するが、CrossrefとOpenAlexで要旨を取得できず、メモリ機構がKVキャッシュや推論効率へどう寄与するか不明瞭なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fixed global memory for controllable long text generation"
+    },
+    "DOI:10.1007/s11265-025-01955-w": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11265-025-01955-w",
+      "identity_tokens": [
+        "DOI:10.1007/s11265-025-01955-w"
+      ],
+      "reason": "高精度な二値化Vision TransformerのFPGAアクセラレータと題するが、CrossrefとOpenAlexで要旨を取得できず、対象がLLMではなくViTである点も含め推論システムへの適用を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DBiT: A High-Precision Binarized ViT FPGA Accelerator"
+    },
+    "SemanticScholar:6f7885bbe872ef9692fa8a55213f0c836f118ab2": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:6f7885bbe872ef9692fa8a55213f0c836f118ab2",
+      "identity_tokens": [
+        "SemanticScholar:6f7885bbe872ef9692fa8a55213f0c836f118ab2"
+      ],
+      "reason": "変換したトリビアでQAシステムを訓練するデータ手法と題するが、Semantic Scholar APIが429を返し要旨を取得できず、推論システムとの関連を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "a Natural Question: Training QA Systems on Transformed Trivia"
+    },
+    "SemanticScholar:cc39ef738b376f2f8e398fa7161543eeb849e4c7": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:cc39ef738b376f2f8e398fa7161543eeb849e4c7",
+      "identity_tokens": [
+        "SemanticScholar:cc39ef738b376f2f8e398fa7161543eeb849e4c7"
+      ],
+      "reason": "学習可能な減衰因子を持つ線形注意と題し注意機構に関連し得るが、Semantic Scholar APIが429を返し要旨を取得できず、線形注意の計算効率やLLM推論への適用を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Disentangle to Decay: Linear Attention with Trainable Decay Factor"
+    },
+    "arXiv:2210.15976": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.15976",
+      "identity_tokens": [
+        "arXiv:2210.15976"
+      ],
+      "reason": "BEBERTは二値化BERTアンサンブルでエッジデバイスへの効率的配置を目指すモデル圧縮研究だが、対象はBERTの分類タスクであり生成LLMの推論サービングへの適用は要旨では限定的なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bebert: Efficient And Robust Binary Ensemble Bert"
+    },
+    "SemanticScholar:8efb1bab8f6a89be6ac0e9a76e021fc89a32bf6c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:8efb1bab8f6a89be6ac0e9a76e021fc89a32bf6c",
+      "identity_tokens": [
+        "SemanticScholar:8efb1bab8f6a89be6ac0e9a76e021fc89a32bf6c"
+      ],
+      "reason": "文書レベル機械翻訳で長い文脈を捉える多解像度アプローチと題するが、Semantic Scholar APIが429を返し要旨を取得できず、長文脈推論の効率機構を確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Capturing Longer Context for Document-level Neural Machine Translation: A Multi-resolutional Approach"
+    },
+    "arXiv:2609.15137": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.15137",
+      "identity_tokens": [
+        "arXiv:2609.15137"
+      ],
+      "reason": "3D Gaussian言語場の意味埋め込みを疎化して3D視覚質問応答の保存量・メモリ・推論コストを削減する研究だが、主対象は3D VQAという応用でありLLM推論システムへの一般化は限定的なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SparseTalk - Sparsifying 3D Gaussian Language Fields for Efficient 3D Visual Question Answering"
+    },
+    "arXiv:2610.06666": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.06666",
+      "identity_tokens": [
+        "arXiv:2610.06666"
+      ],
+      "reason": "flow matchingによる潜在推論は推論計算で洗練可能で明示的CoTより効率的と主張するが、中心は潜在推論の学習方法の分析でありサービングやKVキャッシュ等の推論システム機構は不明瞭なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Matters for Latent Reasoning with Flow Matching"
+    },
+    "DOI:10.1109/satml59370.2024.00042": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/satml59370.2024.00042",
+      "identity_tokens": [
+        "DOI:10.1109/satml59370.2024.00042"
+      ],
+      "reason": "動的ニューラルネット型言語モデルの推論スローダウン攻撃の原因分析と緩和を扱い推論効率には関係するが、主目的はセキュリティ分析であり対象もBERT・GPT級の動的モデルで、現代のLLMサービングへの適用は薄いため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding, Uncovering, and Mitigating the Causes of Inference Slowdown for Language Models"
+    },
+    "arXiv:2206.15014": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.15014",
+      "identity_tokens": [
+        "arXiv:2206.15014"
+      ],
+      "reason": "低ビット量子化とN:M疎化を組み合わせるNxMiFormerでBERTエンコーダを圧縮しサービング効率を狙うが、評価はGLUEの自然言語理解に限られ、生成型LLMのデコードやサービングへの適用は確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compressing Pre-trained Transformers via Low-Bit NxM Sparsity for Natural Language Understanding"
+    },
+    "DOI:10.1109/les.2023.3299638": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/les.2023.3299638",
+      "identity_tokens": [
+        "DOI:10.1109/les.2023.3299638"
+      ],
+      "reason": "Transformerの微分可能なスリミングでメモリ効率の良い推論用サブネットワークを抽出するが、主眼はプルーニングを伴う学習方式そのものであり、対象も汎用TransformerでLLM推論への具体的な適用や推論時機構が要旨から不明瞭なため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Differentiable Slimming for Memory-Efficient Transformers"
+    },
+    "DOI:10.1109/fccm68464.2026.00038": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/fccm68464.2026.00038",
+      "identity_tokens": [
+        "DOI:10.1109/fccm68464.2026.00038"
+      ],
+      "reason": "AI Engine搭載FPGA上でTransformer計算の高スループット最適化をうたうが、CrossrefとOpenAlexのいずれからも要旨を取得できず、推論向けの具体的な機構や評価対象を一次要旨で確認できないため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LegoMap: Optimization for High-Throughput Transformer Computing on AI Engine-Based FPGAs"
+    },
+    "DOI:10.1109/icccworkshops67136.2025.11148149": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccworkshops67136.2025.11148149",
+      "identity_tokens": [
+        "DOI:10.1109/icccworkshops67136.2025.11148149"
+      ],
+      "reason": "意味通信と出力長予測を組み合わせた効率的LLM推論枠組みを提案するが、主目的はエッジネットワーク上の意味通信であり、推論スケジューリングはその適応制御の一部にとどまり推論システムとしての機構が薄いため保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Joint Semantic Communication and Output Length Prediction for Efficient Large Language Model Inference"
+    },
+    "SemanticScholar:97e9d627ba725ce8714459714827327a1f718ef3": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:97e9d627ba725ce8714459714827327a1f718ef3",
+      "identity_tokens": [
+        "SemanticScholar:97e9d627ba725ce8714459714827327a1f718ef3"
+      ],
+      "reason": "タイトルはLLM学習向け量子化のコンパイラ自動化を示すが、OpenAlex検索がレート制限で失敗し一次要旨を取得できなかったため、推論向け量子化への転用可能性を含めて本文確認が必要と判断し保留とする。",
+      "first_checked_at": "2026-11-23T03:23:08+00:00",
+      "last_checked_at": "2026-11-23T03:23:08+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Proﬁle-Guided Quantization: A Compiler Solution to Automate Quantization for Efﬁcient LLM Training"
     }
   }
 }

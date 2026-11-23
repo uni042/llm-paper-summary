@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f1b38df181ccb7e-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:de9f8adb665468e75ee058d72cbf39ad64e76c84",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:de9f8adb665468e75ee058d72cbf39ad64e76c84",
+    "identity_tokens": [
+      "SemanticScholar:de9f8adb665468e75ee058d72cbf39ad64e76c84"
+    ],
+    "reason": "研究室の責任ある信頼できるAIへの取り組みを紹介する概説であり、特定のLLM推論機構やサービング手法の提案・評価を含まないため本サーベイの収録対象には当たらない。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Responsible and Reliable AI at PICUS Lab"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f1b38df181c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

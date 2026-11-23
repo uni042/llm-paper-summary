@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a3631e0eb6216cf-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:f90f41416534efbd13a368d6383865b252584aec",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:f90f41416534efbd13a368d6383865b252584aec",
+    "identity_tokens": [
+      "SemanticScholar:f90f41416534efbd13a368d6383865b252584aec"
+    ],
+    "reason": "512トークンを超える文書マッチング向けのSiamese多深度Transformerエンコーダであり、用途は文書照合タスクでLLM生成推論のサービングやデコード機構を扱っていないため対象外とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Beyond 512 Tokens: Siamese Multi-depth Transformer-based Hierarchical Encoder for Document Matching"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a3631e0eb62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

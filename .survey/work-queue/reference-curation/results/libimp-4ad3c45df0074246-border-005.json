@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ad3c45df0074246-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:855f232253f4d0ccd0887a8abb97bf52dcce9dfb",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:855f232253f4d0ccd0887a8abb97bf52dcce9dfb",
+    "identity_tokens": [
+      "SemanticScholar:855f232253f4d0ccd0887a8abb97bf52dcce9dfb"
+    ],
+    "reason": "Mambaモデル全体を1.58ビットへ量子化する圧縮手法とみられるが、S2 APIの429により要旨を取得できず、推論時の速度・メモリ効果やLLM推論への適用範囲を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Slender-Mamba: Fully Quantized Mamba in 1.58 Bits From Head to Toe"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ad3c45df007",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

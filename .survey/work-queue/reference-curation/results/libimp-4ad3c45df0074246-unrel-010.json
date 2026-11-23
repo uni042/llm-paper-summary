@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ad3c45df0074246-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:42fcf9ee97c13235f5b8003725395a65beaa6cbb",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:42fcf9ee97c13235f5b8003725395a65beaa6cbb",
+    "identity_tokens": [
+      "SemanticScholar:42fcf9ee97c13235f5b8003725395a65beaa6cbb"
+    ],
+    "reason": "一人称視点の生活支援アシスタントという応用システムの研究であり、LLM推論の高速化やサービング機構への貢献はタイトルとメタデータ上確認できない。要旨はS2の429で未取得だが応用主目的が明確なため対象外である。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "EgoLife: Towards Egocentric Life Assistant The EgoLife Team"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ad3c45df007",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

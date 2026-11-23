@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6523f6be28a8128-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:62864343e96cecc5ed6fd19ca394cef247411dac",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:62864343e96cecc5ed6fd19ca394cef247411dac",
+    "identity_tokens": [
+      "SemanticScholar:62864343e96cecc5ed6fd19ca394cef247411dac"
+    ],
+    "reason": "Efficient Attentionと題するのみで、Semantic Scholar APIが429を返し要旨を取得できず、注意機構の具体的な計算量削減やLLM推論への適用を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:23:08+00:00",
+    "last_checked_at": "2026-11-23T03:23:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Attention"
+  },
+  "processed_at": "2026-11-23T03:23:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6523f6be28a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

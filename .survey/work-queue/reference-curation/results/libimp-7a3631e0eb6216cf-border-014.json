@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a3631e0eb6216cf-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:dcccd31d2b84d76c193e0ea78a4ea4763dd6b875",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:dcccd31d2b84d76c193e0ea78a4ea4763dd6b875",
+    "identity_tokens": [
+      "SemanticScholar:dcccd31d2b84d76c193e0ea78a4ea4763dd6b875"
+    ],
+    "reason": "生成型リランキングを単一パスデコードで行うLLM手法という題名でデコード効率に関わり得るが、要旨未取得のため通常のリランキング推論に対する高速化機構が不明瞭であり保留とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "H LLM: S INGLE P ASS D ECODING FOR G ENERATIVE R ERANKING"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a3631e0eb62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

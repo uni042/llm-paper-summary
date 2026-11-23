@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f1b38df181ccb7e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:1c53d27c742fb4658fa03085c7c2ca014a122385",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:1c53d27c742fb4658fa03085c7c2ca014a122385",
+    "identity_tokens": [
+      "SemanticScholar:1c53d27c742fb4658fa03085c7c2ca014a122385"
+    ],
+    "reason": "自己教師あり学習でタンパク質配列という生命のコードを解読するProtTransの研究で、生物学応用向け言語モデルの学習が対象でありLLM推論システムの機構とは無関係なため対象外とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ProtTrans: Towards Cracking the Language of Life’s Code Through Self-Supervised Learning"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f1b38df181c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

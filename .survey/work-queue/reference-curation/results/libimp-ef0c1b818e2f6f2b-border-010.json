@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef0c1b818e2f6f2b-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:97e9d627ba725ce8714459714827327a1f718ef3",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:97e9d627ba725ce8714459714827327a1f718ef3",
+    "identity_tokens": [
+      "SemanticScholar:97e9d627ba725ce8714459714827327a1f718ef3"
+    ],
+    "reason": "タイトルはLLM学習向け量子化のコンパイラ自動化を示すが、OpenAlex検索がレート制限で失敗し一次要旨を取得できなかったため、推論向け量子化への転用可能性を含めて本文確認が必要と判断し保留とする。",
+    "first_checked_at": "2026-11-23T03:23:08+00:00",
+    "last_checked_at": "2026-11-23T03:23:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Proﬁle-Guided Quantization: A Compiler Solution to Automate Quantization for Efﬁcient LLM Training"
+  },
+  "processed_at": "2026-11-23T03:23:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef0c1b818e2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

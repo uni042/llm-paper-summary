@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ff913d3c9c575e5-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.17892",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.17892",
+    "identity_tokens": [
+      "arXiv:2504.17892"
+    ],
+    "reason": "マルチモーダルモデルの視覚トークン選択・マージを比較しクラスタ単位集約が有効と示すトークン圧縮の分析だが、対象は視覚エンコーダ側の冗長性が中心で、LLM推論システムへの直接の機構提案か不明瞭なため保留とする。",
+    "first_checked_at": "2026-11-23T03:23:07+00:00",
+    "last_checked_at": "2026-11-23T03:23:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Token Sequence Compression for Efficient Multimodal Computing"
+  },
+  "processed_at": "2026-11-23T03:23:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ff913d3c9c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
