@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3f9ce3b200a86a0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.sysarc.2026.103708",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.sysarc.2026.103708",
+    "identity_tokens": [
+      "DOI:10.1016/j.sysarc.2026.103708"
+    ],
+    "reason": "Primary full text for 'SpaceFusion++: An operator fusion scheduler for neural language model inference' could not be obtained in the 2026-11-24 final-day OA sweep: OpenAlex reported no retrievable OA location (closed access, or OA in name only with no PDF URL), Semantic Scholar listed no usable openAccessPdf, and publisher OA pages (ACM DL / IEEE Xplore / ScienceDirect) were blocked (403/Cloudflare/bot check) or paywalled, with no author or repository copy found. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-23T23:53:53+00:00",
+    "last_checked_at": "2026-11-23T23:53:53+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SpaceFusion++: An operator fusion scheduler for neural language model inference"
+  },
+  "processed_at": "2026-11-23T23:53:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3f9ce3b200a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

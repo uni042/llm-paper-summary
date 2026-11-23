@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e897e8fb070b569e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e",
+    "identity_tokens": [
+      "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e"
+    ],
+    "reason": "Full text was obtained and read on 2026-11-24 (OpenReview-family OA PDF), but the paper is a proposal-stage preprint: the method is described in future tense ('we will design'), all experimental settings and baselines are planned, and it contains no quantitative results at all (its conclusion only anticipates a speedup ratio of over 2x). The Research quality gate (evaluation section grounded in primary results) cannot be met from this primary source, so it is recorded via the research postread route as borderline; re-check only if a version with actual evaluation appears.",
+    "first_checked_at": "2026-11-23T23:53:53+00:00",
+    "last_checked_at": "2026-11-23T23:53:53+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Inference for Large Multimodal Models"
+  },
+  "processed_at": "2026-11-23T23:53:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e897e8fb070b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
