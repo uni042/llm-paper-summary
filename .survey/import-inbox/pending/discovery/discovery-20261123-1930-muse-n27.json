@@ -1,0 +1,521 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261123-n27",
+ "reference_main_sha": "43a88cd2",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.27971",
+   "identity_tokens": [
+    "arXiv:2605.27971"
+   ],
+   "title": "Semantic Flow Regularization: Teaching LLMs to Generate Diverse Yet Coherent Responses",
+   "reason": "Semantic Flow Regularizationはpersona条件付き対話の多様性低下をflow matching補助目的で改善する微調整手法で、推論ヘッドは破棄され推論効率への直接貢献は示されていない。",
+   "source_url": "https://arxiv.org/abs/2605.27971",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 221
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.04751",
+   "identity_tokens": [
+    "arXiv:2610.04751"
+   ],
+   "title": "Dynamic Routing as a New Dimension for Test-time Versatility of LLMs",
+   "reason": "Dynamic Routingはテスト時に層の部分実行や反復を切り替えるrouting programを少数デモから選定し、CoTと相補的に精度と効率を上げる推論時適応を具体的に示している。",
+   "source_url": "https://arxiv.org/abs/2610.04751",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 222
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/WINCOM59760.2023.10322921",
+   "identity_tokens": [
+    "DOI:10.1109/WINCOM59760.2023.10322921"
+   ],
+   "title": "A Comprehensive Survey On Efficient Transformers",
+   "reason": "Efficient Transformersサーベイはsparse attention・線形化・低ランク化による計算・メモリ削減を整理するが、一次要旨では新規の推論システム機構の提示は確認できない。",
+   "source_url": "https://doi.org/10.1109/WINCOM59760.2023.10322921",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 223
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2402.00913",
+   "identity_tokens": [
+    "arXiv:2402.00913"
+   ],
+   "title": "Institutional Platform for Secure Self-Service Large Language Model Exploration",
+   "reason": "University of Kentuckyのプラットフォームはmulti-LoRA inferenceで多様な利用者のカスタムアダプタを効率的に収容し、テナント分離を備えたセキュアなLLM推論サービス基盤を構築している。",
+   "source_url": "https://arxiv.org/abs/2402.00913",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 224
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2508.17803",
+   "identity_tokens": [
+    "arXiv:2508.17803"
+   ],
+   "title": "DRQA: Dynamic Reasoning Quota Allocation for Controlling Overthinking in Reasoning Large Language Models",
+   "reason": "DRQAはバッチ時の資源競合で得た簡潔な推論選好をRLで単一質問推論へ転移し、過剰思考によるトークン消費と計算非効率を適応的な推論クォータ配分で抑える。",
+   "source_url": "https://arxiv.org/abs/2508.17803",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 225
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2505.18586",
+   "identity_tokens": [
+    "arXiv:2505.18586"
+   ],
+   "title": "Guiding the Experts: Semantic Priors for Efficient and Focused MoE Routing",
+   "reason": "Semantic PriorsによるMoE Routingは視覚Soft MoEのdispatch重みを前景領域に整合させる補助損失で、対象はImageNet等の視覚分類でありLLM推論への直接適用は要旨で確認できない。",
+   "source_url": "https://arxiv.org/abs/2505.18586",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 226
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.12088",
+   "identity_tokens": [
+    "arXiv:2504.12088"
+   ],
+   "title": "AttentionDrop: A Novel Regularization Method for Transformer Models",
+   "reason": "AttentionDropはself-attention分布への確率的正則化で過学習を抑え精度・較正・頑健性を上げる学習手法であり、推論高速化の機構は含まれていない。",
+   "source_url": "https://arxiv.org/abs/2504.12088",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 227
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.13925",
+   "identity_tokens": [
+    "arXiv:2608.13925"
+   ],
+   "title": "CForce: Boosting Parallel Decoding for dLLMs via Consistency Forcing",
+   "reason": "CForceは拡散LLMの早期denoising段階のマスク予測を後期段階に整合させる蒸留で、mask-to-tokenとedit-capableの並列デコードの速度・品質トレードオフを改善する。",
+   "source_url": "https://arxiv.org/abs/2608.13925",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 228
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.00356",
+   "identity_tokens": [
+    "arXiv:2605.00356"
+   ],
+   "title": "MemRouter: Memory-as-Embedding Routing for Long-Term Conversational Agents",
+   "reason": "MemRouterは長期対話エージェントのメモリ格納判定をembedding routingに置換し管理レイテンシを970msから58msへ下げるが、LLM自体の推論・サービング機構ではなく記憶入場制御が主対象である。",
+   "source_url": "https://arxiv.org/abs/2605.00356",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 229
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/TCSI.2025.3610210",
+   "identity_tokens": [
+    "DOI:10.1109/TCSI.2025.3610210"
+   ],
+   "title": "TEA-SPS: A Tiny and Efficient Architecture for Softmax With Parallelism and Sparsity Adaptability",
+   "reason": "TEA-SPSはTransformerのsoftmax向けに並列度可変のsparse mask戦略と情報抽出器を協調設計した小型ハードウェアアーキテクチャで、量子化データ処理の効率を実測している。",
+   "source_url": "https://doi.org/10.1109/TCSI.2025.3610210",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 230
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2602.04491",
+   "identity_tokens": [
+    "arXiv:2602.04491"
+   ],
+   "title": "Greedy-Gnorm: A Gradient Matrix Norm-Based Alternative to Attention Entropy for Head Pruning",
+   "reason": "Greedy-Gnormは検証データのQ/K/V勾配ノルムで注意ヘッド重要度を反復ごとに再計算して剪定し、精度を保ちながらTransformerを圧縮して省エネな配備を可能にする。",
+   "source_url": "https://arxiv.org/abs/2602.04491",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 231
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.29778",
+   "identity_tokens": [
+    "arXiv:2606.29778"
+   ],
+   "title": "Mandol: An Agglomerative Agent Memory System for Long-Term Conversations",
+   "reason": "Mandolは長期対話エージェント向けに階層的意味グラフで記憶を統合しI/Oレイテンシとトークン予算を制御する記憶システムで、LLM推論機構そのものへの貢献は間接的である。",
+   "source_url": "https://arxiv.org/abs/2606.29778",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 232
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2305.14380",
+   "identity_tokens": [
+    "arXiv:2305.14380"
+   ],
+   "title": "Finding the Pillars of Strength for Multi-Head Attention",
+   "reason": "Grouped Head AttentionとVoting-to-Stayは冗長な注意ヘッドをグループ化・除去してパラメータを大幅に圧縮しつつ性能を上げる、効率的なMulti-Head Attention機構を提案している。",
+   "source_url": "https://arxiv.org/abs/2305.14380",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 233
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.07151",
+   "identity_tokens": [
+    "arXiv:2510.07151"
+   ],
+   "title": "ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL",
+   "reason": "ELMURは部分的観測下の長期ホライズン強化学習・ロボット操作向け外部層メモリであり、LLM推論システムではなくRLエージェントの記憶拡張が主題である。",
+   "source_url": "https://arxiv.org/abs/2510.07151",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 234
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.19219",
+   "identity_tokens": [
+    "arXiv:2512.19219"
+   ],
+   "title": "Selective LoRA for Visual Tokens and Attention Heads",
+   "reason": "Selective LoRA（Image-LoRA）は視覚トークンと一部の注意ヘッドのvalue経路だけにLoRAを適用して学習パラメータと学習FLOPsを減らすPEFT手法で、推論高速化が目的ではない。",
+   "source_url": "https://arxiv.org/abs/2512.19219",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 235
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.20711",
+   "identity_tokens": [
+    "arXiv:2608.20711"
+   ],
+   "title": "AsmEvo: Agentic Assembly-Level Optimization of AMD GPU Kernels with Functional Equivalence Verification",
+   "reason": "AsmEvoはコンパイル済みAMDGPUカーネルをアセンブリレベルでエージェント的に最適化し等価性検証を通過したものだけを採用してKernelBenchで幾何平均1.35倍の高速化を示すカーネル最適化である。",
+   "source_url": "https://arxiv.org/abs/2608.20711",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 236
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2306.10231",
+   "identity_tokens": [
+    "arXiv:2306.10231"
+   ],
+   "title": "GLIMMER: generalized late-interaction memory reranker",
+   "reason": "GLIMMERは知識集約タスク向けに事前計算したメモリ表現へ浅いrerankerを載せて検索品質と速度を上げるメモリ拡張言語モデルで、推論基盤というより検索・rerankingの改善が中心である。",
+   "source_url": "https://arxiv.org/abs/2306.10231",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 237
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2510.00192",
+   "identity_tokens": [
+    "arXiv:2510.00192"
+   ],
+   "title": "Train Large, Deploy Compact: Structured Compression for Compact Low-Rank Adaptation",
+   "reason": "PrunedLoRAは過剰パラメータ化したLoRAを微調整中に構造化剪定してコンパクトなアダプタを得る枠組みで、配備時圧縮への言及はあるが主眼は適応学習過程の剪定である。",
+   "source_url": "https://arxiv.org/abs/2510.00192",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 238
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2511.17355",
+   "identity_tokens": [
+    "arXiv:2511.17355"
+   ],
+   "title": "UAM: A Unified Attention-Mamba Backbone of Multimodal Framework for Tumor Cell Classification",
+   "reason": "UAMはAttention-Mambaバックボーンで腫瘍細胞分類と画像セグメンテーションを行う医用画像向けマルチモーダル枠組みであり、LLM推論とは異分野の応用である。",
+   "source_url": "https://arxiv.org/abs/2511.17355",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 239
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.10848",
+   "identity_tokens": [
+    "arXiv:2611.10848"
+   ],
+   "title": "MultiTurnRoute: A Platform for Building and Evaluating Multi-Turn LLM Routers",
+   "reason": "MultiTurnRouteは対話履歴と各モデルの再利用可能なprefix長を入力とする多ターンLLMルータ基盤で、Chain-of-Routeにより最強モデル同等品質に必要なコストを最大20.3%削減する。",
+   "source_url": "https://arxiv.org/abs/2611.10848",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 240
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2509.10345",
+   "identity_tokens": [
+    "arXiv:2509.10345"
+   ],
+   "title": "Towards Understanding Visual Grounding in Visual Language Models",
+   "reason": "Visual Groundingサーベイは視覚言語モデルがテキスト記述に対応する画像領域を同定する能力・ベンチマーク・評価を整理するもので、推論効率化への技術的貢献はない。",
+   "source_url": "https://arxiv.org/abs/2509.10345",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 241
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.engappai.2024.109490",
+   "identity_tokens": [
+    "DOI:10.1016/j.engappai.2024.109490"
+   ],
+   "title": "Low-cost language models: Survey and performance evaluation on Python code generation",
+   "reason": "Crossref・OpenAlexいずれからも要旨を取得できず、低コスト言語モデルの性能評価が推論システムへどう貢献するか一次要旨で確認できないため保留とする。",
+   "source_url": "https://doi.org/10.1016/j.engappai.2024.109490",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 242
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.48550/arXiv.2506.00051",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2506.00051"
+   ],
+   "title": "Beyond Monoliths: Expert Orchestration for More Capable, Democratic, and Safe Large Language Models",
+   "reason": "Expert Orchestrationは専門家モデル群へのjudgeとrouterによる振り分けを主張するposition paperで、具体的な推論機構や実測による効率改善は一次要旨で確認できない。",
+   "source_url": "https://doi.org/10.48550/arXiv.2506.00051",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 243
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:12260a97a97c5d4eb383ee821ea185dcf867d80a",
+   "identity_tokens": [
+    "SemanticScholar:12260a97a97c5d4eb383ee821ea185dcf867d80a"
+   ],
+   "title": "Reducing Environmental Costs whilst Maintaining Operational Effectiveness in Large Language Models through Chain Routing",
+   "reason": "Semantic Scholarが429で要旨を取得できず、Chain Routingによる環境コスト削減の機構を一次要旨で確認できないため保留とする。",
+   "source_url": "https://www.semanticscholar.org/paper/12260a97a97c5d4eb383ee821ea185dcf867d80a",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 244
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:47ed9a1ce01627394e59d9d0d997d9192d59f016",
+   "identity_tokens": [
+    "SemanticScholar:47ed9a1ce01627394e59d9d0d997d9192d59f016"
+   ],
+   "title": "Understanding Compute-Parameter Trade-offs in Sparse Mixture-of-Expert Language Models",
+   "reason": "Semantic Scholarが429で要旨を取得できず、疎なMoE言語モデルの計算量・パラメータトレードオフ分析が推論効率へ与える具体機構を確認できないため保留とする。",
+   "source_url": "https://www.semanticscholar.org/paper/47ed9a1ce01627394e59d9d0d997d9192d59f016",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 245
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:c9fceae6e1588f9dfbdff9d0b534084afb0d82d2",
+   "identity_tokens": [
+    "SemanticScholar:c9fceae6e1588f9dfbdff9d0b534084afb0d82d2"
+   ],
+   "title": "OverThink: Slowdown Attacks on Reasoning LLMs",
+   "reason": "Semantic Scholarが429で要旨を取得できず、推論LLMへのOverThinkスローダウン攻撃の内容を一次要旨で確認できないため保留とする。",
+   "source_url": "https://www.semanticscholar.org/paper/c9fceae6e1588f9dfbdff9d0b534084afb0d82d2",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 246
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.48550/arXiv.2604.14029",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2604.14029"
+   ],
+   "title": "POINTS-Seeker: Towards Training a Multimodal Agentic Search Model from Scratch",
+   "reason": "POINTS-Seekerはマルチモーダル検索エージェントの学習レシピが主眼で、V-Foldによる視覚空間への文脈折り畳みは文脈爆発対策として関連するが推論システムの直接機構ではない。",
+   "source_url": "https://doi.org/10.48550/arXiv.2604.14029",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 247
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.02816",
+   "identity_tokens": [
+    "arXiv:2610.02816"
+   ],
+   "title": "Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention",
+   "reason": "Gated Slot Attention-2は線形注意の固定サイズ再帰メモリに対しkey側のGated Oja Rule-2とvalue側のGated Delta Rule-2で両面補正を行い、ハードウェア効率的なchunkwise算法で線形時間を維持する。",
+   "source_url": "https://arxiv.org/abs/2610.02816",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 248
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2511.00536",
+   "identity_tokens": [
+    "arXiv:2511.00536"
+   ],
+   "title": "Word Salad Chopper: Reasoning Models Waste A Ton Of Decoding Budget On Useless Repetitions, Self-Knowingly",
+   "reason": "Word Salad Chopperは推論モデルの隠れ状態から無用な自己反復を単層線形分類器で検出して切り取り再生成することで、品質損失を抑えつつデコード予算を大幅に節約する。",
+   "source_url": "https://arxiv.org/abs/2511.00536",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 249
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.sysarc.2026.103826",
+   "identity_tokens": [
+    "DOI:10.1016/j.sysarc.2026.103826"
+   ],
+   "title": "GQoD: Group-aware quantization for efficient layer-wise pipelined inference of Multi-Exit BERT on end devices",
+   "reason": "Crossref・OpenAlexから要旨を取得できず、Multi-Exit BERT向けグループ量子化と層別パイプライン推論の具体機構を一次要旨で確認できないため保留とする。",
+   "source_url": "https://doi.org/10.1016/j.sysarc.2026.103826",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T21:35:00+09:00",
+   "last_checked_at": "2026-11-23T21:35:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 250
+  }
+ ]
+}
