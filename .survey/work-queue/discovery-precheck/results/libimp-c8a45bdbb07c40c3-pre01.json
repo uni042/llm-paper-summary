@@ -1,0 +1,221 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c8a45bdbb07c40c3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c8a45bdbb07c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cluster68337.2026.00020",
+    "arXiv:2610.15755"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4fd05e2d350a4e7c7bc78b7e55bdcd640d041417",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:24:23.729526+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cluster68337.2026.00020",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15755",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LIBRE: Lookahead I/O-Efficient Buffered REbatching for MoE Serving",
+      "source_url": "https://doi.org/10.1109/CLUSTER68337.2026.00020",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "IEEE International Conference on Cluster Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) continue to scale, the Mixture-of-Experts (MoE) architecture has become a pivotal technology, offering enhanced model capacity with high computational efficiency. However, MoE faces a critical performance bottleneck during inference: because tokens dynamically select different experts, batching them often leads to excessive I/O overhead when expert selections diverge. This creates an I/O-bound environment that severely limits throughput scalability as batch sizes increase. We propose LIBRE, a Lookahead I/O-efficient Buffered RE-batching framework designed to mitigate redundant I/O by temporarily storing tokens and regrouping those that share the same expert. Central to LIBRE is a “Lookahead Scheduling” algorithm, which optimizes throughput by considering not only current token counts but also the interdependencies between Attention and MLP modules. By incorporating a decayed scoring mechanism based on token distributions already visible in subsequent layers, the proposed scheduler improves batch efficiency while mitigating token starvation. We evaluate LIBRE on a simulation platform modeling a wafer-scale AI chip equipped with a hardware reorder buffer (ROB). Experimental results demonstrate that our method significantly enhances throughput across various datasets, achieving a 50% throughput improvement for Llama4 and up to 85% for Qwen3.",
+      "identifiers": [
+        "SemanticScholar:3eddeef4b768d49ef25cea3d343f0377e8b166b4"
+      ],
+      "semantic_scholar_id": "3eddeef4b768d49ef25cea3d343f0377e8b166b4",
+      "doi": "10.1109/CLUSTER68337.2026.00020",
+      "canonical_id": "DOI:10.1109/CLUSTER68337.2026.00020",
+      "authors": [
+        "Kai-Yang Chen",
+        "Jerry Chou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Native Dual Pools or Shared Paging? Memory Organization for Concurrent Hybrid LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.15755",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid attention-SSM serving combines growing attention KV with fixed-size recurrent and convolution state whose allocation units, reuse boundaries, and lifetimes differ. We implement four memory organizations in a modified vLLM runtime: a coarse shared-page baseline (S0), checkpoint-internal recurrent paging (S1), paging with convolution-slot packing (S2), and native dual pools (D0). Nine evaluation questions cover storage costs and serving behavior. The cumulative S0-S1-S2 refinement improves completed-output throughput and tail completion time at the main operating point. D0-S2 performance varies with memory budget, offered load, and admission headroom. Shared-prefix workloads yield larger stepwise gains; gains also persist in a no-sharing control with equal recorded input-work totals. State traces identify recurrent-checkpoint availability as the limit on joint reuse in the tested S2 runs. Extending producer-side checkpoint lifetime increases reusable depth at a fixed page budget. A fresh-seed SHARE/ISOLATE comparison estimates a positive retention interaction, with a primary confidence interval that includes zero. Retained-state continuation correctness remains unresolved. These findings motivate evaluating physical state representation together with request admission and checkpoint lifetime when designing memory management for concurrent hybrid-model serving.",
+      "identifiers": [
+        "SemanticScholar:85f017e79151c21cf4a8f7d8367388778e96486c"
+      ],
+      "semantic_scholar_id": "85f017e79151c21cf4a8f7d8367388778e96486c",
+      "canonical_id": "arXiv:2610.15755",
+      "arxiv_id": "2610.15755",
+      "authors": [
+        "Dong-hwan Kang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/cluster68337.2026.00020",
+      "identity_tokens": [
+        "id:DOI:10.1109/cluster68337.2026.00020",
+        "id:SemanticScholar:3eddeef4b768d49ef25cea3d343f0377e8b166b4",
+        "title:libre lookahead ioefficient buffered rebatching for moe serving",
+        "url:https://doi.org/10.1109/CLUSTER68337.2026.00020"
+      ],
+      "record": {
+        "title": "LIBRE: Lookahead I/O-Efficient Buffered REbatching for MoE Serving",
+        "source_url": "https://doi.org/10.1109/CLUSTER68337.2026.00020",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "IEEE International Conference on Cluster Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) continue to scale, the Mixture-of-Experts (MoE) architecture has become a pivotal technology, offering enhanced model capacity with high computational efficiency. However, MoE faces a critical performance bottleneck during inference: because tokens dynamically select different experts, batching them often leads to excessive I/O overhead when expert selections diverge. This creates an I/O-bound environment that severely limits throughput scalability as batch sizes increase. We propose LIBRE, a Lookahead I/O-efficient Buffered RE-batching framework designed to mitigate redundant I/O by temporarily storing tokens and regrouping those that share the same expert. Central to LIBRE is a “Lookahead Scheduling” algorithm, which optimizes throughput by considering not only current token counts but also the interdependencies between Attention and MLP modules. By incorporating a decayed scoring mechanism based on token distributions already visible in subsequent layers, the proposed scheduler improves batch efficiency while mitigating token starvation. We evaluate LIBRE on a simulation platform modeling a wafer-scale AI chip equipped with a hardware reorder buffer (ROB). Experimental results demonstrate that our method significantly enhances throughput across various datasets, achieving a 50% throughput improvement for Llama4 and up to 85% for Qwen3.",
+        "identifiers": [
+          "SemanticScholar:3eddeef4b768d49ef25cea3d343f0377e8b166b4"
+        ],
+        "semantic_scholar_id": "3eddeef4b768d49ef25cea3d343f0377e8b166b4",
+        "doi": "10.1109/CLUSTER68337.2026.00020",
+        "canonical_id": "DOI:10.1109/CLUSTER68337.2026.00020",
+        "authors": [
+          "Kai-Yang Chen",
+          "Jerry Chou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15755",
+      "identity_tokens": [
+        "id:SemanticScholar:85f017e79151c21cf4a8f7d8367388778e96486c",
+        "id:arXiv:2610.15755",
+        "title:native dual pools or shared paging memory organization for concurrent hybrid llm serving",
+        "url:https://arxiv.org/abs/2610.15755"
+      ],
+      "record": {
+        "title": "Native Dual Pools or Shared Paging? Memory Organization for Concurrent Hybrid LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.15755",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid attention-SSM serving combines growing attention KV with fixed-size recurrent and convolution state whose allocation units, reuse boundaries, and lifetimes differ. We implement four memory organizations in a modified vLLM runtime: a coarse shared-page baseline (S0), checkpoint-internal recurrent paging (S1), paging with convolution-slot packing (S2), and native dual pools (D0). Nine evaluation questions cover storage costs and serving behavior. The cumulative S0-S1-S2 refinement improves completed-output throughput and tail completion time at the main operating point. D0-S2 performance varies with memory budget, offered load, and admission headroom. Shared-prefix workloads yield larger stepwise gains; gains also persist in a no-sharing control with equal recorded input-work totals. State traces identify recurrent-checkpoint availability as the limit on joint reuse in the tested S2 runs. Extending producer-side checkpoint lifetime increases reusable depth at a fixed page budget. A fresh-seed SHARE/ISOLATE comparison estimates a positive retention interaction, with a primary confidence interval that includes zero. Retained-state continuation correctness remains unresolved. These findings motivate evaluating physical state representation together with request admission and checkpoint lifetime when designing memory management for concurrent hybrid-model serving.",
+        "identifiers": [
+          "SemanticScholar:85f017e79151c21cf4a8f7d8367388778e96486c"
+        ],
+        "semantic_scholar_id": "85f017e79151c21cf4a8f7d8367388778e96486c",
+        "canonical_id": "arXiv:2610.15755",
+        "arxiv_id": "2610.15755",
+        "authors": [
+          "Dong-hwan Kang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:464680181a874770b23206f9e665a9e57ef9915c282b8e0baa2db4389a6580b1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

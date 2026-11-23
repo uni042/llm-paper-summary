@@ -1,0 +1,1044 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7e128623dd3fda40-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7e128623dd3f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00087",
+    "arXiv:2402.14808",
+    "arXiv:2510.15882",
+    "arXiv:2510.24390",
+    "arXiv:2601.15380",
+    "arXiv:2602.07306",
+    "arXiv:2603.14110",
+    "arXiv:2604.00317",
+    "arXiv:2605.17164",
+    "arXiv:2606.07577",
+    "arXiv:2608.28726"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4fd05e2d350a4e7c7bc78b7e55bdcd640d041417",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:24:30.176603+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.14808",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.15882",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.24390",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.15380",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.07306",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.14110",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.00317",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.17164",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.07577",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.28726",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "You Need Better Attention Priors",
+      "source_url": "https://arxiv.org/abs/2601.15380",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We generalize the attention mechanism by viewing it through the lens of Entropic Optimal Transport, revealing that standard attention corresponds to a transport problem regularized by an implicit uniform prior. We introduce Generalized Optimal transport Attention with Trainable priors (GOAT), a new attention mechanism that replaces this naive assumption with a learnable, continuous prior. This prior maintains full compatibility with optimized kernels such as FlashAttention. GOAT also provides an EOT-based explanation of attention sinks and materializes a solution for them, avoiding the representational trade-offs of standard attention. Finally, by absorbing spatial information into the core attention computation, GOAT learns an extrapolatable prior that combines the flexibility of learned positional embeddings with the length generalization of fixed encodings.",
+      "identifiers": [
+        "SemanticScholar:7461aad4a4126c278ebe7b07bedc654acf06ad7b"
+      ],
+      "semantic_scholar_id": "7461aad4a4126c278ebe7b07bedc654acf06ad7b",
+      "canonical_id": "arXiv:2601.15380",
+      "arxiv_id": "2601.15380",
+      "doi": "10.48550/arXiv.2601.15380",
+      "authors": [
+        "Elon Litman",
+        "Gabriel Guo"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 306,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs",
+      "source_url": "https://arxiv.org/abs/2606.07577",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Audio-visual large language models (LLMs) hold strong promise for long-form video understanding, yet their long-video inference is fundamentally limited by the linear growth of video tokens and key-value (KV) caches. We present OmniMem, a memory-efficient streaming framework designed specifically for audio-visual LLMs. Unlike existing compression methods that treat all tokens uniformly, OmniMem introduces a modality-aware memory allocation strategy that separately manages visual and audio contexts, addressing the severe token imbalance between the two modalities. OmniMem further preserves informative and non-redundant KV states through perturbation-aware memory selection, enabling compact memory without sacrificing long-range understanding. To strengthen compression under realistic deployment constraints, we also explore budget-aware fine-tuning, which encourages the model to consolidate useful information into retained memory. Experiments on VideoMME Long, LVBench, and LVOmniBench with video-SALMONN 2+ and Qwen-2.5-Omni show that OmniMem consistently improves over strong training-free compression baselines by 2-4% absolute accuracy under the same memory budgets, with an additional 1-2% gain after fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:c46fea7bd768aa71cbcc8c75a3c18f7aed8ebf6a"
+      ],
+      "semantic_scholar_id": "c46fea7bd768aa71cbcc8c75a3c18f7aed8ebf6a",
+      "canonical_id": "arXiv:2606.07577",
+      "arxiv_id": "2606.07577",
+      "doi": "10.48550/arXiv.2606.07577",
+      "authors": [
+        "Guang-Zhi Sun",
+        "Yixuan Li",
+        "Yu-Dong Yang",
+        "Chao Zhang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallel Track Transformers: Enabling Fast GPU Inference with Reduced Synchronization",
+      "source_url": "https://arxiv.org/abs/2602.07306",
+      "year": 2026,
+      "published": "2026-02-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient large-scale inference of transformer-based large language models (LLMs) remains a fundamental systems challenge, frequently requiring multi-GPU parallelism to meet stringent latency and throughput targets. Conventional tensor parallelism decomposes matrix operations across devices but introduces substantial inter-GPU synchronization, leading to communication bottlenecks and degraded scalability. We propose the Parallel Track (PT) Transformer, a novel architectural paradigm that restructures computation to minimize cross-device dependencies. PT achieves up to a 16x reduction in synchronization operations relative to standard tensor parallelism, while maintaining competitive model quality in our experiments. We integrate PT into two widely adopted LLM serving stacks-Tensor-RT-LLM and vLLM-and report consistent improvements in serving efficiency, including up to 15-30% reduced time to first token, 2-12% reduced time per output token, and up to 31.90% increased throughput in both settings.",
+      "identifiers": [
+        "SemanticScholar:75f3e09b452bc6e3078a3245a99480f5d8d021a4"
+      ],
+      "semantic_scholar_id": "75f3e09b452bc6e3078a3245a99480f5d8d021a4",
+      "canonical_id": "arXiv:2602.07306",
+      "arxiv_id": "2602.07306",
+      "doi": "10.48550/arXiv.2602.07306",
+      "authors": [
+        "Chong Wang",
+        "Nan Du",
+        "Tom Gunter",
+        "Tao Lei",
+        "Kulin Seth",
+        "Senyu Tong",
+        "Jian-Yu Wang",
+        "Guo-Li Yin",
+        "Xiyou Zhou",
+        "Kelvin Zou",
+        "Ruo-Ming Pang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pro-Router: Token-Aware Progressive Model Routing with Adaptive Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.28726",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The remarkable performance of multimodal large language models (MLLMs) comes at the cost of substantial computational overhead, posing significant challenges to real-time deployment and cost effectiveness. Existing model routing approaches either decide from coarse request-level features alone or spend one or several extra language model passes to inspect the generated response, leaving the token-level uncertainty signals that emerge during generation unused. To address these limitations, we propose Pro-Router, a token-aware progressive model routing method with adaptive edge-cloud collaboration for efficient multimodal LLM inference. Pro-Router employs a two-stage progressive decision mechanism. First, a lightweight prompt pre-scorer module performs rapid pre-screening before token generation begins, guiding apparently simple requests to small models. Second, a token-aware verifier reads the sampling probability distribution of each token the small model generates, estimating the model's confidence in its own output to determine, per request, whether the answer ships or escalates to the cloud-based high-precision model. Furthermore, we design an adaptive edge-cloud serving pipeline that sizes every dispatch to each device's measured service rate, so both the edge and the cloud tiers stay fully utilized without manual parameter tuning and are not impacted by the network latency. Extensive experiments on multiple multimodal benchmark datasets and models demonstrate the effectiveness of Pro-Router. Compared to other methods, it achieves the highest routing accuracy and improves routing speed by more than 10x. Its serving pipeline also reaches more than 75% higher end-to-end throughput than the existing model routing pipeline. Our code is available at https://github.com/xinyuangui2/pro-router.",
+      "identifiers": [
+        "SemanticScholar:739e11c4654ba0745e584c2335e47303fe9fc2f1"
+      ],
+      "semantic_scholar_id": "739e11c4654ba0745e584c2335e47303fe9fc2f1",
+      "canonical_id": "arXiv:2608.28726",
+      "arxiv_id": "2608.28726",
+      "doi": "10.48550/arXiv.2608.28726",
+      "authors": [
+        "Xin-Yuan Gui",
+        "Shao-Wen Wang",
+        "Sheng Sun",
+        "Zi-Jian Wang",
+        "Zi-Shu Yu",
+        "Zhe-Ming Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
+      "source_url": "https://arxiv.org/abs/2402.14808",
+      "year": 2024,
+      "published": "2024-02-22",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A practical large language model (LLM) service may involve a long system prompt, which specifies the instructions, examples, and knowledge documents of the task and is reused across requests. However, the long system prompt causes throughput/latency bottlenecks as the cost of generating the next token grows w.r.t. the sequence length. This paper aims to improve the efficiency of LLM services that involve long system prompts. Our key observation is that handling these system prompts requires heavily redundant memory accesses in existing causal attention computation algorithms. Specifically, for batched requests, the cached hidden states (\\ie, key-value pairs) of system prompts are transferred from off-chip DRAM to on-chip SRAM multiple times, each corresponding to an individual request. To eliminate such a redundancy, we propose RelayAttention, an attention algorithm that allows reading these hidden states from DRAM exactly once for a batch of input tokens. RelayAttention is a free lunch: it maintains the generation quality while requiring no model retraining, as it is based on a mathematical reformulation of causal attention. We have observed significant performance improvements to a production-level system, vLLM, through integration with RelayAttention. The improvements are even more profound with longer system prompts.",
+      "identifiers": [
+        "SemanticScholar:de9b37396a6fafc7b11223ef6682e9f13b2edaf1"
+      ],
+      "semantic_scholar_id": "de9b37396a6fafc7b11223ef6682e9f13b2edaf1",
+      "canonical_id": "arXiv:2402.14808",
+      "arxiv_id": "2402.14808",
+      "doi": "10.48550/arXiv.2402.14808",
+      "authors": [
+        "Lei Zhu",
+        "Xin-Jiang Wang",
+        "Wayne Zhang",
+        "Rynson W. H. Lau"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1005,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "IroKnight: Ownership-Preserving Neural Acceleration for Inference Serving",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00087",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of Large Language Models (LLMs), cloud-hosted inference serving has become the norm, requiring users to relinquish data ownership to the ethereal cloud. This surrender of ownership is particularly concerning, as citizens' data is exposed to the cloud en masse and LLMs are increasingly deployed in highly regulated domains. Yet, existing approaches to preserving data ownership are either insufficient or impractical. Trusted Execution Environments (TEEs) incur modest overheads but expose plaintext in on-chip storage, thereby failing to preserve ownership and also presenting a well-exploited attack surface. Fully Homomorphic Encryption (FHE) keeps data encrypted onchip and thus theoretically provides cryptographic data ownership, but it remains impractical due to immense overheads. FHE's overheads stem from performing Arithmetic Logic Unit (ALU) operations directly on encrypted data. However, transient electrical signals within ALU wires and combinational logic gates are unobservable unless they are stored in registers or other onchip storage in plaintext. Thus, if plaintext assets never persist beyond these transient ALU signals and all stored values remain encrypted on-chip, FHE-level data ownership becomes attainable. Our work proposes this new paradigm for ownership-preserving inference, instantiated in a novel design point called the IroKnight Neural Processing Unit (NPU). IroKnight exposes plaintext only ephemerally within the wires and gates of ALUs-flashing for a literal nanosecond-while all on-chip storage (e.g., pipe-registers, buffers, etc.) remains encrypted and integrity-protected. To make this practical, IroKnight leverages two domain-specific insights: (1) the regular accesses in fine-grained tiled and vectored neural calculations enable same-cycle in-ALU encryption and decryption; (2) the mathematics of integrity checks mirrors the multiply-andaccumulate flow of neural operators, enabling mid-execution data authentication. By leveraging these LLM-specific properties, IroKnight achieves near-FHE-level data ownership with just 3.3% runtime and 15.2% energy overheads, whereas FHE NPUs increase runtime and energy by $\\mathbf{1 1 1 0} \\times$ and $\\mathbf{2 8 7 2} \\times$, respectively.",
+      "identifiers": [
+        "SemanticScholar:606fe5b1ba96690e3f864370d5d4efa41e497970"
+      ],
+      "semantic_scholar_id": "606fe5b1ba96690e3f864370d5d4efa41e497970",
+      "doi": "10.1109/ISCA66397.2026.00087",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00087",
+      "authors": [
+        "Harsha Santhanam",
+        "Ashwin Rohit Alagiri Rajan",
+        "H. Esmaeilzadeh"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "SVD Contextual Sparsity Predictors for Fast LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.14110",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Contextual sparsity is one of the approaches used to reduce computational complexity in the inference process of large language models (LLMs). Existing techniques for efficient LLM inference acceleration based on contextual sparsity with minimal accuracy degradation require training sparse pattern predictors. This paper presents a framework for accelerating inference of ReGLU-based feed-forward networks (FFNs) within LLMs. The proposed framework provides a fast, training-free method for building sparse pattern predictors using truncation-aware singular value decomposition (SVD) of the gate projection matrix, along with a threshold calibration algorithm, and inference executors supporting conditional computation on CUDA and CANN devices. Experiments on three sparse LLMs with an average activation sparsity level of 90% in the FFNs demonstrate up to a 1.8x reduction in end-to-end decoding time while maintaining less than 1% degradation in benchmark scores on tasks involving complex math and code generation. This work advances the deployment of LLMs on edge devices.",
+      "identifiers": [
+        "SemanticScholar:72efc3e244f04eb0eb8a736f9a9b65713affda1f"
+      ],
+      "semantic_scholar_id": "72efc3e244f04eb0eb8a736f9a9b65713affda1f",
+      "canonical_id": "arXiv:2603.14110",
+      "arxiv_id": "2603.14110",
+      "doi": "10.48550/arXiv.2603.14110",
+      "authors": [
+        "Georgii Serbin",
+        "Kirill Koshkin",
+        "Zhongao Sun",
+        "Anastasiya Bistrigova",
+        "C. Korikov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Skew to Symmetry: Node-Interconnect Multi-Path Balancing with Execution-time Planning for Modern GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2604.00317",
+      "year": 2026,
+      "published": "2026-03-31",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern GPU-based high-performance computing (HPC) clusters offer unprecedented communication bandwidth through heterogeneous intra-node (e.g., NVLink, NVSwitch, AMD xGMI) and inter-node (e.g., multi-rail InfiniBand, RoCE NICs) interconnects. However, despite ample aggregate bandwidth, many important communication patterns in real-world applications routinely fail to utilize these hardware capabilities fully. Traffic skew frequently leads to scenarios where a small number of links become oversaturated while others remain largely idle, causing congestion, latency spikes, and severe scalability bottlenecks. Current communication frameworks (e.g., NCCL, MPI with UCX) predominantly rely on static fastest-path routing or static hashing-based multi-rail striping, leaving significant bandwidth unused whenever real-time load deviates from the expected distribution.To overcome these limitations, we propose NIMBLE (Node-Interconnect Multi-path BaLancing with Execution-time orchestration), a runtime communication orchestration system that adaptively redistributes network traffic to balance link utilization across all available intra-node and inter-node paths. NIMBLE solves a capacity-normalized minimum-congestion optimization via a fast multiplicative-weights scheme, and leverages CUDA-aware GPU kernel-based RDMA pipelining to efficiently route traffic through intermediate GPUs and rail-matched NICs. This endpoint-driven orchestration integrates transparently with existing communication libraries without application changes while preserving ordering, determinism, and low overhead.On H100-SXM4 nodes with fully connected NVLINK and four NDR400 rails, NIMBLE achieves up to 2.3× higher intra-node bandwidth and 3.8× higher inter-node throughput compared to single-path baselines. It outperforms NCCL and MPI by up to 5.2× on skewed All-to-Allv workloads, 1.35× on the end-to-end LLM MoE blocks, while matching baseline performance under balanced traffic.",
+      "identifiers": [
+        "SemanticScholar:f06888176f2cad9f01aa3b9e7113363564f71d9f"
+      ],
+      "semantic_scholar_id": "f06888176f2cad9f01aa3b9e7113363564f71d9f",
+      "canonical_id": "arXiv:2604.00317",
+      "arxiv_id": "2604.00317",
+      "doi": "10.1109/IPDPS65963.2026.00062",
+      "authors": [
+        "Jing-Han Yao",
+        "Kaushik Kandadi",
+        "B. Ramesh",
+        "H. Subramoni",
+        "Dhabaleswar K. Panda"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Charon: A Unified and Fine-Grained Simulator for Large-Scale LLM Training and Inference",
+      "source_url": "https://arxiv.org/abs/2605.17164",
+      "year": 2026,
+      "published": "2026-05-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large-scale LLM training and inference with optimal performance is exceptionally challenging due to a complex design space of parallelism strategies, system optimizations, and hardware configurations. Accurate and rapid performance simulation is critical for guiding optimization efforts and system studies by validating\"what-if\"Hooker Figure hypotheses. To address this, we introduce Charon, a unified, modular, and fine-grained simulator for accurately predicting LLM performance. Experiments show Charon achieves high accuracy across different models and configurations, with an overall prediction error consistently under 5.35%, and even under 3.74% for training with a large-scale GPU cluster. In a practical inference deployment case, Charon discovered a configuration that improved system throughput over an engineering-tuned baseline, demonstrating its significant real-world value.",
+      "identifiers": [
+        "SemanticScholar:1856a89608f1741e75e325725006cb00f90da596"
+      ],
+      "semantic_scholar_id": "1856a89608f1741e75e325725006cb00f90da596",
+      "canonical_id": "arXiv:2605.17164",
+      "arxiv_id": "2605.17164",
+      "doi": "10.48550/arXiv.2605.17164",
+      "authors": [
+        "Mengtian Yang",
+        "Zhekun Zhang",
+        "Ming Wu",
+        "Jian-Wen Yan",
+        "Hanshi Sun",
+        "Li-Wen Chang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern",
+      "source_url": "https://arxiv.org/abs/2510.15882",
+      "year": 2025,
+      "published": "2025-08-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) continue to scale, multi-node deployment has become a necessity. Consequently, communication has become a critical performance bottleneck. Current intra-node communication libraries, like NCCL, typically make use of a single interconnect such as NVLink. This approach creates performance ceilings, especially on hardware like the H800 GPU where the primary interconnect's bandwidth can become a bottleneck, and leaves other hardware resources like PCIe and Remote Direct Memory Access (RDMA)-capable Network Interface Cards (NICs) largely idle during intensive workloads. We propose FlexLink, the first collective communication framework to the best of our knowledge designed to systematically address this by aggregating these heterogeneous links-NVLink, PCIe, and RDMA NICs-into a single, high-performance communication fabric. FlexLink employs an effective two-stage adaptive load balancing strategy that dynamically partitions communication traffic across all available links, ensuring that faster interconnects are not throttled by slower ones. On an 8-GPU H800 server, our design improves the bandwidth of collective operators such as AllReduce and AllGather by up to 26% and 27% over the NCCL baseline, respectively. This gain is achieved by offloading 2-22% of the total communication traffic to the previously underutilized PCIe and RDMA NICs. FlexLink provides these improvements as a lossless, drop-in replacement compatible with the NCCL API, ensuring easy adoption.",
+      "identifiers": [
+        "SemanticScholar:d1d24efa437c1d5684af5bf1ccd34c0277d97246"
+      ],
+      "semantic_scholar_id": "d1d24efa437c1d5684af5bf1ccd34c0277d97246",
+      "canonical_id": "arXiv:2510.15882",
+      "arxiv_id": "2510.15882",
+      "doi": "10.48550/arXiv.2510.15882",
+      "authors": [
+        "Ao Shen",
+        "Rui Zhang",
+        "Jun-Ping Zhao"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 450,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion",
+      "source_url": "https://arxiv.org/abs/2510.24390",
+      "year": 2025,
+      "published": "2025-10-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of Large Language Models (LLMs) into real-time Web applications, such as AI-powered search and conversational agents, presents a fundamental Web infrastructure challenge: reconciling the demand for high-quality, complex reasoning with the stringent low-latency and high-throughput requirements of interactive services. Current LLM reasoning, hindered by computationally inefficient sequential generation and rigid reasoning strategies, creates a critical bottleneck for the Web services. Existing approaches typically optimize the LLM reasoning for either efficiency or quality but struggle to achieve both, and thus fail to meet the dual requirements of modern Web platforms. To overcome these limitations, we propose Orion, a novel and efficient reasoning framework that enables dependency-aware query decomposition and logic-parallel content expansion. Concretely, Orion decomposes a single query reasoning process into two synergistic phases: (1) \\textit{key point generation}, which distills logically structured key points through retrieval-augmented few-shot prompting, and (2) \\textit{content parallel expansion}, which concurrently elaborates on these points based on a dependency graph to ensure logical consistency. Furthermore, Orion introduces a pipeline scheduling mechanism that exploits the complementary computational characteristics of the two phases (generation imposes pressure on GPU computing and expansion stresses on GPU memory) across multiple queries, enabling cross-query parallelism and dramatically improving reasoning performance (\\ie, efficiency and quality). Experiments on diverse benchmarks show that Orion not only delivers up to 4.33x higher token generation speed and 3.42x lower answer latency over the baselines but also improves reasoning quality by up to 18.75% through explicitly modeling inter-point dependencies.",
+      "identifiers": [
+        "SemanticScholar:a34a8130745082b7cf17847a8827d92e1f6ec672"
+      ],
+      "semantic_scholar_id": "a34a8130745082b7cf17847a8827d92e1f6ec672",
+      "canonical_id": "arXiv:2510.24390",
+      "arxiv_id": "2510.24390",
+      "doi": "10.48550/arXiv.2510.24390",
+      "authors": [
+        "Xianjun Gao",
+        "Jian-Chun Liu",
+        "Hong-Li Xu",
+        "Liu-Sheng Huang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 391,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.15380",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.15380",
+        "id:SemanticScholar:7461aad4a4126c278ebe7b07bedc654acf06ad7b",
+        "id:arXiv:2601.15380",
+        "title:you need better attention priors",
+        "url:https://arxiv.org/abs/2601.15380"
+      ],
+      "record": {
+        "title": "You Need Better Attention Priors",
+        "source_url": "https://arxiv.org/abs/2601.15380",
+        "year": 2026,
+        "published": "2026-01-21",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We generalize the attention mechanism by viewing it through the lens of Entropic Optimal Transport, revealing that standard attention corresponds to a transport problem regularized by an implicit uniform prior. We introduce Generalized Optimal transport Attention with Trainable priors (GOAT), a new attention mechanism that replaces this naive assumption with a learnable, continuous prior. This prior maintains full compatibility with optimized kernels such as FlashAttention. GOAT also provides an EOT-based explanation of attention sinks and materializes a solution for them, avoiding the representational trade-offs of standard attention. Finally, by absorbing spatial information into the core attention computation, GOAT learns an extrapolatable prior that combines the flexibility of learned positional embeddings with the length generalization of fixed encodings.",
+        "identifiers": [
+          "SemanticScholar:7461aad4a4126c278ebe7b07bedc654acf06ad7b"
+        ],
+        "semantic_scholar_id": "7461aad4a4126c278ebe7b07bedc654acf06ad7b",
+        "canonical_id": "arXiv:2601.15380",
+        "arxiv_id": "2601.15380",
+        "doi": "10.48550/arXiv.2601.15380",
+        "authors": [
+          "Elon Litman",
+          "Gabriel Guo"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 306,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.07577",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.07577",
+        "id:SemanticScholar:c46fea7bd768aa71cbcc8c75a3c18f7aed8ebf6a",
+        "id:arXiv:2606.07577",
+        "title:omnimem perturbationaware memory compression for streaming audiovisual llms",
+        "url:https://arxiv.org/abs/2606.07577"
+      ],
+      "record": {
+        "title": "OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs",
+        "source_url": "https://arxiv.org/abs/2606.07577",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Audio-visual large language models (LLMs) hold strong promise for long-form video understanding, yet their long-video inference is fundamentally limited by the linear growth of video tokens and key-value (KV) caches. We present OmniMem, a memory-efficient streaming framework designed specifically for audio-visual LLMs. Unlike existing compression methods that treat all tokens uniformly, OmniMem introduces a modality-aware memory allocation strategy that separately manages visual and audio contexts, addressing the severe token imbalance between the two modalities. OmniMem further preserves informative and non-redundant KV states through perturbation-aware memory selection, enabling compact memory without sacrificing long-range understanding. To strengthen compression under realistic deployment constraints, we also explore budget-aware fine-tuning, which encourages the model to consolidate useful information into retained memory. Experiments on VideoMME Long, LVBench, and LVOmniBench with video-SALMONN 2+ and Qwen-2.5-Omni show that OmniMem consistently improves over strong training-free compression baselines by 2-4% absolute accuracy under the same memory budgets, with an additional 1-2% gain after fine-tuning.",
+        "identifiers": [
+          "SemanticScholar:c46fea7bd768aa71cbcc8c75a3c18f7aed8ebf6a"
+        ],
+        "semantic_scholar_id": "c46fea7bd768aa71cbcc8c75a3c18f7aed8ebf6a",
+        "canonical_id": "arXiv:2606.07577",
+        "arxiv_id": "2606.07577",
+        "doi": "10.48550/arXiv.2606.07577",
+        "authors": [
+          "Guang-Zhi Sun",
+          "Yixuan Li",
+          "Yu-Dong Yang",
+          "Chao Zhang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 181,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.07306",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.07306",
+        "id:SemanticScholar:75f3e09b452bc6e3078a3245a99480f5d8d021a4",
+        "id:arXiv:2602.07306",
+        "title:parallel track transformers enabling fast gpu inference with reduced synchronization",
+        "url:https://arxiv.org/abs/2602.07306"
+      ],
+      "record": {
+        "title": "Parallel Track Transformers: Enabling Fast GPU Inference with Reduced Synchronization",
+        "source_url": "https://arxiv.org/abs/2602.07306",
+        "year": 2026,
+        "published": "2026-02-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient large-scale inference of transformer-based large language models (LLMs) remains a fundamental systems challenge, frequently requiring multi-GPU parallelism to meet stringent latency and throughput targets. Conventional tensor parallelism decomposes matrix operations across devices but introduces substantial inter-GPU synchronization, leading to communication bottlenecks and degraded scalability. We propose the Parallel Track (PT) Transformer, a novel architectural paradigm that restructures computation to minimize cross-device dependencies. PT achieves up to a 16x reduction in synchronization operations relative to standard tensor parallelism, while maintaining competitive model quality in our experiments. We integrate PT into two widely adopted LLM serving stacks-Tensor-RT-LLM and vLLM-and report consistent improvements in serving efficiency, including up to 15-30% reduced time to first token, 2-12% reduced time per output token, and up to 31.90% increased throughput in both settings.",
+        "identifiers": [
+          "SemanticScholar:75f3e09b452bc6e3078a3245a99480f5d8d021a4"
+        ],
+        "semantic_scholar_id": "75f3e09b452bc6e3078a3245a99480f5d8d021a4",
+        "canonical_id": "arXiv:2602.07306",
+        "arxiv_id": "2602.07306",
+        "doi": "10.48550/arXiv.2602.07306",
+        "authors": [
+          "Chong Wang",
+          "Nan Du",
+          "Tom Gunter",
+          "Tao Lei",
+          "Kulin Seth",
+          "Senyu Tong",
+          "Jian-Yu Wang",
+          "Guo-Li Yin",
+          "Xiyou Zhou",
+          "Kelvin Zou",
+          "Ruo-Ming Pang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 289,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28726",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.28726",
+        "id:SemanticScholar:739e11c4654ba0745e584c2335e47303fe9fc2f1",
+        "id:arXiv:2608.28726",
+        "title:prorouter tokenaware progressive model routing with adaptive edgecloud collaboration for efficient multimodal llm inference",
+        "url:https://arxiv.org/abs/2608.28726"
+      ],
+      "record": {
+        "title": "Pro-Router: Token-Aware Progressive Model Routing with Adaptive Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.28726",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The remarkable performance of multimodal large language models (MLLMs) comes at the cost of substantial computational overhead, posing significant challenges to real-time deployment and cost effectiveness. Existing model routing approaches either decide from coarse request-level features alone or spend one or several extra language model passes to inspect the generated response, leaving the token-level uncertainty signals that emerge during generation unused. To address these limitations, we propose Pro-Router, a token-aware progressive model routing method with adaptive edge-cloud collaboration for efficient multimodal LLM inference. Pro-Router employs a two-stage progressive decision mechanism. First, a lightweight prompt pre-scorer module performs rapid pre-screening before token generation begins, guiding apparently simple requests to small models. Second, a token-aware verifier reads the sampling probability distribution of each token the small model generates, estimating the model's confidence in its own output to determine, per request, whether the answer ships or escalates to the cloud-based high-precision model. Furthermore, we design an adaptive edge-cloud serving pipeline that sizes every dispatch to each device's measured service rate, so both the edge and the cloud tiers stay fully utilized without manual parameter tuning and are not impacted by the network latency. Extensive experiments on multiple multimodal benchmark datasets and models demonstrate the effectiveness of Pro-Router. Compared to other methods, it achieves the highest routing accuracy and improves routing speed by more than 10x. Its serving pipeline also reaches more than 75% higher end-to-end throughput than the existing model routing pipeline. Our code is available at https://github.com/xinyuangui2/pro-router.",
+        "identifiers": [
+          "SemanticScholar:739e11c4654ba0745e584c2335e47303fe9fc2f1"
+        ],
+        "semantic_scholar_id": "739e11c4654ba0745e584c2335e47303fe9fc2f1",
+        "canonical_id": "arXiv:2608.28726",
+        "arxiv_id": "2608.28726",
+        "doi": "10.48550/arXiv.2608.28726",
+        "authors": [
+          "Xin-Yuan Gui",
+          "Shao-Wen Wang",
+          "Sheng Sun",
+          "Zi-Jian Wang",
+          "Zi-Shu Yu",
+          "Zhe-Ming Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 87,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.14808",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.14808",
+        "id:SemanticScholar:de9b37396a6fafc7b11223ef6682e9f13b2edaf1",
+        "id:arXiv:2402.14808",
+        "title:relayattention for efficient large language model serving with long system prompts",
+        "url:https://arxiv.org/abs/2402.14808"
+      ],
+      "record": {
+        "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
+        "source_url": "https://arxiv.org/abs/2402.14808",
+        "year": 2024,
+        "published": "2024-02-22",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A practical large language model (LLM) service may involve a long system prompt, which specifies the instructions, examples, and knowledge documents of the task and is reused across requests. However, the long system prompt causes throughput/latency bottlenecks as the cost of generating the next token grows w.r.t. the sequence length. This paper aims to improve the efficiency of LLM services that involve long system prompts. Our key observation is that handling these system prompts requires heavily redundant memory accesses in existing causal attention computation algorithms. Specifically, for batched requests, the cached hidden states (\\ie, key-value pairs) of system prompts are transferred from off-chip DRAM to on-chip SRAM multiple times, each corresponding to an individual request. To eliminate such a redundancy, we propose RelayAttention, an attention algorithm that allows reading these hidden states from DRAM exactly once for a batch of input tokens. RelayAttention is a free lunch: it maintains the generation quality while requiring no model retraining, as it is based on a mathematical reformulation of causal attention. We have observed significant performance improvements to a production-level system, vLLM, through integration with RelayAttention. The improvements are even more profound with longer system prompts.",
+        "identifiers": [
+          "SemanticScholar:de9b37396a6fafc7b11223ef6682e9f13b2edaf1"
+        ],
+        "semantic_scholar_id": "de9b37396a6fafc7b11223ef6682e9f13b2edaf1",
+        "canonical_id": "arXiv:2402.14808",
+        "arxiv_id": "2402.14808",
+        "doi": "10.48550/arXiv.2402.14808",
+        "authors": [
+          "Lei Zhu",
+          "Xin-Jiang Wang",
+          "Wayne Zhang",
+          "Rynson W. H. Lau"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1005,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00087",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00087",
+        "id:SemanticScholar:606fe5b1ba96690e3f864370d5d4efa41e497970",
+        "title:iroknight ownershippreserving neural acceleration for inference serving",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00087"
+      ],
+      "record": {
+        "title": "IroKnight: Ownership-Preserving Neural Acceleration for Inference Serving",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00087",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rise of Large Language Models (LLMs), cloud-hosted inference serving has become the norm, requiring users to relinquish data ownership to the ethereal cloud. This surrender of ownership is particularly concerning, as citizens' data is exposed to the cloud en masse and LLMs are increasingly deployed in highly regulated domains. Yet, existing approaches to preserving data ownership are either insufficient or impractical. Trusted Execution Environments (TEEs) incur modest overheads but expose plaintext in on-chip storage, thereby failing to preserve ownership and also presenting a well-exploited attack surface. Fully Homomorphic Encryption (FHE) keeps data encrypted onchip and thus theoretically provides cryptographic data ownership, but it remains impractical due to immense overheads. FHE's overheads stem from performing Arithmetic Logic Unit (ALU) operations directly on encrypted data. However, transient electrical signals within ALU wires and combinational logic gates are unobservable unless they are stored in registers or other onchip storage in plaintext. Thus, if plaintext assets never persist beyond these transient ALU signals and all stored values remain encrypted on-chip, FHE-level data ownership becomes attainable. Our work proposes this new paradigm for ownership-preserving inference, instantiated in a novel design point called the IroKnight Neural Processing Unit (NPU). IroKnight exposes plaintext only ephemerally within the wires and gates of ALUs-flashing for a literal nanosecond-while all on-chip storage (e.g., pipe-registers, buffers, etc.) remains encrypted and integrity-protected. To make this practical, IroKnight leverages two domain-specific insights: (1) the regular accesses in fine-grained tiled and vectored neural calculations enable same-cycle in-ALU encryption and decryption; (2) the mathematics of integrity checks mirrors the multiply-andaccumulate flow of neural operators, enabling mid-execution data authentication. By leveraging these LLM-specific properties, IroKnight achieves near-FHE-level data ownership with just 3.3% runtime and 15.2% energy overheads, whereas FHE NPUs increase runtime and energy by $\\mathbf{1 1 1 0} \\times$ and $\\mathbf{2 8 7 2} \\times$, respectively.",
+        "identifiers": [
+          "SemanticScholar:606fe5b1ba96690e3f864370d5d4efa41e497970"
+        ],
+        "semantic_scholar_id": "606fe5b1ba96690e3f864370d5d4efa41e497970",
+        "doi": "10.1109/ISCA66397.2026.00087",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00087",
+        "authors": [
+          "Harsha Santhanam",
+          "Ashwin Rohit Alagiri Rajan",
+          "H. Esmaeilzadeh"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.14110",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.14110",
+        "id:SemanticScholar:72efc3e244f04eb0eb8a736f9a9b65713affda1f",
+        "id:arXiv:2603.14110",
+        "title:svd contextual sparsity predictors for fast llm inference",
+        "url:https://arxiv.org/abs/2603.14110"
+      ],
+      "record": {
+        "title": "SVD Contextual Sparsity Predictors for Fast LLM Inference",
+        "source_url": "https://arxiv.org/abs/2603.14110",
+        "year": 2026,
+        "published": "2026-03-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Contextual sparsity is one of the approaches used to reduce computational complexity in the inference process of large language models (LLMs). Existing techniques for efficient LLM inference acceleration based on contextual sparsity with minimal accuracy degradation require training sparse pattern predictors. This paper presents a framework for accelerating inference of ReGLU-based feed-forward networks (FFNs) within LLMs. The proposed framework provides a fast, training-free method for building sparse pattern predictors using truncation-aware singular value decomposition (SVD) of the gate projection matrix, along with a threshold calibration algorithm, and inference executors supporting conditional computation on CUDA and CANN devices. Experiments on three sparse LLMs with an average activation sparsity level of 90% in the FFNs demonstrate up to a 1.8x reduction in end-to-end decoding time while maintaining less than 1% degradation in benchmark scores on tasks involving complex math and code generation. This work advances the deployment of LLMs on edge devices.",
+        "identifiers": [
+          "SemanticScholar:72efc3e244f04eb0eb8a736f9a9b65713affda1f"
+        ],
+        "semantic_scholar_id": "72efc3e244f04eb0eb8a736f9a9b65713affda1f",
+        "canonical_id": "arXiv:2603.14110",
+        "arxiv_id": "2603.14110",
+        "doi": "10.48550/arXiv.2603.14110",
+        "authors": [
+          "Georgii Serbin",
+          "Kirill Koshkin",
+          "Zhongao Sun",
+          "Anastasiya Bistrigova",
+          "C. Korikov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.00317",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps65963.2026.00062",
+        "id:SemanticScholar:f06888176f2cad9f01aa3b9e7113363564f71d9f",
+        "id:arXiv:2604.00317",
+        "title:from skew to symmetry nodeinterconnect multipath balancing with executiontime planning for modern gpu clusters",
+        "url:https://arxiv.org/abs/2604.00317"
+      ],
+      "record": {
+        "title": "From Skew to Symmetry: Node-Interconnect Multi-Path Balancing with Execution-time Planning for Modern GPU Clusters",
+        "source_url": "https://arxiv.org/abs/2604.00317",
+        "year": 2026,
+        "published": "2026-03-31",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern GPU-based high-performance computing (HPC) clusters offer unprecedented communication bandwidth through heterogeneous intra-node (e.g., NVLink, NVSwitch, AMD xGMI) and inter-node (e.g., multi-rail InfiniBand, RoCE NICs) interconnects. However, despite ample aggregate bandwidth, many important communication patterns in real-world applications routinely fail to utilize these hardware capabilities fully. Traffic skew frequently leads to scenarios where a small number of links become oversaturated while others remain largely idle, causing congestion, latency spikes, and severe scalability bottlenecks. Current communication frameworks (e.g., NCCL, MPI with UCX) predominantly rely on static fastest-path routing or static hashing-based multi-rail striping, leaving significant bandwidth unused whenever real-time load deviates from the expected distribution.To overcome these limitations, we propose NIMBLE (Node-Interconnect Multi-path BaLancing with Execution-time orchestration), a runtime communication orchestration system that adaptively redistributes network traffic to balance link utilization across all available intra-node and inter-node paths. NIMBLE solves a capacity-normalized minimum-congestion optimization via a fast multiplicative-weights scheme, and leverages CUDA-aware GPU kernel-based RDMA pipelining to efficiently route traffic through intermediate GPUs and rail-matched NICs. This endpoint-driven orchestration integrates transparently with existing communication libraries without application changes while preserving ordering, determinism, and low overhead.On H100-SXM4 nodes with fully connected NVLINK and four NDR400 rails, NIMBLE achieves up to 2.3× higher intra-node bandwidth and 3.8× higher inter-node throughput compared to single-path baselines. It outperforms NCCL and MPI by up to 5.2× on skewed All-to-Allv workloads, 1.35× on the end-to-end LLM MoE blocks, while matching baseline performance under balanced traffic.",
+        "identifiers": [
+          "SemanticScholar:f06888176f2cad9f01aa3b9e7113363564f71d9f"
+        ],
+        "semantic_scholar_id": "f06888176f2cad9f01aa3b9e7113363564f71d9f",
+        "canonical_id": "arXiv:2604.00317",
+        "arxiv_id": "2604.00317",
+        "doi": "10.1109/IPDPS65963.2026.00062",
+        "authors": [
+          "Jing-Han Yao",
+          "Kaushik Kandadi",
+          "B. Ramesh",
+          "H. Subramoni",
+          "Dhabaleswar K. Panda"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 237,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.17164",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.17164",
+        "id:SemanticScholar:1856a89608f1741e75e325725006cb00f90da596",
+        "id:arXiv:2605.17164",
+        "title:charon a unified and finegrained simulator for largescale llm training and inference",
+        "url:https://arxiv.org/abs/2605.17164"
+      ],
+      "record": {
+        "title": "Charon: A Unified and Fine-Grained Simulator for Large-Scale LLM Training and Inference",
+        "source_url": "https://arxiv.org/abs/2605.17164",
+        "year": 2026,
+        "published": "2026-05-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large-scale LLM training and inference with optimal performance is exceptionally challenging due to a complex design space of parallelism strategies, system optimizations, and hardware configurations. Accurate and rapid performance simulation is critical for guiding optimization efforts and system studies by validating\"what-if\"Hooker Figure hypotheses. To address this, we introduce Charon, a unified, modular, and fine-grained simulator for accurately predicting LLM performance. Experiments show Charon achieves high accuracy across different models and configurations, with an overall prediction error consistently under 5.35%, and even under 3.74% for training with a large-scale GPU cluster. In a practical inference deployment case, Charon discovered a configuration that improved system throughput over an engineering-tuned baseline, demonstrating its significant real-world value.",
+        "identifiers": [
+          "SemanticScholar:1856a89608f1741e75e325725006cb00f90da596"
+        ],
+        "semantic_scholar_id": "1856a89608f1741e75e325725006cb00f90da596",
+        "canonical_id": "arXiv:2605.17164",
+        "arxiv_id": "2605.17164",
+        "doi": "10.48550/arXiv.2605.17164",
+        "authors": [
+          "Mengtian Yang",
+          "Zhekun Zhang",
+          "Ming Wu",
+          "Jian-Wen Yan",
+          "Hanshi Sun",
+          "Li-Wen Chang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 191,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.15882",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.15882",
+        "id:SemanticScholar:d1d24efa437c1d5684af5bf1ccd34c0277d97246",
+        "id:arXiv:2510.15882",
+        "title:flexlink boosting your nvlink bandwidth by 27 without accuracy concern",
+        "url:https://arxiv.org/abs/2510.15882"
+      ],
+      "record": {
+        "title": "FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern",
+        "source_url": "https://arxiv.org/abs/2510.15882",
+        "year": 2025,
+        "published": "2025-08-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) continue to scale, multi-node deployment has become a necessity. Consequently, communication has become a critical performance bottleneck. Current intra-node communication libraries, like NCCL, typically make use of a single interconnect such as NVLink. This approach creates performance ceilings, especially on hardware like the H800 GPU where the primary interconnect's bandwidth can become a bottleneck, and leaves other hardware resources like PCIe and Remote Direct Memory Access (RDMA)-capable Network Interface Cards (NICs) largely idle during intensive workloads. We propose FlexLink, the first collective communication framework to the best of our knowledge designed to systematically address this by aggregating these heterogeneous links-NVLink, PCIe, and RDMA NICs-into a single, high-performance communication fabric. FlexLink employs an effective two-stage adaptive load balancing strategy that dynamically partitions communication traffic across all available links, ensuring that faster interconnects are not throttled by slower ones. On an 8-GPU H800 server, our design improves the bandwidth of collective operators such as AllReduce and AllGather by up to 26% and 27% over the NCCL baseline, respectively. This gain is achieved by offloading 2-22% of the total communication traffic to the previously underutilized PCIe and RDMA NICs. FlexLink provides these improvements as a lossless, drop-in replacement compatible with the NCCL API, ensuring easy adoption.",
+        "identifiers": [
+          "SemanticScholar:d1d24efa437c1d5684af5bf1ccd34c0277d97246"
+        ],
+        "semantic_scholar_id": "d1d24efa437c1d5684af5bf1ccd34c0277d97246",
+        "canonical_id": "arXiv:2510.15882",
+        "arxiv_id": "2510.15882",
+        "doi": "10.48550/arXiv.2510.15882",
+        "authors": [
+          "Ao Shen",
+          "Rui Zhang",
+          "Jun-Ping Zhao"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 450,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.24390",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.24390",
+        "id:SemanticScholar:a34a8130745082b7cf17847a8827d92e1f6ec672",
+        "id:arXiv:2510.24390",
+        "title:improving llm reasoning via dependencyaware query decomposition and logicparallel content expansion",
+        "url:https://arxiv.org/abs/2510.24390"
+      ],
+      "record": {
+        "title": "Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion",
+        "source_url": "https://arxiv.org/abs/2510.24390",
+        "year": 2025,
+        "published": "2025-10-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of Large Language Models (LLMs) into real-time Web applications, such as AI-powered search and conversational agents, presents a fundamental Web infrastructure challenge: reconciling the demand for high-quality, complex reasoning with the stringent low-latency and high-throughput requirements of interactive services. Current LLM reasoning, hindered by computationally inefficient sequential generation and rigid reasoning strategies, creates a critical bottleneck for the Web services. Existing approaches typically optimize the LLM reasoning for either efficiency or quality but struggle to achieve both, and thus fail to meet the dual requirements of modern Web platforms. To overcome these limitations, we propose Orion, a novel and efficient reasoning framework that enables dependency-aware query decomposition and logic-parallel content expansion. Concretely, Orion decomposes a single query reasoning process into two synergistic phases: (1) \\textit{key point generation}, which distills logically structured key points through retrieval-augmented few-shot prompting, and (2) \\textit{content parallel expansion}, which concurrently elaborates on these points based on a dependency graph to ensure logical consistency. Furthermore, Orion introduces a pipeline scheduling mechanism that exploits the complementary computational characteristics of the two phases (generation imposes pressure on GPU computing and expansion stresses on GPU memory) across multiple queries, enabling cross-query parallelism and dramatically improving reasoning performance (\\ie, efficiency and quality). Experiments on diverse benchmarks show that Orion not only delivers up to 4.33x higher token generation speed and 3.42x lower answer latency over the baselines but also improves reasoning quality by up to 18.75% through explicitly modeling inter-point dependencies.",
+        "identifiers": [
+          "SemanticScholar:a34a8130745082b7cf17847a8827d92e1f6ec672"
+        ],
+        "semantic_scholar_id": "a34a8130745082b7cf17847a8827d92e1f6ec672",
+        "canonical_id": "arXiv:2510.24390",
+        "arxiv_id": "2510.24390",
+        "doi": "10.48550/arXiv.2510.24390",
+        "authors": [
+          "Xianjun Gao",
+          "Jian-Chun Liu",
+          "Hong-Li Xu",
+          "Liu-Sheng Huang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 391,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:28f74d3ea80b9349394922df5e4810e81ac8ab27f7beee9da952276232fee21f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

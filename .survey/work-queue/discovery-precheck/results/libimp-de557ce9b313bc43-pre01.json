@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-de557ce9b313bc43-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-de557ce9b313",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2506.07639",
+    "arXiv:2607.12161"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4fd05e2d350a4e7c7bc78b7e55bdcd640d041417",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:24:25.945137+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2506.07639",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.12161",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Token Reduction Is Not Cost Reduction",
+      "source_url": "https://arxiv.org/abs/2607.12161",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token-reduction tools for coding agents are often evaluated by the number of tokens they remove, but token count alone does not determine end-to-end inference cost. We evaluate three token-reduction approaches against an unmodified Claude Code baseline across controlled coding tasks, measuring provider-billed cost, task success, cache traffic, and agent behavior. The largest compression setup reduced delivered tool-output tokens by 38.4% but increased billed cost by 6.8%, while lighter compression produced only small and statistically uncertain savings. Across tasks, token reduction was weakly correlated with cost reduction (Pearson r = 0.15). Cost decomposition shows that prompt-cache creation and reads dominate the measured input-side cost, leaving only a limited fraction of total spend directly addressable by tool-output compression. We also find that compression can alter agent trajectories through additional retrieval, diagnosis, testing, and turns, offsetting local token savings. On a SWE-bench Go subset, aggressive compression also reduced successful patch application. These results show that token reduction is not a reliable proxy for cost reduction in tool-heavy coding agents. Effective optimization should therefore be evaluated at the level of cost per successful task, including cache behavior, trajectory changes, and correctness rather than token counts alone.",
+      "identifiers": [
+        "SemanticScholar:ae89f5df2657ef70c1f0c3b71abfc266be440be3"
+      ],
+      "semantic_scholar_id": "ae89f5df2657ef70c1f0c3b71abfc266be440be3",
+      "canonical_id": "arXiv:2607.12161",
+      "arxiv_id": "2607.12161",
+      "doi": "10.48550/arXiv.2607.12161",
+      "authors": [
+        "Sarel Weinberger",
+        "Amir Hozez"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast ECoT: Efficient Embodied Chain-of-Thought via Thoughts Reuse",
+      "source_url": "https://arxiv.org/abs/2506.07639",
+      "year": 2025,
+      "published": "2025-06-09",
+      "venue": "IEEE International Conference on Robotics and Automation",
+      "citation_count": 25,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Embodied Chain-of-Thought (ECoT) reasoning enhances vision-language-action (VLA) models by improving performance and interpretability through intermediate reasoning steps. However, its sequential autoregressive token generation introduces significant inference latency, limiting real-time deployment. We propose Fast ECoT, an inference-time acceleration method that exploits the structured and repetitive nature of ECoT to (1) cache and reuse high-level reasoning across timesteps and (2) parallelise the generation of modular reasoning steps. Additionally, we introduce an asynchronous scheduler that decouples reasoning from action decoding, further boosting responsiveness. Fast ECoT requires no model changes or additional training and easily integrates into existing VLA pipelines. Experiments in both simulation (LIBERO) and real-world robot tasks show up to a 7.5× reduction in latency with comparable or improved task success rate and reasoning faithfulness, bringing ECoT policies closer to practical real-time deployment. Code is available at https://github.com/kevinDuan1/Fast-ECoT.",
+      "identifiers": [
+        "SemanticScholar:ed5fc04a496681d40888df52d3303bab9a8607a9"
+      ],
+      "semantic_scholar_id": "ed5fc04a496681d40888df52d3303bab9a8607a9",
+      "canonical_id": "arXiv:2506.07639",
+      "arxiv_id": "2506.07639",
+      "doi": "10.1109/ICRA57385.2026.11695789",
+      "authors": [
+        "Zhe-Kai Duan",
+        "Yuan Zhang",
+        "Shi-Kai Geng",
+        "Gao-Wen Liu",
+        "Joschka Boedecker",
+        "C. X. Lu"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 25,
+        "citation_count": 25,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 532,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.12161",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.12161",
+        "id:SemanticScholar:ae89f5df2657ef70c1f0c3b71abfc266be440be3",
+        "id:arXiv:2607.12161",
+        "title:token reduction is not cost reduction",
+        "url:https://arxiv.org/abs/2607.12161"
+      ],
+      "record": {
+        "title": "Token Reduction Is Not Cost Reduction",
+        "source_url": "https://arxiv.org/abs/2607.12161",
+        "year": 2026,
+        "published": "2026-07-13",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Token-reduction tools for coding agents are often evaluated by the number of tokens they remove, but token count alone does not determine end-to-end inference cost. We evaluate three token-reduction approaches against an unmodified Claude Code baseline across controlled coding tasks, measuring provider-billed cost, task success, cache traffic, and agent behavior. The largest compression setup reduced delivered tool-output tokens by 38.4% but increased billed cost by 6.8%, while lighter compression produced only small and statistically uncertain savings. Across tasks, token reduction was weakly correlated with cost reduction (Pearson r = 0.15). Cost decomposition shows that prompt-cache creation and reads dominate the measured input-side cost, leaving only a limited fraction of total spend directly addressable by tool-output compression. We also find that compression can alter agent trajectories through additional retrieval, diagnosis, testing, and turns, offsetting local token savings. On a SWE-bench Go subset, aggressive compression also reduced successful patch application. These results show that token reduction is not a reliable proxy for cost reduction in tool-heavy coding agents. Effective optimization should therefore be evaluated at the level of cost per successful task, including cache behavior, trajectory changes, and correctness rather than token counts alone.",
+        "identifiers": [
+          "SemanticScholar:ae89f5df2657ef70c1f0c3b71abfc266be440be3"
+        ],
+        "semantic_scholar_id": "ae89f5df2657ef70c1f0c3b71abfc266be440be3",
+        "canonical_id": "arXiv:2607.12161",
+        "arxiv_id": "2607.12161",
+        "doi": "10.48550/arXiv.2607.12161",
+        "authors": [
+          "Sarel Weinberger",
+          "Amir Hozez"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.07639",
+      "identity_tokens": [
+        "id:DOI:10.1109/icra57385.2026.11695789",
+        "id:SemanticScholar:ed5fc04a496681d40888df52d3303bab9a8607a9",
+        "id:arXiv:2506.07639",
+        "title:fast ecot efficient embodied chainofthought via thoughts reuse",
+        "url:https://arxiv.org/abs/2506.07639"
+      ],
+      "record": {
+        "title": "Fast ECoT: Efficient Embodied Chain-of-Thought via Thoughts Reuse",
+        "source_url": "https://arxiv.org/abs/2506.07639",
+        "year": 2025,
+        "published": "2025-06-09",
+        "venue": "IEEE International Conference on Robotics and Automation",
+        "citation_count": 25,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Embodied Chain-of-Thought (ECoT) reasoning enhances vision-language-action (VLA) models by improving performance and interpretability through intermediate reasoning steps. However, its sequential autoregressive token generation introduces significant inference latency, limiting real-time deployment. We propose Fast ECoT, an inference-time acceleration method that exploits the structured and repetitive nature of ECoT to (1) cache and reuse high-level reasoning across timesteps and (2) parallelise the generation of modular reasoning steps. Additionally, we introduce an asynchronous scheduler that decouples reasoning from action decoding, further boosting responsiveness. Fast ECoT requires no model changes or additional training and easily integrates into existing VLA pipelines. Experiments in both simulation (LIBERO) and real-world robot tasks show up to a 7.5× reduction in latency with comparable or improved task success rate and reasoning faithfulness, bringing ECoT policies closer to practical real-time deployment. Code is available at https://github.com/kevinDuan1/Fast-ECoT.",
+        "identifiers": [
+          "SemanticScholar:ed5fc04a496681d40888df52d3303bab9a8607a9"
+        ],
+        "semantic_scholar_id": "ed5fc04a496681d40888df52d3303bab9a8607a9",
+        "canonical_id": "arXiv:2506.07639",
+        "arxiv_id": "2506.07639",
+        "doi": "10.1109/ICRA57385.2026.11695789",
+        "authors": [
+          "Zhe-Kai Duan",
+          "Yuan Zhang",
+          "Shi-Kai Geng",
+          "Gao-Wen Liu",
+          "Joschka Boedecker",
+          "C. X. Lu"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 25,
+          "citation_count": 25,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 532,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b1c82dd08e866ffe5ab163ded33198a7236bd2d2c94550bba4c0d57b900789b0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

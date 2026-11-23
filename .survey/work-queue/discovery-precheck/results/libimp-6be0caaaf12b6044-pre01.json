@@ -1,0 +1,789 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6be0caaaf12b6044-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6be0caaaf12b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tcad.2022.3181541",
+    "DOI:10.18653/v1/2026.acl-long.1650",
+    "arXiv:2506.18582",
+    "arXiv:2507.17245",
+    "arXiv:2509.24257",
+    "arXiv:2510.01817",
+    "arXiv:2605.02739",
+    "arXiv:2609.39185"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4fd05e2d350a4e7c7bc78b7e55bdcd640d041417",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:24:23.489456+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tcad.2022.3181541",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.1650",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.18582",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.17245",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.24257",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.01817",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.02739",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39185",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference",
+      "source_url": "https://arxiv.org/abs/2605.02739",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dual-system Vision-Language-Action (VLA) models achieve state-of-the-art robotic manipulation but are bottlenecked by the VLM backbone, which must execute at every control step while producing temporally redundant features. We propose Latent Bridge, a lightweight model that predicts VLM output deltas between timesteps, enabling the action head to operate on predicted outputs while the expensive VLM backbone is called only periodically. We instantiate Latent Bridge on two architecturally distinct VLAs: GR00T-N1.6 (feature-space bridge) and {\\pi}0.5 (KV-cache bridge), demonstrating that the approach generalizes across VLA designs. Our task-agnostic DAgger training pipeline transfers across benchmarks without modification. Across four LIBERO suites, 24 RoboCasa kitchen tasks, and the ALOHA sim transfer-cube task, Latent Bridge achieves 95-100% performance retention while reducing VLM calls by 50-75%, yielding 1.65-1.73x net per-episode speedup.",
+      "identifiers": [
+        "SemanticScholar:8e52002772ed95087bdd4cf7a89dbe3630dfe015"
+      ],
+      "semantic_scholar_id": "8e52002772ed95087bdd4cf7a89dbe3630dfe015",
+      "canonical_id": "arXiv:2605.02739",
+      "arxiv_id": "2605.02739",
+      "doi": "10.48550/arXiv.2605.02739",
+      "authors": [
+        "Yu-Dong Liu",
+        "Yuan Li",
+        "Zi-Jia Tang",
+        "Yu-Xin Zheng",
+        "Yueqian Lin",
+        "Qin-Si Wang",
+        "Yi Li",
+        "Shuang Liu",
+        "Shuai Zhang",
+        "Taotao Jing",
+        "Da-Shan Gao",
+        "Ning Bi",
+        "Jing-Wei Sun",
+        "Yi-Ran Chen",
+        "Hai Li"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Low-Discrepancy Dither for Quantized Recurrent State Caches",
+      "source_url": "https://arxiv.org/abs/2609.39185",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba-style and hybrid language models compress their past into a fixed-size recurrent state that is rewritten at every generated token. Storing this state in low precision saves memory bandwidth, but every rounding error is fed back into the next update and can accumulate over long generations. Production systems round the state stochastically; we ask which rounding rule such caches should use. We find that a deterministic golden-ratio Weyl dither, which needs no random numbers, consistently brings the quantized model closer to the full-precision one than stochastic rounding, across pure and hybrid models, storage formats, and long decoding horizons, at no extra cost. Round-to-nearest behaves differently: because it discards small updates, its error keeps growing, so it can look best in short evaluations yet falls far behind over long generations. A discrepancy analysis explains this ordering, and we document implementation pitfalls that silently remove the benefit.",
+      "identifiers": [
+        "SemanticScholar:7e6949a8a82603708c664d0f9f0652c48adeee25"
+      ],
+      "semantic_scholar_id": "7e6949a8a82603708c664d0f9f0652c48adeee25",
+      "canonical_id": "arXiv:2609.39185",
+      "arxiv_id": "2609.39185",
+      "doi": "10.48550/arXiv.2609.39185",
+      "authors": [
+        "Snigdha Chandan Khilar"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallel Continuous Chain-of-Thought with Jacobi Iteration",
+      "source_url": "https://arxiv.org/abs/2506.18582",
+      "year": 2025,
+      "published": "2025-06-23",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 42,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Continuous chain-of-thought has been shown to be effective in saving reasoning tokens for large language models. By reasoning with continuous latent thought tokens, continuous CoT is able to perform implicit reasoning in a compact manner. However, the sequential dependencies between latent thought tokens spoil parallel training, leading to long training time. In this paper, we propose Parallel Continuous Chain-of-Thought (PCCoT), which performs Jacobi iteration on the latent thought tokens, updating them iteratively in parallel instead of sequentially and thus improving both training and inference efficiency of continuous CoT. Experiments demonstrate that by choosing the proper number of iterations, we are able to achieve comparable or even better performance while saving nearly 50% of the training and inference time. Moreover, PCCoT shows better stability and robustness in the training process. Our code is available at https://github.com/whyNLP/PCCoT.",
+      "identifiers": [
+        "SemanticScholar:5cd0b2a46e3672731d68954a389e01501eeb5c3a"
+      ],
+      "semantic_scholar_id": "5cd0b2a46e3672731d68954a389e01501eeb5c3a",
+      "canonical_id": "arXiv:2506.18582",
+      "arxiv_id": "2506.18582",
+      "doi": "10.48550/arXiv.2506.18582",
+      "authors": [
+        "Haoyi Wu",
+        "Zhihao Teng",
+        "Kewei Tu"
+      ],
+      "priority": 52,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 42,
+        "citation_count": 42,
+        "total": 52,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 518,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "DTATrans: Leveraging Dynamic Token-Based Quantization With Accuracy Compensation Mechanism for Efficient Transformer Architecture",
+      "source_url": "https://doi.org/10.1109/TCAD.2022.3181541",
+      "year": 2023,
+      "published": "2023-02-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 36,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:512ff5037b28be7415d318ae6e8eeb0abb8c7013"
+      ],
+      "semantic_scholar_id": "512ff5037b28be7415d318ae6e8eeb0abb8c7013",
+      "doi": "10.1109/TCAD.2022.3181541",
+      "canonical_id": "DOI:10.1109/TCAD.2022.3181541",
+      "authors": [
+        "Tao Yang",
+        "Fei Ma",
+        "Xiaolin Li",
+        "Fang-Xin Liu",
+        "Yilong Zhao",
+        "Zhe-Zhi He",
+        "Li Jiang"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 36,
+        "citation_count": 36,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1391,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SCOPE: Boosting LLM Efficiency with Scoped Position Encoding",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1650",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Positional encodings are fundamental to Trans-formers, yet explicit methods like RoPE can degrade under length extrapolation and may incur extra arithmetic and memory-access overhead. In this paper, we propose Sco ped P osition E ncoding ( S CO PE ), a novel framework that reimagines structured sparsity as an intrinsic position encoding mechanism. Instead of relying on explicit arithmetic signals, S CO PE assigns exponentially scaled look-back scopes to attention heads. We theoretically demonstrate that this simple topological constraint transforms multi-head attention into a hierarchical processor, yielding an order awareness horizon that grows exponentially with depth up to the sequence length. Consequently, S CO PE is parameter-free and avoids relying on fragile positional arithmetic. Empirically, it significantly enhances efficiency by masking the majority of attention computations, offering a theoretical 8 × reduction in attention FLOPs at long contexts. Extensive evaluations on LLaMA-3-8B architectures reveal that S CO PE achieves superior native length extrapolation and robust retrieval fidelity compared to RoPE, all while substantially reducing training and inference latency. The code is available at https://github.com/oncemoe/ScoPE .",
+      "identifiers": [
+        "SemanticScholar:7d39ab1b557a850a415e78a7be18a97d9ba6f2b0"
+      ],
+      "semantic_scholar_id": "7d39ab1b557a850a415e78a7be18a97d9ba6f2b0",
+      "doi": "10.18653/v1/2026.acl-long.1650",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1650",
+      "authors": [
+        "Qing-qing Qi",
+        "Hongyang Chen",
+        "Zhao Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "VeriLLM: A Lightweight Framework for Publicly Verifiable Decentralized Inference",
+      "source_url": "https://arxiv.org/abs/2509.24257",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decentralized inference provides a scalable and resilient paradigm for serving large language models (LLMs), enabling fragmented global resource utilization and reducing reliance on centralized providers. However, in a permissionless environment without trusted nodes, ensuring the correctness of model outputs remains a core challenge. We introduce VeriLLM, a publicly verifiable protocol for decentralized LLM inference that achieves security with incentive guarantees while maintaining practical efficiency. VeriLLM combines lightweight empirical rerunning with minimal on-chain checks to preclude free-riding, allowing verifiers to validate results at approximately 1% of the underlying inference cost by exploiting the structural separation between prefill and autoregressive decoding. To prevent verification bottlenecks, we design an isomorphic inference--verification architecture that multiplexes both inference and verification roles across the same GPU workers. This design (i) improves GPU utilization and overall throughput, (ii) enlarges the effective validator set, enhancing robustness and liveness, and (iii) enforces task indistinguishability to prevent node-specific optimizations or selective behavior. Through theoretical analysis and system-level evaluation, we show that VeriLLM achieves reliable public verifiability with minimal overhead, offering a practical foundation for trustworthy and scalable decentralized LLM inference.",
+      "identifiers": [
+        "SemanticScholar:14bec854d248fe81a1478ed882a3273ca0c1c3f6"
+      ],
+      "semantic_scholar_id": "14bec854d248fe81a1478ed882a3273ca0c1c3f6",
+      "canonical_id": "arXiv:2509.24257",
+      "arxiv_id": "2509.24257",
+      "doi": "10.48550/arXiv.2509.24257",
+      "authors": [
+        "Ke Wang",
+        "Zishuo Zhao",
+        "Xin-Yuan Song",
+        "Zenlin Li",
+        "Li Xia",
+        "Chris Tong",
+        "Bill Shi",
+        "Wenjie Qu",
+        "Eric Yang",
+        "Lynn Ai"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 420,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction",
+      "source_url": "https://arxiv.org/abs/2510.01817",
+      "year": 2025,
+      "published": "2025-10-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture, underpinned by the Multi-Head Attention (MHA) mechanism, has become the de facto standard for state-of-the-art models in artificial intelligence. However, the quadratic computational complexity of MHA with respect to sequence length presents a significant barrier to scaling, particularly for applications involving long contexts. Prevailing solutions, such as Multi-Query Attention (MQA) and Grouped-Query Attention (GQA), have effectively addressed the memory bandwidth bottleneck that dominates autoregressive inference latency by sharing Key and Value projections. While highly successful, these methods do not reduce the fundamental number of floating-point operations (FLOPs) required for the attention score computation, which remains a critical bottleneck for training and full-sequence processing. This paper introduces Sparse Query Attention (SQA), a novel attention architecture that pursues an alternative and complementary optimization path. Instead of reducing Key/Value heads, SQA reduces the number of Query heads. This architectural modification directly decreases the computational complexity of the attention mechanism by a factor proportional to the reduction in query heads, thereby lowering the overall FLOPs. This work presents the theoretical foundation of SQA, its mathematical formulation, and a family of architectural variants. Empirical benchmarks on long sequences (32k-200k tokens) demonstrate that SQA can achieve significant throughput improvements of up to 3x in computation-bound scenarios such as model pre-training, fine-tuning, and encoder-based tasks, with only a minimal impact on model quality in preliminary smallscale experiments. SQA was discovered serendipitously during the development of the upcoming Reactive Transformer architecture, suggesting its potential as a powerful tool for building more efficient and scalable models",
+      "identifiers": [
+        "SemanticScholar:76e92949321e6c27c9e9168f6f62bc9125ac2dc1"
+      ],
+      "semantic_scholar_id": "76e92949321e6c27c9e9168f6f62bc9125ac2dc1",
+      "canonical_id": "arXiv:2510.01817",
+      "arxiv_id": "2510.01817",
+      "doi": "10.48550/arXiv.2510.01817",
+      "authors": [
+        "Adam Filipek"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 417,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DistrAttention: An Efficient and Flexible Self-Attention Mechanism on Modern GPUs",
+      "source_url": "https://arxiv.org/abs/2507.17245",
+      "year": 2025,
+      "published": "2025-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture has revolutionized deep learning, delivering the state-of-the-art performance in areas such as natural language processing, computer vision, and time series prediction. However, its core component, self-attention, has the quadratic time complexity relative to input sequence length, which hinders the scalability of Transformers. The exsiting approaches on optimizing self-attention either discard full-contextual information or lack of flexibility. In this work, we design DistrAttention, an effcient and flexible self-attention mechanism with the full context. DistrAttention achieves this by grouping data on the embedding dimensionality, usually referred to as $d$. We realize DistrAttention with a lightweight sampling and fusion method that exploits locality-sensitive hashing to group similar data. A block-wise grouping framework is further designed to limit the errors introduced by locality sensitive hashing. By optimizing the selection of block sizes, DistrAttention could be easily integrated with FlashAttention-2, gaining high-performance on modern GPUs. We evaluate DistrAttention with extensive experiments. The results show that our method is 37% faster than FlashAttention-2 on calculating self-attention. In ViT inference, DistrAttention is the fastest and the most accurate among approximate self-attention mechanisms. In Llama3-1B, DistrAttention still achieves the lowest inference time with only 1% accuray loss.",
+      "identifiers": [
+        "SemanticScholar:b37d58593f4384c224b081f5d59ae380a1848d4e"
+      ],
+      "semantic_scholar_id": "b37d58593f4384c224b081f5d59ae380a1848d4e",
+      "canonical_id": "arXiv:2507.17245",
+      "arxiv_id": "2507.17245",
+      "doi": "10.48550/arXiv.2507.17245",
+      "authors": [
+        "Haolin Jin",
+        "Meng-Bai Xiao",
+        "Yuan Yuan",
+        "Xiao Zhang",
+        "Dong-Xiao Yu",
+        "Guang-Hui Zhang",
+        "Hao-Liang Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.02739",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.02739",
+        "id:SemanticScholar:8e52002772ed95087bdd4cf7a89dbe3630dfe015",
+        "id:arXiv:2605.02739",
+        "title:latent bridge feature delta prediction for efficient dualsystem visionlanguageaction model inference",
+        "url:https://arxiv.org/abs/2605.02739"
+      ],
+      "record": {
+        "title": "Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference",
+        "source_url": "https://arxiv.org/abs/2605.02739",
+        "year": 2026,
+        "published": "2026-05-04",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dual-system Vision-Language-Action (VLA) models achieve state-of-the-art robotic manipulation but are bottlenecked by the VLM backbone, which must execute at every control step while producing temporally redundant features. We propose Latent Bridge, a lightweight model that predicts VLM output deltas between timesteps, enabling the action head to operate on predicted outputs while the expensive VLM backbone is called only periodically. We instantiate Latent Bridge on two architecturally distinct VLAs: GR00T-N1.6 (feature-space bridge) and {\\pi}0.5 (KV-cache bridge), demonstrating that the approach generalizes across VLA designs. Our task-agnostic DAgger training pipeline transfers across benchmarks without modification. Across four LIBERO suites, 24 RoboCasa kitchen tasks, and the ALOHA sim transfer-cube task, Latent Bridge achieves 95-100% performance retention while reducing VLM calls by 50-75%, yielding 1.65-1.73x net per-episode speedup.",
+        "identifiers": [
+          "SemanticScholar:8e52002772ed95087bdd4cf7a89dbe3630dfe015"
+        ],
+        "semantic_scholar_id": "8e52002772ed95087bdd4cf7a89dbe3630dfe015",
+        "canonical_id": "arXiv:2605.02739",
+        "arxiv_id": "2605.02739",
+        "doi": "10.48550/arXiv.2605.02739",
+        "authors": [
+          "Yu-Dong Liu",
+          "Yuan Li",
+          "Zi-Jia Tang",
+          "Yu-Xin Zheng",
+          "Yueqian Lin",
+          "Qin-Si Wang",
+          "Yi Li",
+          "Shuang Liu",
+          "Shuai Zhang",
+          "Taotao Jing",
+          "Da-Shan Gao",
+          "Ning Bi",
+          "Jing-Wei Sun",
+          "Yi-Ran Chen",
+          "Hai Li"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 203,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39185",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.39185",
+        "id:SemanticScholar:7e6949a8a82603708c664d0f9f0652c48adeee25",
+        "id:arXiv:2609.39185",
+        "title:lowdiscrepancy dither for quantized recurrent state caches",
+        "url:https://arxiv.org/abs/2609.39185"
+      ],
+      "record": {
+        "title": "Low-Discrepancy Dither for Quantized Recurrent State Caches",
+        "source_url": "https://arxiv.org/abs/2609.39185",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mamba-style and hybrid language models compress their past into a fixed-size recurrent state that is rewritten at every generated token. Storing this state in low precision saves memory bandwidth, but every rounding error is fed back into the next update and can accumulate over long generations. Production systems round the state stochastically; we ask which rounding rule such caches should use. We find that a deterministic golden-ratio Weyl dither, which needs no random numbers, consistently brings the quantized model closer to the full-precision one than stochastic rounding, across pure and hybrid models, storage formats, and long decoding horizons, at no extra cost. Round-to-nearest behaves differently: because it discards small updates, its error keeps growing, so it can look best in short evaluations yet falls far behind over long generations. A discrepancy analysis explains this ordering, and we document implementation pitfalls that silently remove the benefit.",
+        "identifiers": [
+          "SemanticScholar:7e6949a8a82603708c664d0f9f0652c48adeee25"
+        ],
+        "semantic_scholar_id": "7e6949a8a82603708c664d0f9f0652c48adeee25",
+        "canonical_id": "arXiv:2609.39185",
+        "arxiv_id": "2609.39185",
+        "doi": "10.48550/arXiv.2609.39185",
+        "authors": [
+          "Snigdha Chandan Khilar"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.18582",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.18582",
+        "id:SemanticScholar:5cd0b2a46e3672731d68954a389e01501eeb5c3a",
+        "id:arXiv:2506.18582",
+        "title:parallel continuous chainofthought with jacobi iteration",
+        "url:https://arxiv.org/abs/2506.18582"
+      ],
+      "record": {
+        "title": "Parallel Continuous Chain-of-Thought with Jacobi Iteration",
+        "source_url": "https://arxiv.org/abs/2506.18582",
+        "year": 2025,
+        "published": "2025-06-23",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 42,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Continuous chain-of-thought has been shown to be effective in saving reasoning tokens for large language models. By reasoning with continuous latent thought tokens, continuous CoT is able to perform implicit reasoning in a compact manner. However, the sequential dependencies between latent thought tokens spoil parallel training, leading to long training time. In this paper, we propose Parallel Continuous Chain-of-Thought (PCCoT), which performs Jacobi iteration on the latent thought tokens, updating them iteratively in parallel instead of sequentially and thus improving both training and inference efficiency of continuous CoT. Experiments demonstrate that by choosing the proper number of iterations, we are able to achieve comparable or even better performance while saving nearly 50% of the training and inference time. Moreover, PCCoT shows better stability and robustness in the training process. Our code is available at https://github.com/whyNLP/PCCoT.",
+        "identifiers": [
+          "SemanticScholar:5cd0b2a46e3672731d68954a389e01501eeb5c3a"
+        ],
+        "semantic_scholar_id": "5cd0b2a46e3672731d68954a389e01501eeb5c3a",
+        "canonical_id": "arXiv:2506.18582",
+        "arxiv_id": "2506.18582",
+        "doi": "10.48550/arXiv.2506.18582",
+        "authors": [
+          "Haoyi Wu",
+          "Zhihao Teng",
+          "Kewei Tu"
+        ],
+        "priority": 52,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 42,
+          "citation_count": 42,
+          "total": 52,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 518,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2022.3181541",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2022.3181541",
+        "id:SemanticScholar:512ff5037b28be7415d318ae6e8eeb0abb8c7013",
+        "title:dtatrans leveraging dynamic tokenbased quantization with accuracy compensation mechanism for efficient transformer architecture",
+        "url:https://doi.org/10.1109/TCAD.2022.3181541"
+      ],
+      "record": {
+        "title": "DTATrans: Leveraging Dynamic Token-Based Quantization With Accuracy Compensation Mechanism for Efficient Transformer Architecture",
+        "source_url": "https://doi.org/10.1109/TCAD.2022.3181541",
+        "year": 2023,
+        "published": "2023-02-01",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 36,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:512ff5037b28be7415d318ae6e8eeb0abb8c7013"
+        ],
+        "semantic_scholar_id": "512ff5037b28be7415d318ae6e8eeb0abb8c7013",
+        "doi": "10.1109/TCAD.2022.3181541",
+        "canonical_id": "DOI:10.1109/TCAD.2022.3181541",
+        "authors": [
+          "Tao Yang",
+          "Fei Ma",
+          "Xiaolin Li",
+          "Fang-Xin Liu",
+          "Yilong Zhao",
+          "Zhe-Zhi He",
+          "Li Jiang"
+        ],
+        "priority": 36,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 36,
+          "citation_count": 36,
+          "total": 36,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1391,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.1650",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1650",
+        "id:SemanticScholar:7d39ab1b557a850a415e78a7be18a97d9ba6f2b0",
+        "title:scope boosting llm efficiency with scoped position encoding",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.1650"
+      ],
+      "record": {
+        "title": "SCOPE: Boosting LLM Efficiency with Scoped Position Encoding",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1650",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Positional encodings are fundamental to Trans-formers, yet explicit methods like RoPE can degrade under length extrapolation and may incur extra arithmetic and memory-access overhead. In this paper, we propose Sco ped P osition E ncoding ( S CO PE ), a novel framework that reimagines structured sparsity as an intrinsic position encoding mechanism. Instead of relying on explicit arithmetic signals, S CO PE assigns exponentially scaled look-back scopes to attention heads. We theoretically demonstrate that this simple topological constraint transforms multi-head attention into a hierarchical processor, yielding an order awareness horizon that grows exponentially with depth up to the sequence length. Consequently, S CO PE is parameter-free and avoids relying on fragile positional arithmetic. Empirically, it significantly enhances efficiency by masking the majority of attention computations, offering a theoretical 8 × reduction in attention FLOPs at long contexts. Extensive evaluations on LLaMA-3-8B architectures reveal that S CO PE achieves superior native length extrapolation and robust retrieval fidelity compared to RoPE, all while substantially reducing training and inference latency. The code is available at https://github.com/oncemoe/ScoPE .",
+        "identifiers": [
+          "SemanticScholar:7d39ab1b557a850a415e78a7be18a97d9ba6f2b0"
+        ],
+        "semantic_scholar_id": "7d39ab1b557a850a415e78a7be18a97d9ba6f2b0",
+        "doi": "10.18653/v1/2026.acl-long.1650",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.1650",
+        "authors": [
+          "Qing-qing Qi",
+          "Hongyang Chen",
+          "Zhao Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.24257",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.24257",
+        "id:SemanticScholar:14bec854d248fe81a1478ed882a3273ca0c1c3f6",
+        "id:arXiv:2509.24257",
+        "title:verillm a lightweight framework for publicly verifiable decentralized inference",
+        "url:https://arxiv.org/abs/2509.24257"
+      ],
+      "record": {
+        "title": "VeriLLM: A Lightweight Framework for Publicly Verifiable Decentralized Inference",
+        "source_url": "https://arxiv.org/abs/2509.24257",
+        "year": 2025,
+        "published": "2025-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decentralized inference provides a scalable and resilient paradigm for serving large language models (LLMs), enabling fragmented global resource utilization and reducing reliance on centralized providers. However, in a permissionless environment without trusted nodes, ensuring the correctness of model outputs remains a core challenge. We introduce VeriLLM, a publicly verifiable protocol for decentralized LLM inference that achieves security with incentive guarantees while maintaining practical efficiency. VeriLLM combines lightweight empirical rerunning with minimal on-chain checks to preclude free-riding, allowing verifiers to validate results at approximately 1% of the underlying inference cost by exploiting the structural separation between prefill and autoregressive decoding. To prevent verification bottlenecks, we design an isomorphic inference--verification architecture that multiplexes both inference and verification roles across the same GPU workers. This design (i) improves GPU utilization and overall throughput, (ii) enlarges the effective validator set, enhancing robustness and liveness, and (iii) enforces task indistinguishability to prevent node-specific optimizations or selective behavior. Through theoretical analysis and system-level evaluation, we show that VeriLLM achieves reliable public verifiability with minimal overhead, offering a practical foundation for trustworthy and scalable decentralized LLM inference.",
+        "identifiers": [
+          "SemanticScholar:14bec854d248fe81a1478ed882a3273ca0c1c3f6"
+        ],
+        "semantic_scholar_id": "14bec854d248fe81a1478ed882a3273ca0c1c3f6",
+        "canonical_id": "arXiv:2509.24257",
+        "arxiv_id": "2509.24257",
+        "doi": "10.48550/arXiv.2509.24257",
+        "authors": [
+          "Ke Wang",
+          "Zishuo Zhao",
+          "Xin-Yuan Song",
+          "Zenlin Li",
+          "Li Xia",
+          "Chris Tong",
+          "Bill Shi",
+          "Wenjie Qu",
+          "Eric Yang",
+          "Lynn Ai"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 420,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.01817",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.01817",
+        "id:SemanticScholar:76e92949321e6c27c9e9168f6f62bc9125ac2dc1",
+        "id:arXiv:2510.01817",
+        "title:sparse query attention sqa a computationally efficient attention mechanism with query heads reduction",
+        "url:https://arxiv.org/abs/2510.01817"
+      ],
+      "record": {
+        "title": "Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction",
+        "source_url": "https://arxiv.org/abs/2510.01817",
+        "year": 2025,
+        "published": "2025-10-02",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer architecture, underpinned by the Multi-Head Attention (MHA) mechanism, has become the de facto standard for state-of-the-art models in artificial intelligence. However, the quadratic computational complexity of MHA with respect to sequence length presents a significant barrier to scaling, particularly for applications involving long contexts. Prevailing solutions, such as Multi-Query Attention (MQA) and Grouped-Query Attention (GQA), have effectively addressed the memory bandwidth bottleneck that dominates autoregressive inference latency by sharing Key and Value projections. While highly successful, these methods do not reduce the fundamental number of floating-point operations (FLOPs) required for the attention score computation, which remains a critical bottleneck for training and full-sequence processing. This paper introduces Sparse Query Attention (SQA), a novel attention architecture that pursues an alternative and complementary optimization path. Instead of reducing Key/Value heads, SQA reduces the number of Query heads. This architectural modification directly decreases the computational complexity of the attention mechanism by a factor proportional to the reduction in query heads, thereby lowering the overall FLOPs. This work presents the theoretical foundation of SQA, its mathematical formulation, and a family of architectural variants. Empirical benchmarks on long sequences (32k-200k tokens) demonstrate that SQA can achieve significant throughput improvements of up to 3x in computation-bound scenarios such as model pre-training, fine-tuning, and encoder-based tasks, with only a minimal impact on model quality in preliminary smallscale experiments. SQA was discovered serendipitously during the development of the upcoming Reactive Transformer architecture, suggesting its potential as a powerful tool for building more efficient and scalable models",
+        "identifiers": [
+          "SemanticScholar:76e92949321e6c27c9e9168f6f62bc9125ac2dc1"
+        ],
+        "semantic_scholar_id": "76e92949321e6c27c9e9168f6f62bc9125ac2dc1",
+        "canonical_id": "arXiv:2510.01817",
+        "arxiv_id": "2510.01817",
+        "doi": "10.48550/arXiv.2510.01817",
+        "authors": [
+          "Adam Filipek"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 417,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.17245",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.17245",
+        "id:SemanticScholar:b37d58593f4384c224b081f5d59ae380a1848d4e",
+        "id:arXiv:2507.17245",
+        "title:distrattention an efficient and flexible selfattention mechanism on modern gpus",
+        "url:https://arxiv.org/abs/2507.17245"
+      ],
+      "record": {
+        "title": "DistrAttention: An Efficient and Flexible Self-Attention Mechanism on Modern GPUs",
+        "source_url": "https://arxiv.org/abs/2507.17245",
+        "year": 2025,
+        "published": "2025-07-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Transformer architecture has revolutionized deep learning, delivering the state-of-the-art performance in areas such as natural language processing, computer vision, and time series prediction. However, its core component, self-attention, has the quadratic time complexity relative to input sequence length, which hinders the scalability of Transformers. The exsiting approaches on optimizing self-attention either discard full-contextual information or lack of flexibility. In this work, we design DistrAttention, an effcient and flexible self-attention mechanism with the full context. DistrAttention achieves this by grouping data on the embedding dimensionality, usually referred to as $d$. We realize DistrAttention with a lightweight sampling and fusion method that exploits locality-sensitive hashing to group similar data. A block-wise grouping framework is further designed to limit the errors introduced by locality sensitive hashing. By optimizing the selection of block sizes, DistrAttention could be easily integrated with FlashAttention-2, gaining high-performance on modern GPUs. We evaluate DistrAttention with extensive experiments. The results show that our method is 37% faster than FlashAttention-2 on calculating self-attention. In ViT inference, DistrAttention is the fastest and the most accurate among approximate self-attention mechanisms. In Llama3-1B, DistrAttention still achieves the lowest inference time with only 1% accuray loss.",
+        "identifiers": [
+          "SemanticScholar:b37d58593f4384c224b081f5d59ae380a1848d4e"
+        ],
+        "semantic_scholar_id": "b37d58593f4384c224b081f5d59ae380a1848d4e",
+        "canonical_id": "arXiv:2507.17245",
+        "arxiv_id": "2507.17245",
+        "doi": "10.48550/arXiv.2507.17245",
+        "authors": [
+          "Haolin Jin",
+          "Meng-Bai Xiao",
+          "Yuan Yuan",
+          "Xiao Zhang",
+          "Dong-Xiao Yu",
+          "Guang-Hui Zhang",
+          "Hao-Liang Wang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 488,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3ff31d0e989c51668277f8cf99bbdde2354767b6ca00d9ce1522c2cff352b2f5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
