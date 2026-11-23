@@ -1,0 +1,499 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cbe1313e5aa76491-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cbe1313e5aa7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tdsc.2026.3718538",
+    "DOI:10.1145/3770743.3804291",
+    "DOI:10.23919/date69613.2026.11539743",
+    "arXiv:2505.23061",
+    "arXiv:2610.04912"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "57844c76db5534a69ff2f0004d4f7d0d06a48736",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:03:20.521127+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tdsc.2026.3718538",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3770743.3804291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.23061",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04912",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LEAF: A Low-Latency Evaluation Architecture for Feedforward Block in Privacy-Preserving Transformer Inference",
+      "source_url": "https://doi.org/10.1109/TDSC.2026.3718538",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fully homomorphic encryption (FHE) is an appealing and promising solution for privacy-preserving transformer inference to protect users’ privacy. However, the huge computational overhead makes it unrealistic to apply FHE in real-world transformers for large language models (LLM). Current FHE-based non-interactive approaches to secure transformer inference face significant performance challenges, especially in CPU environment. NEXUS (NDSS’25) Zhang et al. 2025 reported a latency exceeding 7 hours for 32-input batches on the BERT-base model in their CPU environment. The feedforward block, comprising a large-scale matrix multiplication followed by a GELU evaluation, is widely recognized as one of the most computationally intensive components in privacy-preserving transformer inference. We aim to reduce the latency and propose LEAF, a low-latency evaluation architecture for the feedforward block. LEAF introduces a novel combination of fast matrix multiplication and an asymptotically efficient algorithm for computing non-polynomial activations. LEAF achieved significant improvement from existing techniques with a total latency of 53.4 seconds and 19.2 seconds for the feedforward block in the BERT-base model with a 128-token input and the Llama-3-8B model with an 8-token input, respectively, on a single CPU. Compared to prior methods on FHE-based non-interactive inference, LEAF achieved 58×–100× speedups over batched approaches such as NEXUS [1] and MOAI [2], and about 11× speedups over non-batched approaches such as THOR [3] and PowerFormer [4] for the BERT-base feedforward block. For the feedforward block in Llama-3-8B model, LEAF further demonstrated an improvement of approximately 1,800× than existing works [1], [2]. Our implementations are open-sourced.",
+      "identifiers": [
+        "SemanticScholar:f82c2ff38b5bb41e473bf396acc71413ca30d424"
+      ],
+      "semantic_scholar_id": "f82c2ff38b5bb41e473bf396acc71413ca30d424",
+      "doi": "10.1109/TDSC.2026.3718538",
+      "canonical_id": "DOI:10.1109/TDSC.2026.3718538",
+      "authors": [
+        "Lin-Ru Zhang",
+        "Xiang-Ning Wang",
+        "Xian-Hui Lu",
+        "Hua-Xiong Wang",
+        "Kwok-Yan Lam"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Static Bootstrap Placement for Encrypted Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2610.04912",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models increasingly serve prompts that carry private data, and secure inference under homomorphic encryption lets a client outsource the computation without revealing the prompt. Existing secure inference systems run a forward pass without consuming a token under encryption, and generating text with them requires a client round trip at every generated token. Keeping the loop on the server instead requires selecting and consuming a token under encryption, and placing bootstraps for a loop body that grows with the context. We build AR-HE, which runs the whole loop on the server, selects each token under encryption, retrieves its embedding, and writes it back into the encrypted state. The client sends one prompt and remains offline until the output. One rule places every bootstrap in the run, without search, so the bootstrap cost of a token is a formula in the context length that is known before the run starts. The schedule skips work whose result cannot reach the output, packs bootstraps that share an operand, and keeps the keys and values of past positions in an encrypted cache. With every optimization applied, generating a GPT-2 small token costs 544 seconds on one NVIDIA H100, down from 4715 seconds without optimization. The prompt step before it costs 4630 seconds. The cache alone takes a generated step from 11751 bootstraps to 1072. The formula predicts every step we measured, including steps of a model it was not derived from.",
+      "identifiers": [
+        "SemanticScholar:ca650351173eb4377f3c48de96a57139e17c0b44"
+      ],
+      "semantic_scholar_id": "ca650351173eb4377f3c48de96a57139e17c0b44",
+      "canonical_id": "arXiv:2610.04912",
+      "arxiv_id": "2610.04912",
+      "authors": [
+        "Halil Ibrahim Kanpak",
+        "D. Unat"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DINGO: Constrained Inference for Diffusion LLMs",
+      "source_url": "https://arxiv.org/abs/2505.23061",
+      "year": 2025,
+      "published": "2025-05-29",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion LLMs have emerged as a promising alternative to conventional autoregressive LLMs, offering significant potential for improved runtime efficiency. However, existing diffusion models lack the ability to provably enforce user-specified formal constraints, such as regular expressions, which makes them unreliable for tasks that require structured outputs, such as fixed-schema JSON generation. Unlike autoregressive models that generate tokens sequentially, diffusion LLMs predict a block of tokens in parallel. This parallelism makes traditional constrained decoding algorithms, which are designed for sequential token prediction, ineffective at preserving the true output distribution. To address this limitation, we propose DINGO, a dynamic programming-based constrained decoding strategy that is both efficient and provably distribution-preserving. DINGO enables sampling of output strings with the highest probability under the model's predicted distribution, while strictly satisfying any user-specified regular expression. On standard symbolic math and JSON generation benchmarks, DINGO achieves up to a 68 percentage point improvement over unconstrained inference",
+      "identifiers": [
+        "SemanticScholar:3886f4dc7bbca578b73d2231c138690d2c01b94d"
+      ],
+      "semantic_scholar_id": "3886f4dc7bbca578b73d2231c138690d2c01b94d",
+      "canonical_id": "arXiv:2505.23061",
+      "arxiv_id": "2505.23061",
+      "doi": "10.48550/arXiv.2505.23061",
+      "authors": [
+        "T. Suresh",
+        "Debangshu Banerjee",
+        "Shubham Ugare",
+        "S. Misailovic",
+        "Gagandeep Singh"
+      ],
+      "priority": 29,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 29,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 543,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "GCPT: Gradient-aware Clustering Method for Efficient Post-Training Quantization in Large Neural Networks",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539743",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale neural network models have achieved outstanding performance across diverse tasks, but often come with expensive computational costs. In this paper, we propose a gradient-aware clustering method for post-training quantization (GCPT) in order to effectively reduce the computational overhead. Our key idea is to cluster the weights of linear layers based on their gradient-aware contributions to the overall loss function. Afterwards, all weights are replaced by a small set of cluster centroids to minimize the variation of the loss function due to quantization. To further accelerate inference, the inputs associated with those weights in the same cluster are first aggregated and then the sum is multiplied with the shared centroid, thereby reducing the number of scalar multiplications. Experiments on three large-scale models demonstrate that the proposed GCPT method achieves up to 93.8% computational cost reduction, while preserving memory usage and inference accuracy, compared to other state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:6ac44cf44235d2a3ba3000e3ca56f4727c416cc0"
+      ],
+      "semantic_scholar_id": "6ac44cf44235d2a3ba3000e3ca56f4727c416cc0",
+      "doi": "10.23919/DATE69613.2026.11539743",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539743",
+      "authors": [
+        "Chu-Yi Dai",
+        "Chenyu Ye",
+        "Ze-Yu Li",
+        "Jun Tao",
+        "Wei Zhang",
+        "G. Zhang",
+        "Xin Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adana: Accelerating Large Language Models via Adaptive Nonuniform Asymmetric Quantization",
+      "source_url": "https://doi.org/10.1145/3770743.3804291",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Adana, a hardware-software co-design that enables efficient low-bit group-wise quantization for LLMs based on the adaptive nonuniform asymmetric numeric type. First, Adana introduces a novel numeric type that precisely captures the nonuniformity and asymmetry of data within small groups. In addition, an approximate metric for quantization error is proposed to facilitate efficient implementation of online adaptive activation quantization. Finally, a dedicated LLM acceleration microarchitecture is developed for Adana. Compared to state-of-the-art designs, Adana achieves 1.42×–2.10× speedups and 18.9%–48.5% power savings on LLMs, while maintaining superior accuracy.",
+      "identifiers": [
+        "SemanticScholar:13dd32d9a39e327263d2a9723efaf71f267b5e00"
+      ],
+      "semantic_scholar_id": "13dd32d9a39e327263d2a9723efaf71f267b5e00",
+      "doi": "10.1145/3770743.3804291",
+      "canonical_id": "DOI:10.1145/3770743.3804291",
+      "authors": [
+        "Xin-Kuang Geng",
+        "Si-Ting Liu",
+        "Hui Wang",
+        "Lei-Bo Liu",
+        "Jie Han",
+        "Hong-Lan Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tdsc.2026.3718538",
+      "identity_tokens": [
+        "id:DOI:10.1109/tdsc.2026.3718538",
+        "id:SemanticScholar:f82c2ff38b5bb41e473bf396acc71413ca30d424",
+        "title:leaf a lowlatency evaluation architecture for feedforward block in privacypreserving transformer inference",
+        "url:https://doi.org/10.1109/TDSC.2026.3718538"
+      ],
+      "record": {
+        "title": "LEAF: A Low-Latency Evaluation Architecture for Feedforward Block in Privacy-Preserving Transformer Inference",
+        "source_url": "https://doi.org/10.1109/TDSC.2026.3718538",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": "IEEE Transactions on Dependable and Secure Computing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fully homomorphic encryption (FHE) is an appealing and promising solution for privacy-preserving transformer inference to protect users’ privacy. However, the huge computational overhead makes it unrealistic to apply FHE in real-world transformers for large language models (LLM). Current FHE-based non-interactive approaches to secure transformer inference face significant performance challenges, especially in CPU environment. NEXUS (NDSS’25) Zhang et al. 2025 reported a latency exceeding 7 hours for 32-input batches on the BERT-base model in their CPU environment. The feedforward block, comprising a large-scale matrix multiplication followed by a GELU evaluation, is widely recognized as one of the most computationally intensive components in privacy-preserving transformer inference. We aim to reduce the latency and propose LEAF, a low-latency evaluation architecture for the feedforward block. LEAF introduces a novel combination of fast matrix multiplication and an asymptotically efficient algorithm for computing non-polynomial activations. LEAF achieved significant improvement from existing techniques with a total latency of 53.4 seconds and 19.2 seconds for the feedforward block in the BERT-base model with a 128-token input and the Llama-3-8B model with an 8-token input, respectively, on a single CPU. Compared to prior methods on FHE-based non-interactive inference, LEAF achieved 58×–100× speedups over batched approaches such as NEXUS [1] and MOAI [2], and about 11× speedups over non-batched approaches such as THOR [3] and PowerFormer [4] for the BERT-base feedforward block. For the feedforward block in Llama-3-8B model, LEAF further demonstrated an improvement of approximately 1,800× than existing works [1], [2]. Our implementations are open-sourced.",
+        "identifiers": [
+          "SemanticScholar:f82c2ff38b5bb41e473bf396acc71413ca30d424"
+        ],
+        "semantic_scholar_id": "f82c2ff38b5bb41e473bf396acc71413ca30d424",
+        "doi": "10.1109/TDSC.2026.3718538",
+        "canonical_id": "DOI:10.1109/TDSC.2026.3718538",
+        "authors": [
+          "Lin-Ru Zhang",
+          "Xiang-Ning Wang",
+          "Xian-Hui Lu",
+          "Hua-Xiong Wang",
+          "Kwok-Yan Lam"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04912",
+      "identity_tokens": [
+        "id:SemanticScholar:ca650351173eb4377f3c48de96a57139e17c0b44",
+        "id:arXiv:2610.04912",
+        "title:static bootstrap placement for encrypted language model decoding",
+        "url:https://arxiv.org/abs/2610.04912"
+      ],
+      "record": {
+        "title": "Static Bootstrap Placement for Encrypted Language Model Decoding",
+        "source_url": "https://arxiv.org/abs/2610.04912",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models increasingly serve prompts that carry private data, and secure inference under homomorphic encryption lets a client outsource the computation without revealing the prompt. Existing secure inference systems run a forward pass without consuming a token under encryption, and generating text with them requires a client round trip at every generated token. Keeping the loop on the server instead requires selecting and consuming a token under encryption, and placing bootstraps for a loop body that grows with the context. We build AR-HE, which runs the whole loop on the server, selects each token under encryption, retrieves its embedding, and writes it back into the encrypted state. The client sends one prompt and remains offline until the output. One rule places every bootstrap in the run, without search, so the bootstrap cost of a token is a formula in the context length that is known before the run starts. The schedule skips work whose result cannot reach the output, packs bootstraps that share an operand, and keeps the keys and values of past positions in an encrypted cache. With every optimization applied, generating a GPT-2 small token costs 544 seconds on one NVIDIA H100, down from 4715 seconds without optimization. The prompt step before it costs 4630 seconds. The cache alone takes a generated step from 11751 bootstraps to 1072. The formula predicts every step we measured, including steps of a model it was not derived from.",
+        "identifiers": [
+          "SemanticScholar:ca650351173eb4377f3c48de96a57139e17c0b44"
+        ],
+        "semantic_scholar_id": "ca650351173eb4377f3c48de96a57139e17c0b44",
+        "canonical_id": "arXiv:2610.04912",
+        "arxiv_id": "2610.04912",
+        "authors": [
+          "Halil Ibrahim Kanpak",
+          "D. Unat"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 50,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.23061",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.23061",
+        "id:SemanticScholar:3886f4dc7bbca578b73d2231c138690d2c01b94d",
+        "id:arXiv:2505.23061",
+        "title:dingo constrained inference for diffusion llms",
+        "url:https://arxiv.org/abs/2505.23061"
+      ],
+      "record": {
+        "title": "DINGO: Constrained Inference for Diffusion LLMs",
+        "source_url": "https://arxiv.org/abs/2505.23061",
+        "year": 2025,
+        "published": "2025-05-29",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 19,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion LLMs have emerged as a promising alternative to conventional autoregressive LLMs, offering significant potential for improved runtime efficiency. However, existing diffusion models lack the ability to provably enforce user-specified formal constraints, such as regular expressions, which makes them unreliable for tasks that require structured outputs, such as fixed-schema JSON generation. Unlike autoregressive models that generate tokens sequentially, diffusion LLMs predict a block of tokens in parallel. This parallelism makes traditional constrained decoding algorithms, which are designed for sequential token prediction, ineffective at preserving the true output distribution. To address this limitation, we propose DINGO, a dynamic programming-based constrained decoding strategy that is both efficient and provably distribution-preserving. DINGO enables sampling of output strings with the highest probability under the model's predicted distribution, while strictly satisfying any user-specified regular expression. On standard symbolic math and JSON generation benchmarks, DINGO achieves up to a 68 percentage point improvement over unconstrained inference",
+        "identifiers": [
+          "SemanticScholar:3886f4dc7bbca578b73d2231c138690d2c01b94d"
+        ],
+        "semantic_scholar_id": "3886f4dc7bbca578b73d2231c138690d2c01b94d",
+        "canonical_id": "arXiv:2505.23061",
+        "arxiv_id": "2505.23061",
+        "doi": "10.48550/arXiv.2505.23061",
+        "authors": [
+          "T. Suresh",
+          "Debangshu Banerjee",
+          "Shubham Ugare",
+          "S. Misailovic",
+          "Gagandeep Singh"
+        ],
+        "priority": 29,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 19,
+          "citation_count": 19,
+          "total": 29,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 543,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539743",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539743",
+        "id:SemanticScholar:6ac44cf44235d2a3ba3000e3ca56f4727c416cc0",
+        "title:gcpt gradientaware clustering method for efficient posttraining quantization in large neural networks",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539743"
+      ],
+      "record": {
+        "title": "GCPT: Gradient-aware Clustering Method for Efficient Post-Training Quantization in Large Neural Networks",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539743",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale neural network models have achieved outstanding performance across diverse tasks, but often come with expensive computational costs. In this paper, we propose a gradient-aware clustering method for post-training quantization (GCPT) in order to effectively reduce the computational overhead. Our key idea is to cluster the weights of linear layers based on their gradient-aware contributions to the overall loss function. Afterwards, all weights are replaced by a small set of cluster centroids to minimize the variation of the loss function due to quantization. To further accelerate inference, the inputs associated with those weights in the same cluster are first aggregated and then the sum is multiplied with the shared centroid, thereby reducing the number of scalar multiplications. Experiments on three large-scale models demonstrate that the proposed GCPT method achieves up to 93.8% computational cost reduction, while preserving memory usage and inference accuracy, compared to other state-of-the-art methods.",
+        "identifiers": [
+          "SemanticScholar:6ac44cf44235d2a3ba3000e3ca56f4727c416cc0"
+        ],
+        "semantic_scholar_id": "6ac44cf44235d2a3ba3000e3ca56f4727c416cc0",
+        "doi": "10.23919/DATE69613.2026.11539743",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539743",
+        "authors": [
+          "Chu-Yi Dai",
+          "Chenyu Ye",
+          "Ze-Yu Li",
+          "Jun Tao",
+          "Wei Zhang",
+          "G. Zhang",
+          "Xin Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3770743.3804291",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770743.3804291",
+        "id:SemanticScholar:13dd32d9a39e327263d2a9723efaf71f267b5e00",
+        "title:adana accelerating large language models via adaptive nonuniform asymmetric quantization",
+        "url:https://doi.org/10.1145/3770743.3804291"
+      ],
+      "record": {
+        "title": "Adana: Accelerating Large Language Models via Adaptive Nonuniform Asymmetric Quantization",
+        "source_url": "https://doi.org/10.1145/3770743.3804291",
+        "year": 2026,
+        "published": "2026-07-26",
+        "venue": "Design Automation Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Adana, a hardware-software co-design that enables efficient low-bit group-wise quantization for LLMs based on the adaptive nonuniform asymmetric numeric type. First, Adana introduces a novel numeric type that precisely captures the nonuniformity and asymmetry of data within small groups. In addition, an approximate metric for quantization error is proposed to facilitate efficient implementation of online adaptive activation quantization. Finally, a dedicated LLM acceleration microarchitecture is developed for Adana. Compared to state-of-the-art designs, Adana achieves 1.42×–2.10× speedups and 18.9%–48.5% power savings on LLMs, while maintaining superior accuracy.",
+        "identifiers": [
+          "SemanticScholar:13dd32d9a39e327263d2a9723efaf71f267b5e00"
+        ],
+        "semantic_scholar_id": "13dd32d9a39e327263d2a9723efaf71f267b5e00",
+        "doi": "10.1145/3770743.3804291",
+        "canonical_id": "DOI:10.1145/3770743.3804291",
+        "authors": [
+          "Xin-Kuang Geng",
+          "Si-Ting Liu",
+          "Hui Wang",
+          "Lei-Bo Liu",
+          "Jie Han",
+          "Hong-Lan Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:44e4959d2c2dfc37ec05f733583fb3acc02431ed5b3571dd022692ca05f2bab4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

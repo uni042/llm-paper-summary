@@ -1,0 +1,398 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a5f38a76f83e56fc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a5f38a76f83e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/prai62207.2024.10826600",
+    "DOI:10.18653/v1/2025.emnlp-main.1498",
+    "DOI:10.63317/55g6qr4jy7ip",
+    "arXiv:2512.00335"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "57844c76db5534a69ff2f0004d4f7d0d06a48736",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:03:24.787418+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/prai62207.2024.10826600",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.emnlp-main.1498",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.63317/55g6qr4jy7ip",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.00335",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FISTAPruner: Layer-wise Post-training Pruning for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1498",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:2e72ace8946566a2eaa7bf03ca6a602da736b408"
+      ],
+      "semantic_scholar_id": "2e72ace8946566a2eaa7bf03ca6a602da736b408",
+      "doi": "10.18653/v1/2025.emnlp-main.1498",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1498",
+      "authors": [
+        "Peng-Xiang Zhao",
+        "Hanyu Hu",
+        "Ping Li",
+        "Yi Zheng",
+        "Zhefeng Wang",
+        "Xiao-Ming Yuan"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Efficient Kernel Mapping and Comprehensive System Evaluation of LLM Acceleration on a CGLA",
+      "source_url": "https://arxiv.org/abs/2512.00335",
+      "year": 2025,
+      "published": "2025-11-29",
+      "venue": "IEEE Access",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demand substantial computational resources, resulting in high energy consumption on GPUs. To address this challenge, we focus on Coarse-Grained Reconfigurable Arrays (CGRAs) as an effective alternative that provides a trade-off between energy efficiency and programmability. This paper presents the first comprehensive, end-to-end evaluation of a non-AI-specialized Coarse-Grained Linear Array (CGLA) accelerator for the state-of-the-art Qwen3 LLM family. The architecture has a general-purpose, task-agnostic design, yet its flexible instruction set allows for domain-specific adaptations. This flexibility enables the architecture to achieve high efficiency for sustainable LLM inference. We assess the performance of our architecture on an FPGA prototype using the widely adopted llama.cpp framework. We then project its potential as a 28 nm ASIC and compare it against a high-performance GPU (NVIDIA RTX 4090) and an edge AI device (NVIDIA Jetson AGX Orin). While GPUs exhibit lower latency, our non-AI-specific accelerator achieves higher energy efficiency, improving the Power-Delay Product (PDP) by up to <inline-formula> <tex-math notation=\"LaTeX\">${44.4} \\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">${13.6} \\times $ </tex-math></inline-formula> compared with the RTX 4090 and Jetson, respectively. Similarly, it reduces the Energy-Delay Product (EDP) by up to <inline-formula> <tex-math notation=\"LaTeX\">${11.5} \\times $ </tex-math></inline-formula> compared to the high-performance GPU, demonstrating a favorable performance-energy trade-off. Critically, our system-level analysis identifies host-accelerator data transfer as the primary performance bottleneck, a factor often overlooked in kernel-level studies. These findings provide design guidance for next-generation LLM accelerators. This work validates CGRAs as a suitable platform for LLM inference in power-constrained environments, without being confined to specific algorithms.",
+      "identifiers": [
+        "SemanticScholar:b0f1241523b28b7fbe85d8d16da7908ec04f34c0"
+      ],
+      "semantic_scholar_id": "b0f1241523b28b7fbe85d8d16da7908ec04f34c0",
+      "canonical_id": "arXiv:2512.00335",
+      "arxiv_id": "2512.00335",
+      "doi": "10.1109/ACCESS.2025.3636266",
+      "authors": [
+        "Takuto Ando",
+        "Yu Eto",
+        "Ayumu Takeuchi",
+        "Yasuhiko Nakashima"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 359,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Low-Rank Adaptation Based Pruning Algorithm for Large Language Models",
+      "source_url": "https://doi.org/10.1109/PRAI62207.2024.10826600",
+      "year": 2024,
+      "published": "2024-08-15",
+      "venue": "2024 7th International Conference on Pattern Recognition and Artificial Intelligence (PRAI)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep neural networks have been getting better and better performance while the parameter size has become larger and larger, and have now entered the era of large language models (LLM). However, large language models with huge number of parameters are difficult to be deployed on edge devices with limited computing power and memory resources. Network pruning techniques can reduce the storage and computation requirements of large language models. Although Dynamic Low-Rank Adaptation (DyLoRA) allows efficient fine-tuning of LLM, the deployment of LLM is still hindered by large model sizes and computational costs. In this paper, we propose a DyLoRA-based pruning algorithm that uses gradient updating of DyLoRA module to define the importance of parameters, and then prune the least important parameters based on the resulting importance scores. Through experiments on commonly used evaluation datasets, it is demonstrated that the proposed pruning algorithm is able to achieve 96.60% of the performance of the original model with 20% of the parameters pruned, which outperforms the previous pruning algorithms.",
+      "identifiers": [
+        "SemanticScholar:fd70bb8974e6c3ab0574b61b9ef33158ab86d689"
+      ],
+      "semantic_scholar_id": "fd70bb8974e6c3ab0574b61b9ef33158ab86d689",
+      "doi": "10.1109/PRAI62207.2024.10826600",
+      "canonical_id": "DOI:10.1109/PRAI62207.2024.10826600",
+      "authors": [
+        "Lin-Feng Li",
+        "Lei Guo"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 830,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Language-Specific Pruning for Efficient Reduction of Large Language Models",
+      "source_url": "https://doi.org/10.63317/55g6qr4jy7ip",
+      "year": 2024,
+      "published": "2024-05-01",
+      "venue": "UNLP",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Delving into pruning techniques is essential to boost the efficiency of Large Language Models (LLMs) by reducing their size and computational demands, resulting in faster and more cost-effective inference. In this work, our key contribution lies in recognizing that LLMs trained on diverse languages manifest distinct language-specific weight distributions. Exploiting this insight, we illustrate that pruning LLMs using language-specific data results in a more potent model compression. Empirical evidence underscores the critical nature of pruning on language-specific data, highlighting a noteworthy impact on the perplexity of Ukrainian texts compared to pruning on English data. The proposed methodology significantly reduces the size of LLaMA, LLaMA 2 and Mistral models while preserving competitive performance. This research underscores the significance of linguistic considerations in LLM pruning and advocates for language-specific optimization, establishing a framework for more efficient and tailored language models across diverse linguistic contexts. Additionally, all experiments were conducted using a single consumer-grade NVIDIA RTX 3090 GPU, and the code is available at https://github.com/mshamrai/language-specific-pruning.",
+      "identifiers": [
+        "SemanticScholar:3a9bb1d557158c4c3d940991f78946acca26e410"
+      ],
+      "semantic_scholar_id": "3a9bb1d557158c4c3d940991f78946acca26e410",
+      "doi": "10.63317/55g6qr4jy7ip",
+      "canonical_id": "DOI:10.63317/55g6qr4jy7ip",
+      "authors": [
+        "M. Shamrai"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 936,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.emnlp-main.1498",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-main.1498",
+        "id:SemanticScholar:2e72ace8946566a2eaa7bf03ca6a602da736b408",
+        "title:fistapruner layerwise posttraining pruning for large language models",
+        "url:https://doi.org/10.18653/v1/2025.emnlp-main.1498"
+      ],
+      "record": {
+        "title": "FISTAPruner: Layer-wise Post-training Pruning for Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1498",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:2e72ace8946566a2eaa7bf03ca6a602da736b408"
+        ],
+        "semantic_scholar_id": "2e72ace8946566a2eaa7bf03ca6a602da736b408",
+        "doi": "10.18653/v1/2025.emnlp-main.1498",
+        "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1498",
+        "authors": [
+          "Peng-Xiang Zhao",
+          "Hanyu Hu",
+          "Ping Li",
+          "Yi Zheng",
+          "Zhefeng Wang",
+          "Xiao-Ming Yuan"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.00335",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2025.3636266",
+        "id:SemanticScholar:b0f1241523b28b7fbe85d8d16da7908ec04f34c0",
+        "id:arXiv:2512.00335",
+        "title:efficient kernel mapping and comprehensive system evaluation of llm acceleration on a cgla",
+        "url:https://arxiv.org/abs/2512.00335"
+      ],
+      "record": {
+        "title": "Efficient Kernel Mapping and Comprehensive System Evaluation of LLM Acceleration on a CGLA",
+        "source_url": "https://arxiv.org/abs/2512.00335",
+        "year": 2025,
+        "published": "2025-11-29",
+        "venue": "IEEE Access",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) demand substantial computational resources, resulting in high energy consumption on GPUs. To address this challenge, we focus on Coarse-Grained Reconfigurable Arrays (CGRAs) as an effective alternative that provides a trade-off between energy efficiency and programmability. This paper presents the first comprehensive, end-to-end evaluation of a non-AI-specialized Coarse-Grained Linear Array (CGLA) accelerator for the state-of-the-art Qwen3 LLM family. The architecture has a general-purpose, task-agnostic design, yet its flexible instruction set allows for domain-specific adaptations. This flexibility enables the architecture to achieve high efficiency for sustainable LLM inference. We assess the performance of our architecture on an FPGA prototype using the widely adopted llama.cpp framework. We then project its potential as a 28 nm ASIC and compare it against a high-performance GPU (NVIDIA RTX 4090) and an edge AI device (NVIDIA Jetson AGX Orin). While GPUs exhibit lower latency, our non-AI-specific accelerator achieves higher energy efficiency, improving the Power-Delay Product (PDP) by up to <inline-formula> <tex-math notation=\"LaTeX\">${44.4} \\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">${13.6} \\times $ </tex-math></inline-formula> compared with the RTX 4090 and Jetson, respectively. Similarly, it reduces the Energy-Delay Product (EDP) by up to <inline-formula> <tex-math notation=\"LaTeX\">${11.5} \\times $ </tex-math></inline-formula> compared to the high-performance GPU, demonstrating a favorable performance-energy trade-off. Critically, our system-level analysis identifies host-accelerator data transfer as the primary performance bottleneck, a factor often overlooked in kernel-level studies. These findings provide design guidance for next-generation LLM accelerators. This work validates CGRAs as a suitable platform for LLM inference in power-constrained environments, without being confined to specific algorithms.",
+        "identifiers": [
+          "SemanticScholar:b0f1241523b28b7fbe85d8d16da7908ec04f34c0"
+        ],
+        "semantic_scholar_id": "b0f1241523b28b7fbe85d8d16da7908ec04f34c0",
+        "canonical_id": "arXiv:2512.00335",
+        "arxiv_id": "2512.00335",
+        "doi": "10.1109/ACCESS.2025.3636266",
+        "authors": [
+          "Takuto Ando",
+          "Yu Eto",
+          "Ayumu Takeuchi",
+          "Yasuhiko Nakashima"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 359,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/prai62207.2024.10826600",
+      "identity_tokens": [
+        "id:DOI:10.1109/prai62207.2024.10826600",
+        "id:SemanticScholar:fd70bb8974e6c3ab0574b61b9ef33158ab86d689",
+        "title:dynamic lowrank adaptation based pruning algorithm for large language models",
+        "url:https://doi.org/10.1109/PRAI62207.2024.10826600"
+      ],
+      "record": {
+        "title": "Dynamic Low-Rank Adaptation Based Pruning Algorithm for Large Language Models",
+        "source_url": "https://doi.org/10.1109/PRAI62207.2024.10826600",
+        "year": 2024,
+        "published": "2024-08-15",
+        "venue": "2024 7th International Conference on Pattern Recognition and Artificial Intelligence (PRAI)",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep neural networks have been getting better and better performance while the parameter size has become larger and larger, and have now entered the era of large language models (LLM). However, large language models with huge number of parameters are difficult to be deployed on edge devices with limited computing power and memory resources. Network pruning techniques can reduce the storage and computation requirements of large language models. Although Dynamic Low-Rank Adaptation (DyLoRA) allows efficient fine-tuning of LLM, the deployment of LLM is still hindered by large model sizes and computational costs. In this paper, we propose a DyLoRA-based pruning algorithm that uses gradient updating of DyLoRA module to define the importance of parameters, and then prune the least important parameters based on the resulting importance scores. Through experiments on commonly used evaluation datasets, it is demonstrated that the proposed pruning algorithm is able to achieve 96.60% of the performance of the original model with 20% of the parameters pruned, which outperforms the previous pruning algorithms.",
+        "identifiers": [
+          "SemanticScholar:fd70bb8974e6c3ab0574b61b9ef33158ab86d689"
+        ],
+        "semantic_scholar_id": "fd70bb8974e6c3ab0574b61b9ef33158ab86d689",
+        "doi": "10.1109/PRAI62207.2024.10826600",
+        "canonical_id": "DOI:10.1109/PRAI62207.2024.10826600",
+        "authors": [
+          "Lin-Feng Li",
+          "Lei Guo"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 830,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.63317/55g6qr4jy7ip",
+      "identity_tokens": [
+        "id:DOI:10.63317/55g6qr4jy7ip",
+        "id:SemanticScholar:3a9bb1d557158c4c3d940991f78946acca26e410",
+        "title:languagespecific pruning for efficient reduction of large language models",
+        "url:https://doi.org/10.63317/55g6qr4jy7ip"
+      ],
+      "record": {
+        "title": "Language-Specific Pruning for Efficient Reduction of Large Language Models",
+        "source_url": "https://doi.org/10.63317/55g6qr4jy7ip",
+        "year": 2024,
+        "published": "2024-05-01",
+        "venue": "UNLP",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Delving into pruning techniques is essential to boost the efficiency of Large Language Models (LLMs) by reducing their size and computational demands, resulting in faster and more cost-effective inference. In this work, our key contribution lies in recognizing that LLMs trained on diverse languages manifest distinct language-specific weight distributions. Exploiting this insight, we illustrate that pruning LLMs using language-specific data results in a more potent model compression. Empirical evidence underscores the critical nature of pruning on language-specific data, highlighting a noteworthy impact on the perplexity of Ukrainian texts compared to pruning on English data. The proposed methodology significantly reduces the size of LLaMA, LLaMA 2 and Mistral models while preserving competitive performance. This research underscores the significance of linguistic considerations in LLM pruning and advocates for language-specific optimization, establishing a framework for more efficient and tailored language models across diverse linguistic contexts. Additionally, all experiments were conducted using a single consumer-grade NVIDIA RTX 3090 GPU, and the code is available at https://github.com/mshamrai/language-specific-pruning.",
+        "identifiers": [
+          "SemanticScholar:3a9bb1d557158c4c3d940991f78946acca26e410"
+        ],
+        "semantic_scholar_id": "3a9bb1d557158c4c3d940991f78946acca26e410",
+        "doi": "10.63317/55g6qr4jy7ip",
+        "canonical_id": "DOI:10.63317/55g6qr4jy7ip",
+        "authors": [
+          "M. Shamrai"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 936,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:15af4b3cc28ca9ebaabe2e4ebad8a645dd52523633b6a067a789f20358241c7e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
