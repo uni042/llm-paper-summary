@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2f4f50b5f1d0c3c661ff6a3d4ca8b24e4dd0d11e",
+  "base_commit": "d1d9f06edf90638fca580d151c70aeaca9264c88",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1380,12 +1380,14 @@
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-privacy-preserving-transformer-inference.json",
+    "2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-serving-configuration-tuning.json",
     "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
     "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json",
     "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json",
     "2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.json",
     "2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.json",
     "2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.json",
+    "2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.json",
     "2026-c303fad14871-latentllm-activation-aware-transform-to-multi-head-latent-attention.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-component-aware-self-speculative-decoding-hybrid-language-models.json",
@@ -6890,6 +6892,7 @@
     "retry-research-56feccb77231--libfile_d896d7a2d4a48191b003e54a2a29b1db--2021-berxit.json",
     "retry-research-572b13fa48b8--libfile_d3f2436ea1008191a94fef6db6b307ae--2026-2609.24298-kv-cobra-bit-rank-allocation-research-20261018-1830-scheduled-chat-30-r01.json",
     "retry-research-587e59534fcb--libfile_f410251ee1788191849b4dc4cf4f835d--2026-2604.07144-autopoiesis-self-evolving-llm-serving-research-20261019-2130-scheduled-ch.json",
+    "retry-research-592b6fa52a4f--2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.json",
     "retry-research-597572674b03--libfile_a95f7fbefd2c819196a0104ee41e23cb--2023-2103.14636-practical-survey-faster-lighter-transformers-research-20261014-0730-sched.json",
     "retry-research-5a0f134dbfe7--libfile_69b21658dc388191a38ae640e363e797--exactbytes-1345--2026-2607.18171-flashrt-multimodal-serving-agent-returned-repair-2026102.json",
     "retry-research-5a62ee941bf0--libfile_d8f059406c888191b876493fd065742f--2026-2607.27269-functional-mla-draft-reconstruction-research-20261019-1157-scheduled-chat.json",
@@ -50296,8 +50299,8 @@
     },
     "arXiv:2310.12818": {
       "order": [
-        "2026-11-23T18:11:13+00:00",
-        "2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.json"
+        "2026-11-23T21:41:22+00:00",
+        "retry-research-592b6fa52a4f--2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.json"
       ],
       "status": "blocked_quality",
       "result": {
@@ -50307,7 +50310,7 @@
         "source_sha256": "92b30b6ea743e142df60c987db5d4f7570f588a6744d967bfd7467cbae0eaced",
         "normalized_source_sha256": null,
         "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.md",
+        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-592b6fa52a4f--2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.md",
         "canonical_id": "arXiv:2310.12818",
         "worker_completed_at": "2026-11-24T03:45:00+09:00",
         "worker_run_key": "muse-20261124-b4w4",
@@ -50326,9 +50329,9 @@
         "failures": [
           "説明不足トリガー: 評価説明量 487 < 500"
         ],
-        "processed_at": "2026-11-23T18:11:13+00:00"
+        "processed_at": "2026-11-23T21:41:22+00:00"
       },
-      "return_count": 2
+      "return_count": 3
     },
     "arXiv:2412.10652": {
       "order": [
@@ -51207,6 +51210,24 @@
       "order": [
         "2026-11-23T21:34:21+00:00",
         "2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-privacy-preserving-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3832783.3834362": {
+      "order": [
+        "2026-11-23T21:39:47+00:00",
+        "2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-serving-configuration-tuning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.24963/ijcai.2026/631": {
+      "order": [
+        "2026-11-23T21:41:19+00:00",
+        "2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.json"
       ],
       "status": "imported",
       "result": null,
@@ -64932,6 +64953,12 @@
     "doi:10.1109/tdsc.2026.3718538": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-priv.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-priv.md"
+    ],
+    "doi:10.1145/3832783.3834362": [
+      "papers/inference/15-inference-simulation-emulation/2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-servi.md"
+    ],
+    "doi:10.24963/ijcai.2026/631": [
+      "papers/inference/99-other-inference-systems/2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.md"
     ]
   }
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1401本）
+## 自動生成の論文一覧（1402本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1529,6 +1529,10 @@
 - **2026-09 · [LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation](2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-count.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ループ型潜在推論の各ステップで、計算継続・メモリ想起・トークン発行の3行動を方策に選ばせ、全行動の1ステップ分岐で得た反実仮想利得で方策と書込みゲートを教える方式により、長文脈推論の精度を上げながら計算量を全深さの約55パーセントへ下げた。
+
+- **2026-09 · [Interaction Effects in Hybrid Compression of Small Language Models](2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.md)**  
+  実装：[✓](https://github.com/ihebbrl/slm-hybrid-compression) ・ リポジトリ内被引用：0  
+  量子化と枝刈りの併用効果から単独効果の和を差し引く相互作用係数を導入し、併用の相互作用が疎性0.2から0.3で最大になり0.5で加算へ戻る非単調な振る舞いと、課題ごとの符号の違いを明らかにした分析研究。
 
 - **2026-09 · [IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices](2026-9b405eddeda4-ihs-lm-intra-batch-hybrid-scheduling-and-layer-migration-for-vlm-pipeline-inference-acceleration-on-edge-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

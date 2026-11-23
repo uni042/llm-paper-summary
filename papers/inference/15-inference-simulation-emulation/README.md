@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（110本）
+## 自動生成の論文一覧（111本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -121,6 +121,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-11 · [ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration](2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configura.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   カーネル集合ごとに一回だけの短い実測を基準にし、固定費を保つ移転則と離散事象の模擬で他配置の性能を予測する枠組みで、十一の基準実測から百七十二構成のトークン当たり時間を中央値誤差八・一パーセントで予測し、探索を実機試行から予測上の探索へ変えたと報告した。
+
+- **2026-10 · [SimServing: Native-Execution Simulation for Evolution-Resilient LLM Serving Configuration Tuning](2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-servi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  サービング管理ソフトウェアを再実装せずそのまま実行しGPU計算だけを遅延推定器へ替えることで、上流進化にずれない模擬を実現し、予測誤差を13.8パーセントから4.9パーセントへ下げた設定調整基盤。
 
 - **2026-10 · [Learning to Formulate: Agentic Hardware–Software Co-Design of AI Infrastructure through Progressive Optimization and Verification](2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
