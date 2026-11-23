@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（107本）
+## 自動生成の論文一覧（108本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -459,6 +459,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2023-05 · [Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator](2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-p.md)**  
   実装：[✓](https://github.com/zhuhanqing/Lightening-Transformer) ・ リポジトリ内被引用：0  
   両辺とも動的な行列積を光の干渉で一括計算する動的フォトニックテンソルコアと光配信による入力共有で、従来の光加速器比でエネルギー2.6倍以上・遅延12倍以上の改善をシミュレーションで示したTransformer向け光加速器。
+
+- **2023-02 · [AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference with Transformers](2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transf.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  閾値比較だけで1クロックで活性値と重みを間引くDynaTranと、タイル化・データフロー・スパース配慮計算を備えたアクセラレータAccelTranを提案し、シミュレーションでサーバー版がA100比5.73倍のスループットと3.69倍低いエネルギーを示す。
 
 ### 7年前（2019-12〜2020-11）
 

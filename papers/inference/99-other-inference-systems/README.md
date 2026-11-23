@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1355本）
+## 自動生成の論文一覧（1359本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5176,6 +5176,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   量子化の難しさを範囲の比で定義し直し、活性値と重みの範囲を各チャネルで一致させる等化と、偏り誤差の統計的補正を組み合わせた学習不要量子化。8ビットと超低ビットの両方で既存手法を上回る。
 
+- **2023-10 · [Zero-Shot Sharpness-Aware Quantization for Pre-trained Language Models](2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  データなし量子化の敵対的学習にシャープネス配慮を入れて平坦な解へ寄せるSAM-SGAにより、BERT系とGPT系の11課題で一貫して精度を改善し、低精度条件では平均で最大6.98ポイント回復させる。
+
 - **2023-10 · [NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models](2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-e.md)**  
   実装：[✓](https://github.com/jongwooko/NASH-Pruning-Official) ・ リポジトリ内被引用：0  
   復号器は層を均等に間引いて浅くし、符号化器は幅を低い疎さで徐々に狭める非対称な枝刈りで、T5-baseの要約で品質をほぼ保ちながら実時間2.5倍から4.2倍の高速化を示した。
@@ -5200,6 +5204,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   例示数を増やせば精度が改善する可能性があるが、全ての例示を連結して密な自己注意を実行すると、系列長の二乗に比例する演算量とメモリが必要になる。SAICL（Structured 注意機構 for In-Context Learning）は、例示どうしの直接注意を取り除き、テスト入力を情報集約のハブにする。
 
+- **2023-07 · [INT-FP-QSim: Mixed Precision and Formats For Large Language Models and Vision Transformers](2023-2307.03712-int-fp-qsim-mixed-precision-and-formats-for-large-language-models-and-vi.md)**  
+  実装：[✓](https://github.com/lightmatter-ai/INT-FP-QSim) ・ リポジトリ内被引用：0  
+  整数と浮動小数点の量子化を一つのシミュレータで比べられるようにし、重み4ビット条件の横断調査で、ベクトル単位の適応スケーリングが全体キャリブレーションより大幅に精度を保ち、低ビット浮動小数点は整数に対して明確な利点がないことを示す研究。
+
 - **2023-07 · [Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models](2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md)**  
   実装：[✓](https://github.com/AlaFalaki/compressedBART) ・ リポジトリ内被引用：0  
   本論文は、既存のTransformer 符号化器が出力する各トークンの隠れ表現を、別途学習した自己符号化器（AE）で低次元に写像し、その低次元表現を入力として処理できる小型復号器を構築する手法を検討する。これは約2.2倍の速度、時間比で約54%の短縮に相当する。
@@ -5219,6 +5227,10 @@
 - **2023-06 · [A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys](2023-dc4a5089a5f8-a-probabilistic-framework-for-pruning-transformers-via-a-finite-admixtur.md)**  
   実装：[✓](https://github.com/Fsoft-AIC/FiAKFormer) ・ リポジトリ内被引用：0  
   本研究は、Transformerの自己注意を確率的な混合モデルとして解釈し、学習可能なkeyの事前重みを使って冗長な注意スコアとkey/valueを枝刈りする方式「Finite Admixture of Keys（FiAK）」を提案する。
+
+- **2023-05 · [NeuralMatrix: Moving Entire Neural Networks to General Matrix Multiplication for Efficient Inference](2023-2305.14405-neuralmatrix-moving-entire-neural-networks-to-general-matrix-multiplicat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  非線形演算を区分線形近似と区間判定の行列積へ置き換え、ネットワーク全体を一般行列積だけで実行することで、単一のGEMM加速器でCNN・Transformer・GNNを専用ASIC級の電力効率で動かす枠組み。
 
 - **2023-05 · [Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model](2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md)**  
   実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  
@@ -5277,6 +5289,10 @@
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのオフライン 正規化を、活性値/勾配統計の平滑化と適応型 外れ値除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+
+- **2022-07 · [STI: Turbocharge NLP Inference at the Edge via Elastic Pipelining](2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  Transformerをシャード単位で深さ・幅・ビット幅を調整できる弾力的なサブモデルにし、重要度順に入出力予算を配るパイプライン計画と小さなプリロードで、モバイル端末の数百ミリ秒目標を満たしながら常駐方式比でメモリを平均122倍削減する推論エンジン。
 
 - **2022-11 · [DBA: Efficient Transformer With Dynamic Bilinear Low-Rank Attention](2022-2211.16368-dba-efficient-transformer-with-dynamic-bilinear-low-rank-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

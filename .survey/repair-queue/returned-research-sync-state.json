@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "713f6c92c59a4f84101dce7f77aac560ed5bbe50",
+  "base_commit": "5f804e6b9f85934b849ae36ac1520b138e72fed8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -68,18 +68,23 @@
     "2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transformer.json",
     "2021-2112.08560-block-skim-efficient-question-answering-for-transformer.json",
     "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json",
+    "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
     "2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.json",
     "2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-research-and-deployment.json",
+    "2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transformers.json",
     "2023-2304.11520-processing-natural-language-on-embedded-devices-how-well-do-transformer-models-perform.json",
+    "2023-2305.14405-neuralmatrix-compute-the-entire-neural-networks-with-linear-matrix-operations-for-efficient-inference.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
     "2023-2306.01841-binary-and-ternary-natural-language-generation.json",
     "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json",
+    "2023-2307.03712-int-fp-qsim-mixed-precision-and-formats-for-large-language-models-and-vision-transformers.json",
     "2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-language-models.json",
     "2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.json",
     "2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language-models.json",
     "2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-encoder-decoder-language-models.json",
     "2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.json",
+    "2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.json",
     "2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-large-language-models.json",
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
     "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json",
@@ -50361,6 +50366,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2207.05022": {
+      "order": [
+        "2026-11-23T18:32:17+00:00",
+        "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2302.14705": {
+      "order": [
+        "2026-11-23T18:33:48+00:00",
+        "2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2305.14405": {
+      "order": [
+        "2026-11-23T18:35:19+00:00",
+        "2023-2305.14405-neuralmatrix-compute-the-entire-neural-networks-with-linear-matrix-operations-for-efficient-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2307.03712": {
+      "order": [
+        "2026-11-23T18:36:49+00:00",
+        "2023-2307.03712-int-fp-qsim-mixed-precision-and-formats-for-large-language-models-and-vision-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2310.13315": {
+      "order": [
+        "2026-11-23T18:38:20+00:00",
+        "2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63742,6 +63792,21 @@
     "arxiv:2602.06127": [
       "papers/inference/99-other-inference-systems/2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.md",
       "papers/inference/99-other-inference-systems/2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.md"
+    ],
+    "arxiv:2207.05022": [
+      "papers/inference/99-other-inference-systems/2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.md"
+    ],
+    "arxiv:2302.14705": [
+      "papers/inference/15-inference-simulation-emulation/2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transf.md"
+    ],
+    "arxiv:2305.14405": [
+      "papers/inference/99-other-inference-systems/2023-2305.14405-neuralmatrix-moving-entire-neural-networks-to-general-matrix-multiplicat.md"
+    ],
+    "arxiv:2307.03712": [
+      "papers/inference/99-other-inference-systems/2023-2307.03712-int-fp-qsim-mixed-precision-and-formats-for-large-language-models-and-vi.md"
+    ],
+    "arxiv:2310.13315": [
+      "papers/inference/99-other-inference-systems/2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.md"
     ]
   }
 }
