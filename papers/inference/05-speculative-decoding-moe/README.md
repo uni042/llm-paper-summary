@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（429本）
+## 自動生成の論文一覧（430本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1454,6 +1454,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/mcj-group/alspec) ・ リポジトリ内被引用：0  
   自己注意の出力を文脈の端だけを見る近似で予測し、後段の計算を別装置で先行させて正確な注意と並行検証することで、静的近似が数学や推論で崩れる問題を避けながら長文脈の生成遅延を最大1.65倍改善する投機的並列方式。
 
+- **2025-04 · [Speculative Sampling via Exponential Races](2025-2504.15475-speculative-sampling-via-exponential-races.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的デコードとチャネルシミュレーションの等価性を示して高速化の情報理論的な上限を導き、指数レースによる新しい検証方式が従来方式と同等以上の受理性能を持つことを実験で示す理論研究。
+
 - **2024-12 · [A Unified Framework for Speculative Decoding with Multiple Drafters as a Bandit](2024-64007ea4d2a1-a-unified-framework-for-speculative-decoding-with-multiple-drafters-as-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号では、小型のドラフトモデルが先行して複数トークンを予測し、大型のターゲットモデルが一括で検証する。黒箱のコードでは自己回帰比2.300倍、Mathでは2.280倍、白箱のコードでは3.724倍だった。
@@ -1691,7 +1695,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：551  
+  実装：✓ ・ リポジトリ内被引用：552  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1349本）
+## 自動生成の論文一覧（1350本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5171,6 +5171,10 @@
 - **2023-09 · [Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing](2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   手元の異種機器へLLMの層を能力に応じて配分し、入力シーケンスをトークン方向へスライスしてパイプラインに流すことで、疎なリクエストでも並列化して推論を速くするPipeLLM。
+
+- **2023-09 · [eDKM: An Efficient and Accurate Train-time Weight Clustering for Large Language Models](2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  微分可能な重みクラスタリングDKMの注意マップを、装置間の重複コピー除去、重み値の一意化、索引の分割で約130分の1へ圧縮し、LLaMA-7Bの学習時3ビット圧縮を可能にするメモリ効率化。
 
 - **2023-07 · [Scaling In-Context Demonstrations with Structured Attention](2023-2307.02690-scaling-in-context-demonstrations-with-structured-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

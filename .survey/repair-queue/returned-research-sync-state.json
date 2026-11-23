@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "acf5841c3e6a88ebca28360db31fb61c4adb436d",
+  "base_commit": "241c383d3230eb4db822ed06488b14d829d04687",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -75,9 +75,11 @@
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
     "2023-2306.01841-binary-and-ternary-natural-language-generation.json",
     "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json",
+    "2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-language-models.json",
     "2023-2309.01729-softmax-bias-correction-for-quantized-generative-models.json",
     "2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language-models.json",
     "2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-encoder-decoder-language-models.json",
+    "2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.json",
     "2023-2311.01305-aweq-post-training-quantization-with-activation-weight-equalization-for-large-language-models.json",
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
     "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json",
@@ -147,12 +149,14 @@
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
     "2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.json",
     "2024-2412.06458-pruning-all-rounder-rethinking-and-improving-inference-efficiency-for-large-vision-language-models.json",
+    "2024-2412.10652-centaur-bridging-the-impossible-trinity-of-privacy-efficiency-and-performance-in-privacy-preserving-transformer-inferenc.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
     "2024-2412.11741-csr-achieving-1-bit-key-value-cache-via-sparse-representation.json",
     "2024-2412.12486-boosting-long-context-management-via-query-guided-activation-refilling.json",
     "2024-2412.13236-cosee-consistency-oriented-signal-based-early-exiting-via-calibrated-sample-weighting-mechanism.json",
     "2024-2412.15127-adaptive-pruning-for-large-language-models-with-structural-importance-awareness.json",
     "2024-2412.15750-extracting-interpretable-task-specific-circuits-from-large-language-models-for-faster-inference.json",
+    "2024-2412.16434-symphony-improving-memory-management-for-llm-inference-workloads.json",
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
     "2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.json",
     "2024-468b43887ef3-how-speculative-can-speculative-decoding-be.json",
@@ -201,6 +205,7 @@
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
     "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json",
+    "2025-2504.15475-speculative-sampling-via-exponential-races.json",
     "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json",
     "2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language-model-inference-on-edge-devices.json",
     "2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.json",
@@ -50184,6 +50189,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2309.00964": {
+      "order": [
+        "2026-11-23T18:11:11+00:00",
+        "2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2310.12818": {
+      "order": [
+        "2026-11-23T18:11:13+00:00",
+        "2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "92b30b6ea743e142df60c987db5d4f7570f588a6744d967bfd7467cbae0eaced",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.md",
+        "canonical_id": "arXiv:2310.12818",
+        "worker_completed_at": "2026-11-24T03:45:00+09:00",
+        "worker_run_key": "muse-20261124-b4w4",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3734,
+          "body_paragraphs": 17,
+          "method_chars": 1365,
+          "method_paragraphs": 4,
+          "evaluation_chars": 487,
+          "limitation_chars": 268,
+          "insufficiency_flags": [
+            "評価説明量 487 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 487 < 500"
+        ],
+        "processed_at": "2026-11-23T18:11:13+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2412.10652": {
+      "order": [
+        "2026-11-23T18:12:06+00:00",
+        "2024-2412.10652-centaur-bridging-the-impossible-trinity-of-privacy-efficiency-and-performance-in-privacy-preserving-transformer-inferenc.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.16434": {
+      "order": [
+        "2026-11-23T18:12:58+00:00",
+        "2024-2412.16434-symphony-improving-memory-management-for-llm-inference-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.15475": {
+      "order": [
+        "2026-11-23T18:13:51+00:00",
+        "2025-2504.15475-speculative-sampling-via-exponential-races.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63509,6 +63586,18 @@
     "arxiv:2505.07531": [
       "papers/inference/09-kernel-runtime-compilation/2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-work.md",
       "papers/inference/09-kernel-runtime-compilation/2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-work.md"
+    ],
+    "arxiv:2309.00964": [
+      "papers/inference/99-other-inference-systems/2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-la.md"
+    ],
+    "arxiv:2412.10652": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.10652-centaur-bridging-the-impossible-trinity-of-privacy-efficiency-and-perfor.md"
+    ],
+    "arxiv:2412.16434": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.16434-symphony-improving-memory-management-for-llm-inference-workloads.md"
+    ],
+    "arxiv:2504.15475": [
+      "papers/inference/05-speculative-decoding-moe/2025-2504.15475-speculative-sampling-via-exponential-races.md"
     ]
   }
 }
