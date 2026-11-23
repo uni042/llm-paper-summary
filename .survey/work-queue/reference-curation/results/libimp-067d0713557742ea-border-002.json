@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-067d0713557742ea-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:4a9db7fe6864d29754b34cf05b80a27054ca275d",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:4a9db7fe6864d29754b34cf05b80a27054ca275d",
+    "identity_tokens": [
+      "SemanticScholar:4a9db7fe6864d29754b34cf05b80a27054ca275d"
+    ],
+    "reason": "意味基底解析による言語モデルのstreamliningは圧縮・効率化に関連し得るが、要旨を取得できず対象機構と推論への直接貢献を確認できないため保留する。",
+    "first_checked_at": "2026-11-23T22:46:15+00:00",
+    "last_checked_at": "2026-11-23T22:46:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Streamlining Language Models via Semantic Basis Analysis"
+  },
+  "processed_at": "2026-11-23T22:46:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-067d07135577",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

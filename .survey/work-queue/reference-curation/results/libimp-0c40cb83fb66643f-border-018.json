@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c40cb83fb66643f-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:e749e1ba1e406bf6af7d9940899558ec80b63c7a",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:e749e1ba1e406bf6af7d9940899558ec80b63c7a",
+    "identity_tokens": [
+      "SemanticScholar:e749e1ba1e406bf6af7d9940899558ec80b63c7a"
+    ],
+    "reason": "Semantic Scholarが429で要旨を取得できず、タイトルが『WINDOW』のみで主題・機構が特定できないため、推論への関連を確認できず保留とする。",
+    "first_checked_at": "2026-11-23T22:46:16+00:00",
+    "last_checked_at": "2026-11-23T22:46:16+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "W INDOW"
+  },
+  "processed_at": "2026-11-23T22:46:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c40cb83fb66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

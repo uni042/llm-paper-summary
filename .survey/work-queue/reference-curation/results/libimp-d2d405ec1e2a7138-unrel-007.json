@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2d405ec1e2a7138-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.05552",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.05552",
+    "identity_tokens": [
+      "arXiv:2412.05552"
+    ],
+    "reason": "言語誘導視覚ナビゲーションを統一枠組みで扱うState-Adaptive MoEによるナビゲーションエージェントの学習であり、対象はロボット等の視覚ナビゲーションタスク性能でLLM推論効率化への貢献はない。",
+    "first_checked_at": "2026-11-23T22:46:17+00:00",
+    "last_checked_at": "2026-11-23T22:46:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SAME: Learning Generic Language-Guided Visual Navigation with State-Adaptive Mixture of Experts"
+  },
+  "processed_at": "2026-11-23T22:46:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2d405ec1e2a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f02b69c6c2fa3168-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.22561",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.22561",
+    "identity_tokens": [
+      "arXiv:2607.22561"
+    ],
+    "reason": "LLM-as-a-judgeの判定論理をプログラム群へ蒸留するPAJAMAで評価時のLLM呼び出しを減らすが、対象は評価専用であり汎用LLMサービング機構としての貢献は限定的である。",
+    "first_checked_at": "2026-11-23T22:46:17+00:00",
+    "last_checked_at": "2026-11-23T22:46:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Codifying the Judge: Scalable Evaluation via Program Distillation"
+  },
+  "processed_at": "2026-11-23T22:46:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f02b69c6c2fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

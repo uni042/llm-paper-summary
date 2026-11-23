@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2d405ec1e2a7138-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c2095895c3899aedf1b61d6a8313fec894315a0d",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c2095895c3899aedf1b61d6a8313fec894315a0d",
+    "identity_tokens": [
+      "SemanticScholar:c2095895c3899aedf1b61d6a8313fec894315a0d"
+    ],
+    "reason": "タイトルはTransformer学習の高スループット化のためのメモリ最適化と並列化の統合を示し学習側が主目的に見えるが、Semantic Scholarで要旨が出版社により省略され取得できず、推論への転用や直接貢献の有無を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T22:46:17+00:00",
+    "last_checked_at": "2026-11-23T22:46:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "H3T: Efficient Integration of Memory Optimization and Parallelism for High-Throughput Transformer Training"
+  },
+  "processed_at": "2026-11-23T22:46:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2d405ec1e2a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c40cb83fb66643f-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.07003",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.07003",
+    "identity_tokens": [
+      "arXiv:2509.07003"
+    ],
+    "reason": "eager-mode SPMDによる分散学習システムveScaleで、乱数生成の一貫性と学習スループット改善が対象であり、推論ではなく学習単独の高速化である。",
+    "first_checked_at": "2026-11-23T22:46:16+00:00",
+    "last_checked_at": "2026-11-23T22:46:16+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD"
+  },
+  "processed_at": "2026-11-23T22:46:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c40cb83fb66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

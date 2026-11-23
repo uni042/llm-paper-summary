@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f02b69c6c2fa3168-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2307.09270",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2307.09270",
+    "identity_tokens": [
+      "arXiv:2307.09270"
+    ],
+    "reason": "線形Transformer向け相対位置符号化を正準形とユニタリ変換で体系化し線形時空間計算量を保つが、推論システムとして実装・計測された貢献ではなく機構の推論適用は間接的である。",
+    "first_checked_at": "2026-11-23T22:46:17+00:00",
+    "last_checked_at": "2026-11-23T22:46:17+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Linearized Relative Positional Encoding"
+  },
+  "processed_at": "2026-11-23T22:46:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f02b69c6c2fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

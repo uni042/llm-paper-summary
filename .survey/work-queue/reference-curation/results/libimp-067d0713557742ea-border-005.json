@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-067d0713557742ea-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:3de1ba425687c8951daf142921fc58c6bf20c18b",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:3de1ba425687c8951daf142921fc58c6bf20c18b",
+    "identity_tokens": [
+      "SemanticScholar:3de1ba425687c8951daf142921fc58c6bf20c18b"
+    ],
+    "reason": "LoRAエキスパートの合成によるLLM改善は適応手法寄りで、推論時合成か学習時手法か要旨を取得できず機構が不明瞭なため保留する。",
+    "first_checked_at": "2026-11-23T22:46:15+00:00",
+    "last_checked_at": "2026-11-23T22:46:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LoRACoE: Improving Large Language Models via Composition-based LoRA Expert"
+  },
+  "processed_at": "2026-11-23T22:46:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-067d07135577",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

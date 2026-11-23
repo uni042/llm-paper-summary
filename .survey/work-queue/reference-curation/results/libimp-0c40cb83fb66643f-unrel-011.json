@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c40cb83fb66643f-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.15379",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.15379",
+    "identity_tokens": [
+      "arXiv:2408.15379"
+    ],
+    "reason": "マルチモーダル側面ベース感情分析向けのDualKanbaFormerで、疎な注意やMambaを使うが適用先は感情分析タスクでありLLM推論システムではない。",
+    "first_checked_at": "2026-11-23T22:46:16+00:00",
+    "last_checked_at": "2026-11-23T22:46:16+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DualKanbaFormer: An Efficient Selective Sparse Framework for Multimodal Aspect-Based Sentiment Analysis"
+  },
+  "processed_at": "2026-11-23T22:46:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c40cb83fb66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
