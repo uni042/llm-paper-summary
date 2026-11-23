@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-90e4f6d2182db05f-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.21437/interspeech.2021-280",
+  "reason": "Transformer系ASRモデルの学習時に注意ヘッドを確率的に除去して各ヘッドの独立学習を促す学習手法であり、テスト時は全ヘッドを用いる学習側の正則化であって、LLM推論の高速化やサービング機構への直接貢献はない。",
+  "title": "Stochastic Attention Head Removal: A Simple and Effective Method for Improving Transformer Based ASR Models",
+  "identity_tokens": [
+    "DOI:10.21437/interspeech.2021-280"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90e4f6d2182d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

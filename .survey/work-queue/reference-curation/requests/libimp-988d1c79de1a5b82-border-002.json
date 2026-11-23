@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-988d1c79de1a5b82-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "SemanticScholar:4d6ba62aca0ffd88bd34400b16824f168285f463",
+  "reason": "スライス上の題名が「This paper」とだけ記され主題自体が不明で、Semantic Scholar APIが429を返し代替経路でも要旨を取得できなかったため、LLM推論システムへの寄与の有無を一切判定できず、証拠不足として保留とした。",
+  "title": "This paper",
+  "identity_tokens": [
+    "SemanticScholar:4d6ba62aca0ffd88bd34400b16824f168285f463"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-988d1c79de1a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
