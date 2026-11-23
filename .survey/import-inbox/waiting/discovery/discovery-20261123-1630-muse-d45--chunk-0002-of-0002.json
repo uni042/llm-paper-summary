@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d45::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07311",
+      "identity_tokens": [
+        "arXiv:2610.07311"
+      ],
+      "title": "Understanding and Mitigating Inference-Time Overreliance Using Agentic Memory",
+      "reason": "エージェント記憶の過剰依存を書込時の証拠索引と読込時の再利用制御で抑えるMEMTRIMを提案し推論時の記憶利用を扱うが、扱う対象は記憶内容の信頼性であり推論処理効率やキャッシュ機構への貢献は間接的なため保留とした。",
+      "source_url": "https://arxiv.org/abs/2610.07311",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 341
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.12874",
+      "identity_tokens": [
+        "arXiv:2610.12874"
+      ],
+      "title": "Temporal Evidence Forests for Long-Horizon Multi-Party Conversational Memory",
+      "reason": "長期多者会話メモリ向けに時間的証拠発見と状態遷移の構造化を行うT-MemでLLMエージェントの記憶検索を改善するが、対象は会話メモリの編成・検索でありLLM推論内部の実行機構とは異なるため保留とした。",
+      "source_url": "https://arxiv.org/abs/2610.12874",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 342
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.00722",
+      "identity_tokens": [
+        "arXiv:2506.00722"
+      ],
+      "title": "Chain-of-Thought Training for Open E2E Spoken Dialogue Systems",
+      "reason": "公開会話データ300時間でend-to-end音声対話システムをChain-of-Thought形式で学習させる手法であり、対話モデルの学習レシピが主貢献でLLM推論システムの高速化やサービングへの直接貢献はないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2506.00722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 343
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.09672",
+      "identity_tokens": [
+        "arXiv:2009.09672"
+      ],
+      "title": "Alleviating the Inequality of Attention Heads for Neural Machine Translation",
+      "reason": "多ヘッド注意のヘッド間不均衡をマスキングHeadMaskで緩和し機械翻訳の精度を上げる学習手法であり、対象はニューラル機械翻訳モデルの訓練であり推論時の注意計算やLLMサービングの効率化ではないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2009.09672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 344
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.14969",
+      "identity_tokens": [
+        "arXiv:2308.14969"
+      ],
+      "title": "Uncovering the Hidden Cost of Model Compression",
+      "reason": "モデル圧縮が視覚プロンプティング転移に与える悪影響を低データ条件中心に検証する研究であり、圧縮モデルの推論実行方式やLLM推論システムへの新たな技術的貢献は要旨に示されていないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2308.14969",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.21173",
+      "identity_tokens": [
+        "arXiv:2509.21173"
+      ],
+      "title": "Less Precise Can Be More Reliable: A Systematic Evaluation of Quantization's Impact on VLMs Beyond Accuracy",
+      "reason": "CLIP等のVLM量子化が精度だけでなく較正や分布外検出、ノイズ頑健性へ与える影響を70万回超の評価で系統的に調べスペクトル平滑化で説明するが、新規量子化手法ではなく評価・分析が中心のため保留とした。",
+      "source_url": "https://arxiv.org/abs/2509.21173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 346
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12071",
+      "identity_tokens": [
+        "arXiv:2309.12071"
+      ],
+      "title": "Benchmarking quantized LLaMa-based models on the Brazilian Secondary School Exam",
+      "reason": "量子化した7B・13BのLLaMA系モデルをブラジル中等教育試験ENEMの1006問で評価し精度と家庭用CPUでの実行時間を測るベンチマークであり、能力評価が主目的で推論手法への新規貢献はないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2309.12071",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11228939",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN64981.2025.11228939"
+      ],
+      "title": "Attention-SSM Network for Predicting Springback Error in Single Point Incremental Forming",
+      "reason": "単点逐次成形のスプリングバック誤差予測に注意と状態空間モデルを組み合わせたAttention-SSMを適用する製造分野の研究であり、LLM推論や生成モデルサービングとは主題が全く異なるため対象外とした。",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11228939",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 348
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.07531",
+      "identity_tokens": [
+        "arXiv:2505.07531"
+      ],
+      "title": "QuantX: A Framework for Hardware-Aware Quantization of Generative AI Workloads",
+      "reason": "ハードウェア制約を考慮した生成AI向け量子化レシピ集QuantXで3ビット化と推論時逆量子化の効率化を図り、LLaVAで性能低下6％以内を保ちllama.cppへ統合して実行時間でも実現可能性を示したため採用とした。",
+      "source_url": "https://arxiv.org/abs/2505.07531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 349
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14175",
+      "identity_tokens": [
+        "arXiv:2605.14175"
+      ],
+      "title": "Grounded Continuation: A Linear-Time Runtime Verifier for LLM Conversations",
+      "reason": "会話の前提依存マップ上を線形時間で走査しLLM呼び出しなしに継続の根拠を検証するランタイム検証器を提案し低コストをうたうが、主目的は信念改訂や文脈攻撃への正確性検証であり推論基盤の効率機構ではないため保留とした。",
+      "source_url": "https://arxiv.org/abs/2605.14175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 350
+    }
+  ],
+  "parent_run_key": "muse-20261123-d45",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

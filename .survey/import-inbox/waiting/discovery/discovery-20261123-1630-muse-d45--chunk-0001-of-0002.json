@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d45::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.03069",
+      "identity_tokens": [
+        "arXiv:2107.03069"
+      ],
+      "title": "Efficient Transformer for Direct Speech Translation",
+      "reason": "音声翻訳向けにLongformerエンコーダでスペクトログラムを直接処理し畳み込み層を省く構成だが、対象は音声翻訳モデルの符号化でありLLMの推論・サービングやデコード効率への直接貢献は要旨に示されていないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2107.03069",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVPRW63382.2024.00369",
+      "identity_tokens": [
+        "DOI:10.1109/CVPRW63382.2024.00369"
+      ],
+      "title": "Efficient Transformer Adaptation with Soft Token Merging",
+      "reason": "微分可能なsoft token mergingとtoken inflationでTransformer層の適応時の計算量を削減し実測速度向上も述べるが、主目的は視覚・言語横断の適応手法でありLLM推論システムとしての機構や評価が薄いため保留とした。",
+      "source_url": "https://doi.org/10.1109/CVPRW63382.2024.00369",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.22034",
+      "identity_tokens": [
+        "arXiv:2509.22034"
+      ],
+      "title": "The Thinking Spectrum: An Empirical Study of Tunable Reasoning in LLMs through Model Merging",
+      "reason": "モデルマージで推論モデルの推論深度とトークン効率のトレードオフを調整できることを大規模実証するが、新たな推論機構やサービング手法ではなくマージ強度による精度・効率曲線の経験的評価が中心のため保留とした。",
+      "source_url": "https://arxiv.org/abs/2509.22034",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.14473",
+      "identity_tokens": [
+        "arXiv:2406.14473"
+      ],
+      "title": "Data-Centric AI in the Age of Large Language Models",
+      "reason": "LLMにおけるデータ中心AIの立場表明としてデータキュレーションや帰属、推論時文脈化の重要性を論じるが、推論システムやデコード、キャッシュ等への具体的な技術的貢献は要旨に含まれないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2406.14473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2307.03712",
+      "identity_tokens": [
+        "arXiv:2307.03712"
+      ],
+      "title": "INT-FP-QSim: Mixed Precision and Formats For Large Language Models and Vision Transformers",
+      "reason": "INT・FPの多様な数値形式でLLMとVision Transformerを4ビット重み等で柔軟に評価できる量子化シミュレータINT-FP-QSimを提案し、SmoothQuantやGPTQ等も比較対象として低精度推論の設計を直接支援するため採用とした。",
+      "source_url": "https://arxiv.org/abs/2307.03712",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.09494",
+      "identity_tokens": [
+        "arXiv:2312.09494"
+      ],
+      "title": "No-Skim: Towards Efficiency Robustness Evaluation on Skimming-based Language Models",
+      "reason": "トークンを動的に落とすskimming型LLM高速化がDoS的摂動で残存トークン率と計算コストを最大145％超増やす脆弱性を測るNo-Skim評価枠組みだが、新規高速化機構ではなく効率ロバスト性の評価が主目的のため保留とした。",
+      "source_url": "https://arxiv.org/abs/2312.09494",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25195/ijci.v51i2.546",
+      "identity_tokens": [
+        "DOI:10.25195/ijci.v51i2.546"
+      ],
+      "title": "LLM Hallucination: The Curse That Cannot Be Broken",
+      "reason": "LLMの幻覚の類型・原因・不可避性と検出緩和策を概説するレビューであり、推論処理やサービング効率、量子化、キャッシュ等の推論システムへの技術的貢献は要旨に示されていないため対象外とした。",
+      "source_url": "https://doi.org/10.25195/ijci.v51i2.546",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.22085",
+      "identity_tokens": [
+        "arXiv:2604.22085"
+      ],
+      "title": "Memanto: Typed Semantic Memory with Information-Theoretic Retrieval for Long-Horizon Agents",
+      "reason": "長期エージェント向けに型付き意味メモリと情報理論的検索で90ミリ秒未満の検索遅延をうたうMemantoを提案するが、対象はエージェント用メモリ層のデータ管理でありLLM推論内部のKVキャッシュやサービング機構とは異なるため保留とした。",
+      "source_url": "https://arxiv.org/abs/2604.22085",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09278",
+      "identity_tokens": [
+        "arXiv:2605.09278"
+      ],
+      "title": "EquiMem: Calibrating Shared Memory in Multi-Agent Debate via Game-Theoretic Equilibrium",
+      "reason": "マルチエージェント討論の共有メモリ汚染に対しゲーム理論的均衡に基づく推論時キャリブレーションEquiMemを提案するが、扱うのは討論用メモリ更新の信頼性でありLLM推論基盤の処理効率への貢献は間接的であるため保留とした。",
+      "source_url": "https://arxiv.org/abs/2605.09278",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10048",
+      "identity_tokens": [
+        "arXiv:2602.10048"
+      ],
+      "title": "Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization",
+      "reason": "強化学習FGOでグループ応答を細分化し長さとエントロピーで重み付けして長いChain-of-Thoughtを圧縮し推論コスト低減を狙うが、手法自体はGRPO系の学習アルゴリズムであり推論時機構ではないため保留とした。",
+      "source_url": "https://arxiv.org/abs/2602.10048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 330
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04443",
+      "identity_tokens": [
+        "arXiv:2607.04443"
+      ],
+      "title": "Wan-Streamer v0.2: Higher Resolution, Same Latency",
+      "reason": "ストリーミング音声映像モデルWan-Streamer v0.2で解像度を上げつつ約200ミリ秒遅延を維持し、単一GPUのthinker経路とUlysses型コンテキスト並列のperformer、事前分割されたK/Vキャッシュ等で低遅延推論を実現するため採用とした。",
+      "source_url": "https://arxiv.org/abs/2607.04443",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 331
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.23878",
+      "identity_tokens": [
+        "arXiv:2604.23878"
+      ],
+      "title": "ZenBrain: A Neuroscience-Inspired 7-Layer Memory Architecture for Autonomous AI Systems",
+      "reason": "神経科学由来の7層メモリとMemoryCoordinatorで自律エージェントの記憶を構成するZenBrainを提案するが、要旨ではシミュレーション上の代替コンポーネントでのアブレーションが中心で実推論システムへの具体的効果が不明瞭なため保留とした。",
+      "source_url": "https://arxiv.org/abs/2604.23878",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 332
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10054",
+      "identity_tokens": [
+        "arXiv:2410.10054"
+      ],
+      "title": "AlphaLoRA: Assigning LoRA Experts Based on Layer Training Quality",
+      "reason": "層ごとの学習品質に基づきMoE内のLoRA専門家数を非一様に割り当てるAlphaLoRAはパラメータ効率的ファインチューニングの手法であり、推論時の専門家実行やサービング効率への直接貢献は要旨にないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2410.10054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 333
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01260",
+      "identity_tokens": [
+        "arXiv:2506.01260"
+      ],
+      "title": "Subspace Networks: Scaling Decentralized Training with Communication-Efficient Model Parallelism",
+      "reason": "分散学習で活性化と勾配を低次元部分空間へ圧縮し通信を最大99％削減するSubspace Networksはモデル並列学習の通信効率化が目的であり、LLM推論の実行やサービングを扱っていないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2506.01260",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 334
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16359",
+      "identity_tokens": [
+        "arXiv:2606.16359"
+      ],
+      "title": "Fenc2: Unifying Data Packing for Efficient Private Inference via Convolution and Architecture-Aware Fragment Encoding",
+      "reason": "CKKS準同型暗号の私的畳み込み推論向けに断片符号化FEnc2でスロット利用と回転回数を最適化し同型演算を1〜2桁削減するが、対象はCNNの暗号化推論でありLLM推論への適用は要旨で示されていないため保留とした。",
+      "source_url": "https://arxiv.org/abs/2606.16359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 335
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.09193",
+      "identity_tokens": [
+        "arXiv:2505.09193"
+      ],
+      "title": "BiECVC: Gated Diversification of Bidirectional Contexts for Learned Video Compression",
+      "reason": "学習型双方向映像圧縮BiECVCで局所・非局所文脈の多様化とゲーティングにより映像符号化性能を改善する研究であり、LLMやTransformer推論システムの処理効率とは主題が異なるため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2505.09193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 336
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/cpe.70713",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.70713"
+      ],
+      "title": "SA‐Cost: Structure‐Aware Cost Model With Attention for Tensor Program Tuning",
+      "reason": "深層学習コンパイラのテンソルプログラム調整向けにスケジューリングプリミティブ間の意味相関を注意で捉えるコストモデルSA-Costを提案しAnsor等より高速化するが、LLM推論カーネルやサービングへの特化は要旨にないため保留とした。",
+      "source_url": "https://doi.org/10.1002/cpe.70713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 337
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.14256",
+      "identity_tokens": [
+        "arXiv:2306.14256"
+      ],
+      "title": "A multilingual translator to SQL with database schema pruning to improve self-attention",
+      "reason": "データベーススキーマ剪定で自己注意の入力長問題を緩和し多言語Text-to-SQLの精度を上げる研究だが、主貢献はSQL変換タスクの精度改善でありLLM推論システムの汎用機構ではないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2306.14256",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 338
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20785",
+      "identity_tokens": [
+        "arXiv:2603.20785"
+      ],
+      "title": "ME-IQA: Memory-Enhanced Image Quality Assessment via Re-Ranking",
+      "reason": "推論型VLMの画質評価スコアの離散崩壊をメモリバンクと再ランキングで改善するME-IQAは画像品質評価という応用タスクが主目的であり、LLM推論基盤への直接貢献は要旨に示されていないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2603.20785",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 339
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27415",
+      "identity_tokens": [
+        "arXiv:2607.27415"
+      ],
+      "title": "Bridging Inference-Time Scaling and Episodic Memory with Action-Centric Graphs",
+      "reason": "行動中心グラフで過去の推論履歴をエピソード記憶化しTD学習の価値で推論時意思決定を双方向に導きトークン消費削減を狙うGAMERだが、対象はエージェントの推論時探索の枠組みでありサービング機構としての具体性が薄いため保留とした。",
+      "source_url": "https://arxiv.org/abs/2607.27415",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 340
+    }
+  ],
+  "parent_run_key": "muse-20261123-d45",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d48::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/MERCon67903.2025.11217068",
+      "identity_tokens": [
+        "DOI:10.1109/MERCon67903.2025.11217068"
+      ],
+      "title": "Segment-Driven Corporate Report Summarization Using Positional-Aware Clustering and Hybrid Summarization",
+      "reason": "OpenAlex要旨では企業レポート要約に向け意味的セグメンテーションと抽出・抽象ハイブリッド要約を組み合わせGov-Report等で評価する応用手法であり、文書要約の精度が主題でLLM推論システムへの技術的貢献はないため対象外である。",
+      "source_url": "https://doi.org/10.1109/MERCon67903.2025.11217068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54364/jaiai.2024.1124",
+      "identity_tokens": [
+        "DOI:10.54364/jaiai.2024.1124"
+      ],
+      "title": "Safety in ChatGPT-like Chatbots across Health, Finance, Law, Security and Defense Settings",
+      "reason": "Crossref要旨はスマートフォン上でローカル動作するChatGPT類似チャットボットが医療・金融・法務等の場面で有害応答に傾く安全性の問題を論じるものであり、ローカル実行への言及は前提に過ぎず推論システムの技術提案ではないため対象外である。",
+      "source_url": "https://doi.org/10.54364/jaiai.2024.1124",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 432
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004",
+      "identity_tokens": [
+        "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004"
+      ],
+      "title": "A UTO D IST : A C OMPOSABLE AND A UTOMATED S YNCHRONIZATION S YSTEM FOR D ISTRIBUTED D EEP L EARNING",
+      "reason": "分散深層学習向けの構成可能で自動化された同期システムAutoDistと題するが、OpenAlex検索が429で打ち切りとなり一次要旨を取得できず、同期対象が学習なのか推論なのか判別できないため、要旨未取得として保留に留める。",
+      "source_url": "https://www.semanticscholar.org/paper/9ea57f5ca4cf965c475ff0f56435c5be65135004",
+      "body_check": "abstract_not_obtained; openalex_429_rate_limited; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:dc1cd9a72845b8f4df3e501e2a37b7570111edd8",
+      "identity_tokens": [
+        "SemanticScholar:dc1cd9a72845b8f4df3e501e2a37b7570111edd8"
+      ],
+      "title": "Generative Question Answering for a Chatbot in the Human Resources Domain",
+      "reason": "OpenAlexが429で要旨を取得できなかったが、タイトル自体が人事領域チャットボット向け生成型質問応答という業務応用を明示しており、LLM推論システムの機構への貢献が想定できないためタイトルスクリーニングで対象外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/dc1cd9a72845b8f4df3e501e2a37b7570111edd8",
+      "body_check": "title_screen_only; abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:f00000404939dbe45ccf69d4bcd6d53ad7cbf257",
+      "identity_tokens": [
+        "SemanticScholar:f00000404939dbe45ccf69d4bcd6d53ad7cbf257"
+      ],
+      "title": "DEVEVOPMENT OF A METHOD FOR IMPROVING MAINTAINABILITY OF MICROSERVICE SOFTWARE BASED ON CENTRALIZED OUTGOING EVENT MANAGEMENT (p. 16–26)",
+      "reason": "OpenAlexが429で要旨を取得できなかったが、タイトル自体が中央集権的な発信イベント管理によるマイクロサービスソフトウェアの保守性改善というソフトウェア工学の主題を明示しており、LLM推論とは無関係なためタイトルスクリーニングで対象外とする。",
+      "source_url": "https://www.semanticscholar.org/paper/f00000404939dbe45ccf69d4bcd6d53ad7cbf257",
+      "body_check": "title_screen_only; abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08139",
+      "identity_tokens": [
+        "arXiv:2506.08139"
+      ],
+      "title": "SoftStep: Learning Sparse Similarity Powers Deep Neighbor-Based Regression",
+      "reason": "要旨のSoftStepは疎な類似度を学習して近傍ベース回帰を深層モデルへ組み込む回帰モジュールの提案であり、表形式・回帰タスクの予測精度が主題でLLMの推論やサービングへの技術的貢献は確認できないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2506.08139",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44163-026-02369-8",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-02369-8"
+      ],
+      "title": "Energy constraints in large scale artificial intelligence and insights from human cognition for efficient large language models",
+      "reason": "Crossref要旨では大規模AIのエネルギー・電力・メモリトラフィック制約を横断的に整理し人間の認知の資源配分から効率的なLLM設計への示唆を論じるレビューであり、推論を含む資源制約には触れるが具体的な推論システムの技術提案ではないため保留とする。",
+      "source_url": "https://doi.org/10.1007/s44163-026-02369-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/AAIML67890.2026.11498121",
+      "identity_tokens": [
+        "DOI:10.1109/AAIML67890.2026.11498121"
+      ],
+      "title": "CALM: Cost-efficient, model Agnostic, Low-latency Modular LLM Deployment framework",
+      "reason": "OpenAlex要旨ではCALMがコスト効率・低レイテンシ・モデル非依存を掲げるモジュール型LLMデプロイメントフレームワークとして、SLAを満たしつつ推論コストを削減する配置戦略の必要性と課題を具体的に論じており、LLMサービング・デプロイ基盤への直接貢献が確認できるため採用する。",
+      "source_url": "https://doi.org/10.1109/AAIML67890.2026.11498121",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCBE65177.2025.11255928",
+      "identity_tokens": [
+        "DOI:10.1109/ICCBE65177.2025.11255928"
+      ],
+      "title": "Comparative Survey of Small and Large Language Models",
+      "reason": "OpenAlex要旨では小規模・大規模言語モデルをアーキテクチャ、蒸留・量子化・軽量注意、推論レイテンシやオンデバイス配置の観点で比較するサーベイであり、推論配置の論点は含むが新たな推論システムの技術提案ではないため保留とする。",
+      "source_url": "https://doi.org/10.1109/ICCBE65177.2025.11255928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12131",
+      "identity_tokens": [
+        "arXiv:2512.12131"
+      ],
+      "title": "BOOST: BOttleneck-Optimized Scalable Training Framework for Low-Rank Large Language Models",
+      "reason": "要旨のBOOSTは低ランクボトルネックLLMの大規模事前学習に向けボトルネック対応テンソル並列や活性チェックポイントで学習を高速化する訓練フレームワークであり、対象は学習単独の高速化で推論システムへの貢献ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2512.12131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 440
+    }
+  ],
+  "parent_run_key": "muse-20261123-d48",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
