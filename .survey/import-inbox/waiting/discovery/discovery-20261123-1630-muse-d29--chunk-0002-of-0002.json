@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d29::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1134/S1064562425700292",
+      "identity_tokens": [
+        "DOI:10.1134/S1064562425700292"
+      ],
+      "title": "Solving Differential Equations with Pretrained Out-of-the-Box Models: The Potential of Small-Scale LLMs",
+      "reason": "DeepSeek-R1蒸留Qwen等の小型推論モデルが微分方程式の解析解を構成できるかをBLEUで評価する能力検証であり、推論システムの機構や高速化ではなくモデル能力の応用評価のみであるため対象外である。",
+      "source_url": "https://doi.org/10.1134/S1064562425700292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:6ec930d7dae0229d22e61840e5dace8b107ad53d",
+      "identity_tokens": [
+        "SemanticScholar:6ec930d7dae0229d22e61840e5dace8b107ad53d"
+      ],
+      "title": "Transformer-based Models for Official Statistic: A Tutorial",
+      "reason": "公的統計向けTransformerモデルのチュートリアルとされる候補で、CrossrefやOpenAlex等から一次要旨を取得できず内容の機構を確認できないため、推論システムへの関連を断定せず要旨未取得として保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/6ec930d7dae0229d22e61840e5dace8b107ad53d",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patcog.2025.112269",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2025.112269"
+      ],
+      "title": "Token-based dynamic bit-width assignment for ViT quantization",
+      "reason": "ViT量子化でトークンごとに動的ビット幅を割り当てるPTQ手法は推論圧縮の考え方を含むが、対象が画像分類用Vision TransformerでありLLM推論への直接適用は要旨で示されていないため保留とする。",
+      "source_url": "https://doi.org/10.1016/j.patcog.2025.112269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 363
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37923",
+      "identity_tokens": [
+        "arXiv:2609.37923"
+      ],
+      "title": "EpiCon: Collective Agent Learning through Co-Evolving Multimodal Memory",
+      "reason": "マルチモーダルエージェントの共有記憶EpiConは記憶操作時間を67〜74%削減するが、主題は経験バンクによる集合学習とベンチマーク精度向上であり、LLMサービングや推論カーネル等への直接貢献は薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2609.37923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12852",
+      "identity_tokens": [
+        "arXiv:2602.12852"
+      ],
+      "title": "WebClipper: Efficient Evolution of Web Agents with Graph-based Trajectory Pruning",
+      "reason": "Webエージェントの探索軌跡をグラフ剪定で圧縮しツール呼び出しを約20%減らすWebClipperはエージェント効率化に寄与するが、剪定軌跡での継続学習が主経路でありLLM推論基盤の機構とは異なるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2602.12852",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 365
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109266",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109266"
+      ],
+      "title": "Directly training on quantized model via gradient scale correction for edge device",
+      "reason": "量子化済みResNet18やMobileNetV2をエッジデバイス上で直接学習させる勾配スケール補正GSC-ALは、量子化モデルの訓練手法であり推論の高速化やサービングを扱うものではないため対象外である。",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.109266",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464486",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11464486"
+      ],
+      "title": "VisualPrism: Disperse-and-Focus Token Compression",
+      "reason": "マルチモーダルLLMの視覚トークンを三経路クエリ射影と階層KV符号化で圧縮するVisualPrismは、密な視覚トークンによる推論計算量を aggressive に削減しつつ精度を保つため、MLLM推論効率への直接貢献として採用とする。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11464486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 367
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2609.34242",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2609.34242"
+      ],
+      "title": "Stashbird: Efficient Speaker-Indexed Memory for Conversational Agents",
+      "reason": "会話エージェント向け記憶Stashbirdは来歴に基づく調整で取り込み・検索プロンプトトークンを大幅に減らすが、主題はエージェント記憶の一貫性管理であり、LLM推論システム自体の機構への貢献は間接的なため保留とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2609.34242",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 368
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27808",
+      "identity_tokens": [
+        "arXiv:2605.27808"
+      ],
+      "title": "TARQ: Tail-Aware Reconstruction Quantization for Rare-Word Robust Automatic Speech Recognition",
+      "reason": "ASR向けに語彙テールへ較正を寄せた再構成量子化TARQはW4G128のPTQとして希少語WERを改善するが、対象は音声認識バックボーンでありLLM推論向け量子化への直接の転用は要旨で示されていないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2605.27808",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 369
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3631311.3632401",
+      "identity_tokens": [
+        "DOI:10.1145/3631311.3632401"
+      ],
+      "title": "Towards Optimal Preemptive GPU Time-Sharing for Edge Model Serving",
+      "reason": "エッジでのモデルサービング向けにGPUプリエンプション遅延と推論遅延の両方を最適化する同期点挿入によるプリエンプティブGPUタイムシェアリングは、推論スケジューリングとサービング基盤への直接貢献であるため採用とする。",
+      "source_url": "https://doi.org/10.1145/3631311.3632401",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 370
+    }
+  ],
+  "parent_run_key": "muse-20261123-d29",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

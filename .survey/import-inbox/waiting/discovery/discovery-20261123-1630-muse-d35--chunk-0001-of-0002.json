@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d35::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103912",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103912"
+      ],
+      "title": "DARS: An algorithm-hardware co-design framework for accelerating sparse attention via dynamic adaptive hierarchical Top-K pruning",
+      "reason": "動的適応階層Top-K剪定によるスパース注意のアルゴリズム・ハードウェア協調設計という題名で、注意高速化への寄与が示唆されるものの、Crossref・OpenAlexとも要旨を保持しておらず一次要旨を取得できなかったため、機構の具体性を確認できず保留とした。",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103912",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4d6ba62aca0ffd88bd34400b16824f168285f463",
+      "identity_tokens": [
+        "SemanticScholar:4d6ba62aca0ffd88bd34400b16824f168285f463"
+      ],
+      "title": "This paper",
+      "reason": "スライス上の題名が「This paper」とだけ記され主題自体が不明で、Semantic Scholar APIが429を返し代替経路でも要旨を取得できなかったため、LLM推論システムへの寄与の有無を一切判定できず、証拠不足として保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/4d6ba62aca0ffd88bd34400b16824f168285f463",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "identity_tokens": [
+        "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6"
+      ],
+      "title": "BiE: Bi-Exponent Block Floating-Point for Large Language Models Quantization",
+      "reason": "BiEは通常部と外れ値部で共有指数を分ける二重指数ブロック浮動小数点という新しい数値表現と量子化フローを提案し、OPT系やLLaMA-2でW4A4等の低ビット量子化により推論時のメモリと計算量を削減する、推論向け量子化への直接の貢献である。",
+      "source_url": "https://www.semanticscholar.org/paper/b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "identity_tokens": [
+        "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a"
+      ],
+      "title": "T RI I NFER : H YBRID D ISAGGREGATED S CHEDULING FOR M ULTIMODAL L ARGE L ANGUAGE M ODEL S ERVING",
+      "reason": "TriInferはマルチモーダルLLMサービングでEncode・Prefill・Decodeを分離するハイブリッドEPD分離アーキテクチャと段階レベルバッチングを提案し、vLLMやSGLang比で最大3.7倍の推論スループットをSLOを満たしつつ示したサービングシステムである。",
+      "source_url": "https://www.semanticscholar.org/paper/2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "identity_tokens": [
+        "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c"
+      ],
+      "title": "An Optimized Dataﬂow for Mitigating Attention Performance Bottlenecks",
+      "reason": "FLATは注意層内の融合機会を見出しオンチップメモリを意識したインターリーブ実行とタイリングで注意のメモリフットプリントの二次増加を線形化し、エッジ・クラウドアクセラレータで1.94倍等の高速化を示した注意データフロー最適化である。",
+      "source_url": "https://www.semanticscholar.org/paper/42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+      "identity_tokens": [
+        "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64"
+      ],
+      "title": "Efficient Distributed LLM Inference with Dynamic Partitioning",
+      "reason": "入力長のばらつきとGPU仕様に応じて分散LLM推論のパーティショニング戦略を実行時に動的切替する推論エンジンを実装し、Llama 2系でTTFT最大40％・レイテンシ最大18％削減を示した、分散推論への直接の貢献である。",
+      "source_url": "https://www.semanticscholar.org/paper/8d3afec4b9114afed276997d483c284deb60eb64",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "identity_tokens": [
+        "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "AlpaServeはモデル並列を統計的多重化に転用し、バースト的ワークロード下で複数モデルの配置と並列化戦略を決める深層学習サービングシステムであり、実運用ワークロードでサービングレイテンシを改善した基盤的サービング研究である。",
+      "source_url": "https://www.semanticscholar.org/paper/f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85",
+      "identity_tokens": [
+        "SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85"
+      ],
+      "title": "XC-C ACHE : Cross-Attending to Cached Context for Efﬁcient LLM Inference",
+      "reason": "XC-Cacheはキャッシュした参照コンテキストへクロスアテンションで条件付けることでプロンプト処理を省く発想だが、追加層の学習を要するモデル改変であり評価もQAをテストベッドとする段階で、サービング機構としての具体性が薄く保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/0a67ea2eb99ed714c97215d131aec03917531d85",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2312.05795",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2312.05795"
+      ],
+      "title": "Large Multimodal Model Compression via Efficient Pruning and Distillation at AntGroup",
+      "reason": "AntGroupの大規模マルチモーダルモデルの多段階プルーニングと蒸留で遅延を700msから90msへ下げた実例だが、広告審査という特定業務への適用報告色が強く、圧縮手法自体も多段階冗長性除去の組合せで推論機構の新規性が薄く保留とした。",
+      "source_url": "https://doi.org/10.48550/arXiv.2312.05795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.future.2026.108735",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2026.108735"
+      ],
+      "title": "Data-driven optimization of GPU efficiency for distributed LLM-adapter serving",
+      "reason": "数百のLLMアダプタを同時ホストする分散サービングで、デジタルツインと学習済み性能予測と貪欲配置により、飢餓やメモリエラーを避けつつ必要GPU数を平均60％削減する配置最適化パイプラインを提案したサービング研究である。",
+      "source_url": "https://doi.org/10.1016/j.future.2026.108735",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:003716d93bdcf33a8a74f71360d0db31c0c448e6",
+      "identity_tokens": [
+        "SemanticScholar:003716d93bdcf33a8a74f71360d0db31c0c448e6"
+      ],
+      "title": "Patient Bytes: A Reliability-Budgeted Scheduler for Agentic LLM Workflows",
+      "reason": "Patientはエージェント型LLMワークフローの信頼性バジェットをゲートウェイで管理するスケジューラで、検証・再試行等のバイト配分を制御するが、対象はワークフロー信頼性でありLLMサービング自体の性能機構への貢献は間接的で保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/003716d93bdcf33a8a74f71360d0db31c0c448e6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2511.19711",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2511.19711"
+      ],
+      "title": "CrypTorch: PyTorch-based Auto-tuning Compiler for Machine Learning with Multi-party Computation",
+      "reason": "CrypTorchはMPCベースのプライベート機械学習推論向けに演算子近似を自動調整するコンパイラで、推論コンパイラではあるが対象はLLMではなく汎用MLの秘密計算であり、LLM推論システムへの直接の貢献は確認できず保留とした。",
+      "source_url": "https://doi.org/10.48550/arXiv.2511.19711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3689031.3717489",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3717489"
+      ],
+      "title": "NeuStream: Bridging Deep Learning Serving and Stream Processing",
+      "reason": "NeuStreamは制御フローを伴うDNN推論ワークフローをモジュール単位のストリーム処理として実行し、モジュール粒度バッチングとSLOを満たす二レベルスケジューリングでサービンググッドプットを最大化する深層学習サービングランタイムである。",
+      "source_url": "https://doi.org/10.1145/3689031.3717489",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.4108/eetsis.13362",
+      "identity_tokens": [
+        "DOI:10.4108/eetsis.13362"
+      ],
+      "title": "A Communication-Reduced Privacy-Preserving ViT Inference Framework for Distributed Edge Intelligence",
+      "reason": "SViTは分散エッジ環境でViT推論のプライバシーを秘密分散プロトコルで守り通信を削減する枠組みだが、対象はLLMではなく画像ViTであり、中核もプライバシー保護プロトコルであってLLM推論機構への直接の貢献はないため保留とした。",
+      "source_url": "https://doi.org/10.4108/eetsis.13362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:94cd38f55370187861cdf67579c2bea3fea449ed",
+      "identity_tokens": [
+        "SemanticScholar:94cd38f55370187861cdf67579c2bea3fea449ed"
+      ],
+      "title": "C ONDITIONAL T RANSFORMER F INE -T UNING BY A DAPTIVE L AYER S KIPPING",
+      "reason": "入力系列の複雑さに応じて層スキップする条件付きファインチューニング枠組みだが、要旨が示す効果は学習時間の25％以上の削減であり、推論時の計算削減やサービング機構を対象としておらず、学習側の高速化に留まるため対象外とした。",
+      "source_url": "https://www.semanticscholar.org/paper/94cd38f55370187861cdf67579c2bea3fea449ed",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.367",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.367"
+      ],
+      "title": "EOP-LLM: Energy Oriented Pruning for Large Language Models",
+      "reason": "EOP-LLMはデバイス校正済みエネルギー代理指標とトークン・FFNセレクタを大域双対変数で協調させ、系列ごとのエネルギーバジェットを厳密に守りながら動的プルーニングを行う、推論エネルギー制約に直接取り組むLLM推論手法である。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.367",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "identity_tokens": [
+        "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71"
+      ],
+      "title": "MoE-Infinity: Offloading-Efficient MoE Model Serving",
+      "reason": "MoE-Infinityはリクエストレベルのエキスパート活性化トレースに基づく活性化認識プリフェッチとキャッシングでホストからGPUへのエキスパート転送を最適化し、オフロード対応LLMサービング比で2〜20倍の遅延改善を示したMoEサービングシステムである。",
+      "source_url": "https://www.semanticscholar.org/paper/b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:89feb9eb9af4ca539cb9461e3d4b88f2dabdfcc2",
+      "identity_tokens": [
+        "SemanticScholar:89feb9eb9af4ca539cb9461e3d4b88f2dabdfcc2"
+      ],
+      "title": "FLARE++: L OW - RANK ATTENTION WITH DYNAMIC ATTENTION ROUTING",
+      "reason": "FLARE++は低ランク注意に入力条件付きルーティングを導入するが、一次要旨での適用対象は不規則領域のPDEサロゲートであり、LLM推論での評価やサービング機構は示されておらず、注意機構としての関連に留まるため保留とした。",
+      "source_url": "https://www.semanticscholar.org/paper/89feb9eb9af4ca539cb9461e3d4b88f2dabdfcc2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44",
+      "identity_tokens": [
+        "SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44"
+      ],
+      "title": "A Survey of Pretrained Language Models Based Text Generation",
+      "reason": "事前学習言語モデルによるテキスト生成の進展を概観するサーベイ論文であり、生成手法やファインチューニング戦略の整理が中心で、推論システム・サービング・デコード高速化への技術的貢献は含まれないため対象外とした。",
+      "source_url": "https://www.semanticscholar.org/paper/b42e3a759348f27cca2f918a6bd0b139a5312e44",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2505.19349",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2505.19349"
+      ],
+      "title": "DECA: A Near-Core LLM Decompression Accelerator Supporting Out-of-Order Invocation",
+      "reason": "DECAは量子化・スパース化された重み行列の展開をソフトウェアベクトル演算からニアコア専用アクセラレータへ移し、3次元ルーフライン性能モデルで設計を裏付けた、LLM推論のメモリ帯域ボトルネック解消を狙うハードウェア貢献である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2505.19349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 40
+    }
+  ],
+  "parent_run_key": "muse-20261123-d35",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

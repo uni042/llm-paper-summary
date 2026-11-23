@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d36::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:2b9955bc08fc5f4ddba73082ddabcfaabdbb4416",
+      "identity_tokens": [
+        "SemanticScholar:2b9955bc08fc5f4ddba73082ddabcfaabdbb4416"
+      ],
+      "title": "Poor Man's BERT: Smaller and Faster Transformer Models",
+      "reason": "Poor Man's BERTは事前学習済みBERTやRoBERTaやXLNetの層を最大40%剪定して98%の性能を保ちDistilBERT並みの大きさにする圧縮研究で、推論の小型化には関わるが符号器型モデルの層落とし分析が中心でありLLM推論システムとしての新規機構は薄い。",
+      "source_url": "https://www.semanticscholar.org/paper/2b9955bc08fc5f4ddba73082ddabcfaabdbb4416",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.future.2026.108423",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2026.108423"
+      ],
+      "title": "SpectraBench: A three-stage evolution framework for intelligent large language model evaluation",
+      "reason": "SpectraBenchはLLM評価の実行を基礎・ハイブリッド・自律の三段階スケジューリングと資源予測で効率化しOOMを防ぐベンチマーク実行枠組みであり、対象は能力評価のパイプラインであって、モデル推論やサービングそのものの高速化ではない。",
+      "source_url": "https://doi.org/10.1016/j.future.2026.108423",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:3252dd13598a7e584b08ecb9caabe7859a843d9f",
+      "identity_tokens": [
+        "SemanticScholar:3252dd13598a7e584b08ecb9caabe7859a843d9f"
+      ],
+      "title": "Sandbox for the Blackbox: How LLMs Learn Structured Data",
+      "reason": "LLMが構造化データをどう学ぶかを扱うとみられる候補だが、一次要旨を取得できなかった（abstract_not_obtained）。学習過程の分析が主題なら対象外だが、推論機構との関係を要旨なしに断定できないため保留とし本文確認を要する。",
+      "source_url": "https://www.semanticscholar.org/paper/3252dd13598a7e584b08ecb9caabe7859a843d9f",
+      "body_check": "abstract_not_obtained; abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:a73ea3d29881032b8e9d1bc9d012f7708886ca86",
+      "identity_tokens": [
+        "SemanticScholar:a73ea3d29881032b8e9d1bc9d012f7708886ca86"
+      ],
+      "title": "Pureformer: Do We Even Need Attention?",
+      "reason": "Pureformerは注意を要するかと問い注意なしアーキテクチャを検討する系譜の研究だが、一次要旨を取得できなかった（abstract_not_obtained）。視覚Transformerの構造分析である可能性が高く、LLM推論への直接貢献は未確認のため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/a73ea3d29881032b8e9d1bc9d012f7708886ca86",
+      "body_check": "abstract_not_obtained; abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408607",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA68181.2026.11408607"
+      ],
+      "title": "VAR-Turbo: Unlocking the Potential of Visual Autoregressive Models Through Dual Redundancy",
+      "reason": "VAR-Turboは視覚自己回帰モデルの画像冗長性を利用したドラフトなし並列デコードとトークン集約・動的バイパスを組み合わせたソフト・ハード協調設計で生成ステップを8割超減らすが、対象は画像生成モデルでありテキストLLM推論への直接性は限定的である。",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408607",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCE67443.2026.11449867",
+      "identity_tokens": [
+        "DOI:10.1109/ICCE67443.2026.11449867"
+      ],
+      "title": "MCP-Based Caching Framework for Intelligent Wireless Control Agents",
+      "reason": "MCP経由で複数LLMエージェントが外部ツールへアクセスする際のTTFT増大を適応キャッシュで抑える枠組みで、無線制御エージェントという応用文脈が主であり、キャッシュ再利用による遅延削減は推論周辺技術だが汎用サービング機構としての性格は弱い。",
+      "source_url": "https://doi.org/10.1109/ICCE67443.2026.11449867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22563",
+      "identity_tokens": [
+        "arXiv:2601.22563"
+      ],
+      "title": "EUGens: Efficient, Unified, and General Dense Layers",
+      "reason": "EUGensはランダム特徴で全結合層を近似し入力ノルム依存を加えた新しい密層により推論複雑度を二次から線形へ下げ、Transformerへ組み込んで推論速度を最大27%、メモリを最大30%改善した、推論効率に直接効く層設計の提案である。",
+      "source_url": "https://arxiv.org/abs/2601.22563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:dacf7ac8924ee959a1096fcc31da6b568ad4093e",
+      "identity_tokens": [
+        "SemanticScholar:dacf7ac8924ee959a1096fcc31da6b568ad4093e"
+      ],
+      "title": "S IMPLE T RON : E LIMINATING S OFTMAX FROM A TTENTION C OMPUTATION",
+      "reason": "SimpleTRONはsoftmaxを除いた注意計算で線形時間・線形メモリのTransformer代替を提案しLong-Range Arenaで近似注意モデルを上回るが、評価は小規模な系列ベンチマークが中心で、大規模LLMの推論やサービングでの効果は要旨からは確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/dacf7ac8924ee959a1096fcc31da6b568ad4093e",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:ee7c30765af7c4a851fc52338030b213ca637b0a",
+      "identity_tokens": [
+        "SemanticScholar:ee7c30765af7c4a851fc52338030b213ca637b0a"
+      ],
+      "title": "HTTM: Head-wise Temporal Token Merging for Faster VGGT Supplementary Material",
+      "reason": "VGGT向けにヘッド単位の時間方向トークンマージで高速化を図る補足資料とみられる候補だが、一次要旨を取得できなかった（abstract_not_obtained）。対象は3次元視覚モデルでありLLM推論との関係は未確認のため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/ee7c30765af7c4a851fc52338030b213ca637b0a",
+      "body_check": "abstract_not_obtained; abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICWS62655.2024.00157",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS62655.2024.00157"
+      ],
+      "title": "Planck: Optimizing LLM Inference Performance in Pipeline Parallelism with Fine-Grained SLO Constraint",
+      "reason": "Planckはパイプライン並列LLM推論で段ごとに異なる性能とリクエスト特性に対し、SLOを段単位に細かく配分し段インスタンスの性能制御でキュー長を均衡させる、オンライン推論のパイプライン最適化そのものを扱う直接のサービング研究である。",
+      "source_url": "https://doi.org/10.1109/ICWS62655.2024.00157",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 80
+    }
+  ],
+  "parent_run_key": "muse-20261123-d36",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

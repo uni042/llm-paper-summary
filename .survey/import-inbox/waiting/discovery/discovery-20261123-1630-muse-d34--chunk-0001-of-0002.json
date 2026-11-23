@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d34::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.06640",
+      "identity_tokens": [
+        "arXiv:2510.06640"
+      ],
+      "title": "Contextual Representation Flow Across Depth in State-Space and Transformer Architectures",
+      "reason": "SSMとTransformerの深さ方向の文脈表現の流れをトークン多様性や回答位置プロービングで比較分析する研究であり、推論高速化やサービング機構への技術的提案は要旨に含まれないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2510.06640",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.23921",
+      "identity_tokens": [
+        "arXiv:2608.23921"
+      ],
+      "title": "HAP: Head-Adaptive Visual Token Pruning via Cross-Modal Alignment",
+      "reason": "視覚言語モデルの長い視覚トークン列によるプリフィルコストに対し、ヘッドごとのプロンプト整合度PAQで重み付けして視覚トークンを剪定するHAPを提案し、5.6%のトークン保持で性能を維持する直接的な推論効率化である。",
+      "source_url": "https://arxiv.org/abs/2608.23921",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01683",
+      "identity_tokens": [
+        "arXiv:2602.01683"
+      ],
+      "title": "FreshMem: Brain-Inspired Frequency-Space Hybrid Memory for Streaming Video Understanding",
+      "reason": "ストリーミング動画理解向けに周波数メモリと空間サムネイルメモリで履歴を圧縮するFreshMemは、MLLMのメモリ効率に関わるものの主目的は動画理解の精度向上であり、汎用推論基盤への貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2602.01683",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.14237",
+      "identity_tokens": [
+        "arXiv:2512.14237"
+      ],
+      "title": "Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets",
+      "reason": "サイドネットワークによるLadder Side Tuningでファインチューニング時のピークメモリを半減させる学習手法であり、対象は学習・微調整の省メモリ化であって推論やデコードの高速化ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2512.14237",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2210.01989",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2210.01989"
+      ],
+      "title": "Waveformer: Linear-Time Attention with Forward and Backward Wavelet Transform",
+      "reason": "ウェーブレット係数空間で注意を学習するWavSpAは線形時間の注意機構として長系列学習能力を狙うが、要旨の中心はモデルアーキテクチャの表現力改善であり、推論システムとしての実装・評価は確認できない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2210.01989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.00625",
+      "identity_tokens": [
+        "arXiv:2401.00625"
+      ],
+      "title": "Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models",
+      "reason": "資源効率的LLMの手法を計算・メモリ・エネルギー等の観点で体系化したサーベイであり、推論段階の最適化も扱うものの新規の推論機構やシステム提案ではなく、既存手法の整理が主目的であるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2401.00625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15484",
+      "identity_tokens": [
+        "arXiv:2605.15484"
+      ],
+      "title": "When Does Sparse MoE Help in Vision? The Role of Backbone Compute Leverage in Sparse Routing",
+      "reason": "視覚分類におけるスパースMoEの有効条件をバックボーン計算量の観点で分析した研究であり、MoEルーティングに関わる知見はあるが対象は画像分類の学習評価で、LLM推論やMoEデコードへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.15484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09155",
+      "identity_tokens": [
+        "arXiv:2608.09155"
+      ],
+      "title": "Beyond Tier Labels: Role- and Deployment-Dependent Model Substitution in Multi-Call LLM Workflows",
+      "reason": "複数回LLMを呼ぶワークフローでのモデル代替の価値を役割と配置条件で評価した研究であり、ルーティング判断の分析はあるものの推論サービングの機構やスケジューリングシステム自体の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2608.09155",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.12252",
+      "identity_tokens": [
+        "arXiv:2505.12252"
+      ],
+      "title": "SchoenbAt: Rethinking Attention with Polynomial basis",
+      "reason": "多項式基底のランダム特徴でドット積カーネル注意を近似するSchoenbAtは注意計算の高速化を狙うが、要旨は近似精度と速度の一般評価が中心で、LLM推論・サービングへの具体的な適用機構は示されていない。",
+      "source_url": "https://arxiv.org/abs/2505.12252",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14901",
+      "identity_tokens": [
+        "arXiv:2602.14901"
+      ],
+      "title": "Picking the Right Specialist: Attentive Neural Process-based Selection of Task-Specialized Models as Tools for Agentic Healthcare Systems",
+      "reason": "医療エージェント向けにタスク特化モデルの選択器ToolSelectと胸部X線ベンチマークを提案する研究であり、対象は医療応用のツール選択であってLLM推論システムの高速化や資源効率化ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2602.14901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 500
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+      "identity_tokens": [
+        "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07"
+      ],
+      "title": "K UN S ERVE : Parameter-centric Memory Management for Efficient Memory Throttling Handling in LLM Serving",
+      "reason": "LLMサービングのメモリ過負荷に対し、複製されたモデルパラメータを選択的に落としてKVキャッシュ用メモリを即時確保するKunServeを提案し、尾部TTFTを最大72.2倍改善する直接的なサービング機構である。",
+      "source_url": "https://www.semanticscholar.org/paper/435390ada7cb1b2e890b34dc036764d5098dee07",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3820171.3806875",
+      "identity_tokens": [
+        "DOI:10.1145/3820171.3806875"
+      ],
+      "title": "SageServe: Optimizing LLM Serving on Cloud Data Centers with Forecast Aware Auto-Scaling",
+      "reason": "クラウドデータセンターでのLLMサービングに対し、需要予測と整数計画法でリクエストルーティングとGPU VMのオートスケーリングやモデル配置を共同最適化するSageServeを提案し、GPU時間を最大25%削減する。",
+      "source_url": "https://doi.org/10.1145/3820171.3806875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20776",
+      "identity_tokens": [
+        "arXiv:2505.20776"
+      ],
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "reason": "長系列で劣化する投機的デコードに対し、FlashAttentionやハイブリッドツリー注意の統合と、ターゲットモデルの注意スコアを用いるドラフト向けKVキャッシュ排出Cross-model Retrievalを提案するSpecExtendである。",
+      "source_url": "https://arxiv.org/abs/2505.20776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "identity_tokens": [
+        "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd"
+      ],
+      "title": "Verification: Exploiting Information Gain for Speculative Decoding",
+      "reason": "投機的デコードの検証長を、ドラフトと同規模のコンパニオンモデルの分布との整合度から得る情報利得で動的に調整するSpeculative Verificationを提案し、大バッチで平均1.4倍のスループット改善を示す。",
+      "source_url": "https://www.semanticscholar.org/paper/1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "identity_tokens": [
+        "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6"
+      ],
+      "title": "UvA-DARE (Digital Academic Repository) Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+      "reason": "プロセス報酬モデルで中間デコードステップを評価し、ターゲットモデルを呼ぶかを動的に決めるReward-Guided Speculative Decodingを提案し、厳密な不偏性を緩めてFLOPsを最大4.4分の1に削減する推論手法である。",
+      "source_url": "https://www.semanticscholar.org/paper/acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "identity_tokens": [
+        "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a"
+      ],
+      "title": "Quantize What Counts: Bit Allocation Insights Informed by Spectral Gaps in Keys and Values",
+      "reason": "KVキャッシュ量子化のビット配分について、キー行列のスペクトルノルムが値行列より大きいという幾何学的性質からキー優先の混合精度配分（K4V2等）を理論的に導く研究であり、推論メモリ削減への直接貢献である。",
+      "source_url": "https://www.semanticscholar.org/paper/998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d9a7c48e91fe4bf36ed6c544d9200d141afb7f88",
+      "identity_tokens": [
+        "SemanticScholar:d9a7c48e91fe4bf36ed6c544d9200d141afb7f88"
+      ],
+      "title": "TRUCTURED M IXTURE - OF -E XPERTS",
+      "reason": "Semantic ScholarおよびOpenAlexが429を返し代替経路でも一次要旨を取得できなかったため判定材料が不足している。タイトルはMoEの構造化を示唆するが推論向けか学習向けか確認できないため保留とする。abstract_not_obtained。",
+      "source_url": "https://www.semanticscholar.org/paper/d9a7c48e91fe4bf36ed6c544d9200d141afb7f88",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+      "identity_tokens": [
+        "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434"
+      ],
+      "title": "L EARNING W HAT M ATTERS : S UPERVISING S PARSE A TTENTION R OUTING WITH C AUSAL E VIDENCE S ETS",
+      "reason": "スパース注意のセレクタ学習について、密な教師の注意パターンではなくマスキングで得た因果的証拠集合を教師信号とする手法を提案し、長文脈推論で読む部分を絞る注意ルーティングの精度を41%から99%へ改善する。",
+      "source_url": "https://www.semanticscholar.org/paper/978af19cb401afdd4f3b1302052773fb7811c434",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f",
+      "identity_tokens": [
+        "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f"
+      ],
+      "title": "Review of Evolution of Large Language Model Algorithms",
+      "reason": "Semantic ScholarおよびOpenAlexが429を返し一次要旨を取得できなかったため詳細は未確認である。タイトル上はLLMアルゴリズム全般の進化を扱うレビューであり、推論システムへの直接の新規貢献は読み取れないため保留とする。abstract_not_obtained。",
+      "source_url": "https://www.semanticscholar.org/paper/990cca64e27b0c29c80ae4aa6920db01913cc92f",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:aba2023ff78101b79586b9de04ca0239d05e938d",
+      "identity_tokens": [
+        "SemanticScholar:aba2023ff78101b79586b9de04ca0239d05e938d"
+      ],
+      "title": "of the 24th USENIX Conference on File and Storage Technologies",
+      "reason": "タイトル自体が第24回USENIXファイル・ストレージ技術会議のプロシーディングス全体を指すものであり、個別の論文ではなく、LLM推論に関する技術的貢献を特定できないため対象外とする。title_screen_only。",
+      "source_url": "https://www.semanticscholar.org/paper/aba2023ff78101b79586b9de04ca0239d05e938d",
+      "body_check": "title_screen_only; abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 10
+    }
+  ],
+  "parent_run_key": "muse-20261123-d34",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
