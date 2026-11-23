@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ef0c1b818e2f6f2b-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/TC.2026.3657493",
+  "reason": "CXLメモリプールへのテンソルオフロードだが対象はZeRO-Infinity系の大規模学習であり、メモリ不均衡やNVMe帯域の解消も学習コスト削減が目的で、LLM推論サービングへの適用は要旨で確認できないため対象外とする。",
+  "title": "Efficient Tensor Offloading Based on CXL Memory Pool for Extreme Scale Deep Learning",
+  "identity_tokens": [
+    "DOI:10.1109/TC.2026.3657493"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef0c1b818e2f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
