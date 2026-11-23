@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d42::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19492",
+      "identity_tokens": [
+        "arXiv:2506.19492"
+      ],
+      "title": "Is Long-to-Short a Free Lunch? Investigating Inconsistency and Reasoning Efficiency in LRMs",
+      "reason": "ICBENCHというベンチマークで大規模推論モデルの効率的推論戦略が招く振る舞いの不整合を課題設定・学習目的・応答間の3次元で測る評価専用の研究であり、推論を高速化する機構やサービング方式の提案はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2506.19492",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 231
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TGRS.2025.3622244",
+      "identity_tokens": [
+        "DOI:10.1109/TGRS.2025.3622244"
+      ],
+      "title": "Extreme Weather Nowcasting With Second-Order State Spaces",
+      "reason": "極端気象のナウキャスティング向けに位置と運動量へ分解する二階状態空間モデルS3とその並列化、統合枠組みS3Castを提案する気象予測応用の論文であり、LLM推論システムへの技術的貢献は要旨に確認できないため対象外である。",
+      "source_url": "https://doi.org/10.1109/TGRS.2025.3622244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 232
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.09907",
+      "identity_tokens": [
+        "arXiv:2412.09907"
+      ],
+      "title": "IQViC: In-context, Question Adaptive Vision Compressor for Long-term Video Understanding LMMs",
+      "reason": "長期動画理解LMM向けに質問適応型の視覚圧縮器IQViCと効率的なメモリ管理を導入し動画質問応答を改善する枠組みだが、主目的は動画理解の精度と時間的依存の把握であり、LLMサービングやKVキャッシュ機構への直接貢献は薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2412.09907",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 233
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICSP62129.2024.10846527",
+      "identity_tokens": [
+        "DOI:10.1109/ICSP62129.2024.10846527"
+      ],
+      "title": "Point-MSD: Jointly Mamba Self-Supervised Self-Distilling Point Cloud Representation Learning",
+      "reason": "点群表現学習向けにマスクモデリングと自己蒸留を組み合わせたPoint-MSDを提案し、座標埋め込みの情報漏れ対策としてマスク埋め込みを入れる自己教師あり学習の研究であり、LLM推論とは分野も目的も異なるため対象外である。",
+      "source_url": "https://doi.org/10.1109/ICSP62129.2024.10846527",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:39666cddd6ad90ce0f27f44239fd00f5ce38449a",
+      "identity_tokens": [
+        "SemanticScholar:39666cddd6ad90ce0f27f44239fd00f5ce38449a"
+      ],
+      "title": "Efficient Object-Centric Representation Learning using Masked Generative Modeling",
+      "reason": "物体中心表現学習MOGENTはマスク付き双方向Transformerによる並列反復デコードで場面生成を高速化するが、対象は視覚的な物体分割と構成的画像生成であり、LLMの推論・サービング・デコード機構への貢献ではないため対象外である。",
+      "source_url": "https://www.semanticscholar.org/paper/39666cddd6ad90ce0f27f44239fd00f5ce38449a",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.09680",
+      "identity_tokens": [
+        "arXiv:2408.09680"
+      ],
+      "title": "MambaLoc: Efficient Camera Localisation via State Space Model",
+      "reason": "選択的状態空間モデルを視覚的自己位置推定へ応用したMambaLocとGlobal Information Selectorの提案で、疎なデータでのカメラ位置推定の学習効率と頑健性を扱うIoT・自動運転応用の研究であり、LLM推論システムとは無関係であるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2408.09680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.16697",
+      "identity_tokens": [
+        "arXiv:2507.16697"
+      ],
+      "title": "Pixel-Resolved Long-Context Learning for Turbulence at Exascale: Resolving Small-scale Eddies Toward the Viscous Limit",
+      "reason": "乱流のエクサスケール学習向けに階層型Turbulence TransformerとRingX系列並列でFrontier上の長文脈学習を拡張する科学計算・学習側の研究であり、対象は流体シミュレーションの予測であってLLM推論の提供機構ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2507.16697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 237
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1051/itmconf/20268404008",
+      "identity_tokens": [
+        "DOI:10.1051/itmconf/20268404008"
+      ],
+      "title": "Research and Analysis on the Application of Lightweight Algorithm Optimization in Complex Scenarios",
+      "reason": "物体検出の軽量化を枝刈り・知識蒸留・低ランク分解の3分類で総説しエッジや組み込みへの展開を論じるが、対象はCNN系検出モデルの学習・配置一般であり、LLM推論向け量子化や圧縮の具体的な新機構は示されていないため保留とする。",
+      "source_url": "https://doi.org/10.1051/itmconf/20268404008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3760269.3760346",
+      "identity_tokens": [
+        "DOI:10.1145/3760269.3760346"
+      ],
+      "title": "OrganVMUNet: A Novel Vision Mamba UNet-Based Network for Multi-Organ Segmentation in Abdominal CT Images",
+      "reason": "腹部CTの多臓器セグメンテーション向けにVision Mamba UNetへ多尺度特徴と空間・チャネル注意ブリッジを組み込んだOrganVMUNetの医用画像分割研究であり、LLM推論システムへの貢献は要旨に一切確認できないため対象外である。",
+      "source_url": "https://doi.org/10.1145/3760269.3760346",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:8d04f37e5d77bc8a44486282cf8acb80e9563ad8",
+      "identity_tokens": [
+        "SemanticScholar:8d04f37e5d77bc8a44486282cf8acb80e9563ad8"
+      ],
+      "title": "L ESS I S M ORE : T RAINING -F REE S PARSE A TTENTION WITH G LOBAL L OCALITY FOR E FFICIENT R EASONING",
+      "reason": "LessIsMoreは推論モデルの長生成向けに、全注意ヘッドのトークン選択を集約して統一的に順位付けする学習不要なスパース注意を提案し、KVキャッシュから読み込むトークンを半減しながらデコードを高速化する、注意・KV機構への直接の推論貢献である。",
+      "source_url": "https://www.semanticscholar.org/paper/8d04f37e5d77bc8a44486282cf8acb80e9563ad8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.01829",
+      "identity_tokens": [
+        "arXiv:2507.01829"
+      ],
+      "title": "mGRADE: Minimal Recurrent Gating Meets Delay Convolutions for Lightweight Sequence Modeling",
+      "reason": "mGRADEはエッジの固定メモリ制約下で学習可能な遅延畳み込みと軽量ゲート付き回帰を組み合わせる多時間スケール系列モデリングのアーキテクチャ提案だが、対象は汎用の系列モデルでありLLM推論での実測やサービング機構は示されていないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2507.01829",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.08381",
+      "identity_tokens": [
+        "arXiv:2511.08381"
+      ],
+      "title": "Fault Tolerant Reconfigurable ML Multiprocessor",
+      "reason": "フォン・ノイマン型の再構成可能な耐故障マルチプロセッサをニューラルネット学習ワークフローで検証しMLIR連携も論じるハードウェア研究だが、実験は学習処理の適応性と頑健性が中心で、推論実行への直接の効果や機構は不明瞭であるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2511.08381",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.30580",
+      "identity_tokens": [
+        "arXiv:2605.30580"
+      ],
+      "title": "Speculative Decoding and the Curse of Multilinguality",
+      "reason": "投機的デコードを11言語で検証し、低リソース言語では小さいドラフトモデルの多言語能力不足で受理効率が大きく落ちること、大きなモデルからの蒸留でも課題横断の汎化が乏しいことを示した、投機的デコードの適用条件を具体化する推論研究である。",
+      "source_url": "https://arxiv.org/abs/2605.30580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.11696",
+      "identity_tokens": [
+        "arXiv:2611.11696"
+      ],
+      "title": "Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models",
+      "reason": "MoE言語モデルと回帰方策を対象にGPUエネルギーを直接計測し、Qwen3-30B-A3Bではバッチを意識したルーティングでバッチ内行の計算共有が実測の省エネになる一方、回帰方策では共有が成立しないことを示した、MoE推論基盤の計測と共有機構の研究である。",
+      "source_url": "https://arxiv.org/abs/2611.11696",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 244
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661117",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS70441.2026.11661117"
+      ],
+      "title": "Mitigating Cold Starts in Container-Ephemeral Large Language Model Serving",
+      "reason": "サーバーレスでコンテナが短命なLLMサービング向けFaLLServeは、コールドスタートの主因であるモデル読み込みのテンソルコピーとワークフロー overhead に対しinitlessな読み込みと多段プリウォーム調整を提案する、LLMサービング基盤への直接貢献である。",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a26a37364914084e28888f3bd778a3c3d6c48e70",
+      "identity_tokens": [
+        "SemanticScholar:a26a37364914084e28888f3bd778a3c3d6c48e70"
+      ],
+      "title": "EmbRace: Accelerating Sparse Communication for Distributed Training of NLP Neural Networks",
+      "reason": "EmbRaceは疎な埋め込み表を持つNLPモデルの分散データ並列学習向けにAlltoAllとモデル並列を組み合わせた疎通信と2次元通信スケジューリングで学習通信を高速化する研究であり、推論ではなく学習単独の高速化であるため対象外である。",
+      "source_url": "https://www.semanticscholar.org/paper/a26a37364914084e28888f3bd778a3c3d6c48e70",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 246
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3582016.3582037",
+      "identity_tokens": [
+        "DOI:10.1145/3582016.3582037"
+      ],
+      "title": "In-Network Aggregation with Transport Transparency for Distributed Training",
+      "reason": "NetReduceは分散学習のall-reduceをネットワークスイッチへオフロードする際にRoCE等の既存トランスポート層をそのまま使える透過的なIn-Network Aggregationプリミティブであり、対象は学習時の勾配集約であって推論サービングではないため対象外である。",
+      "source_url": "https://doi.org/10.1145/3582016.3582037",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05754",
+      "identity_tokens": [
+        "arXiv:2602.05754"
+      ],
+      "title": "TimelyFreeze: Adaptive Parameter Freezing Mechanism for Pipeline Parallelism",
+      "reason": "TimelyFreezeはパイプライン並列学習のバブル削減へ向け、スケジュールをDAGとして線形計画で最適なパラメータ凍結率を求めLLaMA-8Bの学習スループットを上げる手法であり、推論ではなく学習単独の高速化であるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2602.05754",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3555184",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2025.3555184"
+      ],
+      "title": "GPOS: A General and Precise Offloading Strategy for High Generality of DNN Acceleration by OCP and NDP Co-Optimizing",
+      "reason": "GPOSは演算強度が逆向きのDNN演算子に対しオンチップ処理とニアデータ処理を協調させる汎用オフロード戦略を定量指標で決める加速手法だが、対象はDNN加速一般であり、LLM推論に特化した配置や実測が要旨からは確認しにくいため保留とする。",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3555184",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 249
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CBDCom68404.2025.00011",
+      "identity_tokens": [
+        "DOI:10.1109/CBDCom68404.2025.00011"
+      ],
+      "title": "Proactive Concurrency Tuning for Inference Serving in Serverless Platform",
+      "reason": "サーバーレス基盤での推論サービングの並行度を事前に調整する研究と題名からは読めるが、Crossref・OpenAlex・検索のいずれでも一次要旨を取得できず、対象モデルや調整機構、推論基盤への具体的貢献を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/CBDCom68404.2025.00011",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 250
+    }
+  ],
+  "parent_run_key": "muse-20261123-d42",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

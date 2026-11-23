@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d41::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5d31e0ae076a22179d5f4f4065db6b2f94325a9d",
+      "identity_tokens": [
+        "SemanticScholar:5d31e0ae076a22179d5f4f4065db6b2f94325a9d"
+      ],
+      "title": "Breaking the Tradeoff: Elastic and Isolated GPU Sharing with GVM",
+      "reason": "GVMによる弾力的で分離されたGPU共有はLLMサービングの資源共有基盤に関わり得るが、Crossrefでタイトル一致を確認したのみで一次要旨を取得できず、対象ワークロードや分離・弾性化の機構が確認できないため保留寄りの判定とする。",
+      "source_url": "https://www.semanticscholar.org/paper/5d31e0ae076a22179d5f4f4065db6b2f94325a9d",
+      "body_check": "abstract_not_obtained; crossref_title_match_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 201
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1051/itmconf/20268801038",
+      "identity_tokens": [
+        "DOI:10.1051/itmconf/20268801038"
+      ],
+      "title": "Optimization and Analysis of Large-scale Model Training Methods",
+      "reason": "大規模モデル学習の最適化として分散並列学習・効率的自己注意・パラメータ効率的微調整を概観する内容で、要旨が扱うのは学習時のGPU計算効率と学習課題であり、推論・サービング・デコードへの具体的な適用や推論システム機構は示されていない。",
+      "source_url": "https://doi.org/10.1051/itmconf/20268801038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 202
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:5220ccb3505d7f3d01d5c13c2cf42c1b76efc0f6",
+      "identity_tokens": [
+        "SemanticScholar:5220ccb3505d7f3d01d5c13c2cf42c1b76efc0f6"
+      ],
+      "title": "An end-to-end attention-based approach for learning on graphs",
+      "reason": "グラフを集合として扱うTransformer系のグラフ学習向けエンドツーエンド注意手法であり、要旨の対象はグラフ表現学習の有効性・拡張性・前処理の複雑さで、LLM推論の実行時メモリ、KVキャッシュ、サービング等の推論システムへの貢献は確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/5220ccb3505d7f3d01d5c13c2cf42c1b76efc0f6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 203
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:73bbb155ac7984968cb68a105b40394064802019",
+      "identity_tokens": [
+        "SemanticScholar:73bbb155ac7984968cb68a105b40394064802019"
+      ],
+      "title": "Diagnostic-Driven Layer-Wise Compensation for Post-Training Quantization of Encoder-Decoder ASR Models",
+      "reason": "Encoder-Decoder型ASRモデルに対する学習後量子化の層別診断と補償は推論向け量子化・圧縮に近いが、一次要旨を取得できず、量子化ビット幅・補償機構・推論速度やメモリ削減の具体性を確認できないため、対象がASRである点も含め保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/73bbb155ac7984968cb68a105b40394064802019",
+      "body_check": "abstract_not_obtained; crossref_title_search_no_exact_abstract; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 204
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:cc8a1d39ebd48b352f7a82dbd0f133044716fe76",
+      "identity_tokens": [
+        "SemanticScholar:cc8a1d39ebd48b352f7a82dbd0f133044716fe76"
+      ],
+      "title": ": Training QA Systems on Transformed Trivia",
+      "reason": "変換したトリビア質問でQAシステムを訓練する研究とみられるがタイトルが途中で切れており一次要旨を取得できず、データ変換の具体的手法や推論システムとの関係を確認できないため、タイトルだけでは対象外と断定せず保留寄りに分類する。",
+      "source_url": "https://www.semanticscholar.org/paper/cc8a1d39ebd48b352f7a82dbd0f133044716fe76",
+      "body_check": "abstract_not_obtained; crossref_title_search_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 205
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.11603",
+      "identity_tokens": [
+        "arXiv:2603.11603"
+      ],
+      "title": "AutoScout: Structured Optimization for Automating ML System Configuration",
+      "reason": "AutoScoutはモデル並列戦略・通信最適化・低レベル実行時パラメータを含むMLシステム構成空間を、階層依存を持つ混合離散連続最適化として定式化し、プロファイリング費用を下げつつ学習・微調整・推論のエンドツーエンド効率を高める構成探索と多忠実度シミュレータ統合を提案しており、推論基盤の構成最適化への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2603.11603",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 206
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3398020",
+      "identity_tokens": [
+        "DOI:10.1145/3398020"
+      ],
+      "title": "Orchestrating the Development Lifecycle of Machine Learning-based IoT Applications",
+      "reason": "MLベースIoTアプリケーションの開発ライフサイクル全体を、学習と含意を含むパイプライン編成の観点で体系化したサーベイであり、対象はIoT応用の統合工程であって、LLM推論のサービング、デコード、メモリ階層などの実行システム機構への直接貢献は要旨にない。",
+      "source_url": "https://doi.org/10.1145/3398020",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 207
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00094",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00094"
+      ],
+      "title": "RoCC: Harnessing Raster Operations Pipeline for Efficient Tensor Collective Communication",
+      "reason": "RoCCはGPUの未活用なラスタ演算パイプラインへ集合通信をオフロードし、LLM計算における計算フェーズと集合通信フェーズを細粒度に重ねることで、複数GPUノードでのLLMワークロードを高速化するハードウェア・通信機構であり、分散推論・学習共通のLLM実行基盤への直接的な技術貢献が要旨で具体的に示されている。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00094",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.34133/research.0804",
+      "identity_tokens": [
+        "DOI:10.34133/research.0804"
+      ],
+      "title": "Generative Artificial Intelligence in the Metaverse Era: A Review on Models and Applications",
+      "reason": "メタバース時代の生成AIモデルと応用を、AIGCによるコンテンツ生成・パーソナライズ・ハードウェア制約の観点で概観するレビューであり、対象は仮想空間応用であって、LLM推論システムのサービングやデコード、メモリ最適化への具体的な機構提案は要旨に確認できない。",
+      "source_url": "https://doi.org/10.34133/research.0804",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 209
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-2817",
+      "identity_tokens": [
+        "DOI:10.52202/085713-2817"
+      ],
+      "title": "Enhancing the Maximum Effective Window for Long-Term Time Series Forecasting",
+      "reason": "長期時系列予測における最大有効ウィンドウの拡張を題材とする論文で、タイトル自体が時系列予測という異分野応用を明示しており、一次要旨も取得できなかったため、LLM推論システムへの直接貢献がない対象外としてタイトル走査で判定する。",
+      "source_url": "https://doi.org/10.52202/085713-2817",
+      "body_check": "title_screen_only; abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 210
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICIICE69672.2026.11565283",
+      "identity_tokens": [
+        "DOI:10.1109/ICIICE69672.2026.11565283"
+      ],
+      "title": "Head Compensatability Is Architecture-Determined",
+      "reason": "Transformerのプルーニングにおいて、ヘッドの補償可能性が微調整課題ではなく事前学習済みアーキテクチャで決まることをCE/IRスコアで示す研究で、モデル圧縮・枝刈りの判断には関わるが、対象課題は感情分析等の分類でありLLM推論時の速度・メモリ改善を測るシステム貢献は要旨では薄い。",
+      "source_url": "https://doi.org/10.1109/ICIICE69672.2026.11565283",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 211
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08956",
+      "identity_tokens": [
+        "arXiv:2609.08956"
+      ],
+      "title": "TASTE2: Text-Aligned Speech Modeling and Deployment toward Full-Duplex Voice Interaction",
+      "reason": "TASTE2はテキスト整合音声トークン化を増分対話スタックへ拡張し、共有語彙と逐次Speech Detokenizerによるストリーミング合成で全二重音声対話を目指すが、要旨の中心は言語能力保持と音響手がかりの保持という音声モデリングであり、推論システムとしての遅延・スループット機構の具体性は限られる。",
+      "source_url": "https://arxiv.org/abs/2609.08956",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 212
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15606",
+      "identity_tokens": [
+        "arXiv:2609.15606"
+      ],
+      "title": "VideoScout: Learning Agentic Active Exploration with Adaptive Reasoning Pacing for Long Video Understanding",
+      "reason": "VideoScoutは長い動画理解を逐次証拠獲得として定式化し、視聴ペースを適応制御して限られた視覚コンテキスト内で証拠を探索するMLLMエージェントだが、主目的は動画質問応答の精度であり、汎用的なLLM推論・サービング機構への直接貢献は要旨に確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2609.15606",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 213
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23354",
+      "identity_tokens": [
+        "arXiv:2609.23354"
+      ],
+      "title": "From Ranked Documents to Reliable Contexts: An Answer-Oriented Context Construct Framework for AI Search",
+      "reason": "AI検索向けに、回答支援・内容信頼性・有限コンテキスト予算下での文脈組織化という3段階で検索文書から生成用コンテキストを構築する枠組みであり、コンテキスト長管理はLLM生成に接するものの、対象は検索品質と回答正確性で、推論実行システム自体の高速化機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.23354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 214
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02251",
+      "identity_tokens": [
+        "arXiv:2610.02251"
+      ],
+      "title": "Rank-Aware Speculative Sampling for Diffusion Draft Trees",
+      "reason": "Rank-Aware Speculative Samplingは拡散生成の投機的サンプリングにおいて、ドラフト木の候補を提案分布と目標分布の平均変位で順位付けし、順位重みを最適化したリスト結合で検証することで並列計算予算を有効に使う検証規則を提案しており、投機的デコード系の生成高速化への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2610.02251",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 215
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.13081",
+      "identity_tokens": [
+        "arXiv:2610.13081"
+      ],
+      "title": "SWEAR: Section-Wise Efficient Audio Reasoning via Self-Rated Difficulty",
+      "reason": "SWEARは大規模音声言語モデルについて5次元の難易度スコアと圧縮した推論トレースを用い、推論段階ごとの推論配分を適応させて生成トークン数を減らす枠組みだが、機構はSFTと強化学習による推論量制御という学習寄りの手法であり、サービングやデコード実行系への直接貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2610.13081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 216
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.19568",
+      "identity_tokens": [
+        "arXiv:2610.19568"
+      ],
+      "title": "INTACT: Inducing Latent Reasoning on a Frozen Backbone",
+      "reason": "INTACTは凍結したバックボーンに対し小規模外部エンコーダが潜在推論ブロックを反復生成し、自然言語CoTの自己回帰デコードトークン数を減らす潜在推論手法で、デコード量削減には直結するが、評価の中心はGSM8K等の精度向上であり推論システムとしての遅延・メモリ実測や実行機構の貢献は要旨では不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2610.19568",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34450",
+      "identity_tokens": [
+        "arXiv:2610.34450"
+      ],
+      "title": "EvolveMAS: A Unified Self-Evolution Framework for Decentralized Multi-Agent Systems",
+      "reason": "EvolveMASは分散型マルチエージェントシステムにおけるテスト時適応と経験再利用のための自己進化枠組みで、MemoryAgentによる構造化メモリ管理を含むが、対象はエージェント間の相互作用戦略の適応であり、LLM推論の実行効率・サービング・デコード機構への直接貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2610.34450",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.14409",
+      "identity_tokens": [
+        "arXiv:2009.14409"
+      ],
+      "title": "AUBER: Automated BERT regularization",
+      "reason": "AUBERは少量学習データでの過学習を抑えるため、強化学習でBERTの注意ヘッド枝刈りポリシーを学ぶ正則化手法であり、枝刈りの目的は推論圧縮ではなく精度向上を伴う正則化で、評価も下流NLP課題の精度が中心のため、推論向け圧縮としての直接貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2009.14409",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 219
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22810",
+      "identity_tokens": [
+        "arXiv:2505.22810"
+      ],
+      "title": "VidText: Towards Comprehensive Evaluation for Video Text Understanding",
+      "reason": "VidTextは動画内テキスト理解を包括的に測るための階層的評価ベンチマークであり、対象は動画テキスト理解能力の評価設計そのもので、推論システムの高速化・メモリ・サービングに関する技術的機構の提案は要旨に含まれていないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2505.22810",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 220
+    }
+  ],
+  "parent_run_key": "muse-20261123-d41",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
