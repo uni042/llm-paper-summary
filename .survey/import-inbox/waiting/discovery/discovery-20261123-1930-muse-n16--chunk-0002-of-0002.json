@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n16::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.10494",
+      "identity_tokens": [
+        "arXiv:2510.10494"
+      ],
+      "title": "Tracing the Traces: Latent Temporal Signals for Efficient and Accurate Reasoning",
+      "reason": "推論過程の潜在表現の時間変化から成功しそうな推論トレースを予測し無駄な計算を減らす信号を提案するが、対象は回答選択の指針であり推論サービング機構自体ではない。",
+      "source_url": "https://arxiv.org/abs/2510.10494",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 261
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.04523",
+      "identity_tokens": [
+        "arXiv:2406.04523"
+      ],
+      "title": "Proofread: Fixes All Errors with One Tap",
+      "reason": "ProofreadはGboard向けサーバー側LLMによる文章校正機能のデータ生成・調整・デプロイを述べるが、主体は製品機能の品質調整であり推論システムの新機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2406.04523",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 262
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SEC50012.2020.00041",
+      "identity_tokens": [
+        "DOI:10.1109/SEC50012.2020.00041"
+      ],
+      "title": "CHA: A Caching Framework for Home-based Voice Assistant Systems",
+      "reason": "CHAは家庭用音声アシスタント向けに意図理解とキャッシュでクラウド連携を減らすエッジキャッシング枠組みで、LLM推論ではなく従来型音声アシスタントの応答高速化である。",
+      "source_url": "https://doi.org/10.1109/SEC50012.2020.00041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 263
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08500",
+      "identity_tokens": [
+        "arXiv:2308.08500"
+      ],
+      "title": "InTune: Reinforcement Learning-based Data Pipeline Optimization for Deep Recommendation Models",
+      "reason": "InTuneは深層推薦モデルの学習におけるデータ取り込みパイプラインを強化学習で最適化するもので、学習側・推薦モデル対象でありLLM推論への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2308.08500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 264
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21766",
+      "identity_tokens": [
+        "arXiv:2601.21766"
+      ],
+      "title": "CoFrGeNet: Continued Fraction Architectures for Language Generation",
+      "reason": "CoFrGeNetは連分数に基づく構成要素で注意とFFNを置換しパラメータを減らす生成アーキテクチャだが、主体は言語生成モデルの関数クラス設計であり推論高速化の実証は主眼でない。",
+      "source_url": "https://arxiv.org/abs/2601.21766",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 265
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.05362",
+      "identity_tokens": [
+        "arXiv:2606.05362"
+      ],
+      "title": "TESSERA: A Workload-Driven Simulation and Design-Space Exploration Framework for Heterogeneous NPUs",
+      "reason": "TESSERAは異種NPU向けのワークロード駆動シミュレーションと設計空間探索の枠組みでTransformerも対象に含むが、LLM推論専用ではなく汎用アクセラレータ設計支援である。",
+      "source_url": "https://arxiv.org/abs/2606.05362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 266
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17414",
+      "identity_tokens": [
+        "arXiv:2608.17414"
+      ],
+      "title": "REChart: Reasoning-Efficient Chart Editing with Large Reasoning Models",
+      "reason": "REChartは大規模推論モデルによるチャート編集の過剰推論を抑える2段階学習枠組みで、チャート編集という応用タスクの学習が主体であり推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2608.17414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 267
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39277",
+      "identity_tokens": [
+        "arXiv:2609.39277"
+      ],
+      "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+      "reason": "ループモデルの圧縮について、ループが収束すれば量子化の丸め誤差は蓄積せず固定点をずらすだけであることを示し、失敗モデルを最終ループの8ビット重みで回復させるモデル圧縮・推論メモリ帯域削減の知見を与える。",
+      "source_url": "https://arxiv.org/abs/2609.39277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 268
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02005",
+      "identity_tokens": [
+        "arXiv:2505.02005"
+      ],
+      "title": "Learning Heterogeneous Mixture of Scene Experts for Large-Scale Neural Radiance Fields",
+      "reason": "大規模Neural Radiance Fields向けにシーン専門家混合で3Dシーンを分解する手法であり、LLM推論とは異分野の3Dレンダリング研究である。",
+      "source_url": "https://arxiv.org/abs/2505.02005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 269
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.14715",
+      "identity_tokens": [
+        "arXiv:2507.14715"
+      ],
+      "title": "Exploring the Dynamic Scheduling Space of Real-Time Generative AI Applications on Emerging Heterogeneous Systems",
+      "reason": "リアルタイム生成AI（RTGen）ワークロードをAMD Ryzen AI等の異種SoC上で特性評価し、LLM推論を含むリアルタイム推論の動的スケジューリング空間と遅延・並行性制約を明らかにする推論スケジューリング研究。",
+      "source_url": "https://arxiv.org/abs/2507.14715",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 270
+    }
+  ],
+  "parent_run_key": "muse-20261123-n16",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

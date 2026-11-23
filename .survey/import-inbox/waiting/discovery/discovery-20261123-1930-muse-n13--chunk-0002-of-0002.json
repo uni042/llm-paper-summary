@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n13::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11158",
+      "identity_tokens": [
+        "arXiv:2610.11158"
+      ],
+      "title": "Zepp: Accelerating Distributed MoE Serving under Relaxed Balance Constraints",
+      "reason": "分散MoEサービングで負荷均衡を制約として扱い直し、配置・ルーティング・実行の各段階でボトルネック通信を直接最適化するZeppであり、MoEサービングへの直接の技術的貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2610.11158",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.10392",
+      "identity_tokens": [
+        "arXiv:2507.10392"
+      ],
+      "title": "Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters",
+      "reason": "異種GPUクラスタ上でパイプライン並列とデータ並列を統合してLLM学習効率を最適化するZorseの提案であり、学習単独の効率化で推論への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2507.10392",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 172
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27457",
+      "identity_tokens": [
+        "arXiv:2606.27457"
+      ],
+      "title": "Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving",
+      "reason": "オンプレミスの複数サイズモデル間でクエリをクラスタリングしてルーティングし、品質推定で大モデルへエスカレーションするCRE-Routerであり、TPOT・レイテンシ予算下のコスト配慮型LLMサービングへの直接の技術的貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2606.27457",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 173
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.20254",
+      "identity_tokens": [
+        "arXiv:2407.20254"
+      ],
+      "title": "EEGMamba: Bidirectional State Space Model with Mixture of Experts for EEG Multi-task Classification",
+      "reason": "双方向MambaとMoEを組み合わせたEEG信号のマルチタスク分類ネットワークEEGMambaであり、脳波分類という異分野応用でLLM推論への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2407.20254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 174
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21276",
+      "identity_tokens": [
+        "arXiv:2603.21276"
+      ],
+      "title": "Federated Mixture-of-Experts Alignment on Mobile Edge Networks under Data Heterogeneity",
+      "reason": "モバイルエッジ上のデータ異質性下でMoE型LLMを連合学習で整合させる研究であり、対象はファインチューニングの集約問題であってオンデバイス推論サービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2603.21276",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 175
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.23507",
+      "identity_tokens": [
+        "arXiv:2410.23507"
+      ],
+      "title": "Efficient and Interpretable Grammatical Error Correction with Mixture of Experts",
+      "reason": "誤りタイプ別に特化した専門家混合で文法誤り訂正を行うMoECEであり、英語教育系タスクの応用モデルであってLLM推論システムへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2410.23507",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 176
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25889",
+      "identity_tokens": [
+        "arXiv:2509.25889"
+      ],
+      "title": "Multimodal LLM with Hierarchical Mixture-of-Experts for VQA on 3D Brain MRI",
+      "reason": "3D脳MRIに対するVQAで腫瘍記述を生成する階層型MoE付きマルチモーダルLLM mpLLMであり、医療画像応用で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2509.25889",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 177
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d50c95389300270d4359bf992550e1c9cc766bec",
+      "identity_tokens": [
+        "SemanticScholar:d50c95389300270d4359bf992550e1c9cc766bec"
+      ],
+      "title": "Dense Backpropagation Improves Routing for Sparsely-Gated Mixture-of-Experts",
+      "reason": "疎ゲートMoEのルーティングをdense backpropagationで改善すると題するが、Semantic Scholar API 429で要旨を取得できず、学習側の改善か推論時ルーティングかを確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/d50c95389300270d4359bf992550e1c9cc766bec",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 178
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09406",
+      "identity_tokens": [
+        "arXiv:2604.09406"
+      ],
+      "title": "OASIS: Online Activation Subspace Learning for Memory-Efficient Training",
+      "reason": "LLM学習時の活性化メモリをオンライン部分空間学習で削減するOASISであり、対象は学習時のメモリ効率であって推論への直接貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2604.09406",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 179
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24956",
+      "identity_tokens": [
+        "arXiv:2605.24956"
+      ],
+      "title": "NITP: Next Implicit Token Prediction for LLM Pre-training",
+      "reason": "次トークン予測に表現空間の稠密な自己教師信号を加えるNITPという事前学習目的の提案であり、学習手法の改良で推論効率化への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2605.24956",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:30:00+09:00",
+      "last_checked_at": "2026-11-23T20:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 180
+    }
+  ],
+  "parent_run_key": "muse-20261123-n13",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
