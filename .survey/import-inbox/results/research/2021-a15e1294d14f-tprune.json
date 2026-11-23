@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "65437d7aca734522fbc963e545e48c755f416110c123b5c63fca5d779939c8f0",
-  "canonical_id": "DOI:10.1145/3446640",
-  "paper_path": "papers/inference/99-other-inference-systems/2021-a15e1294d14f-tprune.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/2021-a15e1294d14f-tprune.md",
+  "canonical_id": "DOI:10.1145/3446640",
   "worker_completed_at": "2026-11-24T05:30:00+09:00",
   "worker_run_key": "muse-20261124-b7w2",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 255,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-11-23T20:02:40+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-a15e1294d14f-tprune.md と 13 段落 / 4443文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-11-23T22:15:39+00:00"
 }
