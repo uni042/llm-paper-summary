@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SpaceFusion++: An operator fusion scheduler for neural language model inference",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103708",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "Journal of systems architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:99679b3406782b778e3b256eaedd109edcdadba4"
+      ],
+      "semantic_scholar_id": "99679b3406782b778e3b256eaedd109edcdadba4",
+      "doi": "10.1016/j.sysarc.2026.103708",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103708",
+      "authors": [
+        "Liang Zhu",
+        "Jian-Guo Yao",
+        "Hai-Bing Guan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 267,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ニューラル言語モデル推論向け演算子融合スケジューラSpaceFusion++が対象で、空間マッピンググラフ等の抽象化により融合スケジュールを最適化し、Transformer推論を既存コンパイラ比で高速化するカーネル・コンパイラ機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f0b38ef7f07e",
+    "round": "libimp-f0b38ef7f07e9133-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f0b38ef7f07e9133-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f0b38ef7f07e9133-pre01.json",
+    "receipt": "sha256:ea0baac8d424155d1b75ecf4c755bc99091570a2e17ca0366da9de4bfd679a3a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f0b38ef7f07e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

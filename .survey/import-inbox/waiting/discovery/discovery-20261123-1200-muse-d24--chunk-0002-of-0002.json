@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d24::chunk-0002-of-0002",
+  "reference_main_sha": "13a4bc0f",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.114809",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.114809"
+      ],
+      "title": "Robust photovoltaic power forecasting via noise-suppressive structured global convolution and bidirectional mamba modeling",
+      "reason": "太陽光発電量予測に大域畳み込みと双方向Mambaモデリングを適用する異分野の時系列予測研究であり、タイトルからLLM推論システムとの関連がないことが明確なため対象外である。",
+      "source_url": "https://doi.org/10.1016/j.asoc.2026.114809",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 211
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.31005",
+      "identity_tokens": [
+        "arXiv:2608.31005"
+      ],
+      "title": "From Intent to Evidence: Policy-Steered Multi-Strategy Retrieval for Long-Video Agents",
+      "reason": "長尺動画エージェントの証拠取得を意図ルータで方策誘導する検索手法であり、対象は動画理解エージェントの検索行動であってLLM推論の実行基盤やスケジューリング機構ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2608.31005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 212
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.15137",
+      "identity_tokens": [
+        "arXiv:2609.15137"
+      ],
+      "title": "SparseTalk - Sparsifying 3D Gaussian Language Fields for Efficient 3D Visual Question Answering",
+      "reason": "3D Gaussian言語場の意味埋め込みを疎化して3D視覚質問応答の保存量・メモリ・推論コストを削減する研究だが、主対象は3D VQAという応用でありLLM推論システムへの一般化は限定的なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2609.15137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 213
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20828",
+      "identity_tokens": [
+        "arXiv:2609.20828"
+      ],
+      "title": "Beyond WER: Entity and Disfluency Recall in Accented Conversational ASR",
+      "reason": "アクセント付き会話ASRにおける固有名詞とフィラーの再現率をLoRA適応とデータ精選で改善する音声認識の能力向上研究であり、推論システムの遅延や資源効率の機構提案ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2609.20828",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 214
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39446",
+      "identity_tokens": [
+        "arXiv:2609.39446"
+      ],
+      "title": "DuplexAct-Bench: Broadening Full-Duplex Speech Evaluation toward Proactive Interaction across Diverse Behavioral Requirements",
+      "reason": "全二重音声システムの割り込みや先行発話などの対話行動を評価するベンチマークの提案であり、能力・行動評価のみを扱い推論サービングやデコード高速化の機構は含まないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2609.39446",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 215
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.06666",
+      "identity_tokens": [
+        "arXiv:2610.06666"
+      ],
+      "title": "What Matters for Latent Reasoning with Flow Matching",
+      "reason": "flow matchingによる潜在推論は推論計算で洗練可能で明示的CoTより効率的と主張するが、中心は潜在推論の学習方法の分析でありサービングやKVキャッシュ等の推論システム機構は不明瞭なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2610.06666",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 216
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.18162",
+      "identity_tokens": [
+        "arXiv:2610.18162"
+      ],
+      "title": "LoOPSD: On-Policy Self-Distillation with Looped Teachers",
+      "reason": "LoOPSDは層実行順序を変えた自己教師からオンポリシー自己蒸留を行う学習手法であり、推論時の層実行最適化やサービング高速化ではなく学習単独の改善であるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2610.18162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.30181",
+      "identity_tokens": [
+        "arXiv:2610.30181"
+      ],
+      "title": "Deep Search in Real-World Web Environments",
+      "reason": "実世界のWeb環境で深層検索エージェントの多段階検索能力を評価するタスクOpenDSの提案であり、評価設定の構築が中心でLLM推論システムの実行機構への貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2610.30181",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02583",
+      "identity_tokens": [
+        "arXiv:2611.02583"
+      ],
+      "title": "BasisKV: Value Latents for Communication and Key Routing",
+      "reason": "BasisKVは低ランクKVキャッシュ圧縮において値潜在表現を出力射影と結び付け、値キャッシュ幅とテンソル並列通信の双方を削減する手法であり、長文脈LLMの分散推論とKVキャッシュへの直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2611.02583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 219
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21772",
+      "identity_tokens": [
+        "arXiv:2503.21772"
+      ],
+      "title": "LoCoRe: Image Re-Ranking with Long-Context Sequence Modeling",
+      "reason": "LoCoReは画像検索の再ランキングに長文脈系列モデルとスライディングウィンドウを用いるコンピュータビジョン応用であり、LLM推論システムの注意やキャッシュ機構の提案ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2503.21772",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:30:00+09:00",
+      "last_checked_at": "2026-11-23T12:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 220
+    }
+  ],
+  "parent_run_key": "muse-20261123-d24",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
