@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d31::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TASLP.2024.3369530",
+      "identity_tokens": [
+        "DOI:10.1109/TASLP.2024.3369530"
+      ],
+      "title": "Hierarchical Multi-Granularity Interaction Graph Convolutional Network for Long Document Classification",
+      "reason": "単語・文・節の3粒度グラフを階層的に構築するグラフ畳み込み網HMIGCNによる長文書分類のモデル提案であり、分類精度のための表現学習が主題でLLMの推論実行やサービング機構とは無関係である。",
+      "source_url": "https://doi.org/10.1109/TASLP.2024.3369530",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 421
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.04221",
+      "identity_tokens": [
+        "arXiv:2507.04221"
+      ],
+      "title": "Context Tuning for In-Context Optimization",
+      "reason": "デモンストレーションから初期化した学習可能なメモリ表現を勾配で洗練するContext Tuningは、重み更新なしの少数ショット適応手法であり、比較対象もテスト時学習の訓練効率で、推論システムの実行効率への貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2507.04221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 422
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03814",
+      "identity_tokens": [
+        "arXiv:2510.03814"
+      ],
+      "title": "Detecting Invariant Manifolds in ReLU-Based RNNs",
+      "reason": "ReLUベース再帰網の周期点に付随する安定・不安定不変多様体を検出するアルゴリズムの提案であり、力学系としてのRNNの解釈可能性・説明可能性が主題で、推論高速化やサービング等のシステム的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2510.03814",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 423
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00371-025-03965-y",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-025-03965-y"
+      ],
+      "title": "RainRWKV: a deep RWKV model for video deraining",
+      "reason": "雨天走行映像の雨筋・雨滴による歪みを除去する映像デレイニング向けRWKVモデルの研究であり、出版社ページでも雨天映像復元の応用であることが確認でき、LLM推論システムとは分野が異なる対象外の応用である。",
+      "source_url": "https://doi.org/10.1007/s00371-025-03965-y",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 424
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15056",
+      "identity_tokens": [
+        "arXiv:2411.15056"
+      ],
+      "title": "Financial Risk Assessment via Long-term Payment Behavior Sequence Folding",
+      "reason": "商人単位で長期支払行動系列を折り畳み金融リスクを評価するLBSFの提案であり、オンライン金融サービスの信用リスク予測という応用タスクが主題で、LLM推論・サービング技術への貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2411.15056",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 425
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02414",
+      "identity_tokens": [
+        "arXiv:2506.02414"
+      ],
+      "title": "StarVC: A Unified Auto-Regressive Framework for Joint Text and Speech Generation in Voice Conversion",
+      "reason": "テキストトークンを先に予測してから音響特徴を合成する自己回帰型音声変換StarVCの提案であり、話者性と内容保持の品質改善が成果で、推論デコードの効率化やサービング機構に関する技術的貢献は示されていない。",
+      "source_url": "https://arxiv.org/abs/2506.02414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 426
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNET.2024.3510638",
+      "identity_tokens": [
+        "DOI:10.1109/TNET.2024.3510638"
+      ],
+      "title": "Enhancing Stateful Processing in Programmable Data Planes: Model and Improved Architecture",
+      "reason": "プログラマブルデータプレーンでの状態保持処理を投機実行で非ブロッキング化しスループットを論じるネットワークアーキテクチャの研究であり、対象はパケット処理装置でLLM推論基盤とは無関係である。",
+      "source_url": "https://doi.org/10.1109/TNET.2024.3510638",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 427
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:85fd3b8933fc6ed7572ff5fe0c14b1069c66290c",
+      "identity_tokens": [
+        "SemanticScholar:85fd3b8933fc6ed7572ff5fe0c14b1069c66290c"
+      ],
+      "title": "M&M: Secure Two-Party Machine Learning through Efficient Modulus Conversion and Mixed-Mode Protocols",
+      "reason": "秘密分散等の二者間機械学習プロトコルに関する論文だが、Semantic Scholar APIが429を返しOpenAlexも429で要旨を取得できずabstract_not_obtainedのため判定を保留する。安全な推論実行に関連し得る主題でありタイトルだけでは対象外と断定できないため境界事例とする。",
+      "source_url": "https://www.semanticscholar.org/paper/85fd3b8933fc6ed7572ff5fe0c14b1069c66290c",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 428
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.07704",
+      "identity_tokens": [
+        "arXiv:2409.07704"
+      ],
+      "title": "Super Monotonic Alignment Search",
+      "reason": "テキスト音声合成の単調アライメント探索をTritonカーネルでGPU並列化し最大72倍高速化するSuper-MASの実装研究で、カーネル高速化の技術は含むものの対象はTTSのアライメント処理でありLLM推論カーネルへの直接貢献かは本文確認を要する。",
+      "source_url": "https://arxiv.org/abs/2409.07704",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 429
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.15652",
+      "identity_tokens": [
+        "arXiv:2510.15652"
+      ],
+      "title": "GOGH: Correlation-Guided Orchestration of GPUs in Heterogeneous Clusters",
+      "reason": "異種GPUクラスタで学習・推論リクエストをオンライン配分しエネルギーと性能要件を両立させるGOGHの提案であり、推論ワークロードの資源オーケストレーションには関連するが対象は汎用機械学習ワークロードでLLMサービング特有の機構は要旨からは不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2510.15652",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:20:00+09:00",
+      "last_checked_at": "2026-11-23T17:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 430
+    }
+  ],
+  "parent_run_key": "muse-20261123-d31",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
