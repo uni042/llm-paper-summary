@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d37::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02966",
+      "identity_tokens": [
+        "arXiv:2611.02966"
+      ],
+      "title": "SHq: Learnable Grids for LLM Weight Quantization",
+      "reason": "学習可能な量子化グリッドSHqは、companding強度と非対称オフセットでLUT形式の値集合自体を最適化し、FP8ブロック尺度の符号ビットも活用する。低ビットLLM重み量子化の表現力を直接高める推論向け量子化手法であり、対象への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2611.02966",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.17952",
+      "identity_tokens": [
+        "arXiv:2606.17952"
+      ],
+      "title": "SoftMoE: Soft Differentiable Routing for Mixture-of-Experts in LLMs",
+      "reason": "SoftMoEは離散top-kルーティングを微分可能な緩和へ置換し、層ごとの活性専門家数を学習して推論予算内での専門家配分を変える。MoE推論の計算配分と関連は深いが、主眼は言語モデリング性能のためのアーキテクチャと学習手法であり、サービング機構の提案ではないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2606.17952",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 82
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00076",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00076"
+      ],
+      "title": "Mapping and Communication Optimizations with Fault Tolerance for Wafer-Scale LLM Inference",
+      "reason": "BusyBarnはウェハスケールシステムの非対称メッシュと帯域不均一に合わせ、Transformerブロックとダイ配列の階層マッピングおよび故障耐性のある通信最適化を行う。GPU前提の配置が合わない基盤でのLLM推論配置・通信を直接扱う推論システム研究である。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00076",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 83
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/NOMS69089.2026.11668330",
+      "identity_tokens": [
+        "DOI:10.1109/NOMS69089.2026.11668330"
+      ],
+      "title": "Systematic Evaluation and Production Deployment of LLM Inference Platforms: A Comparative Analysis with Operational Validation",
+      "reason": "70B超モデルをOpenAI互換APIで供する運用基盤を、KServeやKnative等で構築し、llm-dによるKVキャッシュ配慮型スケジューリングへ移行してTTFT改善を図る実運用報告である。推論プラットフォームの評価と本番配備の知見が直接の貢献になっている。",
+      "source_url": "https://doi.org/10.1109/NOMS69089.2026.11668330",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 84
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/SpliTech70133.2026.11685449",
+      "identity_tokens": [
+        "DOI:10.23919/SpliTech70133.2026.11685449"
+      ],
+      "title": "Energy Efficiency of Local Large Language Model Inference: A Multi-GPU Benchmark Study on Consumer Hardware",
+      "reason": "消費者向け複数GPUハードウェア上でローカルLLM推論のエネルギー効率を測るベンチマーク研究と題されるが、CrossrefにもOpenAlexにも要旨がなく一次要旨を取得できなかった。計測対象自体は推論基盤と関連するものの、新しい推論機構の有無を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.23919/SpliTech70133.2026.11685449",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 85
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACP66871.2025.11350985",
+      "identity_tokens": [
+        "DOI:10.1109/ACP66871.2025.11350985"
+      ],
+      "title": "Carbon-Aware LLM Inference Instance Deployment and Workload Assignment Across Geo-distributed Data Centers",
+      "reason": "地理分散データセンター間で、地域ごとの炭素強度・遅延要求・需要の違いを踏まえ、LLM推論インスタンス配置とリクエスト割当てをMILPで共同最適化する。推論サービスの配置とワークロード配分という分散推論スケジューリングそのものを扱う研究である。",
+      "source_url": "https://doi.org/10.1109/ACP66871.2025.11350985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 86
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2603.07475",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.07475"
+      ],
+      "title": "Skip to the Good Part: Representation Structure & Inference-Time Layer Skipping in Diffusion vs. Autoregressive LLMs",
+      "reason": "拡散LLMと自己回帰LLMの層別表現を比較し、推論時レイヤースキップを冗長性の探針として用いて拡散型で最大18.75%のFLOPs削減余地を示す分析研究である。推論高速化の示唆はあるが主目的は表現構造の解明であり、実装された推論システムの提案ではないため保留とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2603.07475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 87
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.798",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.798"
+      ],
+      "title": "Lightweight Haar Wavelet Subband Pruning for LLMs",
+      "reason": "Haarウェーブレット変換で重み行列を周波数サブバンドへ分解し、較正データも重み更新もなしに一様な疎率で剪定する学習後プルーニングHWSPを提案する。LLaMA等で剪定時間を大幅に短縮するLLM圧縮手法であり、推論時の計算・メモリ削減へ直接つながる。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 88
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3390/math13223689",
+      "identity_tokens": [
+        "DOI:10.3390/math13223689"
+      ],
+      "title": "Rethinking I/O Caching for Large Language Model Inference on Resource-Constrained Mobile Platforms",
+      "reason": "モバイル端末上のLLM推論で、重みファイルへの繰り返しアクセスが起こすI/Oボトルネックを実アプリのトレースで分析し、ホットセットやループアクセスに合わせたOSバッファキャッシュ戦略とサイズ指針を導く。リソース制約下のオンデバイス推論を直接扱う研究である。",
+      "source_url": "https://doi.org/10.3390/math13223689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 89
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.26599/bdma.2025.9020025",
+      "identity_tokens": [
+        "DOI:10.26599/bdma.2025.9020025"
+      ],
+      "title": "Dynamic Batch Processing with FlexiDecode Scheduler for Efficient LLM Inference in IIoT",
+      "reason": "FlexiDecode SchedulerはIIoT向けLLM推論サービスで、prefillとdecodeの二相性と負荷変動に合わせデコードのバッチサイズを動的に調整し、待ち時間と資源利用率を改善する。動的バッチ処理という推論スケジューリング機構そのものが貢献である。",
+      "source_url": "https://doi.org/10.26599/bdma.2025.9020025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 90
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e64bad304a6b2697d1fb01e9a0e6daa160ecdb17",
+      "identity_tokens": [
+        "SemanticScholar:e64bad304a6b2697d1fb01e9a0e6daa160ecdb17"
+      ],
+      "title": "Accelerating Pre-trained Language Models via Calibrated Cascade",
+      "reason": "CascadeBERTは困難度で較正した完全モデルのカスケードにより、小さい事前学習言語モデルから順に処理して分類タスクの推論を4倍高速化する枠組みである。推論高速化の機構は明確だが、対象はBERT系エンコーダの分類推論であり、生成型LLMのサービングやデコードとは異なるため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/e64bad304a6b2697d1fb01e9a0e6daa160ecdb17",
+      "body_check": "abstract_screen_only; body_not_read (via primary paper abstract on arXiv/ACL)",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3721145.3729514",
+      "identity_tokens": [
+        "DOI:10.1145/3721145.3729514"
+      ],
+      "title": "SmartNIC-GPU-CPU Heterogeneous System for Large Machine Learning Model with Software-Hardware Codesign",
+      "reason": "SmartNIC・GPU・CPUの異種システムで大規模機械学習モデルのストレージと計算をオフロードし、必要GPU数を減らすソフトウェア・ハードウェア協調設計を論じる。要旨では主たる文脈が大規模モデルの学習の普及に置かれており、LLM推論への直接適用が具体的に確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1145/3721145.3729514",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3652892.3700767",
+      "identity_tokens": [
+        "DOI:10.1145/3652892.3700767"
+      ],
+      "title": "Cannikin: Optimal Adaptive Distributed DNN Training over Heterogeneous Clusters",
+      "reason": "Cannikinは異種GPUクラスタ上での分散DNN学習について、適応的バッチサイズ等のハイパーパラメータをモデル化して学習を最大85%短縮する学習システムである。扱うのは訓練の高速化のみで、LLM推論・サービング・デコードへの貢献は要旨に示されていない。",
+      "source_url": "https://doi.org/10.1145/3652892.3700767",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 93
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2409.19134",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2409.19134"
+      ],
+      "title": "Confidential Prompting: Protecting User Prompts from Cloud LLM Providers",
+      "reason": "Petridishは機密コンピューティング上でSecure Partitioned Decodingにより、利用者ごとのprefill・注意計算と共有サービスのバッチ化されたトークン生成を分離する機密プロンプティング基盤である。プライバシー保護を目的としつつ、LLM推論の実行分割とバッチ処理という推論システム機構が中核にある。",
+      "source_url": "https://doi.org/10.48550/arXiv.2409.19134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2025.3593657",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2025.3593657"
+      ],
+      "title": "HPformer: Low-Parameter Transformer With Temporal Dependency Hierarchical Propagation for Health Informatics",
+      "reason": "HPformerは健康情報学向けに、系列をチャンク化し階層的伝播で自己注意の計算量を下げる低パラメータTransformerを提案する医療応用モデルである。効率化の工夫はあるものの対象は医療時系列のモデル精度であり、LLM推論システムへの貢献ではない。",
+      "source_url": "https://doi.org/10.1109/TPAMI.2025.3593657",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICAICE68195.2025.11382476",
+      "identity_tokens": [
+        "DOI:10.1109/ICAICE68195.2025.11382476"
+      ],
+      "title": "Effective Rank-Based Layer-Wise Low-Rank Approximation for LLMs",
+      "reason": "実効ランクに基づき層ごとに保持ランクを決め、二階統計で白化した領域でSVD低ランク近似を行い二つの線形因子として配備する、学習不要のLLM学習後圧縮パイプラインを提案する。LLaMA-2-7Bで層ごとの異質性まで検証しており、推論向けモデル圧縮へ直接貢献する。",
+      "source_url": "https://doi.org/10.1109/ICAICE68195.2025.11382476",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2023/230",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2023/230"
+      ],
+      "title": "Probabilistic Masked Attention Networks for Explainable Sequential Recommendation",
+      "reason": "Probabilistic Masked Attention Networksは逐次推薦において、確率的マスクで注意を疎化しノイズの多いアイテムへの注意を抑えて推薦精度と説明可能性を上げる手法である。対象は推薦システムのモデルであり、LLMの推論・サービング機構とは無関係である。",
+      "source_url": "https://doi.org/10.24963/ijcai.2023/230",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IPDPS57955.2024.00037",
+      "identity_tokens": [
+        "DOI:10.1109/IPDPS57955.2024.00037"
+      ],
+      "title": "Interpretable Analysis of Production GPU Clusters Monitoring Data via Association Rule Mining",
+      "reason": "本研究は本番GPUクラスタの監視データへ相関ルールマイニングを適用し、GPU低利用やジョブ失敗の要因を解釈可能に分析するHPC運用の研究である。対象は深層学習ジョブ一般のクラスタ運用分析であり、LLM推論基盤の機構や計測への直接貢献は示されていない。",
+      "source_url": "https://doi.org/10.1109/IPDPS57955.2024.00037",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 98
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26599/cai.2024.9390004",
+      "identity_tokens": [
+        "DOI:10.26599/cai.2024.9390004"
+      ],
+      "title": "Advances in reasoning by prompting large language models: A survey",
+      "reason": "本論文はプロンプティングによってLLMの推論能力を引き出す手法とベンチマークを整理したサーベイであり、扱うのは推論(reasoning)能力の elicitation である。推論システムの高速化・サービング・メモリ管理といった技術的機構への貢献は含まれない。",
+      "source_url": "https://doi.org/10.26599/cai.2024.9390004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 99
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38521",
+      "identity_tokens": [
+        "arXiv:2609.38521"
+      ],
+      "title": "ShamAN-Q: Shampoo Augmented NanoQuant for Sub-1-bit LLM Weights",
+      "reason": "ShamAN-QはNanoQuantを拡張し、Shampoo流のKronecker積で近似したFisher曲率を再構成損失へ用いる1ビット未満の学習後量子化で、Qwen3系のperplexityを改善する。配備形式を保ちながら重み量子化の精度を上げる手法であり、推論向け量子化への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2609.38521",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:00:00+09:00",
+      "last_checked_at": "2026-11-23T18:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 100
+    }
+  ],
+  "parent_run_key": "muse-20261123-d37",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
