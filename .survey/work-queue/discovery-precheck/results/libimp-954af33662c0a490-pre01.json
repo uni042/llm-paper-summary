@@ -1,0 +1,421 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-954af33662c0a490-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-954af33662c0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.06055",
+    "arXiv:2606.14711",
+    "arXiv:2607.08116",
+    "arXiv:2608.09252"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:38:34.994424+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.06055",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.14711",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.08116",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.09252",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MORES: Mobile Reasoning-as-a-Service via Distributed LLM Inference-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2607.08116",
+      "year": 2026,
+      "published": "2026-07-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time scaling has emerged as an effective approach for enhancing the capabilities of Large Language Models (LLMs), addressing the growing demand for stronger reasoning without increasing model size. This novel form of LLM scaling comprises two representative approaches: explicit reasoning, which generates intermediate chain-of-thought tokens during an explicit thinking phase, and implicit reasoning, which iteratively updates hidden states in the latent space without producing explicit outputs. Despite their effectiveness, both paradigms incur substantial computational and memory overhead, raising challenges for deployment on resource-constrained edge devices. To address these issues, we propose a Mobile Reasoning-as-aService (MORES) framework that treats reasoning as a computational service accessible to edge devices over wireless networks. Focusing on implicit reasoning, we leverage its recursive structure to partition hiddenstate updates between edge devices and servers, enabling cooperative inference that allows devices to access additional cloud computation on demand. To optimize long-term performance, we formulate a joint computation and communication scheduling problem and solve it using a semantic Mixture-of-Experts (MoE)-based Deep Reinforcement Learning (DRL) algorithm to address heterogeneity in wireless conditions and task demands. The agent adaptively allocates resources by adjusting the number of recurrent steps and the transmission pruning rate, while a semantic router enables high-speed gating for real-time expert selection. Experimental results show that the proposed method achieves an approximately 18% improvement in system throughput over the baseline Soft Actor-Critic (SAC) algorithm. Our code is available at https://github.com/NICE-HKU/MORES.",
+      "identifiers": [
+        "SemanticScholar:4d0bf6fbd6e699f1ee06113b3ab6b04fa99481c3"
+      ],
+      "semantic_scholar_id": "4d0bf6fbd6e699f1ee06113b3ab6b04fa99481c3",
+      "canonical_id": "arXiv:2607.08116",
+      "arxiv_id": "2607.08116",
+      "doi": "10.48550/arXiv.2607.08116",
+      "authors": [
+        "Guanchen Liu",
+        "Hong-Yang Du",
+        "Kai-Bin Huang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 137,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SWARM-LLM: Collaborative Inference for Edge-based Small Language Models",
+      "source_url": "https://arxiv.org/abs/2606.14711",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "2026 IEEE 103rd Vehicular Technology Conference (VTC2026-Spring)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) provide strong performance across a wide range of tasks but are typically hosted on centralised cloud infrastructure, incurring significant bandwidth, latency, and privacy costs. In contrast, small language models (SLMs) can run on edge devices but have limited capability and robustness. This paper introduces SWARM-LLM, a routing and collaboration layer that coordinates a small swarm of edge-hosted SLMs with an optional cloud foundation model (FM). SWARM-LLM decides, for each query, whether to answer locally, collaborate with peer SLMs, or \"summon\" a cloud FM, using lightweight uncertainty estimates and safety signals. We implement a working prototype on commodity hardware with three heterogeneous SLMs and a 70B-parameter cloud FM accessed via API, and evaluate it on a controlled study workload of easy, hard, and safety-oriented queries. Our results show that SWARM-LLM substantially improves performance on hard questions compared to an edge-only deployment, while limiting cloud usage to roughly one quarter of queries, illustrating a practical trade-off between accuracy, latency, and cost for privacy-conscious edge deployments. The implementation code is available at the GitHub repository https://github.com/mdahshan/swarm_llm.",
+      "identifiers": [
+        "SemanticScholar:882f63de9917ad5a9edd201c2a0293b2c94d72fd"
+      ],
+      "semantic_scholar_id": "882f63de9917ad5a9edd201c2a0293b2c94d72fd",
+      "canonical_id": "arXiv:2606.14711",
+      "arxiv_id": "2606.14711",
+      "doi": "10.1109/VTC2026-Spring68026.2026.11757728",
+      "authors": [
+        "Mostafa Dahshan",
+        "Q. Mamun",
+        "Tanmoy Debnath"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Relay Buffer Independent Communication over Pooled HBM for Efficient MoE Inference on Ascend",
+      "source_url": "https://arxiv.org/abs/2605.06055",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) inference requires large-scale token exchange across devices, making dispatch and combine major bottlenecks in both prefill and decode. Beyond network transfer, routing-driven layout transformation, temporary relay, and output restoration can add substantial overhead. Existing MoE communication paths are often buffer-centric, using explicit inter-process relay and reordering buffers around collective transfer. This report presents a relay-buffer-free communication design for MoE inference acceleration on Ascend systems. The design reorganizes dispatch and combine around direct placement into destination expert windows and direct reading from remote expert windows. Built on globally pooled high-bandwidth memory and symmetric-memory allocation, it removes most intermediate relay and reordering buffers while retaining only lightweight control state, including counts, offsets, and synchronization metadata. We instantiate the design as two schedules for the main phases of MoE inference: a prefill schedule with richer planning state for throughput-oriented execution, and a compact decode schedule for latency-sensitive execution. Experiments on Ascend-based MoE workloads show reduced dispatch and combine latency in both settings. At the serving level, the implementation improves time to first token (TTFT), preserves competitive time per output token (TPOT), and enlarges the feasible scheduling space under practical latency constraints. These results indicate that, on platforms with globally addressable device memory, reducing intermediate buffering and output restoration around expert execution is an effective direction for accelerating MoE inference.",
+      "identifiers": [
+        "SemanticScholar:d4346061214295ee998de1a10b950d4a338e3f11"
+      ],
+      "semantic_scholar_id": "d4346061214295ee998de1a10b950d4a338e3f11",
+      "canonical_id": "arXiv:2605.06055",
+      "arxiv_id": "2605.06055",
+      "doi": "10.48550/arXiv.2605.06055",
+      "authors": [
+        "Tian-Lun Hu",
+        "Tian-Cheng Hu",
+        "Shengsheng Litang",
+        "Sheng Wang",
+        "Xiaoming Bao",
+        "Yu-Xing Li",
+        "Wei Wang",
+        "Zhong-Zhe Hu",
+        "Li-Jun Li",
+        "Hong-Wei Sun",
+        "Jing-Bin Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 200,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FSGen: Agile Fused and Sparse Accelerator Generator with Accurate Power Model for LLM Applications",
+      "source_url": "https://arxiv.org/abs/2608.09252",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing demand of artificial intelligence (AI) applications, large language models (LLMs) have become important workloads in many domains. The question of how to efficiently generate optimal AI chip accelerator designs remains unresolved and challenging. Currently, there is a lack of end-to-end design methodologies for efficient design space exploration (DSE). We propose FSGen, an agile framework for attention-based LLM accelerator generation with an early-stage PPA estimator. FSGen supports fused operator dataflows and sparsity with a diverse design space and finds designs with 1.4x better power efficiency or 10x speedup with similar PPA metrics compared to prior work. Pareto-optimal designs have much better performance over a wide range of LLM benchmarks and have 58x better figures of merit (FoM). Design exploration is also faster due to our PPA estimators, which have better accuracy than prior art and reduce DSE runtime drastically.",
+      "identifiers": [
+        "SemanticScholar:d70bc510f22108b7fef046d37c75bdb38c4d5972"
+      ],
+      "semantic_scholar_id": "d70bc510f22108b7fef046d37c75bdb38c4d5972",
+      "canonical_id": "arXiv:2608.09252",
+      "arxiv_id": "2608.09252",
+      "doi": "10.1145/3770743.3804052",
+      "authors": [
+        "J. Mok",
+        "Qi-Jun Zhang",
+        "Zhi-Yao Xie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.08116",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.08116",
+        "id:SemanticScholar:4d0bf6fbd6e699f1ee06113b3ab6b04fa99481c3",
+        "id:arXiv:2607.08116",
+        "title:mores mobile reasoningasaservice via distributed llm inferencetime scaling",
+        "url:https://arxiv.org/abs/2607.08116"
+      ],
+      "record": {
+        "title": "MORES: Mobile Reasoning-as-a-Service via Distributed LLM Inference-Time Scaling",
+        "source_url": "https://arxiv.org/abs/2607.08116",
+        "year": 2026,
+        "published": "2026-07-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference-time scaling has emerged as an effective approach for enhancing the capabilities of Large Language Models (LLMs), addressing the growing demand for stronger reasoning without increasing model size. This novel form of LLM scaling comprises two representative approaches: explicit reasoning, which generates intermediate chain-of-thought tokens during an explicit thinking phase, and implicit reasoning, which iteratively updates hidden states in the latent space without producing explicit outputs. Despite their effectiveness, both paradigms incur substantial computational and memory overhead, raising challenges for deployment on resource-constrained edge devices. To address these issues, we propose a Mobile Reasoning-as-aService (MORES) framework that treats reasoning as a computational service accessible to edge devices over wireless networks. Focusing on implicit reasoning, we leverage its recursive structure to partition hiddenstate updates between edge devices and servers, enabling cooperative inference that allows devices to access additional cloud computation on demand. To optimize long-term performance, we formulate a joint computation and communication scheduling problem and solve it using a semantic Mixture-of-Experts (MoE)-based Deep Reinforcement Learning (DRL) algorithm to address heterogeneity in wireless conditions and task demands. The agent adaptively allocates resources by adjusting the number of recurrent steps and the transmission pruning rate, while a semantic router enables high-speed gating for real-time expert selection. Experimental results show that the proposed method achieves an approximately 18% improvement in system throughput over the baseline Soft Actor-Critic (SAC) algorithm. Our code is available at https://github.com/NICE-HKU/MORES.",
+        "identifiers": [
+          "SemanticScholar:4d0bf6fbd6e699f1ee06113b3ab6b04fa99481c3"
+        ],
+        "semantic_scholar_id": "4d0bf6fbd6e699f1ee06113b3ab6b04fa99481c3",
+        "canonical_id": "arXiv:2607.08116",
+        "arxiv_id": "2607.08116",
+        "doi": "10.48550/arXiv.2607.08116",
+        "authors": [
+          "Guanchen Liu",
+          "Hong-Yang Du",
+          "Kai-Bin Huang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 137,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.14711",
+      "identity_tokens": [
+        "id:DOI:10.1109/vtc2026-spring68026.2026.11757728",
+        "id:SemanticScholar:882f63de9917ad5a9edd201c2a0293b2c94d72fd",
+        "id:arXiv:2606.14711",
+        "title:swarmllm collaborative inference for edgebased small language models",
+        "url:https://arxiv.org/abs/2606.14711"
+      ],
+      "record": {
+        "title": "SWARM-LLM: Collaborative Inference for Edge-based Small Language Models",
+        "source_url": "https://arxiv.org/abs/2606.14711",
+        "year": 2026,
+        "published": "2026-04-22",
+        "venue": "2026 IEEE 103rd Vehicular Technology Conference (VTC2026-Spring)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) provide strong performance across a wide range of tasks but are typically hosted on centralised cloud infrastructure, incurring significant bandwidth, latency, and privacy costs. In contrast, small language models (SLMs) can run on edge devices but have limited capability and robustness. This paper introduces SWARM-LLM, a routing and collaboration layer that coordinates a small swarm of edge-hosted SLMs with an optional cloud foundation model (FM). SWARM-LLM decides, for each query, whether to answer locally, collaborate with peer SLMs, or \"summon\" a cloud FM, using lightweight uncertainty estimates and safety signals. We implement a working prototype on commodity hardware with three heterogeneous SLMs and a 70B-parameter cloud FM accessed via API, and evaluate it on a controlled study workload of easy, hard, and safety-oriented queries. Our results show that SWARM-LLM substantially improves performance on hard questions compared to an edge-only deployment, while limiting cloud usage to roughly one quarter of queries, illustrating a practical trade-off between accuracy, latency, and cost for privacy-conscious edge deployments. The implementation code is available at the GitHub repository https://github.com/mdahshan/swarm_llm.",
+        "identifiers": [
+          "SemanticScholar:882f63de9917ad5a9edd201c2a0293b2c94d72fd"
+        ],
+        "semantic_scholar_id": "882f63de9917ad5a9edd201c2a0293b2c94d72fd",
+        "canonical_id": "arXiv:2606.14711",
+        "arxiv_id": "2606.14711",
+        "doi": "10.1109/VTC2026-Spring68026.2026.11757728",
+        "authors": [
+          "Mostafa Dahshan",
+          "Q. Mamun",
+          "Tanmoy Debnath"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 215,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06055",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06055",
+        "id:SemanticScholar:d4346061214295ee998de1a10b950d4a338e3f11",
+        "id:arXiv:2605.06055",
+        "title:relay buffer independent communication over pooled hbm for efficient moe inference on ascend",
+        "url:https://arxiv.org/abs/2605.06055"
+      ],
+      "record": {
+        "title": "Relay Buffer Independent Communication over Pooled HBM for Efficient MoE Inference on Ascend",
+        "source_url": "https://arxiv.org/abs/2605.06055",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) inference requires large-scale token exchange across devices, making dispatch and combine major bottlenecks in both prefill and decode. Beyond network transfer, routing-driven layout transformation, temporary relay, and output restoration can add substantial overhead. Existing MoE communication paths are often buffer-centric, using explicit inter-process relay and reordering buffers around collective transfer. This report presents a relay-buffer-free communication design for MoE inference acceleration on Ascend systems. The design reorganizes dispatch and combine around direct placement into destination expert windows and direct reading from remote expert windows. Built on globally pooled high-bandwidth memory and symmetric-memory allocation, it removes most intermediate relay and reordering buffers while retaining only lightweight control state, including counts, offsets, and synchronization metadata. We instantiate the design as two schedules for the main phases of MoE inference: a prefill schedule with richer planning state for throughput-oriented execution, and a compact decode schedule for latency-sensitive execution. Experiments on Ascend-based MoE workloads show reduced dispatch and combine latency in both settings. At the serving level, the implementation improves time to first token (TTFT), preserves competitive time per output token (TPOT), and enlarges the feasible scheduling space under practical latency constraints. These results indicate that, on platforms with globally addressable device memory, reducing intermediate buffering and output restoration around expert execution is an effective direction for accelerating MoE inference.",
+        "identifiers": [
+          "SemanticScholar:d4346061214295ee998de1a10b950d4a338e3f11"
+        ],
+        "semantic_scholar_id": "d4346061214295ee998de1a10b950d4a338e3f11",
+        "canonical_id": "arXiv:2605.06055",
+        "arxiv_id": "2605.06055",
+        "doi": "10.48550/arXiv.2605.06055",
+        "authors": [
+          "Tian-Lun Hu",
+          "Tian-Cheng Hu",
+          "Shengsheng Litang",
+          "Sheng Wang",
+          "Xiaoming Bao",
+          "Yu-Xing Li",
+          "Wei Wang",
+          "Zhong-Zhe Hu",
+          "Li-Jun Li",
+          "Hong-Wei Sun",
+          "Jing-Bin Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 200,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09252",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770743.3804052",
+        "id:SemanticScholar:d70bc510f22108b7fef046d37c75bdb38c4d5972",
+        "id:arXiv:2608.09252",
+        "title:fsgen agile fused and sparse accelerator generator with accurate power model for llm applications",
+        "url:https://arxiv.org/abs/2608.09252"
+      ],
+      "record": {
+        "title": "FSGen: Agile Fused and Sparse Accelerator Generator with Accurate Power Model for LLM Applications",
+        "source_url": "https://arxiv.org/abs/2608.09252",
+        "year": 2026,
+        "published": "2026-07-26",
+        "venue": "Design Automation Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the growing demand of artificial intelligence (AI) applications, large language models (LLMs) have become important workloads in many domains. The question of how to efficiently generate optimal AI chip accelerator designs remains unresolved and challenging. Currently, there is a lack of end-to-end design methodologies for efficient design space exploration (DSE). We propose FSGen, an agile framework for attention-based LLM accelerator generation with an early-stage PPA estimator. FSGen supports fused operator dataflows and sparsity with a diverse design space and finds designs with 1.4x better power efficiency or 10x speedup with similar PPA metrics compared to prior work. Pareto-optimal designs have much better performance over a wide range of LLM benchmarks and have 58x better figures of merit (FoM). Design exploration is also faster due to our PPA estimators, which have better accuracy than prior art and reduce DSE runtime drastically.",
+        "identifiers": [
+          "SemanticScholar:d70bc510f22108b7fef046d37c75bdb38c4d5972"
+        ],
+        "semantic_scholar_id": "d70bc510f22108b7fef046d37c75bdb38c4d5972",
+        "canonical_id": "arXiv:2608.09252",
+        "arxiv_id": "2608.09252",
+        "doi": "10.1145/3770743.3804052",
+        "authors": [
+          "J. Mok",
+          "Qi-Jun Zhang",
+          "Zhi-Yao Xie"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a6140e1bb6d7ad14ba32614faaaf96231fd7699ab65f3143a87bec54b4a24cc2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

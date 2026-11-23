@@ -1,0 +1,704 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5b493490eaf1e8db-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5b493490eaf1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/ccgrid68966.2026.00024",
+    "DOI:10.1145/3772052.3772249",
+    "arXiv:2512.02351",
+    "arXiv:2603.12254",
+    "arXiv:2607.23115",
+    "arXiv:2609.37345",
+    "arXiv:2610.22818"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:38:35.027689+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/ccgrid68966.2026.00024",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3772052.3772249",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.02351",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.12254",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.23115",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37345",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22818",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
+      "source_url": "https://arxiv.org/abs/2603.12254",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
+      "identifiers": [
+        "SemanticScholar:a0a824823b92ef652d8ed721bb1bf962610a1360"
+      ],
+      "semantic_scholar_id": "a0a824823b92ef652d8ed721bb1bf962610a1360",
+      "canonical_id": "arXiv:2603.12254",
+      "arxiv_id": "2603.12254",
+      "doi": "10.48550/arXiv.2603.12254",
+      "authors": [
+        "Baifeng Shi",
+        "Stephanie Fu",
+        "L. Lian",
+        "Han-Rong Ye",
+        "David Eigen",
+        "Aaron A. Reite",
+        "Bo-Yi Li",
+        "Jan Kautz",
+        "Song Han",
+        "David M. Chan",
+        "Pavlo Molchanov",
+        "Trevor Darrell",
+        "Hong-Xu Yin"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding and Harnessing Sparsity in Unified Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2512.02351",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multimodal models have achieved remarkable progress in both understanding and generation. Recent efforts pursue unified multimodal models that integrate heterogeneous components to support both capabilities within a single framework. However, such unification introduces inference inefficiencies, e.g., specific tasks or samples may not require the full knowledge or capacity of the unified model. Yet, a systematic understanding of how these inefficiencies manifest across different components remains limited. In this work, we first conduct a systematic analysis of unified multimodal model components using training-free pruning as a probing methodology, considering both depth pruning and width reduction. Our study reveals that the understanding component exhibits notable compressibility in both understanding and generation tasks, which is more pronounced in the latter. In contrast, the generation components are highly sensitive to compression, with performance deteriorating sharply even under moderate compression ratios. To address this limitation, we propose the Mixture-of-Experts (MoE) Adaptation, inspired by the dynamic activation patterns observed across different samples. This approach partitions the generation module into multiple experts and enables sparse activation to restore generation quality. We validate the effectiveness of sparse activation through expert-frozen tuning and further demonstrate that a fully trainable adaptation delivers additional gains. As a result, the adapted BAGEL model achieves performance comparable to the full model while activating only about half of its parameters. The code is released at \\href{https://github.com/Shwai-He/SparseUnifiedModel}{this link}.",
+      "identifiers": [
+        "SemanticScholar:6f4e190054bc722fdb0f79b90d0a018fad5ea638"
+      ],
+      "semantic_scholar_id": "6f4e190054bc722fdb0f79b90d0a018fad5ea638",
+      "canonical_id": "arXiv:2512.02351",
+      "arxiv_id": "2512.02351",
+      "doi": "10.48550/arXiv.2512.02351",
+      "authors": [
+        "Shwai He",
+        "Chao Deng",
+        "Ang Li",
+        "Shen Yan"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EAFAL: An Edge-Based Agentic Framework for Adaptive Selection Between SLMs and LLMs",
+      "source_url": "https://doi.org/10.1109/CCGrid68966.2026.00024",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative AI increasingly relies on Large Language Models (LLMs), but their high computational and storage demands hinder edge deployment. Small Language Models (SLMs) offer faster, privacy-preserving edge inference but often at the cost of accuracy. Although prior work has explored routing between SLMs and LLMs to balance accuracy and efficiency, many existing approaches fail to jointly consider output quality, response latency, user preferences, and real-time edge resource constraints. Particularly, these methods are complex deep learning based routers that are impractical for resource-limited edge environments. As a solution, EAFAL, an edge-based agentic framework for LLM selection is proposed that jointly optimizes output quality, latency and edge resource usage. EAFAL employs three lightweight agents to achieve this considering both system factors (available memory) and user requirements (expected quality and latency), to select the most suitable SLM or LLM for a given text query prior to inference. Compared to existing approaches, EAFAL achieves more effective SLM and LLM selection while requiring significantly less model selection time $\\left(1.9 \\times 10^{-4} ~\\mathrm{s}\\right)$, improved output quality by 72.71%, reduced memory usage by 34.85%, and maintaining an average latency of 4.62 seconds, demonstrating its suitability for edge-driven AI applications. (https://github.com/manojMadarasingha/EAFL\\#)",
+      "identifiers": [
+        "SemanticScholar:c91dc552c5009b8fb7453cebeb7b96a81aaa5809"
+      ],
+      "semantic_scholar_id": "c91dc552c5009b8fb7453cebeb7b96a81aaa5809",
+      "doi": "10.1109/CCGrid68966.2026.00024",
+      "canonical_id": "DOI:10.1109/CCGrid68966.2026.00024",
+      "authors": [
+        "Chamara Madarasingha",
+        "Prajyot Singh",
+        "Redowan Mahmud",
+        "M. Afrin",
+        "Aneesh Krishna",
+        "S. Kanhere"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 206,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gleam: Adaptive Network-Efficient CUDA API Remoting for Cross-Device GPU Sharing over LANs",
+      "source_url": "https://arxiv.org/abs/2607.23115",
+      "year": 2026,
+      "published": "2026-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper aims to enable computation- and communication-efficient GPU sharing across devices within local area networks (LANs), facilitating ubiquitous AI inference on heterogeneous personal devices. We achieve distributed task offloading via CUDA API remoting. However, beyond raw computation, network constraints emerge as the primary bottleneck: limited bandwidth, high-frequency API invocations, and cross-task contention significantly hinder performance. To address these challenges, we propose Gleam, a novel and network-efficient framework for task-generic GPU sharing across local-area CUDA devices, with three key contributions. First, we reduce bandwidth overhead in CUDA API remoting through automatic model weight caching, and mitigate accumulated latency from frequent API calls by asynchronous execution. Second, we design a runtime task scheduler that dynamically determines API remoting pairs between LAN clients and servers, explicitly accounting for both network conditions and GPU resource contention under parallel workloads. Finally, we introduce dedicated mechanisms to ensure CUDA context consistency across distributed executions. Extensive experiments on heterogeneous NVIDIA GPUs and diverse AI workloads show Gleam consistently outperforms state-of-the-art baselines, achieving 1.4-24.2 times improvements in API remoting efficiency and up to 1.79 times higher system throughput.",
+      "identifiers": [
+        "SemanticScholar:8a26e94f95e8921f1fc6f2177e201e0b95f8ff26"
+      ],
+      "semantic_scholar_id": "8a26e94f95e8921f1fc6f2177e201e0b95f8ff26",
+      "canonical_id": "arXiv:2607.23115",
+      "arxiv_id": "2607.23115",
+      "doi": "10.48550/arXiv.2607.23115",
+      "authors": [
+        "Zhihao Xu",
+        "Hao Zhong",
+        "Ze-Ting Zhou",
+        "Yuhang Xu",
+        "Hao-Yu Tong",
+        "Wei Wang",
+        "Jin-Shan Chen",
+        "Keqiang He",
+        "Chong Zhu",
+        "Sheng-Zhong Liu",
+        "Fan Wu",
+        "Gui-Hai Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs",
+      "source_url": "https://arxiv.org/abs/2609.37345",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding requires Video Large Language Models (Video-LLMs) to reason over continuous visual streams under causal constraints. As the visual history grows, a bounded visual?processing budget requires evidence selection that balances temporal recency with query relevance. Recent-only selection excludes potentially relevant historical evidence, whereas Semantic-only retrieval can displace useful recent context when relevance scores are ambiguous. We introduce WRWS (When to Retrieve, When to Stay), a training-free framework for uncertainty-adaptive evidence allocation. A lightweight external vision-language encoder scores query relevance across the observed history, while an adaptive allocation module uses the normalized entropy of the similarity distribution as a proxy for retrieval uncertainty. WRWS favors semantic retrieval when relevance cues are reliable and strengthens the recency prior under uncertainty. Following a retrieve-first, encode-later pipeline, WRWS selects evidence before target-model visual encoding, such that only the selected observations are processed by the costly target Video-LLM. Experiments across four Video-LLM families and multiple model scales demonstrate competitive accuracy on StreamingBench and OVO-Bench. In our efficiency evaluation, WRWS reduces average vision-to-answer time to 47.93% of the state-of-the-art method. Code will be released.",
+      "identifiers": [
+        "SemanticScholar:1d9f71f77ddb2cea348265890371c531a1fe4277"
+      ],
+      "semantic_scholar_id": "1d9f71f77ddb2cea348265890371c531a1fe4277",
+      "canonical_id": "arXiv:2609.37345",
+      "arxiv_id": "2609.37345",
+      "doi": "10.48550/arXiv.2609.37345",
+      "authors": [
+        "Xiang Hu",
+        "Jia-Zuo Yu",
+        "Lu Zhang",
+        "Yun-Zhi Zhuge",
+        "Hu-Chuan Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG",
+      "source_url": "https://arxiv.org/abs/2610.22818",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graph-based retrieval-augmented generation (RAG) exploits relationships among evidence to support multi-hop question answering. However, conveying retrieved graphs through non-unique linear textual contexts to Large Language Models (LLMs) leads to graph-structure degradation and inefficient KV-cache reuse. Meanwhile, graph-structure order optimization is already NP-hard, and the additional KV-cache reuse objective further complicates the search by introducing potentially conflicting orders. To tackle these issues, we propose FuseRAG, a cost-efficient graph-based RAG framework that shifts most retrieved evidence from explicit textual contexts to latent representations. Our main idea is to separate reusable evidence content from query-aware structural interactions in latent space, while retaining only a few explicit facts as semantic anchors. The resulting latent representations are injected into decoder self-attention, where they reshape attention over evidence and thereby influence hidden states and next-token probabilities. This design preserves graph structure through latent interactions, enables evidence reuse beyond exact token-prefix matching. Experiments on three multi-hop question-answering datasets with Llama-3-8B and Qwen3.5-9B show that FuseRAG improves answer quality while achieving up to 2.7x and 2.2x TTFT speedups over the fastest graph-based baseline, respectively.",
+      "identifiers": [
+        "SemanticScholar:c15b96d60f9087d03fcdc8f14a06b49874671820"
+      ],
+      "semantic_scholar_id": "c15b96d60f9087d03fcdc8f14a06b49874671820",
+      "canonical_id": "arXiv:2610.22818",
+      "arxiv_id": "2610.22818",
+      "authors": [
+        "Ting-Qi Wang",
+        "Ying-Shu Li",
+        "Zhi-Peng Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoMPI: Coordinated Model Merging and Parallel Inference at Edge",
+      "source_url": "https://doi.org/10.1145/3772052.3772249",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern edge intelligence applications increasingly rely on multiple deep learning models operating under strict latency and memory constraints. However, the limited GPU memory available in edge clusters often leads to costly model switching and frequent SLO violations, particularly under bursty workloads. Several techniques are effective in reducing memory pressure from different aspects: model merging reduces memory usage on individual GPUs by sharing parameters across models, while parallelism reduces memory usage across GPUs by reducing redundant replicas. Since these two techniques operate in orthogonal decision spaces, combining them in edge clusters offers the potential for greater memory efficiency. However, real-world deployments reveal implicit interdependen-cies between them, making independent optimization inadequate for realizing their combined advantages. We present CoMPI, the first framework to jointly optimize model merging and parallel inference in multi-GPU edge clusters. By reducing per-model memory consumption, CoMPI enables the deployment of more replicas across GPUs, enhancing system throughput under bursty workloads and mitigating SLO violations. It performs joint optimization by evaluating the parallelization scheme for each candidate merging scheme and greedily selecting the one that yields the greatest memory savings. To reduce the complexity of the search space, CoMPI employs a Binary Split Tree that recursively partitions candidate merging schemes and uses integer linear programming to compute optimal parallelization schemes. To accommodate dynamic workloads, it further supports runtime replica adjustment without frequent re-optimization. Experimental results demonstrate that CoMPI reduces tail latency by up to 142.7% and improves SLO satisfaction rates by up to 42.3% compared to state-of-the-art methods under real-world conditions. This work is publicly available at https://github.com/bigint405/CoMPI.",
+      "identifiers": [
+        "SemanticScholar:012d7679dfa1b5e4e1e5f3a65e3a861012ac3c63"
+      ],
+      "semantic_scholar_id": "012d7679dfa1b5e4e1e5f3a65e3a861012ac3c63",
+      "doi": "10.1145/3772052.3772249",
+      "canonical_id": "DOI:10.1145/3772052.3772249",
+      "authors": [
+        "Shuang Zeng",
+        "Hai-Tao Zhang",
+        "Ze-Zhong Yan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 369,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.12254",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.12254",
+        "id:SemanticScholar:a0a824823b92ef652d8ed721bb1bf962610a1360",
+        "id:arXiv:2603.12254",
+        "title:attend before attention efficient and scalable video understanding via autoregressive gazing",
+        "url:https://arxiv.org/abs/2603.12254"
+      ],
+      "record": {
+        "title": "Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing",
+        "source_url": "https://arxiv.org/abs/2603.12254",
+        "year": 2026,
+        "published": "2026-03-12",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.",
+        "identifiers": [
+          "SemanticScholar:a0a824823b92ef652d8ed721bb1bf962610a1360"
+        ],
+        "semantic_scholar_id": "a0a824823b92ef652d8ed721bb1bf962610a1360",
+        "canonical_id": "arXiv:2603.12254",
+        "arxiv_id": "2603.12254",
+        "doi": "10.48550/arXiv.2603.12254",
+        "authors": [
+          "Baifeng Shi",
+          "Stephanie Fu",
+          "L. Lian",
+          "Han-Rong Ye",
+          "David Eigen",
+          "Aaron A. Reite",
+          "Bo-Yi Li",
+          "Jan Kautz",
+          "Song Han",
+          "David M. Chan",
+          "Pavlo Molchanov",
+          "Trevor Darrell",
+          "Hong-Xu Yin"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.02351",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.02351",
+        "id:SemanticScholar:6f4e190054bc722fdb0f79b90d0a018fad5ea638",
+        "id:arXiv:2512.02351",
+        "title:understanding and harnessing sparsity in unified multimodal models",
+        "url:https://arxiv.org/abs/2512.02351"
+      ],
+      "record": {
+        "title": "Understanding and Harnessing Sparsity in Unified Multimodal Models",
+        "source_url": "https://arxiv.org/abs/2512.02351",
+        "year": 2025,
+        "published": "2025-12-02",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large multimodal models have achieved remarkable progress in both understanding and generation. Recent efforts pursue unified multimodal models that integrate heterogeneous components to support both capabilities within a single framework. However, such unification introduces inference inefficiencies, e.g., specific tasks or samples may not require the full knowledge or capacity of the unified model. Yet, a systematic understanding of how these inefficiencies manifest across different components remains limited. In this work, we first conduct a systematic analysis of unified multimodal model components using training-free pruning as a probing methodology, considering both depth pruning and width reduction. Our study reveals that the understanding component exhibits notable compressibility in both understanding and generation tasks, which is more pronounced in the latter. In contrast, the generation components are highly sensitive to compression, with performance deteriorating sharply even under moderate compression ratios. To address this limitation, we propose the Mixture-of-Experts (MoE) Adaptation, inspired by the dynamic activation patterns observed across different samples. This approach partitions the generation module into multiple experts and enables sparse activation to restore generation quality. We validate the effectiveness of sparse activation through expert-frozen tuning and further demonstrate that a fully trainable adaptation delivers additional gains. As a result, the adapted BAGEL model achieves performance comparable to the full model while activating only about half of its parameters. The code is released at \\href{https://github.com/Shwai-He/SparseUnifiedModel}{this link}.",
+        "identifiers": [
+          "SemanticScholar:6f4e190054bc722fdb0f79b90d0a018fad5ea638"
+        ],
+        "semantic_scholar_id": "6f4e190054bc722fdb0f79b90d0a018fad5ea638",
+        "canonical_id": "arXiv:2512.02351",
+        "arxiv_id": "2512.02351",
+        "doi": "10.48550/arXiv.2512.02351",
+        "authors": [
+          "Shwai He",
+          "Chao Deng",
+          "Ang Li",
+          "Shen Yan"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 356,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ccgrid68966.2026.00024",
+      "identity_tokens": [
+        "id:DOI:10.1109/ccgrid68966.2026.00024",
+        "id:SemanticScholar:c91dc552c5009b8fb7453cebeb7b96a81aaa5809",
+        "title:eafal an edgebased agentic framework for adaptive selection between slms and llms",
+        "url:https://doi.org/10.1109/CCGrid68966.2026.00024"
+      ],
+      "record": {
+        "title": "EAFAL: An Edge-Based Agentic Framework for Adaptive Selection Between SLMs and LLMs",
+        "source_url": "https://doi.org/10.1109/CCGrid68966.2026.00024",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Generative AI increasingly relies on Large Language Models (LLMs), but their high computational and storage demands hinder edge deployment. Small Language Models (SLMs) offer faster, privacy-preserving edge inference but often at the cost of accuracy. Although prior work has explored routing between SLMs and LLMs to balance accuracy and efficiency, many existing approaches fail to jointly consider output quality, response latency, user preferences, and real-time edge resource constraints. Particularly, these methods are complex deep learning based routers that are impractical for resource-limited edge environments. As a solution, EAFAL, an edge-based agentic framework for LLM selection is proposed that jointly optimizes output quality, latency and edge resource usage. EAFAL employs three lightweight agents to achieve this considering both system factors (available memory) and user requirements (expected quality and latency), to select the most suitable SLM or LLM for a given text query prior to inference. Compared to existing approaches, EAFAL achieves more effective SLM and LLM selection while requiring significantly less model selection time $\\left(1.9 \\times 10^{-4} ~\\mathrm{s}\\right)$, improved output quality by 72.71%, reduced memory usage by 34.85%, and maintaining an average latency of 4.62 seconds, demonstrating its suitability for edge-driven AI applications. (https://github.com/manojMadarasingha/EAFL\\#)",
+        "identifiers": [
+          "SemanticScholar:c91dc552c5009b8fb7453cebeb7b96a81aaa5809"
+        ],
+        "semantic_scholar_id": "c91dc552c5009b8fb7453cebeb7b96a81aaa5809",
+        "doi": "10.1109/CCGrid68966.2026.00024",
+        "canonical_id": "DOI:10.1109/CCGrid68966.2026.00024",
+        "authors": [
+          "Chamara Madarasingha",
+          "Prajyot Singh",
+          "Redowan Mahmud",
+          "M. Afrin",
+          "Aneesh Krishna",
+          "S. Kanhere"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 206,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23115",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.23115",
+        "id:SemanticScholar:8a26e94f95e8921f1fc6f2177e201e0b95f8ff26",
+        "id:arXiv:2607.23115",
+        "title:gleam adaptive networkefficient cuda api remoting for crossdevice gpu sharing over lans",
+        "url:https://arxiv.org/abs/2607.23115"
+      ],
+      "record": {
+        "title": "Gleam: Adaptive Network-Efficient CUDA API Remoting for Cross-Device GPU Sharing over LANs",
+        "source_url": "https://arxiv.org/abs/2607.23115",
+        "year": 2026,
+        "published": "2026-07-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper aims to enable computation- and communication-efficient GPU sharing across devices within local area networks (LANs), facilitating ubiquitous AI inference on heterogeneous personal devices. We achieve distributed task offloading via CUDA API remoting. However, beyond raw computation, network constraints emerge as the primary bottleneck: limited bandwidth, high-frequency API invocations, and cross-task contention significantly hinder performance. To address these challenges, we propose Gleam, a novel and network-efficient framework for task-generic GPU sharing across local-area CUDA devices, with three key contributions. First, we reduce bandwidth overhead in CUDA API remoting through automatic model weight caching, and mitigate accumulated latency from frequent API calls by asynchronous execution. Second, we design a runtime task scheduler that dynamically determines API remoting pairs between LAN clients and servers, explicitly accounting for both network conditions and GPU resource contention under parallel workloads. Finally, we introduce dedicated mechanisms to ensure CUDA context consistency across distributed executions. Extensive experiments on heterogeneous NVIDIA GPUs and diverse AI workloads show Gleam consistently outperforms state-of-the-art baselines, achieving 1.4-24.2 times improvements in API remoting efficiency and up to 1.79 times higher system throughput.",
+        "identifiers": [
+          "SemanticScholar:8a26e94f95e8921f1fc6f2177e201e0b95f8ff26"
+        ],
+        "semantic_scholar_id": "8a26e94f95e8921f1fc6f2177e201e0b95f8ff26",
+        "canonical_id": "arXiv:2607.23115",
+        "arxiv_id": "2607.23115",
+        "doi": "10.48550/arXiv.2607.23115",
+        "authors": [
+          "Zhihao Xu",
+          "Hao Zhong",
+          "Ze-Ting Zhou",
+          "Yuhang Xu",
+          "Hao-Yu Tong",
+          "Wei Wang",
+          "Jin-Shan Chen",
+          "Keqiang He",
+          "Chong Zhu",
+          "Sheng-Zhong Liu",
+          "Fan Wu",
+          "Gui-Hai Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37345",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.37345",
+        "id:SemanticScholar:1d9f71f77ddb2cea348265890371c531a1fe4277",
+        "id:arXiv:2609.37345",
+        "title:when to retrieve when to stay uncertaintyaware temporal evidence allocation for streaming videollms",
+        "url:https://arxiv.org/abs/2609.37345"
+      ],
+      "record": {
+        "title": "When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs",
+        "source_url": "https://arxiv.org/abs/2609.37345",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming video understanding requires Video Large Language Models (Video-LLMs) to reason over continuous visual streams under causal constraints. As the visual history grows, a bounded visual?processing budget requires evidence selection that balances temporal recency with query relevance. Recent-only selection excludes potentially relevant historical evidence, whereas Semantic-only retrieval can displace useful recent context when relevance scores are ambiguous. We introduce WRWS (When to Retrieve, When to Stay), a training-free framework for uncertainty-adaptive evidence allocation. A lightweight external vision-language encoder scores query relevance across the observed history, while an adaptive allocation module uses the normalized entropy of the similarity distribution as a proxy for retrieval uncertainty. WRWS favors semantic retrieval when relevance cues are reliable and strengthens the recency prior under uncertainty. Following a retrieve-first, encode-later pipeline, WRWS selects evidence before target-model visual encoding, such that only the selected observations are processed by the costly target Video-LLM. Experiments across four Video-LLM families and multiple model scales demonstrate competitive accuracy on StreamingBench and OVO-Bench. In our efficiency evaluation, WRWS reduces average vision-to-answer time to 47.93% of the state-of-the-art method. Code will be released.",
+        "identifiers": [
+          "SemanticScholar:1d9f71f77ddb2cea348265890371c531a1fe4277"
+        ],
+        "semantic_scholar_id": "1d9f71f77ddb2cea348265890371c531a1fe4277",
+        "canonical_id": "arXiv:2609.37345",
+        "arxiv_id": "2609.37345",
+        "doi": "10.48550/arXiv.2609.37345",
+        "authors": [
+          "Xiang Hu",
+          "Jia-Zuo Yu",
+          "Lu Zhang",
+          "Yun-Zhi Zhuge",
+          "Hu-Chuan Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 55,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.22818",
+      "identity_tokens": [
+        "id:SemanticScholar:c15b96d60f9087d03fcdc8f14a06b49874671820",
+        "id:arXiv:2610.22818",
+        "title:fuserag fusing structure and evidence into inference for costefficient graphbased rag",
+        "url:https://arxiv.org/abs/2610.22818"
+      ],
+      "record": {
+        "title": "FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG",
+        "source_url": "https://arxiv.org/abs/2610.22818",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Graph-based retrieval-augmented generation (RAG) exploits relationships among evidence to support multi-hop question answering. However, conveying retrieved graphs through non-unique linear textual contexts to Large Language Models (LLMs) leads to graph-structure degradation and inefficient KV-cache reuse. Meanwhile, graph-structure order optimization is already NP-hard, and the additional KV-cache reuse objective further complicates the search by introducing potentially conflicting orders. To tackle these issues, we propose FuseRAG, a cost-efficient graph-based RAG framework that shifts most retrieved evidence from explicit textual contexts to latent representations. Our main idea is to separate reusable evidence content from query-aware structural interactions in latent space, while retaining only a few explicit facts as semantic anchors. The resulting latent representations are injected into decoder self-attention, where they reshape attention over evidence and thereby influence hidden states and next-token probabilities. This design preserves graph structure through latent interactions, enables evidence reuse beyond exact token-prefix matching. Experiments on three multi-hop question-answering datasets with Llama-3-8B and Qwen3.5-9B show that FuseRAG improves answer quality while achieving up to 2.7x and 2.2x TTFT speedups over the fastest graph-based baseline, respectively.",
+        "identifiers": [
+          "SemanticScholar:c15b96d60f9087d03fcdc8f14a06b49874671820"
+        ],
+        "semantic_scholar_id": "c15b96d60f9087d03fcdc8f14a06b49874671820",
+        "canonical_id": "arXiv:2610.22818",
+        "arxiv_id": "2610.22818",
+        "authors": [
+          "Ting-Qi Wang",
+          "Ying-Shu Li",
+          "Zhi-Peng Cai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 38,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3772052.3772249",
+      "identity_tokens": [
+        "id:DOI:10.1145/3772052.3772249",
+        "id:SemanticScholar:012d7679dfa1b5e4e1e5f3a65e3a861012ac3c63",
+        "title:compi coordinated model merging and parallel inference at edge",
+        "url:https://doi.org/10.1145/3772052.3772249"
+      ],
+      "record": {
+        "title": "CoMPI: Coordinated Model Merging and Parallel Inference at Edge",
+        "source_url": "https://doi.org/10.1145/3772052.3772249",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": "ACM Symposium on Cloud Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern edge intelligence applications increasingly rely on multiple deep learning models operating under strict latency and memory constraints. However, the limited GPU memory available in edge clusters often leads to costly model switching and frequent SLO violations, particularly under bursty workloads. Several techniques are effective in reducing memory pressure from different aspects: model merging reduces memory usage on individual GPUs by sharing parameters across models, while parallelism reduces memory usage across GPUs by reducing redundant replicas. Since these two techniques operate in orthogonal decision spaces, combining them in edge clusters offers the potential for greater memory efficiency. However, real-world deployments reveal implicit interdependen-cies between them, making independent optimization inadequate for realizing their combined advantages. We present CoMPI, the first framework to jointly optimize model merging and parallel inference in multi-GPU edge clusters. By reducing per-model memory consumption, CoMPI enables the deployment of more replicas across GPUs, enhancing system throughput under bursty workloads and mitigating SLO violations. It performs joint optimization by evaluating the parallelization scheme for each candidate merging scheme and greedily selecting the one that yields the greatest memory savings. To reduce the complexity of the search space, CoMPI employs a Binary Split Tree that recursively partitions candidate merging schemes and uses integer linear programming to compute optimal parallelization schemes. To accommodate dynamic workloads, it further supports runtime replica adjustment without frequent re-optimization. Experimental results demonstrate that CoMPI reduces tail latency by up to 142.7% and improves SLO satisfaction rates by up to 42.3% compared to state-of-the-art methods under real-world conditions. This work is publicly available at https://github.com/bigint405/CoMPI.",
+        "identifiers": [
+          "SemanticScholar:012d7679dfa1b5e4e1e5f3a65e3a861012ac3c63"
+        ],
+        "semantic_scholar_id": "012d7679dfa1b5e4e1e5f3a65e3a861012ac3c63",
+        "doi": "10.1145/3772052.3772249",
+        "canonical_id": "DOI:10.1145/3772052.3772249",
+        "authors": [
+          "Shuang Zeng",
+          "Hai-Tao Zhang",
+          "Ze-Zhong Yan"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 369,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a48835c690768816c83f61d7b84972da2700cd70fe6d1313e35afa371aad239e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

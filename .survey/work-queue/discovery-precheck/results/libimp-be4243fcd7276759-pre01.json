@@ -1,0 +1,690 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-be4243fcd7276759-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-be4243fcd727",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tgcn.2026.3676823",
+    "arXiv:2408.00008",
+    "arXiv:2502.17728",
+    "arXiv:2506.18796",
+    "arXiv:2506.23635",
+    "arXiv:2602.10254",
+    "arXiv:2602.15379"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:38:37.779721+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tgcn.2026.3676823",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.00008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.17728",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.18796",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.23635",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.10254",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.15379",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FlashMem: Supporting Modern DNN Workloads on Mobile with GPU Memory Hierarchy Optimizations",
+      "source_url": "https://arxiv.org/abs/2602.15379",
+      "year": 2026,
+      "published": "2026-02-17",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing size and complexity of modern deep neural networks (DNNs) pose significant challenges for on-device inference on mobile GPUs, with limited memory and computational resources. Existing DNN acceleration frameworks primarily deploy a weight preloading strategy, where all model parameters are loaded into memory before execution on mobile GPUs. We posit that this approach is not adequate for modern DNN workloads that comprise very large model(s) and possibly execution of several distinct models in succession. In this work, we introduce FlashMem, a memory streaming framework designed to efficiently execute large-scale modern DNNs and multi-DNN workloads while minimizing memory consumption and reducing inference latency. Instead of fully preloading weights, FlashMem statically determines model loading schedules and dynamically streams them on demand, leveraging 2.5D texture memory to minimize data transformations and improve execution efficiency. Experimental results on 11 models demonstrate that FlashMem achieves 2.0× to 8.4× memory reduction and 1.7× to 75.0× speedup compared to existing frameworks, enabling efficient execution of large-scale models and multi-DNN support on resource-constrained mobile GPUs.",
+      "identifiers": [
+        "SemanticScholar:e3060274be09eee60a0ad28e0c9e7dea1c86da6c"
+      ],
+      "semantic_scholar_id": "e3060274be09eee60a0ad28e0c9e7dea1c86da6c",
+      "canonical_id": "arXiv:2602.15379",
+      "arxiv_id": "2602.15379",
+      "doi": "10.1145/3779212.3790164",
+      "authors": [
+        "Zhi-Hao Shu",
+        "Md Musfiqur Rahman Sanim",
+        "Han Zheng",
+        "Kun-Xiong Zhu",
+        "Miao Yin",
+        "G. Agrawal",
+        "Wei Niu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ScaleLLM: A Resource-Frugal LLM Serving Framework by Optimizing End-to-End Efficiency",
+      "source_url": "https://arxiv.org/abs/2408.00008",
+      "year": 2024,
+      "published": "2024-07-23",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have surged in popularity and are extensively used in commercial applications, where the efficiency of model serving is crucial for the user experience. Most current research focuses on optimizing individual sub-procedures, e.g. local inference and communication, however, there is no comprehensive framework that provides a holistic system view for optimizing LLM serving in an end-to-end manner. In this work, we conduct a detailed analysis to identify major bottlenecks that impact end-to-end latency in LLM serving systems. Our analysis reveals that a comprehensive LLM serving endpoint must address a series of efficiency bottlenecks that extend beyond LLM inference. We then propose ScaleLLM, an optimized system for resource-efficient LLM serving. Our extensive experiments reveal that reveal that with 64 concurrent requests on Mixtral 8x7B, ScaleLLM achieves a 4.3× speed up over vLLM and outperforms state-of-the-arts with 1.5× higher throughput.",
+      "identifiers": [
+        "SemanticScholar:42e139aec463a1fb2fbfc65bb12c8483263d8527"
+      ],
+      "semantic_scholar_id": "42e139aec463a1fb2fbfc65bb12c8483263d8527",
+      "canonical_id": "arXiv:2408.00008",
+      "arxiv_id": "2408.00008",
+      "doi": "10.48550/arXiv.2408.00008",
+      "authors": [
+        "Yu-Hang Yao",
+        "Han Jin",
+        "A. Shah",
+        "Shan-Shan Han",
+        "Zijian Hu",
+        "Dimitris Stripelis",
+        "Yi-De Ran",
+        "Zhao-Zhuo Xu",
+        "S. Avestimehr",
+        "Chaoyang He"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 853,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Area-Efficient In-Memory Computing for Mixture-of-Experts via Multiplexing and Caching",
+      "source_url": "https://arxiv.org/abs/2602.10254",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) layers activate a subset of model weights, dubbed experts, to improve model performance. MoE is particularly promising for deployment on process-in-memory (PIM) architectures, because PIM can naturally fit experts separately and provide great benefits for energy efficiency. However, PIM chips often suffer from large area overhead, especially in the peripheral circuits. In this paper, we propose an area-efficient in-memory computing architecture for MoE transformers. First, to reduce area, we propose a crossbar-level multiplexing strategy that exploits MoE sparsity: experts are deployed on crossbars and multiple crossbars share the same peripheral circuits. Second, we propose expert grouping and group-wise scheduling methods to alleviate the load imbalance and contention overhead caused by sharing. In addition, to address the problem that the expert choice router requires access to all hidden states during generation, we propose a gate-output (GO) cache to store necessary results and bypass expensive additional computation. Experiments show that our approaches improve the area efficiency of the MoE part by up to 2.2x compared to a SOTA architecture. During generation, the cache improves performance and energy efficiency by 4.2x and 10.1x, respectively, compared to the baseline when generating 8 tokens. The total performance density achieves 15.6 GOPS/W/mm2. The code is open source at https://github.com/superstarghy/MoEwithPIM.",
+      "identifiers": [
+        "SemanticScholar:58587d2cc6384bd2228fd1314c3be8a192314f1d"
+      ],
+      "semantic_scholar_id": "58587d2cc6384bd2228fd1314c3be8a192314f1d",
+      "canonical_id": "arXiv:2602.10254",
+      "arxiv_id": "2602.10254",
+      "doi": "10.1109/ISCAS66217.2026.11562485",
+      "authors": [
+        "Han-Yuan Gao",
+        "Xiao-Xuan Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 286,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM Inference Acceleration via Efficient Operation Fusion",
+      "source_url": "https://arxiv.org/abs/2502.17728",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid development of the Transformer-based Large Language Models (LLMs) in recent years has been closely linked to their ever-growing and already enormous sizes. Many LLMs contain hundreds of billions of parameters and require dedicated hardware resources for training and inference. One of the key challenges inherent to the Transformer architecture is the requirement to support numerous non-linear transformations that involves normalization. For instance, each decoder block typically contains at least one Softmax operation and two Layernorms. The computation of the corresponding normalization scaling factors becomes a major bottleneck as it requires spatial collective operations. In other words, when it comes to the computation of denominators for Softmax and Layernorm, all vector elements must be aggregated into a single location, requiring significant communication. These collective operations slow down inference on Transformers by approximately 20%, defeating the whole purpose of distributed in-memory compute. In this work, we propose an extremely efficient technique that can completely hide the overhead caused by such collective operations. Note that each Softmax and Layernorm operation is typically followed by a linear layer. Since non-linear and linear operations are performed on different hardware engines, they can be easily parallelized once the algebra allows such commutation. By leveraging the inherent properties of linear operations, we can defer the normalization of the preceding Softmax and Layernorm until after the linear layer is computed. Now we can compute the collective scaling factors concurrently with the matrix multiplication and completely hide the latency of the former behind the latter. Such parallelization preserves the numerical accuracy while significantly improving the hardware utilization and reducing the overall latency.",
+      "identifiers": [
+        "SemanticScholar:9ac69faf0e4dbe6cf7c98ff9baf2ea8f1fba583c"
+      ],
+      "semantic_scholar_id": "9ac69faf0e4dbe6cf7c98ff9baf2ea8f1fba583c",
+      "canonical_id": "arXiv:2502.17728",
+      "arxiv_id": "2502.17728",
+      "doi": "10.48550/arXiv.2502.17728",
+      "authors": [
+        "Mahsa Salmani",
+        "I. Soloveychik"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 637,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Building Private LLMs: Exploring Multi-Node Expert Parallelism on Apple Silicon for Mixture-of-Experts Large Language Model",
+      "source_url": "https://arxiv.org/abs/2506.23635",
+      "year": 2024,
+      "published": "2024-11-05",
+      "venue": "Research in Adaptive and Convergent Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized Artificial Intelligence (AI) with significant advancements such as OpenAI's Chat-GPT, Meta's Llama, and Databricks' DBRX. This paper addresses the cost and scalability challenges encountered when constructing private LLM systems for personal or small group services, as aimed by Apple Intelligence. A Mac Studio cluster with Apple's M2 Ultra chips is established as a cost-efficient solution to host and accelerate the pretrained DBRX model with the Mixture-of-Experts (MoE) architecture. Our performance analysis reveal that parallel execution of the model's experts across two to four machine nodes significantly reduces inference time. We find that computation time for the experts is comparable to the communication time for exchanging their outputs, emphasizing the importance of network latency over bandwidth. We also observe significant management overhead due to Apple software stack's memory management logic. Based on these findings, we develop optimization schemes to eliminate the memory management overhead. As a result, the Mac Studio cluster is 1.15 times more cost-efficient than the state-of-the-art AI supercomputer with NVIDIA H100 GPUs. In addition, we construct a performance model to estimate system performance under varying configurations, and the model provides valuable insights for designing private LLM systems.",
+      "identifiers": [
+        "SemanticScholar:a06cd8053b48702f209ffa04c04796939a3465fa"
+      ],
+      "semantic_scholar_id": "a06cd8053b48702f209ffa04c04796939a3465fa",
+      "canonical_id": "arXiv:2506.23635",
+      "arxiv_id": "2506.23635",
+      "doi": "10.1145/3649601.3698722",
+      "authors": [
+        "Mu-Chi Chen",
+        "Po-Hsuan Huang",
+        "Xiangrui Ke",
+        "Chia-Heng Tu",
+        "Jason Xue",
+        "Shih-Hao Hung"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 748,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Context-Aware CodeLLM Eviction for AI-assisted Coding",
+      "source_url": "https://arxiv.org/abs/2506.18796",
+      "year": 2025,
+      "published": "2025-06-23",
+      "venue": "International Conference on Automated Software Engineering",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI-assisted coding tools powered by Code Large Language Models (CodeLLMs) are increasingly integrated into modern software development workflows. To address concerns around privacy, latency, and model customization, many enterprises opt to self-host these models. However, the diversity and growing number of CodeLLMs, coupled with limited accelerator memory, introduce practical challenges in model management and serving efficiency. This paper presents CACE, a novel context-aware model eviction strategy designed specifically to optimize self-hosted CodeLLM serving under resource constraints. Unlike traditional eviction strategies based solely on recency (e.g., Least Recently Used), CACE leverages multiple context-aware factors, including model load time, task-specific latency sensitivity, expected output length, and recent usage and future demand tracked through a sliding window. We evaluate CACE using realistic workloads that include both latency-sensitive code completion and throughput-intensive code reasoning tasks. Our experiments show that CACE reduces Time-to-First-Token (TTFT) by 70% and end-to-end (E2E) latency by 37%, while significantly lowering the number of model evictions by 55% compared to state-of-the-art systems. Ablation studies further demonstrate the importance of multi-factor eviction in balancing responsiveness and resource efficiency. This work contributes practical strategies for deploying scalable, low-latency AI coding assistants in real-world software engineering environments.",
+      "identifiers": [
+        "SemanticScholar:c4db4b09197485893f72fdb210bc96b353d273c7"
+      ],
+      "semantic_scholar_id": "c4db4b09197485893f72fdb210bc96b353d273c7",
+      "canonical_id": "arXiv:2506.18796",
+      "arxiv_id": "2506.18796",
+      "doi": "10.1109/ASE63991.2025.00271",
+      "authors": [
+        "Kishanthan Thangarajah",
+        "Bo-Yuan Chen",
+        "Shi Chang",
+        "Ahmed E. Hassan"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 518,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Game-Based LLM Inference Task Offloading for Edge Computing System",
+      "source_url": "https://doi.org/10.1109/TGCN.2026.3676823",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Green Communications and Networking",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs), with their powerful capabilities, are fundamentally transforming society. Cloud-based LLM deployment has drawbacks, including latency, lack of offline functionality, and high long-term costs. Edge computing-based LLM solutions address these issues by offloading inference tasks to edge servers. This paper formulates and optimizes an LLM inference framework that jointly accounts for inference time and predictive quality. Specifically, to address the natural tendency of selfish users for personal utility maximization, we develop a Game-theoretic Offloading Algorithm (GOALIT) to optimize LLM inference offloading. The approach enables distributed users to iteratively adjust their strategies and converge to a Nash equilibrium. Compared to the optimal tree-based search (OT-GAH), the proposed approach yields a 27% increase in token throughput and shortens inference latency by 20%, while maintaining lower perplexity under dynamic system loads. These findings confirm the effectiveness of our approach in resource-constrained edge environments.",
+      "identifiers": [
+        "SemanticScholar:2fc142003acec775dd5f13400af81f60589c3991"
+      ],
+      "semantic_scholar_id": "2fc142003acec775dd5f13400af81f60589c3991",
+      "doi": "10.1109/TGCN.2026.3676823",
+      "canonical_id": "DOI:10.1109/TGCN.2026.3676823",
+      "authors": [
+        "Shou-Lu Hou",
+        "Min Gan",
+        "Wei Ni",
+        "Zhong-Yi Zhai",
+        "Xiu-Lei Liu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.15379",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790164",
+        "id:SemanticScholar:e3060274be09eee60a0ad28e0c9e7dea1c86da6c",
+        "id:arXiv:2602.15379",
+        "title:flashmem supporting modern dnn workloads on mobile with gpu memory hierarchy optimizations",
+        "url:https://arxiv.org/abs/2602.15379"
+      ],
+      "record": {
+        "title": "FlashMem: Supporting Modern DNN Workloads on Mobile with GPU Memory Hierarchy Optimizations",
+        "source_url": "https://arxiv.org/abs/2602.15379",
+        "year": 2026,
+        "published": "2026-02-17",
+        "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The increasing size and complexity of modern deep neural networks (DNNs) pose significant challenges for on-device inference on mobile GPUs, with limited memory and computational resources. Existing DNN acceleration frameworks primarily deploy a weight preloading strategy, where all model parameters are loaded into memory before execution on mobile GPUs. We posit that this approach is not adequate for modern DNN workloads that comprise very large model(s) and possibly execution of several distinct models in succession. In this work, we introduce FlashMem, a memory streaming framework designed to efficiently execute large-scale modern DNNs and multi-DNN workloads while minimizing memory consumption and reducing inference latency. Instead of fully preloading weights, FlashMem statically determines model loading schedules and dynamically streams them on demand, leveraging 2.5D texture memory to minimize data transformations and improve execution efficiency. Experimental results on 11 models demonstrate that FlashMem achieves 2.0× to 8.4× memory reduction and 1.7× to 75.0× speedup compared to existing frameworks, enabling efficient execution of large-scale models and multi-DNN support on resource-constrained mobile GPUs.",
+        "identifiers": [
+          "SemanticScholar:e3060274be09eee60a0ad28e0c9e7dea1c86da6c"
+        ],
+        "semantic_scholar_id": "e3060274be09eee60a0ad28e0c9e7dea1c86da6c",
+        "canonical_id": "arXiv:2602.15379",
+        "arxiv_id": "2602.15379",
+        "doi": "10.1145/3779212.3790164",
+        "authors": [
+          "Zhi-Hao Shu",
+          "Md Musfiqur Rahman Sanim",
+          "Han Zheng",
+          "Kun-Xiong Zhu",
+          "Miao Yin",
+          "G. Agrawal",
+          "Wei Niu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 279,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.00008",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.00008",
+        "id:SemanticScholar:42e139aec463a1fb2fbfc65bb12c8483263d8527",
+        "id:arXiv:2408.00008",
+        "title:scalellm a resourcefrugal llm serving framework by optimizing endtoend efficiency",
+        "url:https://arxiv.org/abs/2408.00008"
+      ],
+      "record": {
+        "title": "ScaleLLM: A Resource-Frugal LLM Serving Framework by Optimizing End-to-End Efficiency",
+        "source_url": "https://arxiv.org/abs/2408.00008",
+        "year": 2024,
+        "published": "2024-07-23",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have surged in popularity and are extensively used in commercial applications, where the efficiency of model serving is crucial for the user experience. Most current research focuses on optimizing individual sub-procedures, e.g. local inference and communication, however, there is no comprehensive framework that provides a holistic system view for optimizing LLM serving in an end-to-end manner. In this work, we conduct a detailed analysis to identify major bottlenecks that impact end-to-end latency in LLM serving systems. Our analysis reveals that a comprehensive LLM serving endpoint must address a series of efficiency bottlenecks that extend beyond LLM inference. We then propose ScaleLLM, an optimized system for resource-efficient LLM serving. Our extensive experiments reveal that reveal that with 64 concurrent requests on Mixtral 8x7B, ScaleLLM achieves a 4.3× speed up over vLLM and outperforms state-of-the-arts with 1.5× higher throughput.",
+        "identifiers": [
+          "SemanticScholar:42e139aec463a1fb2fbfc65bb12c8483263d8527"
+        ],
+        "semantic_scholar_id": "42e139aec463a1fb2fbfc65bb12c8483263d8527",
+        "canonical_id": "arXiv:2408.00008",
+        "arxiv_id": "2408.00008",
+        "doi": "10.48550/arXiv.2408.00008",
+        "authors": [
+          "Yu-Hang Yao",
+          "Han Jin",
+          "A. Shah",
+          "Shan-Shan Han",
+          "Zijian Hu",
+          "Dimitris Stripelis",
+          "Yi-De Ran",
+          "Zhao-Zhuo Xu",
+          "S. Avestimehr",
+          "Chaoyang He"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 853,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10254",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas66217.2026.11562485",
+        "id:SemanticScholar:58587d2cc6384bd2228fd1314c3be8a192314f1d",
+        "id:arXiv:2602.10254",
+        "title:areaefficient inmemory computing for mixtureofexperts via multiplexing and caching",
+        "url:https://arxiv.org/abs/2602.10254"
+      ],
+      "record": {
+        "title": "Area-Efficient In-Memory Computing for Mixture-of-Experts via Multiplexing and Caching",
+        "source_url": "https://arxiv.org/abs/2602.10254",
+        "year": 2026,
+        "published": "2026-02-10",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) layers activate a subset of model weights, dubbed experts, to improve model performance. MoE is particularly promising for deployment on process-in-memory (PIM) architectures, because PIM can naturally fit experts separately and provide great benefits for energy efficiency. However, PIM chips often suffer from large area overhead, especially in the peripheral circuits. In this paper, we propose an area-efficient in-memory computing architecture for MoE transformers. First, to reduce area, we propose a crossbar-level multiplexing strategy that exploits MoE sparsity: experts are deployed on crossbars and multiple crossbars share the same peripheral circuits. Second, we propose expert grouping and group-wise scheduling methods to alleviate the load imbalance and contention overhead caused by sharing. In addition, to address the problem that the expert choice router requires access to all hidden states during generation, we propose a gate-output (GO) cache to store necessary results and bypass expensive additional computation. Experiments show that our approaches improve the area efficiency of the MoE part by up to 2.2x compared to a SOTA architecture. During generation, the cache improves performance and energy efficiency by 4.2x and 10.1x, respectively, compared to the baseline when generating 8 tokens. The total performance density achieves 15.6 GOPS/W/mm2. The code is open source at https://github.com/superstarghy/MoEwithPIM.",
+        "identifiers": [
+          "SemanticScholar:58587d2cc6384bd2228fd1314c3be8a192314f1d"
+        ],
+        "semantic_scholar_id": "58587d2cc6384bd2228fd1314c3be8a192314f1d",
+        "canonical_id": "arXiv:2602.10254",
+        "arxiv_id": "2602.10254",
+        "doi": "10.1109/ISCAS66217.2026.11562485",
+        "authors": [
+          "Han-Yuan Gao",
+          "Xiao-Xuan Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 286,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.17728",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.17728",
+        "id:SemanticScholar:9ac69faf0e4dbe6cf7c98ff9baf2ea8f1fba583c",
+        "id:arXiv:2502.17728",
+        "title:llm inference acceleration via efficient operation fusion",
+        "url:https://arxiv.org/abs/2502.17728"
+      ],
+      "record": {
+        "title": "LLM Inference Acceleration via Efficient Operation Fusion",
+        "source_url": "https://arxiv.org/abs/2502.17728",
+        "year": 2025,
+        "published": "2025-02-24",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid development of the Transformer-based Large Language Models (LLMs) in recent years has been closely linked to their ever-growing and already enormous sizes. Many LLMs contain hundreds of billions of parameters and require dedicated hardware resources for training and inference. One of the key challenges inherent to the Transformer architecture is the requirement to support numerous non-linear transformations that involves normalization. For instance, each decoder block typically contains at least one Softmax operation and two Layernorms. The computation of the corresponding normalization scaling factors becomes a major bottleneck as it requires spatial collective operations. In other words, when it comes to the computation of denominators for Softmax and Layernorm, all vector elements must be aggregated into a single location, requiring significant communication. These collective operations slow down inference on Transformers by approximately 20%, defeating the whole purpose of distributed in-memory compute. In this work, we propose an extremely efficient technique that can completely hide the overhead caused by such collective operations. Note that each Softmax and Layernorm operation is typically followed by a linear layer. Since non-linear and linear operations are performed on different hardware engines, they can be easily parallelized once the algebra allows such commutation. By leveraging the inherent properties of linear operations, we can defer the normalization of the preceding Softmax and Layernorm until after the linear layer is computed. Now we can compute the collective scaling factors concurrently with the matrix multiplication and completely hide the latency of the former behind the latter. Such parallelization preserves the numerical accuracy while significantly improving the hardware utilization and reducing the overall latency.",
+        "identifiers": [
+          "SemanticScholar:9ac69faf0e4dbe6cf7c98ff9baf2ea8f1fba583c"
+        ],
+        "semantic_scholar_id": "9ac69faf0e4dbe6cf7c98ff9baf2ea8f1fba583c",
+        "canonical_id": "arXiv:2502.17728",
+        "arxiv_id": "2502.17728",
+        "doi": "10.48550/arXiv.2502.17728",
+        "authors": [
+          "Mahsa Salmani",
+          "I. Soloveychik"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 637,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.23635",
+      "identity_tokens": [
+        "id:DOI:10.1145/3649601.3698722",
+        "id:SemanticScholar:a06cd8053b48702f209ffa04c04796939a3465fa",
+        "id:arXiv:2506.23635",
+        "title:towards building private llms exploring multinode expert parallelism on apple silicon for mixtureofexperts large language model",
+        "url:https://arxiv.org/abs/2506.23635"
+      ],
+      "record": {
+        "title": "Towards Building Private LLMs: Exploring Multi-Node Expert Parallelism on Apple Silicon for Mixture-of-Experts Large Language Model",
+        "source_url": "https://arxiv.org/abs/2506.23635",
+        "year": 2024,
+        "published": "2024-11-05",
+        "venue": "Research in Adaptive and Convergent Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have revolutionized Artificial Intelligence (AI) with significant advancements such as OpenAI's Chat-GPT, Meta's Llama, and Databricks' DBRX. This paper addresses the cost and scalability challenges encountered when constructing private LLM systems for personal or small group services, as aimed by Apple Intelligence. A Mac Studio cluster with Apple's M2 Ultra chips is established as a cost-efficient solution to host and accelerate the pretrained DBRX model with the Mixture-of-Experts (MoE) architecture. Our performance analysis reveal that parallel execution of the model's experts across two to four machine nodes significantly reduces inference time. We find that computation time for the experts is comparable to the communication time for exchanging their outputs, emphasizing the importance of network latency over bandwidth. We also observe significant management overhead due to Apple software stack's memory management logic. Based on these findings, we develop optimization schemes to eliminate the memory management overhead. As a result, the Mac Studio cluster is 1.15 times more cost-efficient than the state-of-the-art AI supercomputer with NVIDIA H100 GPUs. In addition, we construct a performance model to estimate system performance under varying configurations, and the model provides valuable insights for designing private LLM systems.",
+        "identifiers": [
+          "SemanticScholar:a06cd8053b48702f209ffa04c04796939a3465fa"
+        ],
+        "semantic_scholar_id": "a06cd8053b48702f209ffa04c04796939a3465fa",
+        "canonical_id": "arXiv:2506.23635",
+        "arxiv_id": "2506.23635",
+        "doi": "10.1145/3649601.3698722",
+        "authors": [
+          "Mu-Chi Chen",
+          "Po-Hsuan Huang",
+          "Xiangrui Ke",
+          "Chia-Heng Tu",
+          "Jason Xue",
+          "Shih-Hao Hung"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 748,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.18796",
+      "identity_tokens": [
+        "id:DOI:10.1109/ase63991.2025.00271",
+        "id:SemanticScholar:c4db4b09197485893f72fdb210bc96b353d273c7",
+        "id:arXiv:2506.18796",
+        "title:contextaware codellm eviction for aiassisted coding",
+        "url:https://arxiv.org/abs/2506.18796"
+      ],
+      "record": {
+        "title": "Context-Aware CodeLLM Eviction for AI-assisted Coding",
+        "source_url": "https://arxiv.org/abs/2506.18796",
+        "year": 2025,
+        "published": "2025-06-23",
+        "venue": "International Conference on Automated Software Engineering",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI-assisted coding tools powered by Code Large Language Models (CodeLLMs) are increasingly integrated into modern software development workflows. To address concerns around privacy, latency, and model customization, many enterprises opt to self-host these models. However, the diversity and growing number of CodeLLMs, coupled with limited accelerator memory, introduce practical challenges in model management and serving efficiency. This paper presents CACE, a novel context-aware model eviction strategy designed specifically to optimize self-hosted CodeLLM serving under resource constraints. Unlike traditional eviction strategies based solely on recency (e.g., Least Recently Used), CACE leverages multiple context-aware factors, including model load time, task-specific latency sensitivity, expected output length, and recent usage and future demand tracked through a sliding window. We evaluate CACE using realistic workloads that include both latency-sensitive code completion and throughput-intensive code reasoning tasks. Our experiments show that CACE reduces Time-to-First-Token (TTFT) by 70% and end-to-end (E2E) latency by 37%, while significantly lowering the number of model evictions by 55% compared to state-of-the-art systems. Ablation studies further demonstrate the importance of multi-factor eviction in balancing responsiveness and resource efficiency. This work contributes practical strategies for deploying scalable, low-latency AI coding assistants in real-world software engineering environments.",
+        "identifiers": [
+          "SemanticScholar:c4db4b09197485893f72fdb210bc96b353d273c7"
+        ],
+        "semantic_scholar_id": "c4db4b09197485893f72fdb210bc96b353d273c7",
+        "canonical_id": "arXiv:2506.18796",
+        "arxiv_id": "2506.18796",
+        "doi": "10.1109/ASE63991.2025.00271",
+        "authors": [
+          "Kishanthan Thangarajah",
+          "Bo-Yuan Chen",
+          "Shi Chang",
+          "Ahmed E. Hassan"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 518,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tgcn.2026.3676823",
+      "identity_tokens": [
+        "id:DOI:10.1109/tgcn.2026.3676823",
+        "id:SemanticScholar:2fc142003acec775dd5f13400af81f60589c3991",
+        "title:gamebased llm inference task offloading for edge computing system",
+        "url:https://doi.org/10.1109/TGCN.2026.3676823"
+      ],
+      "record": {
+        "title": "Game-Based LLM Inference Task Offloading for Edge Computing System",
+        "source_url": "https://doi.org/10.1109/TGCN.2026.3676823",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Green Communications and Networking",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs), with their powerful capabilities, are fundamentally transforming society. Cloud-based LLM deployment has drawbacks, including latency, lack of offline functionality, and high long-term costs. Edge computing-based LLM solutions address these issues by offloading inference tasks to edge servers. This paper formulates and optimizes an LLM inference framework that jointly accounts for inference time and predictive quality. Specifically, to address the natural tendency of selfish users for personal utility maximization, we develop a Game-theoretic Offloading Algorithm (GOALIT) to optimize LLM inference offloading. The approach enables distributed users to iteratively adjust their strategies and converge to a Nash equilibrium. Compared to the optimal tree-based search (OT-GAH), the proposed approach yields a 27% increase in token throughput and shortens inference latency by 20%, while maintaining lower perplexity under dynamic system loads. These findings confirm the effectiveness of our approach in resource-constrained edge environments.",
+        "identifiers": [
+          "SemanticScholar:2fc142003acec775dd5f13400af81f60589c3991"
+        ],
+        "semantic_scholar_id": "2fc142003acec775dd5f13400af81f60589c3991",
+        "doi": "10.1109/TGCN.2026.3676823",
+        "canonical_id": "DOI:10.1109/TGCN.2026.3676823",
+        "authors": [
+          "Shou-Lu Hou",
+          "Min Gan",
+          "Wei Ni",
+          "Zhong-Yi Zhai",
+          "Xiu-Lei Liu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d462803e078b76bde0ce3631348ed21d98d8e1e6a87378f497e97f81002f4415",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

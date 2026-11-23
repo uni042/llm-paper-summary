@@ -1,0 +1,422 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e9b0bebf15d1379c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e9b0bebf15d1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.21837",
+    "arXiv:2604.09752",
+    "arXiv:2608.25332",
+    "arXiv:2610.10118"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:38:40.208654+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.21837",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.09752",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.25332",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10118",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More",
+      "source_url": "https://arxiv.org/abs/2608.25332",
+      "year": 2026,
+      "published": "2026-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have exhibited impressive performance across diverse visual scenarios. However, this success comes at the cost of explosive growth in visual tokens, which imposes substantial memory and computational overhead during inference, ultimately increasing latency. To improve VLM inference efficiency, a typical class of visual token pruning methods estimates token importance by aggregating attention scores across all heads in the pruning layer of the Large Language Model (LLM) backbone and prunes tokens based on aggregated scores. However, in this paper, we reveal a compelling phenomenon: the capability to pinpoint critical visual tokens is concentrated within a small fraction of heads. Aggregation exclusively on these heads can improve task performance. Inspired by this observation, we propose ProViP, a training-free progressive visual token pruning framework. ProViP first removes redundant visual tokens based on the embedding similarity of input tokens before reasoning of the LLM backbone, and then further prunes tokens during reasoning via head-aware pruning. Experiments demonstrate that ProViP delivers outstanding task performance and inference efficiency. For instance, when applied to LLaVA-1.5-7B, ProViP retains 95.9% of the original performance and achieves 1.62x inference speedup under an 88.9% pruning ratio.",
+      "identifiers": [
+        "SemanticScholar:dc22abcf4c66a133510411e0496a1025ec0c2877"
+      ],
+      "semantic_scholar_id": "dc22abcf4c66a133510411e0496a1025ec0c2877",
+      "canonical_id": "arXiv:2608.25332",
+      "arxiv_id": "2608.25332",
+      "doi": "10.48550/arXiv.2608.25332",
+      "authors": [
+        "Chao-Fang Ma",
+        "Lin Jiang",
+        "Carol Jingyi Li",
+        "Xing-Yu Liu",
+        "Ze-Yu Li",
+        "Jiang Xu",
+        "Wei Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 89,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Semantic Agreement Enables Efficient Open-Ended LLM Cascades",
+      "source_url": "https://arxiv.org/abs/2509.21837",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cascade systems route computational requests to smaller models when possible and defer to larger models only when necessary, offering a promising approach to balance cost and quality in LLM deployment. However, they face a fundamental challenge in open-ended text generation: determining output reliability when generation quality lies on a continuous spectrum, often with multiple valid responses. To address this, we propose semantic agreement -- meaning-level consensus between ensemble outputs -- as a training-free signal for reliable deferral. We show that when diverse model outputs agree semantically, their consensus is a stronger reliability signal than token-level confidence. Evaluated from 500M to 70B-parameter models, we find that semantic cascades match or surpass target-model quality at 40% of the cost and reduce latency by up to 60%. Our method requires no model internals, works across black-box APIs, and remains robust to model updates, making it a practical baseline for real-world LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:fdac69372d09285461a8bd2890123a415bba4748"
+      ],
+      "semantic_scholar_id": "fdac69372d09285461a8bd2890123a415bba4748",
+      "canonical_id": "arXiv:2509.21837",
+      "arxiv_id": "2509.21837",
+      "doi": "10.48550/arXiv.2509.21837",
+      "authors": [
+        "Duncan Soiffer",
+        "Steven Kolawole",
+        "Virginia Smith"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 423,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "A-IO: Adaptive Inference Orchestration for Memory-Bound NPUs",
+      "source_url": "https://arxiv.org/abs/2604.09752",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "During the deployment of Large Language Models (LLMs), the autoregressive decoding phase on heterogeneous NPU platforms (e.g., Ascend 910B) faces severe memory-bound challenges. This study reveals the ``Model Scaling Paradox''caused by the static deployment of single-sized models. It also points out the kernel synchronization overhead of fine-grained speculative decoding \\cite{leviathan2023fast, chen2023speculative} under NPU computational graph compilation, and the severe limitations of purely relying on micro-level acceleration algorithms like Prompt LookUp Decoding (PLD)",
+      "identifiers": [
+        "SemanticScholar:473ddc779228a4891d852ecdd3d30c4fc61b89eb"
+      ],
+      "semantic_scholar_id": "473ddc779228a4891d852ecdd3d30c4fc61b89eb",
+      "canonical_id": "arXiv:2604.09752",
+      "arxiv_id": "2604.09752",
+      "doi": "10.48550/arXiv.2604.09752",
+      "authors": [
+        "Chen Zhang",
+        "Yan Ding",
+        "Hao-Tian Wang",
+        "Chu-Bo Liu",
+        "Ke-Qin Li",
+        "Ken-Li Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EdgeRock: Strong Reasoning at Constant Memory",
+      "source_url": "https://arxiv.org/abs/2610.10118",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present EdgeRock, a family of multimodal models that deliver strong reasoning at constant memory. Most models keep reasoning history in a key-value (KV) cache that grows with every token, consuming accelerator memory, limiting concurrent requests, and competing with perception and control on edge devices. With fixed history, memory is allocated once and never runs out, however long the model reasons. Constant memory alone is not new: bounded-state models (recurrent, state-space, and sliding-window) already achieve it, but often at the cost of reasoning, because they cannot keep the distant details that later reasoning needs. We therefore introduce Rock Memory Anchors (RMA): the model learns what is worth remembering and stores it as KV records in a fixed-size bank, directly readable however far back the source lies. EdgeRock-4B, our first open-source release, supports text and image reasoning and reaches 82.9% mean pass@1 on AIME 2024-2026, while the bounded-state models we evaluate reach at most 18.8%, even at 14B scale. This result is on par with leading compact models whose memory grows with reasoning. Compared with its source model, EdgeRock-4B uses up to 99.1% less KV cache and delivers up to 6.42$\\times$ higher end-to-end batch throughput.",
+      "identifiers": [
+        "SemanticScholar:84956a3e515af0aea8b72468821ca92a51142d60"
+      ],
+      "semantic_scholar_id": "84956a3e515af0aea8b72468821ca92a51142d60",
+      "canonical_id": "arXiv:2610.10118",
+      "arxiv_id": "2610.10118",
+      "authors": [
+        "Hui-Shan Ji",
+        "Wei-Min Zhang",
+        "Qi-Rui Ye",
+        "Jin-Chao Xu",
+        "Yi-Ke Guo",
+        "Hua-Qiu Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.25332",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.25332",
+        "id:SemanticScholar:dc22abcf4c66a133510411e0496a1025ec0c2877",
+        "id:arXiv:2608.25332",
+        "title:not all attention heads contribute to critical visual token selection headaware pruning matters more",
+        "url:https://arxiv.org/abs/2608.25332"
+      ],
+      "record": {
+        "title": "Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More",
+        "source_url": "https://arxiv.org/abs/2608.25332",
+        "year": 2026,
+        "published": "2026-08-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have exhibited impressive performance across diverse visual scenarios. However, this success comes at the cost of explosive growth in visual tokens, which imposes substantial memory and computational overhead during inference, ultimately increasing latency. To improve VLM inference efficiency, a typical class of visual token pruning methods estimates token importance by aggregating attention scores across all heads in the pruning layer of the Large Language Model (LLM) backbone and prunes tokens based on aggregated scores. However, in this paper, we reveal a compelling phenomenon: the capability to pinpoint critical visual tokens is concentrated within a small fraction of heads. Aggregation exclusively on these heads can improve task performance. Inspired by this observation, we propose ProViP, a training-free progressive visual token pruning framework. ProViP first removes redundant visual tokens based on the embedding similarity of input tokens before reasoning of the LLM backbone, and then further prunes tokens during reasoning via head-aware pruning. Experiments demonstrate that ProViP delivers outstanding task performance and inference efficiency. For instance, when applied to LLaVA-1.5-7B, ProViP retains 95.9% of the original performance and achieves 1.62x inference speedup under an 88.9% pruning ratio.",
+        "identifiers": [
+          "SemanticScholar:dc22abcf4c66a133510411e0496a1025ec0c2877"
+        ],
+        "semantic_scholar_id": "dc22abcf4c66a133510411e0496a1025ec0c2877",
+        "canonical_id": "arXiv:2608.25332",
+        "arxiv_id": "2608.25332",
+        "doi": "10.48550/arXiv.2608.25332",
+        "authors": [
+          "Chao-Fang Ma",
+          "Lin Jiang",
+          "Carol Jingyi Li",
+          "Xing-Yu Liu",
+          "Ze-Yu Li",
+          "Jiang Xu",
+          "Wei Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 89,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.21837",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.21837",
+        "id:SemanticScholar:fdac69372d09285461a8bd2890123a415bba4748",
+        "id:arXiv:2509.21837",
+        "title:semantic agreement enables efficient openended llm cascades",
+        "url:https://arxiv.org/abs/2509.21837"
+      ],
+      "record": {
+        "title": "Semantic Agreement Enables Efficient Open-Ended LLM Cascades",
+        "source_url": "https://arxiv.org/abs/2509.21837",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cascade systems route computational requests to smaller models when possible and defer to larger models only when necessary, offering a promising approach to balance cost and quality in LLM deployment. However, they face a fundamental challenge in open-ended text generation: determining output reliability when generation quality lies on a continuous spectrum, often with multiple valid responses. To address this, we propose semantic agreement -- meaning-level consensus between ensemble outputs -- as a training-free signal for reliable deferral. We show that when diverse model outputs agree semantically, their consensus is a stronger reliability signal than token-level confidence. Evaluated from 500M to 70B-parameter models, we find that semantic cascades match or surpass target-model quality at 40% of the cost and reduce latency by up to 60%. Our method requires no model internals, works across black-box APIs, and remains robust to model updates, making it a practical baseline for real-world LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:fdac69372d09285461a8bd2890123a415bba4748"
+        ],
+        "semantic_scholar_id": "fdac69372d09285461a8bd2890123a415bba4748",
+        "canonical_id": "arXiv:2509.21837",
+        "arxiv_id": "2509.21837",
+        "doi": "10.48550/arXiv.2509.21837",
+        "authors": [
+          "Duncan Soiffer",
+          "Steven Kolawole",
+          "Virginia Smith"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 423,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.09752",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.09752",
+        "id:SemanticScholar:473ddc779228a4891d852ecdd3d30c4fc61b89eb",
+        "id:arXiv:2604.09752",
+        "title:aio adaptive inference orchestration for memorybound npus",
+        "url:https://arxiv.org/abs/2604.09752"
+      ],
+      "record": {
+        "title": "A-IO: Adaptive Inference Orchestration for Memory-Bound NPUs",
+        "source_url": "https://arxiv.org/abs/2604.09752",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "During the deployment of Large Language Models (LLMs), the autoregressive decoding phase on heterogeneous NPU platforms (e.g., Ascend 910B) faces severe memory-bound challenges. This study reveals the ``Model Scaling Paradox''caused by the static deployment of single-sized models. It also points out the kernel synchronization overhead of fine-grained speculative decoding \\cite{leviathan2023fast, chen2023speculative} under NPU computational graph compilation, and the severe limitations of purely relying on micro-level acceleration algorithms like Prompt LookUp Decoding (PLD)",
+        "identifiers": [
+          "SemanticScholar:473ddc779228a4891d852ecdd3d30c4fc61b89eb"
+        ],
+        "semantic_scholar_id": "473ddc779228a4891d852ecdd3d30c4fc61b89eb",
+        "canonical_id": "arXiv:2604.09752",
+        "arxiv_id": "2604.09752",
+        "doi": "10.48550/arXiv.2604.09752",
+        "authors": [
+          "Chen Zhang",
+          "Yan Ding",
+          "Hao-Tian Wang",
+          "Chu-Bo Liu",
+          "Ke-Qin Li",
+          "Ken-Li Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.10118",
+      "identity_tokens": [
+        "id:SemanticScholar:84956a3e515af0aea8b72468821ca92a51142d60",
+        "id:arXiv:2610.10118",
+        "title:edgerock strong reasoning at constant memory",
+        "url:https://arxiv.org/abs/2610.10118"
+      ],
+      "record": {
+        "title": "EdgeRock: Strong Reasoning at Constant Memory",
+        "source_url": "https://arxiv.org/abs/2610.10118",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present EdgeRock, a family of multimodal models that deliver strong reasoning at constant memory. Most models keep reasoning history in a key-value (KV) cache that grows with every token, consuming accelerator memory, limiting concurrent requests, and competing with perception and control on edge devices. With fixed history, memory is allocated once and never runs out, however long the model reasons. Constant memory alone is not new: bounded-state models (recurrent, state-space, and sliding-window) already achieve it, but often at the cost of reasoning, because they cannot keep the distant details that later reasoning needs. We therefore introduce Rock Memory Anchors (RMA): the model learns what is worth remembering and stores it as KV records in a fixed-size bank, directly readable however far back the source lies. EdgeRock-4B, our first open-source release, supports text and image reasoning and reaches 82.9% mean pass@1 on AIME 2024-2026, while the bounded-state models we evaluate reach at most 18.8%, even at 14B scale. This result is on par with leading compact models whose memory grows with reasoning. Compared with its source model, EdgeRock-4B uses up to 99.1% less KV cache and delivers up to 6.42$\\times$ higher end-to-end batch throughput.",
+        "identifiers": [
+          "SemanticScholar:84956a3e515af0aea8b72468821ca92a51142d60"
+        ],
+        "semantic_scholar_id": "84956a3e515af0aea8b72468821ca92a51142d60",
+        "canonical_id": "arXiv:2610.10118",
+        "arxiv_id": "2610.10118",
+        "authors": [
+          "Hui-Shan Ji",
+          "Wei-Min Zhang",
+          "Qi-Rui Ye",
+          "Jin-Chao Xu",
+          "Yi-Ke Guo",
+          "Hua-Qiu Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e8ac0b027ebe6670598d5e22d1e3bbfcfd0e527e2903460fd9efd786c2ea8c7f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

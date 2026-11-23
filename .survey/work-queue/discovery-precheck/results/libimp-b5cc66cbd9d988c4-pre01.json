@@ -1,0 +1,522 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b5cc66cbd9d988c4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b5cc66cbd9d9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2111.09714",
+    "arXiv:2511.07397",
+    "arXiv:2606.03569",
+    "arXiv:2610.11251",
+    "arXiv:2610.29733"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:39:05.531099+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2111.09714",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.07397",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.03569",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.11251",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.29733",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "When Attention Collapses: Stage-Aware Visual Token Pruning from Structure to Semantics",
+      "source_url": "https://arxiv.org/abs/2606.03569",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable capabilities but suffer from significant computational overhead during inference. While visual token pruning offers a promising solution, existing methods predominantly rely on initial attention scores. This single-metric paradigm presents a critical flaw: high attention scores inherently collapse onto semantically similar regions, thereby severely reducing feature diversity and discarding vital contextual details. To address this, we introduce Structure-to-Semantics (STS), a novel two-stage visual token pruning framework that explicitly decouples the pruning process. The first stage employs a repulsion-based sampling mechanism to maximize spatial and structural diversity. The second stage leverages instruction-aware cross-attention to precisely filter out prompt-irrelevant tokens. This two-stage synergy constitutes the core of STS, first ensuring geometric coverage and then refining the retained tokens according to semantic relevance. Extensive evaluations demonstrate that STS mitigates the redundancy caused by attention-based selection, improving both structural diversity and fine-grained task alignment of the preserved visual tokens.",
+      "identifiers": [
+        "SemanticScholar:63620ae17342d270cc0e01328de8f15726f38637"
+      ],
+      "semantic_scholar_id": "63620ae17342d270cc0e01328de8f15726f38637",
+      "canonical_id": "arXiv:2606.03569",
+      "arxiv_id": "2606.03569",
+      "doi": "10.48550/arXiv.2606.03569",
+      "authors": [
+        "Jia-Hui Wang",
+        "Kai Zhang",
+        "Mai Han",
+        "Huang Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "You Only Sample (Almost) Once: Linear Cost Self-Attention Via Bernoulli Sampling",
+      "source_url": "https://arxiv.org/abs/2111.09714",
+      "year": 2021,
+      "published": "2021-11-18",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models are widely used in natural language processing (NLP). Central to the transformer model is the self-attention mechanism, which captures the interactions of token pairs in the input sequences and depends quadratically on the sequence length. Training such models on longer sequences is expensive. In this paper, we show that a Bernoulli sampling attention mechanism based on Locality Sensitive Hashing (LSH), decreases the quadratic complexity of such models to linear. We bypass the quadratic cost by considering self-attention as a sum of individual tokens associated with Bernoulli random variables that can, in principle, be sampled at once by a single hash (although in practice, this number may be a small constant). This leads to an efficient sampling scheme to estimate self-attention which relies on specific modifications of LSH (to enable deployment on GPU architectures). We evaluate our algorithm on the GLUE benchmark with standard 512 sequence length where we see favorable performance relative to a standard pretrained Transformer. On the Long Range Arena (LRA) benchmark, for evaluating performance on long sequences, our method achieves results consistent with softmax self-attention but with sizable speed-ups and memory savings and often outperforms other efficient self-attention methods. Our code is available at https://github.com/mlpen/YOSO",
+      "identifiers": [
+        "SemanticScholar:f10d9715c1b5e2f07ef5c32fa3231358bdda94b4"
+      ],
+      "semantic_scholar_id": "f10d9715c1b5e2f07ef5c32fa3231358bdda94b4",
+      "canonical_id": "arXiv:2111.09714",
+      "arxiv_id": "2111.09714",
+      "doi": "10.48550/arXiv.2111.09714",
+      "authors": [
+        "Zhanpeng Zeng",
+        "Yunyang Xiong",
+        "S. Ravi",
+        "Shailesh Acharya",
+        "G. Fung",
+        "Vikas Singh"
+      ],
+      "priority": 33,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 33,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1831,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "V-CoLA: Vision Token Compression with Linear Attention",
+      "source_url": "https://arxiv.org/abs/2610.11251",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) have demonstrated impressive capabilities but suffer from substantial computational overhead, as vision tokens dominate the input sequence. This motivates vision token compression as a key direction to alleviate the burden. However, with the emergence of hybrid architectures incorporating linear attention (\\eg, Qwen3.5), prior methods designed for softmax attention struggle to generalize. Our analysis reveals that both attention- and similarity-based approaches suffer notable performance degradation, underscoring the urgent need for compression methods tailored to this regime. To this end, we propose \\textbf{V-CoLA}, an efficient training-free token compression framework specifically designed for linear attention. V-CoLA introduces a novel \\textit{uniqueness-aware importance criterion} for identifying critical vision tokens, coupled with an \\textit{adaptive token merging strategy} that performs compression. All components are optimized at the implementation level to remain compatible with the chunk-wise parallelism of linear attention, ensuring strong practical value. Extensive experiments across multiple benchmarks demonstrate the superiority of V-CoLA: it achieves 99.5\\% of the original performance with only 50.0\\% of vision tokens, and over 88.0\\% with as few as 12.5\\%, while delivering a 1.86$\\times$ to 6.15$\\times$ prefill speedup. Our code is available at https://github.com/alibaba/EfficientRL.",
+      "identifiers": [
+        "SemanticScholar:77d96fa476929906637c578568989d27136cdc50"
+      ],
+      "semantic_scholar_id": "77d96fa476929906637c578568989d27136cdc50",
+      "canonical_id": "arXiv:2610.11251",
+      "arxiv_id": "2610.11251",
+      "doi": "10.18653/2026.emnlp-main.2593",
+      "authors": [
+        "Hao Jiang",
+        "Yi-Ru Mao",
+        "Tian-Peng Bu",
+        "Hao Zhou",
+        "Hong-Tao Duan",
+        "Wang Jing",
+        "Bo-Wen Xu",
+        "Xin Chen",
+        "Lu-Lu Hu",
+        "Bin Yang",
+        "Yong-Liang Tao",
+        "Min-Ying Zhang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents",
+      "source_url": "https://arxiv.org/abs/2511.07397",
+      "year": 2025,
+      "published": "2025-11-10",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Voice agents face a fundamental tension: the reasoning, retrieval, and tool use that make foundation models capable are iterative and slow, while conversational interaction demands responses on a millisecond timescale. Smaller, real-time models meet the latency bar but cannot match foundation models on complex tasks, leaving current voice agents to trade away either responsiveness or capability. We introduce conversational infill, where a small talker model both immediately generates contextually grounded responses to hide the latency of an external reasoner model and fluently integrates streamed reasoner knowledge into its responses during inference. We curate a 290,571-example synthetic dataset spanning six domains and demonstrate that this task is learnable across seven widely used small language models ranging from 135M to 1.7B parameters. Our system implementation, ConvFill, sustains millisecond-level time-to-first-response while closing the accuracy gap to within 6.3% of the corresponding frontier reasoner performance. In a live user study (n=18) with talker deployments running on an Apple M2 SoC, participants rank ConvFill on par with frontier models overall, prefer it for retrieval-heavy tasks, and rate it significantly more responsive. These results show that conversational infill unlocks a new point on the latency-capability Pareto frontier, offering a practical path toward voice agents that are both responsive and highly capable. Code, models, and datasets are available at https://github.com/vysri/conversational-infill.",
+      "identifiers": [
+        "SemanticScholar:b1832fd7c8dbf3ca498b1714b9668a2b33a3044b"
+      ],
+      "semantic_scholar_id": "b1832fd7c8dbf3ca498b1714b9668a2b33a3044b",
+      "canonical_id": "arXiv:2511.07397",
+      "arxiv_id": "2511.07397",
+      "doi": "10.18653/2026.findings-emnlp.1371",
+      "authors": [
+        "Vidya Srinivas",
+        "Zachary Englhardt",
+        "Vikram Iyer",
+        "Shwetak N. Patel"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 378,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "SAKURA: Serving Attention Key-Value State Under Rate Adaptation for Private Image Editing on Phones",
+      "source_url": "https://arxiv.org/abs/2610.29733",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion transformers are widely used in image-editing services. To preserve both efficiency and privacy, existing systems commonly rely on cloud-device collaboration. Keeping request-specific inference on the device avoids sending personal images and prompts to the cloud. These workloads often use common templates, such as in face swapping and virtual try-on, enabling KV state to be precomputed and reused across requests. However, this reusable state is large and scales with the number of templates, making it impractical to store all of them on mobile devices. Storing them in the cloud addresses this capacity issue, but cache transfer is placed onto the inference path and can even be slower than on-device computation, especially under fluctuating mobile networks. We introduce SAKURA, a cloud-edge architecture that delivers reusable attention state to mobile devices under a bandwidth budget. It first uses a fine-grained token-importance-aware compression method to preserve image quality under limited transfer budgets. At runtime, SAKURA adaptively selects the cache representation for each upcoming shard based on network bandwidth. To enable efficient execution, we develop a pipelined runtime that overlaps cache transfer and reconstruction with on-device execution. We evaluate SAKURA using three editing tasks and two diffusion models, using a Snapdragon 8 Elite Gen 5 phone. SAKURA reduces latency by 1.82x and 3.27x over CacheGen adapted to DiT and on-device generation, respectively. It also reduces cache storage by 3.06x over uncompressed cache, while preserving image quality.",
+      "identifiers": [
+        "SemanticScholar:0206747761e425e6d2971320881fbe4cb76b5601"
+      ],
+      "semantic_scholar_id": "0206747761e425e6d2971320881fbe4cb76b5601",
+      "canonical_id": "arXiv:2610.29733",
+      "arxiv_id": "2610.29733",
+      "authors": [
+        "Shun-Cheng Jie",
+        "De-Sen Sun",
+        "Ri Hong",
+        "Yu-Yang Tian",
+        "Hong Zhang",
+        "Si-Hang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.03569",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.03569",
+        "id:SemanticScholar:63620ae17342d270cc0e01328de8f15726f38637",
+        "id:arXiv:2606.03569",
+        "title:when attention collapses stageaware visual token pruning from structure to semantics",
+        "url:https://arxiv.org/abs/2606.03569"
+      ],
+      "record": {
+        "title": "When Attention Collapses: Stage-Aware Visual Token Pruning from Structure to Semantics",
+        "source_url": "https://arxiv.org/abs/2606.03569",
+        "year": 2026,
+        "published": "2026-06-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable capabilities but suffer from significant computational overhead during inference. While visual token pruning offers a promising solution, existing methods predominantly rely on initial attention scores. This single-metric paradigm presents a critical flaw: high attention scores inherently collapse onto semantically similar regions, thereby severely reducing feature diversity and discarding vital contextual details. To address this, we introduce Structure-to-Semantics (STS), a novel two-stage visual token pruning framework that explicitly decouples the pruning process. The first stage employs a repulsion-based sampling mechanism to maximize spatial and structural diversity. The second stage leverages instruction-aware cross-attention to precisely filter out prompt-irrelevant tokens. This two-stage synergy constitutes the core of STS, first ensuring geometric coverage and then refining the retained tokens according to semantic relevance. Extensive evaluations demonstrate that STS mitigates the redundancy caused by attention-based selection, improving both structural diversity and fine-grained task alignment of the preserved visual tokens.",
+        "identifiers": [
+          "SemanticScholar:63620ae17342d270cc0e01328de8f15726f38637"
+        ],
+        "semantic_scholar_id": "63620ae17342d270cc0e01328de8f15726f38637",
+        "canonical_id": "arXiv:2606.03569",
+        "arxiv_id": "2606.03569",
+        "doi": "10.48550/arXiv.2606.03569",
+        "authors": [
+          "Jia-Hui Wang",
+          "Kai Zhang",
+          "Mai Han",
+          "Huang Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2111.09714",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2111.09714",
+        "id:SemanticScholar:f10d9715c1b5e2f07ef5c32fa3231358bdda94b4",
+        "id:arXiv:2111.09714",
+        "title:you only sample almost once linear cost selfattention via bernoulli sampling",
+        "url:https://arxiv.org/abs/2111.09714"
+      ],
+      "record": {
+        "title": "You Only Sample (Almost) Once: Linear Cost Self-Attention Via Bernoulli Sampling",
+        "source_url": "https://arxiv.org/abs/2111.09714",
+        "year": 2021,
+        "published": "2021-11-18",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 23,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models are widely used in natural language processing (NLP). Central to the transformer model is the self-attention mechanism, which captures the interactions of token pairs in the input sequences and depends quadratically on the sequence length. Training such models on longer sequences is expensive. In this paper, we show that a Bernoulli sampling attention mechanism based on Locality Sensitive Hashing (LSH), decreases the quadratic complexity of such models to linear. We bypass the quadratic cost by considering self-attention as a sum of individual tokens associated with Bernoulli random variables that can, in principle, be sampled at once by a single hash (although in practice, this number may be a small constant). This leads to an efficient sampling scheme to estimate self-attention which relies on specific modifications of LSH (to enable deployment on GPU architectures). We evaluate our algorithm on the GLUE benchmark with standard 512 sequence length where we see favorable performance relative to a standard pretrained Transformer. On the Long Range Arena (LRA) benchmark, for evaluating performance on long sequences, our method achieves results consistent with softmax self-attention but with sizable speed-ups and memory savings and often outperforms other efficient self-attention methods. Our code is available at https://github.com/mlpen/YOSO",
+        "identifiers": [
+          "SemanticScholar:f10d9715c1b5e2f07ef5c32fa3231358bdda94b4"
+        ],
+        "semantic_scholar_id": "f10d9715c1b5e2f07ef5c32fa3231358bdda94b4",
+        "canonical_id": "arXiv:2111.09714",
+        "arxiv_id": "2111.09714",
+        "doi": "10.48550/arXiv.2111.09714",
+        "authors": [
+          "Zhanpeng Zeng",
+          "Yunyang Xiong",
+          "S. Ravi",
+          "Shailesh Acharya",
+          "G. Fung",
+          "Vikas Singh"
+        ],
+        "priority": 33,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 23,
+          "citation_count": 23,
+          "total": 33,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1831,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.11251",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.2593",
+        "id:SemanticScholar:77d96fa476929906637c578568989d27136cdc50",
+        "id:arXiv:2610.11251",
+        "title:vcola vision token compression with linear attention",
+        "url:https://arxiv.org/abs/2610.11251"
+      ],
+      "record": {
+        "title": "V-CoLA: Vision Token Compression with Linear Attention",
+        "source_url": "https://arxiv.org/abs/2610.11251",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models (VLMs) have demonstrated impressive capabilities but suffer from substantial computational overhead, as vision tokens dominate the input sequence. This motivates vision token compression as a key direction to alleviate the burden. However, with the emergence of hybrid architectures incorporating linear attention (\\eg, Qwen3.5), prior methods designed for softmax attention struggle to generalize. Our analysis reveals that both attention- and similarity-based approaches suffer notable performance degradation, underscoring the urgent need for compression methods tailored to this regime. To this end, we propose \\textbf{V-CoLA}, an efficient training-free token compression framework specifically designed for linear attention. V-CoLA introduces a novel \\textit{uniqueness-aware importance criterion} for identifying critical vision tokens, coupled with an \\textit{adaptive token merging strategy} that performs compression. All components are optimized at the implementation level to remain compatible with the chunk-wise parallelism of linear attention, ensuring strong practical value. Extensive experiments across multiple benchmarks demonstrate the superiority of V-CoLA: it achieves 99.5\\% of the original performance with only 50.0\\% of vision tokens, and over 88.0\\% with as few as 12.5\\%, while delivering a 1.86$\\times$ to 6.15$\\times$ prefill speedup. Our code is available at https://github.com/alibaba/EfficientRL.",
+        "identifiers": [
+          "SemanticScholar:77d96fa476929906637c578568989d27136cdc50"
+        ],
+        "semantic_scholar_id": "77d96fa476929906637c578568989d27136cdc50",
+        "canonical_id": "arXiv:2610.11251",
+        "arxiv_id": "2610.11251",
+        "doi": "10.18653/2026.emnlp-main.2593",
+        "authors": [
+          "Hao Jiang",
+          "Yi-Ru Mao",
+          "Tian-Peng Bu",
+          "Hao Zhou",
+          "Hong-Tao Duan",
+          "Wang Jing",
+          "Bo-Wen Xu",
+          "Xin Chen",
+          "Lu-Lu Hu",
+          "Bin Yang",
+          "Yong-Liang Tao",
+          "Min-Ying Zhang"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.07397",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.findings-emnlp.1371",
+        "id:SemanticScholar:b1832fd7c8dbf3ca498b1714b9668a2b33a3044b",
+        "id:arXiv:2511.07397",
+        "title:thinking while speaking inferencetime knowledge transfer for responsive and intelligent conversational voice agents",
+        "url:https://arxiv.org/abs/2511.07397"
+      ],
+      "record": {
+        "title": "Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents",
+        "source_url": "https://arxiv.org/abs/2511.07397",
+        "year": 2025,
+        "published": "2025-11-10",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Voice agents face a fundamental tension: the reasoning, retrieval, and tool use that make foundation models capable are iterative and slow, while conversational interaction demands responses on a millisecond timescale. Smaller, real-time models meet the latency bar but cannot match foundation models on complex tasks, leaving current voice agents to trade away either responsiveness or capability. We introduce conversational infill, where a small talker model both immediately generates contextually grounded responses to hide the latency of an external reasoner model and fluently integrates streamed reasoner knowledge into its responses during inference. We curate a 290,571-example synthetic dataset spanning six domains and demonstrate that this task is learnable across seven widely used small language models ranging from 135M to 1.7B parameters. Our system implementation, ConvFill, sustains millisecond-level time-to-first-response while closing the accuracy gap to within 6.3% of the corresponding frontier reasoner performance. In a live user study (n=18) with talker deployments running on an Apple M2 SoC, participants rank ConvFill on par with frontier models overall, prefer it for retrieval-heavy tasks, and rate it significantly more responsive. These results show that conversational infill unlocks a new point on the latency-capability Pareto frontier, offering a practical path toward voice agents that are both responsive and highly capable. Code, models, and datasets are available at https://github.com/vysri/conversational-infill.",
+        "identifiers": [
+          "SemanticScholar:b1832fd7c8dbf3ca498b1714b9668a2b33a3044b"
+        ],
+        "semantic_scholar_id": "b1832fd7c8dbf3ca498b1714b9668a2b33a3044b",
+        "canonical_id": "arXiv:2511.07397",
+        "arxiv_id": "2511.07397",
+        "doi": "10.18653/2026.findings-emnlp.1371",
+        "authors": [
+          "Vidya Srinivas",
+          "Zachary Englhardt",
+          "Vikram Iyer",
+          "Shwetak N. Patel"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 378,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.29733",
+      "identity_tokens": [
+        "id:SemanticScholar:0206747761e425e6d2971320881fbe4cb76b5601",
+        "id:arXiv:2610.29733",
+        "title:sakura serving attention keyvalue state under rate adaptation for private image editing on phones",
+        "url:https://arxiv.org/abs/2610.29733"
+      ],
+      "record": {
+        "title": "SAKURA: Serving Attention Key-Value State Under Rate Adaptation for Private Image Editing on Phones",
+        "source_url": "https://arxiv.org/abs/2610.29733",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion transformers are widely used in image-editing services. To preserve both efficiency and privacy, existing systems commonly rely on cloud-device collaboration. Keeping request-specific inference on the device avoids sending personal images and prompts to the cloud. These workloads often use common templates, such as in face swapping and virtual try-on, enabling KV state to be precomputed and reused across requests. However, this reusable state is large and scales with the number of templates, making it impractical to store all of them on mobile devices. Storing them in the cloud addresses this capacity issue, but cache transfer is placed onto the inference path and can even be slower than on-device computation, especially under fluctuating mobile networks. We introduce SAKURA, a cloud-edge architecture that delivers reusable attention state to mobile devices under a bandwidth budget. It first uses a fine-grained token-importance-aware compression method to preserve image quality under limited transfer budgets. At runtime, SAKURA adaptively selects the cache representation for each upcoming shard based on network bandwidth. To enable efficient execution, we develop a pipelined runtime that overlaps cache transfer and reconstruction with on-device execution. We evaluate SAKURA using three editing tasks and two diffusion models, using a Snapdragon 8 Elite Gen 5 phone. SAKURA reduces latency by 1.82x and 3.27x over CacheGen adapted to DiT and on-device generation, respectively. It also reduces cache storage by 3.06x over uncompressed cache, while preserving image quality.",
+        "identifiers": [
+          "SemanticScholar:0206747761e425e6d2971320881fbe4cb76b5601"
+        ],
+        "semantic_scholar_id": "0206747761e425e6d2971320881fbe4cb76b5601",
+        "canonical_id": "arXiv:2610.29733",
+        "arxiv_id": "2610.29733",
+        "authors": [
+          "Shun-Cheng Jie",
+          "De-Sen Sun",
+          "Ri Hong",
+          "Yu-Yang Tian",
+          "Hong Zhang",
+          "Si-Hang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:55501a5bfe787679615c46d8d8131ceeba2a8d7e7080c723dda1026cdaec90fe",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

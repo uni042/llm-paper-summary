@@ -1,0 +1,239 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-453b4885237848e0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-453b48852378",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2507.14715",
+    "arXiv:2609.39277"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:39:05.187803+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2507.14715",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39277",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+      "source_url": "https://arxiv.org/abs/2609.39277",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped models reason by applying the same block of weights many times, so compressing that block saves memory traffic on every loop. Compressed looped models, however, often collapse, and the collapse is usually blamed on rounding error that accumulates from loop to loop. In this work we test that account on more than 30 models from five families and find, to our surprise, that it holds only for loops that never settle. When a loop settles, a fixed rounding error does not accumulate. It moves the point where the loop settles, much as tilting a bowl moves where a ball comes to rest, and the answer is lost only when the shift is larger than the readout tolerates. This picture lets us predict which models fail from a single label-free measurement, and it tells us why failed models recover: their loops still settle, so a few final loops with 8-bit weights bring the answer back. Motivated by these findings, we build a controller that stops when the model's halting head fires and then finishes with 8-bit loops. On Sudoku-Extreme and Maze-Hard it beats fixed-depth inference by up to 15 points under a third of the weight traffic.",
+      "identifiers": [
+        "SemanticScholar:e841d2d4f32175b3b11870b26ad5cc2b78fe9fc1"
+      ],
+      "semantic_scholar_id": "e841d2d4f32175b3b11870b26ad5cc2b78fe9fc1",
+      "canonical_id": "arXiv:2609.39277",
+      "arxiv_id": "2609.39277",
+      "doi": "10.48550/arXiv.2609.39277",
+      "authors": [
+        "Steven Kolawole",
+        "Pearse Jim",
+        "O. M. Busoye",
+        "G. Bagai",
+        "Virginia Smith"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exploring the Dynamic Scheduling Space of Real-Time Generative AI Applications on Emerging Heterogeneous Systems",
+      "source_url": "https://arxiv.org/abs/2507.14715",
+      "year": 2025,
+      "published": "2025-07-19",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of generative AI models, particularly large language models (LLMs), into real-time multi-model AI applications such as video conferencing and gaming is giving rise to a new class of workloads: real-time generative AI (RTGen). These workloads combine the compute intensity and dynamic execution patterns of generative models with the stringent latency and concurrency constraints of real-time inference. To meet the diverse demands of RTGen workloads, modern edge platforms increasingly adopt heterogeneous system-on-chip (SoC) architectures that integrate CPUs, GPUs, and NPUs. Despite the potential of heterogeneous SoC, the scheduling space complexity and performance implications of RTGen workloads on such platforms remain underexplored. In this work, we perform a comprehensive characterization of RTGen workloads on AMD's latest heterogeneous SoC, Ryzen AI. We construct realistic multi-model scenarios inspired by industry use cases and profile model performance across all available backends. Using this data, we evaluate five scheduling policies and their impact on both real-time metrics (e.g., deadline violation rate) and LLM performance (e.g., time-to-first-token and tokens-per-second). Our results show that scheduling decisions significantly affect workload performance (e.g., leading to a 41.7% difference in deadline violation rates on average), and highlight the need for scheduling strategies that are aware of workload dynamics and hardware heterogeneity. Our findings underscore the importance of workload-aware, dynamic heterogeneous scheduling in enabling high-performance, on-device RTGen applications.",
+      "identifiers": [
+        "SemanticScholar:1d0d3f40728491e4f53d67b6d11411ae4f4171d8"
+      ],
+      "semantic_scholar_id": "1d0d3f40728491e4f53d67b6d11411ae4f4171d8",
+      "canonical_id": "arXiv:2507.14715",
+      "arxiv_id": "2507.14715",
+      "doi": "10.48550/arXiv.2507.14715",
+      "authors": [
+        "Rachid Karami",
+        "Rajeev Patwari",
+        "Hyoukjun Kwon",
+        "Ashish Sirasao"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 492,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.39277",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.39277",
+        "id:SemanticScholar:e841d2d4f32175b3b11870b26ad5cc2b78fe9fc1",
+        "id:arXiv:2609.39277",
+        "title:a tilted bowl is not a slippery slope compressing looped models",
+        "url:https://arxiv.org/abs/2609.39277"
+      ],
+      "record": {
+        "title": "A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models",
+        "source_url": "https://arxiv.org/abs/2609.39277",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped models reason by applying the same block of weights many times, so compressing that block saves memory traffic on every loop. Compressed looped models, however, often collapse, and the collapse is usually blamed on rounding error that accumulates from loop to loop. In this work we test that account on more than 30 models from five families and find, to our surprise, that it holds only for loops that never settle. When a loop settles, a fixed rounding error does not accumulate. It moves the point where the loop settles, much as tilting a bowl moves where a ball comes to rest, and the answer is lost only when the shift is larger than the readout tolerates. This picture lets us predict which models fail from a single label-free measurement, and it tells us why failed models recover: their loops still settle, so a few final loops with 8-bit weights bring the answer back. Motivated by these findings, we build a controller that stops when the model's halting head fires and then finishes with 8-bit loops. On Sudoku-Extreme and Maze-Hard it beats fixed-depth inference by up to 15 points under a third of the weight traffic.",
+        "identifiers": [
+          "SemanticScholar:e841d2d4f32175b3b11870b26ad5cc2b78fe9fc1"
+        ],
+        "semantic_scholar_id": "e841d2d4f32175b3b11870b26ad5cc2b78fe9fc1",
+        "canonical_id": "arXiv:2609.39277",
+        "arxiv_id": "2609.39277",
+        "doi": "10.48550/arXiv.2609.39277",
+        "authors": [
+          "Steven Kolawole",
+          "Pearse Jim",
+          "O. M. Busoye",
+          "G. Bagai",
+          "Virginia Smith"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.14715",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.14715",
+        "id:SemanticScholar:1d0d3f40728491e4f53d67b6d11411ae4f4171d8",
+        "id:arXiv:2507.14715",
+        "title:exploring the dynamic scheduling space of realtime generative ai applications on emerging heterogeneous systems",
+        "url:https://arxiv.org/abs/2507.14715"
+      ],
+      "record": {
+        "title": "Exploring the Dynamic Scheduling Space of Real-Time Generative AI Applications on Emerging Heterogeneous Systems",
+        "source_url": "https://arxiv.org/abs/2507.14715",
+        "year": 2025,
+        "published": "2025-07-19",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of generative AI models, particularly large language models (LLMs), into real-time multi-model AI applications such as video conferencing and gaming is giving rise to a new class of workloads: real-time generative AI (RTGen). These workloads combine the compute intensity and dynamic execution patterns of generative models with the stringent latency and concurrency constraints of real-time inference. To meet the diverse demands of RTGen workloads, modern edge platforms increasingly adopt heterogeneous system-on-chip (SoC) architectures that integrate CPUs, GPUs, and NPUs. Despite the potential of heterogeneous SoC, the scheduling space complexity and performance implications of RTGen workloads on such platforms remain underexplored. In this work, we perform a comprehensive characterization of RTGen workloads on AMD's latest heterogeneous SoC, Ryzen AI. We construct realistic multi-model scenarios inspired by industry use cases and profile model performance across all available backends. Using this data, we evaluate five scheduling policies and their impact on both real-time metrics (e.g., deadline violation rate) and LLM performance (e.g., time-to-first-token and tokens-per-second). Our results show that scheduling decisions significantly affect workload performance (e.g., leading to a 41.7% difference in deadline violation rates on average), and highlight the need for scheduling strategies that are aware of workload dynamics and hardware heterogeneity. Our findings underscore the importance of workload-aware, dynamic heterogeneous scheduling in enabling high-performance, on-device RTGen applications.",
+        "identifiers": [
+          "SemanticScholar:1d0d3f40728491e4f53d67b6d11411ae4f4171d8"
+        ],
+        "semantic_scholar_id": "1d0d3f40728491e4f53d67b6d11411ae4f4171d8",
+        "canonical_id": "arXiv:2507.14715",
+        "arxiv_id": "2507.14715",
+        "doi": "10.48550/arXiv.2507.14715",
+        "authors": [
+          "Rachid Karami",
+          "Rajeev Patwari",
+          "Hyoukjun Kwon",
+          "Ashish Sirasao"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 492,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:65cfa5ddb8fa1d878e3cc93c610cb0b2a0b91b207a36020ec03017d4dfba68d2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

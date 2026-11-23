@@ -1,0 +1,241 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3b4214f5ab07cf70-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3b4214f5ab07",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isscc49663.2026.11409105",
+    "arXiv:2602.22457",
+    "arXiv:2610.16003"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "733ffd07081443c1a7f0f3572f72a550176267cb",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T15:38:49.009804+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isscc49663.2026.11409105",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.22457",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3797905.3807846"
+    },
+    {
+      "requested_id": "arXiv:2610.16003",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "31.7 LUT-SSM: A 99.3TFLOPS/W LUT-Based State-Space Model Accelerator Using Energy-Efficient Element-Wise Layer Fusion and LUT-Friendly Weight-Only Quantization",
+      "source_url": "https://doi.org/10.1109/ISSCC49663.2026.11409105",
+      "year": 2026,
+      "published": "2026-02-15",
+      "venue": "IEEE International Solid-State Circuits Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space models (SSMs) and weight-only quantization alleviate huge external memory access with a minimal accuracy degradation. To support both efficiently, we propose LUTSSM, a LUT-based SSM accelerator with a many-to-many LUT-ACC and an element-wise (EW) layer fusion. LUT-SSM efficiently supports INT-FP GEMM and sequential EW operations in the SSM blocks. Fabricated in 28nm FD-SOI, LUT-SSM achieves 99.3TFLOPS/W peak efficiency and 96.1TFLOPS/W on Mamba 1.4B, improving energy efficiency by $1.28 \\times$ over recent designs.",
+      "identifiers": [
+        "SemanticScholar:c48c61886d73a2f9a4d068583ce4bdb7dc7717b1"
+      ],
+      "semantic_scholar_id": "c48c61886d73a2f9a4d068583ce4bdb7dc7717b1",
+      "doi": "10.1109/ISSCC49663.2026.11409105",
+      "canonical_id": "DOI:10.1109/ISSCC49663.2026.11409105",
+      "authors": [
+        "S. Yoo",
+        "D. Kam",
+        "Gunho Park",
+        "Soonhyun Kwon",
+        "Dongsoo Lee",
+        "Youngjoo Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 281,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PAIR: Memory-Efficient and Fast Inference with Reading--Reasoning Fusion",
+      "source_url": "https://arxiv.org/abs/2610.16003",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For context-based question answering, using one large model for both evidence extraction and answer reasoning requires substantial memory and computation. Existing approaches trade accuracy for efficiency within a single model only. We propose a multi-model approach for efficient inference: our method, PAIR, employs two differently sized models for evidence extraction and answer reasoning, respectively. A smaller Reader model processes and retains the full context, while a larger Reasoner model sees only the question and generated sequence without directly attending to the context. These capabilities are fused at the logit level: at each token, both Reader and Reasoner produce a prediction, and their logits are combined into one, behaving as a single next-token-prediction model. Fine-tuning further boosts their performance. On HotpotQA, PAIR with a 32B Reasoner retains 96% of that same 32B model's full-context accuracy while using roughly one quarter of its KV memory. At 45.7K-token contexts, PAIR achieves up to 3.2$\\times$ higher end-to-end throughput than the full-context 32B model on the same GPU. PAIR also improves the accuracy-memory and accuracy-throughput trade-offs over evaluated token-reduction baselines. Its accuracy-preserving behavior generalizes across Qwen2.5, OLMo-3, and Gemma-3 model families.",
+      "identifiers": [
+        "SemanticScholar:53811bafb45602b66d47fe4128bb58f13351b8f8"
+      ],
+      "semantic_scholar_id": "53811bafb45602b66d47fe4128bb58f13351b8f8",
+      "canonical_id": "arXiv:2610.16003",
+      "arxiv_id": "2610.16003",
+      "authors": [
+        "Sejun Park",
+        "Hao-Chen Xia",
+        "Yongjoo Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isscc49663.2026.11409105",
+      "identity_tokens": [
+        "id:DOI:10.1109/isscc49663.2026.11409105",
+        "id:SemanticScholar:c48c61886d73a2f9a4d068583ce4bdb7dc7717b1",
+        "title:317 lutssm a 993tflopsw lutbased statespace model accelerator using energyefficient elementwise layer fusion and lutfriendly weightonly quantization",
+        "url:https://doi.org/10.1109/ISSCC49663.2026.11409105"
+      ],
+      "record": {
+        "title": "31.7 LUT-SSM: A 99.3TFLOPS/W LUT-Based State-Space Model Accelerator Using Energy-Efficient Element-Wise Layer Fusion and LUT-Friendly Weight-Only Quantization",
+        "source_url": "https://doi.org/10.1109/ISSCC49663.2026.11409105",
+        "year": 2026,
+        "published": "2026-02-15",
+        "venue": "IEEE International Solid-State Circuits Conference",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-space models (SSMs) and weight-only quantization alleviate huge external memory access with a minimal accuracy degradation. To support both efficiently, we propose LUTSSM, a LUT-based SSM accelerator with a many-to-many LUT-ACC and an element-wise (EW) layer fusion. LUT-SSM efficiently supports INT-FP GEMM and sequential EW operations in the SSM blocks. Fabricated in 28nm FD-SOI, LUT-SSM achieves 99.3TFLOPS/W peak efficiency and 96.1TFLOPS/W on Mamba 1.4B, improving energy efficiency by $1.28 \\times$ over recent designs.",
+        "identifiers": [
+          "SemanticScholar:c48c61886d73a2f9a4d068583ce4bdb7dc7717b1"
+        ],
+        "semantic_scholar_id": "c48c61886d73a2f9a4d068583ce4bdb7dc7717b1",
+        "doi": "10.1109/ISSCC49663.2026.11409105",
+        "canonical_id": "DOI:10.1109/ISSCC49663.2026.11409105",
+        "authors": [
+          "S. Yoo",
+          "D. Kam",
+          "Gunho Park",
+          "Soonhyun Kwon",
+          "Dongsoo Lee",
+          "Youngjoo Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 281,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.16003",
+      "identity_tokens": [
+        "id:SemanticScholar:53811bafb45602b66d47fe4128bb58f13351b8f8",
+        "id:arXiv:2610.16003",
+        "title:pair memoryefficient and fast inference with readingreasoning fusion",
+        "url:https://arxiv.org/abs/2610.16003"
+      ],
+      "record": {
+        "title": "PAIR: Memory-Efficient and Fast Inference with Reading--Reasoning Fusion",
+        "source_url": "https://arxiv.org/abs/2610.16003",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For context-based question answering, using one large model for both evidence extraction and answer reasoning requires substantial memory and computation. Existing approaches trade accuracy for efficiency within a single model only. We propose a multi-model approach for efficient inference: our method, PAIR, employs two differently sized models for evidence extraction and answer reasoning, respectively. A smaller Reader model processes and retains the full context, while a larger Reasoner model sees only the question and generated sequence without directly attending to the context. These capabilities are fused at the logit level: at each token, both Reader and Reasoner produce a prediction, and their logits are combined into one, behaving as a single next-token-prediction model. Fine-tuning further boosts their performance. On HotpotQA, PAIR with a 32B Reasoner retains 96% of that same 32B model's full-context accuracy while using roughly one quarter of its KV memory. At 45.7K-token contexts, PAIR achieves up to 3.2$\\times$ higher end-to-end throughput than the full-context 32B model on the same GPU. PAIR also improves the accuracy-memory and accuracy-throughput trade-offs over evaluated token-reduction baselines. Its accuracy-preserving behavior generalizes across Qwen2.5, OLMo-3, and Gemma-3 model families.",
+        "identifiers": [
+          "SemanticScholar:53811bafb45602b66d47fe4128bb58f13351b8f8"
+        ],
+        "semantic_scholar_id": "53811bafb45602b66d47fe4128bb58f13351b8f8",
+        "canonical_id": "arXiv:2610.16003",
+        "arxiv_id": "2610.16003",
+        "authors": [
+          "Sejun Park",
+          "Hao-Chen Xia",
+          "Yongjoo Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 42,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:44e1b99c94015d4af58cf961dcbf43a9054ca19f50f42f5e59c28630a85d29f7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
