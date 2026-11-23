@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-23 19:38:07 JST**
+> 自動生成: **2026-11-23 19:45:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1378** |
 | 直近24hのResearch処理完了 | **59** |
 | 最終Research処理完了 | **11-22 23:55:00 JST** |
-| 最終Discovery探索完了 | **11-23 19:00:00 JST** |
+| 最終Discovery探索完了 | **11-23 19:45:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-23 13:06:21 JST（6時間31分前）** |
+| 最終maintenance完了 | **11-23 13:06:21 JST（6時間39分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **52** |
-| 直近6hのDiscovery本文確認・分類 | **780** |
+| 直近6hのDiscovery run | **60** |
+| 直近6hのDiscovery本文確認・分類 | **900** |
 | 最終Research完了 | **11-22 23:55:00 JST** |
-| 最終Discovery完了 | **11-23 19:00:00 JST** |
+| 最終Discovery完了 | **11-23 19:45:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-22 23:55:00 JST** / worker — / run muse-20261122-f1 / 成果 **9件**
   - evidence: .survey/import-inbox/results/research/0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json
-- Discovery: **11-23 19:00:00 JST** / worker muse / run muse-20261123-d49::chunk-0001-of-0002
-  - 本文確認・分類 **20件** / accept **7件** / unrelated+borderline **13件**
-  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261123-1630-muse-d49--chunk-0001-of-0002.json
+- Discovery: **11-23 19:45:00 JST** / worker muse / run muse-20261123-n01::chunk-0001-of-0002
+  - 本文確認・分類 **20件** / accept **5件** / unrelated+borderline **15件**
+  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261123-1930-muse-n01--chunk-0001-of-0002.json
 
 ### Codex探索成果の反映状況
 
