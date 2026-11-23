@@ -35,10 +35,15 @@
   "selection_reason": "プリフィル専用の主経路とデコード時のみ有効化する分岐を分離し単一KVキャッシュを共有することで、LLMサービングのプリフィルとデコードの費用配分を直接最適化する。",
   "semantic_scholar_id": "c4234bace133f53eae22ec30e47d3411806ac156",
   "source_url": "https://arxiv.org/abs/2608.12385",
-  "status": "ready",
+  "status": "superseded",
   "title": "Decode-Branch Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T15:57:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.12385-dual-flow-transformers-decoupling-the-primary-prefill-path-from-addition.md",
+  "represented_canonical_id": "arXiv:2608.12385",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

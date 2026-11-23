@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "44c44a66279e2db8831213cfd68087437c4266ea",
+  "base_commit": "34d801942b22c459d01c0a80e723c76f99ebc19a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -553,6 +553,7 @@
     "2026-2605.10414-remember-to-forget-gated-adaptive-positional-encoding.json",
     "2026-2605.10905-tlx-hardware-native-evolvable-mimw-gpu-compiler-for-large-scale-production-environments.json",
     "2026-2605.10980-leap-unlocking-dllm-parallelism-via-lookahead-early-convergence-token-detection.json",
+    "2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.json",
     "2026-2605.11577-bitlm-unlocking-multi-token-language-generation-with-bitwise-continuous-diffusion.json",
     "2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimodal-large-language-models.json",
     "2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.json",
@@ -595,6 +596,7 @@
     "2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-in-gui-vision-language-models.json",
     "2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compression.json",
     "2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted-recovery.json",
+    "2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-llm-compression.json",
     "2026-2606.03014-mosaic-efficient-mixture-of-agent-scheduling-via-adaptive-aggregation-and-inference-concurrency.json",
     "2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-reasoning.json",
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
@@ -626,6 +628,7 @@
     "2026-2606.20474-ultraquant-4-bit-kv-caching-for-context-heavy-agents.json",
     "2026-2606.21023-demystifying-numerical-instability-in-llm-inference-achieving-reproducible-inference-for-mission-critical-tasks-with-hea.json",
     "2026-2606.21428-does-mixture-of-experts-actually-help-inference-on-consumer-and-edge-hardware-an-empirical-study.json",
+    "2026-2606.21847-unirank-unified-rank-allocation-for-low-rank-llm-compression.json",
     "2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-inference.json",
     "2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-api-serving.json",
     "2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffusion.json",
@@ -658,6 +661,7 @@
     "2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.json",
     "2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.json",
     "2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardware-aware.json",
+    "2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.json",
     "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json",
     "2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-inference-on-amd-s-xdna-npu.json",
     "2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.json",
@@ -725,6 +729,7 @@
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-language-models.json",
     "2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-llm-agent.json",
+    "2026-2608.12385-decode-branch-transformers-decoupling-the-primary-prefill-path-from-additional-decode-computation.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
     "2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transport.json",
     "2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-streaming-vlms.json",
@@ -49944,6 +49949,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2605.11317": {
+      "order": [
+        "2026-11-23T15:52:57+00:00",
+        "2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.02559": {
+      "order": [
+        "2026-11-23T15:53:42+00:00",
+        "2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.21847": {
+      "order": [
+        "2026-11-23T15:54:28+00:00",
+        "2026-2606.21847-unirank-unified-rank-allocation-for-low-rank-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.08779": {
+      "order": [
+        "2026-11-23T15:55:14+00:00",
+        "2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.12385": {
+      "order": [
+        "2026-11-23T15:55:59+00:00",
+        "2026-2608.12385-decode-branch-transformers-decoupling-the-primary-prefill-path-from-additional-decode-computation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63173,6 +63223,21 @@
     "arxiv:2603.11603": [
       "papers/inference/99-other-inference-systems/2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.md",
       "papers/inference/99-other-inference-systems/2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.md"
+    ],
+    "arxiv:2605.11317": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.md"
+    ],
+    "arxiv:2606.02559": [
+      "papers/inference/99-other-inference-systems/2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-ll.md"
+    ],
+    "arxiv:2606.21847": [
+      "papers/inference/99-other-inference-systems/2026-2606.21847-unirank-unified-rank-allocation-for-low-rank-llm-compression.md"
+    ],
+    "arxiv:2607.08779": [
+      "papers/inference/99-other-inference-systems/2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.md"
+    ],
+    "arxiv:2608.12385": [
+      "papers/inference/99-other-inference-systems/2026-2608.12385-dual-flow-transformers-decoupling-the-primary-prefill-path-from-addition.md"
     ]
   }
 }

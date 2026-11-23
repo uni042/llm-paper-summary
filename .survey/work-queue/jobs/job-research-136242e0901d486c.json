@@ -35,10 +35,15 @@
   "selection_reason": "SOMAはマルチターンLLMサービングで全対話履歴を毎ターン連結するコストを対象に、序盤ターンで局所応答多様体を推定して小さい代替モデルへLoRAで適応させ、ゲートによる一度限りの切り替えとロールバックで遅延・メモリ・API費用を削減するサービング手法である。",
   "semantic_scholar_id": "5f05f03cec63def6db6137b9b4b047a8957b049b",
   "source_url": "https://arxiv.org/abs/2605.11317",
-  "status": "ready",
+  "status": "superseded",
   "title": "SOMA: Efficient Multi-turn LLM Serving via Small Language Model",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T15:57:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.md",
+  "represented_canonical_id": "arXiv:2605.11317",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

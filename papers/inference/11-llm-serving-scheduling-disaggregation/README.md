@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（613本）
+## 自動生成の論文一覧（614本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1233,6 +1233,10 @@
 - **2026-05 · [Threshold-Based Exclusive Batching for LLM Inference](2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.md)**  
   実装：[✓](https://github.com/weifang231/eb-vllm) ・ リポジトリ内被引用：0  
   プリフィルとデコードを混ぜるか分けるかの優劣はメモリ帯域で反転することを実測と理論で示し、交差条件としきい値を閉形式で与えた研究。帯域制約のある加速器で最大41.9パーセントのスループット改善、切替型は非定常条件でも最大36.4パーセント上回った。
+
+- **2026-05 · [SOMA: Efficient Multi-turn LLM Serving via Small Language Model](2026-2605.11317-soma-efficient-multi-turn-llm-serving-via-small-language-model.md)**  
+  実装：[✓](https://github.com/LabRAI/SOMA) ・ リポジトリ内被引用：0  
+  会話の序盤を大規模モデルで処理して局所的な応答の振る舞いを掘り出し、小規模な代替モデルへLoRAで移してから切り替えることで、応答類似度を平均93.1まで保ちながら長い会話ほど提供費用を下げる多ターン提供の枠組み。
 
 - **2026-05 · [RW-TTT: Batched Serving for Request-Owned Test-Time Training State](2026-2605.28053-rw-ttt-batched-serving-for-request-owned-test-time-training-state.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1334本）
+## 自動生成の論文一覧（1338本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -863,6 +863,10 @@
 - **2026-02 · [Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization](2026-2602.24059-quant-experts-token-aware-adaptive-error-reconstruction-with-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   画像・テキストを統合処理するVision-Language モデル（VLM）を低ビットで推論する際、量子化された重み行列と活性値の積には誤差が生じる。
+
+- **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
+  実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：1  
+  本研究は大規模言語モデルの層を丸ごと削る深さ方向の枝刈り（層 枝刈り）が、分類課題と生成型推論課題で異なる品質低下を起こす原因を調べる。主な実験では、層の約25%を除去し、元モデルが生成した回答を教師にして再学習する。
 
 - **2026-02 · [Neural Attention Search Linear: Towards Adaptive Token-Level Hybrid Attention Models](2026-2602.03681-neural-attention-search-linear-towards-adaptive-token-level-hybrid-atten.md)**  
   実装：[✓](https://github.com/automl/NeuralAttentionSearchLinear) ・ リポジトリ内被引用：1  
@@ -1806,6 +1810,10 @@
   実装：[✓](https://github.com/google-coral/coralnpu（ベースコア）。eNPUの改変実装・シミュレータの公開URLは一次資料に記載なし。) ・ リポジトリ内被引用：0  
   eNPUは、演算器・SRAM・HBM・接続を別電圧周波数領域に分け、非同期転送と演算子別計画をSLO余裕で切替えて、NPUサービングの非ボトルネック電力を落とす。
 
+- **2026-07 · [Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation](2026-2608.12385-dual-flow-transformers-decoupling-the-primary-prefill-path-from-addition.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  主フローだけがプロンプトとKVを担い補助フローは続きだけを厚くする二流化で、検証損失の漸近値を2.9416から2.9013へ下げ、専門家の段階別配分を可能にする。
+
 - **2026-07 · [CXL-CCL: Inter-Node Collective GPU-Communication Using a CXL Shared Memory Pool](2026-fab14a584908-cxl-ccl-inter-node-collective-gpu-communication-using-a-cxl-shared-memory-pool.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CXL共有メモリをノード間GPU集団通信の媒体として使い、データ配置・細粒度重畳・ドアベル同期でRDMA型通信に対する性能とコストを改善する。
@@ -1850,6 +1858,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   グラフ上のランダムウォークで並列開示の誤差を条件付き依存として分離測定し、エントロピー基準が構造依存で一様に最適でないことを示した上で、分離子を開示する二分サンプラーで対数ステップの厳密な並列生成を実現するマスク拡散の研究。
 
+- **2026-06 · [UniRank: Unified Rank Allocation for Low-Rank LLM Compression](2026-2606.21847-unirank-unified-rank-allocation-for-low-rank-llm-compression.md)**  
+  実装：[✓](https://github.com/EIT-NLP/LLM-Pruning) ・ リポジトリ内被引用：0  
+  全行列の特異成分を層の機能的重要度と特異エネルギーで統一採点して予算まで貪欲に残し、再分解なしの微調整を組み合わせることで、微調整なし圧縮のパープレキシティを分解法横断で最大約6割下げる低ランク圧縮のランク配分法。
+
 - **2026-06 · [Understanding Evaluation Illusion in Diffusion Large Language Models](2026-2606.29228-understanding-evaluation-illusion-in-diffusion-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は新しい復号器の提案ではなく、既存の復号方式を同じ条件で比較するための評価方法論の研究である。結果は、少し異なるテンプレートを使うだけで方式間の優劣が逆転し、単一テンプレートで測った「品質を維持した高速化」が再現しない場合があるというものだった。
@@ -1885,6 +1897,10 @@
 - **2026-06 · [Skip a Layer or Loop It? Learning Program-of-Layers in LLMs](2026-2606.06574-skip-a-layer-or-loop-it-learning-program-of-layers-in-llms.md)**  
   実装：[✓](https://github.com/tianyi-lab/PoLar) ・ リポジトリ内被引用：0  
   本論文は、学習済みの各層を関数とみなし、その呼出し順と回数を入力に応じて変える「層プログラム（Program-of-Layers; PoLar）」を提案する。Qwen1.5-MoE-A2.7B-Chatの24層を対象にした実測では、予測器・埋め込み器・候補探索を含む追加費用は合計3.05ミリ秒、通常の全層実行の0.8%だった。
+
+- **2026-06 · [Signed Symmetric Quantization for Few-Bit Integers](2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対称量子化のスケールの符号をグループごとに選び、余分な整数水準を支配的な外れ値側へ回すことで、ゼロ点なしのまま切り捨て誤差を減らし、2ビットでパープレキシティを103.1から17.8へ改善する。
 
 - **2026-06 · [Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data](2026-2606.04238-recover-lora-for-aggressive-quantization-reclaiming-accuracy-in-2-bit-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1965,6 +1981,10 @@
 - **2026-06 · [HMPO: Hybrid Median-length Policy Optimization for Chain-of-Thought Compression](2026-2606.01934-hmpo-hybrid-median-length-policy-optimization-for-chain-of-thought-compr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   思考連鎖の圧縮を単一ステージの強化学習で実現するため、正解生成の長さの中央値を適応予算とし、余弦減衰のトークン報酬と正解優先の乗算型報酬を組み合わせ、9Bから122Bで精度をほぼ保ち19から46パーセントのトークン圧縮を示した研究。
+
+- **2026-06 · [From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression](2026-2606.02559-from-layers-to-submodules-rethinking-granularity-in-replacement-based-ll.md)**  
+  実装：[✓](https://github.com/eliacunegatti/SubFit) ・ リポジトリ内被引用：0  
+  層単位で連続範囲を置換する従来の圧縮を、注意とフィードフォワードのサブモジュール単位で非連続に選び分ける方式へ変え、疎性25パーセントで精度保持84.6パーセントとパープレキシティ悪化2.42倍を両立する置換型圧縮。
 
 - **2026-06 · [Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs](2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-.md)**  
   実装：[✓](https://github.com/Junzhou-Chen/ST_Merge) ・ リポジトリ内被引用：0  
@@ -2789,10 +2809,6 @@
 - **2026-02 · [Phase transitions in large language model compression](2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md)**  
   実装：[✓](https://github.com/whucs21Mzy/Model-Phase-Transitions) ・ リポジトリ内被引用：0  
   LLMのモデルサイズを削減する方法には、重みを低ビットへ丸める量子化、重要度の低い構造や重みを削除する枝刈り、重み行列を小さい行列の積で近似する低ランク分解がある。代表例はLLaMA-2-7Bの3ビット量子化、35%の非構造的枝刈り、5%の低ランク分解を組み合わせた構成である。
-
-- **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
-  実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：0  
-  本研究は大規模言語モデルの層を丸ごと削る深さ方向の枝刈り（層 枝刈り）が、分類課題と生成型推論課題で異なる品質低下を起こす原因を調べる。主な実験では、層の約25%を除去し、元モデルが生成した回答を教師にして再学習する。
 
 - **2026-02 · [On the Importance of a Multi-Scale Calibration for Quantization](2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3732,6 +3748,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   GATEKEEPERは、軽量な小型モデルと高精度だが高価な大型モデルを組み合わせる二段推論カスケードに対して、小型モデルの確信度そのものを委譲判断に適した形へ学習し直す方式である。評価は正答率と委譲率の曲線を主軸としており、実サービング基盤におけるGPU処理量や末尾遅延の改善を直接測ったものではない。
 
+- **2025-02 · [DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights](2025-2501.18596-deltallm-compress-llms-with-low-rank-deltas-between-shared-weights.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  提案は単なる重みの複製ではない。Phi-3.5由来のDeltaPhi 3.35Bは3.8Bから約12%のパラメータ削減で、原著Table 1の5課題平均が0.66から0.59となる。
+
 - **2025-01 · [TreeKV: Smooth Key-Value Cache Compression with Tree Structures](2025-2501.04987-treekv-smooth-key-value-cache-compression-with-tree-structures.md)**  
   実装：[✓](https://github.com/ZiweiHe/TreeKV) ・ リポジトリ内被引用：1  
   過去KVの一部だけを残す方法は以前からあるが、単純な「先頭と末尾の固定窓」は中間の重要情報を落とし、注意重みが大きいものを全履歴から貪欲に選ぶ方式は特定領域へ保持位置が偏りやすい。
@@ -4355,10 +4375,6 @@
 - **2025-02 · [DSMoE: Matrix-Partitioned Experts with Dynamic Routing for Computation-Efficient Dense LLMs](2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   事前学習済み密モデルのFFN行列を分割してエキスパート化し、入力に応じて活性化するエキスパート数を動的に変えることで、知識を削除せずに計算量を削減する手法の研究。
-
-- **2025-02 · [DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights](2025-2501.18596-deltallm-compress-llms-with-low-rank-deltas-between-shared-weights.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  提案は単なる重みの複製ではない。Phi-3.5由来のDeltaPhi 3.35Bは3.8Bから約12%のパラメータ削減で、原著Table 1の5課題平均が0.66から0.59となる。
 
 - **2025-02 · [CopySpec: Accelerating LLMs with Speculative Copy-and-Paste](2025-2502.08923-copyspec-accelerating-llms-with-speculative-copy-and-paste.md)**  
   実装：[✓](https://github.com/RazvanDu/CopySpec) ・ リポジトリ内被引用：0  
