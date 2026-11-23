@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9b0bebf15d1379c-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.08120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.08120",
+    "identity_tokens": [
+      "arXiv:2604.08120"
+    ],
+    "reason": "小規模VLMを長尺動画理解の圧縮器として使うと題するが、OpenAlexに要旨が登録されておらず一次要旨を取得できなかったため、トークン圧縮の機構や推論効率への効果を確認できず保留とする。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Small Vision-Language Models are Smart Compressors for Long Video Understanding"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9b0bebf15d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

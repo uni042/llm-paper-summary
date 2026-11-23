@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b493490eaf1e8db-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.08873",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.08873",
+    "identity_tokens": [
+      "arXiv:2510.08873"
+    ],
+    "reason": "チップレットとアクセラレータの協調設計で演算子レベルの異種性を活かした特注ASICを構成し、データセンター推論サービングから自動運転エッジまでを対象とする。しかしLLM推論固有の機構ではなく、ニューラル演算一般のハードウェア設計枠組みにとどまる。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mozart: A Chiplet Ecosystem-Accelerator Codesign Framework for Composable Bespoke Application Specific Integrated Circuits"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b493490eaf1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

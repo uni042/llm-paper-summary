@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a59bfb1ac0c759a-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icassp55912.2026.11460451",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icassp55912.2026.11460451",
+    "identity_tokens": [
+      "DOI:10.1109/icassp55912.2026.11460451"
+    ],
+    "reason": "TRACEは多段質問応答で信頼度が低い場合のみ検索を発動し冗長な推論を抑えてトークン消費を削減するが、主目的は検索拡張QAの精度と効率の両立という応用手法であり推論基盤への貢献は限定的である。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TRACE: Optimizing Multi-Hop Question Answering via Confidence-Guided Retrieval Assimilation"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a59bfb1ac0c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

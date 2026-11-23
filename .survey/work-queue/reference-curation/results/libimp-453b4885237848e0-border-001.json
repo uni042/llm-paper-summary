@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-453b4885237848e0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.10494",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.10494",
+    "identity_tokens": [
+      "arXiv:2510.10494"
+    ],
+    "reason": "推論過程の潜在表現の時間変化から成功しそうな推論トレースを予測し無駄な計算を減らす信号を提案するが、対象は回答選択の指針であり推論サービング機構自体ではない。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tracing the Traces: Latent Temporal Signals for Efficient and Accurate Reasoning"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-453b48852378",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96cc1bcaad2f2864-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.14188",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.14188",
+    "identity_tokens": [
+      "arXiv:2310.14188"
+    ],
+    "reason": "softmaxゲーティングを持つ多項ロジスティックMoEについて密度・パラメータ推定の収束率を与える統計理論であり、回帰・分類一般の理論でLLM推論機構への貢献はない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A General Theory for Softmax Gating Multinomial Logistic Mixture of Experts"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cc1bcaad2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

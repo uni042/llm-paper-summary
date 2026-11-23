@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b4214f5ab07cf70-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tpami.2022.3231971",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tpami.2022.3231971",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2022.3231971"
+    ],
+    "reason": "3次多項式の枠組みで自己注意を線形複雑度化する演算子を提案し計算量削減を示すが、対象は非局所ブロックを含む汎用視覚系注意でありLLM推論での検証や機構は要旨で確認できない。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Linear Complexity Self-Attention With <inline-formula><tex-math notation=\"LaTeX\">$3{\\mathrm{rd}}$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>3</mml:mn><mml:mi> rd </mml:mi></mml:mrow></mml:math><inline-graphic xlink:href=\"babiloni-ieq1-3231971.gif\"/></alternatives></inline-formula> Order Po"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b4214f5ab07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

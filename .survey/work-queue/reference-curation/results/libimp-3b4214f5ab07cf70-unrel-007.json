@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b4214f5ab07cf70-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.24210",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.24210",
+    "identity_tokens": [
+      "arXiv:2602.24210"
+    ],
+    "reason": "推論モデルの推論トレースに漏れる私的情報をSFTデータで制御する研究であり、対象はプライバシーと追従性の制御で推論システムへの技術貢献はない。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From Leaky Thoughts to Private Reasoning: Controlling What LRMs Say to Themselves"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b4214f5ab07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

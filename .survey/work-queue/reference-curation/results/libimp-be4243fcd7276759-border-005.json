@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be4243fcd7276759-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:ea6881b73b1fe2189aef24c8deda79ab6db59b59",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:ea6881b73b1fe2189aef24c8deda79ab6db59b59",
+    "identity_tokens": [
+      "SemanticScholar:ea6881b73b1fe2189aef24c8deda79ab6db59b59"
+    ],
+    "reason": "事前学習済みモデルから再学習なしでElastic ViTを構成する手法とみられるが、Semantic Scholarが429で要旨を取得できず、LLM推論への貢献を確認できない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UvA-DARE (Digital Academic Repository) Elastic ViTs from Pretrained Models without Retraining"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be4243fcd727",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

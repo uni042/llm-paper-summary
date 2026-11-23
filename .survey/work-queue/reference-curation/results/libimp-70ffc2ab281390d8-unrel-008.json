@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70ffc2ab281390d8-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.14587",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.14587",
+    "identity_tokens": [
+      "arXiv:2310.14587"
+    ],
+    "reason": "検索スタック全体を単一LLMの自己回帰生成として再定義するLarge Search Modelの概念枠組みであり、検索応用の再構成であって推論システムへの技術貢献はない。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Large Search Model: Redefining Search Stack in the Era of LLMs"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70ffc2ab2813",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

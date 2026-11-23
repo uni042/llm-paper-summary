@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-954af33662c0a490-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.07628",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.07628",
+    "identity_tokens": [
+      "arXiv:2604.07628"
+    ],
+    "reason": "TrilinearCIMはDG-FeFETによる3オペランド演算でTransformer注意を不揮発メモリ内で実行しエネルギーと遅延を下げるCIMアーキテクチャだが、評価対象はBERT-baseとViT-baseでありLLM推論アクセラレータとしての効果が確認できないため保留する。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Trilinear Compute-in-Memory Architecture for Energy-Efficient Transformer Acceleration"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-954af33662c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

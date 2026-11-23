@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9b0bebf15d1379c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.27881",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.27881",
+    "identity_tokens": [
+      "arXiv:2608.27881"
+    ],
+    "reason": "ストリーミング動画理解向けに履歴メモリを自己進化させ計算削減を図るStreamEMSで、メモリ表現の再構成が中心であり、VLM動画理解という応用主目的に対する推論機構の直接貢献は限定的である。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "StreamEMS: Streaming Video Understanding with Self-Evolving Memory Scheme for Vision-Language Models"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9b0bebf15d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

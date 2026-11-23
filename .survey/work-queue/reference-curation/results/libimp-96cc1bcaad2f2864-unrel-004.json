@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96cc1bcaad2f2864-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.21079",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.21079",
+    "identity_tokens": [
+      "arXiv:2505.21079"
+    ],
+    "reason": "マルチビュー画像・点群・ボクセル等の3DモダリティをMoEで融合する3Dシーン理解MLLM Uni3D-MoEであり、3D理解という応用が主目的で推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Uni3D-MoE: Scalable Multimodal 3D Scene Understanding via Mixture of Experts"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cc1bcaad2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

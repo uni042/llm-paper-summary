@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b4214f5ab07cf70-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2608.06503",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2608.06503",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2608.06503",
+      "arXiv:2608.06503"
+    ],
+    "reason": "長ホライズンエージェントの再帰的文脈圧縮が実行不安定性を招くことを実証し検証器誘導のTRACEを提案する研究で、文脈圧縮には関わるが焦点は圧縮の信頼性評価であり推論効率の機構貢献は薄い。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Toward Reliable Context Compression for Long-Horizon Agents: An Empirical Study of Execution Instability"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b4214f5ab07",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

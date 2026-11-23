@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e222cc00d878ebc9-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:161f734370b15e4a6edf0e6db8850889f21be6a0",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:161f734370b15e4a6edf0e6db8850889f21be6a0",
+    "identity_tokens": [
+      "SemanticScholar:161f734370b15e4a6edf0e6db8850889f21be6a0"
+    ],
+    "reason": "MA-BERTは複雑な非線形関数を排除し行列演算のみのBERT推論を目指すと題するが、一次要旨が提供されず（出版社により省略）機構の詳細を確認できなかった。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MA-BERT: Towards Matrix Arithmetic-only BERT Inference by Eliminating Complex Non-Linear Functions"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e222cc00d878",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

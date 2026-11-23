@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70ffc2ab281390d8-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:197362094a0864eeca2537b23eb35bfc7ae25e03",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:197362094a0864eeca2537b23eb35bfc7ae25e03",
+    "identity_tokens": [
+      "SemanticScholar:197362094a0864eeca2537b23eb35bfc7ae25e03"
+    ],
+    "reason": "LLMデータシステムの物理設計空間を扱う題目で推論基盤と関連し得るが、一次要旨を取得できず機構や貢献の具体性を確認できなかった。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Expanding the Physical Design Space of LLM Data Systems"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70ffc2ab2813",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

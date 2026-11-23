@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ac3cf6a0d840ae5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.18459",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.18459",
+    "identity_tokens": [
+      "arXiv:2604.18459"
+    ],
+    "reason": "オンライン動画理解で証拠出現時刻に合わせ応答するATDMと階層的意味統合HPSIによる効率的メモリを提案するが、主目的はストリーミング動画理解のタイミングと透明性であり推論システムへの貢献は動画エージェント内のメモリ効率に限られる。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Progressive Online Video Understanding with Evidence-Aligned Timing and Transparent Decisions"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ac3cf6a0d84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

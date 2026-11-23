@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70ffc2ab281390d8-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:84a27f61a31213220b9f88670469ab31d5498a9f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:84a27f61a31213220b9f88670469ab31d5498a9f",
+    "identity_tokens": [
+      "SemanticScholar:84a27f61a31213220b9f88670469ab31d5498a9f"
+    ],
+    "reason": "巨大言語モデル時代の軽量モデル開発・デプロイに関する経験論文とみられるが、一次要旨を取得できず推論効率化への具体的貢献を確認できなかった。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Lesson learned on how to develop and deploy light-weight models in the era of humongous Language Models"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70ffc2ab2813",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

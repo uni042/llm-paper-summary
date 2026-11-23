@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e1199989bfcafb1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.02622",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.02622",
+    "identity_tokens": [
+      "arXiv:2402.02622"
+    ],
+    "reason": "Transformerブロック後に深さ重み付き平均を加えて情報流とパープレシティを改善するDenseFormerで、モデルアーキテクチャの学習・表現能力の改善が目的であり推論効率化の主張や機構はない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DenseFormer: Enhancing Information Flow in Transformers via Depth Weighted Averaging"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e1199989bfc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

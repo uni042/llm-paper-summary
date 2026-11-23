@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82a770d5c4eaf9b4-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.00702",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.00702",
+    "identity_tokens": [
+      "arXiv:2605.00702"
+    ],
+    "reason": "MemCoEは認知科学着想の2段階最適化でLLMエージェントの長期ユーザーメモリの組織化と更新方策を強化学習するエージェント記憶研究であり、KVキャッシュ等の推論メモリ機構ではない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Learning How and What to Memorize: Cognition-Inspired Two-Stage Optimization for Evolving Memory"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82a770d5c4ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

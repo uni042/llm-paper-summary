@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96cc1bcaad2f2864-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.22353",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.22353",
+    "identity_tokens": [
+      "arXiv:2610.22353"
+    ],
+    "reason": "細粒度エキスパート分割と共有エキスパートを併用する現代的MoEで生じるルーティング探索のジレンマを指摘しMirrorMoEを提案するが、主眼は表現力と学習時の探索であり推論効率への直接貢献は薄い。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cc1bcaad2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

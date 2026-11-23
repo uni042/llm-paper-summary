@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a22e89e05fd42bb9-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.08061",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.08061",
+    "identity_tokens": [
+      "arXiv:2512.08061"
+    ],
+    "reason": "LUNAはカーネル特徴写像自体を学習可能にして線形計算量で二次注意並みの精度を狙う線形注意機構で、長系列の注意効率には関連するがアーキテクチャ学習の提案であり推論システムとしての実装・計測ではない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LUNA: Linear Universal Neural Attention with Generalization Guarantees"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a22e89e05fd4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

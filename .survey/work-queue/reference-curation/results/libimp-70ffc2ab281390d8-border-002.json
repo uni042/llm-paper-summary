@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70ffc2ab281390d8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.20384",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.20384",
+    "identity_tokens": [
+      "arXiv:2504.20384"
+    ],
+    "reason": "長尺動画理解向けに時空間圧縮でVLLMへの入力トークンを削減するFiLA-Videoであり、推論入力削減と関わるが主目的は動画理解の精度・特徴優先付けで、LLM推論システムとしての機構は薄い。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FiLA-Video: Spatio-Temporal Compression for Fine-Grained Long Video Understanding"
+  },
+  "processed_at": "2026-11-23T15:35:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70ffc2ab2813",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

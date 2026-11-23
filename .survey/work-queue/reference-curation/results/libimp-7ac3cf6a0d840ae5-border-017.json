@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ac3cf6a0d840ae5-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.01282",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.01282",
+    "identity_tokens": [
+      "arXiv:2412.01282"
+    ],
+    "reason": "モバイルVLM向けに浅層のクロスモーダル整合知識を蒸留するAlign-KDで1.7B級MobileVLMの能力をモデル肥大化なしに高める手法であり、オンデバイス展開に関連するが主目的は小型VLMの能力向上で推論機構の提案ではない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Align-KD: Distilling Cross-Modal Alignment Knowledge for Mobile Vision-Language Large Model Enhancement"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ac3cf6a0d84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

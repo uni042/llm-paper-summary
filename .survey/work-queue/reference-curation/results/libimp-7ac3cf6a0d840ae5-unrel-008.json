@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ac3cf6a0d840ae5-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11175",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11175",
+    "identity_tokens": [
+      "arXiv:2607.11175"
+    ],
+    "reason": "医療エージェントを支援型から自律型へ拡大する臨床システムの調査で、PACS/EHR連携や臨床ベンチマークを論じる医療応用の総説であり推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "The Path to Self-Evolving Clinical Systems: Scaling Medical Agents from Assistance to Autonomy"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ac3cf6a0d84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

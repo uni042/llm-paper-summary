@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b5cc66cbd9d988c4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.13833",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.13833",
+    "identity_tokens": [
+      "arXiv:2605.13833"
+    ],
+    "reason": "量子状態の重ね合わせで履歴を保持する量子・古典ハイブリッドの長注意メモリQLAMを長系列トークンモデリング向けに提案するが、概念段階の系列モデルアーキテクチャであり、実際のLLM推論システムでの効率実証は要旨から確認できない。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QLAM: A Quantum Long-Attention Memory Approach to Long-Sequence Token Modeling"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b5cc66cbd9d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

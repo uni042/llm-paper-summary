@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ac3cf6a0d840ae5-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.05182",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.05182",
+    "identity_tokens": [
+      "arXiv:2602.05182"
+    ],
+    "reason": "複数LM協調の出力を単一モデルへ蒸留し推論時は単一モデルのコストで協調を模倣するSingle-Multi Evolution Loopを提案し推論コスト削減を示すが、主眼は協調システムの自己改善であり推論基盤技術としての新規性は蒸留適用に留まる。",
+    "first_checked_at": "2026-11-23T15:35:54+00:00",
+    "last_checked_at": "2026-11-23T15:35:54+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Single-Multi Evolution Loop for Self-Improving Model Collaboration Systems"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ac3cf6a0d84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

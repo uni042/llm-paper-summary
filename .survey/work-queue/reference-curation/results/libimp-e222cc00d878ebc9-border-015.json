@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e222cc00d878ebc9-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.13412",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.13412",
+    "identity_tokens": [
+      "arXiv:2603.13412"
+    ],
+    "reason": "WATはオンライン動画理解で短期／長期メモリ階層と冗長性配慮の追い出しにより長文脈を保持するが、対象はVideo LLMの動画理解応用であり推論基盤技術としては間接的である。",
+    "first_checked_at": "2026-11-23T15:35:55+00:00",
+    "last_checked_at": "2026-11-23T15:35:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WAT: Online Video Understanding Needs Watching Before Thinking"
+  },
+  "processed_at": "2026-11-23T15:35:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e222cc00d878",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
