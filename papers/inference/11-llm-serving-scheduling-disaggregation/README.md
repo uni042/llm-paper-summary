@@ -428,6 +428,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
 
+- **2026-09 · [ROSETTA: Efficient and Accurate Privacy-Preserving LLM Decoding via Hybrid CKKS/TFHE Evaluation](2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybri.md)**  
+  実装：[✓](https://anonymous.4open.science/r/ROSETTA_artifact-B77F/) ・ リポジトリ内被引用：1  
+  秘匿LLMデコードの非線形演算を、分割ルックアップテーブルによる高精度なTFHE評価と、レベル配分と一体で解く方式選択で処理するハイブリッドCKKS・TFHE方式の研究。
+
 - **2026-09 · [Janus: Multi-LLM Serving at Production Scale](2026-922addb5dfb2-janus-multi-llm-serving-at-production-scale.md)**  
   実装：[✓](https://github.com/Janus2026/Janus) ・ リポジトリ内被引用：1  
   単一モデルの推論エンジンを速くしても、多数の異なるLLMを同時提供するサービスでは設備効率と応答期限の両立が難しい。Janusはサービス層（Service）と推論エンジン層（Engine）を協調設計した、多モデル向けサービングシステムである。
@@ -861,10 +865,6 @@
 - **2026-09 · [Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling](2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-ener.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同じ8件の候補でも、1回のバッチ生成と8回の逐次生成では総エネルギーが4.64倍から4.86倍も違うことをA100の実測で示し、候補数だけではテスト時スケーリングの費用を表せないと明らかにした研究。
-
-- **2026-09 · [ROSETTA: Efficient and Accurate Privacy-Preserving LLM Decoding via Hybrid CKKS/TFHE Evaluation](2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybri.md)**  
-  実装：[✓](https://anonymous.4open.science/r/ROSETTA_artifact-B77F/) ・ リポジトリ内被引用：0  
-  秘匿LLMデコードの非線形演算を、分割ルックアップテーブルによる高精度なTFHE評価と、レベル配分と一体で解く方式選択で処理するハイブリッドCKKS・TFHE方式の研究。
 
 - **2026-09 · [REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](2026-2609.11209-reva-reusable-evidence-view-rag-serving.md)**  
   実装：[✓](https://github.com/UIUC-MLSys/REVA) ・ リポジトリ内被引用：0  
@@ -2127,11 +2127,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：831  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：832  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：725  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：726  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
@@ -2425,7 +2425,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1897  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1899  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
