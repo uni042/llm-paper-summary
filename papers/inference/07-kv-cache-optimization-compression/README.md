@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（645本）
+## 自動生成の論文一覧（646本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -910,6 +910,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [SARIA: Persistence-Aware KV Caching with Coordinated DRAM--SSD Reload for LLM Agents](2026-2610.31169-saria-persistence-aware-kv-caching-with-coordinated-dram-ssd-reload-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント向け階層KVキャッシュで、繰り返しエビクションと再利用履歴を証拠にDRAM滞在を超える再利用が見込めるブロックだけをSSDへ永続化し、SSDヒットの一部をDRAMへ遅延複製して協調再読込で帯域を分け合うことで、SSD書き込みを全複製比57.1から58.9パーセント減らし平均TTFTをDRAMのみ比42.3から79.7パーセント下げる手法。
+
+- **2026-10 · [RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention](2026-2610.20686-rolaq-joint-rotation-and-range-calibration-for-2-bit-kv-caches-in-multi-.md)**  
+  実装：[✓](https://github.com/noforit/RoLaQ) ・ リポジトリ内被引用：0  
+  MLAの共有潜在に対する2ビット量子化で、キー・バリュー射影が定める部分空間での回転学習と、閾値とゲインを結び付けたレンジ較正を合同で行い、保護なしでも最強の比較対象を平均1.1から3.8ポイント上回る精度と容量3.96倍を両立させる。
 
 - **2026-10 · [RISK-KV: Quality-Aware Selective KV Cache Reconstruction for Distributed LLM Inference](2026-2610.29544-risk-kv-quality-aware-selective-kv-cache-reconstruction-for-distributed-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

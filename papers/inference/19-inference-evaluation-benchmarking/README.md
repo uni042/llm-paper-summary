@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（219本）
+## 自動生成の論文一覧（220本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -213,6 +213,10 @@
 - **2026-10 · [How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs](2026-2610.40039-how-far-are-we-from-on-device-vlm-inference-a-measurement-study-on-edge-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末の神経処理装置で六つの視覚言語モデルをカーネル単位で測り、注意はソフトマックスが支配して行列装置が空転すること、線形注意の利得は配置変換で消えること、逐次生成の勝敗は注意の行列並列度で決まることを示し、課題ごとの甘い解像度を提案した測定研究である。
+
+- **2026-10 · [Fewer Bits, More Tries: Recovering Capability Under Memory Constraints](2026-2610.15372-fewer-bits-more-tries-recovering-capability-under-memory-constraints.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小さい・低ビットのモデルを並列に複数回試行しテストで検証して選ぶことで、失われた一発正解率の多くを回復できることを示し、7Bの8回試行が32Bの1回にメモリ約4分の1で匹敵・上回ることを実測する分析研究。
 
 - **2026-10 · [DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning](2026-2610.18862-doubtless-training-free-contrastive-decoding-for-efficient-reasoning.md)**  
   実装：[✓](https://github.com/leoluolol/DoubtLess) ・ リポジトリ内被引用：0  

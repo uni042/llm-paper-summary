@@ -35,10 +35,15 @@
   "selection_reason": "要旨はテンソル並列の全reduceを4ビット化し誤差補償で累積誤差を抑えるEchoを提案し、学習だけでなく推論でもTTFT高速化と精度維持を実測しており、分散推論の通信機構への直接貢献が具体的である。",
   "semantic_scholar_id": "f2a82af504e35215c1690bad476bb9a23f81993d",
   "source_url": "https://arxiv.org/abs/2610.14277",
-  "status": "ready",
+  "status": "superseded",
   "title": "Echo: Error-Compensated 4-Bit Tensor-Parallel Communication for LLM Training and Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:02:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.14277-echo-error-compensated-4-bit-tensor-parallel-communication-for-llm-train.md",
+  "represented_canonical_id": "arXiv:2610.14277",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -293,6 +293,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：2  
   入力処理では多数トークンをまとめて計算するため通信量と演算量が大きいが、復号では1トークンずつ進むため重み読出しと専門家間の負荷不均衡が目立つ。各候補の遅延を演算・通信の実測から予測し、GPUメモリに収まる組合せだけを残す。
 
+- **2025-08 · [FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication](2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-comm.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  集合通信のデータを任意ビット幅で量子化して送る通信方式。ビット分割で不規則なビット幅を扱い、スパイク保存で外れ値を残して2ビット化の崩壊を防ぐ。PCIeノードでは階層通信のパイプライン化も併用する。
+
 - **2024-12 · [IFMoE: An Inference Framework Design for Fine-grained MoE](2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。
@@ -300,10 +304,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-11 · [DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication](2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md)**  
   実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  
   DMA-Latteは、AMD Instinct MI300Xの既存DMAハードウェアに備わる放送（broadcast）、交換（swap）、同一エンジンでの連続コピー（back-to-back copy）、依存条件付き事前発行（prelaunch）を組み合わせ、小粒度転送の非データ移動費用を削減する方式である。
-
-- **2025-08 · [FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication](2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-comm.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  集合通信のデータを任意ビット幅で量子化して送る通信方式。ビット分割で不規則なビット幅を扱い、スパイク保存で外れ値を残して2ビット化の崩壊を防ぐ。PCIeノードでは階層通信のパイプライン化も併用する。
 
 - **2025-07 · [Photonic Fabric Platform for AI Accelerators](2025-2507.14000-photonic-fabric-platform-for-ai-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -324,7 +324,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルでは、各層のルータがトークンを少数の専門家へ割り当てる。論文のA100クラスタ評価では、8～64専門家を持つGPT型MoEモデルに対し全対全通信時間を最大67%削減し、推論処理量を最大2.2倍に改善した。
 
 - **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  

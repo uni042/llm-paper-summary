@@ -35,10 +35,15 @@
   "selection_reason": "メモリ制約下のローカル推論で小さい・圧縮されたモデルを複数回並列に試行しテストで検証して選択することで、7Bモデル8回試行が32Bに匹敵しつつメモリ約4分の1で済むことを示す、圧縮と並列候補生成を組み合わせた推論戦略の直接的貢献が確認できる。",
   "semantic_scholar_id": "6e58b9d9196d50ac080461eb396443dcdf882ddc",
   "source_url": "https://arxiv.org/abs/2610.15372",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fewer Bits, More Tries: Recovering Capability Under Memory Constraints",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:02:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.15372-fewer-bits-more-tries-recovering-capability-under-memory-constraints.md",
+  "represented_canonical_id": "arXiv:2610.15372",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

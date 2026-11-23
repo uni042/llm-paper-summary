@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "604c3fed1cff85ae20fe98a53e1d58561bfd80aa",
+  "base_commit": "a0231b34bcf35b653fac0e28a477e455f2f4fc62",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1023,6 +1023,7 @@
     "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
     "2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.json",
     "2026-2610.08811-kvfetch-temporal-prefetching-for-the-missing-half-of-kv-cache-compression.json",
+    "2026-2610.08858-lrcc-generalizing-low-rank-compression-with-conditional-computation.json",
     "2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.json",
     "2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inference.json",
     "2026-2610.09202-few-bits-one-law-toward-w2a4kv2.json",
@@ -1050,10 +1051,12 @@
     "2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-serving.json",
     "2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-attention-masking.json",
     "2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarchy.json",
+    "2026-2610.13735-orthros-phase-aware-heterogeneous-attention-for-efficient-transformers.json",
     "2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization-for-llms.json",
     "2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.json",
     "2026-2610.13990-dosa-dots-sparse-attention.json",
     "2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.json",
+    "2026-2610.14277-echo-error-compensated-4-bit-tensor-parallel-communication-for-llm-training-and-inference.json",
     "2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-benchmarks-reasoning-modes-and-hardware.json",
     "2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.json",
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
@@ -1065,6 +1068,7 @@
     "2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.json",
     "2026-2610.15324-tempokv-predictive-kv-cache-quantization-for-autoregressive-video-generation.json",
     "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
+    "2026-2610.15372-fewer-bits-more-tries-recovering-capability-under-memory-constraints.json",
     "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
     "2026-2610.15509-cachelink-functional-kv-transport-for-zero-prefill-cross-model-context-handoff.json",
@@ -1119,6 +1123,7 @@
     "2026-2610.20392-fold-position-free-far-memory-with-local-order-for-long-context-speculative-decoding.json",
     "2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hybrid-linear-attention-large-language-models.json",
     "2026-2610.20637-expanding-attention-taylor-series-route-to-linear-time-transformers.json",
+    "2026-2610.20686-rolaq-joint-rotation-and-range-calibration-for-2-bit-kv-caches-in-multi-head-latent-attention.json",
     "2026-2610.20865-long-context-drafting-does-not-require-long-context-drafters.json",
     "2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.json",
     "2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multiplier-free-llm-inference.json",
@@ -51011,6 +51016,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.08858": {
+      "order": [
+        "2026-11-23T20:53:21+00:00",
+        "2026-2610.08858-lrcc-generalizing-low-rank-compression-with-conditional-computation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13735": {
+      "order": [
+        "2026-11-23T20:54:54+00:00",
+        "2026-2610.13735-orthros-phase-aware-heterogeneous-attention-for-efficient-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14277": {
+      "order": [
+        "2026-11-23T20:56:28+00:00",
+        "2026-2610.14277-echo-error-compensated-4-bit-tensor-parallel-communication-for-llm-training-and-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15372": {
+      "order": [
+        "2026-11-23T20:58:01+00:00",
+        "2026-2610.15372-fewer-bits-more-tries-recovering-capability-under-memory-constraints.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.20686": {
+      "order": [
+        "2026-11-23T20:59:33+00:00",
+        "2026-2610.20686-rolaq-joint-rotation-and-range-calibration-for-2-bit-kv-caches-in-multi-head-latent-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64652,6 +64702,21 @@
     "arxiv:2610.04912": [
       "papers/inference/99-other-inference-systems/2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.md",
       "papers/inference/99-other-inference-systems/2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.md"
+    ],
+    "arxiv:2610.08858": [
+      "papers/inference/04-conditional-computation/2026-2610.08858-lrcc-generalizing-low-rank-compression-with-conditional-computation.md"
+    ],
+    "arxiv:2610.13735": [
+      "papers/inference/99-other-inference-systems/2026-2610.13735-orthros-phase-aware-heterogeneous-attention-for-efficient-transformers.md"
+    ],
+    "arxiv:2610.14277": [
+      "papers/inference/99-other-inference-systems/2026-2610.14277-echo-error-compensated-4-bit-tensor-parallel-communication-for-llm-train.md"
+    ],
+    "arxiv:2610.15372": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.15372-fewer-bits-more-tries-recovering-capability-under-memory-constraints.md"
+    ],
+    "arxiv:2610.20686": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.20686-rolaq-joint-rotation-and-range-calibration-for-2-bit-kv-caches-in-multi-.md"
     ]
   }
 }

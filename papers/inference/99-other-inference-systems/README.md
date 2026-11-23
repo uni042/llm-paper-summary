@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1393本）
+## 自動生成の論文一覧（1395本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -676,6 +676,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   時間メモリで新しいフレームへ予算を厚くし、空間メモリで過去に選んだ領域との重なりを避ける二段配分により、視覚トークンを約9割削っても動画質問応答の精度を基準の95パーセント超に保った。
 
+- **2026-05 · [Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression](2026-2605.08568-different-prompts-different-ranks-prompt-aware-dynamic-rank-selection-fo.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  特異値分解（SVD）による低ランク圧縮は、重み行列を小さい行列の積へ分解し、寄与の小さい成分を切り捨てる。
+
 - **2026-05 · [ConQuR: Corner Aligned Activation Quantization via Optimized Rotations for LLMs](2026-2605.10793-conqur-corner-aligned-activation-quantization-via-optimized-rotations-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   低ビット量子化では、重みだけでなく中間活性値を4ビットなどで表現できれば、行列積の計算・転送の効率化余地が増す。
@@ -771,6 +775,10 @@
 - **2026-03 · [TAPS: Task Aware Proposal Distributions for Speculative Sampling](2026-2603.27027-taps-task-aware-proposal-distributions-for-speculative-sampling.md)**  
   実装：[✓](https://github.com/Moe-Zbeeb/TAPS) ・ リポジトリ内被引用：1  
   さらに、複数の専門草稿をどう使い分けるべきかを、重み平均、確信度に基づく経路選択、草稿木の統合検証の三方式で検討する。
+
+- **2026-03 · [Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability](2026-2603.12038-slow-fast-inference-training-free-inference-acceleration-via-within-sent.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  選択器は密注意のlogitから得た証拠と、KVに保存されたキーnorm・位置情報から得たpriorを統合する。Qwen3-4B、Qwen3-30B-A3B、Qwen3-235B-A22Bの長文脈デコードで、密注意と比較した実測スループットは文脈長に応じて約1.6〜14.4倍に増える。
 
 - **2026-03 · [SliderQuant: Accurate Post-Training Quantization for LLMs](2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md)**  
   実装：[✓](https://github.com/deep-optimization/SliderQuant) ・ リポジトリ内被引用：1  
@@ -1166,6 +1174,10 @@
   実装：[✓](https://github.com/neriahbd/OSFP4) ・ リポジトリ内被引用：0  
   NVFP4量子化で、射影ごとの対角平滑化とブロック尺度を、ディザ付き量子化の損失で共同最適化し、最後に決定的尺度を探し直す学習後量子化。同条件の比較手法中で最高の平均精度を保ちながらネイティブ実行の効率をほぼ維持する。
 
+- **2026-10 · [Orthros: Phase-Aware Heterogeneous Attention for Efficient Transformers](2026-2610.13735-orthros-phase-aware-heterogeneous-attention-for-efficient-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アテンションの使い分けを層ではなくプリフィルとデコードのフェーズへ移し、全トークンはスライディングウィンドウ、予測位置だけフルアテンションで処理することで、100万トークンのプリフィルを21.9倍速くしながら128Kの針探し検索をほぼ完璧に保つ統合モジュール。
+
 - **2026-10 · [Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation](2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.md)**  
   実装：[✓](https://github.com/HazyResearch/ncm) ・ リポジトリ内被引用：0  
   テキストを残差量子化の粗から細への離散コード階層へ符号化し、レベル単位で全コードを並列予測することで、拡散モデルより少ない関数評価と短い処理時間で並列生成する二段階の言語モデル。
@@ -1241,6 +1253,10 @@
 - **2026-10 · [Extreme Compression of Per-Layer Embeddings via Cross-Layer Latent Vector Quantization](2026-2610.31309-extreme-compression-of-per-layer-embeddings-via-cross-layer-latent-vecto.md)**  
   実装：[✓](https://github.com/VILA-Lab/optic) ・ リポジトリ内被引用：0  
   Gemma 4の層別埋め込みを、トークン共有のコードと層別アフィンデコーダで表し、ゲートと出力射影の先で誤差を測るfittingにより約100倍圧縮で7タスク保持率97.8パーセントを達成し、圧縮したままの推論でGPUメモリを29.7パーセント減らす手法。
+
+- **2026-10 · [Echo: Error-Compensated 4-Bit Tensor-Parallel Communication for LLM Training and Inference](2026-2610.14277-echo-error-compensated-4-bit-tensor-parallel-communication-for-llm-train.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テンソル並列のオールリデュースを4ビット化し、注入される丸め誤差を二つの時間スケールのフィードバックで打ち消して蓄積を有界に抑えることで、精度をほぼ保ちながら通信を最大2.09倍高速化する方式。
 
 - **2026-10 · [E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks](2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2370,10 +2386,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LLM重みの2〜3ビット学習後量子化を、重み分布を保つKLDキャリブレーション、ノイズ置換による学習可能なコードブック最適化、分布類似度による層グループ化の3機構で実現し、量子化後ファインチューニングなしで先行手法と競合する精度を示した研究。
 
-- **2026-05 · [Different Prompts, Different Ranks: Prompt-aware Dynamic Rank Selection for SVD-based LLM Compression](2026-2605.08568-different-prompts-different-ranks-prompt-aware-dynamic-rank-selection-fo.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  特異値分解（SVD）による低ランク圧縮は、重み行列を小さい行列の積へ分解し、寄与の小さい成分を切り捨てる。
-
 - **2026-05 · [DeferMem: Query-Time Evidence Distillation via Reinforcement Learning for Long-Term Agent Memory](2026-2605.22411-defermem-query-time-evidence-distillation-via-reinforcement-learning-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の記憶システムは、将来の質問が分からない時点で対話を要約・圧縮し、検索しやすい記憶単位を作る。原著v2の評価ではLongMemEval-Sの正答率が70.00%、LoCoMoで学習に使った唯一の会話conv-26を除いた正答率が89.93%だった。
@@ -2661,10 +2673,6 @@
 - **2026-03 · [Task-aware Block Pruning with Output Distribution Signals for Large Language Models](2026-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-lang.md)**  
   実装：[✓](https://github.com/Song-haJo/TaBP) ・ リポジトリ内被引用：0  
   各ブロック前後の出力分布の統計的変化を複数選択式質問応答の較正データで集約して重要度を測るブロック枝刈りTaBPを提案し、LLaMA-3-8Bで25%のブロックを削除しても平均正解率60.93%を保ち、感度分析型の比較対象56.6%前後を上回った。
-
-- **2026-03 · [Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability](2026-2603.12038-slow-fast-inference-training-free-inference-acceleration-via-within-sent.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  選択器は密注意のlogitから得た証拠と、KVに保存されたキーnorm・位置情報から得たpriorを統合する。Qwen3-4B、Qwen3-30B-A3B、Qwen3-235B-A22Bの長文脈デコードで、密注意と比較した実測スループットは文脈長に応じて約1.6〜14.4倍に増える。
 
 - **2026-03 · [SecDTD: Dynamic Token Drop for Secure Transformers Inference](2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3436,6 +3444,10 @@
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：6  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
 
+- **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
+
 - **2025-10 · [xLLM Technical Report](2025-2510.14686-xllm-technical-report.md)**  
   実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：5  
   原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
@@ -3459,10 +3471,6 @@
 - **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
-
-- **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
 
 - **2025-11 · [A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-based Multimodal Large Language Models](2025-2511.15098-a-comprehensive-study-on-visual-token-redundancy-for-discrete-diffusion-.md)**  
   実装：[✓](https://github.com/Yrdal3910/dMLLM-Visual-Token-Redundancy-Analysis) ・ リポジトリ内被引用：4  
@@ -5541,7 +5549,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：376  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：377  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

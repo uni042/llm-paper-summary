@@ -35,10 +35,15 @@
   "selection_reason": "事前学習言語モデルの線形変換を低ランク化し、Transformerブロックごとの軽量ルータがトークン依存に低ランク経路を選ぶ条件付き計算LRCCを提案し、Llama等でバッチ1デコード遅延を揃えた条件でも性能改善を示すなどLLM推論圧縮への直接貢献が確認できるため。",
   "semantic_scholar_id": "c56ee452a4c9661ecdfbf6135165a6113c585894",
   "source_url": "https://arxiv.org/abs/2610.08858",
-  "status": "ready",
+  "status": "superseded",
   "title": "LRCC: Generalizing Low-Rank Compression with Conditional Computation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:02:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/04-conditional-computation/2026-2610.08858-lrcc-generalizing-low-rank-compression-with-conditional-computation.md",
+  "represented_canonical_id": "arXiv:2610.08858",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
