@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（217本）
+## 自動生成の論文一覧（218本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -817,6 +817,10 @@
 - **2024-07 · [S2-Attention: Hardware-Aware Context Sharding Among Attention Heads](2024-2407.17678-s2-attention-hardware-aware-context-sharding-among-attention-heads.md)**  
   実装：[✓](https://github.com/linxihui/dkernel) ・ リポジトリ内被引用：1  
   しかし実GPUでは、疎な位置を飛ばすための分岐、細かなタイル、共有メモリ（SRAM）への同じKVの再読込が増え、密注意を高度に融合したFlashAttention-2より遅くなることがある。また、推論中に不要なKVを削除する方式では、PagedAttentionのページ管理との不整合や将来再参照されるKVの保持が問題となる。
+
+- **2024-07 · [Efficient Sparse Attention needs Adaptive Token Release](2024-2407.02328-efficient-sparse-attention-needs-adaptive-token-release.md)**  
+  実装：[✓](https://github.com/WHUIR/ADORE) ・ リポジトリ内被引用：0  
+  KVキャッシュから寄与の低いトークンを予測して解放し、後で必要になる解放済みトークンのKV状態を再構築して戻すことで、Llama-2 7Bの長生成でフル注意比221.8パーセントのスループット改善と品質維持を両立する。
 
 ### 4年前（2022-12〜2023-11）
 

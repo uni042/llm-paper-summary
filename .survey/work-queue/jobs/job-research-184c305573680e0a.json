@@ -35,10 +35,15 @@
   "selection_reason": "課題非依存プロンプト圧縮TPCは文単位の関連度で入力プロンプトを短縮しLongBench等で性能を維持するため、LLM推論時の入力トークン削減とプリフィル負荷低減へ直接つながる技術的貢献が要旨で確認でき、採用とする。",
   "semantic_scholar_id": "bb36dee4daaf5c1500d89a2fcf8d2f7f900a6d19",
   "source_url": "https://arxiv.org/abs/2502.13374",
-  "status": "ready",
+  "status": "superseded",
   "title": "Task-agnostic Prompt Compression with Context-aware Sentence Embedding and Reward-guided Task Descriptor",
   "type": "research",
   "venue": "Trans. Mach. Learn. Res.",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-23T18:51:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2502.13374-task-agnostic-prompt-compression-with-context-aware-sentence-embedding-a.md",
+  "represented_canonical_id": "arXiv:2502.13374",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

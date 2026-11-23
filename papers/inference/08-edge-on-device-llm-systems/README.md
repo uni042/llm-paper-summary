@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（108本）
+## 自動生成の論文一覧（109本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -371,6 +371,10 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
+
+- **2025-05 · [Scaling On-Device GPU Inference for Large Generative Models](2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テンソル仮想化で論理配置と物理GPUオブジェクトを分離し、デバイス特化や段階配慮型最適化を組み合わせるML Driftにより、従来より10倍から100倍大きな生成モデルを端末GPUで動かし、既存エンジン比で桁違いの性能を示す。
 
 - **2025-05 · [ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference](2025-2505.19342-astra-communication-efficient-acceleration-for-multi-device-transformer-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

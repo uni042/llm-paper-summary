@@ -35,10 +35,15 @@
   "selection_reason": "KVキャッシュ内のトークンを軽量コントローラで適応的に解放し、将来必要になる破棄済みトークンのKV状態を再構築するスパース注意機構を提案し、フル注意と競合する品質でスループットを最大221.8%改善しており、LLM推論のKVキャッシュ管理への直接の技術的貢献が確認できる。",
   "semantic_scholar_id": "038b7559dc5f93e54ff5d66753f48897e80a7298",
   "source_url": "https://arxiv.org/abs/2407.02328",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Sparse Attention needs Adaptive Token Release",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-23T18:51:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2024-2407.02328-efficient-sparse-attention-needs-adaptive-token-release.md",
+  "represented_canonical_id": "arXiv:2407.02328",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

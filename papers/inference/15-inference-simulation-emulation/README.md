@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（108本）
+## 自動生成の論文一覧（109本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -391,6 +391,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-05 · [FlatAttention: Dataflow and Fabric Collectives Co-Optimization for Efficient Multi-Head Attention on Tile-Based Many-PE Accelerators](2025-2505.18824-flatattention-dataflow-and-fabric-collectives-co-optimization-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   タイル型アクセラレータ向けに、注意計算をタイル群へ平坦に割り当てチップ内集合通信で中間結果を回すことでHBMアクセスを16分の1にし、利用率89.3%と最大4.1倍の高速化を得るデータフローと、その共同探索。
+
+- **2025-05 · [DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model](2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  圧縮重みの解凍をコア近傍アクセラレータへ逃がし、アウトオブオーダ起動で遅延を隠すDECAと、三資源で性能を説明する三次元ルーフサーフェスモデルにより、圧縮行列演算を最大4倍、70B級モデルの次トークン生成を1.6倍から2.6倍高速化する。
 
 - **2025-03 · [Fake Runs, Real Fixes - Analyzing xPU Performance Through Simulation](2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

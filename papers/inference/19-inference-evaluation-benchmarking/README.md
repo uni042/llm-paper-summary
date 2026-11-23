@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（211本）
+## 自動生成の論文一覧（213本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -764,6 +764,10 @@
   実装：[✓](https://github.com/aihao2000/DPN-LLaVA) ・ リポジトリ内被引用：0  
   視覚トークンの圧縮を言語モデルの外から内側の階層構造へ移し、深さとともに段階的に圧縮しながら、サンプルごとにプーリング率を動的に選ぶことで、LLaVAの演算量を最大56%削りつつ性能を保つマルチモーダル推論の高速化。
 
+- **2025-02 · [Task-agnostic Prompt Compression with Context-aware Sentence Embedding and Reward-guided Task Descriptor](2025-2502.13374-task-agnostic-prompt-compression-with-context-aware-sentence-embedding-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  質問や手作りテンプレートなしで長いプロンプトを文単位に圧縮するため、プロンプトからタスク記述を生成するモデルを応答分布の近さを報酬に磨き、その記述と各文の文脈対応埋め込みの類似度で文を選ぶ方式で、質問なし設定でも従来方式を大きく上回る。
+
 - **2025-02 · [Leveraging the true depth of LLMs](2025-2502.02790-leveraging-the-true-depth-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続する2層を同じ入力から並列に計算させてテンソル並列の同期回数を半減させるレイヤー並列化を提案し、再学習なしでLlama 2 7Bのスループットを1.19倍にしつつ、精度低下とファインチューニングによる回復の範囲を実測した研究。
@@ -817,6 +821,10 @@
 - **2024-10 · [LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment](2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-de.md)**  
   実装：[✓](https://github.com/AboveParadise/LLMCBench) ・ リポジトリ内被引用：1  
   圧縮性能から信頼性までの6軸で疎化と量子化の代表7手法を統一測定し、量子化が性能保持で優れること、重みのみ量子化が汎化で安定すること、疎化は学習が軽いが配布基盤の対応が未熟なことを明らかにした。
+
+- **2024-09 · [AVG-LLaVA: An Efficient Large Multimodal Model with Adaptive Visual Granularity](2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granu.md)**  
+  実装：[✓](https://github.com/DeepLearnXMU/AVG-LLaVA) ・ リポジトリ内被引用：1  
+  画像と指示に応じて視覚トークンの粒度を5段階から選ぶルータを、言語モデル自身の回答の対数確率を教師にするRGLFで学習し、AI2Dで視覚トークン85.3パーセント削減と2.53倍の高速化を性能向上と両立させる。
 
 - **2024-09 · [Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview](2024-2409.11650-art-and-science-of-quantizing-large-scale-models-a-comprehensive-overvie.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

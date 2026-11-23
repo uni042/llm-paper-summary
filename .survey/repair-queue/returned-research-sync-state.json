@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d034d3379966c7a3fd4256db42c69c6301b8f7b2",
+  "base_commit": "19775bf69c9c12cb54d5b8c3e97093f3f27c8c69",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -119,6 +119,7 @@
     "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
     "2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.json",
+    "2024-2407.02328-efficient-sparse-attention-needs-adaptive-token-release.json",
     "2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models-for-code.json",
     "2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-large-models.json",
     "2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficient-end-to-end-edge-deployment.json",
@@ -131,6 +132,7 @@
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.json",
     "2024-2410.00907-addition-is-all-you-need-for-energy-efficient-language-models.json",
+    "2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granularity.json",
     "2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prompt-compression.json",
     "2024-2410.08666-deltadq-ultra-high-delta-compression-for-fine-tuned-llms-via-group-wise-dropout-and-separate-quantization.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
@@ -183,6 +185,7 @@
     "2025-2502.10216-forget-the-data-and-fine-tuning-just-fold-the-network-to-compress.json",
     "2025-2502.11832-haan-a-holistic-approach-for-accelerating-normalization-operations-in-large-language-models.json",
     "2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-efficient-dense-llms.json",
+    "2025-2502.13374-task-agnostic-prompt-compression-with-context-aware-sentence-embedding-and-reward-guided-task-descriptor.json",
     "2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.json",
     "2025-2502.15075-quantize-what-counts-more-for-keys-less-for-values.json",
     "2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.json",
@@ -212,6 +215,7 @@
     "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json",
     "2025-2504.15475-speculative-sampling-via-exponential-races.json",
     "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json",
+    "2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.json",
     "2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language-model-inference-on-edge-devices.json",
     "2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.json",
     "2025-2505.03373-spap-structured-pruning-via-alternating-optimization-and-penalty-methods.json",
@@ -230,6 +234,7 @@
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.18824-flatattention-dataflow-and-fabric-collectives-co-optimization-for-efficient-attention.json",
     "2025-2505.19342-astra-communication-efficient-acceleration-for-multi-device-transformer-inference.json",
+    "2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline-model.json",
     "2025-2505.19812-efficient-multi-modal-long-context-learning-for-training-free-adaptation.json",
     "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json",
     "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json",
@@ -50411,6 +50416,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2407.02328": {
+      "order": [
+        "2026-11-23T18:43:37+00:00",
+        "2024-2407.02328-efficient-sparse-attention-needs-adaptive-token-release.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.02745": {
+      "order": [
+        "2026-11-23T18:45:00+00:00",
+        "2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granularity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2502.13374": {
+      "order": [
+        "2026-11-23T18:46:24+00:00",
+        "2025-2502.13374-task-agnostic-prompt-compression-with-context-aware-sentence-embedding-and-reward-guided-task-descriptor.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.00232": {
+      "order": [
+        "2026-11-23T18:47:46+00:00",
+        "2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.19349": {
+      "order": [
+        "2026-11-23T18:49:09+00:00",
+        "2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63812,6 +63862,21 @@
     "arxiv:2310.13315": [
       "papers/inference/99-other-inference-systems/2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.md",
       "papers/inference/99-other-inference-systems/2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.md"
+    ],
+    "arxiv:2407.02328": [
+      "papers/inference/13-sparse-attention/2024-2407.02328-efficient-sparse-attention-needs-adaptive-token-release.md"
+    ],
+    "arxiv:2410.02745": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2410.02745-avg-llava-an-efficient-large-multimodal-model-with-adaptive-visual-granu.md"
+    ],
+    "arxiv:2502.13374": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.13374-task-agnostic-prompt-compression-with-context-aware-sentence-embedding-a.md"
+    ],
+    "arxiv:2505.00232": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.md"
+    ],
+    "arxiv:2505.19349": [
+      "papers/inference/15-inference-simulation-emulation/2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md"
     ]
   }
 }
