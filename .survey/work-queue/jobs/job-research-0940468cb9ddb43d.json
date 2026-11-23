@@ -35,10 +35,15 @@
   "selection_reason": "MoE言語モデルと回帰方策を対象にGPUエネルギーを直接計測し、Qwen3-30B-A3Bではバッチを意識したルーティングでバッチ内行の計算共有が実測の省エネになる一方、回帰方策では共有が成立しないことを示した、MoE推論基盤の計測と共有機構の研究である。",
   "semantic_scholar_id": "36a4c73857b1cef472b7566e400fd7100b8a6410",
   "source_url": "https://arxiv.org/abs/2611.11696",
-  "status": "ready",
+  "status": "superseded",
   "title": "Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:36:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md",
+  "represented_canonical_id": "arXiv:2611.11696",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

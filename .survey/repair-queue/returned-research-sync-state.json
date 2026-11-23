@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3ad82f75dc32b91038592c6f4a40be1fea8f70d2",
+  "base_commit": "dad5286b058dc93faac1696f2665904163c894ef",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1361,12 +1361,16 @@
     "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json",
     "2026-2611.07256-triattention-unified-sparse-mixed-precision-attention-for-long-context-llm-inference.json",
     "2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.json",
+    "2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-continuous-time-markov-chains.json",
     "2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.json",
     "2026-2611.08669-chainflow-few-step-latent-flow-matching-for-speculative-decoding.json",
     "2026-2611.09225-fused-softmax-for-efficient-quantized-attention.json",
     "2026-2611.09825-bitdecoding-fp4-native-fp4-kv-cache-decoding-via-algorithm-system-co-design.json",
     "2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-based-multi-agent-systems.json",
     "2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-exponent-mantissa-refinement.json",
+    "2026-2611.10432-d-real-acceptance-length-optimization-with-unbiased-gradients-for-speculative-decoding.json",
+    "2026-2611.10511-calfa-kv-joint-calibration-and-fisher-guided-anchors-for-1-bit-kv-cache-compression.json",
+    "2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-experts-and-recurrent-models.json",
     "2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffusion-draft-trees.json",
     "2026-2611.13017-multi-future-drafting-mixture-block-drafters-for-tree-verified-speculative-decoding.json",
     "2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-agent-serving.json",
@@ -1375,6 +1379,7 @@
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
+    "2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-privacy-preserving-transformer-inference.json",
     "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
     "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json",
     "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json",
@@ -51161,6 +51166,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.08362": {
+      "order": [
+        "2026-11-23T21:28:14+00:00",
+        "2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-continuous-time-markov-chains.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.10432": {
+      "order": [
+        "2026-11-23T21:29:46+00:00",
+        "2026-2611.10432-d-real-acceptance-length-optimization-with-unbiased-gradients-for-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.10511": {
+      "order": [
+        "2026-11-23T21:31:18+00:00",
+        "2026-2611.10511-calfa-kv-joint-calibration-and-fisher-guided-anchors-for-1-bit-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.11696": {
+      "order": [
+        "2026-11-23T21:32:49+00:00",
+        "2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-experts-and-recurrent-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/TDSC.2026.3718538": {
+      "order": [
+        "2026-11-23T21:34:21+00:00",
+        "2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-privacy-preserving-transformer-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64862,6 +64912,21 @@
     "arxiv:2611.06956": [
       "papers/inference/14-agentic-inference-serving-runtime/2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-.md",
       "papers/inference/14-agentic-inference-serving-runtime/2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-.md"
+    ],
+    "arxiv:2611.08362": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-contin.md"
+    ],
+    "arxiv:2611.10432": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.10432-d-real-acceptance-length-optimization-with-unbiased-gradients-for-specul.md"
+    ],
+    "arxiv:2611.10511": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.10511-calfa-kv-joint-calibration-and-fisher-guided-anchors-for-1-bit-kv-cache-.md"
+    ],
+    "arxiv:2611.11696": [
+      "papers/inference/99-other-inference-systems/2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md"
+    ],
+    "doi:10.1109/tdsc.2026.3718538": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-priv.md"
     ]
   }
 }

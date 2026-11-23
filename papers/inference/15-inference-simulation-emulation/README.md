@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（109本）
+## 自動生成の論文一覧（110本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -113,6 +113,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains](2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-contin.md)**  
+  実装：[✓](https://github.com/kasakh/specctmc) ・ リポジトリ内被引用：0  
+  拡散言語モデルの厳密な連続時間サンプリングを、過去の予測で下書きし並列評価と残差補正で検証する投機実行に変え、出力分布を一切変えずに逐次モデル評価を最大4.38倍減らす学習不要のサンプラー。
 
 - **2026-11 · [ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration](2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configura.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
