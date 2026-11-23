@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a0cf6315e649b95bf3eb2d36b2d3abe1bd562263",
+  "base_commit": "25ee7fe137caf2f959e53f7a2479ffda8427ef75",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -315,6 +315,7 @@
     "2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.json",
     "2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-semantic-job-search.json",
     "2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-language-models.json",
+    "2025-2510.25977-neuronmlp-efficient-llm-inference-via-singular-value-decomposition-compression-and-tiling-on-aws-trainium.json",
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.00315-language-modeling-with-factorization-memory.json",
     "2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.json",
@@ -352,6 +353,7 @@
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
     "2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.json",
     "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json",
+    "2025-2512.20636-data-free-pruning-of-self-attention-layers-in-llms.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
@@ -405,6 +407,7 @@
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
+    "2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.json",
     "2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thought-reasoning-in-small-scale-large-reasoning-models.json",
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
     "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json",
@@ -447,6 +450,7 @@
     "2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasoning.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
     "2026-2602.13680-allmem-a-memory-centric-recipe-for-efficient-long-context-modeling.json",
+    "2026-2602.14649-gradmap-faster-layer-pruning-with-gradient-metric-and-projection-compensation.json",
     "2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-transformers-compression.json",
     "2026-2602.15521-expertweaver-unlocking-the-inherent-moe-in-dense-llms-with-glu-activation-patterns.json",
     "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json",
@@ -547,6 +551,7 @@
     "2026-2604.15732-accuracy-is-speed-towards-long-context-aware-routing-for-distributed-llm-serving.json",
     "2026-2604.16395-stream2llm-overlap-context-streaming-and-prefill-for-reduced-time-to-first-token-ttft.json",
     "2026-2604.16583-polar-online-learning-for-lora-adapter-caching-and-routing-in-edge-llm-serving.json",
+    "2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasoning.json",
     "2026-2604.16734-reducing-peak-memory-usage-for-modern-multimodal-large-language-model-pipelines.json",
     "2026-2604.17068-stability-weighted-decoding-for-diffusion-language-models.json",
     "2026-2604.17228-revisiting-auxiliary-losses-for-conditional-depth-routing-an-empirical-study.json",
@@ -50461,6 +50466,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2510.25977": {
+      "order": [
+        "2026-11-23T18:54:22+00:00",
+        "2025-2510.25977-neuronmlp-efficient-llm-inference-via-singular-value-decomposition-compression-and-tiling-on-aws-trainium.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.20636": {
+      "order": [
+        "2026-11-23T18:55:52+00:00",
+        "2025-2512.20636-data-free-pruning-of-self-attention-layers-in-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.22563": {
+      "order": [
+        "2026-11-23T18:57:22+00:00",
+        "2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.14649": {
+      "order": [
+        "2026-11-23T18:58:52+00:00",
+        "2026-2602.14649-gradmap-faster-layer-pruning-with-gradient-metric-and-projection-compensation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.16694": {
+      "order": [
+        "2026-11-23T19:00:22+00:00",
+        "2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63882,6 +63932,21 @@
     "arxiv:2505.19349": [
       "papers/inference/15-inference-simulation-emulation/2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md",
       "papers/inference/15-inference-simulation-emulation/2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md"
+    ],
+    "arxiv:2510.25977": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2510.25977-neuronmm-high-performance-matrix-multiplication-for-llm-inference-on-aws.md"
+    ],
+    "arxiv:2512.20636": [
+      "papers/inference/99-other-inference-systems/2025-2512.20636-data-free-pruning-of-self-attention-layers-in-llms.md"
+    ],
+    "arxiv:2601.22563": [
+      "papers/inference/99-other-inference-systems/2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.md"
+    ],
+    "arxiv:2602.14649": [
+      "papers/inference/99-other-inference-systems/2026-2602.14649-gradmap-faster-layer-pruning-with-gradient-metric-and-projection-compens.md"
+    ],
+    "arxiv:2604.16694": [
+      "papers/inference/99-other-inference-systems/2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasonin.md"
     ]
   }
 }

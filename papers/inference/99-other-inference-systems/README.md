@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1359本）
+## 自動生成の論文一覧（1363本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2446,6 +2446,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   難しい質問には段階的な思考連鎖（Chain-of-Thought、CoT）が有効だが、簡単な質問にも毎回長い思考を生成すると、回答に至るまでの生成トークン数と推論費用が増える。ただし最初の並列生成は無料ではなく、バッチやGPU配置を含む実システム全体で同じ節約率になるとは限らない。
 
+- **2026-04 · [RankGuide: Tensor-Rank-Guided Routing and Steering for Efficient Reasoning](2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasonin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  隠れ状態のテンソルランクの崩壊を小さい推論モデルの失敗信号として使い、過信型の誤りを大きいモデルへ回し、高ランク校正だけで作ったステアリングベクトルで再検証を減らす協調推論の枠組み。
+
 - **2026-04 · [QuantClaw: Precision Where It Matters for OpenClaw](2026-2604.22577-quantclaw-precision-where-it-matters-for-openclaw.md)**  
   実装：[✓](https://github.com/SparkEngineAI/QuantClaw-plugin) ・ リポジトリ内被引用：0  
   エージェント課題ごとの量子化感度を実測して精度の経路表を作り、軽い課題は低精度、重い課題は高精度へ自動で振り分けることで、得点を保ちながら費用と遅延を2割前後削った精度経路プラグイン。
@@ -2874,6 +2878,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   通常の方式は、草稿の先頭付近に受理されにくいトークンがあると、その後の候補が正しくても利用できない。A100 80GB上のOPT-6.7B/350MおよびOPT-6.7B/125Mでは、草稿長L=8、経路数K=3により、K=1のBVに対してトークン当たり実時間を6条件平均13.34%削減した。
 
+- **2026-02 · [GradMAP: Faster Layer Pruning with Gradient Metric and Projection Compensation](2026-2602.14649-gradmap-faster-layer-pruning-with-gradient-metric-and-projection-compens.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  勾配の大きさで層の重要度を1回の逆伝播で測り、枝刈り後に最もずれた1層だけへ射影補償行列を掛けて回復させることで、枝刈り自体を平均約4倍速くし性能も上回る2段階の層枝刈り。
+
 - **2026-02 · [Every Bit Counts: A Theoretical Study of Precision–Expressivity Tradeoffs in Quantized Transformers](2026-2602.02707-every-bit-counts-a-theoretical-study-of-precision-expressivity-tradeoffs.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Transformerの量子化が単に近似誤差を増やすだけなのか、それとも十分な学習を行っても表現できない関数を生むのかを問う理論研究である。補助実験では、2ヘッド・埋め込み次元4の単層モデルに合成等値判定を学習させ、長さ100の課題で学習後量子化した場合、INT12の平均正答率94.95%に対してINT4は58.72%となる。
@@ -3042,6 +3050,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   同系統の大モデルに較正文を書き直させ、競合選択と正規化で整えた較正データで通常の量子化を行うことで、八十億級モデルで全精度との精度差を最大二八・五パーセント縮めたと報告した。
 
+- **2026-01 · [EUGens: Efficient, Unified, and General Dense Layers](2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全結合層の入力と重みをランダム特徴で分離し内積だけで結ぶEUGenで推論を線形時間化し、Mip-NeRF 360で品質を保ったまま27パーセント高速化、ViTで推論パラメータ約30パーセント削減を実証した層置換の研究。
+
 - **2026-01 · [Entropy-Tree: Tree-Based Decoding with Entropy-Guided Exploration](2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークンのエントロピーと注意による重要度で分岐位置を選び、接頭辞を共有する木で推論経路を探索するEntropy-Treeは、同じ葉数の独立サンプリングより高いpass@kと良い不確実性推定を多くの条件で示すデコード手法。
@@ -3169,6 +3181,10 @@
 - **2025-12 · [Demystifying LLM-as-a-Judge: Analytically Tractable Model for Inference-Time Scaling](2025-2512.19905-demystifying-llm-as-a-judge-analytically-tractable-model-for-inference-t.md)**  
   実装：[✓](https://github.com/I-Halder/Demystifying-LLM-as-a-Judge-Analytically-Tractable-Model-for-Inference-Time-Scaling) ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の推論時に複数の回答を生成し、別の評価モデル（LLM-as-a-Judge）が良い回答を選ぶ方式は、学習済みのモデル重みを変更せずに品質を改善する手段である。
+
+- **2025-12 · [Data-Free Pruning of Self-Attention Layers in LLMs](2025-2512.20636-data-free-pruning-of-self-attention-layers-in-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  深い注意層が自らの更新を消すという抑制仮説に基づき、クエリとキー重みの結合の強さだけで注意層を順位付けて外す、データ不要で1秒未満に終わる深さ方向の枝刈り。
 
 - **2025-12 · [Can LLMs Predict Their Own Failures? Self-Awareness via Internal Circuits](2025-2512.20578-can-llms-predict-their-own-failures-self-awareness-via-internal-circuits.md)**  
   実装：[✓](https://github.com/Amirhosein-gh98/Gnosis) ・ リポジトリ内被引用：0  
@@ -5336,13 +5352,13 @@
   実装：[✓](https://github.com/mlpen/Nystromformer) ・ リポジトリ内被引用：49  
   標準的な自己注意（self-注意機構）は、系列長nのすべてのトークン対の類似度を計算するため、n×nの注意行列を作る。系列が2倍になると注意行列の要素数は4倍となり、長い文書を扱うTransformerでは計算量とメモリ容量が問題になる。
 
+- **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
+  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：22  
+  Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
+
 - **2020-12 · [Fast Transformers with Clustered Attention](2020-2007.04825-fast-transformers-with-clustered-attention.md)**  
   実装：[✓](https://github.com/idiap/fast-transformers) ・ リポジトリ内被引用：22  
   本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
-
-- **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
-  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：21  
-  Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
   実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：17  

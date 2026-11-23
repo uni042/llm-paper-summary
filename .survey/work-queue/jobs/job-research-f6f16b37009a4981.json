@@ -35,10 +35,15 @@
   "selection_reason": "AWS Trainium上でのLLM推論に対し、特異値分解による圧縮とタイリング、カーネル融合とキャッシュ戦略でデータ移動を削減するNeuronMLPを提案しており、推論向け圧縮とカーネルの直接貢献が確認できる。",
   "semantic_scholar_id": "b8105b57b523ef4f32152c5b55ba111cbcb90cef",
   "source_url": "https://arxiv.org/abs/2510.25977",
-  "status": "ready",
+  "status": "superseded",
   "title": "NeuronMLP: Efficient LLM Inference via Singular Value Decomposition Compression and Tiling on AWS Trainium",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-23T19:02:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2510.25977-neuronmm-high-performance-matrix-multiplication-for-llm-inference-on-aws.md",
+  "represented_canonical_id": "arXiv:2510.25977",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
