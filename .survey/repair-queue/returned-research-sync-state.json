@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6d80b80c560aaa8295f0dc432251d21912eca8c9",
+  "base_commit": "d6734e0a31d383d8a60f3d8683ffca144b7df3fc",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -29,10 +29,15 @@
     "0-retry-research-b261f1661507--libfile_4a9d01a8e7088191929451077ffc2f06--2025-2505.00019-prompt-compression-empirical-study-research-20261024-0401-scheduled-cha.json",
     "0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-.json",
     "0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-202610.json",
+    "0000-0427ffa977bc-smart-routing-cost-effective-multi-llm-serving-in-aios.json",
     "0000-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed-long-context-summarization.json",
     "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json",
+    "0000-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.json",
     "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json",
     "0000-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quantize-llms.json",
+    "0000-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amortization.json",
+    "0000-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.json",
+    "0000-2650e5d02f29-collaborative-lossless-llm-inference-serving-with-offloading-based-pipeline-parallelism-on-edge-devices.json",
     "0000-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models.json",
     "0000-28f8da2934ce-rqt-hierarchical-residual-quantization-for-multi-model-compression.json",
     "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
@@ -51674,6 +51679,42 @@
         "processed_at": "2026-11-23T22:21:18+00:00"
       },
       "return_count": 3
+    },
+    "DOI:10.18653/v1/2025.ijcnlp-long.112": {
+      "order": [
+        "2026-11-23T23:41:58+00:00",
+        "0000-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.knowfm-1.11": {
+      "order": [
+        "2026-11-23T23:42:52+00:00",
+        "0000-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amortization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64": {
+      "order": [
+        "2026-11-23T23:43:46+00:00",
+        "0000-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:b4bcd75d8f9bd8c78f99e6106169e033c76dd2da": {
+      "order": [
+        "2026-11-23T23:44:13+00:00",
+        "0000-2650e5d02f29-collaborative-lossless-llm-inference-serving-with-offloading-based-pipeline-parallelism-on-edge-devices.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65403,6 +65444,15 @@
     "doi:10.24963/ijcai.2026/631": [
       "papers/inference/99-other-inference-systems/2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.md",
       "papers/inference/99-other-inference-systems/2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.md"
+    ],
+    "doi:10.18653/v1/2025.ijcnlp-long.112": [
+      "papers/inference/99-other-inference-systems/2025-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.md"
+    ],
+    "doi:10.18653/v1/2026.knowfm-1.11": [
+      "papers/inference/99-other-inference-systems/2026-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amort.md"
+    ],
+    "semanticscholar:8d3afec4b9114afed276997d483c284deb60eb64": [
+      "papers/inference/99-other-inference-systems/2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md"
     ]
   }
 }

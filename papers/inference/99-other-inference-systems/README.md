@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1402本）
+## 自動生成の論文一覧（1405本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1830,6 +1830,10 @@
   実装：[✓](https://github.com/LyuQi127/SAB_LVLM) ・ リポジトリ内被引用：0  
   SAB-LVLMは、画像と文章を扱う大規模視覚言語モデル（LVLM）を、重み約1bitの二値化へ圧縮する事後量子化（PTQ）方式である。Qwen2.5-VL-32B-InstructのMMStarは約1bitのARB-LLM48.48点からSAB-LVLM54.77点へ改善し、モデルメモリは10.28GBと報告される。
 
+- **2026-07 · [RSCE: Training-Free Residual Stream Encoding for Persistent Context Amortization](2026-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amort.md)**  
+  実装：[✓](https://anonymous.4open.science/r/RSCE-2E4C/) ・ リポジトリ内被引用：0  
+  文書を残差ストリームの平均ベクトル1本へ圧縮して質問時に注入し、プリフィルを定数時間化する学習不要の方式で、99パーセント削減でも品質の6から8割を保つが、ベクトル単独では記憶想起を抑える干渉も見つけた。
+
 - **2026-07 · [Resting Neurons, Active Insights: Robustifying Activation Sparsity in LLMs via Spontaneity](2025-2512.12744-resting-neurons-active-insights-improving-input-sparsification-for-large.md)**  
   実装：[✓](https://github.com/hxu105/SPON) ・ リポジトリ内被引用：0  
   TEALなどの活性疎化方式は、小さい入力活性を閾値処理で零にして重み転送と積和を省く。実際にNVIDIA A6000でバッチ1の生成速度を測定し、50%疎化したLlama3-8Bは64.13 トークン/s、Mistral-7Bは71.84 トークン/sであり、TEALの64.28、71.25 トークン/sとほぼ同じだった。
@@ -3285,6 +3289,10 @@
 - **2025-12 · [Mesh-Attention: A New Communication-Efficient Distributed Attention with Improved Data Locality](2025-2512.20968-mesh-attention-a-new-communication-efficient-distributed-attention-with-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Mesh-注意機構は、数十万から100万トークンの系列に対して注意機構を多数のGPUへ分割する際、各GPUが受け取る問い合わせ（Q）と鍵・値（KV）の転送量を同時に抑える分散注意アルゴリズムである。
+
+- **2025-12 · [LangCompress: Language-Aware Compression of Large Language Models](2025-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対象言語の指示データをモデル自身に合成させ、頻度の高いキートークンだけへ語彙ヘッドを切り詰めることで、既存の枝刈りと量子化を低資源言語でも崩壊させずに効かせる言語適応型の圧縮枠組み。
 
 - **2025-12 · [Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression](2025-5f0897915cbf-glance2gaze-efficient-vision-language-models-from-glance-fusion-to-gaze-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5153,6 +5161,10 @@
 - **2024-05 · [On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization](2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   微調整データなしで、層ごとの量子化感度をロジットの距離で測ってパレートフロンティアで層を選び、事前学習コーパスで較正することで、言語トランスフォーマーの95%以上を8ビット整数化しても正解率の低下を0.02%以内に抑える学習後量子化の研究。
+
+- **2024-05 · [Efficient Distributed LLM Inference with Dynamic Partitioning](2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テンソル並列の全分割戦略を記号探索してパレート最適な3方式を残し、入力長とGPU特性の閾値で実行時に切り替える動的分割で、L4上のLlama 2で初回トークンまでの時間を最大40パーセント、遅延を最大18パーセント削減する修士論文。
 
 - **2024-05 · [Distributed Inference Performance Optimization for LLMs on CPUs](2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
