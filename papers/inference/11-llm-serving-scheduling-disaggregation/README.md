@@ -2443,7 +2443,7 @@
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   本論文は、Transformerの自己注意における「どの単語対の関連度が小さいかは入力が来るまで分からない」という制約を、学習可能な層別閾値と専用演算器の共同設計で解く。
 
 ### 6年前（2020-12〜2021-11）

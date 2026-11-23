@@ -652,6 +652,10 @@
   実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：2  
   従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
 
+- **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
+
 - **2024-12 · [A Survey of RWKV](2024-2412.14847-a-survey-of-rwkv.md)**  
   実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：2  
   RWKVは、過去の情報を固定形状の再帰状態へ畳み込むことで、生成時に全トークンのKVを保持しない設計を取る。
@@ -667,10 +671,6 @@
 - **2025-09 · [Motivating Next-Gen Accelerators with Flexible N:M Activation Sparsity via Benchmarking Lightweight Post-Training Sparsification Approaches](2025-2509.22166-motivating-next-gen-accelerators-with-flexible-n-m-activation-sparsity-v.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   半構造化N:M疎性は、各M要素のうちN要素を残す制約を設ける。2:4、4:8、8:16、16:32はいずれも50%の要素をゼロ化するが、ブロックが大きいほど、どの要素を残すかの組合せが増える。したがって本研究は「半構造化活性疎性が現時点で実用上安全」と結論するより、将来ハードウェアの設計選択を促す精度とコストの基礎ベンチマークとして読むべきである。
-
-- **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
 
 - **2025-05 · [Quantitative Analysis of Performance Drop in DeepSeek Model Quantization](2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md)**  
   実装：[✓](https://github.com/UnicomAI/DeepSeek-Eval) ・ リポジトリ内被引用：1  
