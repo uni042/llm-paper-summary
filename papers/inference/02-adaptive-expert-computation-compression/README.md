@@ -493,7 +493,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   XMoEは、混合専門家モデル（Mixture-of-Experts、MoE）の計算を、専門家を細かく分割することとトークンごとに選ぶ専門家数を変えることで適応的に配分する手法である。
 
 - **2024-05 · [Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models](2024-2405.14297-dynamic-mixture-of-experts-an-auto-tuning-approach-for-efficient-transfo.md)**  
-  実装：[✓](https://github.com/LINs-lab/DynMoE) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/LINs-lab/DynMoE) ・ リポジトリ内被引用：16  
   DynMoE（動的 Mixture of エキスパート）は、混合専門家モデル（Mixture of エキスパート、MoE）を構成するときに通常手作業で指定する二つの数、すなわち各層に置く専門家の総数Kと、各トークンが使う専門家数kを、学習の過程で調整する方式である。
 
 - **2024-08 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  

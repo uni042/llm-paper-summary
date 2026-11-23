@@ -3193,7 +3193,7 @@
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：123  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：124  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -3241,7 +3241,7 @@
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
 
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
-  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：30  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
@@ -3368,10 +3368,6 @@
   実装：✓ ・ リポジトリ内被引用：4  
   一般的なクラスタスケジューラが空きGPUを近い位置に詰めても、実際に頻繁に通信するDP/PPグループが別のスイッチ配下に分散すれば帯域競合と通信待ちが発生する。トレース駆動シミュレーションでは比較方式に対し通信グループの重み付き最大広がりを最大1.67倍改善し、実クラスタでは208 GPUで学習処理量5.7%、9600超GPUで10.6%改善した。
 
-- **2025-05 · [ERC-SVD: Error-Controlled SVD for Large Language Model Compression](2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  切り捨て残差を2段目の特異値分解で回収する残差補償と、最後の数層だけへの部分層圧縮で誤差伝播を抑える、学習不要の特異値分解圧縮手法。同じ圧縮率で既存の特異値分解系手法より品質を保つ。
-
 - **2025-03 · [Týr-the-Pruner: Structural Pruning LLMs via Global Sparsity Distribution Optimization](2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md)**  
   実装：[✓](https://github.com/AMD-AGI/Tyr-the-Pruner) ・ リポジトリ内被引用：4  
   各層を複数の疎率で切った複製の束から全体の疎率配分を進化的探索で選ぶ全体枝刈りで、七百億級モデルを半分切っても下流の平均正解率を元の九十七パーセントに保ち、八十億級の三十七・五パーセント枝刈りでは従来の最良手法より困惑度が三・四五低く正解率が十・二六ポイント高かったと報告した。
@@ -3412,9 +3408,17 @@
   実装：✓ ・ リポジトリ内被引用：3  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
 
+- **2025-05 · [ERC-SVD: Error-Controlled SVD for Large Language Model Compression](2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  切り捨て残差を2段目の特異値分解で回収する残差補償と、最後の数層だけへの部分層圧縮で誤差伝播を抑える、学習不要の特異値分解圧縮手法。同じ圧縮率で既存の特異値分解系手法より品質を保つ。
+
 - **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   μ-MoEは、モデルをあらかじめ一度だけ枝刈りするのではなく、実際に与えられたプロンプトをその場の校正データとして使い、線形層の重みのうち重要なものだけを有効化する方式である。
+
+- **2025-04 · [AccLLM: Accelerating Long-Context LLM Inference Via Algorithm-Hardware Co-Design](2025-2505.03745-accllm-accelerating-long-context-llm-inference-via-algorithm-hardware-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
 
 - **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -3523,10 +3527,6 @@
 - **2025-04 · [Hawkeye: Model Collaboration for Efficient Reasoning](2025-2504.00424-hawkeye-model-collaboration-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Hawkeyeは、推論用の大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を出力し続けることによる生成遅延と課金額を削減する研究である。重要なのは、二段階のモデル連携を推論時だけでなく事後学習の報酬設計にも組み込んでいることである。
-
-- **2025-04 · [AccLLM: Accelerating Long-Context LLM Inference Via Algorithm-Hardware Co-Design](2025-2505.03745-accllm-accelerating-long-context-llm-inference-via-algorithm-hardware-co.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
 
 - **2025-03 · [Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity](2025-2503.11164-towards-extreme-pruning-of-llms-with-plug-and-play-mixed-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -3735,6 +3735,10 @@
 - **2025-04 · [Empower Vision Applications with LoRA LMM](2025-2411.00915-empower-vision-applications-with-lora-lmm.md)**  
   実装：[✓](https://github.com/mi150/VaLoRA) ・ リポジトリ内被引用：1  
   オンラインでは入力形状に合うタイル構成を事前探索したATMMカーネルを使い、LoRAを基盤重みへ統合するモード、統合しないモード、両者を混ぜるdeLoRAモードを負荷に応じて選ぶ。
+
+- **2025-04 · [Efficient LLMs with AMP: Attention Heads and MLP Pruning](2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.md)**  
+  実装：[✓](https://github.com/c2d-usp/Efficient-LLMs-with-AMP) ・ リポジトリ内被引用：1  
+  入力を重みへ射影して測る寄与の大きさで、注意ヘッドとMLPニューロンを同時に削る構造化枝刈り。ノルム基準より精度を保ち、実測の高速化も得る。
 
 - **2025-04 · [An Empirical Study on Prompt Compression for Large Language Models](2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md)**  
   実装：[✓](https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression) ・ リポジトリ内被引用：1  
@@ -4328,10 +4332,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの低ビット事後量子化では、活性値の外れ値が量子化範囲を占有し、3〜4ビットの小さい整数レンジに通常の値を十分に割り当てられない。Mistral 7B v0.1を重み・活性・KVとも3ビット化した実験では、QuaRot単独の6課題平均18.43%がGBS併用58.31%へ改善した。
 
-- **2025-04 · [Efficient LLMs with AMP: Attention Heads and MLP Pruning](2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.md)**  
-  実装：[✓](https://github.com/c2d-usp/Efficient-LLMs-with-AMP) ・ リポジトリ内被引用：0  
-  入力を重みへ射影して測る寄与の大きさで、注意ヘッドとMLPニューロンを同時に削る構造化枝刈り。ノルム基準より精度を保ち、実測の高速化も得る。
-
 - **2025-04 · [DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models](2025-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SSMで浅い層の隠れ状態が深い層へ届く前に減衰する問題に対し、複数層の隠れ状態を選択的に射影・ゲートして現在の隠れ状態へ融合する密な層間接続DenseSSMを提案し、RetNetとMambaの精度を上げる。
@@ -4586,16 +4586,16 @@
   実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：14  
   線形注意を元の注意出力に合わせる注意転移と低ランク適応だけの調整で線形化し、学習量を桁違いに減らしながらラマ3・8ビーのゼロショット差をほぼ閉じ、初めて4050億パラメータまで線形化した。
 
+- **2024-10 · [AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models](2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md)**  
+  実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：13  
+  重み行列の固有値分布の裾の重さで層の学習度を測り、よく学んだ層ほど少なく刈る層別疎率の配分法で、疎率80%のLLaMA-7Bで従来の層別配分より困惑度を304.31下げ、CPU推論3.06倍を実測した。
+
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：13  
   二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
 
-- **2024-10 · [AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models](2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md)**  
-  実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：12  
-  重み行列の固有値分布の裾の重さで層の学習度を測り、よく学んだ層ほど少なく刈る層別疎率の配分法で、疎率80%のLLaMA-7Bで従来の層別配分より困惑度を304.31下げ、CPU推論3.06倍を実測した。
-
 - **2023-12 · [Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference](2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md)**  
-  実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：13  
   大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
 
 - **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
@@ -4770,6 +4770,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   重要度の小さい方向を剪定したり、特異値を学習対象にしたりすることで、既存モデルの構造を利用した圧縮と効率的な微調整を行う。
 
+- **2024-11 · [AmoebaLLM: Constructing Any-Shape Large Language Models for Efficient and Instant Deployment](2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and.md)**  
+  実装：[✓](https://github.com/GATECH-EIC/AmoebaLLM) ・ リポジトリ内被引用：1  
+  動的計画法の層選択と形状連動のLoRA混合で、一回の微調整から深さと幅の任意形状のモデルを即時抽出できるようにし、個別圧縮より高い精度を出した枠組み。
+
 - **2024-10 · [Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs](2024-2410.14570-understanding-the-difficulty-of-low-precision-post-training-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMの重みを2〜4bitへ圧縮すると、GPUメモリ使用量を減らせる可能性がある一方、言語モデルの予測品質が大きく落ちることがある。
@@ -4869,10 +4873,6 @@
 - **2024-11 · [Anchor Attention, Small Cache: Code Generation with Large Language Models](2024-2411.06680-anchor-attention-small-cache-code-generation-with-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   手法は、行単位のトークン-wise Anchor 注意機構（TAA）、位置情報をアンカー内へ保持するMulti-Head Positional Encoding（MHPE）、浅い層のアンカーKVを深い層へ直接参照させる層-wise Anchor 注意機構（LAA）からなる。
-
-- **2024-11 · [AmoebaLLM: Constructing Any-Shape Large Language Models for Efficient and Instant Deployment](2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and.md)**  
-  実装：[✓](https://github.com/GATECH-EIC/AmoebaLLM) ・ リポジトリ内被引用：0  
-  動的計画法の層選択と形状連動のLoRA混合で、一回の微調整から深さと幅の任意形状のモデルを即時抽出できるようにし、個別圧縮より高い精度を出した枠組み。
 
 - **2024-11 · [A Runtime-Adaptive Transformer Neural Network Accelerator on FPGAs](2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.md)**  
   実装：[✓](https://github.com/Kabir-Ehsan/Transformer_on_FPGA) ・ リポジトリ内被引用：0  
@@ -5057,7 +5057,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：349  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：351  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5073,7 +5073,7 @@
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：103  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
@@ -5362,13 +5362,13 @@
 
 ### 7年前（2019-12〜2020-11）
 
+- **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  FTRANSは、Transformerの重み行列を拡張ブロック循環行列（enhanced block-circulant matrix; BCM）に置き換える構造化圧縮と、その圧縮表現を直接計算する再構成可能論理回路（field-programmable gate array; FPGA）の専用構成を同時設計した研究である。
+
 - **2020-02 · [Compressing Large-Scale Transformer-Based Models: A Case Study on BERT](2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   量子化で重みを小さくする方法、不要な重みや構造を削る方法、大きな教師モデルから小さな生徒モデルへ知識を移す方法など、圧縮の選択肢は多い。
-
-- **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  FTRANSは、Transformerの重み行列を拡張ブロック循環行列（enhanced block-circulant matrix; BCM）に置き換える構造化圧縮と、その圧縮表現を直接計算する再構成可能論理回路（field-programmable gate array; FPGA）の専用構成を同時設計した研究である。
 
 - **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  
   実装：[✓](https://github.com/laiguokun/Funnel-Transformer) ・ リポジトリ内被引用：11  
@@ -5443,11 +5443,11 @@
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：109  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：110  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：91  
+  実装：✓ ・ リポジトリ内被引用：92  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
