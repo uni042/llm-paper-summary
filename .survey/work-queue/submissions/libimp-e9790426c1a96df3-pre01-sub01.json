@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Communication-Efficient Decentralized LLM Inference over Low-Bandwidth Distributed Nodes",
+      "source_url": "https://doi.org/10.1109/ECNCT70535.2026.11661442",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "2026 8th International Conference on Electronics and Communication, Network and Computer Technology (ECNCT)",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decentralized large language model (LLM) inference distributes transformer layers across heterogeneous nodes to enable resource-constrained participants to collaboratively serve large models. However, inter-node activation transfer constitutes a significant communication bottleneck, especially under low-bandwidth conditions prevalent in consumer-grade and edge networks. We propose BandwidthLLM, a communication-efficient framework that integrates three techniques: (1) a bandwidth-aware layer placement algorithm that minimizes boundary-level transfer cost according to link bandwidth and node reliability; (2) a lightweight activation compression scheme combining adaptive quantization with outlier-aware clipping and error feedback; and (3) a semantic preservation check that automatically falls back to higher precision when compressed activations deviate beyond a calibrated threshold. Experiments on Llama-2-7B, Mistral-7B, and Qwen2.5-7B across simulated bandwidth conditions (20–500 Mbps) demonstrate that BandwidthLLM reduces inter-node activation traffic by 62.7–63.4% relative to the BloomBee-like baseline while maintaining perplexity degradation of at most 0.31 points and task accuracy within 0.9 percentage points of uncompressed inference. Under 20 Mbps links, BandwidthLLM achieves 1.7× higher throughput and 41% lower latency.",
+      "identifiers": [
+        "SemanticScholar:126eab5c1731363edfad673e7e2254b33c8b91f7"
+      ],
+      "semantic_scholar_id": "126eab5c1731363edfad673e7e2254b33c8b91f7",
+      "doi": "10.1109/ECNCT70535.2026.11661442",
+      "canonical_id": "DOI:10.1109/ECNCT70535.2026.11661442",
+      "authors": [
+        "Zhi-Hao Wang",
+        "Shi Shu",
+        "Yu-Lin Wang",
+        "I-Hsien Lai",
+        "Cheng-Chuan Peng"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低帯域ノード間の活性化転送を、帯域認識型レイヤ配置と適応量子化による活性化圧縮で62%以上削減する分散LLM推論フレームワークBandwidthLLMを提案しており、分散推論の通信効率への直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment",
+      "source_url": "https://doi.org/10.52202/079017-3471",
+      "year": 2024,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 41,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized the field of natural language processing with their impressive capabilities. However, their enormous size presents challenges for deploying them in real-world applications. Traditional compression techniques, like pruning, often lead to suboptimal performance due to their uniform pruning ratios and lack of consideration for the varying importance of features across different layers. To address these limitations, we present a novel Adaptive Layer Sparsity (ALS) approach to optimize LLMs. Our approach consists of two key steps. Firstly, we estimate the correlation matrix between intermediate layers by leveraging the concept of information orthogonality. This novel perspective allows for a precise measurement of the importance of each layer across the model. Secondly, we employ a linear optimization algorithm to develop an adaptive sparse allocation strategy based on evaluating the correlation matrix. This strategy enables us to selectively prune features in intermediate layers, achieving fine-grained optimization of the LLM model. Considering the varying importance across different layers, we can significantly reduce the model size without sacrificing performance. We conduct extensive experiments on publicly available language processing datasets, including the LLaMA-V1|V2|V3 family and OPT, covering various benchmarks. Our experimental results validate the effectiveness of our ALS method, showcasing its superiority over previous approaches. The performance gains demonstrate its potential for enhancing LLMs’ efficiency and resource utilization. Notably, our approach surpasses the state-of-the-art models Wanda and SparseGPT, showcasing its ability to excel even under high sparsity levels. Codes at: https://github.com/lliai/ALS.",
+      "identifiers": [
+        "SemanticScholar:585d612cf0f4224d7a479fa807dca6cfb52a64cb"
+      ],
+      "semantic_scholar_id": "585d612cf0f4224d7a479fa807dca6cfb52a64cb",
+      "doi": "10.52202/079017-3471",
+      "canonical_id": "DOI:10.52202/079017-3471",
+      "authors": [
+        "Wei Li",
+        "Lu-Jun Li",
+        "Mark G. Lee",
+        "Shengjie Sun"
+      ],
+      "priority": 51,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 41,
+        "citation_count": 41,
+        "total": 51,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 875,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "中間層間の相関行列で層重要度を測り層ごとに適応的な疎化率を割り当てるAdaptive Layer Sparsityにより、性能を保ちつつLLMのモデルサイズを削減する、推論向け圧縮の具体的な手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "UniLoRA: A Unified Framework for Efficient and Secure LoRA Management in Multi-Tenant LLM Inference",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11462889",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:aae8d242889ce84c39d42c352da3f58cf543865b"
+      ],
+      "semantic_scholar_id": "aae8d242889ce84c39d42c352da3f58cf543865b",
+      "doi": "10.1109/icassp55912.2026.11462889",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462889",
+      "authors": [
+        "Zechao Lin",
+        "Xing-Bin Wang",
+        "Dan Meng",
+        "Rui Hou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチテナントLLM推論向けにSLA認識スケジューラ、予測キャッシュとLoRA対応カーネルによる適応メモリ管理を備えたUniLoRAを提案し、P99レイテンシ1.8倍改善とスループット向上を示す、サービングへの直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpecPrune: Accelerating Video LLMs via Diversity-Aware Vision Token Pruning",
+      "source_url": "https://doi.org/10.1109/ICBASE70763.2026.11619377",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "2026 7th International Conference on Big Data & Artificial Intelligence & Software Engineering (ICBASE)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) provides an efficient solution to accelerating the inference of large language models (LLMs), but its application to video large language models (Vid-LLMs) remains underexplored, with existing methods achieving only limited speedup gains. Prior studies have shown that visual tokens are highly redundant and that, compared with the target model, the draft model is more tolerant to token pruning, creating an opportunity for draft-side visual token pruning. Nevertheless, current token pruning approaches predominantly rely on attention-based heuristic selection, which is susceptible to position bias. To tackle this issue, we present SpecPrune, a training-free speculative decoding framework for Vid-LLMs. SpecPrune formulates draft-side video token pruning as a Determinantal Point Process (DPP) problem to retain a diverse visual subset, and combines it with a context-aware dynamic draft tree to improve token budget utilization and reduce low-confidence branch expansions. Experiments on four video benchmarks and two Vid-LLM families show that SpecPrune consistently achieves the best decoding speed and wall-time speedup, demonstrating its effectiveness and robustness for video speculative decoding.",
+      "identifiers": [
+        "SemanticScholar:f64d61b358501918f5ac6955ecd38aa41c85876e"
+      ],
+      "semantic_scholar_id": "f64d61b358501918f5ac6955ecd38aa41c85876e",
+      "doi": "10.1109/ICBASE70763.2026.11619377",
+      "canonical_id": "DOI:10.1109/ICBASE70763.2026.11619377",
+      "authors": [
+        "Yan Feng",
+        "Jing Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ビデオLLMの投機的デコードにおけるドラフト側視覚トークンをDPPで多様性保持しつつ枝刈りし、動的ドラフトツリーと組み合わせてデコード速度を最大化する手法であり、投機的デコードへの直接的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Interaction Effects in Hybrid Compression of Small Language Models",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/631",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "IJCAI/ECAI",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We investigate the interaction between quantization and pruning in the compression of open-weight small language models (SLMs), as these techniques are frequently combined in practice without a clear understanding of whether their effects are antagonistic, synergistic or additive. Prior work has reported ordering effects and studied pruning or quantization in isolation, but rarely quantifies their interaction across models and evaluation metrics. We introduce an interaction coefficient that isolates non-additive effects and apply it to Falcon3-1B-Base and LLaMA-3.2-1B, with a limited study on Qwen2.5-1.5B. Our experiments cover four hybrid application orders, multiple pruning sparsities and 4/8-bit quantization. We find non-monotonic interactions: memory savings are dominated by 4-bit quantization, while pruning alone provides limited benefits. Hybrids exhibit the greatest effects at global unstructured pruning sparsity s ∈ {0.2, 0.3} while getting close to additivity at s=0.5. At low sparsity, truthfulness improves, while reasoning losses diminish at higher sparsity. Future work will extend interaction analysis to hardware-aware sparse kernels and larger models.",
+      "identifiers": [
+        "SemanticScholar:aebd51be18c195ed6fe439e85f208c5ae4548afa"
+      ],
+      "semantic_scholar_id": "aebd51be18c195ed6fe439e85f208c5ae4548afa",
+      "doi": "10.24963/ijcai.2026/631",
+      "canonical_id": "DOI:10.24963/ijcai.2026/631",
+      "authors": [
+        "Iheb Bouriel",
+        "Q. Nasir",
+        "Manar Abu Talib"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      },
+      "reason": "小規模言語モデルにおける量子化と枝刈りの併用効果を相互作用係数で定量化し、適用順序・疎化率・ビット幅ごとのメモリ削減と精度への影響を実測する、推論向けハイブリッド圧縮の設計指針を与える研究である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e9790426c1a9",
+    "round": "libimp-e9790426c1a96df3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e9790426c1a96df3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e9790426c1a96df3-pre01.json",
+    "receipt": "sha256:b60b06b3fd7d37a972c2cdea50de99054282d864d2ef1497797f730e84550cfe"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e9790426c1a9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

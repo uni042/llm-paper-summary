@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "An Empirical Study of LLM Serving in Confidential GPUs",
+      "source_url": "https://doi.org/10.1109/ISPASS69572.2026.00038",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed to serve user prompts, raising significant concerns regarding the security and privacy of user data. Confidential computing (CC) offers a practical approach for securing workloads within untrusted cloud environments. While CPU technologies such as Intel TDX and AMD SEV-SNP enable confidential virtual machines (CVMs) that isolate and attest software execution, recent advancements in NVIDIA GPUs have extended these security guarantees to accelerators. LLM serving frameworks, notably vLLM and SGLang, have emerged as the de facto infrastructure for large-scale deployment, orchestrating complex operations including batching, scheduling, KV-cache management, and kernel execution across heterogeneous CPU–GPU architectures. Although CC in GPU is known to impose overhead through encrypted CPU-GPU communication, its actual impact on these end-to-end LLM serving has not been evaluated in depth, considering the scheduling and optimizations in the serving frameworks, motivating a systematic characterization of how CC reshapes end-to-end LLM serving performance. This paper presents a comprehensive performance study of two popular serving frameworks, vLLM and SGLang, across machines utilizing AMD SEV and Intel TDX. Our evaluation demonstrates that offline throughput overhead varies notably by framework: vLLM exhibits a $\\mathbf{1 - 1 3 \\%}$ overhead across models, whereas SGLang frequently exceeds 20%, with a range of $3-66 \\%$. In online scenarios, queuing delays further amplify CC penalties. Even when large batch sizes provide sufficient throughput, the CC overhead for end-to-end latency is often $2 \\times$ larger than CC overhead observed for offline throughput. Furthermore, optimizations designed for standard environments do not always yield performance gains under CC. While kernel fusion via torch.compile improves throughput for both frameworks in non-confidential settings, SGLang’s static-graph and maxautotune design result in a performance degradation under CC. Additionally, chunked prefill increases CC overhead due to the requirement for additional encrypted communication rounds. Similarly, KV-cache swapping can increase end-to-end latency by as much as 50% compared to recomputation, and model offloading incurs a throughput overhead exceeding 150% under CC.",
+      "identifiers": [
+        "SemanticScholar:81d606ef9793de86bc6f1f27029a0c069e7f90fe"
+      ],
+      "semantic_scholar_id": "81d606ef9793de86bc6f1f27029a0c069e7f90fe",
+      "doi": "10.1109/ISPASS69572.2026.00038",
+      "canonical_id": "DOI:10.1109/ISPASS69572.2026.00038",
+      "authors": [
+        "Eunseon Park",
+        "Timo Thans",
+        "Vishnu Kumar Kalidasan",
+        "Qing-Hao Hu",
+        "Wenjie Xiong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      },
+      "reason": "機密GPU環境下でvLLMとSGLangのバッチング・スケジューリング・KVキャッシュ管理を含むエンドツーエンドのLLMサービング性能を体系的に実測する研究であり、サービング計測として直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RSCE: Training-Free Residual Stream Encoding for Persistent Context Amortization",
+      "source_url": "https://doi.org/10.18653/v1/2026.knowfm-1.11",
+      "year": 2026,
+      "published": null,
+      "venue": "Proceedings of the 4th Workshop on Towards Knowledgeable Foundation Models (KnowFM 2026)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:d4bc1618ee9bdd1b1037093c62b5541150357e7a"
+      ],
+      "semantic_scholar_id": "d4bc1618ee9bdd1b1037093c62b5541150357e7a",
+      "doi": "10.18653/v1/2026.knowfm-1.11",
+      "canonical_id": "DOI:10.18653/v1/2026.knowfm-1.11",
+      "authors": [
+        "A. Kamel",
+        "Eric Z. Xu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "文脈文書を残差ストリームの単一ベクトルへ符号化し、注意プリフィルをO(|T|)からO(1)へ置換する学習不要な手法で、約99%のトークン削減下で長文QA等を評価しており、プリフィル償却という推論コスト削減への直接的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ad3c45df007",
+    "round": "libimp-4ad3c45df0074246-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ad3c45df0074246-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ad3c45df0074246-pre01.json",
+    "receipt": "sha256:2f491d653ef652ae6e339a60848e9a7a2214a01282a5e23f1aa73aecf436fe51"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ad3c45df007",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LEP: Leveraging Local Entropy Pruning for Sparsity in Large Language Models",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10888911",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The application of Large Language Models (LLMs) is rapidly expanding in fields such as natural language processing and computer vision. However, due to the enormous number of model parameters, while their emergent capabilities enhance performance, they also incur significant computational and storage costs, particularly during inference. This makes it particularly challenging to deploy large models in resource-constrained environments. To address this issue, we propose an innovative pruning method based on local entropy, aimed at improving model performance while reducing computational costs. Our approach leverages a small amount of calibration data and calculates the importance of weights based on the local entropy of weights and input activations, applying it to both unstructured and semi-structured pruning without the need for complex weight updates or retraining. Experimental results demonstrate that our method shows superior performance across models of various scales. Specifically, at a sparsity rate of 50%, our method significantly reduces model perplexity without the need for weight updates and outperforms existing pruning techniques such as SparseGPT and Wanda in zero-shot tasks. The code is available at: this https URL.",
+      "identifiers": [
+        "SemanticScholar:80e8c490f958ff90040c8518d82437c9289d98da"
+      ],
+      "semantic_scholar_id": "80e8c490f958ff90040c8518d82437c9289d98da",
+      "doi": "10.1109/ICASSP49660.2025.10888911",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10888911",
+      "authors": [
+        "Yu-Li Chen",
+        "Bo Cheng",
+        "Ying-Ying Zhang",
+        "Shuhao Zhang",
+        "Zhi-Xuan Wu",
+        "Fan-Shen Meng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 596,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重みと入力活性化の局所エントロピーで重要度を測る再学習不要なLLM枝刈りLEPを提案し、50%疎化でも既存手法を上回るパープレキシティを示す、推論コストとストレージ削減を目的とした圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e9790426c1a9",
+    "round": "libimp-e9790426c1a96df3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e9790426c1a96df3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e9790426c1a96df3-pre01.json",
+    "receipt": "sha256:b60b06b3fd7d37a972c2cdea50de99054282d864d2ef1497797f730e84550cfe"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e9790426c1a9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

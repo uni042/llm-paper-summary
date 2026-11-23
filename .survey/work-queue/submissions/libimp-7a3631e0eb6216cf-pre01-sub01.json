@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GradMAP: Faster Layer Pruning with Gradient Metric and Projection Compensation",
+      "source_url": "https://arxiv.org/abs/2602.14649",
+      "year": 2026,
+      "published": "2026-02-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) exhibit strong reasoning abilities, but their high computational costs limit their practical deployment. Recent studies reveal significant redundancy in LLMs layers, making layer pruning an active research topic. Layer pruning research primarily focuses on two aspects: measuring layer importance and recovering performance after pruning. Unfortunately, the present works fail to simultaneously maintain pruning performance and efficiency. In this study, we propose GradMAP, a faster layer pruning method with \\textbf{Grad}ient \\textbf{M}etric \\textbf{A}nd \\textbf{P}rojection compensation, which consists of two stages. In the first stage, we introduce a novel metric based on gradient magnitudes, enabling a global assessment of layer importance. Note that, it requires only a single backward propagation step per pruning decision, substantially enhancing pruning efficiency. In the second stage, we first analyze the layers with the largest mean shift resulting from pruning, and then incorporate a simple yet effective projection compensation matrix to correct this drift in one step. In this way, the degradation of model performance caused by layer pruning is effectively alleviated. Extensive experiments show that GradMAP outperforms previous layer pruning methods in both pruning speed (achieving an average $4\\times$ speedup) and performance.",
+      "identifiers": [
+        "SemanticScholar:c99681a0e7b8fcaa7db864ebc1d7bcad179fc9d8"
+      ],
+      "semantic_scholar_id": "c99681a0e7b8fcaa7db864ebc1d7bcad179fc9d8",
+      "canonical_id": "arXiv:2602.14649",
+      "arxiv_id": "2602.14649",
+      "doi": "10.48550/arXiv.2602.14649",
+      "authors": [
+        "Hao Liu",
+        "Guang-Yan Li",
+        "Wen-Sheng Zhang",
+        "Yong-Qiang Tang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 280,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの層枝刈りについて勾配 magnitude による層重要度評価を単一逆伝播で行い、射影補償行列で枝刈り後の性能劣化を補正するGradMAPを提案し、デプロイ時の計算コスト削減に直結する圧縮手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pretrain Once, Route Anywhere: Towards a Foundation Model for LLM Routing",
+      "source_url": "https://arxiv.org/abs/2609.37362",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) routing aims to assign each query to the most suitable model from a heterogeneous candidate pool, improving the quality--efficiency trade-off of LLM inference. Existing routers are typically learned through local fitting: a router is optimized for a particular query workload and candidate pool, and often requires additional supervision or retraining as the routing environment changes. We ask whether LLM routing can instead be approached from a foundation-model perspective, learning a reusable routing capability that generalizes across tasks, candidate models, and deployment conditions. To this end, we introduce RouteFM, which learns to characterize anonymous candidate models from behavioral context and infer their target-specific capabilities, rather than binding routing decisions to fixed model identities or a single environment. Through episodic pretraining across heterogeneous routing environments, this capability can be reused by a frozen router and adapted to new environments through context alone. Experiments demonstrate transfer across changes in domains, modalities, candidate pools, and context budgets, with the largest gains when behavioral evidence is limited. On MMR-Bench, which is excluded from pretraining, RouteFM outperforms the strongest baseline by 2.23 quality points with only eight observations per candidate. These results support moving LLM routing from repeated local fitting toward a pretrain once, route anywhere paradigm. Our code is publicly available at https://github.com/LAMDA-Model-Reuse/RouteFM.",
+      "identifiers": [
+        "SemanticScholar:62c18cd96b3d011a972202cd96669feda8bec9a0"
+      ],
+      "semantic_scholar_id": "62c18cd96b3d011a972202cd96669feda8bec9a0",
+      "canonical_id": "arXiv:2609.37362",
+      "arxiv_id": "2609.37362",
+      "doi": "10.48550/arXiv.2609.37362",
+      "authors": [
+        "Guannan Lai",
+        "Han-Jia Ye"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種候補モデル群からクエリごとに最適モデルを選ぶLLMルーティングを基盤モデル化し、行動文脈から候補能力を推定して未見環境へ転移させるため、推論の品質と効率のトレードオフを扱うサービング制御として直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Neural Code Completion Models Size up the Situation: Attaining Cheaper and Faster Completion through Dynamic Model Inference",
+      "source_url": "https://arxiv.org/abs/2401.09964",
+      "year": 2024,
+      "published": "2024-01-18",
+      "venue": "International Conference on Software Engineering",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Leveraging recent advancements in large language models, modern neural code completion models have demonstrated the capability to generate highly accurate code suggestions. However, their massive size poses challenges in terms of computational costs and environmental impact, hindering their widespread adoption in practical scenarios. Dynamic inference emerges as a promising solution, as it allocates minimal computation during inference while maintaining the model's performance. In this research, we explore dynamic inference within the context of code completion. Initially, we conducted an empirical investigation on GPT-2, focusing on the inference capabilities of intermediate layers for code completion. We found that 54.4% of tokens can be accurately generated using just the first layer, signifying significant computational savings potential. Moreover, despite using all layers, the model still fails to predict 14.5% of tokens correctly, and the subsequent completions continued from them are rarely considered helpful, with only a 4.2% Acceptance Rate. These findings motivate our exploration of dynamic inference in code completion and inspire us to enhance it with a decision-making mechanism that stops the generation of incorrect code. We thus propose a novel dynamic inference method specifically tailored for code completion models. This method aims not only to produce correct predictions with largely reduced computation but also to prevent incorrect predictions proactively. Our extensive evaluation shows that it can averagely skip 1.7 layers out of 16 layers in the models, leading to an 11.2% speedup with only a marginal 1.1 % reduction in ROUGE- L.",
+      "identifiers": [
+        "SemanticScholar:510cf5894dd9871c5abdfbd1e47df57b25b5530b"
+      ],
+      "semantic_scholar_id": "510cf5894dd9871c5abdfbd1e47df57b25b5530b",
+      "canonical_id": "arXiv:2401.09964",
+      "arxiv_id": "2401.09964",
+      "doi": "10.1145/3597503.3639120",
+      "authors": [
+        "Zhensu Sun",
+        "Xiao-Ning Du",
+        "Fu Song",
+        "Shang-Wen Wang",
+        "Li Li"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1040,
+        "matched_prestigious_venue": null
+      },
+      "reason": "コード補完用LLMの中間層でトークンを早期生成する動的推論を提案し、層スキップによる計算削減と誤予測の早期停止で速度向上を示しており、LLM推論の実行コスト削減へ直接貢献する手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7a3631e0eb62",
+    "round": "libimp-7a3631e0eb6216cf-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7a3631e0eb6216cf-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7a3631e0eb6216cf-pre01.json",
+    "receipt": "sha256:2b671092284c687667ca8a30bc82b5616bb5c12e0667e95f5ca5561b54cca8da"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7a3631e0eb62",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

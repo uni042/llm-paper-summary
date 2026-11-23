@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Joint Optimization of Dynamic Batching and Adaptive Partitioning for Distributed LLMs Inference in Mobile Edge Computing",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3650838",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are revolutionizing various fields due to their powerful generation capabilities. However, their immense computational complexity poses significant challenges in resource consumption, inference latency, and data privacy for traditional cloud-centric deployments. Edge artificial intelligence (Edge-AI) offers promising LLMs deployment solutions by leveraging distributed resources at the network edge. However, existing approaches struggle to adapt to dynamic workloads and efficiently utilize heterogeneous resources in Mobile Edge Computing (MEC) environments. This paper proposes a Dynamic Batching and Adaptive Partitioning (DyBAP) scheme for LLMs deployment, which utilizes ubiquitous geo-distributed resources via end-edge-cloud collaboration. Firstly, we formulate a collaboration deployment optimization problem to minimize inference latency and resource usage under heterogeneous resource and user requirements for latency and accuracy constraints, which is NP-hard. Secondly, to solve this, we develop a dynamic batch fusion optimization algorithm that optimizes the batch size of inference by utilizing the parallel processing power of computing units to balance the latency and resource usage. A block-aware partition optimization algorithm based on multi-agent reinforcement learning (MARL) is proposed for efficient transformer block allocation, integrating mobility awareness for optimal partitioning across dynamic network environments. Simulation results demonstrate the superiority of DyBAP over other benchmarks, reducing inference latency by 17.94% and saving 11.12% in memory resource consumption compared to the end-edge-cloud collaboration approaches.",
+      "identifiers": [
+        "SemanticScholar:985cf3edc77898fb47d408557a2351a5af276118"
+      ],
+      "semantic_scholar_id": "985cf3edc77898fb47d408557a2351a5af276118",
+      "doi": "10.1109/TMC.2026.3650838",
+      "canonical_id": "DOI:10.1109/TMC.2026.3650838",
+      "authors": [
+        "Tong Zheng",
+        "Yuan-Guo Bi",
+        "Guang-Jie Han",
+        "Tian-Ao Xiang",
+        "Le-Xi Xu",
+        "Qiang He",
+        "Liang Zhao"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      },
+      "reason": "モバイルエッジ環境で動的バッチ融合とブロック認識型分割を共同最適化し、エンド・エッジ・クラウド協調でLLM推論レイテンシと資源使用を削減する手法であり、分散推論とバッチングへの直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Acceptance-Guided Adaptive Speculative Decoding for Efficient Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463423",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a12314e5f826e074def27ac310e537239e0169dd"
+      ],
+      "semantic_scholar_id": "a12314e5f826e074def27ac310e537239e0169dd",
+      "doi": "10.1109/icassp55912.2026.11463423",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463423",
+      "authors": [
+        "Wei-Yang Sun",
+        "Zi-Feng Zhu",
+        "Yi-Xian Dai",
+        "Bing-Hui Guo",
+        "Yi-Fan Sun",
+        "Feng Zhou"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ドラフトモデルの受容確率を予測する受容ヘッドで投機的デコードのドラフト長を動的に決め、無駄な検証を削減してLLM推論レイテンシを下げる手法であり、投機的デコードへの直接的貢献が要旨で具体的に確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RoLaQ: Joint Rotation and Range Calibration for 2-Bit KV Caches in Multi-Head Latent Attention",
+      "source_url": "https://arxiv.org/abs/2610.20686",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-head latent attention (MLA) compresses the content of a key-value cache into a shared latent per token, making low-bit storage attractive for long-context inference. At two bits, errors in this representation perturb both attention matching and value readout, with effects that depend on error direction and reconstruction scale. We introduce RoLaQ (Rotation-calibrated Latent Quantization), an offline method for joint rotation and range calibration. RoLaQ refines a shared rotation within subspaces defined by the frozen key and value projections, and jointly learns quantization ranges whose thresholds and reconstruction gains are coupled to control the shared signal's response. Prediction matching and attention-output supervision guide calibration with model weights frozen. Across three MLA models and six benchmarks, RoLaQ achieves the highest average accuracy among the compared 2-bit methods both without and with token protection. On DeepSeek-V2-Lite, an SGLang implementation provides 3.96 times the BF16 KV capacity under the same memory budget and 2.51 times its decode throughput with 256K input tokens.",
+      "identifiers": [
+        "SemanticScholar:accf43a4b3dcc580fadb3890e716f3cc7e3ac96a"
+      ],
+      "semantic_scholar_id": "accf43a4b3dcc580fadb3890e716f3cc7e3ac96a",
+      "canonical_id": "arXiv:2610.20686",
+      "arxiv_id": "2610.20686",
+      "authors": [
+        "Shi-Yu Ji",
+        "Peng-Yang Ling",
+        "Cheng-Xing Lin",
+        "Shu-Peng Li",
+        "Yixuan Wang",
+        "Qing-Fu Zhu",
+        "W. Che"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLA向けに回転と量子化レンジを共同較正する2ビットKVキャッシュ量子化RoLaQを提案し、SGLang実装で同一メモリ予算下のKV容量3.96倍と256K入力時のデコードスループット2.51倍を示す、KVキャッシュ圧縮の直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TPrune",
+      "source_url": "https://doi.org/10.1145/3446640",
+      "year": 2021,
+      "published": "2021-04-01",
+      "venue": "ACM Trans. Cyber Phys. Syst.",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The invention of Transformer model structure boosts the performance of Neural Machine Translation (NMT) tasks to an unprecedented level. Many previous works have been done to make the Transformer model more execution-friendly on resource-constrained platforms. These researches can be categorized into three key fields: Model Pruning, Transfer Learning, and Efficient Transformer Variants. The family of model pruning methods are popular for their simplicity in practice and promising compression rate and have achieved great success in the field of convolution neural networks (CNNs) for many vision tasks. Nonetheless, previous Transformer pruning works did not perform a thorough model analysis and evaluation on each Transformer component on off-the-shelf mobile devices. In this work, we analyze and prune transformer models at the line-wise granularity and also implement our pruning method on real mobile platforms. We explore the properties of all Transformer components as well as their sparsity features, which are leveraged to guide Transformer model pruning. We name our whole Transformer analysis and pruning pipeline as TPrune. In TPrune, we first propose Block-wise Structured Sparsity Learning (BSSL) to analyze Transformer model property. Then, based on the characters derived from BSSL, we apply Structured Hoyer Square (SHS) to derive the final pruned models. Comparing with the state-of-the-art Transformer pruning methods, TPrune is able to achieve a higher model compression rate with less performance degradation. Experimental results show that our pruned models achieve 1.16×–1.92× speedup on mobile devices with 0%–8% BLEU score degradation compared with the original Transformer model.",
+      "identifiers": [
+        "SemanticScholar:e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7"
+      ],
+      "semantic_scholar_id": "e0076ac1166617d3d4dbb36c7bb6de85ee78a1e7",
+      "doi": "10.1145/3446640",
+      "canonical_id": "DOI:10.1145/3446640",
+      "authors": [
+        "Jia-Chen Mao",
+        "Huan-Rui Yang",
+        "Ang Li",
+        "H. Li",
+        "Yi-Ran Chen"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 27,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2062,
+        "matched_prestigious_venue": null
+      },
+      "reason": "モバイル実機上でTransformerの各構成要素を解析し行単位粒度で枝刈りするTPruneを提案し、資源制約デバイス上での実行効率を実測する、オンデバイス推論向けモデル圧縮の具体的な貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Improving Computation and Memory Efficiency for Real-world Transformer Inference on GPUs",
+      "source_url": "https://doi.org/10.1145/3617689",
+      "year": 2023,
+      "published": "2023-08-26",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have emerged as a leading approach in the field of natural language processing (NLP) and are increasingly being deployed in production environments. Graphic processing units (GPUs) have become a popular choice for the transformer deployment and often rely on the batch processing technique to ensure high hardware performance. Nonetheless, the current practice for transformer inference encounters computational and memory redundancy due to the heavy-tailed distribution of sequence lengths in NLP scenarios, resulting in low practical performance. In this article, we propose a unified solution for improving both computation and memory efficiency of the real-world transformer inference on GPUs. The solution eliminates the redundant computation and memory footprint across a transformer model. At first, a GPU-oriented computation approach is proposed to process the self-attention module in a fine-grained manner, eliminating its redundant computation. Next, the multi-layer perceptron module continues to use the word-accumulation approach to eliminate its redundant computation. Then, to better unify the fine-grained approach and the word-accumulation approach, it organizes the data layout of the self-attention module in block granularity. Since aforementioned approaches make the required memory size largely reduce and constantly fluctuate, we propose the chunk-based approach to enable a better balance between memory footprint and allocation/free efficiency. Our experimental results show that our unified solution achieves a decrease of average latency by 28% on the entire transformer model, 63.8% on the self-attention module, and reduces memory footprint of intermediate results by 7.8×, compared with prevailing frameworks.",
+      "identifiers": [
+        "SemanticScholar:7d95aae54152e157c35dfc0de01caa9ce4b85440"
+      ],
+      "semantic_scholar_id": "7d95aae54152e157c35dfc0de01caa9ce4b85440",
+      "doi": "10.1145/3617689",
+      "canonical_id": "DOI:10.1145/3617689",
+      "authors": [
+        "Jiang-Su Du",
+        "Jia-Zhi Jiang",
+        "Jiang Zheng",
+        "Hongbin Zhang",
+        "Dan-E Huang",
+        "Yu-Tong Lu"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1185,
+        "matched_prestigious_venue": null
+      },
+      "reason": "実運用Transformer推論の系列長分布に起因する計算・メモリ冗長性を、自己注意の細粒度処理とMLPの語蓄積処理で除去するGPU向け統合手法を提案しており、推論カーネルとメモリ効率への直接的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ad3c45df007",
+    "round": "libimp-4ad3c45df0074246-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ad3c45df0074246-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ad3c45df0074246-pre01.json",
+    "receipt": "sha256:2f491d653ef652ae6e339a60848e9a7a2214a01282a5e23f1aa73aecf436fe51"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ad3c45df007",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
