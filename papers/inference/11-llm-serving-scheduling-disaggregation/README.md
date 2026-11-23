@@ -432,6 +432,10 @@
   実装：[✓](https://anonymous.4open.science/r/ROSETTA_artifact-B77F/) ・ リポジトリ内被引用：1  
   秘匿LLMデコードの非線形演算を、分割ルックアップテーブルによる高精度なTFHE評価と、レベル配分と一体で解く方式選択で処理するハイブリッドCKKS・TFHE方式の研究。
 
+- **2026-09 · [QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching](2026-2609.36760-quantmla-function-aligned-dual-path-quantization-for-low-bit-mla-kv-cach.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  多頭潜在注意（Multi-Head Latent 注意機構、MLA）は、通常の注意機構のように各ヘッドの鍵と値をすべて保存せず、複数ヘッドで共有する低次元の内容潜在と、位置情報を表す回転位置埋め込み（Rotary Position Embedding、RoPE）の鍵を保持する。
+
 - **2026-09 · [Janus: Multi-LLM Serving at Production Scale](2026-922addb5dfb2-janus-multi-llm-serving-at-production-scale.md)**  
   実装：[✓](https://github.com/Janus2026/Janus) ・ リポジトリ内被引用：1  
   単一モデルの推論エンジンを速くしても、多数の異なるLLMを同時提供するサービスでは設備効率と応答期限の両立が難しい。Janusはサービス層（Service）と推論エンジン層（Engine）を協調設計した、多モデル向けサービングシステムである。
@@ -877,10 +881,6 @@
 - **2026-09 · [RedKnot-MLA: Multi-Head Offline-Online Reuse for DeepSeek-V4 Long-Context Serving](2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context.md)**  
   実装：[✓](https://github.com/rednote-machine-learning/RedKnot) ・ リポジトリ内被引用：0  
   潜在KVを割らずに論理頭の寄与をオフライン成果物化し、位置直しと大域頭の再計算で結合する再利用方式で、長文脈の初回遅延を最大3.84倍速くする設計と証拠境界の報告。
-
-- **2026-09 · [QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching](2026-2609.36760-quantmla-function-aligned-dual-path-quantization-for-low-bit-mla-kv-cach.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  多頭潜在注意（Multi-Head Latent 注意機構、MLA）は、通常の注意機構のように各ヘッドの鍵と値をすべて保存せず、複数ヘッドで共有する低次元の内容潜在と、位置情報を表す回転位置埋め込み（Rotary Position Embedding、RoPE）の鍵を保持する。
 
 - **2026-09 · [Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances](2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2127,7 +2127,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：832  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：834  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2425,7 +2425,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1899  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1901  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2479,7 +2479,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：731  
+  実装：✓ ・ リポジトリ内被引用：732  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

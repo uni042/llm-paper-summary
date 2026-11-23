@@ -66,7 +66,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   特異値の学習可能なしきい値で層・ヘッドごとのKV低ランク次元を自動配分し、鍵/値で異なる分解と低ランク対応混合精度量子化を組み合わせ、強い圧縮を実GPU高速化へつなげる。
 
 - **2026-05 · [OSCAR: Offline Spectral Covariance-Aware Rotation for 2-bit KV Cache Quantization](2026-2605.17757-oscar-offline-spectral-covariance-aware-rotation-for-2-bit-kv-cache-quan.md)**  
-  実装：[✓](https://github.com/FutureMLS-Lab/OSCAR) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/FutureMLS-Lab/OSCAR) ・ リポジトリ内被引用：12  
   しかし2ビットには4段階の値しかなく、KV活性値の少数の大きな外れ値が量子化範囲を支配すると、通常値の区別が失われ、注意分布が崩れる。システム評価はNVIDIA H100上の著者実装であり、12GB級の民生GPUや標準配布版llama.cppで同じ結果が出ると示したものではない。
 
 - **2026-05 · [LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents](2026-2602.01053-lragent-multilora-agent-kv-sharing.md)**  
@@ -133,6 +133,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/shijuzhao/Comb) ・ リポジトリ内被引用：6  
   凍結したデコーダ専用LLMへPIC専用エンコーダを追加し、任意順序の文書KV再利用を高精度化しつつTTFTを51〜94%削減、KV容量も約75%以上削減するCOMBを提案。
 
+- **2026-08 · [Output-Aware Rotation for INT2 KV-Cache Quantization](2026-2608.02691-output-aware-rotation-int2-kv-cache.md)**  
+  実装：[✓](https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization) ・ リポジトリ内被引用：5  
+  OptRは、長文脈推論でKVキャッシュを2ビット整数へ量子化したとき、キーや値そのものの再構成誤差が小さくても、注意重みと出力射影を通過した後のモデル内部表現には大きな誤差が残り得る問題を扱う。
+
 - **2026-07 · [SemPIC: Learning Semantic Position-Independent KV Caches](2026-2607.28069-sempic-learning-semantic-position-independent-kv-caches.md)**  
   実装：[✓](https://github.com/jn12-29/SemPIC) ・ リポジトリ内被引用：5  
   SemPICは、検索拡張生成（Retrieval-Augmented Generation、RAG）やエージェントの長い文書文脈を、問い合わせや文書順序が変わっても再利用するための位置非依存キャッシュ（Position-Independent Caching、PIC）方式である。
@@ -169,10 +173,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/MIRALab-USTC/LLM-AnDPro) ・ リポジトリ内被引用：5  
   従来のH2OやSnapKVは、注意重みの大きいトークンほど重要とみなす。だが注意出力は、注意重みと値ベクトルの積を足し合わせたベクトル和である。重みが大きくても値ベクトルが出力方向に寄与しなければ、そのトークンを残す意義は小さい。逆に重みが比較的小さくても、出力方向へ強い成分を持つ値は重要になりうる。
 
-- **2026-08 · [Output-Aware Rotation for INT2 KV-Cache Quantization](2026-2608.02691-output-aware-rotation-int2-kv-cache.md)**  
-  実装：[✓](https://github.com/daniel-eai/Output-Aware-INT2-KV-Cache-Quantization) ・ リポジトリ内被引用：4  
-  OptRは、長文脈推論でKVキャッシュを2ビット整数へ量子化したとき、キーや値そのものの再構成誤差が小さくても、注意重みと出力射影を通過した後のモデル内部表現には大きな誤差が残り得る問題を扱う。
-
 - **2026-08 · [Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding](2026-2609.00097-faster-than-flash-attention-sparsity-long-context-decoding.md)**  
   実装：[✓](https://github.com/qluoluo/faster-flash-decoding) ・ リポジトリ内被引用：4  
   2ビット鍵でKV全体を低帯域走査し、局所・シンク由来の近似最大値からtop-δで必要ブロックだけを選ぶ選別・計算融合カーネルにより、長文デコードを最大11.63倍のカーネル高速化、最大2.37倍の生成スループットへ高める。
@@ -208,6 +208,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-02 · [IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning](2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-.md)**  
   実装：[✓](https://github.com/FireRedTeam/IVC-Prune) ・ リポジトリ内被引用：4  
   回転位置埋め込みが生む座標役の視覚トークンと意味的に重要な前景トークンを両方残す学習不要の枝刈りで、視覚トークンを約半分にしながら空間推論の精度をほぼ落とさない方式である。
+
+- **2025-12 · [Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers](2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md)**  
+  実装：[✓](https://github.com/LivingFutureLab/FusedKV) ・ リポジトリ内被引用：4  
+  長い系列と同時要求の増加に伴い、層数に比例するKVキャッシュ容量と読み出しがサービングの制約となる。著者は、上位層のキーと値が異なる深さの情報を必要とすることが原因の一つと考え、上位層のキー・値を下位層から非対称に再構成するFusedKVを設計した。
 
 - **2026-09 · [Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding](2026-2609.33889-where-activation-sparsity-and-kv-cache-sparsity-cross-in-llm-decoding.md)**  
   実装：[✓](https://github.com/js-lee-AI/ByteCross) ・ リポジトリ内被引用：3  
@@ -305,10 +309,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：3  
   多ターンの対話では、過去のユーザー発話とモデル応答が蓄積するたびに鍵値キャッシュが増え、メモリ使用量と新しいトークンの注意計算が重くなる。SONICは対話のターン境界を利用し、過去の各メッセージを少数の学習可能なNexusトークンへ集約する方式である。
 
-- **2025-12 · [Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers](2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md)**  
-  実装：[✓](https://github.com/LivingFutureLab/FusedKV) ・ リポジトリ内被引用：3  
-  長い系列と同時要求の増加に伴い、層数に比例するKVキャッシュ容量と読み出しがサービングの制約となる。著者は、上位層のキーと値が異なる深さの情報を必要とすることが原因の一つと考え、上位層のキー・値を下位層から非対称に再構成するFusedKVを設計した。
-
 - **2025-12 · [Efficient Low Rank Attention for Long-Context Inference in Large Language Models](2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md)**  
   実装：[✓](https://github.com/tenghuilee/LRQK) ・ リポジトリ内被引用：3  
   Q・Kの共同低ランク索引で重要KVを選び、CPU上の完全精度KVから欠損分だけGPUへ取得して長文脈の容量制約を緩和する。
@@ -400,6 +400,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   数学的には、毎回すべての接頭辞を再計算する経路と同じ注意計算を実行するはずである。新しい高速化カーネルやKV圧縮方式を提案する研究ではない。さらに32ビット浮動小数点（FP32）へ切り替えると、著者らの別の対照実験ではトークン反転が0%となり、出力分布差が大幅に減った。
+
+- **2026-04 · [Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression](2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md)**  
+  実装：[✓](https://github.com/hiahei/Swift-SVD) ・ リポジトリ内被引用：2  
+  出力活性値の共分散を逐次集約して固有値分解を1回だけ行い、活性値を考慮した理論最適な低ランク圧縮を高速かつ数値安定に実現し、再構成損失と層重要度を組み合わせた動的ランク配分まで備えた学習不要の圧縮手法。
 
 - **2026-04 · [Sub-Token Routing for KV Cache Compression](2026-2604.21335-sub-token-routing-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -693,9 +697,9 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：1  
   推論の段落要約を索引にして、注意ヘッドの合意が取れた区間だけ原文をCPUから読み戻すKV管理で、全キャッシュ退避比でもメモリを4倍超削りながら同予算の圧縮方式を正解率で大きく上回った。
 
-- **2026-04 · [Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression](2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md)**  
-  実装：[✓](https://github.com/hiahei/Swift-SVD) ・ リポジトリ内被引用：1  
-  出力活性値の共分散を逐次集約して固有値分解を1回だけ行い、活性値を考慮した理論最適な低ランク圧縮を高速かつ数値安定に実現し、再構成損失と層重要度を組み合わせた動的ランク配分まで備えた学習不要の圧縮手法。
+- **2026-04 · [YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference](2026-2604.13556-yoco-enhancing-yoco-with-kv-residual-connections-for-efficient-llm-infer.md)**  
+  実装：[✓](https://github.com/wuyou2002/YOCO-plus) ・ リポジトリ内被引用：1  
+  下半分の各層で最下層のキーと値を重み付きで混ぜてからキャッシュすることで、キャッシュ半減の効率を保ったままYOCOの品質低下を回復し標準モデルも上回った。
 
 - **2026-04 · [Retrospective Sparse Attention for Efficient Long-Context Generation](2026-2508.09001-retrospective-sparse-attention-for-efficient-long-context-generation.md)**  
   実装：[✓](https://github.com/csh3695/RetroAttention) ・ リポジトリ内被引用：1  
@@ -1695,10 +1699,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   キーとバリューへ指数減衰メモリを混ぜるバックボーンを使うと、Quest・MoBA・SnapKVのスパース推論が同じKV予算でも正解率を大きく保てることを、干し草タスク8種と選択命中率・ランダム選択の分析実験で示した研究。
 
-- **2026-04 · [YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference](2026-2604.13556-yoco-enhancing-yoco-with-kv-residual-connections-for-efficient-llm-infer.md)**  
-  実装：[✓](https://github.com/wuyou2002/YOCO-plus) ・ リポジトリ内被引用：0  
-  下半分の各層で最下層のキーと値を重み付きで混ぜてからキャッシュすることで、キャッシュ半減の効率を保ったままYOCOの品質低下を回復し標準モデルも上回った。
-
 - **2026-04 · [WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models](2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of.md)**  
   実装：[✓](https://github.com/SAI-Lab-NYU/WSVD) ・ リポジトリ内被引用：0  
   SVDを注意ヘッドごとに適用し再構成をフラッシュデコードへ融合することで、視覚言語モデルのデコードを1.8倍超高速化し、量子化込みでも精度低下を約1ポイントに抑えた。
@@ -1862,7 +1862,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意重みではなくキーの幾何学的多様性を重要度代理として使う学習不要KV削除法で、ブロック長文処理でも厳密な容量上限を守りつつ、8K予算で約23%削減・LongBench差0.04%以下、既存削除法比で遅延最大30%短縮を示す。
 
 - **2025-01 · [RotateKV: Accurate and Robust 2-Bit KV Cache Quantization for LLMs via Outlier-Aware Adaptive Rotations](2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md)**  
-  実装：[✓](https://github.com/ZunhaiSu/RotateKV) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/ZunhaiSu/RotateKV) ・ リポジトリ内被引用：42  
   RotateKVは、言語モデルの鍵・値キャッシュ（KVキャッシュ）を2ビットまで量子化するとき、少数の極端に大きい活性値が量子化範囲を広げてしまう問題を、特徴空間の回転と選択的な高精度保持によって抑える方式である。
 
 - **2025-06 · [KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider](2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md)**  
@@ -2316,15 +2316,15 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：445  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：447  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：418  
+  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：420  
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：407  
+  実装：✓ ・ リポジトリ内被引用：408  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -2344,7 +2344,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   デコード時には過去のKVを読み出すため遅延も長くなり、プリフィルでは注意計算が系列長の二乗に増える。DuoAttentionは、全ての注意ヘッドが遠距離の情報を必要とするわけではないという観測に基づき、ヘッドごとに全履歴を残すか、固定長の履歴だけ残すかを切り替える方式である。
 
 - **2024-03 · [GEAR: An Efficient KV Cache Compression Recipe for Near-Lossless Generative Inference of LLM](2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md)**  
-  実装：[✓](https://github.com/HaoKang-Timmy/GEAR) ・ リポジトリ内被引用：117  
+  実装：[✓](https://github.com/HaoKang-Timmy/GEAR) ・ リポジトリ内被引用：118  
   GEARは、自己回帰生成で増え続けるKVキャッシュを高い圧縮率で保持しつつ、単純な低ビット量子化で生じる生成品質の崩壊を抑えるための圧縮法である。
 
 - **2024-05 · [MiniCache: KV Cache Compression in Depth Dimension for Large Language Models](2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md)**  
@@ -2352,32 +2352,32 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   MiniCacheは層内のトークン選別や低ビット化だけでなく、隣り合う層のあいだにも冗長性があると観察し、中層以降で同じ位置のKV状態を共有表現へ統合する。
 
 - **2024-03 · [Jamba: A Hybrid Transformer-Mamba Language Model](2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：99  
+  実装：✓ ・ リポジトリ内被引用：100  
   系列が長くなると鍵値キャッシュ（KVキャッシュ）の容量と読出し量が増え、GPUのメモリ容量・帯域を圧迫する。さらに混合専門家モデル（Mixture-of-Experts、MoE）を一部の前向き全結合層へ導入し、総パラメータ容量とトークン当たりの有効計算量を分離する。
 
 - **2024-10 · [MagicPIG: LSH Sampling for Efficient LLM Generation](2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/MagicPIG) ・ リポジトリ内被引用：91  
   LSHの衝突確率を注意分布の提案分布として使い、CPUへ置いたKVから少数だけをサンプリングして疎注意を計算する方式。全注意の2〜5%程度の計算で精度を保ち、最大5倍のデコードスループットを示す。
 
+- **2024-05 · [You Only Cache Once: Decoder-Decoder Architectures for Language Models](2024-2405.05254-yoco.md)**  
+  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：75  
+  自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。
+
+- **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：75  
+  MQA/GQAのKV共有を層方向へ拡張し、隣接層でKV活性を再利用してKVキャッシュを追加で約2倍削減する注意アーキテクチャ。
+
 - **2024-02 · [No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization](2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md)**  
   実装：✓ ・ リポジトリ内被引用：75  
   自己回帰推論の鍵・値キャッシュ（KVキャッシュ）は、生成済みの各トークンの中間状態を再利用して再計算を避ける一方、必要容量が同時要求数と文脈長にほぼ比例して増える。提案する混合精度KVキャッシュ（MiKV）は、重要トークンを高精度で保持し、従来なら追い出すトークンも2〜4ビットで保存する。
 
-- **2024-05 · [You Only Cache Once: Decoder-Decoder Architectures for Language Models](2024-2405.05254-yoco.md)**  
-  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：74  
-  自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。
-
-- **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：74  
-  MQA/GQAのKV共有を層方向へ拡張し、隣接層でKV活性を再利用してKVキャッシュを追加で約2倍削減する注意アーキテクチャ。
+- **2024-05 · [ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification](2024-2405.14256-zipcache.md)**  
+  実装：[✓](https://github.com/ThisisBillhe/ZipCache) ・ リポジトリ内被引用：74  
+  ZipCacheは、長文脈推論で肥大化する鍵・値キャッシュ（KV キャッシュ）を、重要トークンの識別と混合精度量子化によって圧縮する手法である。そこでZipCacheは最近5%とランダム5%のプローブトークンの注意スコアだけを求め、残りのトークンは高速注意経路を維持する。
 
 - **2024-07 · [PQCache: Product Quantization-based KVCache for Long Context LLM Inference](2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md)**  
   実装：[✓](https://github.com/HugoZHL/PQCache) ・ リポジトリ内被引用：73  
   文脈が長くなるほどKVキャッシュは大きくなり、GPUメモリへ収まらない場合にはCPUメモリへの退避と転送が必要になる。Llama-3.1-8Bの128K文脈を用いたInfiniteBenchでは、過去トークンの1/10だけを選択する条件で平均スコア46.80を報告し、比較方式に対する改善は+4.60%である。
-
-- **2024-05 · [ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification](2024-2405.14256-zipcache.md)**  
-  実装：[✓](https://github.com/ThisisBillhe/ZipCache) ・ リポジトリ内被引用：73  
-  ZipCacheは、長文脈推論で肥大化する鍵・値キャッシュ（KV キャッシュ）を、重要トークンの識別と混合精度量子化によって圧縮する手法である。そこでZipCacheは最近5%とランダム5%のプローブトークンの注意スコアだけを求め、残りのトークンは高速注意経路を維持する。
 
 - **2024-03 · [Keyformer: KV Cache reduction through key tokens selection for Efficient Generative Inference](2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md)**  
   実装：[✓](https://github.com/d-matrix-ai/keyformer-llm) ・ リポジトリ内被引用：73  
@@ -2590,7 +2590,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：849  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：850  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

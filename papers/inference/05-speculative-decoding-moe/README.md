@@ -1637,7 +1637,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   適応的N-gram並列復号（適応的 N-gram Parallel Decoding; ANPD）は、大規模言語モデル（LLM）を自己回帰で1トークンずつ実行する代わりに、安価なN-gram表で数トークンの候補を先に作り、元のLLMでまとめて検証する手法である。
 
 - **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
-  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：12  
   制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
 
 - **2024-10 · [Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution](2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md)**  
@@ -1753,7 +1753,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：784  
+  実装：✓ ・ リポジトリ内被引用：785  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  

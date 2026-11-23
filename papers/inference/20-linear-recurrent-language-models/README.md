@@ -98,7 +98,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
-  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：163  
+  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：164  
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
 
 - **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
@@ -124,7 +124,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：331  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：332  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2023-12 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
@@ -132,7 +132,7 @@
   また再帰式を素朴にGPUへ実装すると、逐次依存や高帯域メモリへの状態書き込みが律速となる。著者らは二つの仕組みを提案する。
 
 - **2024-02 · [Simple linear attention language models balance the recall-throughput tradeoff](2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md)**  
-  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：62  
+  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：63  
   通常のソフトマックス注意（softmax 注意機構）は、入力文脈に含まれる特定の情報を後から正確に参照する再取得（recall）に強い。モデル規模360M～1.3B、最大50Bトークンの学習、単一NVIDIA H100での実行測定を行い、1.3B・バッチ128・1024トークン生成でFlashAttention-2比最大24倍の処理量を報告する。
 
 - **2024-02 · [Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models](2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md)**  
@@ -144,7 +144,7 @@
   Infini-注意機構は、入力文脈が数十万から100万トークンに達しても、過去の全トークンに対応する鍵・値（KV）を保存し続けずに情報を参照するための注意機構である。
 
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
-  実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：46  
   Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
 
 - **2024-04 · [Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence](2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md)**  
@@ -152,7 +152,7 @@
   過去の鍵・値をトークン単位で保持する代わりに、複数ヘッドの固定サイズ行列状態を更新する。Eagleは行列状態とゲートを、Finchは内容依存の補間・時間減衰を導入し、長文脈での情報保持を改善する。
 
 - **2024-04 · [HGRN2: Gated Linear RNNs with State Expansion](2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md)**  
-  実装：[✓](https://github.com/OpenNLPLab/HGRN2) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/OpenNLPLab/HGRN2) ・ リポジトリ内被引用：32  
   これに対し、線形再帰モデルは固定サイズの状態へ履歴を圧縮して次のトークンを生成できるため、推論時の状態保存量を系列長に依存させない。
 
 - **2024-01 · [Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models](2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md)**  
@@ -163,22 +163,22 @@
   実装：[✓](https://github.com/Zyphra/BlackMamba) ・ リポジトリ内被引用：5  
   選択的状態空間モデルの固定状態生成と、混合専門家層の疎な全結合計算を一つの言語モデルに組み込み、長系列生成・学習計算量・専門家の割当てを同時に評価した。
 
+- **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  
+  実装：[✓](https://github.com/BICLab/MetaLA) ・ リポジトリ内被引用：4  
+  MetaLAは、従来別々の系列モデルとして説明される線形Transformer、状態空間モデル（State Space モデル; SSM）、線形再帰ニューラルネット（Linear RNN）を、有限サイズの隠れ状態を更新する線形注意（linear 注意機構）の共通形式で扱う研究である。
+
 - **2024-03 · [Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference](2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md)**  
   実装：[✓](https://github.com/h-zhao1997/cobra) ・ リポジトリ内被引用：4  
   提案の中心は、既存のMamba言語モデルへ視覚情報を接続する設計と学習方法を評価した点にある。単一のNVIDIA A100 PCIe 80GBで、画像1枚と同じ質問を入力し256トークンを生成する実験では、Cobra-3.5Bが1.54秒・166.47トークン/秒、MobileVLM v2-3Bが5.17秒・49.50トークン/秒である。
 
-- **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  
-  実装：[✓](https://github.com/BICLab/MetaLA) ・ リポジトリ内被引用：3  
-  MetaLAは、従来別々の系列モデルとして説明される線形Transformer、状態空間モデル（State Space モデル; SSM）、線形再帰ニューラルネット（Linear RNN）を、有限サイズの隠れ状態を更新する線形注意（linear 注意機構）の共通形式で扱う研究である。
-
 ### 4年前（2022-12〜2023-11）
 
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
-  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：152  
+  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：153  
   RWKVの大きな特徴は、単に注意を近似して軽量化することではなく、同じ重みと演算を訓練時の並列形式と推論時の再帰形式の双方で扱うことである。論文自身も長文脈評価の一部で弱点を示し、指示の順序を変えるだけで下流評価が大きく改善する例を報告している。
 
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：141  
+  実装：✓ ・ リポジトリ内被引用：142  
   RetNetは、指数減衰付き保持演算を並列・再帰・チャンク再帰の三形式で同じ重みのまま実行する。6.7Bモデルの8K入力ではTransformerのKVキャッシュ方式に対し復号8.4倍、メモリ約70%削減を報告し、学習の並列性と固定状態復号を両立する。
 
 - **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
@@ -216,7 +216,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-02 · [Transformer Quality in Linear Time](2022-2202.10447-transformer-quality-in-linear-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：41  
+  実装：✓ ・ リポジトリ内被引用：42  
   FLASHは、注意計算を系列長に対して線形に近づける方式が、理論計算量を減らしても実機で速くならず、強いTransformerを比較対象にすると品質が落ちるという問題に取り組む。
 
 - **2022-02 · [cosFormer: Rethinking Softmax in Attention](2022-2202.08791-cosformer-rethinking-softmax-in-attention.md)**  

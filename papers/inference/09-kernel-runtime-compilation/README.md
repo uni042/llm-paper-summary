@@ -853,7 +853,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   分散MoE全体を単一の常駐GPUカーネルへ融合し、装置起点通信とタイル単位スケジューリングでCPU起動・同期待ちを除き、8基H100で最大6.4倍の遅延改善と5.7倍のスループットを示す。
 
 - **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：13  
   GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
 
 - **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
@@ -1291,7 +1291,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：903  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：904  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
