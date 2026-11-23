@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1363本）
+## 自動生成の論文一覧（1366本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2238,6 +2238,10 @@
   実装：[✓](https://github.com/Conzel/super-outlier-dlm) ・ リポジトリ内被引用：0  
   本論文は、離散拡散型言語モデル（Diffusion Language モデル、DLM）と自己回帰型言語モデル（Autoregressive Language モデル、ARモデル）で、隠れ状態の層間類似性と圧縮耐性がどのように異なるかを調べた実証研究である。
 
+- **2026-05 · [Latent Action Reparameterization for Efficient Agent Inference](2026-2605.18597-latent-action-reparameterization-for-efficient-agent-inference.md)**  
+  実装：[✓](https://github.com/EZ-hwh/LAR) ・ リポジトリ内被引用：0  
+  エージェントの軌跡から遷移等価な複数ステップ行動を潜在行動として学習し語彙化することで、行動トークンを最大で約27パーセント減らしながらタスク性能を維持または改善する、行動表現そのものの再設計。
+
 - **2026-05 · [LASER: Loss-Aware Singular-value Decomposition and Rank Allocation for Efficient Low-Precision Vision-Language Models](2026-2606.00573-laser-loss-aware-singular-value-decomposition-and-rank-allocation-for-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LASERは、視覚言語モデル（VLM）の自己注意のQ/K/V射影を低ランク化し、同時に低精度化を行う圧縮・推論実装である。
@@ -2329,6 +2333,10 @@
 - **2026-05 · [Code Generation by Differential Test Time Scaling](2026-2605.20473-code-generation-by-differential-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コード生成の推論時計算量拡張（Test-Time Scaling、TTS）では、一つの問題に対して複数のコードを生成し、その中から正しい候補を選ぶ。従来の選択方式には、公開テストを実行するもの、別のLLMにテスト入力を生成させるもの、LLM評価器に候補を比較させるものがある。
+
+- **2026-05 · [Cluster-Level Attention-Guided Parallel Decoding for Masked Diffusion Language Models](2026-2605.29607-cluster-level-attention-guided-parallel-decoding-for-masked-diffusion-la.md)**  
+  実装：[✓](https://github.com/ziyigu2004/CLAD) ・ リポジトリ内被引用：0  
+  マスク拡散言語モデルの確定単位を1トークンから高信頼度の連続区間へ広げ、注意由来の衝突グラフで両立する区間だけを並列確定することで、標準デコード比最大8.47倍の高速化と精度維持を両立する学習不要デコーダ。
 
 - **2026-05 · [Cascade Token Selection for Transformer Attention Acceleration](2026-2605.03110-cascade-token-selection-for-transformer-attention-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2529,6 +2537,10 @@
 - **2026-04 · [DepCap: Adaptive Block-Wise Parallel Decoding for Efficient Diffusion LM Inference](2026-2604.15750-depcap-adaptive-block-wise-parallel-decoding-for-efficient-diffusion-lm-.md)**  
   実装：[✓](https://github.com/X-Xia0828/DepCap) ・ リポジトリ内被引用：0  
   DepCapは、拡散言語モデル（DLM）が文章をブロック単位で生成する際の二つの判断、すなわち「次のブロックをどこまで伸ばすか」と「そのブロック内のどの位置を同時に確定するか」を、異なる予測信号から決める学習不要の推論方式である。
+
+- **2026-04 · [D-QReLO: Training- and Data-Free Delta Compression for Large Language Models via Quantization and Residual Low-Rank Approximation](2026-2604.16940-d-qrelo-training-and-data-free-delta-compression-for-large-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模微調整で大きくなったデルタ重みを、1ビット量子化で大枠を捉えてから残差を低ランク近似で回収する二段圧縮で、圧縮率8分の1でも性能低下を平均6.17パーセントに抑える学習不要のデルタ圧縮。
 
 - **2026-04 · [Coverage-Based Calibration for Post-Training Quantization via Weighted Set Cover over Outlier Channels](2026-2604.24008-coverage-based-calibration-for-post-training-quantization-via-weighted-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3205,7 +3217,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：148  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：149  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  

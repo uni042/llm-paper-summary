@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4934f3c456561e2ab1460c1500a9bf168c3e3e36",
+  "base_commit": "df131b36e71249c8b4afc9e326b4c9d07e68b3ad",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -553,6 +553,7 @@
     "2026-2604.16583-polar-online-learning-for-lora-adapter-caching-and-routing-in-edge-llm-serving.json",
     "2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasoning.json",
     "2026-2604.16734-reducing-peak-memory-usage-for-modern-multimodal-large-language-model-pipelines.json",
+    "2026-2604.16940-d-qrelo-training-and-data-free-delta-compression-for-large-language-models-via-quantization-and-residual-low-rank-approx.json",
     "2026-2604.17068-stability-weighted-decoding-for-diffusion-language-models.json",
     "2026-2604.17228-revisiting-auxiliary-losses-for-conditional-depth-routing-an-empirical-study.json",
     "2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-llm-servi.json",
@@ -590,6 +591,7 @@
     "2026-2605.06850-shadow-mask-distillation-for-memory-efficient-alignment-in-rl-post-training.json",
     "2026-2605.07019-lensvlm-selective-context-expansion-for-compressed-visual-representation-of-text.json",
     "2026-2605.07112-switchcraft-ai-model-router-for-agentic-tool-calling.json",
+    "2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-representations.json",
     "2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-caching.json",
     "2026-2605.08044-fast-byte-latent-transformer.json",
     "2026-2605.08985-llava-uhd-v4-what-makes-efficient-visual-encoding-in-mllms.json",
@@ -613,6 +615,7 @@
     "2026-2605.17653-llmforge-multi-backend-hardware-aware-neural-architecture-search-with-infinite-head-attention-for-edge-language-models.json",
     "2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.json",
     "2026-2605.18331-prune-update-and-trim-robust-structured-pruning-for-large-language-models.json",
+    "2026-2605.18597-latent-action-reparameterization-for-efficient-agent-inference.json",
     "2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.json",
     "2026-2605.19322-dynatok-temporally-adaptive-and-positional-bias-aware-token-compression-for-video-llms.json",
     "2026-2605.19506-eventprune-cascaded-event-assisted-token-pruning-for-efficient-first-person-dynamic-spatial-reasoning.json",
@@ -630,8 +633,10 @@
     "2026-2605.28213-klineage-recovering-the-missing-when-of-kernel-optimization-by-deoptimizing-experts.json",
     "2026-2605.28640-augmenting-attention-with-exponentially-decaying-memory-improves-query-aware-kv-sparsity.json",
     "2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-models.json",
+    "2026-2605.29607-cluster-level-attention-guided-parallel-decoding-for-masked-diffusion-language-models.json",
     "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json",
     "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json",
+    "2026-2605.30580-speculative-decoding-and-the-curse-of-multilinguality.json",
     "2026-2605.31215-fixed-point-masked-generative-modeling.json",
     "2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-inference.json",
     "2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.json",
@@ -50511,6 +50516,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.16940": {
+      "order": [
+        "2026-11-23T19:05:06+00:00",
+        "2026-2604.16940-d-qrelo-training-and-data-free-delta-compression-for-large-language-models-via-quantization-and-residual-low-rank-approx.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.07325": {
+      "order": [
+        "2026-11-23T19:05:53+00:00",
+        "2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-representations.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.18597": {
+      "order": [
+        "2026-11-23T19:06:40+00:00",
+        "2026-2605.18597-latent-action-reparameterization-for-efficient-agent-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.29607": {
+      "order": [
+        "2026-11-23T19:07:27+00:00",
+        "2026-2605.29607-cluster-level-attention-guided-parallel-decoding-for-masked-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.30580": {
+      "order": [
+        "2026-11-23T19:08:13+00:00",
+        "2026-2605.30580-speculative-decoding-and-the-curse-of-multilinguality.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63952,6 +64002,21 @@
     "arxiv:2604.16694": [
       "papers/inference/99-other-inference-systems/2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasonin.md",
       "papers/inference/99-other-inference-systems/2026-2604.16694-rankguide-tensor-rank-guided-routing-and-steering-for-efficient-reasonin.md"
+    ],
+    "arxiv:2604.16940": [
+      "papers/inference/99-other-inference-systems/2026-2604.16940-d-qrelo-training-and-data-free-delta-compression-for-large-language-mode.md"
+    ],
+    "arxiv:2605.07325": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-repres.md"
+    ],
+    "arxiv:2605.18597": [
+      "papers/inference/99-other-inference-systems/2026-2605.18597-latent-action-reparameterization-for-efficient-agent-inference.md"
+    ],
+    "arxiv:2605.29607": [
+      "papers/inference/99-other-inference-systems/2026-2605.29607-cluster-level-attention-guided-parallel-decoding-for-masked-diffusion-la.md"
+    ],
+    "arxiv:2605.30580": [
+      "papers/inference/05-speculative-decoding-moe/2026-2605.30580-speculative-decoding-across-languages.md"
     ]
   }
 }

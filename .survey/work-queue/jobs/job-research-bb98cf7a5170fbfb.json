@@ -35,10 +35,15 @@
   "selection_reason": "D-QRELOは多数のファインチューニング済みLLMを保持するメモリ負担に対し、デルタ重みを1ビット量子化で大まかに捉え残差を低ランク近似で補う学習・データ不要のデルタ圧縮を提案する、LLMの圧縮・保持コスト削減への直接貢献である。",
   "semantic_scholar_id": "26f9f768d6437358745ab530010540dfd839cd55",
   "source_url": "https://arxiv.org/abs/2604.16940",
-  "status": "ready",
+  "status": "superseded",
   "title": "D-QRELO: Training- and Data-Free Delta Compression for Large Language Models via Quantization and Residual Low-Rank Approximation",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T19:09:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.16940-d-qrelo-training-and-data-free-delta-compression-for-large-language-mode.md",
+  "represented_canonical_id": "arXiv:2604.16940",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

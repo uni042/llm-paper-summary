@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（213本）
+## 自動生成の論文一覧（214本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -465,6 +465,10 @@
 - **2026-05 · [Evading Visual Aphasia: Contrastive Adaptive Semantic Token Pruning for Vision-Language Models](2026-2605.09429-evading-visual-aphasia-contrastive-adaptive-semantic-token-pruning-for-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   たとえば、画像内で目立つ動物より周辺の店名看板を尋ねているのに、初期層の注意が動物へ集中した結果、看板のトークンが枝刈りされ、モデルが架空の店名を答える。LLaVA-v1.5-7Bで画像トークンを576個から128個へ77.8%削減した条件では、七つの評価セットを正規化した平均性能を98.64%保持し、遅延を167.50ミリ秒から77.94ミリ秒へ短縮した。
+
+- **2026-05 · [CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations](2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-repres.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ロボットの状態履歴を書き換えない静的プリフィックスと小さな動的末尾へ分け、追い出しは別資源で裏側に再計算して差し替えることで、235Bモデルと12万トークン文脈の応答開始遅延を14.67秒から0.56秒へ26倍下げ、想起率でも検索型を上回る枠組み。
 
 - **2026-05 · [AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference](2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-model-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
