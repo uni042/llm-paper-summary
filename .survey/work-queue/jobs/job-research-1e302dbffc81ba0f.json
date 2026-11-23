@@ -35,10 +35,15 @@
   "selection_reason": "FlexAttentionは高解像度ビジョン言語モデルで全画像トークンの注意計算が高コストになる問題を対象に、低解像度トークンと選択された高解像度トークンのみで注意マップを計算する柔軟な注意機構と階層的自己注意を提案し、推論時の計算コストを直接削減する。",
   "semantic_scholar_id": "bc612aac20b532da7688329b3f4b0726bd6ecf8a",
   "source_url": "https://arxiv.org/abs/2407.20228",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlexAttention for Efficient High-Resolution Vision-Language Models",
   "type": "research",
   "venue": "European Conference on Computer Vision",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-23T17:44:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.md",
+  "represented_canonical_id": "arXiv:2407.20228",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

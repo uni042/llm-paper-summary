@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "618d5465721dbdcd5542e40c21dd54dc337e03d8",
+  "base_commit": "58250e379ca1e71f798f5ce2c03a72411edfbd69",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -108,11 +108,14 @@
     "2024-2406.09041-me-switch-a-memory-efficient-expert-switching-framework-for-large-language-models.json",
     "2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-target-language-text.json",
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
+    "2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchronization-traversal.json",
     "2024-2406.15524-rethinking-pruning-large-language-models-benefits-and-pitfalls-of-reconstruction-error-minimization.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
+    "2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models-for-code.json",
     "2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-large-models.json",
     "2024-2407.12070-co-designing-binarized-transformer-and-hardware-accelerator-for-efficient-end-to-end-edge-deployment.json",
     "2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.json",
+    "2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large-language-models.json",
     "2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retrieval.json",
@@ -155,6 +158,7 @@
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
     "2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.json",
+    "2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-model-based-on-fully-homomorphic-encryption.json",
     "2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.json",
     "2025-2501.08631-swsc-shared-weight-for-similar-channel-in-llm.json",
     "2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-parallel.json",
@@ -216,6 +220,7 @@
     "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json",
     "2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-llm-inference.json",
     "2025-2505.22425-scaling-reasoning-without-attention.json",
+    "2025-2506.00307-lossless-token-sequence-compression-via-meta-tokens.json",
     "2025-2506.02561-pruning-general-large-language-models-into-customized-expert-models.json",
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
     "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json",
@@ -50034,6 +50039,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2406.12385": {
+      "order": [
+        "2026-11-23T17:38:26+00:00",
+        "2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchronization-traversal.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2407.04147": {
+      "order": [
+        "2026-11-23T17:39:33+00:00",
+        "2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models-for-code.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2407.20228": {
+      "order": [
+        "2026-11-23T17:40:40+00:00",
+        "2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2501.01672": {
+      "order": [
+        "2026-11-23T17:41:47+00:00",
+        "2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-model-based-on-fully-homomorphic-encryption.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.00307": {
+      "order": [
+        "2026-11-23T17:42:59+00:00",
+        "2025-2506.00307-lossless-token-sequence-compression-via-meta-tokens.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63299,6 +63349,21 @@
     "arxiv:2610.15324": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.15324-tempokv-predictive-kv-cache-quantization-for-autoregressive-video-genera.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.15324-tempokv-predictive-kv-cache-quantization-for-autoregressive-video-genera.md"
+    ],
+    "arxiv:2406.12385": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchroni.md"
+    ],
+    "arxiv:2407.04147": [
+      "papers/inference/99-other-inference-systems/2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models.md"
+    ],
+    "arxiv:2407.20228": [
+      "papers/inference/99-other-inference-systems/2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.md"
+    ],
+    "arxiv:2501.01672": [
+      "papers/inference/99-other-inference-systems/2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-mod.md"
+    ],
+    "arxiv:2506.00307": [
+      "papers/inference/99-other-inference-systems/2025-2506.00307-lossless-token-sequence-compression-via-meta-tokens.md"
     ]
   }
 }

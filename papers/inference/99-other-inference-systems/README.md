@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1340本）
+## 自動生成の論文一覧（1344本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4248,6 +4248,10 @@
   実装：[✓](https://github.com/X-LANCE/MBS) ・ リポジトリ内被引用：0  
   Multilingual Brain Surgeon（MBS）は、LLMの重み量子化や枝刈りで使うキャリブレーションデータを英語だけから選ぶと、事前学習時に割合が小さい言語の品質が大きく悪化する問題を扱う。
 
+- **2025-05 · [Lossless Token Sequence Compression via Meta-Tokens](2025-2506.00307-lossless-token-sequence-compression-via-meta-tokens.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  繰り返すトークン部分列をプロンプト専用辞書付きのメタトークンへ置換する無損失なプロンプト圧縮で、木構造理解では27パーセント短縮しても精度低下が1ポイント未満にとどまる方式。
+
 - **2025-05 · [LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation](2025-2506.12038-lcd-advancing-extreme-low-bit-clustering-for-large-language-models-via-k.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LCDは密度に基づく重み代表値の初期化、ヘッセ対角近似による代表値更新、段階的・投機的な代表値数削減、層別活性平滑化を組み合わせる極低ビット量子化方式。A100上の報告速度改善はBERT-large最大6.2倍、LLaMA-2-7Bは4.7倍。
@@ -4412,6 +4416,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、LLMの学習後量子化（PTQ）において、校正用の入力文を使わずに重要な重みを識別し、低ビット量子化での品質低下を抑える事前校正（pre-calibration）を提案する。LLaMA-7B、4ビット系の実験では、量子化時間が57秒でAWQの838秒、SpQRの10,901秒より短い。
 
+- **2025-01 · [Practical Secure Inference Algorithm for a Fine-Tuned Large Language Model Based on Fully Homomorphic Encryption](2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  基盤モデルはクライアント、LoRA行列だけはサーバーで暗号文計算する分割と、モデル抽出攻撃へ耐えるPrivate Linear 層により、ChatGLM2-6Bで1トークン1.61秒の秘匿推論を実現する方式。
+
 - **2025-01 · [CURing Large Models: Compression via CUR Decomposition](2025-2501.04211-curing-large-models-compression-via-cur-decomposition.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重みを圧縮する場合、ニューロンや層を削除する構造化剪定はパラメータ数を減らせるが、ネットワーク構造と残差経路の整合性を変更する必要がある。原著はLlama3.1-8Bで10層をrank 256で分解し、8.03Bパラメータを7.32Bに削減する処理を129.45秒で実行した。
@@ -4475,7 +4483,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：99  
+  実装：✓ ・ リポジトリ内被引用：100  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -4902,6 +4910,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   モデルをブロック列へ分けて位相と能力を見て選んだ分散ノード列へ順に配置し、量子化で転送とメモリを減らす、モデル非依存の分散推論シャーディング方式。
 
+- **2024-07 · [FlexAttention for Efficient High-Resolution Vision-Language Models](2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  高解像度画像の注意マップから重要領域の高解像度トークンだけを約1割選んで階層型自己注意へ入れることで、V BenchやTextVQAの精度を上げながら計算量を約3割から4割減らす視覚言語モデルの効率化。
+
 - **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
   実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  
   RMSNormは多くのLLMで注意機構やFFNの直前に置かれ、活性ベクトルの二乗平均平方根で各要素を割り、学習済みスケールを掛ける。T4 GPUのnorm-then-project単体実験では、SmolLM2-135M相当の4096トークンで0.704msから0.468msへ、8192トークンで0.929msから0.599msへ短縮した。
@@ -4913,6 +4925,10 @@
 - **2024-07 · [Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models](2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TransformerベースのLLMでは、各層に注意機構サブレイヤとMLPサブレイヤがあり、推論時にもすべての層を通すのが通常である。主要な結果として、Llama2-13Bで後段注意機構の約33%を省くと、OpenLLMのARC、HellaSwag、TruthfulQA、MMLUの平均スコアは58.5から56.8へ低下する。
+
+- **2024-07 · [An Adaptive Language-Agnostic Pruning Method for Greener Language Models for Code](2024-2407.04147-an-adaptive-language-agnostic-pruning-method-for-greener-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各層の注意スコアの分布から外れたトークンをフィードフォワード直前で適応的に落とす枝刈りで、コード向けモデルの演算を約半分にしつつ予測性能の98パーセント超を保つ方式。
 
 - **2024-06 · [VTrans: Accelerating Transformer Compression with Variational Information Bottleneck based Pruning](2024-2406.05276-vtrans-accelerating-transformer-compression-with-variational-information.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5021,7 +5037,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：83  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：84  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  

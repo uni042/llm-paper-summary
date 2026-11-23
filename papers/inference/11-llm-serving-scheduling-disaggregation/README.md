@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（615本）
+## 自動生成の論文一覧（616本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2286,6 +2286,10 @@
   実装：✓ ・ リポジトリ内被引用：12  
   要点: この研究は、vLLMのような各GPU内スケジューラを改良するのではなく、その一段手前の「どのLLMインスタンスへ要求を送るか」を最適化する。
 
+- **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
+  実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：12  
+  検索拡張生成（Retrieval-Augmented Generation、RAG）では、生成開始前に一度だけ外部情報を検索する方式に加え、生成文が伸びる途中でも検索を繰り返す方式がある。1024トークン生成の端から端の遅延では、同等以上の困惑度を維持しながらRETRO比最大2.6倍の短縮を示す。
+
 - **2024-03 · [Optimizing LLM Queries in Relational Data Analytics Workloads](2024-2403.05821-optimizing-llm-queries-in-relational-data-analytics-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   理論上の最適解を探す最適接頭辞ヒット再帰（Optimal Prefix Hit Recursion、OPHR）は組合せ爆発を起こすため、実用方式として貪欲群再帰（Greedy Group Recursion、GGR）を設計する。
@@ -2301,10 +2305,6 @@
 - **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   SCLS（スライス単位スケジューリング）は、LLMの応答長が要求到着時に分からないことから生じる二つの資源浪費を解消するサービング手法である。著者らはAnt GroupのCodeFuse実運用要求記録を用い、8台のNVIDIA A100 80GBでLLaMA2-13Bを動かした。
-
-- **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
-  実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：11  
-  検索拡張生成（Retrieval-Augmented Generation、RAG）では、生成開始前に一度だけ外部情報を検索する方式に加え、生成文が伸びる途中でも検索を繰り返す方式がある。1024トークン生成の端から端の遅延では、同等以上の困惑度を維持しながらRETRO比最大2.6倍の短縮を示す。
 
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
   実装：[✓](https://github.com/FlexLLM/artifact) ・ リポジトリ内被引用：11  
@@ -2381,6 +2381,10 @@
 - **2024-10 · [MESS+: Energy-Optimal Inferencing in Language Model Zoos with Service Level Guarantees](2024-2411.00889-mess-energy-optimal-inferencing-in-language-model-zoos-with-service-leve.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデルズーからのリクエスト単位のモデル選択を、平均精度のSLAを制約とするオンライン制御問題として定式化し、仮想キューと精度予測器でエネルギー消費を最大モデル固定比で最大4.6倍分削減した研究。
+
+- **2024-06 · [Fast Graph Vector Search via Hardware Acceleration and Delayed-Synchronization Traversal](2024-2406.12385-fast-graph-vector-search-via-hardware-acceleration-and-delayed-synchroni.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  グラフ型ベクトル検索専用のFPGAアクセラレータFalconと、同期を遅らせて探索パイプラインを埋め続けるDSTにより、CPU比で最大4.3倍の低遅延と再現率の同時改善を示した共同設計。
 
 - **2024-05 · [Turnip: A "Nondeterministic" GPU Runtime with CPU RAM Offload](2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
