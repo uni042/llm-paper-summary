@@ -14,6 +14,14 @@ vLLM-Omniの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-11-22 — vLLM-Omni v0.34.0（正式版）
+
+- v0.34.0rc1からの正式版。vLLM 0.34.0へrebaseし、autoregressive / generation stageはModel Runner V2へ移行。776件のPR（185名、うち初回61名）。
+- 新モデル: MiniMax-H3-Image（画像生成・編集）、FLUX.3 (Klein)、PAN2（text/image-to-video）、Hy-Nomas-Diffusers、Haru-4B（full-duplex音声対話）、Ming-3.0系（TTS Tiny / Audio Flash）、Stable Audio 3 Medium、SAM 3 / 3.1、Video Depth Anything、NVIDIA Alpamayo 2 Super、Runway Praxis-1。
+- **分散duplex serving**: stage replicaを独立runtimeへ配置しつつsessionをreplica groupへ固定。外部orchestrator向けの実験的 `/v1/run` API。CausVidの生成中video streaming、sessionのKV状態を保つ Noisy Pipeline Parallelism も追加。
+- **runtime**: 同時request時のOmni prefix-cache overhead削減、AR KV cacheと後段speech stage向けhidden stateのLMCache CPU offloading、HunyuanImage3 の AR/DiT stage間 CUDA IPC weight sharing。
+- [公式release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.34.0)
+
 ### 2026-11-18 — vLLM-Omni v0.34.0rc1（公開候補版）
 
 - upstream vLLM 0.34.0への整合を目的とする初のRC。AR / generation stageでModelRunner V2が必須となり、Python 3.11〜3.13とvLLM 0.34.0の一致が必要。

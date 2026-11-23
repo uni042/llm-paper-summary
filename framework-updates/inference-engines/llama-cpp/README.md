@@ -100,6 +100,22 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-23 — llama.cpp b12635〜b12651（開発ビルド）
+
+b12633の続き。対象期間の開発ビルドはb12635からb12651（2026-11-23 08:52 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。なお b12634 / b12636 / b12637 / b12639 は GitHub Release が存在しない（Releases API の一覧になく、tag指定取得も404）ため、この範囲表記は「番号の範囲」であって全番号にreleaseがある意味ではない。重要変更だけを拾う。
+
+- **b12648: OpenCLに投機的検証（speculative verification）向け Q4_K coop-k c8 GEMMを追加**。n>=2 で有効化され、X2向けにも有効化。対象はQualcomm系のOpenCL経路に限られ、一般的な生成速度倍率は公表されていない。
+- **b12642: 複数ノードで共有されるホスト重みの全expertコピーを修正**。スケジューラがホスト重みをグラフごとに1回だけデバイスへコピーするため、最初の MUL_MAT_ID 向けの部分コピーでは他のノード分が古くなる問題（例: `--n-cpu-moe` 使用時の inkling2_loop の共有層）への正確性修正。MoEのCPU offload構成に関わる。
+- **b12638: チャットのtoken-aware parsingを実装**（PR #29307）。チャット／ツール呼び出しのパース経路の変更。
+- **b12650 / b12641: Inkling系の対応仕上げ**。b12650は inkling の parser / grammar を改善、b12641は inkling2 の vocab で `ignore_merges` を有効化。
+- **b12644: mtmdの共有audio FFTを高速化**。再帰的な radix-2 分割を反復ステージ方式へ置換し入力バッファを縮小、`test_audio_fft` を追加。速度倍率は一次資料にないため記録しない。
+- **b12643: mtmdの Qwen3-Omni / Qwen3-ASR の音声末尾（audio tail）修正**。zero-padding 由来の余分なtokenを除去する正確性修正。
+- **b12649: OpenCLに XIELU 演算を追加**。**b12651: WebGPUに ROLL 対応を追加**（backend演算カバレッジの拡張）。
+- **b12635: ggmlに SIGMOID の backward pass を追加**。Qwen3.5 hybrid系で使われる演算で、RPCプロトコルのパッチ版を更新。推論decode自体の高速化ではない。
+- 小変更として扱い個別には記録しないもの: b12640（server の grep_search ツールへのoffset pagination）、b12645（LFM2.5-VL のtemplate検出修正）、b12646（ggml-backend の memset 汎用fallback）、b12647（GDN snapshot のテスト比較範囲の修正のみ）。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12651 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12648 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12642 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12638
+
 ## 2026-11-22 — llama.cpp b12614〜b12633（開発ビルド）
 
 b12613の続き。対象期間の開発ビルドはb12614からb12633（2026-11-22 14:53 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。
