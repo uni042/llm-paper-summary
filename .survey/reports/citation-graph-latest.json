@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T22:34:14+00:00",
-  "paper_count": 5175,
+  "generated_at": "2026-11-23T23:52:03+00:00",
+  "paper_count": 5178,
   "edge_count": 66747,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 30,
@@ -3854,6 +3854,7 @@
     "papers/inference/99-other-inference-systems/2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md": 0,
     "papers/inference/99-other-inference-systems/2024-2305.12330-task-agnostic-distillation-of-encoder-decoder-language-models.md": 1,
     "papers/inference/99-other-inference-systems/2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md": 3,
+    "papers/inference/99-other-inference-systems/2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md": 0,
     "papers/inference/99-other-inference-systems/2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md": 5,
     "papers/inference/99-other-inference-systems/2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md": 11,
     "papers/inference/99-other-inference-systems/2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheap.md": 0,
@@ -4000,6 +4001,7 @@
     "papers/inference/99-other-inference-systems/2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md": 0,
     "papers/inference/99-other-inference-systems/2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cr.md": 0,
     "papers/inference/99-other-inference-systems/2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-sy.md": 0,
+    "papers/inference/99-other-inference-systems/2025-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.md": 0,
     "papers/inference/99-other-inference-systems/2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md": 0,
     "papers/inference/99-other-inference-systems/2025-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quant.md": 0,
     "papers/inference/99-other-inference-systems/2025-1e04c2f7fc65-pld-accelerating-llm-inference-by-leveraging-language-model-artifacts.md": 8,
@@ -4368,6 +4370,7 @@
     "papers/inference/99-other-inference-systems/2026-092a8a151f95-compel-compensated-mixture-of-experts-pruning-with-expert-layer-distribu.md": 2,
     "papers/inference/99-other-inference-systems/2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md": 5,
     "papers/inference/99-other-inference-systems/2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md": 1,
+    "papers/inference/99-other-inference-systems/2026-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amort.md": 0,
     "papers/inference/99-other-inference-systems/2026-1e016ba4edaa-hybridserve-stall-free-distributed-disaggregated-llm-inference-with-hybr.md": 0,
     "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md": 45,
     "papers/inference/99-other-inference-systems/2026-2502.18424-compressing-language-models-for-specialized-domains.md": 1,
@@ -65571,6 +65574,7 @@
       "papers/inference/21-static-structured-pruning/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
       "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
     ],
+    "papers/inference/99-other-inference-systems/2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md": [],
     "papers/inference/99-other-inference-systems/2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md": [
       "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md",
       "papers/inference/16-weight-quantization-compression/2021-2102.08124-accelerated-sparse-neural-training-a-provable-and-efficient-method-to-fi.md",
@@ -67439,6 +67443,7 @@
       "papers/inference/09-kernel-runtime-compilation/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md",
       "papers/inference/09-kernel-runtime-compilation/2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md"
     ],
+    "papers/inference/99-other-inference-systems/2025-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.md": [],
     "papers/inference/99-other-inference-systems/2025-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.md": [
       "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
       "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md"
@@ -71936,6 +71941,7 @@
     "papers/inference/99-other-inference-systems/2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md": [
       "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-1cd332146598-rsce-training-free-residual-stream-encoding-for-persistent-context-amort.md": [],
     "papers/inference/99-other-inference-systems/2026-1e016ba4edaa-hybridserve-stall-free-distributed-disaggregated-llm-inference-with-hybr.md": [],
     "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md": [],
     "papers/inference/99-other-inference-systems/2026-2502.18424-compressing-language-models-for-specialized-domains.md": [
