@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1395本）
+## 自動生成の論文一覧（1398本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -279,6 +279,10 @@
 - **2026-07 · [CRISP: Pre-LLM Yet Text-Driven Visual Token Pruning for Efficient LVLM Inference](2026-2607.16326-crisp-pre-llm-yet-text-driven-visual-token-pruning-for-efficient-lvlm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   学習を追加せず、言語モデルの層内注意重みを取り出さないことが設計上の要点である。原著の表IではLLaVA-1.5-7Bの視覚トークンを576個から128個（77.8%削除）へ減らしても、報告された平均性能保持率は99.5%である。
+
+- **2026-07 · [Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata](2026-2607.07026-constrained-decoding-for-diffusion-language-models-via-efficient-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  DangとErmonは、生成時に課す制約を有限オートマトン（finite automaton）へ変換し、拡散モデルの各位置に対する予測分布とオートマトンの受理経路を結合する。制約を満たすかどうかを生成後に判定して捨てる拒否標本化とは異なり、無効な系列へ確率を割り当てない点が中心的な貢献である。
 
 - **2026-07 · [COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution](2026-092a8a151f95-compel-compensated-mixture-of-experts-pruning-with-expert-layer-distribu.md)**  
   実装：[✓](https://github.com/seohee0925/COMPEL) ・ リポジトリ内被引用：2  
@@ -556,10 +560,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   総保持量を変えずに、質問と技能プールの類似度で音声と映像の間の予算を移し、複雑さと冗長さで時刻方向の予算を組み替える階層的配分により、全モダリティモデルのトークン圧縮の精度と効率の釣り合いを改善した研究である。
 
-- **2026-07 · [Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata](2026-2607.07026-constrained-decoding-for-diffusion-language-models-via-efficient-inferen.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  DangとErmonは、生成時に課す制約を有限オートマトン（finite automaton）へ変換し、拡散モデルの各位置に対する予測分布とオートマトンの受理経路を結合する。制約を満たすかどうかを生成後に判定して捨てる拒否標本化とは異なり、無効な系列へ確率を割り当てない点が中心的な貢献である。
-
 - **2026-07 · [CoMem: Reusing Transformer Depth across Queries with Persistent Intermediate Residuals](2026-2607.28263-comem-reusing-transformer-depth-across-queries-with-persistent-intermedi.md)**  
   実装：[✓](https://github.com/liuhanzuo/Mixture-of-Memory) ・ リポジトリ内被引用：1  
   CoMemはTransformerのどこまでを文書単独で先払い計算するかを新たな制御変数とし、文書の中間残差（residual state）を永続保存して、問い合わせ時は上位層のみ再実行する方式である。
@@ -643,6 +643,10 @@
 - **2026-05 · [Pruning and Distilling Mixture-of-Experts into Dense Language Models](2026-2605.28207-pruning-and-distilling-mixture-of-experts-into-dense-language-models.md)**  
   実装：[✓](https://github.com/krafton-ai/moe-to-dense) ・ リポジトリ内被引用：1  
   演算量は小さくても、すべての専門家をGPUメモリへ常駐させる場合の容量は大きい。CPUへ退避すれば容量制約を緩和できるが、専門家の転送が遅延や帯域を圧迫する。Qwen3-30B-A3Bから約3.3Bの密な生徒モデルを作った実験では、約4Bトークンの蒸留後に5課題の平均58.10%を達成した。
+
+- **2026-05 · [Probabilistic Tiny Recursive Model](2026-2605.19943-probabilistic-tiny-recursive-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  数独や格子型の制約充足問題で高い精度を示す一方、決定的な更新では誤った解の近傍へ収束し、再帰を増やしても抜け出せないことがある。推論時の追加計算を、再帰を長くする「深さ」だけでなく、並列に試す「幅」へ割り当てる方式である。
 
 - **2026-05 · [Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics](2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1086,6 +1090,10 @@
   実装：[✓](https://github.com/ding-xiaolu/ThinkJev) ・ リポジトリ内被引用：0  
   一つのハイブリッド思考モデルの回答スロットを、空の思考と実思考の後で同じキャッシュ済みプロンプトから読み、直接回答には誤り率の統計保証を付け、残りは確信度が立つ時点で思考を止める、学習なしの二系統カスケード。
 
+- **2026-10 · [ThinkBit: Search Codewords, Recalibrate Scales, Select by Reasoning](2026-2610.34886-thinkbit-search-codewords-recalibrate-scales-select-by-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ベクトルコードブックも回転も使わない厳密なスカラー2ビット量子化で、感度配分・コードワード探索・スケール再調整・量子化認識学習を積み重ね、最後は訓練問題の推論テストで選ぶことで、Qwen3-1.7Bを0.52GBまで小さくしながらMATH-500で73.0を保つ枠組み。
+
 - **2026-10 · [The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases](2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   入力長と出力長を格子状に振った実測で、入力側の時間とエネルギーが入力長に線形と二次で伸びることを示し、時間の振る舞いが最も近い手元構成の対のモデルで商用モデルのエネルギーを推す方法により、未見構成でも時間で最大三・九七パーセント、エネルギーで最大二・四八パーセントの誤差で予測したと報告した。
@@ -1298,6 +1306,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   生徒の現在の順位を教師に教師強制で評価させ、残り候補への条件付き選好で先頭トークンスコアを直接直す項目空間オン方策蒸留により、小さい決断モデルが27B教師を超える順位品質と24.5倍の高速化を両立した。
 
+- **2026-10 · [DConstrain: Compiling Context-Parameterized Transitions for Diffusion Language Model Constrained Decoding](2026-2610.30920-dconstrain-compiling-context-parameterized-transitions-for-diffusion-lan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散言語モデルの制約付きデコードで、スタックとフィールド履歴を実行時パラメータとして残す遷移プログラムへスキーマをコンパイルし、プロパティの任意順序でも厳密な同時推論を可能にしてBFCL遅延を最大46.26倍削減する方式。
+
 - **2026-10 · [Continue or Restart? The Limits of Early Failure Prediction in Coding Agents](2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   147,002件の軌跡で、早期接頭辞は同一課題の試行を偶然並みにしか分けられないこと、学習型再起動の利得は試行選択ではなく課題間配分から来ること、予算内では継続が再起動を支配することを示した。
@@ -1325,6 +1337,10 @@
 - **2026-10 · [Breaking the Space Barrier and its Application to Language Model Inference](2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   制約付き復号の経路一意性という理論結果から、強制テキストの無償化と表なしマスクと並列検証を持つ推論エンジンを構成し、ノートPCで構造化出力を高速化する研究。
+
+- **2026-10 · [Breaking Diffusion: Parallel Reasoning with Draft Refinement](2026-2610.26542-breaking-diffusion-parallel-reasoning-with-draft-refinement.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散の逆遷移を捨て、完全な下書きを並列に書き直し、トークン自身の証拠を割り引いたキャビティエネルギーで候補を採否する推論方式で、6MモデルがCountdown-5で44.4パーセント、Sudoku-Extremeで93.9パーセントを記録する。
 
 - **2026-10 · [Bifocal: Training-Free Mixed Granularity Visual Token Pruning for Multimodal LLMs](2026-2610.18399-bifocal-training-free-mixed-granularity-visual-token-pruning-for-multimo.md)**  
   実装：[✓](https://github.com/EIT-NLP/Bifocal) ・ リポジトリ内被引用：0  
@@ -2221,10 +2237,6 @@
 - **2026-05 · [ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression](2026-2606.00494-projq-project-and-quantize-for-adapter-aware-llm-compression.md)**  
   実装：[✓](https://github.com/yy9301/ProjQ) ・ リポジトリ内被引用：0  
   量子化ノイズを直交射影でLoRAが直せる低ランク部分空間へ閉じ込め、補正不能な残差を最小化してから共分散-awareな閉形式でアダプタを初期化することで、3ビットで4ビット級の性能を出す量子化枠組み。
-
-- **2026-05 · [Probabilistic Tiny Recursive Model](2026-2605.19943-probabilistic-tiny-recursive-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  数独や格子型の制約充足問題で高い精度を示す一方、決定的な更新では誤った解の近傍へ収束し、再帰を増やしても抜け出せないことがある。推論時の追加計算を、再帰を長くする「深さ」だけでなく、並列に試す「幅」へ割り当てる方式である。
 
 - **2026-05 · [PreFT: Prefill-only finetuning for inference efficiency](2026-2605.14217-preft-prefill-only-finetuning-for-inference-efficiency.md)**  
   実装：[✓](https://github.com/stanfordnlp/preft) ・ リポジトリ内被引用：0  
@@ -3297,7 +3309,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：149  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：151  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -5233,7 +5245,7 @@
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
-  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：24  
   従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
 
 - **2023-05 · [Tabi: An Efficient Multi-Level Inference System for Large Language Models](2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md)**  
@@ -5257,7 +5269,7 @@
   大規模言語モデルを配備する際、同じ品質・遅延・計算資源の要求を持つ利用者ばかりとは限らない。モデルを後から枝刈りして調整する方法では、新しいサイズごとに再学習や調整を要することもある。
 
 - **2023-10 · [A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration](2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md)**  
-  実装：[✓](https://github.com/SALT-NLP/DyLAN) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/SALT-NLP/DyLAN) ・ リポジトリ内被引用：12  
   複数の大規模言語モデルエージェントを協調させる方式では、担当する役割や通信順序を固定すると、問題によっては不得意なエージェントの発言が増え、余計なモデル呼出しと品質低下を招く。原著のHumanEvalコード生成評価では、単一実行の正答率73.2%に対してDyLANは82.9%、平均モデルAPI呼出し数は16.85回だった。
 
 - **2023-10 · [GEMINI: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints](2023-075d73797107-gemini-fast-failure-recovery-in-distributed-training-with-in-memory-chec.md)**  
@@ -5423,7 +5435,7 @@
   前者は回帰や生成へそのまま転用しにくく、後者は未知入力に対する難度予測が難しい。難度を精密に当てることより、似た語彙が学習時と推論時に同じ計算経路を通る一貫性を重視する設計である。
 
 - **2022-04 · [Step-unrolled Denoising Autoencoders for Text Generation](2022-2112.06749-step-unrolled-denoising-autoencoders-for-text-generation.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   大規模言語モデルの典型的な自己回帰生成は、先行トークンが確定してから次トークンを計算する。注意演算の内部を高速化しても、長い出力を作るにはトークン数にほぼ比例した生成ステップが必要になる。最初はランダムなトークン列を用意し、各反復で全体の整合性を改善して最終文を得る。しかし生成中のモデルが自分で作った中間文は、人工的なランダム破損文と同じ分布ではない。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
@@ -5605,7 +5617,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：372  
+  実装：✓ ・ リポジトリ内被引用：373  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

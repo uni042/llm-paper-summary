@@ -35,10 +35,15 @@
   "selection_reason": "推論言語モデルの生成がメモリ帯域律速である点に対し、層ごとのビット幅割当て・コードワード探索・スケール再校正からなる厳密スカラー2ビット量子化ThinkBitで重みを0.52GBまで圧縮し推論を最大8倍安価にすることを狙う、量子化による推論高速化への直接貢献が要旨で確認できる。",
   "semantic_scholar_id": "292b1367a7ebc4c94e272f2da40e6920d00539ec",
   "source_url": "https://arxiv.org/abs/2610.34886",
-  "status": "ready",
+  "status": "superseded",
   "title": "ThinkBit: Search Codewords, Recalibrate Scales, Select by Reasoning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:08:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.34886-thinkbit-search-codewords-recalibrate-scales-select-by-reasoning.md",
+  "represented_canonical_id": "arXiv:2610.34886",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

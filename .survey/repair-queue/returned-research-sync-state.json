@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "690b217d1664903e1315721d6f812316fad71299",
+  "base_commit": "03a42c9eb0bf69926e2401ccec59a967cd6c2508",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1145,6 +1145,7 @@
     "2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut-driven-mixed-precision-acceleration.json",
     "2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-llms-inference.json",
     "2026-2610.23006-efficient-cpu-gpu-collaborative-moe-inference-via-adaptive-expert-assignment.json",
+    "2026-2610.23056-thought-blocks-non-autoregressive-latent-communication-for-multi-agent-systems-via-trajectory-to-state-compilation.json",
     "2026-2610.23455-hydrallm-adaptive-width-slicing-for-elastic-text-and-vision-language-models.json",
     "2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.json",
     "2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-service.json",
@@ -1168,6 +1169,7 @@
     "2026-2610.25908-calm-consistency-aware-logit-masking-in-decoding-space-for-mitigating-overthinking.json",
     "2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-software-co-design-exploration.json",
     "2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.json",
+    "2026-2610.26542-breaking-diffusion-parallel-reasoning-with-draft-refinement.json",
     "2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.json",
     "2026-2610.26693-parallel-language-models-via-variational-decoding.json",
     "2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learned-token-pruning.json",
@@ -1191,6 +1193,7 @@
     "2026-2610.29527-rcsd-reinforcement-and-continual-learning-for-domain-specific-speculative-decoding.json",
     "2026-2610.29544-risk-kv-quality-aware-selective-kv-cache-reconstruction-for-distributed-llm-inference.json",
     "2026-2610.29545-pace-periodic-and-channel-aligned-encoding-of-four-bit-recurrent-states.json",
+    "2026-2610.29662-spare-sparsity-allocation-via-routing-entropy-for-efficient-moes.json",
     "2026-2610.29820-ulacache-unified-logical-addressing-for-sparse-llm-serving.json",
     "2026-2610.29873-hawk-heterogeneity-aware-kv-cache-transfer-for-efficient-gpu-npu-phase-disaggregated-llm-inference.json",
     "2026-2610.30206-moezip-routing-aware-kv-cache-compression-for-sparse-mixture-of-experts-llms.json",
@@ -1201,6 +1204,7 @@
     "2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quantization-of-mixture-of-experts-models.json",
     "2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cache-offloading-in-llm-serving.json",
     "2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storage.json",
+    "2026-2610.30920-dconstrain-compiling-context-parameterized-transitions-for-diffusion-language-model-constrained-decoding.json",
     "2026-2610.30951-openattention-one-percent-is-enough-with-tail-proxies.json",
     "2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressibility-training.json",
     "2026-2610.31169-saria-persistence-aware-kv-caching-with-coordinated-dram-ssd-reload-for-llm-agents.json",
@@ -1235,6 +1239,7 @@
     "2026-2610.34721-prefetch-steered-routing-deterministic-cache-aware-expert-selection-for-offloaded-mixture-of-experts-decoding.json",
     "2026-2610.34731-mcf-a-memory-and-communication-aware-co-designed-framework-for-long-context-llm-inference.json",
     "2026-2610.34824-sparta-a-sparse-ternary-llm-accelerator-with-adaptive-attention-and-unified-datapath-for-long-context-edge-inference.json",
+    "2026-2610.34886-thinkbit-search-codewords-recalibrate-scales-select-by-reasoning.json",
     "2026-2610.35023-bellowskv-one-latent-for-many-layers-expanded-on-demand.json",
     "2026-2610.35230-context-is-not-free-carbon-aware-llm-routing-for-multi-turn-llm-web-services-across-geo-distributed-data-centers.json",
     "2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimodal-llms-on-edge-socs.json",
@@ -51061,6 +51066,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.23056": {
+      "order": [
+        "2026-11-23T21:04:04+00:00",
+        "2026-2610.23056-thought-blocks-non-autoregressive-latent-communication-for-multi-agent-systems-via-trajectory-to-state-compilation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26542": {
+      "order": [
+        "2026-11-23T21:04:51+00:00",
+        "2026-2610.26542-breaking-diffusion-parallel-reasoning-with-draft-refinement.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.29662": {
+      "order": [
+        "2026-11-23T21:05:38+00:00",
+        "2026-2610.29662-spare-sparsity-allocation-via-routing-entropy-for-efficient-moes.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.30920": {
+      "order": [
+        "2026-11-23T21:06:25+00:00",
+        "2026-2610.30920-dconstrain-compiling-context-parameterized-transitions-for-diffusion-language-model-constrained-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.34886": {
+      "order": [
+        "2026-11-23T21:07:12+00:00",
+        "2026-2610.34886-thinkbit-search-codewords-recalibrate-scales-select-by-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64722,6 +64772,21 @@
     "arxiv:2610.20686": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.20686-rolaq-joint-rotation-and-range-calibration-for-2-bit-kv-caches-in-multi-.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.20686-rolaq-joint-rotation-and-range-calibration-for-2-bit-kv-caches-in-multi-.md"
+    ],
+    "arxiv:2610.23056": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2610.23056-thought-blocks-non-autoregressive-latent-communication-for-multi-agent-s.md"
+    ],
+    "arxiv:2610.26542": [
+      "papers/inference/99-other-inference-systems/2026-2610.26542-breaking-diffusion-parallel-reasoning-with-draft-refinement.md"
+    ],
+    "arxiv:2610.29662": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2610.29662-spare-sparsity-allocation-via-routing-entropy-for-efficient-moes.md"
+    ],
+    "arxiv:2610.30920": [
+      "papers/inference/99-other-inference-systems/2026-2610.30920-dconstrain-compiling-context-parameterized-transitions-for-diffusion-lan.md"
+    ],
+    "arxiv:2610.34886": [
+      "papers/inference/99-other-inference-systems/2026-2610.34886-thinkbit-search-codewords-recalibrate-scales-select-by-reasoning.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "MoEの層別ルーティングエントロピーに基づき訓練不要で専門家プルーニング量を配分するSPAREは、MixtralやQwen3、DeepSeek-R1で50%プルーニング時の精度を改善し、MoE推論のメモリフットプリント削減へ直接貢献するため採用とする。",
   "semantic_scholar_id": "a3fe9791cfdbd55aa10ad5043009f73e32ac5812",
   "source_url": "https://arxiv.org/abs/2610.29662",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPARE: Sparsity Allocation via Routing Entropy for Efficient MoEs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:08:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2610.29662-spare-sparsity-allocation-via-routing-entropy-for-efficient-moes.md",
+  "represented_canonical_id": "arXiv:2610.29662",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

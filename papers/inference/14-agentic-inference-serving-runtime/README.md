@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（95本）
+## 自動生成の論文一覧（96本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -174,6 +174,10 @@
 - **2026-11 · [Bursts That Outlast Themselves: Persistent Degradation in Prefix-Cached Agent Serving](2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   数分のバーストがKVプールを溢れさせ、ヒット率約1割の劣化が負荷回復後も続く準安定故障を対照実験で示し、受付済みセッションの一時停止とKV需要の予算制御が回復と予防に効くことを示した研究。
+
+- **2026-10 · [Thought Blocks: Non-Autoregressive Latent Communication for Multi-Agent Systems via Trajectory-to-State Compilation](2026-2610.23056-thought-blocks-non-autoregressive-latent-communication-for-multi-agent-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチエージェント間の潜在メッセージを、自己回帰的な潜在軌跡を実行せず固定サイズのKVブロックとして一括構築する方式で、テキスト通信と比べて平均遅延を8.6倍削減する。
 
 - **2026-10 · [Taking Tokenization off the Host for Agentic LLM Serving](2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md)**  
   実装：[✓](https://github.com/Msiavashi/GraphTok) ・ リポジトリ内被引用：0  

@@ -393,6 +393,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/IMBALDY/MuKV) ・ リポジトリ内被引用：2  
   動画を区間・フレーム・パッチの3粒度のKVキャッシュで保持し、自己注意と周波数の二信号で圧縮して半階層検索する方式で、保存量を増やさずにストリーミング動画質問応答の精度を代表方式から数ポイント引き上げた。
 
+- **2026-04 · [When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration](2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compressio.md)**  
+  実装：[✓](https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay) ・ リポジトリ内被引用：2  
+  エージェント間の潜在受け渡しでプロンプトのKVを32トークンへ絞り、消した値の直交残差を保持側へ戻す方式で、通信量を約4.7分の1にしながら全受け渡しに近い精度を保った。
+
 - **2026-04 · [The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference](2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   数学的には、毎回すべての接頭辞を再計算する経路と同じ注意計算を実行するはずである。新しい高速化カーネルやKV圧縮方式を提案する研究ではない。さらに32ビット浮動小数点（FP32）へ切り替えると、著者らの別の対照実験ではトークン反転が0%となり、出力分布差が大幅に減った。
@@ -688,10 +692,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval](2026-2604.10898-zoomr-memory-efficient-reasoning-through-multi-granularity-key-value-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   推論の段落要約を索引にして、注意ヘッドの合意が取れた区間だけ原文をCPUから読み戻すKV管理で、全キャッシュ退避比でもメモリを4倍超削りながら同予算の圧縮方式を正解率で大きく上回った。
-
-- **2026-04 · [When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration](2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compressio.md)**  
-  実装：[✓](https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay) ・ リポジトリ内被引用：1  
-  エージェント間の潜在受け渡しでプロンプトのKVを32トークンへ絞り、消した値の直交残差を保持側へ戻す方式で、通信量を約4.7分の1にしながら全受け渡しに近い精度を保った。
 
 - **2026-04 · [Swift-SVD: Theoretical Optimality Meets Practical Efficiency in Low-Rank LLM Compression](2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-.md)**  
   実装：[✓](https://github.com/hiahei/Swift-SVD) ・ リポジトリ内被引用：1  
@@ -1878,7 +1878,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KVTunerは、大規模言語モデル（LLM）の鍵・値キャッシュ（key-value キャッシュ; KVキャッシュ）を、層ごとに異なるビット幅で量子化するための自動設定方式である。またKIVI-KV8を基準に、文脈長を変えた実験で最大21.25%の推論処理量改善を報告する。
 
 - **2025-10 · [Cache-to-Cache: Direct Semantic Communication Between Large Language Models](2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md)**  
-  実装：[✓](https://github.com/thu-nics/C2C) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/thu-nics/C2C) ・ リポジトリ内被引用：34  
   複数の大規模言語モデル（LLM）が協調するシステムでは、あるモデルが推論や分析の結果を文章として生成し、別のモデルがその文章を読み込んで次の応答を作ることが多い。
 
 - **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
@@ -1890,7 +1890,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KVを一律の長さで削る方式は簡単だが、要約、文書質問応答、コード補完などでは、重要な情報が残る層とトークン位置が異なる。
 
 - **2025-10 · [KVComm: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems](2025-2510.12872-kvcomm-online-cross-context-kv-cache-communication-for-efficient-llm-bas.md)**  
-  実装：[✓](https://github.com/FastMAS/KVCOMM) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/FastMAS/KVCOMM) ・ リポジトリ内被引用：31  
   複数の大規模言語モデル（LLM）エージェントが役割を分担すると、各エージェントのシステム指示、直前の発言、道具から得た文章は異なる。
 
 - **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
@@ -2456,7 +2456,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   WKVQuantは、大規模言語モデルの推論時に使うメモリを、モデル重み、鍵・値キャッシュ、一時活性化の三種類に分け、容量を長く占有する重みと鍵・値キャッシュだけを低ビット化する事後量子化（post-学習 量子化; PTQ）方式である。重みのみの量子化は比較的精度を維持しやすいが、長文脈・大バッチで増える鍵・値キャッシュを圧縮しない。
 
 - **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
-  実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：42  
   活性値 Beaconは、文章そのものを短く書き換えるのではなく、Transformerの各層に生じる鍵・値活性を、追加したビーコントークンの活性へ直接圧縮する。圧縮率を8倍にした128K文脈の実験では、非圧縮で同じデータにより微調整した比較モデルに対し、推論時間を約半分、KVキャッシュを約8分の1にした。
 
 - **2024-10 · [LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy](2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md)**  

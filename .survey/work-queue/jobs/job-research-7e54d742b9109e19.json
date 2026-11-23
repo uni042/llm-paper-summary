@@ -35,10 +35,15 @@
   "selection_reason": "LLMマルチエージェント間のテキスト通信を、軌跡を一括で潜在KV継続メモリへコンパイルするThought Blocksに置き換え、自己回帰ステップを84.8%減らし平均8.6倍のレイテンシ高速化を示しており、推論時通信の直接的な効率化が要旨で確認できる。",
   "semantic_scholar_id": "258dd82c274663dc2ce5e51faa204ccf0f8ad543",
   "source_url": "https://arxiv.org/abs/2610.23056",
-  "status": "ready",
+  "status": "superseded",
   "title": "Thought Blocks: Non-Autoregressive Latent Communication for Multi-Agent Systems via Trajectory-to-State Compilation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:08:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2610.23056-thought-blocks-non-autoregressive-latent-communication-for-multi-agent-s.md",
+  "represented_canonical_id": "arXiv:2610.23056",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
