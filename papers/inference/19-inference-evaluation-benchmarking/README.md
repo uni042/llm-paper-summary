@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（217本）
+## 自動生成の論文一覧（218本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -249,6 +249,10 @@
 - **2026-09 · [PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving](2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21725505) ・ リポジトリ内被引用：0  
   単一H100 NVL上でvLLMとTensorRT-LLMへ同じ要求列を送り、接頭辞キャッシュそのものの効果、容量超過、要求スケジューリングの差を切り分ける実測ベンチマーク。
+
+- **2026-09 · [PC-SubMax: Efficient Prompt Compression via Regularized Submodular Maximization](2026-2609.32474-pc-submax-efficient-prompt-compression-via-regularized-submodular-maximi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文選択を被覆・関連性・多様性の劣モジュラ効用とトークン費用の差として定式化し、近似保証付きの貪欲法で解くことで、自己回帰モデルによる採点なしに速く冗長さの少ないプロンプト圧縮を行う。
 
 - **2026-09 · [P4Q: Co-designing Token Pruning and Quantization for Vision-Language Model Acceleration](2026-2609.34867-p4q-co-designing-token-pruning-and-quantization-for-vision-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "バッチ推論下で単一プルーニングマスクを共有する際の閾値ずれ問題に対し、集約した重要度スコアへの周期的top-k選択で対処する学習不要の適応的プルーニングを提案し、大規模推論モデルのバッチ推論における精度劣化を防ぎつつ高速化を維持する、推論向け圧縮の直接の貢献である。",
   "semantic_scholar_id": "eba345dd029f8f281876cb09262563841729e3f9",
   "source_url": "https://arxiv.org/abs/2608.14003",
-  "status": "ready",
+  "status": "superseded",
   "title": "Batch-wise Adaptive Pruning: Periodic Neuron Activation-Aware Weight Pruning for Language Reasoning Model",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T19:40:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-prun.md",
+  "represented_canonical_id": "arXiv:2608.14003",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

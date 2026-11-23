@@ -35,10 +35,15 @@
   "selection_reason": "行列単位のSVD切り捨てでは誤差がブロックを通じて複合する問題に対し、白化SVD・ブロック単位共同最適化・モデル全体の言語モデリング損失での精緻化という三段階最適化で低ランクLLM圧縮を行い perplexity を大幅に改善する、LLM圧縮への直接貢献である。",
   "semantic_scholar_id": "8f740c4bbe0522e35439d5e965b980630321214e",
   "source_url": "https://arxiv.org/abs/2609.15838",
-  "status": "ready",
+  "status": "superseded",
   "title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T19:40:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.15838-per-matrix-optimality-is-not-enough-three-level-optimization-for-low-ran.md",
+  "represented_canonical_id": "arXiv:2609.15838",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

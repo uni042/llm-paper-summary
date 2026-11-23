@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1372本）
+## 自動生成の論文一覧（1376本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -52,6 +52,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
 
+- **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
+  実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：7  
+  入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
+
 - **2026-04 · [Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding](2026-2604.12358-why-and-when-visual-token-pruning-fails-a-study-on-relevant-visual-infor.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   そのうえで、生成中の注意分布が初期状態から変化した時だけ、退避しておいた視覚トークンを選び直す生成段階移動対応トークン削減（デコード-stage Shift-aware トークン 枝刈り; DSTP）を提案する。
@@ -79,10 +83,6 @@
 - **2025-12 · [DEER: Draft with Diffusion, Verify with Autoregressive Models](2025-2512.15176-deer-draft-with-diffusion-verify-with-autoregressive-models.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
-
-- **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
-  実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：6  
-  入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
 
 - **2026-02 · [HiFloat4 Format for Language Model Inference](2026-2602.11287-hifloat4-format-for-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -1050,6 +1050,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   クエリと視覚の相互作用行列の低ランク構造を使い、上位の特異方向へ参加するトークンを残す学習なしの枝刈りQViDで、強い圧縮ほど既存手法より精度を保った研究。
 
+- **2026-10 · [VETO: Video Efficient Token Optimization for Vision Language Models](2026-2610.01785-veto-video-efficient-token-optimization-for-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  動画の視覚トークンを、フレーム内の意味的統合の後にフレーム間の冗長統合を行う二軸の階層圧縮で減らし、EgoSchemaで精度を保ったまま遅延を4割下げ、保持率10パーセントでも単軸方式を上回るプラグイン。
+
 - **2026-10 · [UNREAL: Unifying Retrieval and Long-Context with a Single Model](2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   凍結LLMの内部表現と学習した検索トークンだけで証拠チャンクを選び、外部検索モデルなしにコーパス検索と長文脈推論を一つの選択機構で統一する方式。
@@ -1406,6 +1410,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Reciprocal Guidance（RecGuide）は、拡散型ドラフトと自己回帰検証を同一の大規模言語モデルで実行する自己投機的復号に対し、同時実行負荷に応じて二つの制御方式を使い分ける推論ランタイムである。
 
+- **2026-09 · [Rank-Aware Speculative Sampling for Diffusion Draft Trees](2026-2610.02251-rank-aware-speculative-sampling-for-diffusion-draft-trees.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散ドラフト木の検証で、候補を平均変位に沿って順位付けし全変動距離を最小化する順位重みで選ぶことで、対象分布の厳密さを保ったまま受理確率と対象呼出し効率を上げる検証規則。
+
 - **2026-09 · [QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression](2026-2609.40146-quloc-photonic-quantum-assisted-low-rank-llm-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの線形射影行列を特異値分解（singular value decomposition; SVD）して小さな二つの行列へ置き換える低ランク圧縮は、重み数と行列演算量を削減できる。Qwen3.5-4Bの言語モデル部分のパラメータを20.05%減らした条件で、六つの下流課題の平均精度はSwift-SVDの49.24%から54.03%へ上昇した。
@@ -1429,6 +1437,10 @@
 - **2026-09 · [Post-Training Ternarization of Qwen3-4B: Capability, Effective Bit Budget, Storage Compression, and Deployment](2026-2609.01962-post-training-ternarization-of-qwen3-4b-capability-effective-bit-budget-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen3-4Bの線形重み81.62%を既存の回転・残差三値化・誤差補償で事後変換し、対象重みの実効1.641ビット、保存容量8.29→3.96GiBを実証。圧縮、能力保持、実行速度を分離して検証する。
+
+- **2026-09 · [Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression](2026-2609.15838-per-matrix-optimality-is-not-enough-three-level-optimization-for-low-ran.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  行列単位のSVD、ブロック単位の共同最適化、モデル全体の言語モデリング損失による磨き上げを256系列の較正だけでつなぎ、LLaMA-7Bの60パーセント圧縮でパープレキシティを42.1から11.4へ下げる三段階の低ランク圧縮。
 
 - **2026-09 · [Output-aware Residual Stream Pruning for Large Language Models](2026-2609.35579-output-aware-residual-stream-pruning-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1681,6 +1693,10 @@
 - **2026-08 · [Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State](2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md)**  
   実装：[✓](https://github.com/StarkLeeSunny/Flexkv-doublenode) ・ リポジトリ内被引用：0  
   外部KV状態の全ヒットを先に把握しつつ、復元はWチャンク窓だけを順次ステージングして解放することで、長大な外部状態とローカル復元メモリを分離する方式。
+
+- **2026-08 · [Batch-wise Adaptive Pruning: Periodic Neuron Activation-Aware Weight Pruning for Language Reasoning Model](2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-prun.md)**  
+  実装：[✓](https://github.com/matsuolab/batch-wise-prune) ・ リポジトリ内被引用：0  
+  バッチ共有マスクで崩れる閾値型の適応枝刈りを、周期的なtop-k選択と重要度を蓄積する活性化メモリで置き換え、バッチ4・スパース率50パーセントでTEALを39.7ポイント上回り1.40倍の高速化を得る学習不要の枝刈り。
 
 - **2026-08 · [Allocation Before Ranking: Decoupled Token Compression for OmniLLMs](2026-2608.01665-allocation-before-ranking-decoupled-token-compression-for-omnillms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3292,13 +3308,13 @@
   実装：✓ ・ リポジトリ内被引用：32  
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
 
+- **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
+  実装：✓ ・ リポジトリ内被引用：30  
+  Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
+
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：30  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
-
-- **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
-  Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
 
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
@@ -4619,7 +4635,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：22  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  
@@ -5129,7 +5145,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：85  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  

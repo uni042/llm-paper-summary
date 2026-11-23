@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "461222bfe93604ed7ac23503ce6419d85e00684c",
+  "base_commit": "ab5d197e011d0103972e6ac796ff53541f3caf01",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -793,6 +793,7 @@
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
     "2026-2608.13226-coverprune-coverage-driven-token-pruning-for-3d-vlms-via-optimal-transport.json",
     "2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-streaming-vlms.json",
+    "2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-pruning-for-language-reasoning-model.json",
     "2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-without-hand-written-cuda.json",
     "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json",
     "2026-2608.15592-when-entropy-is-not-enough-reclaiming-lost-semantics-in-llm-output-length-prediction.json",
@@ -851,6 +852,7 @@
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.json",
     "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
+    "2026-2609.15838-per-matrix-optimality-is-not-enough-three-level-optimization-for-low-rank-llm-compression.json",
     "2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-llms.json",
     "2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybrid-ckks-tfhe.json",
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
@@ -877,6 +879,7 @@
     "2026-2609.32204-degreespar-structured-degree-sparsity-for-efficient-secure-transformer-inference.json",
     "2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agent-llms.json",
     "2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.json",
+    "2026-2609.32474-pc-submax-efficient-prompt-compression-via-regularized-submodular-maximization.json",
     "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal-models.json",
@@ -927,9 +930,11 @@
     "2026-2610.00671-megaflux-skew-resilient-moe-megakernels-via-pipelined-expert-replication.json",
     "2026-2610.00894-clock-diffusion-efficient-semi-autoregressive-continuous-diffusion-language-models.json",
     "2026-2610.01160-serving-a-revisable-world-versioned-execution-for-interruptible-agents.json",
+    "2026-2610.01785-veto-video-efficient-token-optimization-for-vision-language-models.json",
     "2026-2610.02229-efficient-flashattention-on-blackwell-via-fixed-shift-softmax-and-persistent-scheduling.json",
     "2026-2610.02233-budgeted-cache-repair-for-cross-context-kv-cache-reuse.json",
     "2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-experts.json",
+    "2026-2610.02251-rank-aware-speculative-sampling-for-diffusion-draft-trees.json",
     "2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on-offloaded-weights.json",
     "2026-2610.02670-leap-learning-efficient-action-proposals-for-llm-agents.json",
     "2026-2610.02713-wakekv-reactive-reversible-kv-residency-for-heads-that-change-their-minds.json",
@@ -50661,6 +50666,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.14003": {
+      "order": [
+        "2026-11-23T19:32:55+00:00",
+        "2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-pruning-for-language-reasoning-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.15838": {
+      "order": [
+        "2026-11-23T19:34:16+00:00",
+        "2026-2609.15838-per-matrix-optimality-is-not-enough-three-level-optimization-for-low-rank-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.32474": {
+      "order": [
+        "2026-11-23T19:35:37+00:00",
+        "2026-2609.32474-pc-submax-efficient-prompt-compression-via-regularized-submodular-maximization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.01785": {
+      "order": [
+        "2026-11-23T19:36:58+00:00",
+        "2026-2610.01785-veto-video-efficient-token-optimization-for-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02251": {
+      "order": [
+        "2026-11-23T19:38:19+00:00",
+        "2026-2610.02251-rank-aware-speculative-sampling-for-diffusion-draft-trees.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64162,6 +64212,21 @@
     "arxiv:2608.10137": [
       "papers/inference/99-other-inference-systems/2026-2608.10137-the-parser-already-knows-lightweight-bias-correction-in-constrained-deco.md",
       "papers/inference/99-other-inference-systems/2026-2608.10137-the-parser-already-knows-lightweight-bias-correction-in-constrained-deco.md"
+    ],
+    "arxiv:2608.14003": [
+      "papers/inference/99-other-inference-systems/2026-2608.14003-batch-wise-adaptive-pruning-periodic-neuron-activation-aware-weight-prun.md"
+    ],
+    "arxiv:2609.15838": [
+      "papers/inference/99-other-inference-systems/2026-2609.15838-per-matrix-optimality-is-not-enough-three-level-optimization-for-low-ran.md"
+    ],
+    "arxiv:2609.32474": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.32474-pc-submax-efficient-prompt-compression-via-regularized-submodular-maximi.md"
+    ],
+    "arxiv:2610.01785": [
+      "papers/inference/99-other-inference-systems/2026-2610.01785-veto-video-efficient-token-optimization-for-vision-language-models.md"
+    ],
+    "arxiv:2610.02251": [
+      "papers/inference/99-other-inference-systems/2026-2610.02251-rank-aware-speculative-sampling-for-diffusion-draft-trees.md"
     ]
   }
 }
