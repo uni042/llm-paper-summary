@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n18::provider-gap",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 2,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36452",
+      "identity_tokens": [
+        "arXiv:2609.36452"
+      ],
+      "title": "Reliable Parallel Decoding in Masked Diffusion Language Models",
+      "reason": "Reliable Parallel Decodingはマスク拡散言語モデルで層ごとの予測安定性と最終信頼度、累積エントロピー予算に基づき複数トークンの並列コミット可否を決め、信頼できない並列確定を避けながら並列デコードを行う言語モデル推論手法である。",
+      "source_url": "https://arxiv.org/abs/2609.36452",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.03173",
+      "identity_tokens": [
+        "arXiv:2611.03173"
+      ],
+      "title": "PagedMoE: Cross-Precision Expert Caching for Token-Level Dynamic Precision in SSD-Resident MoE Inference",
+      "reason": "PagedMoEはSSD常駐MoEのローカル推論で、エキスパートを接頭辞互換のツリーコードブックとビットプレーン配置で一度だけ保持し、トークン単位の動的精度に応じて不足ビットプレーンだけを取得してDRAMキャッシュ再利用とSSD I/O削減を両立させるMoE推論手法である。",
+      "source_url": "https://arxiv.org/abs/2611.03173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    }
+  ],
+  "parent_run_key": "muse-20261123-n18",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261123-1930-muse-n18--chunk-0002-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2609.36452",
+    "arXiv:2611.03173"
+  ]
+}
