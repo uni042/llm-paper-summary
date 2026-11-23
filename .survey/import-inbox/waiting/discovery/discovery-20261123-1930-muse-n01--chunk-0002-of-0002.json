@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n01::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/AEMCSE65292.2025.11042839",
+      "identity_tokens": [
+        "DOI:10.1109/AEMCSE65292.2025.11042839"
+      ],
+      "title": "A Survey of Low-Rank Adaptation Techniques",
+      "reason": "LoRA等の低ランク適応手法のサーベイで、対象は下流タスク向けパラメータ効率ファインチューニングの概念・最適化・課題整理であり、LLM推論の高速化やサービング機構への直接の貢献はない。",
+      "source_url": "https://doi.org/10.1109/AEMCSE65292.2025.11042839",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.18915",
+      "identity_tokens": [
+        "arXiv:2502.18915"
+      ],
+      "title": "END: Early Noise Dropping for Efficient and Effective Context Denoising",
+      "reason": "ENDはLLMの初期層に線形プローブを置いて入力チャンクの有益・ノイズを判定し早期に落とすことで文脈ノイズによる品質低下を防ぐ手法で、計算オーバーヘッド削減も示すが主目的はRAG等の文脈デノイジングによる品質改善であり推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2502.18915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:8fb36b138672afd1b42dd038d2a09777fbf55330",
+      "identity_tokens": [
+        "SemanticScholar:8fb36b138672afd1b42dd038d2a09777fbf55330"
+      ],
+      "title": "A D OT P RODUCT A TTENTION F REE T RANSFORMER",
+      "reason": "ドット積注意を使わないTransformerと題するが、Semantic Scholarが429で要旨を取得できず、arXiv・Crossrefでも一致する要旨を確認できなかったため、注意代替機構の推論効率への具体的な寄与を一次要旨で検証できていない。",
+      "source_url": "https://www.semanticscholar.org/paper/8fb36b138672afd1b42dd038d2a09777fbf55330",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 165
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1610",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.1610"
+      ],
+      "title": "HookMoE: A learnable performance compensation strategy of Mixture-of-Experts for LLM inference acceleration",
+      "reason": "HookMoEは選択したTransformerブロック直前に軽量な学習可能Hookモジュールを挿入し、活性化エキスパート数を50％超削減しながら性能劣化を平均2.5％に抑え、プリフィル段階で1.42倍の推論高速化を達成するMoE推論加速の補償戦略であり、MoE推論に直接貢献する。",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1610",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 166
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08913",
+      "identity_tokens": [
+        "arXiv:2605.08913"
+      ],
+      "title": "Non-Monotonic Latency in Apple MPS Decoding: KV Cache Interactions and Execution Regimes",
+      "reason": "Apple MPSバックエンドでの自己回帰デコードに非単調なレイテンシ急増が生じる現象をGPT-2・BLOOM・OPTで計測し、KVキャッシュとの強い相互作用やデコード段階起源であることを切り分けた研究で、KVキャッシュとデコード実行レジームの計測に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2605.08913",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 167
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCCN.2025.3571753",
+      "identity_tokens": [
+        "DOI:10.1109/TCCN.2025.3571753"
+      ],
+      "title": "Mixture of Experts-Enabled Parallel Scheduling and Processing for Vehicular Generative AI Services",
+      "reason": "車両向け生成AIサービスのためにMoEエキスパートを車両間に配置し、無線環境適応ゲーティングと車車間通信によるエキスパート並列、Stackelbergゲームによる計算資源配分を提案するが、主眼はInternet of Vehiclesという応用領域の分散推論でありLLMサービング一般への貢献は薄い。",
+      "source_url": "https://doi.org/10.1109/TCCN.2025.3571753",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 168
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20291",
+      "identity_tokens": [
+        "arXiv:2512.20291"
+      ],
+      "title": "Mixture-of-Experts with Gradient Conflict-Driven Subspace Topology Pruning for Emergent Modularity",
+      "reason": "CDSP-MoEは勾配競合を構造的教師信号として共有部分空間内のエキスパート位相を剪定し創発的モジュール性を得るアーキテクチャ学習の枠組みで、目的は破滅的忘却や指示過適合の緩和であり、推論高速化やサービングへの直接の貢献は示されていない。",
+      "source_url": "https://arxiv.org/abs/2512.20291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.00136",
+      "identity_tokens": [
+        "arXiv:2604.00136"
+      ],
+      "title": "ParetoBandit: Budget-Paced Adaptive Routing for Non-Stationary LLM Serving",
+      "reason": "ParetoBanditは価格改定や品質変動が起こる非定常なマルチモデルLLMサービング向けに、コスト認識型文脈バンディットとオンライン原始双対予算ペーサーでリクエスト当たりコスト上限を閉ループで守りつつ適応ルーティングを行う手法で、LLMサービングのルーティングに直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2604.00136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 170
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19349",
+      "identity_tokens": [
+        "arXiv:2607.19349"
+      ],
+      "title": "FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads",
+      "reason": "FineServeはグローバルな商用マーケットプレイスから収集した実運用マルチモデルLLMサービングワークロードのデータセットと細粒度特性評価、ワークロード生成器を提供し、到着動態やトークン挙動の異質性を明らかにしており、ルーティング・スケジューリング・容量計画の評価基盤として推論基盤の計測に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2607.19349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3390/su172310473",
+      "identity_tokens": [
+        "DOI:10.3390/su172310473"
+      ],
+      "title": "A Deployment-Aware Framework for Carbon- and Water- Efficient LLM Serving",
+      "reason": "デプロイメント配慮型枠組みは、SLOを満たす範囲で地域・バッチサイズ・プリフィル／デコード用ハードウェアを5分窓の混合整数計画で選ぶオーケストレーションにより、LLMサービングのエネルギー・水・CO2を削減する手法で、LLMサービングの運用最適化に直接貢献する。",
+      "source_url": "https://doi.org/10.3390/su172310473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 172
+    }
+  ],
+  "parent_run_key": "muse-20261123-n01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

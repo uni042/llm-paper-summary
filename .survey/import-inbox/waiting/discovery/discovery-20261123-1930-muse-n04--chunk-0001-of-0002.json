@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n04::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38255",
+      "identity_tokens": [
+        "arXiv:2610.38255"
+      ],
+      "title": "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
+      "reason": "ParaTTTは深い非線形メモリを持つTest-Time Training層について、内ループ勾配軌跡を反復精緻化する3つのchunkwise並列パスで正確なオンライン再帰を再現し、学習とprefillを並列化する推論・prefill効率化の直接技術である。",
+      "source_url": "https://arxiv.org/abs/2610.38255",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 233
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/s21165599",
+      "identity_tokens": [
+        "DOI:10.3390/s21165599"
+      ],
+      "title": "No Fine-Tuning, No Cry: Robust SVD for Compressing Deep Networks",
+      "reason": "Robust SVDはファインチューニングなしで全結合層・埋め込みをlp低ランク近似により圧縮する汎用ニューラルネット圧縮であり、LLM推論への具体的な適用や推論時効果の確認が要旨では薄い。",
+      "source_url": "https://doi.org/10.3390/s21165599",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02052",
+      "identity_tokens": [
+        "arXiv:2406.02052"
+      ],
+      "title": "PETRA: Parallel End-to-end Training with Reversible Architectures",
+      "reason": "PETRAは可逆アーキテクチャでResNet等の学習時の勾配計算とモデル並列を並列化する学習高速化手法であり、LLM推論への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2406.02052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12354",
+      "identity_tokens": [
+        "arXiv:2603.12354"
+      ],
+      "title": "Alternating Gradient Flow Utility: A Unified Metric for Structural Pruning and Dynamic Routing in Deep Networks",
+      "reason": "Alternating Gradient Flow指標は深いビジョンネットワークとViTの構造プルーニングと動的ルーティングを扱う圧縮関連研究だが、対象が画像モデル中心でLLM推論への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2603.12354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.10441",
+      "identity_tokens": [
+        "arXiv:2609.10441"
+      ],
+      "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+      "reason": "ConvMemは学習不要で階層的畳み込みとして長文脈推論を再定式化し、逐次メモリ更新の線形経路を対数木へ短縮して並列化と遅延低減を図る長文脈LLM推論手法である。",
+      "source_url": "https://arxiv.org/abs/2609.10441",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 237
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2023.3288749",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2023.3288749"
+      ],
+      "title": "MGen: A Framework for Energy-Efficient In-ReRAM Acceleration of Multi-Task BERT",
+      "reason": "MGenはReRAM上でマルチタスクBERTの計算冗長性を削るモデル生成器とタスクスケジューラでエネルギー効率を上げるが、対象はBERTアクセラレーションであり生成LLM推論への直接性は限定的である。",
+      "source_url": "https://doi.org/10.1109/TC.2023.3288749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.00244",
+      "identity_tokens": [
+        "arXiv:2408.00244"
+      ],
+      "title": "Enhanced Structured State Space Models via Grouped FIR Filtering and Attention Sink Mechanisms",
+      "reason": "GFSSMはGrouped FIRフィルタとattention sinkでSSMの系列モデリング安定性を改善するアーキテクチャ提案であり、線形時間性は推論と関連するが推論システムとしての機構・実測が要旨で不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2408.00244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.65109/PGWI7290",
+      "identity_tokens": [
+        "DOI:10.65109/PGWI7290"
+      ],
+      "title": "RouterHGC: Optimized Router for LLM-based Multi-Agent Systems via Heterogeneous Graph Contrastive Learning",
+      "reason": "RouterHGCは異種グラフ対照学習でLLMマルチエージェントの協働モード・役割・モデル選択をルーティングしコスト低減を狙うが、対象はMAS構成最適化でありLLMサービング基盤への直接貢献ではない。",
+      "source_url": "https://doi.org/10.65109/PGWI7290",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.04290",
+      "identity_tokens": [
+        "arXiv:2010.04290"
+      ],
+      "title": "Deep Learning Meets Projective Clustering",
+      "reason": "Projective Clustering 기반の埋め込み圧縮はNLPネットワークの埋め込み層を複数の部分空間で低ランク化する圧縮手法だが、LLM推論での適用・効果は要旨の範囲では限定的である。",
+      "source_url": "https://arxiv.org/abs/2010.04290",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133092",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133092"
+      ],
+      "title": "Dimension-free transformer: The semi-tensor product approach for heterogeneous sequence modeling",
+      "reason": "Dimension-free transformerは半テンソル積による異種系列モデリングのTransformer変種と題するが、一次要旨を取得できず推論効率への貢献を確認できない。",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.133092",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.03414",
+      "identity_tokens": [
+        "arXiv:2408.03414"
+      ],
+      "title": "Logistic Regression makes small LLMs strong and explainable \"tens-of-shot\" classifiers",
+      "reason": "小規模LLMの埋め込みへの罰則付きロジスティック回帰で文分類を行う応用研究であり、LLM推論システムへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2408.03414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2405.08965",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2405.08965"
+      ],
+      "title": "LLMs are Meaning-Typed Code Constructs",
+      "reason": "Meaning-Typed ProgrammingはJac言語でLLM呼び出しを抽象化するプログラミングパラダイムとランタイムの提案であり、推論効率化ではなく開発複雑性の削減が目的である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2405.08965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 244
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:15cb2c6e1a752b28e4958f0e65e071d8005dc50e",
+      "identity_tokens": [
+        "SemanticScholar:15cb2c6e1a752b28e4958f0e65e071d8005dc50e"
+      ],
+      "title": "PROMPTS: P E R FORMANCE O PTIMIZATION VIA M ULTI -A GENT P LANNING FOR LLM T RAINING AND S ERVING",
+      "reason": "PROMPTSはLLMの学習とサービングの性能最適化をマルチエージェント計画で行うと題するが、一次要旨を取得できずサービングへの具体的機構を確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/15cb2c6e1a752b28e4958f0e65e071d8005dc50e",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5b5fe51aa353db8b4b2e221a1b57495caf43edd3",
+      "identity_tokens": [
+        "SemanticScholar:5b5fe51aa353db8b4b2e221a1b57495caf43edd3"
+      ],
+      "title": "Domain-Specific LLM Adaptation: Bridging Personalization and Efficiency Through Synthetic Data and Optimization",
+      "reason": "Domain-Specific LLM Adaptationは合成データと最適化による個人化と効率の両立を題するが、一次要旨を取得できず推論効率への具体的貢献を確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/5b5fe51aa353db8b4b2e221a1b57495caf43edd3",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 246
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:d79b9042fe9c30027d49fdd6fe24e737b720af6b",
+      "identity_tokens": [
+        "SemanticScholar:d79b9042fe9c30027d49fdd6fe24e737b720af6b"
+      ],
+      "title": "DRONE: Data-aware Low-rank Compression for Large NLP Models",
+      "reason": "DRONEは大規模NLPモデル向けデータ-aware低ランク圧縮と題し推論向け圧縮と関連するが、一次要旨を取得できず対象・機構を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/d79b9042fe9c30027d49fdd6fe24e737b720af6b",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.11411",
+      "identity_tokens": [
+        "arXiv:2512.11411"
+      ],
+      "title": "Sliced ReLU attention: Quasi-linear contextual expressivity via sorting",
+      "reason": "Sliced ReLU attentionはキー・クエリ差分の1次元射影とソートでO(n log n)の準線形注意を実現し、長文脈での注意計算コストを直接削減する注意機構である。",
+      "source_url": "https://arxiv.org/abs/2512.11411",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.07563",
+      "identity_tokens": [
+        "arXiv:2207.07563"
+      ],
+      "title": "QSAN: A Near-Term Achievable Quantum Self-Attention Network",
+      "reason": "QSANは近未来量子デバイス上の画像分類向け量子自己注意ネットワークであり、LLM推論への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2207.07563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 249
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1241",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1241"
+      ],
+      "title": "Look and Think: Efficient Multimodal Reasoning via Modality-Decoupled Compression",
+      "reason": "Look and Think（LaT）はモダリティ分離圧縮で不要時の視覚トークンevictionと推論ステップ後の圧縮を行い、MLLMの平均文脈長を最大57%削減するマルチモーダル推論効率化である。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 250
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/VLSI-SoC57769.2023.10321880",
+      "identity_tokens": [
+        "DOI:10.1109/VLSI-SoC57769.2023.10321880"
+      ],
+      "title": "Memory-Based Computing for Energy-Efficient AI: Grand Challenges",
+      "reason": "Memory-Based ComputingのGrand Challengesはメモリベース計算によるエネルギー効率AIの展望・課題整理であり、LLM推論への具体的な技術的貢献は要旨では示されない。",
+      "source_url": "https://doi.org/10.1109/VLSI-SoC57769.2023.10321880",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:84832599e5d7fbef3842dde92e6406f832502108",
+      "identity_tokens": [
+        "SemanticScholar:84832599e5d7fbef3842dde92e6406f832502108"
+      ],
+      "title": "Preserving GPU Profiling Accuracy under Concurrent GPU-Coding Agent Workloads",
+      "reason": "GPUプロファイリング精度の保持は並行するGPUコーディングエージェント負荷下の計測問題で推論基盤計測と関連しうるが、一次要旨を取得できず内容を確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/84832599e5d7fbef3842dde92e6406f832502108",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 252
+    }
+  ],
+  "parent_run_key": "muse-20261123-n04",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

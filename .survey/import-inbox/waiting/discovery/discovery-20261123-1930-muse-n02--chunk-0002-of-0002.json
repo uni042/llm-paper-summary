@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n02::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18083",
+      "identity_tokens": [
+        "arXiv:2605.18083"
+      ],
+      "title": "A Data-Efficient Path to Multilingual LLMs: Language Expansion via Post-training PARAMΔ Integration into Upcycled MoE",
+      "reason": "多言語拡張のため密モデルをMoEへアップサイクルし事後学習デルタを統合する方法で、目的は継続事前学習とアライメントの回避であり推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.18083",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 193
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.10611",
+      "identity_tokens": [
+        "arXiv:2305.10611"
+      ],
+      "title": "ACRoBat: Optimizing Auto-batching of Dynamic Deep Learning at Compile Time",
+      "reason": "ACRoBatは動的深層学習の自動バッチ化をコンパイル時に最適化しスループットを上げる枠組みだが、対象はテキスト解析や早期終了など汎用動的DLでLLM推論固有の貢献は要旨からは薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2305.10611",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 194
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.00888",
+      "identity_tokens": [
+        "arXiv:2405.00888"
+      ],
+      "title": "DynaMo: Accelerating Language Model Inference with Dynamic Multi-Token Sampling",
+      "reason": "DynaMoは信頼度に応じて複数トークンを動的に予測する多トークンサンプリングで言語モデル推論を高速化し、同等品質で2.57倍の速度向上を示しておりデコード高速化への直接貢献がある。",
+      "source_url": "https://arxiv.org/abs/2405.00888",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 195
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539392",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539392"
+      ],
+      "title": "SCARLET: A Scalable OPCM-Based Accelerator for Transformer Inference with Tiled Crossbars",
+      "reason": "タイル型クロスバーを持つOPCMベースのTransformer推論加速器SCARLETという題名で推論ハードウェアに関連するが、Crossrefに要旨がなくOpenAlexも429で一次要旨を取得できず詳細を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539392",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 196
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07317",
+      "identity_tokens": [
+        "arXiv:2605.07317"
+      ],
+      "title": "Amortized-Precision Quantization for Early-Exit Vision Transformers",
+      "reason": "早期終了Vision Transformer向けの量子化手法であり、対象は画像分類・検出・セグメンテーションのViTでLLM推論の量子化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.07317",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 197
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.18131",
+      "identity_tokens": [
+        "arXiv:2609.18131"
+      ],
+      "title": "Colla-Q: Toward Collaborative Experts in MoE Quantization via Minimax Precision Balancing",
+      "reason": "Colla-Qは活性エントロピーに基づきMoEの専門家ごとにビット幅を割り当てる量子化手法で、低ビット化による専門家性能の偏りを抑えMoEモデルのメモリ・計算コストを削減する推論向け量子化である。",
+      "source_url": "https://arxiv.org/abs/2609.18131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 198
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2203.11987",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2203.11987"
+      ],
+      "title": "Learning Patch-to-Cluster Attention in Vision Transformer",
+      "reason": "PaCa-ViTはVision Transformerのパッチからクラスタへの注意を学習する画像分類・セグメンテーション向けアーキテクチャであり、LLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2203.11987",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 199
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCD65941.2025.00011",
+      "identity_tokens": [
+        "DOI:10.1109/ICCD65941.2025.00011"
+      ],
+      "title": "SecNPU: Securing LLM Inference on NPU",
+      "reason": "NPU上のLLM推論を保護するSecNPUという題名で推論基盤に関連するが、Crossrefに要旨がなくOpenAlexも429で一次要旨を取得できず、効率化への貢献かセキュリティのみか確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/ICCD65941.2025.00011",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 200
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14428/esann/2025.es2025-97",
+      "identity_tokens": [
+        "DOI:10.14428/esann/2025.es2025-97"
+      ],
+      "title": "Early Prediction of Dynamic Sparsity in Large Language Models",
+      "reason": "LLMの動的スパース性を早期予測するという題名で推論効率化に関連しうるが、Crossrefに要旨がなくOpenAlexも429で一次要旨を取得できず機構を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.14428/esann/2025.es2025-97",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 201
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.17323/jle.2024.22368",
+      "identity_tokens": [
+        "DOI:10.17323/jle.2024.22368"
+      ],
+      "title": "Probing the Pitfalls: Understanding SVD’s Shortcomings in Language Model Compression",
+      "reason": "SVDによる言語モデル圧縮の欠点をBERTとLlama 2で検証する研究で、圧縮と資源制約下デプロイに関連するが、新たな推論高速化手法ではなく因子分解の限界を調べる評価研究であるため保留とする。",
+      "source_url": "https://doi.org/10.17323/jle.2024.22368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 202
+    }
+  ],
+  "parent_run_key": "muse-20261123-n02",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

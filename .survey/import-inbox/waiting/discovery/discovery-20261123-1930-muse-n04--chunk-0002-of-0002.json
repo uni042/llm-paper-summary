@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n04::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:fa2b93624725c9e8f090471b884debc3ba8bc879",
+      "identity_tokens": [
+        "SemanticScholar:fa2b93624725c9e8f090471b884debc3ba8bc879"
+      ],
+      "title": "Weight Squeezing: Reparameterization for Model Compression Anonymous submission",
+      "reason": "Weight Squeezingは再パラメータ化によるモデル圧縮と題し推論向け圧縮と関連するが、一次要旨を取得できず機構・対象を確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/fa2b93624725c9e8f090471b884debc3ba8bc879",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.20519",
+      "identity_tokens": [
+        "arXiv:2609.20519"
+      ],
+      "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
+      "reason": "SoL-Piはコーディングエージェントのハーネス層で文脈圧縮や委任読み取りによりトークン交通量を44-49%削減するが、対象はエージェント実行ハーネスでありLLM推論システム自体への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2609.20519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24039",
+      "identity_tokens": [
+        "arXiv:2604.24039"
+      ],
+      "title": "AgenticCache: Cache-Driven Asynchronous Planning for Embodied AI Agents",
+      "reason": "AgenticCacheは身体性エージェントの計画遷移をランタイムキャッシュで再利用しLLM呼び出しを避けて遅延とトークンを削減するが、対象は身体性計画の応用キャッシュでありLLMサービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2604.24039",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17172",
+      "identity_tokens": [
+        "arXiv:2605.17172"
+      ],
+      "title": "OpenJarvis: Personal AI, On Personal Devices",
+      "reason": "OpenJarvisは個人デバイス上のローカルモデルで動く個人AIスタックを5つのプリミティブに分解し精度・コスト・遅延で最適化可能にする設計だが、具体的な推論技術の貢献は要旨では不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2605.17172",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21711",
+      "identity_tokens": [
+        "arXiv:2601.21711"
+      ],
+      "title": "TACLer: Tailored Curriculum Reinforcement Learning for Efficient Reasoning",
+      "reason": "TACLerはカリキュラム強化学習で学習計算を50%以上削減し推論トークンも42%削減するとするが、主目的は推論モデルの学習効率化であり推論時機構の直接貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2601.21711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 257
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.12161",
+      "identity_tokens": [
+        "arXiv:2607.12161"
+      ],
+      "title": "Token Reduction Is Not Cost Reduction",
+      "reason": "Token Reduction Is Not Cost Reductionはコーディングエージェントでトークン削減と提供者課金コスト・プロンプトキャッシュ交通量の関係を実測分解した推論コスト計測研究であり、推論基盤の計測として直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2607.12161",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.14792",
+      "identity_tokens": [
+        "arXiv:2601.14792"
+      ],
+      "title": "Robustness of Mixtures of Experts to Feature Noise",
+      "reason": "MoEの特徴ノイズに対する頑健性は疎な専門家活性化がノイズフィルタになる理論・実証研究であり、推論効率化への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2601.14792",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12517",
+      "identity_tokens": [
+        "arXiv:2609.12517"
+      ],
+      "title": "One Skill Does Not Fit All: Automatic Discovery and Taxonomy-Guided Routing of Frame-Selection Skills for Long-Video Question Answering",
+      "reason": "長動画質問応答向けにフレーム選択スキルを自動発見しルーティングする研究であり、LLM推論システムではなく動画QAの証拠取得が主題である。",
+      "source_url": "https://arxiv.org/abs/2609.12517",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 260
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.07639",
+      "identity_tokens": [
+        "arXiv:2506.07639"
+      ],
+      "title": "Fast ECoT: Efficient Embodied Chain-of-Thought via Thoughts Reuse",
+      "reason": "Fast ECoTはVLAモデルのEmbodied Chain-of-Thoughtについて高レベル推論のキャッシュ再利用、モジュール推論の並列生成、非同期スケジューラで推論時遅延を削減する推論高速化手法である。",
+      "source_url": "https://arxiv.org/abs/2506.07639",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 261
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.16173",
+      "identity_tokens": [
+        "arXiv:2411.16173"
+      ],
+      "title": "SALOVA: Segment-Augmented Long Video Assistant for Targeted Retrieval and Routing in Long-Form Video Analysis",
+      "reason": "SALOVAは長尺動画理解のためのセグメント単位キャプション付きデータセットと検索・ルーティング付き動画LLM枠組みであり、能力向上が主題で推論効率への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2411.16173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 262
+    }
+  ],
+  "parent_run_key": "muse-20261123-n04",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

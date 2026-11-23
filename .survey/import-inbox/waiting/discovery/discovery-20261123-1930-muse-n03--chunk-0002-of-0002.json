@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n03::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.17816",
+      "identity_tokens": [
+        "arXiv:2610.17816"
+      ],
+      "title": "Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution",
+      "reason": "エッジとクラウドの協調によるLLMエージェント実行を評価するEC2-Benchを構築し資源使用量やプライバシーも測っているが、提案はベンチマークと実証分析であり、協調推論を実行する新しいシステム機構ではないため。",
+      "source_url": "https://arxiv.org/abs/2610.17816",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.08374",
+      "identity_tokens": [
+        "arXiv:2303.08374"
+      ],
+      "title": "MCR-DL: Mix-and-Match Communication Runtime for Deep Learning",
+      "reason": "MCR-DLはDeepSpeed-MoEやDLRM等の分散深層学習の学習時に必要な集合・点対点通信を混在させるランタイムであり、対象は学習通信の効率化でLLM推論ではないため。",
+      "source_url": "https://arxiv.org/abs/2303.08374",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 224
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12175",
+      "identity_tokens": [
+        "arXiv:2409.12175"
+      ],
+      "title": "Expanding Expressivity in Transformer Models with MöbiusAttention",
+      "reason": "MöbiusAttentionは複素数上のMöbius変換を注意へ組み込みトークン間関係の表現力を高める機構で、BERT等の事前学習とGLUE評価が中心であり、計算効率や推論高速化を目的としていないため。",
+      "source_url": "https://arxiv.org/abs/2409.12175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 225
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3766896",
+      "identity_tokens": [
+        "DOI:10.1145/3766896"
+      ],
+      "title": "Ares: Fair and Efficient Scheduling of Deep Learning Jobs with Elastic Fair Queuing",
+      "reason": "Aresは仮想終了時刻に基づき深層学習の学習ジョブをGPUクラスタへ公平かつ効率的に割り当てるスケジューラであり、対象はモデル学習ジョブであってLLM推論サービングのスケジューリングではないため。",
+      "source_url": "https://doi.org/10.1145/3766896",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 226
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08872",
+      "identity_tokens": [
+        "arXiv:2510.08872"
+      ],
+      "title": "GTAlign: Game-Theoretic Alignment of LLM Assistants for Mutual Welfare",
+      "reason": "GTAlignは利用者とLLMの利得行列を用いるゲーム理論的な整合フレームワークで、推論時の意思決定も学習時の報酬も応答の社会的厚生を目的としており、推論システムの効率化への貢献ではないため。",
+      "source_url": "https://arxiv.org/abs/2510.08872",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 227
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15329",
+      "identity_tokens": [
+        "arXiv:2602.15329"
+      ],
+      "title": "EventMemAgent: Hierarchical Event-Centric Memory for Online Video Understanding with Adaptive Tool Use",
+      "reason": "階層的なイベント中心メモリと適応的ツール使用でオンライン動画理解を行うEventMemAgentは、MLLMのコンテキスト制約へのメモリ機構を含むものの、主目的はストリーミング動画理解エージェントの能力向上であるため。",
+      "source_url": "https://arxiv.org/abs/2602.15329",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 228
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.22690",
+      "identity_tokens": [
+        "arXiv:2607.22690"
+      ],
+      "title": "LazyMem: Retrieve Broadly, Construct Selectively for Efficient Long-Term Agent Memory",
+      "reason": "長期エージェントメモリを問い合わせ時に選択的に構築するLazyMemにより回答用コンテキストのトークン数を大幅に減らすが、対象は対話履歴の検索・圧縮というエージェントメモリ層であり、LLM推論コアの機構ではないため。",
+      "source_url": "https://arxiv.org/abs/2607.22690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 229
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.23986",
+      "identity_tokens": [
+        "arXiv:2605.23986"
+      ],
+      "title": "MemForest: An Efficient Agent Memory System with Hierarchical Temporal Indexing",
+      "reason": "階層的時間索引MemTreeと並列抽出でLLMエージェントのメモリ書き込み経路を効率化するMemForestは、serve-and-updateのデータ管理システムとしての貢献はあるが、推論実行そのものではなくエージェントメモリ基盤に留まるため。",
+      "source_url": "https://arxiv.org/abs/2605.23986",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.01711",
+      "identity_tokens": [
+        "arXiv:2605.01711"
+      ],
+      "title": "Linear-Time Global Visual Modeling without Explicit Attention",
+      "reason": "動的パラメータ予測により明示的な注意を置き換え線形時間の全体モデリングを目指すが、実証は視覚モデルに限られ、LLM推論への適用や推論効率の測定は要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2605.01711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 231
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.22583",
+      "identity_tokens": [
+        "arXiv:2604.22583"
+      ],
+      "title": "Adaptive Head Budgeting for Efficient Multi-Head Attention",
+      "reason": "入力ごとに関連する注意ヘッドだけへ予算を割り当てるBudgetFormerにより、多頭注意のFLOPsとメモリ使用量を削減しつつ標準的な注意と同等以上の性能を維持できることを示しているため。",
+      "source_url": "https://arxiv.org/abs/2604.22583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:45:00+09:00",
+      "last_checked_at": "2026-11-23T19:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 232
+    }
+  ],
+  "parent_run_key": "muse-20261123-n03",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
