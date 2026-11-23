@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n25::provider-gap",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 2,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3651558",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3651558"
+      ],
+      "title": "Enabling Software-Defined Tiered LLM Inference Continuum on Passive Optical Network",
+      "reason": "受動光ネットワーク上の階層型LLM推論コンティニュアムをソフトウェア定義アーキテクチャで実現し、OLT/ONUに推論処理とキューイングを持たせSDN制御で推論トラフィックと資源配分を最適化する推論基盤の提案である。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3651558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 186
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04236",
+      "identity_tokens": [
+        "arXiv:2606.04236"
+      ],
+      "title": "Supportive Token Revealing for Fast Diffusion Language Model Decoding",
+      "reason": "拡散言語モデルの並列デコードに対し、AXONが不確実なマスク位置が依存する自信あるアンカートークンを先に開示することで後続のデノイジングを支援し、品質を保ちながらデコードステップを削減する学習不要モジュールを提案している。",
+      "source_url": "https://arxiv.org/abs/2606.04236",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 189
+    }
+  ],
+  "parent_run_key": "muse-20261123-n25",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261123-1930-muse-n25--chunk-0002-of-0002.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/access.2026.3651558",
+    "arXiv:2606.04236"
+  ]
+}
