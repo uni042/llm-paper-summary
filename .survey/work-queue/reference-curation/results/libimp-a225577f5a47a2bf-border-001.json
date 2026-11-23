@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a225577f5a47a2bf-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.15836",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.15836",
+    "identity_tokens": [
+      "arXiv:2602.15836"
+    ],
+    "reason": "LAMナビゲーション向けにOpenVLA-7Bを4ビットQLoRA量子化し動的早期終了で遅延を82.7%削減するが、量子化と早期終了は既知手法のナビゲーション応用が主目的でLLM推論自体への新規機構は薄い",
+    "first_checked_at": "2026-11-23T19:39:02+00:00",
+    "last_checked_at": "2026-11-23T19:39:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EdgeNav-QE: QLoRA Quantization and Dynamic Early Exit for LAM-based Navigation on Edge Devices"
+  },
+  "processed_at": "2026-11-23T19:39:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a225577f5a47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

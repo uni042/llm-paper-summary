@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eff127f995768266-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.22937",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.22937",
+    "identity_tokens": [
+      "arXiv:2507.22937"
+    ],
+    "reason": "AIOpsの質問応答向けにLLMベース専門家の協調とRAGを組み合わせるCoE-Opsであり、DevOps-EVALでのルーティング精度・QA精度が主眼の応用研究で、推論システムの効率化機構ではない。",
+    "first_checked_at": "2026-11-23T19:39:03+00:00",
+    "last_checked_at": "2026-11-23T19:39:03+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "CoE-Ops: Collaboration of LLM-based Experts for AIOps Question-Answering"
+  },
+  "processed_at": "2026-11-23T19:39:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eff127f99576",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

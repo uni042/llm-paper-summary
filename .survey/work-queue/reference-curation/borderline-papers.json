@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-23T17:37:43+00:00",
-  "record_count": 8084,
+  "updated_at": "2026-11-23T19:39:03+00:00",
+  "record_count": 8099,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -124452,6 +124452,232 @@
       ],
       "borderline_recheck_count": 0,
       "title": "大模型关键技术与应用 Key Technologies and Applications of Large Models"
+    },
+    "arXiv:2602.15836": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15836",
+      "identity_tokens": [
+        "arXiv:2602.15836"
+      ],
+      "reason": "LAMナビゲーション向けにOpenVLA-7Bを4ビットQLoRA量子化し動的早期終了で遅延を82.7%削減するが、量子化と早期終了は既知手法のナビゲーション応用が主目的でLLM推論自体への新規機構は薄い",
+      "first_checked_at": "2026-11-23T19:39:02+00:00",
+      "last_checked_at": "2026-11-23T19:39:02+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EdgeNav-QE: QLoRA Quantization and Dynamic Early Exit for LAM-based Navigation on Edge Devices"
+    },
+    "arXiv:2609.04131": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04131",
+      "identity_tokens": [
+        "arXiv:2609.04131"
+      ],
+      "reason": "ストリーミング動画MLLM向けに固定メモリ予算下で短・中・長期の階層潜在メモリを進化させるLatentStreamを提案し推論時メモリ管理に関連するが、主目的は動画理解の精度でありサービング効率の直接改善は示されない",
+      "first_checked_at": "2026-11-23T19:39:02+00:00",
+      "last_checked_at": "2026-11-23T19:39:02+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding"
+    },
+    "DOI:10.3389/fnbot.2026.1799054": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/fnbot.2026.1799054",
+      "identity_tokens": [
+        "DOI:10.3389/fnbot.2026.1799054"
+      ],
+      "reason": "UAV群戦闘向けにDeepSeek-R1 70Bと7B蒸留モデルの投機的デコーディングで意思決定スループットを上げる階層フレームワークだが、主目的は戦闘制御への応用で投機的推論機構自体の新規性は限られる",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A cognitive synergetic hierarchical framework for UAV swarm combat via speculative inference and role-decoupled reinforcement learning"
+    },
+    "arXiv:2412.16616": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16616",
+      "identity_tokens": [
+        "arXiv:2412.16616"
+      ],
+      "reason": "モバイル・エッジ・クラウドへ小・中・全DNNを配置しデータカルトグラフィでサンプル複雑度を判定して推論コストを43%下げる分散推論だが、対象はGLUE向け小型DNNでLLMサービングではない",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distributed Inference on Mobile Edge and Cloud: A Data-Cartography based Clustering Approach"
+    },
+    "arXiv:2606.18774": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18774",
+      "identity_tokens": [
+        "arXiv:2606.18774"
+      ],
+      "reason": "LLMルーティング戦略を同一モデルプール・予算下でペアワイズ嗜好評価するRouteJudgeとルーティング用ORBITツールボックスでルーティング評価基盤には関連するが、推論効率を改善するルータ自体の提案ではない",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RouteJudge: An Open Platform for Reproducible and Preference-Aware LLM Routing"
+    },
+    "arXiv:2405.17951": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.17951",
+      "identity_tokens": [
+        "arXiv:2405.17951"
+      ],
+      "reason": "時系列Transformerと状態空間モデル向けに局所近傍でトークンをマージし計算量を二次から線形へ調整可能にする手法で汎用的な系列処理効率化ではあるが、適用先は時系列解析でLLM推論ではない",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Time Series Processing for Transformers and State-Space Models through Token Merging"
+    },
+    "arXiv:2305.19585": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.19585",
+      "identity_tokens": [
+        "arXiv:2305.19585"
+      ],
+      "reason": "複数セグメント入力を前半層で独立に、後半層で共同に符号化するLAITでTransformerエンコーダの計算効率と精度のトレードオフを改善するが、対象は汎用NLPエンコーディングでLLMサービング機構ではない",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LAIT: Efficient Multi-Segment Encoding in Transformers with Layer-Adjustable Interaction"
+    },
+    "arXiv:2605.20863": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20863",
+      "identity_tokens": [
+        "arXiv:2605.20863"
+      ],
+      "reason": "RLVR学習ジョブ間で統一LLMサービスをクラスタレベルで多重化しモデル配置と状態遷移を時分割するPlexRLで推論実行の共有に関連するが、最終目的はRLVR訓練の遊休解消であり推論サービング自体ではない",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PlexRL: Cluster-Level Orchestration of Serviceized LLM Execution for RLVR"
+    },
+    "arXiv:2402.11577": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.11577",
+      "identity_tokens": [
+        "arXiv:2402.11577"
+      ],
+      "reason": "複数トークンの情報を担うExtensible Embeddingで小さなコンテキスト窓でも広い文脈へアクセスさせる文脈拡張手法だが、主眼は埋め込みの学習と文脈理解品質であり、推論システムとしての機構や処理量削減の実測が要旨では限定的である。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Extensible Embedding: A Flexible Multipler For LLM's Context Length"
+    },
+    "DOI:10.48550/arxiv.2411.06254": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2411.06254",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2411.06254",
+        "arXiv:2411.06254"
+      ],
+      "reason": "軽量セレクタで文書ブロックを選び適応的証拠予算でLLM再ランキング用コンテキストを圧縮し遅延を下げるEviRerankだが、主目的は長文書ランキングという検索応用の精度であり、推論機構自体の貢献は入力短縮にとどまる。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KeyB2: Selecting Key Blocks is Also Important for Long Document Ranking with Large Language Models"
+    },
+    "arXiv:2602.01826": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01826",
+      "identity_tokens": [
+        "arXiv:2602.01826"
+      ],
+      "reason": "RL学習における学習・推論エンジン間ミスマッチを勾配ノイズと結び付け、応答長を信号とする学習率スケジューラで安定化する研究だが、最終目的はRL学習の安定化であり推論効率化ではないため境界とする。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Precision: Training-Inference Mismatch is an Optimization Problem and Simple LR Scheduling Fixes It"
+    },
+    "arXiv:2602.22103": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22103",
+      "identity_tokens": [
+        "arXiv:2602.22103"
+      ],
+      "reason": "GPUアクセラレータ向けの低オーバーヘッドなプログラム解析基盤PASTAで深層学習ワークロード特性解析等を提供するが、対象は汎用解析ツールでありLLM推論基盤への直接貢献は計測支援にとどまる。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PASTA: A Modular Program Analysis Tool Framework for Accelerators"
+    },
+    "arXiv:2110.09419": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.09419",
+      "identity_tokens": [
+        "arXiv:2110.09419"
+      ],
+      "reason": "多頭注意の探索と検索を分離し動的に合成するCompositional Attentionを提案するが、対象は汎用タスクの注意機構の表現力・汎化であり、LLM推論での処理量削減や実測は要旨に示されていない。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compositional Attention: Disentangling Search and Retrieval"
+    },
+    "arXiv:2406.09477": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.09477",
+      "identity_tokens": [
+        "arXiv:2406.09477"
+      ],
+      "reason": "状態空間モデルS5へ量子化認識学習と学習後量子化を適用しエッジ展開を検討するQ-S5だが、対象はLLMではなくSSMであり、推論向け量子化としての関連は間接的である。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Q-S5: Towards Quantized State Space Models"
+    },
+    "arXiv:2512.20724": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.20724",
+      "identity_tokens": [
+        "arXiv:2512.20724"
+      ],
+      "reason": "拡散モデルによる長文書生成へスパース注意を組み込み計算量とサンプリング効率を改善するSA-DiffuSeqだが、対象は拡散生成モデルであり自己回帰LLM推論の機構ではない。",
+      "first_checked_at": "2026-11-23T19:39:03+00:00",
+      "last_checked_at": "2026-11-23T19:39:03+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SA-DiffuSeq: Addressing Computational and Scalability Challenges in Long-Document Generation with Sparse Attention"
     }
   }
 }

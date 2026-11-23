@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a225577f5a47a2bf-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.17951",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.17951",
+    "identity_tokens": [
+      "arXiv:2405.17951"
+    ],
+    "reason": "時系列Transformerと状態空間モデル向けに局所近傍でトークンをマージし計算量を二次から線形へ調整可能にする手法で汎用的な系列処理効率化ではあるが、適用先は時系列解析でLLM推論ではない",
+    "first_checked_at": "2026-11-23T19:39:03+00:00",
+    "last_checked_at": "2026-11-23T19:39:03+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Time Series Processing for Transformers and State-Space Models through Token Merging"
+  },
+  "processed_at": "2026-11-23T19:39:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a225577f5a47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

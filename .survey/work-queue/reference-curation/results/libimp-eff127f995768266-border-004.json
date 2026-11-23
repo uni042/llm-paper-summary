@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eff127f995768266-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2411.06254",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2411.06254",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2411.06254",
+      "arXiv:2411.06254"
+    ],
+    "reason": "軽量セレクタで文書ブロックを選び適応的証拠予算でLLM再ランキング用コンテキストを圧縮し遅延を下げるEviRerankだが、主目的は長文書ランキングという検索応用の精度であり、推論機構自体の貢献は入力短縮にとどまる。",
+    "first_checked_at": "2026-11-23T19:39:03+00:00",
+    "last_checked_at": "2026-11-23T19:39:03+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "KeyB2: Selecting Key Blocks is Also Important for Long Document Ranking with Large Language Models"
+  },
+  "processed_at": "2026-11-23T19:39:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eff127f99576",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

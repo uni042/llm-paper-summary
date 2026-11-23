@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eff127f995768266-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.20724",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.20724",
+    "identity_tokens": [
+      "arXiv:2512.20724"
+    ],
+    "reason": "拡散モデルによる長文書生成へスパース注意を組み込み計算量とサンプリング効率を改善するSA-DiffuSeqだが、対象は拡散生成モデルであり自己回帰LLM推論の機構ではない。",
+    "first_checked_at": "2026-11-23T19:39:03+00:00",
+    "last_checked_at": "2026-11-23T19:39:03+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SA-DiffuSeq: Addressing Computational and Scalability Challenges in Long-Document Generation with Sparse Attention"
+  },
+  "processed_at": "2026-11-23T19:39:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eff127f99576",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

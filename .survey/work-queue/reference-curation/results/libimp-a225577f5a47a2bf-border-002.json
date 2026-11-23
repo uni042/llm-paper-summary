@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a225577f5a47a2bf-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.04131",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.04131",
+    "identity_tokens": [
+      "arXiv:2609.04131"
+    ],
+    "reason": "ストリーミング動画MLLM向けに固定メモリ予算下で短・中・長期の階層潜在メモリを進化させるLatentStreamを提案し推論時メモリ管理に関連するが、主目的は動画理解の精度でありサービング効率の直接改善は示されない",
+    "first_checked_at": "2026-11-23T19:39:02+00:00",
+    "last_checked_at": "2026-11-23T19:39:02+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding"
+  },
+  "processed_at": "2026-11-23T19:39:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a225577f5a47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
