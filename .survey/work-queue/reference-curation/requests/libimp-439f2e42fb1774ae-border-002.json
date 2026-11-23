@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-439f2e42fb1774ae-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2611.11533",
+  "reason": "CPU-GPU MoE推論で全フォワードに resident experts を置く Ostinato はMoE推論高速化に直結しうるが、arXiv要旨を取得できず（レート制限・ページ未取得）機構を確認できない。",
+  "title": "Ostinato: Fast CPU-GPU MoE Inference for Local Agents via Resident Experts in Every Forward Pass",
+  "identity_tokens": [
+    "arXiv:2611.11533"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439f2e42fb17",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
