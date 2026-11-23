@@ -1,0 +1,397 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-568559e5e8106d77-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-568559e5e810",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.csl.2024.101646",
+    "DOI:10.1109/cgo68049.2026.11395198",
+    "SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c",
+    "arXiv:2510.09932"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f76de5b04a9b085d522e416ca1771e71a999466c",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T07:37:15.449045+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.csl.2024.101646",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/cgo68049.2026.11395198",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.09932",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tensor Program Superoptimization through Cost-Guided Symbolic Program Synthesis",
+      "source_url": "https://doi.org/10.1109/CGO68049.2026.11395198",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern tensor compiler frameworks like JAX and PyTorch accelerate numerical programs by compiling or mapping Domain-Specific Language (DSL) code to efficient executables. However, they rely on a fixed set of transformation rules and heuristics, which means they can miss profitable optimization opportunities. This leaves significant optimization potential unused for programs that fall outside these fixed patterns.This paper presents STENSO, a tensor DSL program superoptimizer that discovers such missing rewrites. STENSO’s core is a symbolic program synthesis based search algorithm that systematically explores the space of equivalent programs. By combining symbolic execution and sketch-based program synthesis, it generates equivalent candidate implementations. To make the search computationally tractable, STENSO further integrates a cost model with a branch-and-bound algorithm scheme. This effectively prunes the search space, arriving at optimal solutions in a reasonable time.We evaluate STENSO on over 30 benchmarks. The discovered programs achieve geometric mean speedups of 3.8x over NumPy and 1.6x over state-of-the-art compilers like JAX and PyTorch-Inductor. These results underscore the limitations of heuristic-based compilation and demonstrate STENSO’s effectiveness in finding such optimizations automatically.",
+      "identifiers": [
+        "SemanticScholar:32f68eace59112ba62b3be45589f4d2f241dd278"
+      ],
+      "semantic_scholar_id": "32f68eace59112ba62b3be45589f4d2f241dd278",
+      "doi": "10.1109/CGO68049.2026.11395198",
+      "canonical_id": "DOI:10.1109/CGO68049.2026.11395198",
+      "authors": [
+        "Alexander Brauckmann",
+        "Aarsh Chaube",
+        "J. W. de Souza Magalhães",
+        "Elizabeth Polgreen",
+        "M. O'Boyle"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 296,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A flexible BERT model enabling width- and depth-dynamic inference",
+      "source_url": "https://doi.org/10.1016/j.csl.2024.101646",
+      "year": 2024,
+      "published": "2024-04-01",
+      "venue": "Computer Speech and Language",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:fa5d1c636acf85ee6cea8342e6ccb8448be02820"
+      ],
+      "semantic_scholar_id": "fa5d1c636acf85ee6cea8342e6ccb8448be02820",
+      "doi": "10.1016/j.csl.2024.101646",
+      "canonical_id": "DOI:10.1016/j.csl.2024.101646",
+      "authors": [
+        "Ting Hu",
+        "C. Meinel",
+        "Hao-Jin Yang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 966,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CIM-Aware Quantization for Energy Efficient Generative AI Models",
+      "source_url": "https://www.semanticscholar.org/paper/0759f3b990357e382725aea462947caa77f9e86c",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c"
+      ],
+      "semantic_scholar_id": "0759f3b990357e382725aea462947caa77f9e86c",
+      "canonical_id": "SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c",
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Automatically Generating ML Compiler Backends from Tensor Accelerator ISA Descriptions",
+      "source_url": "https://arxiv.org/abs/2510.09932",
+      "year": 2025,
+      "published": "2025-10-11",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Machine learning (ML) compilers play a key role in enabling high-performance implementations of ML workloads. These compilers use existing CPU and GPU backends to generate device-specific code. In recent years, many tensor accelerators (or AI accelerators) have been designed to further accelerate these workloads, with commercial products like AWS Trainium publicly available. However, compared to commodity hardware, a majority of tensor accelerators do not have mature ML compiler backends with robust code generation support. Moreover, tensor accelerator designs are subject to fast iteration cycles, making it difficult to manually develop and maintain ML compiler backends. Therefore, to enable faster integration of novel tensor accelerator designs in ML infrastructure, we need to make the compiler backend construction process more agile. In this paper, we introduce ACT, a compiler backend generator that automatically generates compiler backends for tensor accelerators, given just the instruction set architecture (ISA) descriptions. These backends are integrated with XLA, a production ML compiler. ACT uses a novel ISA-parameterized compilation algorithm to generate a compiler backend with an equality-saturation-based instruction selection phase and a constraint-programming-based memory allocation phase. We generated compiler backends for 6 accelerator platforms from industry (e.g., AWS Trainium, Intel AMX) and academia (e.g., Gemmini). We showed that these generated backends match or outperform commercial compiler backends and expert-written kernel libraries, while maintaining low compilation overheads. Notably, ACT-generated backend for AWS NKI ISA improved the code generation coverage for AWS Trainium by 2.3x compared with AWS’s production compiler, neuronx-cc. ACT is part of a larger open-source ecosystem, built around our ISA description language TAIDL, that automatically generates essential software tools, such as test oracles and compiler backends, from ISA descriptions of tensor accelerators. Our tooling has been adopted by multiple academic and industry teams designing novel tensor accelerators. The ecosystem is available at https://github.com/act-compiler/act.",
+      "identifiers": [
+        "SemanticScholar:c245f5adb2a15522827542f72b807a142363713e"
+      ],
+      "semantic_scholar_id": "c245f5adb2a15522827542f72b807a142363713e",
+      "canonical_id": "arXiv:2510.09932",
+      "arxiv_id": "2510.09932",
+      "doi": "10.1145/3839457",
+      "authors": [
+        "Devansh Jain",
+        "Akash Pardeshi",
+        "Marco Frigo",
+        "Kaustubh Khulbe",
+        "Krut Patel",
+        "Saatvik Lochan",
+        "Jai Arora",
+        "Charith Mendis"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 408,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/cgo68049.2026.11395198",
+      "identity_tokens": [
+        "id:DOI:10.1109/cgo68049.2026.11395198",
+        "id:SemanticScholar:32f68eace59112ba62b3be45589f4d2f241dd278",
+        "title:tensor program superoptimization through costguided symbolic program synthesis",
+        "url:https://doi.org/10.1109/CGO68049.2026.11395198"
+      ],
+      "record": {
+        "title": "Tensor Program Superoptimization through Cost-Guided Symbolic Program Synthesis",
+        "source_url": "https://doi.org/10.1109/CGO68049.2026.11395198",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern tensor compiler frameworks like JAX and PyTorch accelerate numerical programs by compiling or mapping Domain-Specific Language (DSL) code to efficient executables. However, they rely on a fixed set of transformation rules and heuristics, which means they can miss profitable optimization opportunities. This leaves significant optimization potential unused for programs that fall outside these fixed patterns.This paper presents STENSO, a tensor DSL program superoptimizer that discovers such missing rewrites. STENSO’s core is a symbolic program synthesis based search algorithm that systematically explores the space of equivalent programs. By combining symbolic execution and sketch-based program synthesis, it generates equivalent candidate implementations. To make the search computationally tractable, STENSO further integrates a cost model with a branch-and-bound algorithm scheme. This effectively prunes the search space, arriving at optimal solutions in a reasonable time.We evaluate STENSO on over 30 benchmarks. The discovered programs achieve geometric mean speedups of 3.8x over NumPy and 1.6x over state-of-the-art compilers like JAX and PyTorch-Inductor. These results underscore the limitations of heuristic-based compilation and demonstrate STENSO’s effectiveness in finding such optimizations automatically.",
+        "identifiers": [
+          "SemanticScholar:32f68eace59112ba62b3be45589f4d2f241dd278"
+        ],
+        "semantic_scholar_id": "32f68eace59112ba62b3be45589f4d2f241dd278",
+        "doi": "10.1109/CGO68049.2026.11395198",
+        "canonical_id": "DOI:10.1109/CGO68049.2026.11395198",
+        "authors": [
+          "Alexander Brauckmann",
+          "Aarsh Chaube",
+          "J. W. de Souza Magalhães",
+          "Elizabeth Polgreen",
+          "M. O'Boyle"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 296,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.csl.2024.101646",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.csl.2024.101646",
+        "id:SemanticScholar:fa5d1c636acf85ee6cea8342e6ccb8448be02820",
+        "title:a flexible bert model enabling width and depthdynamic inference",
+        "url:https://doi.org/10.1016/j.csl.2024.101646"
+      ],
+      "record": {
+        "title": "A flexible BERT model enabling width- and depth-dynamic inference",
+        "source_url": "https://doi.org/10.1016/j.csl.2024.101646",
+        "year": 2024,
+        "published": "2024-04-01",
+        "venue": "Computer Speech and Language",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:fa5d1c636acf85ee6cea8342e6ccb8448be02820"
+        ],
+        "semantic_scholar_id": "fa5d1c636acf85ee6cea8342e6ccb8448be02820",
+        "doi": "10.1016/j.csl.2024.101646",
+        "canonical_id": "DOI:10.1016/j.csl.2024.101646",
+        "authors": [
+          "Ting Hu",
+          "C. Meinel",
+          "Hao-Jin Yang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 966,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c",
+      "identity_tokens": [
+        "id:SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c",
+        "title:cimaware quantization for energy efficient generative ai models",
+        "url:https://www.semanticscholar.org/paper/0759f3b990357e382725aea462947caa77f9e86c"
+      ],
+      "record": {
+        "title": "CIM-Aware Quantization for Energy Efficient Generative AI Models",
+        "source_url": "https://www.semanticscholar.org/paper/0759f3b990357e382725aea462947caa77f9e86c",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c"
+        ],
+        "semantic_scholar_id": "0759f3b990357e382725aea462947caa77f9e86c",
+        "canonical_id": "SemanticScholar:0759f3b990357e382725aea462947caa77f9e86c",
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.09932",
+      "identity_tokens": [
+        "id:DOI:10.1145/3839457",
+        "id:SemanticScholar:c245f5adb2a15522827542f72b807a142363713e",
+        "id:arXiv:2510.09932",
+        "title:automatically generating ml compiler backends from tensor accelerator isa descriptions",
+        "url:https://arxiv.org/abs/2510.09932"
+      ],
+      "record": {
+        "title": "Automatically Generating ML Compiler Backends from Tensor Accelerator ISA Descriptions",
+        "source_url": "https://arxiv.org/abs/2510.09932",
+        "year": 2025,
+        "published": "2025-10-11",
+        "venue": "Proceedings of the ACM on Programming Languages",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Machine learning (ML) compilers play a key role in enabling high-performance implementations of ML workloads. These compilers use existing CPU and GPU backends to generate device-specific code. In recent years, many tensor accelerators (or AI accelerators) have been designed to further accelerate these workloads, with commercial products like AWS Trainium publicly available. However, compared to commodity hardware, a majority of tensor accelerators do not have mature ML compiler backends with robust code generation support. Moreover, tensor accelerator designs are subject to fast iteration cycles, making it difficult to manually develop and maintain ML compiler backends. Therefore, to enable faster integration of novel tensor accelerator designs in ML infrastructure, we need to make the compiler backend construction process more agile. In this paper, we introduce ACT, a compiler backend generator that automatically generates compiler backends for tensor accelerators, given just the instruction set architecture (ISA) descriptions. These backends are integrated with XLA, a production ML compiler. ACT uses a novel ISA-parameterized compilation algorithm to generate a compiler backend with an equality-saturation-based instruction selection phase and a constraint-programming-based memory allocation phase. We generated compiler backends for 6 accelerator platforms from industry (e.g., AWS Trainium, Intel AMX) and academia (e.g., Gemmini). We showed that these generated backends match or outperform commercial compiler backends and expert-written kernel libraries, while maintaining low compilation overheads. Notably, ACT-generated backend for AWS NKI ISA improved the code generation coverage for AWS Trainium by 2.3x compared with AWS’s production compiler, neuronx-cc. ACT is part of a larger open-source ecosystem, built around our ISA description language TAIDL, that automatically generates essential software tools, such as test oracles and compiler backends, from ISA descriptions of tensor accelerators. Our tooling has been adopted by multiple academic and industry teams designing novel tensor accelerators. The ecosystem is available at https://github.com/act-compiler/act.",
+        "identifiers": [
+          "SemanticScholar:c245f5adb2a15522827542f72b807a142363713e"
+        ],
+        "semantic_scholar_id": "c245f5adb2a15522827542f72b807a142363713e",
+        "canonical_id": "arXiv:2510.09932",
+        "arxiv_id": "2510.09932",
+        "doi": "10.1145/3839457",
+        "authors": [
+          "Devansh Jain",
+          "Akash Pardeshi",
+          "Marco Frigo",
+          "Kaustubh Khulbe",
+          "Krut Patel",
+          "Saatvik Lochan",
+          "Jai Arora",
+          "Charith Mendis"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 408,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f119fc8b8a875acaeeffae66569547b08d4e95cb038b167409f201e4b0a20ec3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,584 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-531ef68e097b338f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-531ef68e097b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iccad66269.2025.11240807",
+    "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+    "arXiv:2503.19876",
+    "arXiv:2512.20636",
+    "arXiv:2607.21985",
+    "arXiv:2608.00922"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f76de5b04a9b085d522e416ca1771e71a999466c",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T07:37:17.717809+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iccad66269.2025.11240807",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.19876",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.20636",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.21985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00922",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Data-Free Pruning of Self-Attention Layers in LLMs",
+      "source_url": "https://arxiv.org/abs/2512.20636",
+      "year": 2025,
+      "published": "2025-12-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many self-attention sublayers in large language models (LLMs) can be removed with little to no loss. We attribute this to the Attention Suppression Hypothesis: during pre-training, some deep attention layers learn to mute their own contribution, leaving the residual stream and the MLP to carry the representation. We propose Gate-Norm, a one-shot, weight-only criterion that ranks attention sublayers by query-key coupling and removes the least coupled ones, requiring no calibration data, no forward passes, no fine-tuning, and no specialized kernels. On 40-layer, 13B-parameter LLaMA models, Gate-Norm prunes the model in under a second. Pruning 8-16 attention sublayers yields up to $1.30\\times$ higher inference throughput while keeping average zero-shot accuracy within 1.5 percentage points of the unpruned baseline across BoolQ, RTE, HellaSwag, WinoGrande, ARC-Easy/Challenge, and OpenBookQA. Across these settings, Gate-Norm matches data-driven pruning methods in accuracy while being $\\sim 1000\\times$ faster to score layers, enabling practical, data-free compression of LLMs.",
+      "identifiers": [
+        "SemanticScholar:7614b41e9ad1b942cf005e4e68f1cd275c86072e"
+      ],
+      "semantic_scholar_id": "7614b41e9ad1b942cf005e4e68f1cd275c86072e",
+      "canonical_id": "arXiv:2512.20636",
+      "arxiv_id": "2512.20636",
+      "doi": "10.48550/arXiv.2512.20636",
+      "authors": [
+        "Dhananjay Saikumar",
+        "Blesson Varghese"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.21985",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing deployment of large language models (LLMs) has magnified the computational and memory bottlenecks of autoregressive decoding, where low compute intensity and bandwidth-bound kernels dominate inference cost. Weight pruning offers a promising remedy, but existing methods remain confined to either static pruning (SP)—which permanently removes redundant weights but lacks adaptivity—or dynamic pruning (DP)—which adapts to input sparsity but introduces runtime irregularity. This paper presents SPDP, a unified sparse-inference framework that integrates unstructured SP with input-adaptive DP for efficient LLM inference on GPUs. SPDP co-designs a new Tiled-Columnwise Bitmap Compressed (Tiled-CBC) format and two complementary GPU kernels: (1) a CUDA-core spMspV kernel featuring Hybrid Activation-aware Dynamic Shared-Memory Bitmap Decoding (HAD-SMBD) for fine-grained, runtime activation skipping, and (2) a Tensor-Core SpMM kernel optimized for prefill computation. This joint format-kernel design harmonizes static and dynamic sparsity, maintaining bandwidth-efficient memory access and high compute intensity under both phases of LLM inference. Comprehensive evaluations on inference-optimized GPUs demonstrate that SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer, while matching perplexity with up to 25% higher sparsity. SPDP advances the inference efficiency-quality Pareto frontier, showing that unified static-dynamic pruning can deliver substantial throughput and performance-per-watt improvements in large-scale LLM serving.",
+      "identifiers": [
+        "SemanticScholar:26effe73105f75da2bbd0a1c6c238dfd62428486"
+      ],
+      "semantic_scholar_id": "26effe73105f75da2bbd0a1c6c238dfd62428486",
+      "canonical_id": "arXiv:2607.21985",
+      "arxiv_id": "2607.21985",
+      "doi": "10.48550/arXiv.2607.21985",
+      "authors": [
+        "Jin-hong Kim",
+        "Yejoo Lee",
+        "Jaeyoung Do"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Cloud to Crowd: Democratizing LLM Service With Decentralized Edge Collaboration for RAG",
+      "source_url": "https://arxiv.org/abs/2608.00922",
+      "year": 2026,
+      "published": "2026-08-02",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid advancement of large language models (LLMs) has increased demand for scalable and cost-effective deployment, especially for mobile and edge devices. Cloud-hosted LLMs are powerful but expensive and difficult to scale due to vendor lock-in and high resource needs, resulting in high expenses and unstable performance under load. Recent efforts focus on deploying small language models (SLMs), distilled or pruned from LLMs, on resource-constrained edge devices to reduce costs and improve scalability. However, edge-based SLMs face limited knowledge coverage and notable accuracy gap compared to cloud-based LLMs. To address this, we present DEFRAG, a decentralized edge collaboration system for retrieval-augmented generation (RAG) that optimizes both retrieval and generation across heterogeneous edge devices. For retrieval, DEFRAG compresses and shares knowledge graphs, using hybrid retrieval to expand knowledge coverage. For generation, DEFRAG introduces an optimizer that adaptively selects SLMs and RAG parameters per query, balancing accuracy and cost. We implement DEFRAG on a heterogeneous edge testbed and evaluate it on benchmark QA datasets. We also test it under mobile route stress, non-uniform data placement, and a domain-specific QA workload. The results show that DEFRAG maintains stable service quality and cost efficiency under these broader settings. Results show that DEFRAG narrows the SLM–LLM accuracy gap, while reducing cost by up to 98.4% and increasing peak throughput by up to 97.8% over centralized services. These findings demonstrate the potential of DEFRAG for democratized LLM services at the edge.",
+      "identifiers": [
+        "SemanticScholar:25b1c98c3003228d81ee1e84c4e370ebd81d85de"
+      ],
+      "semantic_scholar_id": "25b1c98c3003228d81ee1e84c4e370ebd81d85de",
+      "canonical_id": "arXiv:2608.00922",
+      "arxiv_id": "2608.00922",
+      "doi": "10.1109/TMC.2026.3720608",
+      "authors": [
+        "Jiaxing Li",
+        "Heng-Zhi Wang",
+        "Feng Wang",
+        "Chi Xu",
+        "Dan-Yang Song",
+        "Rui-Xiao Zhang",
+        "E. Ngai",
+        "Jiang-Chuan Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 113,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": ": Conditional Computation of Transformer Models for Efﬁcient Inference",
+      "source_url": "https://www.semanticscholar.org/paper/8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+      "year": 2021,
+      "published": null,
+      "venue": null,
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f"
+      ],
+      "semantic_scholar_id": "8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+      "canonical_id": "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+      "authors": [
+        "Prafulla Dhariwal",
+        "G. Sastry",
+        "Mark Chen"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1971,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoE-OPU: An FPGA Overlay Processor Leveraging Expert Parallelism for MoE-based Large Language Models",
+      "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240807",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advent of Large Language Models (LLMs) like DeepSeek, empowered by the Mixture-of-Experts (MoE) architecture, has driven significant advancements across diverse applications. However, a critical challenge arises during inference: Only a small fraction of experts are activated, causing severe token allocation imbalances among experts. This inefficiency poses substantial storage and computational burdens on resource-constrained devices, exacerbated by the lack of optimization strategies that integrate expert usage-aware parameter pruning and parallel scheduling, ultimately leading to suboptimal resource utilization. To address these limitations, we propose MoE-OPU, an FPGA-based overlay processor that optimizes parallel MoE inference through three key innovations. First, we introduce N:M sparsity (1:4/2:4/4:8/6:8/8:8) in the MLP layers and mixed-precision quantization (BF16/FP8/INT4) guided by expert activation frequency, reducing the parameter size by up to 2.76× while maintaining model accuracy (only 1.53% average drop after fine-tuning). Second, a lightweight prediction network dynamically predicts next-layer \"hot\" experts by analyzing historical activation patterns and current hidden states, achieving an average prediction hit rate of 83.4%. Third, a reconfigurable multi-core architecture maximizes the utilization of HBM bandwidth via a systolic array that natively supports sparse and mixed-precision computations, coupled with parallel concatenation to balance compute and memory efficiency. Experimental results on a Xilinx V80 FPGA with the DeepSeek-V2-lite model demonstrate that MoE-OPU outperforms the NVIDIA A100 GPU, delivering a 6.78× higher token throughput. Compared to RTX 4090 and U200 FPGA, MoE-OPU achieves 13.37× and 7.85× improvements, respectively. These advancements highlight the potential of algorithm-hardware co-design for scalable deployment of MoE-based LLMs on edge devices.",
+      "identifiers": [
+        "SemanticScholar:aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe"
+      ],
+      "semantic_scholar_id": "aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe",
+      "doi": "10.1109/ICCAD66269.2025.11240807",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240807",
+      "authors": [
+        "Shaoqiang Lu",
+        "Yang-Bo Wei",
+        "Jun-Hong Qian",
+        "Chen Wu",
+        "Xiao Shi",
+        "Lei He"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 393,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLA-Awareness for AI-assisted coding",
+      "source_url": "https://arxiv.org/abs/2503.19876",
+      "year": 2025,
+      "published": "2025-03-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of AI-assisted coding tools within development environments drastically reduces development time, and allows developers to focus more on creative and critical aspects of software engineering through the use of Code Large Language Models (CodeLLMs). These coding assistants automate repetitive and time-consuming coding tasks such as code generation, code completion, code summarization, and code translation. Responsiveness is a crucial requirement of these coding assistants to maintain real-time interactivity, such that their use does not impede the developers' workflows. Different coding tasks have unique characteristics and latency requirements: Time-To-First-Token (TTFT) latency is essential for code completion tasks, while End-To-End (E2E) latency is crucial for code translation tasks. Managing these varying requirements simultaneously while optimizing resource usage poses significant challenges. Existing work adopts the Model-as-a-Service paradigm for serving individual CodeLLMs, but cannot effectively manage latency requirements of concurrent coding tasks and sequences of CodeLLM inference calls, due to a lack of end-to-end latency awareness. Another challenge is keeping resource utilization high, when the serving system is deployed on a shared cluster environment. To address these challenges, we propose Coding Assistant Task Orchestrator (CATO), a runtime system designed to serve a diverse assortment of coding tasks while meeting latency requirements and maximizing resource utilization. Our experiments demonstrate that when all types of coding tasks were served simultaneously, for TTFT-critical tasks, CATO improves overall Goodput rate and resource utilization by up to 10% and 41.1%, respectively. P95 E2E latency was also reduced by 18% for code summarization tasks, and P95 TTFT for code generation tasks were reduced by 14% compared against state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:8e94e8083b2774ef4ac4ec9ebe32291d4f110cec"
+      ],
+      "semantic_scholar_id": "8e94e8083b2774ef4ac4ec9ebe32291d4f110cec",
+      "canonical_id": "arXiv:2503.19876",
+      "arxiv_id": "2503.19876",
+      "doi": "10.48550/arXiv.2503.19876",
+      "authors": [
+        "Kishanthan Thangarajah",
+        "Arthur Leung",
+        "Bo-Yuan Chen",
+        "Ahmed E. Hassan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 608,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.20636",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.20636",
+        "id:SemanticScholar:7614b41e9ad1b942cf005e4e68f1cd275c86072e",
+        "id:arXiv:2512.20636",
+        "title:datafree pruning of selfattention layers in llms",
+        "url:https://arxiv.org/abs/2512.20636"
+      ],
+      "record": {
+        "title": "Data-Free Pruning of Self-Attention Layers in LLMs",
+        "source_url": "https://arxiv.org/abs/2512.20636",
+        "year": 2025,
+        "published": "2025-12-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many self-attention sublayers in large language models (LLMs) can be removed with little to no loss. We attribute this to the Attention Suppression Hypothesis: during pre-training, some deep attention layers learn to mute their own contribution, leaving the residual stream and the MLP to carry the representation. We propose Gate-Norm, a one-shot, weight-only criterion that ranks attention sublayers by query-key coupling and removes the least coupled ones, requiring no calibration data, no forward passes, no fine-tuning, and no specialized kernels. On 40-layer, 13B-parameter LLaMA models, Gate-Norm prunes the model in under a second. Pruning 8-16 attention sublayers yields up to $1.30\\times$ higher inference throughput while keeping average zero-shot accuracy within 1.5 percentage points of the unpruned baseline across BoolQ, RTE, HellaSwag, WinoGrande, ARC-Easy/Challenge, and OpenBookQA. Across these settings, Gate-Norm matches data-driven pruning methods in accuracy while being $\\sim 1000\\times$ faster to score layers, enabling practical, data-free compression of LLMs.",
+        "identifiers": [
+          "SemanticScholar:7614b41e9ad1b942cf005e4e68f1cd275c86072e"
+        ],
+        "semantic_scholar_id": "7614b41e9ad1b942cf005e4e68f1cd275c86072e",
+        "canonical_id": "arXiv:2512.20636",
+        "arxiv_id": "2512.20636",
+        "doi": "10.48550/arXiv.2512.20636",
+        "authors": [
+          "Dhananjay Saikumar",
+          "Blesson Varghese"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 355,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21985",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.21985",
+        "id:SemanticScholar:26effe73105f75da2bbd0a1c6c238dfd62428486",
+        "id:arXiv:2607.21985",
+        "title:unified staticdynamic pruning for efficient llm inference",
+        "url:https://arxiv.org/abs/2607.21985"
+      ],
+      "record": {
+        "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.21985",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "Proceedings of the VLDB Endowment",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The increasing deployment of large language models (LLMs) has magnified the computational and memory bottlenecks of autoregressive decoding, where low compute intensity and bandwidth-bound kernels dominate inference cost. Weight pruning offers a promising remedy, but existing methods remain confined to either static pruning (SP)—which permanently removes redundant weights but lacks adaptivity—or dynamic pruning (DP)—which adapts to input sparsity but introduces runtime irregularity. This paper presents SPDP, a unified sparse-inference framework that integrates unstructured SP with input-adaptive DP for efficient LLM inference on GPUs. SPDP co-designs a new Tiled-Columnwise Bitmap Compressed (Tiled-CBC) format and two complementary GPU kernels: (1) a CUDA-core spMspV kernel featuring Hybrid Activation-aware Dynamic Shared-Memory Bitmap Decoding (HAD-SMBD) for fine-grained, runtime activation skipping, and (2) a Tensor-Core SpMM kernel optimized for prefill computation. This joint format-kernel design harmonizes static and dynamic sparsity, maintaining bandwidth-efficient memory access and high compute intensity under both phases of LLM inference. Comprehensive evaluations on inference-optimized GPUs demonstrate that SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer, while matching perplexity with up to 25% higher sparsity. SPDP advances the inference efficiency-quality Pareto frontier, showing that unified static-dynamic pruning can deliver substantial throughput and performance-per-watt improvements in large-scale LLM serving.",
+        "identifiers": [
+          "SemanticScholar:26effe73105f75da2bbd0a1c6c238dfd62428486"
+        ],
+        "semantic_scholar_id": "26effe73105f75da2bbd0a1c6c238dfd62428486",
+        "canonical_id": "arXiv:2607.21985",
+        "arxiv_id": "2607.21985",
+        "doi": "10.48550/arXiv.2607.21985",
+        "authors": [
+          "Jin-hong Kim",
+          "Yejoo Lee",
+          "Jaeyoung Do"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.00922",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3720608",
+        "id:SemanticScholar:25b1c98c3003228d81ee1e84c4e370ebd81d85de",
+        "id:arXiv:2608.00922",
+        "title:from cloud to crowd democratizing llm service with decentralized edge collaboration for rag",
+        "url:https://arxiv.org/abs/2608.00922"
+      ],
+      "record": {
+        "title": "From Cloud to Crowd: Democratizing LLM Service With Decentralized Edge Collaboration for RAG",
+        "source_url": "https://arxiv.org/abs/2608.00922",
+        "year": 2026,
+        "published": "2026-08-02",
+        "venue": "IEEE Transactions on Mobile Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid advancement of large language models (LLMs) has increased demand for scalable and cost-effective deployment, especially for mobile and edge devices. Cloud-hosted LLMs are powerful but expensive and difficult to scale due to vendor lock-in and high resource needs, resulting in high expenses and unstable performance under load. Recent efforts focus on deploying small language models (SLMs), distilled or pruned from LLMs, on resource-constrained edge devices to reduce costs and improve scalability. However, edge-based SLMs face limited knowledge coverage and notable accuracy gap compared to cloud-based LLMs. To address this, we present DEFRAG, a decentralized edge collaboration system for retrieval-augmented generation (RAG) that optimizes both retrieval and generation across heterogeneous edge devices. For retrieval, DEFRAG compresses and shares knowledge graphs, using hybrid retrieval to expand knowledge coverage. For generation, DEFRAG introduces an optimizer that adaptively selects SLMs and RAG parameters per query, balancing accuracy and cost. We implement DEFRAG on a heterogeneous edge testbed and evaluate it on benchmark QA datasets. We also test it under mobile route stress, non-uniform data placement, and a domain-specific QA workload. The results show that DEFRAG maintains stable service quality and cost efficiency under these broader settings. Results show that DEFRAG narrows the SLM–LLM accuracy gap, while reducing cost by up to 98.4% and increasing peak throughput by up to 97.8% over centralized services. These findings demonstrate the potential of DEFRAG for democratized LLM services at the edge.",
+        "identifiers": [
+          "SemanticScholar:25b1c98c3003228d81ee1e84c4e370ebd81d85de"
+        ],
+        "semantic_scholar_id": "25b1c98c3003228d81ee1e84c4e370ebd81d85de",
+        "canonical_id": "arXiv:2608.00922",
+        "arxiv_id": "2608.00922",
+        "doi": "10.1109/TMC.2026.3720608",
+        "authors": [
+          "Jiaxing Li",
+          "Heng-Zhi Wang",
+          "Feng Wang",
+          "Chi Xu",
+          "Dan-Yang Song",
+          "Rui-Xiao Zhang",
+          "E. Ngai",
+          "Jiang-Chuan Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 113,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+      "identity_tokens": [
+        "id:SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+        "title:conditional computation of transformer models for efficient inference",
+        "url:https://www.semanticscholar.org/paper/8c4e2a1c421d91a75961e1a91a378cbaf4289b0f"
+      ],
+      "record": {
+        "title": ": Conditional Computation of Transformer Models for Efﬁcient Inference",
+        "source_url": "https://www.semanticscholar.org/paper/8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+        "year": 2021,
+        "published": null,
+        "venue": null,
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f"
+        ],
+        "semantic_scholar_id": "8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+        "canonical_id": "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f",
+        "authors": [
+          "Prafulla Dhariwal",
+          "G. Sastry",
+          "Mark Chen"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1971,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccad66269.2025.11240807",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240807",
+        "id:SemanticScholar:aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe",
+        "title:moeopu an fpga overlay processor leveraging expert parallelism for moebased large language models",
+        "url:https://doi.org/10.1109/ICCAD66269.2025.11240807"
+      ],
+      "record": {
+        "title": "MoE-OPU: An FPGA Overlay Processor Leveraging Expert Parallelism for MoE-based Large Language Models",
+        "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240807",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The advent of Large Language Models (LLMs) like DeepSeek, empowered by the Mixture-of-Experts (MoE) architecture, has driven significant advancements across diverse applications. However, a critical challenge arises during inference: Only a small fraction of experts are activated, causing severe token allocation imbalances among experts. This inefficiency poses substantial storage and computational burdens on resource-constrained devices, exacerbated by the lack of optimization strategies that integrate expert usage-aware parameter pruning and parallel scheduling, ultimately leading to suboptimal resource utilization. To address these limitations, we propose MoE-OPU, an FPGA-based overlay processor that optimizes parallel MoE inference through three key innovations. First, we introduce N:M sparsity (1:4/2:4/4:8/6:8/8:8) in the MLP layers and mixed-precision quantization (BF16/FP8/INT4) guided by expert activation frequency, reducing the parameter size by up to 2.76× while maintaining model accuracy (only 1.53% average drop after fine-tuning). Second, a lightweight prediction network dynamically predicts next-layer \"hot\" experts by analyzing historical activation patterns and current hidden states, achieving an average prediction hit rate of 83.4%. Third, a reconfigurable multi-core architecture maximizes the utilization of HBM bandwidth via a systolic array that natively supports sparse and mixed-precision computations, coupled with parallel concatenation to balance compute and memory efficiency. Experimental results on a Xilinx V80 FPGA with the DeepSeek-V2-lite model demonstrate that MoE-OPU outperforms the NVIDIA A100 GPU, delivering a 6.78× higher token throughput. Compared to RTX 4090 and U200 FPGA, MoE-OPU achieves 13.37× and 7.85× improvements, respectively. These advancements highlight the potential of algorithm-hardware co-design for scalable deployment of MoE-based LLMs on edge devices.",
+        "identifiers": [
+          "SemanticScholar:aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe"
+        ],
+        "semantic_scholar_id": "aad4c0578b59b5839e8f8dca26c103d2f5cc1dbe",
+        "doi": "10.1109/ICCAD66269.2025.11240807",
+        "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240807",
+        "authors": [
+          "Shaoqiang Lu",
+          "Yang-Bo Wei",
+          "Jun-Hong Qian",
+          "Chen Wu",
+          "Xiao Shi",
+          "Lei He"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 393,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.19876",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.19876",
+        "id:SemanticScholar:8e94e8083b2774ef4ac4ec9ebe32291d4f110cec",
+        "id:arXiv:2503.19876",
+        "title:slaawareness for aiassisted coding",
+        "url:https://arxiv.org/abs/2503.19876"
+      ],
+      "record": {
+        "title": "SLA-Awareness for AI-assisted coding",
+        "source_url": "https://arxiv.org/abs/2503.19876",
+        "year": 2025,
+        "published": "2025-03-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of AI-assisted coding tools within development environments drastically reduces development time, and allows developers to focus more on creative and critical aspects of software engineering through the use of Code Large Language Models (CodeLLMs). These coding assistants automate repetitive and time-consuming coding tasks such as code generation, code completion, code summarization, and code translation. Responsiveness is a crucial requirement of these coding assistants to maintain real-time interactivity, such that their use does not impede the developers' workflows. Different coding tasks have unique characteristics and latency requirements: Time-To-First-Token (TTFT) latency is essential for code completion tasks, while End-To-End (E2E) latency is crucial for code translation tasks. Managing these varying requirements simultaneously while optimizing resource usage poses significant challenges. Existing work adopts the Model-as-a-Service paradigm for serving individual CodeLLMs, but cannot effectively manage latency requirements of concurrent coding tasks and sequences of CodeLLM inference calls, due to a lack of end-to-end latency awareness. Another challenge is keeping resource utilization high, when the serving system is deployed on a shared cluster environment. To address these challenges, we propose Coding Assistant Task Orchestrator (CATO), a runtime system designed to serve a diverse assortment of coding tasks while meeting latency requirements and maximizing resource utilization. Our experiments demonstrate that when all types of coding tasks were served simultaneously, for TTFT-critical tasks, CATO improves overall Goodput rate and resource utilization by up to 10% and 41.1%, respectively. P95 E2E latency was also reduced by 18% for code summarization tasks, and P95 TTFT for code generation tasks were reduced by 14% compared against state-of-the-art systems.",
+        "identifiers": [
+          "SemanticScholar:8e94e8083b2774ef4ac4ec9ebe32291d4f110cec"
+        ],
+        "semantic_scholar_id": "8e94e8083b2774ef4ac4ec9ebe32291d4f110cec",
+        "canonical_id": "arXiv:2503.19876",
+        "arxiv_id": "2503.19876",
+        "doi": "10.48550/arXiv.2503.19876",
+        "authors": [
+          "Kishanthan Thangarajah",
+          "Arthur Leung",
+          "Bo-Yuan Chen",
+          "Ahmed E. Hassan"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 608,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:89d716846995ba9f69f0bb4173813134eb71b4a24bd517c0f3923f1438a6cb48",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
