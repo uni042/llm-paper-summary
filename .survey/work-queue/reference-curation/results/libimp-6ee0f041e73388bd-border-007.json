@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ee0f041e73388bd-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:3c1d8d3846a7ed76d870451c03b1a6f366ea2d7d",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:3c1d8d3846a7ed76d870451c03b1a6f366ea2d7d",
+    "identity_tokens": [
+      "SemanticScholar:3c1d8d3846a7ed76d870451c03b1a6f366ea2d7d"
+    ],
+    "reason": "浮動小数点活性化の精度と整数演算の単純さを両立させるという題名からは推論向け量子化・数値演算への関連が示唆されるが、OpenAlex・Crossrefで一次要旨を取得できず機構とLLM推論への適用を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Winning Both the Accuracy of Floating Point Activation and the Simplicity of Integer Arithmetic"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ee0f041e733",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

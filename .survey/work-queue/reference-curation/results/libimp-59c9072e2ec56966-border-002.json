@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59c9072e2ec56966-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:4f10e0d4ddb277025e0716085498b0a1cbf0e048",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:4f10e0d4ddb277025e0716085498b0a1cbf0e048",
+    "identity_tokens": [
+      "SemanticScholar:4f10e0d4ddb277025e0716085498b0a1cbf0e048"
+    ],
+    "reason": "拡散言語モデルの自己修正生成に関する研究とみられ拡散モデルの推論・生成過程に関連する可能性があるが、OpenAlex・Crossref・一次ページのいずれでも要旨を取得できず、推論システムへの具体的な機構や貢献を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Discrete Stochastic Localization for Self-Correcting Diffusion Language Models"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59c9072e2ec5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

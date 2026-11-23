@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbcb1dbc371b335d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.20097",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.20097",
+    "identity_tokens": [
+      "arXiv:2606.20097"
+    ],
+    "reason": "注意ヘッド単位でフル注意と線形注意を混成させるアーキテクチャHydraHeadを提案し長文脈処理の二次計算量の緩和を狙うが、主眼は解釈可能性分析に基づくモデルアーキテクチャ設計であり、既存LLMの推論システムへの適用や実行時機構としての貢献は限定的である。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HydraHead: From Head-Level Functional Heterogeneity to Specialized Attention Hybridization"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbcb1dbc371b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

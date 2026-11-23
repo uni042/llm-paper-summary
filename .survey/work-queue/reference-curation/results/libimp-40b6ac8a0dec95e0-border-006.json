@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40b6ac8a0dec95e0-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.21070",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.21070",
+    "identity_tokens": [
+      "arXiv:2505.21070"
+    ],
+    "reason": "動画拡散モデルの分散推論として時間フレーム並列と層並列を組み合わせ特徴キャッシュで通信を削減するが、対象はDiT動画生成の推論でありLLM推論ではないため、分散推論技術としての関連はあるものの直接の適用対象外である。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Minute-Long Videos with Dual Parallelisms"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40b6ac8a0dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

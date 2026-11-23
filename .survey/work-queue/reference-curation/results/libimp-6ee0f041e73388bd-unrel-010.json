@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ee0f041e73388bd-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.17771",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.17771",
+    "identity_tokens": [
+      "arXiv:2407.17771"
+    ],
+    "reason": "明示的な階層構造と対角化メッセージパッシングで意味表現を効率的に学習するBanyanの研究であり、低リソースでの表現学習が主目的で、LLMの推論・デコード・サービング機構への技術的貢献は要旨に確認できないため。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Banyan: Improved Representation Learning with Explicit Structure"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ee0f041e733",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

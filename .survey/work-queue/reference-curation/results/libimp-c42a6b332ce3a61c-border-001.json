@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c42a6b332ce3a61c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.00339",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.00339",
+    "identity_tokens": [
+      "arXiv:2607.00339"
+    ],
+    "reason": "会話データを時間的証拠グラフとしてモデル化し有効性注釈付きで状態認識クエリ処理を行うTRACEは、長期エージェントの文脈検索基盤と関係するが、主貢献は会話状態の検索精度でありLLM推論の実行・デコード機構への直接貢献は薄いため。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TRACE: State-Aware Query Processing over Temporal Evidence Graphs for Conversational Data"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42a6b332ce3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

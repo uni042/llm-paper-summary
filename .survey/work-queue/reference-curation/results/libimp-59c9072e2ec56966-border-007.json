@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59c9072e2ec56966-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.03839",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.03839",
+    "identity_tokens": [
+      "arXiv:2610.03839"
+    ],
+    "reason": "構文単位に境界を合わせたテキスト・潜在混合表現で長いCoTを圧縮し推論時の出力トークンコスト削減を狙うが、主目的は圧縮下での推論精度維持という推論手法側の課題であり、推論システム機構としての貢献は間接的であるため保留とする。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SYNLAT: Syntax-Aligned Text-Latent Compression for Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59c9072e2ec5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

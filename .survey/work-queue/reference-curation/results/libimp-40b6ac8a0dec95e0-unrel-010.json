@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40b6ac8a0dec95e0-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.07783",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.07783",
+    "identity_tokens": [
+      "arXiv:2505.07783"
+    ],
+    "reason": "複数モデルのアンサンブルにおける相対的過学習の理論とモデル組立の枠組みを論じるもので、対象はモデル性能の統計的性質であり、LLM推論システムの実行機構やサービングへの技術的貢献ではない。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Relative Overfitting and Accept-Reject Framework"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40b6ac8a0dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

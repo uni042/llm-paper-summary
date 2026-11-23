@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ee0f041e73388bd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.06216",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.06216",
+    "identity_tokens": [
+      "arXiv:2509.06216"
+    ],
+    "reason": "エージェント型ソフトウェア工学の基礎柱と研究ロードマップを論じる展望論文であり、作業環境の提案も工学プロセス論にとどまり、LLM推論・サービング・デコード機構への直接の技術的貢献は確認できないため。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Agentic Software Engineering: Foundational Pillars and a Research Roadmap"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ee0f041e733",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

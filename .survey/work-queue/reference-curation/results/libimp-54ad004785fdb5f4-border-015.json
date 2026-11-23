@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54ad004785fdb5f4-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:2e20c9a6e2e965045a9f1acac4a146c023888568",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:2e20c9a6e2e965045a9f1acac4a146c023888568",
+    "identity_tokens": [
+      "SemanticScholar:2e20c9a6e2e965045a9f1acac4a146c023888568"
+    ],
+    "reason": "時系列基盤モデルへの投機的デコード適用と題されデコード手法自体は関連するが、要旨を取得できずLLM推論への転用可能性や機構の詳細を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Time Series Foundation Models with Speculative Decoding"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54ad004785fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

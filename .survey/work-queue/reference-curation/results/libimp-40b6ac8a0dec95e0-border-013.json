@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40b6ac8a0dec95e0-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:226348eddfaf8453c8507c92f8567e27a8567d69",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:226348eddfaf8453c8507c92f8567e27a8567d69",
+    "identity_tokens": [
+      "SemanticScholar:226348eddfaf8453c8507c92f8567e27a8567d69",
+      "arXiv:2403.04510"
+    ],
+    "reason": "LLMの文脈内機械翻訳がどの層で成立するかをマスキング実験で解析する解釈可能性研究であり、文脈への注意を省くことで45%の計算削減が得られる所見はあるものの、主目的は内部機構の解明で推論システムへの技術的貢献は副次的である。",
+    "first_checked_at": "2026-11-21T17:57:50+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "W HERE DOES I N - CONTEXT M ACHINE T RANSLATION H APPEN IN L ARGE L ANGUAGE M ODELS ?"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40b6ac8a0dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

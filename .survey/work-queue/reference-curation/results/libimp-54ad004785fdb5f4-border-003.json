@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54ad004785fdb5f4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.24894",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.24894",
+    "identity_tokens": [
+      "arXiv:2609.24894"
+    ],
+    "reason": "病理スライド向けMLLMのエンコーダ内漸進的トークン剪定で推論遅延とメモリ削減を示すが、対象が病理画像応用に特化し汎用LLM推論システムへの貢献は限定的である。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54ad004785fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

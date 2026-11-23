@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54ad004785fdb5f4-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:5fc3a6e76f4165070e4d0aea730b5791e3952135",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:5fc3a6e76f4165070e4d0aea730b5791e3952135",
+    "identity_tokens": [
+      "SemanticScholar:5fc3a6e76f4165070e4d0aea730b5791e3952135"
+    ],
+    "reason": "LLMの最適化と適応と応用を広く扱う題目だが要旨を取得できず、推論システムへの具体的な技術的貢献の有無や範囲を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimization, Adaptation and Applications of Large Language Models"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54ad004785fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

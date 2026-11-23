@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40b6ac8a0dec95e0-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:231501c4fbd3eec510fed16010a9db55745183c0",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:231501c4fbd3eec510fed16010a9db55745183c0",
+    "identity_tokens": [
+      "SemanticScholar:231501c4fbd3eec510fed16010a9db55745183c0"
+    ],
+    "reason": "非自己回帰機械翻訳の局所性不足を時間畳み込みで補い翻訳品質を改善する手法であり、並列デコードという生成方式には関係するものの、主目的は翻訳品質の改善でLLM推論システムへの直接の効率貢献は薄い。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Improving Non-Autoregressive Neural Machine Translation via Modeling Localness"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40b6ac8a0dec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

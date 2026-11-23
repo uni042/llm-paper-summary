@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54ad004785fdb5f4-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:513321c28ff7abdc61644c83f0db0907ec1b18ed",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:513321c28ff7abdc61644c83f0db0907ec1b18ed",
+    "identity_tokens": [
+      "SemanticScholar:513321c28ff7abdc61644c83f0db0907ec1b18ed"
+    ],
+    "reason": "メモリ中心の観点でニューロシンボリック構造とLLMを論じる題目で推論メモリとの関連は窺えるが、要旨を取得できず具体的な推論システム機構を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T03:04:36+00:00",
+    "last_checked_at": "2026-11-23T03:04:36+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Neuro-Symbolic Architecture Meets Large Language Models: A Memory-Centric Perspective"
+  },
+  "processed_at": "2026-11-23T03:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54ad004785fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
