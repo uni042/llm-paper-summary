@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75072ba1d47affcf-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.20237",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.20237",
+    "identity_tokens": [
+      "arXiv:2512.20237"
+    ],
+    "reason": "MemR3はLLMエージェントの長期対話メモリ検索を、根拠と未解決の情報要求からなる証拠ギャップ状態でretrieve・reflect・answerを制御する閉ループ方式に reformulate するが、対象はエージェントの検索方策であり推論サービング機構そのものではないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemR3: Memory Retrieval via Reflective Reasoning for LLM Agents"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75072ba1d47a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

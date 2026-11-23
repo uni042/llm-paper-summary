@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b8f294a4b3f5a58-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.02066",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.02066",
+    "identity_tokens": [
+      "arXiv:2510.02066"
+    ],
+    "reason": "SCoTは全二重音声対話システムにおいて固定長入力処理と応答生成をブロック単位で交互に行うストリーミングChain-of-Thought枠組みで、低遅延で重なり合う対話を支える点は推論配信に接するが、要旨の主眼はVAD不要化と意味推論の coherence であり、サービング機構としての定量的な実行貢献は薄い。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Chain-of-Thought Reasoning in Streaming Full-Duplex End-to-End Spoken Dialogue Systems"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b8f294a4b3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

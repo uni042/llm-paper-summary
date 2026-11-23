@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22b4a53d39235f2e-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.13530",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.13530",
+    "identity_tokens": [
+      "arXiv:2602.13530"
+    ],
+    "reason": "言語エージェントのエピソード記憶を時間認識型の要約と事実を結ぶハイブリッド記憶グラフで構築しエージェント型検索で推論するREMemであり、記憶の想起・推論能力が主眼でKVキャッシュ等の推論システム機構への直接貢献はないため対象外である。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "REMem: Reasoning with Episodic Memory in Language Agent"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22b4a53d3923",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

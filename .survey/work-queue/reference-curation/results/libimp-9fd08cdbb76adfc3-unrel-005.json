@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9fd08cdbb76adfc3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:39666cddd6ad90ce0f27f44239fd00f5ce38449a",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:39666cddd6ad90ce0f27f44239fd00f5ce38449a",
+    "identity_tokens": [
+      "SemanticScholar:39666cddd6ad90ce0f27f44239fd00f5ce38449a"
+    ],
+    "reason": "物体中心表現学習MOGENTはマスク付き双方向Transformerによる並列反復デコードで場面生成を高速化するが、対象は視覚的な物体分割と構成的画像生成であり、LLMの推論・サービング・デコード機構への貢献ではないため対象外である。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Efficient Object-Centric Representation Learning using Masked Generative Modeling"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9fd08cdbb76a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

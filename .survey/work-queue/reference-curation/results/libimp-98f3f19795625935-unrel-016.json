@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98f3f19795625935-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.14256",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.14256",
+    "identity_tokens": [
+      "arXiv:2306.14256"
+    ],
+    "reason": "データベーススキーマ剪定で自己注意の入力長問題を緩和し多言語Text-to-SQLの精度を上げる研究だが、主貢献はSQL変換タスクの精度改善でありLLM推論システムの汎用機構ではないため対象外とした。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A multilingual translator to SQL with database schema pruning to improve self-attention"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98f3f1979562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

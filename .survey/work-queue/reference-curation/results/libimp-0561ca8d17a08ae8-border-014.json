@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0561ca8d17a08ae8-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.19568",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.19568",
+    "identity_tokens": [
+      "arXiv:2610.19568"
+    ],
+    "reason": "INTACTは凍結したバックボーンに対し小規模外部エンコーダが潜在推論ブロックを反復生成し、自然言語CoTの自己回帰デコードトークン数を減らす潜在推論手法で、デコード量削減には直結するが、評価の中心はGSM8K等の精度向上であり推論システムとしての遅延・メモリ実測や実行機構の貢献は要旨では不明瞭である。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "INTACT: Inducing Latent Reasoning on a Frozen Backbone"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0561ca8d17a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

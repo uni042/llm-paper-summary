@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b8f294a4b3f5a58-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.06689",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.06689",
+    "identity_tokens": [
+      "arXiv:2507.06689"
+    ],
+    "reason": "音楽誘導ダンス動画合成のための時空間グラフMambaであり、音楽から骨格列を生成し条件画像と合わせてダンス動画へ変換する生成タスク専用の手法で、LLM推論システムの実行・メモリ・スケジューリングへの貢献は要旨に一切確認できない。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Spatial-Temporal Graph Mamba for Music-Guided Dance Video Synthesis"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b8f294a4b3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

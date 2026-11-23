@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d685028a53ece8f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2025.naacl-tutorial.4",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2025.naacl-tutorial.4",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.naacl-tutorial.4"
+    ],
+    "reason": "言語モデルの知識蒸留について中間層マッチングや予測マッチング、LLMの系列圧縮への応用までを解説するNAACLチュートリアルであり、新規の推論技術の提案ではなく教育的な総説のため推論システムへの直接貢献は確認できない。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Knowledge Distillation for Language Models"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d685028a53e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

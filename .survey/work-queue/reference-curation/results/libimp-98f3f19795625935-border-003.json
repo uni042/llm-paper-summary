@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98f3f19795625935-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.22034",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.22034",
+    "identity_tokens": [
+      "arXiv:2509.22034"
+    ],
+    "reason": "モデルマージで推論モデルの推論深度とトークン効率のトレードオフを調整できることを大規模実証するが、新たな推論機構やサービング手法ではなくマージ強度による精度・効率曲線の経験的評価が中心のため保留とした。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Thinking Spectrum: An Empirical Study of Tunable Reasoning in LLMs through Model Merging"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98f3f1979562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

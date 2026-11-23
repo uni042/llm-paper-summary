@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-384bed5346296e46-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c5a24d8a54121c015c5c938619e26334b4473874",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c5a24d8a54121c015c5c938619e26334b4473874",
+    "identity_tokens": [
+      "SemanticScholar:c5a24d8a54121c015c5c938619e26334b4473874"
+    ],
+    "reason": "一次情報源を確認したがSemantic Scholarは429で補足資料自体の要旨を取得できなかった。タイトルは視覚言語モデル向けマルチエンコーダ協調トークンプルーニングの補足資料を示すが、本編の推論削減機構をこの記録単独では確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Supplementary Material for METEOR: Multi-Encoder Collaborative Token Pruning for Efficient Vision Language Models"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-384bed534629",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

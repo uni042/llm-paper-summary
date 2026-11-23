@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b1e96fb0f3109caa-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.21227",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.21227",
+    "identity_tokens": [
+      "arXiv:2606.21227"
+    ],
+    "reason": "Bagpiper-Editは豊富なキャプションの書き換えを介して音声・音楽・環境音をゼロショットで編集する生成手法であり、音声編集という応用タスクの実現自体が目的であって、LLM推論の効率化やサービングへの技術的貢献は要旨に示されていないため対象外とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Bagpiper-Edit: Zero-Shot Open-Ended Audio Editing via Rich-Caption"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b1e96fb0f310",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

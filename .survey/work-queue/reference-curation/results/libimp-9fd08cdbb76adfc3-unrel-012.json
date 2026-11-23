@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9fd08cdbb76adfc3-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:a26a37364914084e28888f3bd778a3c3d6c48e70",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:a26a37364914084e28888f3bd778a3c3d6c48e70",
+    "identity_tokens": [
+      "SemanticScholar:a26a37364914084e28888f3bd778a3c3d6c48e70"
+    ],
+    "reason": "EmbRaceは疎な埋め込み表を持つNLPモデルの分散データ並列学習向けにAlltoAllとモデル並列を組み合わせた疎通信と2次元通信スケジューリングで学習通信を高速化する研究であり、推論ではなく学習単独の高速化であるため対象外である。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "EmbRace: Accelerating Sparse Communication for Distributed Training of NLP Neural Networks"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9fd08cdbb76a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

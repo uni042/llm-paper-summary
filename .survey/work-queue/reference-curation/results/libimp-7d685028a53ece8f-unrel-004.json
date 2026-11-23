@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d685028a53ece8f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.00377",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.00377",
+    "identity_tokens": [
+      "arXiv:2602.00377"
+    ],
+    "reason": "低不一致数列と算術デコードで言語モデルから概念グラフをゼロショット抽出するDecompressionLMの研究で、量子化モデルは被評価対象として現れるのみであり、主眼は知識プロービングと概念被覆という評価次元で推論高速化への貢献はない。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DecompressionLM: Deterministic, Diagnostic, and Zero-Shot Concept Graph Extraction from Language Models"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d685028a53e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

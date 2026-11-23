@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9fd08cdbb76adfc3-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.08381",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.08381",
+    "identity_tokens": [
+      "arXiv:2511.08381"
+    ],
+    "reason": "フォン・ノイマン型の再構成可能な耐故障マルチプロセッサをニューラルネット学習ワークフローで検証しMLIR連携も論じるハードウェア研究だが、実験は学習処理の適応性と頑健性が中心で、推論実行への直接の効果や機構は不明瞭であるため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fault Tolerant Reconfigurable ML Multiprocessor"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9fd08cdbb76a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

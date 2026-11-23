@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb6ebac4c1eaf64c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2209.12816",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2209.12816",
+    "identity_tokens": [
+      "arXiv:2209.12816"
+    ],
+    "reason": "要旨はFNetのフーリエ変換層を効率化しパラメータ数・学習時間・メモリを減らすエンコーダアーキテクチャを提案するが、対象は小規模エンコーダの学習加速が中心でLLM推論・長文脈サービングへの直接適用や測定が要旨で薄いため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fast-FNet: Accelerating transformer encoder models via efficient fourier layers"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb6ebac4c1ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

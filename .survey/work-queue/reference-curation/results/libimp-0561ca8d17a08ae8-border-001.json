@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0561ca8d17a08ae8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:5d31e0ae076a22179d5f4f4065db6b2f94325a9d",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:5d31e0ae076a22179d5f4f4065db6b2f94325a9d",
+    "identity_tokens": [
+      "SemanticScholar:5d31e0ae076a22179d5f4f4065db6b2f94325a9d"
+    ],
+    "reason": "GVMによる弾力的で分離されたGPU共有はLLMサービングの資源共有基盤に関わり得るが、Crossrefでタイトル一致を確認したのみで一次要旨を取得できず、対象ワークロードや分離・弾性化の機構が確認できないため保留寄りの判定とする。",
+    "first_checked_at": "2026-11-23T11:19:12+00:00",
+    "last_checked_at": "2026-11-23T11:19:12+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Breaking the Tradeoff: Elastic and Isolated GPU Sharing with GVM"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0561ca8d17a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

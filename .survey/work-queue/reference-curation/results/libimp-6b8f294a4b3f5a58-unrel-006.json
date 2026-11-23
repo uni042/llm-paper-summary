@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b8f294a4b3f5a58-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.06369",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.06369",
+    "identity_tokens": [
+      "arXiv:2503.06369"
+    ],
+    "reason": "回転不変な視覚表現学習のためのスペクトル状態空間モデルであり、画像パッチ間の大域構造把握と走査方向の回転敏感性を扱う視覚モデル研究で、対象は画像表現学習そのものであってLLM推論の実行システムへの適用や貢献は要旨に示されていない。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Spectral State Space Model for Rotation-Invariant Visual Representation Learning"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b8f294a4b3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

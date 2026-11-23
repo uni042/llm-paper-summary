@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b1e96fb0f3109caa-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:b075f86200bbc3615791620fdae3f2af23d9850b",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:b075f86200bbc3615791620fdae3f2af23d9850b",
+    "identity_tokens": [
+      "SemanticScholar:b075f86200bbc3615791620fdae3f2af23d9850b"
+    ],
+    "reason": "モード条件付けは並列サンプリングの計算資源を推論モードへ明示的に配分して多様性の崩壊を防ぎ、Pass@kの改善と4倍の効率向上を示すが、微調整を含む学習手順と一体の提案であり、テスト時計算の配分機構が推論処理系として独立に評価されているか要旨では判然としないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mode-conditioning unlocks superior test-time compute scaling"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b1e96fb0f310",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-244d93408c442047-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:4f5e96966f8f6a5335ca739e1cc23afb51276d21",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:4f5e96966f8f6a5335ca739e1cc23afb51276d21",
+    "identity_tokens": [
+      "SemanticScholar:4f5e96966f8f6a5335ca739e1cc23afb51276d21"
+    ],
+    "reason": "ShareLoRAと題しLoRAファインチューニングの調整量削減と性能向上をうたう研究とみられるが、OpenAlexが429を返し一次要旨を取得できず、重み共有の機構が推論効率へ及ぶのか学習効率にとどまるのか確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "S HARE L O RA: L ESS T UNING , M ORE P ERFORMANCE FOR L O RA F INE - TUNING OF LLM S"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-244d93408c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

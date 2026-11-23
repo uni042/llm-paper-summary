@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-384bed5346296e46-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.07457",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.07457",
+    "identity_tokens": [
+      "arXiv:2303.07457"
+    ],
+    "reason": "要旨は条件付きマスク言語モデルの推論効率を上げる非自己回帰生成で、デコーダ精緻化を助ける適応的マスキングAMOMを翻訳・要約・コード生成で評価するが、対象は小規模seq2seq生成であり現代LLMサービングへの直接適用は薄いため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AMOM: Adaptive Masking over Masking for Conditional Masked Language Model"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-384bed534629",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

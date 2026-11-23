@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75072ba1d47affcf-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.neucom.2021.01.125",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.neucom.2021.01.125",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2021.01.125"
+    ],
+    "reason": "Mesh-TensorFlow上で畳み込みフィルタ次元を異種デバイスの計算能力に応じて静的に分割し負荷均衡する、CNNの異種モデル並列学習の研究であり、対象はHPCでの学習性能であってLLM推論の実行・サービング機構ではないため対象外である。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Heterogeneous model parallelism for deep neural networks"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75072ba1d47a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

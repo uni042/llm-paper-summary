@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-22b4a53d39235f2e-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3708495",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3708495",
+    "identity_tokens": [
+      "DOI:10.1145/3708495"
+    ],
+    "reason": "エッジコンピューティングにおける分散機械学習の課題・並列パターン・通信集約方式を整理したサーベイであり、LLM推論に特化したサービングや分散推論の新たな技術的貢献を提示するものではないため対象外である。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Distributed Machine Learning in Edge Computing: Challenges, Solutions and Future Directions"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22b4a53d3923",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

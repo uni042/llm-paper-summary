@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0561ca8d17a08ae8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:73bbb155ac7984968cb68a105b40394064802019",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:73bbb155ac7984968cb68a105b40394064802019",
+    "identity_tokens": [
+      "SemanticScholar:73bbb155ac7984968cb68a105b40394064802019"
+    ],
+    "reason": "Encoder-Decoder型ASRモデルに対する学習後量子化の層別診断と補償は推論向け量子化・圧縮に近いが、一次要旨を取得できず、量子化ビット幅・補償機構・推論速度やメモリ削減の具体性を確認できないため、対象がASRである点も含め保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Diagnostic-Driven Layer-Wise Compensation for Post-Training Quantization of Encoder-Decoder ASR Models"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0561ca8d17a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

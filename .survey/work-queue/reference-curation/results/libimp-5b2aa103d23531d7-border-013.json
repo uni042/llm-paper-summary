@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b2aa103d23531d7-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.07497",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.07497",
+    "identity_tokens": [
+      "arXiv:2510.07497"
+    ],
+    "reason": "音声LLMが利用者の発話終了前に推論を開始する『聞きながら考える』手法で、質問完全性というエントロピー指標により開始時点を制御し遅延を70%削減するが、中心はCoT微調整による音声推論精度の改善でありサービング機構への貢献は限定的である。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Can Speech LLMs Think while Listening?"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b2aa103d235",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

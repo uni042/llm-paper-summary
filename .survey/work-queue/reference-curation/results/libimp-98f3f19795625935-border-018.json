@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98f3f19795625935-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.27415",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.27415",
+    "identity_tokens": [
+      "arXiv:2607.27415"
+    ],
+    "reason": "行動中心グラフで過去の推論履歴をエピソード記憶化しTD学習の価値で推論時意思決定を双方向に導きトークン消費削減を狙うGAMERだが、対象はエージェントの推論時探索の枠組みでありサービング機構としての具体性が薄いため保留とした。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bridging Inference-Time Scaling and Episodic Memory with Action-Centric Graphs"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98f3f1979562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

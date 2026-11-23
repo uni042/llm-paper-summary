@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fed1f2add76182b-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.07960",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.07960",
+    "identity_tokens": [
+      "arXiv:2602.07960"
+    ],
+    "reason": "対話中心の音声映像キャプション向けに話者帰属等の報酬でGRPO学習を行うD-ORCAとその学習データセットDVDに関する研究であり、学習によるキャプション能力改善が主目的で推論システムへの直接貢献はないため対象外である。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "D-ORCA: Dialogue-Centric Optimization for Robust Audio-Visual Captioning"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fed1f2add76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

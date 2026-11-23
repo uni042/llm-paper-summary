@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98f3f19795625935-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.16359",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.16359",
+    "identity_tokens": [
+      "arXiv:2606.16359"
+    ],
+    "reason": "CKKS準同型暗号の私的畳み込み推論向けに断片符号化FEnc2でスロット利用と回転回数を最適化し同型演算を1〜2桁削減するが、対象はCNNの暗号化推論でありLLM推論への適用は要旨で示されていないため保留とした。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fenc2: Unifying Data Packing for Efficient Private Inference via Convolution and Architecture-Aware Fragment Encoding"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98f3f1979562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

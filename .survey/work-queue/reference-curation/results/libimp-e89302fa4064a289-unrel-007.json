@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e89302fa4064a289-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.18158",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.18158",
+    "identity_tokens": [
+      "arXiv:2512.18158"
+    ],
+    "reason": "PIM-FWはHBM3スタックのDRAM内・近傍演算で全点対最短路問題のFloyd-Warshall法を高速化するハードウェア・ソフトウェア協調設計であり、対象は道路網などのグラフ計算であって、LLM推論のメモリ階層・オフロード技術とは無関係のため対象外とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PIM-FW: Hardware-Software Co-Design of All-pairs Shortest Paths in DRAM"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e89302fa4064",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

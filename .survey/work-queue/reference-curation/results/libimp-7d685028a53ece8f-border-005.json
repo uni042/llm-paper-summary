@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d685028a53ece8f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05358",
+    "identity_tokens": [
+      "arXiv:2605.05358"
+    ],
+    "reason": "早期終了ネットワークを逐次学習する際に既存出口の知識をElastic Weight Consolidation等で保持する研究であり、早期終了自体は適応推論の機構だが、本論文の主たる貢献は逐次学習時の安定性と可塑性の両立という学習手法にある。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Balancing Stability and Plasticity in Sequentially Trained Early-Exiting Neural Networks"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d685028a53e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98f3f19795625935-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.09494",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.09494",
+    "identity_tokens": [
+      "arXiv:2312.09494"
+    ],
+    "reason": "トークンを動的に落とすskimming型LLM高速化がDoS的摂動で残存トークン率と計算コストを最大145％超増やす脆弱性を測るNo-Skim評価枠組みだが、新規高速化機構ではなく効率ロバスト性の評価が主目的のため保留とした。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "No-Skim: Towards Efficiency Robustness Evaluation on Skimming-based Language Models"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98f3f1979562",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

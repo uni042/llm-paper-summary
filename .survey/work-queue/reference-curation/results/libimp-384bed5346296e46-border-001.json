@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-384bed5346296e46-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:4d491b6fbe529a3986ef50cc34ede7c9ad88126c",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:4d491b6fbe529a3986ef50cc34ede7c9ad88126c",
+    "identity_tokens": [
+      "SemanticScholar:4d491b6fbe529a3986ef50cc34ede7c9ad88126c"
+    ],
+    "reason": "Crossrefで確認したIJCAI版要旨はLayerNorm入力のチャネル間変動に対しPower-of-Two Factorで完全量子化Vision Transformerの劣化と推論複雑度を下げる学習後量子化だが、対象は画像ViTでありLLM推論への直接貢献ではないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FQ-ViT: Fully Quantized Vision Transformer without Retraining"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-384bed534629",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

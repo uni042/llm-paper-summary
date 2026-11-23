@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b1e96fb0f3109caa-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.03983",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.03983",
+    "identity_tokens": [
+      "arXiv:2508.03983"
+    ],
+    "reason": "MiDashengLMは一般音声キャプションで学習した音声言語モデルで初回トークンまでの時間を最大4倍、スループットを最大20倍高速化すると謳うが、貢献の中心は音声理解モデルの学習データと音声エンコーダであり、推論高速化の機構自体の切り分けが要旨では不十分なため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MiDashengLM: Efficient Audio Understanding with General Audio Captions"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b1e96fb0f310",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d685028a53ece8f-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34223",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34223",
+    "identity_tokens": [
+      "arXiv:2609.34223"
+    ],
+    "reason": "音声視覚LLMが話者の順序と画面配置を単純照合する順序照合バイアスを合成診断データで明らかにし微調整で緩和する研究であり、モデルのバイアス評価と能力改善が主題で推論効率やサービング機構とは無関係である。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Uncovering Ordinal-Matching Bias in Audio-Visual LLMs"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d685028a53e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

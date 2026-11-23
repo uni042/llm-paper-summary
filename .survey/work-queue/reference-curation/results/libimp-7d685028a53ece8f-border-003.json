@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d685028a53ece8f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/ccsb71176.2026.11716445",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/ccsb71176.2026.11716445",
+    "identity_tokens": [
+      "DOI:10.1109/ccsb71176.2026.11716445"
+    ],
+    "reason": "LLMエージェントの長期外部メモリを関係データベースの外れ値管理規則で分類し、検索時の文脈剪定や生成修復、圧縮時の重要知識保持を行うDOMR-Memだが、対象はエージェントの意味的メモリ管理でありKVキャッシュ等の推論メモリ機構とは異なる。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DOMR-Mem: Detecting, Repairing, and Preserving Long-Term LLM Memories"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d685028a53e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

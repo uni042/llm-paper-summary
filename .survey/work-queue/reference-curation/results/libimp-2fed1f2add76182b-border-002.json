@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fed1f2add76182b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.18689",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.18689",
+    "identity_tokens": [
+      "arXiv:2511.18689"
+    ],
+    "reason": "スプライン型パラメータを持つKolmogorov-Arnold Networks向けに枝認識量子化器でQATとPTQを統一するQuantKANであり、量子化とFPGA推論のエネルギー評価を含むものの対象モデルがLLMではなく推論向け量子化としての直接性は限定的であるため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QuantKAN: A Unified Quantization Framework for Kolmogorov Arnold Networks"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fed1f2add76",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0561ca8d17a08ae8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:cc8a1d39ebd48b352f7a82dbd0f133044716fe76",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:cc8a1d39ebd48b352f7a82dbd0f133044716fe76",
+    "identity_tokens": [
+      "SemanticScholar:cc8a1d39ebd48b352f7a82dbd0f133044716fe76"
+    ],
+    "reason": "変換したトリビア質問でQAシステムを訓練する研究とみられるがタイトルが途中で切れており一次要旨を取得できず、データ変換の具体的手法や推論システムとの関係を確認できないため、タイトルだけでは対象外と断定せず保留寄りに分類する。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": ": Training QA Systems on Transformed Trivia"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0561ca8d17a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

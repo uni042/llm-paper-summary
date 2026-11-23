@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e89302fa4064a289-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.133560",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.neucom.2026.133560",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2026.133560"
+    ],
+    "reason": "BinParamは分布整合と直交残差を用いる二値化された人体パラメトリックモデリングの論文だが、CrossrefとOpenAlexのいずれからも要旨を取得できず（abstract_not_obtained）、二値化がLLM推論向け量子化に相当するのか人体モデル専用の表現圧縮なのかを一次要旨で確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:14+00:00",
+    "last_checked_at": "2026-11-23T11:19:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BinParam: Binarized human parametric modeling via distribution alignment and orthogonal residuals"
+  },
+  "processed_at": "2026-11-23T11:19:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e89302fa4064",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

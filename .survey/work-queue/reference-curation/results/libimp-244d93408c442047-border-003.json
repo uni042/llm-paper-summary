@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-244d93408c442047-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f08d2a956040f133d21599781e8a06769fe9913a",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f08d2a956040f133d21599781e8a06769fe9913a",
+    "identity_tokens": [
+      "SemanticScholar:f08d2a956040f133d21599781e8a06769fe9913a"
+    ],
+    "reason": "量子Transformerの技術的アプローチと課題を扱うサーベイとみられるが、OpenAlexが429を返し一次要旨を取得できず、量子計算上のTransformerがLLM推論システムへ具体的にどう関わるか確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey of Quantum Transformers: Technical Approaches, Challenges and Outlooks"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-244d93408c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

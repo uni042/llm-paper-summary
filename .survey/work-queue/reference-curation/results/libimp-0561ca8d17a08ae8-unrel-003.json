@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0561ca8d17a08ae8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:5220ccb3505d7f3d01d5c13c2cf42c1b76efc0f6",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:5220ccb3505d7f3d01d5c13c2cf42c1b76efc0f6",
+    "identity_tokens": [
+      "SemanticScholar:5220ccb3505d7f3d01d5c13c2cf42c1b76efc0f6"
+    ],
+    "reason": "グラフを集合として扱うTransformer系のグラフ学習向けエンドツーエンド注意手法であり、要旨の対象はグラフ表現学習の有効性・拡張性・前処理の複雑さで、LLM推論の実行時メモリ、KVキャッシュ、サービング等の推論システムへの貢献は確認できない。",
+    "first_checked_at": "2026-11-23T11:19:13+00:00",
+    "last_checked_at": "2026-11-23T11:19:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "An end-to-end attention-based approach for learning on graphs"
+  },
+  "processed_at": "2026-11-23T11:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0561ca8d17a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
