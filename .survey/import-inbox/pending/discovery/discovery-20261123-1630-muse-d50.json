@@ -1,0 +1,521 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261123-d50",
+ "reference_main_sha": "0cb12d65",
+ "record_count": 30,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2402.14808",
+   "identity_tokens": [
+    "arXiv:2402.14808"
+   ],
+   "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
+   "reason": "長いシステムプロンプトを共有するバッチリクエストで、システムプロンプト分のKVをDRAMからSRAMへリクエストごとに繰り返し読む冗長性を、RelayAttentionの因果注意の再定式化でバッチ当たり1回に削減し、vLLM統合でスループットとレイテンシを改善するLLMサービング向け注意アルゴリズムである。",
+   "source_url": "https://arxiv.org/abs/2402.14808",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 471
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "DOI:10.1109/ISCA66397.2026.00087",
+   "identity_tokens": [
+    "DOI:10.1109/ISCA66397.2026.00087"
+   ],
+   "title": "IroKnight: Ownership-Preserving Neural Acceleration for Inference Serving",
+   "reason": "クラウド推論サービングで平文をチップ内ストレージに残さずALU内の過渡信号でのみ扱い、ストレージは暗号化と完全性保護を保つIroKnight NPUを提案し、FHE級のデータ所有権保持を現実的なオーバーヘッドで実現する推論アクセラレーションのハードウェア設計である。",
+   "source_url": "https://doi.org/10.1109/ISCA66397.2026.00087",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 472
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2602.07306",
+   "identity_tokens": [
+    "arXiv:2602.07306"
+   ],
+   "title": "Parallel Track Transformers: Enabling Fast GPU Inference with Reduced Synchronization",
+   "reason": "テンソル並列の行列分解に伴うGPU間同期をParallel Track Transformerの計算再構成で最大16倍削減し、TensorRT-LLMとvLLMへ統合してTTFT最大30％削減とスループット最大31.9％向上を示した、マルチGPU LLMサービングの直接的な高速化である。",
+   "source_url": "https://arxiv.org/abs/2602.07306",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 473
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2603.14110",
+   "identity_tokens": [
+    "arXiv:2603.14110"
+   ],
+   "title": "SVD Contextual Sparsity Predictors for Fast LLM Inference",
+   "reason": "ReGLU型FFNの文脈的スパース性予測器をゲート射影行列の切断対応SVDで学習不要に構築し閾値較正とCUDA・CANN向け条件付き実行器を備え、FFN活性化スパース性90％でデコード時間を最大1.8倍短縮する高速LLM推論フレームワークである。",
+   "source_url": "https://arxiv.org/abs/2603.14110",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 474
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2510.24390",
+   "identity_tokens": [
+    "arXiv:2510.24390"
+   ],
+   "title": "Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion",
+   "reason": "単一クエリの推論をキーポイント生成と依存グラフに基づくロジック並列なコンテンツ展開へ分解し、GPU計算律速フェーズとメモリ律速フェーズを複数クエリ間でパイプラインスケジューリングすることでトークン生成速度を最大4.33倍化する推論実行フレームワークOrionの提案である。",
+   "source_url": "https://arxiv.org/abs/2510.24390",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 475
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.02430",
+   "identity_tokens": [
+    "arXiv:2606.02430"
+   ],
+   "title": "Not All Errors Are Equal: A Systematic Study of Error Propagation in Large Language Model Inference",
+   "reason": "LLM推論におけるソフトエラーの伝播を故障注入フレームワークLLMFIで3モデル13タスクにわたり系統的に計測し脆弱性パターンを明らかにした研究であり、推論の信頼性計測として関連するが、サービング機構そのものの改善ではなく低オーバーヘッドな緩和方向の提示にとどまる。",
+   "source_url": "https://arxiv.org/abs/2606.02430",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 476
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2606.07577",
+   "identity_tokens": [
+    "arXiv:2606.07577"
+   ],
+   "title": "OmniMem: Perturbation-aware Memory Compression for Streaming Audio-Visual LLMs",
+   "reason": "長尺動画の音声・映像LLM推論で線形に増えるビデオトークンとKVキャッシュに対し、モダリティ別メモリ配分と摂動を意識したKV選択で圧縮するOmniMemを提案し、同一メモリ予算で学習不要圧縮ベースラインを2〜4ポイント上回るストリーミング推論向けメモリ圧縮である。",
+   "source_url": "https://arxiv.org/abs/2606.07577",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 477
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2608.28726",
+   "identity_tokens": [
+    "arXiv:2608.28726"
+   ],
+   "title": "Pro-Router: Token-Aware Progressive Model Routing with Adaptive Edge-Cloud Collaboration for Efficient Multimodal LLM Inference",
+   "reason": "マルチモーダルLLM推論でプロンプト事前スコアリングと生成トークンの確率分布を読む検証器による段階的ルーティングを行い、各デバイスの実測サービスレートに合わせる適応的エッジ・クラウド協調サービングパイプラインでエンドツーエンドスループットを75％以上高めるPro-Routerである。",
+   "source_url": "https://arxiv.org/abs/2608.28726",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 478
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.01392",
+   "identity_tokens": [
+    "arXiv:2406.01392"
+   ],
+   "title": "Sparsity-Accelerated Training for Large Language Models",
+   "reason": "事前学習済みLLMの活性化ニューロンのスパース性を利用して継続事前学習と教師あり微調整を高速化するSATの提案であり、スループット45％改善も学習工程の話であって、推論・サービング・デコードへの直接貢献は要旨に確認できない学習単独の高速化である。",
+   "source_url": "https://arxiv.org/abs/2406.01392",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 479
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2605.17164",
+   "identity_tokens": [
+    "arXiv:2605.17164"
+   ],
+   "title": "Charon: A Unified and Fine-Grained Simulator for Large-Scale LLM Training and Inference",
+   "reason": "並列戦略やハードウェア構成の設計空間に対し学習と推論を統一的に細粒度シミュレーションするCharonを提案し、予測誤差5.35％未満を達成するとともに実推論デプロイ事例でエンジニア調整済みベースラインを超える構成を発見した、推論基盤の計測・シミュレーションである。",
+   "source_url": "https://arxiv.org/abs/2605.17164",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 480
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2509.24406",
+   "identity_tokens": [
+    "arXiv:2509.24406"
+   ],
+   "title": "Muon: Training and Trade-offs with Latent Attention and MoE",
+   "reason": "Muon最適化器の収束理論とMLA・MoEとの相乗効果を小中規模デコーダの学習で検証した研究で、MLAとMoE併用時のメモリ68％削減や推論3.2倍高速化にも触れるが、主たる貢献は学習の計算・時間トレードオフと最適化器の性質であり推論機構の提案ではない。",
+   "source_url": "https://arxiv.org/abs/2509.24406",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 481
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1007/s10707-025-00541-3",
+   "identity_tokens": [
+    "DOI:10.1007/s10707-025-00541-3"
+   ],
+   "title": "Fair routing in MoE for distributed spatial data: a combinatorial multi-armed bandit solution",
+   "reason": "分散空間データ生成向け大規模モデルの学習・推論コストに対し、疎に活性化するMoEのtop-kルーティングが生む負荷不均衡を組合せ多腕バンディットで公平化する提案であり、MoEルーティングとして関連はあるが対象は空間データ応用でLLM推論サービングへの直接適用は要旨からは不明瞭である。",
+   "source_url": "https://doi.org/10.1007/s10707-025-00541-3",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 482
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/TEMSCONGlobal64363.2025.11238257",
+   "identity_tokens": [
+    "DOI:10.1109/TEMSCONGlobal64363.2025.11238257"
+   ],
+   "title": "Optimizing Deployment Strategies for Large Language Models: A Comparative Analysis of Cloud, On-Premises, and Hybrid Solutions for Enhanced Efficiency and Continuous Improvement",
+   "reason": "LLMのクラウド・オンプレミス・ハイブリッドという配置戦略をコストやセキュリティ、電力効率や拡張性の観点で比較分析した論考であり、デプロイメントには関連するものの新たな推論システムや最適化機構の技術的提案はなく、貢献は運用上の比較検討にとどまる。",
+   "source_url": "https://doi.org/10.1109/TEMSCONGlobal64363.2025.11238257",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 483
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2601.15380",
+   "identity_tokens": [
+    "arXiv:2601.15380"
+   ],
+   "title": "You Need Better Attention Priors",
+   "reason": "注意機構をエントロピー最適輸送として一般化し学習可能な事前分布を持つGOATを導入して、FlashAttention等の最適化カーネルと互換性を保ちながら注意シンクへの説明と対処を与え位置情報を注意計算自体へ取り込む、新しい注意機構の提案である。",
+   "source_url": "https://arxiv.org/abs/2601.15380",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 484
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2604.00317",
+   "identity_tokens": [
+    "arXiv:2604.00317"
+   ],
+   "title": "From Skew to Symmetry: Node-Interconnect Multi-Path Balancing with Execution-time Planning for Modern GPU Clusters",
+   "reason": "GPUクラスタの異種インターコネクトでトラフィック偏りによりリンクが飽和する問題に対し、実行時計画で多経路へ容量正規化した混雑最小化の再配分を行うNIMBLEを提案し、偏ったAll-to-Allvで最大5.2倍、LLM MoEのエンドツーエンドでも1.35倍の改善を示す分散実行基盤である。",
+   "source_url": "https://arxiv.org/abs/2604.00317",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 485
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2510.15882",
+   "identity_tokens": [
+    "arXiv:2510.15882"
+   ],
+   "title": "FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern",
+   "reason": "マルチノードLLM配置でNVLink単独利用が帯域上限となる問題に対し、PCIeとRDMA NICを含む異種リンクを集約する集合通信フレームワークFlexLinkを提案し、適応的負荷分散でAllReduceやAllGatherの帯域を最大27％高めるNCCL互換の通信高速化である。",
+   "source_url": "https://arxiv.org/abs/2510.15882",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 486
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2604.07753",
+   "identity_tokens": [
+    "arXiv:2604.07753"
+   ],
+   "title": "Symbiotic-MoE: Unlocking the Synergy between Generation and Understanding",
+   "reason": "画像生成を備えた大規模マルチモーダルモデルで生成と理解の勾配競合を、専門家を課題別に分離し共有専門家を橋渡しとするSymbiotic-MoEと漸進的学習戦略で解く事前学習フレームワークであり、MoE構造には関わるが目的は学習時の干渉解消で推論高速化の機構ではない。",
+   "source_url": "https://arxiv.org/abs/2604.07753",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 487
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2307.02321",
+   "identity_tokens": [
+    "arXiv:2307.02321"
+   ],
+   "title": "MSViT: Dynamic Mixed-scale Tokenization for Vision Transformers",
+   "reason": "Vision Transformerの入力パッチを内容に応じて動的混合スケールでトークン化するMSViTの提案であり、分類とセグメンテーションでの精度・複雑度トレードオフ改善が対象で、LLMの推論やサービング、KVキャッシュ等への直接貢献は要旨にない視覚モデル研究である。",
+   "source_url": "https://arxiv.org/abs/2307.02321",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 488
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.18653/v1/2025.acl-long.1603",
+   "identity_tokens": [
+    "DOI:10.18653/v1/2025.acl-long.1603"
+   ],
+   "title": "Design Choices for Extending the Context Length of Visual Language Models",
+   "reason": "視覚言語モデルの長文脈化についてデータレシピETVLMや位置拡張M-RoPE++、混合解像度学習等の設計選択を大規模実験で比較し128K文脈のGiraffeを構築した研究であり、長文脈処理には関連するが主眼は指示チューニングによるモデル拡張で推論システムの機構ではない。",
+   "source_url": "https://doi.org/10.18653/v1/2025.acl-long.1603",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 489
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2410.16070",
+   "identity_tokens": [
+    "arXiv:2410.16070"
+   ],
+   "title": "On-Device LLMs for SMEs: Challenges and Opportunities",
+   "reason": "中小企業向けオンデバイスLLM配置についてGPUやTPU等のハードウェア要件とフレームワーク互換性やOS最適化等のソフトウェア面を整理した系統的レビューであり、オンデバイス推論の課題整理として関連はあるが新たな推論機構や実測システムの提案は含まれない。",
+   "source_url": "https://arxiv.org/abs/2410.16070",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 490
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2510.03784",
+   "identity_tokens": [
+    "arXiv:2510.03784"
+   ],
+   "title": "Performance-Efficiency Tradeoffs in Transformers: An Approximation Theory Perspective",
+   "reason": "Transformerの表現力と効率のトレードオフを近似理論から解析し、層ごとの注意ヘッド数とヘッド次元の配分指針やsoftmaxの飽和現象を示した理論研究であり、モデル効率の設計には示唆を与えるが推論システムやカーネルの実装・実測による直接貢献はない。",
+   "source_url": "https://arxiv.org/abs/2510.03784",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 491
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.08374",
+   "identity_tokens": [
+    "arXiv:2605.08374"
+   ],
+   "title": "MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs",
+   "reason": "LLMエージェントのエピソード記憶について、記憶生成の来歴DAG上をQ値の信用伝播で評価するMemQの提案であり、対象はエージェントの経験検索と再利用であって、LLM推論の実行機構やKVキャッシュ、サービングへの直接貢献は要旨に確認できない。",
+   "source_url": "https://arxiv.org/abs/2605.08374",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 492
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.00019",
+   "identity_tokens": [
+    "arXiv:2504.00019"
+   ],
+   "title": "ObscuraCoder: Powering Efficient Code LM Pre-Training Via Obfuscation Grounding",
+   "reason": "難読化コードと原文のペアObscuraXを用いたコードLMの事前学習レシピObscuraCoderの研究であり、コード理解や補完の能力向上が成果で、学習データ効率の改善にとどまり推論・デコード・サービングの高速化への直接貢献はない事前学習研究である。",
+   "source_url": "https://arxiv.org/abs/2504.00019",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 493
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.15720",
+   "identity_tokens": [
+    "arXiv:2602.15720"
+   ],
+   "title": "ToaSt: Token Channel Selection and Structured Pruning for Efficient ViT",
+   "reason": "Vision Transformerの計算コスト削減として注意の構造化プルーニングと推論時のトークンチャネル選択を組み合わせたToaStの提案であり、対象はDeiTやSwin等の視覚モデルのFLOPs削減で、LLM推論システムへの直接貢献は要旨に確認できない。",
+   "source_url": "https://arxiv.org/abs/2602.15720",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 494
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2505.11945",
+   "identity_tokens": [
+    "arXiv:2505.11945"
+   ],
+   "title": "Top–Down Compression: Revisit Efficient Vision Token Projection for Visual Instruction Tuning",
+   "reason": "視覚指示チューニングにおける視覚トークン射影を上位からの圧縮で効率化し視覚トークンを75〜95％削減するLLaVA-Meteorの提案であり、VLMのトークン削減として推論効率に関連はするが主目的は視覚・言語アライメントの学習手法でありサービング機構の提案ではない。",
+   "source_url": "https://arxiv.org/abs/2505.11945",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 495
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2604.00025",
+   "identity_tokens": [
+    "arXiv:2604.00025"
+   ],
+   "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+   "reason": "大規模モデルが冗長な生成で小規模モデルに劣る逆スケーリング現象を31モデルの評価で分析し、簡潔さ制約というプロンプト設計で逆転することを示した能力評価研究であり、推論システムやデコード機構への技術的貢献は要旨にない。",
+   "source_url": "https://arxiv.org/abs/2604.00025",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 496
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:52abfa3bf570e7ff43d02cde2c9843ab1729e0f4",
+   "identity_tokens": [
+    "SemanticScholar:52abfa3bf570e7ff43d02cde2c9843ab1729e0f4"
+   ],
+   "title": "Towards Carbon-efficient LLM Life Cycle",
+   "reason": "生成AIのライフサイクル炭素排出をCPU・GPUのパラメータ化モデルで推定し、生成推論向けにバッチングやモデルシャーディング、並列化の組合せで炭素を17％改善できること等を示した研究であり、推論の計測・最適化には関連するが主眼は炭素モデリングでサービング機構自体の提案は薄い。",
+   "source_url": "https://www.semanticscholar.org/paper/52abfa3bf570e7ff43d02cde2c9843ab1729e0f4",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 497
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "SemanticScholar:f6b06fd0d5934422f800efe3677bcb209bec91ee",
+   "identity_tokens": [
+    "SemanticScholar:f6b06fd0d5934422f800efe3677bcb209bec91ee"
+   ],
+   "title": "T OWARDS P RIVACY -P RESERVING LLM I NFERENCE VIA C OLLABORATIVE O BFUSCATION (T ECHNICAL R EPORT )",
+   "reason": "クラウドLLM推論のプライバシーに対し、入力データとモデルパラメータを協調的に変換する共変難読化AloePriを提案し、既存LMaaS基盤と互換のまま671Bモデルで平文推論と同等の効率と精度損失0〜3.5％を実システムで示したプライバシー保護推論機構である。",
+   "source_url": "https://www.semanticscholar.org/paper/f6b06fd0d5934422f800efe3677bcb209bec91ee",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 498
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2605.08580",
+   "identity_tokens": [
+    "arXiv:2605.08580"
+   ],
+   "title": "Slipstream: Trajectory-Grounded Compaction Validation for Long-Horizon Agents",
+   "reason": "長期間エージェントの文脈圧縮を非同期に並行実行し、継続するエージェント推論と照らして要約を検証するSlipstreamにより精度向上とエンドツーエンド遅延最大39.7％削減を示した研究であり、エージェント実行基盤として関連はあるが対象は圧縮検証ワークフローでLLMサービング中核機構ではない。",
+   "source_url": "https://arxiv.org/abs/2605.08580",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 499
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2604.14339",
+   "identity_tokens": [
+    "arXiv:2604.14339"
+   ],
+   "title": "Shuffle the Context: RoPE-Perturbed Self-Distillation for Long-Context Adaptation",
+   "reason": "短文脈モデルを長文脈へ適応させる際の位置依存の脆さを、RoPEインデックスを摂動した自己蒸留という学習正則化で改善する研究であり、RULER等での精度向上は微調整工程の成果であって推論時の機構やサービングへの直接貢献はない。",
+   "source_url": "https://arxiv.org/abs/2604.14339",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T19:00:00+09:00",
+   "last_checked_at": "2026-11-23T19:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 500
+  }
+ ]
+}
