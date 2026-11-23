@@ -1,0 +1,326 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-59c9072e2ec56966-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-59c9072e2ec5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.23919/date69613.2026.11539577",
+    "arXiv:2601.20168",
+    "arXiv:2601.20655"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f5c0e896e35a2e1c5ab0047632eff8aa8660d0cf",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:07:24.421800+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539577",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20168",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20655",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Efficient Token Pruning for LLaDA-V",
+      "source_url": "https://arxiv.org/abs/2601.20168",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large multimodal models, such as LLaDA-V, have demonstrated impressive capabilities in vision-language understanding and generation. However, their bidirectional attention mechanism and diffusion-style iterative denoising paradigm introduce significant computational overhead, as visual tokens are repeatedly processed across all layers and denoising steps. In this work, we conduct an in-depth attention analysis and reveal that, unlike autoregressive decoders, LLaDA-V aggregates cross-modal information predominantly in middle-to-late layers, leading to delayed semantic alignment. Motivated by this observation, we propose a structured token pruning strategy inspired by FastV, selectively removing a proportion of visual tokens at designated layers to reduce FLOPs while preserving critical semantic information. To the best of our knowledge, this is the first work to investigate structured token pruning in diffusion-based large multimodal models. Unlike FastV, which focuses on shallow-layer pruning, our method targets the middle-to-late layers of the first denoising step to align with LLaDA-V's delayed attention aggregation to maintain output quality, and the first-step pruning strategy reduces the computation across all subsequent steps. Our framework provides an empirical basis for efficient LLaDA-V inference and highlights the potential of vision-aware pruning in diffusion-based multimodal models. Across multiple benchmarks, our best configuration reduces computational cost by up to 65% while preserving an average of 95% task performance.",
+      "identifiers": [
+        "SemanticScholar:2c2d0b0be6c3836427abe850e768bbd19841bd00"
+      ],
+      "semantic_scholar_id": "2c2d0b0be6c3836427abe850e768bbd19841bd00",
+      "canonical_id": "arXiv:2601.20168",
+      "arxiv_id": "2601.20168",
+      "doi": "10.48550/arXiv.2601.20168",
+      "authors": [
+        "Zhewen Wan",
+        "Tian-Chen Song",
+        "Chen-Long Lin",
+        "Zhi-Yong Zhao",
+        "Xianpeng Lang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OnePiece: A Large-Scale Distributed Inference System with RDMA for Complex AI-Generated Content (AIGC) Workflows",
+      "source_url": "https://arxiv.org/abs/2601.20655",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of AI-generated content (AIGC) has enabled high-quality creative production across diverse domains, yet existing systems face critical inefficiencies in throughput, resource utilization, and scalability under concurrent workloads. This paper introduces OnePiece, a large-scale distributed inference system with RDMA optimized for multi-stage AIGC workflows. By decomposing pipelines into fine-grained microservices and leveraging one-sided RDMA communication, OnePiece significantly reduces inter-node latency and CPU overhead while improving GPU utilization. The system incorporates a novel double-ring buffer design to resolve deadlocks in RDMA-aware memory access without CPU involvement. Additionally, a dynamic Node Manager allocates resources elastically across workflow stages in response to real-time load. Experimental results demonstrate that OnePiece reduces GPU resource consumption by 16x in Wan2.1 image-to-video generation compared to monolithic inference pipelines, offering a scalable, fault-tolerant, and efficient solution for production AIGC environments.",
+      "identifiers": [
+        "SemanticScholar:8715aa1ed829ab52e2d29ec70c5d7916f434a5e5"
+      ],
+      "semantic_scholar_id": "8715aa1ed829ab52e2d29ec70c5d7916f434a5e5",
+      "canonical_id": "arXiv:2601.20655",
+      "arxiv_id": "2601.20655",
+      "doi": "10.48550/arXiv.2601.20655",
+      "authors": [
+        "Jun-Da Chen",
+        "N. Xu",
+        "G.-S. Huang",
+        "Bo Zhou",
+        "Stephen Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dolphium: Co-Optimizing Quantization Dataflow and Paradigms on Poly-Hierarchical NPUs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539577",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Poly-hierarchical NPUs integrate distributed memory modules with heterogeneous computation units, posing significant challenges for mapping quantized operators. The difficulty arises from the need to coordinate data transfers across memory hierarchies and to assign diverse operations to suitable computation units. In this work, we systematically construct the mapping space from quantization to dataflows by addressing three key aspects: generation of NPU-friendly computation flows, integrated operation–data co-mapping, and determination of transfer granularity and frequency. Building on this foundation, we further exploit quantization dataflows to guide the selection of quantization paradigms. Compared with the state-of-the-art quantization compiler, our mapping achieves a 1.67–2.03× speedup. Moreover, the selected quantization paradigms deliver an average 2.18× efficiency improvement on NPUs without accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c"
+      ],
+      "semantic_scholar_id": "da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c",
+      "doi": "10.23919/DATE69613.2026.11539577",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539577",
+      "authors": [
+        "Xiu-Ping Cui",
+        "Cheng-Rui Zhang",
+        "Xiang Chen",
+        "Yun Liang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.20168",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20168",
+        "id:SemanticScholar:2c2d0b0be6c3836427abe850e768bbd19841bd00",
+        "id:arXiv:2601.20168",
+        "title:efficient token pruning for lladav",
+        "url:https://arxiv.org/abs/2601.20168"
+      ],
+      "record": {
+        "title": "Efficient Token Pruning for LLaDA-V",
+        "source_url": "https://arxiv.org/abs/2601.20168",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based large multimodal models, such as LLaDA-V, have demonstrated impressive capabilities in vision-language understanding and generation. However, their bidirectional attention mechanism and diffusion-style iterative denoising paradigm introduce significant computational overhead, as visual tokens are repeatedly processed across all layers and denoising steps. In this work, we conduct an in-depth attention analysis and reveal that, unlike autoregressive decoders, LLaDA-V aggregates cross-modal information predominantly in middle-to-late layers, leading to delayed semantic alignment. Motivated by this observation, we propose a structured token pruning strategy inspired by FastV, selectively removing a proportion of visual tokens at designated layers to reduce FLOPs while preserving critical semantic information. To the best of our knowledge, this is the first work to investigate structured token pruning in diffusion-based large multimodal models. Unlike FastV, which focuses on shallow-layer pruning, our method targets the middle-to-late layers of the first denoising step to align with LLaDA-V's delayed attention aggregation to maintain output quality, and the first-step pruning strategy reduces the computation across all subsequent steps. Our framework provides an empirical basis for efficient LLaDA-V inference and highlights the potential of vision-aware pruning in diffusion-based multimodal models. Across multiple benchmarks, our best configuration reduces computational cost by up to 65% while preserving an average of 95% task performance.",
+        "identifiers": [
+          "SemanticScholar:2c2d0b0be6c3836427abe850e768bbd19841bd00"
+        ],
+        "semantic_scholar_id": "2c2d0b0be6c3836427abe850e768bbd19841bd00",
+        "canonical_id": "arXiv:2601.20168",
+        "arxiv_id": "2601.20168",
+        "doi": "10.48550/arXiv.2601.20168",
+        "authors": [
+          "Zhewen Wan",
+          "Tian-Chen Song",
+          "Chen-Long Lin",
+          "Zhi-Yong Zhao",
+          "Xianpeng Lang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 299,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.20655",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20655",
+        "id:SemanticScholar:8715aa1ed829ab52e2d29ec70c5d7916f434a5e5",
+        "id:arXiv:2601.20655",
+        "title:onepiece a largescale distributed inference system with rdma for complex aigenerated content aigc workflows",
+        "url:https://arxiv.org/abs/2601.20655"
+      ],
+      "record": {
+        "title": "OnePiece: A Large-Scale Distributed Inference System with RDMA for Complex AI-Generated Content (AIGC) Workflows",
+        "source_url": "https://arxiv.org/abs/2601.20655",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid growth of AI-generated content (AIGC) has enabled high-quality creative production across diverse domains, yet existing systems face critical inefficiencies in throughput, resource utilization, and scalability under concurrent workloads. This paper introduces OnePiece, a large-scale distributed inference system with RDMA optimized for multi-stage AIGC workflows. By decomposing pipelines into fine-grained microservices and leveraging one-sided RDMA communication, OnePiece significantly reduces inter-node latency and CPU overhead while improving GPU utilization. The system incorporates a novel double-ring buffer design to resolve deadlocks in RDMA-aware memory access without CPU involvement. Additionally, a dynamic Node Manager allocates resources elastically across workflow stages in response to real-time load. Experimental results demonstrate that OnePiece reduces GPU resource consumption by 16x in Wan2.1 image-to-video generation compared to monolithic inference pipelines, offering a scalable, fault-tolerant, and efficient solution for production AIGC environments.",
+        "identifiers": [
+          "SemanticScholar:8715aa1ed829ab52e2d29ec70c5d7916f434a5e5"
+        ],
+        "semantic_scholar_id": "8715aa1ed829ab52e2d29ec70c5d7916f434a5e5",
+        "canonical_id": "arXiv:2601.20655",
+        "arxiv_id": "2601.20655",
+        "doi": "10.48550/arXiv.2601.20655",
+        "authors": [
+          "Jun-Da Chen",
+          "N. Xu",
+          "G.-S. Huang",
+          "Bo Zhou",
+          "Stephen Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 299,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539577",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539577",
+        "id:SemanticScholar:da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c",
+        "title:dolphium cooptimizing quantization dataflow and paradigms on polyhierarchical npus",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539577"
+      ],
+      "record": {
+        "title": "Dolphium: Co-Optimizing Quantization Dataflow and Paradigms on Poly-Hierarchical NPUs",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539577",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Poly-hierarchical NPUs integrate distributed memory modules with heterogeneous computation units, posing significant challenges for mapping quantized operators. The difficulty arises from the need to coordinate data transfers across memory hierarchies and to assign diverse operations to suitable computation units. In this work, we systematically construct the mapping space from quantization to dataflows by addressing three key aspects: generation of NPU-friendly computation flows, integrated operation–data co-mapping, and determination of transfer granularity and frequency. Building on this foundation, we further exploit quantization dataflows to guide the selection of quantization paradigms. Compared with the state-of-the-art quantization compiler, our mapping achieves a 1.67–2.03× speedup. Moreover, the selected quantization paradigms deliver an average 2.18× efficiency improvement on NPUs without accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c"
+        ],
+        "semantic_scholar_id": "da5e6d82f363b96e94b550d2dd56ba0e5a2eb37c",
+        "doi": "10.23919/DATE69613.2026.11539577",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539577",
+        "authors": [
+          "Xiu-Ping Cui",
+          "Cheng-Rui Zhang",
+          "Xiang Chen",
+          "Yun Liang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:78f5a49cc87734b27dbd47b5697b54a18d4ba71ecba11a8cb563fed806a50ecf",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,502 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a2c124197fa3632c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a2c124197fa3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2302.14705",
+    "arXiv:2305.14405",
+    "arXiv:2512.06869",
+    "arXiv:2602.00247",
+    "arXiv:2608.12385"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f5c0e896e35a2e1c5ab0047632eff8aa8660d0cf",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:07:24.139098+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2302.14705",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.14405",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.06869",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.00247",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.12385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2602.00247",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient inference in Large Vision-Language Models is constrained by the high cost of processing thousands of visual tokens, yet it remains unclear which tokens and computations can be safely removed. While attention scores are commonly used to estimate visual token importance, they are an imperfect proxy for actual contribution. We show that Attention Contribution, which weights attention probabilities by value vector magnitude, provides a more accurate criterion for visual token selection. Our empirical analysis reveals that visual attention sinks are functionally heterogeneous, comprising Probability Dumps with low contribution that can be safely pruned, and Structural Anchors with high contribution essential for maintaining model performance. Further, we identify substantial redundancy in Feed-Forward Networks (FFNs) associated with visual tokens, particularly in intermediate layers where image tokens exhibit linear behavior. Based on our findings, we introduce CAPA (Contribution-Aware Pruning and FFN Approximation), a dual-strategy framework that prunes visual tokens using attention contribution at critical functional transitions and reduces FFN computation through efficient linear approximations. Experiments on various benchmarks across baselines show that CAPA achieves competent efficiency--performance trade-offs with improved robustness.",
+      "identifiers": [
+        "SemanticScholar:4d7d63a23b234094aaafb48f056e5bffece36669"
+      ],
+      "semantic_scholar_id": "4d7d63a23b234094aaafb48f056e5bffece36669",
+      "canonical_id": "arXiv:2602.00247",
+      "arxiv_id": "2602.00247",
+      "doi": "10.48550/arXiv.2602.00247",
+      "authors": [
+        "Samyak Jha",
+        "Junho Kim"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 297,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Decode-Branch Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
+      "source_url": "https://arxiv.org/abs/2608.12385",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models serve ever more requests, cumulative inference cost is growing relative to the one-time cost of training. In typical serving, prompt prefill runs in parallel and is compute-bound, whereas autoregressive decode is sequential and memory-traffic-bound. Conventional width or depth scaling raises both costs together, since every added layer is evaluated in both phases and enlarges the weights read at each decode step. We instead ask whether additional learned computation can be allocated to continuation prediction while preserving prompt-wide primary computation and a single KV cache. We realize this with the Decode-Branch Transformer. Its primary path alone processes the prompt and writes the KV cache; the decode branch is omitted during prefill and activated only from the final prompt position onward, adding continuation computation without writing state or affecting the primary path. The paths share attention, MLP, and output matrices, using separate token embeddings with lightweight coupling. Grouped decode reuses loaded weight tiles and the primary KV cache across both paths, so the added arithmetic does not proportionally increase dominant memory traffic or decode latency. Across matched-token comparisons, Decode-Branch achieves lower validation loss across architectures and data settings. In MoE models, the primary and branch expert fan-outs become independent knobs for trading prompt cost, decode cost, and predictive quality. We study two expert-allocation regimes, holding prefill or decode computation fixed, and expose a prefill-decode-quality trade-off enabled by phase-specific expert allocation.",
+      "identifiers": [
+        "SemanticScholar:c4234bace133f53eae22ec30e47d3411806ac156"
+      ],
+      "semantic_scholar_id": "c4234bace133f53eae22ec30e47d3411806ac156",
+      "canonical_id": "arXiv:2608.12385",
+      "arxiv_id": "2608.12385",
+      "doi": "10.48550/arXiv.2608.12385",
+      "authors": [
+        "Li-Ming Liu",
+        "Mingze Wang",
+        "Tuo Zhao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 115,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference With Transformers",
+      "source_url": "https://arxiv.org/abs/2302.14705",
+      "year": 2023,
+      "published": "2023-02-28",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 70,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention-based transformer models have achieved tremendous success in the domain of natural language processing. Despite their efficacy, accelerating the transformer is challenging due to its quadratic computational complexity and large activation sizes. Existing transformer accelerators attempt to prune its tokens to reduce memory access, albeit with high compute overheads. Moreover, previous works directly operate on large matrices involved in the attention operation, which limits hardware utilization. In order to address these challenges, this work proposes a novel dynamic inference scheme, DynaTran, which prunes activations at runtime with low overhead, substantially reducing the number of ineffectual operations. This improves the throughput of transformer inference. We further propose tiling the matrices in transformer operations along with diverse dataflows to improve data reuse, thus, enabling higher energy efficiency. To effectively implement these methods, we propose AccelTran, a novel accelerator architecture for transformers. Extensive experiments with different models and benchmarks demonstrate that DynaTran achieves higher accuracy than the state-of-the-art top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> hardware-aware pruning strategy while attaining up to <inline-formula> <tex-math notation=\"LaTeX\">$1.2\\times $ </tex-math></inline-formula> higher sparsity. One of our proposed accelerators, AccelTran-Edge, achieves 330K<inline-formula> <tex-math notation=\"LaTeX\">$\\times $ </tex-math></inline-formula> higher throughput with 93K<inline-formula> <tex-math notation=\"LaTeX\">$\\times $ </tex-math></inline-formula> lower energy requirement when compared to a Raspberry Pi device. On the other hand, AccelTran-Server achieves <inline-formula> <tex-math notation=\"LaTeX\">$5.73\\times $ </tex-math></inline-formula> higher throughput and <inline-formula> <tex-math notation=\"LaTeX\">$3.69\\times $ </tex-math></inline-formula> lower energy consumption compared to the state-of-the-art transformer co-processor, Energon. The simulation source code is available at <uri>https://github.com/jha-lab/acceltran</uri>.",
+      "identifiers": [
+        "SemanticScholar:a7d298cbbac81bd47396edbf6a97fbc1fa0cf5c6"
+      ],
+      "semantic_scholar_id": "a7d298cbbac81bd47396edbf6a97fbc1fa0cf5c6",
+      "canonical_id": "arXiv:2302.14705",
+      "arxiv_id": "2302.14705",
+      "doi": "10.1109/TCAD.2023.3273992",
+      "authors": [
+        "Shikhar Tuli",
+        "N. K. Jha"
+      ],
+      "priority": 70,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 70,
+        "citation_count": 70,
+        "total": 70,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1364,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Role-aware Heuristic Episodic Attention for Conversational LLMs",
+      "source_url": "https://arxiv.org/abs/2512.06869",
+      "year": 2025,
+      "published": "2025-12-07",
+      "venue": "Volume 1",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models often lose track of persistent instructions and relevant information as multi-turn conversations grow. We study this cumulative contextual decay through three related failure modes: attention pollution, dilution, and drift. We propose REA(Role-aware Heuristic Episodic Attention), a context-management framework that assigns different persistence and representation policies to instructions and episodic interactions. Instructional Memory retains identified global constraints in a dedicated prefix. Episodic Memory preserves user inputs and compresses model replies, while heuristic retrieval selects raw text, compressed representations, or omission for each historical turn. On Long-MT-Bench+, REA improves the judge score from 6.32 to 7.36 on a 10-point scale, a 16.5% relative gain over the Vanilla baseline, and reduces average latency by 2.91x. Additional evaluations show aggregate gains on three backbones spanning 1.7B-7B parameters and on Chinese and English role-playing tasks. These results support role-aware context management as a practical approach to maintaining conversational continuity and instruction adherence.",
+      "identifiers": [
+        "SemanticScholar:ef6224c301d8cd75af3f986768c8a790e303e07e"
+      ],
+      "semantic_scholar_id": "ef6224c301d8cd75af3f986768c8a790e303e07e",
+      "canonical_id": "arXiv:2512.06869",
+      "arxiv_id": "2512.06869",
+      "doi": "10.18653/2026.aacl-long.183",
+      "authors": [
+        "Wan-Yang Hong",
+        "Zhao-Ning Zhang",
+        "Yi Chen",
+        "Li-Bo Zhang",
+        "Bai-Hui Liu",
+        "Lin-Bo Qiao",
+        "Zhi-Liang Tian",
+        "Dong-Sheng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NeuralMatrix: Compute the Entire Neural Networks with Linear Matrix Operations for Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2305.14405",
+      "year": 2023,
+      "published": "2023-05-23",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inherent diversity of computation types within the deep neural network (DNN) models often requires a variety of specialized units in hardware processors, which limits computational efficiency, increasing both inference latency and power consumption, especially when the hardware processor needs to support and execute different neural networks. In this study, we introduce NeuralMatrix, which elastically transforms the computations of entire DNNs into linear matrix operations. This transformation allows seamless execution of various DNN models all with matrix operations and paves the way for running versatile DNN models with a single General Matrix Multiplication (GEMM) accelerator.Extensive experiments with both CNN and transformer-based models demonstrate the potential of NeuralMatrix to accurately and efficiently execute a wide range of DNN models, achieving 2.17-38.72 times computation efficiency (i.e., throughput per power) compared to CPUs, GPUs, and SoC platforms. This level of efficiency is usually only attainable with the accelerator designed for a specific neural network.",
+      "identifiers": [
+        "SemanticScholar:3dd4dac8289f41b9b8504eff329f5e83288b85d1"
+      ],
+      "semantic_scholar_id": "3dd4dac8289f41b9b8504eff329f5e83288b85d1",
+      "canonical_id": "arXiv:2305.14405",
+      "arxiv_id": "2305.14405",
+      "authors": [
+        "Ruiqi Sun",
+        "Si-Wei Ye",
+        "Jie Zhao",
+        "Xin He",
+        "Jian-Zhe Lin",
+        "Yi-Ran Li",
+        "An Zou"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1280,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.00247",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.00247",
+        "id:SemanticScholar:4d7d63a23b234094aaafb48f056e5bffece36669",
+        "id:arXiv:2602.00247",
+        "title:capa contributionaware pruning and ffn approximation for efficient large visionlanguage models",
+        "url:https://arxiv.org/abs/2602.00247"
+      ],
+      "record": {
+        "title": "CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2602.00247",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient inference in Large Vision-Language Models is constrained by the high cost of processing thousands of visual tokens, yet it remains unclear which tokens and computations can be safely removed. While attention scores are commonly used to estimate visual token importance, they are an imperfect proxy for actual contribution. We show that Attention Contribution, which weights attention probabilities by value vector magnitude, provides a more accurate criterion for visual token selection. Our empirical analysis reveals that visual attention sinks are functionally heterogeneous, comprising Probability Dumps with low contribution that can be safely pruned, and Structural Anchors with high contribution essential for maintaining model performance. Further, we identify substantial redundancy in Feed-Forward Networks (FFNs) associated with visual tokens, particularly in intermediate layers where image tokens exhibit linear behavior. Based on our findings, we introduce CAPA (Contribution-Aware Pruning and FFN Approximation), a dual-strategy framework that prunes visual tokens using attention contribution at critical functional transitions and reduces FFN computation through efficient linear approximations. Experiments on various benchmarks across baselines show that CAPA achieves competent efficiency--performance trade-offs with improved robustness.",
+        "identifiers": [
+          "SemanticScholar:4d7d63a23b234094aaafb48f056e5bffece36669"
+        ],
+        "semantic_scholar_id": "4d7d63a23b234094aaafb48f056e5bffece36669",
+        "canonical_id": "arXiv:2602.00247",
+        "arxiv_id": "2602.00247",
+        "doi": "10.48550/arXiv.2602.00247",
+        "authors": [
+          "Samyak Jha",
+          "Junho Kim"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 297,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12385",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.12385",
+        "id:SemanticScholar:c4234bace133f53eae22ec30e47d3411806ac156",
+        "id:arXiv:2608.12385",
+        "title:decodebranch transformers decoupling the primary prefill path from additional decode computation",
+        "url:https://arxiv.org/abs/2608.12385"
+      ],
+      "record": {
+        "title": "Decode-Branch Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
+        "source_url": "https://arxiv.org/abs/2608.12385",
+        "year": 2026,
+        "published": "2026-07-31",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models serve ever more requests, cumulative inference cost is growing relative to the one-time cost of training. In typical serving, prompt prefill runs in parallel and is compute-bound, whereas autoregressive decode is sequential and memory-traffic-bound. Conventional width or depth scaling raises both costs together, since every added layer is evaluated in both phases and enlarges the weights read at each decode step. We instead ask whether additional learned computation can be allocated to continuation prediction while preserving prompt-wide primary computation and a single KV cache. We realize this with the Decode-Branch Transformer. Its primary path alone processes the prompt and writes the KV cache; the decode branch is omitted during prefill and activated only from the final prompt position onward, adding continuation computation without writing state or affecting the primary path. The paths share attention, MLP, and output matrices, using separate token embeddings with lightweight coupling. Grouped decode reuses loaded weight tiles and the primary KV cache across both paths, so the added arithmetic does not proportionally increase dominant memory traffic or decode latency. Across matched-token comparisons, Decode-Branch achieves lower validation loss across architectures and data settings. In MoE models, the primary and branch expert fan-outs become independent knobs for trading prompt cost, decode cost, and predictive quality. We study two expert-allocation regimes, holding prefill or decode computation fixed, and expose a prefill-decode-quality trade-off enabled by phase-specific expert allocation.",
+        "identifiers": [
+          "SemanticScholar:c4234bace133f53eae22ec30e47d3411806ac156"
+        ],
+        "semantic_scholar_id": "c4234bace133f53eae22ec30e47d3411806ac156",
+        "canonical_id": "arXiv:2608.12385",
+        "arxiv_id": "2608.12385",
+        "doi": "10.48550/arXiv.2608.12385",
+        "authors": [
+          "Li-Ming Liu",
+          "Mingze Wang",
+          "Tuo Zhao"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 115,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2302.14705",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2023.3273992",
+        "id:SemanticScholar:a7d298cbbac81bd47396edbf6a97fbc1fa0cf5c6",
+        "id:arXiv:2302.14705",
+        "title:acceltran a sparsityaware accelerator for dynamic inference with transformers",
+        "url:https://arxiv.org/abs/2302.14705"
+      ],
+      "record": {
+        "title": "AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference With Transformers",
+        "source_url": "https://arxiv.org/abs/2302.14705",
+        "year": 2023,
+        "published": "2023-02-28",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 70,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-attention-based transformer models have achieved tremendous success in the domain of natural language processing. Despite their efficacy, accelerating the transformer is challenging due to its quadratic computational complexity and large activation sizes. Existing transformer accelerators attempt to prune its tokens to reduce memory access, albeit with high compute overheads. Moreover, previous works directly operate on large matrices involved in the attention operation, which limits hardware utilization. In order to address these challenges, this work proposes a novel dynamic inference scheme, DynaTran, which prunes activations at runtime with low overhead, substantially reducing the number of ineffectual operations. This improves the throughput of transformer inference. We further propose tiling the matrices in transformer operations along with diverse dataflows to improve data reuse, thus, enabling higher energy efficiency. To effectively implement these methods, we propose AccelTran, a novel accelerator architecture for transformers. Extensive experiments with different models and benchmarks demonstrate that DynaTran achieves higher accuracy than the state-of-the-art top-<inline-formula> <tex-math notation=\"LaTeX\">$k$ </tex-math></inline-formula> hardware-aware pruning strategy while attaining up to <inline-formula> <tex-math notation=\"LaTeX\">$1.2\\times $ </tex-math></inline-formula> higher sparsity. One of our proposed accelerators, AccelTran-Edge, achieves 330K<inline-formula> <tex-math notation=\"LaTeX\">$\\times $ </tex-math></inline-formula> higher throughput with 93K<inline-formula> <tex-math notation=\"LaTeX\">$\\times $ </tex-math></inline-formula> lower energy requirement when compared to a Raspberry Pi device. On the other hand, AccelTran-Server achieves <inline-formula> <tex-math notation=\"LaTeX\">$5.73\\times $ </tex-math></inline-formula> higher throughput and <inline-formula> <tex-math notation=\"LaTeX\">$3.69\\times $ </tex-math></inline-formula> lower energy consumption compared to the state-of-the-art transformer co-processor, Energon. The simulation source code is available at <uri>https://github.com/jha-lab/acceltran</uri>.",
+        "identifiers": [
+          "SemanticScholar:a7d298cbbac81bd47396edbf6a97fbc1fa0cf5c6"
+        ],
+        "semantic_scholar_id": "a7d298cbbac81bd47396edbf6a97fbc1fa0cf5c6",
+        "canonical_id": "arXiv:2302.14705",
+        "arxiv_id": "2302.14705",
+        "doi": "10.1109/TCAD.2023.3273992",
+        "authors": [
+          "Shikhar Tuli",
+          "N. K. Jha"
+        ],
+        "priority": 70,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 70,
+          "citation_count": 70,
+          "total": 70,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1364,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.06869",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.aacl-long.183",
+        "id:SemanticScholar:ef6224c301d8cd75af3f986768c8a790e303e07e",
+        "id:arXiv:2512.06869",
+        "title:roleaware heuristic episodic attention for conversational llms",
+        "url:https://arxiv.org/abs/2512.06869"
+      ],
+      "record": {
+        "title": "Role-aware Heuristic Episodic Attention for Conversational LLMs",
+        "source_url": "https://arxiv.org/abs/2512.06869",
+        "year": 2025,
+        "published": "2025-12-07",
+        "venue": "Volume 1",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models often lose track of persistent instructions and relevant information as multi-turn conversations grow. We study this cumulative contextual decay through three related failure modes: attention pollution, dilution, and drift. We propose REA(Role-aware Heuristic Episodic Attention), a context-management framework that assigns different persistence and representation policies to instructions and episodic interactions. Instructional Memory retains identified global constraints in a dedicated prefix. Episodic Memory preserves user inputs and compresses model replies, while heuristic retrieval selects raw text, compressed representations, or omission for each historical turn. On Long-MT-Bench+, REA improves the judge score from 6.32 to 7.36 on a 10-point scale, a 16.5% relative gain over the Vanilla baseline, and reduces average latency by 2.91x. Additional evaluations show aggregate gains on three backbones spanning 1.7B-7B parameters and on Chinese and English role-playing tasks. These results support role-aware context management as a practical approach to maintaining conversational continuity and instruction adherence.",
+        "identifiers": [
+          "SemanticScholar:ef6224c301d8cd75af3f986768c8a790e303e07e"
+        ],
+        "semantic_scholar_id": "ef6224c301d8cd75af3f986768c8a790e303e07e",
+        "canonical_id": "arXiv:2512.06869",
+        "arxiv_id": "2512.06869",
+        "doi": "10.18653/2026.aacl-long.183",
+        "authors": [
+          "Wan-Yang Hong",
+          "Zhao-Ning Zhang",
+          "Yi Chen",
+          "Li-Bo Zhang",
+          "Bai-Hui Liu",
+          "Lin-Bo Qiao",
+          "Zhi-Liang Tian",
+          "Dong-Sheng Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 351,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.14405",
+      "identity_tokens": [
+        "id:SemanticScholar:3dd4dac8289f41b9b8504eff329f5e83288b85d1",
+        "id:arXiv:2305.14405",
+        "title:neuralmatrix compute the entire neural networks with linear matrix operations for efficient inference",
+        "url:https://arxiv.org/abs/2305.14405"
+      ],
+      "record": {
+        "title": "NeuralMatrix: Compute the Entire Neural Networks with Linear Matrix Operations for Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2305.14405",
+        "year": 2023,
+        "published": "2023-05-23",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The inherent diversity of computation types within the deep neural network (DNN) models often requires a variety of specialized units in hardware processors, which limits computational efficiency, increasing both inference latency and power consumption, especially when the hardware processor needs to support and execute different neural networks. In this study, we introduce NeuralMatrix, which elastically transforms the computations of entire DNNs into linear matrix operations. This transformation allows seamless execution of various DNN models all with matrix operations and paves the way for running versatile DNN models with a single General Matrix Multiplication (GEMM) accelerator.Extensive experiments with both CNN and transformer-based models demonstrate the potential of NeuralMatrix to accurately and efficiently execute a wide range of DNN models, achieving 2.17-38.72 times computation efficiency (i.e., throughput per power) compared to CPUs, GPUs, and SoC platforms. This level of efficiency is usually only attainable with the accelerator designed for a specific neural network.",
+        "identifiers": [
+          "SemanticScholar:3dd4dac8289f41b9b8504eff329f5e83288b85d1"
+        ],
+        "semantic_scholar_id": "3dd4dac8289f41b9b8504eff329f5e83288b85d1",
+        "canonical_id": "arXiv:2305.14405",
+        "arxiv_id": "2305.14405",
+        "authors": [
+          "Ruiqi Sun",
+          "Si-Wei Ye",
+          "Jie Zhao",
+          "Xin He",
+          "Jian-Zhe Lin",
+          "Yi-Ran Li",
+          "An Zou"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1280,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ab7cd261ab0335c278f9944e516b6bde1815e2f5f9ef6742d3fbd3a9b40d19d6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
