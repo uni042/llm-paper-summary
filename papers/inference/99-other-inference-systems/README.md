@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1398本）
+## 自動生成の論文一覧（1400本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -28,13 +28,13 @@
   実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：11  
   入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
 
+- **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
+  実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：11  
+  再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
+
 - **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：10  
   動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
-
-- **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
-  実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：10  
-  再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
 
 - **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -1062,6 +1062,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   三階層スケールの4ビット形式ハイフロート4へ、誤差補償、指数と仮数の学習補正、外れ値をならす等価変換という三つの較正を作り替えて適用し、五つのモデルと七つの課題の平均精度を直接変換の72.804パーセントから最大73.708パーセントへ上げ、16ビットとの差を0.262ポイントまで縮めたと報告した。
 
+- **2026-11 · [BasisKV: Value Latents for Communication and Key Routing](2026-2611.02583-basiskv-value-latents-for-communication-and-key-routing.md)**  
+  実装：[✓](https://github.com/alexz949/BasisKV) ・ リポジトリ内被引用：0  
+  バリューの低ランク潜在表現を一つ作り、KVキャッシュ幅、テンソル並列の通信、キーのページ選択の三つに共有することで、8GPUテンソル並列で最大1.42倍の高速化を得る低ランク圧縮法。
+
 - **2026-10 · [Whose Turn Is It? Context-Guided Model Routing for Stateful Agents](2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   状態を持つエージェントのターン単位ルーティングを比較し、履歴を見ることが同じ振り分け率で成功率を3.3ポイント上げることと、切替の費用が方向で非対称であり下方の切替だけが短期間で元を取ることを示した分析研究。
@@ -1313,6 +1317,10 @@
 - **2026-10 · [DConstrain: Compiling Context-Parameterized Transitions for Diffusion Language Model Constrained Decoding](2026-2610.30920-dconstrain-compiling-context-parameterized-transitions-for-diffusion-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの制約付きデコードで、スタックとフィールド履歴を実行時パラメータとして残す遷移プログラムへスキーマをコンパイルし、プロパティの任意順序でも厳密な同時推論を可能にしてBFCL遅延を最大46.26倍削減する方式。
+
+- **2026-10 · [CoS-VQ: Coordinated Shared-Scale Vector Quantization for Large Language Models](2026-2610.37336-cos-vq-coordinated-shared-scale-vector-quantization-for-large-language-m.md)**  
+  実装：[✓](https://github.com/xzktx003/Cos_VQ) ・ リポジトリ内被引用：0  
+  低次元コードワードを保ち、共有スケールとハードインデックスを下側包絡の探索で協調最適化するベクトル量子化で、スケール単独調整では届かない量子化誤差の削減を約2ビット毎重みで実現し、Qwen3.8-27BでQTIPやLLVQを上回る。
 
 - **2026-10 · [Continue or Restart? The Limits of Early Failure Prediction in Coding Agents](2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5561,7 +5569,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：377  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：378  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

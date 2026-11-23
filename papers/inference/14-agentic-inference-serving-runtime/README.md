@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（96本）
+## 自動生成の論文一覧（97本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -34,7 +34,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System](2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md)**  
-  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：31  
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
 
 - **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
@@ -170,6 +170,10 @@
   カーネルを意味を保つテンプレートへ書き換えてから資源制約下でパラメータ探索を行う二段階方式で、SGLangの実カーネルを最大3.55倍まで高速化した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning](2026-2611.06956-octopus-one-brain-many-branches-for-latent-kv-multi-agent-reinforcement-.md)**  
+  実装：[✓](https://github.com/shatianming5/octopus) ・ リポジトリ内被引用：0  
+  エピソードを不変カーソル上の分岐DAGとしてGPU上で実行し、枝ごとの文脈分離、全注意層だけへの兄弟KVマウント、接頭辞重複排除付きのDAG-GRPO学習を組み合わせて、4Bモデルで深い検索の正解率を26.0パーセントから49.6パーセントへ上げる統合基盤。
 
 - **2026-11 · [Bursts That Outlast Themselves: Persistent Degradation in Prefix-Cached Agent Serving](2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

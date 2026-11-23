@@ -319,13 +319,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：19  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
 
+- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
+
 - **2024-01 · [Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference](2024-2401.08383-exploiting-inter-layer-expert-affinity-for-accelerating-mixture-of-exper.md)**  
   実装：[✓](https://github.com/YJHMITWEB/ExFlow) ・ リポジトリ内被引用：10  
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルでは、各層のルータがトークンを少数の専門家へ割り当てる。論文のA100クラスタ評価では、8～64専門家を持つGPT型MoEモデルに対し全対全通信時間を最大67%削減し、推論処理量を最大2.2倍に改善した。
-
-- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（324本）
+## 自動生成の論文一覧（325本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -365,6 +365,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference](2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantizat.md)**  
   実装：[✓](https://github.com/PuppyQ08/24_quant_compare) ・ リポジトリ内被引用：0  
   2対4スパース性と量子化を等ビットと等階層で全オペランド実測比較し、床より上では一段の量子化が常に勝ち、床でのみ再学習を条件に2対4が1.3倍から1.7倍の高速化と27パーセントのプリフィル改善をもたらすことを、エネルギー損失の解析とともに示した研究。
+
+- **2026-10 · [Inference First, Training Underneath: Layer-Granular LoRA Co-Serving with LayerLoom](2026-2611.00652-inference-first-training-underneath-layer-granular-lora-co-serving-with-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ランク適応の逆伝播を層単位へ分解し、推論の順伝播へ同層の逆伝播だけを遅延余裕の範囲で差し込むことで、需要急増時でも推論の目標達成率を守りながら空き容量を学習へ使う同時提供ランタイム。
 
 - **2026-10 · [HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines](2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matri.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

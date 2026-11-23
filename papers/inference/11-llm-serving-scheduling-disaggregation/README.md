@@ -1465,7 +1465,7 @@
   エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
-  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：59  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -1808,6 +1808,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   HFX（後続版ではHyperFlexisとも表記）は、異なる遅延目標を持つLLM推論要求が同じクラスタに流入する状況で、既に処理中の要求を遅延目標違反に追い込まず、緊急な新規要求を早く投入し、必要な実行器を迅速に増やすためのシステムである。
 
+- **2025-06 · [PCDVQ: Enhancing Vector Quantization for Large Language Models via Polar Coordinate Decoupling](2025-2506.05432-pcdvq-enhancing-vector-quantization-for-large-language-models-via-polar-.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  PCDVQは、大規模言語モデルの重みを2ビット前後まで圧縮する重み専用のベクトル量子化を扱う。著者らの観測では、LLaMA-2-7Bの重みベクトルを方向と長さへ分けて片方ずつ量子化した際、方向の量子化によるゼロショット課題の正答率低下は46.5%、長さの量子化では2.3%だった。
+
 - **2025-05 · [Scorpio: Serving Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference](2025-2505.23022-scorpio-heterogeneous-slo-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   要求ごとに異なるTTFT/TPOTのSLOを、締切順の並べ替え・達成不能要求の拒否・SLO比例の処理機会配分で共同制御し、高負荷時の有効スループットを最大14.4倍にする。
@@ -1843,10 +1847,6 @@
 - **2025-06 · [PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference](2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   長入力事前計算を短入力事前計算で選択的に横取りし、事前計算・復号の分離同居と高速系列並列を組み合わせて、短入力の待ち時間と長入力の飢餓を両立して抑える。
-
-- **2025-06 · [PCDVQ: Enhancing Vector Quantization for Large Language Models via Polar Coordinate Decoupling](2025-2506.05432-pcdvq-enhancing-vector-quantization-for-large-language-models-via-polar-.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  PCDVQは、大規模言語モデルの重みを2ビット前後まで圧縮する重み専用のベクトル量子化を扱う。著者らの観測では、LLaMA-2-7Bの重みベクトルを方向と長さへ分けて片方ずつ量子化した際、方向の量子化によるゼロショット課題の正答率低下は46.5%、長さの量子化では2.3%だった。
 
 - **2025-05 · [ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs](2025-2505.14468-serverlesslora-latency-cost-lora-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

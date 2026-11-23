@@ -114,6 +114,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：5  
   HybridGenはKVをCPU/GPUへ分けて各側で注意を計算しGPUで正規化し、次層CPU計算・PCIe転送・GPU計算も重ねて長文デコードの転送／CPU律速を減らす方式。
 
+- **2026-07 · [Learning Agent Execution for KV-Cache Management in Agentic Serving](2026-2608.14624-cachescout.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  CacheScoutはエージェント遷移をオンライン学習し、次に呼ばれそうな固定プレフィックスKVをGPUへ残し、空き時間に先読みして再プリフィルと追い出しを減らす方式。
+
 - **2026-03 · [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Swarmは、長文脈の大規模言語モデル推論で鍵・値キャッシュ（KV キャッシュ）を大容量のSSDへ退避するとき、SSDの入出力帯域が注意計算を待たせる問題に取り組む。
@@ -125,10 +129,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ハイブリッドLLMの位置非依存キャッシュで、複数の再帰状態を厳密合成せず単一チャンク状態から再計算する方式。Mamba-2ではEPIC併用時の完全プリフィル比品質を46.6%から86.8%へ改善し、合成処理の追加遅延も避ける。
-
-- **2026-07 · [Learning Agent Execution for KV-Cache Management in Agentic Serving](2026-2608.14624-cachescout.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  CacheScoutはエージェント遷移をオンライン学習し、次に呼ばれそうな固定プレフィックスKVをGPUへ残し、空き時間に先読みして再プリフィルと追い出しを減らす方式。
 
 - **2026-07 · [DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch](2026-2607.26475-dualdecoder-predictive-prefetch.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

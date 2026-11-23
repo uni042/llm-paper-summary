@@ -35,10 +35,15 @@
   "selection_reason": "Penelopeはエージェント型LLMサービングで共有接頭辞を保ちつつ履歴の先頭側KVを追い出す方針を採り、SGLang実装でGPU-CPUキャッシュ管理と再計算を共設計し、初回トークン遅延を最大60%削減したと要旨が具体的に示す直接のKVキャッシュ貢献である。",
   "semantic_scholar_id": "35f342f4751b6865f69ab92411fe6e5529131174",
   "source_url": "https://arxiv.org/abs/2611.00391",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rethinking KV Cache Eviction for Agentic LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T21:25:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.00391-rethinking-kv-cache-eviction-for-agentic-llm-serving.md",
+  "represented_canonical_id": "arXiv:2611.00391",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

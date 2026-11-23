@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（646本）
+## 自動生成の論文一覧（647本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -173,6 +173,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/MIRALab-USTC/LLM-AnDPro) ・ リポジトリ内被引用：5  
   従来のH2OやSnapKVは、注意重みの大きいトークンほど重要とみなす。だが注意出力は、注意重みと値ベクトルの積を足し合わせたベクトル和である。重みが大きくても値ベクトルが出力方向に寄与しなければ、そのトークンを残す意義は小さい。逆に重みが比較的小さくても、出力方向へ強い成分を持つ値は重要になりうる。
 
+- **2026-09 · [When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse](2026-2609.28870-when-fancy-eviction-fails-rethinking-cache-replacement-for-llm-prefix-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  接頭辞キャッシュ（prefix キャッシュ）は長文脈の事前充填（プリフィル）費用を下げる重要な機構だが、GPUの高帯域幅メモリ（HBM）には容量制限があるため、どのブロックを保持し、どれを退避するかを決める必要がある。
+
 - **2026-08 · [Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding](2026-2609.00097-faster-than-flash-attention-sparsity-long-context-decoding.md)**  
   実装：[✓](https://github.com/qluoluo/faster-flash-decoding) ・ リポジトリ内被引用：4  
   2ビット鍵でKV全体を低帯域走査し、局所・シンク由来の近似最大値からtop-δで必要ブロックだけを選ぶ選別・計算融合カーネルにより、長文デコードを最大11.63倍のカーネル高速化、最大2.37倍の生成スループットへ高める。
@@ -180,6 +184,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [KV Cache Translation across Heterogeneous Large Language Models](2026-2607.28979-kv-cache-translation-across-heterogeneous-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   従来の単一射影や共有潜在空間を介す方式と異なり、MoTは複数の変換器を用意し、トークンごとに適切な変換器を上位K個選択して出力を混合する。Llama-3.2 3B、Gemma-3 4B、Qwen-3 4B間の異種変換を評価し、閉集合質問応答の平均正解率57.6%、抽出型質問応答の平均F1 0.42を報告する。
+
+- **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。
 
 - **2026-06 · [Kamera: Unified Position-Invariant Multimodal KV Cache for Training-Free Reuse](2026-2606.23581-kamera-unified-position-invariant-multimodal-kv-cache-for-training-free-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -216,10 +224,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding](2026-2609.33889-where-activation-sparsity-and-kv-cache-sparsity-cross-in-llm-decoding.md)**  
   実装：[✓](https://github.com/js-lee-AI/ByteCross) ・ リポジトリ内被引用：3  
   LLMの一トークン復号では、線形層の重みをメモリから読み込む費用と、過去文脈のKVキャッシュを読み込む費用が競合する。前者はモデルの構造でほぼ固定され、後者は文脈長に比例して増える。活性化疎化は現在の入力で活性化しているニューロンに対応する射影重みだけを読み込み、KV疎化は注意で参照する過去トークンを選んでキャッシュ読出しを減らす。
-
-- **2026-09 · [When Fancy Eviction Fails: Rethinking Cache Replacement For LLM Prefix Reuse](2026-2609.28870-when-fancy-eviction-fails-rethinking-cache-replacement-for-llm-prefix-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  接頭辞キャッシュ（prefix キャッシュ）は長文脈の事前充填（プリフィル）費用を下げる重要な機構だが、GPUの高帯域幅メモリ（HBM）には容量制限があるため、どのブロックを保持し、どれを退避するかを決める必要がある。
 
 - **2026-09 · [H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache](2026-2609.24197-h-spec-parallel-speculative-decoding-without-a-drafter-side-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -260,10 +264,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [RaBitQCache: Rotated Binary Quantization for KVCache in Long Context LLM Inference](2026-2606.31519-rabitqcache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   長文脈大規模言語モデルでは、復号の各ステップで巨大なKVキャッシュから注意計算用データを読むことがメモリ帯域のボトルネックになる。RaBitQCacheはランダム回転と二値量子化で小型索引を作り、不偏な注意スコア推定から累積確率に応じて必要量を変える上位確率検索（Top-p）を行う。
-
-- **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。
 
 - **2026-06 · [MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference](2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-conte.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -926,6 +926,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training](2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressib.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ドラフトモデルのKV圧縮で、プリフィル選択が生成中に陳腐化する問題に対し、直近ウィンドウとの予算併用、デコード中の再採点、適応的な更新間隔、圧縮マスク付き蒸留学習を段階的に組み合わせ、固定予算で受理長をほぼ維持する手法群。
+
+- **2026-10 · [Rethinking KV Cache Eviction for Agentic LLM Serving](2026-2611.00391-rethinking-kv-cache-eviction-for-agentic-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVキャッシュの追い出しを末尾からではなく共有接頭辞の直後から行い、再計算の高い接尾辞を残すことで、実エージェントトレースで初回トークン時間を最大76パーセント削減するサービング方式。
 
 - **2026-10 · [Recency Is the Wrong Axis: A Negative Result on Windowed Deepest-Plane KV Caching in Looped Language Models](2026-2610.34436-recency-is-the-wrong-axis-a-negative-result-on-windowed-deepest-plane-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2328,7 +2332,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
-  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：324  
+  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：325  
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
