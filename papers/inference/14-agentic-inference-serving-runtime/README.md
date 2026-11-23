@@ -397,6 +397,10 @@
   実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：2  
   機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
 
+- **2025-09 · [Nova: Real-Time Agentic Vision-Language Model Serving with Adaptive Cross-Stage Parallelization](2025-2509.21301-nova-real-time-agentic-vision-language-model-serving-with-adaptive-cross.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  Novaは、画面画像を見て操作命令を生成する視覚言語エージェント（Vision-Language モデル agent、VLMエージェント）を、単一のGPUで低遅延に提供する推論基盤である。さらに、画像符号器の全重みをGPUへ常駐させず、CPUメモリから層ごとに先読みする。
+
 - **2025-11 · [Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse](2025-2511.00413-tree-training-accelerating-agentic-llms-training-via-shared-prefix-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   エージェント型大規模言語モデルの学習軌跡が共有接頭辞を持つ木になることを利用し、各枝を独立学習する際の順伝播・逆伝播の重複を除く。深さ優先直列化、木に沿った注意・状態伝播、枝数に応じた損失重み付け、微分可能な分割境界を組み合わせ、学習目的を保ちながら計算を一度にする。
@@ -404,10 +408,6 @@
 - **2025-10 · [Staircase Streaming for Low-Latency Multi-Agent Inference](2025-2510.05059-staircase-streaming-for-low-latency-multi-agent-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   前段の提案者が最初の8トークン程度を生成した時点で集約者を起動し、後続の生成と集約を重ねる。提案者の全出力を待たないため、MoAでTTFTを10.6秒から0.47秒、MADで6.70秒から0.45秒へ削減する条件がある。
-
-- **2025-09 · [Nova: Real-Time Agentic Vision-Language Model Serving with Adaptive Cross-Stage Parallelization](2025-2509.21301-nova-real-time-agentic-vision-language-model-serving-with-adaptive-cross.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  Novaは、画面画像を見て操作命令を生成する視覚言語エージェント（Vision-Language モデル agent、VLMエージェント）を、単一のGPUで低遅延に提供する推論基盤である。さらに、画像符号器の全重みをGPUへ常駐させず、CPUメモリから層ごとに先読みする。
 
 - **2025-11 · [Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving](2025-2511.01633-graph-cot-multi-agent-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
