@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-851d9f3841e08b9c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.36959",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.36959",
+    "identity_tokens": [
+      "arXiv:2610.36959"
+    ],
+    "reason": "要旨のLive-OPSDはストリーミング動画モデルに対し特権ヒントを用いるオンポリシー自己蒸留という学習手法であり、応答判断の訓練が主題で推論時の実行系やデコード最適化の提案ではないため対象外である。",
+    "first_checked_at": "2026-11-23T11:23:15+00:00",
+    "last_checked_at": "2026-11-23T11:23:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Live-OPSD: On-Policy Self-Distillation for Proactive Streaming Large Video Models"
+  },
+  "processed_at": "2026-11-23T11:23:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-851d9f3841e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

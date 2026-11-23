@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9eefef0ae875f6b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.08139",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.08139",
+    "identity_tokens": [
+      "arXiv:2506.08139"
+    ],
+    "reason": "要旨のSoftStepは疎な類似度を学習して近傍ベース回帰を深層モデルへ組み込む回帰モジュールの提案であり、表形式・回帰タスクの予測精度が主題でLLMの推論やサービングへの技術的貢献は確認できないため対象外である。",
+    "first_checked_at": "2026-11-23T11:23:15+00:00",
+    "last_checked_at": "2026-11-23T11:23:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SoftStep: Learning Sparse Similarity Powers Deep Neighbor-Based Regression"
+  },
+  "processed_at": "2026-11-23T11:23:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9eefef0ae87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

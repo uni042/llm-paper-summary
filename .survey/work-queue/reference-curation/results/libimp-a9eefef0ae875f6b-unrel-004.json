@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9eefef0ae875f6b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:dc1cd9a72845b8f4df3e501e2a37b7570111edd8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:dc1cd9a72845b8f4df3e501e2a37b7570111edd8",
+    "identity_tokens": [
+      "SemanticScholar:dc1cd9a72845b8f4df3e501e2a37b7570111edd8"
+    ],
+    "reason": "OpenAlexが429で要旨を取得できなかったが、タイトル自体が人事領域チャットボット向け生成型質問応答という業務応用を明示しており、LLM推論システムの機構への貢献が想定できないためタイトルスクリーニングで対象外とする。",
+    "first_checked_at": "2026-11-23T11:23:15+00:00",
+    "last_checked_at": "2026-11-23T11:23:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Generative Question Answering for a Chatbot in the Human Resources Domain"
+  },
+  "processed_at": "2026-11-23T11:23:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9eefef0ae87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

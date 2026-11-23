@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-851d9f3841e08b9c-unrel-016",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.19786",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.19786",
+    "identity_tokens": [
+      "arXiv:2507.19786"
+    ],
+    "reason": "要旨のFloraは短い指示を組み合わせて任意長の長文脈を人手やLLMなしに構築する指示チューニング用データ生成戦略であり、長文脈能力の学習データが主題で推論時の文脈処理やKVキャッシュ等の最適化ではないため対象外である。",
+    "first_checked_at": "2026-11-23T11:23:15+00:00",
+    "last_checked_at": "2026-11-23T11:23:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Flora: Effortless Context Construction to Arbitrary Length and Scale"
+  },
+  "processed_at": "2026-11-23T11:23:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-851d9f3841e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

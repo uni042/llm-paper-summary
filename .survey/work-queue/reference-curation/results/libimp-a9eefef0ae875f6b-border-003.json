@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9eefef0ae875f6b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004",
+    "identity_tokens": [
+      "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004"
+    ],
+    "reason": "分散深層学習向けの構成可能で自動化された同期システムAutoDistと題するが、OpenAlex検索が429で打ち切りとなり一次要旨を取得できず、同期対象が学習なのか推論なのか判別できないため、要旨未取得として保留に留める。",
+    "first_checked_at": "2026-11-23T11:23:15+00:00",
+    "last_checked_at": "2026-11-23T11:23:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A UTO D IST : A C OMPOSABLE AND A UTOMATED S YNCHRONIZATION S YSTEM FOR D ISTRIBUTED D EEP L EARNING"
+  },
+  "processed_at": "2026-11-23T11:23:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9eefef0ae87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

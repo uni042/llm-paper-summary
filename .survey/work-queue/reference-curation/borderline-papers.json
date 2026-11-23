@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-23T11:19:14+00:00",
-  "record_count": 7697,
+  "updated_at": "2026-11-23T11:23:15+00:00",
+  "record_count": 7702,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -118638,6 +118638,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "PISA: Piecewise Sparse Attention Is Wiser for Efficient Diffusion Transformers"
+    },
+    "arXiv:2506.01934": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.01934",
+      "identity_tokens": [
+        "arXiv:2506.01934"
+      ],
+      "reason": "要旨では全二重応答をネイティブに支えるオムニモーダルモデルRoboEgoのシステムカードで理論上の二重レイテンシ80ms等を示すが、主体はモデル能力と具身応用の提示であり推論実行系の具体的な最適化機構は薄いため保留とする。",
+      "first_checked_at": "2026-11-23T11:23:15+00:00",
+      "last_checked_at": "2026-11-23T11:23:15+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RoboEgo System Card: An Omnimodal Model with Native Full Duplexity"
+    },
+    "DOI:10.1109/taslpro.2026.3658957": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/taslpro.2026.3658957",
+      "identity_tokens": [
+        "DOI:10.1109/taslpro.2026.3658957"
+      ],
+      "reason": "OpenAlex要旨ではRAG質問応答で有害な検索文書を識別・除去する二段階の知識フィルタリングを提案し生成品質を守るが、狙いは検索知識の品質管理であり推論実行の効率やレイテンシ改善の機構は示されていないため保留とする。",
+      "first_checked_at": "2026-11-23T11:23:15+00:00",
+      "last_checked_at": "2026-11-23T11:23:15+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Knowledge Filtering for Retrieval-Augmented Question Answering"
+    },
+    "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004",
+      "identity_tokens": [
+        "SemanticScholar:9ea57f5ca4cf965c475ff0f56435c5be65135004"
+      ],
+      "reason": "分散深層学習向けの構成可能で自動化された同期システムAutoDistと題するが、OpenAlex検索が429で打ち切りとなり一次要旨を取得できず、同期対象が学習なのか推論なのか判別できないため、要旨未取得として保留に留める。",
+      "first_checked_at": "2026-11-23T11:23:15+00:00",
+      "last_checked_at": "2026-11-23T11:23:15+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A UTO D IST : A C OMPOSABLE AND A UTOMATED S YNCHRONIZATION S YSTEM FOR D ISTRIBUTED D EEP L EARNING"
+    },
+    "DOI:10.1007/s44163-026-02369-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44163-026-02369-8",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-02369-8"
+      ],
+      "reason": "Crossref要旨では大規模AIのエネルギー・電力・メモリトラフィック制約を横断的に整理し人間の認知の資源配分から効率的なLLM設計への示唆を論じるレビューであり、推論を含む資源制約には触れるが具体的な推論システムの技術提案ではないため保留とする。",
+      "first_checked_at": "2026-11-23T11:23:15+00:00",
+      "last_checked_at": "2026-11-23T11:23:15+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Energy constraints in large scale artificial intelligence and insights from human cognition for efficient large language models"
+    },
+    "DOI:10.1109/iccbe65177.2025.11255928": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccbe65177.2025.11255928",
+      "identity_tokens": [
+        "DOI:10.1109/iccbe65177.2025.11255928"
+      ],
+      "reason": "OpenAlex要旨では小規模・大規模言語モデルをアーキテクチャ、蒸留・量子化・軽量注意、推論レイテンシやオンデバイス配置の観点で比較するサーベイであり、推論配置の論点は含むが新たな推論システムの技術提案ではないため保留とする。",
+      "first_checked_at": "2026-11-23T11:23:15+00:00",
+      "last_checked_at": "2026-11-23T11:23:15+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Comparative Survey of Small and Large Language Models"
     }
   }
 }

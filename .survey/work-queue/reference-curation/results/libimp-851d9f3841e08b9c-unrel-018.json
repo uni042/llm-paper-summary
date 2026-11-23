@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-851d9f3841e08b9c-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.05903",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.05903",
+    "identity_tokens": [
+      "arXiv:2410.05903"
+    ],
+    "reason": "要旨は入力長制限を超える7万語超の長文要約を可能にする三つのアルゴリズムでBERTScore改善を示す長文要約の応用研究であり、LLMを要約器として使う側の工夫であって推論基盤自体の最適化ではないため対象外である。",
+    "first_checked_at": "2026-11-23T11:23:15+00:00",
+    "last_checked_at": "2026-11-23T11:23:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Automatic Summarization of Long Documents"
+  },
+  "processed_at": "2026-11-23T11:23:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-851d9f3841e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
