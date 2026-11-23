@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "8547bcf707f0176a3aec866a5319f9b9fa952a44",
+  "base_commit": "9e0dd91a5d5bd2eb50e898ada14a8ce73877dd2d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -750,6 +750,7 @@
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
     "2026-2608.22708-cacherouter-a-dual-path-tool-routing-architecture-with-cache-preserving-main-model-isolation-for-long-tail-tool-discover.json",
     "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
+    "2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
     "2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.json",
     "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json",
@@ -777,6 +778,7 @@
     "2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-understanding.json",
     "2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.json",
     "2026-2609.04238-budgeting-bytes-a-windowed-storage-roofline-and-dual-budget-architecture.json",
+    "2026-2609.04288-scalable-context-orchestration-for-serving-llms-over-voice.json",
     "2026-2609.04947-mcpo-modality-contrastive-preference-optimization-for-multimodal-cot-compression.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
@@ -843,6 +845,7 @@
     "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
     "2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-language-models.json",
     "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json",
+    "2026-2609.37362-pretrain-once-route-anywhere-towards-a-foundation-model-for-llm-routing.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json",
     "2026-2609.37902-you-cannot-pick-a-provider-from-the-price-list-market-aware-routing-for-open-weight.json",
@@ -965,6 +968,7 @@
     "2026-2610.14934-fidelityq-preserving-predictive-fidelity-in-ultra-low-bit-language-model-quantization.json",
     "2026-2610.15095-swarm-telepathy-prefill-free-kv-cache-transfer-across-families.json",
     "2026-2610.15259-recap-calibrating-low-bit-reasoning-models-on-the-history-they-read.json",
+    "2026-2610.15324-tempokv-predictive-kv-cache-quantization-for-autoregressive-video-generation.json",
     "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
     "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
@@ -49994,6 +49998,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.23921": {
+      "order": [
+        "2026-11-23T15:59:20+00:00",
+        "2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.04288": {
+      "order": [
+        "2026-11-23T16:00:12+00:00",
+        "2026-2609.04288-scalable-context-orchestration-for-serving-llms-over-voice.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.37362": {
+      "order": [
+        "2026-11-23T16:01:05+00:00",
+        "2026-2609.37362-pretrain-once-route-anywhere-towards-a-foundation-model-for-llm-routing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15324": {
+      "order": [
+        "2026-11-23T16:01:57+00:00",
+        "2026-2610.15324-tempokv-predictive-kv-cache-quantization-for-autoregressive-video-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63243,6 +63283,18 @@
     "arxiv:2608.12385": [
       "papers/inference/99-other-inference-systems/2026-2608.12385-dual-flow-transformers-decoupling-the-primary-prefill-path-from-addition.md",
       "papers/inference/99-other-inference-systems/2026-2608.12385-dual-flow-transformers-decoupling-the-primary-prefill-path-from-addition.md"
+    ],
+    "arxiv:2608.23921": [
+      "papers/inference/99-other-inference-systems/2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.md"
+    ],
+    "arxiv:2609.04288": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04288-scalable-context-orchestration-for-serving-llms-over-voice.md"
+    ],
+    "arxiv:2609.37362": [
+      "papers/inference/99-other-inference-systems/2026-2609.37362-pretrain-once-route-anywhere-towards-a-foundation-model-for-llm-routing.md"
+    ],
+    "arxiv:2610.15324": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15324-tempokv-predictive-kv-cache-quantization-for-autoregressive-video-genera.md"
     ]
   }
 }

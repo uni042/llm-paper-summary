@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1338本）
+## 自動生成の論文一覧（1340本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1410,6 +1410,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   三値イベントと2のべき乗の量子で1ステップあたりの情報量を増やし、外れ値だけに開始スパイクを1回追加することで、発火窓4ステップのままシフトと累積だけで計算できるスパイク駆動の学習後量子化。
 
+- **2026-09 · [Pretrain Once, Route Anywhere: Towards a Foundation Model for LLM Routing](2026-2609.37362-pretrain-once-route-anywhere-towards-a-foundation-model-for-llm-routing.md)**  
+  実装：[✓](https://github.com/LAMDA-Model-Reuse/RouteFM) ・ リポジトリ内被引用：0  
+  候補モデルを少数の行動観測から作る匿名の能力プロファイルで表し、異種環境をまたぐエピソード型事前学習で凍結まま適応できる基盤ルータを作り、未見のMMR-Benchで候補あたり8観測で最強比較対象を2.23ポイント上回る。
+
 - **2026-09 · [PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention](2026-2609.33746-pq-hsa-reusing-product-quantized-scores-for-hybrid-sparse-approximate-at.md)**  
   実装：[✓](https://github.com/KunmingSHAO/pqhsa_release) ・ リポジトリ内被引用：0  
   PQ-HSAは、積量化（PQ）で圧縮したキーを全件走査して近似logitを求め、そのスコアを上位KVの選択だけでなく、非選択KVの背景寄与の推定にも使う。
@@ -1617,6 +1621,10 @@
 - **2026-08 · [LegoLM: Structured Weight Sharing for Large Language Models](2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/legolm) ・ リポジトリ内被引用：0  
   重み共有圧縮の失敗原因を尺度不一致と外れ値支配に分解し、スカラー化と外れ値の原文保持と境界層保護を組み合わせて、校正データなしで7Bモデルを4倍以上圧縮しても品質劣化をほぼゼロに抑える研究。
+
+- **2026-08 · [HAP: Head-Adaptive Visual Token Pruning via Cross-Modal Alignment](2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.md)**  
+  実装：[✓](https://github.com/baokou-fw2/HAP) ・ リポジトリ内被引用：0  
+  視覚トークン枝刈りで全ヘッド一様平均が抱える雑音混入を、ヘッドごとのプロンプト整合度PAQで重み付けする二段集約へ置き換え、LLaVA-1.5-7Bでトークン5.6パーセント保持でも相対性能99.1パーセントと2.82倍の高速化を両立させる学習不要の枝刈り。
 
 - **2026-08 · [From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization](2026-2608.09595-from-sweep-to-seam-interleaved-cross-block-post-training-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3221,7 +3229,7 @@
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：28  
   Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
 
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
@@ -4515,7 +4523,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：19  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  

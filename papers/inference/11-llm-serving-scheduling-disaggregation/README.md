@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（614本）
+## 自動生成の論文一覧（615本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -853,6 +853,10 @@
 - **2026-09 · [SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving](2026-2609.34117-slimwise-decoupling-expert-pruning-across-prefill-and-decode-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンに対して全エキスパートのうち少数だけを実行することで、モデル全体のパラメータ規模に比べた演算量を抑える。
+
+- **2026-09 · [Scalable Context Orchestration for Serving LLMs Over Voice](2026-2609.04288-scalable-context-orchestration-for-serving-llms-over-voice.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  意味・話し方・伝送状態をモデル自身に推論させて応答の内容とターンの取り方を制御し、履歴を多段階の忠実度で予算内に収める音声向け文脈管理で、誤割り込みと長会話の費用を大きく減らす方式。
 
 - **2026-09 · [Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling](2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-ener.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

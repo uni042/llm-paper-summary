@@ -35,10 +35,15 @@
   "selection_reason": "視覚言語モデルの長い視覚トークン列によるプリフィルコストに対し、ヘッドごとのプロンプト整合度PAQで重み付けして視覚トークンを剪定するHAPを提案し、5.6%のトークン保持で性能を維持する直接的な推論効率化である。",
   "semantic_scholar_id": "dfa1dc7ef59e5ca30ece294a873e8f54b186fb3c",
   "source_url": "https://arxiv.org/abs/2608.23921",
-  "status": "ready",
+  "status": "superseded",
   "title": "HAP: Head-Adaptive Visual Token Pruning via Cross-Modal Alignment",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T16:03:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.md",
+  "represented_canonical_id": "arXiv:2608.23921",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "音声対話向けLLMサービングで会話文脈を平坦なメッセージ列として扱う問題に対し、発話速度や雑音等の音声文脈を有界に編成するミドルウェアllmovoiceを提案しコストと割込み率を削減しており、LLMサービングへの直接貢献が確認できる。",
   "semantic_scholar_id": "06613a24d2fd60a7aba23b8bccd14d01311a9515",
   "source_url": "https://arxiv.org/abs/2609.04288",
-  "status": "ready",
+  "status": "superseded",
   "title": "Scalable Context Orchestration for Serving LLMs Over Voice",
   "type": "research",
   "venue": "Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T16:03:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04288-scalable-context-orchestration-for-serving-llms-over-voice.md",
+  "represented_canonical_id": "arXiv:2609.04288",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
