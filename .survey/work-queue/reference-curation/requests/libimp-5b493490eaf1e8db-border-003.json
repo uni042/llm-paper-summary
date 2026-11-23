@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5b493490eaf1e8db-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.04925",
+  "reason": "LLM推論時に自己蒸留した潜在補正ベクトルを推論チェックポイントで検索し短い先読みで検証して適用することで、生成トークンを最大35%削減しつつ推論精度を上げる。しかし機構は推論時の潜在介入による推論品質・コスト調整であり、サービング等のシステム貢献は薄い。",
+  "title": "Internalizing LLM Reasoning via Discovery and Replay of Latent Actions",
+  "identity_tokens": [
+    "arXiv:2602.04925"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b493490eaf1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
