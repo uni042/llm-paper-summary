@@ -1,0 +1,765 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6b7e1b3e38734e3b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6b7e1b3e3873",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/apccas67402.2025.11378253",
+    "DOI:10.1109/cluster68337.2026.00048",
+    "DOI:10.1109/cvprf71909.2026.00866",
+    "arXiv:2305.02440",
+    "arXiv:2501.14205",
+    "arXiv:2602.02199",
+    "arXiv:2604.05250",
+    "arXiv:2610.11214"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "35745111760a8e67fd04ebb8fba30511c9a8fae6",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T17:43:08.701453+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/apccas67402.2025.11378253",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/cluster68337.2026.00048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/cvprf71909.2026.00866",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2305.02440",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.14205",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02199",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.05250",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.11214",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "More Than a Quick Glance: Overcoming the Greedy Bias in KV-Cache Compression",
+      "source_url": "https://arxiv.org/abs/2602.02199",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) can theoretically support extensive context windows, their actual deployment is constrained by the linear growth of Key-Value (KV) cache memory. Prevailing compression strategies mitigate this through various pruning mechanisms, yet trade-off semantic recall for memory efficiency. In this work, we present LASER-KV (Layer Accumulated Selection with Exact-LSH Recall), a framework designed to test the limits of KV compression under a strict accumulative budgeting policy. We deviate from the standard fixed summary size approach by implementing a block-wise accumulation strategy governed by a protection divisor (n). This allows us to isolate the effects of compression from sliding window artifacts. Our experiments on the Babilong benchmark reveal performance degradation in previous compression methods by 15-30% on various long context tasks. LASER-KV maintains stable performance, achieving superior accuracies by a margin of upto 10% at 128k. These findings challenge the prevailing assumption that attention scores alone are a sufficient proxy for token utility.",
+      "identifiers": [
+        "SemanticScholar:40b289da5d52a74f150caece4db4c8e193199bc5"
+      ],
+      "semantic_scholar_id": "40b289da5d52a74f150caece4db4c8e193199bc5",
+      "canonical_id": "arXiv:2602.02199",
+      "arxiv_id": "2602.02199",
+      "doi": "10.48550/arXiv.2602.02199",
+      "authors": [
+        "Aryan Sood",
+        "Tanvi Sharma",
+        "V. Agrawal"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Myopia Rectification: KV Cache Pruning for MLLMs via Dynamic Attention Subsidy and Token Reclamation",
+      "source_url": "https://doi.org/10.1109/CVPRF71909.2026.00866",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The computational demands of visual tokens in Multi-modal Large Language Models (MLLMs) present a significant challenge for real-time inference, particularly in long-contextual scenarios. The Key-Value cache generated by these visual tokens requires substantial GPU memory, slowing down decoding speed. While existing KV cache compression methods have made some progress in language and single-image multi-modal contexts, there has been limited exploration in video-based multi-image scenarios. To bridge this gap, we conduct an in-depth analysis of the attention mechanism in MLLMs and identify an intriguing phenomenon termed “Attention Myopia”: the model inadequately allocates attention to later images, which impedes the direct application of existing compression methods to multi-image contexts. Based on this insight, we propose Dynamic Attention Subsidy (DAS), a novel technique that adjusts attention scores to ensure a more balanced selection of critical tokens. Additionally, to preserve the integrity of visual information, we propose a reclamation mechanism called “Recycling Bin”, which compresses the discarded tokens to a minimal size. Our method achieves around 1.5× speedup on inference in decoding phase with 20% of the KV cache footprint compared to the original model, while maintaining consistent performance across over 20 diverse datasets. Crucially, our technique is plug-and-play, allowing seamless integration with existing pre-trained MLLMs without incurring any additional training costs.",
+      "identifiers": [
+        "SemanticScholar:2611f9cd4e9813d2de44332d7418f0cad1c5f787"
+      ],
+      "semantic_scholar_id": "2611f9cd4e9813d2de44332d7418f0cad1c5f787",
+      "doi": "10.1109/CVPRF71909.2026.00866",
+      "canonical_id": "DOI:10.1109/CVPRF71909.2026.00866",
+      "authors": [
+        "Jie-Dong Zhuang",
+        "Lu Lu",
+        "Ming Dai",
+        "Jian Chen",
+        "Qiang Liu",
+        "Hao-Ji Hu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Serving Long-Context LLMs at the Mobile Edge: Test-Time Reinforcement Learning-based Model Caching and Inference Offloading",
+      "source_url": "https://arxiv.org/abs/2501.14205",
+      "year": 2025,
+      "published": "2025-01-24",
+      "venue": "Global Communications Conference",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) can process data to perform zero-shot learning on unseen tasks and few-shot learning on complex reasoning tasks for devices. However, resource-limited mobile edge networks struggle to support long-context LLM serving for deploying and executing LLM agents during multi-round interactions with users. Unlike stateless computation offloading and static service offloading in edge computing, optimizing LLM serving at edge servers is challenging because LLMs continuously learn from context, which makes their accuracy, latency, and resource consumption dynamics. In this paper, we propose a joint model caching and inference offloading framework that utilizes test-time deep reinforcement learning (T2DRL) to optimize deployment and execution strategies for long-context LLM serving. In this framework, we analyze the performance convergence and design an optimization problem considering the utilization of context windows in LLMs. Furthermore, the T2DRL algorithm can learn not only in the training phase but also in the testing phase to proactively manage cached models and service requests and adapt to context changes and usage patterns during execution. Finally, experimental results demonstrate that the T2DRL algorithm can reduce system costs by at least 30% compared to baselines while guaranteeing the performance of LLM agents in real-world perception and reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:75665bdbd0162478c2e92c107ca2b0bdbac7b8e5"
+      ],
+      "semantic_scholar_id": "75665bdbd0162478c2e92c107ca2b0bdbac7b8e5",
+      "canonical_id": "arXiv:2501.14205",
+      "arxiv_id": "2501.14205",
+      "doi": "10.1109/GLOBECOM59602.2025.11432543",
+      "authors": [
+        "Min-Rui Xu",
+        "D. Niyato",
+        "Christopher G. Brinton"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 668,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DualDiffusion: A Speculative Decoding Strategy for Masked Diffusion Models",
+      "source_url": "https://arxiv.org/abs/2604.05250",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked Diffusion Models (MDMs) offer a promising alternative to autoregressive language models by enabling parallel token generation and bidirectional context modeling. However, their inference speed is significantly limited by the inability to cache key-value pairs due to bidirectional attention, requiring $O(N^2)$ computations at each generation step. While recent methods like FastDLLM and DkvCache improve inference speed through attention approximations and caching strategies, they achieve speedups at the cost of generation quality. We propose DualDiffusion, a speculative decoding framework for MDMs that combines fast drafter models (using efficient approximations) with slower, more accurate verifier models. By running multiple steps of a lightweight drafter followed by a single verification step, DualDiffusion achieves a superior Pareto frontier between generation steps and accuracy compared to existing approaches. We evaluate our method on MMLU and GSM8K, demonstrating that DualDiffusion maintains high accuracy while reducing the number of generation steps required, effectively pushing the quality-efficiency trade-off curve for masked diffusion language models.",
+      "identifiers": [
+        "SemanticScholar:a48ee54ec2c3c3a71d4517e520055e0d279d72a1"
+      ],
+      "semantic_scholar_id": "a48ee54ec2c3c3a71d4517e520055e0d279d72a1",
+      "canonical_id": "arXiv:2604.05250",
+      "arxiv_id": "2604.05250",
+      "doi": "10.48550/arXiv.2604.05250",
+      "authors": [
+        "Satyam Goyal",
+        "Kushalkumar G. Patel",
+        "Tanush Mittal",
+        "Arjun Laxman"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Taichi: Elastic Multi-LLM Serving with Coordinated Memory–Compute Multiplexing",
+      "source_url": "https://doi.org/10.1109/CLUSTER68337.2026.00048",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "IEEE International Conference on Cluster Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of LLM applications is driving up serving cost, yet GPUs remain underutilized in practice due to single-model provisioning and highly variable, long-tailed workloads. Co-locating two or more LLMs on one GPU can improve utilization, but it requires fast and coordinated control of both KV cache/parameter memory and compute resources without disrupting in-flight requests. We present Taichi, a multi-LLM serving system for GPUlevel vertical scaling via joint memory-compute multiplexing. Taichi introduces (i) seamless memory sharing: a unified GPU memory pool with register-then-allocate management, Least-Common Alignment for heterogeneous KV layouts, and burst-time borrow/restore of idle parameter regions; and (ii) seamless compute switching: shared-memory-backed active-standby workers for millisecond-scale SM reallocation with bounded cross-model interference. Implemented atop vLLM and evaluated across single-GPU and distributed serving, Taichi reduces the bursting model's prefill P95 latency by 24-46× relative to S-Alloc's fixed 50/50 split across the four evaluated workload pairs, and reduces decode P95 latency by up to 2.9×, within the same GPU budget.",
+      "identifiers": [
+        "SemanticScholar:ff9b3b985c4cac0fafeea2b2d4e176a395ee36a0"
+      ],
+      "semantic_scholar_id": "ff9b3b985c4cac0fafeea2b2d4e176a395ee36a0",
+      "doi": "10.1109/CLUSTER68337.2026.00048",
+      "canonical_id": "DOI:10.1109/CLUSTER68337.2026.00048",
+      "authors": [
+        "Cun-Chi Lv",
+        "Xiao Shi",
+        "Zheng-Yu Lei",
+        "Xiao-Wei Li",
+        "Xin-Yu Li",
+        "Qing-Wen Li",
+        "Zhi-Peng Tang",
+        "Xiao-Fang Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bridging KV-Cache Quantization and Linear Attention: From Theory to Pretrained Weight Migration",
+      "source_url": "https://arxiv.org/abs/2610.11214",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantization and linear attention are two representative approaches to tackling the storage and computational costs of Transformers. KV-cache quantization compresses individual KV entries into discrete codes but retains all entries, whereas linear attention recurrently aggregates multiple historical KV contributions into a fixed-size continuous state but can introduce interference. This contrast raises the question of whether per-KV compression and multi-KV aggregation can be bridged within a single mechanism for efficient attention. We identify RAM-Net as such a bridge through soft assignments over a discrete address space. These assignments determine recurrent updates to the continuous slot state associated with each address. Under a restricted RAM-Net construction, we prove that soft address assignments extend hard quantized matching to a separable read-write overlap that locally approximates full-attention similarity and supports recurrent aggregation. These connections further enable Transformer-to-RAM-Net weight migration through a new path based on a soft-quantized intermediate construction. Across nine pretrained Transformer models from 0.3B to 7B parameters, RAM-Net recovers an average of 87.1% of the teachers'accuracy gains over random guessing across six commonsense and knowledge tasks using only a 500M-token budget per model.",
+      "identifiers": [
+        "SemanticScholar:6854cb6fcf31cfa5687b1e664f10dcf41cd3f672"
+      ],
+      "semantic_scholar_id": "6854cb6fcf31cfa5687b1e664f10dcf41cd3f672",
+      "canonical_id": "arXiv:2610.11214",
+      "arxiv_id": "2610.11214",
+      "authors": [
+        "Kai-Cheng Xiao",
+        "Li-Ran Dong",
+        "Hao-Tian Li",
+        "Guo-Liang Xing"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cheaply Evaluating Inference Efficiency Metrics for Autoregressive Transformer APIs",
+      "source_url": "https://arxiv.org/abs/2305.02440",
+      "year": 2023,
+      "published": "2023-05-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) power many state-of-the-art systems in natural language processing. However, these models are extremely computationally expensive, even at inference time, raising the natural question: when is the extra cost of deploying a larger model worth the anticipated boost in capabilities? Better understanding this tradeoff fundamentally could benefit from an inference efficiency metric that is both (i) easily comparable across models from different providers, and (ii) representative of the true cost of running queries in an isolated performance environment. Unfortunately, access to LLMs today is largely restricted to black-box text generation APIs and raw runtimes measured through this interface do not satisfy these desiderata: model providers can apply various software and hardware optimizations orthogonal to the model, and models served on shared infrastructure are susceptible to performance contention. To circumvent these problems, we propose a new metric for comparing inference efficiency across models. This metric puts models on equal footing as though they were served (i) on uniform hardware and software, and (ii) without performance contention. We call this metric the \\emph{idealized runtime}, and we propose a methodology to efficiently estimate this metric for autoregressive Transformer models. We also propose cost-aware variants that incorporate the number of accelerators needed to serve the model. Using these metrics, we compare ten state-of-the-art LLMs to provide the first analysis of inference efficiency-capability tradeoffs; we make several observations from this analysis, including the fact that the superior inference runtime performance of certain APIs is often a byproduct of optimizations within the API rather than the underlying model. Our methodology also facilitates the efficient comparison of different software and hardware stacks.",
+      "identifiers": [
+        "SemanticScholar:d4d7966a7b4dbf4cd764e443392d22826618a293"
+      ],
+      "semantic_scholar_id": "d4d7966a7b4dbf4cd764e443392d22826618a293",
+      "canonical_id": "arXiv:2305.02440",
+      "arxiv_id": "2305.02440",
+      "doi": "10.48550/arXiv.2305.02440",
+      "authors": [
+        "Deepak Narayanan",
+        "Keshav Santhanam",
+        "Peter Henderson",
+        "Rishi Bommasani",
+        "Tony Lee",
+        "Percy Liang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1300,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RoPE on the Fast Track: Latency-Optimized LLM Inference on GPUs with Low-Rank QKV Factorization and Rotary Positional Embedding",
+      "source_url": "https://doi.org/10.1109/APCCAS67402.2025.11378253",
+      "year": 2025,
+      "published": "2025-10-12",
+      "venue": "Asia Pacific Conference on Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In large language model (LLM) inference, rotary positional embedding (RoPE) contributes significantly to overall decoding latency due to accumulated overhead from numerous micro-kernel invocations and its sequential execution after Q and K generation, which prevents effective parallelization. Additionally, the $\\mathrm{Q}, \\mathrm{K}$, and V (QKV) generation weights in modern LLMs-where the model dimension reaches several thou-sand-are each several gigabytes in size, making it impractical to store them in the on-chip memory of FPGAs or custom ASICs. This necessitates repeated off-chip accesses, limiting hardware utilization and inference speed. To address these bottlenecks, we apply rank $=8$ factorization to the QKV generation weights, reducing memory usage by over 99% and lowering per-token FLOPs to 1.41% of the baseline, with minimal loss in accuracy. Furthermore, we reformulate RoPE as a Weight-side RoPE mechanism by pre-applying it to low-rank weights and enabling its parallel execution with RMS normalization on the GPU. This structural change improves execution efficiency by enabling concurrent computation. Experimental results using a Llama3based model on an RTX 3090 GPU show that decoding latency is reduced by $1.14 \\times$ for batch size 1 and $1.17 \\times$ for batch size 2, while maintaining comparable accuracy to the baseline.",
+      "identifiers": [
+        "SemanticScholar:f7e4e0b4948faa0dfa395a829f1b674bb36dad73"
+      ],
+      "semantic_scholar_id": "f7e4e0b4948faa0dfa395a829f1b674bb36dad73",
+      "doi": "10.1109/APCCAS67402.2025.11378253",
+      "canonical_id": "DOI:10.1109/APCCAS67402.2025.11378253",
+      "authors": [
+        "Gi-Min Lee",
+        "Jihoon Jang",
+        "Kyungmin Goh",
+        "H. Kim"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 407,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.02199",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02199",
+        "id:SemanticScholar:40b289da5d52a74f150caece4db4c8e193199bc5",
+        "id:arXiv:2602.02199",
+        "title:more than a quick glance overcoming the greedy bias in kvcache compression",
+        "url:https://arxiv.org/abs/2602.02199"
+      ],
+      "record": {
+        "title": "More Than a Quick Glance: Overcoming the Greedy Bias in KV-Cache Compression",
+        "source_url": "https://arxiv.org/abs/2602.02199",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Large Language Models (LLMs) can theoretically support extensive context windows, their actual deployment is constrained by the linear growth of Key-Value (KV) cache memory. Prevailing compression strategies mitigate this through various pruning mechanisms, yet trade-off semantic recall for memory efficiency. In this work, we present LASER-KV (Layer Accumulated Selection with Exact-LSH Recall), a framework designed to test the limits of KV compression under a strict accumulative budgeting policy. We deviate from the standard fixed summary size approach by implementing a block-wise accumulation strategy governed by a protection divisor (n). This allows us to isolate the effects of compression from sliding window artifacts. Our experiments on the Babilong benchmark reveal performance degradation in previous compression methods by 15-30% on various long context tasks. LASER-KV maintains stable performance, achieving superior accuracies by a margin of upto 10% at 128k. These findings challenge the prevailing assumption that attention scores alone are a sufficient proxy for token utility.",
+        "identifiers": [
+          "SemanticScholar:40b289da5d52a74f150caece4db4c8e193199bc5"
+        ],
+        "semantic_scholar_id": "40b289da5d52a74f150caece4db4c8e193199bc5",
+        "canonical_id": "arXiv:2602.02199",
+        "arxiv_id": "2602.02199",
+        "doi": "10.48550/arXiv.2602.02199",
+        "authors": [
+          "Aryan Sood",
+          "Tanvi Sharma",
+          "V. Agrawal"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 294,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cvprf71909.2026.00866",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00866",
+        "id:SemanticScholar:2611f9cd4e9813d2de44332d7418f0cad1c5f787",
+        "title:myopia rectification kv cache pruning for mllms via dynamic attention subsidy and token reclamation",
+        "url:https://doi.org/10.1109/CVPRF71909.2026.00866"
+      ],
+      "record": {
+        "title": "Myopia Rectification: KV Cache Pruning for MLLMs via Dynamic Attention Subsidy and Token Reclamation",
+        "source_url": "https://doi.org/10.1109/CVPRF71909.2026.00866",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The computational demands of visual tokens in Multi-modal Large Language Models (MLLMs) present a significant challenge for real-time inference, particularly in long-contextual scenarios. The Key-Value cache generated by these visual tokens requires substantial GPU memory, slowing down decoding speed. While existing KV cache compression methods have made some progress in language and single-image multi-modal contexts, there has been limited exploration in video-based multi-image scenarios. To bridge this gap, we conduct an in-depth analysis of the attention mechanism in MLLMs and identify an intriguing phenomenon termed “Attention Myopia”: the model inadequately allocates attention to later images, which impedes the direct application of existing compression methods to multi-image contexts. Based on this insight, we propose Dynamic Attention Subsidy (DAS), a novel technique that adjusts attention scores to ensure a more balanced selection of critical tokens. Additionally, to preserve the integrity of visual information, we propose a reclamation mechanism called “Recycling Bin”, which compresses the discarded tokens to a minimal size. Our method achieves around 1.5× speedup on inference in decoding phase with 20% of the KV cache footprint compared to the original model, while maintaining consistent performance across over 20 diverse datasets. Crucially, our technique is plug-and-play, allowing seamless integration with existing pre-trained MLLMs without incurring any additional training costs.",
+        "identifiers": [
+          "SemanticScholar:2611f9cd4e9813d2de44332d7418f0cad1c5f787"
+        ],
+        "semantic_scholar_id": "2611f9cd4e9813d2de44332d7418f0cad1c5f787",
+        "doi": "10.1109/CVPRF71909.2026.00866",
+        "canonical_id": "DOI:10.1109/CVPRF71909.2026.00866",
+        "authors": [
+          "Jie-Dong Zhuang",
+          "Lu Lu",
+          "Ming Dai",
+          "Jian Chen",
+          "Qiang Liu",
+          "Hao-Ji Hu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.14205",
+      "identity_tokens": [
+        "id:DOI:10.1109/globecom59602.2025.11432543",
+        "id:SemanticScholar:75665bdbd0162478c2e92c107ca2b0bdbac7b8e5",
+        "id:arXiv:2501.14205",
+        "title:serving longcontext llms at the mobile edge testtime reinforcement learningbased model caching and inference offloading",
+        "url:https://arxiv.org/abs/2501.14205"
+      ],
+      "record": {
+        "title": "Serving Long-Context LLMs at the Mobile Edge: Test-Time Reinforcement Learning-based Model Caching and Inference Offloading",
+        "source_url": "https://arxiv.org/abs/2501.14205",
+        "year": 2025,
+        "published": "2025-01-24",
+        "venue": "Global Communications Conference",
+        "citation_count": 23,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) can process data to perform zero-shot learning on unseen tasks and few-shot learning on complex reasoning tasks for devices. However, resource-limited mobile edge networks struggle to support long-context LLM serving for deploying and executing LLM agents during multi-round interactions with users. Unlike stateless computation offloading and static service offloading in edge computing, optimizing LLM serving at edge servers is challenging because LLMs continuously learn from context, which makes their accuracy, latency, and resource consumption dynamics. In this paper, we propose a joint model caching and inference offloading framework that utilizes test-time deep reinforcement learning (T2DRL) to optimize deployment and execution strategies for long-context LLM serving. In this framework, we analyze the performance convergence and design an optimization problem considering the utilization of context windows in LLMs. Furthermore, the T2DRL algorithm can learn not only in the training phase but also in the testing phase to proactively manage cached models and service requests and adapt to context changes and usage patterns during execution. Finally, experimental results demonstrate that the T2DRL algorithm can reduce system costs by at least 30% compared to baselines while guaranteeing the performance of LLM agents in real-world perception and reasoning tasks.",
+        "identifiers": [
+          "SemanticScholar:75665bdbd0162478c2e92c107ca2b0bdbac7b8e5"
+        ],
+        "semantic_scholar_id": "75665bdbd0162478c2e92c107ca2b0bdbac7b8e5",
+        "canonical_id": "arXiv:2501.14205",
+        "arxiv_id": "2501.14205",
+        "doi": "10.1109/GLOBECOM59602.2025.11432543",
+        "authors": [
+          "Min-Rui Xu",
+          "D. Niyato",
+          "Christopher G. Brinton"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 23,
+          "citation_count": 23,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 668,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.05250",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.05250",
+        "id:SemanticScholar:a48ee54ec2c3c3a71d4517e520055e0d279d72a1",
+        "id:arXiv:2604.05250",
+        "title:dualdiffusion a speculative decoding strategy for masked diffusion models",
+        "url:https://arxiv.org/abs/2604.05250"
+      ],
+      "record": {
+        "title": "DualDiffusion: A Speculative Decoding Strategy for Masked Diffusion Models",
+        "source_url": "https://arxiv.org/abs/2604.05250",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked Diffusion Models (MDMs) offer a promising alternative to autoregressive language models by enabling parallel token generation and bidirectional context modeling. However, their inference speed is significantly limited by the inability to cache key-value pairs due to bidirectional attention, requiring $O(N^2)$ computations at each generation step. While recent methods like FastDLLM and DkvCache improve inference speed through attention approximations and caching strategies, they achieve speedups at the cost of generation quality. We propose DualDiffusion, a speculative decoding framework for MDMs that combines fast drafter models (using efficient approximations) with slower, more accurate verifier models. By running multiple steps of a lightweight drafter followed by a single verification step, DualDiffusion achieves a superior Pareto frontier between generation steps and accuracy compared to existing approaches. We evaluate our method on MMLU and GSM8K, demonstrating that DualDiffusion maintains high accuracy while reducing the number of generation steps required, effectively pushing the quality-efficiency trade-off curve for masked diffusion language models.",
+        "identifiers": [
+          "SemanticScholar:a48ee54ec2c3c3a71d4517e520055e0d279d72a1"
+        ],
+        "semantic_scholar_id": "a48ee54ec2c3c3a71d4517e520055e0d279d72a1",
+        "canonical_id": "arXiv:2604.05250",
+        "arxiv_id": "2604.05250",
+        "doi": "10.48550/arXiv.2604.05250",
+        "authors": [
+          "Satyam Goyal",
+          "Kushalkumar G. Patel",
+          "Tanush Mittal",
+          "Arjun Laxman"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 231,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cluster68337.2026.00048",
+      "identity_tokens": [
+        "id:DOI:10.1109/cluster68337.2026.00048",
+        "id:SemanticScholar:ff9b3b985c4cac0fafeea2b2d4e176a395ee36a0",
+        "title:taichi elastic multillm serving with coordinated memorycompute multiplexing",
+        "url:https://doi.org/10.1109/CLUSTER68337.2026.00048"
+      ],
+      "record": {
+        "title": "Taichi: Elastic Multi-LLM Serving with Coordinated Memory–Compute Multiplexing",
+        "source_url": "https://doi.org/10.1109/CLUSTER68337.2026.00048",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "IEEE International Conference on Cluster Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid adoption of LLM applications is driving up serving cost, yet GPUs remain underutilized in practice due to single-model provisioning and highly variable, long-tailed workloads. Co-locating two or more LLMs on one GPU can improve utilization, but it requires fast and coordinated control of both KV cache/parameter memory and compute resources without disrupting in-flight requests. We present Taichi, a multi-LLM serving system for GPUlevel vertical scaling via joint memory-compute multiplexing. Taichi introduces (i) seamless memory sharing: a unified GPU memory pool with register-then-allocate management, Least-Common Alignment for heterogeneous KV layouts, and burst-time borrow/restore of idle parameter regions; and (ii) seamless compute switching: shared-memory-backed active-standby workers for millisecond-scale SM reallocation with bounded cross-model interference. Implemented atop vLLM and evaluated across single-GPU and distributed serving, Taichi reduces the bursting model's prefill P95 latency by 24-46× relative to S-Alloc's fixed 50/50 split across the four evaluated workload pairs, and reduces decode P95 latency by up to 2.9×, within the same GPU budget.",
+        "identifiers": [
+          "SemanticScholar:ff9b3b985c4cac0fafeea2b2d4e176a395ee36a0"
+        ],
+        "semantic_scholar_id": "ff9b3b985c4cac0fafeea2b2d4e176a395ee36a0",
+        "doi": "10.1109/CLUSTER68337.2026.00048",
+        "canonical_id": "DOI:10.1109/CLUSTER68337.2026.00048",
+        "authors": [
+          "Cun-Chi Lv",
+          "Xiao Shi",
+          "Zheng-Yu Lei",
+          "Xiao-Wei Li",
+          "Xin-Yu Li",
+          "Qing-Wen Li",
+          "Zhi-Peng Tang",
+          "Xiao-Fang Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.11214",
+      "identity_tokens": [
+        "id:SemanticScholar:6854cb6fcf31cfa5687b1e664f10dcf41cd3f672",
+        "id:arXiv:2610.11214",
+        "title:bridging kvcache quantization and linear attention from theory to pretrained weight migration",
+        "url:https://arxiv.org/abs/2610.11214"
+      ],
+      "record": {
+        "title": "Bridging KV-Cache Quantization and Linear Attention: From Theory to Pretrained Weight Migration",
+        "source_url": "https://arxiv.org/abs/2610.11214",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache quantization and linear attention are two representative approaches to tackling the storage and computational costs of Transformers. KV-cache quantization compresses individual KV entries into discrete codes but retains all entries, whereas linear attention recurrently aggregates multiple historical KV contributions into a fixed-size continuous state but can introduce interference. This contrast raises the question of whether per-KV compression and multi-KV aggregation can be bridged within a single mechanism for efficient attention. We identify RAM-Net as such a bridge through soft assignments over a discrete address space. These assignments determine recurrent updates to the continuous slot state associated with each address. Under a restricted RAM-Net construction, we prove that soft address assignments extend hard quantized matching to a separable read-write overlap that locally approximates full-attention similarity and supports recurrent aggregation. These connections further enable Transformer-to-RAM-Net weight migration through a new path based on a soft-quantized intermediate construction. Across nine pretrained Transformer models from 0.3B to 7B parameters, RAM-Net recovers an average of 87.1% of the teachers'accuracy gains over random guessing across six commonsense and knowledge tasks using only a 500M-token budget per model.",
+        "identifiers": [
+          "SemanticScholar:6854cb6fcf31cfa5687b1e664f10dcf41cd3f672"
+        ],
+        "semantic_scholar_id": "6854cb6fcf31cfa5687b1e664f10dcf41cd3f672",
+        "canonical_id": "arXiv:2610.11214",
+        "arxiv_id": "2610.11214",
+        "authors": [
+          "Kai-Cheng Xiao",
+          "Li-Ran Dong",
+          "Hao-Tian Li",
+          "Guo-Liang Xing"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2305.02440",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.02440",
+        "id:SemanticScholar:d4d7966a7b4dbf4cd764e443392d22826618a293",
+        "id:arXiv:2305.02440",
+        "title:cheaply evaluating inference efficiency metrics for autoregressive transformer apis",
+        "url:https://arxiv.org/abs/2305.02440"
+      ],
+      "record": {
+        "title": "Cheaply Evaluating Inference Efficiency Metrics for Autoregressive Transformer APIs",
+        "source_url": "https://arxiv.org/abs/2305.02440",
+        "year": 2023,
+        "published": "2023-05-03",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) power many state-of-the-art systems in natural language processing. However, these models are extremely computationally expensive, even at inference time, raising the natural question: when is the extra cost of deploying a larger model worth the anticipated boost in capabilities? Better understanding this tradeoff fundamentally could benefit from an inference efficiency metric that is both (i) easily comparable across models from different providers, and (ii) representative of the true cost of running queries in an isolated performance environment. Unfortunately, access to LLMs today is largely restricted to black-box text generation APIs and raw runtimes measured through this interface do not satisfy these desiderata: model providers can apply various software and hardware optimizations orthogonal to the model, and models served on shared infrastructure are susceptible to performance contention. To circumvent these problems, we propose a new metric for comparing inference efficiency across models. This metric puts models on equal footing as though they were served (i) on uniform hardware and software, and (ii) without performance contention. We call this metric the \\emph{idealized runtime}, and we propose a methodology to efficiently estimate this metric for autoregressive Transformer models. We also propose cost-aware variants that incorporate the number of accelerators needed to serve the model. Using these metrics, we compare ten state-of-the-art LLMs to provide the first analysis of inference efficiency-capability tradeoffs; we make several observations from this analysis, including the fact that the superior inference runtime performance of certain APIs is often a byproduct of optimizations within the API rather than the underlying model. Our methodology also facilitates the efficient comparison of different software and hardware stacks.",
+        "identifiers": [
+          "SemanticScholar:d4d7966a7b4dbf4cd764e443392d22826618a293"
+        ],
+        "semantic_scholar_id": "d4d7966a7b4dbf4cd764e443392d22826618a293",
+        "canonical_id": "arXiv:2305.02440",
+        "arxiv_id": "2305.02440",
+        "doi": "10.48550/arXiv.2305.02440",
+        "authors": [
+          "Deepak Narayanan",
+          "Keshav Santhanam",
+          "Peter Henderson",
+          "Rishi Bommasani",
+          "Tony Lee",
+          "Percy Liang"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1300,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/apccas67402.2025.11378253",
+      "identity_tokens": [
+        "id:DOI:10.1109/apccas67402.2025.11378253",
+        "id:SemanticScholar:f7e4e0b4948faa0dfa395a829f1b674bb36dad73",
+        "title:rope on the fast track latencyoptimized llm inference on gpus with lowrank qkv factorization and rotary positional embedding",
+        "url:https://doi.org/10.1109/APCCAS67402.2025.11378253"
+      ],
+      "record": {
+        "title": "RoPE on the Fast Track: Latency-Optimized LLM Inference on GPUs with Low-Rank QKV Factorization and Rotary Positional Embedding",
+        "source_url": "https://doi.org/10.1109/APCCAS67402.2025.11378253",
+        "year": 2025,
+        "published": "2025-10-12",
+        "venue": "Asia Pacific Conference on Circuits and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In large language model (LLM) inference, rotary positional embedding (RoPE) contributes significantly to overall decoding latency due to accumulated overhead from numerous micro-kernel invocations and its sequential execution after Q and K generation, which prevents effective parallelization. Additionally, the $\\mathrm{Q}, \\mathrm{K}$, and V (QKV) generation weights in modern LLMs-where the model dimension reaches several thou-sand-are each several gigabytes in size, making it impractical to store them in the on-chip memory of FPGAs or custom ASICs. This necessitates repeated off-chip accesses, limiting hardware utilization and inference speed. To address these bottlenecks, we apply rank $=8$ factorization to the QKV generation weights, reducing memory usage by over 99% and lowering per-token FLOPs to 1.41% of the baseline, with minimal loss in accuracy. Furthermore, we reformulate RoPE as a Weight-side RoPE mechanism by pre-applying it to low-rank weights and enabling its parallel execution with RMS normalization on the GPU. This structural change improves execution efficiency by enabling concurrent computation. Experimental results using a Llama3based model on an RTX 3090 GPU show that decoding latency is reduced by $1.14 \\times$ for batch size 1 and $1.17 \\times$ for batch size 2, while maintaining comparable accuracy to the baseline.",
+        "identifiers": [
+          "SemanticScholar:f7e4e0b4948faa0dfa395a829f1b674bb36dad73"
+        ],
+        "semantic_scholar_id": "f7e4e0b4948faa0dfa395a829f1b674bb36dad73",
+        "doi": "10.1109/APCCAS67402.2025.11378253",
+        "canonical_id": "DOI:10.1109/APCCAS67402.2025.11378253",
+        "authors": [
+          "Gi-Min Lee",
+          "Jihoon Jang",
+          "Kyungmin Goh",
+          "H. Kim"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 407,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7e24c1c87bac2108a654be4329a2827ea62ba7f26268335ee7943206c48e45dc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

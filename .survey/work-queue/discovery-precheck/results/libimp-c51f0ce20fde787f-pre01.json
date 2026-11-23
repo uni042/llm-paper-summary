@@ -1,0 +1,248 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c51f0ce20fde787f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c51f0ce20fde",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.00536",
+    "arXiv:2610.02816"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "35745111760a8e67fd04ebb8fba30511c9a8fae6",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T17:42:56.631544+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.00536",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.02816",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention",
+      "source_url": "https://arxiv.org/abs/2610.02816",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention models have emerged as efficient alternatives to standard attention, but effectively managing their fixed-size recurrent memory remains challenging. To improve memory, recent work has explored two distinct directions: delta-rule variants for precise correction of values associated with keys, and slot-based architectures such as Gated Slot Attention for modeling key and value memories in two stages. We observe that these directions are complementary--the delta rule provides effective memory correction, while the two-stage structure provides a natural way to operate on both sides of an association. Building on this insight, we introduce a new Gated Oja Rule for key-side correction and extend it with decoupled erase and write control to obtain Gated Oja Rule-2. We then introduce Gated Slot Attention-2 (GSA2), which combines Gated Oja Rule-2 for key-side correction with Gated Delta Rule-2 for value-side correction through shared latent slots. We further derive a hardware-efficient chunkwise algorithm for parallel training. Experiments demonstrate that GSA2 consistently improves over strong linear-attention baselines across benchmarks while retaining linear-time sequence modeling and constant-memory recurrent decoding.",
+      "identifiers": [
+        "SemanticScholar:5732f59e24f5ee845b72e9f8eda319b7a1dfe968"
+      ],
+      "semantic_scholar_id": "5732f59e24f5ee845b72e9f8eda319b7a1dfe968",
+      "canonical_id": "arXiv:2610.02816",
+      "arxiv_id": "2610.02816",
+      "authors": [
+        "Rui-Jie Li",
+        "Sheng-Nan Ding",
+        "Wei-Min Zhang",
+        "Derick Tang",
+        "Zhan-Peng Zeng",
+        "Qin-Song Zeng",
+        "Ming Chen",
+        "Jia-Xi Hu",
+        "Yuxuan Liang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Word Salad Chopper: Reasoning Models Waste A Ton Of Decoding Budget On Useless Repetitions, Self-Knowingly",
+      "source_url": "https://arxiv.org/abs/2511.00536",
+      "year": 2025,
+      "published": "2025-11-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) are often bottlenecked by the high cost of output tokens. We show that a significant portion of these tokens are useless self-repetitions - what we call\"word salad\"- that exhaust the decoding budget without adding value. Interestingly, we observe that LRMs are self-aware when trapped in these loops: the hidden states of<\\n\\n>tokens trailing each reasoning chunk exhibit patterns that allow us to detect word salad behavior on-the-fly via a single-layer linear classifier. Once detected, a simple chop appended by a straightforward regeneration prompt yields substantial length savings with minimal quality loss. Our work offers WordSaladChopper (WSC) - a lightweight, turnkey component for LRM that is minimally invasive to its reasoning trajectory by only removing semantically redundant tokens. Given its low overhead, strong savings, and the lack of semantic value of word salad tokens, we believe it is not too far-fetched to argue that WSC - or a similar component - is a must-have for all LRM applications with user experience in mind. Our code is publicly available at https://github.com/wenyaxie023/WordSaladChopper.",
+      "identifiers": [
+        "SemanticScholar:fd2df844cc790b70828533f7b0116e7a614364d3"
+      ],
+      "semantic_scholar_id": "fd2df844cc790b70828533f7b0116e7a614364d3",
+      "canonical_id": "arXiv:2511.00536",
+      "arxiv_id": "2511.00536",
+      "doi": "10.18653/v1/2025.emnlp-main.1705",
+      "authors": [
+        "Wen-Ya Xie",
+        "Shao-Chen Zhong",
+        "Hoang Anh Duy Le",
+        "Zhao-Zhuo Xu",
+        "Jian-Wen Xie",
+        "Zi-Rui Liu"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 387,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.02816",
+      "identity_tokens": [
+        "id:SemanticScholar:5732f59e24f5ee845b72e9f8eda319b7a1dfe968",
+        "id:arXiv:2610.02816",
+        "title:gated slot attention2 twosided associative memory correction in linear attention",
+        "url:https://arxiv.org/abs/2610.02816"
+      ],
+      "record": {
+        "title": "Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention",
+        "source_url": "https://arxiv.org/abs/2610.02816",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention models have emerged as efficient alternatives to standard attention, but effectively managing their fixed-size recurrent memory remains challenging. To improve memory, recent work has explored two distinct directions: delta-rule variants for precise correction of values associated with keys, and slot-based architectures such as Gated Slot Attention for modeling key and value memories in two stages. We observe that these directions are complementary--the delta rule provides effective memory correction, while the two-stage structure provides a natural way to operate on both sides of an association. Building on this insight, we introduce a new Gated Oja Rule for key-side correction and extend it with decoupled erase and write control to obtain Gated Oja Rule-2. We then introduce Gated Slot Attention-2 (GSA2), which combines Gated Oja Rule-2 for key-side correction with Gated Delta Rule-2 for value-side correction through shared latent slots. We further derive a hardware-efficient chunkwise algorithm for parallel training. Experiments demonstrate that GSA2 consistently improves over strong linear-attention baselines across benchmarks while retaining linear-time sequence modeling and constant-memory recurrent decoding.",
+        "identifiers": [
+          "SemanticScholar:5732f59e24f5ee845b72e9f8eda319b7a1dfe968"
+        ],
+        "semantic_scholar_id": "5732f59e24f5ee845b72e9f8eda319b7a1dfe968",
+        "canonical_id": "arXiv:2610.02816",
+        "arxiv_id": "2610.02816",
+        "authors": [
+          "Rui-Jie Li",
+          "Sheng-Nan Ding",
+          "Wei-Min Zhang",
+          "Derick Tang",
+          "Zhan-Peng Zeng",
+          "Qin-Song Zeng",
+          "Ming Chen",
+          "Jia-Xi Hu",
+          "Yuxuan Liang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 52,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.00536",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-main.1705",
+        "id:SemanticScholar:fd2df844cc790b70828533f7b0116e7a614364d3",
+        "id:arXiv:2511.00536",
+        "title:word salad chopper reasoning models waste a ton of decoding budget on useless repetitions selfknowingly",
+        "url:https://arxiv.org/abs/2511.00536"
+      ],
+      "record": {
+        "title": "Word Salad Chopper: Reasoning Models Waste A Ton Of Decoding Budget On Useless Repetitions, Self-Knowingly",
+        "source_url": "https://arxiv.org/abs/2511.00536",
+        "year": 2025,
+        "published": "2025-11-01",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) are often bottlenecked by the high cost of output tokens. We show that a significant portion of these tokens are useless self-repetitions - what we call\"word salad\"- that exhaust the decoding budget without adding value. Interestingly, we observe that LRMs are self-aware when trapped in these loops: the hidden states of<\\n\\n>tokens trailing each reasoning chunk exhibit patterns that allow us to detect word salad behavior on-the-fly via a single-layer linear classifier. Once detected, a simple chop appended by a straightforward regeneration prompt yields substantial length savings with minimal quality loss. Our work offers WordSaladChopper (WSC) - a lightweight, turnkey component for LRM that is minimally invasive to its reasoning trajectory by only removing semantically redundant tokens. Given its low overhead, strong savings, and the lack of semantic value of word salad tokens, we believe it is not too far-fetched to argue that WSC - or a similar component - is a must-have for all LRM applications with user experience in mind. Our code is publicly available at https://github.com/wenyaxie023/WordSaladChopper.",
+        "identifiers": [
+          "SemanticScholar:fd2df844cc790b70828533f7b0116e7a614364d3"
+        ],
+        "semantic_scholar_id": "fd2df844cc790b70828533f7b0116e7a614364d3",
+        "canonical_id": "arXiv:2511.00536",
+        "arxiv_id": "2511.00536",
+        "doi": "10.18653/v1/2025.emnlp-main.1705",
+        "authors": [
+          "Wen-Ya Xie",
+          "Shao-Chen Zhong",
+          "Hoang Anh Duy Le",
+          "Zhao-Zhuo Xu",
+          "Jian-Wen Xie",
+          "Zi-Rui Liu"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 387,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5eb72667af9e580ce362fab86ff390926ea977056375f008bd1415eea0abbe7f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
