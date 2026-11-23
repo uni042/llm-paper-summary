@@ -1,0 +1,453 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-eff127f995768266-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-eff127f99576",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.03480",
+    "arXiv:2405.00738",
+    "arXiv:2510.01585",
+    "arXiv:2608.03048"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b7a3feb4f8169c17ec0bfe8e094c859382008aa1",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T19:42:13.349305+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.03480",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.00738",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.01585",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.03048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Trillion Parameter AI Serving Infrastructure for Scientific Discovery: A Survey and Vision",
+      "source_url": "https://arxiv.org/abs/2402.03480",
+      "year": 2023,
+      "published": "2023-12-04",
+      "venue": "BDCAT",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep learning methods are transforming research, enabling new techniques, and ultimately leading to new discoveries. As the demand for more capable AI models continues to grow, we are now entering an era of Trillion Parameter Models (TPM), or models with more than a trillion parameters---such as Huawei's PanGu-Σ. We describe a vision for the ecosystem of TPM users and providers that caters to the specific needs of the scientific community. We then outline the significant technical challenges and open problems in system design for serving TPMs to enable scientific research and discovery. Specifically, we describe the requirements of a comprehensive software stack and interfaces to support the diverse and flexible requirements of researchers.",
+      "identifiers": [
+        "SemanticScholar:caa42f52bc3363bc506c07dafb72427af257ea34"
+      ],
+      "semantic_scholar_id": "caa42f52bc3363bc506c07dafb72427af257ea34",
+      "canonical_id": "arXiv:2402.03480",
+      "arxiv_id": "2402.03480",
+      "doi": "10.1145/3632366.3632396",
+      "authors": [
+        "Nathaniel Hudson",
+        "J. Pauloski",
+        "Matt Baughman",
+        "Alok V. Kamatar",
+        "Mansi Sakarvadia",
+        "Logan T. Ward",
+        "Ryan Chard",
+        "A. Bauer",
+        "Maksim Levental",
+        "Wen-Yi Wang",
+        "W. Engler",
+        "Owen Price-Skelly",
+        "B. Blaiszik",
+        "Rick L. Stevens",
+        "K. Chard",
+        "Ian T. Foster"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1085,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HLSTransform: Energy-Efficient Llama 2 Inference on FPGAs Via High Level Synthesis",
+      "source_url": "https://arxiv.org/abs/2405.00738",
+      "year": 2024,
+      "published": "2024-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Graphics Processing Units (GPUs) have become the leading hardware accelerator for deep learning applications and are used widely in training and inference of transformers; transformers have achieved state-of-the-art performance in many areas of machine learning and are especially used in most modern Large Language Models (LLMs). However, GPUs require large amounts of energy, which poses environmental concerns, demands high operational costs, and causes GPUs to be unsuitable for edge computing. We develop an accelerator for transformers, namely, Llama 2, an open-source state-of-the-art LLM, using high level synthesis (HLS) on Field Programmable Gate Arrays (FPGAs). HLS allows us to rapidly prototype FPGA designs without writing code at the register-transfer level (RTL). We name our method HLSTransform, and the FPGA designs we synthesize with HLS achieve up to a 12.75x reduction and 8.25x reduction in energy used per token on the Xilinx Virtex UltraScale+ VU9P FPGA compared to an Intel Xeon Broadwell E5-2686 v4 CPU and NVIDIA RTX 3090 GPU respectively, while increasing inference speeds by up to 2.46x compared to CPU and maintaining 0.53x the speed of an RTX 3090 GPU despite the GPU's 4 times higher base clock rate. With the lack of existing open-source FPGA accelerators for transformers, we open-source our code and document our steps for synthesis. We hope this work will serve as a step in democratizing the use of FPGAs in transformer inference and inspire research into energy-efficient inference methods as a whole. The code can be found on https://github.com/HLSTransform/submission.",
+      "identifiers": [
+        "SemanticScholar:45c41eef002fee89fe01818dab17e0d839e78e64"
+      ],
+      "semantic_scholar_id": "45c41eef002fee89fe01818dab17e0d839e78e64",
+      "canonical_id": "arXiv:2405.00738",
+      "arxiv_id": "2405.00738",
+      "doi": "10.48550/arXiv.2405.00738",
+      "authors": [
+        "Andy He",
+        "Darren Key",
+        "Mason Bulling",
+        "Andrew Chang",
+        "Skyler Shapiro",
+        "Everett S. Lee"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 938,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PI-Mem: Pushing Long-Context Reasoning to 3.6M Tokens with Parallel-Iterative Memory",
+      "source_url": "https://arxiv.org/abs/2608.03048",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context reasoning remains a critical bottleneck for large language models, as recent recurrent-memory approaches face two inherent challenges: sequential chunk-wise updates can overwrite early critical evidence with later irrelevant content, and serial inter-chunk dependencies limit parallelism and cause latency to increase with context length. To address these issues, we propose PI-Mem (Parallel-Iterative Memory), a mechanism that processes all chunks in parallel and iteratively refines a shared memory over a bounded number of turns. In each turn, PI-Mem reads all chunks in parallel conditioned on the current memory, selects new or complementary evidence from each chunk, and merges the selected evidence into a compact shared memory for the next turn. To discourage redundant turns, we optimize the workflow through reinforcement learning with an auxiliary turn-efficiency reward, enabling the model to adaptively exit once sufficient evidence has been accumulated. We evaluate PI-Mem with Qwen3.5-35B-A3B and Qwen2.5-7B on the HotpotQA benchmark across context lengths up to 3.6 million tokens and find that it outperforms the recurrent-memory baseline by +6.25 and +7.81 absolute points while achieving 6.1$\\times$ and 2.1$\\times$ inference speedups, respectively. These results demonstrate that PI-Mem breaks the accuracy--efficiency trade-off in long-context reasoning and provides a scalable approach to complex multi-hop question answering over extremely long documents.",
+      "identifiers": [
+        "SemanticScholar:e50d86ece64a8672aef93572b3d412a53873ae28"
+      ],
+      "semantic_scholar_id": "e50d86ece64a8672aef93572b3d412a53873ae28",
+      "canonical_id": "arXiv:2608.03048",
+      "arxiv_id": "2608.03048",
+      "doi": "10.48550/arXiv.2608.03048",
+      "authors": [
+        "Da-Wei Liu",
+        "Haixu Song",
+        "Shuang Cheng",
+        "Shi-Jie Wang",
+        "Hao-Zheng Hou",
+        "Kai-Feng Liu",
+        "Er-Mo Hua",
+        "Zhonghang Yuan",
+        "Zhi-Jie Zhong",
+        "Yuchen Fan",
+        "Biqing Qi",
+        "Bo-Wen Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 111,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ReSSFormer: A Recursive Sparse Structured Transformer for Scalable and Long-Context Reasoning",
+      "source_url": "https://arxiv.org/abs/2510.01585",
+      "year": 2025,
+      "published": "2025-10-02",
+      "venue": "ACM Multimedia Asia",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Transformer architectures have demonstrated impressive scalability across domains, they continue to face challenges in long-context reasoning, computational efficiency, and structural generalization - largely due to rigid layer stacking, dense attention, and reliance on positional encodings. We present ReSSFormer, a Recursive Sparse Structured Transformer that integrates three complementary innovations: Recurrent Reasoning & Memory Unit (R2MU) for iterative reasoning with bounded depth, Adaptive Sparse Attention Module (ASAM) for efficient and focused context selection, and Self-Organizing Encoder Structure (SOES) for position-free structure induction. ReSSFormer replaces conventional depth stacking with recurrent inference, substitutes full attention with token- and expert-level sparsity, and models latent token topology directly from content. Across language modeling, multi-hop QA, and structure-sensitive tasks, ReSSFormer consistently outperforms strong baselines under comparable FLOPs and parameter budgets, highlighting its scalability, efficiency, and structural flexibility.",
+      "identifiers": [
+        "SemanticScholar:ff2bb2033bc429d385db427573433728370f7af2"
+      ],
+      "semantic_scholar_id": "ff2bb2033bc429d385db427573433728370f7af2",
+      "canonical_id": "arXiv:2510.01585",
+      "arxiv_id": "2510.01585",
+      "doi": "10.1145/3743093.3770926",
+      "authors": [
+        "Haochen You",
+        "Baojing Liu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 417,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.03480",
+      "identity_tokens": [
+        "id:DOI:10.1145/3632366.3632396",
+        "id:SemanticScholar:caa42f52bc3363bc506c07dafb72427af257ea34",
+        "id:arXiv:2402.03480",
+        "title:trillion parameter ai serving infrastructure for scientific discovery a survey and vision",
+        "url:https://arxiv.org/abs/2402.03480"
+      ],
+      "record": {
+        "title": "Trillion Parameter AI Serving Infrastructure for Scientific Discovery: A Survey and Vision",
+        "source_url": "https://arxiv.org/abs/2402.03480",
+        "year": 2023,
+        "published": "2023-12-04",
+        "venue": "BDCAT",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep learning methods are transforming research, enabling new techniques, and ultimately leading to new discoveries. As the demand for more capable AI models continues to grow, we are now entering an era of Trillion Parameter Models (TPM), or models with more than a trillion parameters---such as Huawei's PanGu-Σ. We describe a vision for the ecosystem of TPM users and providers that caters to the specific needs of the scientific community. We then outline the significant technical challenges and open problems in system design for serving TPMs to enable scientific research and discovery. Specifically, we describe the requirements of a comprehensive software stack and interfaces to support the diverse and flexible requirements of researchers.",
+        "identifiers": [
+          "SemanticScholar:caa42f52bc3363bc506c07dafb72427af257ea34"
+        ],
+        "semantic_scholar_id": "caa42f52bc3363bc506c07dafb72427af257ea34",
+        "canonical_id": "arXiv:2402.03480",
+        "arxiv_id": "2402.03480",
+        "doi": "10.1145/3632366.3632396",
+        "authors": [
+          "Nathaniel Hudson",
+          "J. Pauloski",
+          "Matt Baughman",
+          "Alok V. Kamatar",
+          "Mansi Sakarvadia",
+          "Logan T. Ward",
+          "Ryan Chard",
+          "A. Bauer",
+          "Maksim Levental",
+          "Wen-Yi Wang",
+          "W. Engler",
+          "Owen Price-Skelly",
+          "B. Blaiszik",
+          "Rick L. Stevens",
+          "K. Chard",
+          "Ian T. Foster"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1085,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.00738",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.00738",
+        "id:SemanticScholar:45c41eef002fee89fe01818dab17e0d839e78e64",
+        "id:arXiv:2405.00738",
+        "title:hlstransform energyefficient llama 2 inference on fpgas via high level synthesis",
+        "url:https://arxiv.org/abs/2405.00738"
+      ],
+      "record": {
+        "title": "HLSTransform: Energy-Efficient Llama 2 Inference on FPGAs Via High Level Synthesis",
+        "source_url": "https://arxiv.org/abs/2405.00738",
+        "year": 2024,
+        "published": "2024-04-29",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Graphics Processing Units (GPUs) have become the leading hardware accelerator for deep learning applications and are used widely in training and inference of transformers; transformers have achieved state-of-the-art performance in many areas of machine learning and are especially used in most modern Large Language Models (LLMs). However, GPUs require large amounts of energy, which poses environmental concerns, demands high operational costs, and causes GPUs to be unsuitable for edge computing. We develop an accelerator for transformers, namely, Llama 2, an open-source state-of-the-art LLM, using high level synthesis (HLS) on Field Programmable Gate Arrays (FPGAs). HLS allows us to rapidly prototype FPGA designs without writing code at the register-transfer level (RTL). We name our method HLSTransform, and the FPGA designs we synthesize with HLS achieve up to a 12.75x reduction and 8.25x reduction in energy used per token on the Xilinx Virtex UltraScale+ VU9P FPGA compared to an Intel Xeon Broadwell E5-2686 v4 CPU and NVIDIA RTX 3090 GPU respectively, while increasing inference speeds by up to 2.46x compared to CPU and maintaining 0.53x the speed of an RTX 3090 GPU despite the GPU's 4 times higher base clock rate. With the lack of existing open-source FPGA accelerators for transformers, we open-source our code and document our steps for synthesis. We hope this work will serve as a step in democratizing the use of FPGAs in transformer inference and inspire research into energy-efficient inference methods as a whole. The code can be found on https://github.com/HLSTransform/submission.",
+        "identifiers": [
+          "SemanticScholar:45c41eef002fee89fe01818dab17e0d839e78e64"
+        ],
+        "semantic_scholar_id": "45c41eef002fee89fe01818dab17e0d839e78e64",
+        "canonical_id": "arXiv:2405.00738",
+        "arxiv_id": "2405.00738",
+        "doi": "10.48550/arXiv.2405.00738",
+        "authors": [
+          "Andy He",
+          "Darren Key",
+          "Mason Bulling",
+          "Andrew Chang",
+          "Skyler Shapiro",
+          "Everett S. Lee"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 938,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.03048",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.03048",
+        "id:SemanticScholar:e50d86ece64a8672aef93572b3d412a53873ae28",
+        "id:arXiv:2608.03048",
+        "title:pimem pushing longcontext reasoning to 36m tokens with paralleliterative memory",
+        "url:https://arxiv.org/abs/2608.03048"
+      ],
+      "record": {
+        "title": "PI-Mem: Pushing Long-Context Reasoning to 3.6M Tokens with Parallel-Iterative Memory",
+        "source_url": "https://arxiv.org/abs/2608.03048",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context reasoning remains a critical bottleneck for large language models, as recent recurrent-memory approaches face two inherent challenges: sequential chunk-wise updates can overwrite early critical evidence with later irrelevant content, and serial inter-chunk dependencies limit parallelism and cause latency to increase with context length. To address these issues, we propose PI-Mem (Parallel-Iterative Memory), a mechanism that processes all chunks in parallel and iteratively refines a shared memory over a bounded number of turns. In each turn, PI-Mem reads all chunks in parallel conditioned on the current memory, selects new or complementary evidence from each chunk, and merges the selected evidence into a compact shared memory for the next turn. To discourage redundant turns, we optimize the workflow through reinforcement learning with an auxiliary turn-efficiency reward, enabling the model to adaptively exit once sufficient evidence has been accumulated. We evaluate PI-Mem with Qwen3.5-35B-A3B and Qwen2.5-7B on the HotpotQA benchmark across context lengths up to 3.6 million tokens and find that it outperforms the recurrent-memory baseline by +6.25 and +7.81 absolute points while achieving 6.1$\\times$ and 2.1$\\times$ inference speedups, respectively. These results demonstrate that PI-Mem breaks the accuracy--efficiency trade-off in long-context reasoning and provides a scalable approach to complex multi-hop question answering over extremely long documents.",
+        "identifiers": [
+          "SemanticScholar:e50d86ece64a8672aef93572b3d412a53873ae28"
+        ],
+        "semantic_scholar_id": "e50d86ece64a8672aef93572b3d412a53873ae28",
+        "canonical_id": "arXiv:2608.03048",
+        "arxiv_id": "2608.03048",
+        "doi": "10.48550/arXiv.2608.03048",
+        "authors": [
+          "Da-Wei Liu",
+          "Haixu Song",
+          "Shuang Cheng",
+          "Shi-Jie Wang",
+          "Hao-Zheng Hou",
+          "Kai-Feng Liu",
+          "Er-Mo Hua",
+          "Zhonghang Yuan",
+          "Zhi-Jie Zhong",
+          "Yuchen Fan",
+          "Biqing Qi",
+          "Bo-Wen Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 111,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.01585",
+      "identity_tokens": [
+        "id:DOI:10.1145/3743093.3770926",
+        "id:SemanticScholar:ff2bb2033bc429d385db427573433728370f7af2",
+        "id:arXiv:2510.01585",
+        "title:ressformer a recursive sparse structured transformer for scalable and longcontext reasoning",
+        "url:https://arxiv.org/abs/2510.01585"
+      ],
+      "record": {
+        "title": "ReSSFormer: A Recursive Sparse Structured Transformer for Scalable and Long-Context Reasoning",
+        "source_url": "https://arxiv.org/abs/2510.01585",
+        "year": 2025,
+        "published": "2025-10-02",
+        "venue": "ACM Multimedia Asia",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Transformer architectures have demonstrated impressive scalability across domains, they continue to face challenges in long-context reasoning, computational efficiency, and structural generalization - largely due to rigid layer stacking, dense attention, and reliance on positional encodings. We present ReSSFormer, a Recursive Sparse Structured Transformer that integrates three complementary innovations: Recurrent Reasoning & Memory Unit (R2MU) for iterative reasoning with bounded depth, Adaptive Sparse Attention Module (ASAM) for efficient and focused context selection, and Self-Organizing Encoder Structure (SOES) for position-free structure induction. ReSSFormer replaces conventional depth stacking with recurrent inference, substitutes full attention with token- and expert-level sparsity, and models latent token topology directly from content. Across language modeling, multi-hop QA, and structure-sensitive tasks, ReSSFormer consistently outperforms strong baselines under comparable FLOPs and parameter budgets, highlighting its scalability, efficiency, and structural flexibility.",
+        "identifiers": [
+          "SemanticScholar:ff2bb2033bc429d385db427573433728370f7af2"
+        ],
+        "semantic_scholar_id": "ff2bb2033bc429d385db427573433728370f7af2",
+        "canonical_id": "arXiv:2510.01585",
+        "arxiv_id": "2510.01585",
+        "doi": "10.1145/3743093.3770926",
+        "authors": [
+          "Haochen You",
+          "Baojing Liu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 417,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4669b73a9388257f4dcb7f56c139c4b2ce1c13ac79db67dd75d82dbca0b7b30a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
