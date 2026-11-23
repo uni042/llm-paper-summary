@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "973c41d1f044a604abed338b068ea3429008f827",
+  "base_commit": "e7ca4f681c631eedd02bdb31fc4dac6ddec92b09",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -51027,48 +51027,173 @@
     },
     "arXiv:2402.17652": {
       "order": [
-        "2026-11-23T20:08:41+00:00",
+        "2026-11-23T22:16:56+00:00",
         "2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.json"
       ],
-      "status": "imported",
-      "result": null,
-      "return_count": 0
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "51207939136b45a09772d3278962f5250abd2bc61dc6ce9c2f298e5c4883d790",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.md",
+        "canonical_id": "arXiv:2402.17652",
+        "worker_completed_at": "2026-11-24T05:30:00+09:00",
+        "worker_run_key": "muse-20261124-b7w1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4644,
+          "body_paragraphs": 18,
+          "method_chars": 1768,
+          "method_paragraphs": 4,
+          "evaluation_chars": 640,
+          "limitation_chars": 311,
+          "insufficiency_flags": []
+        },
+        "failures": [
+          "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.md と 12 段落 / 4155文字 (100.0%) が完全一致"
+        ],
+        "processed_at": "2026-11-23T22:16:56+00:00"
+      },
+      "return_count": 1
     },
     "arXiv:2403.10799": {
       "order": [
-        "2026-11-23T20:10:02+00:00",
+        "2026-11-23T22:16:57+00:00",
         "2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grained-weight-importance-assessment.json"
       ],
-      "status": "imported",
-      "result": null,
-      "return_count": 0
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "4291a0e5b829fcf16b70a5d6df5759b82ce7a98d73b8f197e9bb6a70fac86594",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grained-weight-importance-assessment.md",
+        "canonical_id": "arXiv:2403.10799",
+        "worker_completed_at": "2026-11-24T05:30:00+09:00",
+        "worker_run_key": "muse-20261124-b7w1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4344,
+          "body_paragraphs": 18,
+          "method_chars": 1541,
+          "method_paragraphs": 4,
+          "evaluation_chars": 736,
+          "limitation_chars": 303,
+          "insufficiency_flags": []
+        },
+        "failures": [
+          "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grai.md と 11 段落 / 3702文字 (100.0%) が完全一致"
+        ],
+        "processed_at": "2026-11-23T22:16:57+00:00"
+      },
+      "return_count": 1
     },
     "DOI:10.1109/HPEC62836.2024.10938498": {
       "order": [
-        "2026-11-23T20:11:24+00:00",
+        "2026-11-23T22:16:59+00:00",
         "2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-system.json"
       ],
-      "status": "imported",
-      "result": null,
-      "return_count": 0
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "c915d044a39f01120279a02a8b3b50670fd2f5d88b608cf0bdc84af9ebd934b8",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-system.md",
+        "canonical_id": "DOI:10.1109/HPEC62836.2024.10938498",
+        "worker_completed_at": "2026-11-24T05:30:00+09:00",
+        "worker_run_key": "muse-20261124-b7w3",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 5486,
+          "body_paragraphs": 20,
+          "method_chars": 2148,
+          "method_paragraphs": 5,
+          "evaluation_chars": 709,
+          "limitation_chars": 328,
+          "insufficiency_flags": []
+        },
+        "failures": [
+          "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-sy.md と 15 段落 / 5095文字 (100.0%) が完全一致"
+        ],
+        "processed_at": "2026-11-23T22:16:59+00:00"
+      },
+      "return_count": 1
     },
     "arXiv:2503.19876": {
       "order": [
-        "2026-11-23T20:12:45+00:00",
+        "2026-11-23T22:17:00+00:00",
         "2025-2503.19876-sla-awareness-for-ai-assisted-coding.json"
       ],
-      "status": "imported",
-      "result": null,
-      "return_count": 0
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "c53dc3c1d0fb8a46cd211fa567b66838fd511058945b7f89ffce5cfd8ee82b47",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2025-2503.19876-sla-awareness-for-ai-assisted-coding.md",
+        "canonical_id": "arXiv:2503.19876",
+        "worker_completed_at": "2026-11-24T05:30:00+09:00",
+        "worker_run_key": "muse-20261124-b7w1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4442,
+          "body_paragraphs": 18,
+          "method_chars": 1685,
+          "method_paragraphs": 4,
+          "evaluation_chars": 647,
+          "limitation_chars": 210,
+          "insufficiency_flags": []
+        },
+        "failures": [
+          "長文定型文の再利用を検出: papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.19876-sla-awareness-for-ai-assisted-coding.md と 12 段落 / 3964文字 (100.0%) が完全一致"
+        ],
+        "processed_at": "2026-11-23T22:17:00+00:00"
+      },
+      "return_count": 1
     },
     "arXiv:2504.20922": {
       "order": [
-        "2026-11-23T20:14:07+00:00",
+        "2026-11-23T22:17:02+00:00",
         "2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.json"
       ],
-      "status": "imported",
-      "result": null,
-      "return_count": 0
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "3c0ad24e7fd35df7805c4a27cdd04166234b4d228b8663ca9359507686d3a0ec",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.md",
+        "canonical_id": "arXiv:2504.20922",
+        "worker_completed_at": "2026-11-24T05:30:00+09:00",
+        "worker_run_key": "muse-20261124-b7w1",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4795,
+          "body_paragraphs": 18,
+          "method_chars": 1878,
+          "method_paragraphs": 4,
+          "evaluation_chars": 707,
+          "limitation_chars": 255,
+          "insufficiency_flags": []
+        },
+        "failures": [
+          "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.md と 12 段落 / 4287文字 (100.0%) が完全一致"
+        ],
+        "processed_at": "2026-11-23T22:17:02+00:00"
+      },
+      "return_count": 1
     },
     "arXiv:2511.03245": {
       "order": [
