@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "68c3e26acb13bdab06eb3a9a7e43dbc7b4d71be1",
+  "base_commit": "5eaf729566c2817775e08372577880e0cb36ce3b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -322,6 +322,7 @@
     "2025-2511.21910-platinum-path-adaptable-lut-based-accelerator-tailored-for-low-bit-weight-matrix-multiplication.json",
     "2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-information.json",
     "2025-2511.22599-discedge-distributed-context-management-for-large-language-models-at-the-edge.json",
+    "2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acceleration-on-a-cgla.json",
     "2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and-gauge-fixing.json",
     "2025-2512.05597-fast-scenescript-fast-and-accurate-language-based-3d-scene-understanding-via-multi-token-prediction.json",
     "2025-2512.06457-bitstopper-an-efficient-transformer-attention-accelerator-via-stage-fusion-and-early-termination.json",
@@ -336,8 +337,10 @@
     "2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-online-video-understanding.json",
     "2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via-shared-projection-and-block-skipping.json",
     "2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-decoding.json",
+    "2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edge-devices.json",
     "2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-self-attention.json",
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
+    "2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.json",
     "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
@@ -390,6 +393,7 @@
     "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json",
     "2026-2601.20520-context-tokens-are-anchors-repetition-curse-in-dmllms-information-flow-perspective.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
+    "2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
     "2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thought-reasoning-in-small-scale-large-reasoning-models.json",
     "2026-2601.22787-float8-2bits-entropy-coding-enables-data-free-model-compression.json",
@@ -410,6 +414,7 @@
     "2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token-bypass.json",
     "2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.json",
     "2026-2602.03359-meki-memory-based-expert-knowledge-injection-for-efficient-llm-scaling.json",
+    "2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.json",
     "2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decoding.json",
     "2026-2602.06454-relaygen-intra-generation-model-switching-for-efficient-reasoning.json",
     "2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-with-hypothesis-path-expansion-and-reduction.json",
@@ -50311,6 +50316,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.00335": {
+      "order": [
+        "2026-11-23T18:24:27+00:00",
+        "2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acceleration-on-a-cgla.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.14052": {
+      "order": [
+        "2026-11-23T18:25:20+00:00",
+        "2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edge-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.20184": {
+      "order": [
+        "2026-11-23T18:26:13+00:00",
+        "2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.20755": {
+      "order": [
+        "2026-11-23T18:27:06+00:00",
+        "2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.06127": {
+      "order": [
+        "2026-11-23T18:27:59+00:00",
+        "2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63672,6 +63722,21 @@
     "arxiv:2510.22101": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-se.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-se.md"
+    ],
+    "arxiv:2512.00335": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acce.md"
+    ],
+    "arxiv:2512.14052": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edg.md"
+    ],
+    "arxiv:2512.20184": [
+      "papers/inference/99-other-inference-systems/2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.md"
+    ],
+    "arxiv:2601.20755": [
+      "papers/inference/99-other-inference-systems/2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.md"
+    ],
+    "arxiv:2602.06127": [
+      "papers/inference/99-other-inference-systems/2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.md"
     ]
   }
 }

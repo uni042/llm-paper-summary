@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1352本）
+## 自動生成の論文一覧（1355本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2898,6 +2898,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   そこで本論文は、モデルの確率分布に「適切な時点で終了する」兆候がすでに含まれているのかを調べ、その情報を取り出す生成方式と学習方式を設計する。
 
+- **2026-02 · [Compressing LLMs with MoP: Mixture of Pruners](2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.md)**  
+  実装：[✓](https://github.com/c2d-usp/Efficient-LLMs-with-MoP) ・ リポジトリ内被引用：0  
+  深さ枝刈りと幅枝刈りの候補を毎回同じ圧縮量で競わせ、短い回復微調整後の品質で経路を選ぶ反復により、二つの次元の強みを交互に使う構造化枝刈り。
+
 - **2026-02 · [COMPOT: Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers Compression](2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-tra.md)**  
   実装：[✓](https://github.com/mts-ai/COMPOT) ・ リポジトリ内被引用：0  
   較正で白色化した重みを直交辞書と疎な係数の積へ分解し、辞書更新を閉形式のプロクルステス解、係数更新をハード閾値処理で解くことで、単一共有部分空間の低ランク圧縮より高い精度を訓練なしで保つ圧縮方式の研究。
@@ -2989,6 +2993,10 @@
 - **2026-01 · [QA-Merging: Query-Adaptive Reasoning via Layer Selective Model Merging](2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.md)**  
   実装：[✓](https://github.com/Zephyr-Zhong/QA-Merging) ・ リポジトリ内被引用：0  
   長い思考過程を出すモデルと短い思考過程を出すモデルについて、両者の隠れ状態が大きく分かれる層だけを特徴合わせで較正し、残りの層は閉形式の隠れ状態補正で済ませて統合することで、難しい問いには長く、簡単な問いには短く答える単一モデルを作る統合方式。
+
+- **2026-01 · [ProfInfer: An eBPF-based Fine-Grained LLM Inference Profiler](2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡張バークレーパケットフィルタの動的プローブで推論エンジンを書き換えずに四つの粒度で計測し、演算子・時系列・統計の三つの図へ変換する、速度低下4パーセント未満の細粒度プロファイラ。
 
 - **2026-01 · [Power-based Partial Attention: Bridging Linear-Complexity and Full Attention](2026-2601.17334-power-based-partial-attention-bridging-linear-complexity-and-full-attent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3113,6 +3121,10 @@
 - **2025-12 · [Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models](2025-2512.21651-rethinking-output-alignment-for-1-bit-post-training-quantization-of-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）を事後量子化（Post-学習 量子化; PTQ）で1ビットへ圧縮すると、重みをほぼ±1に制限するため、4ビットなどの量子化より精度劣化が大きい。
+
+- **2025-12 · [Reaching Agreement Among Reasoning LLM Agents](2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチエージェントの洗練を分散合意として形式化し、クォーラムと安定地平で確定するAegeanと、合意検出をサービング層へ埋め込むAegean-Serveで、遅延を最大20倍削減しながら精度を2.5パーセント以内に保つ研究。
 
 - **2025-12 · [RADAR: Accelerate Large Language Model Inference With RL-Based Dynamic Draft Trees](2025-2512.14069-radar-accelerate-large-language-model-inference-with-rl-based-dynamic-dr.md)**  
   実装：[✓](https://github.com/minaduki-sora/RADAR) ・ リポジトリ内被引用：0  
@@ -4518,13 +4530,13 @@
   実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：69  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
+- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
+  実装：✓ ・ リポジトリ内被引用：51  
+  本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
+
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：50  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
-
-- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：50  
-  本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
   実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：43  
@@ -5339,7 +5351,7 @@
   量子化で重みを小さくする方法、不要な重みや構造を削る方法、大きな教師モデルから小さな生徒モデルへ知識を移す方法など、圧縮の選択肢は多い。
 
 - **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   FTRANSは、Transformerの重み行列を拡張ブロック循環行列（enhanced block-circulant matrix; BCM）に置き換える構造化圧縮と、その圧縮表現を直接計算する再構成可能論理回路（field-programmable gate array; FPGA）の専用構成を同時設計した研究である。
 
 - **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（210本）
+## 自動生成の論文一覧（211本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -573,6 +573,10 @@
 - **2026-01 · [EntroCut: Entropy-Guided Adaptive Truncation for Efficient Chain-of-Thought Reasoning in Small-scale Large Reasoning Models](2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thoug.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   反省トークンの地点で探査文字列への続きのエントロピーを測り、確信が十分なら思考を打ち切って応答段階へ移す学習不要の適応的打ち切りで、小規模な推論モデルのトークンを最大約40%削りながら精度をほぼ保つ方式。
+
+- **2025-12 · [HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices](2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edg.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚解像度圧縮器で入力ごとに縮小率を予測して視覚トークンを減らし、二重整合学習で大小二つの視覚エンコーダを一つの言語モデルへそろえて切替可能にした、端末向けマルチモーダルモデル。
 
 ### 2年前（2024-12〜2025-11）
 

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（320本）
+## 自動生成の論文一覧（321本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1011,6 +1011,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-11 · [FlashEVA: Accelerating LLM inference via Efficient Attention](2025-2511.00576-flasheva-accelerating-llm-inference-via-efficient-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FlashEVAは、既存の全注意Transformerを再学習なしで置き換える方式ではなく、事前学習済み重みを出発点に、近似注意へ構造を変えたモデルを追加学習して高速化する研究である。2048トークンの入力に対して最大10240トークンを生成する条件では、通常Transformerに対して生成処理量が最大6.7倍、ピークGPUメモリが最大5分の1となった。
+
+- **2025-11 · [Efficient Kernel Mapping and Comprehensive System Evaluation of LLM Acceleration on a CGLA](2025-2512.00335-efficient-kernel-mapping-and-comprehensive-system-evaluation-of-llm-acce.md)**  
+  実装：[✓](https://github.com/Takuto-Ando/IMAX3-LLM) ・ リポジトリ内被引用：0  
+  汎用の粗粒度線形アレイIMAXへllama.cppの量子化カーネルを写像してQwen3を動かし、FPGA実測とASIC投影で、遅延はGPUに劣るが電力遅延積は最大44.4倍良いことを示した包括評価。
 
 - **2025-11 · [EcoSpa: Efficient Transformer Training with Coupled Sparsity](2025-2511.11641-ecospa-efficient-transformer-training-with-coupled-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
