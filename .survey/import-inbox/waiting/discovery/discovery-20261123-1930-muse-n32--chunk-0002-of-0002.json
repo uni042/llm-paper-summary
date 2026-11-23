@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n32::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34545",
+      "identity_tokens": [
+        "arXiv:2610.34545"
+      ],
+      "title": "VTC-AUDIT: An Interventional Reliability Audit for Visual-Token Compression under Paired Image Shifts",
+      "reason": "視覚トークン圧縮の信頼性を画像シフト下で介入的に監査するVTC-AUDITであり、圧縮手法そのものではなくVLM推論圧縮の評価・監査が主目的のため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.34545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 391
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.09486",
+      "identity_tokens": [
+        "arXiv:2508.09486"
+      ],
+      "title": "Video-EM: Event-Centric Episodic Memory for Long-Form Video Understanding",
+      "reason": "長尺動画Video-LLM向けにイベント中心のエピソード記憶を学習なしで構築し文脈窓制約を回避するVideo-EMだが、主目的は動画QAの根拠品質であり推論効率の機構・実測は要旨で限定的である。",
+      "source_url": "https://arxiv.org/abs/2508.09486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 392
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.12758",
+      "identity_tokens": [
+        "arXiv:2411.12758"
+      ],
+      "title": "An exploration of the effect of quantisation on energy consumption and inference time of StarCoder2",
+      "reason": "コードLLM StarCoder2の推論において量子化とプルーニングがエネルギー消費と推論時間へ与える影響を実測し、量子化でスループット低下によりエネルギー増となるトレードオフを明らかにした推論計測研究である。",
+      "source_url": "https://arxiv.org/abs/2411.12758",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3721146.3721954",
+      "identity_tokens": [
+        "DOI:10.1145/3721146.3721954"
+      ],
+      "title": "RMAI: Rethinking Memory for AI (Inference): In-Kernel Remote Shared Memory as a Software Alternative to CXL",
+      "reason": "AI推論向けにカーネル内リモート共有メモリを提供するRMAIをCXLのソフトウェア代替として提案し、特にMoEモデルでエキスパート切替を最大10倍高速化するなど、推論の階層メモリ／共有メモリ機構への直接貢献である。",
+      "source_url": "https://doi.org/10.1145/3721146.3721954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.09612",
+      "identity_tokens": [
+        "arXiv:2507.09612"
+      ],
+      "title": "Inter2Former: Dynamic Hybrid Attention for Efficient High-Precision Interactive Segmentation",
+      "reason": "対話型セグメンテーション向けに動的ハイブリッド注意でCPU推論を効率化するInter2Formerであり、対象は画像セグメンテーション応用でLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2507.09612",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3772052.3772218",
+      "identity_tokens": [
+        "DOI:10.1145/3772052.3772218"
+      ],
+      "title": "DyOrc: Efficient Serving of Dynamic Machine Learning Workflows",
+      "reason": "基盤モデルの動的ワークフローを効率的にサービングするDyOrcで、条件分岐でバッチングが効かない問題に対しサービス単位バッチングやGPUテンソル通信、コールドスタート対策を備えたサービングシステムを提案している。",
+      "source_url": "https://doi.org/10.1145/3772052.3772218",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.17814",
+      "identity_tokens": [
+        "arXiv:2601.17814"
+      ],
+      "title": "MMR-Bench: A Comprehensive Benchmark for Multimodal LLM Routing",
+      "reason": "マルチモーダルLLMのクエリ単位ルーティングを固定候補集合とコストモデルの下で評価するベンチマークMMR-Benchであり、ルーティング方策自体ではなく推論基盤の評価基盤が主成果のため境界とする。",
+      "source_url": "https://arxiv.org/abs/2601.17814",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.03284",
+      "identity_tokens": [
+        "arXiv:2411.03284"
+      ],
+      "title": "SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents",
+      "reason": "マルチエージェントLLMの情報フローを疎化し早期停止で計算コストを下げつつ性能を保つSMoAだが、対象はエージェント協調フレームワークであり推論システム機構としての位置づけは間接的である。",
+      "source_url": "https://arxiv.org/abs/2411.03284",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3589777",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3589777"
+      ],
+      "title": "Opportunities and Challenges of Foundation Models in Industrial Manufacturing",
+      "reason": "基盤モデルの産業製造への応用機会と統合課題を論じるサーベイであり、製造分野への応用が主題でLLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3589777",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:338d0501947b5fc7d92d09eed9a3e299f7b48ec1",
+      "identity_tokens": [
+        "SemanticScholar:338d0501947b5fc7d92d09eed9a3e299f7b48ec1"
+      ],
+      "title": "Tuformer: Data-driven Design of Transformers for Improved Generalization or Efficiency",
+      "reason": "タイトル上はTransformerアーキテクチャをデータ駆動で設計し汎化性能または効率の改善を狙うTuformerとされるが、一次要旨を取得できなかったため、LLM推論効率への具体的な機構や実測を確認できず、判定を保留してborderlineとする。",
+      "source_url": "https://www.semanticscholar.org/paper/338d0501947b5fc7d92d09eed9a3e299f7b48ec1",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    }
+  ],
+  "parent_run_key": "muse-20261123-n32",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

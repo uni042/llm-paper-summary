@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n34::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5753/sbsi.2026.248585",
+      "identity_tokens": [
+        "DOI:10.5753/sbsi.2026.248585"
+      ],
+      "title": "Text Message Routing System for Chat-Based Applications",
+      "reason": "銀行チャット向けに意図を4分類して振り分ける意味ルーティングでLLM推論コスト問題を扱うが、業務応用システムの検証が中心であり汎用推論基盤への貢献は薄い。",
+      "source_url": "https://doi.org/10.5753/sbsi.2026.248585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.21387",
+      "identity_tokens": [
+        "arXiv:2506.21387"
+      ],
+      "title": "Early Stopping Tabular In-Context Learning",
+      "reason": "表形式基盤モデルの文脈内学習をTransformer層ごとに早期停止して推論を最大2.2倍高速化するが、対象は表データ分類でありLLM推論システムへの直接適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2506.21387",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01313",
+      "identity_tokens": [
+        "arXiv:2601.01313"
+      ],
+      "title": "Spectral-Window Hybrid (SWH)",
+      "reason": "大域畳み込み枝と滑走窓注意枝を並列化しO(T log T)で長文脈系列モデリングを行うSWHは注意計算量を下げるが、新規アーキテクチャの学習・ perplexity評価が中心で推論サービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2601.01313",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02320",
+      "identity_tokens": [
+        "arXiv:2602.02320"
+      ],
+      "title": "MolLangData: A Large-Scale Dataset for Molecular Structure-Language Description via a Rule-Regularized Method",
+      "reason": "IUPAC名解析とLLMで分子構造の言語記述データセットMolLangDataを自動構築する研究であり、化学データ作成が目的で推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.02320",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16424",
+      "identity_tokens": [
+        "arXiv:2604.16424"
+      ],
+      "title": "Safety, Security, and Cognitive Risks in State-Space Models: A Systematic Threat Analysis with Spectral, Stateful, and Capacity Attacks",
+      "reason": "状態空間モデルに対するスペクトル攻撃や遅延トリガ型バックドア等の脅威を体系化する安全性分析であり、推論効率化への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.16424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06683",
+      "identity_tokens": [
+        "arXiv:2605.06683"
+      ],
+      "title": "Toeplitz MLP Mixers are Low Complexity, Information-Rich Sequence Models",
+      "reason": "注意をToeplitz行列積に置換し推論プリフィルでO(dn)時間・空間をうたうToeplitz MLP Mixerだが、主眼は新規系列アーキテクチャの学習効率と情報保持でありサービング実装の貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2605.06683",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07019",
+      "identity_tokens": [
+        "arXiv:2606.07019"
+      ],
+      "title": "PCCL: Process Group-Aware Scalable and Generic Collective Algorithm Synthesizer",
+      "reason": "プロセスグループを意識した位相適応集合通信アルゴリズム合成器PCCLは分散学習の集合通信ボトルネックを扱い分散推論基盤とも関連するが、要旨上の対象は学習時の同期が中心である。",
+      "source_url": "https://arxiv.org/abs/2606.07019",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23087",
+      "identity_tokens": [
+        "arXiv:2609.23087"
+      ],
+      "title": "Neural Spectral Capacity: Measuring and Designing Architectures from Network Specification Alone",
+      "reason": "重み行列の特異値スペクトルからアーキテクチャ容量NSCを閉形式で測り設計する指標の提案であり、推論機構やサービングへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2609.23087",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38413",
+      "identity_tokens": [
+        "arXiv:2609.38413"
+      ],
+      "title": "VidHarness: Evolving Agent Harnesses for Cost-Efficient Long Video Understanding",
+      "reason": "長時間動画理解のエージェントハーネスを進化させVLM処理コストを下げるVidHarnessだが、コスト削減はフレーム選択等のハーネス層によるもので推論システム自体の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2609.38413",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22026",
+      "identity_tokens": [
+        "arXiv:2610.22026"
+      ],
+      "title": "Augment the Cache, Replace the Activation: A 2x2 Study of Internal-State Sharing",
+      "reason": "凍結LLM多エージェント間で内部状態を共有する研究で、受信側が自身のKVキャッシュを保持しつつ相手のキャッシュへクロスアテンションする増強方式が再計算回避に有効であることを示し、KVキャッシュ共有による推論効率化への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2610.22026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:20:00+09:00",
+      "last_checked_at": "2026-11-23T22:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    }
+  ],
+  "parent_run_key": "muse-20261123-n34",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

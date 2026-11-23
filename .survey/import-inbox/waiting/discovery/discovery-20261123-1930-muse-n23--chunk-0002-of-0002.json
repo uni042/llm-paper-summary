@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n23::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.01482",
+      "identity_tokens": [
+        "arXiv:2409.01482"
+      ],
+      "title": "Masked Mixers for Language Generation and Retrieval",
+      "reason": "自己注意をマスク付き畳み込みのmasked mixerへ置換し言語生成・検索での表現精度と学習効率を論じるアーキテクチャ研究だが、推論サービングでの効果は小文脈での学習効率中心で不明確",
+      "source_url": "https://arxiv.org/abs/2409.01482",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2509.24560",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2509.24560"
+      ],
+      "title": "AdaThink-Med: Medical Adaptive Thinking with Uncertainty-Guided Length Calibration",
+      "reason": "医療LLMで不確実性に基づき思考長を校正し推論時計算を適応化する枠組みだが、実証は医療診断応用が主目的で汎用推論機構としての位置づけは限定的",
+      "source_url": "https://doi.org/10.48550/arXiv.2509.24560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.10584",
+      "identity_tokens": [
+        "arXiv:2505.10584"
+      ],
+      "title": "Aquarius: A Family of Industry-Level Video Generation Models for Marketing Scenarios",
+      "reason": "マーケティング向け産業規模動画生成モデル群とそのデータ処理基盤の報告で、LLM推論システムとは対象が異なる",
+      "source_url": "https://arxiv.org/abs/2505.10584",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12247",
+      "identity_tokens": [
+        "arXiv:2508.12247"
+      ],
+      "title": "STM3: Mixture of Multiscale Mamba for Long-Term Spatio-Temporal Time-Series Prediction",
+      "reason": "マルチスケールMambaとMoEによる長期時空間時系列予測モデルであり、LLM推論とは無関係な予測応用",
+      "source_url": "https://arxiv.org/abs/2508.12247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12842",
+      "identity_tokens": [
+        "arXiv:2510.12842"
+      ],
+      "title": "Protenix-Mini+: efficient structure prediction model with scalable pairformer",
+      "reason": "生体分子構造予測モデルで三次複雑性演算の圧縮・冗長ブロック除去・少数ステップサンプラにより推論レイテンシを下げるが、対象はタンパク質構造予測応用でありLLM推論ではない",
+      "source_url": "https://arxiv.org/abs/2510.12842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.24030",
+      "identity_tokens": [
+        "arXiv:2510.24030"
+      ],
+      "title": "Human Machine Social Hybrid Intelligence:A Collaborative Decision Making Framework for Large Model Agent Groups and Human Experts",
+      "reason": "大規模モデルエージェント集団と人間専門家の協調意思決定枠組みの提案で、推論効率化の技術的機構は扱わない",
+      "source_url": "https://arxiv.org/abs/2510.24030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:0ad38c8f81b61993304b47dc73d50892e5a1ead5",
+      "identity_tokens": [
+        "SemanticScholar:0ad38c8f81b61993304b47dc73d50892e5a1ead5"
+      ],
+      "title": "ACCO: A CCUMULATE WHILE YOU C OMMUNICATE , H IDING",
+      "reason": "Semantic Scholarが429で要旨未取得のため、通信しながら累積する手法の対象と推論への寄与を確認できない",
+      "source_url": "https://www.semanticscholar.org/paper/0ad38c8f81b61993304b47dc73d50892e5a1ead5",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4af3c4f5616d99e5d0698727949728e77333270e",
+      "identity_tokens": [
+        "SemanticScholar:4af3c4f5616d99e5d0698727949728e77333270e"
+      ],
+      "title": "This paper is included in the Proceedings of the 21st USENIX Symposium on Networked Systems Design and Implementation.",
+      "reason": "Semantic Scholarの要旨がnullで未取得のため、NSDI収録論文としてのシステム内容とLLM推論への寄与を確認できない",
+      "source_url": "https://www.semanticscholar.org/paper/4af3c4f5616d99e5d0698727949728e77333270e",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:c3ceffdcf2d29af8124321ac3f63f788fb0e3ec2",
+      "identity_tokens": [
+        "SemanticScholar:c3ceffdcf2d29af8124321ac3f63f788fb0e3ec2"
+      ],
+      "title": "Finding the Needle in a Haystack: Zero-shot Rationale Extraction for Long Text Classifiers",
+      "reason": "Semantic Scholarが429で要旨未取得のため、長文分類器の根拠抽出が推論効率へ寄与するか確認できない",
+      "source_url": "https://www.semanticscholar.org/paper/c3ceffdcf2d29af8124321ac3f63f788fb0e3ec2",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.16491",
+      "identity_tokens": [
+        "arXiv:2412.16491"
+      ],
+      "title": "ImagePiece: Content-aware Re-tokenization for Efficient Image Recognition",
+      "reason": "Vision Transformerの画像認識で意味単位へ再トークン化しトークン削減と両立させる視覚モデル高速化であり、LLM推論システムではない",
+      "source_url": "https://arxiv.org/abs/2412.16491",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 480
+    }
+  ],
+  "parent_run_key": "muse-20261123-n23",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n31::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.15836",
+      "identity_tokens": [
+        "arXiv:2602.15836"
+      ],
+      "title": "EdgeNav-QE: QLoRA Quantization and Dynamic Early Exit for LAM-based Navigation on Edge Devices",
+      "reason": "LAMナビゲーション向けにOpenVLA-7Bを4ビットQLoRA量子化し動的早期終了で遅延を82.7%削減するが、量子化と早期終了は既知手法のナビゲーション応用が主目的でLLM推論自体への新規機構は薄い",
+      "source_url": "https://arxiv.org/abs/2602.15836",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 341
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04131",
+      "identity_tokens": [
+        "arXiv:2609.04131"
+      ],
+      "title": "Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding",
+      "reason": "ストリーミング動画MLLM向けに固定メモリ予算下で短・中・長期の階層潜在メモリを進化させるLatentStreamを提案し推論時メモリ管理に関連するが、主目的は動画理解の精度でありサービング効率の直接改善は示されない",
+      "source_url": "https://arxiv.org/abs/2609.04131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 342
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE54114.2022.9774692",
+      "identity_tokens": [
+        "DOI:10.23919/DATE54114.2022.9774692"
+      ],
+      "title": "DTQAtten: Leveraging Dynamic Token-based Quantization for Efficient Attention Architecture",
+      "reason": "BERT/GPT-2の注意向けにトークンごとの耐ノイズ性に基づく動的混合精度量子化DTQAttenと可変速シストリックアレイを協調設計し、推論の高速化と省エネルギーを実測する注意・量子化の直接貢献",
+      "source_url": "https://doi.org/10.23919/DATE54114.2022.9774692",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 343
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/fnbot.2026.1799054",
+      "identity_tokens": [
+        "DOI:10.3389/fnbot.2026.1799054"
+      ],
+      "title": "A cognitive synergetic hierarchical framework for UAV swarm combat via speculative inference and role-decoupled reinforcement learning",
+      "reason": "UAV群戦闘向けにDeepSeek-R1 70Bと7B蒸留モデルの投機的デコーディングで意思決定スループットを上げる階層フレームワークだが、主目的は戦闘制御への応用で投機的推論機構自体の新規性は限られる",
+      "source_url": "https://doi.org/10.3389/fnbot.2026.1799054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 344
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.14586",
+      "identity_tokens": [
+        "arXiv:2608.14586"
+      ],
+      "title": "Efficient Block-Layer Parallel Inference for Vision-Language-Action on Hybrid Architectures",
+      "reason": "自動運転VLA向けにバックボーンをブロック層単位で分割し視覚エンコーダとLLMプレフィックスをGPU、LLMサフィックスをCPUへオフロードする跨フレーム非同期パイプラインで、GPUメモリ制約下の並列推論を実現する",
+      "source_url": "https://arxiv.org/abs/2608.14586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19151",
+      "identity_tokens": [
+        "arXiv:2505.19151"
+      ],
+      "title": "SRDiffusion: Accelerate Video Diffusion Inference via Sketching-Rendering Cooperation",
+      "reason": "対象はSora系の動画拡散モデルDiTであり、大モデルがスケッチ、小モデルが描画を担う協力で動画生成を高速化するもので、LLM推論・デコードではない",
+      "source_url": "https://arxiv.org/abs/2505.19151",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 346
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3722113",
+      "identity_tokens": [
+        "DOI:10.1145/3722113"
+      ],
+      "title": "Koala: Efficient Pipeline Training through Automated Schedule Searching on Domain-Specific Language",
+      "reason": "Koalaは大規模モデル学習のパイプライン並列スケジュールをDSLで自動探索する学習高速化であり、推論サービングへの直接貢献はない",
+      "source_url": "https://doi.org/10.1145/3722113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16616",
+      "identity_tokens": [
+        "arXiv:2412.16616"
+      ],
+      "title": "Distributed Inference on Mobile Edge and Cloud: A Data-Cartography based Clustering Approach",
+      "reason": "モバイル・エッジ・クラウドへ小・中・全DNNを配置しデータカルトグラフィでサンプル複雑度を判定して推論コストを43%下げる分散推論だが、対象はGLUE向け小型DNNでLLMサービングではない",
+      "source_url": "https://arxiv.org/abs/2412.16616",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 348
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02477",
+      "identity_tokens": [
+        "arXiv:2504.02477"
+      ],
+      "title": "Multimodal Fusion and Vision-Language Models: A Survey for Robot Vision",
+      "reason": "ロボットビジョンにおけるマルチモーダル融合とVLMの応用を課題別に整理するサーベイであり、推論システムへの技術的貢献はない",
+      "source_url": "https://arxiv.org/abs/2504.02477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 349
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18774",
+      "identity_tokens": [
+        "arXiv:2606.18774"
+      ],
+      "title": "RouteJudge: An Open Platform for Reproducible and Preference-Aware LLM Routing",
+      "reason": "LLMルーティング戦略を同一モデルプール・予算下でペアワイズ嗜好評価するRouteJudgeとルーティング用ORBITツールボックスでルーティング評価基盤には関連するが、推論効率を改善するルータ自体の提案ではない",
+      "source_url": "https://arxiv.org/abs/2606.18774",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 350
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12206",
+      "identity_tokens": [
+        "arXiv:2603.12206"
+      ],
+      "title": "CLASP: Defending Hybrid Large Language Models Against Hidden State Poisoning Attacks",
+      "reason": "Mamba系ハイブリッドLLMの隠れ状態汚染攻撃に対しブロック出力埋め込みとXGBoostで悪性トークンを検出する防御手法であり、推論効率化への貢献はない",
+      "source_url": "https://arxiv.org/abs/2603.12206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 351
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.17182",
+      "identity_tokens": [
+        "arXiv:2604.17182"
+      ],
+      "title": "Layer-wise MoE Routing Locality under Shared-Prefix Code Generation: Token-Identity Decomposition and Compile-Equivalent Fork Redundancy",
+      "reason": "共有プレフィックス並列コード生成時にQwen3.5 MoEの層別ルーティング局所性をトークン同一性で分解測定し、KVキャッシュ共有下でのエキスパート重なりとコンパイル等価フォーク冗長性を定量化するMoE推論の計測研究",
+      "source_url": "https://arxiv.org/abs/2604.17182",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 352
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02092",
+      "identity_tokens": [
+        "arXiv:2507.02092"
+      ],
+      "title": "Energy-Based Transformers are Scalable Learners and Thinkers",
+      "reason": "エネルギー 기반Transformerを教師なし学習で検証器として訓練し推論時計算を一般化する新アーキテクチャ・学習法の提案であり、既存LLM推論システムの効率化ではない",
+      "source_url": "https://arxiv.org/abs/2507.02092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 353
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05661",
+      "identity_tokens": [
+        "arXiv:2410.05661"
+      ],
+      "title": "Scaling Laws Across Model Architectures: A Comparative Analysis of Dense and MoE Models in Large Language Models",
+      "reason": "DenseとMoEのLLMについて損失・バッチサイズ・学習率・資源配分のスケーリング則の転移性を訓練実験で比較する研究であり、推論への直接貢献はない",
+      "source_url": "https://arxiv.org/abs/2410.05661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3637528.3671452",
+      "identity_tokens": [
+        "DOI:10.1145/3637528.3671452"
+      ],
+      "title": "Reasoning and Planning with Large Language Models in Code Development",
+      "reason": "コード開発におけるLLMの推論・計画利用を生成・テスト・文書化・プロンプト等の観点で概説するKDDチュートリアル型サーベイであり、推論システム技術ではない",
+      "source_url": "https://doi.org/10.1145/3637528.3671452",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.17951",
+      "identity_tokens": [
+        "arXiv:2405.17951"
+      ],
+      "title": "Efficient Time Series Processing for Transformers and State-Space Models through Token Merging",
+      "reason": "時系列Transformerと状態空間モデル向けに局所近傍でトークンをマージし計算量を二次から線形へ調整可能にする手法で汎用的な系列処理効率化ではあるが、適用先は時系列解析でLLM推論ではない",
+      "source_url": "https://arxiv.org/abs/2405.17951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 356
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.19585",
+      "identity_tokens": [
+        "arXiv:2305.19585"
+      ],
+      "title": "LAIT: Efficient Multi-Segment Encoding in Transformers with Layer-Adjustable Interaction",
+      "reason": "複数セグメント入力を前半層で独立に、後半層で共同に符号化するLAITでTransformerエンコーダの計算効率と精度のトレードオフを改善するが、対象は汎用NLPエンコーディングでLLMサービング機構ではない",
+      "source_url": "https://arxiv.org/abs/2305.19585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 357
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.14246",
+      "identity_tokens": [
+        "arXiv:2604.14246"
+      ],
+      "title": "Awakening Dormant Experts:Counterfactual Routing to Mitigate MoE Hallucinations",
+      "reason": "MoEの静的Top-kルーティングで休眠する長尾知識エキスパートを、層別摂動による反実仮想エキスパート影響度で訓練なしに推論時に覚醒させ、総活性数を変えずに事実性を上げるMoE推論フレームワーク",
+      "source_url": "https://arxiv.org/abs/2604.14246",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 358
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10525",
+      "identity_tokens": [
+        "arXiv:2502.10525"
+      ],
+      "title": "Towards Watermarking of Open-Source LLMs",
+      "reason": "オープンソースLLM向け透かしの要件を定式化しマージ・量子化・微調整への耐久性を評価する研究であり、推論効率化への貢献はない",
+      "source_url": "https://arxiv.org/abs/2502.10525",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 359
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.10985",
+      "identity_tokens": [
+        "arXiv:2406.10985"
+      ],
+      "title": "Taking a Deep Breath: Enhancing Language Modeling of Large Language Models with Sentinel Tokens",
+      "reason": "テキストをチャンク化しセンチネルトークンへ情報を集約させることで長文脈言語モデリングの精度を上げる学習・表現手法であり、推論システムの効率化ではない",
+      "source_url": "https://arxiv.org/abs/2406.10985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 360
+    }
+  ],
+  "parent_run_key": "muse-20261123-n31",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

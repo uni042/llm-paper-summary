@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n25::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27089",
+      "identity_tokens": [
+        "arXiv:2604.27089"
+      ],
+      "title": "AutoSP: Unlocking Long-Context LLM Training Via Compiler-Based Sequence Parallelism",
+      "reason": "AutoSPはコンパイラベースのシーケンス並列と活性化チェックポイントで長文脈LLM学習を自動最適化する手法であり、対象は学習スループットと学習可能文脈長であって推論ではない。",
+      "source_url": "https://arxiv.org/abs/2604.27089",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 181
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2411.02908",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2411.02908"
+      ],
+      "title": "Photon: Federated LLM Pre-Training",
+      "reason": "Photonは低帯域の連合学習でLLMを事前学習するシステムであり、通信削減の対象は分散学習であって推論サービングではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2411.02908",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 182
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.00640",
+      "identity_tokens": [
+        "arXiv:2210.00640"
+      ],
+      "title": "Wide Attention Is The Way Forward For Transformers",
+      "reason": "単層で幅広い注意を持つTransformerが深いモデルと同等性能を保ちつつメモリフットプリント削減とCPU推論レイテンシ改善を示すが、主眼はモデルアーキテクチャの深さ対幅の比較であり推論システム機構への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2210.00640",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 183
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.03424",
+      "identity_tokens": [
+        "arXiv:2310.03424"
+      ],
+      "title": "Neural Language Model Pruning for Automatic Speech Recognition",
+      "reason": "音声認識用Transformer言語モデルのプルーニング基準・手法・スケジューラを分析し推論速度とのトレードオフを示すが、適用先はASR応用でありLLM推論への直接貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2310.03424",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 184
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCD65941.2025.00017",
+      "identity_tokens": [
+        "DOI:10.1109/ICCD65941.2025.00017"
+      ],
+      "title": "DHeLlam: General-Purpose, Automatic Micro-Batch Co-Execution for Distributed LLM Training",
+      "reason": "DHeLlamは分散LLM学習で2つのマイクロバッチのforward/backwardを共実行し通信によるMFU低下を抑える学習手法であり、対象は学習スループットであって推論ではない。",
+      "source_url": "https://doi.org/10.1109/ICCD65941.2025.00017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 185
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3651558",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3651558"
+      ],
+      "title": "Enabling Software-Defined Tiered LLM Inference Continuum on Passive Optical Network",
+      "reason": "受動光ネットワーク上の階層型LLM推論コンティニュアムをソフトウェア定義アーキテクチャで実現し、OLT/ONUに推論処理とキューイングを持たせSDN制御で推論トラフィックと資源配分を最適化する推論基盤の提案である。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3651558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 186
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28732",
+      "identity_tokens": [
+        "arXiv:2605.28732"
+      ],
+      "title": "MemTrace: Tracing and Attributing Errors in Large Language Model Memory Systems",
+      "reason": "MemTraceはRAGやMem0等のLLMメモリシステムの誤りをメモリ進化グラフで追跡・帰属するデバッグ枠組みであり、記憶システムの信頼性分析が主題で推論実行効率への直接貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2605.28732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 187
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/technologies14020133",
+      "identity_tokens": [
+        "DOI:10.3390/technologies14020133"
+      ],
+      "title": "Training Methods for Large Language Models: Current Approaches and Challenges",
+      "reason": "LLMの事前学習・ファインチューニング・アライメント等の学習手法を体系的に整理したマッピング研究であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.3390/technologies14020133",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 188
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04236",
+      "identity_tokens": [
+        "arXiv:2606.04236"
+      ],
+      "title": "Supportive Token Revealing for Fast Diffusion Language Model Decoding",
+      "reason": "拡散言語モデルの並列デコードに対し、AXONが不確実なマスク位置が依存する自信あるアンカートークンを先に開示することで後続のデノイジングを支援し、品質を保ちながらデコードステップを削減する学習不要モジュールを提案している。",
+      "source_url": "https://arxiv.org/abs/2606.04236",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 189
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.06392",
+      "identity_tokens": [
+        "arXiv:2512.06392"
+      ],
+      "title": "RLAX: Large-Scale, Distributed Reinforcement Learning for Large Language Models on TPUs",
+      "reason": "RLAXはTPU上のLLM強化学習をパラメータサーバーと推論ワーカーで大規模化する学習フレームワークであり、推論ワーカーはロールアウト生成という学習の従属要素で、最終目的はRL学習の高速化である。",
+      "source_url": "https://arxiv.org/abs/2512.06392",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 190
+    }
+  ],
+  "parent_run_key": "muse-20261123-n25",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

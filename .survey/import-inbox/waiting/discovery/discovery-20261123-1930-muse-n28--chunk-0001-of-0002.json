@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n28::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24859",
+      "identity_tokens": [
+        "arXiv:2509.24859"
+      ],
+      "title": "HARP: Orchestrating Automated Parallel Training on Heterogeneous GPU Clusters",
+      "reason": "異種GPUクラスタ向け自動並列学習フレームワークHARPの学習並列戦略と1F1Bスケジューラであり、推論・サービングへの技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2509.24859",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f8b97e063d66fbf8a49b33a7b43efdd4fe677ae3",
+      "identity_tokens": [
+        "SemanticScholar:f8b97e063d66fbf8a49b33a7b43efdd4fe677ae3"
+      ],
+      "title": "Weight Squeezing: Reparameterization for Compression and Fast Inference",
+      "reason": "BERT教師モデルの重みから小さい生徒重みへの写像を学ぶWeight Squeezingによる知識転移・圧縮で、GLUE分類での評価が中心でありLLM推論高速化の直接機構は要旨で限定的である。",
+      "source_url": "https://www.semanticscholar.org/paper/f8b97e063d66fbf8a49b33a7b43efdd4fe677ae3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08310",
+      "identity_tokens": [
+        "arXiv:2601.08310"
+      ],
+      "title": "ORBIT: On-policy Exploration-Exploitation for Controllable Multi-Budget Reasoning",
+      "reason": "長大なCoTの推論コストに対し入力で切り替える複数推論予算モードを多段階強化学習で獲得するORBITだが、主機構は学習でありサービング機構としての直接貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2601.08310",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.08819",
+      "identity_tokens": [
+        "arXiv:2512.08819"
+      ],
+      "title": "Do Depth-Grown Models Overcome the Curse of Depth? An In-Depth Analysis",
+      "reason": "深さ方向に段階成長させるMIDAS型学習の機構的分析とCurse of Depthの解明が主題で、推論効率化への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2512.08819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09188",
+      "identity_tokens": [
+        "arXiv:2602.09188"
+      ],
+      "title": "Harvest: Adaptive Photonic Switching Schedules for Collective Communication in Scale-up Domains",
+      "reason": "フォトニック回路切替の再構成遅延と輻輳を均衡させる集団通信スケジュール合成Harvestで、分散推論にも関わり得るが要旨は汎用集団通信が対象でLLM推論特化ではない。",
+      "source_url": "https://arxiv.org/abs/2602.09188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05182",
+      "identity_tokens": [
+        "arXiv:2604.05182"
+      ],
+      "title": "LSRM: High-Fidelity Object-Centric Reconstruction via Scaled Context Windows",
+      "reason": "疎注意と文脈窓拡大によるフィードフォワード3次元物体再構成LSRMであり、LLM推論システムとは異分野である。",
+      "source_url": "https://arxiv.org/abs/2604.05182",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06991",
+      "identity_tokens": [
+        "arXiv:2606.06991"
+      ],
+      "title": "Don't Pause: Streaming Video-Language Synchrony for Online Video Understanding",
+      "reason": "応答生成中に映像知覚が停止する問題へのStreaming Token Pacer等によるオンラインVideo-LLM同期機構だが、主目的は映像理解応用であり汎用LLMサービング貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2606.06991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 257
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.00823",
+      "identity_tokens": [
+        "arXiv:2601.00823"
+      ],
+      "title": "Energy-Aware Routing to Large Reasoning Models",
+      "reason": "大規模推論モデルへのタスク振り分けと推論エネルギー供給の理論的特性化が主題で、ルーティングには関連するが具体的なサービング機構や実測が要旨で不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2601.00823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19214",
+      "identity_tokens": [
+        "arXiv:2607.19214"
+      ],
+      "title": "Keeping the Cache Warm Pays: Keepalive Economics for Agentic Workloads",
+      "reason": "エージェントのツール実行待ちで失われるプロンプト接頭辞キャッシュをクライアント側keepaliveで保持し、再prefill費用を最大12.5倍削減する、LLMサービングのキャッシュ経済性への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2607.19214",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18111",
+      "identity_tokens": [
+        "arXiv:2405.18111"
+      ],
+      "title": "ATM: Adversarial Tuning Multi-agent System Makes a Robust Retrieval-Augmented Generator",
+      "reason": "敵対的チューニング多エージェントによるRAG生成器のノイズ頑健化ATMであり、推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2405.18111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 260
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21097",
+      "identity_tokens": [
+        "arXiv:2505.21097"
+      ],
+      "title": "Thinker: Learning to Think Fast and Slow",
+      "reason": "高速思考・検証・低速思考の段階を強化学習で学ぶThinkerは推論能力向上が目的で、推論システムへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2505.21097",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 261
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.17700",
+      "identity_tokens": [
+        "arXiv:2510.17700"
+      ],
+      "title": "Elastic ViTs from Pretrained Models without Retraining",
+      "reason": "学習済みViTを再学習なしに構造プルーニングし計算予算連続可変な弾性推論を可能にするSnapViTだが、対象は視覚モデルでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2510.17700",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 262
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.04903",
+      "identity_tokens": [
+        "arXiv:2509.04903"
+      ],
+      "title": "ACE-RL: Adaptive Constraint-Enhanced Reward for Long-form Generation Reinforcement Learning",
+      "reason": "長文生成向けに制約分解と報酬設計を行う強化学習ACE-RLであり、学習手法であって推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2509.04903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 263
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.17108",
+      "identity_tokens": [
+        "arXiv:2512.17108"
+      ],
+      "title": "Atom: Efficient On-Device Video-Language Pipelines Through Modular Reuse",
+      "reason": "動画言語パイプラインを視覚エンコーダと言語デコーダ等の再利用可能モジュールへ分解しモバイル上で並列実行して遅延を27-33%削減するAtomは、オンデバイス推論システムへの直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2512.17108",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 264
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06216",
+      "identity_tokens": [
+        "arXiv:2605.06216"
+      ],
+      "title": "TIDE: Every Layer Knows the Token Beneath the Context",
+      "reason": "トークン索引を全層へ再注入するEmbeddingMemory付きTransformerアーキテクチャTIDEは希少トークン表現の問題が主題で、推論効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.06216",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 265
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25422",
+      "identity_tokens": [
+        "arXiv:2607.25422"
+      ],
+      "title": "Salient Knowledge Pathways: Sparse Cross-Modal Routing for Efficient Knowledge-Intensive Multimodal Question Answering",
+      "reason": "知識集約型マルチモーダルQA向けに視覚トークン剪定・疎検索・疎交差注意と難易度適応予算を組み合わせるSKIPで、推論計算削減には関連するが特定応用主目的である。",
+      "source_url": "https://arxiv.org/abs/2607.25422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 266
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19579",
+      "identity_tokens": [
+        "arXiv:2609.19579"
+      ],
+      "title": "Recovering Aggressively Pruned Vision-Language-Action Models with Offline Hidden-State Distillation",
+      "reason": "ロボット実装のため63%プルーニングした視覚言語行動モデルの隠れ状態蒸留によるオフライン回復であり、圧縮には関連するが主目的はVLAの成功率回復である。",
+      "source_url": "https://arxiv.org/abs/2609.19579",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 267
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13504",
+      "identity_tokens": [
+        "arXiv:2305.13504"
+      ],
+      "title": "Neural Machine Translation for Code Generation",
+      "reason": "コード生成向けニューラル機械翻訳手法のサーベイであり、LLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2305.13504",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 268
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01126",
+      "identity_tokens": [
+        "arXiv:2407.01126"
+      ],
+      "title": "Investigating the potential of Sparse Mixtures-of-Experts for multi-domain neural machine translation",
+      "reason": "多ドメイン機械翻訳における疎MoEの有用性検証であり、幅拡大Transformerと同等という結果で翻訳応用が主題、LLM推論への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2407.01126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 269
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:6b369fa145497b54da31682fbc45ac94399bb547",
+      "identity_tokens": [
+        "SemanticScholar:6b369fa145497b54da31682fbc45ac94399bb547"
+      ],
+      "title": "大模型关键技术与应用 Key Technologies and Applications of Large Models",
+      "reason": "大規模モデルの基幹技術と応用を扱うと題する中国語論文だが、Semantic Scholarが429で要旨を取得できず推論システムへの具体的貢献を確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/6b369fa145497b54da31682fbc45ac94399bb547",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 270
+    }
+  ],
+  "parent_run_key": "muse-20261123-n28",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

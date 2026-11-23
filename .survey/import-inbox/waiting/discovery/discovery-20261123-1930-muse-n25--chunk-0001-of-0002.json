@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n25::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.08642",
+      "identity_tokens": [
+        "arXiv:2407.08642"
+      ],
+      "title": "Towards Building Specialized Generalist AI with System 1 and System 2 Fusion",
+      "reason": "System 1/2融合によるSpecialized Generalist AIというAGI概念・展望論文であり、LLM推論の高速化やサービング機構への技術的貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2407.08642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 161
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TASLPRO.2025.3579303",
+      "identity_tokens": [
+        "DOI:10.1109/TASLPRO.2025.3579303"
+      ],
+      "title": "Speaker Adaptive Mixture of Weight-Decomposed LoRA Experts for On-Device End-to-End ASR",
+      "reason": "対象はオンデバイス音声認識の話者適応であり、量子化済みASRモデルへのLoRA専門家混合による適応精度の改善が主目的で、LLM推論システムへの直接貢献はない。",
+      "source_url": "https://doi.org/10.1109/TASLPRO.2025.3579303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 162
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.19391",
+      "identity_tokens": [
+        "arXiv:2504.19391"
+      ],
+      "title": "Bi-directional Model Cascading with Proxy Confidence",
+      "reason": "小モデルから大モデルへ段階的に委譲するモデルカスケーディングでLLM推論効率を高め、隠れ状態解析による小モデル信頼度と微小プロキシによる大モデル信頼度の双方向委譲を提案しており、推論コスト削減への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2504.19391",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3704923",
+      "identity_tokens": [
+        "DOI:10.1145/3704923"
+      ],
+      "title": "Reinforcement Learning for Intra- & Inter-Node Recommender Data Pipeline Optimization",
+      "reason": "対象はNetflixの推薦モデルDLRM学習用データ取り込みパイプラインのノード内外配置最適化であり、LLM推論とは無関係な学習データ基盤の研究である。",
+      "source_url": "https://doi.org/10.1145/3704923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103699",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103699"
+      ],
+      "title": "KVC-Q: A high-fidelity and dynamic KV Cache quantization framework for long-context large language models",
+      "reason": "タイトルは長文脈LLM向け動的KVキャッシュ量子化フレームワークKVC-Qを示すが、Crossref・OpenAlex・掲載ページのいずれからも要旨を取得できず、機構の具体性を確認できない。",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103699",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 165
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:2fec9b113c91fc2c090ab656094d97afc8e91e9b",
+      "identity_tokens": [
+        "SemanticScholar:2fec9b113c91fc2c090ab656094d97afc8e91e9b"
+      ],
+      "title": "Accelerating Large Language Model Inference with Dynamic Self-Speculative Decoding",
+      "reason": "タイトルは動的自己投機的デコードによるLLM推論高速化を示すが、Semantic Scholar APIが429を返し要旨を取得できなかったため、投機的デコード機構の具体性を確認できない。",
+      "source_url": "https://www.semanticscholar.org/paper/2fec9b113c91fc2c090ab656094d97afc8e91e9b",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 166
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24031",
+      "identity_tokens": [
+        "arXiv:2606.24031"
+      ],
+      "title": "A 35B Hybrid-Attention Mixture-of-Experts Model on a 6GB 2011 GPU: Hand-Written 4-bit CUDA Inference for Fermi",
+      "reason": "35Bのハイブリッド注意MoEモデルを6GB Fermi GPUで動かすため、専門家重みをホストRAMから層単位でストリーミングするprefillと手書きW4A8 GEMVによるCPUデコードを組み合わせた4ビットCUDA推論エンジンを実装し、prefill短縮とデコード高速化を実測している。",
+      "source_url": "https://arxiv.org/abs/2606.24031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 167
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.19438",
+      "identity_tokens": [
+        "arXiv:2511.19438"
+      ],
+      "title": "Opt4GPTQ: Co-Optimizing Memory and Computation for 4-bit GPTQ Quantized LLM Inference on Heterogeneous Platforms",
+      "reason": "vLLM上に構築したOpt4GPTQが、共有メモリバッファリング・ベクトル化メモリロード・インラインアセンブリの3最適化で異種アクセラレータ上の4ビットGPTQ量子化LLM推論を最大84.42%高速化しており、量子化推論への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2511.19438",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 168
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s10586-026-06732-3",
+      "identity_tokens": [
+        "DOI:10.1007/s10586-026-06732-3"
+      ],
+      "title": "Congestion-aware routing and dynamic replication for scalable mixture-of-experts inference",
+      "reason": "分散GPUクラスタ上のMoEサービングにおける専門家ルーティングの輻輳に対し、帯域と遅延を直接最適化するILPによる初期配置と、ホットスポット専門家の動的複製を行うランタイム適応を組み合わせ、goodputとp99遅延を改善している。",
+      "source_url": "https://doi.org/10.1007/s10586-026-06732-3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.22925",
+      "identity_tokens": [
+        "arXiv:2512.22925"
+      ],
+      "title": "Argus: Token Aware Distributed LLM Inference Optimization",
+      "reason": "エッジ・クラウド間の分散LLM推論フレームワークArgusが、出力トークン長予測モジュールとprefill/decodeコストを明示したLyapunov誘導オフロード最適化により、異種環境でのタスク配置を最適化している。",
+      "source_url": "https://arxiv.org/abs/2512.22925",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 170
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.04794",
+      "identity_tokens": [
+        "arXiv:2611.04794"
+      ],
+      "title": "Accelerating Offloading-Based MoE Inference by Interleaving Concurrent Requests",
+      "reason": "専門家オフロード型MoE推論システムBevyが、予測プリフェッチではなく同時リクエストのrunahead実行とスケジューリングで専門家フェッチと計算を重ね合わせ、キャッシュ存在下でのプリフェッチの害を回避している。",
+      "source_url": "https://arxiv.org/abs/2611.04794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25422",
+      "identity_tokens": [
+        "arXiv:2605.25422"
+      ],
+      "title": "A token/KV-cache communication media selection and resource allocation strategy for multi-agent collaboration",
+      "reason": "複数エージェント協調においてトークン伝送とKVキャッシュ伝送のどちらが端末間遅延を下げるかを無線資源配分と共同最適化する研究で、KVキャッシュに関わるが主たる貢献は6G無線側のメディア選択と資源配分であり推論機構自体ではない。",
+      "source_url": "https://arxiv.org/abs/2605.25422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 172
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:c5860b016fd17d4a2e23f4b50622a030df01e51e",
+      "identity_tokens": [
+        "SemanticScholar:c5860b016fd17d4a2e23f4b50622a030df01e51e"
+      ],
+      "title": "OFFMATE: full fine-tuning of LLMs on a single GPU by re-materialization and offloading",
+      "reason": "タイトルは再物質化とオフロードによる単一GPUでのLLMフルファインチューニングOFFMATEを示し学習側の手法とみられるが、Semantic Scholar APIが429を返し要旨を取得できなかったため最終確認ができない。",
+      "source_url": "https://www.semanticscholar.org/paper/c5860b016fd17d4a2e23f4b50622a030df01e51e",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 173
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.12236",
+      "identity_tokens": [
+        "arXiv:2310.12236"
+      ],
+      "title": "Direct Neural Machine Translation with Task-level Mixture of Experts models",
+      "reason": "タスクレベルMoEを非英語間直接翻訳へ適用する研究で、推論効率的なMoE変種を用い言語群別ルーティングで翻訳性能を上げているが、主目的は機械翻訳応用の性能であり推論システム機構への貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2310.12236",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 174
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.01697",
+      "identity_tokens": [
+        "arXiv:2603.01697"
+      ],
+      "title": "DynaMoE: Dynamic Token-Level Expert Activation with Layer-Wise Adaptive Capacity for Mixture-of-Experts Neural Networks",
+      "reason": "DynaMoEはトークンごとに活性専門家数を変える動的ルーティングと層別容量配分を提案するが、評価はMNISTやCIFAR-10等の小規模分類と言語モデリングで、MoEサービングや推論実行系での効率検証は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2603.01697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 175
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.22103",
+      "identity_tokens": [
+        "arXiv:2511.22103"
+      ],
+      "title": "MoE3D: Mixture of Experts meets Multi-Modal 3D Understanding",
+      "reason": "MoE3Dはマルチモーダル3D理解のための専門家混合による視覚特徴融合が主題であり、LLM推論の実行効率とは無関係なコンピュータビジョン応用である。",
+      "source_url": "https://arxiv.org/abs/2511.22103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 176
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.08972",
+      "identity_tokens": [
+        "arXiv:2511.08972"
+      ],
+      "title": "Selective Sinkhorn Routing for Improved Sparse Mixture of Experts",
+      "reason": "Selective Sinkhorn Routingは最適輸送に基づくトークン-専門家割当てでSMoEの負荷均衡と性能を改善するが、主眼はルーティング学習の仕組みであり、推論サービングや実行時効率への具体的な貢献は要旨で薄い。",
+      "source_url": "https://arxiv.org/abs/2511.08972",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 177
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2025/610",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2025/610"
+      ],
+      "title": "Heterogeneous Federated Learning with Scalable Server Mixture-of-Experts",
+      "reason": "Fed-MoEは異種連合学習でクライアントモデルをサーバー側MoEへ集約する学習フレームワークであり、評価も画像連合学習とBERT/GPT-2の学習タスクで、推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.24963/ijcai.2025/610",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 178
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.15628",
+      "identity_tokens": [
+        "arXiv:2405.15628"
+      ],
+      "title": "A Comparative Analysis of Distributed Training Strategies for GPT-2",
+      "reason": "GPT-2の分散学習戦略としてFSDPやデータ並列等の学習並列化を比較分析する文献研究であり、対象は学習単独で推論高速化への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2405.15628",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 179
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00100",
+      "identity_tokens": [
+        "DOI:10.1109/IPDPS65963.2026.00100"
+      ],
+      "title": "PowerMorph: Shaping LLM Training for Data Center Demand Response",
+      "reason": "PowerMorphはデータセンターのデマンドレスポンスに合わせてLLM学習ジョブの消費電力を整形する手法であり、対象は学習時の電力追従であって推論ではない。",
+      "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00100",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 180
+    }
+  ],
+  "parent_run_key": "muse-20261123-n25",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

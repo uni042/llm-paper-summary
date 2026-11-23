@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n31::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/SPCCS69331.2026.11588633",
+      "identity_tokens": [
+        "DOI:10.1109/SPCCS69331.2026.11588633"
+      ],
+      "title": "Overcoming Congestion in Edge MoE: A Bi-Level Game-Theoretic Orchestration Framework",
+      "reason": "エッジ協調MoE推論の下り帯域競合に対し、エッジサーバが資源希少性指標を放送する二水準Stackelbergゲームと離散ポテンシャルゲームでエキスパート選択を分散編成し、遅延と精度の均衡を取るスケジューリング手法",
+      "source_url": "https://doi.org/10.1109/SPCCS69331.2026.11588633",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.23029",
+      "identity_tokens": [
+        "arXiv:2512.23029"
+      ],
+      "title": "Viability and Performance of a Private LLM Server for SMBs: A Benchmark Analysis of Qwen3-30B on Consumer-Grade Hardware",
+      "reason": "中小企業向け私設LLMサーバとして消費者級GPU上で量子化Qwen3-30B MoEを運用し、同時利用者数に対する遅延・トークン毎秒・TTFTを負荷計測するLLM推論サービングの実測ベンチマーク",
+      "source_url": "https://arxiv.org/abs/2512.23029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11332",
+      "identity_tokens": [
+        "arXiv:2603.11332"
+      ],
+      "title": "On the Computational Hardness of Transformers",
+      "reason": "複数層・複数ヘッドのTransformer計算がヘッド独立計算より本質的に速くならないことを示す計算量下限の理論研究であり、推論システムの実装・効率化手法ではない",
+      "source_url": "https://arxiv.org/abs/2603.11332",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 363
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.01373",
+      "identity_tokens": [
+        "arXiv:2605.01373"
+      ],
+      "title": "Focus on the Core: Empowering Diffusion Large Language Models by Self-Contrast",
+      "reason": "拡散LLM向けに高情報密度トークンの早期収束を利用した自己対照デコーディングFoCoreと、安定候補の並列デコードで高速化するFoCore_Aを訓練なしで提案するデコード戦略",
+      "source_url": "https://arxiv.org/abs/2605.01373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20863",
+      "identity_tokens": [
+        "arXiv:2605.20863"
+      ],
+      "title": "PlexRL: Cluster-Level Orchestration of Serviceized LLM Execution for RLVR",
+      "reason": "RLVR学習ジョブ間で統一LLMサービスをクラスタレベルで多重化しモデル配置と状態遷移を時分割するPlexRLで推論実行の共有に関連するが、最終目的はRLVR訓練の遊休解消であり推論サービング自体ではない",
+      "source_url": "https://arxiv.org/abs/2605.20863",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 365
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/fi17100477",
+      "identity_tokens": [
+        "DOI:10.3390/fi17100477"
+      ],
+      "title": "Uncensored AI in the Wild: Tracking Publicly Available and Locally Deployable LLMs",
+      "reason": "安全性改変されたオープンウェイトLLMの配布実態を8,608リポジトリで追跡するガバナンス実態調査であり、GGUFや量子化への言及はあるが推論技術の提案ではない",
+      "source_url": "https://doi.org/10.3390/fi17100477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16918",
+      "identity_tokens": [
+        "arXiv:2402.16918"
+      ],
+      "title": "m2mKD: Module-to-Module Knowledge Distillation for Modular Transformers",
+      "reason": "モジュラーTransformerの訓練を容易にするためモノリシック教師モジュールからモジュール単位で知識蒸留するm2mKDであり、学習手法であって推論効率化ではない",
+      "source_url": "https://arxiv.org/abs/2402.16918",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 367
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.02.13.638190",
+      "identity_tokens": [
+        "DOI:10.1101/2025.02.13.638190"
+      ],
+      "title": "Selective State Space Models Outperform Transformers at Predicting RNA-Seq Read Coverage",
+      "reason": "RNA-seqリード被覆予測というゲノミクス応用でMamba等の状態空間モデルとTransformerを比較する研究であり、LLM推論への直接貢献はない",
+      "source_url": "https://doi.org/10.1101/2025.02.13.638190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 368
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.15877",
+      "identity_tokens": [
+        "arXiv:2405.15877"
+      ],
+      "title": "Basis Selection: Low-Rank Decomposition of Pretrained Large Language Models for Target Applications",
+      "reason": "事前学習LLMの重み行列を基底成分の線形結合で表し対象用途に不要な基底を除去する低ランク分解Basis SelectionでLlama2を深く圧縮し、資源制約デバイス配置と推論コスト削減を狙うモデル圧縮手法",
+      "source_url": "https://arxiv.org/abs/2405.15877",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 369
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22120",
+      "identity_tokens": [
+        "arXiv:2505.22120"
+      ],
+      "title": "LoKI: Low-damage Knowledge Implanting of Large Language Models",
+      "reason": "知識がTransformer内にどう格納されるかの機構的知見を使い壊滅的忘却を抑えるPEFT微調整LoKIであり、知識注入という学習目的で推論効率化ではない",
+      "source_url": "https://arxiv.org/abs/2505.22120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 370
+    }
+  ],
+  "parent_run_key": "muse-20261123-n31",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

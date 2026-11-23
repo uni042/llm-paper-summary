@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d35::provider-gap",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/978-981-95-2725-0_16",
+      "identity_tokens": [
+        "DOI:10.1007/978-981-95-2725-0_16"
+      ],
+      "title": "Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models",
+      "reason": "vLLMやTensorRT-LLM等の推論ライブラリを粗粒度・細粒度の二段で比較し、Transformer各モジュールのFLOPやメモリアクセスを理論・実測両面で分析する推論効率評価手法であり、推論基盤の計測に直接該当するため収録対象とした。",
+      "source_url": "https://doi.org/10.1007/978-981-95-2725-0_16",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:40:00+09:00",
+      "last_checked_at": "2026-11-23T17:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 48
+    }
+  ],
+  "parent_run_key": "muse-20261123-d35",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261123-1630-muse-d35--chunk-0002-of-0002.json",
+  "provider_gap_ids": [
+    "DOI:10.1007/978-981-95-2725-0_16"
+  ]
+}

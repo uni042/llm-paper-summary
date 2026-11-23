@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n30::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02383",
+      "identity_tokens": [
+        "arXiv:2610.02383"
+      ],
+      "title": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
+      "reason": "ループTransformerで初回再帰のみがKVキャッシュを書き、後続再帰が共有メモリと短い局所窓を読む設計により、品質を保ちながら文脈メモリを76〜79%削減しており、KVキャッシュ削減への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2610.02383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 311
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02288",
+      "identity_tokens": [
+        "arXiv:2606.02288"
+      ],
+      "title": "Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization",
+      "reason": "LLMの巨大活性化スパイクをバイアスベクトルとして解明し、スパイクをクランプしてテンプレートベクトルで機能を復元するINSERTQUANTにより低ビット量子化を可能にする、推論向け量子化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2606.02288",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20002",
+      "identity_tokens": [
+        "arXiv:2606.20002"
+      ],
+      "title": "Connect the Dots: Training LLMs for Long-Lifecycle Agents with Cross-Domain Generalization Via Reinforcement Learning",
+      "reason": "長期エージェントのメタ能力をGRPO式強化学習で訓練する枠組みであり、推論効率やサービング機構への技術的貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2606.20002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.17670",
+      "identity_tokens": [
+        "arXiv:2505.17670"
+      ],
+      "title": "Towards General Continuous Memory for Vision-Language Models",
+      "reason": "VLM自身を連続メモリエンコーダとして知識を8個の密埋め込みに圧縮するが、主目的はマルチモーダル推論能力の向上であり、推論システム効率化への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2505.17670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.17364",
+      "identity_tokens": [
+        "arXiv:2510.17364"
+      ],
+      "title": "Recurrent Attention-based Token Selection for Efficient Streaming Video-LLMs",
+      "reason": "ストリーミングVideo-LLM向けに注意に基づく視覚トークン選択で不要トークンの約95%を破棄し、再帰処理とキャプションQAを組み合わせる学習不要手法で、ビデオLLM推論効率化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2510.17364",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-3590",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3590"
+      ],
+      "title": "PseuZO: Pseudo-Zeroth-Order Algorithm for Training Deep Neural Networks",
+      "reason": "複合目的関数の疑似ゼロ次最適化でJacobian推定と移動平均により分散を抑える学習・ファインチューニング用アルゴリズムであり、推論効率化を目的としていない。",
+      "source_url": "https://doi.org/10.52202/085713-3590",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.11851",
+      "identity_tokens": [
+        "arXiv:2401.11851"
+      ],
+      "title": "BETA: Binarized Energy-Efficient Transformer Accelerator at the Edge",
+      "reason": "二値Transformerの量子化行列積実行を最適化する計算フローとFPGAアクセラレータBETAにより、エッジでのTransformer推論のエネルギー効率174 GOPS/Wを達成するハードウェア貢献である。",
+      "source_url": "https://arxiv.org/abs/2401.11851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3816433",
+      "identity_tokens": [
+        "DOI:10.1145/3816433"
+      ],
+      "title": "CPU-GPU Workload Distribution during Throughput-Oriented LLM Inference on Single-GPU Systems",
+      "reason": "単一GPUシステムでデコーダ型LLM推論の計算をCPUとGPUへ動的に配分し、両者のアイドル期間を最小化してスループットを最大30%向上させる推論ワークロード分散手法である。",
+      "source_url": "https://doi.org/10.1145/3816433",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04974",
+      "identity_tokens": [
+        "arXiv:2606.04974"
+      ],
+      "title": "SAID: Accelerating Diffusion-Based Language Models via Scaffold-Aware Iterative Decoding",
+      "reason": "拡散型LLM向けに足場トークンへ計算を先行配分し詳細トークンを少ないステップで補完するSAIDと信頼度階層生成により、推論を最大9.1倍高速化するデコード手法である。",
+      "source_url": "https://arxiv.org/abs/2606.04974",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 319
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.02083",
+      "identity_tokens": [
+        "arXiv:2609.02083"
+      ],
+      "title": "XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression",
+      "reason": "LLMの深さ圧縮として交差軸選択で除去ブロックを特定し隣接ブロックを局所再構成するXMergeにより、標準サービング構造を保ったまま層削減を行う後学習圧縮手法である。",
+      "source_url": "https://arxiv.org/abs/2609.02083",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 320
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.16744",
+      "identity_tokens": [
+        "arXiv:2610.16744"
+      ],
+      "title": "FoveaTree: Information-Density Trees for Query-Guided Visual Token Pruning in Video Large Language Models",
+      "reason": "Video LLM向けに情報密度木で領域ごとの圧縮可能性を推定しクエリ誘導の視覚トークン剪定を行うFoveaTreeにより、視覚トークン保持率10%でも精度を保ちビデオ推論コストを削減する。",
+      "source_url": "https://arxiv.org/abs/2610.16744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.07985",
+      "identity_tokens": [
+        "arXiv:2510.07985"
+      ],
+      "title": "Fewer Weights, More Problems: A Practical Attack on LLM Pruning",
+      "reason": "vLLM等で適用されるLLM剪定への攻撃で剪定後に悪性挙動が現れるモデル構築を示すが、対象は圧縮のセキュリティであり推論効率化自体への技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.07985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52733.2024.00562",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52733.2024.00562"
+      ],
+      "title": "Sheared Backpropagation for Fine-Tuning Foundation Models",
+      "reason": "基盤モデルのファインチューニング向けに活性化剪定とパラメータ凍結サンプリングで逆伝播を疎化するPreBackRazorであり、学習時のメモリ・計算削減が目的で推論ではない。",
+      "source_url": "https://doi.org/10.1109/CVPR52733.2024.00562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/WACV56688.2023.00641",
+      "identity_tokens": [
+        "DOI:10.1109/WACV56688.2023.00641"
+      ],
+      "title": "Couplformer: Rethinking Vision Transformer with Coupling Attention",
+      "reason": "視覚Transformerの注意マップを分離してImageNet分類等でメモリを42%削減するCouplformerだが、対象は画像タスク用ViTアーキテクチャでありLLM推論への適用は示されていない。",
+      "source_url": "https://doi.org/10.1109/WACV56688.2023.00641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.01673",
+      "identity_tokens": [
+        "arXiv:2510.01673"
+      ],
+      "title": "ENLighten: Lighten the Transformer, Enable Efficient Optical Acceleration",
+      "reason": "Transformer重みを低ランク＋構造化疎に分解し光テンソルコアで加速する共設計だが、評価はImageNetのViTが中心でLLM推論への直接の適用確認は限定的である。",
+      "source_url": "https://arxiv.org/abs/2510.01673",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3445263",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3445263"
+      ],
+      "title": "Efficient Batched Inference in Conditional Neural Networks",
+      "reason": "条件付きNN向けに計算類似性でバッチを編成しハードウェア適応的に再分割するBatchCondにより、自己回帰Transformer等を含むバッチ推論スループットを最大6.6倍改善する。",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3445263",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.18929",
+      "identity_tokens": [
+        "arXiv:2504.18929"
+      ],
+      "title": "Revisiting Transformers through the Lens of Low Entropy and Dynamic Sparsity",
+      "reason": "Transformerの低エントロピー傾向と動的疎性を制御実験で分析する研究であり、疎性に関する知見は推論効率と関連するが具体的な推論高速化手法の提案はない。",
+      "source_url": "https://arxiv.org/abs/2504.18929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.15473",
+      "identity_tokens": [
+        "arXiv:2111.15473"
+      ],
+      "title": "Beyond Self Attention: A Subquadratic Fourier Wavelet Transformer with Multi Modal Fusion",
+      "reason": "フーリエ・ウェーブレット混合で注意を置換し二次未満の時間・メモリをうたうTransformerだが、検証はPubMed要約タスクでありLLM推論システムへの貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2111.15473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15651",
+      "identity_tokens": [
+        "arXiv:2410.15651"
+      ],
+      "title": "Understanding and Alleviating Memory Consumption in RLHF for LLMs",
+      "reason": "RLHFファインチューニング時のメモリ消費要因を分析し削減手法を提案する研究であり、対象は学習工程のメモリであって推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/2410.15651",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.00642",
+      "identity_tokens": [
+        "arXiv:2509.00642"
+      ],
+      "title": "HADIS: A Hybrid Architecture for Query-Aware Diffusion Model Serving",
+      "reason": "テキスト画像拡散モデル向けにルータと判別器を組み合わせGPU配分を最適化するサービングシステムHADISであり、サービング機構は関連するが対象はLLMではなく拡散モデルである。",
+      "source_url": "https://arxiv.org/abs/2509.00642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T22:00:00+09:00",
+      "last_checked_at": "2026-11-23T22:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 330
+    }
+  ],
+  "parent_run_key": "muse-20261123-n30",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

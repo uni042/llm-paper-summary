@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n21::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24955",
+      "identity_tokens": [
+        "arXiv:2610.24955"
+      ],
+      "title": "MemPrice: Online Memory Allocation via Adaptive Pricing for Long-Horizon Agents",
+      "reason": "長ホライズンLLMエージェントの文脈を共有資源とみなし、記憶の保持価値に応じて適応価格で文脈配分を決めるMemPriceを提案するが、対象はエージェント記憶の配分方策でありKVキャッシュやサービング機構への直接貢献は要旨で確認できない。",
+      "source_url": "https://arxiv.org/abs/2610.24955",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 391
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.20384",
+      "identity_tokens": [
+        "arXiv:2504.20384"
+      ],
+      "title": "FiLA-Video: Spatio-Temporal Compression for Fine-Grained Long Video Understanding",
+      "reason": "長尺動画理解向けに時空間圧縮でVLLMへの入力トークンを削減するFiLA-Videoであり、推論入力削減と関わるが主目的は動画理解の精度・特徴優先付けで、LLM推論システムとしての機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2504.20384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 392
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.00641",
+      "identity_tokens": [
+        "arXiv:2210.00641"
+      ],
+      "title": "DARTFormer: Finding The Best Type Of Attention",
+      "reason": "DARTS型NASでタスクごとに最適な注意種別や異種注意の組合せを探索するDARTFormerであり、対象はアーキテクチャ探索そのもので推論・サービング効率化への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2210.00641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3712285.3759829",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759829"
+      ],
+      "title": "Matrix Is All You Need: Rearchitecting Quantum Chemistry to Scale on AI Accelerators",
+      "reason": "AIアクセラレータ上で量子化学計算を行列演算中心に再設計してスケールさせる研究であり、LLM推論とは異分野の科学技術計算応用である。",
+      "source_url": "https://doi.org/10.1145/3712285.3759829",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01172",
+      "identity_tokens": [
+        "arXiv:2402.01172"
+      ],
+      "title": "Streaming Sequence Transduction through Dynamic Compression",
+      "reason": "ストリーミング音声認識・同時音声翻訳向けに動的圧縮でアンカー表現を作るSTARであり、対象は音声系列変換モデルでLLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2402.01172",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3769304",
+      "identity_tokens": [
+        "DOI:10.1145/3769304"
+      ],
+      "title": "Towards Floating Point-Based AI Acceleration: Hybrid PIM with Non-Uniform Data Format and Reduced Multiplications",
+      "reason": "浮動小数点対応のハイブリッドPIMと非一様データ形式・乗算削減により、行列ベクトル積等のデータ移動を抑えてニューラルネット推論性能を上げるハードウェア加速の貢献が要旨で具体的である。",
+      "source_url": "https://doi.org/10.1145/3769304",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.06444",
+      "identity_tokens": [
+        "arXiv:2506.06444"
+      ],
+      "title": "Saffron-1: Safety Inference Scaling",
+      "reason": "推論スケーリングをLLMの安全性・ジェイルブレイク耐性へ初めて適用するSaffron-1であり、推論時計算の使い方には関わるが目的は安全保証で推論効率化の機構貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2506.06444",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08686",
+      "identity_tokens": [
+        "arXiv:2605.08686"
+      ],
+      "title": "Iterative Critique-and-Routing Controller for Multi-Agent Systems with Heterogeneous LLMs",
+      "reason": "異種LLMプールに対し下書き批判と反復ルーティングを行う多エージェント制御器であり、モデル選択には関わるが対象はエージェント協調の品質改善でサービングや推論コスト削減の機構は要旨で薄い。",
+      "source_url": "https://arxiv.org/abs/2605.08686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.14587",
+      "identity_tokens": [
+        "arXiv:2310.14587"
+      ],
+      "title": "Large Search Model: Redefining Search Stack in the Era of LLMs",
+      "reason": "検索スタック全体を単一LLMの自己回帰生成として再定義するLarge Search Modelの概念枠組みであり、検索応用の再構成であって推論システムへの技術貢献はない。",
+      "source_url": "https://arxiv.org/abs/2310.14587",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.16977",
+      "identity_tokens": [
+        "arXiv:2410.16977"
+      ],
+      "title": "IPL: Leveraging Multimodal Large Language Models for Intelligent Product Listing",
+      "reason": "C2C出品者向けにマルチモーダルLLMで商品説明を生成するIPLという出品支援ツールであり、電子商取引応用で推論効率化の貢献はない。",
+      "source_url": "https://arxiv.org/abs/2410.16977",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.711",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.711"
+      ],
+      "title": "Efficient Transformer Parameter Reuse via Zero-Token Mechanism",
+      "reason": "パラメータ共有を頭尾層を外した中間層の循環再利用へ変えるZero-Token Transformerで、狙いは制約下のパラメータ容量拡大と適応性であり、推論コストやサービング効率の改善は要旨で明確でない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.711",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.20556",
+      "identity_tokens": [
+        "arXiv:2604.20556"
+      ],
+      "title": "LayerTracer: A Joint Task-Particle and Vulnerable-Layer Analysis framework for Arbitrary Large Language Model Architectures",
+      "reason": "Transformer・Mamba等のLLM内部表現と頑健性ボトルネックを層ごとに解析するLayerTracerであり、対象はモデル解釈・分析で推論効率化への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.20556",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:1e85e07c2be6c52a88281d244789a1af95fd9fb9",
+      "identity_tokens": [
+        "SemanticScholar:1e85e07c2be6c52a88281d244789a1af95fd9fb9"
+      ],
+      "title": "M EGA B YTE : Modeling Million-byte Sequences with Multiscale Transformers",
+      "reason": "パッチ分割と局所・大域サブモデルで二次未満の注意とデコード並列性を得るMEGABYTEは生成コスト削減にも触れるが、主目的はトークン化なし長系列モデリングのアーキテクチャ提案でありLLM推論システムとしての位置付けは間接的である。",
+      "source_url": "https://www.semanticscholar.org/paper/1e85e07c2be6c52a88281d244789a1af95fd9fb9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2505.17118",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2505.17118"
+      ],
+      "title": "After Retrieval, Before Generation: Enhancing the Trustworthiness of Large Language Models in RAG",
+      "reason": "RAGにおける内部知識と検索知識の競合時の信頼性をデータセットTRDで分析する研究であり、対象は応答の信頼性評価で推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2505.17118",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3677182.3677282",
+      "identity_tokens": [
+        "DOI:10.1145/3677182.3677282"
+      ],
+      "title": "A Concise Review of Long Context in Large Language Models",
+      "reason": "LLMの長文脈処理の課題と既存戦略を整理する簡潔なレビューであり、長文脈推論に密接に関連するが新規の技術的貢献を持たない総説である。",
+      "source_url": "https://doi.org/10.1145/3677182.3677282",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2510.06261",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2510.06261"
+      ],
+      "title": "AlphaApollo: Orchestrating Foundation Models and Professional Tools into a Self-Evolving System for Deep Agentic Reasoning",
+      "reason": "基盤モデルと専門ツールを編成して深いエージェント推論の質と検証可能性を高めるAlphaApolloであり、対象は推論能力・自己進化の枠組みで推論効率化の機構貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2510.06261",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:197362094a0864eeca2537b23eb35bfc7ae25e03",
+      "identity_tokens": [
+        "SemanticScholar:197362094a0864eeca2537b23eb35bfc7ae25e03"
+      ],
+      "title": "Expanding the Physical Design Space of LLM Data Systems",
+      "reason": "LLMデータシステムの物理設計空間を扱う題目で推論基盤と関連し得るが、一次要旨を取得できず機構や貢献の具体性を確認できなかった。",
+      "source_url": "https://www.semanticscholar.org/paper/197362094a0864eeca2537b23eb35bfc7ae25e03",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:84a27f61a31213220b9f88670469ab31d5498a9f",
+      "identity_tokens": [
+        "SemanticScholar:84a27f61a31213220b9f88670469ab31d5498a9f"
+      ],
+      "title": "Lesson learned on how to develop and deploy light-weight models in the era of humongous Language Models",
+      "reason": "巨大言語モデル時代の軽量モデル開発・デプロイに関する経験論文とみられるが、一次要旨を取得できず推論効率化への具体的貢献を確認できなかった。",
+      "source_url": "https://www.semanticscholar.org/paper/84a27f61a31213220b9f88670469ab31d5498a9f",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12928",
+      "identity_tokens": [
+        "arXiv:2502.12928"
+      ],
+      "title": "Finedeep: Mitigating Sparse Activation in Dense LLMs via Multi-Layer Fine-Grained Experts",
+      "reason": "密モデルのFFNを細粒度エキスパートへ分割し複数サブ層に配置するFinedeepはMoE的構造だが、狙いは疎な活性化の緩和と表現空間の探索であり推論時の計算・メモリ削減効果は要旨で示されていない。",
+      "source_url": "https://arxiv.org/abs/2502.12928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.20111",
+      "identity_tokens": [
+        "arXiv:2512.20111"
+      ],
+      "title": "ABBEL: Learning Natural-Language Belief States for Memory-Efficient Interaction",
+      "reason": "対話履歴を再帰更新される自然言語の信念状態要約へ置換し文脈長を抑えるABBELは記憶効率的対話を狙うが、対象はエージェントの状態表現学習でありLLM推論機構への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2512.20111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:15:00+09:00",
+      "last_checked_at": "2026-11-23T21:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    }
+  ],
+  "parent_run_key": "muse-20261123-n21",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

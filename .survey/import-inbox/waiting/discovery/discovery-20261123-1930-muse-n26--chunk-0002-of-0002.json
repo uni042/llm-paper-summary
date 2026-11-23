@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n26::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.19535",
+      "identity_tokens": [
+        "arXiv:2608.19535"
+      ],
+      "title": "From Retrieved Context to Runtime Control: Adaptive Compression for Edge-based RAG",
+      "reason": "エッジRAGで検索コンテキスト圧縮がプリフィル・KVキャッシュ・遅延に与えるトレードオフをJetson上で計測し適応圧縮を構想するビジョン論文で、実装された推論機構としての貢献は限定的。",
+      "source_url": "https://arxiv.org/abs/2608.19535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 211
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDE65448.2025.00029",
+      "identity_tokens": [
+        "DOI:10.1109/ICDE65448.2025.00029"
+      ],
+      "title": "Ratel: Optimizing Holistic Data Movement to Fine-tune 100B Model on a Consumer GPU",
+      "reason": "消費者向けGPU1台で100Bモデルのファインチューニングを行うためデータ移動を最適化するRatelで、オフロード対象は学習であり推論高速化ではない。",
+      "source_url": "https://doi.org/10.1109/ICDE65448.2025.00029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 212
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.13707",
+      "identity_tokens": [
+        "arXiv:2503.13707"
+      ],
+      "title": "Long-VMNet: Accelerating Long-Form Video Understanding via Fixed Memory",
+      "reason": "固定サイズメモリ表現と識別パッチのサンプリングで長尺動画理解の推論時間を18〜75倍高速化するが、対象は動画検索・質問応答モデルでありLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2503.13707",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 213
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.13873",
+      "identity_tokens": [
+        "arXiv:2502.13873"
+      ],
+      "title": "NVR: Vector Runahead on NPUs for Sparse Memory Access",
+      "reason": "スパースDNNワークロードの不規則メモリアクセスに対しNPU向けベクトルランアヘッドプリフェッチNVRを提案するハードウェア機構で、LLMに限らない汎用DNN向けであり関連に留まる。",
+      "source_url": "https://arxiv.org/abs/2502.13873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 214
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05883",
+      "identity_tokens": [
+        "arXiv:2602.05883"
+      ],
+      "title": "A Guide to Large Language Models in Modeling and Simulation: From Core Techniques to Critical Challenges",
+      "reason": "モデリング＆シミュレーション分野でLLMを使う際の実務ガイドであり、推論システム技術への貢献はない応用解説。",
+      "source_url": "https://arxiv.org/abs/2602.05883",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 215
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.17827",
+      "identity_tokens": [
+        "arXiv:2604.17827"
+      ],
+      "title": "Learning to Seek Help: Dynamic Collaboration Between Small and Large Language Models",
+      "reason": "オンデバイスSLMが大規模LLMへ相談するか否かを動的に学ぶ協調フレームワークで、プライバシーと効率を扱うが主目的は能力補完であり推論基盤の高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2604.17827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 216
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.12473",
+      "identity_tokens": [
+        "arXiv:2506.12473"
+      ],
+      "title": "TagRouter: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks",
+      "reason": "タグに基づく学習不要のモデルルーティングTagRouterでクエリを適切なLLMへ割り当て、受付率を上げつつ生成コストを17.2%削減するLLMサービングのルーティング手法。",
+      "source_url": "https://arxiv.org/abs/2506.12473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.00712",
+      "identity_tokens": [
+        "arXiv:2501.00712"
+      ],
+      "title": "Rethinking Addressing in Language Models via Contexualized Equivariant Positional Encoding",
+      "reason": "文脈化された同変位置符号化TAPEで位置アドレッシングと推論能力・長文脈能力を改善するモデル構造研究であり、推論効率化の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2501.00712",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323149",
+      "identity_tokens": [
+        "DOI:10.1109/ICPADS67057.2025.11323149"
+      ],
+      "title": "AUE: A Normalized Energy Efficiency Metric for AI Servers Under LLM Workloads",
+      "reason": "LLMワークロード下のAIサーバ向けに、1000トークン当たり・活性パラメータ10億当たりのエネルギーで正規化した効率指標AUEを提案しNPUサーバで評価する、推論基盤の計測への貢献。",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323149",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 219
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04580",
+      "identity_tokens": [
+        "arXiv:2512.04580"
+      ],
+      "title": "CryptoTensors: A Light-Weight Large Language Model File Format for Highly-Secure Model Distribution",
+      "reason": "機密性の高いLLM配布のための軽量ファイル形式CryptoTensorsで、目的はモデル重みの機密保持とアクセス制御であり推論性能への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2512.04580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 220
+    }
+  ],
+  "parent_run_key": "muse-20261123-n26",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

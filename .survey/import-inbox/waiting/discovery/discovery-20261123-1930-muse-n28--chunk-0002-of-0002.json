@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n28::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04331",
+      "identity_tokens": [
+        "arXiv:2510.04331"
+      ],
+      "title": "DoRAN: Stabilizing Weight-Decomposed Low-Rank Adaptation via Noise Injection and Auxiliary Networks",
+      "reason": "DoRAの重み分解をノイズ注入と補助ネットワークで安定化するパラメータ効率ファインチューニングDoRANであり、学習手法である。",
+      "source_url": "https://arxiv.org/abs/2510.04331",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 271
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNSE.2026.3720648",
+      "identity_tokens": [
+        "DOI:10.1109/TNSE.2026.3720648"
+      ],
+      "title": "Privacy-Preserving Agentic AI in Edge Networks With Content and Trace Protection",
+      "reason": "エッジネットワークにおけるコンテンツ・痕跡保護付きプライバシー保持エージェントAIと題するが、Crossrefに要旨がなく推論システムへの具体的貢献を確認できない。",
+      "source_url": "https://doi.org/10.1109/TNSE.2026.3720648",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 272
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.18857",
+      "identity_tokens": [
+        "arXiv:2504.18857"
+      ],
+      "title": "Effective Length Extrapolation via Dimension-Wise Positional Embeddings Manipulation",
+      "reason": "RoPEの次元別有効長を検出し位置索引を操作する学習不要な文脈長外挿DPEで、長文脈推論には関連するが主目的は処理可能長の拡張であり効率化機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2504.18857",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 273
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2409.00563",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2409.00563"
+      ],
+      "title": "Sparse Mamba: Reinforcing Controllability In Structural State Space Models",
+      "reason": "構造化状態空間モデルMambaへ可制御性・可観測性・安定性を導入するSparse Mambaはモデルアーキテクチャ理論が主題で、推論効率化への直接貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2409.00563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 274
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:61e3829ae5b2548d66377fcb8b21537694cd8cfa",
+      "identity_tokens": [
+        "SemanticScholar:61e3829ae5b2548d66377fcb8b21537694cd8cfa"
+      ],
+      "title": "PETRA: P ARALLEL E ND - TO -E ND T RAINING OF R E - VERSIBLE A RCHITECTURES",
+      "reason": "可逆アーキテクチャの並列エンドツーエンド学習PETRAはタイトルから明白に学習が主題であり、推論システムへの貢献はない。",
+      "source_url": "https://www.semanticscholar.org/paper/61e3829ae5b2548d66377fcb8b21537694cd8cfa",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 275
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.07831",
+      "identity_tokens": [
+        "arXiv:2505.07831"
+      ],
+      "title": "Polysemy of Synthetic Neurons Towards a New Type of Explanatory Categorical Vector Spaces",
+      "reason": "合成ニューロンの多義性をカテゴリカルベクトル空間で説明する理論研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2505.07831",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.12590",
+      "identity_tokens": [
+        "arXiv:2508.12590"
+      ],
+      "title": "Energy-Efficient Wireless LLM Inference via Uncertainty- and Importance-Aware Speculative Decoding",
+      "reason": "不確実性と注意重要度で有益トークンだけをクラウドLLMへ送る無線ハイブリッド推論と投機的デコードによりエネルギー消費を40.7%削減する、LLM推論効率化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2508.12590",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890716",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10890716"
+      ],
+      "title": "QoKV: Comprehending and Surpassing the Hurdles of KV Cache Quantization",
+      "reason": "KVキャッシュ量子化の課題を扱うQoKVと題するが、Crossrefに要旨がなく一次要旨で具体的機構を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890716",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3769002.3769979",
+      "identity_tokens": [
+        "DOI:10.1145/3769002.3769979"
+      ],
+      "title": "Leveraging PyTorch for Hardware-Aware Optimization in Efficient Mixture-of-Experts Large Language Model Inference",
+      "reason": "PyTorchによるハードウェア配慮型MoE LLM推論最適化と題するが、Crossrefに要旨がなく一次要旨で具体的機構を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1145/3769002.3769979",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.07334",
+      "identity_tokens": [
+        "arXiv:2402.07334"
+      ],
+      "title": "Differentially Private Training of Mixture of Experts Models",
+      "reason": "MoEモデル学習への差分プライバシー統合を論じるポジションペーパーであり、学習時のプライバシーが主題で推論への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2402.07334",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:35:00+09:00",
+      "last_checked_at": "2026-11-23T21:35:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    }
+  ],
+  "parent_run_key": "muse-20261123-n28",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

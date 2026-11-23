@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n20::chunk-0001-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11440",
+      "identity_tokens": [
+        "arXiv:2506.11440"
+      ],
+      "title": "AbsenceBench: Language Models Can't Tell What's Missing",
+      "reason": "AbsenceBenchは数値列・詩・GitHub PRから欠落箇所を検出できるかを測る能力評価ベンチマークで、推論高速化やサービング機構への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2506.11440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2605.30202",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2605.30202"
+      ],
+      "title": "A Dual-Path Architecture for Scaling Compute and Capacity in LLMs",
+      "reason": "Dual-Pathはlooped transformerの深さ経路とFFN拡大の幅経路をトークン別ゲートで併用しiso-FLOPでLM性能を上げるアーキテクチャ提案だが、評価は言語モデリング性能中心で推論サービング効率の直接検証ではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2605.30202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09173",
+      "identity_tokens": [
+        "arXiv:2602.09173"
+      ],
+      "title": "n-Musketeers: Reinforcement Learning Shapes Collaboration Among Language Models",
+      "reason": "n-Musketeersは凍結した異種SLM専門家の隠れ状態を学習可能な注意インターフェースで統合しReasoning GymやGSM8Kの推論性能を競う強化学習・協調手法で、推論システムの効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2602.09173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 363
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.12301",
+      "identity_tokens": [
+        "arXiv:2604.12301"
+      ],
+      "title": "Local-Splitter: A Measurement Study of Seven Tactics for Reducing Cloud LLM Token Usage on Coding-Agent Workloads",
+      "reason": "Local-Splitterはローカル小型モデルをトリアージ層とする7戦術（ローカルルーティング、プロンプト圧縮、意味キャッシュ、ローカル起草＋クラウドレビュー、ベンダープロンプトキャッシュ等）をコーディングエージェント負荷で計測し、クラウドLLMトークン使用量45〜79%削減を示した推論基盤の計測研究である。",
+      "source_url": "https://arxiv.org/abs/2604.12301",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17093",
+      "identity_tokens": [
+        "arXiv:2605.17093"
+      ],
+      "title": "HEED: Density-Weighted Residual Alignment for Hybrid Vision-Language Model Distillation",
+      "reason": "HEEDはQwen3-VL-8BをMamba-2/注意3:1ハイブリッドへ蒸留して推論を効率化する際、情報密度の高いパッチの残差ドリフトがOCR等で選択的失敗を招くことを特定し、密度重み付き残差アライメントで高密度パッチを保護する、効率的VLM推論向け蒸留手法である。",
+      "source_url": "https://arxiv.org/abs/2605.17093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 365
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01014",
+      "identity_tokens": [
+        "arXiv:2610.01014"
+      ],
+      "title": "From Discovery to Decision: Finite-Budget Recoverability in LLM Voting",
+      "reason": "LLM投票における有限予算での発見から決定へのギャップを到達可能性閾値やロック証明で理論解析しており、テスト時スケーリングという推論プリミティブには関連するが、サービング機構や効率改善の実装貢献はない。",
+      "source_url": "https://arxiv.org/abs/2610.01014",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 366
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2008.07027",
+      "identity_tokens": [
+        "arXiv:2008.07027"
+      ],
+      "title": "Adding Recurrence to Pretrained Transformers for Improved Efficiency and Context Size",
+      "reason": "事前学習済みTransformerへ再帰を加えて学習・推論時のメモリ要件を下げ固定コンテキスト制約を外す手法でGPT-2のperplexityで評価しており、推論メモリ効率に関連はするが主眼は微調整適用法であり推論システムとしての検証は薄い。",
+      "source_url": "https://arxiv.org/abs/2008.07027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 367
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TSE.2023.3310793",
+      "identity_tokens": [
+        "DOI:10.1109/TSE.2023.3310793"
+      ],
+      "title": "CombTransformers: Statement-Wise Transformers for Statement-Wise Representations",
+      "reason": "CombTransformersは区間分割とX-word埋め込みで自己注意の空間計算量を二次から劣二次へ下げるが、適用先はASTコード表現によるメソッド名生成・コード検索・要約であり、LLM推論サービングへの直接貢献は確認できない。",
+      "source_url": "https://doi.org/10.1109/TSE.2023.3310793",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 368
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5755/j01.itc.54.1.39713",
+      "identity_tokens": [
+        "DOI:10.5755/j01.itc.54.1.39713"
+      ],
+      "title": "Synthetic Data Enhances Mathematical Reasoning of Language Models Based on Artificial Intelligence",
+      "reason": "Gretel.aiで生成した線形代数・抽象代数の数学QA合成データでGPT-3やLlama-2を微調整し正答率を上げる学習データ研究で、推論効率化とは無関係である。",
+      "source_url": "https://doi.org/10.5755/j01.itc.54.1.39713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 369
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.15353",
+      "identity_tokens": [
+        "arXiv:2505.15353"
+      ],
+      "title": "Establishing a Scale for Kullback-Leibler Divergence in Language Models Across Various Settings",
+      "reason": "対数尤度ベクトル空間でKLダイバージェンスの尺度を事前学習・量子化・微調整等の設定横断で確立する言語モデル分布の分析研究で、推論機構への技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2505.15353",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 370
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.11857",
+      "identity_tokens": [
+        "arXiv:2410.11857"
+      ],
+      "title": "LLMBridge: Reducing Costs to Access LLMs in a Prompt-Centric Internet",
+      "reason": "LLMBridgeはプロンプト中心インターネット向けLLMプロキシとして、モデル選択ルーティング、コンテキスト削減管理、ローカルモデルとベクトルDBによる意味キャッシュでLLMアクセス費用を下げる推論基盤システムである。",
+      "source_url": "https://arxiv.org/abs/2410.11857",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 371
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2507.07818",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2507.07818"
+      ],
+      "title": "MoSE: Skill-by-Skill Mixture-of-Expert Learning for Autonomous Driving",
+      "reason": "MoSEはスキル単位ルーティングと階層スキルデータで自動運転やロボット操作の推論・学習効率を上げる身体性AI向けMoEであり、LLM推論システムではなく自動運転応用が主目的である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2507.07818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 372
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18405",
+      "identity_tokens": [
+        "arXiv:2507.18405"
+      ],
+      "title": "Iwin Transformer: Hierarchical Vision Transformer using Interleaved Windows",
+      "reason": "Iwin Transformerは位置埋め込みなしの階層型Vision Transformerでインターリーブ窓注意と深さ方向畳み込みを組み合わせImageNetやKineticsで評価される画像・動画認識アーキテクチャであり、LLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2507.18405",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 373
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.19902",
+      "identity_tokens": [
+        "arXiv:2509.19902"
+      ],
+      "title": "WEST: LLM based Speech Toolkit for Speech Understanding, Generation, and Interaction",
+      "reason": "WESTはLLMベースの音声理解・生成・対話ツールキットでレシピとモデルを提供する音声処理基盤であり、LLM推論の効率化機構は扱っていない。",
+      "source_url": "https://arxiv.org/abs/2509.19902",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 374
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.18534",
+      "identity_tokens": [
+        "arXiv:2511.18534"
+      ],
+      "title": "HiFi-MambaV2: Hierarchical Shared-Routed MoE for High-Fidelity MRI Reconstruction",
+      "reason": "HiFi-MambaV2は階層型共有ルーティングMoEによる高忠実度MRI再構成モデルであり、タイトル自体が医療画像再構成という異分野応用を示す。",
+      "source_url": "https://arxiv.org/abs/2511.18534",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 375
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.09687",
+      "identity_tokens": [
+        "arXiv:2410.09687"
+      ],
+      "title": "MoIN: Mixture of Introvert Experts to Upcycle an LLM",
+      "reason": "MoINは凍結した基底モデル上に軽量アダプタ専門家を載せクエリごとに単一専門家へルーティングするLLMアップサイクル手法で、専門家をGPU分散する推論並列化も述べるが主貢献は継続事前学習を避ける学習手法である。",
+      "source_url": "https://arxiv.org/abs/2410.09687",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 376
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08226",
+      "identity_tokens": [
+        "arXiv:2506.08226"
+      ],
+      "title": "Mondrian: Transformer Operators via Domain Decomposition",
+      "reason": "Mondrianは領域分割で注意を離散化から切り離すTransformer演算子学習でAllen-CahnやNavier-Stokes等のPDEモデリングが対象であり、LLM推論とは異分野である。",
+      "source_url": "https://arxiv.org/abs/2506.08226",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 377
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00702",
+      "identity_tokens": [
+        "arXiv:2605.00702"
+      ],
+      "title": "Learning How and What to Memorize: Cognition-Inspired Two-Stage Optimization for Evolving Memory",
+      "reason": "MemCoEは認知科学着想の2段階最適化でLLMエージェントの長期ユーザーメモリの組織化と更新方策を強化学習するエージェント記憶研究であり、KVキャッシュ等の推論メモリ機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.00702",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 378
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2603.23234",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.23234"
+      ],
+      "title": "MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation",
+      "reason": "MemCollabは異なる基底モデルのエージェント間で推論軌跡を対照蒸留して共有メモリを構築するエージェント記憶協調の研究であり、推論サービングや効率化への直接貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2603.23234",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 379
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3649880",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2025.3649880"
+      ],
+      "title": "S2Mamba: An Efficient Mamba Accelerator With Word-Importance SSM Sparsity",
+      "reason": "S2Mambaは単語重要度によるSSMスパース性で計算を約37%削減するMamba専用アクセラレータを28nmで実装しGPU比の高速化を示すが、評価は汎用ベンチマーク中心でLLM推論サービング特化の検証ではない。",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3649880",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T21:00:00+09:00",
+      "last_checked_at": "2026-11-23T21:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 380
+    }
+  ],
+  "parent_run_key": "muse-20261123-n20",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
