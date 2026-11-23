@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "156f018cd13d46c3446be098fcac63b932bd84de",
+  "base_commit": "1017bb4b6c04cad362eedfc6b90874e099b2f165",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -44,19 +44,24 @@
     "0000-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.json",
     "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json",
     "0000-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.json",
+    "0000-514f83264c8b-edinburgh-research-explorer-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.json",
     "0000-55b2ea8d5d29-stip-three-party-privacy-preserving-and-lossless-inference-for-large-transformers-in-production.json",
     "0000-572d81dfcf74-beyond-fixed-length-calibration-for-post-training-compression-of-llms.json",
     "0000-5e4ab017b5df-distribution-aware-low-bitwidth-quantization-for-large-language-models.json",
+    "0000-65a0133f5916-position-adaptive-temporal-sparsity-for-kv-caches-in-long-context-llms.json",
     "0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.json",
     "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json",
+    "0000-685f90406825-l-earning-w-hat-m-atters-s-upervising-s-parse-a-ttention-r-outing-with-c-ausal-e-vidence-s-ets.json",
     "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
     "0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.json",
     "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json",
     "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
+    "0000-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modeling-of-information-capacity-and-spectral-structure.json",
     "0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.json",
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
+    "0000-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-context-window-of-large-language-models.json",
     "0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.json",
     "0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.json",
     "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json",
@@ -12379,10 +12384,10 @@
     },
     "arXiv:2403.09636": {
       "order": [
-        "2026-10-07T22:43:50+00:00",
-        "interactive-20261008-bottom-up-reaudit-dmc-2403.09636.json"
+        "2026-11-23T23:48:46+00:00",
+        "0000-514f83264c8b-edinburgh-research-explorer-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.json"
       ],
-      "status": "imported",
+      "status": "already_represented",
       "result": null,
       "return_count": 1
     },
@@ -51715,6 +51720,42 @@
       "status": "already_represented",
       "result": null,
       "return_count": 0
+    },
+    "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c": {
+      "order": [
+        "2026-11-23T23:50:04+00:00",
+        "0000-65a0133f5916-position-adaptive-temporal-sparsity-for-kv-caches-in-long-context-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434": {
+      "order": [
+        "2026-11-23T23:51:22+00:00",
+        "0000-685f90406825-l-earning-w-hat-m-atters-s-upervising-s-parse-a-ttention-r-outing-with-c-ausal-e-vidence-s-ets.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.946": {
+      "order": [
+        "2026-11-23T23:52:40+00:00",
+        "0000-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modeling-of-information-capacity-and-spectral-structure.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2024.findings-emnlp.358": {
+      "order": [
+        "2026-11-23T23:53:58+00:00",
+        "0000-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-context-window-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65456,6 +65497,18 @@
     "semanticscholar:8d3afec4b9114afed276997d483c284deb60eb64": [
       "papers/inference/99-other-inference-systems/2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md",
       "papers/inference/99-other-inference-systems/2024-2326b3d5db35-efficient-distributed-llm-inference-with-dynamic-partitioning.md"
+    ],
+    "semanticscholar:2814c6db036b63ad79dfe5374d5212faf3aab85c": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-65a0133f5916-position-adaptive-temporal-sparsity-for-kv-caches-in-long-context-llms.md"
+    ],
+    "semanticscholar:978af19cb401afdd4f3b1302052773fb7811c434": [
+      "papers/inference/13-sparse-attention/2026-2607.21692-learning-what-matters-supervising-sparse-attention-routing-with-causal-e.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.946": [
+      "papers/inference/99-other-inference-systems/2026-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modelin.md"
+    ],
+    "doi:10.18653/v1/2024.findings-emnlp.358": [
+      "papers/inference/99-other-inference-systems/2024-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-contex.md"
     ]
   }
 }

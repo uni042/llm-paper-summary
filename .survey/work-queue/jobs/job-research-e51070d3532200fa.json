@@ -35,10 +35,15 @@
   "selection_reason": "トークン位置に応じてKVエントリの浮動小数点下位ビットを切り捨てるPosition-Adaptive Temporal Sparsity（PATS）は、トークンを削除せず再学習不要で既存推論システムへ組み込め、KVキャッシュ容量を最大42%削減する長文脈LLM推論のメモリ機構である。",
   "semantic_scholar_id": "2814c6db036b63ad79dfe5374d5212faf3aab85c",
   "source_url": "https://www.semanticscholar.org/paper/2814c6db036b63ad79dfe5374d5212faf3aab85c",
-  "status": "ready",
+  "status": "superseded",
   "title": "Position-Adaptive Temporal Sparsity for KV Caches in Long-Context LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": null
+  "year": null,
+  "superseded_at": "2026-11-23T23:56:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-65a0133f5916-position-adaptive-temporal-sparsity-for-kv-caches-in-long-context-llms.md",
+  "represented_canonical_id": "SemanticScholar:2814c6db036b63ad79dfe5374d5212faf3aab85c",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
