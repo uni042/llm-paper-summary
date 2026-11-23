@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（105本）
+## 自動生成の論文一覧（106本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -289,6 +289,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの推論ではモデル重みだけでなく、各層で生じる活性化と、長い入力履歴を保持する鍵・値キャッシュ（KVキャッシュ）がメモリ容量・帯域・演算器の面積を消費する。重みだけを4ビット整数へ量子化しても、活性化がFP16のままでは浮動小数点と整数の混合積和演算を処理する回路が必要になる。
+
+- **2026-02 · [From Buffers to Registers: Unlocking Fine-Grained FlashAttention with Hybrid-Bonded 3D NPU Co-Design](2026-2602.11016-from-buffers-to-registers-unlocking-fine-grained-flashattention-with-hyb.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlashAttentionの融合で表に出てきたチップ内SRAMアクセスのエネルギー支配に対し、演算子を縦積みの処理要素層へ分けて中間結果をレジスタ間で直接流す3次元アクセラレータと泡のない縦パイプラインのスケジューリングで、エネルギーを最大93パーセント減らし最大7.6倍速くするハードウェアとデータフローの協調設計。
 
 - **2026-01 · [Mugi: Value Level Parallelism For Efficient LLMs](2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md)**  
   実装：[✓](https://zenodo.org/records/18063514) ・ リポジトリ内被引用：0  

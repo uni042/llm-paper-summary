@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1344本）
+## 自動生成の論文一覧（1346本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2426,6 +2426,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルを用いた翻訳では、高品質な大型モデルをすべての要求に適用すると推論費用と遅延が大きくなる。小型モデルで大半を処理し、必要な要求だけ大型モデルへ振り分ける混成配備（hybrid deployment）は、一定の品質を維持しながら大型モデルの利用率を抑えるための基本的な方式である。
 
+- **2026-04 · [Revisiting Auxiliary Losses for Conditional Depth Routing: An Empirical Study](2026-2604.17228-revisiting-auxiliary-losses-for-conditional-depth-routing-an-empirical-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  条件付き深さルーティングのゲート学習で、予測型の補助とオラクル型のスコア監督の相互作用を統制比較し、後続層がすべてfullという前提で作る教師ラベルは実行方策とずれて純粋に有害であり、外すと両ゲートとも改善してゲート間の差も消えることを示した実証研究。
+
 - **2026-04 · [ReSpinQuant: Efficient Layer-Wise LLM Quantization via Subspace Residual Rotation Approximation](2026-2604.11080-respinquant-efficient-layer-wise-llm-quantization-via-subspace-residual-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層別の密な回転を重みへ融合し、残差の基底のずれを低次元部分空間で近似することで、層別適応の品質をほぼ追加計算なしに得る量子化方式を提案した。
@@ -3213,7 +3217,7 @@
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：37  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
@@ -4040,6 +4044,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   線形層を二部グラフとみなし、対角選択で連結性を保証しながらN:M構造化枝刈りを行う学習後枝刈り手法。重要度保持とチャネル破損回避を両立し、全モデルで既存の構造化枝刈りを上回る。
 
+- **2025-08 · [ChipChat: Low-Latency Cascaded Conversational Agent in MLX](2025-2509.00078-chipchat-low-latency-cascaded-conversational-agent-in-mlx.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  音声認識から音声合成まで全段をストリーミング化して段の待ちを重ね合わせ、MLX実装でMac Studio上に1秒未満の応答遅延と割り込み対応を持つ端末内音声対話エージェントを実現したシステム。
+
 - **2025-08 · [CALR: Corrective Adaptive Low-Rank Decomposition for Efficient Large Language Model Layer Compression](2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-large-lang.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SVD圧縮で失われる機能残差を、並列の学習可能な低ランク補正モジュールに学習させるLLM圧縮手法CALRを提案し、安定したFFNだけを選ぶ対象選択とあわせて圧縮率と性能保持の釣り合いを改善した研究。
@@ -4531,7 +4539,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：20  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  
@@ -4542,13 +4550,13 @@
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：16  
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
 
+- **2024-08 · [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming](2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md)**  
+  実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：15  
+  Mini-Omniは、言語モデルの応答文を最後まで生成してから独立した音声合成器へ渡す従来の直列方式を避け、文字トークンと音声トークンを一つの自己回帰生成過程の中で並列に出力する音声対話モデルである。
+
 - **2024-10 · [LoLCATs: On Low-Rank Linearizing of Large Language Models](2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.md)**  
   実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：14  
   線形注意を元の注意出力に合わせる注意転移と低ランク適応だけの調整で線形化し、学習量を桁違いに減らしながらラマ3・8ビーのゼロショット差をほぼ閉じ、初めて4050億パラメータまで線形化した。
-
-- **2024-08 · [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming](2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md)**  
-  実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：14  
-  Mini-Omniは、言語モデルの応答文を最後まで生成してから独立した音声合成器へ渡す従来の直列方式を避け、文字トークンと音声トークンを一つの自己回帰生成過程の中で並列に出力する音声対話モデルである。
 
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
   実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：13  
@@ -5203,7 +5211,7 @@
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：78  
   ST-MoEは専門家混合（Mixture-of-Experts、MoE）モデルを単に巨大化するのではなく、学習の発散を防ぎ、下流の多様な自然言語課題で密モデルを上回るための設計を検討する研究である。ただしこれはモデル全体をGPUメモリ12GBで動かせるという意味ではなく、専門家の重み配置と分散通信を含めた大規模学習システムの研究である。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  

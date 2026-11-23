@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（428本）
+## 自動生成の論文一覧（429本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1063,6 +1063,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-01 · [ButterflyMoE: Compression-Scalable Ternary Experts via Structured Butterfly Orbits](2026-2601.13563-butterflymoe-compression-scalable-ternary-experts-via-structured-butterf.md)**  
   実装：[✓](https://github.com/aryan331277/butterfly_moe) ・ リポジトリ内被引用：0  
   低ビット量子化や枝刈りは係数を小さくできるが、独立した行列を $N$ 個保存する構造は残る。専門家部分の容量は標準MoEの32.00 MBから0.40 MBへ減少するが、検証困惑度（perplexity、低いほど良い）は標準MoEの71.75に対してButterflyMoEは81.19であり、無損失の圧縮ではない。
+
+- **2025-12 · [Fast SceneScript: Fast and Accurate Language-Based 3D Scene Understanding via Multi-Token Prediction](2025-2512.05597-fast-scenescript-fast-and-accurate-language-based-3d-scene-understanding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  3次元レイアウトを構造化言語で生成するモデルの推論を、複数トークン予測と信頼できないトークンの除去、ヘッド共有による軽量化で高速化し、1ステップあたり約9トークンを受理しながら精度を保ち、パラメータ追加約7.5パーセントで5.09倍速くする手法。
 
 ### 2年前（2024-12〜2025-11）
 

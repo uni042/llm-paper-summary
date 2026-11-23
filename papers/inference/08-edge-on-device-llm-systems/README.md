@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（107本）
+## 自動生成の論文一覧（108本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -253,6 +253,10 @@
 - **2026-03 · [ConsRoute: Consistency-Aware Adaptive Query Routing for Cloud-Edge-Device Large Language Models](2026-2603.21237-consroute-consistency-aware-adaptive-query-routing-for-cloud-edge-device.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   応答間の意味的一致を教師信号にし、デバイス側モデルのプリフィル隠れ状態を再利用する軽量予測器とクラスタ別ベイズ最適化閾値で、3層協調推論のルーティングを適応化した研究。
+
+- **2026-02 · [QuickGrasp: Responsive Video-Language Querying Service via Accelerated Tokenization and Edge-Augmented Inference](2026-2603.00126-quickgrasp-responsive-video-language-querying-service-via-accelerated-to.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末の小規模な視覚言語モデルを優先し、信頼度が足りない質問だけ視覚トークンを共有してエッジの大規模モデルへ送る構成と、キーフレーム整列の高速トークン化、バンディットによるトークン密度選択を組み合わせ、長動画で応答遅延を最大12.8倍下げながら大規模モデル並みの精度を保つ動画質問応答の提供系。
 
 - **2026-02 · [Quantization-Aware Collaborative Inference for Large Embodied AI Models](2026-2602.13052-quantization-aware-collaborative-inference-for-large-embodied-ai-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
