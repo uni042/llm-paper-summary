@@ -1,0 +1,232 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-471958737a934c58-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-471958737a93",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.54097/wy0g8m89",
+    "arXiv:2407.04147"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9f6afae7381167eb14e4d047bf4404f5eee7398c",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:13:34.007060+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.54097/wy0g8m89",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.04147",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "An Adaptive Language-Agnostic Pruning Method for Greener Language Models for Code",
+      "source_url": "https://arxiv.org/abs/2407.04147",
+      "year": 2024,
+      "published": "2024-07-04",
+      "venue": "Proc. ACM Softw. Eng.",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models of code have demonstrated remarkable performance across various software engineering and source code analysis tasks. However, their demanding computational resource requirements and consequential environmental footprint remain as significant challenges. This work introduces Alpine, an adaptive programming language-agnostic pruning technique designed to substantially reduce the computational overhead of these models. The proposed method offers a pluggable layer that can be integrated with all Transformer-based models. With Alpine, input sequences undergo adaptive compression throughout the pipeline, reaching a size that is up to ×3 less their initial size, resulting in significantly reduced computational load. Our experiments on two software engineering tasks, defect prediction and code clone detection across three language models CodeBert, GraphCodeBert and UniXCoder show that Alpine achieves up to a 50% reduction in FLOPs, a 58.1% decrease in memory footprint, and a 28.1% improvement in throughput on average. This led to a reduction in CO2 emissions by up to 44.85%. Importantly, it achieves a reduction in computation resources while maintaining up to 98.1% of the original predictive performance. These findings highlight the potential of Alpine in making language models of code more resource-efficient and accessible while preserving their performance, contributing to the overall sustainability of their adoption in software development. Also, it sheds light on redundant and noisy information in source code analysis corpora, as shown by the substantial sequence compression achieved by Alpine.",
+      "identifiers": [
+        "SemanticScholar:065adf0c491d277a168f8e0c2910e8c5f922af2c"
+      ],
+      "semantic_scholar_id": "065adf0c491d277a168f8e0c2910e8c5f922af2c",
+      "canonical_id": "arXiv:2407.04147",
+      "arxiv_id": "2407.04147",
+      "doi": "10.1145/3715773",
+      "authors": [
+        "M. Saad",
+        "José Antonio Hernández López",
+        "Bo-Qi Chen",
+        "D'aniel Varr'o",
+        "Tushar Sharma"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 872,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Layer Skipping for Large Language Models on Natural Language Understanding Tasks and Machine Translation Using Reinforcement Learning",
+      "source_url": "https://doi.org/10.54097/wy0g8m89",
+      "year": 2024,
+      "published": "2024-09-26",
+      "venue": "Frontiers in Computing and Intelligent Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demonstrate remarkable proficiency in various natural language processing (NLP) tasks. However, their extensive size, resulting from the inclusion of billions of parameters across multiple layers, presents significant challenges regarding storage, training, and inference. Traditional methodologies such as model pruning and distillation are employed to decrease the size of these models, but these techniques often result in a compromise on performance retention. In this work, we propose a novel framework that uses dynamic layer skipping for different samples to accelerate the inference speed of LLMs. First, we add an adapter layer at each transformer layer to predict whether to skip the next layer or not, and we propose layer skip pretraining to recover the model’s performance. Second, we propose using reinforcement learning (RL) to optimize the model and design several strategies to stabilize the training. Extensive experiments on four natural language understanding (NLU) datasets and three machine translation datasets and ablation studies show that our method achieves SOTA performance among layer skipping methods on LLMs.",
+      "identifiers": [
+        "SemanticScholar:87d43666283c47439c449f6b32b657586f8daed0"
+      ],
+      "semantic_scholar_id": "87d43666283c47439c449f6b32b657586f8daed0",
+      "doi": "10.54097/wy0g8m89",
+      "canonical_id": "DOI:10.54097/wy0g8m89",
+      "authors": [
+        "Wei Xu",
+        "Xiaodong Jin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 788,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2407.04147",
+      "identity_tokens": [
+        "id:DOI:10.1145/3715773",
+        "id:SemanticScholar:065adf0c491d277a168f8e0c2910e8c5f922af2c",
+        "id:arXiv:2407.04147",
+        "title:an adaptive languageagnostic pruning method for greener language models for code",
+        "url:https://arxiv.org/abs/2407.04147"
+      ],
+      "record": {
+        "title": "An Adaptive Language-Agnostic Pruning Method for Greener Language Models for Code",
+        "source_url": "https://arxiv.org/abs/2407.04147",
+        "year": 2024,
+        "published": "2024-07-04",
+        "venue": "Proc. ACM Softw. Eng.",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models of code have demonstrated remarkable performance across various software engineering and source code analysis tasks. However, their demanding computational resource requirements and consequential environmental footprint remain as significant challenges. This work introduces Alpine, an adaptive programming language-agnostic pruning technique designed to substantially reduce the computational overhead of these models. The proposed method offers a pluggable layer that can be integrated with all Transformer-based models. With Alpine, input sequences undergo adaptive compression throughout the pipeline, reaching a size that is up to ×3 less their initial size, resulting in significantly reduced computational load. Our experiments on two software engineering tasks, defect prediction and code clone detection across three language models CodeBert, GraphCodeBert and UniXCoder show that Alpine achieves up to a 50% reduction in FLOPs, a 58.1% decrease in memory footprint, and a 28.1% improvement in throughput on average. This led to a reduction in CO2 emissions by up to 44.85%. Importantly, it achieves a reduction in computation resources while maintaining up to 98.1% of the original predictive performance. These findings highlight the potential of Alpine in making language models of code more resource-efficient and accessible while preserving their performance, contributing to the overall sustainability of their adoption in software development. Also, it sheds light on redundant and noisy information in source code analysis corpora, as shown by the substantial sequence compression achieved by Alpine.",
+        "identifiers": [
+          "SemanticScholar:065adf0c491d277a168f8e0c2910e8c5f922af2c"
+        ],
+        "semantic_scholar_id": "065adf0c491d277a168f8e0c2910e8c5f922af2c",
+        "canonical_id": "arXiv:2407.04147",
+        "arxiv_id": "2407.04147",
+        "doi": "10.1145/3715773",
+        "authors": [
+          "M. Saad",
+          "José Antonio Hernández López",
+          "Bo-Qi Chen",
+          "D'aniel Varr'o",
+          "Tushar Sharma"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 872,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.54097/wy0g8m89",
+      "identity_tokens": [
+        "id:DOI:10.54097/wy0g8m89",
+        "id:SemanticScholar:87d43666283c47439c449f6b32b657586f8daed0",
+        "title:dynamic layer skipping for large language models on natural language understanding tasks and machine translation using reinforcement learning",
+        "url:https://doi.org/10.54097/wy0g8m89"
+      ],
+      "record": {
+        "title": "Dynamic Layer Skipping for Large Language Models on Natural Language Understanding Tasks and Machine Translation Using Reinforcement Learning",
+        "source_url": "https://doi.org/10.54097/wy0g8m89",
+        "year": 2024,
+        "published": "2024-09-26",
+        "venue": "Frontiers in Computing and Intelligent Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) demonstrate remarkable proficiency in various natural language processing (NLP) tasks. However, their extensive size, resulting from the inclusion of billions of parameters across multiple layers, presents significant challenges regarding storage, training, and inference. Traditional methodologies such as model pruning and distillation are employed to decrease the size of these models, but these techniques often result in a compromise on performance retention. In this work, we propose a novel framework that uses dynamic layer skipping for different samples to accelerate the inference speed of LLMs. First, we add an adapter layer at each transformer layer to predict whether to skip the next layer or not, and we propose layer skip pretraining to recover the model’s performance. Second, we propose using reinforcement learning (RL) to optimize the model and design several strategies to stabilize the training. Extensive experiments on four natural language understanding (NLU) datasets and three machine translation datasets and ablation studies show that our method achieves SOTA performance among layer skipping methods on LLMs.",
+        "identifiers": [
+          "SemanticScholar:87d43666283c47439c449f6b32b657586f8daed0"
+        ],
+        "semantic_scholar_id": "87d43666283c47439c449f6b32b657586f8daed0",
+        "doi": "10.54097/wy0g8m89",
+        "canonical_id": "DOI:10.54097/wy0g8m89",
+        "authors": [
+          "Wei Xu",
+          "Xiaodong Jin"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 788,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4edec02405e88a984a320bcb9143a1b019c66f59056647a8b55bb8deda5f7bea",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

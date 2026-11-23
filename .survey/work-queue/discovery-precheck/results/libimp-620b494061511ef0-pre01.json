@@ -1,0 +1,935 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-620b494061511ef0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-620b49406151",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/978-3-031-99854-6_10",
+    "DOI:10.1109/icccs69761.2026.11613300",
+    "DOI:10.1109/pimrc62392.2025.11275395",
+    "DOI:10.1109/taslpro.2026.3739140",
+    "DOI:10.1145/3821725.3821806",
+    "DOI:10.18653/v1/2024.findings-emnlp.358",
+    "DOI:10.23919/date69613.2026.11539140",
+    "DOI:10.3390/electronics15112451",
+    "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+    "arXiv:2204.00408",
+    "arXiv:2308.16475"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9f6afae7381167eb14e4d047bf4404f5eee7398c",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:13:03.812608+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/978-3-031-99854-6_10",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icccs69761.2026.11613300",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/pimrc62392.2025.11275395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/taslpro.2026.3739140",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3821725.3821806",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2024.findings-emnlp.358",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539140",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/electronics15112451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2204.00408",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2204.00408"
+    },
+    {
+      "requested_id": "arXiv:2308.16475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Benchmarking Large Language Model Inference on Limited-Resource Edge Systems",
+      "source_url": "https://doi.org/10.3390/electronics15112451",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "Electronics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly considered for deployment on edge and limited-resource systems, where local inference can reduce latency, improve privacy, and decrease dependence on cloud infrastructure. While prior studies have evaluated either task accuracy or hardware efficiency in isolation, few benchmarks combine generation-based response-quality evaluation with real-device power measurements on a representative limited-resource platform. This study addresses that gap by benchmarking twelve compact and mid-scale open-weight LLMs (sub-1B to 8B parameters), evaluating generation-based accuracy on a desktop platform and measuring deployment efficiency—throughput, power consumption, and energy use—on an NVIDIA Jetson Orin Nano Super; the accuracy–efficiency trade-off is thus established at the model-configuration level. Unlike prior Jetson-based evaluations relying solely on internal telemetry, this work pairs generation-compatible lm-eval accuracy tasks with a dual power-measurement setup that combines internal tegrastats rail readings with external board-level input power measured using a digital multimeter and explicitly compares GPU-accelerated and CPU-only inference modes. GPU-accelerated inference provided a clear advantage, increasing median throughput from 7.12 to 18.13 tok/s and improving external-meter energy efficiency from 0.453 to 0.823 tok/J, despite higher mean input power. Sub-1B models offered the best throughput and energy efficiency, whereas 7–8B models achieved stronger accuracy at a substantially higher energy cost per generated token. These results demonstrate that edge LLM deployment requires multi-objective evaluation balancing accuracy, throughput, power consumption, and energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:7d894a7d17c1458cc29f51d8f3cf8fd101bdd2c8"
+      ],
+      "semantic_scholar_id": "7d894a7d17c1458cc29f51d8f3cf8fd101bdd2c8",
+      "doi": "10.3390/electronics15112451",
+      "canonical_id": "DOI:10.3390/electronics15112451",
+      "authors": [
+        "Henrikas Giedra",
+        "D. Matuzevičius",
+        "T. Sledevič",
+        "Giga Shubitidze",
+        "A. Serackis"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ParallelPrefill: Efficient LLM Prefill on Mobile NPU via 2D Task Decomposition on Hexagon DSP",
+      "source_url": "https://doi.org/10.1145/3821725.3821806",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "Proceedings of the 2026 International Conference on Machine Learning and Neural Networks",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device large language model (LLM) inference on mobile devices is increasingly bottlenecked by the prefill phase, which processes the entire input prompt before generation begins. While existing systems offload decode-phase operators to the Qualcomm Hexagon DSP, prefill remains largely single-threaded due to an incomplete parallelization of the Flash Attention and matrix multiplication kernels. We identify two root causes: (1) Flash Attention parallelizes only along the KV-head dimension, leaving the query-length dimension—which dominates during prefill—unexploited; and (2) the output transfer from VTCM to DDR after matrix multiplication is serialized on a single DSP thread, creating a write-back bottleneck that grows linearly with matrix size. We present ParallelPrefill, a system that addresses both bottlenecks through two contributions. First, we redesign the Flash Attention task decomposition from 1D (KV heads only) to 2D (query positions × KV heads), enabling all available DSP hardware threads to participate in prefill computation. Second, we parallelize the VTCM-to-DDR output transfer in the matrix multiplication kernel using a work-stealing scheduler over row-tile chunks. Together, these changes reduce prefill latency by up to 2.7 × on Snapdragon 8 Elite Gen 5 for Qwen2.5-1.5B with a 512-token prompt, while decode performance is unaffected. On Qwen2.5-3B with a 512-token prompt, ParallelPrefill achieves 3.1 × and 2.7 × higher prefill throughput than llama.cpp and MNN-LLM, respectively, on the same device.",
+      "identifiers": [
+        "SemanticScholar:63dfb3ec06100daa5e5f5fd8f1682d24e14bba31"
+      ],
+      "semantic_scholar_id": "63dfb3ec06100daa5e5f5fd8f1682d24e14bba31",
+      "doi": "10.1145/3821725.3821806",
+      "canonical_id": "DOI:10.1145/3821725.3821806",
+      "authors": [
+        "Han Yang",
+        "Jun Ma",
+        "Miao Wang",
+        "Jian Li",
+        "Xian-Hui Guo",
+        "Da-Dong Wu",
+        "Xin-Yun Jiang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Accelerating Inference for Pretrained Language Models by Unified Multi-Perspective Early Exiting",
+      "source_url": "https://www.semanticscholar.org/paper/4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+      "year": 2022,
+      "published": null,
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17"
+      ],
+      "semantic_scholar_id": "4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+      "canonical_id": "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+      "authors": [
+        "Jun Kong",
+        "Jin Wang",
+        "Liang-Chih Yu",
+        "Xuejie Zhang"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1606,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SP³: Enhancing Structured Pruning via PCA Projection",
+      "source_url": "https://arxiv.org/abs/2308.16475",
+      "year": 2023,
+      "published": "2023-08-31",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning is a widely used technique for reducing the size of pre-trained language models (PLMs), but current methods often overlook the potential of compressing the hidden dimension (d) in PLMs, a dimension critical to model size and efficiency. This paper introduces a novel structured pruning approach, Structured Pruning with PCA Projection (SP3), targeting the effective reduction of d by projecting features into a space defined by principal components before masking. Extensive experiments on benchmarks (GLUE and SQuAD) show that SP3 can reduce d by 70%, compress 94% of the BERTbase model, maintain over 96% accuracy, and outperform other methods that compress d by 6% in accuracy at the same compression ratio. SP3 has also proven effective with other models, including OPT and Llama. Our data and code are available at an anonymous repo.",
+      "identifiers": [
+        "SemanticScholar:abea8484e09c75cef09445c97213db47711d9fef"
+      ],
+      "semantic_scholar_id": "abea8484e09c75cef09445c97213db47711d9fef",
+      "canonical_id": "arXiv:2308.16475",
+      "arxiv_id": "2308.16475",
+      "doi": "10.18653/v1/2024.findings-acl.187",
+      "authors": [
+        "Yuxuan Hu",
+        "Jing Zhang",
+        "Zhe Zhao",
+        "Chengliang Zhao",
+        "Xiaodong Chen",
+        "Cui-Ping Li",
+        "Hong Chen"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1180,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "SCA: Selective Compression Attention for Efficiently Extending the Context Window of Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.358",
+      "year": 2024,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:d451b279d738a2493c27df49f6d3898d8dc2417c"
+      ],
+      "semantic_scholar_id": "d451b279d738a2493c27df49f6d3898d8dc2417c",
+      "doi": "10.18653/v1/2024.findings-emnlp.358",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.358",
+      "authors": [
+        "Huanran Zheng",
+        "Wei Zhu",
+        "Xiaoling Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 875,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Path-Compressed Trie for Efficient KV Cache Reuse",
+      "source_url": "https://doi.org/10.1109/ICCCS69761.2026.11613300",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "International Conference on Communication, Computing & Security",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In Large Language Models (LLMs), prefix matching in the sequences of requests is a critical issue. It can improve inference efficiency by reusing the results of previous computations. The key tensors and the value tensors in the KV cache are computed using the sequences of requests, and our goal is to find the co-prefixed part in these sequences. However, existing prefix matching approaches store all prefix parts of each sequence in a hash table, which encounter significant challenges in efficiently matching reusable KV cache due to the need for multiple memory accesses. In this paper, we present a novel triebased approach for indexing request sequences, wherein our path compression technique substantially minimizes memory accesses required for matching. Experimental results demonstrate that our method improves the match performance by $2.11 \\times$ compared with matching strategy in Mooncake.",
+      "identifiers": [
+        "SemanticScholar:74c80455571ede78998dad7990d8c87f3f6c0db9"
+      ],
+      "semantic_scholar_id": "74c80455571ede78998dad7990d8c87f3f6c0db9",
+      "doi": "10.1109/ICCCS69761.2026.11613300",
+      "canonical_id": "DOI:10.1109/ICCCS69761.2026.11613300",
+      "authors": [
+        "Biao Wang",
+        "Yun Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scrooge: Accelerating Attention Inference in LLMs via Early Termination Mechanism",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539140",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in natural language processing and are now widely adopted in diverse applications. However, their significant computation and memory costs severely limit their acceleration. In particular, the self-attention mechanism is a significant bottleneck, as it cannot exploit batch parallelism across prompts, and its memory traffic grows quadratically with sequence length. In this paper, we propose Scrooge, a novel hardware accelerator framework that leverages an attention early termination mechanism, designed to address the inefficiency of self-attention. The self-attention mechanism does not assign equal importance to all tokens. Instead, semantically important tokens consistently receive higher attention scores. Consequently, preserving sufficient attention for a subset of important tokens is often enough to maintain model accuracy, even without computing attention for all tokens. Our key insight is that once sufficient attention has been accumulated, further computation with the remaining tokens only increases complexity without improving accuracy. Scrooge leverages this insight to approximate the attention of the remaining tokens and terminates the attention computation dynamically once it has gathered sufficient attention. With this method, Scrooge reduces both latency and memory traffic while maintaining accuracy. Experimental results show that Scrooge achieves a 1.7× speedup and a 0.47× reduction in memory traffic with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:14191fefa6104d1d3612d3e200efcb6c0a2ff312"
+      ],
+      "semantic_scholar_id": "14191fefa6104d1d3612d3e200efcb6c0a2ff312",
+      "doi": "10.23919/DATE69613.2026.11539140",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539140",
+      "authors": [
+        "Gwangeun Byeon",
+        "Seongwook Kim",
+        "Taein Kim",
+        "Jungmin Lee",
+        "Seokin Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Collaborative Multi-Device Edge Inference for Vision-Language Models with Speculative Decoding",
+      "source_url": "https://doi.org/10.1109/PIMRC62392.2025.11275395",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "IEEE International Symposium on Personal, Indoor and Mobile Radio Communications",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable success across various domains. However, the substantial computational and memory demands pose significant challenges for deploying LLMs at the network edge. To address this issue, the existing studies mainly focus on either reducing the size of LLMs or distributing LLMs across multiple devices. However, the former approach suffers from performance degradation, while the latter incurs high communication cost due to the transmission of high-dimensional intermediate features. To tackle these issues, we propose a novel collaborative framework to support vision-language model (VLM) inference at the network edge, expanding speculative decoding into a multi-device scenario. In this framework, each edge device first utilizes its small VLM to generate draft tokens in an auto-regressive manner. These tokens are then transmitted to an edge server, where they are corrected in parallel by a large VLM. By benefiting from speculative decoding, the number of calls to the large VLM is reduced without degrading the inference performance. Furthermore, we minimize the average latency of inference tasks by developing a deep reinforcement learning algorithm to optimize the number of draft tokens generated at each iteration. Simulation results confirm that the proposed algorithm achieves a lower average latency compared to other baselines.",
+      "identifiers": [
+        "SemanticScholar:62a26cb36610ac4863b697fe114ea1de01fead15"
+      ],
+      "semantic_scholar_id": "62a26cb36610ac4863b697fe114ea1de01fead15",
+      "doi": "10.1109/PIMRC62392.2025.11275395",
+      "canonical_id": "DOI:10.1109/PIMRC62392.2025.11275395",
+      "authors": [
+        "Luteng Qiao",
+        "Jia-Wei Shao",
+        "Yong Zhou",
+        "Yuan-Ming Shi",
+        "Xue-Long Li",
+        "K. Letaief"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 448,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Leveraging Expert Usage to Speed up LLM Inference with Expert Parallelism",
+      "source_url": "https://doi.org/10.1007/978-3-031-99854-6_10",
+      "year": 2025,
+      "published": null,
+      "venue": "European Conference on Parallel Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "—Large language models have become indispensable for many text-processing applications. Their inference, i.e. their use to generate text, is a time-consuming task since tokens have to be generated one after the other, even if the computational load has been reduced by model sparsification, e.g. by using a Mixture of Experts (MoE) models. In the MoE context, a subset of experts is selected at each stage. Note that not all subsets of experts (pairs of experts in most cases) in a given layer have the same probability of being selected. When experts are mapped to different GPUs, there is a risk of load imbalance if the selected experts end up on a small number of GPUs. This paper proposes to leverage this heterogeneity in expert usage to map experts of popular subsets onto distinct GPUs, allowing them to be processed in parallel and thus reducing the time needed for inference. Even though this mapping problem is NP-complete, it is possible to design simple greedy strategies that significantly reduce the need for sequential expert processing. Our proof-of-concept confirms that our mapping strategies effectively reduce inference time on the Mixtral model.",
+      "identifiers": [
+        "SemanticScholar:0b2be88abd437cd7084fdbb6a59c3f77d1438145"
+      ],
+      "semantic_scholar_id": "0b2be88abd437cd7084fdbb6a59c3f77d1438145",
+      "doi": "10.1007/978-3-031-99854-6_10",
+      "canonical_id": "DOI:10.1007/978-3-031-99854-6_10",
+      "authors": [
+        "O. Beaumont",
+        "Raphaël Bourgouin",
+        "Maxime Darrin",
+        "L. Marchal",
+        "Pablo Piantanida"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ESWD: Entropy-Stratified Sliding-Window Decoding for Efficient Diffusion Language Models",
+      "source_url": "https://doi.org/10.1109/TASLPRO.2026.3739140",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive models due to their potential for parallel text generation. However, their inference efficiency is often constrained by decoding strategies that restrict parallel decoding to fixed token blocks, leading to unstable parallelism during generation. We propose <bold>ESWD</bold>, a training-free decoding strategy for efficient diffusion language model inference. ESWD first introduces a sliding-window candidate selection mechanism that dynamically maintains a stable set of masked positions while preserving semi-autoregressive ordering. On this basis, ESWD further applies an entropy-stratified parallel decoding strategy that aggressively decodes low-entropy tokens in parallel, while selectively resolving high-entropy decisions through entropy-guided exploration to control error propagation. Extensive experiments across multiple benchmarks demonstrate that ESWD achieves <inline-formula><tex-math notation=\"LaTeX\">$2.2\\times$</tex-math></inline-formula>–<inline-formula><tex-math notation=\"LaTeX\">$5.0\\times$</tex-math></inline-formula> speedup over standard decoding baselines while maintaining comparable or improved generation quality.",
+      "identifiers": [
+        "SemanticScholar:99179bf8646a954d64d30cc1b8e59a25015a4f9f"
+      ],
+      "semantic_scholar_id": "99179bf8646a954d64d30cc1b8e59a25015a4f9f",
+      "doi": "10.1109/TASLPRO.2026.3739140",
+      "canonical_id": "DOI:10.1109/TASLPRO.2026.3739140",
+      "authors": [
+        "Jing-Ye Li",
+        "Bin-Quan Wu",
+        "Xi-Di Cai",
+        "Qian-Li Ma"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15112451",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15112451",
+        "id:SemanticScholar:7d894a7d17c1458cc29f51d8f3cf8fd101bdd2c8",
+        "title:benchmarking large language model inference on limitedresource edge systems",
+        "url:https://doi.org/10.3390/electronics15112451"
+      ],
+      "record": {
+        "title": "Benchmarking Large Language Model Inference on Limited-Resource Edge Systems",
+        "source_url": "https://doi.org/10.3390/electronics15112451",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "Electronics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly considered for deployment on edge and limited-resource systems, where local inference can reduce latency, improve privacy, and decrease dependence on cloud infrastructure. While prior studies have evaluated either task accuracy or hardware efficiency in isolation, few benchmarks combine generation-based response-quality evaluation with real-device power measurements on a representative limited-resource platform. This study addresses that gap by benchmarking twelve compact and mid-scale open-weight LLMs (sub-1B to 8B parameters), evaluating generation-based accuracy on a desktop platform and measuring deployment efficiency—throughput, power consumption, and energy use—on an NVIDIA Jetson Orin Nano Super; the accuracy–efficiency trade-off is thus established at the model-configuration level. Unlike prior Jetson-based evaluations relying solely on internal telemetry, this work pairs generation-compatible lm-eval accuracy tasks with a dual power-measurement setup that combines internal tegrastats rail readings with external board-level input power measured using a digital multimeter and explicitly compares GPU-accelerated and CPU-only inference modes. GPU-accelerated inference provided a clear advantage, increasing median throughput from 7.12 to 18.13 tok/s and improving external-meter energy efficiency from 0.453 to 0.823 tok/J, despite higher mean input power. Sub-1B models offered the best throughput and energy efficiency, whereas 7–8B models achieved stronger accuracy at a substantially higher energy cost per generated token. These results demonstrate that edge LLM deployment requires multi-objective evaluation balancing accuracy, throughput, power consumption, and energy efficiency.",
+        "identifiers": [
+          "SemanticScholar:7d894a7d17c1458cc29f51d8f3cf8fd101bdd2c8"
+        ],
+        "semantic_scholar_id": "7d894a7d17c1458cc29f51d8f3cf8fd101bdd2c8",
+        "doi": "10.3390/electronics15112451",
+        "canonical_id": "DOI:10.3390/electronics15112451",
+        "authors": [
+          "Henrikas Giedra",
+          "D. Matuzevičius",
+          "T. Sledevič",
+          "Giga Shubitidze",
+          "A. Serackis"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 173,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3821725.3821806",
+      "identity_tokens": [
+        "id:DOI:10.1145/3821725.3821806",
+        "id:SemanticScholar:63dfb3ec06100daa5e5f5fd8f1682d24e14bba31",
+        "title:parallelprefill efficient llm prefill on mobile npu via 2d task decomposition on hexagon dsp",
+        "url:https://doi.org/10.1145/3821725.3821806"
+      ],
+      "record": {
+        "title": "ParallelPrefill: Efficient LLM Prefill on Mobile NPU via 2D Task Decomposition on Hexagon DSP",
+        "source_url": "https://doi.org/10.1145/3821725.3821806",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "Proceedings of the 2026 International Conference on Machine Learning and Neural Networks",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On-device large language model (LLM) inference on mobile devices is increasingly bottlenecked by the prefill phase, which processes the entire input prompt before generation begins. While existing systems offload decode-phase operators to the Qualcomm Hexagon DSP, prefill remains largely single-threaded due to an incomplete parallelization of the Flash Attention and matrix multiplication kernels. We identify two root causes: (1) Flash Attention parallelizes only along the KV-head dimension, leaving the query-length dimension—which dominates during prefill—unexploited; and (2) the output transfer from VTCM to DDR after matrix multiplication is serialized on a single DSP thread, creating a write-back bottleneck that grows linearly with matrix size. We present ParallelPrefill, a system that addresses both bottlenecks through two contributions. First, we redesign the Flash Attention task decomposition from 1D (KV heads only) to 2D (query positions × KV heads), enabling all available DSP hardware threads to participate in prefill computation. Second, we parallelize the VTCM-to-DDR output transfer in the matrix multiplication kernel using a work-stealing scheduler over row-tile chunks. Together, these changes reduce prefill latency by up to 2.7 × on Snapdragon 8 Elite Gen 5 for Qwen2.5-1.5B with a 512-token prompt, while decode performance is unaffected. On Qwen2.5-3B with a 512-token prompt, ParallelPrefill achieves 3.1 × and 2.7 × higher prefill throughput than llama.cpp and MNN-LLM, respectively, on the same device.",
+        "identifiers": [
+          "SemanticScholar:63dfb3ec06100daa5e5f5fd8f1682d24e14bba31"
+        ],
+        "semantic_scholar_id": "63dfb3ec06100daa5e5f5fd8f1682d24e14bba31",
+        "doi": "10.1145/3821725.3821806",
+        "canonical_id": "DOI:10.1145/3821725.3821806",
+        "authors": [
+          "Han Yang",
+          "Jun Ma",
+          "Miao Wang",
+          "Jian Li",
+          "Xian-Hui Guo",
+          "Da-Dong Wu",
+          "Xin-Yun Jiang"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+      "identity_tokens": [
+        "id:SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+        "title:accelerating inference for pretrained language models by unified multiperspective early exiting",
+        "url:https://www.semanticscholar.org/paper/4a984ec8286b19bb0c033e6e4df198a0421b0c17"
+      ],
+      "record": {
+        "title": "Accelerating Inference for Pretrained Language Models by Unified Multi-Perspective Early Exiting",
+        "source_url": "https://www.semanticscholar.org/paper/4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+        "year": 2022,
+        "published": null,
+        "venue": "International Conference on Computational Linguistics",
+        "citation_count": 19,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17"
+        ],
+        "semantic_scholar_id": "4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+        "canonical_id": "SemanticScholar:4a984ec8286b19bb0c033e6e4df198a0421b0c17",
+        "authors": [
+          "Jun Kong",
+          "Jin Wang",
+          "Liang-Chih Yu",
+          "Xuejie Zhang"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 19,
+          "citation_count": 19,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1606,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2308.16475",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.findings-acl.187",
+        "id:SemanticScholar:abea8484e09c75cef09445c97213db47711d9fef",
+        "id:arXiv:2308.16475",
+        "title:sp³ enhancing structured pruning via pca projection",
+        "url:https://arxiv.org/abs/2308.16475"
+      ],
+      "record": {
+        "title": "SP³: Enhancing Structured Pruning via PCA Projection",
+        "source_url": "https://arxiv.org/abs/2308.16475",
+        "year": 2023,
+        "published": "2023-08-31",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning is a widely used technique for reducing the size of pre-trained language models (PLMs), but current methods often overlook the potential of compressing the hidden dimension (d) in PLMs, a dimension critical to model size and efficiency. This paper introduces a novel structured pruning approach, Structured Pruning with PCA Projection (SP3), targeting the effective reduction of d by projecting features into a space defined by principal components before masking. Extensive experiments on benchmarks (GLUE and SQuAD) show that SP3 can reduce d by 70%, compress 94% of the BERTbase model, maintain over 96% accuracy, and outperform other methods that compress d by 6% in accuracy at the same compression ratio. SP3 has also proven effective with other models, including OPT and Llama. Our data and code are available at an anonymous repo.",
+        "identifiers": [
+          "SemanticScholar:abea8484e09c75cef09445c97213db47711d9fef"
+        ],
+        "semantic_scholar_id": "abea8484e09c75cef09445c97213db47711d9fef",
+        "canonical_id": "arXiv:2308.16475",
+        "arxiv_id": "2308.16475",
+        "doi": "10.18653/v1/2024.findings-acl.187",
+        "authors": [
+          "Yuxuan Hu",
+          "Jing Zhang",
+          "Zhe Zhao",
+          "Chengliang Zhao",
+          "Xiaodong Chen",
+          "Cui-Ping Li",
+          "Hong Chen"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1180,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2024.findings-emnlp.358",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2024.findings-emnlp.358",
+        "id:SemanticScholar:d451b279d738a2493c27df49f6d3898d8dc2417c",
+        "title:sca selective compression attention for efficiently extending the context window of large language models",
+        "url:https://doi.org/10.18653/v1/2024.findings-emnlp.358"
+      ],
+      "record": {
+        "title": "SCA: Selective Compression Attention for Efficiently Extending the Context Window of Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2024.findings-emnlp.358",
+        "year": 2024,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:d451b279d738a2493c27df49f6d3898d8dc2417c"
+        ],
+        "semantic_scholar_id": "d451b279d738a2493c27df49f6d3898d8dc2417c",
+        "doi": "10.18653/v1/2024.findings-emnlp.358",
+        "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.358",
+        "authors": [
+          "Huanran Zheng",
+          "Wei Zhu",
+          "Xiaoling Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 875,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icccs69761.2026.11613300",
+      "identity_tokens": [
+        "id:DOI:10.1109/icccs69761.2026.11613300",
+        "id:SemanticScholar:74c80455571ede78998dad7990d8c87f3f6c0db9",
+        "title:pathcompressed trie for efficient kv cache reuse",
+        "url:https://doi.org/10.1109/ICCCS69761.2026.11613300"
+      ],
+      "record": {
+        "title": "Path-Compressed Trie for Efficient KV Cache Reuse",
+        "source_url": "https://doi.org/10.1109/ICCCS69761.2026.11613300",
+        "year": 2026,
+        "published": "2026-04-01",
+        "venue": "International Conference on Communication, Computing & Security",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In Large Language Models (LLMs), prefix matching in the sequences of requests is a critical issue. It can improve inference efficiency by reusing the results of previous computations. The key tensors and the value tensors in the KV cache are computed using the sequences of requests, and our goal is to find the co-prefixed part in these sequences. However, existing prefix matching approaches store all prefix parts of each sequence in a hash table, which encounter significant challenges in efficiently matching reusable KV cache due to the need for multiple memory accesses. In this paper, we present a novel triebased approach for indexing request sequences, wherein our path compression technique substantially minimizes memory accesses required for matching. Experimental results demonstrate that our method improves the match performance by $2.11 \\times$ compared with matching strategy in Mooncake.",
+        "identifiers": [
+          "SemanticScholar:74c80455571ede78998dad7990d8c87f3f6c0db9"
+        ],
+        "semantic_scholar_id": "74c80455571ede78998dad7990d8c87f3f6c0db9",
+        "doi": "10.1109/ICCCS69761.2026.11613300",
+        "canonical_id": "DOI:10.1109/ICCCS69761.2026.11613300",
+        "authors": [
+          "Biao Wang",
+          "Yun Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 236,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539140",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539140",
+        "id:SemanticScholar:14191fefa6104d1d3612d3e200efcb6c0a2ff312",
+        "title:scrooge accelerating attention inference in llms via early termination mechanism",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539140"
+      ],
+      "record": {
+        "title": "Scrooge: Accelerating Attention Inference in LLMs via Early Termination Mechanism",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539140",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in natural language processing and are now widely adopted in diverse applications. However, their significant computation and memory costs severely limit their acceleration. In particular, the self-attention mechanism is a significant bottleneck, as it cannot exploit batch parallelism across prompts, and its memory traffic grows quadratically with sequence length. In this paper, we propose Scrooge, a novel hardware accelerator framework that leverages an attention early termination mechanism, designed to address the inefficiency of self-attention. The self-attention mechanism does not assign equal importance to all tokens. Instead, semantically important tokens consistently receive higher attention scores. Consequently, preserving sufficient attention for a subset of important tokens is often enough to maintain model accuracy, even without computing attention for all tokens. Our key insight is that once sufficient attention has been accumulated, further computation with the remaining tokens only increases complexity without improving accuracy. Scrooge leverages this insight to approximate the attention of the remaining tokens and terminates the attention computation dynamically once it has gathered sufficient attention. With this method, Scrooge reduces both latency and memory traffic while maintaining accuracy. Experimental results show that Scrooge achieves a 1.7× speedup and a 0.47× reduction in memory traffic with negligible accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:14191fefa6104d1d3612d3e200efcb6c0a2ff312"
+        ],
+        "semantic_scholar_id": "14191fefa6104d1d3612d3e200efcb6c0a2ff312",
+        "doi": "10.23919/DATE69613.2026.11539140",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539140",
+        "authors": [
+          "Gwangeun Byeon",
+          "Seongwook Kim",
+          "Taein Kim",
+          "Jungmin Lee",
+          "Seokin Hong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/pimrc62392.2025.11275395",
+      "identity_tokens": [
+        "id:DOI:10.1109/pimrc62392.2025.11275395",
+        "id:SemanticScholar:62a26cb36610ac4863b697fe114ea1de01fead15",
+        "title:collaborative multidevice edge inference for visionlanguage models with speculative decoding",
+        "url:https://doi.org/10.1109/PIMRC62392.2025.11275395"
+      ],
+      "record": {
+        "title": "Collaborative Multi-Device Edge Inference for Vision-Language Models with Speculative Decoding",
+        "source_url": "https://doi.org/10.1109/PIMRC62392.2025.11275395",
+        "year": 2025,
+        "published": "2025-09-01",
+        "venue": "IEEE International Symposium on Personal, Indoor and Mobile Radio Communications",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable success across various domains. However, the substantial computational and memory demands pose significant challenges for deploying LLMs at the network edge. To address this issue, the existing studies mainly focus on either reducing the size of LLMs or distributing LLMs across multiple devices. However, the former approach suffers from performance degradation, while the latter incurs high communication cost due to the transmission of high-dimensional intermediate features. To tackle these issues, we propose a novel collaborative framework to support vision-language model (VLM) inference at the network edge, expanding speculative decoding into a multi-device scenario. In this framework, each edge device first utilizes its small VLM to generate draft tokens in an auto-regressive manner. These tokens are then transmitted to an edge server, where they are corrected in parallel by a large VLM. By benefiting from speculative decoding, the number of calls to the large VLM is reduced without degrading the inference performance. Furthermore, we minimize the average latency of inference tasks by developing a deep reinforcement learning algorithm to optimize the number of draft tokens generated at each iteration. Simulation results confirm that the proposed algorithm achieves a lower average latency compared to other baselines.",
+        "identifiers": [
+          "SemanticScholar:62a26cb36610ac4863b697fe114ea1de01fead15"
+        ],
+        "semantic_scholar_id": "62a26cb36610ac4863b697fe114ea1de01fead15",
+        "doi": "10.1109/PIMRC62392.2025.11275395",
+        "canonical_id": "DOI:10.1109/PIMRC62392.2025.11275395",
+        "authors": [
+          "Luteng Qiao",
+          "Jia-Wei Shao",
+          "Yong Zhou",
+          "Yuan-Ming Shi",
+          "Xue-Long Li",
+          "K. Letaief"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 448,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1007/978-3-031-99854-6_10",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-99854-6_10",
+        "id:SemanticScholar:0b2be88abd437cd7084fdbb6a59c3f77d1438145",
+        "title:leveraging expert usage to speed up llm inference with expert parallelism",
+        "url:https://doi.org/10.1007/978-3-031-99854-6_10"
+      ],
+      "record": {
+        "title": "Leveraging Expert Usage to Speed up LLM Inference with Expert Parallelism",
+        "source_url": "https://doi.org/10.1007/978-3-031-99854-6_10",
+        "year": 2025,
+        "published": null,
+        "venue": "European Conference on Parallel Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "—Large language models have become indispensable for many text-processing applications. Their inference, i.e. their use to generate text, is a time-consuming task since tokens have to be generated one after the other, even if the computational load has been reduced by model sparsification, e.g. by using a Mixture of Experts (MoE) models. In the MoE context, a subset of experts is selected at each stage. Note that not all subsets of experts (pairs of experts in most cases) in a given layer have the same probability of being selected. When experts are mapped to different GPUs, there is a risk of load imbalance if the selected experts end up on a small number of GPUs. This paper proposes to leverage this heterogeneity in expert usage to map experts of popular subsets onto distinct GPUs, allowing them to be processed in parallel and thus reducing the time needed for inference. Even though this mapping problem is NP-complete, it is possible to design simple greedy strategies that significantly reduce the need for sequential expert processing. Our proof-of-concept confirms that our mapping strategies effectively reduce inference time on the Mixtral model.",
+        "identifiers": [
+          "SemanticScholar:0b2be88abd437cd7084fdbb6a59c3f77d1438145"
+        ],
+        "semantic_scholar_id": "0b2be88abd437cd7084fdbb6a59c3f77d1438145",
+        "doi": "10.1007/978-3-031-99854-6_10",
+        "canonical_id": "DOI:10.1007/978-3-031-99854-6_10",
+        "authors": [
+          "O. Beaumont",
+          "Raphaël Bourgouin",
+          "Maxime Darrin",
+          "L. Marchal",
+          "Pablo Piantanida"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/taslpro.2026.3739140",
+      "identity_tokens": [
+        "id:DOI:10.1109/taslpro.2026.3739140",
+        "id:SemanticScholar:99179bf8646a954d64d30cc1b8e59a25015a4f9f",
+        "title:eswd entropystratified slidingwindow decoding for efficient diffusion language models",
+        "url:https://doi.org/10.1109/TASLPRO.2026.3739140"
+      ],
+      "record": {
+        "title": "ESWD: Entropy-Stratified Sliding-Window Decoding for Efficient Diffusion Language Models",
+        "source_url": "https://doi.org/10.1109/TASLPRO.2026.3739140",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Audio, Speech, and Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive models due to their potential for parallel text generation. However, their inference efficiency is often constrained by decoding strategies that restrict parallel decoding to fixed token blocks, leading to unstable parallelism during generation. We propose <bold>ESWD</bold>, a training-free decoding strategy for efficient diffusion language model inference. ESWD first introduces a sliding-window candidate selection mechanism that dynamically maintains a stable set of masked positions while preserving semi-autoregressive ordering. On this basis, ESWD further applies an entropy-stratified parallel decoding strategy that aggressively decodes low-entropy tokens in parallel, while selectively resolving high-entropy decisions through entropy-guided exploration to control error propagation. Extensive experiments across multiple benchmarks demonstrate that ESWD achieves <inline-formula><tex-math notation=\"LaTeX\">$2.2\\times$</tex-math></inline-formula>–<inline-formula><tex-math notation=\"LaTeX\">$5.0\\times$</tex-math></inline-formula> speedup over standard decoding baselines while maintaining comparable or improved generation quality.",
+        "identifiers": [
+          "SemanticScholar:99179bf8646a954d64d30cc1b8e59a25015a4f9f"
+        ],
+        "semantic_scholar_id": "99179bf8646a954d64d30cc1b8e59a25015a4f9f",
+        "doi": "10.1109/TASLPRO.2026.3739140",
+        "canonical_id": "DOI:10.1109/TASLPRO.2026.3739140",
+        "authors": [
+          "Jing-Ye Li",
+          "Bin-Quan Wu",
+          "Xi-Di Cai",
+          "Qian-Li Ma"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:eea85082b3b27188065812eabe0cf14977c6546f4480cb21d1622231196534dd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

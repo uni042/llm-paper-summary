@@ -1,0 +1,228 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0b02470c74cef39f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0b02470c74ce",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11460785",
+    "SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd",
+    "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+    "arXiv:2204.03227",
+    "arXiv:2305.09781",
+    "arXiv:2405.01943",
+    "arXiv:2502.20576",
+    "arXiv:2504.05586",
+    "arXiv:2504.09775",
+    "arXiv:2607.12550",
+    "arXiv:2609.03949"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9f6afae7381167eb14e4d047bf4404f5eee7398c",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 10,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 10,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:13:17.841303+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11460785",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.05926"
+    },
+    {
+      "requested_id": "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2608.27128"
+    },
+    {
+      "requested_id": "arXiv:2204.03227",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2204.03227"
+    },
+    {
+      "requested_id": "arXiv:2305.09781",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3620666.3651335"
+    },
+    {
+      "requested_id": "arXiv:2405.01943",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2405.01943"
+    },
+    {
+      "requested_id": "arXiv:2502.20576",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2502.20576"
+    },
+    {
+      "requested_id": "arXiv:2504.05586",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.05586"
+    },
+    {
+      "requested_id": "arXiv:2504.09775",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2504.09775"
+    },
+    {
+      "requested_id": "arXiv:2607.12550",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2607.12550"
+    },
+    {
+      "requested_id": "arXiv:2609.03949",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2609.03949"
+    }
+  ],
+  "results": [
+    {
+      "title": "ECM: Enhancing Compressibility of Quantized Vision Encoder and LLM for Large Vision-Language Models",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11460785",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:d519aefebebb14ba38797aa6dfb54030380b7143"
+      ],
+      "semantic_scholar_id": "d519aefebebb14ba38797aa6dfb54030380b7143",
+      "doi": "10.1109/icassp55912.2026.11460785",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460785",
+      "authors": [
+        "Weilan Wang",
+        "Yu Mao",
+        "Dongdong Tang",
+        "Nan Guan",
+        "C. Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11460785",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11460785",
+        "id:SemanticScholar:d519aefebebb14ba38797aa6dfb54030380b7143",
+        "title:ecm enhancing compressibility of quantized vision encoder and llm for large visionlanguage models",
+        "url:https://doi.org/10.1109/icassp55912.2026.11460785"
+      ],
+      "record": {
+        "title": "ECM: Enhancing Compressibility of Quantized Vision Encoder and LLM for Large Vision-Language Models",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11460785",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:d519aefebebb14ba38797aa6dfb54030380b7143"
+        ],
+        "semantic_scholar_id": "d519aefebebb14ba38797aa6dfb54030380b7143",
+        "doi": "10.1109/icassp55912.2026.11460785",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11460785",
+        "authors": [
+          "Weilan Wang",
+          "Yu Mao",
+          "Dongdong Tang",
+          "Nan Guan",
+          "C. Xue"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:91c13a18b7ab0eba95574be8af36dbcd2494b357c86213285ac07ca9b07ffd90",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

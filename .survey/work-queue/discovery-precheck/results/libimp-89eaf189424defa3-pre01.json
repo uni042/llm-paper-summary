@@ -1,0 +1,448 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-89eaf189424defa3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-89eaf189424d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.20922",
+    "arXiv:2510.22101",
+    "arXiv:2604.16694",
+    "arXiv:2610.13735"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9f6afae7381167eb14e4d047bf4404f5eee7398c",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:13:03.788504+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.20922",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.22101",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.16694",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.13735",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RankGuide: Tensor-Rank-Guided Routing and Steering for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2604.16694",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) enhance problem-solving capabilities by generating explicit multi-step chains of thought (CoT) reasoning; however, they incur substantial inference latency and computational overhead. To mitigate this issue, recent works have explored model collaboration paradigms, where small reasoning models (SRMs) generate intermediate reasoning steps to achieve a better accuracy--latency trade-off. Despite recent progress, effectively and efficiently detecting and mitigating SRM failures in collaborative systems remains a key challenge. To address this issue, we analyze SRM inference in both the generated text and hidden-state spaces, and identify three types of failure modes: \\textit{overconfidence}, \\textit{uncertainty}, and \\textit{heavy revalidation}. Building on these insights, we propose \\textbf{RankGuide}, a framework that improves the efficiency and effectiveness of SRM--LRM collaboration through tensor-rank-guided routing and steering. Specifically, RankGuide leverages a routing signal that incorporates tensor-rank signals derived from consecutive hidden states to detect when SRMs are likely to fail and selectively invoke LRMs. In addition, we introduce a tensor-rank-filtered steering vector extraction method to modulate the reasoning trajectory of SRMs, thereby improving their generation quality. By improving both routing and steering through tensor-rank signals, RankGuide enables SRM--LRM collaborative systems to achieve more efficient reasoning with fewer steps and improved accuracy. Experiments across three reasoning domains -- mathematics, code generation, and scientific QA -- demonstrate the efficacy of RankGuide in reducing latency by up to $1.75\\times$ compared to LRM, while maintaining competitive accuracy relative to prior methods. The code is available at \\href{https://github.com/TTTTTTris/RankGuide}{https://github.com/TTTTTTris/RankGuide}.",
+      "identifiers": [
+        "SemanticScholar:3be8b4b9c3f6ff2481dbba6e2d118035baaaf8c5"
+      ],
+      "semantic_scholar_id": "3be8b4b9c3f6ff2481dbba6e2d118035baaaf8c5",
+      "canonical_id": "arXiv:2604.16694",
+      "arxiv_id": "2604.16694",
+      "doi": "10.48550/arXiv.2604.16694",
+      "authors": [
+        "Jia-Yi Tian",
+        "Yupeng Su",
+        "Ryan Solgi",
+        "Souvik Kundu",
+        "Zheng Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 220,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Orthros: Phase-Aware Heterogeneous Attention for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2610.13735",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient attention mechanisms, such as linear and sliding window attention, aim to reduce the computational complexity of Transformers from quadratic to linear. However, their degraded in-context recall often necessitates interleaving full attention layers, leaving the quadratic bottleneck unresolved in long-context processing. To address this, we introduce Orthros attention, which shifts the efficiency paradigm from structural allocation to phase-aware decoupling. As a unified module, it dynamically switches its computation pattern across different phases of sequence processing, enabling linear complexity prefilling and full attention decoding. Our design grants Orthros attention a lower asymptotic complexity compared to vanilla Transformers in prevalent long-context scenarios characterized by heavy prefilling and light decoding. Beyond theoretical formulation and complexity analysis, extensive empirical evaluations demonstrate Orthros's superiority across multiple dimensions. First, we validate its fundamental language modeling capabilities, demonstrating scalability across varying model sizes and strong competitiveness in comprehensive architectural comparisons. Second, Orthros exhibits exceptional conversion feasibility via a data-efficient Transformer-to-Orthros conversion, yielding performance that even surpasses the original Transformer. Finally, Orthros achieves a $21.9\\times$ prefilling speedup over Transformers with end-to-end inference gains, while preserving long-context capabilities, as demonstrated by near-perfect 128K needle-in-a-haystack results and Transformer-level performance on real-world in-context recall tasks. Overall, these advantages in high performance, flexibility, and efficiency position Orthros as a promising candidate to succeed the Transformer in industrial applications.",
+      "identifiers": [
+        "SemanticScholar:565188e52378c967d825712a3357215f476a9ee7"
+      ],
+      "semantic_scholar_id": "565188e52378c967d825712a3357215f476a9ee7",
+      "canonical_id": "arXiv:2610.13735",
+      "arxiv_id": "2610.13735",
+      "authors": [
+        "Yu-Hong Chou",
+        "Ze-Hao Liu",
+        "Yu-Qi Pan",
+        "Qian Liu",
+        "Xian-Wei Chen",
+        "Zhong-Zhu Zhou",
+        "Ji-Bin Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DYNAMAX: Dynamic computing for Transformers and Mamba based architectures",
+      "source_url": "https://arxiv.org/abs/2504.20922",
+      "year": 2025,
+      "published": "2025-04-29",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Early exits (EEs) offer a promising approach to reducing computational costs and latency by dynamically terminating inference once a satisfactory prediction confidence on a data sample is achieved. Although many works integrate EEs into encoder-only Transformers, their application to decoder-only architectures and, more importantly, Mamba models, a novel family of state-space architectures in the LLM realm, remains insufficiently explored. This work introduces DYNAMAX, the first framework to exploit the unique properties of Mamba architectures for early exit mechanisms. We not only integrate EEs into Mamba but also repurpose Mamba as an efficient EE classifier for both Mamba-based and transformer-based LLMs, showcasing its versatility. Our experiments employ the Mistral 7B transformer compared to the Codestral 7B Mamba model, using data sets such as TruthfulQA, CoQA, and TriviaQA to evaluate computational savings, accuracy, and consistency. The results highlight the adaptability of Mamba as a powerful EE classifier and its efficiency in balancing computational cost and performance quality across NLP tasks. By leveraging Mamba’s inherent design for dynamic processing, we open pathways for scalable and efficient inference in embedded applications and resource-constrained environments. This study underscores the transformative potential of Mamba in redefining dynamic computing paradigms for LLMs.",
+      "identifiers": [
+        "SemanticScholar:c76156732566c865c2c6f9aa77b6d717d66f1e69"
+      ],
+      "semantic_scholar_id": "c76156732566c865c2c6f9aa77b6d717d66f1e69",
+      "canonical_id": "arXiv:2504.20922",
+      "arxiv_id": "2504.20922",
+      "doi": "10.1109/IJCNN64981.2025.11228828",
+      "authors": [
+        "M. Nogales",
+        "Matteo Gambella",
+        "Manuel Roveri"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 573,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Up Efficient Small Language Models Serving and Deployment for Semantic Job Search",
+      "source_url": "https://arxiv.org/abs/2510.22101",
+      "year": 2025,
+      "published": "2025-10-25",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive quality when applied to predictive tasks such as relevance ranking and semantic search. However, deployment of such LLMs remains prohibitively expensive for industry applications with strict latency and throughput requirements. In this work, we present lessons and efficiency insights from developing a purely text-based decoder-only Small Language Model (SLM) for a semantic search application at LinkedIn. Particularly, we discuss model compression techniques such as pruning that allow us to reduce the model size by up to $40\\%$ while maintaining the accuracy. Additionally, we present context compression techniques that allow us to reduce the input context length by up to $10$x with minimal loss of accuracy. Finally, we present practical lessons from optimizing the serving infrastructure for deploying such a system on GPUs at scale, serving millions of requests per second. Taken together, this allows us to increase our system's throughput by $10$x in a real-world deployment, while meeting our quality bar.",
+      "identifiers": [
+        "SemanticScholar:adaf713f40b6e61668281535e6eaa7113419f869"
+      ],
+      "semantic_scholar_id": "adaf713f40b6e61668281535e6eaa7113419f869",
+      "canonical_id": "arXiv:2510.22101",
+      "arxiv_id": "2510.22101",
+      "doi": "10.48550/arXiv.2510.22101",
+      "authors": [
+        "Kayhan Behdin",
+        "Qingquan Song",
+        "Sriram Vasudevan",
+        "Jian Sheng",
+        "Xiao-Jing Ma",
+        "Z. Zhou",
+        "Chuan-Rui Zhu",
+        "Guo-Yao Li",
+        "Chanh Nguyen",
+        "Sayan Ghosh",
+        "He-Jian Sang",
+        "A. F. Baarzi",
+        "Sundara Raman Ramachandran",
+        "Xiao-Qing Wang",
+        "Qing Lan",
+        "S. VinayY",
+        "Qi Guo",
+        "Caleb Johnson",
+        "Zhipeng Wang",
+        "Fedor Borisyuk"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 394,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.16694",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.16694",
+        "id:SemanticScholar:3be8b4b9c3f6ff2481dbba6e2d118035baaaf8c5",
+        "id:arXiv:2604.16694",
+        "title:rankguide tensorrankguided routing and steering for efficient reasoning",
+        "url:https://arxiv.org/abs/2604.16694"
+      ],
+      "record": {
+        "title": "RankGuide: Tensor-Rank-Guided Routing and Steering for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2604.16694",
+        "year": 2026,
+        "published": "2026-04-17",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) enhance problem-solving capabilities by generating explicit multi-step chains of thought (CoT) reasoning; however, they incur substantial inference latency and computational overhead. To mitigate this issue, recent works have explored model collaboration paradigms, where small reasoning models (SRMs) generate intermediate reasoning steps to achieve a better accuracy--latency trade-off. Despite recent progress, effectively and efficiently detecting and mitigating SRM failures in collaborative systems remains a key challenge. To address this issue, we analyze SRM inference in both the generated text and hidden-state spaces, and identify three types of failure modes: \\textit{overconfidence}, \\textit{uncertainty}, and \\textit{heavy revalidation}. Building on these insights, we propose \\textbf{RankGuide}, a framework that improves the efficiency and effectiveness of SRM--LRM collaboration through tensor-rank-guided routing and steering. Specifically, RankGuide leverages a routing signal that incorporates tensor-rank signals derived from consecutive hidden states to detect when SRMs are likely to fail and selectively invoke LRMs. In addition, we introduce a tensor-rank-filtered steering vector extraction method to modulate the reasoning trajectory of SRMs, thereby improving their generation quality. By improving both routing and steering through tensor-rank signals, RankGuide enables SRM--LRM collaborative systems to achieve more efficient reasoning with fewer steps and improved accuracy. Experiments across three reasoning domains -- mathematics, code generation, and scientific QA -- demonstrate the efficacy of RankGuide in reducing latency by up to $1.75\\times$ compared to LRM, while maintaining competitive accuracy relative to prior methods. The code is available at \\href{https://github.com/TTTTTTris/RankGuide}{https://github.com/TTTTTTris/RankGuide}.",
+        "identifiers": [
+          "SemanticScholar:3be8b4b9c3f6ff2481dbba6e2d118035baaaf8c5"
+        ],
+        "semantic_scholar_id": "3be8b4b9c3f6ff2481dbba6e2d118035baaaf8c5",
+        "canonical_id": "arXiv:2604.16694",
+        "arxiv_id": "2604.16694",
+        "doi": "10.48550/arXiv.2604.16694",
+        "authors": [
+          "Jia-Yi Tian",
+          "Yupeng Su",
+          "Ryan Solgi",
+          "Souvik Kundu",
+          "Zheng Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 220,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.13735",
+      "identity_tokens": [
+        "id:SemanticScholar:565188e52378c967d825712a3357215f476a9ee7",
+        "id:arXiv:2610.13735",
+        "title:orthros phaseaware heterogeneous attention for efficient transformers",
+        "url:https://arxiv.org/abs/2610.13735"
+      ],
+      "record": {
+        "title": "Orthros: Phase-Aware Heterogeneous Attention for Efficient Transformers",
+        "source_url": "https://arxiv.org/abs/2610.13735",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient attention mechanisms, such as linear and sliding window attention, aim to reduce the computational complexity of Transformers from quadratic to linear. However, their degraded in-context recall often necessitates interleaving full attention layers, leaving the quadratic bottleneck unresolved in long-context processing. To address this, we introduce Orthros attention, which shifts the efficiency paradigm from structural allocation to phase-aware decoupling. As a unified module, it dynamically switches its computation pattern across different phases of sequence processing, enabling linear complexity prefilling and full attention decoding. Our design grants Orthros attention a lower asymptotic complexity compared to vanilla Transformers in prevalent long-context scenarios characterized by heavy prefilling and light decoding. Beyond theoretical formulation and complexity analysis, extensive empirical evaluations demonstrate Orthros's superiority across multiple dimensions. First, we validate its fundamental language modeling capabilities, demonstrating scalability across varying model sizes and strong competitiveness in comprehensive architectural comparisons. Second, Orthros exhibits exceptional conversion feasibility via a data-efficient Transformer-to-Orthros conversion, yielding performance that even surpasses the original Transformer. Finally, Orthros achieves a $21.9\\times$ prefilling speedup over Transformers with end-to-end inference gains, while preserving long-context capabilities, as demonstrated by near-perfect 128K needle-in-a-haystack results and Transformer-level performance on real-world in-context recall tasks. Overall, these advantages in high performance, flexibility, and efficiency position Orthros as a promising candidate to succeed the Transformer in industrial applications.",
+        "identifiers": [
+          "SemanticScholar:565188e52378c967d825712a3357215f476a9ee7"
+        ],
+        "semantic_scholar_id": "565188e52378c967d825712a3357215f476a9ee7",
+        "canonical_id": "arXiv:2610.13735",
+        "arxiv_id": "2610.13735",
+        "authors": [
+          "Yu-Hong Chou",
+          "Ze-Hao Liu",
+          "Yu-Qi Pan",
+          "Qian Liu",
+          "Xian-Wei Chen",
+          "Zhong-Zhu Zhou",
+          "Ji-Bin Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.20922",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn64981.2025.11228828",
+        "id:SemanticScholar:c76156732566c865c2c6f9aa77b6d717d66f1e69",
+        "id:arXiv:2504.20922",
+        "title:dynamax dynamic computing for transformers and mamba based architectures",
+        "url:https://arxiv.org/abs/2504.20922"
+      ],
+      "record": {
+        "title": "DYNAMAX: Dynamic computing for Transformers and Mamba based architectures",
+        "source_url": "https://arxiv.org/abs/2504.20922",
+        "year": 2025,
+        "published": "2025-04-29",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Early exits (EEs) offer a promising approach to reducing computational costs and latency by dynamically terminating inference once a satisfactory prediction confidence on a data sample is achieved. Although many works integrate EEs into encoder-only Transformers, their application to decoder-only architectures and, more importantly, Mamba models, a novel family of state-space architectures in the LLM realm, remains insufficiently explored. This work introduces DYNAMAX, the first framework to exploit the unique properties of Mamba architectures for early exit mechanisms. We not only integrate EEs into Mamba but also repurpose Mamba as an efficient EE classifier for both Mamba-based and transformer-based LLMs, showcasing its versatility. Our experiments employ the Mistral 7B transformer compared to the Codestral 7B Mamba model, using data sets such as TruthfulQA, CoQA, and TriviaQA to evaluate computational savings, accuracy, and consistency. The results highlight the adaptability of Mamba as a powerful EE classifier and its efficiency in balancing computational cost and performance quality across NLP tasks. By leveraging Mamba’s inherent design for dynamic processing, we open pathways for scalable and efficient inference in embedded applications and resource-constrained environments. This study underscores the transformative potential of Mamba in redefining dynamic computing paradigms for LLMs.",
+        "identifiers": [
+          "SemanticScholar:c76156732566c865c2c6f9aa77b6d717d66f1e69"
+        ],
+        "semantic_scholar_id": "c76156732566c865c2c6f9aa77b6d717d66f1e69",
+        "canonical_id": "arXiv:2504.20922",
+        "arxiv_id": "2504.20922",
+        "doi": "10.1109/IJCNN64981.2025.11228828",
+        "authors": [
+          "M. Nogales",
+          "Matteo Gambella",
+          "Manuel Roveri"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 573,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.22101",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.22101",
+        "id:SemanticScholar:adaf713f40b6e61668281535e6eaa7113419f869",
+        "id:arXiv:2510.22101",
+        "title:scaling up efficient small language models serving and deployment for semantic job search",
+        "url:https://arxiv.org/abs/2510.22101"
+      ],
+      "record": {
+        "title": "Scaling Up Efficient Small Language Models Serving and Deployment for Semantic Job Search",
+        "source_url": "https://arxiv.org/abs/2510.22101",
+        "year": 2025,
+        "published": "2025-10-25",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated impressive quality when applied to predictive tasks such as relevance ranking and semantic search. However, deployment of such LLMs remains prohibitively expensive for industry applications with strict latency and throughput requirements. In this work, we present lessons and efficiency insights from developing a purely text-based decoder-only Small Language Model (SLM) for a semantic search application at LinkedIn. Particularly, we discuss model compression techniques such as pruning that allow us to reduce the model size by up to $40\\%$ while maintaining the accuracy. Additionally, we present context compression techniques that allow us to reduce the input context length by up to $10$x with minimal loss of accuracy. Finally, we present practical lessons from optimizing the serving infrastructure for deploying such a system on GPUs at scale, serving millions of requests per second. Taken together, this allows us to increase our system's throughput by $10$x in a real-world deployment, while meeting our quality bar.",
+        "identifiers": [
+          "SemanticScholar:adaf713f40b6e61668281535e6eaa7113419f869"
+        ],
+        "semantic_scholar_id": "adaf713f40b6e61668281535e6eaa7113419f869",
+        "canonical_id": "arXiv:2510.22101",
+        "arxiv_id": "2510.22101",
+        "doi": "10.48550/arXiv.2510.22101",
+        "authors": [
+          "Kayhan Behdin",
+          "Qingquan Song",
+          "Sriram Vasudevan",
+          "Jian Sheng",
+          "Xiao-Jing Ma",
+          "Z. Zhou",
+          "Chuan-Rui Zhu",
+          "Guo-Yao Li",
+          "Chanh Nguyen",
+          "Sayan Ghosh",
+          "He-Jian Sang",
+          "A. F. Baarzi",
+          "Sundara Raman Ramachandran",
+          "Xiao-Qing Wang",
+          "Qing Lan",
+          "S. VinayY",
+          "Qi Guo",
+          "Caleb Johnson",
+          "Zhipeng Wang",
+          "Fedor Borisyuk"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 394,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e52972ba5fdf404cb8665df92903ffb629706b0c26d7b61ee3f29b8a8641b359",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

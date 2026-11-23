@@ -1,0 +1,402 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bbfbca2627baf2bf-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bbfbca2627ba",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icct67417.2025.11374072",
+    "DOI:10.1145/3805621.3807658",
+    "arXiv:2510.25977",
+    "arXiv:2605.29607"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "9f6afae7381167eb14e4d047bf4404f5eee7398c",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T03:13:03.806651+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icct67417.2025.11374072",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3805621.3807658",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.25977",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29607",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Cluster-Level Attention-Guided Parallel Decoding for Masked Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.29607",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models (MDLMs) enable parallel decoding by predicting all masked positions at each denoising step, yet existing training-free samplers usually decide which positions to commit at token-level granularity. We revisit this granularity and observe that reliable predictions often emerge as contiguous high-confidence spans, suggesting that the unit of parallel commitment can be larger than a single token. We first group adjacent high-confidence candidates into confidence-induced clusters (CICs) as span-level update units. We then use self-attention maps from the same forward pass to estimate inter-cluster dependencies, enabling conflict-aware selection of mutually compatible CICs for parallel commitment. This yields CLAD (Cluster-Level Attention-Guided Decoding), a training-free cluster-level decoder for MDLMs. Experiments on LLaDA and Dream model families across four reasoning and code-generation benchmarks show that CLAD achieves 1.77x--8.47x speedups over Vanilla decoding while maintaining broadly comparable task accuracy in most settings.",
+      "identifiers": [
+        "SemanticScholar:a9f9f688cbf789d1e32dd27304413722a4c58112"
+      ],
+      "semantic_scholar_id": "a9f9f688cbf789d1e32dd27304413722a4c58112",
+      "canonical_id": "arXiv:2605.29607",
+      "arxiv_id": "2605.29607",
+      "doi": "10.48550/arXiv.2605.29607",
+      "authors": [
+        "He Qi",
+        "Wei Huang",
+        "Mingyuan Bai",
+        "Xiang-Ming Meng"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 179,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Towards a Solution to the Management Scaling Paradox in Distributed LLM Inference",
+      "source_url": "https://doi.org/10.1145/3805621.3807658",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregated LLM inference separates prefill and decode across nodes, relying on cross-node KV cache reuse (prefix caching) to reduce time-to-first-token (TTFT). Yet existing systems manage this cache entirely in user space, atop the Operating Systems (OS) kernel that already handles memory mapping, page tables, and RDMA registration. We identify a management scaling paradox: user-space overhead from coordination RPCs, per-chunk locking, redundant memory copies, and RDMA transfer fragmentation grows to 79% of achievable TTFT as the cache warms, nearly doubling latency when caching should help most. We formalize this paradox as a TTFT decomposition model and validate it on the state-of-the-art LMCache + Mooncake stack atop vLLM. We then present RMC (Remote Memory for Cache), a kernel-space framework that extends OS-provided shared memory (/dev/shm) to cluster-wide scope via content-addressed Virtual Memory Regions (VMRs), where any node computes the address of any cached chunk by hashing its token content, requiring no coordination. Across four workloads, RMC achieves 1.1-1.3× TTFT reduction over LMCache + Mooncake and up to 2.1× over full recompute.",
+      "identifiers": [
+        "SemanticScholar:d7c5e9eabc52ed234ec73d829c0834dad2912777"
+      ],
+      "semantic_scholar_id": "d7c5e9eabc52ed234ec73d829c0834dad2912777",
+      "doi": "10.1145/3805621.3807658",
+      "canonical_id": "DOI:10.1145/3805621.3807658",
+      "authors": [
+        "Amir Noohi",
+        "Bita Asoodeh",
+        "A. Barbalace"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": "EuroSys"
+      }
+    },
+    {
+      "title": "Communication-Efficient Speculative Decoding for Large Language Models Inference",
+      "source_url": "https://doi.org/10.1109/ICCT67417.2025.11374072",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "International Conference on Speech Technology and Human-Computer Dialogue",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve state-of-the-art generation quality, but deploying them across device-edge-cloud hierarchies remains challenging due to constrained uplink bandwidth and tight latency budgets. Existing speculative decoding techniques reduce end-to-end delay by offloading candidate verification to an edge LLM, yet they still transmit large hidden-state updates at every decoding step. In this work, we introduce Fused Speculative Decoding with Cooperative Cache Sharing and Incremental Synchronous Window (FSD-CCS-ISW), a communication-optimized framework that combines two complementary innovations: (1)Cooperative Cache Sharing (CCS) leverages a Bloom filter-based cache to avoid retransmission of previously seen quantized hidden-state deltas, dramatically reducing redundant traffic; (2)Incremental Synchronous Window (ISW) batches unseen deltas within a sliding window of size $W$, amortizing per-step communication overhead and exploiting temporal locality. We validate our method on LLaMA-2-7B (main) and LLaMA-160M (draft) across Belle dialog prompts (1000 tokens each), demonstrating a 40-57% latency reduction under realistic PCIe latencies, while preserving generation fidelity. FSD-CCS-ISW offers a principled, low-overhead path toward scalable LLM inference in bandwidthlimited environments.",
+      "identifiers": [
+        "SemanticScholar:6851298c1eb0c6d02da9898a4a25eb4700d32b6f"
+      ],
+      "semantic_scholar_id": "6851298c1eb0c6d02da9898a4a25eb4700d32b6f",
+      "doi": "10.1109/ICCT67417.2025.11374072",
+      "canonical_id": "DOI:10.1109/ICCT67417.2025.11374072",
+      "authors": [
+        "Yong Yang",
+        "Ting-Ting Yang",
+        "Shao-Shuai Gao"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NeuronMLP: Efficient LLM Inference via Singular Value Decomposition Compression and Tiling on AWS Trainium",
+      "source_url": "https://arxiv.org/abs/2510.25977",
+      "year": 2025,
+      "published": "2025-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging AI accelerators have started to gain attention and offer new opportunities for efficient inference of large language models (LLMs). Trainium, an AI accelerator recently developed by Amazon Web Services (AWS), provides an attractive option for LLM inference through its heterogeneous architecture. However, leveraging Trainium architecture for high performance can be challenging because of its systolic array architecture and special requirement on data layout. In this paper, we propose NeuronMLP, an efficient LLM inference method based on Singular Value Decomposition (SVD) compression and tiling on AWS Trainium. We introduce a series of techniques customized to Trainium based on kernel fusion and novel caching strategies to reduce data movement across the software-managed memory hierarchy, maximize SRAM bandwidth, and avoid expensive matrix transpose. The proposed method is specifically optimized for multi-layer perceptron (MLP) layers in LLMs, which serve as a critical computational kernel for inference on Trainium. Evaluating on nine datasets and six recent LLMs, we show that NeuronMLP significantly outperforms the state-of-the-art Neuron Kernel Interface (NKI)-based matrix multiplication (matmul) kernel implemented by AWS on Trainium: at the kernel level, it achieves an average 1.35x speedup, which translates to an average 1.21x speedup for end-to-end LLM inference, under a compression ratio of 0.05.",
+      "identifiers": [
+        "SemanticScholar:b8105b57b523ef4f32152c5b55ba111cbcb90cef"
+      ],
+      "semantic_scholar_id": "b8105b57b523ef4f32152c5b55ba111cbcb90cef",
+      "canonical_id": "arXiv:2510.25977",
+      "arxiv_id": "2510.25977",
+      "authors": [
+        "Ding-Hong Song",
+        "Jierui Xu",
+        "Wei-Chun Yang",
+        "Peng-Fei Su",
+        "Dong Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 390,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.29607",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29607",
+        "id:SemanticScholar:a9f9f688cbf789d1e32dd27304413722a4c58112",
+        "id:arXiv:2605.29607",
+        "title:clusterlevel attentionguided parallel decoding for masked diffusion language models",
+        "url:https://arxiv.org/abs/2605.29607"
+      ],
+      "record": {
+        "title": "Cluster-Level Attention-Guided Parallel Decoding for Masked Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2605.29607",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion language models (MDLMs) enable parallel decoding by predicting all masked positions at each denoising step, yet existing training-free samplers usually decide which positions to commit at token-level granularity. We revisit this granularity and observe that reliable predictions often emerge as contiguous high-confidence spans, suggesting that the unit of parallel commitment can be larger than a single token. We first group adjacent high-confidence candidates into confidence-induced clusters (CICs) as span-level update units. We then use self-attention maps from the same forward pass to estimate inter-cluster dependencies, enabling conflict-aware selection of mutually compatible CICs for parallel commitment. This yields CLAD (Cluster-Level Attention-Guided Decoding), a training-free cluster-level decoder for MDLMs. Experiments on LLaDA and Dream model families across four reasoning and code-generation benchmarks show that CLAD achieves 1.77x--8.47x speedups over Vanilla decoding while maintaining broadly comparable task accuracy in most settings.",
+        "identifiers": [
+          "SemanticScholar:a9f9f688cbf789d1e32dd27304413722a4c58112"
+        ],
+        "semantic_scholar_id": "a9f9f688cbf789d1e32dd27304413722a4c58112",
+        "canonical_id": "arXiv:2605.29607",
+        "arxiv_id": "2605.29607",
+        "doi": "10.48550/arXiv.2605.29607",
+        "authors": [
+          "He Qi",
+          "Wei Huang",
+          "Mingyuan Bai",
+          "Xiang-Ming Meng"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 179,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3805621.3807658",
+      "identity_tokens": [
+        "id:DOI:10.1145/3805621.3807658",
+        "id:SemanticScholar:d7c5e9eabc52ed234ec73d829c0834dad2912777",
+        "title:towards a solution to the management scaling paradox in distributed llm inference",
+        "url:https://doi.org/10.1145/3805621.3807658"
+      ],
+      "record": {
+        "title": "Towards a Solution to the Management Scaling Paradox in Distributed LLM Inference",
+        "source_url": "https://doi.org/10.1145/3805621.3807658",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "EuroMLSys@EuroSys",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Disaggregated LLM inference separates prefill and decode across nodes, relying on cross-node KV cache reuse (prefix caching) to reduce time-to-first-token (TTFT). Yet existing systems manage this cache entirely in user space, atop the Operating Systems (OS) kernel that already handles memory mapping, page tables, and RDMA registration. We identify a management scaling paradox: user-space overhead from coordination RPCs, per-chunk locking, redundant memory copies, and RDMA transfer fragmentation grows to 79% of achievable TTFT as the cache warms, nearly doubling latency when caching should help most. We formalize this paradox as a TTFT decomposition model and validate it on the state-of-the-art LMCache + Mooncake stack atop vLLM. We then present RMC (Remote Memory for Cache), a kernel-space framework that extends OS-provided shared memory (/dev/shm) to cluster-wide scope via content-addressed Virtual Memory Regions (VMRs), where any node computes the address of any cached chunk by hashing its token content, requiring no coordination. Across four workloads, RMC achieves 1.1-1.3× TTFT reduction over LMCache + Mooncake and up to 2.1× over full recompute.",
+        "identifiers": [
+          "SemanticScholar:d7c5e9eabc52ed234ec73d829c0834dad2912777"
+        ],
+        "semantic_scholar_id": "d7c5e9eabc52ed234ec73d829c0834dad2912777",
+        "doi": "10.1145/3805621.3807658",
+        "canonical_id": "DOI:10.1145/3805621.3807658",
+        "authors": [
+          "Amir Noohi",
+          "Bita Asoodeh",
+          "A. Barbalace"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": "EuroSys"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icct67417.2025.11374072",
+      "identity_tokens": [
+        "id:DOI:10.1109/icct67417.2025.11374072",
+        "id:SemanticScholar:6851298c1eb0c6d02da9898a4a25eb4700d32b6f",
+        "title:communicationefficient speculative decoding for large language models inference",
+        "url:https://doi.org/10.1109/ICCT67417.2025.11374072"
+      ],
+      "record": {
+        "title": "Communication-Efficient Speculative Decoding for Large Language Models Inference",
+        "source_url": "https://doi.org/10.1109/ICCT67417.2025.11374072",
+        "year": 2025,
+        "published": "2025-10-16",
+        "venue": "International Conference on Speech Technology and Human-Computer Dialogue",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve state-of-the-art generation quality, but deploying them across device-edge-cloud hierarchies remains challenging due to constrained uplink bandwidth and tight latency budgets. Existing speculative decoding techniques reduce end-to-end delay by offloading candidate verification to an edge LLM, yet they still transmit large hidden-state updates at every decoding step. In this work, we introduce Fused Speculative Decoding with Cooperative Cache Sharing and Incremental Synchronous Window (FSD-CCS-ISW), a communication-optimized framework that combines two complementary innovations: (1)Cooperative Cache Sharing (CCS) leverages a Bloom filter-based cache to avoid retransmission of previously seen quantized hidden-state deltas, dramatically reducing redundant traffic; (2)Incremental Synchronous Window (ISW) batches unseen deltas within a sliding window of size $W$, amortizing per-step communication overhead and exploiting temporal locality. We validate our method on LLaMA-2-7B (main) and LLaMA-160M (draft) across Belle dialog prompts (1000 tokens each), demonstrating a 40-57% latency reduction under realistic PCIe latencies, while preserving generation fidelity. FSD-CCS-ISW offers a principled, low-overhead path toward scalable LLM inference in bandwidthlimited environments.",
+        "identifiers": [
+          "SemanticScholar:6851298c1eb0c6d02da9898a4a25eb4700d32b6f"
+        ],
+        "semantic_scholar_id": "6851298c1eb0c6d02da9898a4a25eb4700d32b6f",
+        "doi": "10.1109/ICCT67417.2025.11374072",
+        "canonical_id": "DOI:10.1109/ICCT67417.2025.11374072",
+        "authors": [
+          "Yong Yang",
+          "Ting-Ting Yang",
+          "Shao-Shuai Gao"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 403,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.25977",
+      "identity_tokens": [
+        "id:SemanticScholar:b8105b57b523ef4f32152c5b55ba111cbcb90cef",
+        "id:arXiv:2510.25977",
+        "title:neuronmlp efficient llm inference via singular value decomposition compression and tiling on aws trainium",
+        "url:https://arxiv.org/abs/2510.25977"
+      ],
+      "record": {
+        "title": "NeuronMLP: Efficient LLM Inference via Singular Value Decomposition Compression and Tiling on AWS Trainium",
+        "source_url": "https://arxiv.org/abs/2510.25977",
+        "year": 2025,
+        "published": "2025-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging AI accelerators have started to gain attention and offer new opportunities for efficient inference of large language models (LLMs). Trainium, an AI accelerator recently developed by Amazon Web Services (AWS), provides an attractive option for LLM inference through its heterogeneous architecture. However, leveraging Trainium architecture for high performance can be challenging because of its systolic array architecture and special requirement on data layout. In this paper, we propose NeuronMLP, an efficient LLM inference method based on Singular Value Decomposition (SVD) compression and tiling on AWS Trainium. We introduce a series of techniques customized to Trainium based on kernel fusion and novel caching strategies to reduce data movement across the software-managed memory hierarchy, maximize SRAM bandwidth, and avoid expensive matrix transpose. The proposed method is specifically optimized for multi-layer perceptron (MLP) layers in LLMs, which serve as a critical computational kernel for inference on Trainium. Evaluating on nine datasets and six recent LLMs, we show that NeuronMLP significantly outperforms the state-of-the-art Neuron Kernel Interface (NKI)-based matrix multiplication (matmul) kernel implemented by AWS on Trainium: at the kernel level, it achieves an average 1.35x speedup, which translates to an average 1.21x speedup for end-to-end LLM inference, under a compression ratio of 0.05.",
+        "identifiers": [
+          "SemanticScholar:b8105b57b523ef4f32152c5b55ba111cbcb90cef"
+        ],
+        "semantic_scholar_id": "b8105b57b523ef4f32152c5b55ba111cbcb90cef",
+        "canonical_id": "arXiv:2510.25977",
+        "arxiv_id": "2510.25977",
+        "authors": [
+          "Ding-Hong Song",
+          "Jierui Xu",
+          "Wei-Chun Yang",
+          "Peng-Fei Su",
+          "Dong Li"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 390,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:649bd537fa989df9cbfa3fab1c468131bf6ede574dc1c965d6b358a4fba39259",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
