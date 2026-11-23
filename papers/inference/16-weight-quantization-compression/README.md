@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（200本）
+## 自動生成の論文一覧（201本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -514,6 +514,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Neural 重み Compression（NWC）は、LLMの重みを手作業で設計した一様量子化やHadamard回転だけで圧縮するのではなく、重み分布からencoderとdecoderを学習して圧縮する方式である。
 
+- **2025-10 · [Beyond Uniform SVD: Dual-Level Optimization across Columns and Modules for LLM Compression](2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-fo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SVD圧縮で誤差の大きい列はそのまま保持し小さい列だけ低ランク化する列保持と、モジュール単位の圧縮率配分により、同じ圧縮率でパープレキシティと正解率を同時に改善する再学習不要の圧縮法。
+
 - **2025-10 · [AMS-Quant: Adaptive Mantissa Sharing for Floating-Point Quantization](2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   k個の重みで仮数の最下位ビットを共有して非整数ビット幅を実現する浮動小数点量子化。適応探索で共有ビットを決め、FP5.33でFP16同等の精度と最大2.77倍の高速化を得る。
@@ -569,7 +573,7 @@
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
-  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：94  
   活性値認識型特異値分解（活性値-aware Singular Value Decomposition、ASVD）は、大規模言語モデル（LLM）の線形重みを追加学習なしで低ランク行列へ置き換える圧縮方式である。LLaMA-7BとLLaMA-2-7B/13Bで重み容量を10～30%削減する実験を行い、活性値を考慮しないSVDより大幅に良い困惑度を報告する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f50efb21f967a48e1b81ea71b763b210f17ac653",
+  "base_commit": "622bab743aa44cfcac4fa52537e4346cf9beb93c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -230,6 +230,7 @@
     "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json",
     "2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-llm-inference.json",
     "2025-2505.22425-scaling-reasoning-without-attention.json",
+    "2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.json",
     "2025-2506.00307-lossless-token-sequence-compression-via-meta-tokens.json",
     "2025-2506.02561-pruning-general-large-language-models-into-customized-expert-models.json",
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
@@ -263,6 +264,7 @@
     "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
     "2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-without-retraining.json",
+    "2025-2508.16151-hardwired-neurons-language-processing-units-as-general-purpose-cognitive-substrates.json",
     "2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-llm-layer-compression.json",
     "2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with-hybrid-ckks-and-mpc.json",
     "2025-2509.00078-chipchat-low-latency-cascaded-conversational-agent-in-mlx.json",
@@ -289,6 +291,7 @@
     "2025-2510.05090-finish-first-perfect-later-test-time-token-level-cross-validation-for-diffusion.json",
     "2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a-large-language-model.json",
     "2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.json",
+    "2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-isa-descriptions.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-attention-transformer-models.json",
     "2025-2510.14444-a-free-lunch-in-llm-compression-revisiting-retraining-after-pruning.json",
@@ -297,8 +300,10 @@
     "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
+    "2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-for-llm-compression.json",
     "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json",
     "2025-2510.19644-corova-compressed-representations-for-vector-augmented-code-completion.json",
+    "2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-semantic-job-search.json",
     "2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-language-models.json",
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.00315-language-modeling-with-factorization-memory.json",
@@ -50261,6 +50266,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2505.23061": {
+      "order": [
+        "2026-11-23T18:17:34+00:00",
+        "2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.16151": {
+      "order": [
+        "2026-11-23T18:18:22+00:00",
+        "2025-2508.16151-hardwired-neurons-language-processing-units-as-general-purpose-cognitive-substrates.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.09932": {
+      "order": [
+        "2026-11-23T18:19:11+00:00",
+        "2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-isa-descriptions.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.19385": {
+      "order": [
+        "2026-11-23T18:19:59+00:00",
+        "2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-for-llm-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.22101": {
+      "order": [
+        "2026-11-23T18:20:47+00:00",
+        "2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-semantic-job-search.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63602,6 +63652,21 @@
     "arxiv:2504.15475": [
       "papers/inference/05-speculative-decoding-moe/2025-2504.15475-speculative-sampling-via-exponential-races.md",
       "papers/inference/05-speculative-decoding-moe/2025-2504.15475-speculative-sampling-via-exponential-races.md"
+    ],
+    "arxiv:2505.23061": [
+      "papers/inference/99-other-inference-systems/2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.md"
+    ],
+    "arxiv:2508.16151": [
+      "papers/inference/99-other-inference-systems/2025-2508.16151-hardwired-neurons-language-processing-units-as-general-purpose-cognitive.md"
+    ],
+    "arxiv:2510.09932": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-is.md"
+    ],
+    "arxiv:2510.19385": [
+      "papers/inference/16-weight-quantization-compression/2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-fo.md"
+    ],
+    "arxiv:2510.22101": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-se.md"
     ]
   }
 }

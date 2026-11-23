@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（618本）
+## 自動生成の論文一覧（619本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1644,6 +1644,10 @@
   実装：✓ ・ リポジトリ内被引用：12  
   プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
 
+- **2025-02 · [EcoServe: Designing Carbon-Aware AI Inference Systems](2025-2502.05043-ecoserve-carbon-aware-ai-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  運用時炭素と製造由来炭素を同時最適化し、4Rと整数線形計画でLLM配信の総炭素をSLO維持のまま最大47%削減するEcoServe。
+
 - **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
   実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：11  
   マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
@@ -1659,10 +1663,6 @@
 - **2025-03 · [Teola: Towards End-to-End Optimization of LLM-based Applications](2024-2407.00326-teola.md)**  
   実装：[✓](https://github.com/NetX-lab/Ayo) ・ リポジトリ内被引用：11  
   LLMアプリをプリミティブ依存グラフへ分解し、モジュール横断の並列化・パイプライン化とトポロジ認識バッチングでエンドツーエンド遅延を短縮する。
-
-- **2025-02 · [EcoServe: Designing Carbon-Aware AI Inference Systems](2025-2502.05043-ecoserve-carbon-aware-ai-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  運用時炭素と製造由来炭素を同時最適化し、4Rと整数線形計画でLLM配信の総炭素をSLO維持のまま最大47%削減するEcoServe。
 
 - **2025-11 · [Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments](2024-2411.17741-chameleon-adapter-caching-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
@@ -2032,6 +2032,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究はIBMの専用ニューラル推論アクセラレータNorthPoleを288枚組み合わせ、18台の2Uサーバからなるラックへ実装した大規模言語モデル推論システムである。2,048トークン文脈、28同時利用者の一インスタンスで、最初のトークンまでの時間64.8ミリ秒、トークン間遅延2.8ミリ秒、出力処理量10,341トークン/秒を報告する。
 
+- **2025-10 · [Scaling Up Efficient Small Language Models Serving and Deployment for Semantic Job Search](2025-2510.22101-scaling-up-efficient-small-language-models-serving-and-deployment-for-se.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  求人検索の適合度採点を、プルーニングで4割小型化した小型モデルと強化学習で93パーセント圧縮した求人説明要約、プリフィル専用のサービング最適化で回し、オンラインスループットを10倍超へ引き上げた実運用報告。
+
 - **2025-10 · [Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing](2025-2510.16040-kelle-co-design-kv-caching-and-edram-for-efficient-llm-serving-in-edge-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Kelleは、端末上で大規模言語モデル（LLM）を推論する際、鍵・値の中間表現（KVキャッシュ）を面積効率の高い組込みDRAM（eDRAM）へ置き、記憶内容の削除・再計算・リフレッシュ頻度・演算順序まで一体で最適化する方式である。原著の合成・モデル評価では、元のSRAM構成に対し平均3.94倍の遅延改善と4.46倍のエネルギー効率改善を報告する。
@@ -2163,7 +2167,7 @@
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：93  
+  実装：✓ ・ リポジトリ内被引用：94  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  

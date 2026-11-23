@@ -35,10 +35,15 @@
   "selection_reason": "SVD低ランク圧縮の誤差が列・モジュール間で大きく異なる点に着目し、高誤差列を保持するColumn-Preservingと摂動ベースのModule-Adaptive配分を組み合わせたDuo-SVDは、学習不要で構造化プルーニング等を上回るLLM圧縮手法であり推論の記憶・計算削減に直接貢献する。",
   "semantic_scholar_id": "1b85c60c4e0d6dc171c0b9b1774223f8c9229ae4",
   "source_url": "https://arxiv.org/abs/2510.19385",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Uniform SVD: Dual-Level Optimization across Columns and Modules for LLM Compression",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-23T18:22:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2510.19385-beyond-uniform-svd-dual-level-optimization-across-columns-and-modules-fo.md",
+  "represented_canonical_id": "arXiv:2510.19385",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

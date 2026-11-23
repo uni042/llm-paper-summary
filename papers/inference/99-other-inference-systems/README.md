@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1350本）
+## 自動生成の論文一覧（1352本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3229,7 +3229,7 @@
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
 
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
-  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：31  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
@@ -3356,6 +3356,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   一般的なクラスタスケジューラが空きGPUを近い位置に詰めても、実際に頻繁に通信するDP/PPグループが別のスイッチ配下に分散すれば帯域競合と通信待ちが発生する。トレース駆動シミュレーションでは比較方式に対し通信グループの重み付き最大広がりを最大1.67倍改善し、実クラスタでは208 GPUで学習処理量5.7%、9600超GPUで10.6%改善した。
 
+- **2025-05 · [ERC-SVD: Error-Controlled SVD for Large Language Model Compression](2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  切り捨て残差を2段目の特異値分解で回収する残差補償と、最後の数層だけへの部分層圧縮で誤差伝播を抑える、学習不要の特異値分解圧縮手法。同じ圧縮率で既存の特異値分解系手法より品質を保つ。
+
 - **2025-03 · [Týr-the-Pruner: Structural Pruning LLMs via Global Sparsity Distribution Optimization](2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md)**  
   実装：[✓](https://github.com/AMD-AGI/Tyr-the-Pruner) ・ リポジトリ内被引用：4  
   各層を複数の疎率で切った複製の束から全体の疎率配分を進化的探索で選ぶ全体枝刈りで、七百億級モデルを半分切っても下流の平均正解率を元の九十七パーセントに保ち、八十億級の三十七・五パーセント枝刈りでは従来の最良手法より困惑度が三・四五低く正解率が十・二六ポイント高かったと報告した。
@@ -3395,10 +3399,6 @@
 - **2025-05 · [Radio: Rate–Distortion Optimization for Large Language Model Compression](2025-2505.03031-radio-rate-distortion-optimization-for-large-language-model-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
-
-- **2025-05 · [ERC-SVD: Error-Controlled SVD for Large Language Model Compression](2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  切り捨て残差を2段目の特異値分解で回収する残差補償と、最後の数層だけへの部分層圧縮で誤差伝播を抑える、学習不要の特異値分解圧縮手法。同じ圧縮率で既存の特異値分解系手法より品質を保つ。
 
 - **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -4028,6 +4028,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、事前学習済みの言語モデルをそのまま極端な低ビット形式へ変換すると知識が破壊される問題に対し、BinaryLLMという段階的な一ビット化方式を提案する。原著はSmolLM、LLaMA3、LLaMA2などで評価し、三十億パラメータ規模ではゼロショット七課題平均57.0%を得た。
 
+- **2025-08 · [Hardwired-Neurons Language Processing Units as General-Purpose Cognitive Substrates](2025-2508.16151-hardwired-neurons-language-processing-units-as-general-purpose-cognitive.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの重みを金属配線の形状として回路へ埋め込み、メモリアクセスを消すことで桁違いのスループットとエネルギー効率を狙う言語処理ユニットと、その製造を成立させる配線埋め込み方法の提案。
+
 - **2025-08 · [GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model](2025-2508.16700-gpt-oss-20b-a-comprehensive-deployment-centric-analysis-of-openai-s-open.md)**  
   実装：[✓](https://github.com/deepdik/GPT-OSS-20B-analysis) ・ リポジトリ内被引用：0  
   MoEは全重みの一部だけを各トークンで活性化するため、演算量はDenseの同規模モデルより小さくなり得る。しかし、未活性のエキスパート重みがメモリから消えるわけではなく、ルーティング、メモリアクセス、KV保持、プリフィルの費用も発生する。GPUのCUDA allocatorピークメモリはそれぞれ43,461MB、63,650MB、66,459MB。
@@ -4287,6 +4291,10 @@
 - **2025-05 · [EdgeMM: Multi-Core CPU with Heterogeneous AI-Extension and Activation-aware Weight Pruning for Multimodal LLMs at Edge](2025-2505.10782-edgemm-multi-core-cpu-with-heterogeneous-ai-extension-and-activation-awa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エッジでマルチモーダルLLM（MLLM）を実行する際、画像などをトークンに変換するエンコーダ、入力トークンをまとめて処理するLLM プリフィル、出力トークンを逐次生成するデコードでは、計算とメモリの比率が大きく異なる。ただし、これらは実チップを製造して測定した数字ではなく、シミュレーション・実装設計評価に基づく比較である。
+
+- **2025-05 · [DINGO: Constrained Inference for Diffusion LLMs](2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  正規表現のオートマトン上で動的計画法を回し、ブロック並列予測でも分布を歪めずに確率最大の制約適合出力を厳密に求める、拡散言語モデル向けの制約付きデコード。
 
 - **2025-04 · [TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models](2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-model.md)**  
   実装：[✓](https://github.com/G-JWLee/TAMP) ・ リポジトリ内被引用：0  
@@ -4670,6 +4678,10 @@
   実装：[✓](https://github.com/RazvanDu/LayerwiseQuant/) ・ リポジトリ内被引用：4  
   層の重要度を二つの物差しで順位付けし、重要な層を高ビット、重要でない層を低ビットに割り当てることで、平均三ビット前後まで性能の九割前後を保ちながらメモリ予算へ細かく合わせられるようにした。
 
+- **2024-03 · [SynCode: LLM Generation with Grammar Augmentation](2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md)**  
+  実装：[✓](https://github.com/structuredllm/syncode) ・ リポジトリ内被引用：4  
+  SynCodeは、言語モデルがJSON、SQL、Python、Goなどの形式言語を生成する際に、文脈自由文法（CFG）を満たすトークンだけを次の候補として残す制約付き復号方式である。
+
 - **2024-10 · [Scaling Laws for Mixed Quantization](2024-2410.06722-scaling-laws-for-mixed-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   低bitのLLM推論では、すべての重みや活性を同じ低精度へ変換するより、精度低下に敏感な部分を高精度で残す混合量子化が有効になる場合がある。
@@ -4681,10 +4693,6 @@
 - **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：3  
   大規模言語モデルの圧縮では、重みを0にする枝刈りや、浮動小数点数を整数へ変換する量子化が、生成文をどの時点から変えてしまうかを把握する必要がある。この指標を使って行列ごとの枝刈り率を配分すると、Llama-2-13Bを全体75%疎化したとき、同じ平均疎化率の一様な大きさ基準の枝刈りより、WikiText2のPPLを13.512から8.101へ抑えられる。
-
-- **2024-03 · [SynCode: LLM Generation with Grammar Augmentation](2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md)**  
-  実装：[✓](https://github.com/structuredllm/syncode) ・ リポジトリ内被引用：3  
-  SynCodeは、言語モデルがJSON、SQL、Python、Goなどの形式言語を生成する際に、文脈自由文法（CFG）を満たすトークンだけを次の候補として残す制約付き復号方式である。
 
 - **2024-03 · [Repoformer: Selective Retrieval for Repository-Level Code Completion](2024-2403.10059-repoformer-selective-retrieval-for-repository-level-code-completion.md)**  
   実装：[✓](https://github.com/amazon-science/Repoformer) ・ リポジトリ内被引用：3  
@@ -5085,7 +5093,7 @@
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
-  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：22  
   従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
 
 - **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
