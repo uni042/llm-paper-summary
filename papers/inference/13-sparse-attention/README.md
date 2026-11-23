@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（216本）
+## 自動生成の論文一覧（217本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -581,6 +581,10 @@
 - **2025-12 · [Leveraging KV Similarity for Online Structured Pruning in LLMs](2025-2512.07090-leveraging-kv-similarity-for-online-structured-pruning-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   事前学習済み言語モデルの構造化枝刈りは、重みや注意ヘッドを削ることで推論費用を下げるが、較正用の入力分布が実際の生成入力と異なる場合、精度低下が大きい。著者のLLaMA-2-13B実験では50%省略条件の常識推論7課題平均が無省略69.51%から65.90%となり、バッチ128では遅延を46.6%、メモリを33.6%削減した。
+
+- **2025-12 · [Designing Spatial Architectures for Sparse Attention: STAR Accelerator via Cross-Stage Tiling](2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-vi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疎注意の予測・ソート・注意本体を段階またぎのタイリングで連携させ、対数領域の乗算なし予測と分散ソートとソート流用のFlashAttentionで、A100比71.2倍のエネルギー効率と空間版20.1倍のスループットを達成する加速器設計。
 
 ### 2年前（2024-12〜2025-11）
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "138ff76ac4584be8f4fdb734da6e89bfc4e7ddec",
+  "base_commit": "59676ddbdb6efaa1905401f43ff5b061c805fa89",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -307,6 +307,7 @@
     "2025-2512.06989-flash-multi-head-feed-forward-network.json",
     "2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-energy-debugging.json",
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
+    "2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-action-models.json",
     "2025-2512.10922-sparseswaps-tractable-llm-pruning-mask-refinement-at-scale.json",
     "2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-memory-growth-for-efficient-llm-inference.json",
     "2025-2512.11534-hfs-holistic-query-aware-frame-selection-for-efficient-video-understanding.json",
@@ -315,6 +316,7 @@
     "2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-decoding.json",
     "2025-2512.15973-dynamic-rank-reinforcement-learning-for-adaptive-low-rank-multi-head-self-attention.json",
     "2025-2512.16238-trustworthy-and-controllable-professional-knowledge-utilization-in-large-language-models.json",
+    "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
@@ -361,6 +363,7 @@
     "2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.json",
     "2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasoning.json",
     "2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.json",
+    "2026-2601.20168-efficient-token-pruning-for-llada-v.json",
     "2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.json",
     "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json",
     "2026-2601.20520-context-tokens-are-anchors-repetition-curse-in-dmllms-information-flow-perspective.json",
@@ -371,6 +374,7 @@
     "2026-2601.22959-triage-hierarchical-visual-budgeting-for-efficient-video-reasoning-in-vision-language-models.json",
     "2026-2601.23182-fouriersampler-unlocking-non-autoregressive-potential-in-diffusion-language-models.json",
     "2026-2602.00165-benfords-law-as-a-distributional-prior-for-post-training-quantization.json",
+    "2026-2602.00247-capa-contribution-aware-pruning-and-ffn-approximation-for-efficient-large-vision-language-models.json",
     "2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.json",
     "2026-2602.01901-q-cache-visual-attention-is-valuable-in-less-than-half-of-decode-layers-for-multimodal.json",
     "2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-block-aware-precision-rescaling.json",
@@ -434,6 +438,7 @@
     "2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-comprehensive-benchmark-and-deployment-study.json",
     "2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-future-without-generation.json",
     "2026-2603.11340-slo-tuner-black-box-online-tuning-llm-performance.json",
+    "2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
     "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json",
     "2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-visual-token-compression-in-vlms.json",
@@ -49894,6 +49899,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.09927": {
+      "order": [
+        "2026-11-23T15:45:09+00:00",
+        "2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-action-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.20198": {
+      "order": [
+        "2026-11-23T15:46:12+00:00",
+        "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.20168": {
+      "order": [
+        "2026-11-23T15:47:14+00:00",
+        "2026-2601.20168-efficient-token-pruning-for-llada-v.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.00247": {
+      "order": [
+        "2026-11-23T15:48:17+00:00",
+        "2026-2602.00247-capa-contribution-aware-pruning-and-ffn-approximation-for-efficient-large-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.11603": {
+      "order": [
+        "2026-11-23T15:49:20+00:00",
+        "2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -63103,6 +63153,21 @@
     "arxiv:2512.06457": [
       "papers/inference/99-other-inference-systems/2025-2512.06457-bitstopper-an-efficient-transformer-attention-accelerator-via-stage-fusi.md",
       "papers/inference/99-other-inference-systems/2025-2512.06457-bitstopper-an-efficient-transformer-attention-accelerator-via-stage-fusi.md"
+    ],
+    "arxiv:2512.09927": [
+      "papers/inference/99-other-inference-systems/2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-a.md"
+    ],
+    "arxiv:2512.20198": [
+      "papers/inference/13-sparse-attention/2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-vi.md"
+    ],
+    "arxiv:2601.20168": [
+      "papers/inference/99-other-inference-systems/2026-2601.20168-efficient-token-pruning-for-llada-v.md"
+    ],
+    "arxiv:2602.00247": [
+      "papers/inference/99-other-inference-systems/2026-2602.00247-capa-contribution-aware-pruning-and-ffn-approximation-for-efficient-larg.md"
+    ],
+    "arxiv:2603.11603": [
+      "papers/inference/99-other-inference-systems/2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.md"
     ]
   }
 }

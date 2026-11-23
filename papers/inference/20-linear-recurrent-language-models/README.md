@@ -205,13 +205,13 @@
   実装：[✓](https://github.com/ynahshan/linear-lognormal-attention) ・ リポジトリ内被引用：3  
   本研究が扱う問題は、系列長が伸びると通常の自己注意（self-注意機構）のスコア行列が二次的に増大する一方、その行列を単に線形化した方式では言語理解の精度が落ちやすいことである。系列長4096での学習反復時間は標準方式6.8秒に対しLLN単独3.2秒、メモリは32.1GBに対し7.5GBだった。
 
+- **2023-02 · [SpikeGPT: Generative Pre-trained Language Model with Spiking Neural Networks](2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md)**  
+  実装：[✓](https://github.com/ridgerchu/SpikeGPT) ・ リポジトリ内被引用：3  
+  従来のスパイク型ネットワークは画像分類などでは有効だったが、語彙数が大きく長距離依存を必要とする言語生成では、二値活性による情報の欠落と訓練の不安定性が課題だった。SpikeGPTは再帰的な言語モデルRWKVのトークン混合をスパイク型ニューロンと組み合わせ、時系列の情報を内部状態へ蓄積することで、二値発火を用いながら自己回帰的な文章生成を行う。
+
 - **2023-06 · [Block-State Transformers](2023-2306.09539-block-state-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPUで測った層単体の順方向計算は、ブロック再帰方式に対して単一頭BSTが6〜11倍速い。
-
-- **2023-02 · [SpikeGPT: Generative Pre-trained Language Model with Spiking Neural Networks](2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md)**  
-  実装：[✓](https://github.com/ridgerchu/SpikeGPT) ・ リポジトリ内被引用：2  
-  従来のスパイク型ネットワークは画像分類などでは有効だったが、語彙数が大きく長距離依存を必要とする言語生成では、二値活性による情報の欠落と訓練の不安定性が課題だった。SpikeGPTは再帰的な言語モデルRWKVのトークン混合をスパイク型ニューロンと組み合わせ、時系列の情報を内部状態へ蓄積することで、二値発火を用いながら自己回帰的な文章生成を行う。
 
 ### 5年前（2021-12〜2022-11）
 

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1330本）
+## 自動生成の論文一覧（1334本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2698,6 +2698,10 @@
   実装：[✓](https://github.com/jayaylee/PromPrune) ・ リポジトリ内被引用：0  
   特異値のスペクトルエントロピーで画像ごとの意味の広がりを測り、固定予算を顕著さと被覆へ振り分けて二段で選ぶことで、エルラバネクスト七ビーで計算量八十八パーセント削減と入力処理二十二パーセント高速化をしながら元の精度の九十七点五パーセントを保った。
 
+- **2026-03 · [AutoScout: Structured Optimization for Automating ML System Configuration](2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MLシステムの階層的な設定空間を、木探索による構造選択と座標探索による密パラメータ調整に分け、特徴量優先順位のトーナメントと多忠実度シミュレータで探索を安く回し、学習で専門家調整比最大3.0倍を達成する自動設定器。
+
 - **2026-03 · [Attention-Based Sampler for Diffusion Language Models](2026-2604.08564-attention-based-sampler-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、マスク拡散型大規模言語モデル（dLLM）の生成時に、どの位置のマスクを先に確定するかを注意行列から決める学習不要の復号法Attn-Samplerを提案する。
@@ -3010,6 +3014,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   異なるGPUや端末で同じ系列モデルを提供する場合、計算予算ごとに別の小型モデルを学習する方法は、学習費用とモデル管理の両方を増やす。学習済みの幅・層数を後から単純に削っても、小型化された部分が単独で有効な予測器になるとは限らない。学習後は成分の接頭辞を物理的に切り出し、別の学習やチャネル選別を行わずに、複数のパラメータ数・実行予算に対応する。
 
+- **2026-01 · [Efficient Token Pruning for LLaDA-V](2026-2601.20168-efficient-token-pruning-for-llada-v.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散型の視覚言語モデルLLaDA-Vでは意味の集約が中層から深層で遅れて起きることを注意の実測で示し、最初の拡散ステップの中深層で視覚トークンを間引くことで、計算量を最大63パーセント減らしながら平均で相対性能95パーセント台を保つ枝刈り法。
+
 - **2026-01 · [Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models](2026-2601.09260-efficient-paths-and-dense-rewards-probabilistic-flow-reasoning-for-large.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   標準的な思考の連鎖は、最終解答の正誤だけでは途中の推論ステップの有用性を直接測れず、冗長な言い換えや誤った分岐を含みやすい。CoT-Flowは、問題xと時点iまでの生成列sを持つ状態Iiにおいて、正解yの負の対数確率 D(Ii)=-log p(y\|Ii) を難しさと定義する。
@@ -3025,6 +3033,10 @@
 - **2026-01 · [Context Tokens are Anchors: Understanding the Repetition Curse in dMLLMs from an Information Flow Perspective](2026-2601.20520-context-tokens-are-anchors-understanding-the-repetition-curse-in-dmllms-.md)**  
   実装：[✓](https://github.com/ErikZ719/CoTA) ・ リポジトリ内被引用：0  
   拡散型マルチモーダルモデルでキャッシュが引き起こす反復現象を、文脈トークンがアンカーであるという情報フロー分析で説明し、注意強化とエントロピー誘導投票のCoTAで隣接反復率を大幅に減らした研究。
+
+- **2026-01 · [CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models](2026-2602.00247-capa-contribution-aware-pruning-and-ffn-approximation-for-efficient-larg.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意確率に値ベクトルの大きさを掛けた注意寄与で視覚トークンを選び直し、中間層のほぼ線形な全結合変換を要素ごとのスケーリングへ置き換えることで、視覚トークン25パーセント保持でも精度を保ち理論計算量を78パーセント減らす二重の効率化。
 
 - **2026-01 · [Can Vision-Language Models Handle Long-Context Code? An Empirical Study on Visual Compression](2026-2602.00746-can-vision-language-models-handle-long-context-code-an-empirical-study-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3045,6 +3057,10 @@
 - **2025-12 · [XLM: A Python package for non-autoregressive language models](2025-2512.17065-xlm-a-python-package-for-non-autoregressive-language-models.md)**  
   実装：[✓](https://github.com/dhruvdcoder/xlm-core) ・ リポジトリ内被引用：0  
   これに対して、非自己回帰言語モデルにはマスク拡散、挿入型生成、編集型生成など複数の方式がある。
+
+- **2025-12 · [Token Expand-Merge: Training-Free Token Compression for Vision-Language-Action Models](2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-a.md)**  
+  実装：[✓](https://github.com/Jasper-aaa/TEAM-VLA) ・ リポジトリ内被引用：0  
+  疎な言語・画像類似度を密度で広げて前景を復元する前段の枝刈りと、行動に応答するトークンへ残りを畳み込む中間層マージを組み合わせ、学習なしでLIBEROの成功率を保ちながら遅延を約1.5倍速くする視覚・言語・行動モデル向け圧縮。
 
 - **2025-12 · [StreamingAssistant: Efficient Visual Token Pruning for Accelerating Online Video Understanding](2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-onlin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3496,6 +3512,10 @@
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：2  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
 
+- **2025-01 · [RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs](2025-2501.19036-redundancylens-revealing-and-exploiting-visual-token-processing-redundan.md)**  
+  実装：[✓](https://github.com/L-Hugh/RedundancyLens) ・ リポジトリ内被引用：2  
+  この構成は実装が単純で精度も高い一方、画像由来のトークン数が増えると、LLMのself-注意機構とFFNの両方で大量の演算が発生する。約半数の層へ演算削減を適用すると、FLOPs比が約71〜72%に下がり、元モデルに近い品質を維持する。
+
 - **2025-01 · [A Proximal Operator for Inducing 2:4-Sparsity](2025-2501.18015-a-proximal-operator-for-inducing-2-4-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
@@ -3559,6 +3579,10 @@
 - **2025-10 · [Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling](2025-1fee57bdbc55-keeping-up-with-large-language-models-a-holistic-methodology-of-compute-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   分散LLMの解析的性能モデルへFlashAttention・MoE・トポロジ別通信を組み込んで並列化空間を5次元化し、チップレットの製造コストモデルまで統合することで、実機を作らずに性能とコストの交換関係を設計初期に探索できるようにしたモデル化方法論。
+
+- **2025-10 · [Direct Multi-Token Decoding](2025-2510.11958-direct-multi-token-decoding.md)**  
+  実装：[✓](https://github.com/luoxuan-cs/Direct-Multitoken-Decoding) ・ リポジトリ内被引用：1  
+  低バッチでは重みをGPUメモリから読み出す時間が支配的になりやすく、各層を毎トークン通ることが遅延の主要因になる。以下の数値はすべて原著の表を照合したものであり、未測定の大規模サービング性能や他の投機復号方式との優劣は主張しない。
 
 - **2025-10 · [AsyncSpade: Efficient Test-Time Scaling with Asynchronous Sparse Decoding](2025-2510.07486-asyncspade-efficient-test-time-scaling-with-asynchronous-sparse-decoding.md)**  
   実装：[✓](https://github.com/UNITES-Lab/AsyncSpade) ・ リポジトリ内被引用：1  
@@ -3712,10 +3736,6 @@
   実装：[✓](https://github.com/ZiweiHe/TreeKV) ・ リポジトリ内被引用：1  
   過去KVの一部だけを残す方法は以前からあるが、単純な「先頭と末尾の固定窓」は中間の重要情報を落とし、注意重みが大きいものを全履歴から貪欲に選ぶ方式は特定領域へ保持位置が偏りやすい。
 
-- **2025-01 · [RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs](2025-2501.19036-redundancylens-revealing-and-exploiting-visual-token-processing-redundan.md)**  
-  実装：[✓](https://github.com/L-Hugh/RedundancyLens) ・ リポジトリ内被引用：1  
-  この構成は実装が単純で精度も高い一方、画像由来のトークン数が増えると、LLMのself-注意機構とFFNの両方で大量の演算が発生する。約半数の層へ演算削減を適用すると、FLOPs比が約71〜72%に下がり、元モデルに近い品質を維持する。
-
 - **2025-01 · [DReSS: Data-driven Regularized Structured Streamlining for Large Language Models](2025-2501.17905-dress-data-driven-regularized-structured-streamlining-for-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   しかし従来の「重要度を測ってチャネルを直接削除し、その後に回復微調整する」方式では、削除予定チャネルに残っていた有用な情報まで失われる。
@@ -3843,10 +3863,6 @@
 - **2025-10 · [Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered](2025-2510.08464-don-t-run-with-scissors-pruning-breaks-vla-models-but-they-can-be-recove.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、2:4構造化剪定をVLAへ適用すると、一般的な言語モデルよりはるかに深刻な性能崩壊が起こることを示し、剪定で失われた重み成分を低ランク補正で部分的に復元するGLUESTICKを提案する。
-
-- **2025-10 · [Direct Multi-Token Decoding](2025-2510.11958-direct-multi-token-decoding.md)**  
-  実装：[✓](https://github.com/luoxuan-cs/Direct-Multitoken-Decoding) ・ リポジトリ内被引用：0  
-  低バッチでは重みをGPUメモリから読み出す時間が支配的になりやすく、各層を毎トークン通ることが遅延の主要因になる。以下の数値はすべて原著の表を照合したものであり、未測定の大規模サービング性能や他の投機復号方式との優劣は主張しない。
 
 - **2025-10 · [Deconstructing Attention: Investigating Design Principles for Effective Language Modeling](2025-2510.11602-deconstructing-attention-investigating-design-principles-for-effective-l.md)**  
   実装：[✓](https://github.com/HUIYINXUE/DeconAttn) ・ リポジトリ内被引用：0  
@@ -4969,7 +4985,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：124  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：125  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
@@ -5331,7 +5347,7 @@
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：90  
+  実装：✓ ・ リポジトリ内被引用：91  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
