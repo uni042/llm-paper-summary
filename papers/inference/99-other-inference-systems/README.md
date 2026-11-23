@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1325本）
+## 自動生成の論文一覧（1330本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3118,6 +3118,10 @@
   実装：[✓](https://github.com/Amirhosein-gh98/Gnosis) ・ リポジトリ内被引用：0  
   回答文中の自己申告の確信度も、誤った回答に対して高い確信を示す問題がある。提案方式は、生成モデル本体の重みを変更せず、生成中に現れる隠れ状態（Hidden States）と注意重み（注意機構 Maps）の時系列的な特徴を抽出する。これは判定器の時間比較であり、回答を生成する言語モデル全体が37倍または99倍速くなるという意味ではない。
 
+- **2025-12 · [BitStopper: An Efficient Transformer Attention Accelerator via Stage-fusion and Early Termination](2025-2512.06457-bitstopper-an-efficient-transformer-attention-accelerator-via-stage-fusi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キーを1ビットずつ読みながら部分スコアで不要トークンを早期に打ち切り、独立したスパース予測段を消した注意アクセラレータ。Sanger比2.03倍、SOFA比1.89倍の高速化を品質悪化ほぼなしで得る。
+
 - **2025-12 · [Accelerating Language Model Workflows with Prompt Choreography](2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.md)**  
   実装：[✓](https://github.com/tjbai/choreo) ・ リポジトリ内被引用：0  
   文章ごとの鍵と値の符号化を全体で共有し、各呼び出しが任意の文章を任意の順序で参照できるようにして、追加学習でずれを直すことで、最初のトークンまでの時間を二・〇倍から六・二倍、全体でも二・二倍超速くしたと報告した。
@@ -3747,6 +3751,10 @@
 - **2025-11 · [R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization](2025-2511.21736-r2q-towards-robust-2-bit-large-language-models-via-residual-refinement-q.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   R2Q（Residual Refinement Quantization）は、2ビットの重み量子化を1回の4値への丸めではなく、元重みを二値近似した後、その残差をさらに二値近似する2段階へ分解する方式である。2ビットで品質を完全に保てる方式ではなく、比較対象の崩壊が極端な条件で改善幅が大きく見える点を区別する必要がある。
+
+- **2025-11 · [Mosaic Pruning: A Hierarchical Framework for Generalizable Pruning of Mixture-of-Experts Models](2025-2511.19822-mosaic-pruning-a-hierarchical-framework-for-generalizable-pruning-of-mix.md)**  
+  実装：[✓](https://github.com/Saul-James/MoP) ・ リポジトリ内被引用：0  
+  専門家の機能的な似通いを領域横断の働き方でクラスタリングし、各群から最も代表的な専門家を残すことで、単一コーパス最適化の枝刈りが起こす専門領域での崩壊を避けるMoE枝刈り。
 
 - **2025-11 · [Focused Chain-of-Thought: Efficient LLM Reasoning via Structured Input Information](2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4846,6 +4854,10 @@
   実装：[✓](https://github.com/YupengSu/LLM-Barber) ・ リポジトリ内被引用：0  
   枝刈り後のモデルで重みの重要度が変わることに着目し、ブロック単位の再構成誤差の勾配と重みの積でマスクを作り直して、重要になった重みを復活させ不要になった重みを落とす、再学習なしの一括マスク再構築。
 
+- **2024-07 · [Turbo: Informativity-Driven Acceleration Plug-In for Vision-Language Large Models](2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-larg.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  相互冗長度と意味的価値を合わせた情報度で視覚と言語のトークンを並べ替え、冗長なものを統合する再学習不要の差し込みで、視覚言語モデルを理解課題で約2倍、生成課題で約1.6倍速くする方式。
+
 - **2024-07 · [Model Agnostic Hybrid Sharding For Heterogeneous Distributed Inference](2024-2407.19775-model-agnostic-hybrid-sharding-for-heterogeneous-distributed-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデルをブロック列へ分けて位相と能力を見て選んだ分散ノード列へ順に配置し、量子化で転送とメモリを減らす、モデル非依存の分散推論シャーディング方式。
@@ -4934,6 +4946,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   標準Transformerの自己注意は、系列内の各トークンが過去の各トークンを参照するため、長い入力のプリフィルではトークン数の二乗に比例する注意計算を必要とする。生成時には過去のKey/ValueをKVキャッシュへ保持するため、文脈長とともにメモリ容量も増える。本論文は、線形注意を潜在変数を介した確率分布として解釈する。
 
+- **2024-01 · [When Neural Code Completion Models Size up the Situation: Attaining Cheaper and Faster Completion through Dynamic Model Inference](2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheap.md)**  
+  実装：[✓](https://github.com/v587su/SEC) ・ リポジトリ内被引用：0  
+  中間層で十分なトークンは早期に出し、予測できない補完は丸ごと打ち切る二判断の動的推論で、コード補完を平均11.2パーセント速くし無駄な提案も減らす方式。
+
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
   従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
@@ -4945,7 +4961,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：347  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：348  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5189,6 +5205,10 @@
 - **2021-12 · [DAP-BERT: Differentiable Architecture Pruning of BERT](2021-0028045aea9f-dap-bert-differentiable-architecture-pruning-of-bert.md)**  
   実装：[✓](https://github.com/OscarYau525/DAP-BERT) ・ リポジトリ内被引用：0  
   DAP-BERTは、既存のBERTモデルから、実行装置の演算制約に応じて不要な注意ヘッドとFeed-順伝播 Network（FFN）の中間次元を選択的に除去する、微分可能な構造化枝刈り方式である。
+
+- **2021-12 · [Block-Skim: Efficient Question Answering for Transformer](2021-2112.08560-block-skim-efficient-question-answering-for-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意重みから答えに関係するブロックだけを残し無関係な本文を下位層で早期に捨てることで、質問応答の精度を上げながらBERTを約3倍速くする早期スキミング。
 
 ### 6年前（2020-12〜2021-11）
 

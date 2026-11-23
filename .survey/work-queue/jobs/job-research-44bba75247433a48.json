@@ -35,10 +35,15 @@
   "selection_reason": "Block-SkimはTransformerの質問応答推論で不要な文脈を上位層で読み飛ばす手法で、自己注意の重みから処理継続が必要な位置を判定し、下位層で隠れ状態を早期にプルーニングすることで精度を保ちながら推論時の大幅な高速化を達成すると要旨が示している。",
   "semantic_scholar_id": "f5a3dbc0518df5ca1b6333ae93244dde7f793736",
   "source_url": "https://arxiv.org/abs/2112.08560",
-  "status": "ready",
+  "status": "superseded",
   "title": "Block-Skim: Efficient Question Answering for Transformer",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-11-23T15:41:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2021-2112.08560-block-skim-efficient-question-answering-for-transformer.md",
+  "represented_canonical_id": "arXiv:2112.08560",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
