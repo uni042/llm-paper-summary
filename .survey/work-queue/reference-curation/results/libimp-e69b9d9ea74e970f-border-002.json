@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e69b9d9ea74e970f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.17834",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.17834",
+    "identity_tokens": [
+      "arXiv:2604.17834"
+    ],
+    "reason": "非同期GPUのTMAやワープ特殊化を活かすSpMMカーネルAsyncSparseで汎用疎行列演算を高速化しQwenプリフィルでの評価も含むが、主対象は科学計算を含む汎用カーネルでありLLM推論専用の貢献とは言い切れないため境界域とする。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AsyncSparse: Accelerating Sparse Matrix-Matrix Multiplication on Asynchronous GPU Architectures"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e69b9d9ea74e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

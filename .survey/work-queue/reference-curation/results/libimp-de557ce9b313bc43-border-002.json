@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de557ce9b313bc43-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.20519",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.20519",
+    "identity_tokens": [
+      "arXiv:2609.20519"
+    ],
+    "reason": "SoL-Piはコーディングエージェントのハーネス層で文脈圧縮や委任読み取りによりトークン交通量を44-49%削減するが、対象はエージェント実行ハーネスでありLLM推論システム自体への貢献は間接的である。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de557ce9b313",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-736e6b0e0156d38a-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.03197",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.03197",
+    "identity_tokens": [
+      "arXiv:2606.03197"
+    ],
+    "reason": "LLMエージェントの文脈メモリ能力を自己教師ありのマスク再構成タスクで高めるMemTrainは学習フレームワークであり、推論時のメモリ機構やサービング高速化ではなく学習単独の改善に留まるため対象外とする。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MemTrain: Self-Supervised Context Memory Training"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-736e6b0e0156",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

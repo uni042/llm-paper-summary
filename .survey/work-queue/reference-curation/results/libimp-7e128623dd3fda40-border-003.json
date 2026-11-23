@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e128623dd3fda40-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.24406",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.24406",
+    "identity_tokens": [
+      "arXiv:2509.24406"
+    ],
+    "reason": "Muon最適化器の収束理論とMLA・MoEとの相乗効果を小中規模デコーダの学習で検証した研究で、MLAとMoE併用時のメモリ68％削減や推論3.2倍高速化にも触れるが、主たる貢献は学習の計算・時間トレードオフと最適化器の性質であり推論機構の提案ではない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Muon: Training and Trade-offs with Latent Attention and MoE"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e128623dd3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

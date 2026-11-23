@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e128623dd3fda40-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.01392",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.01392",
+    "identity_tokens": [
+      "arXiv:2406.01392"
+    ],
+    "reason": "事前学習済みLLMの活性化ニューロンのスパース性を利用して継続事前学習と教師あり微調整を高速化するSATの提案であり、スループット45％改善も学習工程の話であって、推論・サービング・デコードへの直接貢献は要旨に確認できない学習単独の高速化である。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Sparsity-Accelerated Training for Large Language Models"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e128623dd3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

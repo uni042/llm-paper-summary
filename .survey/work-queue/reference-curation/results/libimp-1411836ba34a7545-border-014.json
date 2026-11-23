@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1411836ba34a7545-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.01637",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.01637",
+    "identity_tokens": [
+      "arXiv:2410.01637"
+    ],
+    "reason": "decoder-only TransformerへUnlimiformerを適応しkNN索引へクロスアテンションをオフロードして長文脈化する試みで、2倍文脈長相当の要約性能を示すが推論コストやレイテンシの改善量は要旨で明確でない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the Adaptation of Unlimiformer for Decoder-Only Transformers"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1411836ba34a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

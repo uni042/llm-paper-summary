@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10c04908641cc80c-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.09357",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.09357",
+    "identity_tokens": [
+      "arXiv:2503.09357"
+    ],
+    "reason": "演算子レベルの並列計画を混合整数計画で自動化しMoEやマルチモーダルの複雑なトポロジを扱うが、要旨は分散学習全般が中心でLLM推論サービング固有の効果が明確でないため保留とする。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Automatic Operator-level Parallelism Planning for Distributed Deep Learning - A Mixed-Integer Programming Approach"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10c04908641c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

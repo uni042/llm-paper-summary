@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-907fabd7e503a2a3-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.23089",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.23089",
+    "identity_tokens": [
+      "arXiv:2607.23089"
+    ],
+    "reason": "LLMを用いてTritonカーネルをコンパイラ根拠で診断・最適化しNPUベンチで高速化する枠組みだが、対象カーネルは汎用NPUカーネルでありLLM推論カーネル自体の改善かどうかは要旨で特定できない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compiler-Grounded Hierarchical Diagnosis for LLM-Based Triton Kernel Optimization"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-907fabd7e503",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a5b2b334f8254ba-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.03784",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.03784",
+    "identity_tokens": [
+      "arXiv:2510.03784"
+    ],
+    "reason": "Transformerの表現力と効率のトレードオフを近似理論から解析し、層ごとの注意ヘッド数とヘッド次元の配分指針やsoftmaxの飽和現象を示した理論研究であり、モデル効率の設計には示唆を与えるが推論システムやカーネルの実装・実測による直接貢献はない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Performance-Efficiency Tradeoffs in Transformers: An Approximation Theory Perspective"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a5b2b334f82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

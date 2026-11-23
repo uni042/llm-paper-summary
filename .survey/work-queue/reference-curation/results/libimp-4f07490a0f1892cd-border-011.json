@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f07490a0f1892cd-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2104.05343",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2104.05343",
+    "identity_tokens": [
+      "arXiv:2104.05343"
+    ],
+    "reason": "Optimusは超大規模モデルの学習向けに活性化も分割する2次元モデル並列を提案し学習で1.48倍・推論でも1.78倍の高速化を報告するが、主目的と評価の中心は学習のスケーリングであり推論サービングへの貢献は副次的である。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Efficient 2D Method for Training Super-Large Deep Learning Models"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f07490a0f18",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

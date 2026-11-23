@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e128623dd3fda40-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.07753",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.07753",
+    "identity_tokens": [
+      "arXiv:2604.07753"
+    ],
+    "reason": "画像生成を備えた大規模マルチモーダルモデルで生成と理解の勾配競合を、専門家を課題別に分離し共有専門家を橋渡しとするSymbiotic-MoEと漸進的学習戦略で解く事前学習フレームワークであり、MoE構造には関わるが目的は学習時の干渉解消で推論高速化の機構ではない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Symbiotic-MoE: Unlocking the Synergy between Generation and Understanding"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e128623dd3f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

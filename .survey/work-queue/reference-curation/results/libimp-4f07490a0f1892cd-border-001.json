@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f07490a0f1892cd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112",
+    "identity_tokens": [
+      "SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112"
+    ],
+    "reason": "投機的デコードとその周辺技術のレビューと題するが、Semantic Scholarが429で要旨を取得できず、arXiv・Crossrefでも当該レビューの要旨を確認できなかったため、推論高速化への具体的な貢献範囲を一次要旨で検証できていない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculative Decoding and Beyond: An In-Depth Review of Techniques"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f07490a0f18",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

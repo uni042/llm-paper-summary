@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6be0caaaf12b6044-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.23170",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.23170",
+    "identity_tokens": [
+      "arXiv:2507.23170"
+    ],
+    "reason": "推論予算・事実性・推論能力の三者のトレードオフを定式化するBAR理論をLLMサービス設計向けに提案するが、要旨ではサービングやデコードを高速化する具体的な推論機構は示されず、理論的枠組みに留まるため。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BAR Conjecture: the Feasibility of Inference Budget-Constrained LLM Services with Authenticity and Reasoning"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6be0caaaf12b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

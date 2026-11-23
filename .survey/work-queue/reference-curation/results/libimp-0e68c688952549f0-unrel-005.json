@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e68c688952549f0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.29245",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.29245",
+    "identity_tokens": [
+      "arXiv:2609.29245"
+    ],
+    "reason": "コーパス規模に対する課題難易度の伸びをCorpus Task Complexityとして定義し高CTC課題を提案するコーパス課題・検索評価の研究で、LLM推論機構への貢献はない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "No More Free Lunch: Corpus Task Complexity Matters as Corpora Grow"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e68c6889525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

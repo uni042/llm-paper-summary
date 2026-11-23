@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e68c688952549f0-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.15099",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.15099",
+    "identity_tokens": [
+      "arXiv:2508.15099"
+    ],
+    "reason": "状態空間基盤にスパース大域注意・MoE・二重メモリを適応的にルーティングするHydraで長文脈スループット3倍を主張するが、29Mパラメータの合成系列での検証にとどまりLLMサービングへの直接適用は不明瞭である。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hydra: A Modular Architecture for Efficient Long-Context Reasoning"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e68c6889525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

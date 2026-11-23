@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-907fabd7e503a2a3-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.03460",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.03460",
+    "identity_tokens": [
+      "arXiv:2502.03460"
+    ],
+    "reason": "小規模言語モデルを効率的に得るため構造化プルーニングと学習を交互に行うAdapt-Prunerで、主眼はSLMの学習・作成コストであり推論サービング時の効率化機構ではない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adapt-Pruner: Adaptive Structural Pruning for Efficient Small Language Model Training"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-907fabd7e503",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

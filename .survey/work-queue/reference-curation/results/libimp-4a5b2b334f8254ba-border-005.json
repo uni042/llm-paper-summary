@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a5b2b334f8254ba-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.11945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.11945",
+    "identity_tokens": [
+      "arXiv:2505.11945"
+    ],
+    "reason": "視覚指示チューニングにおける視覚トークン射影を上位からの圧縮で効率化し視覚トークンを75〜95％削減するLLaVA-Meteorの提案であり、VLMのトークン削減として推論効率に関連はするが主目的は視覚・言語アライメントの学習手法でありサービング機構の提案ではない。",
+    "first_checked_at": "2026-11-23T12:22:27+00:00",
+    "last_checked_at": "2026-11-23T12:22:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Top–Down Compression: Revisit Efficient Vision Token Projection for Visual Instruction Tuning"
+  },
+  "processed_at": "2026-11-23T12:22:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a5b2b334f82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
