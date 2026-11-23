@@ -1,0 +1,610 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-11d45b1c166ce25e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-11d45b1c166c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/edge62653.2024.00015",
+    "DOI:10.1109/ijcnn55064.2022.9891931",
+    "DOI:10.1109/tmc.2026.3709190",
+    "DOI:10.1145/3524059.3532366",
+    "DOI:10.23919/vlsitechnologyandcir65189.2025.11074875",
+    "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a7f49c1246cf5b793089d7ef02bc636be993353a",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T07:32:18.900056+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/edge62653.2024.00015",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ijcnn55064.2022.9891931",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tmc.2026.3709190",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3524059.3532366",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/vlsitechnologyandcir65189.2025.11074875",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AccSI: Accelerating Serverless Inference via Edge-Assisted Pipelined Model Fetching",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3709190",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serverless edge computing (SEC) is an emerging paradigm for delivering low-latency and auto-scaling services on resource-limited edges. However, when applied to DNN inference applications, SEC suffers from significant cold-start overhead, because large model parameters need to be fetched from remote model registries before execution. Prior studies reduce model-fetching latency by prefetching models in SSDs. However, these methods are impractical for SEC, as resource-constrained edge servers cannot accommodate all required DNN models. To solve it, we propose AccSI, a novel edge-assisted pipelined model fetching framework to accelerate serverless inference. AccSI aggregates distributed edge storage to prefetch DNN model layers and employs a pipelined execution strategy that overlaps model fetching, model loading, and inference, thereby minimizing the overall application completion time (ACT). To fully unlock AccSI’s potential, we jointly optimize application placement and model fetching decisions with a provable approximation ratio. In addition, considering the dynamic nature of SEC environments and application requests, we adaptively adjust application placement, model fetching, and prefetching decisions at runtime. Finally, extensive experiments demonstrate that AccSI achieves a speedup of up to <inline-formula><tex-math notation=\"LaTeX\">$3.47\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>3</mml:mn><mml:mo>.</mml:mo><mml:mn>47</mml:mn><mml:mo>×</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"dong-ieq1-3709190.gif\"/></alternatives></inline-formula> in average ACT.",
+      "identifiers": [
+        "SemanticScholar:d360583ffbcd4ea6bf1c2838a6fc5671a8219959"
+      ],
+      "semantic_scholar_id": "d360583ffbcd4ea6bf1c2838a6fc5671a8219959",
+      "doi": "10.1109/TMC.2026.3709190",
+      "canonical_id": "DOI:10.1109/TMC.2026.3709190",
+      "authors": [
+        "Zhao-Wu Huang",
+        "Fang Dong",
+        "Xiao-Lin Guo",
+        "Rui-Ting Zhou",
+        "Jing-Hui Zhang",
+        "Xing Chen",
+        "Xian-Bin Peng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PAME: precision-aware multi-exit DNN serving for reducing latencies of batched inferences",
+      "source_url": "https://doi.org/10.1145/3524059.3532366",
+      "year": 2022,
+      "published": "2022-06-28",
+      "venue": "International Conference on Supercomputing",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In emerging DNN serving systems, queries are usually batched to fully leverage hardware resources, and all the queries in a batch run through the complete model and return at the same time. According to our findings, some queries only need to pass through a portion of the DNN model to attain sufficient precision in a DNN service. These queries can have shorter latencies if they can return early in the middle of a model. Therefore, we propose precision-aware multi-exit inference serving, PAME, to achieve the above purpose. PAME provides a holistic scheme to build a multi-exit DNN model and a corresponding system-level design of the inference engine. We use representative CV and NLP benchmarks to evaluate PAME. PAME is adaptive to various DNN tasks and service loads. Experimental results show that PAME reduces 39.9% average latency without increasing the tail latency, while maintaining 99.68% precision of the original single-exit DNN models on average.",
+      "identifiers": [
+        "SemanticScholar:87122b70bc2b810d12189777fcd70e8c04eb9d1a"
+      ],
+      "semantic_scholar_id": "87122b70bc2b810d12189777fcd70e8c04eb9d1a",
+      "doi": "10.1145/3524059.3532366",
+      "canonical_id": "DOI:10.1145/3524059.3532366",
+      "authors": [
+        "Shulai Zhang",
+        "Wei-Hao Cui",
+        "Quan Chen",
+        "Zhengnian Zhang",
+        "Yue Guan",
+        "Jingwen Leng",
+        "C. Li",
+        "Min-Yi Guo"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1609,
+        "matched_prestigious_venue": "Supercomputing"
+      }
+    },
+    {
+      "title": "Navigator: A Decentralized Scheduler for Latency-Sensitive AI Workflows",
+      "source_url": "https://doi.org/10.1109/EDGE62653.2024.00015",
+      "year": 2024,
+      "published": "2024-07-07",
+      "venue": "International Conference on Edge Computing [Services Society]",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider AI inference and generative query processing in distributed systems: an increasingly popular edgecomputing use case. In such systems, coscheduling of GPU memory management and task placement represents a promising opportunity. We propose Navigator, a novel framework that unifies these functions to reduce job latency while using resources efficiently, placing tasks where data dependencies will be satisfied collocating tasks from the same job (when this will not overload the host or its GPU), and efficiently managing GPU memory Comparison with other state of the art schedulers shows a significant reduction in completion times while requiring the same amount or even fewer resources. In one case, just half the servers were needed for processing the same workload.",
+      "identifiers": [
+        "SemanticScholar:b2f0117c3792a29876a0de49df9fc19cc042a380"
+      ],
+      "semantic_scholar_id": "b2f0117c3792a29876a0de49df9fc19cc042a380",
+      "doi": "10.1109/EDGE62653.2024.00015",
+      "canonical_id": "DOI:10.1109/EDGE62653.2024.00015",
+      "authors": [
+        "Yuting Yang",
+        "Andrea Merlina",
+        "Wei-Jia Song",
+        "Tian-Cheng Yuan",
+        "K. Birman",
+        "R. Vitenberg"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 869,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Design Considerations for LLM Inference in Data Centers: Chip and Interconnect",
+      "source_url": "https://doi.org/10.23919/VLSITechnologyandCir65189.2025.11074875",
+      "year": 2025,
+      "published": "2025-06-08",
+      "venue": "2025 Symposium on VLSI Technology and Circuits (VLSI Technology and Circuits)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:de300d1012099863a578da2bcc0e52ce2a9ba38a"
+      ],
+      "semantic_scholar_id": "de300d1012099863a578da2bcc0e52ce2a9ba38a",
+      "doi": "10.23919/VLSITechnologyandCir65189.2025.11074875",
+      "canonical_id": "DOI:10.23919/VLSITechnologyandCir65189.2025.11074875",
+      "authors": [
+        "Zhan Shi",
+        "Yan Wang",
+        "Minggang Diao",
+        "Wenyu Wu",
+        "Zong-Ming Su",
+        "Xiangku Li",
+        "Rui Niu",
+        "Hui Zang",
+        "Kunpeng Song",
+        "Y. Yu",
+        "Huimin Lin",
+        "Junxian He",
+        "Hu Liu",
+        "Ji Xia",
+        "Heng Liao"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 533,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UvA-DARE (Digital Academic Repository) SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems",
+      "source_url": "https://www.semanticscholar.org/paper/3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789"
+      ],
+      "semantic_scholar_id": "3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "canonical_id": "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "authors": [
+        "Kanwal Batool",
+        "Saleem Anwar",
+        "Francesco Regazzoni",
+        "A. Pimentel",
+        "andZoltán ÁdámMann",
+        "SwiftSNNI"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical Cache Transformer: Dynamic Early Exit for Language Translation",
+      "source_url": "https://doi.org/10.1109/IJCNN55064.2022.9891931",
+      "year": 2022,
+      "published": "2022-07-18",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The transformer model significantly improves the performance of natural language processing tasks. However, the downside of employing the transformer-based model is its heavy inference cost, which raises the concern of putting transformer-based models into industrial operations. Thus, studies for im-proving inference performance were reported. However, the major studies mainly consider classification tasks but not for natural language generation (NLG). In this paper, we propose Hierarchical Cache (HC) Transformer model tailored to NLG tasks. Our experiments show the feasible results on German-English translation dataset. The experiment result demonstrates that HC-Transformer can speed up inference by 32% with a 3% loss in performance.",
+      "identifiers": [
+        "SemanticScholar:e4440f79f3a2c90d0021912888637c516f6fc7cf"
+      ],
+      "semantic_scholar_id": "e4440f79f3a2c90d0021912888637c516f6fc7cf",
+      "doi": "10.1109/IJCNN55064.2022.9891931",
+      "canonical_id": "DOI:10.1109/IJCNN55064.2022.9891931",
+      "authors": [
+        "Chi Tsai",
+        "Ying-Hong Chan",
+        "Yao-Chung Fan"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1589,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/tmc.2026.3709190",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmc.2026.3709190",
+        "id:SemanticScholar:d360583ffbcd4ea6bf1c2838a6fc5671a8219959",
+        "title:accsi accelerating serverless inference via edgeassisted pipelined model fetching",
+        "url:https://doi.org/10.1109/TMC.2026.3709190"
+      ],
+      "record": {
+        "title": "AccSI: Accelerating Serverless Inference via Edge-Assisted Pipelined Model Fetching",
+        "source_url": "https://doi.org/10.1109/TMC.2026.3709190",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": "IEEE Transactions on Mobile Computing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serverless edge computing (SEC) is an emerging paradigm for delivering low-latency and auto-scaling services on resource-limited edges. However, when applied to DNN inference applications, SEC suffers from significant cold-start overhead, because large model parameters need to be fetched from remote model registries before execution. Prior studies reduce model-fetching latency by prefetching models in SSDs. However, these methods are impractical for SEC, as resource-constrained edge servers cannot accommodate all required DNN models. To solve it, we propose AccSI, a novel edge-assisted pipelined model fetching framework to accelerate serverless inference. AccSI aggregates distributed edge storage to prefetch DNN model layers and employs a pipelined execution strategy that overlaps model fetching, model loading, and inference, thereby minimizing the overall application completion time (ACT). To fully unlock AccSI’s potential, we jointly optimize application placement and model fetching decisions with a provable approximation ratio. In addition, considering the dynamic nature of SEC environments and application requests, we adaptively adjust application placement, model fetching, and prefetching decisions at runtime. Finally, extensive experiments demonstrate that AccSI achieves a speedup of up to <inline-formula><tex-math notation=\"LaTeX\">$3.47\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>3</mml:mn><mml:mo>.</mml:mo><mml:mn>47</mml:mn><mml:mo>×</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"dong-ieq1-3709190.gif\"/></alternatives></inline-formula> in average ACT.",
+        "identifiers": [
+          "SemanticScholar:d360583ffbcd4ea6bf1c2838a6fc5671a8219959"
+        ],
+        "semantic_scholar_id": "d360583ffbcd4ea6bf1c2838a6fc5671a8219959",
+        "doi": "10.1109/TMC.2026.3709190",
+        "canonical_id": "DOI:10.1109/TMC.2026.3709190",
+        "authors": [
+          "Zhao-Wu Huang",
+          "Fang Dong",
+          "Xiao-Lin Guo",
+          "Rui-Ting Zhou",
+          "Jing-Hui Zhang",
+          "Xing Chen",
+          "Xian-Bin Peng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3524059.3532366",
+      "identity_tokens": [
+        "id:DOI:10.1145/3524059.3532366",
+        "id:SemanticScholar:87122b70bc2b810d12189777fcd70e8c04eb9d1a",
+        "title:pame precisionaware multiexit dnn serving for reducing latencies of batched inferences",
+        "url:https://doi.org/10.1145/3524059.3532366"
+      ],
+      "record": {
+        "title": "PAME: precision-aware multi-exit DNN serving for reducing latencies of batched inferences",
+        "source_url": "https://doi.org/10.1145/3524059.3532366",
+        "year": 2022,
+        "published": "2022-06-28",
+        "venue": "International Conference on Supercomputing",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In emerging DNN serving systems, queries are usually batched to fully leverage hardware resources, and all the queries in a batch run through the complete model and return at the same time. According to our findings, some queries only need to pass through a portion of the DNN model to attain sufficient precision in a DNN service. These queries can have shorter latencies if they can return early in the middle of a model. Therefore, we propose precision-aware multi-exit inference serving, PAME, to achieve the above purpose. PAME provides a holistic scheme to build a multi-exit DNN model and a corresponding system-level design of the inference engine. We use representative CV and NLP benchmarks to evaluate PAME. PAME is adaptive to various DNN tasks and service loads. Experimental results show that PAME reduces 39.9% average latency without increasing the tail latency, while maintaining 99.68% precision of the original single-exit DNN models on average.",
+        "identifiers": [
+          "SemanticScholar:87122b70bc2b810d12189777fcd70e8c04eb9d1a"
+        ],
+        "semantic_scholar_id": "87122b70bc2b810d12189777fcd70e8c04eb9d1a",
+        "doi": "10.1145/3524059.3532366",
+        "canonical_id": "DOI:10.1145/3524059.3532366",
+        "authors": [
+          "Shulai Zhang",
+          "Wei-Hao Cui",
+          "Quan Chen",
+          "Zhengnian Zhang",
+          "Yue Guan",
+          "Jingwen Leng",
+          "C. Li",
+          "Min-Yi Guo"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1609,
+          "matched_prestigious_venue": "Supercomputing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/edge62653.2024.00015",
+      "identity_tokens": [
+        "id:DOI:10.1109/edge62653.2024.00015",
+        "id:SemanticScholar:b2f0117c3792a29876a0de49df9fc19cc042a380",
+        "title:navigator a decentralized scheduler for latencysensitive ai workflows",
+        "url:https://doi.org/10.1109/EDGE62653.2024.00015"
+      ],
+      "record": {
+        "title": "Navigator: A Decentralized Scheduler for Latency-Sensitive AI Workflows",
+        "source_url": "https://doi.org/10.1109/EDGE62653.2024.00015",
+        "year": 2024,
+        "published": "2024-07-07",
+        "venue": "International Conference on Edge Computing [Services Society]",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We consider AI inference and generative query processing in distributed systems: an increasingly popular edgecomputing use case. In such systems, coscheduling of GPU memory management and task placement represents a promising opportunity. We propose Navigator, a novel framework that unifies these functions to reduce job latency while using resources efficiently, placing tasks where data dependencies will be satisfied collocating tasks from the same job (when this will not overload the host or its GPU), and efficiently managing GPU memory Comparison with other state of the art schedulers shows a significant reduction in completion times while requiring the same amount or even fewer resources. In one case, just half the servers were needed for processing the same workload.",
+        "identifiers": [
+          "SemanticScholar:b2f0117c3792a29876a0de49df9fc19cc042a380"
+        ],
+        "semantic_scholar_id": "b2f0117c3792a29876a0de49df9fc19cc042a380",
+        "doi": "10.1109/EDGE62653.2024.00015",
+        "canonical_id": "DOI:10.1109/EDGE62653.2024.00015",
+        "authors": [
+          "Yuting Yang",
+          "Andrea Merlina",
+          "Wei-Jia Song",
+          "Tian-Cheng Yuan",
+          "K. Birman",
+          "R. Vitenberg"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 869,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/vlsitechnologyandcir65189.2025.11074875",
+      "identity_tokens": [
+        "id:DOI:10.23919/vlsitechnologyandcir65189.2025.11074875",
+        "id:SemanticScholar:de300d1012099863a578da2bcc0e52ce2a9ba38a",
+        "title:design considerations for llm inference in data centers chip and interconnect",
+        "url:https://doi.org/10.23919/VLSITechnologyandCir65189.2025.11074875"
+      ],
+      "record": {
+        "title": "Design Considerations for LLM Inference in Data Centers: Chip and Interconnect",
+        "source_url": "https://doi.org/10.23919/VLSITechnologyandCir65189.2025.11074875",
+        "year": 2025,
+        "published": "2025-06-08",
+        "venue": "2025 Symposium on VLSI Technology and Circuits (VLSI Technology and Circuits)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:de300d1012099863a578da2bcc0e52ce2a9ba38a"
+        ],
+        "semantic_scholar_id": "de300d1012099863a578da2bcc0e52ce2a9ba38a",
+        "doi": "10.23919/VLSITechnologyandCir65189.2025.11074875",
+        "canonical_id": "DOI:10.23919/VLSITechnologyandCir65189.2025.11074875",
+        "authors": [
+          "Zhan Shi",
+          "Yan Wang",
+          "Minggang Diao",
+          "Wenyu Wu",
+          "Zong-Ming Su",
+          "Xiangku Li",
+          "Rui Niu",
+          "Hui Zang",
+          "Kunpeng Song",
+          "Y. Yu",
+          "Huimin Lin",
+          "Junxian He",
+          "Hu Liu",
+          "Ji Xia",
+          "Heng Liao"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 533,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "identity_tokens": [
+        "id:SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+        "title:uvadare digital academic repository swiftsnni optimized scheduling for secure neural network inference snni on multicore systems",
+        "url:https://www.semanticscholar.org/paper/3bacbf132bda7b701e6eaf1ed54b52241b914789"
+      ],
+      "record": {
+        "title": "UvA-DARE (Digital Academic Repository) SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems",
+        "source_url": "https://www.semanticscholar.org/paper/3bacbf132bda7b701e6eaf1ed54b52241b914789",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789"
+        ],
+        "semantic_scholar_id": "3bacbf132bda7b701e6eaf1ed54b52241b914789",
+        "canonical_id": "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+        "authors": [
+          "Kanwal Batool",
+          "Saleem Anwar",
+          "Francesco Regazzoni",
+          "A. Pimentel",
+          "andZoltán ÁdámMann",
+          "SwiftSNNI"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ijcnn55064.2022.9891931",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn55064.2022.9891931",
+        "id:SemanticScholar:e4440f79f3a2c90d0021912888637c516f6fc7cf",
+        "title:hierarchical cache transformer dynamic early exit for language translation",
+        "url:https://doi.org/10.1109/IJCNN55064.2022.9891931"
+      ],
+      "record": {
+        "title": "Hierarchical Cache Transformer: Dynamic Early Exit for Language Translation",
+        "source_url": "https://doi.org/10.1109/IJCNN55064.2022.9891931",
+        "year": 2022,
+        "published": "2022-07-18",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The transformer model significantly improves the performance of natural language processing tasks. However, the downside of employing the transformer-based model is its heavy inference cost, which raises the concern of putting transformer-based models into industrial operations. Thus, studies for im-proving inference performance were reported. However, the major studies mainly consider classification tasks but not for natural language generation (NLG). In this paper, we propose Hierarchical Cache (HC) Transformer model tailored to NLG tasks. Our experiments show the feasible results on German-English translation dataset. The experiment result demonstrates that HC-Transformer can speed up inference by 32% with a 3% loss in performance.",
+        "identifiers": [
+          "SemanticScholar:e4440f79f3a2c90d0021912888637c516f6fc7cf"
+        ],
+        "semantic_scholar_id": "e4440f79f3a2c90d0021912888637c516f6fc7cf",
+        "doi": "10.1109/IJCNN55064.2022.9891931",
+        "canonical_id": "DOI:10.1109/IJCNN55064.2022.9891931",
+        "authors": [
+          "Chi Tsai",
+          "Ying-Hong Chan",
+          "Yao-Chung Fan"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1589,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:030c50f47852e7438bf220a43176c9ae287046dabc239e5115d361c59f05b719",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,706 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-143c8671eb9a69bd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-143c8671eb9a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iwqos65803.2025.11143270",
+    "DOI:10.1109/mm.2025.3575361",
+    "DOI:10.1145/3770743.3803978",
+    "DOI:10.1145/3801976",
+    "arXiv:2202.01699",
+    "arXiv:2310.13315",
+    "arXiv:2412.10652",
+    "arXiv:2606.00494"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a7f49c1246cf5b793089d7ef02bc636be993353a",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T07:32:18.917829+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iwqos65803.2025.11143270",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/mm.2025.3575361",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:splitwise efficient generative llm inference using phase splitting"
+    },
+    {
+      "requested_id": "DOI:10.1145/3770743.3803978",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3801976",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2202.01699",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.13315",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.10652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.00494",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression",
+      "source_url": "https://arxiv.org/abs/2606.00494",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) and Low-Rank Adaptation (LoRA) constitute the standard pipeline for efficient Large Language Model (LLM) deployment. However, applying them sequentially poses a problem: PTQ often leaves behind random noise that is spread out (across the model's weights) in a way LoRA can't easily fix, meaning that LoRA ends up wasting its limited capacity trying to fix uncorrectable noise instead of improving task performance. In this paper, we propose \\textbf{ProjQ}, a novel framework for constraining quantization noise to the low-rank manifold via orthogonal subspace projection. We derive an efficient alternating algorithm that shapes the quantization noise into a low-rank structure, effectively offloading dominant error components to the subsequent adapter while minimizing the residual error in the orthogonal\"uncorrectable\"subspace. Our theoretical analysis demonstrates that ProjQ preserves strictly greater model plasticity for downstream tasks compared to standard PTQ. Extensive experiments on LLaMA-2, Qwen2.5 and Qwen3 confirm that ProjQ consistently outperforms existing methods in both quantization error compensation and downstream task fine-tuning, achieving up to $2\\times$ lower evaluation loss for compensation and matching the performance of standard 4-bit baselines on language modeling tasks with only 3 bits. The code is available on https://github.com/yy9301/ProjQ .",
+      "identifiers": [
+        "SemanticScholar:1b7b644eb4e51501eb2ca6f055bbe09e8fe80fa5"
+      ],
+      "semantic_scholar_id": "1b7b644eb4e51501eb2ca6f055bbe09e8fe80fa5",
+      "canonical_id": "arXiv:2606.00494",
+      "arxiv_id": "2606.00494",
+      "doi": "10.48550/arXiv.2606.00494",
+      "authors": [
+        "Wen-Ya Yu",
+        "Chao Zhang",
+        "Li Wang",
+        "S. Lasaulce",
+        "M. Debbah"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DistrEdge: Speeding up Convolutional Neural Network Inference on Distributed Edge Devices",
+      "source_url": "https://arxiv.org/abs/2202.01699",
+      "year": 2022,
+      "published": "2022-02-03",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 92,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the number of edge devices with computing resources (e.g., embedded GPUs, mobile phones, and laptops) in-creases, recent studies demonstrate that it can be beneficial to col-laboratively run convolutional neural network (CNN) inference on more than one edge device. However, these studies make strong assumptions on the devices' conditions, and their application is far from practical. In this work, we propose a general method, called DistrEdge, to provide CNN inference distribution strategies in environments with multiple IoT edge devices. By addressing heterogeneity in devices, network conditions, and nonlinear characters of CNN computation, DistrEdge is adaptive to a wide range of cases (e.g., with different network conditions, various device types) using deep reinforcement learning technology. We utilize the latest embedded AI computing devices (e.g., NVIDIA Jetson products) to construct cases of heterogeneous devices' types in the experiment. Based on our evaluations, DistrEdge can properly adjust the distribution strategy according to the devices' computing characters and the network conditions. It achieves 1.1 to 3 x speedup compared to state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:496fa8e62f444c62a1e37b5f8fe3225a12fbf136"
+      ],
+      "semantic_scholar_id": "496fa8e62f444c62a1e37b5f8fe3225a12fbf136",
+      "canonical_id": "arXiv:2202.01699",
+      "arxiv_id": "2202.01699",
+      "doi": "10.48550/arXiv.2202.01699",
+      "authors": [
+        "Xue-Yu Hou",
+        "Yong-Jie Guan",
+        "Tao Han",
+        "Ning Zhang"
+      ],
+      "priority": 92,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 92,
+        "citation_count": 92,
+        "total": 92,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1754,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Centaur: Bridging the Impossible Trinity of Privacy, Efficiency, and Performance in Privacy-Preserving Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2412.10652",
+      "year": 2024,
+      "published": "2024-12-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing deployment of pre-trained models like Transformers on cloud platforms, privacy concerns about model parameters and inference data are intensifying. Existing Privacy-Preserving Transformer Inference (PPTI) frameworks face the\"impossible trinity\"of balancing privacy, efficiency, and performance: Secure Multi-Party Computation (SMPC)-based approaches ensure strong privacy but suffer from high computational overhead and performance losses; Conversely, permutation-based methods achieve near-plaintext efficiency and accuracy but compromise privacy by exposing sensitive model parameters and intermediate results. Bridging this gap with a single approach presents substantial challenges, motivating the introduction of CENTAUR, a groundbreaking PPTI framework that seamlessly integrates random permutations and SMPC to address the\"impossible trinity\". By designing efficient PPTI algorithms tailored to the structural properties of Transformer models, CENTAUR achieves an unprecedented balance among privacy, efficiency, and performance. Our experiments demonstrate CENTAUR's ability to resist diverse data reconstruction attacks, achieve plaintext-level inference accuracy, and boost inference speed by 5.0-30.4 times, unlocking new possibilities for secure and efficient AI deployment.",
+      "identifiers": [
+        "SemanticScholar:ec4cb5f9fb9e37afeb71a1c9d4d79f7111212d52"
+      ],
+      "semantic_scholar_id": "ec4cb5f9fb9e37afeb71a1c9d4d79f7111212d52",
+      "canonical_id": "arXiv:2412.10652",
+      "arxiv_id": "2412.10652",
+      "doi": "10.48550/arXiv.2412.10652",
+      "authors": [
+        "Jinglong Luo",
+        "Guanzhong Chen",
+        "Yehong Zhang",
+        "Shiyu Liu",
+        "Wendy Hui Wang",
+        "Yue Yu",
+        "Xun Zhou",
+        "Yuan Qi",
+        "Zeng-Lin Xu"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 709,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Zero-Shot Sharpness-Aware Quantization for Pre-trained Language Models",
+      "source_url": "https://arxiv.org/abs/2310.13315",
+      "year": 2023,
+      "published": "2023-10-20",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is a promising approach for reducing memory overhead and accelerating inference, especially in large pre-trained language model (PLM) scenarios. While having no access to original training data due to security and privacy concerns has emerged the demand for zero-shot quantization. Most of the cutting-edge zero-shot quantization methods primarily 1) apply to computer vision tasks, and 2) neglect of overfitting problem in the generative adversarial learning process, leading to sub-optimal performance. Motivated by this, we propose a novel zero-shot sharpness-aware quantization (ZSAQ) framework for the zero-shot quantization of various PLMs. The key algorithm in solving ZSAQ is the SAM-SGA optimization, which aims to improve the quantization accuracy and model generalization via optimizing a minimax problem. We theoretically prove the convergence rate for the minimax optimization problem and this result can be applied to other nonconvex-PL minimax optimization frameworks. Extensive experiments on 11 tasks demonstrate that our method brings consistent and significant performance gains on both discriminative and generative PLMs, i.e., up to +6.98 average score. Furthermore, we empirically validate that our method can effectively improve the model generalization.",
+      "identifiers": [
+        "SemanticScholar:22736a03ffe39b024b45f294e6508e0b2b90079d"
+      ],
+      "semantic_scholar_id": "22736a03ffe39b024b45f294e6508e0b2b90079d",
+      "canonical_id": "arXiv:2310.13315",
+      "arxiv_id": "2310.13315",
+      "doi": "10.48550/arXiv.2310.13315",
+      "authors": [
+        "Miaoxi Zhu",
+        "Qi-Huang Zhong",
+        "Li Shen",
+        "Liang Ding",
+        "Ju-Hua Liu",
+        "Bo Du",
+        "Da-Cheng Tao"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1130,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "OrCA: An Efficient Computing Architecture for Fault-Tolerant Large Language Model Inference via Outlier-Aware Recalculation",
+      "source_url": "https://doi.org/10.1145/3801976",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "ACM Trans. Design Autom. Electr. Syst.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep-learning accelerators such as TPUs and GPUs now run ever larger models. Conventional fault-tolerant accelerators, designed for CNNs, are ineffective and cost-prohibitive for emerging large language models (LLMs) due to their exponentially higher computational demands. To address the impact of soft errors on computation, various specialized fault-tolerant DNN accelerators have been proposed, typically employing full-element protection. Yet, emerging LLMs exhibit exponentially higher computational demands compared to traditional CNN models, rendering conventional fault-tolerant accelerators both cost-prohibitive and ineffective in handling multi-point faults. To tackle these challenges, we conduct fault injection experiments on multiple representative LLMs, revealing the inherent parameter redundancy in Transformer-based models. Specifically, only 1%–2% of the elements significantly affect the output when perturbed—these critical elements are identified as outliers. Leveraging this insight, we propose OrCA, a hierarchically redundant fault-tolerant accelerator, which introduces the principle of selective protection for critical elements and optimizes the dataflow accordingly. Through extensive fault injection experiments and hardware simulations, we demonstrate that OrCA outperforms conventional fault-tolerant accelerators, achieving superior protection at equal or lower area overhead. Notably, OrCA delivers better performance under fault rates up to 10× higher and supports elastic protection against diverse hardware faults (e.g., transient and permanent faults), adapting to varying fault-tolerance requirements. Furthermore, OrCA breaks the limitation of traditional accelerators that require separate error detection and correction steps, enabling more efficient fault resilience.",
+      "identifiers": [
+        "SemanticScholar:9fcb1e109ba7c6d2eebc62c0721bf9fa8fa3cce4"
+      ],
+      "semantic_scholar_id": "9fcb1e109ba7c6d2eebc62c0721bf9fa8fa3cce4",
+      "doi": "10.1145/3801976",
+      "canonical_id": "DOI:10.1145/3801976",
+      "authors": [
+        "Yi-Hao Shi",
+        "Sheng Ma",
+        "Tie-Jun Li",
+        "Bo Wang",
+        "Sheng-Bai Luo",
+        "Yun-Ping Zhao",
+        "Jian-Min Zhang",
+        "Li-Zhou Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoE-Balance: Unleashing the Full Potential of CPU-GPU Heterogeneity for Efficient MoE Inference",
+      "source_url": "https://doi.org/10.1145/3770743.3803978",
+      "year": 2026,
+      "published": "2026-07-26",
+      "venue": "Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Mixture-of-Experts (MoE) models offer a powerful way to increase the capacity of large language models without proportionally increasing computation. Yet, their extremely large expert weight parameters create severe memory challenges for consumer-grade GPUs and edge devices. Existing offloading and hybrid CPU-GPU approaches fall short in fully utilizing CPU resources, and their coarse-grained scheduling and poorly overlapped CPU-GPU data transfers leave CPU cores frequently idle, thus causing pipeline bubbles and exacerbating overall system inefficiency. We present MoE-Balance, a system that efficiently utilizes heterogeneous CPU-GPU resources for MoE inference. The key innovations include a fine-grained dynamic scheduler that distributes expert tasks based on real-time load, and a cross-layer prefetching and chunked transfer mechanism that overlaps computation with weight movement via PCIe. Experiments on Mixtral-8×7B show that MoE-Balance achieves 1.6× higher throughput and 37.5% lower end-to-end latency compared with state-of-the-art hybrid baselines, demonstrating strong performance gains under memory-constrained settings.",
+      "identifiers": [
+        "SemanticScholar:110a994f859a5102c5027342cd587020170e4ef7"
+      ],
+      "semantic_scholar_id": "110a994f859a5102c5027342cd587020170e4ef7",
+      "doi": "10.1145/3770743.3803978",
+      "canonical_id": "DOI:10.1145/3770743.3803978",
+      "authors": [
+        "Tian-Tian Lin",
+        "Xiao-Hang Wang",
+        "Ying-Tao Jiang",
+        "Amit Kumar Singh",
+        "Kui Ren"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "JointSerLoRA: Cache-Aware LoRA Inference Serving",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143270",
+      "year": 2025,
+      "published": "2025-07-02",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ffd0465d766416809727ceb87f78424063d8ed46"
+      ],
+      "semantic_scholar_id": "ffd0465d766416809727ceb87f78424063d8ed46",
+      "doi": "10.1109/IWQoS65803.2025.11143270",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143270",
+      "authors": [
+        "Rui Li",
+        "Han Bao",
+        "Huai-Min Wang",
+        "Pei-Chang Shi",
+        "Guo-Dong Yi"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 509,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.00494",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.00494",
+        "id:SemanticScholar:1b7b644eb4e51501eb2ca6f055bbe09e8fe80fa5",
+        "id:arXiv:2606.00494",
+        "title:projq projectandquantize for adapteraware llm compression",
+        "url:https://arxiv.org/abs/2606.00494"
+      ],
+      "record": {
+        "title": "ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression",
+        "source_url": "https://arxiv.org/abs/2606.00494",
+        "year": 2026,
+        "published": "2026-05-30",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) and Low-Rank Adaptation (LoRA) constitute the standard pipeline for efficient Large Language Model (LLM) deployment. However, applying them sequentially poses a problem: PTQ often leaves behind random noise that is spread out (across the model's weights) in a way LoRA can't easily fix, meaning that LoRA ends up wasting its limited capacity trying to fix uncorrectable noise instead of improving task performance. In this paper, we propose \\textbf{ProjQ}, a novel framework for constraining quantization noise to the low-rank manifold via orthogonal subspace projection. We derive an efficient alternating algorithm that shapes the quantization noise into a low-rank structure, effectively offloading dominant error components to the subsequent adapter while minimizing the residual error in the orthogonal\"uncorrectable\"subspace. Our theoretical analysis demonstrates that ProjQ preserves strictly greater model plasticity for downstream tasks compared to standard PTQ. Extensive experiments on LLaMA-2, Qwen2.5 and Qwen3 confirm that ProjQ consistently outperforms existing methods in both quantization error compensation and downstream task fine-tuning, achieving up to $2\\times$ lower evaluation loss for compensation and matching the performance of standard 4-bit baselines on language modeling tasks with only 3 bits. The code is available on https://github.com/yy9301/ProjQ .",
+        "identifiers": [
+          "SemanticScholar:1b7b644eb4e51501eb2ca6f055bbe09e8fe80fa5"
+        ],
+        "semantic_scholar_id": "1b7b644eb4e51501eb2ca6f055bbe09e8fe80fa5",
+        "canonical_id": "arXiv:2606.00494",
+        "arxiv_id": "2606.00494",
+        "doi": "10.48550/arXiv.2606.00494",
+        "authors": [
+          "Wen-Ya Yu",
+          "Chao Zhang",
+          "Li Wang",
+          "S. Lasaulce",
+          "M. Debbah"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2202.01699",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2202.01699",
+        "id:SemanticScholar:496fa8e62f444c62a1e37b5f8fe3225a12fbf136",
+        "id:arXiv:2202.01699",
+        "title:distredge speeding up convolutional neural network inference on distributed edge devices",
+        "url:https://arxiv.org/abs/2202.01699"
+      ],
+      "record": {
+        "title": "DistrEdge: Speeding up Convolutional Neural Network Inference on Distributed Edge Devices",
+        "source_url": "https://arxiv.org/abs/2202.01699",
+        "year": 2022,
+        "published": "2022-02-03",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 92,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the number of edge devices with computing resources (e.g., embedded GPUs, mobile phones, and laptops) in-creases, recent studies demonstrate that it can be beneficial to col-laboratively run convolutional neural network (CNN) inference on more than one edge device. However, these studies make strong assumptions on the devices' conditions, and their application is far from practical. In this work, we propose a general method, called DistrEdge, to provide CNN inference distribution strategies in environments with multiple IoT edge devices. By addressing heterogeneity in devices, network conditions, and nonlinear characters of CNN computation, DistrEdge is adaptive to a wide range of cases (e.g., with different network conditions, various device types) using deep reinforcement learning technology. We utilize the latest embedded AI computing devices (e.g., NVIDIA Jetson products) to construct cases of heterogeneous devices' types in the experiment. Based on our evaluations, DistrEdge can properly adjust the distribution strategy according to the devices' computing characters and the network conditions. It achieves 1.1 to 3 x speedup compared to state-of-the-art methods.",
+        "identifiers": [
+          "SemanticScholar:496fa8e62f444c62a1e37b5f8fe3225a12fbf136"
+        ],
+        "semantic_scholar_id": "496fa8e62f444c62a1e37b5f8fe3225a12fbf136",
+        "canonical_id": "arXiv:2202.01699",
+        "arxiv_id": "2202.01699",
+        "doi": "10.48550/arXiv.2202.01699",
+        "authors": [
+          "Xue-Yu Hou",
+          "Yong-Jie Guan",
+          "Tao Han",
+          "Ning Zhang"
+        ],
+        "priority": 92,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 92,
+          "citation_count": 92,
+          "total": 92,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1754,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.10652",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.10652",
+        "id:SemanticScholar:ec4cb5f9fb9e37afeb71a1c9d4d79f7111212d52",
+        "id:arXiv:2412.10652",
+        "title:centaur bridging the impossible trinity of privacy efficiency and performance in privacypreserving transformer inference",
+        "url:https://arxiv.org/abs/2412.10652"
+      ],
+      "record": {
+        "title": "Centaur: Bridging the Impossible Trinity of Privacy, Efficiency, and Performance in Privacy-Preserving Transformer Inference",
+        "source_url": "https://arxiv.org/abs/2412.10652",
+        "year": 2024,
+        "published": "2024-12-14",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the growing deployment of pre-trained models like Transformers on cloud platforms, privacy concerns about model parameters and inference data are intensifying. Existing Privacy-Preserving Transformer Inference (PPTI) frameworks face the\"impossible trinity\"of balancing privacy, efficiency, and performance: Secure Multi-Party Computation (SMPC)-based approaches ensure strong privacy but suffer from high computational overhead and performance losses; Conversely, permutation-based methods achieve near-plaintext efficiency and accuracy but compromise privacy by exposing sensitive model parameters and intermediate results. Bridging this gap with a single approach presents substantial challenges, motivating the introduction of CENTAUR, a groundbreaking PPTI framework that seamlessly integrates random permutations and SMPC to address the\"impossible trinity\". By designing efficient PPTI algorithms tailored to the structural properties of Transformer models, CENTAUR achieves an unprecedented balance among privacy, efficiency, and performance. Our experiments demonstrate CENTAUR's ability to resist diverse data reconstruction attacks, achieve plaintext-level inference accuracy, and boost inference speed by 5.0-30.4 times, unlocking new possibilities for secure and efficient AI deployment.",
+        "identifiers": [
+          "SemanticScholar:ec4cb5f9fb9e37afeb71a1c9d4d79f7111212d52"
+        ],
+        "semantic_scholar_id": "ec4cb5f9fb9e37afeb71a1c9d4d79f7111212d52",
+        "canonical_id": "arXiv:2412.10652",
+        "arxiv_id": "2412.10652",
+        "doi": "10.48550/arXiv.2412.10652",
+        "authors": [
+          "Jinglong Luo",
+          "Guanzhong Chen",
+          "Yehong Zhang",
+          "Shiyu Liu",
+          "Wendy Hui Wang",
+          "Yue Yu",
+          "Xun Zhou",
+          "Yuan Qi",
+          "Zeng-Lin Xu"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 709,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.13315",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.13315",
+        "id:SemanticScholar:22736a03ffe39b024b45f294e6508e0b2b90079d",
+        "id:arXiv:2310.13315",
+        "title:zeroshot sharpnessaware quantization for pretrained language models",
+        "url:https://arxiv.org/abs/2310.13315"
+      ],
+      "record": {
+        "title": "Zero-Shot Sharpness-Aware Quantization for Pre-trained Language Models",
+        "source_url": "https://arxiv.org/abs/2310.13315",
+        "year": 2023,
+        "published": "2023-10-20",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is a promising approach for reducing memory overhead and accelerating inference, especially in large pre-trained language model (PLM) scenarios. While having no access to original training data due to security and privacy concerns has emerged the demand for zero-shot quantization. Most of the cutting-edge zero-shot quantization methods primarily 1) apply to computer vision tasks, and 2) neglect of overfitting problem in the generative adversarial learning process, leading to sub-optimal performance. Motivated by this, we propose a novel zero-shot sharpness-aware quantization (ZSAQ) framework for the zero-shot quantization of various PLMs. The key algorithm in solving ZSAQ is the SAM-SGA optimization, which aims to improve the quantization accuracy and model generalization via optimizing a minimax problem. We theoretically prove the convergence rate for the minimax optimization problem and this result can be applied to other nonconvex-PL minimax optimization frameworks. Extensive experiments on 11 tasks demonstrate that our method brings consistent and significant performance gains on both discriminative and generative PLMs, i.e., up to +6.98 average score. Furthermore, we empirically validate that our method can effectively improve the model generalization.",
+        "identifiers": [
+          "SemanticScholar:22736a03ffe39b024b45f294e6508e0b2b90079d"
+        ],
+        "semantic_scholar_id": "22736a03ffe39b024b45f294e6508e0b2b90079d",
+        "canonical_id": "arXiv:2310.13315",
+        "arxiv_id": "2310.13315",
+        "doi": "10.48550/arXiv.2310.13315",
+        "authors": [
+          "Miaoxi Zhu",
+          "Qi-Huang Zhong",
+          "Li Shen",
+          "Liang Ding",
+          "Ju-Hua Liu",
+          "Bo Du",
+          "Da-Cheng Tao"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1130,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3801976",
+      "identity_tokens": [
+        "id:DOI:10.1145/3801976",
+        "id:SemanticScholar:9fcb1e109ba7c6d2eebc62c0721bf9fa8fa3cce4",
+        "title:orca an efficient computing architecture for faulttolerant large language model inference via outlieraware recalculation",
+        "url:https://doi.org/10.1145/3801976"
+      ],
+      "record": {
+        "title": "OrCA: An Efficient Computing Architecture for Fault-Tolerant Large Language Model Inference via Outlier-Aware Recalculation",
+        "source_url": "https://doi.org/10.1145/3801976",
+        "year": 2026,
+        "published": "2026-04-08",
+        "venue": "ACM Trans. Design Autom. Electr. Syst.",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep-learning accelerators such as TPUs and GPUs now run ever larger models. Conventional fault-tolerant accelerators, designed for CNNs, are ineffective and cost-prohibitive for emerging large language models (LLMs) due to their exponentially higher computational demands. To address the impact of soft errors on computation, various specialized fault-tolerant DNN accelerators have been proposed, typically employing full-element protection. Yet, emerging LLMs exhibit exponentially higher computational demands compared to traditional CNN models, rendering conventional fault-tolerant accelerators both cost-prohibitive and ineffective in handling multi-point faults. To tackle these challenges, we conduct fault injection experiments on multiple representative LLMs, revealing the inherent parameter redundancy in Transformer-based models. Specifically, only 1%–2% of the elements significantly affect the output when perturbed—these critical elements are identified as outliers. Leveraging this insight, we propose OrCA, a hierarchically redundant fault-tolerant accelerator, which introduces the principle of selective protection for critical elements and optimizes the dataflow accordingly. Through extensive fault injection experiments and hardware simulations, we demonstrate that OrCA outperforms conventional fault-tolerant accelerators, achieving superior protection at equal or lower area overhead. Notably, OrCA delivers better performance under fault rates up to 10× higher and supports elastic protection against diverse hardware faults (e.g., transient and permanent faults), adapting to varying fault-tolerance requirements. Furthermore, OrCA breaks the limitation of traditional accelerators that require separate error detection and correction steps, enabling more efficient fault resilience.",
+        "identifiers": [
+          "SemanticScholar:9fcb1e109ba7c6d2eebc62c0721bf9fa8fa3cce4"
+        ],
+        "semantic_scholar_id": "9fcb1e109ba7c6d2eebc62c0721bf9fa8fa3cce4",
+        "doi": "10.1145/3801976",
+        "canonical_id": "DOI:10.1145/3801976",
+        "authors": [
+          "Yi-Hao Shi",
+          "Sheng Ma",
+          "Tie-Jun Li",
+          "Bo Wang",
+          "Sheng-Bai Luo",
+          "Yun-Ping Zhao",
+          "Jian-Min Zhang",
+          "Li-Zhou Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 229,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3770743.3803978",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770743.3803978",
+        "id:SemanticScholar:110a994f859a5102c5027342cd587020170e4ef7",
+        "title:moebalance unleashing the full potential of cpugpu heterogeneity for efficient moe inference",
+        "url:https://doi.org/10.1145/3770743.3803978"
+      ],
+      "record": {
+        "title": "MoE-Balance: Unleashing the Full Potential of CPU-GPU Heterogeneity for Efficient MoE Inference",
+        "source_url": "https://doi.org/10.1145/3770743.3803978",
+        "year": 2026,
+        "published": "2026-07-26",
+        "venue": "Design Automation Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Mixture-of-Experts (MoE) models offer a powerful way to increase the capacity of large language models without proportionally increasing computation. Yet, their extremely large expert weight parameters create severe memory challenges for consumer-grade GPUs and edge devices. Existing offloading and hybrid CPU-GPU approaches fall short in fully utilizing CPU resources, and their coarse-grained scheduling and poorly overlapped CPU-GPU data transfers leave CPU cores frequently idle, thus causing pipeline bubbles and exacerbating overall system inefficiency. We present MoE-Balance, a system that efficiently utilizes heterogeneous CPU-GPU resources for MoE inference. The key innovations include a fine-grained dynamic scheduler that distributes expert tasks based on real-time load, and a cross-layer prefetching and chunked transfer mechanism that overlaps computation with weight movement via PCIe. Experiments on Mixtral-8×7B show that MoE-Balance achieves 1.6× higher throughput and 37.5% lower end-to-end latency compared with state-of-the-art hybrid baselines, demonstrating strong performance gains under memory-constrained settings.",
+        "identifiers": [
+          "SemanticScholar:110a994f859a5102c5027342cd587020170e4ef7"
+        ],
+        "semantic_scholar_id": "110a994f859a5102c5027342cd587020170e4ef7",
+        "doi": "10.1145/3770743.3803978",
+        "canonical_id": "DOI:10.1145/3770743.3803978",
+        "authors": [
+          "Tian-Tian Lin",
+          "Xiao-Hang Wang",
+          "Ying-Tao Jiang",
+          "Amit Kumar Singh",
+          "Kui Ren"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iwqos65803.2025.11143270",
+      "identity_tokens": [
+        "id:DOI:10.1109/iwqos65803.2025.11143270",
+        "id:SemanticScholar:ffd0465d766416809727ceb87f78424063d8ed46",
+        "title:jointserlora cacheaware lora inference serving",
+        "url:https://doi.org/10.1109/IWQoS65803.2025.11143270"
+      ],
+      "record": {
+        "title": "JointSerLoRA: Cache-Aware LoRA Inference Serving",
+        "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143270",
+        "year": 2025,
+        "published": "2025-07-02",
+        "venue": "International Workshop on Quality of Service",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:ffd0465d766416809727ceb87f78424063d8ed46"
+        ],
+        "semantic_scholar_id": "ffd0465d766416809727ceb87f78424063d8ed46",
+        "doi": "10.1109/IWQoS65803.2025.11143270",
+        "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143270",
+        "authors": [
+          "Rui Li",
+          "Han Bao",
+          "Huai-Min Wang",
+          "Pei-Chang Shi",
+          "Guo-Dong Yi"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 509,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7ef1bdcfd4de8b34c20433bffb0f4c33601bd3396fd53f5ed55a283b4836f71b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
