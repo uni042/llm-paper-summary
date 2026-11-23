@@ -1500,13 +1500,13 @@
   実装：✓ ・ リポジトリ内被引用：28  
   プリフィル重視/デコード重視インスタンスを混在させ、要求ごとのTTFT・TPOT余裕を別要求へ移すことで集約型と分離型を統一するLLM配信基盤。既存集約型比9〜47%、分離型比29〜77%グッドプットを改善する。
 
+- **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
+  実装：✓ ・ リポジトリ内被引用：27  
+  不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
+
 - **2025-04 · [semi-PD: Towards Efficient LLM Serving via Phase-Wise Disaggregated Computation and Unified Storage](2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
   入力処理と逐次生成の計算をSM単位で分離しつつ高帯域メモリを共有し、完全分離方式のKV転送と保存容量の偏りを除いてエンドツーエンド遅延を最大2.58倍改善する。
-
-- **2025-04 · [JITServe: SLO-aware LLM Serving with Imprecise Request Information](2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
-  不確かな出力長と依存関係を逐次更新し、期限達成に必要な最小帯域で要求を選ぶことで、サービス有効処理量を1.4〜6.3倍へ改善する。
 
 - **2025-02 · [HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment](2025-2502.07903-hexgen-2.md)**  
   実装：✓ ・ リポジトリ内被引用：25  
@@ -1548,6 +1548,10 @@
   実装：✓ ・ リポジトリ内被引用：19  
   同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
 
+- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：19  
+  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
+
 - **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
   実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：19  
   起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
@@ -1563,10 +1567,6 @@
 - **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
   実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：18  
   モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
-
-- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
 
 - **2025-10 · [Pie: A Programmable Serving System for Emerging LLM Applications](2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md)**  
   実装：[✓](https://github.com/pie-project/pie) ・ リポジトリ内被引用：17  
@@ -1696,6 +1696,10 @@
   実装：[✓](https://github.com/microsoft/sarathi-serve/tree/niyama_asplos2026) ・ リポジトリ内被引用：9  
   対話・コード補完・要約などを「対話型」「バッチ型」の別GPU群へ固定せず、要求ごとの細かなサービス品質（Quality of Service; QoS）期限を同じGPUプールで扱う配信系。Niyamaはデコード要求の締切余裕を見ながらプリフィルの分割サイズを動的に変え、期限優先と残り仕事量優先を混ぜ、過負荷時には少数要求だけを低優先度へ降格する。
 
+- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
+  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：9  
+  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
+
 - **2025-01 · [Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management](2025-2501.06709-mell-multi-gpu-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   複数GPUでLLMを提供すると、要求ごとの出力長の違いでKVキャッシュが一方のGPUだけに膨らみ、空きGPUを使えない。Mellは実行中要求をGPU間で移し、通信余力があればKV本体を転送し、演算余力があればトークンだけを送り移行先で再プリフィルして偏りを抑える。
@@ -1727,10 +1731,6 @@
 - **2025-02 · [TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval](2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md)**  
   実装：[✓](https://github.com/uw-syfi/TeleRAG) ・ リポジトリ内被引用：8  
   RAGの前段生成から次のIVF検索クラスタを予測し、LLM生成とCPU→GPU先読みを重ねつつ外れクラスタをCPU検索で補完して、大規模索引をGPU常駐せず検索待ちを隠す。
-
-- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
-  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：8  
-  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
 
 - **2025-11 · [DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing](2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1800,6 +1800,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   要求ごとに異なるTTFT/TPOTのSLOを、締切順の並べ替え・達成不能要求の拒否・SLO比例の処理機会配分で共同制御し、高負荷時の有効スループットを最大14.4倍にする。
 
+- **2025-04 · [Compass: SLO-aware Query Planner for Compound AI Serving at Scale](2025-2504.16397-compass-slo-aware-query-planner-for-compound-ai-serving-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  各演算器にはモデル規模やサンプリング率の選択肢があり、端末、近傍エッジ、クラウドのどこで実行するか、どれだけGPUを割り当てるかで、品質・遅延・費用が変わる。原著の評価は5種類の複合AI応用を対象とし、強化した既存計画器と比べて、同じ計画期限でSLOを満たす要求数を2.4〜5.1倍、全要求を処理するための配備費を3.8〜4.5分の1に改善したと報告する。
+
 - **2025-03 · [Optimizing LLM Inference Throughput via Memory-aware and SLA-constrained Dynamic Batching](2025-2503.05248-optimizing-llm-inference-throughput-via-memory-aware-and-sla-constrained.md)**  
   実装：[✓](https://github.com/KevinLee1110/dynamic-batching) ・ リポジトリ内被引用：5  
   ただし各要求の入力長・生成長に応じてKVキャッシュが増えるため、バッチを大きくし過ぎるとメモリ不足（OOM）、KV退避、再計算が発生する。飽和要求負荷での実験では、静的バッチ上限に比べて生成処理量が6.5〜28.2%改善した。
@@ -1844,9 +1848,9 @@
   実装：✓ ・ リポジトリ内被引用：4  
   早期終了方式は、Transformerの途中層に置いた出力ヘッドで十分に確信できる次トークンが得られれば、残りの層を実行せずに生成する。4基のNVIDIA A100 40GBを使う評価で、OPT-1.3B単独の早期終了方式に比べバッチ1条件のトークンスループットは平均1.48倍、OPT-6.7B単独比は2.13倍となった。
 
-- **2025-04 · [Compass: SLO-aware Query Planner for Compound AI Serving at Scale](2025-2504.16397-compass-slo-aware-query-planner-for-compound-ai-serving-at-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  各演算器にはモデル規模やサンプリング率の選択肢があり、端末、近傍エッジ、クラウドのどこで実行するか、どれだけGPUを割り当てるかで、品質・遅延・費用が変わる。原著の評価は5種類の複合AI応用を対象とし、強化した既存計画器と比べて、同じ計画期限でSLOを満たす要求数を2.4〜5.1倍、全要求を処理するための配備費を3.8〜4.5分の1に改善したと報告する。
+- **2025-01 · [HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location](2025-2501.14808-hygen-efficient-llm-serving-via-elastic-online-offline-request-co-locati.md)**  
+  実装：[✓](https://github.com/UIUC-MLSys/HyGen) ・ リポジトリ内被引用：4  
+  本研究は、オンライン要求を先にバッチへ配置し、そのバッチが消費しない遅延・トークン・KVキャッシュメモリの予算内でオフライン要求を追加する二段階スケジューラを設計した。原著の主要実機評価では、純オンラインのSarathi比で総処理量最大3.87倍、SLOを考慮してオフライン到着率を制御するHyGen比でオフライン処理量最大5.84倍を報告する。
 
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1895,10 +1899,6 @@
 - **2025-03 · [PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling](2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   同一基盤モデルのサーバーレス立上げをGPU間のパイプライン読込・早期分散推論・障害復旧で高速化し、既存低遅延基盤比で推論遅延を31〜49.8%削減する。
-
-- **2025-01 · [HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location](2025-2501.14808-hygen-efficient-llm-serving-via-elastic-online-offline-request-co-locati.md)**  
-  実装：[✓](https://github.com/UIUC-MLSys/HyGen) ・ リポジトリ内被引用：3  
-  本研究は、オンライン要求を先にバッチへ配置し、そのバッチが消費しない遅延・トークン・KVキャッシュメモリの予算内でオフライン要求を追加する二段階スケジューラを設計した。原著の主要実機評価では、純オンラインのSarathi比で総処理量最大3.87倍、SLOを考慮してオフライン到着率を制御するHyGen比でオフライン処理量最大5.84倍を報告する。
 
 - **2025-10 · [Preserving LLM Capabilities through Calibration Data Curation: From Analysis to Optimization](2025-2510.10618-preserving-llm-capabilities-through-calibration-data-curation-from-analy.md)**  
   実装：[✓](https://github.com/BokwaiHo/COLA) ・ リポジトリ内被引用：2  
@@ -2119,7 +2119,7 @@
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：205  
+  実装：✓ ・ リポジトリ内被引用：206  
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
@@ -2243,7 +2243,7 @@
   本論文は、大規模言語モデル（Large Language モデル、LLM）の推論サービスを効率化するシステム研究を整理した総説である。
 
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：26  
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
@@ -2397,7 +2397,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1885  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1887  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

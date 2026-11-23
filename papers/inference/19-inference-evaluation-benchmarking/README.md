@@ -589,7 +589,7 @@
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：31  
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
@@ -632,6 +632,10 @@
   実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：4  
   層の入出力の類似度から重要度を測る指標BIで冗長な層を見つけ、層を丸ごと削除するShortGPTと、生成トークンだけ全層を通すShortGPT-genで、約25%の層を削っても多肢選択で約9割、生成で97%の性能を保つ枝刈り手法。
 
+- **2025-06 · [Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques](2025-2506.06579-towards-efficient-multi-llm-inference-characterization-and-analysis-of-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  このサーベイは、複数の独立した大規模言語モデル（LLM）を一つのサービスで使い分ける際、どの要求をどのモデルへ送り、どの条件で上位モデルへ再実行するかを推論システムの最適化問題として整理する。本文中の最大98%費用削減などの値は引用した個別研究の結果であり、このサーベイの独立した再現実験ではない。
+
 - **2025-01 · [Resource-efficient Algorithms and Systems of Foundation Models: A Survey](2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Xu・Cai・Yin・Wang・Jin・Liuによる39ページの査読付きサーベイは、基盤モデルの「効率」を単一のモデル圧縮率やGPU演算速度として扱わず、モデル構造、学習・圧縮・推論アルゴリズム、実行システムという異なる介入点に分解する。
@@ -647,10 +651,6 @@
 - **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
-
-- **2025-06 · [Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques](2025-2506.06579-towards-efficient-multi-llm-inference-characterization-and-analysis-of-l.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  このサーベイは、複数の独立した大規模言語モデル（LLM）を一つのサービスで使い分ける際、どの要求をどのモデルへ送り、どの条件で上位モデルへ再実行するかを推論システムの最適化問題として整理する。本文中の最大98%費用削減などの値は引用した個別研究の結果であり、このサーベイの独立した再現実験ではない。
 
 - **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
   実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：2  
@@ -779,7 +779,7 @@
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
-  実装：✓ ・ リポジトリ内被引用：57  
+  実装：✓ ・ リポジトリ内被引用：58  
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
@@ -837,7 +837,7 @@
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
-  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：16  
   しかし実際のサービスでは、数学問題、法務文書、要約、常識質問など、タスクごとに得意なモデルが異なる。常に最も大きいモデルを呼ぶ方式は品質を得やすい反面、必要以上の推論計算を消費する。これらは品質と必要なモデル呼出し回数の評価であり、実際のGPU実行時間・請求金額の削減倍率を測定したものではない（原著§5、表1・2）。
 
 - **2023-05 · [A Quantitative Review on Language Model Efficiency Research](2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md)**  

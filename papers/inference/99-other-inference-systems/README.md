@@ -688,6 +688,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   実行時LoRA入力・NPU向け最適化・並行生成・自己投機的復号を統合し、Galaxy S24/S25で多用途LLMを単一グラフ展開する。
 
+- **2026-04 · [Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios](2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthes.md)**  
+  実装：[✓](https://github.com/less-and-less-bugs/ColdStartLLMRouter) ・ リポジトリ内被引用：1  
+  ドメイン内学習データがないコールドスタートでもLLMルーティングを可能にするため、階層タスク分類から質問応答データを合成して学習し、潜在タスクタイプ変数と分類由来の事前分布による正則化で回帰型ルーターの汎化を高めた研究。
+
 - **2026-04 · [Tango: Taming Visual Signals for Efficient Video Large Language Models](2026-2604.09547-tango-taming-visual-signals-for-efficient-video-large-language-models.md)**  
   実装：[✓](https://github.com/xjtupanda/Tango) ・ リポジトリ内被引用：1  
   Tangoは、動画大規模言語モデル（Video LLM）へ渡す視覚トークンの数を削減する、学習不要の前処理方式である。LLaVA-OneVision-7Bの32フレーム評価では、視覚トークンを10%にしたとき元の4ベンチマーク平均性能の98.9%を保持し、実測推論速度は1.88倍となった。
@@ -2386,10 +2390,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   端末推論のメモリ圧迫に対し、高帯域ストレージと接合型SRAMチップレットを階層ルーフラインの解析モデルで評価し、帯域・遅延の要求条件とデータ配置の指針を示すハードウェア技術の分析。
 
-- **2026-04 · [Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios](2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthes.md)**  
-  実装：[✓](https://github.com/less-and-less-bugs/ColdStartLLMRouter) ・ リポジトリ内被引用：0  
-  ドメイン内学習データがないコールドスタートでもLLMルーティングを可能にするため、階層タスク分類から質問応答データを合成して学習し、潜在タスクタイプ変数と分類由来の事前分布による正則化で回帰型ルーターの汎化を高めた研究。
-
 - **2026-04 · [Stability-Weighted Decoding for Diffusion Language Models](2026-2604.17068-stability-weighted-decoding-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続ステップ間の予測の揺れでトークンの確定を遅らせる学習不要の調整器により、拡散言語モデルの並列復号で正解率を大きく上げながら関数評価回数も減らした。
@@ -3688,6 +3688,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、大規模LLMで利用される多頭潜在注意（Multi-head Latent 注意機構、MLA）の低ランクKV表現が、数千万〜数億パラメータ規模の小型GPTでも有効かを調べる。
 
+- **2025-06 · [FREE: Fast and Robust Vision Language Models with Early Exits](2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.md)**  
+  実装：[✓](https://github.com/Div290/FREE) ・ リポジトリ内被引用：1  
+  視覚言語モデルの途中層に、最終層の分類器を共有し敵対的学習で最終層の表現をまねる早期終了口を付け、簡単なトークンを浅い層で確定させることで、NoCapsで品質を保ったまま1.51倍の高速化を示した。
+
 - **2025-06 · [BAQ: Efficient Bit Allocation Quantization for Large Language Models](2025-2506.05664-baq-efficient-bit-allocation-quantization-for-large-language-models.md)**  
   実装：[✓](https://github.com/CSU-ModelCompression/BAQ) ・ リポジトリ内被引用：1  
   BAQ（Bit Allocation Quantization）は、大規模言語モデルの事後量子化で各列に同じビット数を割り当てることの非効率を、逆ヘッセ行列に基づく感度係数から計算した列別ビット幅で改善する手法である。
@@ -4160,10 +4164,6 @@
   実装：[✓](https://github.com/Guinan-Su/auto-merge-llm) ・ リポジトリ内被引用：0  
   単一モデルではなく同族の微調整モデルの層を除去・選択・統合する切り貼りを零次最適化で探索する枝刈りで、一百三十億級モデルの約二十五パーセント除去時に能力の九十七・三パーセント、七十億級で九十二・二パーセントを後訓練なしで保った。
 
-- **2025-06 · [FREE: Fast and Robust Vision Language Models with Early Exits](2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.md)**  
-  実装：[✓](https://github.com/Div290/FREE) ・ リポジトリ内被引用：0  
-  視覚言語モデルの途中層に、最終層の分類器を共有し敵対的学習で最終層の表現をまねる早期終了口を付け、簡単なトークンを浅い層で確定させることで、NoCapsで品質を保ったまま1.51倍の高速化を示した。
-
 - **2025-06 · [Fine-grained Token Allocation Via Operation Pruning for Efficient MLLMs](2025-2507.02909-fine-grained-token-allocation-via-operation-pruning-for-efficient-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の視覚トークン枝刈りは、重要と判定した少数のトークンを残すが、どの層・どのモジュールも同じ数の視覚トークンを処理しがちである。LLaVA-NeXT-7Bの実験では、視覚トークンを一律に減らす比較方式より同一演算予算で精度を保ち、特定の強圧縮条件ではTFLOPs86%削減とプリフィル CUDA遅延83%削減を平均性能約1%低下で報告する。
@@ -4491,7 +4491,7 @@
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
+  実装：✓ ・ リポジトリ内被引用：50  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
@@ -4503,7 +4503,7 @@
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
-  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：38  
+  実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：39  
   本手法は圧縮を単語の保持/削除の二値分類として定式化し、双方向encoderのXLM-RoBERTa-largeやmBERTに圧縮の目的を直接学習させる。V100-32GB上のMeetingBank遅延測定では、非圧縮エンドツーエンド14.9秒に対し、5倍圧縮時5.2秒（2.9倍高速）と報告する。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
@@ -4515,7 +4515,7 @@
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：27  
   線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
@@ -4554,6 +4554,10 @@
   実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：12  
   大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
 
+- **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
+  実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：11  
+  従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
+
 - **2024-06 · [Hybrid SLM and LLM for Edge-Cloud Collaborative Inference](2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   本研究は、端末側で短い草稿を作り、クラウド側で草稿中のトークンをまとめて検証することで、品質と計算費用の間の連続的な選択肢を作る。GSM8KではLlama-2-7B単独の正答率21.68%、70B単独53.07%に対し、対数閾値−0.5の協調方式は52.24%を達成した。
@@ -4565,10 +4569,6 @@
 - **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
-
-- **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：10  
-  従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
 
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：9  
@@ -4714,6 +4714,10 @@
   実装：[✓](https://github.com/tval2/contextual-pruning) ・ リポジトリ内被引用：2  
   Mini-GPTsは、汎用言語モデルが保持する知識や計算経路の全てを個別業務で必要とするわけではないという仮説から、用途に応じて不要なニューロンを取り除く研究である。削除後には分野別データで微調整し、困惑度の回復を試みる。
 
+- **2024-11 · [Zeroth-Order Adaptive Neuron Alignment Based Pruning without Re-Training](2024-2411.07066-zeroth-order-adaptive-neuron-alignment-based-pruning-without-re-training.md)**  
+  実装：[✓](https://github.com/eliacunegatti/NeuroAL) ・ リポジトリ内被引用：1  
+  既存の枝刈り手法の上に乗り、ブロック単位と行単位の疎率の配分をニューロンの整列度で自動的に決め直すことで、再学習なしに高疎率でも性能と実行時間の釣り合いを改善するNeuroAl。
+
 - **2024-11 · [freePruner: A Training-free Approach for Large Multimodal Model Acceleration](2024-2411.15446-freepruner-a-training-free-approach-for-large-multimodal-model-accelerat.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   主目的は視覚トークンの数を減らしてLLM側の事前入力処理（プリフィル）を軽くすることで、視覚エンコーダそのものを低ビット化する手法ではない。LLaVA-1.5では視覚トークンを約50%へ減らして複数の画像質問応答指標を維持し、Video-LLaVAではさらに高い冗長性を利用した削減を報告する。
@@ -4797,10 +4801,6 @@
 - **2024-01 · [With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation](2024-2401.11504-with-greater-text-comes-greater-necessity-inference-time-training-helps-.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Temp-LoRA) ・ リポジトリ内被引用：1  
   本論文が扱うのは、数十万トークン規模の小説生成や長編翻訳を、短い注意窓しか持たない言語モデルで継続するときに発生する「古い情報の消失」と「長い鍵・値キャッシュ（KVキャッシュ）の費用」の両立問題である。近い文脈は通常の注意機構で直接読み、古い情報は一時的に変化した重みを介して利用する。
-
-- **2024-11 · [Zeroth-Order Adaptive Neuron Alignment Based Pruning without Re-Training](2024-2411.07066-zeroth-order-adaptive-neuron-alignment-based-pruning-without-re-training.md)**  
-  実装：[✓](https://github.com/eliacunegatti/NeuroAL) ・ リポジトリ内被引用：0  
-  既存の枝刈り手法の上に乗り、ブロック単位と行単位の疎率の配分をニューロンの整列度で自動的に決め直すことで、再学習なしに高疎率でも性能と実行時間の釣り合いを改善するNeuroAl。
 
 - **2024-11 · [The Evolution of RWKV: Advancements in Efficient Language Modeling](2024-2411.02795-the-evolution-of-rwkv-advancements-in-efficient-language-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5001,7 +5001,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：348  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：349  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5013,7 +5013,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：103  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：104  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -5291,7 +5291,7 @@
   量子化で重みを小さくする方法、不要な重みや構造を削る方法、大きな教師モデルから小さな生徒モデルへ知識を移す方法など、圧縮の選択肢は多い。
 
 - **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   FTRANSは、Transformerの重み行列を拡張ブロック循環行列（enhanced block-circulant matrix; BCM）に置き換える構造化圧縮と、その圧縮表現を直接計算する再構成可能論理回路（field-programmable gate array; FPGA）の専用構成を同時設計した研究である。
 
 - **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  
@@ -5329,7 +5329,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：372  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：373  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -5367,7 +5367,7 @@
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：109  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
@@ -5385,7 +5385,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：369  
+  実装：✓ ・ リポジトリ内被引用：370  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）
