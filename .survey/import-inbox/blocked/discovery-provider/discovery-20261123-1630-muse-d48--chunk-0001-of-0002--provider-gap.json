@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d48::provider-gap",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3731599.3767574",
+      "identity_tokens": [
+        "DOI:10.1145/3731599.3767574"
+      ],
+      "title": "A Study of Performance Portability of Low-bit Fused Matrix-Vector Multiplication Kernels in SYCL",
+      "reason": "OpenAlex要旨では低ビット融合行列ベクトル積カーネルをSYCLで実装しCUDA・HIPとの性能差の要因をループ展開やカーネル起動オーバーヘッド、和の削減から分析しており、低ビット量子化推論のデコード核となるGEMVカーネルの性能移植性への直接貢献が確認できるため採用する。",
+      "source_url": "https://doi.org/10.1145/3731599.3767574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 427
+    }
+  ],
+  "parent_run_key": "muse-20261123-d48",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261123-1630-muse-d48--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "DOI:10.1145/3731599.3767574"
+  ]
+}

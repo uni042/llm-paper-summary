@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d48::provider-gap",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/AAIML67890.2026.11498121",
+      "identity_tokens": [
+        "DOI:10.1109/AAIML67890.2026.11498121"
+      ],
+      "title": "CALM: Cost-efficient, model Agnostic, Low-latency Modular LLM Deployment framework",
+      "reason": "OpenAlex要旨ではCALMがコスト効率・低レイテンシ・モデル非依存を掲げるモジュール型LLMデプロイメントフレームワークとして、SLAを満たしつつ推論コストを削減する配置戦略の必要性と課題を具体的に論じており、LLMサービング・デプロイ基盤への直接貢献が確認できるため採用する。",
+      "source_url": "https://doi.org/10.1109/AAIML67890.2026.11498121",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 438
+    }
+  ],
+  "parent_run_key": "muse-20261123-d48",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261123-1630-muse-d48--chunk-0002-of-0002.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/aaiml67890.2026.11498121"
+  ]
+}
