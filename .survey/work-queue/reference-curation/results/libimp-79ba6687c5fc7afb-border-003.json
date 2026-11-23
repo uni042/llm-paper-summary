@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79ba6687c5fc7afb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:8590eb88a8fd2d2606d18780f7dd3677935030c1",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:8590eb88a8fd2d2606d18780f7dd3677935030c1",
+    "identity_tokens": [
+      "SemanticScholar:8590eb88a8fd2d2606d18780f7dd3677935030c1"
+    ],
+    "reason": "Semantic ScholarおよびOpenAlexが429を返し一次要旨を取得できなかったため詳細は未確認である。タイトル上は深層学習の数値精度全般を扱う内容で低精度推論と関わり得るが、LLM推論への具体的な機構提案は確認できないため保留とする。abstract_not_obtained。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Numerical Precision for Deep Learning"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79ba6687c5fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

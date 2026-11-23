@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90e4f6d2182db05f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/dcas69364.2026.11545012",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/dcas69364.2026.11545012",
+    "identity_tokens": [
+      "DOI:10.1109/dcas69364.2026.11545012"
+    ],
+    "reason": "医療LLMに対して2〜4ビットの低ビット量子化手法を複数ベンチマークで精度・サイズ・推論効率の観点から実証比較した研究であり、推論向け量子化と直接関連するが新規手法ではなく医療データでの能力・適用性評価が中心である。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "How Low Can Medical Llms Go? an Empirical Study of Low-Bit Quantization"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90e4f6d2182d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

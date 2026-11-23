@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96c6c1dd4feab13a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:2b9955bc08fc5f4ddba73082ddabcfaabdbb4416",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:2b9955bc08fc5f4ddba73082ddabcfaabdbb4416",
+    "identity_tokens": [
+      "SemanticScholar:2b9955bc08fc5f4ddba73082ddabcfaabdbb4416"
+    ],
+    "reason": "Poor Man's BERTは事前学習済みBERTやRoBERTaやXLNetの層を最大40%剪定して98%の性能を保ちDistilBERT並みの大きさにする圧縮研究で、推論の小型化には関わるが符号器型モデルの層落とし分析が中心でありLLM推論システムとしての新規機構は薄い。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Poor Man's BERT: Smaller and Faster Transformer Models"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96c6c1dd4fea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

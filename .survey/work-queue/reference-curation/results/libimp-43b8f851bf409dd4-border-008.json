@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43b8f851bf409dd4-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.01499",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.01499",
+    "identity_tokens": [
+      "arXiv:2603.01499"
+    ],
+    "reason": "AloePriは共変難読化で入出力とモデルパラメータを共同変換するプライバシー保護LLM推論手法で、精度・効率損失の最小化や既存推論基盤との互換も要件には含むが、要旨の主目的はプライバシー保証であり、推論効率そのものへの技術的貢献は副次的にとどまる。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Privacy-Preserving LLM Inference via Covariant Obfuscation (Technical Report)"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43b8f851bf40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

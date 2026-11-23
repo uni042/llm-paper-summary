@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38c301c4f13edd65-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.07680",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.07680",
+    "identity_tokens": [
+      "arXiv:2503.07680"
+    ],
+    "reason": "Hierarchical Balance Packingは長文脈LLMの教師ありファインチューニングにおける長短混合データの負荷不均衡を、多段階パッキングと動的学習パイプラインで解消して学習時間を短縮する手法であり、対象は学習効率であって推論やサービングの技術ではない。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Hierarchical Balance Packing: Towards Efficient Supervised Fine-tuning for Long-Context LLM"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38c301c4f13e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

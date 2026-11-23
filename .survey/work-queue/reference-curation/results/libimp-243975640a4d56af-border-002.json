@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-243975640a4d56af-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:6ec930d7dae0229d22e61840e5dace8b107ad53d",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:6ec930d7dae0229d22e61840e5dace8b107ad53d",
+    "identity_tokens": [
+      "SemanticScholar:6ec930d7dae0229d22e61840e5dace8b107ad53d"
+    ],
+    "reason": "公的統計向けTransformerモデルのチュートリアルとされる候補で、CrossrefやOpenAlex等から一次要旨を取得できず内容の機構を確認できないため、推論システムへの関連を断定せず要旨未取得として保留とする。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Transformer-based Models for Official Statistic: A Tutorial"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-243975640a4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

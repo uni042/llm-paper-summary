@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0a5f369ba277ff3-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f",
+    "identity_tokens": [
+      "SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f"
+    ],
+    "reason": "Semantic ScholarおよびOpenAlexが429を返し一次要旨を取得できなかったため詳細は未確認である。タイトル上はLLMアルゴリズム全般の進化を扱うレビューであり、推論システムへの直接の新規貢献は読み取れないため保留とする。abstract_not_obtained。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Review of Evolution of Large Language Model Algorithms"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0a5f369ba27",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-079766302f4c9836-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.08092",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.08092",
+    "identity_tokens": [
+      "arXiv:2511.08092"
+    ],
+    "reason": "Whisper-smallへの感度配慮型ワンショットプルーニングでASRの圧縮と汎化改善を示すが、対象は音声認識モデルの枝刈り分析であり、LLM推論システムへの適用やサービング機構は要旨で示されていないため保留とする。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pruning as Regularization: Sensitivity-Aware One-Shot Pruning in ASR"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-079766302f4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

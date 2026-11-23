@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-079766302f4c9836-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.10265",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.10265",
+    "identity_tokens": [
+      "arXiv:2610.10265"
+    ],
+    "reason": "個人記憶の古さ・誤帰属・提供期限遅れを生成前に測るPFM基準層の分析で、サービング期限への言及はあるものの主題は記憶構築とスロット統合の失敗計測であり、推論システム自体の高速化やスケジューリング機構は提示されていないため保留とする。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stale, Misattributed, or Late: Where Personal Memory Fails Before Generation"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-079766302f4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

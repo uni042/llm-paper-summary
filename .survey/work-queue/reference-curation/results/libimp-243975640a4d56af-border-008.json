@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-243975640a4d56af-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27808",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27808",
+    "identity_tokens": [
+      "arXiv:2605.27808"
+    ],
+    "reason": "ASR向けに語彙テールへ較正を寄せた再構成量子化TARQはW4G128のPTQとして希少語WERを改善するが、対象は音声認識バックボーンでありLLM推論向け量子化への直接の転用は要旨で示されていないため保留とする。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TARQ: Tail-Aware Reconstruction Quantization for Rare-Word Robust Automatic Speech Recognition"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-243975640a4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

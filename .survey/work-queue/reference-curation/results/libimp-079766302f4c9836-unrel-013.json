@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-079766302f4c9836-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:81e1f076e8d45a14b47df7ad4f4426062b36471b",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:81e1f076e8d45a14b47df7ad4f4426062b36471b",
+    "identity_tokens": [
+      "SemanticScholar:81e1f076e8d45a14b47df7ad4f4426062b36471b"
+    ],
+    "reason": "合成選好データで個人化報酬関数をメタ学習するFSPOはLLMのパーソナライゼーションと選好最適化が主題であり、推論システムの高速化、メモリ管理、サービング機構への貢献は要旨に確認できないため対象外である。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "FSPO: Few-Shot Preference Optimization of Synthetic Preference Data Elicits LLM Personalization to Real Users"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-079766302f4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e8a35c7779ff56b-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:19020fa54c47bb82aaa1428a0b408b26d85d4067",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:19020fa54c47bb82aaa1428a0b408b26d85d4067",
+    "identity_tokens": [
+      "SemanticScholar:19020fa54c47bb82aaa1428a0b408b26d85d4067"
+    ],
+    "reason": "自己回帰言語モデルの事前学習におけるソフトルーティングMoEに関する候補だが、一次要旨を取得できなかった（abstract_not_obtained）。MoE推論ではなく事前学習側の話題である可能性が高く、推論への直接貢献は未確認のため保留とする。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Soft-routing Mixture of Experts for Autoregressive Language Model Pre-training"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e8a35c7779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

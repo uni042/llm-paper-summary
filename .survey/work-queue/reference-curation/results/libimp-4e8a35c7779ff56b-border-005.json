@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e8a35c7779ff56b-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:ef88a6b24c5d4dfdf081f28e98114f640ec54274",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:ef88a6b24c5d4dfdf081f28e98114f640ec54274",
+    "identity_tokens": [
+      "SemanticScholar:ef88a6b24c5d4dfdf081f28e98114f640ec54274"
+    ],
+    "reason": "XLM-Rに対する知識蒸留と早期終了による多言語NLP効率化であり、早期終了は推論短縮に関連するものの一次要旨を取得できなかった（abstract_not_obtained）。符号器型小規模モデルの圧縮が中心とみられ直接貢献は未確認のため保留とする。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficiency in Multilingual NLP: Knowledge Distillation and Early Exit on XLM-R"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e8a35c7779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

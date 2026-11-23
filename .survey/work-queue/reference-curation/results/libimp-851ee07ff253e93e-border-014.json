@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-851ee07ff253e93e-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f72e21d6b5e713da8ece02da0d14ae03562bb8e0",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f72e21d6b5e713da8ece02da0d14ae03562bb8e0",
+    "identity_tokens": [
+      "SemanticScholar:f72e21d6b5e713da8ece02da0d14ae03562bb8e0"
+    ],
+    "reason": "タイトルが『Microprocessors and Microsystems』という学術誌名そのものであり個別論文の主題を示さず、代替経路でも要旨を取得できなかったため、推論関連かどうかを判定する証拠がなく保留とする。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Microprocessors and Microsystems"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-851ee07ff253",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

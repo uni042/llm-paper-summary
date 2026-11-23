@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-851ee07ff253e93e-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:2a86869b09d5df9b42629881ce0861f20e4cab20",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:2a86869b09d5df9b42629881ce0861f20e4cab20",
+    "identity_tokens": [
+      "SemanticScholar:2a86869b09d5df9b42629881ce0861f20e4cab20"
+    ],
+    "reason": "Agent2Agentプロトコルで増減する専門エージェント群から、文脈付き組合せバンディットでタスクに最適なエージェントをオンラインに選ぶCoCoMaMaルータの提案であり、LLMエージェントのルーティングとしてサービングと隣接するが、トークン生成推論機構自体への貢献ではない。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoCoMaMa: Contextual Combinatorial Multi-Armed Bandit Router for Multi-Agent Systems with Volatile Arms"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-851ee07ff253",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

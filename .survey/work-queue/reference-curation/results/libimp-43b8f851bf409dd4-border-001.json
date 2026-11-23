@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43b8f851bf409dd4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2206.05852",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2206.05852",
+    "identity_tokens": [
+      "arXiv:2206.05852"
+    ],
+    "reason": "ChordMixerは回転層と要素別MLPで可変長系列の注意を混合する新ブロックだが、要旨の評価は合成加算・長文書分類・DNA分類であり、LLM推論やサービングでの遅延・メモリ削減が示されていないため、注意効率には関連するが直接の推論貢献としては薄い。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ChordMixer: A Scalable Neural Attention Model for Sequences with Different Lengths"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43b8f851bf40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

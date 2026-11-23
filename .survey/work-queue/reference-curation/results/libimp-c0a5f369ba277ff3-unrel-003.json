@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0a5f369ba277ff3-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.14237",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.14237",
+    "identity_tokens": [
+      "arXiv:2512.14237"
+    ],
+    "reason": "サイドネットワークによるLadder Side Tuningでファインチューニング時のピークメモリを半減させる学習手法であり、対象は学習・微調整の省メモリ化であって推論やデコードの高速化ではないため対象外である。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Ladder Up, Memory Down: Low-Cost Fine-Tuning With Side Nets"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0a5f369ba27",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

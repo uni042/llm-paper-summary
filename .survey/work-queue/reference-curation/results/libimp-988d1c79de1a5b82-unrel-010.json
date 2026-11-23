@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-988d1c79de1a5b82-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44",
+    "identity_tokens": [
+      "SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44"
+    ],
+    "reason": "事前学習言語モデルによるテキスト生成の進展を概観するサーベイ論文であり、生成手法やファインチューニング戦略の整理が中心で、推論システム・サービング・デコード高速化への技術的貢献は含まれないため対象外とした。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A Survey of Pretrained Language Models Based Text Generation"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-988d1c79de1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-079766302f4c9836-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:43afd07ab5f04f74ae6ba66c2d9d964fa4c0ac34",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:43afd07ab5f04f74ae6ba66c2d9d964fa4c0ac34",
+    "identity_tokens": [
+      "SemanticScholar:43afd07ab5f04f74ae6ba66c2d9d964fa4c0ac34"
+    ],
+    "reason": "Flow型大規模拡散TransformerのLumina-T2Xによる画像・動画・3D・音声生成モデルの技術報告であり、生成モデル自体の学習とスケーリングが主題で、LLM推論基盤やサービング最適化への直接貢献はないため対象外である。",
+    "first_checked_at": "2026-11-23T07:45:14+00:00",
+    "last_checked_at": "2026-11-23T07:45:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Lumina-T2X: Scalable Flow-based Large Diffusion Transformer for Flexible Resolution Generation"
+  },
+  "processed_at": "2026-11-23T07:45:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-079766302f4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

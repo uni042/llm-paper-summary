@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bece3fa7d5306185-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:469a55d2688c68575957b53dc2a29609c5e5e200",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:469a55d2688c68575957b53dc2a29609c5e5e200",
+    "identity_tokens": [
+      "SemanticScholar:469a55d2688c68575957b53dc2a29609c5e5e200"
+    ],
+    "reason": "Arachneは動的で異種なGPUクラスタ上で分散学習のパイプライン並列計画を学習ベースプランナで構築し学習スループットを上げる研究であり、対象は学習計画のみで推論・サービングへの貢献は要旨に示されていないため対象外とした。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Arachne: Learning to Plan Distributed Training on Dynamic Heterogeneous Clusters"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bece3fa7d530",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

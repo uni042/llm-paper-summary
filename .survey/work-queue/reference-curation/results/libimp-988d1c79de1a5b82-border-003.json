@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-988d1c79de1a5b82-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85",
+    "identity_tokens": [
+      "SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85"
+    ],
+    "reason": "XC-Cacheはキャッシュした参照コンテキストへクロスアテンションで条件付けることでプロンプト処理を省く発想だが、追加層の学習を要するモデル改変であり評価もQAをテストベッドとする段階で、サービング機構としての具体性が薄く保留とした。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "XC-C ACHE : Cross-Attending to Cached Context for Efﬁcient LLM Inference"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-988d1c79de1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

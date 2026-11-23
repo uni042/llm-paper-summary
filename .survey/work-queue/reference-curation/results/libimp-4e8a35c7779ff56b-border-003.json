@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4e8a35c7779ff56b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a72e71980017a8af20ce6f4aa8ca1a2d541abdb5",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a72e71980017a8af20ce6f4aa8ca1a2d541abdb5",
+    "identity_tokens": [
+      "SemanticScholar:a72e71980017a8af20ce6f4aa8ca1a2d541abdb5"
+    ],
+    "reason": "全活性をスパース化する系譜の研究はtop-Kスパース化とstraight-through推定で推論時効率と推論最適スケーリング則を主張するが、本候補のタイトルと取得できた関連要旨の同一性が完全には確定できず、学習側の設計が中心のため断定を避ける。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scaling Large Language Models with Fully Sparse Activations"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4e8a35c7779f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

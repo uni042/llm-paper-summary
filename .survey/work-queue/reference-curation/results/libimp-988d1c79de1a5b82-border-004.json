@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-988d1c79de1a5b82-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2312.05795",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2312.05795",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.05795",
+      "arXiv:2312.05795"
+    ],
+    "reason": "AntGroupの大規模マルチモーダルモデルの多段階プルーニングと蒸留で遅延を700msから90msへ下げた実例だが、広告審査という特定業務への適用報告色が強く、圧縮手法自体も多段階冗長性除去の組合せで推論機構の新規性が薄く保留とした。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Large Multimodal Model Compression via Efficient Pruning and Distillation at AntGroup"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-988d1c79de1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79ba6687c5fc7afb-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:459b34447952feebacc2f12778c539618e8a299f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:459b34447952feebacc2f12778c539618e8a299f",
+    "identity_tokens": [
+      "SemanticScholar:459b34447952feebacc2f12778c539618e8a299f"
+    ],
+    "reason": "NLP向けモデル圧縮手法全般を扱うサーベイであり、量子化や蒸留など推論効率化と関わる技術も含まれるが、新規の推論機構の提案ではなく既存手法の総説が主目的であるため保留とする。なおS2/OpenAlexは429のため要旨は代替確認できていない。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey on Model Compression for Natural Language Processing"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79ba6687c5fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

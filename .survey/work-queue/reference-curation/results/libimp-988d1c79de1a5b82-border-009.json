@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-988d1c79de1a5b82-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:89feb9eb9af4ca539cb9461e3d4b88f2dabdfcc2",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:89feb9eb9af4ca539cb9461e3d4b88f2dabdfcc2",
+    "identity_tokens": [
+      "SemanticScholar:89feb9eb9af4ca539cb9461e3d4b88f2dabdfcc2"
+    ],
+    "reason": "FLARE++は低ランク注意に入力条件付きルーティングを導入するが、一次要旨での適用対象は不規則領域のPDEサロゲートであり、LLM推論での評価やサービング機構は示されておらず、注意機構としての関連に留まるため保留とした。",
+    "first_checked_at": "2026-11-23T07:45:15+00:00",
+    "last_checked_at": "2026-11-23T07:45:15+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FLARE++: L OW - RANK ATTENTION WITH DYNAMIC ATTENTION ROUTING"
+  },
+  "processed_at": "2026-11-23T07:45:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-988d1c79de1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
