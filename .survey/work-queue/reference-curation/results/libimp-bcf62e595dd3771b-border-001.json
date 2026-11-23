@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcf62e595dd3771b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.19535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.19535",
+    "identity_tokens": [
+      "arXiv:2608.19535"
+    ],
+    "reason": "エッジRAGで検索コンテキスト圧縮がプリフィル・KVキャッシュ・遅延に与えるトレードオフをJetson上で計測し適応圧縮を構想するビジョン論文で、実装された推論機構としての貢献は限定的。",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Retrieved Context to Runtime Control: Adaptive Compression for Edge-based RAG"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcf62e595dd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

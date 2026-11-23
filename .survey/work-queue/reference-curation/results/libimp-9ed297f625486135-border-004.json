@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ed297f625486135-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.07985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.07985",
+    "identity_tokens": [
+      "arXiv:2510.07985"
+    ],
+    "reason": "vLLM等で適用されるLLM剪定への攻撃で剪定後に悪性挙動が現れるモデル構築を示すが、対象は圧縮のセキュリティであり推論効率化自体への技術的貢献はない。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fewer Weights, More Problems: A Practical Attack on LLM Pruning"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ed297f62548",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

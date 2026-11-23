@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa24386d7eae1304-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.27600",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.27600",
+    "identity_tokens": [
+      "arXiv:2610.27600"
+    ],
+    "reason": "拡散言語モデルのコード生成でプログラムを契約に基づき分解し単位を並列生成することで並列デコードの効率と依存整合の両立を狙うが、対象はコード生成手法であり汎用デコード基盤への貢献は間接的",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Self-Decomposing Diffusion for Code Generation"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa24386d7eae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

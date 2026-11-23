@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18733e8203b64a33-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.00192",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.00192",
+    "identity_tokens": [
+      "arXiv:2510.00192"
+    ],
+    "reason": "PrunedLoRAは過剰パラメータ化したLoRAを微調整中に構造化剪定してコンパクトなアダプタを得る枠組みで、配備時圧縮への言及はあるが主眼は適応学習過程の剪定である。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Train Large, Deploy Compact: Structured Compression for Compact Low-Rank Adaptation"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18733e8203b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

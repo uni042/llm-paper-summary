@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-723e05350eb0bdcf-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2306.02824",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2306.02824",
+    "identity_tokens": [
+      "arXiv:2306.02824"
+    ],
+    "reason": "木構造ゲートCOMETと局所探索で基数制約付きスパースMoEの学習を改善し計算高速化も狙うが、対象はNLP・視覚全般のMoE学習でありLLM推論への適用・計測は要旨で確認できない。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "COMET: Learning Cardinality Constrained Mixture of Experts with Trees and Local Search"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-723e05350eb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a67f0c2013b6cb7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df",
+    "identity_tokens": [
+      "SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df"
+    ],
+    "reason": "KLT誘導SVDとバイアス補正ベクトル量子化によるMoE圧縮KBVQ-MoEとみられるが、Semantic Scholarが429で一次要旨を取得できず、圧縮率や推論適用の具体性を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "KBVQ-M O E: KLT-GUIDED SVD WITH B IAS - C ORRECTED V ECTOR Q UANTIZATION FOR M O E"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a67f0c2013b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

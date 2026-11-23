@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d54d7a7373e2b7e-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.12236",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.12236",
+    "identity_tokens": [
+      "arXiv:2310.12236"
+    ],
+    "reason": "タスクレベルMoEを非英語間直接翻訳へ適用する研究で、推論効率的なMoE変種を用い言語群別ルーティングで翻訳性能を上げているが、主目的は機械翻訳応用の性能であり推論システム機構への貢献は限定的である。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Direct Neural Machine Translation with Task-level Mixture of Experts models"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d54d7a7373e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

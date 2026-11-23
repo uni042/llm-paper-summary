@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcf62e595dd3771b-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.17827",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.17827",
+    "identity_tokens": [
+      "arXiv:2604.17827"
+    ],
+    "reason": "オンデバイスSLMが大規模LLMへ相談するか否かを動的に学ぶ協調フレームワークで、プライバシーと効率を扱うが主目的は能力補完であり推論基盤の高速化ではない。",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning to Seek Help: Dynamic Collaboration Between Small and Large Language Models"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcf62e595dd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

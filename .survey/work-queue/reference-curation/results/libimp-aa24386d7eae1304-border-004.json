@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa24386d7eae1304-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.20286",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.20286",
+    "identity_tokens": [
+      "arXiv:2603.20286"
+    ],
+    "reason": "RAGでクエリ認識型に取得文脈を統合し有限コンテキスト内の情報密度とトークン消費のトレードオフを改善するが、対象は取得文脈の前処理でありLLMサービング機構自体ではない",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Retrieval-Augmentation as Synthesis: A Query-Aware Context Merging Approach"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa24386d7eae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcf62e595dd3771b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.13707",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.13707",
+    "identity_tokens": [
+      "arXiv:2503.13707"
+    ],
+    "reason": "固定サイズメモリ表現と識別パッチのサンプリングで長尺動画理解の推論時間を18〜75倍高速化するが、対象は動画検索・質問応答モデルでありLLM推論システムではない。",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Long-VMNet: Accelerating Long-Form Video Understanding via Fixed Memory"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcf62e595dd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

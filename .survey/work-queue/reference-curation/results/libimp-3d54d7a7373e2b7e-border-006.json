@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d54d7a7373e2b7e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.25422",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.25422",
+    "identity_tokens": [
+      "arXiv:2605.25422"
+    ],
+    "reason": "複数エージェント協調においてトークン伝送とKVキャッシュ伝送のどちらが端末間遅延を下げるかを無線資源配分と共同最適化する研究で、KVキャッシュに関わるが主たる貢献は6G無線側のメディア選択と資源配分であり推論機構自体ではない。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A token/KV-cache communication media selection and resource allocation strategy for multi-agent collaboration"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d54d7a7373e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

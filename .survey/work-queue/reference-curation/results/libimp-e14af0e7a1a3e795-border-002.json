@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e14af0e7a1a3e795-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:f8b97e063d66fbf8a49b33a7b43efdd4fe677ae3",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:f8b97e063d66fbf8a49b33a7b43efdd4fe677ae3",
+    "identity_tokens": [
+      "SemanticScholar:f8b97e063d66fbf8a49b33a7b43efdd4fe677ae3"
+    ],
+    "reason": "BERT教師モデルの重みから小さい生徒重みへの写像を学ぶWeight Squeezingによる知識転移・圧縮で、GLUE分類での評価が中心でありLLM推論高速化の直接機構は要旨で限定的である。",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Weight Squeezing: Reparameterization for Compression and Fast Inference"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e14af0e7a1a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

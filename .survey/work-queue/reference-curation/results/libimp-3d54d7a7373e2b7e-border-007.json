@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d54d7a7373e2b7e-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c5860b016fd17d4a2e23f4b50622a030df01e51e",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c5860b016fd17d4a2e23f4b50622a030df01e51e",
+    "identity_tokens": [
+      "SemanticScholar:c5860b016fd17d4a2e23f4b50622a030df01e51e"
+    ],
+    "reason": "タイトルは再物質化とオフロードによる単一GPUでのLLMフルファインチューニングOFFMATEを示し学習側の手法とみられるが、Semantic Scholar APIが429を返し要旨を取得できなかったため最終確認ができない。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OFFMATE: full fine-tuning of LLMs on a single GPU by re-materialization and offloading"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d54d7a7373e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

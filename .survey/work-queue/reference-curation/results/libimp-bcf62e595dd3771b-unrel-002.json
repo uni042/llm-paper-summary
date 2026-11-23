@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcf62e595dd3771b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icde65448.2025.00029",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icde65448.2025.00029",
+    "identity_tokens": [
+      "DOI:10.1109/icde65448.2025.00029"
+    ],
+    "reason": "消費者向けGPU1台で100Bモデルのファインチューニングを行うためデータ移動を最適化するRatelで、オフロード対象は学習であり推論高速化ではない。",
+    "first_checked_at": "2026-11-23T17:37:43+00:00",
+    "last_checked_at": "2026-11-23T17:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Ratel: Optimizing Holistic Data Movement to Fine-tune 100B Model on a Consumer GPU"
+  },
+  "processed_at": "2026-11-23T17:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcf62e595dd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

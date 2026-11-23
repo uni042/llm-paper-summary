@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b7e1b3e38734e3b-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:9dbdb754eaa69f22d89c8b04a2eddc63320efaa7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:9dbdb754eaa69f22d89c8b04a2eddc63320efaa7",
+    "identity_tokens": [
+      "SemanticScholar:9dbdb754eaa69f22d89c8b04a2eddc63320efaa7"
+    ],
+    "reason": "分散LLMサービングのタスクスケジューリングに関する論文だが、Semantic Scholarが429、代替経路でも一次要旨を取得できず、スケジューリング機構の具体性を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Task Scheduling for Decentralized LLM Serving in Heterogeneous Networks"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b7e1b3e3873",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

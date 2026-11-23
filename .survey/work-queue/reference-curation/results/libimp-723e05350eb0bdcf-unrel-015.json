@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-723e05350eb0bdcf-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10766-026-00812-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10766-026-00812-y",
+    "identity_tokens": [
+      "DOI:10.1007/s10766-026-00812-y"
+    ],
+    "reason": "記号的コストモデルでテンソル分割と統合並列化戦略を生成するSymTensorは基盤モデルの分散学習性能を対象とし、推論ではない。",
+    "first_checked_at": "2026-11-23T17:37:42+00:00",
+    "last_checked_at": "2026-11-23T17:37:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "SymTensor: Symbolic and Adaptive Tensor Partitioning by Unified Parallelism for Deep Learning"
+  },
+  "processed_at": "2026-11-23T17:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-723e05350eb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
