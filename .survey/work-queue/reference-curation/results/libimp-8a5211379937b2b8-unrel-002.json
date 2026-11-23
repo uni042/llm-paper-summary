@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a5211379937b2b8-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:b057d31e12e71681d9101113b8bfff11a0a625b7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:b057d31e12e71681d9101113b8bfff11a0a625b7",
+    "identity_tokens": [
+      "SemanticScholar:b057d31e12e71681d9101113b8bfff11a0a625b7"
+    ],
+    "reason": "ViBidは画像向けVision Transformerの自己注意を双方向正規化BiNormへ置換して計算量を線形化する視覚モデルであり、評価もImageNet等の視覚タスクである。注意の効率化という要素はあるが、対象は画像分類モデルでLLM推論への適用は論じられていない。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ViBid: Linear Vision Transformer with Bidirectional Normalization"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a5211379937",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

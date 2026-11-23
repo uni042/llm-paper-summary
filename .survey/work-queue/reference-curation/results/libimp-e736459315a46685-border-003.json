@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e736459315a46685-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/ojcs.2026.3690486",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/ojcs.2026.3690486",
+    "identity_tokens": [
+      "DOI:10.1109/ojcs.2026.3690486"
+    ],
+    "reason": "一次要旨を取得できなかった。タイトル上は分散物理インフラネットワーク上でのパレート効率的な協調推論DeCLIPが示唆され分散推論に近いが、分割方式・通信モデル・対象モデルが未確認のため、分散推論への直接的貢献を確定できず保留とする。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DeCLIP: Pareto-Efficient Collaborative Inference in Decentralized Physical Infrastructure Networks"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e736459315a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

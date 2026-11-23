@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a5211379937b2b8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:8c5a394654822a5de53ac2e4a355c1c6ead4750c",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:8c5a394654822a5de53ac2e4a355c1c6ead4750c",
+    "identity_tokens": [
+      "SemanticScholar:8c5a394654822a5de53ac2e4a355c1c6ead4750c"
+    ],
+    "reason": "深いエンコーダと単層の自己回帰デコーダで、非自己回帰翻訳と同等の推論速度と精度が得られると再評価した機械翻訳の研究である。デコーダ深度と推論遅延のトレードオフはLLMデコードにも通じるが、対象は翻訳専用モデルの層配分であり、LLM推論システムの提案ではないため保留とする。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Deep Encoder, Shallow Decoder: Reevaluating the Speed-Quality Tradeoff in Machine Translation"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a5211379937",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

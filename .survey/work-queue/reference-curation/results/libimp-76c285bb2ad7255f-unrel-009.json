@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76c285bb2ad7255f-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ipdps57955.2024.00037",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ipdps57955.2024.00037",
+    "identity_tokens": [
+      "DOI:10.1109/ipdps57955.2024.00037"
+    ],
+    "reason": "本研究は本番GPUクラスタの監視データへ相関ルールマイニングを適用し、GPU低利用やジョブ失敗の要因を解釈可能に分析するHPC運用の研究である。対象は深層学習ジョブ一般のクラスタ運用分析であり、LLM推論基盤の機構や計測への直接貢献は示されていない。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Interpretable Analysis of Production GPU Clusters Monitoring Data via Association Rule Mining"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76c285bb2ad7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

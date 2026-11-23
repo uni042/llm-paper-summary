@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e736459315a46685-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:0ac8484b380ac5bef430b38533a7a1764db7762e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:0ac8484b380ac5bef430b38533a7a1764db7762e",
+    "identity_tokens": [
+      "SemanticScholar:0ac8484b380ac5bef430b38533a7a1764db7762e"
+    ],
+    "reason": "タイトルが明示する主題はビジョンTransformerのファインチューニングにおけるプルーニングとMixture of Expertsの組合せを扱う学位研究であり、学習側の視覚モデル圧縮であってLLM推論・デコード・サービングへの直接的貢献は明確にない。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Master Computer Science Combining pruning and mixture of expert for finetuning vision transformers"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e736459315a4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

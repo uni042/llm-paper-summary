@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d3bb57a9738c5520-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:e45e433dac992a299b999ad7429f3a8f629e47a7",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:e45e433dac992a299b999ad7429f3a8f629e47a7",
+    "identity_tokens": [
+      "SemanticScholar:e45e433dac992a299b999ad7429f3a8f629e47a7"
+    ],
+    "reason": "PARは弱依存の遠隔視覚トークンを並列生成し強依存の局所トークンは逐次生成する並列デコードで画像・動画生成を3.6〜9.5倍高速化するが、対象は視覚自己回帰生成モデルでありLLM推論システムへの直接適用やサービング評価は要旨にない。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Parallelized Autoregressive Visual"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3bb57a9738c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

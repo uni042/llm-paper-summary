@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a5211379937b2b8-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.16817",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.16817",
+    "identity_tokens": [
+      "arXiv:2508.16817"
+    ],
+    "reason": "非線形状態空間モデルの逐次評価を並列化できる条件を、予測可能性とLyapunov指数および最適化問題の条件付けで理論的に解明する研究である。SSM系モデルの推論計算と関連はあるが、対象は汎用力学系の理論解析であり、LLM推論基盤への直接の実装貢献は確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Predictability Enables Parallelization of Nonlinear State Space Models"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a5211379937",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

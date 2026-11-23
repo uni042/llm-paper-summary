@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-23T07:45:15+00:00",
-  "record_count": 13853,
+  "updated_at": "2026-11-23T07:49:26+00:00",
+  "record_count": 13866,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -199080,6 +199080,188 @@
         "worker-worklist discovery_review"
       ],
       "title": "of the 24th USENIX Conference on File and Storage Technologies"
+    },
+    "DOI:10.1145/3652892.3700767": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3652892.3700767",
+      "identity_tokens": [
+        "DOI:10.1145/3652892.3700767"
+      ],
+      "reason": "Cannikinは異種GPUクラスタ上での分散DNN学習について、適応的バッチサイズ等のハイパーパラメータをモデル化して学習を最大85%短縮する学習システムである。扱うのは訓練の高速化のみで、LLM推論・サービング・デコードへの貢献は要旨に示されていない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Cannikin: Optimal Adaptive Distributed DNN Training over Heterogeneous Clusters"
+    },
+    "DOI:10.1109/tpami.2025.3593657": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2025.3593657",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2025.3593657"
+      ],
+      "reason": "HPformerは健康情報学向けに、系列をチャンク化し階層的伝播で自己注意の計算量を下げる低パラメータTransformerを提案する医療応用モデルである。効率化の工夫はあるものの対象は医療時系列のモデル精度であり、LLM推論システムへの貢献ではない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "HPformer: Low-Parameter Transformer With Temporal Dependency Hierarchical Propagation for Health Informatics"
+    },
+    "DOI:10.24963/ijcai.2023/230": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2023/230",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2023/230"
+      ],
+      "reason": "Probabilistic Masked Attention Networksは逐次推薦において、確率的マスクで注意を疎化しノイズの多いアイテムへの注意を抑えて推薦精度と説明可能性を上げる手法である。対象は推薦システムのモデルであり、LLMの推論・サービング機構とは無関係である。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Probabilistic Masked Attention Networks for Explainable Sequential Recommendation"
+    },
+    "DOI:10.1109/ipdps57955.2024.00037": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ipdps57955.2024.00037",
+      "identity_tokens": [
+        "DOI:10.1109/ipdps57955.2024.00037"
+      ],
+      "reason": "本研究は本番GPUクラスタの監視データへ相関ルールマイニングを適用し、GPU低利用やジョブ失敗の要因を解釈可能に分析するHPC運用の研究である。対象は深層学習ジョブ一般のクラスタ運用分析であり、LLM推論基盤の機構や計測への直接貢献は示されていない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Interpretable Analysis of Production GPU Clusters Monitoring Data via Association Rule Mining"
+    },
+    "DOI:10.26599/cai.2024.9390004": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26599/cai.2024.9390004",
+      "identity_tokens": [
+        "DOI:10.26599/cai.2024.9390004"
+      ],
+      "reason": "本論文はプロンプティングによってLLMの推論能力を引き出す手法とベンチマークを整理したサーベイであり、扱うのは推論(reasoning)能力の elicitation である。推論システムの高速化・サービング・メモリ管理といった技術的機構への貢献は含まれない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Advances in reasoning by prompting large language models: A survey"
+    },
+    "DOI:10.1016/j.ipm.2025.104245": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104245",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104245"
+      ],
+      "reason": "新興AIトピックの計算機的文献レビューに言語モデルを活用する応用研究であり、タイトル自体が文献レビューという利用目的を明示している。要旨は取得できなかったが、主題はLLM推論システムの機構ではなく応用利用であるため対象外と判断する。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Harnessing language models for computational literature review of emerging AI topics"
+    },
+    "SemanticScholar:b057d31e12e71681d9101113b8bfff11a0a625b7": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:b057d31e12e71681d9101113b8bfff11a0a625b7",
+      "identity_tokens": [
+        "SemanticScholar:b057d31e12e71681d9101113b8bfff11a0a625b7"
+      ],
+      "reason": "ViBidは画像向けVision Transformerの自己注意を双方向正規化BiNormへ置換して計算量を線形化する視覚モデルであり、評価もImageNet等の視覚タスクである。注意の効率化という要素はあるが、対象は画像分類モデルでLLM推論への適用は論じられていない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ViBid: Linear Vision Transformer with Bidirectional Normalization"
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.209": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.209",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.209"
+      ],
+      "reason": "Thinking Interventionは大規模推論モデルの思考過程へ介入し、推論方向を認知パターンへ寄せて過剰思考や誤推論を抑え多ホップQA精度を上げる手法である。扱うのは推論内容の制御と能力改善であり、推論システムの速度・メモリ・スケジューリングへの貢献ではない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Can We Steer Reasoning Direction by Thinking Intervention?"
+    },
+    "DOI:10.1109/tifs.2025.3644269": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tifs.2025.3644269",
+      "identity_tokens": [
+        "DOI:10.1109/tifs.2025.3644269"
+      ],
+      "reason": "タイトルが明示する主題は虹彩プレゼンテーション攻撃検知であり、Mask-and-Distill型Mixture of Expertsは生体認証モデルの構造にすぎず、LLM推論・サービング・デコード等への技術的貢献はタイトル上明確に存在しない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Toward Generalized Iris Presentation Attack Detection: A Mask-and-Distill Mixture of Experts Approach"
+    },
+    "DOI:10.62762/tssr.2025.806733": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.62762/tssr.2025.806733",
+      "identity_tokens": [
+        "DOI:10.62762/tssr.2025.806733"
+      ],
+      "reason": "要旨は数千GPU・数週間に及ぶLLM学習基盤の信頼性を故障検知・故障回復・ストラグラ緩和の3本柱で論じる学習システムのサーベイであり、推論やサービングの機構・計測は扱われていないため、推論システムへの直接的貢献はない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Reliability Optimization for Large Language Model Training Infrastructure: Challenges, Advances, and Future Directions"
+    },
+    "DOI:10.1109/ccgrid57682.2023.00044": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ccgrid57682.2023.00044",
+      "identity_tokens": [
+        "DOI:10.1109/ccgrid57682.2023.00044"
+      ],
+      "reason": "ScaMPは深層学習の探索、すなわちハイパーパラメータ／アーキテクチャ探索等のメタ並列化を扱うもので、タイトル上もLLMの推論・デコード・サービングを対象としておらず、推論システムへの直接的貢献は明確にない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "ScaMP: Scalable Meta-Parallelism for Deep Learning Search"
+    },
+    "DOI:10.1007/s11227-025-07204-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11227-025-07204-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-07204-y"
+      ],
+      "reason": "タイトルが明示する対象は深層学習による偏微分方程式ソルバーの推論・学習高速化であり、LLMやTransformer推論基盤ではなく数値計算応用モデルの高速化であるため、LLM推論システムへの直接的貢献は明確にない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Inference and training acceleration of deep learning partial differential equation solver"
+    },
+    "SemanticScholar:0ac8484b380ac5bef430b38533a7a1764db7762e": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:0ac8484b380ac5bef430b38533a7a1764db7762e",
+      "identity_tokens": [
+        "SemanticScholar:0ac8484b380ac5bef430b38533a7a1764db7762e"
+      ],
+      "reason": "タイトルが明示する主題はビジョンTransformerのファインチューニングにおけるプルーニングとMixture of Expertsの組合せを扱う学位研究であり、学習側の視覚モデル圧縮であってLLM推論・デコード・サービングへの直接的貢献は明確にない。",
+      "first_checked_at": "2026-11-23T07:49:26+00:00",
+      "last_checked_at": "2026-11-23T07:49:26+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Master Computer Science Combining pruning and mixture of expert for finetuning vision transformers"
     }
   }
 }

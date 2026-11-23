@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d3bb57a9738c5520-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11227-025-07204-y",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11227-025-07204-y",
+    "identity_tokens": [
+      "DOI:10.1007/s11227-025-07204-y"
+    ],
+    "reason": "タイトルが明示する対象は深層学習による偏微分方程式ソルバーの推論・学習高速化であり、LLMやTransformer推論基盤ではなく数値計算応用モデルの高速化であるため、LLM推論システムへの直接的貢献は明確にない。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Inference and training acceleration of deep learning partial differential equation solver"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3bb57a9738c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

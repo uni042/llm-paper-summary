@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a5211379937b2b8-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:6f022503c240d322e36c3ed9a0b4c908c74b9613",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:6f022503c240d322e36c3ed9a0b4c908c74b9613",
+    "identity_tokens": [
+      "SemanticScholar:6f022503c240d322e36c3ed9a0b4c908c74b9613"
+    ],
+    "reason": "FastHybridはハイブリッド自己回帰画像生成について、先読みデコードと誘導拡散サンプリングで拡散デコーダの計算負荷を減らし生成を高速化する。デコード高速化の発想は投機的デコード等と通じるが、対象は画像生成モデルでありLLM推論システムではないため保留とする。",
+    "first_checked_at": "2026-11-23T07:49:26+00:00",
+    "last_checked_at": "2026-11-23T07:49:26+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FastHybrid: Accelerating Hybrid Autoregressive Image Generation with Lookahead and Guided Decoding"
+  },
+  "processed_at": "2026-11-23T07:49:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a5211379937",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
