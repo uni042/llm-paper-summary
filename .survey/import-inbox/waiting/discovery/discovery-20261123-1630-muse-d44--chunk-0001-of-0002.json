@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d44::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.19755",
+      "identity_tokens": [
+        "arXiv:2606.19755"
+      ],
+      "title": "SafeSpec: Fast and Safe LLM via Dynamic Reflective Sampling",
+      "reason": "投機的デコードの検証過程に軽量な潜在安全ヘッドを組み込み、安全性判定と意味検証を1回のフォワードで同時に行い、ロールバックと反射的多重サンプリングで安全な継続を回復しつつ2.06倍の推論高速化を維持する、投機的推論そのものへの直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2606.19755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.09927",
+      "identity_tokens": [
+        "arXiv:2512.09927"
+      ],
+      "title": "Token Expand-Merge: Training-Free Token Compression for Vision-Language-Action Models",
+      "reason": "VLAモデルのリアルタイム推論が重い問題に対し、注意で注目された領域周辺の情報トークンを動的に拡張し深層で行動認識に基づき選択的にマージする学習不要のトークン圧縮で、再学習なしに推論速度を改善する推論向けトークン圧縮手法である。",
+      "source_url": "https://arxiv.org/abs/2512.09927",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.08779",
+      "identity_tokens": [
+        "arXiv:2607.08779"
+      ],
+      "title": "Signed Symmetric Quantization for Few-Bit Integers",
+      "reason": "符号付き整数の余分な負側表現値を外れ値の支配的な尾側へ割り当てる符号付き対称量子化を提案し、非対称量子化の実行時ペナルティなしに低ビット量子化誤差を下げ、LLMで推論コスト不変のままパープレキシティ改善を示す推論向け量子化である。",
+      "source_url": "https://arxiv.org/abs/2607.08779",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.00652",
+      "identity_tokens": [
+        "arXiv:2611.00652"
+      ],
+      "title": "Inference First, Training Underneath: Layer-Granular LoRA Co-Serving with LayerLoom",
+      "reason": "推論とLoRA微調整の同一GPU共存において、微調整の逆伝播を層粒度タスクへ分解し推論フォワードのレイテンシ余裕内で同層に付随実行させ、ホストへのオフロードと融合カーネルでSLO達成率を高めるLayerLoomは推論サービングとスケジューリングへの直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2611.00652",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3671798",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3671798"
+      ],
+      "title": "CAGR: A Cross-Accelerator Graph Optimization Framework for Efficient Recommender System Inference",
+      "reason": "NVIDIA・AMD・TPU間で推薦モデルDLRMの推論遅延が大きく異なる問題に、ハードウェア認識グラフ書き換えと強化学習による変換方針で性能可搬な推論最適化を行うが、対象はLLMではなく推薦システムでありLLM推論への貢献は間接的である。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3671798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 295
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-1073",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1073"
+      ],
+      "title": "Compress & Cache: Vision token compression for efficient generation and retrieval",
+      "reason": "タイトルは視覚トークン圧縮による効率的な生成と検索を示唆するが、CrossrefとOpenAlexのいずれからも一次要旨を取得できず、圧縮機構や推論高速化の具体的内容を一次情報で確認できなかったため保留とする。",
+      "source_url": "https://doi.org/10.52202/085713-1073",
+      "body_check": "abstract_not_obtained; Crossref/OpenAlex checked, no abstract available; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661149",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS70441.2026.11661149"
+      ],
+      "title": "Achieving Fast and High Throughput Data Exchange for Serverless Computing Systems via Switch-Native Serialization/Deserialization",
+      "reason": "サーバーレス計算における直列化・逆直列化をプログラマブルスイッチへオフロードしデータ交換の遅延とスループットを改善する研究であり、LLMやニューラルモデルの推論・デコード・サービングへの直接の技術的貢献は要旨に確認できない。",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661149",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26189",
+      "identity_tokens": [
+        "arXiv:2605.26189"
+      ],
+      "title": "Max-Window Scale Estimation for Near-Lossless HiF8 W8A8 Quantization-Aware Training",
+      "reason": "HiF8 W8A8の量子化認識学習におけるamax飽和と壊滅的忘却という学習時の失敗モードをDelayed Tensor Scalingの窓推定で抑える研究で、効率的LLM展開を動機とするものの主たる貢献はQATの学習安定化であり推論機構そのものではない。",
+      "source_url": "https://arxiv.org/abs/2605.26189",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 298
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCCN.2025.3613490",
+      "identity_tokens": [
+        "DOI:10.1109/TCCN.2025.3613490"
+      ],
+      "title": "Inference Routing Over Multi-Hop Edge Networks",
+      "reason": "無線マルチホップ網上でDNNを複数分割し早期終了を動的に組み合わせて端末間推論の遅延を最小化するルーティング最適化であり、分散・エッジ推論に関連するが対象は汎用DNN分割配置でLLMサービング固有の機構は要旨に示されていない。",
+      "source_url": "https://doi.org/10.1109/TCCN.2025.3613490",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 299
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.36948/ijfmr.2024.v06i06.32140",
+      "identity_tokens": [
+        "DOI:10.36948/ijfmr.2024.v06i06.32140"
+      ],
+      "title": "Accelerating Foundational Model Training: A Systematic Review of Hardware, Algorithmic, and Distributed Computing Optimizations",
+      "reason": "基盤モデルの学習をハードウェア・アルゴリズム・分散計算の観点から加速する手法を総覧するレビューであり、扱うのは混合精度学習やパイプライン並列など学習単独の高速化で、推論・デコード・サービングへの直接貢献はない。",
+      "source_url": "https://doi.org/10.36948/ijfmr.2024.v06i06.32140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 300
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.03245",
+      "identity_tokens": [
+        "arXiv:2511.03245"
+      ],
+      "title": "Decoupled Multi-Predictor Optimization for Inference-Efficient Model Tuning",
+      "reason": "多段予測器付き早期終了において浅層特徴の表現能力と識別能力を分離するバイパスモジュールと二相最適化を提案し、事前学習モデルの計算コストを削減しながら精度を保つ推論効率化アーキテクチャであり、早期終了という推論機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2511.03245",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 301
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.08093",
+      "identity_tokens": [
+        "arXiv:2511.08093"
+      ],
+      "title": "Quantizing Whisper-small: How design choices affect ASR performance",
+      "reason": "Whisper-smallへの学習後量子化を4ライブラリ横断で評価し、int8動的量子化でモデルサイズ57%削減と推論コスト低減を示すが、対象は音声認識モデルの設計選択の実証評価でありLLM推論システムへの一般的な機構提案は薄い。",
+      "source_url": "https://arxiv.org/abs/2511.08093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 302
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19956",
+      "identity_tokens": [
+        "arXiv:2601.19956"
+      ],
+      "title": "VoxPrivacy: A Benchmark for Evaluating Interactional Privacy of Speech Language Models",
+      "reason": "音声言語モデルが複数利用者環境で他者の秘密情報を漏らす相互作用プライバシーを測るベンチマークとデータセットの研究であり、推論高速化やサービング機構ではなく能力・安全性の評価のみを扱っている。",
+      "source_url": "https://arxiv.org/abs/2601.19956",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 303
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.29354",
+      "identity_tokens": [
+        "arXiv:2606.29354"
+      ],
+      "title": "When LLMs Develop Languages: Symbolic Communication for Efficient Multi-Agent Reasoning",
+      "reason": "複数LLMエージェントが記号的通信言語を自律的に発明・進化させ、ルータがクエリごとに選択して生成トークンを3〜6倍削減するテスト時枠組みだが、主目的は多エージェント推論の通信プロトコル設計であり推論システム機構としての位置づけは薄い。",
+      "source_url": "https://arxiv.org/abs/2606.29354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 304
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17231",
+      "identity_tokens": [
+        "arXiv:2603.17231"
+      ],
+      "title": "Neuron-Level Emotion Control in Speech-Generative Large Audio-Language Models",
+      "reason": "音声生成大規模音響言語モデルで感情に敏感なニューロンを特定し推論時に介入して感情制御を行う研究であり、推論時介入という語はあるものの対象は感情表現の制御能力であって推論効率やサービングへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2603.17231",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 305
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.14052",
+      "identity_tokens": [
+        "arXiv:2512.14052"
+      ],
+      "title": "HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices",
+      "reason": "オンデバイス推論向けに画像タイリングでピークメモリを抑え、視覚解像度圧縮器が最適な符号化解像度を適応予測して冗長計算を除き、実モバイル機器で遅延と消費電力の大幅削減を示すHyperVLはオンデバイス推論への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2512.14052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 306
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04099",
+      "identity_tokens": [
+        "arXiv:2602.04099"
+      ],
+      "title": "Rethinking Perplexity: Revealing the Impact of Input Length on Perplexity Evaluation in LLMs",
+      "reason": "入力長がLLMのパープレキシティ評価へ与える偏りを、直接蓄積と固定窓スライディングの2方式で遅延・メモリ・評価コストも含め計測するLengthBenchmarkの研究で、推論基盤の計測に触れるが主眼は評価指標の公平性であり推論機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2602.04099",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 307
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19686",
+      "identity_tokens": [
+        "arXiv:2607.19686"
+      ],
+      "title": "Multi-Mask Diffusion Language Models for Few-Step Generation",
+      "reason": "マスク拡散言語モデルで各トークンを指定マスク経由でマスク集合へ混合させる多重マスク前方過程により下書き能力を持つ逆過程を構成し、離散一貫性蒸留と合わせて少数ステップ生成を可能にするMultiMDMは生成・デコード効率への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2607.19686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 308
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3534678.3539314",
+      "identity_tokens": [
+        "DOI:10.1145/3534678.3539314"
+      ],
+      "title": "MT-FlowFormer: A Semi-Supervised Flow Transformer for Encrypted Traffic Classification",
+      "reason": "暗号化ネットワークトラフィック分類のためにフロー系列の注意機構分類器と半教師ありMean Teacher枠組みを提案する研究であり、対象分野はネットワークセキュリティのトラフィック解析でLLM推論システムとは無関係である。",
+      "source_url": "https://doi.org/10.1145/3534678.3539314",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 309
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.07497",
+      "identity_tokens": [
+        "arXiv:2510.07497"
+      ],
+      "title": "Can Speech LLMs Think while Listening?",
+      "reason": "音声LLMが利用者の発話終了前に推論を開始する『聞きながら考える』手法で、質問完全性というエントロピー指標により開始時点を制御し遅延を70%削減するが、中心はCoT微調整による音声推論精度の改善でありサービング機構への貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2510.07497",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:20:00+09:00",
+      "last_checked_at": "2026-11-23T18:20:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 310
+    }
+  ],
+  "parent_run_key": "muse-20261123-d44",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
