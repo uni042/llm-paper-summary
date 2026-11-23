@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6646b189533e00e57e6c6e192d81cfedb6318e0d",
+  "base_commit": "2f751393b071d0ccb22594ef5e6bd650f3ccad2e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -766,6 +766,7 @@
     "2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantization-of-mllms.json",
+    "2026-2607.21985-unified-static-dynamic-pruning-for-efficient-llm-inference.json",
     "2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-model.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22583-multi-objective-structured-pruning-of-llms-for-latency-and-model-size-optimization.json",
@@ -773,6 +774,7 @@
     "2026-2607.22587-trisp-tri-signal-structured-pruning-for-large-language-models.json",
     "2026-2607.22602-deeplook-uncertainty-guided-branching-with-lookahead-confidence.json",
     "2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.json",
+    "2026-2607.22726-pca-persistence-aware-compression-and-aggregation-for-fast-video-large-language-models.json",
     "2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computation-fusion.json",
     "2026-2607.23265-wavezip-wavelet-driven-space-time-decoupling-for-video-token-condensation.json",
     "2026-2607.24148-a-motion-aware-vector-quantization-framework-with-centroid-reuse-for-efficient-vla-inference.json",
@@ -788,6 +790,7 @@
     "2026-2608.00573-trimmoe-a-communication-aware-and-adaptive-depth-framework-for-distributed-edge-inference.json",
     "2026-2608.00867-nuna-characterizing-and-mitigating-non-uniform-network-access-in-multi-die-gpu-scale-up-systems.json",
     "2026-2608.00914-augmented-backpressure-for-decentralized-management-of-agentic-networks.json",
+    "2026-2608.00922-from-cloud-to-crowd-democratizing-llm-service-with-decentralized-edge-collaboration-for-rag.json",
     "2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded-language-flows.json",
     "2026-2608.01638-dynamic-resolution-routing-for-efficient-egocentric-grounding.json",
     "2026-2608.01655-prefixplace-provable-prefix-key-value-placement-for-large-language-model-serving-under-heterogeneous-compute-and-transfer-costs.json",
@@ -965,6 +968,7 @@
     "2026-2610.02713-wakekv-reactive-reversible-kv-residency-for-heads-that-change-their-minds.json",
     "2026-2610.02732-servetwin-a-benchmark-validated-simulator-for-distributed-llm-architecture-exploration.json",
     "2026-2610.02800-bitnest-bit-nested-speculative-decoding-for-memory-efficient-llm-inference-acceleration.json",
+    "2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.json",
     "2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free-beacon-attention.json",
     "2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.json",
     "2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.json",
@@ -981,6 +985,7 @@
     "2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-unified-memory.json",
     "2026-2610.04635-latentindex-cross-layer-sharing-with-layer-specific-selection-for-sparse-attention.json",
     "2026-2610.04753-more-value-per-key-asymmetric-sparse-attention-for-faster-llm-decoding.json",
+    "2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.json",
     "2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-lora-assisted-on-premise-llm-deployment.json",
     "2026-2610.05106-sharpdraft-accelerating-long-context-speculative-decoding-with-cardinality-aware-query-scaling.json",
     "2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matrix-engines.json",
@@ -50961,6 +50966,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.21985": {
+      "order": [
+        "2026-11-23T20:30:19+00:00",
+        "2026-2607.21985-unified-static-dynamic-pruning-for-efficient-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.22726": {
+      "order": [
+        "2026-11-23T20:31:52+00:00",
+        "2026-2607.22726-pca-persistence-aware-compression-and-aggregation-for-fast-video-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.00922": {
+      "order": [
+        "2026-11-23T20:33:26+00:00",
+        "2026-2608.00922-from-cloud-to-crowd-democratizing-llm-service-with-decentralized-edge-collaboration-for-rag.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02815": {
+      "order": [
+        "2026-11-23T20:34:58+00:00",
+        "2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.04912": {
+      "order": [
+        "2026-11-23T20:36:30+00:00",
+        "2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64582,6 +64632,21 @@
     "arxiv:2604.17709": [
       "papers/inference/99-other-inference-systems/2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-mod.md",
       "papers/inference/99-other-inference-systems/2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-mod.md"
+    ],
+    "arxiv:2607.21985": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.21985-unified-static-dynamic-pruning-for-efficient-llm-inference.md"
+    ],
+    "arxiv:2607.22726": [
+      "papers/inference/99-other-inference-systems/2026-2607.22726-pca-persistence-aware-compression-and-aggregation-for-fast-video-large-l.md"
+    ],
+    "arxiv:2608.00922": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2608.00922-from-cloud-to-crowd-democratizing-llm-service-with-decentralized-edge-co.md"
+    ],
+    "arxiv:2610.02815": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.md"
+    ],
+    "arxiv:2610.04912": [
+      "papers/inference/99-other-inference-systems/2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.md"
     ]
   }
 }

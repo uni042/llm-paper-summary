@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（323本）
+## 自動生成の論文一覧（324本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -541,6 +541,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-07 · [VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination](2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   中間テンソルを実データでなく添字の対応関係として保持する仮想テンソルで全種類のデータ移動を消すコンパイラにより、既存系の最良比で最大一・九三倍、平均一・二八倍の高速化と最大六十パーセントのメモリ削減を得たと報告した。
+
+- **2026-07 · [Unified Static-Dynamic Pruning for Efficient LLM Inference](2026-2607.21985-unified-static-dynamic-pruning-for-efficient-llm-inference.md)**  
+  実装：[✓](https://github.com/AIDASLab/SPDP) ・ リポジトリ内被引用：0  
+  静的枝刈りと動的枝刈りを一つのタイル化ビットマップ形式と段階別カーネルで統合し、同じパープレキシティで最大25パーセント高い疎率と静的専用基盤比で最大2.51倍の高速化を実現する疎推論基盤。
 
 - **2026-07 · [TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters](2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

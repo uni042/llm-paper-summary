@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（644本）
+## 自動生成の論文一覧（645本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1014,6 +1014,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [JointServe: Serving Multi-Model Agents on Memory-Constrained GPUs](2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みの断片とKVブロックを1つのメモリ予算で競わせ、呼び出し意図の先読みと層単位の流し込みで複数モデルエージェントをメモリ制約GPUに載せるサービング基盤。
+
+- **2026-10 · [iS-KV: Online Low-Rank KV Cache Compression via Block-Incremental SVD](2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  直近を正確に残し古い履歴を低ランク化するオンライン圧縮で、基底更新時に過去の係数も同期させることでドリフトを防ぎ、MATH-500で4.06倍圧縮しながら元モデルの83.6パーセントに対し82.6パーセントを保つ。
 
 - **2026-10 · [InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations](2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

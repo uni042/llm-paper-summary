@@ -35,10 +35,15 @@
   "selection_reason": "長い思考連鎖の自己回帰デコードで増大するKVキャッシュに対し、最近窓を厳密に保持し古い状態をブロック増分SVDで有界ランクへ折り畳み基底更新に履歴座標を同期させるオンライン低ランク圧縮を提案し、4〜5倍圧縮で精度維持を示しておりKVキャッシュ圧縮への直接貢献である。",
   "semantic_scholar_id": "341ea62437cca550e685e6f593fa57db37e44582",
   "source_url": "https://arxiv.org/abs/2610.02815",
-  "status": "ready",
+  "status": "superseded",
   "title": "iS-KV: Online Low-Rank KV Cache Compression via Block-Incremental SVD",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T20:39:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.md",
+  "represented_canonical_id": "arXiv:2610.02815",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

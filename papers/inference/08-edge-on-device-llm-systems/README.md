@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（110本）
+## 自動生成の論文一覧（111本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -137,6 +137,10 @@
 - **2026-08 · [Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels](2026-2608.25053-hydra-phase-aware-workload-characterization-of-llm-inference-across-edge.md)**  
   実装：[✓](https://github.com/amirtaherin/hydra) ・ リポジトリ内被引用：0  
   Hydraは、エッジ向け統合SoCで動く大規模言語モデル（LLM）の推論を、事前充填（プリフィル）と復号（デコード）という二つの処理区間に分け、実行時間・CPU/GPU活動・主記憶帯域・電力・消費エネルギー・温度を対応付ける計測・解析基盤である。
+
+- **2026-08 · [From Cloud to Crowd: Democratizing LLM Service With Decentralized Edge Collaboration for RAG](2026-2608.00922-from-cloud-to-crowd-democratizing-llm-service-with-decentralized-edge-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エッジ機器同士で知識グラフと計算を共有し、クエリごとにモデルと検索量をバンディットで選ぶ分散RAGにより、クラウドLLMとの正解率差を半分以下へ縮め費用を最大98.4パーセント減らす協調推論基盤。
 
 - **2026-08 · [FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving](2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md)**  
   実装：[✓](https://github.com/z-lab/flashdrive) ・ リポジトリ内被引用：0  

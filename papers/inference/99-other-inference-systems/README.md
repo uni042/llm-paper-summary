@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1391本）
+## 自動生成の論文一覧（1393本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1086,6 +1086,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルだけを1ミリ秒刻みの電力計測で切り分け、入力トークンのエネルギー原単位が文脈長とエンジン最適化でどう変わるかをA100実機で示した計測研究。
 
+- **2026-10 · [Static Bootstrap Placement for Encrypted Language Model Decoding](2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一つの静的な配置規則で暗号化デコードのブートストラップ費用を文脈長の閉形式にし、トークン選択から書き戻しまで暗号の下でループ全体をサーバ側で回してクライアントをオフラインにする方式。
+
 - **2026-10 · [Spend Bytes on Breadth: Precision–Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning](2026-2610.05685-spend-bytes-on-breadth-precision-count-trade-offs-for-decode-time-kv-com.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   古いデコード KVをKIVI形式で2、3、4ビット量子化し、直近128トークンはfp16に残す。3モデル、複数の数学・科学ベンチマーク、2予算の計18条件では、BreadthKVがfp16のSnapKV-D 追い出しより17条件で正答率が高く、16条件で95%信頼区間が0を除く。
@@ -1785,6 +1789,10 @@
 - **2026-07 · [PE-QAT: Parameter-Efficient Quantization-Aware Training for Large Language Models](2026-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   凍結した基底モデルへ低ランクアダプタを統合した重みに疑似量子化をかけ、平滑化係数とクリッピング閾値も一緒に学習することで、学習可能パラメータ約1%で重み・活性値4ビット量子化の精度低下を補う量子化認識学習。
+
+- **2026-07 · [PCA: Persistence-Aware Compression and Aggregation for Fast Video Large Language Models](2026-2607.22726-pca-persistence-aware-compression-and-aggregation-for-fast-video-large-l.md)**  
+  実装：[✓](https://github.com/Heisenberg10110/PCA) ・ リポジトリ内被引用：0  
+  符号化前にフレーム間類似度で間引き、残ったフレームへ過去フレームを減衰集約して動きを補う学習不要の前処理で、動画LLMの総FLOPsを約半分以下へ減らしながら精度をほぼ保つ。
 
 - **2026-07 · [Optimal Model Activation Policies for Inference Networks of Large Language Models](2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-large-langua.md)**  
   実装：[✓](https://github.com/anonym-conf/inf-nets) ・ リポジトリ内被引用：0  
