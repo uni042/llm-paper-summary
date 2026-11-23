@@ -1,0 +1,721 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c0a5f369ba277ff3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c0a5f369ba27",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3820171.3806875",
+    "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+    "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+    "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+    "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+    "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+    "arXiv:2505.20776",
+    "arXiv:2608.23921"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "559fdf033cbc839a7002addf61c1f7c34400f340",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T10:45:55.666500+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3820171.3806875",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:sageserve optimizing llm serving on cloud data centers with forecast aware autoscaling"
+    },
+    {
+      "requested_id": "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.20776",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:specextend a dropin enhancement for speculative decoding of long sequences"
+    },
+    {
+      "requested_id": "arXiv:2608.23921",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HAP: Head-Adaptive Visual Token Pruning via Cross-Modal Alignment",
+      "source_url": "https://arxiv.org/abs/2608.23921",
+      "year": 2026,
+      "published": "2026-08-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Vision-Language Models encode high-resolution images into long visual token sequences, incurring prohibitive prefill costs. To compress them, existing methods score each visual token by averaging text-to-visual attention uniformly across all heads, which assumes every head matches the query. However, our empirical analysis shows that misaligned heads dominate the average, amplifying background tokens and drowning out fine-grained cues. To address this, we propose PAQ (Prompt-Grounded Attention Quality), a metric quantifying how well each head aligns the prompt with image regions. Built on PAQ, our pruning proceeds in three stages. Given a target FLOPs budget, we first partition the transformer layers into groups and allocate a visual token budget to each. Within each group, we then aggregate per-head attention maps via PAQ-weighted softmax into a group-level matrix. Finally, we score visual tokens by this matrix's magnitude and retain the allocated budget per group. By weighting heads with PAQ, our method scores tokens by attention signals that more faithfully reflect prompt relevance, rather than diluting them through uniform averaging. Across 18 benchmarks, our method delivers state-of-the-art trade-offs. Specifically, on LLaVA-1.5-7B (9 tasks), retaining only \\textbf{5.6\\%} tokens preserves \\textbf{99.1\\%} of the original performance, surpassing the strongest baseline AutoPrune by 4.2 points. Code is available in https://github.com/baokou-fw2/HAP.",
+      "identifiers": [
+        "SemanticScholar:dfa1dc7ef59e5ca30ece294a873e8f54b186fb3c"
+      ],
+      "semantic_scholar_id": "dfa1dc7ef59e5ca30ece294a873e8f54b186fb3c",
+      "canonical_id": "arXiv:2608.23921",
+      "arxiv_id": "2608.23921",
+      "doi": "10.48550/arXiv.2608.23921",
+      "authors": [
+        "Yuan Sun",
+        "Hua-Wei Ji",
+        "Yuanhao Jin",
+        "Cheng Deng",
+        "Luo-Yi Fu",
+        "Xin-Bing Wang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Quantize What Counts: Bit Allocation Insights Informed by Spectral Gaps in Keys and Values",
+      "source_url": "https://www.semanticscholar.org/paper/998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a"
+      ],
+      "semantic_scholar_id": "998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "canonical_id": "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "authors": [
+        "Mohsen Hariri",
+        "Alan Luo",
+        "M. Nemati",
+        "Lam Nguyen",
+        "Shao-Chen Zhong",
+        "Qi-Fan Wang",
+        "Xia Ben Hu",
+        "Xiao-Tian Han",
+        "Vipin Chaudhary"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Verification: Exploiting Information Gain for Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd"
+      ],
+      "semantic_scholar_id": "1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "canonical_id": "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "authors": [
+        "Sungkyun Kim",
+        "Jaemin Kim",
+        "Dogyung Yoon",
+        "Junyeol Lee",
+        "Jiwon Seo",
+        "Jacob Austin",
+        "A. Odena",
+        "Maxwell Nye",
+        "Maarten Bosma",
+        "H. Michalewski",
+        "David Dohan",
+        "Ellen Jiang",
+        "Carrie J. Cai",
+        "M. Terry",
+        "K. Cobbe",
+        "Vineet Kosaraju",
+        "Mo Bavarian",
+        "Mark Chen",
+        "Heewoo Jun",
+        "L. Kaiser",
+        "Matthias Plappert",
+        "Jerry Tworek",
+        "Jacob Hilton",
+        "Reiichiro Nakano",
+        "C. Hesse",
+        "Konstantin Donhauser",
+        "Charles Arnal",
+        "Mohammad Pezeshki",
+        "Vivien Cabannes",
+        "D. Lopez-Paz",
+        "Mostafa Elhoushi",
+        "Akshat Shrivastava",
+        "Diana Liskovich",
+        "Basil Hosmer",
+        "Bram Wasti",
+        "Liangzhen Lai",
+        "Anas Mahmoud",
+        "Bilge Acun",
+        "Saurabh Agarwal",
+        "Ahmed Roman",
+        "A. Aly",
+        "Beidi Chen",
+        "Carole-Jean Wu",
+        "Layerskip",
+        "Aaron Grattafiori",
+        "Abhimanyu Dubey",
+        "Abhinav Jauhri",
+        "Abhinav Pandey",
+        "Abhishek Kadian",
+        "Ahmad Al-Dahle",
+        "Aiesha Letman",
+        "Akhil Mathur",
+        "Alan Schelten",
+        "Xiaoxuan Liu",
+        "Cade Daniel",
+        "Lang-Xiang Hu",
+        "Woosuk Kwon",
+        "Zhuo-Han Li",
+        "Xiangxi Mo",
+        "Alvin Cheung",
+        "J. Mamou",
+        "Oren Pereg",
+        "Daniel Korat",
+        "Moshe Berchansky",
+        "Nadav Timor",
+        "Moshe Wasserblat",
+        "Roy Schwartz"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "K UN S ERVE : Parameter-centric Memory Management for Efficient Memory Throttling Handling in LLM Serving",
+      "source_url": "https://www.semanticscholar.org/paper/435390ada7cb1b2e890b34dc036764d5098dee07",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07"
+      ],
+      "semantic_scholar_id": "435390ada7cb1b2e890b34dc036764d5098dee07",
+      "canonical_id": "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+      "authors": [
+        "Rongxin Cheng",
+        "YuxinLai",
+        "Xing-Da Wei",
+        "Rong Chen",
+        "Hai-Bo Chen",
+        "YY . Y c m"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "L EARNING W HAT M ATTERS : S UPERVISING S PARSE A TTENTION R OUTING WITH C AUSAL E VIDENCE S ETS",
+      "source_url": "https://www.semanticscholar.org/paper/978af19cb401afdd4f3b1302052773fb7811c434",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434"
+      ],
+      "semantic_scholar_id": "978af19cb401afdd4f3b1302052773fb7811c434",
+      "canonical_id": "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+      "authors": [
+        "J. Allchin"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UvA-DARE (Digital Academic Repository) Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+      "source_url": "https://www.semanticscholar.org/paper/acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6"
+      ],
+      "semantic_scholar_id": "acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "canonical_id": "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "authors": [
+        "Baohao Liao",
+        "Yuhui Xu",
+        "Han-Ze Dong",
+        "Jun-Nan Li",
+        "Christof Monz",
+        "S. Savarese",
+        "Doyen Sahoo",
+        "Cai-Ming Xiong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.23921",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.23921",
+        "id:SemanticScholar:dfa1dc7ef59e5ca30ece294a873e8f54b186fb3c",
+        "id:arXiv:2608.23921",
+        "title:hap headadaptive visual token pruning via crossmodal alignment",
+        "url:https://arxiv.org/abs/2608.23921"
+      ],
+      "record": {
+        "title": "HAP: Head-Adaptive Visual Token Pruning via Cross-Modal Alignment",
+        "source_url": "https://arxiv.org/abs/2608.23921",
+        "year": 2026,
+        "published": "2026-08-24",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent Vision-Language Models encode high-resolution images into long visual token sequences, incurring prohibitive prefill costs. To compress them, existing methods score each visual token by averaging text-to-visual attention uniformly across all heads, which assumes every head matches the query. However, our empirical analysis shows that misaligned heads dominate the average, amplifying background tokens and drowning out fine-grained cues. To address this, we propose PAQ (Prompt-Grounded Attention Quality), a metric quantifying how well each head aligns the prompt with image regions. Built on PAQ, our pruning proceeds in three stages. Given a target FLOPs budget, we first partition the transformer layers into groups and allocate a visual token budget to each. Within each group, we then aggregate per-head attention maps via PAQ-weighted softmax into a group-level matrix. Finally, we score visual tokens by this matrix's magnitude and retain the allocated budget per group. By weighting heads with PAQ, our method scores tokens by attention signals that more faithfully reflect prompt relevance, rather than diluting them through uniform averaging. Across 18 benchmarks, our method delivers state-of-the-art trade-offs. Specifically, on LLaVA-1.5-7B (9 tasks), retaining only \\textbf{5.6\\%} tokens preserves \\textbf{99.1\\%} of the original performance, surpassing the strongest baseline AutoPrune by 4.2 points. Code is available in https://github.com/baokou-fw2/HAP.",
+        "identifiers": [
+          "SemanticScholar:dfa1dc7ef59e5ca30ece294a873e8f54b186fb3c"
+        ],
+        "semantic_scholar_id": "dfa1dc7ef59e5ca30ece294a873e8f54b186fb3c",
+        "canonical_id": "arXiv:2608.23921",
+        "arxiv_id": "2608.23921",
+        "doi": "10.48550/arXiv.2608.23921",
+        "authors": [
+          "Yuan Sun",
+          "Hua-Wei Ji",
+          "Yuanhao Jin",
+          "Cheng Deng",
+          "Luo-Yi Fu",
+          "Xin-Bing Wang"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 91,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "identity_tokens": [
+        "id:SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+        "title:quantize what counts bit allocation insights informed by spectral gaps in keys and values",
+        "url:https://www.semanticscholar.org/paper/998dca0b69dd0b08495d90530db2352be3a04d4a"
+      ],
+      "record": {
+        "title": "Quantize What Counts: Bit Allocation Insights Informed by Spectral Gaps in Keys and Values",
+        "source_url": "https://www.semanticscholar.org/paper/998dca0b69dd0b08495d90530db2352be3a04d4a",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a"
+        ],
+        "semantic_scholar_id": "998dca0b69dd0b08495d90530db2352be3a04d4a",
+        "canonical_id": "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+        "authors": [
+          "Mohsen Hariri",
+          "Alan Luo",
+          "M. Nemati",
+          "Lam Nguyen",
+          "Shao-Chen Zhong",
+          "Qi-Fan Wang",
+          "Xia Ben Hu",
+          "Xiao-Tian Han",
+          "Vipin Chaudhary"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+      "identity_tokens": [
+        "id:SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+        "title:verification exploiting information gain for speculative decoding",
+        "url:https://www.semanticscholar.org/paper/1c052dc64b887eb0bc785e5f6518239a0dac95cd"
+      ],
+      "record": {
+        "title": "Verification: Exploiting Information Gain for Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd"
+        ],
+        "semantic_scholar_id": "1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+        "canonical_id": "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd",
+        "authors": [
+          "Sungkyun Kim",
+          "Jaemin Kim",
+          "Dogyung Yoon",
+          "Junyeol Lee",
+          "Jiwon Seo",
+          "Jacob Austin",
+          "A. Odena",
+          "Maxwell Nye",
+          "Maarten Bosma",
+          "H. Michalewski",
+          "David Dohan",
+          "Ellen Jiang",
+          "Carrie J. Cai",
+          "M. Terry",
+          "K. Cobbe",
+          "Vineet Kosaraju",
+          "Mo Bavarian",
+          "Mark Chen",
+          "Heewoo Jun",
+          "L. Kaiser",
+          "Matthias Plappert",
+          "Jerry Tworek",
+          "Jacob Hilton",
+          "Reiichiro Nakano",
+          "C. Hesse",
+          "Konstantin Donhauser",
+          "Charles Arnal",
+          "Mohammad Pezeshki",
+          "Vivien Cabannes",
+          "D. Lopez-Paz",
+          "Mostafa Elhoushi",
+          "Akshat Shrivastava",
+          "Diana Liskovich",
+          "Basil Hosmer",
+          "Bram Wasti",
+          "Liangzhen Lai",
+          "Anas Mahmoud",
+          "Bilge Acun",
+          "Saurabh Agarwal",
+          "Ahmed Roman",
+          "A. Aly",
+          "Beidi Chen",
+          "Carole-Jean Wu",
+          "Layerskip",
+          "Aaron Grattafiori",
+          "Abhimanyu Dubey",
+          "Abhinav Jauhri",
+          "Abhinav Pandey",
+          "Abhishek Kadian",
+          "Ahmad Al-Dahle",
+          "Aiesha Letman",
+          "Akhil Mathur",
+          "Alan Schelten",
+          "Xiaoxuan Liu",
+          "Cade Daniel",
+          "Lang-Xiang Hu",
+          "Woosuk Kwon",
+          "Zhuo-Han Li",
+          "Xiangxi Mo",
+          "Alvin Cheung",
+          "J. Mamou",
+          "Oren Pereg",
+          "Daniel Korat",
+          "Moshe Berchansky",
+          "Nadav Timor",
+          "Moshe Wasserblat",
+          "Roy Schwartz"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+      "identity_tokens": [
+        "id:SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+        "title:k un s erve parametercentric memory management for efficient memory throttling handling in llm serving",
+        "url:https://www.semanticscholar.org/paper/435390ada7cb1b2e890b34dc036764d5098dee07"
+      ],
+      "record": {
+        "title": "K UN S ERVE : Parameter-centric Memory Management for Efficient Memory Throttling Handling in LLM Serving",
+        "source_url": "https://www.semanticscholar.org/paper/435390ada7cb1b2e890b34dc036764d5098dee07",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07"
+        ],
+        "semantic_scholar_id": "435390ada7cb1b2e890b34dc036764d5098dee07",
+        "canonical_id": "SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07",
+        "authors": [
+          "Rongxin Cheng",
+          "YuxinLai",
+          "Xing-Da Wei",
+          "Rong Chen",
+          "Hai-Bo Chen",
+          "YY . Y c m"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+      "identity_tokens": [
+        "id:SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+        "title:l earning w hat m atters s upervising s parse a ttention r outing with c ausal e vidence s ets",
+        "url:https://www.semanticscholar.org/paper/978af19cb401afdd4f3b1302052773fb7811c434"
+      ],
+      "record": {
+        "title": "L EARNING W HAT M ATTERS : S UPERVISING S PARSE A TTENTION R OUTING WITH C AUSAL E VIDENCE S ETS",
+        "source_url": "https://www.semanticscholar.org/paper/978af19cb401afdd4f3b1302052773fb7811c434",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434"
+        ],
+        "semantic_scholar_id": "978af19cb401afdd4f3b1302052773fb7811c434",
+        "canonical_id": "SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434",
+        "authors": [
+          "J. Allchin"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "identity_tokens": [
+        "id:SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+        "title:uvadare digital academic repository rewardguided speculative decoding for efficient llm reasoning",
+        "url:https://www.semanticscholar.org/paper/acaaa08dba4a23b0b68a2c455ded10f7146674b6"
+      ],
+      "record": {
+        "title": "UvA-DARE (Digital Academic Repository) Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+        "source_url": "https://www.semanticscholar.org/paper/acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6"
+        ],
+        "semantic_scholar_id": "acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+        "canonical_id": "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+        "authors": [
+          "Baohao Liao",
+          "Yuhui Xu",
+          "Han-Ze Dong",
+          "Jun-Nan Li",
+          "Christof Monz",
+          "S. Savarese",
+          "Doyen Sahoo",
+          "Cai-Ming Xiong"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8dcbbb59ccb5e5c9c1c1b36fd5bd1de35a9b1e884cf0b32e5b3f5273e2fad9c8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

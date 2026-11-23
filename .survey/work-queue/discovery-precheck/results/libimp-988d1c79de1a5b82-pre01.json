@@ -1,0 +1,766 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-988d1c79de1a5b82-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-988d1c79de1a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.future.2026.108735",
+    "DOI:10.1145/3689031.3717489",
+    "DOI:10.18653/v1/2026.findings-acl.367",
+    "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+    "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+    "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+    "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+    "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+    "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+    "arXiv:2505.19349"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "559fdf033cbc839a7002addf61c1f7c34400f340",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T10:46:08.122731+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.future.2026.108735",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "DOI:10.1145/3689031.3717489",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:alpaserve statistical multiplexing with model parallelism for deep learning serving"
+    },
+    {
+      "requested_id": "arXiv:2505.19349",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MoE-Infinity: Offloading-Efficient MoE Model Serving",
+      "source_url": "https://www.semanticscholar.org/paper/b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 42,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71"
+      ],
+      "semantic_scholar_id": "b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "canonical_id": "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "authors": [
+        "Leyang Xue",
+        "Yao Fu",
+        "Zhan Lu",
+        "Luo Mai",
+        "M. Marina"
+      ],
+      "priority": 42,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 42,
+        "citation_count": 42,
+        "total": 42,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BiE: Bi-Exponent Block Floating-Point for Large Language Models Quantization",
+      "source_url": "https://www.semanticscholar.org/paper/b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "year": 2024,
+      "published": null,
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6"
+      ],
+      "semantic_scholar_id": "b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "canonical_id": "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Wen-Qian Zhao",
+        "Shuo Yin",
+        "Chen Bai",
+        "Qi Sun",
+        "Bei Yu"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 875,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "An Optimized Dataﬂow for Mitigating Attention Performance Bottlenecks",
+      "source_url": "https://www.semanticscholar.org/paper/42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "year": 2021,
+      "published": null,
+      "venue": null,
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c"
+      ],
+      "semantic_scholar_id": "42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "canonical_id": "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "authors": [
+        "Sheng-Chun Kao",
+        "Suvinay Subramanian",
+        "Gaurav Agrawal",
+        "Tushar Krishna"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1971,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model",
+      "source_url": "https://arxiv.org/abs/2505.19349",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "Micro",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To alleviate the memory bandwidth bottleneck in Large Language Model (LLM) inference workloads, weight matrices are stored in memory in quantized and sparsified formats. Hence, before tiles of these matrices can be processed by in-core generalized matrix multiplication (GeMM) hardware engines, they need to be dequantized and de-sparsified. This is currently performed in software with vector operations. Unfortunately, this approach delivers only modest performance. Moreover, it is hard to understand how to improve the system, as the overall GeMM performance depends on the interaction between memory resources, vector units, and hardware matrix engines. This paper addresses the problem of improving the performance of these environments. For this, it first develops the novel Roof-Surface performance model, a 3D model that provides clear insights into how memory resources, vector units, and hardware matrix engines interact to deliver compressed GeMM performance. Then, it proposes DECA, a new near-core ML-model decompression accelerator. DECA offloads tile de-sparsification and dequantization from the CPU, producing ready-to-use tiles for in-core GeMM engines. Finally, it introduces a new ISA extension that enables out-of-order invocation of the near-core accelerator. With this extension, accelerator and core computations can interleave and overlap with high performance. Our evaluation shows that, in a simulated 56-core Xeon 4 server with HBM, DECA accelerates the execution of compressed GeMMs by up to 4x over the use of optimized Intel software kernels. Further, DECA reduces the next-token generation time of Llama2-70B and OPT-66B by 1.6 × —1.9 ×.",
+      "identifiers": [
+        "SemanticScholar:927332c3799031b25378578f780de674d0b844be"
+      ],
+      "semantic_scholar_id": "927332c3799031b25378578f780de674d0b844be",
+      "canonical_id": "arXiv:2505.19349",
+      "arxiv_id": "2505.19349",
+      "doi": "10.1145/3725843.3756073",
+      "authors": [
+        "Gerasimos Gerogiannis",
+        "Stijn Eyerman",
+        "Evangelos Georganas",
+        "W. Heirman",
+        "J. Torrellas"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 547,
+        "matched_prestigious_venue": "MICRO"
+      }
+    },
+    {
+      "title": "EOP-LLM: Energy Oriented Pruning for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.367",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:bb00a780fb82a6dec2550ce78f905fe371f070ee"
+      ],
+      "semantic_scholar_id": "bb00a780fb82a6dec2550ce78f905fe371f070ee",
+      "doi": "10.18653/v1/2026.findings-acl.367",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.367",
+      "authors": [
+        "Guan Huang",
+        "Tao Shu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Efficient Distributed LLM Inference with Dynamic Partitioning",
+      "source_url": "https://www.semanticscholar.org/paper/8d3afec4b9114afed276997d483c284deb60eb64",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64"
+      ],
+      "semantic_scholar_id": "8d3afec4b9114afed276997d483c284deb60eb64",
+      "canonical_id": "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+      "authors": [
+        "Isaac Ong"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NeuStream: Bridging Deep Learning Serving and Stream Processing",
+      "source_url": "https://doi.org/10.1145/3689031.3717489",
+      "year": 2025,
+      "published": "2025-03-30",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Deep Neural Network (DNN) exhibits a pattern where multiple sub-models are executed, guided by control flows such as loops and switch/merge operations. This dynamic nature introduces complexities in batching the requests of such DNNs for efficient execution on GPUs. In this paper, we present NeuStream, a programming model and runtime system for serving deep learning workloads using stream processing. NeuStream decomposes the inference workflow into modules and forms them into a streaming processing system where a request flows through. Based on such abstraction, NeuStream is able to batch requests at fine-grained module granularity. To maximize serving goodput, NeuStream exploits a two-level scheduling approach to decide the best batching requests and resource allocation for each module while satisfying service level objectives (SLOs). Our evaluation of NeuStream on a set of modern DNNs like Large Language Models (LLM) and diffusion models, etc., shows that NeuStream significantly improves goodput compared to state-of-the-art DNN serving systems.",
+      "identifiers": [
+        "SemanticScholar:36fb47f8d1c877ed3f75207be25d50afa503ef28"
+      ],
+      "semantic_scholar_id": "36fb47f8d1c877ed3f75207be25d50afa503ef28",
+      "doi": "10.1145/3689031.3717489",
+      "canonical_id": "DOI:10.1145/3689031.3717489",
+      "authors": [
+        "Hao-Chen Yuan",
+        "Yuan-Qing Wang",
+        "Wen-Hao Xie",
+        "Yu Cheng",
+        "Zi-Ming Miao",
+        "Ling-Xiao Ma",
+        "Ji-Long Xue",
+        "Zhi Yang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 603,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "T RI I NFER : H YBRID D ISAGGREGATED S CHEDULING FOR M ULTIMODAL L ARGE L ANGUAGE M ODEL S ERVING",
+      "source_url": "https://www.semanticscholar.org/paper/2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a"
+      ],
+      "semantic_scholar_id": "2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "canonical_id": "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "authors": [
+        "Xian-Zhe Dong",
+        "Tong-Xuan Liu",
+        "Yu-Ting Zeng",
+        "Wei-Zhe Huang",
+        "Xiao-Yang Zhao",
+        "Si-Yu Wu",
+        "Liang-Yu Liu",
+        "Yang Liu",
+        "Yu Wu",
+        "Hai-Long Yang",
+        "Ke Zhang",
+        "Jing Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+      "identity_tokens": [
+        "id:SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+        "title:moeinfinity offloadingefficient moe model serving",
+        "url:https://www.semanticscholar.org/paper/b43e2cd01d23f3bdb90751d0d2893bd8388f1a71"
+      ],
+      "record": {
+        "title": "MoE-Infinity: Offloading-Efficient MoE Model Serving",
+        "source_url": "https://www.semanticscholar.org/paper/b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 42,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71"
+        ],
+        "semantic_scholar_id": "b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+        "canonical_id": "SemanticScholar:b43e2cd01d23f3bdb90751d0d2893bd8388f1a71",
+        "authors": [
+          "Leyang Xue",
+          "Yao Fu",
+          "Zhan Lu",
+          "Luo Mai",
+          "M. Marina"
+        ],
+        "priority": 42,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 42,
+          "citation_count": 42,
+          "total": 42,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+      "identity_tokens": [
+        "id:SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+        "title:bie biexponent block floatingpoint for large language models quantization",
+        "url:https://www.semanticscholar.org/paper/b3156ef0ede90712840f6bb639fb3295b2fa7bf6"
+      ],
+      "record": {
+        "title": "BiE: Bi-Exponent Block Floating-Point for Large Language Models Quantization",
+        "source_url": "https://www.semanticscholar.org/paper/b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+        "year": 2024,
+        "published": null,
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6"
+        ],
+        "semantic_scholar_id": "b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+        "canonical_id": "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6",
+        "authors": [
+          "Lan-Cheng Zou",
+          "Wen-Qian Zhao",
+          "Shuo Yin",
+          "Chen Bai",
+          "Qi Sun",
+          "Bei Yu"
+        ],
+        "priority": 26,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 26,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 875,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+      "identity_tokens": [
+        "id:SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+        "title:an optimized dataflow for mitigating attention performance bottlenecks",
+        "url:https://www.semanticscholar.org/paper/42b65c3871ef550cc6d8e9668ef6646aa1db975c"
+      ],
+      "record": {
+        "title": "An Optimized Dataﬂow for Mitigating Attention Performance Bottlenecks",
+        "source_url": "https://www.semanticscholar.org/paper/42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+        "year": 2021,
+        "published": null,
+        "venue": null,
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c"
+        ],
+        "semantic_scholar_id": "42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+        "canonical_id": "SemanticScholar:42b65c3871ef550cc6d8e9668ef6646aa1db975c",
+        "authors": [
+          "Sheng-Chun Kao",
+          "Suvinay Subramanian",
+          "Gaurav Agrawal",
+          "Tushar Krishna"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1971,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19349",
+      "identity_tokens": [
+        "id:DOI:10.1145/3725843.3756073",
+        "id:SemanticScholar:927332c3799031b25378578f780de674d0b844be",
+        "id:arXiv:2505.19349",
+        "title:deca a nearcore llm decompression accelerator grounded on a 3d roofline model",
+        "url:https://arxiv.org/abs/2505.19349"
+      ],
+      "record": {
+        "title": "DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model",
+        "source_url": "https://arxiv.org/abs/2505.19349",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "Micro",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To alleviate the memory bandwidth bottleneck in Large Language Model (LLM) inference workloads, weight matrices are stored in memory in quantized and sparsified formats. Hence, before tiles of these matrices can be processed by in-core generalized matrix multiplication (GeMM) hardware engines, they need to be dequantized and de-sparsified. This is currently performed in software with vector operations. Unfortunately, this approach delivers only modest performance. Moreover, it is hard to understand how to improve the system, as the overall GeMM performance depends on the interaction between memory resources, vector units, and hardware matrix engines. This paper addresses the problem of improving the performance of these environments. For this, it first develops the novel Roof-Surface performance model, a 3D model that provides clear insights into how memory resources, vector units, and hardware matrix engines interact to deliver compressed GeMM performance. Then, it proposes DECA, a new near-core ML-model decompression accelerator. DECA offloads tile de-sparsification and dequantization from the CPU, producing ready-to-use tiles for in-core GeMM engines. Finally, it introduces a new ISA extension that enables out-of-order invocation of the near-core accelerator. With this extension, accelerator and core computations can interleave and overlap with high performance. Our evaluation shows that, in a simulated 56-core Xeon 4 server with HBM, DECA accelerates the execution of compressed GeMMs by up to 4x over the use of optimized Intel software kernels. Further, DECA reduces the next-token generation time of Llama2-70B and OPT-66B by 1.6 × —1.9 ×.",
+        "identifiers": [
+          "SemanticScholar:927332c3799031b25378578f780de674d0b844be"
+        ],
+        "semantic_scholar_id": "927332c3799031b25378578f780de674d0b844be",
+        "canonical_id": "arXiv:2505.19349",
+        "arxiv_id": "2505.19349",
+        "doi": "10.1145/3725843.3756073",
+        "authors": [
+          "Gerasimos Gerogiannis",
+          "Stijn Eyerman",
+          "Evangelos Georganas",
+          "W. Heirman",
+          "J. Torrellas"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 547,
+          "matched_prestigious_venue": "MICRO"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.367",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.367",
+        "id:SemanticScholar:bb00a780fb82a6dec2550ce78f905fe371f070ee",
+        "title:eopllm energy oriented pruning for large language models",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.367"
+      ],
+      "record": {
+        "title": "EOP-LLM: Energy Oriented Pruning for Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.367",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:bb00a780fb82a6dec2550ce78f905fe371f070ee"
+        ],
+        "semantic_scholar_id": "bb00a780fb82a6dec2550ce78f905fe371f070ee",
+        "doi": "10.18653/v1/2026.findings-acl.367",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.367",
+        "authors": [
+          "Guan Huang",
+          "Tao Shu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+      "identity_tokens": [
+        "id:SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+        "title:efficient distributed llm inference with dynamic partitioning",
+        "url:https://www.semanticscholar.org/paper/8d3afec4b9114afed276997d483c284deb60eb64"
+      ],
+      "record": {
+        "title": "Efficient Distributed LLM Inference with Dynamic Partitioning",
+        "source_url": "https://www.semanticscholar.org/paper/8d3afec4b9114afed276997d483c284deb60eb64",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64"
+        ],
+        "semantic_scholar_id": "8d3afec4b9114afed276997d483c284deb60eb64",
+        "canonical_id": "SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64",
+        "authors": [
+          "Isaac Ong"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3689031.3717489",
+      "identity_tokens": [
+        "id:DOI:10.1145/3689031.3717489",
+        "id:SemanticScholar:36fb47f8d1c877ed3f75207be25d50afa503ef28",
+        "title:neustream bridging deep learning serving and stream processing",
+        "url:https://doi.org/10.1145/3689031.3717489"
+      ],
+      "record": {
+        "title": "NeuStream: Bridging Deep Learning Serving and Stream Processing",
+        "source_url": "https://doi.org/10.1145/3689031.3717489",
+        "year": 2025,
+        "published": "2025-03-30",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern Deep Neural Network (DNN) exhibits a pattern where multiple sub-models are executed, guided by control flows such as loops and switch/merge operations. This dynamic nature introduces complexities in batching the requests of such DNNs for efficient execution on GPUs. In this paper, we present NeuStream, a programming model and runtime system for serving deep learning workloads using stream processing. NeuStream decomposes the inference workflow into modules and forms them into a streaming processing system where a request flows through. Based on such abstraction, NeuStream is able to batch requests at fine-grained module granularity. To maximize serving goodput, NeuStream exploits a two-level scheduling approach to decide the best batching requests and resource allocation for each module while satisfying service level objectives (SLOs). Our evaluation of NeuStream on a set of modern DNNs like Large Language Models (LLM) and diffusion models, etc., shows that NeuStream significantly improves goodput compared to state-of-the-art DNN serving systems.",
+        "identifiers": [
+          "SemanticScholar:36fb47f8d1c877ed3f75207be25d50afa503ef28"
+        ],
+        "semantic_scholar_id": "36fb47f8d1c877ed3f75207be25d50afa503ef28",
+        "doi": "10.1145/3689031.3717489",
+        "canonical_id": "DOI:10.1145/3689031.3717489",
+        "authors": [
+          "Hao-Chen Yuan",
+          "Yuan-Qing Wang",
+          "Wen-Hao Xie",
+          "Yu Cheng",
+          "Zi-Ming Miao",
+          "Ling-Xiao Ma",
+          "Ji-Long Xue",
+          "Zhi Yang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 603,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "identity_tokens": [
+        "id:SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+        "title:t ri i nfer h ybrid d isaggregated s cheduling for m ultimodal l arge l anguage m odel s erving",
+        "url:https://www.semanticscholar.org/paper/2250dcb979f60ed25bfe6c7ba3e62c758dd0273a"
+      ],
+      "record": {
+        "title": "T RI I NFER : H YBRID D ISAGGREGATED S CHEDULING FOR M ULTIMODAL L ARGE L ANGUAGE M ODEL S ERVING",
+        "source_url": "https://www.semanticscholar.org/paper/2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a"
+        ],
+        "semantic_scholar_id": "2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+        "canonical_id": "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+        "authors": [
+          "Xian-Zhe Dong",
+          "Tong-Xuan Liu",
+          "Yu-Ting Zeng",
+          "Wei-Zhe Huang",
+          "Xiao-Yang Zhao",
+          "Si-Yu Wu",
+          "Liang-Yu Liu",
+          "Yang Liu",
+          "Yu Wu",
+          "Hai-Long Yang",
+          "Ke Zhang",
+          "Jing Li"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b1e6443e0926fd0d242905445663055176b1ced713c3447ee4d83fde767c937f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

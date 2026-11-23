@@ -1,0 +1,252 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-96c6c1dd4feab13a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-96c6c1dd4fea",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icws62655.2024.00157",
+    "arXiv:2601.22563"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "559fdf033cbc839a7002addf61c1f7c34400f340",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T10:45:53.623340+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icws62655.2024.00157",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Planck: Optimizing LLM Inference Performance in Pipeline Parallelism with Fine-Grained SLO Constraint",
+      "source_url": "https://doi.org/10.1109/ICWS62655.2024.00157",
+      "year": 2024,
+      "published": "2024-07-07",
+      "venue": "2024 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism is an important strategy for improving inference performance in Large Language Models (LLMs). However, we find that different stages of LLM pipelines exhibit distinct performance and request characteristics, posing challenges to system performance in online inference scenarios. To address this issue, we propose Planck, a performance optimization framework tailored for LLM pipeline inference. By balancing request traffic, queue length, and execution time at each stage, Planck introduces a progressive SLO (Service Level Objective) allocation method and a stage instance performance controller. Planck fine-grainedly allocates SLOs to each pipeline stage and dynamically adjusts according to request distribution to control queue length. Through optimizing queue lengths across different stages of the model pipeline, Planck effectively reduces waiting time and tail latency. Evaluations conducted on a real cloud cluster using diverse workloads demonstrate that Planck effectively reduces P99 latency and queue length for each pipeline stage.",
+      "identifiers": [
+        "SemanticScholar:8be250464f3a8d975fd1048024ea8234f7af0a5f"
+      ],
+      "semantic_scholar_id": "8be250464f3a8d975fd1048024ea8234f7af0a5f",
+      "doi": "10.1109/ICWS62655.2024.00157",
+      "canonical_id": "DOI:10.1109/ICWS62655.2024.00157",
+      "authors": [
+        "Yan-Ying Lin",
+        "Shi-Jie Peng",
+        "Shuai-Peng Wu",
+        "Yan-Bo Li",
+        "Cheng-Zhi Lu",
+        "Cheng-Zhong Xu",
+        "Ke-Jiang Ye"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 869,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EUGens: Efficient, Unified, and General Dense Layers",
+      "source_url": "https://arxiv.org/abs/2601.22563",
+      "year": 2024,
+      "published": "2024-10-13",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient neural networks are essential for scaling machine learning models to real-time applications and resource-constrained environments. Fully-connected feedforward layers (FFLs) introduce computation and parameter count bottlenecks within neural network architectures. To address this challenge, in this work, we propose a new class of dense layers that generalize standard fully-connected feedforward layers, \\textbf{E}fficient, \\textbf{U}nified and \\textbf{Gen}eral dense layers (EUGens). EUGens leverage random features to approximate standard FFLs and go beyond them by incorporating a direct dependence on the input norms in their computations. The proposed layers unify existing efficient FFL extensions and improve efficiency by reducing inference complexity from quadratic to linear time. They also lead to \\textbf{the first} unbiased algorithms approximating FFLs with arbitrary polynomial activation functions. Furthermore, EuGens reduce the parameter count and computational overhead while preserving the expressive power and adaptability of FFLs. We also present a layer-wise knowledge transfer technique that bypasses backpropagation, enabling efficient adaptation of EUGens to pre-trained models. Empirically, we observe that integrating EUGens into Transformers and MLPs yields substantial improvements in inference speed (up to \\textbf{27}\\%) and memory efficiency (up to \\textbf{30}\\%) across a range of tasks, including image classification, language model pre-training, and 3D scene reconstruction. Overall, our results highlight the potential of EUGens for the scalable deployment of large-scale neural networks in real-world scenarios.",
+      "identifiers": [
+        "SemanticScholar:5ba3f797178e890f529846da44f1e1262830b294"
+      ],
+      "semantic_scholar_id": "5ba3f797178e890f529846da44f1e1262830b294",
+      "canonical_id": "arXiv:2601.22563",
+      "arxiv_id": "2601.22563",
+      "doi": "10.48550/arXiv.2601.22563",
+      "authors": [
+        "Sang Min Kim",
+        "Byeongchang Kim",
+        "Arijit Sehanobish",
+        "Somnath Basu Roy Chowdhury",
+        "Rahul Kidambi",
+        "D. Shim",
+        "Kumar Avinava Dubey",
+        "Snigdha Chaturvedi",
+        "Min-hwan Oh",
+        "Krzysztof Choromanski"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 771,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/icws62655.2024.00157",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws62655.2024.00157",
+        "id:SemanticScholar:8be250464f3a8d975fd1048024ea8234f7af0a5f",
+        "title:planck optimizing llm inference performance in pipeline parallelism with finegrained slo constraint",
+        "url:https://doi.org/10.1109/ICWS62655.2024.00157"
+      ],
+      "record": {
+        "title": "Planck: Optimizing LLM Inference Performance in Pipeline Parallelism with Fine-Grained SLO Constraint",
+        "source_url": "https://doi.org/10.1109/ICWS62655.2024.00157",
+        "year": 2024,
+        "published": "2024-07-07",
+        "venue": "2024 IEEE International Conference on Web Services (ICWS)",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pipeline parallelism is an important strategy for improving inference performance in Large Language Models (LLMs). However, we find that different stages of LLM pipelines exhibit distinct performance and request characteristics, posing challenges to system performance in online inference scenarios. To address this issue, we propose Planck, a performance optimization framework tailored for LLM pipeline inference. By balancing request traffic, queue length, and execution time at each stage, Planck introduces a progressive SLO (Service Level Objective) allocation method and a stage instance performance controller. Planck fine-grainedly allocates SLOs to each pipeline stage and dynamically adjusts according to request distribution to control queue length. Through optimizing queue lengths across different stages of the model pipeline, Planck effectively reduces waiting time and tail latency. Evaluations conducted on a real cloud cluster using diverse workloads demonstrate that Planck effectively reduces P99 latency and queue length for each pipeline stage.",
+        "identifiers": [
+          "SemanticScholar:8be250464f3a8d975fd1048024ea8234f7af0a5f"
+        ],
+        "semantic_scholar_id": "8be250464f3a8d975fd1048024ea8234f7af0a5f",
+        "doi": "10.1109/ICWS62655.2024.00157",
+        "canonical_id": "DOI:10.1109/ICWS62655.2024.00157",
+        "authors": [
+          "Yan-Ying Lin",
+          "Shi-Jie Peng",
+          "Shuai-Peng Wu",
+          "Yan-Bo Li",
+          "Cheng-Zhi Lu",
+          "Cheng-Zhong Xu",
+          "Ke-Jiang Ye"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 869,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.22563",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22563",
+        "id:SemanticScholar:5ba3f797178e890f529846da44f1e1262830b294",
+        "id:arXiv:2601.22563",
+        "title:eugens efficient unified and general dense layers",
+        "url:https://arxiv.org/abs/2601.22563"
+      ],
+      "record": {
+        "title": "EUGens: Efficient, Unified, and General Dense Layers",
+        "source_url": "https://arxiv.org/abs/2601.22563",
+        "year": 2024,
+        "published": "2024-10-13",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient neural networks are essential for scaling machine learning models to real-time applications and resource-constrained environments. Fully-connected feedforward layers (FFLs) introduce computation and parameter count bottlenecks within neural network architectures. To address this challenge, in this work, we propose a new class of dense layers that generalize standard fully-connected feedforward layers, \\textbf{E}fficient, \\textbf{U}nified and \\textbf{Gen}eral dense layers (EUGens). EUGens leverage random features to approximate standard FFLs and go beyond them by incorporating a direct dependence on the input norms in their computations. The proposed layers unify existing efficient FFL extensions and improve efficiency by reducing inference complexity from quadratic to linear time. They also lead to \\textbf{the first} unbiased algorithms approximating FFLs with arbitrary polynomial activation functions. Furthermore, EuGens reduce the parameter count and computational overhead while preserving the expressive power and adaptability of FFLs. We also present a layer-wise knowledge transfer technique that bypasses backpropagation, enabling efficient adaptation of EUGens to pre-trained models. Empirically, we observe that integrating EUGens into Transformers and MLPs yields substantial improvements in inference speed (up to \\textbf{27}\\%) and memory efficiency (up to \\textbf{30}\\%) across a range of tasks, including image classification, language model pre-training, and 3D scene reconstruction. Overall, our results highlight the potential of EUGens for the scalable deployment of large-scale neural networks in real-world scenarios.",
+        "identifiers": [
+          "SemanticScholar:5ba3f797178e890f529846da44f1e1262830b294"
+        ],
+        "semantic_scholar_id": "5ba3f797178e890f529846da44f1e1262830b294",
+        "canonical_id": "arXiv:2601.22563",
+        "arxiv_id": "2601.22563",
+        "doi": "10.48550/arXiv.2601.22563",
+        "authors": [
+          "Sang Min Kim",
+          "Byeongchang Kim",
+          "Arijit Sehanobish",
+          "Somnath Basu Roy Chowdhury",
+          "Rahul Kidambi",
+          "D. Shim",
+          "Kumar Avinava Dubey",
+          "Snigdha Chaturvedi",
+          "Min-hwan Oh",
+          "Krzysztof Choromanski"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 771,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b2a18d678580311fc52ce8cb5105dc349ac9441a44a6a38c746a8f02df611e17",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

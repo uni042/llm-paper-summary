@@ -1,0 +1,522 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-90e4f6d2182db05f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-90e4f6d2182d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iscas56072.2025.11043714",
+    "DOI:10.1109/wcnc65185.2026.11555072",
+    "DOI:10.18653/v1/2025.acl-industry.48",
+    "arXiv:2310.12818",
+    "arXiv:2609.15838"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "559fdf033cbc839a7002addf61c1f7c34400f340",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T10:46:07.996825+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043714",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/wcnc65185.2026.11555072",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.acl-industry.48",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.12818",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.15838",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
+      "source_url": "https://arxiv.org/abs/2609.15838",
+      "year": 2026,
+      "published": "2026-09-14",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Per-matrix singular value decomposition (SVD) truncation is Eckart-Young optimal in the whitened Frobenius norm, but errors from independently compressed matrices compound through the block's nonlinear forward pass. Inspired in part by hierarchical variational optimization in quantum many-body methods, we introduce a three-level chain that widens optimization scope from individual matrices to Transformer blocks to the full model: whitened SVD~(L1), block-level joint optimization~(L2), and end-to-end language-modeling loss refinement~(L3), all from 256 calibration sequences, with no instruction or recovery data. On LLaMA-7B at 60% compression, the chain reduces WikiText-2 perplexity from 42.1 to 19.1 to 11.4. The block-level stage acts as a regularizer: skipping it worsens Penn Treebank (PTB) perplexity by 24 points, a gap that additional end-to-end training did not close in our experiments. Perplexity gains hold across 20-80% compression, five architectures up to 13B parameters, and both in-distribution and out-of-distribution benchmarks, though the cross-architecture rows use architecture-specific configurations and the ratio sweep was not run under one common protocol. With more calibration data, skipping the block-level stage becomes competitive, revealing an offline compute--data trade-off. We therefore claim improvements only in perplexity and compression fidelity; downstream accuracy remains well below the dense model.",
+      "identifiers": [
+        "SemanticScholar:8f740c4bbe0522e35439d5e965b980630321214e"
+      ],
+      "semantic_scholar_id": "8f740c4bbe0522e35439d5e965b980630321214e",
+      "canonical_id": "arXiv:2609.15838",
+      "arxiv_id": "2609.15838",
+      "doi": "10.18653/2026.findings-emnlp.251",
+      "authors": [
+        "Hui-Cheng Zhang",
+        "Xi-Yao Feng",
+        "Ze-Tong Li",
+        "Cheng-Kai Zhu",
+        "Xiao Shi",
+        "Xi-Wei Pan",
+        "Jin-Guo Liu",
+        "Ge Bai",
+        "Xin Wang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 70,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Speed Without Sacrifice: Fine-Tuning Language Models with Medusa and Knowledge Distillation in Travel Applications",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-industry.48",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In high-stakes industrial NLP applications, balancing generation quality with speed and efficiency presents significant challenges. We address them by investigating two complementary optimization approaches: Medusa for speculative decoding and knowledge distillation (KD) for model compression. We demonstrate the practical application of these techniques in real-world travel domain tasks, including trip planning, smart filters, and generating accommodation descriptions. We introduce modifications to the Medusa implementation, starting with base pre-trained models rather than conversational fine-tuned ones, and developing a simplified single-stage training process for Medusa-2 that maintains performance while reducing computational requirements. Lastly, we present a novel framework that combines Medusa with KD, achieving compounded benefits in both model size and inference speed. Our experiments with TinyLlama-1.1B as the student model and Llama-3.1-70B as the teacher show that the combined approach maintains the teacher’s performance quality while reducing inference latency by 10-20x.",
+      "identifiers": [
+        "SemanticScholar:d70eead076dd6d658c77360aa06d452fd386b687"
+      ],
+      "semantic_scholar_id": "d70eead076dd6d658c77360aa06d452fd386b687",
+      "doi": "10.18653/v1/2025.acl-industry.48",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-industry.48",
+      "authors": [
+        "Daniel Zagyva",
+        "Emmanouil Stergiadis",
+        "Laurens Van Der Maas",
+        "Aleksandra Dokic",
+        "Eran Fainman",
+        "Ilya Gusev",
+        "Moran Beladev"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Boosting Inference Efficiency: Unleashing the Power of Parameter-Shared Pre-trained Language Models",
+      "source_url": "https://arxiv.org/abs/2310.12818",
+      "year": 2023,
+      "published": "2023-10-19",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parameter-shared pre-trained language models (PLMs) have emerged as a successful approach in resource-constrained environments, enabling substantial reductions in model storage and memory costs without significant performance compromise. However, it is important to note that parameter sharing does not alleviate computational burdens associated with inference, thus impeding its practicality in situations characterized by limited stringent latency requirements or computational resources. Building upon neural ordinary differential equations (ODEs), we introduce a straightforward technique to enhance the inference efficiency of parameter-shared PLMs. Additionally, we propose a simple pre-training technique that leads to fully or partially shared models capable of achieving even greater inference acceleration. The experimental results demonstrate the effectiveness of our methods on both autoregressive and autoencoding PLMs, providing novel insights into more efficient utilization of parameter-shared models in resource-constrained settings.",
+      "identifiers": [
+        "SemanticScholar:0a3dae1d8da0f97d754f4b3077763587c3a9aebd"
+      ],
+      "semantic_scholar_id": "0a3dae1d8da0f97d754f4b3077763587c3a9aebd",
+      "canonical_id": "arXiv:2310.12818",
+      "arxiv_id": "2310.12818",
+      "doi": "10.48550/arXiv.2310.12818",
+      "authors": [
+        "Weize Chen",
+        "Xiao-Yue Xu",
+        "Xu Han",
+        "Yankai Lin",
+        "Ruo-Bing Xie",
+        "Zhi-Yuan Liu",
+        "Maosong Sun",
+        "Jie Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1131,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Model Splitting and Computing Resource Allocation for Collaborative Edge-Device LLM Inference: A Transformer-Enhanced DRL Approach",
+      "source_url": "https://doi.org/10.1109/WCNC65185.2026.11555072",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "IEEE Wireless Communications and Networking Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The edge-device collaborative computing paradigm enables low-latency AI inference while preserving privacy, particularly for deep neural networks (DNNs). However, existing model splitting approaches, primarily designed for DNNs, fail to account for the distinct computational characteristics between the prefill and decoding phases in large language model (LLM) inference, often resulting in excessive latency. To address this issue, this paper proposes a novel collaborative edge-device LLM inference framework that decouples the prefill and decoding stages and strategically partitions the model between the edge server and the end device, balancing latency and privacy. We further formulate a joint optimization problem for split point selection and resource allocation to minimize inference latency. To solve this problem, a transformer-enhanced actor-critic (A2C) algorithm is developed. By incorporating a transformer encoder, the algorithm captures global system states and inter-user dependencies, thereby supporting effective multi-user decision-making in dynamic environments, such as fluctuating channel conditions, varying numbers of users, and diverse user attributes, without retraining. Comprehensive simulations validate that our framework significantly outperforms existing baselines across key performance metrics, including latency and energy consumption.",
+      "identifiers": [
+        "SemanticScholar:1f2002724fa1e2bf3bd033ed13e717fb4093d9b4"
+      ],
+      "semantic_scholar_id": "1f2002724fa1e2bf3bd033ed13e717fb4093d9b4",
+      "doi": "10.1109/WCNC65185.2026.11555072",
+      "canonical_id": "DOI:10.1109/WCNC65185.2026.11555072",
+      "authors": [
+        "Xin-Zhu Chen",
+        "Feng-Xian Guo",
+        "Chen-Xi Liu",
+        "Mu-Gen Peng",
+        "T. Quek"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A 4.21 TFLOPS/W Memory-Efficient LLM Inference Accelerator with Bit-Layered Non-Uniform Quantization",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043714",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Non-uniform Quantization (NUQ) is widely used in LLM accelerators due to its high accuracy. However, employing NUQ with models of varying sizes can substantially increase storage requirements on mobile devices. This paper presents a bit-layered NUQ accelerator architecture that supports multiple bit-width configurations while minimizing memory usage. Key features include Reconfigurable Condensed Look-up Accumulator (RCLA), Dual-Sign Path Accumulation (DSPA), and MSB-Sparse Encoding Compression (MSEC). RCLA enables the use of multiple weight precisions within a uniform PE array. In particular, it optimizes PE utilization in high-bit-width NUQ modes, reducing accumulation cycles by 63.2 %. DSPA facilitates energy-efficient computation, resulting in an average power reduction of 40.7 % across various weight modes. MSEC enhances weight compression, reducing the data storage size of each bit plane by up to 47.7 %. The proposed design supports models of different sizes, improves energy efficiency, and reduces memory capacity requirements, rendering it ideal for mobile LLM inference.",
+      "identifiers": [
+        "SemanticScholar:9ee731e6c71837a7e548978bfe0bda496d224557"
+      ],
+      "semantic_scholar_id": "9ee731e6c71837a7e548978bfe0bda496d224557",
+      "doi": "10.1109/ISCAS56072.2025.11043714",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043714",
+      "authors": [
+        "Byeongcheol Kim",
+        "Sangjin Kim",
+        "Sangwoo Ha",
+        "Soyeon Um",
+        "Kyomin Sohn",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 547,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.15838",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.findings-emnlp.251",
+        "id:SemanticScholar:8f740c4bbe0522e35439d5e965b980630321214e",
+        "id:arXiv:2609.15838",
+        "title:permatrix optimality is not enough threelevel optimization for lowrank llm compression",
+        "url:https://arxiv.org/abs/2609.15838"
+      ],
+      "record": {
+        "title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
+        "source_url": "https://arxiv.org/abs/2609.15838",
+        "year": 2026,
+        "published": "2026-09-14",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Per-matrix singular value decomposition (SVD) truncation is Eckart-Young optimal in the whitened Frobenius norm, but errors from independently compressed matrices compound through the block's nonlinear forward pass. Inspired in part by hierarchical variational optimization in quantum many-body methods, we introduce a three-level chain that widens optimization scope from individual matrices to Transformer blocks to the full model: whitened SVD~(L1), block-level joint optimization~(L2), and end-to-end language-modeling loss refinement~(L3), all from 256 calibration sequences, with no instruction or recovery data. On LLaMA-7B at 60% compression, the chain reduces WikiText-2 perplexity from 42.1 to 19.1 to 11.4. The block-level stage acts as a regularizer: skipping it worsens Penn Treebank (PTB) perplexity by 24 points, a gap that additional end-to-end training did not close in our experiments. Perplexity gains hold across 20-80% compression, five architectures up to 13B parameters, and both in-distribution and out-of-distribution benchmarks, though the cross-architecture rows use architecture-specific configurations and the ratio sweep was not run under one common protocol. With more calibration data, skipping the block-level stage becomes competitive, revealing an offline compute--data trade-off. We therefore claim improvements only in perplexity and compression fidelity; downstream accuracy remains well below the dense model.",
+        "identifiers": [
+          "SemanticScholar:8f740c4bbe0522e35439d5e965b980630321214e"
+        ],
+        "semantic_scholar_id": "8f740c4bbe0522e35439d5e965b980630321214e",
+        "canonical_id": "arXiv:2609.15838",
+        "arxiv_id": "2609.15838",
+        "doi": "10.18653/2026.findings-emnlp.251",
+        "authors": [
+          "Hui-Cheng Zhang",
+          "Xi-Yao Feng",
+          "Ze-Tong Li",
+          "Cheng-Kai Zhu",
+          "Xiao Shi",
+          "Xi-Wei Pan",
+          "Jin-Guo Liu",
+          "Ge Bai",
+          "Xin Wang"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 70,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.acl-industry.48",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.acl-industry.48",
+        "id:SemanticScholar:d70eead076dd6d658c77360aa06d452fd386b687",
+        "title:speed without sacrifice finetuning language models with medusa and knowledge distillation in travel applications",
+        "url:https://doi.org/10.18653/v1/2025.acl-industry.48"
+      ],
+      "record": {
+        "title": "Speed Without Sacrifice: Fine-Tuning Language Models with Medusa and Knowledge Distillation in Travel Applications",
+        "source_url": "https://doi.org/10.18653/v1/2025.acl-industry.48",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In high-stakes industrial NLP applications, balancing generation quality with speed and efficiency presents significant challenges. We address them by investigating two complementary optimization approaches: Medusa for speculative decoding and knowledge distillation (KD) for model compression. We demonstrate the practical application of these techniques in real-world travel domain tasks, including trip planning, smart filters, and generating accommodation descriptions. We introduce modifications to the Medusa implementation, starting with base pre-trained models rather than conversational fine-tuned ones, and developing a simplified single-stage training process for Medusa-2 that maintains performance while reducing computational requirements. Lastly, we present a novel framework that combines Medusa with KD, achieving compounded benefits in both model size and inference speed. Our experiments with TinyLlama-1.1B as the student model and Llama-3.1-70B as the teacher show that the combined approach maintains the teacher’s performance quality while reducing inference latency by 10-20x.",
+        "identifiers": [
+          "SemanticScholar:d70eead076dd6d658c77360aa06d452fd386b687"
+        ],
+        "semantic_scholar_id": "d70eead076dd6d658c77360aa06d452fd386b687",
+        "doi": "10.18653/v1/2025.acl-industry.48",
+        "canonical_id": "DOI:10.18653/v1/2025.acl-industry.48",
+        "authors": [
+          "Daniel Zagyva",
+          "Emmanouil Stergiadis",
+          "Laurens Van Der Maas",
+          "Aleksandra Dokic",
+          "Eran Fainman",
+          "Ilya Gusev",
+          "Moran Beladev"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.12818",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.12818",
+        "id:SemanticScholar:0a3dae1d8da0f97d754f4b3077763587c3a9aebd",
+        "id:arXiv:2310.12818",
+        "title:boosting inference efficiency unleashing the power of parametershared pretrained language models",
+        "url:https://arxiv.org/abs/2310.12818"
+      ],
+      "record": {
+        "title": "Boosting Inference Efficiency: Unleashing the Power of Parameter-Shared Pre-trained Language Models",
+        "source_url": "https://arxiv.org/abs/2310.12818",
+        "year": 2023,
+        "published": "2023-10-19",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parameter-shared pre-trained language models (PLMs) have emerged as a successful approach in resource-constrained environments, enabling substantial reductions in model storage and memory costs without significant performance compromise. However, it is important to note that parameter sharing does not alleviate computational burdens associated with inference, thus impeding its practicality in situations characterized by limited stringent latency requirements or computational resources. Building upon neural ordinary differential equations (ODEs), we introduce a straightforward technique to enhance the inference efficiency of parameter-shared PLMs. Additionally, we propose a simple pre-training technique that leads to fully or partially shared models capable of achieving even greater inference acceleration. The experimental results demonstrate the effectiveness of our methods on both autoregressive and autoencoding PLMs, providing novel insights into more efficient utilization of parameter-shared models in resource-constrained settings.",
+        "identifiers": [
+          "SemanticScholar:0a3dae1d8da0f97d754f4b3077763587c3a9aebd"
+        ],
+        "semantic_scholar_id": "0a3dae1d8da0f97d754f4b3077763587c3a9aebd",
+        "canonical_id": "arXiv:2310.12818",
+        "arxiv_id": "2310.12818",
+        "doi": "10.48550/arXiv.2310.12818",
+        "authors": [
+          "Weize Chen",
+          "Xiao-Yue Xu",
+          "Xu Han",
+          "Yankai Lin",
+          "Ruo-Bing Xie",
+          "Zhi-Yuan Liu",
+          "Maosong Sun",
+          "Jie Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1131,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/wcnc65185.2026.11555072",
+      "identity_tokens": [
+        "id:DOI:10.1109/wcnc65185.2026.11555072",
+        "id:SemanticScholar:1f2002724fa1e2bf3bd033ed13e717fb4093d9b4",
+        "title:model splitting and computing resource allocation for collaborative edgedevice llm inference a transformerenhanced drl approach",
+        "url:https://doi.org/10.1109/WCNC65185.2026.11555072"
+      ],
+      "record": {
+        "title": "Model Splitting and Computing Resource Allocation for Collaborative Edge-Device LLM Inference: A Transformer-Enhanced DRL Approach",
+        "source_url": "https://doi.org/10.1109/WCNC65185.2026.11555072",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "IEEE Wireless Communications and Networking Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The edge-device collaborative computing paradigm enables low-latency AI inference while preserving privacy, particularly for deep neural networks (DNNs). However, existing model splitting approaches, primarily designed for DNNs, fail to account for the distinct computational characteristics between the prefill and decoding phases in large language model (LLM) inference, often resulting in excessive latency. To address this issue, this paper proposes a novel collaborative edge-device LLM inference framework that decouples the prefill and decoding stages and strategically partitions the model between the edge server and the end device, balancing latency and privacy. We further formulate a joint optimization problem for split point selection and resource allocation to minimize inference latency. To solve this problem, a transformer-enhanced actor-critic (A2C) algorithm is developed. By incorporating a transformer encoder, the algorithm captures global system states and inter-user dependencies, thereby supporting effective multi-user decision-making in dynamic environments, such as fluctuating channel conditions, varying numbers of users, and diverse user attributes, without retraining. Comprehensive simulations validate that our framework significantly outperforms existing baselines across key performance metrics, including latency and energy consumption.",
+        "identifiers": [
+          "SemanticScholar:1f2002724fa1e2bf3bd033ed13e717fb4093d9b4"
+        ],
+        "semantic_scholar_id": "1f2002724fa1e2bf3bd033ed13e717fb4093d9b4",
+        "doi": "10.1109/WCNC65185.2026.11555072",
+        "canonical_id": "DOI:10.1109/WCNC65185.2026.11555072",
+        "authors": [
+          "Xin-Zhu Chen",
+          "Feng-Xian Guo",
+          "Chen-Xi Liu",
+          "Mu-Gen Peng",
+          "T. Quek"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas56072.2025.11043714",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043714",
+        "id:SemanticScholar:9ee731e6c71837a7e548978bfe0bda496d224557",
+        "title:a 421 tflopsw memoryefficient llm inference accelerator with bitlayered nonuniform quantization",
+        "url:https://doi.org/10.1109/ISCAS56072.2025.11043714"
+      ],
+      "record": {
+        "title": "A 4.21 TFLOPS/W Memory-Efficient LLM Inference Accelerator with Bit-Layered Non-Uniform Quantization",
+        "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043714",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Non-uniform Quantization (NUQ) is widely used in LLM accelerators due to its high accuracy. However, employing NUQ with models of varying sizes can substantially increase storage requirements on mobile devices. This paper presents a bit-layered NUQ accelerator architecture that supports multiple bit-width configurations while minimizing memory usage. Key features include Reconfigurable Condensed Look-up Accumulator (RCLA), Dual-Sign Path Accumulation (DSPA), and MSB-Sparse Encoding Compression (MSEC). RCLA enables the use of multiple weight precisions within a uniform PE array. In particular, it optimizes PE utilization in high-bit-width NUQ modes, reducing accumulation cycles by 63.2 %. DSPA facilitates energy-efficient computation, resulting in an average power reduction of 40.7 % across various weight modes. MSEC enhances weight compression, reducing the data storage size of each bit plane by up to 47.7 %. The proposed design supports models of different sizes, improves energy efficiency, and reduces memory capacity requirements, rendering it ideal for mobile LLM inference.",
+        "identifiers": [
+          "SemanticScholar:9ee731e6c71837a7e548978bfe0bda496d224557"
+        ],
+        "semantic_scholar_id": "9ee731e6c71837a7e548978bfe0bda496d224557",
+        "doi": "10.1109/ISCAS56072.2025.11043714",
+        "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043714",
+        "authors": [
+          "Byeongcheol Kim",
+          "Sangjin Kim",
+          "Sangwoo Ha",
+          "Soyeon Um",
+          "Kyomin Sohn",
+          "Hoi-Jun Yoo"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 547,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5410ed2db8cf31f698b4f98b526cb062fe23db9230c93476ce2f398743b92c20",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

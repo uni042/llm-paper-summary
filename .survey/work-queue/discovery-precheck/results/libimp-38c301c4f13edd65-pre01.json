@@ -1,0 +1,450 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-38c301c4f13edd65-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-38c301c4f13e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/aicas59952.2024.10595871",
+    "arXiv:2112.08560",
+    "arXiv:2407.20228",
+    "arXiv:2605.18597"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "559fdf033cbc839a7002addf61c1f7c34400f340",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T10:45:53.340907+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/aicas59952.2024.10595871",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2112.08560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.20228",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18597",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Block-Skim: Efficient Question Answering for Transformer",
+      "source_url": "https://arxiv.org/abs/2112.08560",
+      "year": 2021,
+      "published": "2021-12-16",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 33,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer models have achieved promising results on natural language processing (NLP) tasks including extractive question answering (QA). Common Transformer encoders used in NLP tasks process the hidden states of all input tokens in the context paragraph throughout all layers. However, different from other tasks such as sequence classification, answering the raised question does not necessarily need all the tokens in the context paragraph. Following this motivation, we propose Block-skim, which learns to skim unnecessary context in higher hidden layers to improve and accelerate the Transformer performance. The key idea of Block-Skim is to identify the context that must be further processed and those that could be safely discarded early on during inference. Critically, we find that such information could be sufficiently derived from the self-attention weights inside the Transformer model. We further prune the hidden states corresponding to the unnecessary positions early in lower layers, achieving significant inference-time speedup. To our surprise, we observe that models pruned in this way outperform their full-size counterparts. Block-Skim improves QA models' accuracy on different datasets and achieves 3 times speedup on BERT-base model.",
+      "identifiers": [
+        "SemanticScholar:f5a3dbc0518df5ca1b6333ae93244dde7f793736"
+      ],
+      "semantic_scholar_id": "f5a3dbc0518df5ca1b6333ae93244dde7f793736",
+      "canonical_id": "arXiv:2112.08560",
+      "arxiv_id": "2112.08560",
+      "doi": "10.48550/arXiv.2112.08560",
+      "authors": [
+        "Yue Guan",
+        "Zhengyi Li",
+        "Zhouhan Lin",
+        "Yuhao Zhu",
+        "Jingwen Leng",
+        "Min-Yi Guo"
+      ],
+      "priority": 33,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 33,
+        "citation_count": 33,
+        "total": 33,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1803,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexAttention for Efficient High-Resolution Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2407.20228",
+      "year": 2024,
+      "published": "2024-07-29",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current high-resolution vision-language models encode images as high-resolution image tokens and exhaustively take all these tokens to compute attention, which significantly increases the computational cost. To address this problem, we propose FlexAttention, a flexible attention mechanism for efficient high-resolution vision-language models. Specifically, a high-resolution image is encoded both as high-resolution tokens and low-resolution tokens, where only the low-resolution tokens and a few selected high-resolution tokens are utilized to calculate the attention map, which greatly shrinks the computational cost. The high-resolution tokens are selected via a high-resolution selection module which could retrieve tokens of relevant regions based on an input attention map. The selected high-resolution tokens are then concatenated to the low-resolution tokens and text tokens, and input to a hierarchical self-attention layer which produces an attention map that could be used for the next-step high-resolution token selection. The hierarchical self-attention process and high-resolution token selection process are performed iteratively for each attention layer. Experiments on multimodal benchmarks prove that our FlexAttention outperforms existing high-resolution VLMs (e.g., relatively ~9% in V* Bench, ~7% in TextVQA), while also significantly reducing the computational cost by nearly 40%.",
+      "identifiers": [
+        "SemanticScholar:bc612aac20b532da7688329b3f4b0726bd6ecf8a"
+      ],
+      "semantic_scholar_id": "bc612aac20b532da7688329b3f4b0726bd6ecf8a",
+      "canonical_id": "arXiv:2407.20228",
+      "arxiv_id": "2407.20228",
+      "doi": "10.48550/arXiv.2407.20228",
+      "authors": [
+        "Jun-Yan Li",
+        "Delin Chen",
+        "Tianle Cai",
+        "Pei-Hao Chen",
+        "Yining Hong",
+        "Zhenfang Chen",
+        "Yikang Shen",
+        "Chuang Gan"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 847,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Latent Action Reparameterization for Efficient Agent Inference",
+      "source_url": "https://arxiv.org/abs/2605.18597",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents often rely on long sequences of low-level textual actions, resulting in large effective decision horizons and high inference cost. While prior work has focused on improving inference efficiency through system-level optimizations or prompt engineering, we argue that a key bottleneck lies in the representation of the action space itself. We propose Latent Action Reparameterization (LAR), a framework that learns a compact latent action space in which each latent action corresponds to a multi-step semantic behavior. By reparameterizing agent actions into latent units, LAR enables decision making over a shorter effective horizon while preserving the expressiveness of the original action space. Unlike hand-crafted macros or hierarchical controllers, latent actions are learned from agent trajectories and integrated directly into the model, allowing both planning and execution to operate over abstract action representations. Across a range of LLM-based agent benchmarks, LAR significantly reduces the effective action horizon and improves inference efficiency under fixed compute budgets. As a consequence, our approach achieves substantial reductions in action tokens and corresponding wall-clock inference time, while maintaining or improving task success rates. These results suggest that action representation learning is a critical and underexplored factor in scaling efficient LLM agent inference, complementary to advances in model architecture and hardware.",
+      "identifiers": [
+        "SemanticScholar:e1cf7d66e63f3a53d60398f78582dff971736141"
+      ],
+      "semantic_scholar_id": "e1cf7d66e63f3a53d60398f78582dff971736141",
+      "canonical_id": "arXiv:2605.18597",
+      "arxiv_id": "2605.18597",
+      "doi": "10.48550/arXiv.2605.18597",
+      "authors": [
+        "Wenhao Huang",
+        "Qing-Wen Zeng",
+        "Qi-Yue Chen",
+        "Zi-Jie Guo",
+        "Yu Sun",
+        "Cheng-Yi Yang",
+        "Si-Ru Ouyang",
+        "Jiri Gesi",
+        "Fang Wu",
+        "Jiayi Zhang",
+        "Hua-Min Chen",
+        "Bang Liu",
+        "Xiang-Ru Tang",
+        "Cheng-Lin Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HLC: A Hardware-friendly Quantization and Cache-based Accelerator for Transformer",
+      "source_url": "https://doi.org/10.1109/AICAS59952.2024.10595871",
+      "year": 2024,
+      "published": "2024-04-22",
+      "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based language representations have demonstrated superior accuracy in various natural language processing (NLP) tasks. However, their deployment on terminal hardware is challenging due to the involvement of dense matrix operations and complex data flows. In this paper, we propose a heterogeneous multi-core low-power architecture design based on cache (HLC) for TIFP11: top-K half-precision integerized floating-point format. A quantization method is proposed to enable a hardware-friendly model compression technique, TIFP11. Furthermore, parallelized process elements (PE) and storage mechanisms for TIFP11 are carefully designed. Additionally, a cache architecture based on heterogeneous multi-core systems that significantly enhances the efficiency of transformer operations is described. We implement the transformer model using appropriate hardware scheduling. The IFP11 were deployed and verified the performance during storage and calculation. Experimental results demonstrate that the transformer deployed on VCK190 achieves a latency of 9.31ms with a batch size of 32, resulting in a 37.9× speedup compared to the CPU platform and a 1.94× speedup compared to the GPU platform.",
+      "identifiers": [
+        "SemanticScholar:d7b8ff5fddf80b62ab3f9b01bd23c79c51bbbee5"
+      ],
+      "semantic_scholar_id": "d7b8ff5fddf80b62ab3f9b01bd23c79c51bbbee5",
+      "doi": "10.1109/AICAS59952.2024.10595871",
+      "canonical_id": "DOI:10.1109/AICAS59952.2024.10595871",
+      "authors": [
+        "Xiang-Feng Sun",
+        "Yuanting Zhang",
+        "Yunchang Jiang",
+        "Zheng Li",
+        "Bingjin Han",
+        "Jun-Yi Mai",
+        "Zhibin Luo",
+        "En-Yi Yao"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 945,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2112.08560",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2112.08560",
+        "id:SemanticScholar:f5a3dbc0518df5ca1b6333ae93244dde7f793736",
+        "id:arXiv:2112.08560",
+        "title:blockskim efficient question answering for transformer",
+        "url:https://arxiv.org/abs/2112.08560"
+      ],
+      "record": {
+        "title": "Block-Skim: Efficient Question Answering for Transformer",
+        "source_url": "https://arxiv.org/abs/2112.08560",
+        "year": 2021,
+        "published": "2021-12-16",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 33,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer models have achieved promising results on natural language processing (NLP) tasks including extractive question answering (QA). Common Transformer encoders used in NLP tasks process the hidden states of all input tokens in the context paragraph throughout all layers. However, different from other tasks such as sequence classification, answering the raised question does not necessarily need all the tokens in the context paragraph. Following this motivation, we propose Block-skim, which learns to skim unnecessary context in higher hidden layers to improve and accelerate the Transformer performance. The key idea of Block-Skim is to identify the context that must be further processed and those that could be safely discarded early on during inference. Critically, we find that such information could be sufficiently derived from the self-attention weights inside the Transformer model. We further prune the hidden states corresponding to the unnecessary positions early in lower layers, achieving significant inference-time speedup. To our surprise, we observe that models pruned in this way outperform their full-size counterparts. Block-Skim improves QA models' accuracy on different datasets and achieves 3 times speedup on BERT-base model.",
+        "identifiers": [
+          "SemanticScholar:f5a3dbc0518df5ca1b6333ae93244dde7f793736"
+        ],
+        "semantic_scholar_id": "f5a3dbc0518df5ca1b6333ae93244dde7f793736",
+        "canonical_id": "arXiv:2112.08560",
+        "arxiv_id": "2112.08560",
+        "doi": "10.48550/arXiv.2112.08560",
+        "authors": [
+          "Yue Guan",
+          "Zhengyi Li",
+          "Zhouhan Lin",
+          "Yuhao Zhu",
+          "Jingwen Leng",
+          "Min-Yi Guo"
+        ],
+        "priority": 33,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 33,
+          "citation_count": 33,
+          "total": 33,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1803,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.20228",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.20228",
+        "id:SemanticScholar:bc612aac20b532da7688329b3f4b0726bd6ecf8a",
+        "id:arXiv:2407.20228",
+        "title:flexattention for efficient highresolution visionlanguage models",
+        "url:https://arxiv.org/abs/2407.20228"
+      ],
+      "record": {
+        "title": "FlexAttention for Efficient High-Resolution Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2407.20228",
+        "year": 2024,
+        "published": "2024-07-29",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current high-resolution vision-language models encode images as high-resolution image tokens and exhaustively take all these tokens to compute attention, which significantly increases the computational cost. To address this problem, we propose FlexAttention, a flexible attention mechanism for efficient high-resolution vision-language models. Specifically, a high-resolution image is encoded both as high-resolution tokens and low-resolution tokens, where only the low-resolution tokens and a few selected high-resolution tokens are utilized to calculate the attention map, which greatly shrinks the computational cost. The high-resolution tokens are selected via a high-resolution selection module which could retrieve tokens of relevant regions based on an input attention map. The selected high-resolution tokens are then concatenated to the low-resolution tokens and text tokens, and input to a hierarchical self-attention layer which produces an attention map that could be used for the next-step high-resolution token selection. The hierarchical self-attention process and high-resolution token selection process are performed iteratively for each attention layer. Experiments on multimodal benchmarks prove that our FlexAttention outperforms existing high-resolution VLMs (e.g., relatively ~9% in V* Bench, ~7% in TextVQA), while also significantly reducing the computational cost by nearly 40%.",
+        "identifiers": [
+          "SemanticScholar:bc612aac20b532da7688329b3f4b0726bd6ecf8a"
+        ],
+        "semantic_scholar_id": "bc612aac20b532da7688329b3f4b0726bd6ecf8a",
+        "canonical_id": "arXiv:2407.20228",
+        "arxiv_id": "2407.20228",
+        "doi": "10.48550/arXiv.2407.20228",
+        "authors": [
+          "Jun-Yan Li",
+          "Delin Chen",
+          "Tianle Cai",
+          "Pei-Hao Chen",
+          "Yining Hong",
+          "Zhenfang Chen",
+          "Yikang Shen",
+          "Chuang Gan"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 847,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18597",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18597",
+        "id:SemanticScholar:e1cf7d66e63f3a53d60398f78582dff971736141",
+        "id:arXiv:2605.18597",
+        "title:latent action reparameterization for efficient agent inference",
+        "url:https://arxiv.org/abs/2605.18597"
+      ],
+      "record": {
+        "title": "Latent Action Reparameterization for Efficient Agent Inference",
+        "source_url": "https://arxiv.org/abs/2605.18597",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) agents often rely on long sequences of low-level textual actions, resulting in large effective decision horizons and high inference cost. While prior work has focused on improving inference efficiency through system-level optimizations or prompt engineering, we argue that a key bottleneck lies in the representation of the action space itself. We propose Latent Action Reparameterization (LAR), a framework that learns a compact latent action space in which each latent action corresponds to a multi-step semantic behavior. By reparameterizing agent actions into latent units, LAR enables decision making over a shorter effective horizon while preserving the expressiveness of the original action space. Unlike hand-crafted macros or hierarchical controllers, latent actions are learned from agent trajectories and integrated directly into the model, allowing both planning and execution to operate over abstract action representations. Across a range of LLM-based agent benchmarks, LAR significantly reduces the effective action horizon and improves inference efficiency under fixed compute budgets. As a consequence, our approach achieves substantial reductions in action tokens and corresponding wall-clock inference time, while maintaining or improving task success rates. These results suggest that action representation learning is a critical and underexplored factor in scaling efficient LLM agent inference, complementary to advances in model architecture and hardware.",
+        "identifiers": [
+          "SemanticScholar:e1cf7d66e63f3a53d60398f78582dff971736141"
+        ],
+        "semantic_scholar_id": "e1cf7d66e63f3a53d60398f78582dff971736141",
+        "canonical_id": "arXiv:2605.18597",
+        "arxiv_id": "2605.18597",
+        "doi": "10.48550/arXiv.2605.18597",
+        "authors": [
+          "Wenhao Huang",
+          "Qing-Wen Zeng",
+          "Qi-Yue Chen",
+          "Zi-Jie Guo",
+          "Yu Sun",
+          "Cheng-Yi Yang",
+          "Si-Ru Ouyang",
+          "Jiri Gesi",
+          "Fang Wu",
+          "Jiayi Zhang",
+          "Hua-Min Chen",
+          "Bang Liu",
+          "Xiang-Ru Tang",
+          "Cheng-Lin Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 189,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/aicas59952.2024.10595871",
+      "identity_tokens": [
+        "id:DOI:10.1109/aicas59952.2024.10595871",
+        "id:SemanticScholar:d7b8ff5fddf80b62ab3f9b01bd23c79c51bbbee5",
+        "title:hlc a hardwarefriendly quantization and cachebased accelerator for transformer",
+        "url:https://doi.org/10.1109/AICAS59952.2024.10595871"
+      ],
+      "record": {
+        "title": "HLC: A Hardware-friendly Quantization and Cache-based Accelerator for Transformer",
+        "source_url": "https://doi.org/10.1109/AICAS59952.2024.10595871",
+        "year": 2024,
+        "published": "2024-04-22",
+        "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based language representations have demonstrated superior accuracy in various natural language processing (NLP) tasks. However, their deployment on terminal hardware is challenging due to the involvement of dense matrix operations and complex data flows. In this paper, we propose a heterogeneous multi-core low-power architecture design based on cache (HLC) for TIFP11: top-K half-precision integerized floating-point format. A quantization method is proposed to enable a hardware-friendly model compression technique, TIFP11. Furthermore, parallelized process elements (PE) and storage mechanisms for TIFP11 are carefully designed. Additionally, a cache architecture based on heterogeneous multi-core systems that significantly enhances the efficiency of transformer operations is described. We implement the transformer model using appropriate hardware scheduling. The IFP11 were deployed and verified the performance during storage and calculation. Experimental results demonstrate that the transformer deployed on VCK190 achieves a latency of 9.31ms with a batch size of 32, resulting in a 37.9× speedup compared to the CPU platform and a 1.94× speedup compared to the GPU platform.",
+        "identifiers": [
+          "SemanticScholar:d7b8ff5fddf80b62ab3f9b01bd23c79c51bbbee5"
+        ],
+        "semantic_scholar_id": "d7b8ff5fddf80b62ab3f9b01bd23c79c51bbbee5",
+        "doi": "10.1109/AICAS59952.2024.10595871",
+        "canonical_id": "DOI:10.1109/AICAS59952.2024.10595871",
+        "authors": [
+          "Xiang-Feng Sun",
+          "Yuanting Zhang",
+          "Yunchang Jiang",
+          "Zheng Li",
+          "Bingjin Han",
+          "Jun-Yi Mai",
+          "Zhibin Luo",
+          "En-Yi Yao"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 945,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8a6f07ddcc76bb9c12319e4ca5d70cb0ec57313aaa6a6b11dbfadb9b2b316021",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

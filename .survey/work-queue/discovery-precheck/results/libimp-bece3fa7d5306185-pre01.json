@@ -1,0 +1,306 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bece3fa7d5306185-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bece3fa7d530",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/978-981-95-2725-0_16",
+    "DOI:10.1109/pact65351.2025.00016",
+    "SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+    "SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "559fdf033cbc839a7002addf61c1f7c34400f340",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T10:46:38.391758+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/978-981-95-2725-0_16",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "DOI:10.1109/pact65351.2025.00016",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Accelerating Best-of-N via Speculative Rejection",
+      "source_url": "https://www.semanticscholar.org/paper/80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7"
+      ],
+      "semantic_scholar_id": "80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+      "canonical_id": "SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LibraPIM: Dynamic Load Rebalancing to Maximize Utilization in PIM-Assisted LLM Inference Systems",
+      "source_url": "https://doi.org/10.1109/PACT65351.2025.00016",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require inference systems that can handle both compute- and memory-intensive workloads. GPUs and NPUs (referred to as xPUs) efficiently process compute-intensive layers, while Processing-In-Memory (PIM) architectures are well suited for memory-bound stages. To exploit this complementary relationship, recent LLM inference systems have adopted heterogeneous architectures integrating xPUs with PIM units. However, this integration poses several challenges. Tight execution dependencies between the two devices limit concurrency, as PIM often must wait for data produced by the xPUs. Moreover, batch size and sequence length affect the computational load on PIM and the accelerator differently, leading to execution imbalance across devices and degrading their utilization. To address these challenges, we propose LibraPIM, a novel PIM framework that orchestrates workload rebalancing and concurrent execution between compute accelerators and in-memory compute units, enabling efficient and scalable LLM inference. LibraPIM addresses the above challenges through two key techniques: Dynamic Batch Offloading (DBO), which adaptively redirects portions of the workload to the underutilized device based on runtime profiling, and Dual-Path Execution (DEX), which enables concurrent PIM operations and memory accesses through sub-bank partitioning with minimal hardware overhead. Together, these techniques improve resource utilization across heterogeneous devices, thereby increasing system throughput in LLM inference. Our experimental results demonstrate that LibraPIM achieves $6.2 \\times$ average speedup over the baseline PIM-enabled system and delivers a $2.1 \\times$ average speedup compared to a state-of-the-art approach.",
+      "identifiers": [
+        "SemanticScholar:1e8c8bebfd540a02bffffb4ba43e8f6fc6c6bde0"
+      ],
+      "semantic_scholar_id": "1e8c8bebfd540a02bffffb4ba43e8f6fc6c6bde0",
+      "doi": "10.1109/PACT65351.2025.00016",
+      "canonical_id": "DOI:10.1109/PACT65351.2025.00016",
+      "authors": [
+        "Hyeongjun Cho",
+        "Yoonho Jang",
+        "Hyungi Kim",
+        "Seongwook Kim",
+        "Keewon Kwon",
+        "G. Kim",
+        "Seokin Hong"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 385,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Phase-Scoped Query Layouts for Reference-Preserving Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/e965d154800ba792471110f63dd2550652e8b64c",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c"
+      ],
+      "semantic_scholar_id": "e965d154800ba792471110f63dd2550652e8b64c",
+      "canonical_id": "SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c",
+      "authors": [
+        "Cheng-Zhan Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+      "identity_tokens": [
+        "id:SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+        "title:accelerating bestofn via speculative rejection",
+        "url:https://www.semanticscholar.org/paper/80b98ce3dda7c40418ceb54091ed15bd5a22acd7"
+      ],
+      "record": {
+        "title": "Accelerating Best-of-N via Speculative Rejection",
+        "source_url": "https://www.semanticscholar.org/paper/80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7"
+        ],
+        "semantic_scholar_id": "80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+        "canonical_id": "SemanticScholar:80b98ce3dda7c40418ceb54091ed15bd5a22acd7",
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/pact65351.2025.00016",
+      "identity_tokens": [
+        "id:DOI:10.1109/pact65351.2025.00016",
+        "id:SemanticScholar:1e8c8bebfd540a02bffffb4ba43e8f6fc6c6bde0",
+        "title:librapim dynamic load rebalancing to maximize utilization in pimassisted llm inference systems",
+        "url:https://doi.org/10.1109/PACT65351.2025.00016"
+      ],
+      "record": {
+        "title": "LibraPIM: Dynamic Load Rebalancing to Maximize Utilization in PIM-Assisted LLM Inference Systems",
+        "source_url": "https://doi.org/10.1109/PACT65351.2025.00016",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) require inference systems that can handle both compute- and memory-intensive workloads. GPUs and NPUs (referred to as xPUs) efficiently process compute-intensive layers, while Processing-In-Memory (PIM) architectures are well suited for memory-bound stages. To exploit this complementary relationship, recent LLM inference systems have adopted heterogeneous architectures integrating xPUs with PIM units. However, this integration poses several challenges. Tight execution dependencies between the two devices limit concurrency, as PIM often must wait for data produced by the xPUs. Moreover, batch size and sequence length affect the computational load on PIM and the accelerator differently, leading to execution imbalance across devices and degrading their utilization. To address these challenges, we propose LibraPIM, a novel PIM framework that orchestrates workload rebalancing and concurrent execution between compute accelerators and in-memory compute units, enabling efficient and scalable LLM inference. LibraPIM addresses the above challenges through two key techniques: Dynamic Batch Offloading (DBO), which adaptively redirects portions of the workload to the underutilized device based on runtime profiling, and Dual-Path Execution (DEX), which enables concurrent PIM operations and memory accesses through sub-bank partitioning with minimal hardware overhead. Together, these techniques improve resource utilization across heterogeneous devices, thereby increasing system throughput in LLM inference. Our experimental results demonstrate that LibraPIM achieves $6.2 \\times$ average speedup over the baseline PIM-enabled system and delivers a $2.1 \\times$ average speedup compared to a state-of-the-art approach.",
+        "identifiers": [
+          "SemanticScholar:1e8c8bebfd540a02bffffb4ba43e8f6fc6c6bde0"
+        ],
+        "semantic_scholar_id": "1e8c8bebfd540a02bffffb4ba43e8f6fc6c6bde0",
+        "doi": "10.1109/PACT65351.2025.00016",
+        "canonical_id": "DOI:10.1109/PACT65351.2025.00016",
+        "authors": [
+          "Hyeongjun Cho",
+          "Yoonho Jang",
+          "Hyungi Kim",
+          "Seongwook Kim",
+          "Keewon Kwon",
+          "G. Kim",
+          "Seokin Hong"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 385,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c",
+      "identity_tokens": [
+        "id:SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c",
+        "title:phasescoped query layouts for referencepreserving speculative decoding",
+        "url:https://www.semanticscholar.org/paper/e965d154800ba792471110f63dd2550652e8b64c"
+      ],
+      "record": {
+        "title": "Phase-Scoped Query Layouts for Reference-Preserving Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/e965d154800ba792471110f63dd2550652e8b64c",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c"
+        ],
+        "semantic_scholar_id": "e965d154800ba792471110f63dd2550652e8b64c",
+        "canonical_id": "SemanticScholar:e965d154800ba792471110f63dd2550652e8b64c",
+        "authors": [
+          "Cheng-Zhan Li"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f75d155a5d83570ce2d4d4b69cff54ec8ad2e74cdbcd398dd5190fab19b1523e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
