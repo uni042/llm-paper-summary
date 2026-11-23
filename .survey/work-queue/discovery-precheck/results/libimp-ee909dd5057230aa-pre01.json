@@ -1,0 +1,421 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ee909dd5057230aa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ee909dd50572",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2105.04779",
+    "arXiv:2603.24787",
+    "arXiv:2609.11192",
+    "arXiv:2610.09074"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:07.509419+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2105.04779",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.24787",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.11192",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09074",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ReLope: From Hidden-State Probing to a Decision Module for Multimodal LLM Routing",
+      "source_url": "https://arxiv.org/abs/2603.24787",
+      "year": 2026,
+      "published": "2026-03-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Routing balances performance and cost in hybrid systems by escalating selected queries from a lightweight model to a powerful but expensive one. Hidden-state probes provide an effective routing signal by predicting the small model's correctness from hidden states it already computes. Although effective in text-only settings, their behavior on multimodal LLMs (MLLMs) is less understood. We find that correctness is harder to predict from hidden states when questions are paired with images rather than with captions of those images. Two training-free dependence measures, HSIC and label CKA, show the same pattern. We first investigate whether changing hidden states used by the probe improves correctness prediction for MLLMs. We propose Attention Probe, which learns an attention query to pool frozen token states into a routing feature and improves over the standard probe. However, pooling only recombines hidden states computed for answer generation, not for deciding whether the answer should be trusted. We therefore build a decision layer inside the existing MLLM and train it for the routing decision. The resulting router, ReLope (KL-Regularized LoRA Probe), adapts a separate copy of one MLLM layer with LoRA and regularizes it with a KL-penalized stochastic bottleneck. This decision branch shares the frozen lower layers and leaves the model's answer-generation path unchanged. ReLope attains the highest correctness prediction AUC on all five benchmarks and three backbones we evaluate and improves the accuracy versus cost trade-off at negligible overhead. These results suggest a new perspective and a practical technical path on routing: rather than reading decisions off states built for generation, routing decisions can be learned by a dedicated decision layer inside the model. Code: https://github.com/Spinozaaa/ReLope",
+      "identifiers": [
+        "SemanticScholar:35ce93ce6f832b66b7c8c063f7070e53970668c5"
+      ],
+      "semantic_scholar_id": "35ce93ce6f832b66b7c8c063f7070e53970668c5",
+      "canonical_id": "arXiv:2603.24787",
+      "arxiv_id": "2603.24787",
+      "authors": [
+        "Yaopei Zeng",
+        "Cong-Chao Wang",
+        "Blake JianHang Chen",
+        "Lu Lin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlexComp: One Model for Every Ratio in Context Compression",
+      "source_url": "https://arxiv.org/abs/2609.11192",
+      "year": 2026,
+      "published": "2026-09-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Soft context compression condenses a context into a few memory tokens that a frozen LLM consumes in place of the raw text, but existing compressors fix the compression ratio at training and inference: each deployed ratio requires a separately trained model, and the chosen ratio is applied uniformly to all inputs, whose actual needs vary drastically. We propose FlexComp, a method-agnostic framework that decouples the ratio from both training and deployment: Matryoshka-style training samples the memory budget $K$ per instance, turning one model into an any-ratio compressor, and the budget is then chosen per input by: (1) confidence-based cascade routing or (2) a lightweight learned $K$ predictor. Across ICAE, 500xCompressor, and SAC on MRQA, a single FlexComp model matches separately trained fixed-ratio specialists with minimal degradation. Cascade routing preserves over 98% of the mildest ratio's accuracy at up to 266x average compression; the $K$ predictor, in a single compression-decoding pass, reaches 158-236x within 0.7 F1 of the mildest ratio. At serving-scale batch sizes, the $K$ predictor cuts context KV cache by 50% and improves decoding throughput by 47%.",
+      "identifiers": [
+        "SemanticScholar:b0fea39ff4064a5cac87d0e412aed870f718b188"
+      ],
+      "semantic_scholar_id": "b0fea39ff4064a5cac87d0e412aed870f718b188",
+      "canonical_id": "arXiv:2609.11192",
+      "arxiv_id": "2609.11192",
+      "doi": "10.48550/arXiv.2609.11192",
+      "authors": [
+        "Kai-Yan Zhao",
+        "Zhong-Tao Miao",
+        "Akiko Aizawa",
+        "Y. Tsuruoka"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 74,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EL-Attention: Memory Efficient Lossless Attention for Generation",
+      "source_url": "https://arxiv.org/abs/2105.04779",
+      "year": 2021,
+      "published": "2021-05-11",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer model with multi-head attention requires caching intermediate results for efficient inference in generation tasks. However, cache brings new memory-related costs and prevents leveraging larger batch size for faster speed. We propose memory-efficient lossless attention (called EL-attention) to address this issue. It avoids heavy operations for building multi-head keys and values, cache for them is not needed. EL-attention constructs an ensemble of attention results by expanding query while keeping key and value shared. It produces the same result as multi-head attention with less GPU memory and faster inference speed. We conduct extensive experiments on Transformer, BART, and GPT-2 for summarization and question generation tasks. The results show EL-attention speeds up existing models by 1.6x to 5.3x without accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:e723337067b923b1df75c4e92c1d17d544723772"
+      ],
+      "semantic_scholar_id": "e723337067b923b1df75c4e92c1d17d544723772",
+      "canonical_id": "arXiv:2105.04779",
+      "arxiv_id": "2105.04779",
+      "doi": "10.48550/arXiv.2105.04779",
+      "authors": [
+        "Yu Yan",
+        "Jiu-Sheng Chen",
+        "Weizhen Qi",
+        "Nikhil Bhendawade",
+        "Yeyun Gong",
+        "Nan Duan",
+        "Ruo-Fei Zhang"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2022,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "TAP: Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery",
+      "source_url": "https://arxiv.org/abs/2610.09074",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging long-horizon agentic tasks require repeated model calls, worsening the inference cost of already-costly language models. While narrow agentic tasks suggest potential for aggressive model pruning without performance drop, empirical results show existing methods proposed for question answering tasks severely degrade task performance when applied to agentic models. We trace this failure to two decisions: what to prune and how to recover. For pruning, one-shot importance estimates fail to track how the pruned model adapts. For recovery, offline distillation covers only teacher prefixes, while full-trajectory on-policy distillation causes student errors to compound across turns. In this work, we propose Trajectory-Anchored Pruning (TAP), the first structural pruning framework for reinforcement learning (RL)-trained agents. TAP couples structural pruning with efficient on-policy recovery, anchoring interactions to teacher trajectories while allowing the student to generate each reasoning-action response. A frozen dense teacher supervises the student's response prefixes, addressing within-response training-inference mismatch while preventing student-induced deviations from propagating across training turns. Instead of one-shot pruning, TAP re-scores channels using gradients of the recovery objective on the recovered student, connecting iterative channel selection to the evolving policy. With 60% of FFN channels removed, TAP retains 99.2% and 88.0% of the dense 7B agents'task success rates on ALFWorld and WebShop, respectively, while reducing GPU time per successful task by approximately 22% and 17%. These results demonstrate effective structural compression of long-horizon agents under a limited recovery budget.",
+      "identifiers": [
+        "SemanticScholar:cdc1e8d5141c7704c8a318b1dbc351303d6e8f45"
+      ],
+      "semantic_scholar_id": "cdc1e8d5141c7704c8a318b1dbc351303d6e8f45",
+      "canonical_id": "arXiv:2610.09074",
+      "arxiv_id": "2610.09074",
+      "authors": [
+        "Yuan-Zhe Li",
+        "Peng-Xin Wang",
+        "Yuxin Ren",
+        "Jia-Ning Deng",
+        "Jing-Tong Hu",
+        "Song Wang",
+        "Jing-Di Chen",
+        "Huan-Rui Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 48,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.24787",
+      "identity_tokens": [
+        "id:SemanticScholar:35ce93ce6f832b66b7c8c063f7070e53970668c5",
+        "id:arXiv:2603.24787",
+        "title:relope from hiddenstate probing to a decision module for multimodal llm routing",
+        "url:https://arxiv.org/abs/2603.24787"
+      ],
+      "record": {
+        "title": "ReLope: From Hidden-State Probing to a Decision Module for Multimodal LLM Routing",
+        "source_url": "https://arxiv.org/abs/2603.24787",
+        "year": 2026,
+        "published": "2026-03-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Routing balances performance and cost in hybrid systems by escalating selected queries from a lightweight model to a powerful but expensive one. Hidden-state probes provide an effective routing signal by predicting the small model's correctness from hidden states it already computes. Although effective in text-only settings, their behavior on multimodal LLMs (MLLMs) is less understood. We find that correctness is harder to predict from hidden states when questions are paired with images rather than with captions of those images. Two training-free dependence measures, HSIC and label CKA, show the same pattern. We first investigate whether changing hidden states used by the probe improves correctness prediction for MLLMs. We propose Attention Probe, which learns an attention query to pool frozen token states into a routing feature and improves over the standard probe. However, pooling only recombines hidden states computed for answer generation, not for deciding whether the answer should be trusted. We therefore build a decision layer inside the existing MLLM and train it for the routing decision. The resulting router, ReLope (KL-Regularized LoRA Probe), adapts a separate copy of one MLLM layer with LoRA and regularizes it with a KL-penalized stochastic bottleneck. This decision branch shares the frozen lower layers and leaves the model's answer-generation path unchanged. ReLope attains the highest correctness prediction AUC on all five benchmarks and three backbones we evaluate and improves the accuracy versus cost trade-off at negligible overhead. These results suggest a new perspective and a practical technical path on routing: rather than reading decisions off states built for generation, routing decisions can be learned by a dedicated decision layer inside the model. Code: https://github.com/Spinozaaa/ReLope",
+        "identifiers": [
+          "SemanticScholar:35ce93ce6f832b66b7c8c063f7070e53970668c5"
+        ],
+        "semantic_scholar_id": "35ce93ce6f832b66b7c8c063f7070e53970668c5",
+        "canonical_id": "arXiv:2603.24787",
+        "arxiv_id": "2603.24787",
+        "authors": [
+          "Yaopei Zeng",
+          "Cong-Chao Wang",
+          "Blake JianHang Chen",
+          "Lu Lin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.11192",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.11192",
+        "id:SemanticScholar:b0fea39ff4064a5cac87d0e412aed870f718b188",
+        "id:arXiv:2609.11192",
+        "title:flexcomp one model for every ratio in context compression",
+        "url:https://arxiv.org/abs/2609.11192"
+      ],
+      "record": {
+        "title": "FlexComp: One Model for Every Ratio in Context Compression",
+        "source_url": "https://arxiv.org/abs/2609.11192",
+        "year": 2026,
+        "published": "2026-09-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Soft context compression condenses a context into a few memory tokens that a frozen LLM consumes in place of the raw text, but existing compressors fix the compression ratio at training and inference: each deployed ratio requires a separately trained model, and the chosen ratio is applied uniformly to all inputs, whose actual needs vary drastically. We propose FlexComp, a method-agnostic framework that decouples the ratio from both training and deployment: Matryoshka-style training samples the memory budget $K$ per instance, turning one model into an any-ratio compressor, and the budget is then chosen per input by: (1) confidence-based cascade routing or (2) a lightweight learned $K$ predictor. Across ICAE, 500xCompressor, and SAC on MRQA, a single FlexComp model matches separately trained fixed-ratio specialists with minimal degradation. Cascade routing preserves over 98% of the mildest ratio's accuracy at up to 266x average compression; the $K$ predictor, in a single compression-decoding pass, reaches 158-236x within 0.7 F1 of the mildest ratio. At serving-scale batch sizes, the $K$ predictor cuts context KV cache by 50% and improves decoding throughput by 47%.",
+        "identifiers": [
+          "SemanticScholar:b0fea39ff4064a5cac87d0e412aed870f718b188"
+        ],
+        "semantic_scholar_id": "b0fea39ff4064a5cac87d0e412aed870f718b188",
+        "canonical_id": "arXiv:2609.11192",
+        "arxiv_id": "2609.11192",
+        "doi": "10.48550/arXiv.2609.11192",
+        "authors": [
+          "Kai-Yan Zhao",
+          "Zhong-Tao Miao",
+          "Akiko Aizawa",
+          "Y. Tsuruoka"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 74,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2105.04779",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2105.04779",
+        "id:SemanticScholar:e723337067b923b1df75c4e92c1d17d544723772",
+        "id:arXiv:2105.04779",
+        "title:elattention memory efficient lossless attention for generation",
+        "url:https://arxiv.org/abs/2105.04779"
+      ],
+      "record": {
+        "title": "EL-Attention: Memory Efficient Lossless Attention for Generation",
+        "source_url": "https://arxiv.org/abs/2105.04779",
+        "year": 2021,
+        "published": "2021-05-11",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer model with multi-head attention requires caching intermediate results for efficient inference in generation tasks. However, cache brings new memory-related costs and prevents leveraging larger batch size for faster speed. We propose memory-efficient lossless attention (called EL-attention) to address this issue. It avoids heavy operations for building multi-head keys and values, cache for them is not needed. EL-attention constructs an ensemble of attention results by expanding query while keeping key and value shared. It produces the same result as multi-head attention with less GPU memory and faster inference speed. We conduct extensive experiments on Transformer, BART, and GPT-2 for summarization and question generation tasks. The results show EL-attention speeds up existing models by 1.6x to 5.3x without accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:e723337067b923b1df75c4e92c1d17d544723772"
+        ],
+        "semantic_scholar_id": "e723337067b923b1df75c4e92c1d17d544723772",
+        "canonical_id": "arXiv:2105.04779",
+        "arxiv_id": "2105.04779",
+        "doi": "10.48550/arXiv.2105.04779",
+        "authors": [
+          "Yu Yan",
+          "Jiu-Sheng Chen",
+          "Weizhen Qi",
+          "Nikhil Bhendawade",
+          "Yeyun Gong",
+          "Nan Duan",
+          "Ruo-Fei Zhang"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2022,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.09074",
+      "identity_tokens": [
+        "id:SemanticScholar:cdc1e8d5141c7704c8a318b1dbc351303d6e8f45",
+        "id:arXiv:2610.09074",
+        "title:tap efficient longhorizon agent pruning via trajectoryanchored recovery",
+        "url:https://arxiv.org/abs/2610.09074"
+      ],
+      "record": {
+        "title": "TAP: Efficient Long-Horizon Agent Pruning via Trajectory-Anchored Recovery",
+        "source_url": "https://arxiv.org/abs/2610.09074",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging long-horizon agentic tasks require repeated model calls, worsening the inference cost of already-costly language models. While narrow agentic tasks suggest potential for aggressive model pruning without performance drop, empirical results show existing methods proposed for question answering tasks severely degrade task performance when applied to agentic models. We trace this failure to two decisions: what to prune and how to recover. For pruning, one-shot importance estimates fail to track how the pruned model adapts. For recovery, offline distillation covers only teacher prefixes, while full-trajectory on-policy distillation causes student errors to compound across turns. In this work, we propose Trajectory-Anchored Pruning (TAP), the first structural pruning framework for reinforcement learning (RL)-trained agents. TAP couples structural pruning with efficient on-policy recovery, anchoring interactions to teacher trajectories while allowing the student to generate each reasoning-action response. A frozen dense teacher supervises the student's response prefixes, addressing within-response training-inference mismatch while preventing student-induced deviations from propagating across training turns. Instead of one-shot pruning, TAP re-scores channels using gradients of the recovery objective on the recovered student, connecting iterative channel selection to the evolving policy. With 60% of FFN channels removed, TAP retains 99.2% and 88.0% of the dense 7B agents'task success rates on ALFWorld and WebShop, respectively, while reducing GPU time per successful task by approximately 22% and 17%. These results demonstrate effective structural compression of long-horizon agents under a limited recovery budget.",
+        "identifiers": [
+          "SemanticScholar:cdc1e8d5141c7704c8a318b1dbc351303d6e8f45"
+        ],
+        "semantic_scholar_id": "cdc1e8d5141c7704c8a318b1dbc351303d6e8f45",
+        "canonical_id": "arXiv:2610.09074",
+        "arxiv_id": "2610.09074",
+        "authors": [
+          "Yuan-Zhe Li",
+          "Peng-Xin Wang",
+          "Yuxin Ren",
+          "Jia-Ning Deng",
+          "Jing-Tong Hu",
+          "Song Wang",
+          "Jing-Di Chen",
+          "Huan-Rui Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 48,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:51682dd4f30a34419a439d0389f5c9ab6e8e799de7f66ecdb2d5e82aafc8b6a6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

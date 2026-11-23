@@ -1,0 +1,398 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-439f2e42fb1774ae-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-439f2e42fb17",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1007/s10994-026-07016-y",
+    "DOI:10.3390/drones10060410",
+    "arXiv:2607.25018",
+    "arXiv:2611.01864"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:13.196885+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1007/s10994-026-07016-y",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.3390/drones10060410",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.25018",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.01864",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PrunePrivyTune: Accelerating Language Models with Pruning and Differentially Private Fine-Tuning",
+      "source_url": "https://doi.org/10.1007/s10994-026-07016-y",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "Machine-mediated learning",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated exceptional capabilities in language understanding and generation, but their large-scale architecture poses significant challenges in deployment and inference, such as increased computational demands and slower processing times. While various techniques like model pruning, knowledge distillation, and quantization have been developed to compress LLMs, they often result in task-specific compression, limiting the model’s versatility. Additionally, LLMs face privacy risks due to their potential to memorize and reproduce sensitive training data, raising concerns when deployed in real-world applications. To address these challenges, we propose a novel methodology PrunePrivyTune that combines efficient model compression with privacy preserving fine-tuning. Our approach leverages pairwise cosine similarity to identify redundant layers in transformer models, enabling structural pruning that reduces model size without compromising performance. After pruning, we apply Low-Rank Adaptation (LoRA) with DPSGD to fine-tune the model. This ensures that fine-tuning process is both efficient and privacy-preserving, outperforming training and preventing the model from memorizing sensitive data. Later on, we generated synthetic data using the fine-tuned model and subsequently conducted a training data extraction attack to assess the model’s privacy vulnerabilities, in terms of perplexity and BERTScore. Our framework demonstrates that the proposed methodology effectively reduces the inference time through model compression and pruning compliments privacy, followed by private fine-tuning. Additionally, our privacy risk assessment indicates that integrating DP successfully mitigates the risk of the model’s memorization. This approach upholds strong privacy guarantees, making it highly suitable for real-time applications and deployment in sensitive domains where data confidentiality is paramount.",
+      "identifiers": [
+        "SemanticScholar:11b0633e85a91fe8f8c756727ed2a46484ce1475"
+      ],
+      "semantic_scholar_id": "11b0633e85a91fe8f8c756727ed2a46484ce1475",
+      "doi": "10.1007/s10994-026-07016-y",
+      "canonical_id": "DOI:10.1007/s10994-026-07016-y",
+      "authors": [
+        "Sonakshi Garg",
+        "V. Torra"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.25018",
+      "year": 2026,
+      "published": "2026-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) cascades reduce inference cost by routing easy queries to a small model and deferring hard queries to a larger one. Production cascades govern this deferral through a confidence threshold, but LLM confidence scores are miscalibrated, the threshold must be tuned per model pair and per domain, and no setting yields a formal bound on cascade accuracy. We introduce \\textbf{Conformal Cascade} (CC), a multi-tier inference framework that uses conformal prediction set size as the deferral rule: accept when the calibrated set collapses to a single answer, defer otherwise. The procedure delivers a distribution-free, finite-sample accuracy guarantee. By a per-tier union bound, the prediction set at the accepting tier covers the correct answer with probability at least $1 - K\\alpha$ for any user-specified $\\alpha$; under a selection-preservation condition (consistent with, but not strictly implied by, our marginal coverage results), the bound tightens to $1 - \\alpha$. We further characterise expected cascade cost as an explicit function of $\\alpha$ and the calibration-set acceptance rate. Across 18 multiple-choice benchmarks spanning science, medicine, commonsense, and standardized exams, evaluated on two-tier cascades drawn from four open-weight model families, CC strictly improves over the strongest calibration-tuned heuristic cascade on the majority of family--benchmark pairs, with the largest gains on reasoning-heavy benchmarks where majority vote is unreliable; on easier benchmarks the cascade commits the vast majority of queries to the small model at no accuracy cost. Extension to open-ended generation requires an answer-clustering step that we leave for future work. The method requires no model training and only black-box API access.",
+      "identifiers": [
+        "SemanticScholar:50e40d53a189b47e84195559eee26cd7e20003cd"
+      ],
+      "semantic_scholar_id": "50e40d53a189b47e84195559eee26cd7e20003cd",
+      "canonical_id": "arXiv:2607.25018",
+      "arxiv_id": "2607.25018",
+      "doi": "10.48550/arXiv.2607.25018",
+      "authors": [
+        "Yi-Fan Dou",
+        "Shikan Lian",
+        "Shi-Bo Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quantizing Recurrent Language Models Is Easier Than You Think",
+      "source_url": "https://arxiv.org/abs/2611.01864",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrences are becoming an increasingly common building block in large language models, replacing the growing KV cache of softmax attention with a fixed-size recurrent state that enables efficient decoding. However, the quantization stack has largely been developed around softmax Transformers, whose numerical properties and inference state differ from those of recurrent models. Our goal is to understand these differences and study the design space of quantization methods for recurrent models. In our analysis, we differentiate between two targets. First, extra-state quantization concerns weights and activations outside the recurrent state, whose distributions are shaped indirectly by the sequence mixer during training. In controlled 1.3B parameter models, we find that decayed recurrences develop weaker residual outlier channels than softmax attention and are therefore easier to quantize without incoherence processing. Second, intra-state quantization concerns the recurrent state itself during decode, where repeated updates create a different numerical problem from KV cache quantization. We instantiate our findings as LoReS, a state quantization pipeline combining value-axis scale grouping to match output channel magnitude, decay-based mixed-precision to protect slowly decaying heads or channels, and stochastic rounding to limit error accumulation under repeated requantization. Across Qwen-3.5 9B, Nemotron-H 8B, and Kimi-Linear 48B-A3B, LoReS supports robust 8-bit state quantization and lower effective precision on shorter decode horizons. We implement LoReS in vLLM and demonstrate end-to-end decode speedups.",
+      "identifiers": [
+        "SemanticScholar:a93259edb9a0a5015cc7494be940918af8134e89"
+      ],
+      "semantic_scholar_id": "a93259edb9a0a5015cc7494be940918af8134e89",
+      "canonical_id": "arXiv:2611.01864",
+      "arxiv_id": "2611.01864",
+      "authors": [
+        "Philipp Nazari",
+        "Neehal Tumma",
+        "D. Rus",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Orion: A Collaborative Edge Inference Framework for Large Language Models Processing Multi-Sensor Data in UAV Swarms",
+      "source_url": "https://doi.org/10.3390/drones10060410",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "Drones",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unmanned aerial vehicle (UAV) swarms generate massive multi-modal sensor data streams from onboard payloads such as RGB cameras, LiDAR, and thermal sensors. Large language models (LLMs) can interpret these data for natural language-based swarm coordination. However, deploying LLMs directly on resource-constrained UAV nodes faces a critical bottleneck. Long-context textual sensor logs (e.g., continuous status reports with GPS, altitude, and detection events) lead to high prefill latency. Existing distributed inference frameworks suffer from load imbalance and pipeline bubbles, violating real-time mission requirements. To address these issues, we propose Orion, an edge-only collaborative inference framework for LLM-based sensor data processing in heterogeneous UAV swarms. Orion incorporates three innovations: (1) optimal model partitioning via dynamic programming, (2) adaptive sequence partitioning that balances causal attention load across pipeline stages, and (3) a predictive decoding mechanism that speculatively generates the first token during idle intervals. Experiments on a comprehensive simulation framework ((using Meta’s Llama-2 (Large Language Model Meta AI)) 7B/13B/70B and simulated UAV swarm sensor traces) show that Orion reduces prefill latency by 81% (7B) and 78% (13B) compared to the best cloud–UAV baseline. Among the evaluated frameworks, Orion is the only framework capable of running the full 70B model on memory-constrained UAV nodes, enabling real-time sensor-aware LLM inference.",
+      "identifiers": [
+        "SemanticScholar:e840fd68d752f3e5611a55a368ae6beb4da803e0"
+      ],
+      "semantic_scholar_id": "e840fd68d752f3e5611a55a368ae6beb4da803e0",
+      "doi": "10.3390/drones10060410",
+      "canonical_id": "DOI:10.3390/drones10060410",
+      "authors": [
+        "Tianchou Yang",
+        "Hong-Jie Guo",
+        "Zhengyu Zhao",
+        "Dong-Lin Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1007/s10994-026-07016-y",
+      "identity_tokens": [
+        "id:DOI:10.1007/s10994-026-07016-y",
+        "id:SemanticScholar:11b0633e85a91fe8f8c756727ed2a46484ce1475",
+        "title:pruneprivytune accelerating language models with pruning and differentially private finetuning",
+        "url:https://doi.org/10.1007/s10994-026-07016-y"
+      ],
+      "record": {
+        "title": "PrunePrivyTune: Accelerating Language Models with Pruning and Differentially Private Fine-Tuning",
+        "source_url": "https://doi.org/10.1007/s10994-026-07016-y",
+        "year": 2026,
+        "published": "2026-04-29",
+        "venue": "Machine-mediated learning",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated exceptional capabilities in language understanding and generation, but their large-scale architecture poses significant challenges in deployment and inference, such as increased computational demands and slower processing times. While various techniques like model pruning, knowledge distillation, and quantization have been developed to compress LLMs, they often result in task-specific compression, limiting the model’s versatility. Additionally, LLMs face privacy risks due to their potential to memorize and reproduce sensitive training data, raising concerns when deployed in real-world applications. To address these challenges, we propose a novel methodology PrunePrivyTune that combines efficient model compression with privacy preserving fine-tuning. Our approach leverages pairwise cosine similarity to identify redundant layers in transformer models, enabling structural pruning that reduces model size without compromising performance. After pruning, we apply Low-Rank Adaptation (LoRA) with DPSGD to fine-tune the model. This ensures that fine-tuning process is both efficient and privacy-preserving, outperforming training and preventing the model from memorizing sensitive data. Later on, we generated synthetic data using the fine-tuned model and subsequently conducted a training data extraction attack to assess the model’s privacy vulnerabilities, in terms of perplexity and BERTScore. Our framework demonstrates that the proposed methodology effectively reduces the inference time through model compression and pruning compliments privacy, followed by private fine-tuning. Additionally, our privacy risk assessment indicates that integrating DP successfully mitigates the risk of the model’s memorization. This approach upholds strong privacy guarantees, making it highly suitable for real-time applications and deployment in sensitive domains where data confidentiality is paramount.",
+        "identifiers": [
+          "SemanticScholar:11b0633e85a91fe8f8c756727ed2a46484ce1475"
+        ],
+        "semantic_scholar_id": "11b0633e85a91fe8f8c756727ed2a46484ce1475",
+        "doi": "10.1007/s10994-026-07016-y",
+        "canonical_id": "DOI:10.1007/s10994-026-07016-y",
+        "authors": [
+          "Sonakshi Garg",
+          "V. Torra"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 208,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.25018",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.25018",
+        "id:SemanticScholar:50e40d53a189b47e84195559eee26cd7e20003cd",
+        "id:arXiv:2607.25018",
+        "title:conformal cascade distributionfree accuracy guarantees for multitier llm inference",
+        "url:https://arxiv.org/abs/2607.25018"
+      ],
+      "record": {
+        "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.25018",
+        "year": 2026,
+        "published": "2026-07-27",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) cascades reduce inference cost by routing easy queries to a small model and deferring hard queries to a larger one. Production cascades govern this deferral through a confidence threshold, but LLM confidence scores are miscalibrated, the threshold must be tuned per model pair and per domain, and no setting yields a formal bound on cascade accuracy. We introduce \\textbf{Conformal Cascade} (CC), a multi-tier inference framework that uses conformal prediction set size as the deferral rule: accept when the calibrated set collapses to a single answer, defer otherwise. The procedure delivers a distribution-free, finite-sample accuracy guarantee. By a per-tier union bound, the prediction set at the accepting tier covers the correct answer with probability at least $1 - K\\alpha$ for any user-specified $\\alpha$; under a selection-preservation condition (consistent with, but not strictly implied by, our marginal coverage results), the bound tightens to $1 - \\alpha$. We further characterise expected cascade cost as an explicit function of $\\alpha$ and the calibration-set acceptance rate. Across 18 multiple-choice benchmarks spanning science, medicine, commonsense, and standardized exams, evaluated on two-tier cascades drawn from four open-weight model families, CC strictly improves over the strongest calibration-tuned heuristic cascade on the majority of family--benchmark pairs, with the largest gains on reasoning-heavy benchmarks where majority vote is unreliable; on easier benchmarks the cascade commits the vast majority of queries to the small model at no accuracy cost. Extension to open-ended generation requires an answer-clustering step that we leave for future work. The method requires no model training and only black-box API access.",
+        "identifiers": [
+          "SemanticScholar:50e40d53a189b47e84195559eee26cd7e20003cd"
+        ],
+        "semantic_scholar_id": "50e40d53a189b47e84195559eee26cd7e20003cd",
+        "canonical_id": "arXiv:2607.25018",
+        "arxiv_id": "2607.25018",
+        "doi": "10.48550/arXiv.2607.25018",
+        "authors": [
+          "Yi-Fan Dou",
+          "Shikan Lian",
+          "Shi-Bo Li"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 119,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.01864",
+      "identity_tokens": [
+        "id:SemanticScholar:a93259edb9a0a5015cc7494be940918af8134e89",
+        "id:arXiv:2611.01864",
+        "title:quantizing recurrent language models is easier than you think",
+        "url:https://arxiv.org/abs/2611.01864"
+      ],
+      "record": {
+        "title": "Quantizing Recurrent Language Models Is Easier Than You Think",
+        "source_url": "https://arxiv.org/abs/2611.01864",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear recurrences are becoming an increasingly common building block in large language models, replacing the growing KV cache of softmax attention with a fixed-size recurrent state that enables efficient decoding. However, the quantization stack has largely been developed around softmax Transformers, whose numerical properties and inference state differ from those of recurrent models. Our goal is to understand these differences and study the design space of quantization methods for recurrent models. In our analysis, we differentiate between two targets. First, extra-state quantization concerns weights and activations outside the recurrent state, whose distributions are shaped indirectly by the sequence mixer during training. In controlled 1.3B parameter models, we find that decayed recurrences develop weaker residual outlier channels than softmax attention and are therefore easier to quantize without incoherence processing. Second, intra-state quantization concerns the recurrent state itself during decode, where repeated updates create a different numerical problem from KV cache quantization. We instantiate our findings as LoReS, a state quantization pipeline combining value-axis scale grouping to match output channel magnitude, decay-based mixed-precision to protect slowly decaying heads or channels, and stochastic rounding to limit error accumulation under repeated requantization. Across Qwen-3.5 9B, Nemotron-H 8B, and Kimi-Linear 48B-A3B, LoReS supports robust 8-bit state quantization and lower effective precision on shorter decode horizons. We implement LoReS in vLLM and demonstrate end-to-end decode speedups.",
+        "identifiers": [
+          "SemanticScholar:a93259edb9a0a5015cc7494be940918af8134e89"
+        ],
+        "semantic_scholar_id": "a93259edb9a0a5015cc7494be940918af8134e89",
+        "canonical_id": "arXiv:2611.01864",
+        "arxiv_id": "2611.01864",
+        "authors": [
+          "Philipp Nazari",
+          "Neehal Tumma",
+          "D. Rus",
+          "T. Konstantin Rusch"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/drones10060410",
+      "identity_tokens": [
+        "id:DOI:10.3390/drones10060410",
+        "id:SemanticScholar:e840fd68d752f3e5611a55a368ae6beb4da803e0",
+        "title:orion a collaborative edge inference framework for large language models processing multisensor data in uav swarms",
+        "url:https://doi.org/10.3390/drones10060410"
+      ],
+      "record": {
+        "title": "Orion: A Collaborative Edge Inference Framework for Large Language Models Processing Multi-Sensor Data in UAV Swarms",
+        "source_url": "https://doi.org/10.3390/drones10060410",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "Drones",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Unmanned aerial vehicle (UAV) swarms generate massive multi-modal sensor data streams from onboard payloads such as RGB cameras, LiDAR, and thermal sensors. Large language models (LLMs) can interpret these data for natural language-based swarm coordination. However, deploying LLMs directly on resource-constrained UAV nodes faces a critical bottleneck. Long-context textual sensor logs (e.g., continuous status reports with GPS, altitude, and detection events) lead to high prefill latency. Existing distributed inference frameworks suffer from load imbalance and pipeline bubbles, violating real-time mission requirements. To address these issues, we propose Orion, an edge-only collaborative inference framework for LLM-based sensor data processing in heterogeneous UAV swarms. Orion incorporates three innovations: (1) optimal model partitioning via dynamic programming, (2) adaptive sequence partitioning that balances causal attention load across pipeline stages, and (3) a predictive decoding mechanism that speculatively generates the first token during idle intervals. Experiments on a comprehensive simulation framework ((using Meta’s Llama-2 (Large Language Model Meta AI)) 7B/13B/70B and simulated UAV swarm sensor traces) show that Orion reduces prefill latency by 81% (7B) and 78% (13B) compared to the best cloud–UAV baseline. Among the evaluated frameworks, Orion is the only framework capable of running the full 70B model on memory-constrained UAV nodes, enabling real-time sensor-aware LLM inference.",
+        "identifiers": [
+          "SemanticScholar:e840fd68d752f3e5611a55a368ae6beb4da803e0"
+        ],
+        "semantic_scholar_id": "e840fd68d752f3e5611a55a368ae6beb4da803e0",
+        "doi": "10.3390/drones10060410",
+        "canonical_id": "DOI:10.3390/drones10060410",
+        "authors": [
+          "Tianchou Yang",
+          "Hong-Jie Guo",
+          "Zhengyu Zhao",
+          "Dong-Lin Zhu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 181,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:85c59e54072e1d8d0de13568de7af82099926dc3e998261221950b493f045e91",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

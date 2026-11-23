@@ -1,0 +1,239 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cef9f03e560eb178-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cef9f03e560e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.22512",
+    "arXiv:2603.05974"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:21.860221+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.22512",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.05974",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading",
+      "source_url": "https://arxiv.org/abs/2603.05974",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "Proc. ACM Softw. Eng.",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Line-level code completion aims to complete the current line in real-time as developers type. Low latency is crucial to maintaining a seamless and uninterrupted coding experience, enabling developers to remain in a productive flow. However, existing approaches face a fundamental trade-off: large language models (LLMs) provide high-quality suggestions but require expensive computational resources to ensure acceptable inference latency. In contrast, static-analysis-based methods and small language models respond quickly but often generate suboptimal completions. To fill this gap, our idea is to rely on the small model by default and only escalate the large model when necessary to achieve latency-accuracy trade-offs. Based on this idea, we propose MCCom(Model-Cascading-based code Completion), a framework that cascades a local small model with a high-performance cloud large model for code completion. Realizing effective model cascading requires answering two non-trivial questions, i.e., when to invoke the large model and how to enable effective collaboration between small and large models. For the first question, we leverage a valuable but easily overlooked signal, i.e., user actions, during code completion to accurately identify failed completions. This deferral decision allows us to invoke the large model only when necessary, reducing both latency and cloud-side computation costs. To enable effective collaboration, MCCom employs a two-stage speculative decoding strategy and an iterative retrieval mechanism that collectively accelerate and improve the quality of completions. Due to the lack of high-quality small models for code completion, we also train a lightweight model with only 121M parameters to implement MCCom. The small model achieves an average of 73.8% of the performance of the state-of-the-art 7B model. We evaluate MCCom on the RepoEval benchmark and a new benchmark, StmtEval, collected from real-world projects. Experimental results show that our approach not only reduces inference latency by up to 47.9% and cuts down LLM usage by an average of 46.3%, but also improves the exact match rate of the large model by an average of 8.9%.",
+      "identifiers": [
+        "SemanticScholar:d90b22dcc5c8a24accc7c0a1faa92cd42b0f9662"
+      ],
+      "semantic_scholar_id": "d90b22dcc5c8a24accc7c0a1faa92cd42b0f9662",
+      "canonical_id": "arXiv:2603.05974",
+      "arxiv_id": "2603.05974",
+      "doi": "10.1145/3797088",
+      "authors": [
+        "Hanzhen Lu",
+        "Lishui Fan",
+        "Jia-Chi Chen",
+        "Qiu-Yuan Chen",
+        "Zhao Wei",
+        "Zhong-Xin Liu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AxLLM: accelerator architecture for large language models with computation reuse capability",
+      "source_url": "https://arxiv.org/abs/2509.22512",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models demand massive computational power and memory resources, posing significant challenges for efficient deployment. While quantization has been widely explored to reduce model size and computation, this paper demonstrates an additional benefit: quantization increases parameter locality, creating opportunities for computation reuse. Building on this insight, we propose AxLLM, a hardware accelerator architecture designed for quantized models. Axllm introduces a novel redundancy elimination technique that caches and reuses multiplication results for repeated weight values, substantially reducing redundant operations. The architecture features dual multiply and reuse pipelines, efficiently supporting both base models and LoRA fine-tuned models without altering parameters, retraining, or requiring offline preprocessing. Experimental results show that AxLLM achieves up to 90% reduction in computations, delivering 28% lower energy consumption and a 1.7x speedup over baseline execution. These results highlight Axllm as a scalable and efficient solution for accelerating LLMs on specialized hardware.",
+      "identifiers": [
+        "SemanticScholar:b8d234c7f0a35e5073869ef77654721e655f43e2"
+      ],
+      "semantic_scholar_id": "b8d234c7f0a35e5073869ef77654721e655f43e2",
+      "canonical_id": "arXiv:2509.22512",
+      "arxiv_id": "2509.22512",
+      "doi": "10.48550/arXiv.2509.22512",
+      "authors": [
+        "Soroush Ahadi",
+        "Mehdi Modarressi",
+        "M. Daneshtalab"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 423,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.05974",
+      "identity_tokens": [
+        "id:DOI:10.1145/3797088",
+        "id:SemanticScholar:d90b22dcc5c8a24accc7c0a1faa92cd42b0f9662",
+        "id:arXiv:2603.05974",
+        "title:balancing latency and accuracy of code completion via localcloud model cascading",
+        "url:https://arxiv.org/abs/2603.05974"
+      ],
+      "record": {
+        "title": "Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading",
+        "source_url": "https://arxiv.org/abs/2603.05974",
+        "year": 2026,
+        "published": "2026-03-06",
+        "venue": "Proc. ACM Softw. Eng.",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Line-level code completion aims to complete the current line in real-time as developers type. Low latency is crucial to maintaining a seamless and uninterrupted coding experience, enabling developers to remain in a productive flow. However, existing approaches face a fundamental trade-off: large language models (LLMs) provide high-quality suggestions but require expensive computational resources to ensure acceptable inference latency. In contrast, static-analysis-based methods and small language models respond quickly but often generate suboptimal completions. To fill this gap, our idea is to rely on the small model by default and only escalate the large model when necessary to achieve latency-accuracy trade-offs. Based on this idea, we propose MCCom(Model-Cascading-based code Completion), a framework that cascades a local small model with a high-performance cloud large model for code completion. Realizing effective model cascading requires answering two non-trivial questions, i.e., when to invoke the large model and how to enable effective collaboration between small and large models. For the first question, we leverage a valuable but easily overlooked signal, i.e., user actions, during code completion to accurately identify failed completions. This deferral decision allows us to invoke the large model only when necessary, reducing both latency and cloud-side computation costs. To enable effective collaboration, MCCom employs a two-stage speculative decoding strategy and an iterative retrieval mechanism that collectively accelerate and improve the quality of completions. Due to the lack of high-quality small models for code completion, we also train a lightweight model with only 121M parameters to implement MCCom. The small model achieves an average of 73.8% of the performance of the state-of-the-art 7B model. We evaluate MCCom on the RepoEval benchmark and a new benchmark, StmtEval, collected from real-world projects. Experimental results show that our approach not only reduces inference latency by up to 47.9% and cuts down LLM usage by an average of 46.3%, but also improves the exact match rate of the large model by an average of 8.9%.",
+        "identifiers": [
+          "SemanticScholar:d90b22dcc5c8a24accc7c0a1faa92cd42b0f9662"
+        ],
+        "semantic_scholar_id": "d90b22dcc5c8a24accc7c0a1faa92cd42b0f9662",
+        "canonical_id": "arXiv:2603.05974",
+        "arxiv_id": "2603.05974",
+        "doi": "10.1145/3797088",
+        "authors": [
+          "Hanzhen Lu",
+          "Lishui Fan",
+          "Jia-Chi Chen",
+          "Qiu-Yuan Chen",
+          "Zhao Wei",
+          "Zhong-Xin Liu"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 262,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.22512",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.22512",
+        "id:SemanticScholar:b8d234c7f0a35e5073869ef77654721e655f43e2",
+        "id:arXiv:2509.22512",
+        "title:axllm accelerator architecture for large language models with computation reuse capability",
+        "url:https://arxiv.org/abs/2509.22512"
+      ],
+      "record": {
+        "title": "AxLLM: accelerator architecture for large language models with computation reuse capability",
+        "source_url": "https://arxiv.org/abs/2509.22512",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models demand massive computational power and memory resources, posing significant challenges for efficient deployment. While quantization has been widely explored to reduce model size and computation, this paper demonstrates an additional benefit: quantization increases parameter locality, creating opportunities for computation reuse. Building on this insight, we propose AxLLM, a hardware accelerator architecture designed for quantized models. Axllm introduces a novel redundancy elimination technique that caches and reuses multiplication results for repeated weight values, substantially reducing redundant operations. The architecture features dual multiply and reuse pipelines, efficiently supporting both base models and LoRA fine-tuned models without altering parameters, retraining, or requiring offline preprocessing. Experimental results show that AxLLM achieves up to 90% reduction in computations, delivering 28% lower energy consumption and a 1.7x speedup over baseline execution. These results highlight Axllm as a scalable and efficient solution for accelerating LLMs on specialized hardware.",
+        "identifiers": [
+          "SemanticScholar:b8d234c7f0a35e5073869ef77654721e655f43e2"
+        ],
+        "semantic_scholar_id": "b8d234c7f0a35e5073869ef77654721e655f43e2",
+        "canonical_id": "arXiv:2509.22512",
+        "arxiv_id": "2509.22512",
+        "doi": "10.48550/arXiv.2509.22512",
+        "authors": [
+          "Soroush Ahadi",
+          "Mehdi Modarressi",
+          "M. Daneshtalab"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 423,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5676c8b0b97deff01e9d8b3c3d94bd7d9070855c6a422c23ffd0e20b4af952bc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

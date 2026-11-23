@@ -1,0 +1,232 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-80345590b1415e47-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-80345590b141",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/mwscas60917.2024.10658840",
+    "arXiv:2604.26881"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:37.418720+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/mwscas60917.2024.10658840",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.26881",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FaaSMoE: A Serverless Framework for Multi-Tenant Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2604.26881",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "MobiSys Workshops",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models offer high capacity with efficient inference cost by activating a small subset of expert models per input. However, deploying MoE models requires all experts to reside in memory, creating a gap between the resource used by activated experts and the provisioned resources. This underutilization is further pronounced in multi-tenant scenarios. In this paper, we propose FaaSMoE, a multi-tenant MoE serving architecture built on Function-as-a-Service (FaaS) platforms. FaaSMoE decouples the control and execution planes of MoE by deploying experts as stateless FaaS functions, enabling on-demand and scale-to-zero expert invocation across tenants. FaaSMoE further supports configurable expert granularity within functions, trading off per-expert elasticity for reduced invocation overhead. We implement a prototype with an open-source edge-oriented FaaS platform and evaluate it using Qwen1.5-moe-2.7B under multi-tenant workloads. Compared to a full-model baseline, FaaSMoE uses less than one third of the resources, demonstrating a practical and resource-efficient path towards scalable MoE serving in a multi-tenant environment.",
+      "identifiers": [
+        "SemanticScholar:c37894c35cbc5e1c776dd377935219e7d3957fb4"
+      ],
+      "semantic_scholar_id": "c37894c35cbc5e1c776dd377935219e7d3957fb4",
+      "canonical_id": "arXiv:2604.26881",
+      "arxiv_id": "2604.26881",
+      "doi": "10.1145/3812836.3814785",
+      "authors": [
+        "Ming-He Wang",
+        "Trever Schirmer",
+        "Mohammadreza Malekabbasi",
+        "David Bermbach"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hessian-Aware KV Cache Quantization for LLMs",
+      "source_url": "https://doi.org/10.1109/MWSCAS60917.2024.10658840",
+      "year": 2024,
+      "published": "2024-08-11",
+      "venue": "Midwest Symposium on Circuits and Systems",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c60d4537f391d35e1ee3966ed17a0241bd3ea9ec"
+      ],
+      "semantic_scholar_id": "c60d4537f391d35e1ee3966ed17a0241bd3ea9ec",
+      "doi": "10.1109/MWSCAS60917.2024.10658840",
+      "canonical_id": "DOI:10.1109/MWSCAS60917.2024.10658840",
+      "authors": [
+        "Woohong Byun",
+        "J. Woo",
+        "S. Mukhopadhyay"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 834,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.26881",
+      "identity_tokens": [
+        "id:DOI:10.1145/3812836.3814785",
+        "id:SemanticScholar:c37894c35cbc5e1c776dd377935219e7d3957fb4",
+        "id:arXiv:2604.26881",
+        "title:faasmoe a serverless framework for multitenant mixtureofexperts serving",
+        "url:https://arxiv.org/abs/2604.26881"
+      ],
+      "record": {
+        "title": "FaaSMoE: A Serverless Framework for Multi-Tenant Mixture-of-Experts Serving",
+        "source_url": "https://arxiv.org/abs/2604.26881",
+        "year": 2026,
+        "published": "2026-04-29",
+        "venue": "MobiSys Workshops",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models offer high capacity with efficient inference cost by activating a small subset of expert models per input. However, deploying MoE models requires all experts to reside in memory, creating a gap between the resource used by activated experts and the provisioned resources. This underutilization is further pronounced in multi-tenant scenarios. In this paper, we propose FaaSMoE, a multi-tenant MoE serving architecture built on Function-as-a-Service (FaaS) platforms. FaaSMoE decouples the control and execution planes of MoE by deploying experts as stateless FaaS functions, enabling on-demand and scale-to-zero expert invocation across tenants. FaaSMoE further supports configurable expert granularity within functions, trading off per-expert elasticity for reduced invocation overhead. We implement a prototype with an open-source edge-oriented FaaS platform and evaluate it using Qwen1.5-moe-2.7B under multi-tenant workloads. Compared to a full-model baseline, FaaSMoE uses less than one third of the resources, demonstrating a practical and resource-efficient path towards scalable MoE serving in a multi-tenant environment.",
+        "identifiers": [
+          "SemanticScholar:c37894c35cbc5e1c776dd377935219e7d3957fb4"
+        ],
+        "semantic_scholar_id": "c37894c35cbc5e1c776dd377935219e7d3957fb4",
+        "canonical_id": "arXiv:2604.26881",
+        "arxiv_id": "2604.26881",
+        "doi": "10.1145/3812836.3814785",
+        "authors": [
+          "Ming-He Wang",
+          "Trever Schirmer",
+          "Mohammadreza Malekabbasi",
+          "David Bermbach"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 208,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/mwscas60917.2024.10658840",
+      "identity_tokens": [
+        "id:DOI:10.1109/mwscas60917.2024.10658840",
+        "id:SemanticScholar:c60d4537f391d35e1ee3966ed17a0241bd3ea9ec",
+        "title:hessianaware kv cache quantization for llms",
+        "url:https://doi.org/10.1109/MWSCAS60917.2024.10658840"
+      ],
+      "record": {
+        "title": "Hessian-Aware KV Cache Quantization for LLMs",
+        "source_url": "https://doi.org/10.1109/MWSCAS60917.2024.10658840",
+        "year": 2024,
+        "published": "2024-08-11",
+        "venue": "Midwest Symposium on Circuits and Systems",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:c60d4537f391d35e1ee3966ed17a0241bd3ea9ec"
+        ],
+        "semantic_scholar_id": "c60d4537f391d35e1ee3966ed17a0241bd3ea9ec",
+        "doi": "10.1109/MWSCAS60917.2024.10658840",
+        "canonical_id": "DOI:10.1109/MWSCAS60917.2024.10658840",
+        "authors": [
+          "Woohong Byun",
+          "J. Woo",
+          "S. Mukhopadhyay"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 834,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f118cf18ab24a685b7721663752448677b7bf1bc039b95ced8f5183ab35c3935",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

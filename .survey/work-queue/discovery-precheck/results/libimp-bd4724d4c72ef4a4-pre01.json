@@ -1,0 +1,410 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bd4724d4c72ef4a4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bd4724d4c72e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.16863",
+    "arXiv:2609.29664",
+    "arXiv:2609.38997",
+    "arXiv:2610.25621"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:07.501513+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.16863",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.29664",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38997",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25621",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Mixture-of-Models: Distributed Inference over Heterogeneous LLMs as Model-Level Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2601.16863",
+      "year": 2026,
+      "published": "2026-01-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Switch Transformers scale MoE model capacity by routing tokens in memory for one jointly trained model, requiring high-bandwidth interconnects, large memory, centralised ownership, and lack scalable composability. We propose Mixture-of-Models (MoM) architecture as Switch Transformer scaling to semantic level which composes inference across independently trained distributed LLMs, each run on its own GPU. The models reach joint consensus using N-Way Self-Evaluating Deliberation protocol: a combination of social-choice methods such as Delphi method and Quadratic Voting as well as Inference-Time scaling paradigm. We start with an empirical model that characterizes consensus as an inference-time trade-off between signal extraction and contextual noise accumulation, establishing a mathematical basis for convergence driven inference stopping strategies. We show experimental results where ensemble of smaller (<21B) models matches closely 120B MoE (GPT-OSS-120B) on AIME 2025 while larger ensemble of open-weight models reaches 90.0%, close to proprietary models at time of writing.",
+      "identifiers": [
+        "SemanticScholar:82bea6ccaadbb1f1c30a407387af940cf73a768b"
+      ],
+      "semantic_scholar_id": "82bea6ccaadbb1f1c30a407387af940cf73a768b",
+      "canonical_id": "arXiv:2601.16863",
+      "arxiv_id": "2601.16863",
+      "doi": "10.5281/zenodo.18234923",
+      "authors": [
+        "Tims Pečerskis",
+        "Aivars Smirnovs"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 304,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "To Think or Not to Think: Allocating Reasoning Where It Helps",
+      "source_url": "https://arxiv.org/abs/2609.29664",
+      "year": 2026,
+      "published": "2026-08-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning (RL) has proven effective in enhancing the reasoning performance of large language models (LLMs), particularly in complex mathematical and programming tasks. However, this capability comes with systematic \\textit{length misallocation}, in which models devote excessive reasoning to simple questions while terminating prematurely on harder ones, degrading inference efficiency with negligible accuracy improvement. Many length-adaptive methods mitigate this issue by allocating token budgets according to question difficulty, under the implicit assumption that harder questions benefit monotonically from extended reasoning. In contrast, we find that the effect of reasoning length on accuracy is concentrated on \\textit{partially solvable} questions. Our further analysis reveals that explicit length rewards can produce unintended training dynamics. Motivated by these findings, we propose \\textbf{CARE}---\\textbf{C}ontrastive \\textbf{A}ccuracy \\textbf{R}eward \\textbf{E}stimation---which compares the beneficial length adjustment per question from online sampled responses and applies adaptive length rewards within Group Relative Policy Optimization, with no extra hyperparameters or additional inference cost. Experiments across multiple reasoning benchmarks demonstrate that our method improves Pass@1 by up to \\(4\\%\\) while simultaneously reducing reasoning length by \\(37\\%\\), achieving higher token efficiency. Code will be available upon the acceptance of this paper.",
+      "identifiers": [
+        "SemanticScholar:a0a2e9b09dd297ede8b7da287f5d3929ada35d05"
+      ],
+      "semantic_scholar_id": "a0a2e9b09dd297ede8b7da287f5d3929ada35d05",
+      "canonical_id": "arXiv:2609.29664",
+      "arxiv_id": "2609.29664",
+      "doi": "10.48550/arXiv.2609.29664",
+      "authors": [
+        "Zheng-Dong He",
+        "Yun-Fan Zhou",
+        "Jian-Guo Yao",
+        "Hai-Bing Guan",
+        "Xi-Jun Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Settle: Learning When to Stop Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.38997",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models often continue generating after their answers have settled. Settle learns when to stop from answer stability in completed traces. It trains the existing end-of-reasoning token while keeping other predictions close to the base model, and requires only ordinary decoding at inference. On MATH-500 with Qwen3-4B, Settle reduces token count by 40% with a 0.5-percentage-point decrease in accuracy. It gains 6.16 percentage points over supervised fine-tuning on the same traces shortened at their first stable answer, at nearly identical token counts. Its stopping score predicts whether a correct answer will remain correct. Settle extends the accuracy-token-count Pareto frontier of the evaluated stopping methods.",
+      "identifiers": [
+        "SemanticScholar:45f4bb9b1bdd7043db5105005a18665b0434308a"
+      ],
+      "semantic_scholar_id": "45f4bb9b1bdd7043db5105005a18665b0434308a",
+      "canonical_id": "arXiv:2609.38997",
+      "arxiv_id": "2609.38997",
+      "doi": "10.48550/arXiv.2609.38997",
+      "authors": [
+        "Ryan Brown",
+        "Zi-Hao Fu",
+        "Chris Russell"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Weighted State Souping for Efficient Long-Context Retrieval",
+      "source_url": "https://arxiv.org/abs/2610.25621",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State space models (SSMs) combine fast inference and fixed state size with competitive language-modeling performance. Recently, state souping has been proposed as a procedure whereby an SSM independently encodes chunks of tokens like documents, tool definitions, or memory records. The resulting state encodings may be cached and recombined to cheaply construct a context for downstream queries. However, both state souping and vanilla SSMs deteriorate on long, crowded contexts, limiting their utility for long-horizon domains. To address this issue, we propose weighted state souping, a simple method that learns query-dependent weights for composing cached states. The resulting models improve long-context performance substantially across both single- and multi-hop document question answering, needle-in-a-haystack retrieval, variable tracking, and tool use. Our method can be further adapted into an efficient sparse variant, yielding near-constant encoding cost with respect to context length while preserving (and sometimes improving) performance. We also present simple theoretical arguments that illustrate why souping works and when it may fail, and discuss informally the advantages of weighted souping. Weighted state souping thus combines reusable context representations with selective retrieval, offering an efficient approach to language modeling over large collections of documents, tools, and other forms of structured context that increasingly dominate modern agentic workloads.",
+      "identifiers": [
+        "SemanticScholar:8e4cd022a80a788401fe5196f3e197c03925c150"
+      ],
+      "semantic_scholar_id": "8e4cd022a80a788401fe5196f3e197c03925c150",
+      "canonical_id": "arXiv:2610.25621",
+      "arxiv_id": "2610.25621",
+      "authors": [
+        "W. Tong",
+        "Aryo Lotfi",
+        "Emmanuel Abbé",
+        "J. Susskind",
+        "Cengiz Pehlevan",
+        "Eran Malach"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.16863",
+      "identity_tokens": [
+        "id:DOI:10.5281/zenodo.18234923",
+        "id:SemanticScholar:82bea6ccaadbb1f1c30a407387af940cf73a768b",
+        "id:arXiv:2601.16863",
+        "title:mixtureofmodels distributed inference over heterogeneous llms as modellevel mixtureofexperts",
+        "url:https://arxiv.org/abs/2601.16863"
+      ],
+      "record": {
+        "title": "Mixture-of-Models: Distributed Inference over Heterogeneous LLMs as Model-Level Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2601.16863",
+        "year": 2026,
+        "published": "2026-01-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Switch Transformers scale MoE model capacity by routing tokens in memory for one jointly trained model, requiring high-bandwidth interconnects, large memory, centralised ownership, and lack scalable composability. We propose Mixture-of-Models (MoM) architecture as Switch Transformer scaling to semantic level which composes inference across independently trained distributed LLMs, each run on its own GPU. The models reach joint consensus using N-Way Self-Evaluating Deliberation protocol: a combination of social-choice methods such as Delphi method and Quadratic Voting as well as Inference-Time scaling paradigm. We start with an empirical model that characterizes consensus as an inference-time trade-off between signal extraction and contextual noise accumulation, establishing a mathematical basis for convergence driven inference stopping strategies. We show experimental results where ensemble of smaller (<21B) models matches closely 120B MoE (GPT-OSS-120B) on AIME 2025 while larger ensemble of open-weight models reaches 90.0%, close to proprietary models at time of writing.",
+        "identifiers": [
+          "SemanticScholar:82bea6ccaadbb1f1c30a407387af940cf73a768b"
+        ],
+        "semantic_scholar_id": "82bea6ccaadbb1f1c30a407387af940cf73a768b",
+        "canonical_id": "arXiv:2601.16863",
+        "arxiv_id": "2601.16863",
+        "doi": "10.5281/zenodo.18234923",
+        "authors": [
+          "Tims Pečerskis",
+          "Aivars Smirnovs"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 304,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29664",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.29664",
+        "id:SemanticScholar:a0a2e9b09dd297ede8b7da287f5d3929ada35d05",
+        "id:arXiv:2609.29664",
+        "title:to think or not to think allocating reasoning where it helps",
+        "url:https://arxiv.org/abs/2609.29664"
+      ],
+      "record": {
+        "title": "To Think or Not to Think: Allocating Reasoning Where It Helps",
+        "source_url": "https://arxiv.org/abs/2609.29664",
+        "year": 2026,
+        "published": "2026-08-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement learning (RL) has proven effective in enhancing the reasoning performance of large language models (LLMs), particularly in complex mathematical and programming tasks. However, this capability comes with systematic \\textit{length misallocation}, in which models devote excessive reasoning to simple questions while terminating prematurely on harder ones, degrading inference efficiency with negligible accuracy improvement. Many length-adaptive methods mitigate this issue by allocating token budgets according to question difficulty, under the implicit assumption that harder questions benefit monotonically from extended reasoning. In contrast, we find that the effect of reasoning length on accuracy is concentrated on \\textit{partially solvable} questions. Our further analysis reveals that explicit length rewards can produce unintended training dynamics. Motivated by these findings, we propose \\textbf{CARE}---\\textbf{C}ontrastive \\textbf{A}ccuracy \\textbf{R}eward \\textbf{E}stimation---which compares the beneficial length adjustment per question from online sampled responses and applies adaptive length rewards within Group Relative Policy Optimization, with no extra hyperparameters or additional inference cost. Experiments across multiple reasoning benchmarks demonstrate that our method improves Pass@1 by up to \\(4\\%\\) while simultaneously reducing reasoning length by \\(37\\%\\), achieving higher token efficiency. Code will be available upon the acceptance of this paper.",
+        "identifiers": [
+          "SemanticScholar:a0a2e9b09dd297ede8b7da287f5d3929ada35d05"
+        ],
+        "semantic_scholar_id": "a0a2e9b09dd297ede8b7da287f5d3929ada35d05",
+        "canonical_id": "arXiv:2609.29664",
+        "arxiv_id": "2609.29664",
+        "doi": "10.48550/arXiv.2609.29664",
+        "authors": [
+          "Zheng-Dong He",
+          "Yun-Fan Zhou",
+          "Jian-Guo Yao",
+          "Hai-Bing Guan",
+          "Xi-Jun Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38997",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.38997",
+        "id:SemanticScholar:45f4bb9b1bdd7043db5105005a18665b0434308a",
+        "id:arXiv:2609.38997",
+        "title:settle learning when to stop reasoning",
+        "url:https://arxiv.org/abs/2609.38997"
+      ],
+      "record": {
+        "title": "Settle: Learning When to Stop Reasoning",
+        "source_url": "https://arxiv.org/abs/2609.38997",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning models often continue generating after their answers have settled. Settle learns when to stop from answer stability in completed traces. It trains the existing end-of-reasoning token while keeping other predictions close to the base model, and requires only ordinary decoding at inference. On MATH-500 with Qwen3-4B, Settle reduces token count by 40% with a 0.5-percentage-point decrease in accuracy. It gains 6.16 percentage points over supervised fine-tuning on the same traces shortened at their first stable answer, at nearly identical token counts. Its stopping score predicts whether a correct answer will remain correct. Settle extends the accuracy-token-count Pareto frontier of the evaluated stopping methods.",
+        "identifiers": [
+          "SemanticScholar:45f4bb9b1bdd7043db5105005a18665b0434308a"
+        ],
+        "semantic_scholar_id": "45f4bb9b1bdd7043db5105005a18665b0434308a",
+        "canonical_id": "arXiv:2609.38997",
+        "arxiv_id": "2609.38997",
+        "doi": "10.48550/arXiv.2609.38997",
+        "authors": [
+          "Ryan Brown",
+          "Zi-Hao Fu",
+          "Chris Russell"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.25621",
+      "identity_tokens": [
+        "id:SemanticScholar:8e4cd022a80a788401fe5196f3e197c03925c150",
+        "id:arXiv:2610.25621",
+        "title:weighted state souping for efficient longcontext retrieval",
+        "url:https://arxiv.org/abs/2610.25621"
+      ],
+      "record": {
+        "title": "Weighted State Souping for Efficient Long-Context Retrieval",
+        "source_url": "https://arxiv.org/abs/2610.25621",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State space models (SSMs) combine fast inference and fixed state size with competitive language-modeling performance. Recently, state souping has been proposed as a procedure whereby an SSM independently encodes chunks of tokens like documents, tool definitions, or memory records. The resulting state encodings may be cached and recombined to cheaply construct a context for downstream queries. However, both state souping and vanilla SSMs deteriorate on long, crowded contexts, limiting their utility for long-horizon domains. To address this issue, we propose weighted state souping, a simple method that learns query-dependent weights for composing cached states. The resulting models improve long-context performance substantially across both single- and multi-hop document question answering, needle-in-a-haystack retrieval, variable tracking, and tool use. Our method can be further adapted into an efficient sparse variant, yielding near-constant encoding cost with respect to context length while preserving (and sometimes improving) performance. We also present simple theoretical arguments that illustrate why souping works and when it may fail, and discuss informally the advantages of weighted souping. Weighted state souping thus combines reusable context representations with selective retrieval, offering an efficient approach to language modeling over large collections of documents, tools, and other forms of structured context that increasingly dominate modern agentic workloads.",
+        "identifiers": [
+          "SemanticScholar:8e4cd022a80a788401fe5196f3e197c03925c150"
+        ],
+        "semantic_scholar_id": "8e4cd022a80a788401fe5196f3e197c03925c150",
+        "canonical_id": "arXiv:2610.25621",
+        "arxiv_id": "2610.25621",
+        "authors": [
+          "W. Tong",
+          "Aryo Lotfi",
+          "Emmanuel Abbé",
+          "J. Susskind",
+          "Cengiz Pehlevan",
+          "Eran Malach"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7e5b32750eacf510498f42674160e525089474504b12622c716a144bf286c7f7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,259 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-efe74ca93caa5145-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-efe74ca93caa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2411.17773",
+    "arXiv:2505.09663"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:21.854753+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2411.17773",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.09663",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Analog Foundation Models",
+      "source_url": "https://arxiv.org/abs/2505.09663",
+      "year": 2025,
+      "published": "2025-05-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Analog in-memory computing (AIMC) is a promising compute paradigm to improve speed and power efficiency of neural network inference beyond the limits of conventional von Neumann-based architectures. However, AIMC introduces fundamental challenges such as noisy computations and strict constraints on input and output quantization. Because of these constraints and imprecisions, off-the-shelf LLMs are not able to achieve 4-bit-level performance when deployed on AIMC-based hardware. While researchers previously investigated recovering this accuracy gap on small, mostly vision-based models, a generic method applicable to LLMs pre-trained on trillions of tokens does not yet exist. In this work, we introduce a general and scalable method to robustly adapt LLMs for execution on noisy, low-precision analog hardware. Our approach enables state-of-the-art models $\\unicode{x2013}$ including Phi-3-mini-4k-instruct and Llama-3.2-1B-Instruct $\\unicode{x2013}$ to retain performance comparable to 4-bit weight, 8-bit activation baselines, despite the presence of analog noise and quantization constraints. Additionally, we show that as a byproduct of our training methodology, analog foundation models can be quantized for inference on low-precision digital hardware. Finally, we show that our models also benefit from test-time compute scaling, showing better scaling behavior than models trained with 4-bit weight and 8-bit static input quantization. Our work bridges the gap between high-capacity LLMs and efficient analog hardware, offering a path toward energy-efficient foundation models. Code is available at https://github.com/IBM/analog-foundation-models.",
+      "identifiers": [
+        "SemanticScholar:d9876cad881de165f0235b9177a8b6756870fc65"
+      ],
+      "semantic_scholar_id": "d9876cad881de165f0235b9177a8b6756870fc65",
+      "canonical_id": "arXiv:2505.09663",
+      "arxiv_id": "2505.09663",
+      "doi": "10.48550/arXiv.2505.09663",
+      "authors": [
+        "J. Büchel",
+        "Iason Chalas",
+        "Giovanni Acampa",
+        "An Chen",
+        "O. Fagbohungbe",
+        "H. Tsai",
+        "K. El Maghraoui",
+        "M. Le Gallo",
+        "Abbas Rahimi",
+        "A. Sebastian"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 558,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Efficient Multi-modal Large Language Models via Visual Token Grouping",
+      "source_url": "https://arxiv.org/abs/2411.17773",
+      "year": 2024,
+      "published": "2024-11-26",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The development of Multi-modal Large Language Models (MLLMs) enhances Large Language Models (LLMs) with the ability to perceive data formats beyond text, significantly advancing a range of downstream applications, such as visual question answering and image captioning. However, the substantial computational costs associated with processing high-resolution images and videos pose a barrier to their broader adoption. To address this challenge, compressing vision tokens in MLLMs has emerged as a promising approach to reduce inference costs. While existing methods conduct token reduction in the feature alignment phase. In this paper, we introduce VisToG, a novel grouping mechanism that leverages the capabilities of pre-trained vision encoders to group similar image segments without the need for segmentation masks. Specifically, we concatenate semantic tokens to represent image semantic segments after the linear projection layer before feeding into the vision encoder. Besides, with the isolated attention we adopt, VisToG can identify and eliminate redundant visual tokens utilizing the prior knowledge in the pre-trained vision encoder, which effectively reduces computational demands. Extensive experiments demonstrate the effectiveness of VisToG, maintaining 98.1% of the original performance while achieving a reduction of over 27\\% inference time.",
+      "identifiers": [
+        "SemanticScholar:bb9190c2e0573a076f991037312d7cd65d8ee686"
+      ],
+      "semantic_scholar_id": "bb9190c2e0573a076f991037312d7cd65d8ee686",
+      "canonical_id": "arXiv:2411.17773",
+      "arxiv_id": "2411.17773",
+      "doi": "10.48550/arXiv.2411.17773",
+      "authors": [
+        "Minbin Huang",
+        "Runhu Huang",
+        "Han Shi",
+        "Yimeng Chen",
+        "Chuan-Yang Zheng",
+        "Xiang-Guo Sun",
+        "Xin Jiang",
+        "Zhen-Guo Li",
+        "Hong Cheng"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 727,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.09663",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.09663",
+        "id:SemanticScholar:d9876cad881de165f0235b9177a8b6756870fc65",
+        "id:arXiv:2505.09663",
+        "title:analog foundation models",
+        "url:https://arxiv.org/abs/2505.09663"
+      ],
+      "record": {
+        "title": "Analog Foundation Models",
+        "source_url": "https://arxiv.org/abs/2505.09663",
+        "year": 2025,
+        "published": "2025-05-14",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Analog in-memory computing (AIMC) is a promising compute paradigm to improve speed and power efficiency of neural network inference beyond the limits of conventional von Neumann-based architectures. However, AIMC introduces fundamental challenges such as noisy computations and strict constraints on input and output quantization. Because of these constraints and imprecisions, off-the-shelf LLMs are not able to achieve 4-bit-level performance when deployed on AIMC-based hardware. While researchers previously investigated recovering this accuracy gap on small, mostly vision-based models, a generic method applicable to LLMs pre-trained on trillions of tokens does not yet exist. In this work, we introduce a general and scalable method to robustly adapt LLMs for execution on noisy, low-precision analog hardware. Our approach enables state-of-the-art models $\\unicode{x2013}$ including Phi-3-mini-4k-instruct and Llama-3.2-1B-Instruct $\\unicode{x2013}$ to retain performance comparable to 4-bit weight, 8-bit activation baselines, despite the presence of analog noise and quantization constraints. Additionally, we show that as a byproduct of our training methodology, analog foundation models can be quantized for inference on low-precision digital hardware. Finally, we show that our models also benefit from test-time compute scaling, showing better scaling behavior than models trained with 4-bit weight and 8-bit static input quantization. Our work bridges the gap between high-capacity LLMs and efficient analog hardware, offering a path toward energy-efficient foundation models. Code is available at https://github.com/IBM/analog-foundation-models.",
+        "identifiers": [
+          "SemanticScholar:d9876cad881de165f0235b9177a8b6756870fc65"
+        ],
+        "semantic_scholar_id": "d9876cad881de165f0235b9177a8b6756870fc65",
+        "canonical_id": "arXiv:2505.09663",
+        "arxiv_id": "2505.09663",
+        "doi": "10.48550/arXiv.2505.09663",
+        "authors": [
+          "J. Büchel",
+          "Iason Chalas",
+          "Giovanni Acampa",
+          "An Chen",
+          "O. Fagbohungbe",
+          "H. Tsai",
+          "K. El Maghraoui",
+          "M. Le Gallo",
+          "Abbas Rahimi",
+          "A. Sebastian"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 558,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.17773",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2411.17773",
+        "id:SemanticScholar:bb9190c2e0573a076f991037312d7cd65d8ee686",
+        "id:arXiv:2411.17773",
+        "title:efficient multimodal large language models via visual token grouping",
+        "url:https://arxiv.org/abs/2411.17773"
+      ],
+      "record": {
+        "title": "Efficient Multi-modal Large Language Models via Visual Token Grouping",
+        "source_url": "https://arxiv.org/abs/2411.17773",
+        "year": 2024,
+        "published": "2024-11-26",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The development of Multi-modal Large Language Models (MLLMs) enhances Large Language Models (LLMs) with the ability to perceive data formats beyond text, significantly advancing a range of downstream applications, such as visual question answering and image captioning. However, the substantial computational costs associated with processing high-resolution images and videos pose a barrier to their broader adoption. To address this challenge, compressing vision tokens in MLLMs has emerged as a promising approach to reduce inference costs. While existing methods conduct token reduction in the feature alignment phase. In this paper, we introduce VisToG, a novel grouping mechanism that leverages the capabilities of pre-trained vision encoders to group similar image segments without the need for segmentation masks. Specifically, we concatenate semantic tokens to represent image semantic segments after the linear projection layer before feeding into the vision encoder. Besides, with the isolated attention we adopt, VisToG can identify and eliminate redundant visual tokens utilizing the prior knowledge in the pre-trained vision encoder, which effectively reduces computational demands. Extensive experiments demonstrate the effectiveness of VisToG, maintaining 98.1% of the original performance while achieving a reduction of over 27\\% inference time.",
+        "identifiers": [
+          "SemanticScholar:bb9190c2e0573a076f991037312d7cd65d8ee686"
+        ],
+        "semantic_scholar_id": "bb9190c2e0573a076f991037312d7cd65d8ee686",
+        "canonical_id": "arXiv:2411.17773",
+        "arxiv_id": "2411.17773",
+        "doi": "10.48550/arXiv.2411.17773",
+        "authors": [
+          "Minbin Huang",
+          "Runhu Huang",
+          "Han Shi",
+          "Yimeng Chen",
+          "Chuan-Yang Zheng",
+          "Xiang-Guo Sun",
+          "Xin Jiang",
+          "Zhen-Guo Li",
+          "Hong Cheng"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 727,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d0515c6edfcdf6f363e6ce9f4296cb73e81ee756bf96cd96b236beed0e0c400a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

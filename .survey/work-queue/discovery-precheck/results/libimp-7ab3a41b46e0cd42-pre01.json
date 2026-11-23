@@ -1,0 +1,894 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7ab3a41b46e0cd42-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7ab3a41b46e0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp49660.2025.10890071",
+    "DOI:10.1109/icpads67057.2025.11323059",
+    "DOI:10.18653/v1/2025.emnlp-main.331",
+    "arXiv:2312.07046",
+    "arXiv:2506.07334",
+    "arXiv:2510.09017",
+    "arXiv:2511.18977",
+    "arXiv:2512.07855",
+    "arXiv:2609.36860"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0fa273f0e965573e4e601a269511a619505ff5bc",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-23T12:46:13.207826+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp49660.2025.10890071",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icpads67057.2025.11323059",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.emnlp-main.331",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2312.07046",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.07334",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.09017",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.18977",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.07855",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36860",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Graph-KV: Breaking Sequence via Injecting Structural Biases into Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.07334",
+      "year": 2025,
+      "published": "2025-06-09",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language models (LLMs) are inherently auto-regressive, requiring input to be serialized into flat sequences regardless of their structural dependencies. This serialization hinders the model's ability to leverage structural inductive biases, especially in tasks such as retrieval-augmented generation (RAG) and reasoning on data with native graph structures, where inter-segment dependencies are crucial. We introduce Graph-KV with the potential to overcome this limitation. Graph-KV leverages the KV-cache of text segments as condensed representations and governs their interaction through structural inductive biases. In this framework,'target'segments selectively attend only to the KV-caches of their designated'source'segments, rather than all preceding segments in a serialized sequence. This approach induces a graph-structured block mask, sparsifying attention and enabling a message-passing-like step within the LLM. Furthermore, strategically allocated positional encodings for source and target segments reduce positional bias and context window consumption. We evaluate Graph-KV across three scenarios: (1) seven RAG benchmarks spanning direct inference, multi-hop reasoning, and long-document understanding; (2) Arxiv-QA, a novel academic paper QA task with full-text scientific papers structured as citation ego-graphs; and (3) paper topic classification within a citation network. By effectively reducing positional bias and harnessing structural inductive biases, Graph-KV substantially outperforms baselines, including standard costly sequential encoding, across various settings. Code and the Graph-KV data are publicly available.",
+      "identifiers": [
+        "SemanticScholar:db613de741f357a69f65acef0ee7fecbd52bd268"
+      ],
+      "semantic_scholar_id": "db613de741f357a69f65acef0ee7fecbd52bd268",
+      "canonical_id": "arXiv:2506.07334",
+      "arxiv_id": "2506.07334",
+      "doi": "10.48550/arXiv.2506.07334",
+      "authors": [
+        "H. Wang",
+        "Pei-Hao Wang",
+        "Mufei Li",
+        "Shi-Kun Liu",
+        "Siqi Miao",
+        "Zhang-Yang Wang",
+        "Pan Li"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 532,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Firewall Routing: Blocking Leads to Better Hybrid Inference for LLMs",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.331",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:723a71a45929a3d8860f30eb97dfcfacfbd3b7c2"
+      ],
+      "semantic_scholar_id": "723a71a45929a3d8860f30eb97dfcfacfbd3b7c2",
+      "doi": "10.18653/v1/2025.emnlp-main.331",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.331",
+      "authors": [
+        "Run-Yu Peng",
+        "Yunhua Zhou",
+        "Kai Lv",
+        "Yang Gao",
+        "Qi-Peng Guo",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 510,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Efficient LLM Edge Collaboration Deployment with LoRA",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323059",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, large language models (LLMs) have shown great potential in many fields. LLMs deployed in cloud data centers are increasingly unable to meet the low-latency inference requirements of massive mobile users. Benefiting from various LLM lightweighting techniques and the continuously improving performance of edge servers, deploying LLMs on edge servers closer to mobile users and executing inference tasks locally can effectively reduce inference latency. However, edge servers have limited storage capacity, and deploying LLMs on edge servers incurs additional deployment overhead. In this paper, we propose an efficient LLM edge collaboration deployment strategy called EdgeColl, aiming to jointly optimize inference latency and LLM deployment costs. Specifically, EdgeColl adopts Low-Rank Adaptation (LoRA) to divide each LLM into a base model and a LoRA matrix. We formulate the LLM edge collaboration deployment problem with LoRA. Then, we present the base model deployment (BMD) strategy to achieve low inference latency and deployment costs. The LoRA deployment (LMD) strategy is also proposed to enable personalized inference. We evaluate the performance of EdgeColl. The experimental results show that EdgeColl effectively reduces LLM inference latency and deployment costs.",
+      "identifiers": [
+        "SemanticScholar:d653f858a424bf16992d14087f3facf4b9ff4486"
+      ],
+      "semantic_scholar_id": "d653f858a424bf16992d14087f3facf4b9ff4486",
+      "doi": "10.1109/ICPADS67057.2025.11323059",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323059",
+      "authors": [
+        "Yang Xiao",
+        "Xin He",
+        "Wei-Jun Wang",
+        "Jian Zhou",
+        "Fu Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "IronLLM: Forging Compact Edge-Native Language Models for Real-Time Embodied Intelligence",
+      "source_url": "https://arxiv.org/abs/2609.36860",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present IronLLM-0.6B, a 654M-parameter language model designed for efficient on-device inference. IronLLM-0.6B combines a hybrid attention architecture with X-MTP, a lightweight shared-KV multi-token prediction design that eliminates per-depth KV-cache replay and employs a lightweight verification head for rollback-free drafting, achieving a 1.48x decoding speedup. The model is pretrained on approximately 6.2 trillion tokens using a quality-oriented data pipeline and is further post-trained with Multi-Domain On-Policy Distillation to integrate capabilities from domain-specialized teachers. To better meet the low-latency requirements of on-device scenarios, IronLLM-0.6B adopts an Instruct-Only design. Evaluations show that IronLLM-0.6B achieves competitive performance relative to larger models such as Qwen3.5-0.8B and MiniCPM5-1B, while producing more concise responses on many tasks. We further present IronLLM-0.6B-Light, which replaces RMSNorm with Dynamic Tanh and simplifies several computationally expensive components to improve inference and quantization efficiency. Together, the IronLLM models provide an effective performance-efficiency trade-off for resource-constrained deployment.",
+      "identifiers": [
+        "SemanticScholar:24f87a453e7a099c619d1f3ac5b6bc66b1d53146"
+      ],
+      "semantic_scholar_id": "24f87a453e7a099c619d1f3ac5b6bc66b1d53146",
+      "canonical_id": "arXiv:2609.36860",
+      "arxiv_id": "2609.36860",
+      "doi": "10.48550/arXiv.2609.36860",
+      "authors": [
+        "Chang-Di Yang",
+        "Feng-Quan Jiao",
+        "Hao-Chih Lin",
+        "Haoran Yang",
+        "Jing Xiao",
+        "Liang-Yu Huo",
+        "Su Lu",
+        "Tian-Ce Chen",
+        "Wei Liu",
+        "Ying-Gan Xu",
+        "Yun-Xiang Lu",
+        "Zai Zheng",
+        "Zhi-Rui Xie",
+        "Zhong-Yang Che",
+        "Zi-Yan Tang",
+        "Zuo-Xiang Zhao",
+        "Jian-Kang Yao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Value-State Gated Attention for Mitigating Extreme-Token Phenomena in Transformers",
+      "source_url": "https://arxiv.org/abs/2510.09017",
+      "year": 2025,
+      "published": "2025-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large models based on the Transformer architecture are susceptible to extreme-token phenomena, such as attention sinks and value-state drains. These issues, which degrade model performance, quantization fidelity, and interpretability, arise from a problematic mutual reinforcement mechanism where the model learns an inefficient'no-op'behavior by focusing attention on tokens with near-zero value states. In this paper, we propose Value-State Gated Attention (VGA), a simple, dedicated, and stable architectural mechanism for performing'no-op'attention efficiently by directly breaking this cycle. VGA introduces a learnable, data-dependent gate, computed directly from the value vectors (V), to modulate the output. Through a theoretical analysis of the underlying gradients, we show that gating the value-state with a function of itself is more effective at decoupling value and attention score updates than prior methods that gate on input embeddings. This creates a direct regulatory pathway that allows the model to suppress a token's contribution based on its emergent value representation. Our experiments demonstrate that VGA significantly mitigates the formation of attention sinks and stabilizes value-state norms, leading to improved performance, robust quantization fidelity, and enhanced model interpretability.",
+      "identifiers": [
+        "SemanticScholar:0a849c8a9c28837a80dce67ef114e22f7110c20f"
+      ],
+      "semantic_scholar_id": "0a849c8a9c28837a80dce67ef114e22f7110c20f",
+      "canonical_id": "arXiv:2510.09017",
+      "arxiv_id": "2510.09017",
+      "doi": "10.48550/arXiv.2510.09017",
+      "authors": [
+        "Rui Bu",
+        "Haofeng Zhong",
+        "Wenzheng Chen",
+        "Yangyan Li"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 409,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LAPA: Log-Domain Prediction-Driven Dynamic Sparsity Accelerator for Transformer Model",
+      "source_url": "https://arxiv.org/abs/2512.07855",
+      "year": 2025,
+      "published": "2025-11-26",
+      "venue": "Asia and South Pacific Design Automation Conference",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention-based Transformers have revolutionized natural language processing (NLP) and shown strong performance in computer vision (CV) tasks. However, as the input sequence varies, the computational bottlenecks in Transformer models exhibit dynamic behavior across stages, which calls for a cross-stage sparse acceleration strategy. Unfortunately, most existing sparse Transformer approaches are single-stage based, and their sparsity prediction mechanisms lead to significant power overhead when applied across multiple stages. To this end, this paper proposes a log-domain attention prediction algorithmarchitecture co-design, named LAPA. First, an asymmetric leading one computing (ALOC) scheme is designed to eliminate expensive multiplications. Next, a mixed-precision multi-round shifting accumulation (MRSA) mechanism is further proposed to mitigate the accumulation overhead. A data-feature dependent filter (DDF) strategy is designed to work in concert with the MRSA process. Finally, an elaborate accelerator is designed to translate the theoretical enhancement into practical hardware improvement. Experimental results show that LAPA achieves $3.52 \\times, 3.24 \\times$ and $2.79 \\times$ higher energy efficiency than the state-of-the-art (SOTA) works Spatten, Sanger and FACT, respectively.",
+      "identifiers": [
+        "SemanticScholar:b427677209b2bcfaf2a19bd8cd2a4b18ed942bc2"
+      ],
+      "semantic_scholar_id": "b427677209b2bcfaf2a19bd8cd2a4b18ed942bc2",
+      "canonical_id": "arXiv:2512.07855",
+      "arxiv_id": "2512.07855",
+      "doi": "10.1109/ASP-DAC66049.2026.11420725",
+      "authors": [
+        "Hui-Zheng Wang",
+        "Hong-Bin Wang",
+        "Shaojun Wei",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Compression: Reduced Order Modelling of Latent Features in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2312.07046",
+      "year": 2023,
+      "published": "2023-12-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to the substantial scale of Large Language Models (LLMs), the direct application of conventional compression methodologies proves impractical. The computational demands associated with even minimal gradient updates present challenges, particularly on consumer-grade hardware. This paper introduces an innovative approach for the parametric and practical compression of LLMs based on reduced order modelling, which entails low-rank decomposition within the feature space and re-parameterization in the weight space. Notably, this compression technique operates in a layer-wise manner, obviating the need for a GPU device and enabling the compression of billion-scale models within stringent constraints of both memory and time. Our method represents a significant advancement in model compression by leveraging matrix decomposition, demonstrating superior efficacy compared to the prevailing state-of-the-art structured pruning method.",
+      "identifiers": [
+        "SemanticScholar:39ad56e1e94c71b5366ac0b41d48b5b7bba7d64a"
+      ],
+      "semantic_scholar_id": "39ad56e1e94c71b5366ac0b41d48b5b7bba7d64a",
+      "canonical_id": "arXiv:2312.07046",
+      "arxiv_id": "2312.07046",
+      "doi": "10.48550/arXiv.2312.07046",
+      "authors": [
+        "Arnav Chavan",
+        "Nahush Lele",
+        "Deepak Gupta"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1077,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SOA: A Sparsity-Oriented Activation on Sub-layers of FFN of Transformers",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890071",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Since the invention of Transformers, attention-based models have been widely used in machine translation, language understanding, and image processing. However, performance of Transformers comes at cost of significant large computation and memory requirements. Sparsification is a feasible solution to the above problems. In this paper, We propose an new approach called SOA that inserts truncated activation functions into sublayers of FFN to introduce new levels of sparsity. The introduction of the new activation functions can reduce the number of active activations and enable sparse matrix multiplications in following FFN layers. To address the problem of the accuracy degradation caused by the inserted activation functions, we employ fine-tuning to retain accuracy. Our experiments show that for BERT on GLUE datasets, with almost no accuracy degradation(average 0.045%), SOA can produce the average sparsity 60%,and reduce 31.5% of total computation for the entire Transformer, and can save 19% memory space by using run-length coding.",
+      "identifiers": [
+        "SemanticScholar:ec1d48dfb65b162dd3beeb82dfd6158bdb687522"
+      ],
+      "semantic_scholar_id": "ec1d48dfb65b162dd3beeb82dfd6158bdb687522",
+      "doi": "10.1109/ICASSP49660.2025.10890071",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890071",
+      "authors": [
+        "Yu-Long Meng",
+        "Yuan Li",
+        "Bin-Han Chen",
+        "Yi Kangt"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 596,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastForward Pruning: Efficient LLM Pruning via Single-Step Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2511.18977",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is an effective method for compressing Large Language Models, but finding an optimal, non-uniform layer-wise sparsity allocation remains a key challenge. While heuristic methods are fast but yield suboptimal performance, more powerful search-based approaches like Reinforcement Learning are often hindered by prohibitive computational costs on large-scale models. To overcome this efficiency barrier, we propose FastForward Pruning. Its core is a decoupled, single-step RL framework that separates policy optimization from the complex budget satisfaction problem. Such a decoupling is crucial for efficiently searching the vast policy space of LLMs. This curriculum-based strategy begins with low-cost, simple tasks and gradually increases in complexity, significantly reducing the search's computational overhead. Evaluated on the LLaMA, Mistral, and OPT model families, our framework discovers pruning policies that achieve superior performance over strong heuristic baselines. Crucially, when compared to other search-based algorithms, our method achieves competitive or superior results at a fraction of the computational cost, demonstrating a clear advantage in search efficiency.",
+      "identifiers": [
+        "SemanticScholar:f7908136af3a2798c80f78fd64aa8a395ee8b3f9"
+      ],
+      "semantic_scholar_id": "f7908136af3a2798c80f78fd64aa8a395ee8b3f9",
+      "canonical_id": "arXiv:2511.18977",
+      "arxiv_id": "2511.18977",
+      "doi": "10.48550/arXiv.2511.18977",
+      "authors": [
+        "Xin Yuan",
+        "Siqi Li",
+        "Jiateng Wei",
+        "Chengrui Zhu",
+        "Yanming Wu",
+        "Qingpeng Li",
+        "Jia-Jun Lv",
+        "Xiao-Ke Lan",
+        "Jun Chen",
+        "Yong Liu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2506.07334",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.07334",
+        "id:SemanticScholar:db613de741f357a69f65acef0ee7fecbd52bd268",
+        "id:arXiv:2506.07334",
+        "title:graphkv breaking sequence via injecting structural biases into large language models",
+        "url:https://arxiv.org/abs/2506.07334"
+      ],
+      "record": {
+        "title": "Graph-KV: Breaking Sequence via Injecting Structural Biases into Large Language Models",
+        "source_url": "https://arxiv.org/abs/2506.07334",
+        "year": 2025,
+        "published": "2025-06-09",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern large language models (LLMs) are inherently auto-regressive, requiring input to be serialized into flat sequences regardless of their structural dependencies. This serialization hinders the model's ability to leverage structural inductive biases, especially in tasks such as retrieval-augmented generation (RAG) and reasoning on data with native graph structures, where inter-segment dependencies are crucial. We introduce Graph-KV with the potential to overcome this limitation. Graph-KV leverages the KV-cache of text segments as condensed representations and governs their interaction through structural inductive biases. In this framework,'target'segments selectively attend only to the KV-caches of their designated'source'segments, rather than all preceding segments in a serialized sequence. This approach induces a graph-structured block mask, sparsifying attention and enabling a message-passing-like step within the LLM. Furthermore, strategically allocated positional encodings for source and target segments reduce positional bias and context window consumption. We evaluate Graph-KV across three scenarios: (1) seven RAG benchmarks spanning direct inference, multi-hop reasoning, and long-document understanding; (2) Arxiv-QA, a novel academic paper QA task with full-text scientific papers structured as citation ego-graphs; and (3) paper topic classification within a citation network. By effectively reducing positional bias and harnessing structural inductive biases, Graph-KV substantially outperforms baselines, including standard costly sequential encoding, across various settings. Code and the Graph-KV data are publicly available.",
+        "identifiers": [
+          "SemanticScholar:db613de741f357a69f65acef0ee7fecbd52bd268"
+        ],
+        "semantic_scholar_id": "db613de741f357a69f65acef0ee7fecbd52bd268",
+        "canonical_id": "arXiv:2506.07334",
+        "arxiv_id": "2506.07334",
+        "doi": "10.48550/arXiv.2506.07334",
+        "authors": [
+          "H. Wang",
+          "Pei-Hao Wang",
+          "Mufei Li",
+          "Shi-Kun Liu",
+          "Siqi Miao",
+          "Zhang-Yang Wang",
+          "Pan Li"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 532,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.emnlp-main.331",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-main.331",
+        "id:SemanticScholar:723a71a45929a3d8860f30eb97dfcfacfbd3b7c2",
+        "title:firewall routing blocking leads to better hybrid inference for llms",
+        "url:https://doi.org/10.18653/v1/2025.emnlp-main.331"
+      ],
+      "record": {
+        "title": "Firewall Routing: Blocking Leads to Better Hybrid Inference for LLMs",
+        "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.331",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:723a71a45929a3d8860f30eb97dfcfacfbd3b7c2"
+        ],
+        "semantic_scholar_id": "723a71a45929a3d8860f30eb97dfcfacfbd3b7c2",
+        "doi": "10.18653/v1/2025.emnlp-main.331",
+        "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.331",
+        "authors": [
+          "Run-Yu Peng",
+          "Yunhua Zhou",
+          "Kai Lv",
+          "Yang Gao",
+          "Qi-Peng Guo",
+          "Xi-Peng Qiu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 510,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icpads67057.2025.11323059",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpads67057.2025.11323059",
+        "id:SemanticScholar:d653f858a424bf16992d14087f3facf4b9ff4486",
+        "title:efficient llm edge collaboration deployment with lora",
+        "url:https://doi.org/10.1109/ICPADS67057.2025.11323059"
+      ],
+      "record": {
+        "title": "Efficient LLM Edge Collaboration Deployment with LoRA",
+        "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323059",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "International Conference on Parallel and Distributed Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In recent years, large language models (LLMs) have shown great potential in many fields. LLMs deployed in cloud data centers are increasingly unable to meet the low-latency inference requirements of massive mobile users. Benefiting from various LLM lightweighting techniques and the continuously improving performance of edge servers, deploying LLMs on edge servers closer to mobile users and executing inference tasks locally can effectively reduce inference latency. However, edge servers have limited storage capacity, and deploying LLMs on edge servers incurs additional deployment overhead. In this paper, we propose an efficient LLM edge collaboration deployment strategy called EdgeColl, aiming to jointly optimize inference latency and LLM deployment costs. Specifically, EdgeColl adopts Low-Rank Adaptation (LoRA) to divide each LLM into a base model and a LoRA matrix. We formulate the LLM edge collaboration deployment problem with LoRA. Then, we present the base model deployment (BMD) strategy to achieve low inference latency and deployment costs. The LoRA deployment (LMD) strategy is also proposed to enable personalized inference. We evaluate the performance of EdgeColl. The experimental results show that EdgeColl effectively reduces LLM inference latency and deployment costs.",
+        "identifiers": [
+          "SemanticScholar:d653f858a424bf16992d14087f3facf4b9ff4486"
+        ],
+        "semantic_scholar_id": "d653f858a424bf16992d14087f3facf4b9ff4486",
+        "doi": "10.1109/ICPADS67057.2025.11323059",
+        "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323059",
+        "authors": [
+          "Yang Xiao",
+          "Xin He",
+          "Wei-Jun Wang",
+          "Jian Zhou",
+          "Fu Xiao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 344,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36860",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.36860",
+        "id:SemanticScholar:24f87a453e7a099c619d1f3ac5b6bc66b1d53146",
+        "id:arXiv:2609.36860",
+        "title:ironllm forging compact edgenative language models for realtime embodied intelligence",
+        "url:https://arxiv.org/abs/2609.36860"
+      ],
+      "record": {
+        "title": "IronLLM: Forging Compact Edge-Native Language Models for Real-Time Embodied Intelligence",
+        "source_url": "https://arxiv.org/abs/2609.36860",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present IronLLM-0.6B, a 654M-parameter language model designed for efficient on-device inference. IronLLM-0.6B combines a hybrid attention architecture with X-MTP, a lightweight shared-KV multi-token prediction design that eliminates per-depth KV-cache replay and employs a lightweight verification head for rollback-free drafting, achieving a 1.48x decoding speedup. The model is pretrained on approximately 6.2 trillion tokens using a quality-oriented data pipeline and is further post-trained with Multi-Domain On-Policy Distillation to integrate capabilities from domain-specialized teachers. To better meet the low-latency requirements of on-device scenarios, IronLLM-0.6B adopts an Instruct-Only design. Evaluations show that IronLLM-0.6B achieves competitive performance relative to larger models such as Qwen3.5-0.8B and MiniCPM5-1B, while producing more concise responses on many tasks. We further present IronLLM-0.6B-Light, which replaces RMSNorm with Dynamic Tanh and simplifies several computationally expensive components to improve inference and quantization efficiency. Together, the IronLLM models provide an effective performance-efficiency trade-off for resource-constrained deployment.",
+        "identifiers": [
+          "SemanticScholar:24f87a453e7a099c619d1f3ac5b6bc66b1d53146"
+        ],
+        "semantic_scholar_id": "24f87a453e7a099c619d1f3ac5b6bc66b1d53146",
+        "canonical_id": "arXiv:2609.36860",
+        "arxiv_id": "2609.36860",
+        "doi": "10.48550/arXiv.2609.36860",
+        "authors": [
+          "Chang-Di Yang",
+          "Feng-Quan Jiao",
+          "Hao-Chih Lin",
+          "Haoran Yang",
+          "Jing Xiao",
+          "Liang-Yu Huo",
+          "Su Lu",
+          "Tian-Ce Chen",
+          "Wei Liu",
+          "Ying-Gan Xu",
+          "Yun-Xiang Lu",
+          "Zai Zheng",
+          "Zhi-Rui Xie",
+          "Zhong-Yang Che",
+          "Zi-Yan Tang",
+          "Zuo-Xiang Zhao",
+          "Jian-Kang Yao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 55,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.09017",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.09017",
+        "id:SemanticScholar:0a849c8a9c28837a80dce67ef114e22f7110c20f",
+        "id:arXiv:2510.09017",
+        "title:valuestate gated attention for mitigating extremetoken phenomena in transformers",
+        "url:https://arxiv.org/abs/2510.09017"
+      ],
+      "record": {
+        "title": "Value-State Gated Attention for Mitigating Extreme-Token Phenomena in Transformers",
+        "source_url": "https://arxiv.org/abs/2510.09017",
+        "year": 2025,
+        "published": "2025-10-10",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large models based on the Transformer architecture are susceptible to extreme-token phenomena, such as attention sinks and value-state drains. These issues, which degrade model performance, quantization fidelity, and interpretability, arise from a problematic mutual reinforcement mechanism where the model learns an inefficient'no-op'behavior by focusing attention on tokens with near-zero value states. In this paper, we propose Value-State Gated Attention (VGA), a simple, dedicated, and stable architectural mechanism for performing'no-op'attention efficiently by directly breaking this cycle. VGA introduces a learnable, data-dependent gate, computed directly from the value vectors (V), to modulate the output. Through a theoretical analysis of the underlying gradients, we show that gating the value-state with a function of itself is more effective at decoupling value and attention score updates than prior methods that gate on input embeddings. This creates a direct regulatory pathway that allows the model to suppress a token's contribution based on its emergent value representation. Our experiments demonstrate that VGA significantly mitigates the formation of attention sinks and stabilizes value-state norms, leading to improved performance, robust quantization fidelity, and enhanced model interpretability.",
+        "identifiers": [
+          "SemanticScholar:0a849c8a9c28837a80dce67ef114e22f7110c20f"
+        ],
+        "semantic_scholar_id": "0a849c8a9c28837a80dce67ef114e22f7110c20f",
+        "canonical_id": "arXiv:2510.09017",
+        "arxiv_id": "2510.09017",
+        "doi": "10.48550/arXiv.2510.09017",
+        "authors": [
+          "Rui Bu",
+          "Haofeng Zhong",
+          "Wenzheng Chen",
+          "Yangyan Li"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 409,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.07855",
+      "identity_tokens": [
+        "id:DOI:10.1109/asp-dac66049.2026.11420725",
+        "id:SemanticScholar:b427677209b2bcfaf2a19bd8cd2a4b18ed942bc2",
+        "id:arXiv:2512.07855",
+        "title:lapa logdomain predictiondriven dynamic sparsity accelerator for transformer model",
+        "url:https://arxiv.org/abs/2512.07855"
+      ],
+      "record": {
+        "title": "LAPA: Log-Domain Prediction-Driven Dynamic Sparsity Accelerator for Transformer Model",
+        "source_url": "https://arxiv.org/abs/2512.07855",
+        "year": 2025,
+        "published": "2025-11-26",
+        "venue": "Asia and South Pacific Design Automation Conference",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention-based Transformers have revolutionized natural language processing (NLP) and shown strong performance in computer vision (CV) tasks. However, as the input sequence varies, the computational bottlenecks in Transformer models exhibit dynamic behavior across stages, which calls for a cross-stage sparse acceleration strategy. Unfortunately, most existing sparse Transformer approaches are single-stage based, and their sparsity prediction mechanisms lead to significant power overhead when applied across multiple stages. To this end, this paper proposes a log-domain attention prediction algorithmarchitecture co-design, named LAPA. First, an asymmetric leading one computing (ALOC) scheme is designed to eliminate expensive multiplications. Next, a mixed-precision multi-round shifting accumulation (MRSA) mechanism is further proposed to mitigate the accumulation overhead. A data-feature dependent filter (DDF) strategy is designed to work in concert with the MRSA process. Finally, an elaborate accelerator is designed to translate the theoretical enhancement into practical hardware improvement. Experimental results show that LAPA achieves $3.52 \\times, 3.24 \\times$ and $2.79 \\times$ higher energy efficiency than the state-of-the-art (SOTA) works Spatten, Sanger and FACT, respectively.",
+        "identifiers": [
+          "SemanticScholar:b427677209b2bcfaf2a19bd8cd2a4b18ed942bc2"
+        ],
+        "semantic_scholar_id": "b427677209b2bcfaf2a19bd8cd2a4b18ed942bc2",
+        "canonical_id": "arXiv:2512.07855",
+        "arxiv_id": "2512.07855",
+        "doi": "10.1109/ASP-DAC66049.2026.11420725",
+        "authors": [
+          "Hui-Zheng Wang",
+          "Hong-Bin Wang",
+          "Shaojun Wei",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 362,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2312.07046",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2312.07046",
+        "id:SemanticScholar:39ad56e1e94c71b5366ac0b41d48b5b7bba7d64a",
+        "id:arXiv:2312.07046",
+        "title:rethinking compression reduced order modelling of latent features in large language models",
+        "url:https://arxiv.org/abs/2312.07046"
+      ],
+      "record": {
+        "title": "Rethinking Compression: Reduced Order Modelling of Latent Features in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2312.07046",
+        "year": 2023,
+        "published": "2023-12-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Due to the substantial scale of Large Language Models (LLMs), the direct application of conventional compression methodologies proves impractical. The computational demands associated with even minimal gradient updates present challenges, particularly on consumer-grade hardware. This paper introduces an innovative approach for the parametric and practical compression of LLMs based on reduced order modelling, which entails low-rank decomposition within the feature space and re-parameterization in the weight space. Notably, this compression technique operates in a layer-wise manner, obviating the need for a GPU device and enabling the compression of billion-scale models within stringent constraints of both memory and time. Our method represents a significant advancement in model compression by leveraging matrix decomposition, demonstrating superior efficacy compared to the prevailing state-of-the-art structured pruning method.",
+        "identifiers": [
+          "SemanticScholar:39ad56e1e94c71b5366ac0b41d48b5b7bba7d64a"
+        ],
+        "semantic_scholar_id": "39ad56e1e94c71b5366ac0b41d48b5b7bba7d64a",
+        "canonical_id": "arXiv:2312.07046",
+        "arxiv_id": "2312.07046",
+        "doi": "10.48550/arXiv.2312.07046",
+        "authors": [
+          "Arnav Chavan",
+          "Nahush Lele",
+          "Deepak Gupta"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1077,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp49660.2025.10890071",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp49660.2025.10890071",
+        "id:SemanticScholar:ec1d48dfb65b162dd3beeb82dfd6158bdb687522",
+        "title:soa a sparsityoriented activation on sublayers of ffn of transformers",
+        "url:https://doi.org/10.1109/ICASSP49660.2025.10890071"
+      ],
+      "record": {
+        "title": "SOA: A Sparsity-Oriented Activation on Sub-layers of FFN of Transformers",
+        "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890071",
+        "year": 2025,
+        "published": "2025-04-06",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Since the invention of Transformers, attention-based models have been widely used in machine translation, language understanding, and image processing. However, performance of Transformers comes at cost of significant large computation and memory requirements. Sparsification is a feasible solution to the above problems. In this paper, We propose an new approach called SOA that inserts truncated activation functions into sublayers of FFN to introduce new levels of sparsity. The introduction of the new activation functions can reduce the number of active activations and enable sparse matrix multiplications in following FFN layers. To address the problem of the accuracy degradation caused by the inserted activation functions, we employ fine-tuning to retain accuracy. Our experiments show that for BERT on GLUE datasets, with almost no accuracy degradation(average 0.045%), SOA can produce the average sparsity 60%,and reduce 31.5% of total computation for the entire Transformer, and can save 19% memory space by using run-length coding.",
+        "identifiers": [
+          "SemanticScholar:ec1d48dfb65b162dd3beeb82dfd6158bdb687522"
+        ],
+        "semantic_scholar_id": "ec1d48dfb65b162dd3beeb82dfd6158bdb687522",
+        "doi": "10.1109/ICASSP49660.2025.10890071",
+        "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890071",
+        "authors": [
+          "Yu-Long Meng",
+          "Yuan Li",
+          "Bin-Han Chen",
+          "Yi Kangt"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 596,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.18977",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.18977",
+        "id:SemanticScholar:f7908136af3a2798c80f78fd64aa8a395ee8b3f9",
+        "id:arXiv:2511.18977",
+        "title:fastforward pruning efficient llm pruning via singlestep reinforcement learning",
+        "url:https://arxiv.org/abs/2511.18977"
+      ],
+      "record": {
+        "title": "FastForward Pruning: Efficient LLM Pruning via Single-Step Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2511.18977",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning is an effective method for compressing Large Language Models, but finding an optimal, non-uniform layer-wise sparsity allocation remains a key challenge. While heuristic methods are fast but yield suboptimal performance, more powerful search-based approaches like Reinforcement Learning are often hindered by prohibitive computational costs on large-scale models. To overcome this efficiency barrier, we propose FastForward Pruning. Its core is a decoupled, single-step RL framework that separates policy optimization from the complex budget satisfaction problem. Such a decoupling is crucial for efficiently searching the vast policy space of LLMs. This curriculum-based strategy begins with low-cost, simple tasks and gradually increases in complexity, significantly reducing the search's computational overhead. Evaluated on the LLaMA, Mistral, and OPT model families, our framework discovers pruning policies that achieve superior performance over strong heuristic baselines. Crucially, when compared to other search-based algorithms, our method achieves competitive or superior results at a fraction of the computational cost, demonstrating a clear advantage in search efficiency.",
+        "identifiers": [
+          "SemanticScholar:f7908136af3a2798c80f78fd64aa8a395ee8b3f9"
+        ],
+        "semantic_scholar_id": "f7908136af3a2798c80f78fd64aa8a395ee8b3f9",
+        "canonical_id": "arXiv:2511.18977",
+        "arxiv_id": "2511.18977",
+        "doi": "10.48550/arXiv.2511.18977",
+        "authors": [
+          "Xin Yuan",
+          "Siqi Li",
+          "Jiateng Wei",
+          "Chengrui Zhu",
+          "Yanming Wu",
+          "Qingpeng Li",
+          "Jia-Jun Lv",
+          "Xiao-Ke Lan",
+          "Jun Chen",
+          "Yong Liu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 364,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e057cd7fd9de6dacf5a5f405264aa3c72eb47b8cecd6ab0d7750b8e763a8be54",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
