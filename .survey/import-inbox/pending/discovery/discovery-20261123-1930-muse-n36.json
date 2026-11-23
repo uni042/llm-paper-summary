@@ -1,0 +1,181 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261123-n36",
+ "reference_main_sha": "43a88cd2",
+ "record_count": 10,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2606.26631",
+   "identity_tokens": [
+    "arXiv:2606.26631"
+   ],
+   "title": "Adaptive Visual KV Cache Reuse for Efficient Multi-Turn Iterative Multimodal Reasoning",
+   "reason": "多ターン視覚推論で重なるクロップ観測の視覚エンコーディングとプリフィルを削減するため、Positional Key RebindingとIntent-guided Value Enhancementによる適応的視覚KVキャッシュ再利用を提案し、推論時間削減を実証しており、KVキャッシュ再利用による推論効率化への直接貢献がある。",
+   "source_url": "https://arxiv.org/abs/2606.26631",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 491
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2611.13176",
+   "identity_tokens": [
+    "arXiv:2611.13176"
+   ],
+   "title": "SHADOWPREFILL: Keeping Your Next Model Warm for Per-Step Model Routing in Agentic LLM Serving",
+   "reason": "エージェント型LLMサービングでモデル切替時に失われるプリフィックスキャッシュを、未選択モデルへのシャドウプリフィルとホストメモリへのKVスピルで温存し、切替レイテンシとルーティングコストを削減する、サービング・プリフィル最適化への直接貢献がある。",
+   "source_url": "https://arxiv.org/abs/2611.13176",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 492
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1016/j.sysarc.2026.103861",
+   "identity_tokens": [
+    "DOI:10.1016/j.sysarc.2026.103861"
+   ],
+   "title": "EdgeATP: An adaptive tensor parallelism framework for scalable and efficient transformer inference on edge clusters",
+   "reason": "タイトルはエッジクラスタ上のTransformer推論向け適応的テンソル並列フレームワークを示すが、Crossref・OpenAlex・Semantic Scholarいずれでも一次要旨を取得できず、機構や推論効率の具体的内容を確認できないため保留とする。",
+   "source_url": "https://doi.org/10.1016/j.sysarc.2026.103861",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 493
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "SemanticScholar:c2095895c3899aedf1b61d6a8313fec894315a0d",
+   "identity_tokens": [
+    "SemanticScholar:c2095895c3899aedf1b61d6a8313fec894315a0d"
+   ],
+   "title": "H3T: Efficient Integration of Memory Optimization and Parallelism for High-Throughput Transformer Training",
+   "reason": "タイトルはTransformer学習の高スループット化のためのメモリ最適化と並列化の統合を示し学習側が主目的に見えるが、Semantic Scholarで要旨が出版社により省略され取得できず、推論への転用や直接貢献の有無を確認できないため保留とする。",
+   "source_url": "https://www.semanticscholar.org/paper/c2095895c3899aedf1b61d6a8313fec894315a0d",
+   "body_check": "abstract_not_obtained; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 494
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2601.05208",
+   "identity_tokens": [
+    "arXiv:2601.05208"
+   ],
+   "title": "MoE3D: A Mixture-of-Experts Module for 3D Reconstruction",
+   "reason": "フィードフォワード3D再構成で深度不連続部のぼやけを抑えるため、複数深度仮説をピクセル単位で重み付けするMoE定式化であり、対象は3D再構成精度であってLLM推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2601.05208",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 495
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.18653/v1/2026.acl-long.561",
+   "identity_tokens": [
+    "DOI:10.18653/v1/2026.acl-long.561"
+   ],
+   "title": "Capability Decomposition for Unified Information Extraction via Hierarchical Mixture-of-Experts",
+   "reason": "統合情報抽出UC-UIEがjudging/locating/associatingへの能力分解とLoRA階層MoEアダプタで抽出精度と汎化を狙うもので、目的は情報抽出タスク性能でありLLM推論の効率化やサービングへの直接貢献はない。",
+   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.561",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 496
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2610.11575",
+   "identity_tokens": [
+    "arXiv:2610.11575"
+   ],
+   "title": "Smoothing the Top-k Exposure Boundary for Sparse Mixture-of-Experts",
+   "reason": "スパースMoEのtop-k境界をElastic Expert Routingで平滑化し推論予算と期待計算量は維持すると述べるが、実証はSFT・事前学習での下流スコアとLM損失改善が中心で、推論システムとしての効率改善は直接示されていないため保留とする。",
+   "source_url": "https://arxiv.org/abs/2610.11575",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 497
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.09906",
+   "identity_tokens": [
+    "arXiv:2504.09906"
+   ],
+   "title": "Plasticity-Aware Mixture of Experts for Learning Under QoE Shifts in Adaptive Video Streaming",
+   "reason": "適応的ビデオストリーミングでQoE関数の変化に適応するためノイズ注入で可塑性を調整するPA-MoEであり、対象はストリーミングQoE最適化であってLLM推論システムとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2504.09906",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 498
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2412.05552",
+   "identity_tokens": [
+    "arXiv:2412.05552"
+   ],
+   "title": "SAME: Learning Generic Language-Guided Visual Navigation with State-Adaptive Mixture of Experts",
+   "reason": "言語誘導視覚ナビゲーションを統一枠組みで扱うState-Adaptive MoEによるナビゲーションエージェントの学習であり、対象はロボット等の視覚ナビゲーションタスク性能でLLM推論効率化への貢献はない。",
+   "source_url": "https://arxiv.org/abs/2412.05552",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 499
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1111/exsy.13533",
+   "identity_tokens": [
+    "DOI:10.1111/exsy.13533"
+   ],
+   "title": "Enhancing diversity for logical table‐to‐text generation with mixture of experts",
+   "reason": "論理的table-to-text生成で論理タイプ別専門家により文の多様性を高めるLogicMoEであり、対象はNLGの多様性と忠実度であってLLM推論システムへの直接貢献はない。",
+   "source_url": "https://doi.org/10.1111/exsy.13533",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-23T22:20:00+09:00",
+   "last_checked_at": "2026-11-23T22:20:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 500
+  }
+ ]
+}
