@@ -1,0 +1,356 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d10::chunk-0001-of-0002",
+  "reference_main_sha": "43aae2a750a9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16207",
+      "identity_tokens": [
+        "arXiv:2607.16207"
+      ],
+      "title": "JUMP: Efficient Membership Inference on Fine-Tuned Diffusion Language Models",
+      "reason": "拡散言語モデルへのメンバーシップ推論攻撃を共同マスキングで効率化する研究であり、攻撃精度と前方パスの削減が主眼で、LLM推論・サービング機構への技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.16207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 271
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32060",
+      "identity_tokens": [
+        "arXiv:2609.32060"
+      ],
+      "title": "Depth Laws for the Precision Floor of Trained Neural Networks: Amplification, Residual Scaling, and a Quantization-Aware Training Paradox",
+      "reason": "PTQとQATにおける精度フロアの深さ則を言語モデル含む複数モデルで理論・実証し量子化ビット幅の指針を与えるが、新たな推論量子化手法や実行機構の提案ではなく分析が中心である。",
+      "source_url": "https://arxiv.org/abs/2609.32060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 272
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32752",
+      "identity_tokens": [
+        "arXiv:2610.32752"
+      ],
+      "title": "ActionRAG: Evidence-Refining Graph Diffusion for Long-Term Memory in LLM Agents",
+      "reason": "LLMエージェントの長期記憶をグラフ拡散で検索・精緻化する応用機構であり、対象は対話履歴からの証拠検索であって、デコード、KVキャッシュやサービング等の推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2610.32752",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 273
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17500",
+      "identity_tokens": [
+        "arXiv:2503.17500"
+      ],
+      "title": "Variance Control via Weight Rescaling in LLM Pre-training",
+      "reason": "LIR初期化とTVR分散制御によるLLM事前学習の改善が主題であり、量子化への悪影響緩和は副次的言及にとどまるため、推論システムへの直接の技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2503.17500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 274
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.00335",
+      "identity_tokens": [
+        "arXiv:2512.00335"
+      ],
+      "title": "Efficient Kernel Mapping and Comprehensive System Evaluation of LLM Acceleration on a CGLA",
+      "reason": "Qwen系LLMをCGLAアクセラレータへカーネルマッピングしllama.cppでエンドツーエンド評価して、GPU比で電力遅延積を大幅改善しホスト転送ボトルネックも特定するLLM推論高速化の直接的貢献である。",
+      "source_url": "https://arxiv.org/abs/2512.00335",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 275
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/PRAI62207.2024.10826600",
+      "identity_tokens": [
+        "DOI:10.1109/PRAI62207.2024.10826600"
+      ],
+      "title": "Dynamic Low-Rank Adaptation Based Pruning Algorithm for Large Language Models",
+      "reason": "DyLoRAモジュールの勾配更新からパラメータ重要度を定義してLLMを枝刈りし、20%削減で原モデルの96.60%の性能を維持することでエッジ配置時のメモリと計算量を直接削減する手法である。",
+      "source_url": "https://doi.org/10.1109/PRAI62207.2024.10826600",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.63317/55g6qr4jy7ip",
+      "identity_tokens": [
+        "DOI:10.63317/55g6qr4jy7ip"
+      ],
+      "title": "Language-Specific Pruning for Efficient Reduction of Large Language Models",
+      "reason": "言語固有の重み分布を利用し対象言語データでLLaMAやMistralを枝刈りしてモデルサイズと計算需要を減らし、より高速で低コストなLLM推論を実現する圧縮手法を実証している。",
+      "source_url": "https://doi.org/10.63317/55g6qr4jy7ip",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21221",
+      "identity_tokens": [
+        "arXiv:2509.21221"
+      ],
+      "title": "Go With the Flow: Churn-Tolerant Decentralized Training of Large Language Models",
+      "reason": "異種・離脱の多いボランティアノード上でLLMを分散学習するGWTFの学習フレームワークであり、マイクロバッチ経路最適化は学習時間短縮が目的で推論実行への貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2509.21221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2508.18609",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2508.18609",
+        "arXiv:2508.18609"
+      ],
+      "title": "Scaling Laws for Task-Stratified Knowledge in Post-Training Quantized Large Language Models",
+      "reason": "PTQしたLLMについてモデル規模・ビット幅・グループサイズ等と知識能力の関係を293構成で法則化し量子化設計の基礎を与えるが、新たな量子化・推論実行手法そのものの提案ではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2508.18609",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18631",
+      "identity_tokens": [
+        "arXiv:2603.18631"
+      ],
+      "title": "D-Mem: A Dual-Process Memory System for LLM Agents",
+      "reason": "LLMエージェント向けにベクトル検索と全件精査を品質ゲートで切り替える対話記憶システムであり、対象は長期推論用の記憶検索であってLLM推論・サービング機構ではない。",
+      "source_url": "https://arxiv.org/abs/2603.18631",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15665",
+      "identity_tokens": [
+        "arXiv:2603.15665"
+      ],
+      "title": "QV May Be Enough: Toward the Essence of Attention in LLMs",
+      "reason": "QKV機構を言語学的に再解釈しMQA・GQA・MLAを統一説明した上でQVパラダイムとQV-Ka最適化を提案するが、推論速度やメモリ削減の具体的なシステム評価は限定的で理論寄りである。",
+      "source_url": "https://arxiv.org/abs/2603.15665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e33868fb621ef19cb14451d3f414c2ff7972874c",
+      "identity_tokens": [
+        "SemanticScholar:e33868fb621ef19cb14451d3f414c2ff7972874c"
+      ],
+      "title": "Powerformer: Efficient Privacy-Preserving Transformer with Batch Rectifier-Power Max Function and Optimized Homomorphic Attention",
+      "reason": "準同型暗号下のTransformer推論と注意機構最適化をうたうが、OpenAlex・Crossref・一次掲載ページのいずれからも要旨を取得できず、LLM推論への具体的貢献を確認できなかったため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/e33868fb621ef19cb14451d3f414c2ff7972874c",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1498",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.1498"
+      ],
+      "title": "FISTAPruner: Layer-wise Post-training Pruning for Large Language Models",
+      "reason": "LASSO型凸最適化とFISTAで学習後枝刈りを行い累積誤差除去と2:4半構造化も支援し、LLaMA-3-70Bのパラメータ50%削減でも性能をほぼ維持してLLMのメモリ節約と計算高速化を実現する。",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1498",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ETAI68332.2026.11485459",
+      "identity_tokens": [
+        "DOI:10.1109/ETAI68332.2026.11485459"
+      ],
+      "title": "Efficient Quantization of Text-to-Video Diffusion Models with OmniQuant-Style PTQ on Consumer GPUs",
+      "reason": "消費者GPU上のテキスト動画拡散モデルのOmniQuant式PTQをうたうが、Crossref・OpenAlexに要旨がなく取得できなかったため、LLM推論ではなく拡散モデル対象である点も含め保留とする。",
+      "source_url": "https://doi.org/10.1109/ETAI68332.2026.11485459",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21900",
+      "identity_tokens": [
+        "arXiv:2610.21900"
+      ],
+      "title": "TEM: Temporal State Tracking Memory for Large Language Model Agents",
+      "reason": "事実を版管理して時系列順に提示するLLMエージェントの記憶フレームワークであり、証拠トークン削減は検索文脈の圧縮であって、デコードやKVキャッシュ等の推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2610.21900",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIFS.2025.3650384",
+      "identity_tokens": [
+        "DOI:10.1109/TIFS.2025.3650384"
+      ],
+      "title": "FSAT: A Faster Secure Convolutional Neural Network Inference Framework With Adversarial Training in Resource-Constrained Scenarios",
+      "reason": "FHE下のCNN推論を暗号化ルックアップ表などで高速化する安全な推論枠組みだが、対象は畳み込みネットワークの画像分類でありLLMやTransformer推論システムへの貢献ではない。",
+      "source_url": "https://doi.org/10.1109/TIFS.2025.3650384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1063/5.0289586",
+      "identity_tokens": [
+        "DOI:10.1063/5.0289586"
+      ],
+      "title": "Quantization of Hindi LLM to various bit precisions using HQQ",
+      "reason": "ヒンディー語LLM Airavata 7Bへ既存のHQQを1〜8ビット適用しメモリと性能を比較した適用評価であり、推論向け量子化に直接関わるものの新たな量子化機構の提案はない。",
+      "source_url": "https://doi.org/10.1063/5.0289586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 287
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21010",
+      "identity_tokens": [
+        "arXiv:2602.21010"
+      ],
+      "title": "Le-DETR: Revisiting Real-Time Detection Transformer with Efficient Encoder Design",
+      "reason": "物体検出DETRのバックボーンとエンコーダを再設計してCOCOで低遅延検出を行う視覚モデルであり、LLM推論ではなく画像検出タスク専用の高速化であるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2602.21010",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNNLS.2023.3257038",
+      "identity_tokens": [
+        "DOI:10.1109/TNNLS.2023.3257038"
+      ],
+      "title": "DLformer: A Dynamic Length Transformer-Based Network for Efficient Feature Representation in Remaining Useful Life Prediction",
+      "reason": "設備の余寿命予測のために系列長を適応化するTransformer応用であり、特徴再利用による計算削減も当該予測タスク内にとどまりLLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/TNNLS.2023.3257038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11784",
+      "identity_tokens": [
+        "arXiv:2506.11784"
+      ],
+      "title": "GPLQ: A General, Practical, and Lightning QAT Method for Vision Transformers",
+      "reason": "Vision Transformer向けの4ビットQAT手法でImageNet等の視覚タスクを対象としており、量子化の考え方は近接するもののLLM推論を対象とした手法や評価ではない。",
+      "source_url": "https://arxiv.org/abs/2506.11784",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    }
+  ],
+  "parent_run_key": "muse-20261123-d10",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

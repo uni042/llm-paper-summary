@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d11::chunk-0002-of-0002",
+  "reference_main_sha": "43aae2a750a9",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.23122",
+      "identity_tokens": [
+        "arXiv:2610.23122"
+      ],
+      "title": "LED: Improving Masked Diffusion Language Models by Lookahead Editing",
+      "reason": "LEDはマスク拡散LLMのデコードに書き換え可能な提案状態と先読み編集を加える生成手法であり、並列デコードには関連するが、要旨の中心は表現力と最適化の理論分析でシステム面の評価は不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2610.23122",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01213",
+      "identity_tokens": [
+        "arXiv:2312.01213"
+      ],
+      "title": "Recent Advances in Scalable Energy-Efficient and Trustworthy Spiking Neural Networks: from Algorithms to Technology",
+      "reason": "本論文はスパイキングニューラルネットワークの省エネ・信頼性に関するアルゴリズムからハードウェアまでのレビューであり、LLM推論システムを対象とした技術的貢献は含まれていない。",
+      "source_url": "https://arxiv.org/abs/2312.01213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10974",
+      "identity_tokens": [
+        "arXiv:2508.10974"
+      ],
+      "title": "Failures to Surface Harmful Contents in Video Large Language Models",
+      "reason": "本論文は動画LLMが有害コンテンツを表出できない失敗モードの安全性分析であり、フレームサンプリング等の要因分析はあるものの、推論システムの効率化を目的とした技術的貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2508.10974",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.17181",
+      "identity_tokens": [
+        "arXiv:2401.17181"
+      ],
+      "title": "Transfer Learning for Text Diffusion Models",
+      "reason": "本報告は自己回帰デコードの代替としてテキスト拡散モデルへの転移学習AR2Diffを検討しLLM展開への関心を示すが、結果はタスク依存で、推論システムとしての速度やサービング機構の実証は限定的である。",
+      "source_url": "https://arxiv.org/abs/2401.17181",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCCN.2026.3683207",
+      "identity_tokens": [
+        "DOI:10.1109/TCCN.2026.3683207"
+      ],
+      "title": "MILAFormer: A Multi-Stage Hybrid Deep Learning Architecture for Robust Radio Signal Modulation Recognition",
+      "reason": "MILAFormerは無線信号の変調認識向けのハイブリッド深層学習アーキテクチャであり、通信信号処理の応用研究であってLLM推論システムとは無関係な異分野応用である。",
+      "source_url": "https://doi.org/10.1109/TCCN.2026.3683207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ASE63991.2025.00016",
+      "identity_tokens": [
+        "DOI:10.1109/ASE63991.2025.00016"
+      ],
+      "title": "When AllClose Fails: Round-Off Error Estimation for Deep Learning Programs",
+      "reason": "本論文は深層学習プログラムの丸め誤差推定とAllClose検証の失敗を扱うソフトウェア工学的研究であり、Crossref等で要旨を取得できず、LLM推論システムへの直接の貢献もタイトルとメタデータからは確認できない。",
+      "source_url": "https://doi.org/10.1109/ASE63991.2025.00016",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.01471",
+      "identity_tokens": [
+        "arXiv:2411.01471"
+      ],
+      "title": "A Practical and Privacy-Preserving Framework for Real-World Large Language Model Services",
+      "reason": "本論文は実世界のLLMサービス利用者の匿名性を部分ブラインド署名で守るプライバシー枠組みであり、サービス層には関連するが、推論実行の効率・メモリ・スケジューリングへの技術的貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2411.01471",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.23929",
+      "identity_tokens": [
+        "arXiv:2607.23929"
+      ],
+      "title": "MemTX: Transactional Belief Commit for Stateful Agent Memory",
+      "reason": "MemTXは状態を持つエージェント共有メモリへの信念コミットをトランザクション化するプロトコルであり、エージェント基盤には関連するが、LLM推論・デコード・KVキャッシュ等の推論システム中核への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2607.23929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04763",
+      "identity_tokens": [
+        "arXiv:2512.04763"
+      ],
+      "title": "MemLoRA: Distilling Expert Adapters for On-Device Memory Systems",
+      "reason": "MemLoRAは小型言語モデルへ記憶アダプタを蒸留しオンデバイス記憶システムを可能にするが、主眼は対話記憶によるパーソナライゼーションであり、オンデバイス推論の効率機構そのものへの貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2512.04763",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.16622",
+      "identity_tokens": [
+        "arXiv:2601.16622"
+      ],
+      "title": "E2Former-V2: On-the-Fly Equivariant Attention with Linear Activation Memory",
+      "reason": "E2Former-V2は3次元原子系向け同変グラフニューラルネットの注意機構と活性化メモリ削減であり、対象は分子モデリングであってLLM推論システムへの直接の適用や貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2601.16622",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 330
+    }
+  ],
+  "parent_run_key": "muse-20261123-d11",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

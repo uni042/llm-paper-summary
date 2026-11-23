@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0fd9b23cb9f5a6c9-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2204.09028",
+  "reason": "直接音声翻訳のTransformerエンコーダで注意の局所性を分析し、局所的な効率的注意へ置換して不要な注意計算を省く提案だが、対象は音声翻訳タスクのエンコーダであり、LLM推論時の注意カーネルやKVキャッシュへの直接適用は確認できないため。",
+  "title": "On the Locality of Attention in Direct Speech Translation",
+  "identity_tokens": [
+    "arXiv:2204.09028"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fd9b23cb9f5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

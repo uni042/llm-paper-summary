@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d12::chunk-0001-of-0002",
+  "reference_main_sha": "43aae2a750a9",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18952",
+      "identity_tokens": [
+        "arXiv:2602.18952"
+      ],
+      "title": "MDM-ASR: Bridging Accuracy and Efficiency in ASR with Diffusion-Based Non-Autoregressive Decoding",
+      "reason": "音声認識向けにMasked Diffusion Modelによる非自己回帰デコードと反復自己修正学習、信頼度サンプラを提案し並列デコード効率を狙うが、対象はASRでありLLM推論サービングへの直接の技術的貢献は限定的であるため。",
+      "source_url": "https://arxiv.org/abs/2602.18952",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 331
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3638831",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2025.3638831"
+      ],
+      "title": "FP2: A 2-bit Floating-Point Format for Edge-AI Inference and Fine-Tuning",
+      "reason": "2ビット浮動小数点形式FP2を4ビット空間で2値を表す符号化と、浮動小数点MACをビット加算・論理演算へ簡略化する計算アーキテクチャで提示し、エッジAI推論のメモリと演算コストを直接削減する推論向け低ビット化の貢献が要旨で確認できるため。",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3638831",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 332
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.02196",
+      "identity_tokens": [
+        "arXiv:2605.02196"
+      ],
+      "title": "DurableUn: Quantization-Induced Recovery Attacks in Machine Unlearning",
+      "reason": "機械忘却した内容がINT4量子化で復元される攻撃と量子化耐性を持つ忘却学習を扱うが、量子化は配布精度の条件として用いられるだけで、LLM推論の高速化・メモリ削減・サービングへの技術的貢献は要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2605.02196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 333
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.08542",
+      "identity_tokens": [
+        "arXiv:2201.08542"
+      ],
+      "title": "Can Model Compression Improve NLP Fairness",
+      "reason": "GPT-2への蒸留・プルーニングが毒性やバイアスといった公平性へ与える影響を評価する研究であり、モデル圧縮は評価対象の操作であって、LLM推論システムの効率やデコード機構への直接の貢献は示されていないため。",
+      "source_url": "https://arxiv.org/abs/2201.08542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 334
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVPR52734.2025.01809",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52734.2025.01809"
+      ],
+      "title": "Zero-shot 3D Question Answering via Voxel-based Dynamic Token Compression",
+      "reason": "ボクセルの空間事前情報と視覚意味を用いるDynamic Token Compressionで多フレームVLMの視覚トークンを90%以上削減するが、主目的は3D質問応答という視覚応用であり、LLM推論基盤一般への適用やサービング評価は要旨で限定的なため。",
+      "source_url": "https://doi.org/10.1109/CVPR52734.2025.01809",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 335
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.09028",
+      "identity_tokens": [
+        "arXiv:2204.09028"
+      ],
+      "title": "On the Locality of Attention in Direct Speech Translation",
+      "reason": "直接音声翻訳のTransformerエンコーダで注意の局所性を分析し、局所的な効率的注意へ置換して不要な注意計算を省く提案だが、対象は音声翻訳タスクのエンコーダであり、LLM推論時の注意カーネルやKVキャッシュへの直接適用は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2204.09028",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 336
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-025-08080-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-08080-2"
+      ],
+      "title": "ROM-SRAM hybrid compute-in-memory for edge AI: circuits, architectures and challenges",
+      "reason": "ROM-SRAMハイブリッドCompute-in-Memoryの回路・アーキテクチャをエッジAI向けに概説し長系列推論の課題にも触れるが、LLM推論に特化した新規機構ではなく、対象は汎用エッジAIハードウェアのサーベイであるため。",
+      "source_url": "https://doi.org/10.1007/s11227-025-08080-2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 337
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s41060-026-01290-8",
+      "identity_tokens": [
+        "DOI:10.1007/s41060-026-01290-8"
+      ],
+      "title": "Beyond similarity retrieval: governance fidelity, consistency, and minimality in long-term conversational memory",
+      "reason": "会話型言語モデルの長期メモリで類似度検索では統治的事実が文脈へ届かない問題を示し、型条件付き検索による階層型文脈再構成を提案するが、KVキャッシュや推論実行系ではなく外部メモリ検索層の提案であり推論システムへの貢献は間接的なため。",
+      "source_url": "https://doi.org/10.1007/s41060-026-01290-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 338
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.18002",
+      "identity_tokens": [
+        "arXiv:2406.18002"
+      ],
+      "title": "Decoding with Limited Teacher Supervision Requires Understanding When to Trust the Teacher",
+      "reason": "小規模LLMと教師LLMの予測を初期トークンで集約し、小規模モデルの信頼度に応じて教師予測を過信・無視する適応的デコードアルゴリズムを提案しており、限られた教師監督下でのLLMデコード機構そのものへの直接の貢献が要旨で確認できるため。",
+      "source_url": "https://arxiv.org/abs/2406.18002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 339
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17745",
+      "identity_tokens": [
+        "arXiv:2605.17745"
+      ],
+      "title": "StatQAT: Statistical Quantizer Optimization for Deep Networks",
+      "reason": "一様・浮動小数点量子化の統計的誤差解析と反復型・解析型量子化器を提案し量子化認識学習へ組み込むが、主眼は深層ネットワーク学習時の量子化器最適化であり、LLM推論時の量子化カーネルやサービングでの実測貢献は要旨で確認できないため。",
+      "source_url": "https://arxiv.org/abs/2605.17745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 340
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16898",
+      "identity_tokens": [
+        "arXiv:2609.16898"
+      ],
+      "title": "OptiPrime: Optimizing Private Inference through Protocol-Hardware Co-design",
+      "reason": "同型暗号とMPCによるプライベートDNN推論で、畳み込み用HEプロトコルとハードウェア協調設計により暗号文通信のボトルネックを緩和するが、対象は画像系DNNの畳み込み推論でありLLM推論への直接適用は要旨で示されていないため。",
+      "source_url": "https://arxiv.org/abs/2609.16898",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 341
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08858",
+      "identity_tokens": [
+        "arXiv:2610.08858"
+      ],
+      "title": "LRCC: Generalizing Low-Rank Compression with Conditional Computation",
+      "reason": "事前学習言語モデルの線形変換を低ランク化し、Transformerブロックごとの軽量ルータがトークン依存に低ランク経路を選ぶ条件付き計算LRCCを提案し、Llama等でバッチ1デコード遅延を揃えた条件でも性能改善を示すなどLLM推論圧縮への直接貢献が確認できるため。",
+      "source_url": "https://arxiv.org/abs/2610.08858",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 342
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26542",
+      "identity_tokens": [
+        "arXiv:2610.26542"
+      ],
+      "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+      "reason": "拡散型言語モデル向けに単一デノイザで並列な草稿改訂を提案し、自己トークン証拠を補正したキャビティエネルギーを1回の順伝播で評価して改訂候補を採否するDraft Refinementを提示しており、並列推論・草稿改訂デコード機構への直接の貢献が要旨で確認できるため。",
+      "source_url": "https://arxiv.org/abs/2610.26542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 343
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bioinformatics/btad232",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btad232"
+      ],
+      "title": "AttOmics: attention-based architecture for diagnosis and prognosis from omics data",
+      "reason": "オミクスデータのグループ化と自己注意で患者の表現型を診断・予後予測するAttOmicsの提案であり、生物医学応用が主目的で、LLM推論・サービング・デコードなど推論システムへの技術的貢献は要旨に一切示されていないため。",
+      "source_url": "https://doi.org/10.1093/bioinformatics/btad232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 344
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.11180",
+      "identity_tokens": [
+        "arXiv:2302.11180"
+      ],
+      "title": "DISCO: Distributed Inference with Sparse Communications",
+      "reason": "各層の推論を複数ノードへ分ける層内モデル並列を対象に、ノード間送信データの部分集合選択をモデル最適化問題へ帰着させ、計算と通信を共に削減する分散推論フレームワークDISCOを提案しており、分散推論システムへの直接の貢献が要旨で確認できるため。",
+      "source_url": "https://arxiv.org/abs/2302.11180",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDCS63083.2025.00033",
+      "identity_tokens": [
+        "DOI:10.1109/ICDCS63083.2025.00033"
+      ],
+      "title": "ECCheck: Enhancing In-Memory Checkpoint with Erasure Coding in Distributed DNN Training",
+      "reason": "分散DNN学習の障害耐性のため、消失訂正符号を用いたインメモリチェックポイントECCheckで学習時の中断復旧を高速化する研究であり、対象は学習のチェックポイントであってLLM推論やサービングへの直接の貢献はないため。",
+      "source_url": "https://doi.org/10.1109/ICDCS63083.2025.00033",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 346
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.09782",
+      "identity_tokens": [
+        "arXiv:2506.09782"
+      ],
+      "title": "Q-SAM2: Accurate Quantization for Segment Anything Model 2",
+      "reason": "視覚基盤モデルSAM2向けに分散低減キャリブレーションと学習可能な統計的クリッピングによる低ビット量子化Q-SAM2を提案するが、対象は動画セグメンテーションという視覚応用であり、LLM推論向け量子化への直接の転用可能性は要旨だけでは限定的なため。",
+      "source_url": "https://arxiv.org/abs/2506.09782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11992",
+      "identity_tokens": [
+        "arXiv:2506.11992"
+      ],
+      "title": "Compression Aware Certified Training",
+      "reason": "プルーニングや量子化で圧縮されても認証ロバスト性を保つモデルを学習する圧縮認識認証学習CACTUSの提案であり、主眼は学習時の認証精度と安全性であって、推論実行の高速化やメモリ削減といった推論システムへの直接貢献は示されていないため。",
+      "source_url": "https://arxiv.org/abs/2506.11992",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 348
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.08552",
+      "identity_tokens": [
+        "arXiv:2311.08552"
+      ],
+      "title": "UT5: Pretraining Non autoregressive T5 with unrolled denoising",
+      "reason": "非自己回帰T5の逐次デコードのボトルネックを動機に、unrolled denoisingによる教師なし事前学習でNAR生成を改善する研究だが、中心は事前学習手法であり、推論時のデコード機構やサービングでの効率実測といった推論システム貢献は要旨で限定的なため。",
+      "source_url": "https://arxiv.org/abs/2311.08552",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 349
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.14304",
+      "identity_tokens": [
+        "arXiv:2103.14304"
+      ],
+      "title": "Exploiting Temporal Contexts With Strided Transformer for 3D Human Pose Estimation",
+      "reason": "動画の2次元関節列から3次元人体姿勢を推定するStrided Transformerの視覚タスク研究であり、注意や系列短縮は姿勢推定の表現学習のためで、LLM推論・デコード・サービングへの技術的貢献は要旨に示されていないため。",
+      "source_url": "https://arxiv.org/abs/2103.14304",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:00:00+09:00",
+      "last_checked_at": "2026-11-23T12:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 350
+    }
+  ],
+  "parent_run_key": "muse-20261123-d12",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
