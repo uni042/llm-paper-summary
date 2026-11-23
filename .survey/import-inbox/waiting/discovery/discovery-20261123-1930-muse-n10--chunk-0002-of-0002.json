@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n10::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.21057",
+      "identity_tokens": [
+        "arXiv:2604.21057"
+      ],
+      "title": "TRACES: Tagging Reasoning Steps for Adaptive Cost-Efficient Early-Stopping",
+      "reason": "TRACESは推論ステップをリアルタイムにタグ付けし正答到達後の行動変化を検出して適応的に早期停止することで、数学・知識ベンチマークで生成トークンを20〜50%削減するLLM推論の早期終了手法である。",
+      "source_url": "https://arxiv.org/abs/2604.21057",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11354",
+      "identity_tokens": [
+        "arXiv:2605.11354"
+      ],
+      "title": "Lite3R: A Model-Agnostic Framework for Efficient Feed-Forward 3D Reconstruction",
+      "reason": "Lite3Rは多視点3D再構成Transformerの密注意を疎線形注意へ置換しFP8量子化対応学習を併用する効率化枠組みだが、対象は3D再構成という特定応用でありLLM推論への直接適用は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2605.11354",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30703",
+      "identity_tokens": [
+        "arXiv:2608.30703"
+      ],
+      "title": "SingProbe Technical Report",
+      "reason": "SingProbeは自己回帰デコード中に既存隠れ状態を再利用する軽量プローブで生成時ガードレールをSGLang・vLLMへ統合するが、主目的は安全性・幻覚リスク監視であり推論効率そのものへの貢献は監視オーバーヘッド回避に留まる。",
+      "source_url": "https://arxiv.org/abs/2608.30703",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34763",
+      "identity_tokens": [
+        "arXiv:2610.34763"
+      ],
+      "title": "The Physical Cost of Context: Quality-Constrained Resource Accounting for Coding Agents",
+      "reason": "コーディングエージェントの文脈ポリシーを、接頭辞キャッシュ再利用を差し引いた実効プリフィル・KV滞在量・時間・エネルギーで測る品質制約付き資源会計プロトコルを提示し、接頭辞キャッシュ有効化で未キャッシュプリフィル67.7%削減等を示す推論基盤の計測研究である。",
+      "source_url": "https://arxiv.org/abs/2610.34763",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 436
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.04120",
+      "identity_tokens": [
+        "arXiv:2212.04120"
+      ],
+      "title": "Denoising Self-Attentive Sequential Recommendation",
+      "reason": "Transformer型逐次推薦におけるノイズの多い暗黙フィードバックへの対処として自己注意をデノイズする推薦モデル研究で、対象は推薦精度でありLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2212.04120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 437
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNNLS.2023.3294064",
+      "identity_tokens": [
+        "DOI:10.1109/TNNLS.2023.3294064"
+      ],
+      "title": "CTFNet: Long-Sequence Time-Series Forecasting Based on Convolution and Time–Frequency Analysis",
+      "reason": "畳み込みと時間-周波数解析に基づく長系列時系列予測モデルCTFNetと題されるが、Crossrefに要旨がなく一次要旨を取得できなかったため、LLM推論との関連を確認できない。",
+      "source_url": "https://doi.org/10.1109/TNNLS.2023.3294064",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 438
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.15574",
+      "identity_tokens": [
+        "arXiv:2405.15574"
+      ],
+      "title": "Meteor: Mamba-based Traversal of Rationale for Large Language and Vision Models",
+      "reason": "Meteorは多面的rationaleを線形時間のMambaで埋め込む効率的な大規模言語視覚モデルを提案するが、主目的は視覚指示理解の能力向上であり、推論時の遅延・メモリ等のシステム効率評価は要旨で中心ではない。",
+      "source_url": "https://arxiv.org/abs/2405.15574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.14725",
+      "identity_tokens": [
+        "arXiv:2410.14725"
+      ],
+      "title": "Rethinking Token Reduction for State Space Models",
+      "reason": "Mamba等の状態空間モデル向けにトークン重要度と類似度を統合した学習後トークン削減（剪定＋統合）を提案し、Mamba-2で精度を既存手法比5.7〜13.1%改善しつつ計算量とメモリ要求を大幅に削減する推論効率化手法である。",
+      "source_url": "https://arxiv.org/abs/2410.14725",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 440
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.14794",
+      "identity_tokens": [
+        "arXiv:2205.14794"
+      ],
+      "title": "Temporal Latent Bottleneck: Synthesis of Fast and Slow Processing Mechanisms in Sequence Learning",
+      "reason": "再帰的な遅いストリームとTransformerの速いストリームを組み合わせたTemporal Latent Bottleneckは系列学習の表現圧縮に関する一般的な学習アーキテクチャ研究で、LLM推論効率化への直接貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2205.14794",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.06959",
+      "identity_tokens": [
+        "arXiv:2411.06959"
+      ],
+      "title": "ENAT: Rethinking Spatial-temporal Interactions in Token-based Image Synthesis",
+      "reason": "ENATは非自己回帰Transformerによるトークン型画像合成の空間・時間相互作用を分析しEfficientNATを提案する生成効率の研究だが、対象は画像合成でありLLM推論への直接適用は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2411.06959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 442
+    }
+  ],
+  "parent_run_key": "muse-20261123-n10",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-n11::chunk-0002-of-0002",
+  "reference_main_sha": "43a88cd2",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03101",
+      "identity_tokens": [
+        "arXiv:2504.03101"
+      ],
+      "title": "Single-Pass Document Scanning for Question Answering",
+      "reason": "Mamba型スキャナで文書全体を線形時間に走査し質問関連文を選ぶ単一パス文書QAは長文処理コストを下げるが、主眼はQA検索モデルの精度と効率でありLLMサービングやデコード機構への直接貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2504.03101",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.17802",
+      "identity_tokens": [
+        "arXiv:2510.17802"
+      ],
+      "title": "Unbiased Gradient Low-Rank Projection",
+      "reason": "GaLore型勾配低ランク射影のバイアスを層別サンプリングで除去しMuonと組み合わせるGUMであり、LLM訓練・微調整時の最適化メモリ効率と収束保証が対象で推論高速化ではない。",
+      "source_url": "https://arxiv.org/abs/2510.17802",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.14573",
+      "identity_tokens": [
+        "arXiv:2510.14573"
+      ],
+      "title": "State-Space Models for Tabular Prior-Data Fitted Networks",
+      "reason": "表形式データ向け事前学習モデルTabPFNのTransformerを双方向SSMのHydraへ置き換え行順序依存を調べる研究であり、対象は表データ予測であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2510.14573",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.05400",
+      "identity_tokens": [
+        "arXiv:2302.05400"
+      ],
+      "title": "DNArch: Learning Convolutional Neural Architectures by Backpropagation",
+      "reason": "微分可能なマスクでCNNのカーネルサイズ・チャネル数・深さ等を勾配により同時学習するDNArchであり、CNNアーキテクチャ探索であってLLM推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2302.05400",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10259",
+      "identity_tokens": [
+        "arXiv:2508.10259"
+      ],
+      "title": "Leveraging OS-Level Primitives for Robotic Action Management",
+      "reason": "ロボット行動スライスへ例外・コンテキストスイッチ・記録再生等のOSプリミティブを適用するAMSであり、対象は模倣学習ロボットの行動管理であってLLM推論基盤ではない。",
+      "source_url": "https://arxiv.org/abs/2508.10259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00495",
+      "identity_tokens": [
+        "arXiv:2506.00495"
+      ],
+      "title": "FLoE: Fisher-Based Layer Selection for Efficient Sparse Adaptation of Low-Rank Experts",
+      "reason": "Fisher情報で重要層を選びMoE型低ランク専門家を疎に配置するFLoEはLLMのパラメータ効率適応に関するが、対象は微調整時のメモリと計算削減であり推論時の機構ではないため境界域とする。",
+      "source_url": "https://arxiv.org/abs/2506.00495",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.18923",
+      "identity_tokens": [
+        "arXiv:2506.18923"
+      ],
+      "title": "Mix-of-Language-Experts Architecture for Multilingual Programming",
+      "reason": "多言語プログラミング向けに共有LoRAと言語別LoRA専門家を組み合わせ推論時にコードの言語でルーティングするMoLEだが、主目的は言語別特化によるコード能力であり推論システムとしての効率貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2506.18923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.babylm-main.39",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.babylm-main.39"
+      ],
+      "title": "MoEP: Modular Expert Paths for Sample-Efficient Language Modeling",
+      "reason": "疎なデコーダとモデル並列・top-kルータでトークン活性化を選択的にし小規模データでの言語モデル訓練を加速するMoEPであり、サンプル効率的な学習が目的で推論効率化の提案ではない。",
+      "source_url": "https://doi.org/10.18653/v1/2025.babylm-main.39",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 470
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16377",
+      "identity_tokens": [
+        "arXiv:2406.16377"
+      ],
+      "title": "On the Transformations across Reward Model, Parameter Update, and In-Context Prompt",
+      "reason": "報酬モデル・パラメータ更新・文脈内プロンプトという3つのLLM適応手段の相互変換可能性を示す理論的枠組みであり、推論コストやサービングへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2406.16377",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22360",
+      "identity_tokens": [
+        "arXiv:2505.22360"
+      ],
+      "title": "Identity-Preserving Text-to-Image Generation via Dual-Level Feature Decoupling and Expert-Guided Fusion",
+      "reason": "テキスト画像生成で被写体同一性を保つため前景背景分離とMoE型特徴融合を用いる生成品質改善手法であり、LLM推論とは異分野の画像生成応用である。",
+      "source_url": "https://arxiv.org/abs/2505.22360",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T20:15:00+09:00",
+      "last_checked_at": "2026-11-23T20:15:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    }
+  ],
+  "parent_run_key": "muse-20261123-n11",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
