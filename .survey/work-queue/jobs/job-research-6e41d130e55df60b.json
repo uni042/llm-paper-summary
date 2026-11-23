@@ -35,10 +35,15 @@
   "selection_reason": "小規模LLMと教師LLMの予測を初期トークンで集約し、小規模モデルの信頼度に応じて教師予測を過信・無視する適応的デコードアルゴリズムを提案しており、限られた教師監督下でのLLMデコード機構そのものへの直接の貢献が要旨で確認できるため。",
   "semantic_scholar_id": "4985da3fa08a74644bfb244c1fe5f0c64330fade",
   "source_url": "https://arxiv.org/abs/2406.18002",
-  "status": "ready",
+  "status": "superseded",
   "title": "Decoding with Limited Teacher Supervision Requires Understanding When to Trust the Teacher",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-23T19:49:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2406.18002-decoding-with-limited-teacher-supervision-requires-understanding-when-to.md",
+  "represented_canonical_id": "arXiv:2406.18002",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

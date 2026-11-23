@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（620本）
+## 自動生成の論文一覧（621本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2459,6 +2459,10 @@
 - **2023-05 · [Large Language Models as Tool Makers](2023-2305.17126-large-language-models-as-tool-makers.md)**  
   実装：[✓](https://github.com/ctlllll/LLM-ToolMaker) ・ リポジトリ内被引用：3  
   大規模言語モデルへ複雑な推論を毎回直接依頼すると、同じ種類の問題に対して高価な推論を繰り返すことになる。Large Language Models as Tool Makers（LATM）は、問題の解き方をPython関数として保存する機能キャッシュ（functional キャッシュ）を提案する。
+
+- **2023-08 · [Symphony: Optimized DNN Model Serving using Deferred Batch Scheduling](2023-2308.07470-symphony-optimized-dnn-model-serving-using-deferred-batch-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  集中型スケジューラが期限内で発送を遅らせてバッチを太らせる非仕事保存型の調度と、エポック単位のモデル配置最適化で、混合モデル負荷の有効スループットを最大4.7倍にする推論サービング基盤。
 
 - **2023-05 · [PruMUX: Augmenting Data Multiplexing with Model Compression](2023-2305.14706-prumux-augmenting-data-multiplexing-with-model-compression.md)**  
   実装：[✓](https://github.com/yushansu/PruMUX) ・ リポジトリ内被引用：0  

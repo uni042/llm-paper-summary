@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1376本）
+## 自動生成の論文一覧（1380本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3182,6 +3182,10 @@
   実装：[✓](https://github.com/YucanGuo/RouteRAG) ・ リポジトリ内被引用：0  
   RouteRAGは、言語モデルが推論途中に外部知識を調べる際、通常の文書検索、知識グラフ検索、両者の混合検索を状況に応じて切り替える方策を強化学習で獲得する検索拡張生成方式である。
 
+- **2025-12 · [Rhea: Role-aware Heuristic Episodic Attention for Conversational LLMs](2025-2512.06869-rhea-role-aware-heuristic-episodic-attention-for-conversational-llms.md)**  
+  実装：[✓](https://github.com/ddInference/Rhea) ・ リポジトリ内被引用：0  
+  会話履歴を指示メモリとエピソードメモリへ役割分離し、応答だけの潜在圧縮と類似度による粒度付き検索で文脈の汚染・希釈・ドリフトを抑え、Long-MT-Bench+の精度を6.32から7.36へ上げる多ターン対話の文脈管理。
+
 - **2025-12 · [Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models](2025-2512.21651-rethinking-output-alignment-for-1-bit-post-training-quantization-of-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）を事後量子化（Post-学習 量子化; PTQ）で1ビットへ圧縮すると、重みをほぼ±1に制限するため、4ビットなどの量子化より精度劣化が大きい。
@@ -5050,6 +5054,10 @@
   実装：[✓](https://github.com/naver-ai/elva) ・ リポジトリ内被引用：0  
   本論文は、視覚と言語を組み合わせた助手（Vision-Language Assistant; VLA）が文書画像を理解する際の推論資源を削減しながら、画像中の文字を読み取る精度を維持するためのモデル設計を調べる。
 
+- **2024-06 · [Decoding with Limited Teacher Supervision Requires Understanding When to Trust the Teacher](2024-2406.18002-decoding-with-limited-teacher-supervision-requires-understanding-when-to.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  教師の助けを冒頭数トークンに限る条件で、信頼の重みを事例ごとに予測し、生徒のエントロピーが中間帯のときだけ知識を注入することで、小さなモデルの生成品質を一貫して上げるデコード法。
+
 - **2024-06 · [Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other](2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   事後量子化は、既存の言語モデルの重みや活性を低ビット整数で近似し、メモリ占有量とデータ転送量を削減する。著者は実際のGPUサービング速度を新たに測定していないため、精度改善と高速化を混同しない。
@@ -5268,6 +5276,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   微分可能な重みクラスタリングDKMの注意マップを、装置間の重複コピー除去、重み値の一意化、索引の分割で約130分の1へ圧縮し、LLaMA-7Bの学習時3ビット圧縮を可能にするメモリ効率化。
 
+- **2023-08 · [Transformer Compression via Subspace Projection](2023-2308.16475-transformer-compression-via-subspace-projection.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  特徴行列の特異値分解から作った射影でTransformer全体を低次元部分空間へ移し、隠れ次元を直接削る圧縮法で、圧縮率44パーセントでも精度低下を最大1.6パーセントに抑える。
+
 - **2023-07 · [Scaling In-Context Demonstrations with Structured Attention](2023-2307.02690-scaling-in-context-demonstrations-with-structured-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   例示数を増やせば精度が改善する可能性があるが、全ての例示を連結して密な自己注意を実行すると、系列長の二乗に比例する演算量とメモリが必要になる。SAICL（Structured 注意機構 for In-Context Learning）は、例示どうしの直接注意を取り除き、テスト入力を情報集約のハブにする。
@@ -5303,6 +5315,10 @@
 - **2023-05 · [Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model](2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md)**  
   実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  
   Infor-Coefが扱うのは、BERTのモデル重みを固定比率で減らすだけでは、簡単な入力と難しい入力に同じ計算を割り当てるという問題である。BERT-base比で16.2倍という原著の代表値は、バッチ内最大長へpaddingしたときの推定FLOPs比である。
+
+- **2023-02 · [DISCO: Distributed Inference with Sparse Communications](2023-2302.11180-disco-distributed-inference-with-sparse-communications.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層内並列の分散推論で送る特徴の選択を重みの重要度による疎化へ変換して学習し、ResNet-50の2ノード推論で通信量を5分の1にしながら4.7倍の高速化と同等精度を両立する枠組み。
 
 - **2023-02 · [Auto-Parallelizing Large Models with Rhino: A Systematic Approach on Production AI Platform](2023-2302.08141-auto-parallelizing-large-models-with-rhino-a-systematic-approach-on-prod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

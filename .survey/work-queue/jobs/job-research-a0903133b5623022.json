@@ -35,10 +35,15 @@
   "selection_reason": "SP3は主成分射影による構造化プルーニングで隠れ次元を圧縮し、BERTを94%圧縮しつつOPTやLlamaでも有効とされ、モデルサイズと推論時の計算・メモリ削減に直結する推論向け圧縮手法である",
   "semantic_scholar_id": "abea8484e09c75cef09445c97213db47711d9fef",
   "source_url": "https://arxiv.org/abs/2308.16475",
-  "status": "ready",
+  "status": "superseded",
   "title": "SP³: Enhancing Structured Pruning via PCA Projection",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-11-23T19:49:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2308.16475-transformer-compression-via-subspace-projection.md",
+  "represented_canonical_id": "arXiv:2308.16475",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
