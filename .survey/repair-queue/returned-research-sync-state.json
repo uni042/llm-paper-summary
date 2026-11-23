@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ecee3443a53f2fdbeae65d6ec8e8d5a9891c12b3",
+  "base_commit": "8f7154d61fbe6e3e7657fbc557faf6ea5808e6c2",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -703,11 +703,14 @@
     "2026-2606.30709-hierarchical-global-attention-hga.json",
     "2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.json",
     "2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.json",
+    "2026-2607.01241-mapping-text-to-multiplex-graph-prompt-compression-as-levy-walk-guided-graph-pruning.json",
     "2026-2607.01308-cache-merging-as-a-convergent-replicated-state-for-multi-agent-latent-reasoning.json",
+    "2026-2607.01792-partrep-learning-what-to-repeat-for-decoder-only-llms.json",
     "2026-2607.02521-tile-level-activation-overlap-for-efficient-llm-inference.json",
     "2026-2607.02522-multi-turn-distributed-inference-with-mixture-of-experts-for-6g-edge-cloud-networks.json",
     "2026-2607.03050-omnifocus-query-guided-modality-balanced-token-compression-for-omni-modal-large-language-models.json",
     "2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inference.json",
+    "2026-2607.04443-wan-streamer-v0-2-higher-resolution-same-latency.json",
     "2026-2607.04668-elastic-gang-per-token-membership-change-for-a-hard-barriered-llm-inference-gang-co-scheduled-with-os-processes.json",
     "2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-in-mobile-llm-inference.json",
     "2026-2607.06202-ubep-re-architecting-expert-parallelism-communication-library-for-production-superpods.json",
@@ -735,6 +738,7 @@
     "2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.json",
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
+    "2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantization-of-mllms.json",
     "2026-2607.22432-tilesight-a-first-principles-tile-centric-analytical-gpu-performance-model.json",
@@ -781,6 +785,7 @@
     "2026-2608.08630-vlzip-unified-visual-and-textual-compression-for-interleaved-long-context-modeling.json",
     "2026-2608.08652-legolm-structured-weight-sharing-for-large-language-models.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
+    "2026-2608.10137-the-parser-already-knows-lightweight-bias-correction-in-constrained-decoding.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-language-models.json",
     "2026-2608.12123-ready-cohorts-bounding-gpu-opportunity-and-avoiding-host-round-trips-in-llm-agent.json",
@@ -50611,6 +50616,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.01241": {
+      "order": [
+        "2026-11-23T19:21:28+00:00",
+        "2026-2607.01241-mapping-text-to-multiplex-graph-prompt-compression-as-levy-walk-guided-graph-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.01792": {
+      "order": [
+        "2026-11-23T19:23:00+00:00",
+        "2026-2607.01792-partrep-learning-what-to-repeat-for-decoder-only-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.04443": {
+      "order": [
+        "2026-11-23T19:24:31+00:00",
+        "2026-2607.04443-wan-streamer-v0-2-higher-resolution-same-latency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.19686": {
+      "order": [
+        "2026-11-23T19:26:02+00:00",
+        "2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.10137": {
+      "order": [
+        "2026-11-23T19:27:34+00:00",
+        "2026-2608.10137-the-parser-already-knows-lightweight-bias-correction-in-constrained-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64092,6 +64142,21 @@
     "arxiv:2606.29565": [
       "papers/inference/99-other-inference-systems/2026-2606.29565-speculative-pre-positioning-decoding-stateful-sessions-to-the-next-decis.md",
       "papers/inference/99-other-inference-systems/2026-2606.29565-speculative-pre-positioning-decoding-stateful-sessions-to-the-next-decis.md"
+    ],
+    "arxiv:2607.01241": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2607.01241-mapping-text-to-multiplex-graph-prompt-compression-as-l-vy-walk-guided-g.md"
+    ],
+    "arxiv:2607.01792": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2607.01792-partrep-learning-what-to-repeat-for-decoder-only-llms.md"
+    ],
+    "arxiv:2607.04443": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04443-wan-streamer-v0-2-higher-resolution-same-latency.md"
+    ],
+    "arxiv:2607.19686": [
+      "papers/inference/99-other-inference-systems/2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.md"
+    ],
+    "arxiv:2608.10137": [
+      "papers/inference/99-other-inference-systems/2026-2608.10137-the-parser-already-knows-lightweight-bias-correction-in-constrained-deco.md"
     ]
   }
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（619本）
+## 自動生成の論文一覧（620本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1093,6 +1093,10 @@
 - **2026-07 · [X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding](2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末SLMとサーバLLMの語彙が異なっても、残差分布を共通語彙・LLM専用語彙へ分け、少数の置換候補だけを通信して厳密な協調投機的デコードを行う方式。
+
+- **2026-07 · [Wan-Streamer v0.2: Higher Resolution, Same Latency](2026-2607.04443-wan-streamer-v0-2-higher-resolution-same-latency.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対話映像の解像度を192かける336から640かける368へ上げながら、シンカーを単一GPUに残し映像潜在生成だけをUlysses型文脈並列の複数GPUパフォーマーへ移すことで、モデル側遅延約200ミリ秒を保つストリーミング音声映像モデルの改版。
 
 - **2026-07 · [SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving](2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（215本）
+## 自動生成の論文一覧（217本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -378,6 +378,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ブロック内の位置は任意順で確定できるように見えるが、既存の並列サンプリング方式をそのまま移植すると、先の位置だけを確定して前方の未確定位置を残し、コードや推論の構造を壊す場合がある。
 
+- **2026-07 · [PartRep: Learning What to Repeat for Decoder-only LLMs](2026-2607.01792-partrep-learning-what-to-repeat-for-decoder-only-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プロンプトを全部繰り返す代わりに、負の対数尤度が高い情報密度の高いトークンだけを初期層ゲートで選んで繰り返し、全繰り返しの精度利得をKVキャッシュ59.4パーセントで近似する選択的拡張。
+
 - **2026-07 · [From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models](2026-73c7c240d868-from-static-inference-to-dynamic-interaction-a-survey-of-streaming-large.md)**  
   実装：[✓](https://github.com/EIT-NLP/Awesome-Streaming-LLMs) ・ リポジトリ内被引用：0  
   さらに同時入出力で生じる注意依存の競合、位置IDの衝突、読み書きタイミングの決定を、アーキテクチャと制御ポリシーの独立した設計軸として比較する。
@@ -445,6 +449,10 @@
 - **2026-05 · [Measuring Maximum Activations in Open Large Language Models](2026-2605.15572-measuring-maximum-activations-in-open-large-language-models.md)**  
   実装：[✓](https://github.com/clx1415926/Max_act_llm) ・ リポジトリ内被引用：0  
   低ビット推論では、活性値を少数の離散水準へ写すときに、値の最大絶対値が量子化尺度の決定を左右する。近い規模のMoEモデルは密モデルより14.0〜23.4倍低い極大値を示す。
+
+- **2026-05 · [Mapping text to multiplex graph: Prompt compression as Lévy walk-guided graph pruning](2026-2607.01241-mapping-text-to-multiplex-graph-prompt-compression-as-l-vy-walk-guided-g.md)**  
+  実装：[✓](https://anonymous.4open.science/r/RAGP-B0CB) ・ リポジトリ内被引用：0  
+  テキストを注意の局所層と意味の大域層からなる多重グラフへ写し、レヴィ歩行の訪問頻度で冗長でないノードを選ぶことで、構造を保ったままプロンプトを圧縮する。
 
 - **2026-05 · [Linear Scaling Video VLMs for Long Video Understanding](2026-2605.31598-linear-scaling-video-vlms-for-long-video-understanding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

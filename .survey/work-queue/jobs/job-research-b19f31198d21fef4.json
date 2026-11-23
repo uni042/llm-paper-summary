@@ -35,10 +35,15 @@
   "selection_reason": "PARTREPはプロンプト全体の繰り返しがKVキャッシュを2倍化しプリフィル注意コストを4倍化する問題に対し、負の対数尤度で選んだ情報量の高いトークンだけを追記する選択的繰り返しを提案し、長文脈LLMの推論コストを抑える直接の手法である。",
   "semantic_scholar_id": "9b51afb5da71e1d07ad3af6936aeb4008c232a58",
   "source_url": "https://arxiv.org/abs/2607.01792",
-  "status": "ready",
+  "status": "superseded",
   "title": "PARTREP: Learning What to Repeat for Decoder-only LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T19:30:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2607.01792-partrep-learning-what-to-repeat-for-decoder-only-llms.md",
+  "represented_canonical_id": "arXiv:2607.01792",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
