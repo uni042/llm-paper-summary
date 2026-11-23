@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d47::provider-gap",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 1,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37976",
+      "identity_tokens": [
+        "arXiv:2609.37976"
+      ],
+      "title": "S3: Spectral Null-Space Swap Makes Reasoning Models Efficient",
+      "reason": "S3は非思考モデルの主特異方向が張る部分空間の零空間に思考モデルの成分を残す学習不要なチェックポイント合成であり、2Bから30Bの密モデルとMoEで推論トークンのオーバーヘッドを平均27.4%削減しつつ精度も向上させることを示しており、推論効率への直接の技術的貢献が具体的に確認できるため採用とする。",
+      "source_url": "https://arxiv.org/abs/2609.37976",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T18:40:00+09:00",
+      "last_checked_at": "2026-11-23T18:40:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    }
+  ],
+  "parent_run_key": "muse-20261123-d47",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261123-1630-muse-d47--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2609.37976"
+  ]
+}
