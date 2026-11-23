@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d14::chunk-0001-of-0002",
+  "reference_main_sha": "8bebb239",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36903",
+      "identity_tokens": [
+        "arXiv:2609.36903"
+      ],
+      "title": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+      "reason": "全二重音声モデルの長文・多人数・二言語会話向けデータと評価の拡張であり、対象は音声対話モデルの能力とデータ整備で、LLMのデコード、KVキャッシュ、サービング等の推論システムへの技術的貢献は要旨に確認できないため。",
+      "source_url": "https://arxiv.org/abs/2609.36903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 391
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.06216",
+      "identity_tokens": [
+        "arXiv:2509.06216"
+      ],
+      "title": "Agentic Software Engineering: Foundational Pillars and a Research Roadmap",
+      "reason": "エージェント型ソフトウェア工学の基礎柱と研究ロードマップを論じる展望論文であり、作業環境の提案も工学プロセス論にとどまり、LLM推論・サービング・デコード機構への直接の技術的貢献は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2509.06216",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 392
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.07515",
+      "identity_tokens": [
+        "arXiv:2110.07515"
+      ],
+      "title": "Non-Autoregressive Translation with Layer-Wise Prediction and Deep Supervision",
+      "reason": "深い教師と層別予測で非自己回帰翻訳を高速化し推論効率14.8倍を報告する点は並列デコードとして推論と関係するが、対象は機械翻訳モデル単体の学習・生成方式であり、LLM推論システムやサービングへの適用は要旨で示されていないため。",
+      "source_url": "https://arxiv.org/abs/2110.07515",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.13742",
+      "identity_tokens": [
+        "arXiv:2501.13742"
+      ],
+      "title": "An Empirical Study of Retrieval-Augmented Code Generation: Challenges and Opportunities",
+      "reason": "検索拡張コード生成の実証研究で、取得コードの品質と利用法が生成精度へ与える影響を評価したものであり、推論の高速化、メモリ、スケジューリング等のLLM推論システムへの技術的貢献は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2501.13742",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.11180",
+      "identity_tokens": [
+        "arXiv:2208.11180"
+      ],
+      "title": "Auditing Membership Leakages of Multi-Exit Networks",
+      "reason": "早期終了を持つマルチ出口ネットワークのメンバーシップ漏洩を監査するプライバシー分析であり、マルチ出口自体は効率的推論と関係するものの、本論文の貢献は攻撃脆弱性の評価で推論システムの改善ではないため。",
+      "source_url": "https://arxiv.org/abs/2208.11180",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 395
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07053",
+      "identity_tokens": [
+        "arXiv:2504.07053"
+      ],
+      "title": "TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
+      "reason": "音声トークン化をテキスト転写と整合させるTASTEにより音声言語モデルの共同モデリングを行う研究で、トークン長削減は副次的であり、主目的は音声モデルの表現と生成能力でLLM推論システムへの直接貢献は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2504.07053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 396
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:3c1d8d3846a7ed76d870451c03b1a6f366ea2d7d",
+      "identity_tokens": [
+        "SemanticScholar:3c1d8d3846a7ed76d870451c03b1a6f366ea2d7d"
+      ],
+      "title": "Winning Both the Accuracy of Floating Point Activation and the Simplicity of Integer Arithmetic",
+      "reason": "浮動小数点活性化の精度と整数演算の単純さを両立させるという題名からは推論向け量子化・数値演算への関連が示唆されるが、OpenAlex・Crossrefで一次要旨を取得できず機構とLLM推論への適用を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/3c1d8d3846a7ed76d870451c03b1a6f366ea2d7d",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 397
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.29093",
+      "identity_tokens": [
+        "arXiv:2603.29093"
+      ],
+      "title": "APEX-EM: Non-Parametric Online Learning for Autonomous Agents via Structured Procedural-Episodic Experience Replay",
+      "reason": "LLMエージェントの手続き・エピソード経験を知識グラフに蓄積し検索して再利用するAPEX-EMは再推論の削減と関係するが、主貢献はエージェントの経験学習と課題成功率であり、推論システムのデコードやサービング機構ではないため。",
+      "source_url": "https://arxiv.org/abs/2603.29093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 398
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00028",
+      "identity_tokens": [
+        "arXiv:2505.00028"
+      ],
+      "title": "Enhancing Speech-to-Speech Dialogue Modeling with End-to-End Retrieval-Augmented Generation",
+      "reason": "音声クエリからテキスト知識を直接検索する音声対音声対話向け検索拡張生成の研究で、対象は対話モデルの知識統合能力であり、検索効率の改善も対話品質が主目的でLLM推論システムへの直接貢献は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2505.00028",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 399
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.17771",
+      "identity_tokens": [
+        "arXiv:2407.17771"
+      ],
+      "title": "Banyan: Improved Representation Learning with Explicit Structure",
+      "reason": "明示的な階層構造と対角化メッセージパッシングで意味表現を効率的に学習するBanyanの研究であり、低リソースでの表現学習が主目的で、LLMの推論・デコード・サービング機構への技術的貢献は要旨に確認できないため。",
+      "source_url": "https://arxiv.org/abs/2407.17771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 400
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.15475",
+      "identity_tokens": [
+        "arXiv:2504.15475"
+      ],
+      "title": "Speculative Sampling via Exponential Races",
+      "reason": "小さいドラフトモデルを使う投機的デコードとチャネルシミュレーションの情報理論的接続を確立し、生成高速化の上限とドラフトトークン数の関係を導出し、指数レースによる新規投機的サンプリングERSDを提案しており、LLM推論高速化への直接貢献が具体的であるため。",
+      "source_url": "https://arxiv.org/abs/2504.15475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05951",
+      "identity_tokens": [
+        "arXiv:2511.05951"
+      ],
+      "title": "Klear-AgentForge: Forging Agentic Intelligence through Posttraining Scaling",
+      "reason": "Qwen3-8Bを基に教師あり微調整と多ターン強化学習でエージェントモデルを学習する事後学習パイプラインの公開が主内容であり、学習単独の規模拡大であってLLM推論システムへの直接の技術的貢献は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2511.05951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CCGrid68966.2026.00038",
+      "identity_tokens": [
+        "DOI:10.1109/CCGrid68966.2026.00038"
+      ],
+      "title": "TelePod: Live Migration for Stateful Containers",
+      "reason": "状態を持つコンテナのライブマイグレーションでメモリ事前コピーと転送・復元の重ね合わせにより停止時間を減らすTelePodはサービング基盤と関係しうるが、要旨の対象はデータベースやゲームサーバ等の汎用ワークロードでLLM推論への適用は示されていないため。",
+      "source_url": "https://doi.org/10.1109/CCGrid68966.2026.00038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JETCAS.2026.3657823",
+      "identity_tokens": [
+        "DOI:10.1109/JETCAS.2026.3657823"
+      ],
+      "title": "A Coalesced Tensor Reduction Architecture for Scalable All-Bank PIM Execution",
+      "reason": "推薦モデルの埋め込み層向けにHBM-PIMとDIMMを組み合わせテンソル削減を加速するTRAMはメモリ律速処理のハードウェア加速として関連するが、対象はDLRMの埋め込み削減でありLLM推論の注意やKVキャッシュ等への適用は要旨で示されていないため。",
+      "source_url": "https://doi.org/10.1109/JETCAS.2026.3657823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832235",
+      "identity_tokens": [
+        "DOI:10.1145/3832235"
+      ],
+      "title": "When Optimizations Backfire: The Paradox of Plaintext Optimizations in Privacy-Preserving ML Compilers",
+      "reason": "プライバシー保護MLコンパイラへ平文用最適化パスを流用すると性能退行を起こす問題を検出するHoptaの研究はMLコンパイラ最適化と関係するが、対象は暗号化データ上の回路コンパイルであり通常のLLM推論コンパイラや実行系への直接貢献は薄いため。",
+      "source_url": "https://doi.org/10.1145/3832235",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2118/235328-ms",
+      "identity_tokens": [
+        "DOI:10.2118/235328-ms"
+      ],
+      "title": "Schema-Primed Knowledge-Augmented Approach to Water Injection Diagnostics and Closed-Loop Reservoir Dynamic Analysis",
+      "reason": "成熟油田の注水診断と貯留層動態解析へスキーマ駆動の知識拡張生成とエージェント記憶を適用した石油工学分野の応用研究であり、LLM推論システムへの技術的貢献は確認できず異分野応用に該当するため。",
+      "source_url": "https://doi.org/10.2118/235328-ms",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b28ebae331f42fb8161ea4a36d10bd0c58ada8fc",
+      "identity_tokens": [
+        "SemanticScholar:b28ebae331f42fb8161ea4a36d10bd0c58ada8fc"
+      ],
+      "title": "ViBES: A Conversational Agent with Behaviorally-Intelligent 3D Virtual Body",
+      "reason": "行動的に知的な3D仮想身体を持つ対話エージェントという題名からは対話応用が示唆されるが、OpenAlex・Crossrefで一次要旨を取得できず、LLM推論システムとの関係や機構を確認できないため、要旨未取得の規則により保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/b28ebae331f42fb8161ea4a36d10bd0c58ada8fc",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01418",
+      "identity_tokens": [
+        "arXiv:2602.01418"
+      ],
+      "title": "Parabolic Position Encoding: Vision-Centric, Principled, Extrapolatable, General",
+      "reason": "視覚トークン向けに放物線型の位置符号化PaPEを提案し画像等の外挿と汎用性を評価した研究であり、対象はビジョンモデルの位置表現の精度であって、LLM推論のデコード、メモリ、サービングへの直接貢献は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2602.01418",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12036",
+      "identity_tokens": [
+        "arXiv:2605.12036"
+      ],
+      "title": "Towards Fine-Grained Multi-Dimensional Speech Understanding: Data Pipeline, Benchmark, and Model",
+      "reason": "音声LLMの細粒度多次元理解に向けたデータパイプライン、14次元のベンチマーク、モデルの構築が主内容であり、対象は音声知覚能力の評価と改善であってLLM推論システムへの技術的貢献は要旨に確認できないため。",
+      "source_url": "https://arxiv.org/abs/2605.12036",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.29453",
+      "identity_tokens": [
+        "arXiv:2605.29453"
+      ],
+      "title": "Forget Less, Generalize More: Unifying Temporal and Structural Adaptation for Dynamic Graphs",
+      "reason": "動的グラフの時間・構造適応を保持型状態と適応減衰カーネルで統一する表現学習手法DSRDの研究であり、対象はグラフ学習の汎化性能であって、LLM推論システムの機構や基盤への直接の関係は確認できないため。",
+      "source_url": "https://arxiv.org/abs/2605.29453",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    }
+  ],
+  "parent_run_key": "muse-20261123-d14",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

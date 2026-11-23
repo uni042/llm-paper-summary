@@ -1,0 +1,187 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d16::chunk-0002-of-0002",
+  "reference_main_sha": "8bebb239",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.02679",
+      "identity_tokens": [
+        "arXiv:2106.02679"
+      ],
+      "title": "Layered gradient accumulation and modular pipeline parallelism: fast and efficient training of large language models",
+      "reason": "階層的勾配蓄積とモジュール型パイプライン並列で大規模言語モデルの学習時間を短縮する研究であり、対象は学習専用で推論やサービングへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2106.02679",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 471
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14574",
+      "identity_tokens": [
+        "arXiv:2410.14574"
+      ],
+      "title": "MomentumSMoE: Integrating Momentum into Sparse Mixture of Experts",
+      "reason": "疎MoEへ運動量を導入し学習の安定性と分布変化への頑健性を高める研究であり、推論時の専門家実行や負荷分散など推論システムへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2410.14574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 472
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.06724",
+      "identity_tokens": [
+        "arXiv:2511.06724"
+      ],
+      "title": "Argus: Quality-Aware High-Throughput Text-to-Image Inference Serving System",
+      "reason": "拡散モデル向けに近似レベルをプロンプトごとに選ぶ高スループット画像生成サービングArgusであり、サービング設計は関連するが対象がLLMではなく拡散モデルである。",
+      "source_url": "https://arxiv.org/abs/2511.06724",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 473
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.12385",
+      "identity_tokens": [
+        "arXiv:2608.12385"
+      ],
+      "title": "Decode-Branch Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
+      "reason": "プリフィル専用の主経路とデコード時のみ有効化する分岐を分離し単一KVキャッシュを共有することで、LLMサービングのプリフィルとデコードの費用配分を直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2608.12385",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 474
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05697",
+      "identity_tokens": [
+        "arXiv:2605.05697"
+      ],
+      "title": "Budgeted Attention Allocation: Cost-Conditioned Compute Control for Efficient Transformers",
+      "reason": "予算条件付きの注意ヘッドゲーティングで費用と品質の動作点を切り替えるが、検証は合成課題やBERT-Mini等の小型モデル中心でLLM推論への実証は限定的である。",
+      "source_url": "https://arxiv.org/abs/2605.05697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 475
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2305.14405",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2305.14405",
+        "arXiv:2305.14405"
+      ],
+      "title": "NeuralMatrix: Moving Entire Neural Networks to General Matrix Multiplication for Efficient Inference",
+      "reason": "ニューラルネット全体の計算を一般行列積へ変換し単一GEMMアクセラレータでTransformerを含む多様なモデルを実行するNeuralMatrixで、推論効率を直接改善する。",
+      "source_url": "https://doi.org/10.48550/arXiv.2305.14405",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 476
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.00247",
+      "identity_tokens": [
+        "arXiv:2602.00247"
+      ],
+      "title": "CAPA: Contribution-Aware Pruning and FFN Approximation for Efficient Large Vision-Language Models",
+      "reason": "注意寄与度に基づく視覚トークン剪定と視覚トークン向けFFN近似を組み合わせ、大規模視覚言語モデルの推論計算とメモリ費用を直接削減する手法である。",
+      "source_url": "https://arxiv.org/abs/2602.00247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 477
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/LCA.2026.3659512",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2026.3659512"
+      ],
+      "title": "De-Quantization Penalties for Interactive LLM Inference on Prosumer GPUs",
+      "reason": "プロシューマGPU上の対話的LLM推論における逆量子化のペナルティを扱う題目で量子化推論に直結するが、要旨を取得できず計測対象や結論の具体性を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/LCA.2026.3659512",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 478
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.14705",
+      "identity_tokens": [
+        "arXiv:2302.14705"
+      ],
+      "title": "AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference With Transformers",
+      "reason": "実行時に活性化を剪定するDynaTranとタイリングやデータフロー最適化を備えたAccelTranアクセラレータで、Transformer推論のスループットとエネルギー効率を直接高める。",
+      "source_url": "https://arxiv.org/abs/2302.14705",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 479
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2512.06869",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2512.06869",
+        "arXiv:2512.06869"
+      ],
+      "title": "Rhea: Role-aware Heuristic Episodic Attention for Conversational LLMs",
+      "reason": "指示と対話履歴に異なる保持方針を与える役割認識型エピソード注意REAで文脈管理を行い、会話LLMの品質向上と平均遅延の大幅削減を実証する推論時機構である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2512.06869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 480
+    }
+  ],
+  "parent_run_key": "muse-20261123-d16",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

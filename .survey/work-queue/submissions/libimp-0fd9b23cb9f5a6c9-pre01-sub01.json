@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FP2: A 2-bit Floating-Point Format for Edge-AI Inference and Fine-Tuning",
+      "source_url": "https://doi.org/10.1109/TCSI.2025.3638831",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Transactions on Circuits and Systems Part 1: Regular Papers",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The increasing scale of Deep Neural Networks (DNNs) has made 2-bit quantization crucial for mitigating memory bottlenecks on edge devices. Low-bitwidth floating-point formats, offering larger dynamic ranges and avoiding quantization steps, have emerged as promising alternatives to fixed-point quantization. However, constructing viable floating-point representations with fewer than 3 bits remains challenging, as conventional formats require at least one sign bit, one exponent bit, and one mantissa bit. We address this challenge by introducing a novel data compression method that uses a 4-bit encoding space to represent two floating-point values, achieving an effective storage density of 2 bits per value. Depending on the bit width of the exponent and mantissa, we propose two different 2-bit floating-point encodings: <sc>fp2-e1m0</sc> and <sc>fp2-e0m1</sc>. Based on <sc>fp2</sc>, we introduce two computing architectures that simplify floating-point multiply-accumulate (MAC) operations into bitwise addition and logic operations, reducing floating-point computation by factors of <inline-formula> <tex-math notation=\"LaTeX\">$2\\times $ </tex-math></inline-formula> and <inline-formula> <tex-math notation=\"LaTeX\">$4\\times $ </tex-math></inline-formula>. As a result, <sc>fp2</sc> offers a practical solution for efficient inference using floating-point arithmetic on resource-constrained edge devices. Moreover, we analyze the error characteristics of the <sc>fp2</sc> data format from three perspectives. To validate the effectiveness of the <sc>fp2</sc> format, we conduct experiments on ResNet18/50 and ConvNeXt-Tiny using the CIFAR-10 and ImageNet-1K datasets. Compared to <sc>fp4</sc>, our approach reduces model size by 47%, with accuracy loss is less than 2 percentage points. Notably, on CIFAR-10, some results are close to those of <sc>fp32</sc>. In contrast, when evaluated under 2-bit GPTQ, <sc>fp2</sc> demonstrates significant advantages over the baseline method on the LLAMA model. For hardware evaluation, we implement our design at the RTL level and evaluate it on both FPGA and ASIC platforms. Compared to computation architectures based on <sc>fp4</sc>, our <sc>fp4</sc><inline-formula> <tex-math notation=\"LaTeX\">$\\times $ </tex-math></inline-formula><sc>fp2</sc> processing element (PE) array reduces area by 15% and power consumption by 8%. Furthermore, our <sc>fp2</sc><inline-formula> <tex-math notation=\"LaTeX\">$\\times $ </tex-math></inline-formula><sc>fp2</sc> PE array achieves a remarkable 78% reduction in both area and power consumption.",
+      "identifiers": [
+        "SemanticScholar:df71622761f7a50630161a2a559df67bc3f418aa"
+      ],
+      "semantic_scholar_id": "df71622761f7a50630161a2a559df67bc3f418aa",
+      "doi": "10.1109/TCSI.2025.3638831",
+      "canonical_id": "DOI:10.1109/TCSI.2025.3638831",
+      "authors": [
+        "Qi-Wei Dang",
+        "Chengyu Ma",
+        "Hai-Duo Huang",
+        "Ge-Lin Fu",
+        "Zhiwang Huo",
+        "Guoming Yang",
+        "Pengchen Zong",
+        "Tian Xia",
+        "Wen-Zhe Zhao",
+        "Peng-Ju Ren"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      },
+      "reason": "2ビット浮動小数点形式FP2を4ビット空間で2値を表す符号化と、浮動小数点MACをビット加算・論理演算へ簡略化する計算アーキテクチャで提示し、エッジAI推論のメモリと演算コストを直接削減する推論向け低ビット化の貢献が要旨で確認できるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Decoding with Limited Teacher Supervision Requires Understanding When to Trust the Teacher",
+      "source_url": "https://arxiv.org/abs/2406.18002",
+      "year": 2024,
+      "published": "2024-06-26",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How can small-scale large language models (LLMs) efficiently utilize the supervision of LLMs to improve their generative quality? This question has been well studied in scenarios where there is no restriction on the number of LLM supervisions one can use, giving birth to many decoding algorithms that utilize supervision without further training. However, it is still unclear what is an effective strategy under the $\\textit{limited supervision}$ scenario, where we assume that no more than a few tokens can be generated by LLMs. To this end, we develop an algorithm to effectively aggregate the small-scale LLM and LLM predictions on initial tokens so that the generated tokens can more accurately condition the subsequent token generation by small-scale LLM only. Critically, we find that it is essential to adaptively overtrust or disregard the LLM prediction based on the confidence of the small-scale LLM. Through our experiments on a wide range of models and datasets, we demonstrate that our method provides a consistent improvement over conventional decoding strategies. $\\small$ $\\textbf{Code:}$ https://github.com/HJ-Ok/DecLimSup",
+      "identifiers": [
+        "SemanticScholar:4985da3fa08a74644bfb244c1fe5f0c64330fade"
+      ],
+      "semantic_scholar_id": "4985da3fa08a74644bfb244c1fe5f0c64330fade",
+      "canonical_id": "arXiv:2406.18002",
+      "arxiv_id": "2406.18002",
+      "doi": "10.48550/arXiv.2406.18002",
+      "authors": [
+        "Hyunjong Ok",
+        "Jegwang Ryu",
+        "Jaeho Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 880,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "小規模LLMと教師LLMの予測を初期トークンで集約し、小規模モデルの信頼度に応じて教師予測を過信・無視する適応的デコードアルゴリズムを提案しており、限られた教師監督下でのLLMデコード機構そのものへの直接の貢献が要旨で確認できるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LRCC: Generalizing Low-Rank Compression with Conditional Computation",
+      "source_url": "https://arxiv.org/abs/2610.08858",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-rank compression reduces the cost of pretrained language models by replacing linear transformations with low-rank factorizations. However, conventional methods use a fixed rank allocation during inference, assigning the same amount of compute regardless of the input token. We introduce Low-Rank Conditional Computation (LRCC), which adds token-dependent computation to pretrained models by training one lightweight router per Transformer block to select among a small set of nested low-rank paths. During training, the low-rank factors remain frozen, and only the routers are optimized. We evaluate LRCC on Llama and Qwen models for language modeling and zero-shot downstream tasks. Within the same average active-parameter budget, LRCC improves the predictive performance over static low-rank compression, including a 7.6 percentage-point gain in average downstream accuracy on Llama-2-7B over static methods. At matched batch-size-1 decoding latency, LRCC improves both perplexity and downstream accuracy on Llama-3.2-1B and remains competitive on Llama-2-7B, without specialized kernels. Finally, we assess the usefulness of assigning a token-wise path by analyzing the routers'path choices.",
+      "identifiers": [
+        "SemanticScholar:c56ee452a4c9661ecdfbf6135165a6113c585894"
+      ],
+      "semantic_scholar_id": "c56ee452a4c9661ecdfbf6135165a6113c585894",
+      "canonical_id": "arXiv:2610.08858",
+      "arxiv_id": "2610.08858",
+      "authors": [
+        "T. Fontanari",
+        "Maximo Eduardo Rulli",
+        "Federico Alvetreti",
+        "Donatella Genovese",
+        "Simone Scardapane"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習言語モデルの線形変換を低ランク化し、Transformerブロックごとの軽量ルータがトークン依存に低ランク経路を選ぶ条件付き計算LRCCを提案し、Llama等でバッチ1デコード遅延を揃えた条件でも性能改善を示すなどLLM推論圧縮への直接貢献が確認できるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Breaking Diffusion: Parallel Reasoning with Draft Refinement",
+      "source_url": "https://arxiv.org/abs/2610.26542",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Drafting an answer allows a reasoning model to reconsider each decision in the context of the others. Yet repeated diffusion denoising does not ensure that individually plausible token updates form a better answer together. We introduce Draft Refinement Language Models (DRLMs), which use a single denoiser to propose parallel revisions and evaluate a candidate draft. We train the denoiser to reconstruct every token from uniformly corrupted drafts, teaching both preservation and repair. Its predictions specify revisions directly, without a diffusion reverse transition. Evaluation requires a different use of these predictions: confidence in an existing token reflects both contextual support and evidence from observing the token itself. Using the known corruption process, we correct for this self-token evidence to estimate how well each token is supported by the prompt and the remaining draft. Aggregating these estimates yields a cavity energy computed in one forward pass, without an additional scoring model. Each round proposes a revision, reads the completed candidate in its revised context, and retains it only if its energy is lower. Across Countdown, Sudoku-Extreme, and Maze-Hard, our method outperforms autoregressive and discrete diffusion baselines. With 6M parameters, DRLM reaches 44.4% on Countdown-5 and 93.9% on Sudoku-Extreme. The results establish complete-draft parallel refinement as an effective alternative to reverse diffusion for complex reasoning.",
+      "identifiers": [
+        "SemanticScholar:02524582a809ff4256de86bbce3c718adfea431f"
+      ],
+      "semantic_scholar_id": "02524582a809ff4256de86bbce3c718adfea431f",
+      "canonical_id": "arXiv:2610.26542",
+      "arxiv_id": "2610.26542",
+      "authors": [
+        "Jaesang Yu",
+        "Seoyeon Byun",
+        "Yun Wang",
+        "Yan Lu",
+        "Juho Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散型言語モデル向けに単一デノイザで並列な草稿改訂を提案し、自己トークン証拠を補正したキャビティエネルギーを1回の順伝播で評価して改訂候補を採否するDraft Refinementを提示しており、並列推論・草稿改訂デコード機構への直接の貢献が要旨で確認できるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DISCO: Distributed Inference with Sparse Communications",
+      "source_url": "https://arxiv.org/abs/2302.11180",
+      "year": 2023,
+      "published": "2023-02-22",
+      "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep neural networks (DNNs) have great potential to solve many real-world problems, but they usually require an extensive amount of computation and memory. It is of great difficulty to deploy a large DNN model to a single resource-limited device with small memory capacity. Distributed computing is a common approach to reduce single-node memory consumption and to accelerate the inference of DNN models. In this paper, we explore the \"within-layer model parallelism\", which distributes the inference of each layer into multiple nodes. In this way, the memory requirement can be distributed to many nodes, making it possible to use several edge devices to infer a large DNN model. Due to the dependency within each layer, data communications between nodes during this parallel inference can be a bottleneck when the communication bandwidth is limited. We propose a framework to train DNN models for Distributed Inference with Sparse Communications (DISCO). We convert the problem of selecting which subset of data to transmit between nodes into a model optimization problem, and derive models with both computation and communication reduction when each layer is inferred on multiple nodes. We show the benefit of the DISCO framework on a variety of CV tasks such as image classification, object detection, semantic segmentation, and image super resolution. The corresponding models include important DNN building blocks such as convolutions and transformers. For example, each layer of a ResNet-50 model can be distributively inferred across two nodes with 5x less data communications, almost half overall computations and less than half memory requirement for a single node, and achieve comparable accuracy to the original ResNet-50 model.",
+      "identifiers": [
+        "SemanticScholar:ba05ff59a27bb5ded2d407c264fac3a6901d432a"
+      ],
+      "semantic_scholar_id": "ba05ff59a27bb5ded2d407c264fac3a6901d432a",
+      "canonical_id": "arXiv:2302.11180",
+      "arxiv_id": "2302.11180",
+      "doi": "10.1109/WACV57701.2024.00242",
+      "authors": [
+        "Minghai Qin",
+        "Chaowen Sun",
+        "Jaco A. Hofmann",
+        "Dejan Vucinic"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1370,
+        "matched_prestigious_venue": null
+      },
+      "reason": "各層の推論を複数ノードへ分ける層内モデル並列を対象に、ノード間送信データの部分集合選択をモデル最適化問題へ帰着させ、計算と通信を共に削減する分散推論フレームワークDISCOを提案しており、分散推論システムへの直接の貢献が要旨で確認できるため。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0fd9b23cb9f5",
+    "round": "libimp-0fd9b23cb9f5a6c9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0fd9b23cb9f5a6c9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0fd9b23cb9f5a6c9-pre01.json",
+    "receipt": "sha256:b65ba0791c4e88d3ddf3ecbace67fa9c0ef3be01d3dad36c52844d14a3d9a05a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0fd9b23cb9f5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

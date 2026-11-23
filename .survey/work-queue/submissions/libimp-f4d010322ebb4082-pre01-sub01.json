@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "iS-KV: Online Low-Rank KV Cache Compression via Block-Incremental SVD",
+      "source_url": "https://arxiv.org/abs/2610.02815",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought reasoning substantially increases KV-cache memory during autoregressive decoding, as every generated token introduces new key and value states and causes the cache to grow linearly with decoding length. Existing KV-cache compression methods typically control this growth through token eviction, but irreversible deletion can remove historical states that later reasoning may need to revisit. SVD-based low-rank compression provides an alternative by retaining all positions with a more compact representation. However, extending it from a fixed prompt cache to online decoding is non-trivial. Through our investigation, we find that if the basis is updated for new tokens while old tokens keep their coordinates in the old basis, the stored history drifts substantially. Based on this observation, we propose iS-KV, an online low-rank KV-cache compression method for long-horizon reasoning. iS-KV keeps a recent window exact while incrementally folding older states into bounded-rank representations. As the low-rank basis evolves, it synchronizes historical coordinates with the updated basis to maintain representation consistency. On DeepSeek-R1-Distill-Llama-8B, iS-KV achieves 82.6% accuracy at 4.06-fold persistent-KV compression, close to the original model's 83.6%. On Qwen3-8B, it achieves 89.2% accuracy at 5.64-fold compression. Under matched memory budgets, iS-KV consistently outperforms token-eviction baselines.",
+      "identifiers": [
+        "SemanticScholar:341ea62437cca550e685e6f593fa57db37e44582"
+      ],
+      "semantic_scholar_id": "341ea62437cca550e685e6f593fa57db37e44582",
+      "canonical_id": "arXiv:2610.02815",
+      "arxiv_id": "2610.02815",
+      "authors": [
+        "Yi-Ren Zhao",
+        "Guang-Hui Song",
+        "Tianrui Qin",
+        "Ke-Jiang Ye",
+        "Cheng-Zhong Xu",
+        "Xi-Tong Gao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長い思考連鎖の自己回帰デコードで増大するKVキャッシュに対し、最近窓を厳密に保持し古い状態をブロック増分SVDで有界ランクへ折り畳み基底更新に履歴座標を同期させるオンライン低ランク圧縮を提案し、4〜5倍圧縮で精度維持を示しておりKVキャッシュ圧縮への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SecDTD: Dynamic Token Drop for Secure Transformers Inference",
+      "source_url": "https://arxiv.org/abs/2603.13670",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "European Symposium on Security and Privacy",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Transformer-based AI has been driven by accessible models such as ChatGPT, which provide API-based services for developers and businesses. However, as these online inference services increasingly handle sensitive inputs, privacy concerns have emerged as a significant challenge. To address this, secure inference frameworks have been proposed, but their high computational and communication overhead often limit practical deployment. In plaintext settings, token drop is an effective technique for reducing inference cost; however, our analysis reveals that directly applying such methods to ciphertext scenarios is suboptimal due to distinct cost distributions in secure computation. We propose SecDTD, a dynamic token drop scheme tailored for secure Transformer inference. SecDTD advances token drop by shifting the dropping to earlier inference stages, effectively reducing the cost of key components such as Softmax. To support this, we introduce two core techniques. Max-Centric Normalization (MCN): A novel, Softmax-independent scoring method that enables early token drop with minimal overhead and improved normalization, supporting more aggressive dropping without accuracy loss. OMSel: A faster, oblivious median selection protocol that securely identifies the median of importance scores to support token drop. Compared to existing sorting-based methods, OMSel achieves a 16.9× speedup while maintaining security, obliviousness and randomness. We evaluate SecDTD through 48 experiments across eight GLUE datasets under various network settings using the BOLT and BumbleBee frameworks. SecDTD achieves 4.47× end-to-end inference acceleration without degradation in accuracy.",
+      "identifiers": [
+        "SemanticScholar:a0bc126be49be9e4fdcf59cebd0c94e5cd491cf5"
+      ],
+      "semantic_scholar_id": "a0bc126be49be9e4fdcf59cebd0c94e5cd491cf5",
+      "canonical_id": "arXiv:2603.13670",
+      "arxiv_id": "2603.13670",
+      "doi": "10.1109/EuroSP68448.2026.00050",
+      "authors": [
+        "Yi-Fei Cai",
+        "Zhuo-Ran Li",
+        "Yi-Zhou Feng",
+        "Qiao Zhang",
+        "Hong-Yi Wu",
+        "Dan Zhao",
+        "Chun-Sheng Xin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      },
+      "reason": "安全なTransformer推論の暗号計算コストに対し、平文向けトークンドロップの費用分布の違いを踏まえ早期ドロップ、Softmax非依存の重要度評価と秘匿中央値選択プロトコルを提案し、精度維持で推論4.47倍高速化を示しておりセキュア推論高速化への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pipelining Network and Compute for Real-Time LLM Serving",
+      "source_url": "https://doi.org/10.1145/3798065.3798069",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "International Workshop on Network and Operating System Support for Digital Audio and Video",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-time interaction with multimodal Large Language Models (M-LLMs) remains impractical because conventional serving pipelines impose a receive-then-process barrier: video must be fully uploaded and preprocessed before inference can begin, leading to accelerator cold-start and high end-to-end latency. We present RabbitLLM, an end-to-end serving architecture that enables network-compute pipelining by coupling progressive video transport with transport-triggered incremental KV-cache construction. RabbitLLM streams video frames using WebRTC and immediately prefixes arriving visual chunks into the model state, overlapping transmission with prefilling while deferring decoding until a warm cache is available. Across realistic 4G/5G traces, RabbitLLM reduces interactive end-to-end delay by 43.5% compared to an upload-first TCP baseline while preserving output quality (BERTScore F1 > 0.82). RabbitLLM also reduces per-frame transmission delay by 95.4% and bandwidth consumption by 99.1%. These results suggest that low-latency multimodal serving requires co-design between streaming transport and inference execution, rather than optimizing either layer in isolation.",
+      "identifiers": [
+        "SemanticScholar:8857ea8f577ec92e1643bcb0fed9fce2105bcdc3"
+      ],
+      "semantic_scholar_id": "8857ea8f577ec92e1643bcb0fed9fce2105bcdc3",
+      "doi": "10.1145/3798065.3798069",
+      "canonical_id": "DOI:10.1145/3798065.3798069",
+      "authors": [
+        "Amani Sahu",
+        "Abdechakour Mechri",
+        "Abdelhak Bentaleb"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 233,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチモーダルLLMサービングで受信完了後に処理する障壁を、WebRTCによる映像ストリーミングと到着チャンクによる増分KVキャッシュ構築のプリフィルを重ねるネットワーク・計算パイプラインで解消し、対話遅延43.5％削減を示しておりLLMサービングへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SAPDS: Providing Latency Guarantees for Prioritized DAGs in Embodied LLM Systems",
+      "source_url": "https://doi.org/10.1109/CSCWD68734.2026.11582410",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "International Conference on Computer Supported Cooperative Work in Design",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) act as core reasoning engines in embodied LLM systems, executing macro-tasks decomposed into Directed Acyclic Graphs (DAGs) of heterogeneous-priority sub-tasks (e.g., safety-critical vs. goal-oriented). In scenarios like industry, stochastic LLM outputs require external verification, where failures trigger high-priority corrective tasks. This dynamic validation loop intensifies resource contention throughout the execution pipeline. Constrained by limited KV cache capacity and bimodal LLM inference (compute-bound prefill vs. memory-bound decode), existing throughput-optimized GPU schedulers fail to preserve priority semantics for dynamic DAG execution. Resulting priority inversion imposes unacceptably high latencies on critical tasks, compromising system reliability in time-sensitive embodied applications. We propose SAPDS (Stage-Aware Prioritized DAG Scheduling), a framework that co-manages DAG dependencies, validation loops, and resources through a stage-aware scheduling strategy. SAPDS employs High-Priority Biasing to prioritize critical prefill tasks and minimize queuing delays, while its fine-grained, Decode-Only Preemption policy resolves KV cache contention, ensuring strict latency guarantees and priority isolation for time-sensitive operations. While incurring a throughput trade-off against First-In, First-Out (FIFO) schedulers, SAPDS outperforms standard High-Priority-First (HPF) baselines with a validation-retry mechanism.",
+      "identifiers": [
+        "SemanticScholar:6c29a6926e33e542ed7cd9a32eabc6cbaaeb6104"
+      ],
+      "semantic_scholar_id": "6c29a6926e33e542ed7cd9a32eabc6cbaaeb6104",
+      "doi": "10.1109/CSCWD68734.2026.11582410",
+      "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582410",
+      "authors": [
+        "Zhendong Chen",
+        "ZhanShang Nie",
+        "Shuai Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      },
+      "reason": "身体性LLMシステムの優先度付きDAG実行に対し、計算律速プリフィルとメモリ律速デコードの二相性を踏まえた段階認識スケジューリング、高優先プリフィル偏重とデコード専用プリエンプションでKVキャッシュ競合を解消し遅延保証を行うもので、LLM推論スケジューリングへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "D-REAL: Acceptance-Length Optimization with Unbiased Gradients for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.10432",
+      "year": 2026,
+      "published": "2026-11-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding efficiency depends on the number of consecutively accepted draft tokens, yet token-level training objectives do not directly optimize this quantity. We introduce D-REAL (Drafter Reinforcement of Expected Acceptance Length), a post-training method that directly optimizes expected acceptance length for a fixed decoding context. D-REAL weights position-wise draft-target distributional overlap by prefix survival probabilities along a draft-sampled prefix, faithfully capturing the sequential dependence of verification on earlier proposals. By accounting for the parameter dependence of the proposal distribution, we derive an unbiased gradient estimator for this single-round objective under stochastic verification. We evaluate D-REAL on DSpark and DFlash2 with Qwen3-8B as the target model across ten benchmarks. Starting from baselines whose mean acceptance length has plateaued, one epoch of D-REAL post-training consistently improves the benchmark-averaged mean acceptance length by up to 0.23 tokens across both architectures under greedy (T = 0.0) and stochastic (T = 1.0) sampling, translating into up to a 9.4% end-to-end serving throughput improvement.",
+      "identifiers": [
+        "SemanticScholar:cd20398b2cc70b396df781a54e5de50423e51b7d"
+      ],
+      "semantic_scholar_id": "cd20398b2cc70b396df781a54e5de50423e51b7d",
+      "canonical_id": "arXiv:2611.10432",
+      "arxiv_id": "2611.10432",
+      "authors": [
+        "Meng Wei",
+        "Ye-Fei Chen",
+        "An-Tong Li",
+        "Ya-Nan Gao",
+        "Xing-Liang Shi",
+        "Xin Gao",
+        "Zhi-Ling Ye",
+        "Yun Yue",
+        "Chun-Xiao Guo",
+        "Peng Wei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的デコードの効率を決める連続受理長を直接最適化する学習法であり、前方生存確率で重み付けした不偏勾配推定によりドラフタを後学習し、受理長改善とサービングスループット最大9.4％向上を示しており投機的デコードへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f4d010322ebb",
+    "round": "libimp-f4d010322ebb4082-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f4d010322ebb4082-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f4d010322ebb4082-pre01.json",
+    "receipt": "sha256:85e5868ba845713ff2763c8e3bc9b882f9ac0849671758eeaa05449767686e49"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f4d010322ebb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

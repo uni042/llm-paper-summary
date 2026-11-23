@@ -1,0 +1,356 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d16::chunk-0001-of-0002",
+  "reference_main_sha": "8bebb239",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748173.3779189",
+      "identity_tokens": [
+        "DOI:10.1145/3748173.3779189"
+      ],
+      "title": "Hummingbird+: Advancing FPGA-based LLM Deployment from Research Prototype to Edge Product",
+      "reason": "FPGAベースのLLM配置とエッジ製品化を扱い推論ハードウェアへの関連は強いが、Crossrefに要旨がなく具体的な推論機構や性能貢献を確認できなかったため保留とする。",
+      "source_url": "https://doi.org/10.1145/3748173.3779189",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IPDPSW63119.2024.00208",
+      "identity_tokens": [
+        "DOI:10.1109/IPDPSW63119.2024.00208"
+      ],
+      "title": "System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models",
+      "reason": "極長系列Transformerの学習向けシステム最適化とされ推論ではなく学習が主題に見えるが、要旨を取得できず推論側への転用可能性も含め断定できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/IPDPSW63119.2024.00208",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24894",
+      "identity_tokens": [
+        "arXiv:2609.24894"
+      ],
+      "title": "SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models",
+      "reason": "病理スライド向けMLLMのエンコーダ内漸進的トークン剪定で推論遅延とメモリ削減を示すが、対象が病理画像応用に特化し汎用LLM推論システムへの貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2609.24894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2606.21847",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2606.21847",
+        "arXiv:2606.21847"
+      ],
+      "title": "UniRank: Unified Rank Allocation for Low-Rank LLM Compression",
+      "reason": "特異成分のエネルギーと機能的重要度でランク予算を全重み行列へ統一配分する低ランクLLM圧縮とランク保存微調整を提案し、推論向けモデル圧縮へ直接貢献する。",
+      "source_url": "https://doi.org/10.48550/arXiv.2606.21847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CCAI69603.2026.11642022",
+      "identity_tokens": [
+        "DOI:10.1109/CCAI69603.2026.11642022"
+      ],
+      "title": "A CIM-Aware Roofline Framework for Evaluating Compute-in-Memory Adaptation in Large Language Model Inference",
+      "reason": "LLM推論へのCompute-in-Memory適用をRooflineで評価する枠組みと題されるが、要旨を取得できず評価対象や計測手法の具体性を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/CCAI69603.2026.11642022",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:513321c28ff7abdc61644c83f0db0907ec1b18ed",
+      "identity_tokens": [
+        "SemanticScholar:513321c28ff7abdc61644c83f0db0907ec1b18ed"
+      ],
+      "title": "Neuro-Symbolic Architecture Meets Large Language Models: A Memory-Centric Perspective",
+      "reason": "メモリ中心の観点でニューロシンボリック構造とLLMを論じる題目で推論メモリとの関連は窺えるが、要旨を取得できず具体的な推論システム機構を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/513321c28ff7abdc61644c83f0db0907ec1b18ed",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.22891",
+      "identity_tokens": [
+        "arXiv:2511.22891"
+      ],
+      "title": "ORION: Teaching Language Models to Reason Efficiently in the Language of Thought",
+      "reason": "圧縮した思考言語と長さ選好最適化で推論トークン数を減らし遅延削減を狙うが、主たる貢献は推論時のシステム機構ではなくモデルの学習手法側にある。",
+      "source_url": "https://arxiv.org/abs/2511.22891",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.20198",
+      "identity_tokens": [
+        "arXiv:2512.20198"
+      ],
+      "title": "Designing Spatial Architectures for Sparse Attention: STAR Accelerator via Cross-Stage Tiling",
+      "reason": "疎注意の予測とソート済みFlashAttentionを跨段タイリングで協調させるSTARアクセラレータを提案し、LLM推論の注意計算とメモリアクセスを直接高速化する。",
+      "source_url": "https://arxiv.org/abs/2512.20198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.02134",
+      "identity_tokens": [
+        "arXiv:2508.02134"
+      ],
+      "title": "Free-Moref: Instantly Multiplexing Context Perception Capabilities of Video-Mllms Within Single Inference",
+      "reason": "動画MLLMで視覚トークンを複数参照へ再構成し単一推論で長尺文脈を扱う学習不要手法だが、動画理解応用が主目的で汎用LLMサービングへの貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2508.02134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fnbot.2025.1590994",
+      "identity_tokens": [
+        "DOI:10.3389/fnbot.2025.1590994"
+      ],
+      "title": "Adaptive-expert-weight-based load balance scheme for dynamic routing of MoE",
+      "reason": "要旨はMoE学習時の専門家負荷不均衡とルーティング崩壊への動的均衡化を扱い、推論時の負荷分散やサービングへの直接の技術的貢献は示されていない。",
+      "source_url": "https://doi.org/10.3389/fnbot.2025.1590994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27286",
+      "identity_tokens": [
+        "arXiv:2609.27286"
+      ],
+      "title": "Memory Control Signals Emerge Before Action in Long Horizon Agents",
+      "reason": "長期エージェントの履歴圧縮と想起の必要性が行動前の隠れ状態に現れることを解析しPaMERを提案するが、中心は内部表現の解析で推論システム機構の貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2609.27286",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 461
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.29565",
+      "identity_tokens": [
+        "arXiv:2606.29565"
+      ],
+      "title": "Speculative Pre-Positioning: Decoding Stateful Sessions to the Next Decision Point Off the Critical Path",
+      "reason": "vLLM等の無状態サーバの遊休時間に状態保持セッションを次判断点まで先行デコードし、プリフィルと初回デコードをクリティカルパスから外す投機的サービング手法である。",
+      "source_url": "https://arxiv.org/abs/2606.29565",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 462
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5fc3a6e76f4165070e4d0aea730b5791e3952135",
+      "identity_tokens": [
+        "SemanticScholar:5fc3a6e76f4165070e4d0aea730b5791e3952135"
+      ],
+      "title": "Optimization, Adaptation and Applications of Large Language Models",
+      "reason": "LLMの最適化と適応と応用を広く扱う題目だが要旨を取得できず、推論システムへの具体的な技術的貢献の有無や範囲を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/5fc3a6e76f4165070e4d0aea730b5791e3952135",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 463
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.196",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.196"
+      ],
+      "title": "DRP: Distilled Reasoning Pruning with Mathematical Skill-aware Step Decomposition for Efficient Large Reasoning Models",
+      "reason": "数学スキルを意識した推論ステップ分解と蒸留剪定で大規模推論モデル効率化を狙う題目だが、ACL掲載ページとCrossrefから要旨を取得できず機構を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.196",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 464
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09375",
+      "identity_tokens": [
+        "arXiv:2607.09375"
+      ],
+      "title": "Mach-Mind-4-Flash Technical Report",
+      "reason": "35B MoEエージェントモデルの技術報告で強化学習基盤の学習高速化には触れるが、主題はモデル能力と学習パイプラインでありLLM推論システムへの直接貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2607.09375",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 465
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26495",
+      "identity_tokens": [
+        "arXiv:2608.26495"
+      ],
+      "title": "Video-FLAIR: Not Whether to Reason, But How",
+      "reason": "動画質問応答で知覚・構成・熟慮の推論様式を強化学習で選択させる学習枠組みであり、能力向上が主目的で推論システムやデコード機構への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2608.26495",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 466
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.16151",
+      "identity_tokens": [
+        "arXiv:2508.16151"
+      ],
+      "title": "Hardwired-Neurons Language Processing Units as General-Purpose Cognitive Substrates",
+      "reason": "LLM重みを計算基板へ配線するLanguage Processing Unitと金属配線へ重みを埋め込む手法を提案し、LLM推論専用ハードウェアのエネルギー効率を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2508.16151",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 467
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12893",
+      "identity_tokens": [
+        "arXiv:2511.12893"
+      ],
+      "title": "ActVAR: Activating Mixtures of Weights and Tokens for Efficient Visual Autoregressive Generation",
+      "reason": "視覚自己回帰生成で重みとトークンの動的活性化によりFLOPsを削減するが、対象は画像生成モデルでありLLM推論システムへの直接の適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2511.12893",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 468
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:2e20c9a6e2e965045a9f1acac4a146c023888568",
+      "identity_tokens": [
+        "SemanticScholar:2e20c9a6e2e965045a9f1acac4a146c023888568"
+      ],
+      "title": "Accelerating Time Series Foundation Models with Speculative Decoding",
+      "reason": "時系列基盤モデルへの投機的デコード適用と題されデコード手法自体は関連するが、要旨を取得できずLLM推論への転用可能性や機構の詳細を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/2e20c9a6e2e965045a9f1acac4a146c023888568",
+      "body_check": "abstract_not_obtained; title_and_metadata_screen_only",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 469
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01911",
+      "identity_tokens": [
+        "arXiv:2402.01911"
+      ],
+      "title": "From PEFT to DEFT: Parameter Efficient Finetuning for Reducing Activation Density in Transformers",
+      "reason": "活性化密度を下げる損失をPEFT学習へ組み込む微調整手法であり、疎性対応ハードウェアでの推論効率は動機付けに留まり推論時機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2402.01911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 470
+    }
+  ],
+  "parent_run_key": "muse-20261123-d16",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

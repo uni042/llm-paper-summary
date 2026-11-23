@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "VETO: Video Efficient Token Optimization for Vision Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01785",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long videos with Vision-Language Models (VLMs) is bottlenecked by the quadratic cost of visual tokens, making long-form inference prohibitively expensive. While single-axis compression methods mitigate this, they hit a hard efficiency floor because they treat spatial and temporal redundancy independently. We present VETO (Video Efficient Token Optimization for Vision-Language Models), a training-optional plug-in that eliminates this bottleneck through dual-axis compression: (i) an intra-frame compressor that merges semantically similar tokens within each frame via optimal-transport inspired matching, and (ii) an inter-frame compressor that identifies and merges temporally redundant frames. The key design insight is hierarchical ordering: by first compressing spatial dimensions, VETO drastically reduces the cost of subsequent global temporal matching, bypassing the efficiency wall of single-axis approaches, with an advantage that grows with modern fully-fused attention infrastructure. Empirically, VETO achieves up to 45% faster inference (e.g., on LLaVA-OneVision-7B) while preserving or improving accuracy. Under extreme token starvation (10% budget), VETO outperforms VFlowOpt (54.9%), VisionZip (52.6%), and FastV (47.9%) with 55.7% accuracy. We demonstrate universal applicability across LLaVA-OneVision, InternVL-2.5, and LongVA, with zero-shot accuracy preserved or improved in all cases.",
+      "identifiers": [
+        "SemanticScholar:8cea8397f6e6b873330fa6380565f29c0d37a565"
+      ],
+      "semantic_scholar_id": "8cea8397f6e6b873330fa6380565f29c0d37a565",
+      "canonical_id": "arXiv:2610.01785",
+      "arxiv_id": "2610.01785",
+      "authors": [
+        "Gueter Josmy Faure",
+        "Hao-Ping Wang",
+        "Min-Hung Chen",
+        "Winston H. Hsu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VETOは長尺動画VLM推論の二次コストを対象に、フレーム内トークン統合とフレーム間冗長圧縮の二軸圧縮を提案するプラグインであり、視覚トークン削減による推論効率化への直接の貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compass: A Decentralized Scheduler for Latency-Sensitive ML Workflows",
+      "source_url": "https://arxiv.org/abs/2402.17652",
+      "year": 2024,
+      "published": "2024-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We consider ML query processing in distributed systems where GPU-enabled workers coordinate to execute complex queries: a computing style often seen in applications that interact with users in support of image processing and natural language processing. In such systems, coscheduling of GPU memory management and task placement represents a promising opportunity. We propose Compass, a novel framework that unifies these functions to reduce job latency while using resources efficiently, placing tasks where data dependencies will be satisfied, collocating tasks from the same job (when this will not overload the host or its GPU), and efficiently managing GPU memory. Comparison with other state of the art schedulers shows a significant reduction in completion times while requiring the same amount or even fewer resources. In one case, just half the servers were needed for processing the same workload.",
+      "identifiers": [
+        "SemanticScholar:185fef78da0ff6245f32d879a084a5d5dc6620d9"
+      ],
+      "semantic_scholar_id": "185fef78da0ff6245f32d879a084a5d5dc6620d9",
+      "canonical_id": "arXiv:2402.17652",
+      "arxiv_id": "2402.17652",
+      "doi": "10.48550/arXiv.2402.17652",
+      "authors": [
+        "Yuting Yang",
+        "Andrea Merlina",
+        "Wei-Jia Song",
+        "Tian-Cheng Yuan",
+        "K. Birman",
+        "R. Vitenberg"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1000,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CompassはGPUワーカー上のMLクエリ処理を対象に、タスク配置とGPUメモリ管理を統合した分散スケジューラで、ジョブ遅延削減を実証しており、分散推論・スケジューリングへの直接の技術的貢献が具体的である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-75244b121a74",
+    "round": "libimp-75244b121a7400f6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-75244b121a7400f6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-75244b121a7400f6-pre01.json",
+    "receipt": "sha256:923f8d52ddaedc310451ee864465028fbded4e69a8f20e49bd6a06829f3cf6c1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-75244b121a74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d13::chunk-0002-of-0002",
+  "reference_main_sha": "8bebb239",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04707",
+      "identity_tokens": [
+        "arXiv:2604.04707"
+      ],
+      "title": "OpenWorldLib: A Unified Codebase and Definition of Advanced World Models",
+      "reason": "ワールドモデルの統一定義とタスク横断のコードベース統合を提案する研究であり、推論フレームワークという語はワールドモデル群の再利用枠組みを指し、LLM推論・サービングの実行効率や機構への貢献ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2604.04707",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 381
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21667",
+      "identity_tokens": [
+        "arXiv:2601.21667"
+      ],
+      "title": "From Instruction to Event: Sound-Triggered Mobile Manipulation",
+      "reason": "音をトリガに移動操作を行うロボットの課題設定・シミュレーションプラットフォーム・階層ベースラインの研究であり、対象はロボットの自律知覚と制御であって、LLM推論システムへの技術的貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2601.21667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 382
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3690447",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3690447"
+      ],
+      "title": "OmniCharacter++: Toward Comprehensive Benchmark for Realistic Role-Playing Agents",
+      "reason": "複数キャラクターのテキスト・音声対話を対象とするロールプレイエージェント評価ベンチマークであり、内容はデータセットと能力評価の提供であって、LLM推論の実行機構やサービングへの技術的貢献はないため対象外である。",
+      "source_url": "https://doi.org/10.1109/TPAMI.2026.3690447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 383
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18573",
+      "identity_tokens": [
+        "arXiv:2604.18573"
+      ],
+      "title": "T-REN: Learning Text-Aligned Region Tokens Improves Dense Vision-Language Alignment and Scalability",
+      "reason": "視覚言語エンコーダの領域トークン化で密なクロスモーダル整列とトークン数削減を行う表現学習の研究であり、対象はセグメンテーションや検索等の理解タスクの精度と表現効率であって、LLM推論システムの実行機構ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2604.18573",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 384
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27652",
+      "identity_tokens": [
+        "arXiv:2606.27652"
+      ],
+      "title": "MER-R1: Multimodal Emotion Reasoning via Slow-Fast Thinking Synergy",
+      "reason": "マルチモーダル感情認識における速い思考と遅い思考の相補性を強化学習で最適化する研究であり、対象は感情推論タスクの精度特性であって、LLM推論システムのデコード機構やサービングへの技術的貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2606.27652",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 385
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10791-026-10502-5",
+      "identity_tokens": [
+        "DOI:10.1007/s10791-026-10502-5"
+      ],
+      "title": "Computational intelligence enabled hardware software co design for energy efficient Edge Artificial Intelligence",
+      "reason": "エッジAIのエネルギー効率化に向けたハードウェア・ソフトウェア協調設計を扱う総説であり、オンデバイス推論のハードウェア基盤とは関連するが、対象はマイコンからNPUまでの汎用エッジAIでLLM推論固有の新規機構や実測貢献が要旨で確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1007/s10791-026-10502-5",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 386
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03500",
+      "identity_tokens": [
+        "arXiv:2512.03500"
+      ],
+      "title": "EEA: Exploration-Exploitation Agent for Long Video Understanding",
+      "reason": "長時間動画理解のために意味誘導型の階層ツリー探索で関連フレームを収集する動画エージェントの研究であり、対象は映像理解タスクの探索効率と網羅性であって、LLM推論システムの実行機構への技術的貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2512.03500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 387
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22641",
+      "identity_tokens": [
+        "arXiv:2603.22641"
+      ],
+      "title": "Q-Tacit: Image Quality Assessment via Latent Visual Reasoning",
+      "reason": "画質評価において自然言語ではなく潜在品質空間で推論するVLM手法の研究であり、トークン数削減はIQAタスク内の副次的効果であって、対象は画質評価の精度でありLLM推論システムへの技術的貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2603.22641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 388
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03544",
+      "identity_tokens": [
+        "arXiv:2606.03544"
+      ],
+      "title": "SAGE: A Quantitative Evaluation of Socialized Evolution in Agent Ecosystems",
+      "reason": "エージェント同士の履歴共有が自己改善を上回るかを比較するエージェント生態系の評価フレームワークであり、内容は能力評価と知見の提示であって、LLM推論の実行機構・サービング・デコードへの技術的貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2606.03544",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 389
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04124",
+      "identity_tokens": [
+        "arXiv:2608.04124"
+      ],
+      "title": "Perception Before Reasoning: Dynamic Latent Reasoning for Video Understanding and Question Answering",
+      "reason": "動画質問応答で知覚潜在と推論潜在を適応的に切り替え出力トークンを減らす潜在推論手法であり、対象は動画QAタスクの精度と応答長であって、LLM推論システムの実行基盤や汎用デコード機構への貢献ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2608.04124",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 390
+    }
+  ],
+  "parent_run_key": "muse-20261123-d13",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

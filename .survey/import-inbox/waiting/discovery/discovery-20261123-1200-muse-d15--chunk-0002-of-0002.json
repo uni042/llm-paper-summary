@@ -1,0 +1,186 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d15::chunk-0002-of-0002",
+  "reference_main_sha": "8bebb239",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+      "identity_tokens": [
+        "SemanticScholar:ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+        "arXiv:2110.01786"
+      ],
+      "title": "MoEfication: Conditional Computation of Transformer Models for Efficient Inference",
+      "reason": "TransformerのFFNを機能分割してエキスパート化しルータで条件付き計算を行うMoEficationにより、FFNパラメータの10〜30%の活性化で性能の95%以上を維持し推論FLOPSを削減して2倍の高速化を達成しており、MoE推論・条件付き計算への直接の技術的貢献が確認できる。",
+      "source_url": "https://www.semanticscholar.org/paper/ed0b674a1e31f8756bdb5a6d97a6c3282a4e3fb6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.14003",
+      "identity_tokens": [
+        "arXiv:2608.14003"
+      ],
+      "title": "Batch-wise Adaptive Pruning: Periodic Neuron Activation-Aware Weight Pruning for Language Reasoning Model",
+      "reason": "バッチ推論下で単一プルーニングマスクを共有する際の閾値ずれ問題に対し、集約した重要度スコアへの周期的top-k選択で対処する学習不要の適応的プルーニングを提案し、大規模推論モデルのバッチ推論における精度劣化を防ぎつつ高速化を維持する、推論向け圧縮の直接の貢献である。",
+      "source_url": "https://arxiv.org/abs/2608.14003",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08008",
+      "identity_tokens": [
+        "arXiv:2510.08008"
+      ],
+      "title": "Beyond Sunk Costs: Boosting LLM Pre-training Efficiency via Orthogonal Growth of Mixture-of-Experts",
+      "reason": "学習済みMoEチェックポイントを層複製とエキスパート複製で拡張し継続事前学習する手法であり、対象は専ら事前学習の効率と精度であって、推論時のMoE実行、サービング、デコードへの技術的貢献は要旨に含まれない。",
+      "source_url": "https://arxiv.org/abs/2510.08008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3724635",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3724635"
+      ],
+      "title": "DABO: Difficulty-Aware Binary Offloading for Collaborative Large-Small Model Inference",
+      "reason": "クラウドの大規模モデルとエッジの小規模モデルによる協調推論において、エッジ側の軽量なプローブ推論の信頼度を較正して難易度を推定し、リクエストのオフロード先を二値決定するDABOを提案しており、大規模・小規模モデル協調推論の振り分け機構への直接の貢献が確認できる。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3724635",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05049",
+      "identity_tokens": [
+        "arXiv:2605.05049"
+      ],
+      "title": "Piper: Efficient Large-Scale MoE Training via Resource Modeling and Pipelined Hybrid Parallelism",
+      "reason": "MoEの大規模学習を対象に資源モデリングとパイプライン化したハイブリッド並列で学習スループットを高めるフレームワークであり、対象は学習基盤であって推論・サービングの実行機構への貢献ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2605.05049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539084",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539084"
+      ],
+      "title": "RheoSparse: Exploring Finer Grained Structured Sparsity for Small Language Models",
+      "reason": "小規模言語モデル向けに層ごとの細粒度N:M構造化スパース化を進化探索で割り当て、トークン生成時に任意のスパースパターンを効率実行する最適化SpMVカーネルを設計しており、オンデバイス推論の圧縮とカーネル実行への直接の技術的貢献が確認できる。",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539084",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.00232",
+      "identity_tokens": [
+        "arXiv:2505.00232"
+      ],
+      "title": "Scaling On-Device GPU Inference for Large Generative Models",
+      "reason": "モバイル・デスクトップGPU向けの推論エンジンML Driftにより、従来のオンデバイス生成モデルの10〜100倍のパラメータ規模のワークロードを実行可能にし既存GPU推論エンジン比で1桁の性能改善を達成しており、オンデバイス推論基盤への直接の技術的貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2505.00232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00126",
+      "identity_tokens": [
+        "arXiv:2603.00126"
+      ],
+      "title": "QuickGrasp: Responsive Video-Language Querying Service via Accelerated Tokenization and Edge-Augmented Inference",
+      "reason": "映像言語モデルによるクエリサービスを対象に、視覚表現の共有、高速な映像トークン化、クエリ適応的なエッジ増強推論、遅延を意識したトークン密度設定を備えたローカル優先のサービングシステムQuickGraspを実装し、大規模VLM並みの精度で応答遅延を最大12.8倍削減する推論システムの直接の貢献である。",
+      "source_url": "https://arxiv.org/abs/2603.00126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.20097",
+      "identity_tokens": [
+        "arXiv:2606.20097"
+      ],
+      "title": "HydraHead: From Head-Level Functional Heterogeneity to Specialized Attention Hybridization",
+      "reason": "注意ヘッド単位でフル注意と線形注意を混成させるアーキテクチャHydraHeadを提案し長文脈処理の二次計算量の緩和を狙うが、主眼は解釈可能性分析に基づくモデルアーキテクチャ設計であり、既存LLMの推論システムへの適用や実行時機構としての貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2606.20097",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3744244",
+      "identity_tokens": [
+        "DOI:10.1145/3744244"
+      ],
+      "title": "HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Optimization",
+      "reason": "プルーニング構造ごとの実測の推論高速化感度を取り入れたハードウェア意識型LLMプルーニングにより、汎用・エッジデバイス上での効率的なLLM展開と推論を実現する手法であり、オンデバイス推論向け圧縮・最適化への直接の技術的貢献が確認できる。",
+      "source_url": "https://doi.org/10.1145/3744244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T12:10:00+09:00",
+      "last_checked_at": "2026-11-23T12:10:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    }
+  ],
+  "parent_run_key": "muse-20261123-d15",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
