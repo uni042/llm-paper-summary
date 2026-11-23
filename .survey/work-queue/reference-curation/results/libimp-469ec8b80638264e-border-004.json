@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-469ec8b80638264e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.17181",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.17181",
+    "identity_tokens": [
+      "arXiv:2401.17181"
+    ],
+    "reason": "本報告は自己回帰デコードの代替としてテキスト拡散モデルへの転移学習AR2Diffを検討しLLM展開への関心を示すが、結果はタスク依存で、推論システムとしての速度やサービング機構の実証は限定的である。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Transfer Learning for Text Diffusion Models"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-469ec8b80638",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

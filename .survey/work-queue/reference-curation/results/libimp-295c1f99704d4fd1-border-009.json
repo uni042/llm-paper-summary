@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-295c1f99704d4fd1-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.06949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.06949",
+    "identity_tokens": [
+      "arXiv:2610.06949"
+    ],
+    "reason": "音声言語モデル向けに音声と質問に応じて潜在的な反復精緻化の深さを学習し停止機構で早期終了するAdaLoopを提案し適応深度の考えは推論計算配分と関連するが、主目的は音声理解の精度向上でありLLM推論基盤への直接適用は限定的なため。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdaLoop: Adaptive-Depth Latent Reasoning for Audio Language Models"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-295c1f99704d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

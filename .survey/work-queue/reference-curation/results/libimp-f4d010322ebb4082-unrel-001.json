@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4d010322ebb4082-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:be679f52d25a783073a2cbdbbf93c781666c12cb",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:be679f52d25a783073a2cbdbbf93c781666c12cb",
+    "identity_tokens": [
+      "SemanticScholar:be679f52d25a783073a2cbdbbf93c781666c12cb",
+      "arXiv:2507.16632"
+    ],
+    "reason": "音声理解と音声対話向けのマルチモーダル大規模言語モデルの技術報告であり、潜在音声エンコーダや推論中心の強化学習による能力向上が中心で、LLM推論サービングやデコード高速化への技術的貢献は確認できない。",
+    "first_checked_at": "2026-11-23T03:01:39+00:00",
+    "last_checked_at": "2026-11-23T03:01:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Step-Audio 2 Technical Report StepFun Audio Team"
+  },
+  "processed_at": "2026-11-23T03:01:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4d010322ebb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

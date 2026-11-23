@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75244b121a7400f6-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.18456",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.18456",
+    "identity_tokens": [
+      "arXiv:2505.18456"
+    ],
+    "reason": "Anchored Diffusion Language Modelは拡散言語モデルの並列生成に関わる二段階の生成機構を提案するが、主眼は尤度と生成品質の改善であり、推論サービングやデコード高速化のシステム評価は示されていない。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Anchored Diffusion Language Model"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75244b121a74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

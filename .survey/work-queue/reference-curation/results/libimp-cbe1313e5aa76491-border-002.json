@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbe1313e5aa76491-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.03149",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.03149",
+    "identity_tokens": [
+      "arXiv:2503.03149"
+    ],
+    "reason": "生成中の幻覚検出と巻き戻し修正を行う自己検証デコード枠組みであり、デコード機構そのものは扱うものの、主目的は真実性と事実精度の向上であり、推論遅延やスループット等の推論システム性能への効果や機構の詳細は要旨からは不明瞭なため境界とする。",
+    "first_checked_at": "2026-11-23T03:01:39+00:00",
+    "last_checked_at": "2026-11-23T03:01:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DSVD: Dynamic Self-Verify Decoding for Faithful Generation in Large Language Models"
+  },
+  "processed_at": "2026-11-23T03:01:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbe1313e5aa7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

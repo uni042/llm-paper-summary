@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75244b121a7400f6-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.967",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.967",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.findings-emnlp.967"
+    ],
+    "reason": "Layer DuplicationはLLMの初期注意層を複製する効果を言語タスク性能で検証する研究であり、計算量はむしろ増える方向で、推論効率・圧縮・サービングへの技術的貢献は要旨に示されていない。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Layer Duplication in LLMs"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75244b121a74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

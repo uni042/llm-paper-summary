@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-469ec8b80638264e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tccn.2026.3683207",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tccn.2026.3683207",
+    "identity_tokens": [
+      "DOI:10.1109/tccn.2026.3683207"
+    ],
+    "reason": "MILAFormerは無線信号の変調認識向けのハイブリッド深層学習アーキテクチャであり、通信信号処理の応用研究であってLLM推論システムとは無関係な異分野応用である。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MILAFormer: A Multi-Stage Hybrid Deep Learning Architecture for Robust Radio Signal Modulation Recognition"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-469ec8b80638",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

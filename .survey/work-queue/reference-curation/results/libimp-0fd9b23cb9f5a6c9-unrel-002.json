@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fd9b23cb9f5a6c9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.02196",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.02196",
+    "identity_tokens": [
+      "arXiv:2605.02196"
+    ],
+    "reason": "機械忘却した内容がINT4量子化で復元される攻撃と量子化耐性を持つ忘却学習を扱うが、量子化は配布精度の条件として用いられるだけで、LLM推論の高速化・メモリ削減・サービングへの技術的貢献は要旨に示されていないため。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "DurableUn: Quantization-Induced Recovery Attacks in Machine Unlearning"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fd9b23cb9f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82751aa08ada4bd0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3620678.3624664",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3620678.3624664",
+    "identity_tokens": [
+      "DOI:10.1145/3620678.3624664"
+    ],
+    "reason": "バースト負荷に対し層の一部だけ載せるShadow FunctionでサーバーレスDL推論を弾力化するサービングシステムだが、対象は汎用深層学習モデルでLLM特有のデコードやKVキャッシュは扱わない。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AsyFunc: A High-Performance and Resource-Efficient Serverless Inference System via Asymmetric Functions"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82751aa08ada",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

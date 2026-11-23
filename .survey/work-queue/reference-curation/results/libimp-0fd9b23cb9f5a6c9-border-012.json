@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fd9b23cb9f5a6c9-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.09782",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.09782",
+    "identity_tokens": [
+      "arXiv:2506.09782"
+    ],
+    "reason": "視覚基盤モデルSAM2向けに分散低減キャリブレーションと学習可能な統計的クリッピングによる低ビット量子化Q-SAM2を提案するが、対象は動画セグメンテーションという視覚応用であり、LLM推論向け量子化への直接の転用可能性は要旨だけでは限定的なため。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Q-SAM2: Accurate Quantization for Segment Anything Model 2"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fd9b23cb9f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

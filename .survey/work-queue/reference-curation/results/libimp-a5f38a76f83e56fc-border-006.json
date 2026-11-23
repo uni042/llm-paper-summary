@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5f38a76f83e56fc-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2508.18609",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2508.18609",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.18609",
+      "arXiv:2508.18609"
+    ],
+    "reason": "PTQしたLLMについてモデル規模・ビット幅・グループサイズ等と知識能力の関係を293構成で法則化し量子化設計の基礎を与えるが、新たな量子化・推論実行手法そのものの提案ではない。",
+    "first_checked_at": "2026-11-23T03:01:39+00:00",
+    "last_checked_at": "2026-11-23T03:01:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scaling Laws for Task-Stratified Knowledge in Post-Training Quantized Large Language Models"
+  },
+  "processed_at": "2026-11-23T03:01:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5f38a76f83e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

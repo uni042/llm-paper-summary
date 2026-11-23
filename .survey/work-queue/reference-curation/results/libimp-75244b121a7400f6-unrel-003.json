@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75244b121a7400f6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.15279",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.15279",
+    "identity_tokens": [
+      "arXiv:2504.15279"
+    ],
+    "reason": "VisuLogicはマルチモーダルLLMの視覚推論能力を測るベンチマークの提案と評価分析であり、能力評価のみで推論・サービング・デコード等の推論システムへの直接の技術的貢献はない。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "VisuLogic: A Benchmark for Evaluating Visual Reasoning in Multi-modal Large Language Models"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75244b121a74",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

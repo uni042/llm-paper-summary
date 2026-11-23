@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5f38a76f83e56fc-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32060",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32060",
+    "identity_tokens": [
+      "arXiv:2609.32060"
+    ],
+    "reason": "PTQとQATにおける精度フロアの深さ則を言語モデル含む複数モデルで理論・実証し量子化ビット幅の指針を与えるが、新たな推論量子化手法や実行機構の提案ではなく分析が中心である。",
+    "first_checked_at": "2026-11-23T03:01:39+00:00",
+    "last_checked_at": "2026-11-23T03:01:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Depth Laws for the Precision Floor of Trained Neural Networks: Amplification, Residual Scaling, and a Quantization-Aware Training Paradox"
+  },
+  "processed_at": "2026-11-23T03:01:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5f38a76f83e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

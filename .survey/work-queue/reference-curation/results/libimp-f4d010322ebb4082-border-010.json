@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4d010322ebb4082-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.12264",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.12264",
+    "identity_tokens": [
+      "arXiv:2508.12264"
+    ],
+    "reason": "PEFTアダプタと入力のプライバシーを守る秘匿推論で、暗号計算をアダプタ側に閉じる一方向通信アーキテクチャにより大幅な高速化を示すが、評価対象はVision Transformerの画像分類であり、LLM推論への適用や検証は示されていないため境界とする。",
+    "first_checked_at": "2026-11-23T03:01:39+00:00",
+    "last_checked_at": "2026-11-23T03:01:39+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning"
+  },
+  "processed_at": "2026-11-23T03:01:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4d010322ebb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

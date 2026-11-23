@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-295c1f99704d4fd1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.29431",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.29431",
+    "identity_tokens": [
+      "arXiv:2609.29431"
+    ],
+    "reason": "会話の成功度を測るLLMジャッジの点別・対別評価と、アンカー集合によるスコア校正を扱う評価研究であり、LLMの能力評価の校正が中心で、推論実行・デコード・メモリ管理など推論システムへの技術的貢献はないため。",
+    "first_checked_at": "2026-11-23T03:01:38+00:00",
+    "last_checked_at": "2026-11-23T03:01:38+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Calibrating LLM Judges for Human and AI Conversations"
+  },
+  "processed_at": "2026-11-23T03:01:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-295c1f99704d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
