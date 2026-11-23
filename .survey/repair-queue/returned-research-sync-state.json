@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2f3f78007dc8da4321e687718af4ec07a09a3d88",
+  "base_commit": "a8faedd6174b588d3ea159fa1daafa77d1c39e02",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -359,6 +359,7 @@
     "2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.json",
     "2025-2512.20198-designing-spatial-architectures-for-sparse-attention-star-accelerator-via-cross-stage-tiling.json",
     "2025-2512.20636-data-free-pruning-of-self-attention-layers-in-llms.json",
+    "2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-model-inference.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
@@ -409,6 +410,7 @@
     "2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.json",
     "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json",
     "2026-2601.20520-context-tokens-are-anchors-repetition-curse-in-dmllms-information-flow-perspective.json",
+    "2026-2601.20655-onepiece-a-large-scale-distributed-inference-system-with-rdma-for-complex-ai-generated-content-aigc-workflows.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
@@ -451,6 +453,7 @@
     "2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-large-language-models.json",
     "2026-2602.11534-krause-synchronization-transformers.json",
     "2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-discrete-spaces.json",
+    "2026-2602.12609-quept-quantized-elastic-precision-transformers-with-one-shot-calibration-for-multi-bit-switching.json",
     "2026-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficient-multimodal-large-language-models.json",
     "2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasoning.json",
     "2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybrid-model-cascade-and-dynamic-templating.json",
@@ -489,6 +492,7 @@
     "2026-2603.11603-autoscout-structured-optimization-for-automating-ml-system-configuration.json",
     "2026-2603.12208-forensiczip-more-tokens-are-better-but-not-necessary-in-forensic-vision-language-models.json",
     "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json",
+    "2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.json",
     "2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-visual-token-compression-in-vlms.json",
     "2026-2603.15954-mobilellm-flash-latency-guided-on-device-llm-design-for-industry-scale-deployment.json",
     "2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-for-llm-inference.json",
@@ -547,6 +551,7 @@
     "2026-2604.10898-zoomr-memory-efficient-reasoning-through-multi-granularity-key-value-retrieval.json",
     "2026-2604.11080-respinquant-efficient-layer-wise-llm-quantization-via-subspace-residual-rotation-approximation.json",
     "2026-2604.11128-technology-solutions-targeting-performance-of-gen-ai-inference.json",
+    "2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vision-language-models.json",
     "2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compression-for-latent-multi-agent-llm-collaboration.json",
     "2026-2604.13440-a-kl-lens-on-quantization-fast-forward-only-sensitivity-for-mixed-precision-ssm-transformer-models.json",
     "2026-2604.13556-yoco-enhancing-yoco-with-kv-residual-connections-for-efficient-llm-inference.json",
@@ -50761,6 +50766,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.20839": {
+      "order": [
+        "2026-11-23T19:52:32+00:00",
+        "2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-model-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.20655": {
+      "order": [
+        "2026-11-23T19:53:37+00:00",
+        "2026-2601.20655-onepiece-a-large-scale-distributed-inference-system-with-rdma-for-complex-ai-generated-content-aigc-workflows.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.12609": {
+      "order": [
+        "2026-11-23T19:54:42+00:00",
+        "2026-2602.12609-quept-quantized-elastic-precision-transformers-with-one-shot-calibration-for-multi-bit-switching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.13670": {
+      "order": [
+        "2026-11-23T19:55:46+00:00",
+        "2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.11530": {
+      "order": [
+        "2026-11-23T19:56:50+00:00",
+        "2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64302,6 +64352,21 @@
     "arxiv:2512.06869": [
       "papers/inference/99-other-inference-systems/2025-2512.06869-rhea-role-aware-heuristic-episodic-attention-for-conversational-llms.md",
       "papers/inference/99-other-inference-systems/2025-2512.06869-rhea-role-aware-heuristic-episodic-attention-for-conversational-llms.md"
+    ],
+    "arxiv:2512.20839": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-m.md"
+    ],
+    "arxiv:2601.20655": [
+      "papers/inference/99-other-inference-systems/2026-2601.20655-onepiece-a-large-scale-distributed-inference-system-with-rdma-for-comple.md"
+    ],
+    "arxiv:2602.12609": [
+      "papers/inference/99-other-inference-systems/2026-2602.12609-quept-quantized-elastic-precision-transformers-with-one-shot-calibration.md"
+    ],
+    "arxiv:2603.13670": [
+      "papers/inference/99-other-inference-systems/2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.md"
+    ],
+    "arxiv:2604.11530": [
+      "papers/inference/99-other-inference-systems/2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vis.md"
     ]
   }
 }

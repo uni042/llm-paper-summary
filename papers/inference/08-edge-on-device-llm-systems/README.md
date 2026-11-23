@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（109本）
+## 自動生成の論文一覧（110本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -277,6 +277,10 @@
 - **2025-12 · [LOIP: Collaborative LLM Inference with Offloading-based Pipeline Parallelism on Edge Devices](2025-2512.21835-loip-collaborative-llm-inference-with-offloading-based-pipeline-parallel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LOIPは、端末ごとのメモリ容量・演算性能が異なる複数のNVIDIA Jetsonを連携させ、モデルのパラメータを量子化・枝刈りせずに推論するための実行基盤である。
+
+- **2025-12 · [Input-Adaptive Visual Preprocessing for Efficient Fast Vision-Language Model Inference](2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-m.md)**  
+  実装：[✓](https://github.com/kmdavidds/mlfastlm) ・ リポジトリ内被引用：0  
+  画像の複雑さに応じて解像度と切り抜きを変える前処理をFastVLMの前に置き、モデル無変更で視覚トークンを55パーセント超、画像あたり推論時間を50パーセント超減らす軽量な効率化。
 
 ### 2年前（2024-12〜2025-11）
 

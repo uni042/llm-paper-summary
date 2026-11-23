@@ -35,10 +35,15 @@
   "selection_reason": "SVDで視覚トークン特徴行列を分解しレバレッジスコアで上位トークンを残す学習不要のSVD-Pruneにより、視覚トークンを32個や16個まで削っても性能を保つVLMの計算・メモリ削減を実現しており、トークンプルーニングによる推論効率化の直接的貢献が確認できる。",
   "semantic_scholar_id": "1dda723f9d8dccc63fdfa9a11eea489ea3afa0b3",
   "source_url": "https://arxiv.org/abs/2604.11530",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Attention Scores: SVD-Based Vision Token Pruning for Efficient Vision-Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T19:58:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vis.md",
+  "represented_canonical_id": "arXiv:2604.11530",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

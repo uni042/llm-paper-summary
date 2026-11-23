@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1380本）
+## 自動生成の論文一覧（1384本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2610,6 +2610,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   全注意（full 注意機構）の鍵・値キャッシュ（KV キャッシュ）は生成文脈とともに増大する。Qwen3 1.7B/8B/14B/30B-A3Bの4モデル、SWA率25/50/75/87.5%を用いた原著表1・2では、BOSCHは多くの設定で層単位の単純な交互配置や静的ヘッド順位より高いNIAH/LongBenchスコアを保つ。
 
+- **2026-04 · [Beyond Attention Scores: SVD-Based Vision Token Pruning for Efficient Vision-Language Models](2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vis.md)**  
+  実装：[✓](https://github.com/anoncvlab/svdPrune) ・ リポジトリ内被引用：0  
+  視覚トークンの重要度を注意スコアではなく特異値分解のレバレッジスコアで測り、支配的分散を担うトークンだけを残す学習不要の枝刈りで、32トークンや16トークンの極端な予算でも先行手法を上回る保持性能を示す。
+
 - **2026-04 · [Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion](2026-2604.05688-attention-editing-a-versatile-framework-for-cross-architecture-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の長文脈推論では、過去トークンの鍵・値（Key-Value; KV）を保存するメモリと、その読出し帯域が制約となる。グループ化問い合わせ注意（Grouped Query 注意機構; GQA）はKVヘッドの共有によって容量を抑えるが、長い系列や多数の同時要求ではKVが増え続ける。
@@ -2649,6 +2653,10 @@
 - **2026-03 · [Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability](2026-2603.12038-slow-fast-inference-training-free-inference-acceleration-via-within-sent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   選択器は密注意のlogitから得た証拠と、KVに保存されたキーnorm・位置情報から得たpriorを統合する。Qwen3-4B、Qwen3-30B-A3B、Qwen3-235B-A22Bの長文脈デコードで、密注意と比較した実測スループットは文脈長に応じて約1.6〜14.4倍に増える。
+
+- **2026-03 · [SecDTD: Dynamic Token Drop for Secure Transformers Inference](2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  安全なTransformer推論向けに、ソフトマックス前スコア付けMCNと秘匿中央値選択OMSelでトークンドロップを前倒しし、暗号文で最も高いソフトマックスまで削って最大4.47倍の高速化を精度維持で示す。
 
 - **2026-03 · [Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints](2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2857,6 +2865,10 @@
 - **2026-02 · [Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization](2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-.md)**  
   実装：[✓](https://github.com/zhoustan/VQRound) ・ リポジトリ内被引用：0  
   適応型丸めの丸め行列をコードブックで表し直し、学習量を最大で元の0.2パーセント程度まで削る量子化。初期化の工夫と合わせて、2ビットでも崩壊を避ける。
+
+- **2026-02 · [QuEPT: Quantized Elastic Precision Transformers with One-Shot Calibration for Multi-Bit Switching](2026-2602.12609-quept-quantized-elastic-precision-transformers-with-one-shot-calibration.md)**  
+  実装：[✓](https://github.com/xuke225/QuEPT) ・ リポジトリ内被引用：0  
+  一回の較正で複数ビット幅へ対応する弾性量子化QuEPTを提案し、ビット幅間の特徴融合と段階的低ランク補償で競合を抑え、再最適化なしのビット幅切り替えと混合精度化を可能にする。
 
 - **2026-02 · [QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs](2026-2602.10431-qtale-quantization-robust-token-adaptive-layer-execution-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3069,6 +3081,10 @@
 - **2026-01 · [PLA-Serve: A Prefill-Length-Aware LLM Serving System](2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md)**  
   実装：[✓](https://github.com/Jianshu-She/LAPS) ・ リポジトリ内被引用：0  
   プリフィル長で短要求と長要求を別キュー・別実行モードへ分離し、待機窓、CUDA Graph形状クラスタリング、動的GPU割当で短要求の待ちと長要求の干渉を同時に抑える。
+
+- **2026-01 · [OnePiece: A Large-Scale Distributed Inference System with RDMA for Complex AI-Generated Content (AIGC) Workflows](2026-2601.20655-onepiece-a-large-scale-distributed-inference-system-with-rdma-for-comple.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生成コンテンツの多段階処理をマイクロサービスへ分解し、片側RDMAと二重リングバッファ、利用率に応じた動的再配置でGPU利用効率を狙う分散推論基盤。ただし定量評価の提示が乏しく効果量は未検証である。
 
 - **2026-01 · [Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming](2026-2601.06562-mosaic-unlocking-long-context-inference-for-diffusion-llms-via-global-me.md)**  
   実装：[✓](https://github.com/flashserve/Mosaic) ・ リポジトリ内被引用：0  
