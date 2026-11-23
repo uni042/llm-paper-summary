@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（621本）
+## 自動生成の論文一覧（622本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2477,6 +2477,10 @@
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   本論文は、Transformerの自己注意における「どの単語対の関連度が小さいかは入力が来るまで分からない」という制約を、学習可能な層別閾値と専用演算器の共同設計で解く。
+
+- **2022-06 · [PAME: precision-aware multi-exit DNN serving for reducing latencies of batched inferences](2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-ba.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  バッチ推論で簡単なクエリだけを途中の出口から先に返す複数出口提供系で、ブリッジと規則ベースの出口判定、実負荷に基づく出口選択を組み合わせ、テイル遅延を増やさず平均遅延を約4割削減する。
 
 ### 6年前（2020-12〜2021-11）
 

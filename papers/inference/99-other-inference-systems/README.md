@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1384本）
+## 自動生成の論文一覧（1386本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5276,6 +5276,10 @@
   実装：[✓](https://github.com/jongwooko/NASH-Pruning-Official) ・ リポジトリ内被引用：0  
   復号器は層を均等に間引いて浅くし、符号化器は幅を低い疎さで徐々に狭める非対称な枝刈りで、T5-baseの要約で品質をほぼ保ちながら実時間2.5倍から4.2倍の高速化を示した。
 
+- **2023-10 · [Improving Computation and Memory Efficiency for Real-world Transformer Inference on GPUs](2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  系列長の裾の重い分布が生むゼロ埋めの冗長を、自己注意の有効ミニブロックだけを実行する細粒度処理とブロック配置、チャンク単位のメモリ管理で削り、モデル全体の遅延と中間結果のメモリを大きく減らす統合解法。
+
 - **2023-09 · [Understanding the Impact of Post-Training Quantization on Large Language Models](2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化方式ごとに温度・生成長・topkへの生成品質の感度を6,300生成で実測した分析。4ビット量子化は温度に敏感で、方式の優劣はモデル系列で逆転する。
@@ -5410,6 +5414,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   Transformerの推論では、すべての入力トークンに対して各層の注意機構とFFNを実行する。
 
+- **2021-12 · [Block-Skim: Efficient Question Answering for Transformer](2021-2112.08560-block-skim-efficient-question-answering-for-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  注意重みから答えに関係するブロックだけを残し無関係な本文を下位層で早期に捨てることで、質問応答の精度を上げながらBERTを約3倍速くする早期スキミング。
+
 - **2022-10 · [QuaLA-MiniLM: a Quantized Length Adaptive MiniLM](2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md)**  
   実装：[✓](https://github.com/intel/intel-extension-for-transformers/tree/main/examples/huggingface/pytorch/question-answering/dynamic) ・ リポジトリ内被引用：0  
   MiniLMv2の自己注意関係蒸留、層別トークン削減と復元、INT8事後量子化を統合し、SQuAD1.1の質問応答でBERT-base比8.8倍のCPU推論高速化をF1低下約0.90ポイントで達成した研究。
@@ -5421,10 +5429,6 @@
 - **2021-12 · [DAP-BERT: Differentiable Architecture Pruning of BERT](2021-0028045aea9f-dap-bert-differentiable-architecture-pruning-of-bert.md)**  
   実装：[✓](https://github.com/OscarYau525/DAP-BERT) ・ リポジトリ内被引用：0  
   DAP-BERTは、既存のBERTモデルから、実行装置の演算制約に応じて不要な注意ヘッドとFeed-順伝播 Network（FFN）の中間次元を選択的に除去する、微分可能な構造化枝刈り方式である。
-
-- **2021-12 · [Block-Skim: Efficient Question Answering for Transformer](2021-2112.08560-block-skim-efficient-question-answering-for-transformer.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  注意重みから答えに関係するブロックだけを残し無関係な本文を下位層で早期に捨てることで、質問応答の精度を上げながらBERTを約3倍速くする早期スキミング。
 
 ### 6年前（2020-12〜2021-11）
 
@@ -5459,6 +5463,10 @@
 - **2021-08 · [FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention](2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意を帯行列で厳密に計算する近傍成分と、複数特徴写像の低ランク近似で表す遠方成分へ分け、線形の時間とメモリを保ったまま長距離課題五件の平均正解率で標準の変換器を上回った。
+
+- **2021-04 · [TPrune](2021-a15e1294d14f-tprune.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerの各行列の削れやすさをブロック単位のスパース学習で分析し、スケール不変な正則化による行単位枝刈りで、モバイル実機でBLEU低下なしの1.21倍から最大1.92倍の高速化を示す枝刈りパイプライン。
 
 ### 7年前（2019-12〜2020-11）
 

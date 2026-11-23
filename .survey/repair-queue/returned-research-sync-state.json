@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "dbfd2f567882d05168b68940fdccc77b2cccb822",
+  "base_commit": "bea9a583d62c252a8bca6eade29fee7b11f3db29",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -30,6 +30,7 @@
     "0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-.json",
     "0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-202610.json",
     "0000-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed-long-context-summarization.json",
+    "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json",
     "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json",
     "0000-19bdead741ff-variable-layerwise-quantization-a-simple-and-effective-approach-to-quantize-llms.json",
     "0000-28d0e3a1162b-octopus-gated-selective-attention-for-memory-bounded-long-context-inference-in-large-language-models.json",
@@ -55,6 +56,7 @@
     "0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.json",
     "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json",
     "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json",
+    "0000-c62b8e2ab730-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
     "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json",
     "0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.json",
@@ -67,6 +69,8 @@
     "2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-and-far-field-attention.json",
     "2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transformer.json",
     "2021-2112.08560-block-skim-efficient-question-answering-for-transformer.json",
+    "2021-a15e1294d14f-tprune.json",
+    "2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-batched-inferences.json",
     "2022-2203.00748-e-lang-energy-based-joint-inferencing-of-super-and-swift-language-models.json",
     "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
@@ -93,6 +97,7 @@
     "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json",
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
     "2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.json",
+    "2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-inference-on-gpus.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheaper-and-faster-completion-through-dynamic-model-i.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
@@ -50811,6 +50816,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.acl-industry.48": {
+      "order": [
+        "2026-11-23T20:00:42+00:00",
+        "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.03228": {
+      "order": [
+        "2026-11-23T20:01:41+00:00",
+        "0000-c62b8e2ab730-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3446640": {
+      "order": [
+        "2026-11-23T20:02:40+00:00",
+        "2021-a15e1294d14f-tprune.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3524059.3532366": {
+      "order": [
+        "2026-11-23T20:03:39+00:00",
+        "2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-batched-inferences.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3617689": {
+      "order": [
+        "2026-11-23T20:04:38+00:00",
+        "2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-inference-on-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64372,6 +64422,21 @@
     "arxiv:2604.11530": [
       "papers/inference/99-other-inference-systems/2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vis.md",
       "papers/inference/99-other-inference-systems/2026-2604.11530-beyond-attention-scores-svd-based-vision-token-pruning-for-efficient-vis.md"
+    ],
+    "doi:10.18653/v1/2025.acl-industry.48": [
+      "papers/inference/05-speculative-decoding-moe/2025-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-know.md"
+    ],
+    "arxiv:2610.03228": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.03228-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.md"
+    ],
+    "doi:10.1145/3446640": [
+      "papers/inference/99-other-inference-systems/2021-a15e1294d14f-tprune.md"
+    ],
+    "doi:10.1145/3524059.3532366": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-ba.md"
+    ],
+    "doi:10.1145/3617689": [
+      "papers/inference/99-other-inference-systems/2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-i.md"
     ]
   }
 }

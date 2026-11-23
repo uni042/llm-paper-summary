@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（431本）
+## 自動生成の論文一覧（433本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -683,6 +683,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [PV-Decoding: Progressive Verification Decoding with Decode Gating for Diffusion Language Models](2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-dif.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの中確信度トークンを仮置きして次段で段階的に検証する投機的デコードにより、モデル実行回数を最大37パーセント削減し、単一・二重検証では実時間のスループットも7.0パーセントから13.6パーセント改善した。
+
+- **2026-10 · [Phase-Scoped Query Layouts for Reference-Preserving Speculative Decoding](2026-2610.03228-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的検証で変わる注意のクエリ配置をビュー変換で局所的に直し、参照出力をビット級に保ちながらクエリ単位注意より最大6.17パーセント速くし、状態とバックエンドの転移限界も切り分けた研究。
 
 - **2026-10 · [Parallel Language Models via Variational Decoding](2026-2610.26693-parallel-language-models-via-variational-decoding.md)**  
   実装：[✓](https://github.com/mandt-lab/plm) ・ リポジトリ内被引用：0  
@@ -1434,6 +1438,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/hunzhizi/CARD) ・ リポジトリ内被引用：0  
   CARDは、大規模言語モデル（LLM）の投機的復号（投機的復号）で、ドラフトモデルが候補を作り終わるまで対象モデルが待ち、対象モデルが検証している間ドラフトモデルが待つという相互待機を減らす方式である。
 
+- **2025-07 · [Speed Without Sacrifice: Fine-Tuning Language Models with Medusa and Knowledge Distillation in Travel Applications](2025-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-know.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Medusaの投機的デコードと系列レベルの知識蒸留を旅行ドメインの実務へ組み合わせ、Medusa-2の学習を一段階へ単純化したうえで、70B教師の品質を1.1Bの生徒へ移して遅延を10から20倍削減した産業応用。
+
 - **2025-07 · [Hierarchical Verification of Speculative Beams for Accelerating LLM Inference](2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的ビームの候補を尤度優先度の検証木に組み替え、棄却された候補の部分木を丸ごと切り捨てることで対象モデルの検証回数を減らす復号手法。貪欲復号比2.3倍の高速化と検証の62.7パーセント削減を実測した。
@@ -1469,7 +1477,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：519  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：520  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
@@ -1493,7 +1501,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
 - **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
-  実装：[✓](https://github.com/zankner/Hydra) ・ リポジトリ内被引用：110  
+  実装：[✓](https://github.com/zankner/Hydra) ・ リポジトリ内被引用：111  
   投機的復号（投機的復号）は、安価な下書きモデルが複数の将来トークンを予測し、元の大きな言語モデルが候補をまとめて検証することで、1回の高価な順伝播で複数トークンを確定させる。単一要求のVicuna 7B/13B/33Bで通常の自己回帰生成に対しそれぞれ2.70/2.50/2.53倍、Medusaに対し1.27/1.27/1.31倍の処理率を報告する。
 
 - **2024-02 · [Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md)**  
@@ -1699,11 +1707,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：555  
+  実装：✓ ・ リポジトリ内被引用：556  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
-  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：236  
+  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：237  
   SpecInferは、小型モデル群が先に作る複数候補を共通接頭辞の木へまとめ、対象LLMを1回で木構造検証することで、逐次デコードの対象重み読出しとGPU間通信を減らし、複数トークンを確定する。
 
 - **2023-09 · [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](2023-2309.08168-draft-verify.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "量子化デプロイで投機的検証が貪欲参照出力を変えてしまう問題に対し、フェーズ範囲付きクエリ・バッチ変換でK/V共有とバッチ計算を保ちつつ参照出力を一致させ、投機的リクエスト遅延を数％削減した実行時グラフ変換の提案である。",
   "semantic_scholar_id": "e965d154800ba792471110f63dd2550652e8b64c",
   "source_url": "https://www.semanticscholar.org/paper/e965d154800ba792471110f63dd2550652e8b64c",
-  "status": "ready",
+  "status": "superseded",
   "title": "Phase-Scoped Query Layouts for Reference-Preserving Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T20:06:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.03228-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2610.03228",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

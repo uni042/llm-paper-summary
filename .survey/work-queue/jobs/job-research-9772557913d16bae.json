@@ -35,10 +35,15 @@
   "selection_reason": "バッチ推論では一部のクエリはモデル途中までで十分な精度が得られる点に着目し、多出口DNNモデルと推論エンジンのシステム設計を一体で提案するPAMEにより平均遅延を39.9%削減する、DNNサービングへの直接貢献である。",
   "semantic_scholar_id": "87122b70bc2b810d12189777fcd70e8c04eb9d1a",
   "source_url": "https://doi.org/10.1145/3524059.3532366",
-  "status": "ready",
+  "status": "superseded",
   "title": "PAME: precision-aware multi-exit DNN serving for reducing latencies of batched inferences",
   "type": "research",
   "venue": "International Conference on Supercomputing",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-11-23T20:06:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2022-04cb6c841249-pame-precision-aware-multi-exit-dnn-serving-for-reducing-latencies-of-ba.md",
+  "represented_canonical_id": "DOI:10.1145/3524059.3532366",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
