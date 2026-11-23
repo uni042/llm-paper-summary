@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ece2497067b468fe-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.12001",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.12001",
+    "identity_tokens": [
+      "arXiv:2410.12001"
+    ],
+    "reason": "法律コーパスでの継続事前学習と指示ファインチューニングがLLMの潜在表現における法律概念の利用へどう影響するかを注意配分の可視化で分析する研究であり、法分野の表現分析が主題で推論システムや計算効率への直接貢献はない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Impacts of Continued Legal Pre-Training and IFT on LLMs' Latent Representations of Human-Defined Legal Concepts"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ece2497067b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

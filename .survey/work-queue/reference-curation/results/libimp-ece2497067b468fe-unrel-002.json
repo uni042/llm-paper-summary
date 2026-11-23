@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ece2497067b468fe-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.27714",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.27714",
+    "identity_tokens": [
+      "arXiv:2610.27714"
+    ],
+    "reason": "閉ループLLM運転エージェントで経験メモリが役立つ条件を、ウォームアッププールの再抽選やトークン一致フィラー等の統制下で評価した研究であり、対象は運転エージェントの能力評価とメモリ効果の検証であって推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "When Does Experience Memory Help Closed-Loop LLM Driving Agents? A Controlled Evaluation with Resampled Warmup Pools, Token-Matched Fillers, and Audited Baselines"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ece2497067b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

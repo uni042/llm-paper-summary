@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38ef31d0d91b5c97-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.23724",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.23724",
+    "identity_tokens": [
+      "arXiv:2509.23724"
+    ],
+    "reason": "複数フレームを1枚のパネル画像に合成する学習不要の視覚プロンプティングで長尺動画VLMの時間解像度を上げる手法であり、推論時入力削減に触れるがモデル側の推論機構やKVキャッシュへの貢献ではないため保留とする。",
+    "first_checked_at": "2026-11-23T07:30:05+00:00",
+    "last_checked_at": "2026-11-23T07:30:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Video Panels for Long Video Understanding"
+  },
+  "processed_at": "2026-11-23T07:30:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38ef31d0d91b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

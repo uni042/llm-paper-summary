@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4da02ab668ad696-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.11257",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.11257",
+    "identity_tokens": [
+      "arXiv:2303.11257"
+    ],
+    "reason": "FP16/FP8等の低精度学習を初期化時の分散設計で安定化するunit scalingの提案で、BERT-Largeの学習効率が対象であり、推論向け量子化や推論高速化ではなく学習単独の低精度化にあたるため対象外である。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Unit Scaling: Out-of-the-Box Low-Precision Training"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4da02ab668a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

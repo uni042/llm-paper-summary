@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-852ebdbfc73ad438-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.21749",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.21749",
+    "identity_tokens": [
+      "arXiv:2505.21749"
+    ],
+    "reason": "双線形の状態遷移が状態追跡タスクで帰納バイアスとなることを理論・実験で示しMamba等の線形再帰モデルを階層内に位置づけるが、推論時のスループットやメモリ削減など推論システムへの直接の機構や計測は要旨にない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Revisiting Bi-Linear State Transitions in Recurrent Neural Networks"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-852ebdbfc73a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

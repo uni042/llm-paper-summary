@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4da02ab668ad696-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21465",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21465",
+    "identity_tokens": [
+      "arXiv:2609.21465"
+    ],
+    "reason": "音声と映像を直接入力するネイティブ音視対話OmniVChatのデータ生成エンジン、ベンチと学習を扱う研究で、マルチモーダル対話のデータ・評価が主題であり推論システムやデコード技術への貢献は確認できない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4da02ab668a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

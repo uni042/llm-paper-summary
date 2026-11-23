@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4da02ab668ad696-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19004",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19004",
+    "identity_tokens": [
+      "arXiv:2606.19004"
+    ],
+    "reason": "拡散TransformerのRL事後学習をスポットGPUとシード探索の並列化で安くするSpotlightの提案で、GPUスケジューリングを含むものの対象は学習・事後学習システムであり推論サービングやデコードへの貢献ではない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Spotlight: Synergizing Seed Exploration and Spot GPUs for DiT RL Post-Training"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4da02ab668a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

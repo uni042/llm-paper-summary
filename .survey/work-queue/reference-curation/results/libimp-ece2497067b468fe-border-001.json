@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ece2497067b468fe-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.16211",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.16211",
+    "identity_tokens": [
+      "arXiv:2607.16211"
+    ],
+    "reason": "実体型グラフ保存、LSHによる高速な二経路検索、保存時の矛盾検出を備えるMOSAICはLLMエージェント長期メモリの精度と検索遅延0.58秒を示すが、主題はエージェント記憶の正確さと検索であり推論システム機構への貢献は周辺的なため保留とする。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accurate and Efficient Long-Term Memory for LLM Agents"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ece2497067b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

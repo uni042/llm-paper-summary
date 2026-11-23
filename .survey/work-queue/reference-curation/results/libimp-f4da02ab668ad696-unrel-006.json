@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4da02ab668ad696-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.01905",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.01905",
+    "identity_tokens": [
+      "arXiv:2503.01905"
+    ],
+    "reason": "事前学習重みの一部接続だけを微調整するPaCAでLoRA比で学習時間22％・メモリ16％削減を示すが、対象はパラメータ効率的ファインチューニングという学習過程であり推論高速化への直接の貢献ではないため対象外である。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PaCA: Partial Connection Adaptation for Efficient Fine-Tuning"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4da02ab668a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

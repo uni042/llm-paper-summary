@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4da02ab668ad696-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.04346",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.04346",
+    "identity_tokens": [
+      "arXiv:2602.04346"
+    ],
+    "reason": "Householder反射で特徴写像を非負象限へ回転させ線形注意の性能劣化を抑えるMirrorLAを提案し注意機構の計算量削減と関わるが、対象は視覚モデルの線形注意でありLLM推論でのカーネルやKVキャッシュへの適用は示されていない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MirrorLA: Reflecting Feature Map for Vision Linear Attention"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4da02ab668a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

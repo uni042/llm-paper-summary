@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-852ebdbfc73ad438-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03750",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03750",
+    "identity_tokens": [
+      "arXiv:2410.03750"
+    ],
+    "reason": "低精度・スパースな基盤モデルへのパラメータ効率的適応SQFTを提案し、量子化重みとアダプタの精度不一致を解消してマージする点は圧縮と関わるが、主目的はファインチューニングによる適応であり推論高速化の具体策は示されていない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SQFT: Low-cost Model Adaptation in Low-precision Sparse Foundation Models"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-852ebdbfc73a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

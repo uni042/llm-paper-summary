@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c1369724cd1c9f8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.16971",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.16971",
+    "identity_tokens": [
+      "arXiv:2412.16971"
+    ],
+    "reason": "MoEモデルのルータが品詞タグに応じて専門家へ振り分ける挙動を6モデルで分析した研究であり、MoE推論の理解には関わるが、推論高速化やスケジューリングの手法提案ではなく分析に留まるため保留とする。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Part-Of-Speech Sensitivity of Routers in Mixture of Experts Models"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c1369724cd1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

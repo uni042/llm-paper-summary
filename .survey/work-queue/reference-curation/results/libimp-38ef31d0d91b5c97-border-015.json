@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38ef31d0d91b5c97-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:86e0c6e038ba928b091329950400b8debe79363f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:86e0c6e038ba928b091329950400b8debe79363f",
+    "identity_tokens": [
+      "SemanticScholar:86e0c6e038ba928b091329950400b8debe79363f"
+    ],
+    "reason": "Semantic Scholar APIが429を返し代替経路でも要旨を取得できなかったため判定材料が不足している。長文書比較向け教師あり対照学習という題目からは推論システムへの直接貢献を確認できないため、要旨未取得として保留とする。",
+    "first_checked_at": "2026-11-23T07:30:05+00:00",
+    "last_checked_at": "2026-11-23T07:30:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Supervised Contrastive Learning for Interpretable Long Document Comparison"
+  },
+  "processed_at": "2026-11-23T07:30:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38ef31d0d91b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11d45b1c166ce25e-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.28292",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.28292",
+    "identity_tokens": [
+      "arXiv:2605.28292"
+    ],
+    "reason": "明示的Chain-of-Thoughtを機能単位トークンへ変換し潜在推論でLLMの推論コスト削減を狙うCIRFを提案するが、微調整を伴う推論過程の表現手法が中心で、サービングやデコード機構の具体的な高速化は要旨で限定的なため保留とする。",
+    "first_checked_at": "2026-11-23T07:30:05+00:00",
+    "last_checked_at": "2026-11-23T07:30:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CIRF: Tokenizing Chain-of-Thoughts into Reusable Functional Units for Efficient Latent Reasoning in Large Language Models"
+  },
+  "processed_at": "2026-11-23T07:30:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11d45b1c166c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11d45b1c166ce25e-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.27855",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.27855",
+    "identity_tokens": [
+      "arXiv:2604.27855"
+    ],
+    "reason": "地理分散AI推論の配置を電力価格・炭素強度・PUE・容量・ネットワーク遅延の制約付き最適化として定式化しエネルギーと遅延のフロンティアを論じるが、実装されたサービング機構ではなく枠組みとモデリングの提案にとどまるため保留とする。",
+    "first_checked_at": "2026-11-23T07:30:05+00:00",
+    "last_checked_at": "2026-11-23T07:30:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AI Inference as Relocatable Electricity Demand: A Latency-Constrained Energy-Geography Framework"
+  },
+  "processed_at": "2026-11-23T07:30:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11d45b1c166c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

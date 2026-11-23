@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-852ebdbfc73ad438-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tcsvt.2025.3588737",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tcsvt.2025.3588737",
+    "identity_tokens": [
+      "DOI:10.1109/tcsvt.2025.3588737"
+    ],
+    "reason": "確率的プログラミングとベイズMAP推定で量子化ステップサイズを最適化し64枚の較正画像でもPTQ精度を保つ手法だが、対象は画像系DNNのエッジ展開向け学習後量子化でありLLM推論向け量子化への直接適用は要旨で示されていない。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Improving Post-Training Quantization via Probabilistic Programming"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-852ebdbfc73a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

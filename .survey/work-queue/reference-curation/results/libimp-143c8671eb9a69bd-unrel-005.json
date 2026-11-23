@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-143c8671eb9a69bd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.16621",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.16621",
+    "identity_tokens": [
+      "arXiv:2607.16621"
+    ],
+    "reason": "長期エージェントの経験を根拠付きステップ軌跡や再利用可能な手続きスキルへ結晶化するMSCEは、エージェントの記憶とスキルの共進化ガバナンスとその能力評価が主題であり、推論・サービング機構や計算効率への直接の技術的貢献は要旨にない。",
+    "first_checked_at": "2026-11-23T07:30:05+00:00",
+    "last_checked_at": "2026-11-23T07:30:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From Memory to Skills: Evidence-Grounded Co-Evolution Governance for Long-Horizon LLM Agents"
+  },
+  "processed_at": "2026-11-23T07:30:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-143c8671eb9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

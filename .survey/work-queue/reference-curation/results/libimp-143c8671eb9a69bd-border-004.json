@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-143c8671eb9a69bd-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.09250",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.09250",
+    "identity_tokens": [
+      "arXiv:2603.09250"
+    ],
+    "reason": "親近感の不確実性で高速な類似検索経路とクラスタを辿る想起経路を切り替えるRF-Memは個人化LLMのメモリ検索手法であり、固定予算・遅延下での評価はあるものの主目的は検索精度と個人化であって推論システム機構への貢献は間接的で薄いため保留とする。",
+    "first_checked_at": "2026-11-23T07:30:05+00:00",
+    "last_checked_at": "2026-11-23T07:30:05+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evoking User Memory: Personalizing LLM via Recollection-Familiarity Adaptive Retrieval"
+  },
+  "processed_at": "2026-11-23T07:30:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-143c8671eb9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

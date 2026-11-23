@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c1369724cd1c9f8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f",
+    "identity_tokens": [
+      "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f"
+    ],
+    "reason": "Semantic Scholar APIが429を返し代替経路でも要旨を取得できなかった上、題目自体も主題が判読しづらく、LLM推論システムへの直接貢献の有無を要旨なしに確定できないため、要旨未取得として保留とする。",
+    "first_checked_at": "2026-11-23T07:30:06+00:00",
+    "last_checked_at": "2026-11-23T07:30:06+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "on Transformed Trivia"
+  },
+  "processed_at": "2026-11-23T07:30:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c1369724cd1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
