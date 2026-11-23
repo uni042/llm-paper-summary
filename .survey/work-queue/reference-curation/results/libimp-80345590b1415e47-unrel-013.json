@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80345590b1415e47-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.08184",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.08184",
+    "identity_tokens": [
+      "arXiv:2109.08184"
+    ],
+    "reason": "大規模正方行列を疎なフルランク行列の積で近似する汎用的な行列分解の研究であり、LLM推論への適用や推論機構への貢献は要旨に示されていない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Sparse Factorization of Large Square Matrices"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80345590b141",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

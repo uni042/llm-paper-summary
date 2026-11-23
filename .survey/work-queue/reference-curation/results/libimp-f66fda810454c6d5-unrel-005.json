@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f66fda810454c6d5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.10259",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.10259",
+    "identity_tokens": [
+      "arXiv:2508.10259"
+    ],
+    "reason": "ロボット行動スライスへ例外・コンテキストスイッチ・記録再生等のOSプリミティブを適用するAMSであり、対象は模倣学習ロボットの行動管理であってLLM推論基盤ではない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Leveraging OS-Level Primitives for Robotic Action Management"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f66fda810454",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

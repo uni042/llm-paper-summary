@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f66fda810454c6d5-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.16377",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.16377",
+    "identity_tokens": [
+      "arXiv:2406.16377"
+    ],
+    "reason": "報酬モデル・パラメータ更新・文脈内プロンプトという3つのLLM適応手段の相互変換可能性を示す理論的枠組みであり、推論コストやサービングへの技術的貢献はない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "On the Transformations across Reward Model, Parameter Update, and In-Context Prompt"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f66fda810454",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-915b964b42666305-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:0a8c53eea07d5c8efd98471f9c95d6850195efe6",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:0a8c53eea07d5c8efd98471f9c95d6850195efe6",
+    "identity_tokens": [
+      "SemanticScholar:0a8c53eea07d5c8efd98471f9c95d6850195efe6"
+    ],
+    "reason": "オンポリシー強化学習を周期非同期で高速化する手法と題されるが、Semantic Scholar APIが429を返し一次要旨を取得できなかったため、学習高速化なのか推論への貢献なのかを確認できない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "P ERIODIC A SYNCHRONY : An Effective Method for Accelerating On-Policy Reinforcement Learning"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-915b964b4266",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

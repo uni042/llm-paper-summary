@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f66fda810454c6d5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.03101",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.03101",
+    "identity_tokens": [
+      "arXiv:2504.03101"
+    ],
+    "reason": "Mamba型スキャナで文書全体を線形時間に走査し質問関連文を選ぶ単一パス文書QAは長文処理コストを下げるが、主眼はQA検索モデルの精度と効率でありLLMサービングやデコード機構への直接貢献は薄い。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Single-Pass Document Scanning for Question Answering"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f66fda810454",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

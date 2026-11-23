@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bd4724d4c72ef4a4-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.19201",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.19201",
+    "identity_tokens": [
+      "arXiv:2604.19201"
+    ],
+    "reason": "コード編集を大規模モデルの編集スケッチ生成と小規模モデルの適用へ分けるカスケードで大規模モデルの生成トークンを減らすが、対象はコード編集タスク固有の工程分解であり汎用の推論・デコード機構としての検証は限られる。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cascaded Code Editing: Large-Small Model Collaboration for Effective and Efficient Code Editing"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bd4724d4c72e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

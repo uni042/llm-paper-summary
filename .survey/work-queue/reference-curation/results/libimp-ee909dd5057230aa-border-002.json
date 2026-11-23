@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ee909dd5057230aa-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.03279",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.03279",
+    "identity_tokens": [
+      "arXiv:2510.03279"
+    ],
+    "reason": "Mambaの長距離メモリ減衰を解析し状態要約を統合するMemMambaは状態空間モデルのアーキテクチャ提案で、LLM推論システムへの直接の効率化機構は要旨で明確でない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemMamba: Rethinking Memory Patterns in State Space Model"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee909dd50572",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

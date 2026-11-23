@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-179ac3d005765d92-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3934/aci.2026009",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3934/aci.2026009",
+    "identity_tokens": [
+      "DOI:10.3934/aci.2026009"
+    ],
+    "reason": "小規模言語モデルの持続可能性とエネルギー効率に関する2020-2026年の文献計量分析であり、量子化等の整理を含むが技術的貢献ではなく書誌分析である。",
+    "first_checked_at": "2026-11-23T12:44:13+00:00",
+    "last_checked_at": "2026-11-23T12:44:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From carbon-intensive to carbon-neutral: sustainability and energy efficiency in small language models: bibliometric analysis (2020–2026)"
+  },
+  "processed_at": "2026-11-23T12:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-179ac3d00576",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

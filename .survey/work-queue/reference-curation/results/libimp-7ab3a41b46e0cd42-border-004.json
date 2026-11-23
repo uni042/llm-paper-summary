@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ab3a41b46e0cd42-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.19875",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.19875",
+    "identity_tokens": [
+      "arXiv:2510.19875"
+    ],
+    "reason": "動的スパース注意で長文脈の解釈可能性解析を近線形時間にするStreamだが、目的はthought anchor等の解析であり推論サービング自体の高速化ではない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stream: Scaling up Mechanistic Interpretability to Long Context in LLMs via Sparse Attention"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ab3a41b46e0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

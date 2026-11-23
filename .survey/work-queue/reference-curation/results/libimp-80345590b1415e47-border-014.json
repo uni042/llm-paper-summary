@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80345590b1415e47-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/acoit66109.2025.11436985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/acoit66109.2025.11436985",
+    "identity_tokens": [
+      "DOI:10.1109/acoit66109.2025.11436985"
+    ],
+    "reason": "小規模・大規模言語モデルのマージ、ルーティング、多モデルオーケストレーションを統合するSLM-Fusionライブラリであり、コスト配慮型推論や量子化統合を含むが主眼はモデル融合と運用ライブラリで推論システム機構の貢献が薄いため保留とする。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SLM-Fusion: A Unified Framework for Model Merging, Routing, and Multi-Model Orchestration"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80345590b141",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

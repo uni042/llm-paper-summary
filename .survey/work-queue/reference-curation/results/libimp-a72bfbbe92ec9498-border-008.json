@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a72bfbbe92ec9498-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.06616",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.06616",
+    "identity_tokens": [
+      "arXiv:2603.06616"
+    ],
+    "reason": "LLMルーティングをリスク較正付きモデル集合選択として定式化するRACERはコスト性能トレードオフに関連するが、貢献の中心は誤ルーティングリスク制御でありサービング機構ではない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RACER: Risk-Aware Calibrated Efficient Routing for Large Language Models"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a72bfbbe92ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

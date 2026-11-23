@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-439f2e42fb1774ae-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.07513",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.07513",
+    "identity_tokens": [
+      "arXiv:2504.07513"
+    ],
+    "reason": "タイトルが基盤モデルのカスタマイズ学習そのものを主題とし、推論・サービング効率化への言及がない学習単独の提案である。",
+    "first_checked_at": "2026-11-23T12:44:13+00:00",
+    "last_checked_at": "2026-11-23T12:44:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "GPT Carry-On: Training Foundation Model for Customization Could Be Simple, Scalable and Affordable"
+  },
+  "processed_at": "2026-11-23T12:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439f2e42fb17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

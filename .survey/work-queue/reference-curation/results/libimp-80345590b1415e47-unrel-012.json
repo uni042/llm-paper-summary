@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80345590b1415e47-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.07414",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.07414",
+    "identity_tokens": [
+      "arXiv:2510.07414"
+    ],
+    "reason": "異種リトリーバによるノイズ混入を再現した長文文脈ベンチマークHaystackCraftの提案であり、LLMの長文文脈能力の評価のみで推論効率化への貢献はない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Haystack Engineering: Context Engineering for Heterogeneous and Agentic Long-Context Evaluation"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80345590b141",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

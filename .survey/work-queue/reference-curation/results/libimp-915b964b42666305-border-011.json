@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-915b964b42666305-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14724",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14724",
+    "identity_tokens": [
+      "arXiv:2604.14724"
+    ],
+    "reason": "HAMSAは走査不要なスペクトル領域の視覚状態空間モデルでImageNetでTransformer比2.2倍の推論高速化等を主張するが、対象は画像分類向け視覚SSMのアーキテクチャ効率でありLLM推論への適用は要旨にない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HAMSA: Scanning-Free Vision State Space Models via SpectralPulseNet"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-915b964b4266",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

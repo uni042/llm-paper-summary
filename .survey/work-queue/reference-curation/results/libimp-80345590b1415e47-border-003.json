@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80345590b1415e47-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:588cbe93f62ef1235587c7abfc4cac5deb0d1acc",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:588cbe93f62ef1235587c7abfc4cac5deb0d1acc",
+    "identity_tokens": [
+      "SemanticScholar:588cbe93f62ef1235587c7abfc4cac5deb0d1acc"
+    ],
+    "reason": "自己回帰翻訳の投機的デコードによるロスレス高速化を扱うと題するが、Semantic Scholar API 429で要旨を取得できず、ドラフト機構や検証手順の具体を確認できないため保留とする。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "S PECULATIVE D ECODING : L OSSLESS S PEEDUP OF A UTOREGRESSIVE T RANSLATION"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80345590b141",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

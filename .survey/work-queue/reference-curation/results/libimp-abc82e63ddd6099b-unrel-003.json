@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abc82e63ddd6099b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.09141",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.09141",
+    "identity_tokens": [
+      "arXiv:2410.09141"
+    ],
+    "reason": "ACERは短文脈LMによる検索風データ合成でタスク特化の長文脈能力を微調整で獲得させる手法であり、長文脈化の学習過程が主題で推論システムではない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ACER: Automatic Language Model Context Extension via Retrieval"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abc82e63ddd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

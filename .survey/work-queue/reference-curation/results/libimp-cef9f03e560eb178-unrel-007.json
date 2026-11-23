@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cef9f03e560eb178-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.15306",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.15306",
+    "identity_tokens": [
+      "arXiv:2512.15306"
+    ],
+    "reason": "消費者GPU向け低精度事前学習 LLMQ は量子化対応学習で事前学習を高速化するもので、要旨の主目的は学習効率であり推論システムへの直接貢献ではない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LLMQ: Efficient Lower-Precision Pretraining for Consumer GPUs"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cef9f03e560e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

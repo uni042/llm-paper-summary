@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-439f2e42fb1774ae-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.20122",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.20122",
+    "identity_tokens": [
+      "arXiv:2508.20122"
+    ],
+    "reason": "スパイキング大規模言語モデルへ時空間プルーニングと重み量子化を適用しエネルギー効率を狙うが、要旨の主眼はSNN変換と精度回復であり、通常のLLM推論システムへの直接貢献は限定的で薄い。",
+    "first_checked_at": "2026-11-23T12:44:13+00:00",
+    "last_checked_at": "2026-11-23T12:44:13+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spatio-Temporal Pruning for Compressed Spiking Large Language Models"
+  },
+  "processed_at": "2026-11-23T12:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-439f2e42fb17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

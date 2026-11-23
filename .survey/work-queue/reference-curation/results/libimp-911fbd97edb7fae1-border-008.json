@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-911fbd97edb7fae1-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2102.09727",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2102.09727",
+    "identity_tokens": [
+      "arXiv:2102.09727"
+    ],
+    "reason": "BERTへ学習可能なゲート変数を適用し入力トークン単位で計算量と精度を調整する動的推論手法だが、対象はエンコーダ型BERTであり生成LLM推論システムへの貢献は間接的である。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning Dynamic BERT via Trainable Gate Variables and a Bi-modal Regularizer"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-911fbd97edb7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

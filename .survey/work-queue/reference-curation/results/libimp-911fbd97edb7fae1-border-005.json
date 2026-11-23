@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-911fbd97edb7fae1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3672919.3672949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3672919.3672949",
+    "identity_tokens": [
+      "DOI:10.1145/3672919.3672949"
+    ],
+    "reason": "テキスト分類向け事前学習モデルで推論時に影響スコアにより重要でないトークンを動的減衰・除去する手法だが、対象は分類モデルでありLLMサービングへの直接適用は要旨で示されていない。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Text Classification Network Based on Token Dynamic Decay"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-911fbd97edb7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f66fda810454c6d5-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.00495",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.00495",
+    "identity_tokens": [
+      "arXiv:2506.00495"
+    ],
+    "reason": "Fisher情報で重要層を選びMoE型低ランク専門家を疎に配置するFLoEはLLMのパラメータ効率適応に関するが、対象は微調整時のメモリと計算削減であり推論時の機構ではないため境界域とする。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FLoE: Fisher-Based Layer Selection for Efficient Sparse Adaptation of Low-Rank Experts"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f66fda810454",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

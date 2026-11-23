@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efe74ca93caa5145-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.15983",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.15983",
+    "identity_tokens": [
+      "arXiv:2504.15983"
+    ],
+    "reason": "W-PCAという勾配不要のzero-shot NASプロキシで軽量言語モデルを効率的に探索する手法だが、評価はGLUE/SQuAD上のアーキテクチャ探索時間短縮であり推論実行系への直接貢献は限定的である。",
+    "first_checked_at": "2026-11-23T12:44:14+00:00",
+    "last_checked_at": "2026-11-23T12:44:14+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "W-PCA Based Gradient-Free Proxy for Efficient Search of Lightweight Language Models"
+  },
+  "processed_at": "2026-11-23T12:44:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efe74ca93caa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
