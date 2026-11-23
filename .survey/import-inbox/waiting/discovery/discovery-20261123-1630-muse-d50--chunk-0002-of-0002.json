@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d50::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03784",
+      "identity_tokens": [
+        "arXiv:2510.03784"
+      ],
+      "title": "Performance-Efficiency Tradeoffs in Transformers: An Approximation Theory Perspective",
+      "reason": "Transformerの表現力と効率のトレードオフを近似理論から解析し、層ごとの注意ヘッド数とヘッド次元の配分指針やsoftmaxの飽和現象を示した理論研究であり、モデル効率の設計には示唆を与えるが推論システムやカーネルの実装・実測による直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.03784",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 491
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08374",
+      "identity_tokens": [
+        "arXiv:2605.08374"
+      ],
+      "title": "MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs",
+      "reason": "LLMエージェントのエピソード記憶について、記憶生成の来歴DAG上をQ値の信用伝播で評価するMemQの提案であり、対象はエージェントの経験検索と再利用であって、LLM推論の実行機構やKVキャッシュ、サービングへの直接貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.08374",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 492
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00019",
+      "identity_tokens": [
+        "arXiv:2504.00019"
+      ],
+      "title": "ObscuraCoder: Powering Efficient Code LM Pre-Training Via Obfuscation Grounding",
+      "reason": "難読化コードと原文のペアObscuraXを用いたコードLMの事前学習レシピObscuraCoderの研究であり、コード理解や補完の能力向上が成果で、学習データ効率の改善にとどまり推論・デコード・サービングの高速化への直接貢献はない事前学習研究である。",
+      "source_url": "https://arxiv.org/abs/2504.00019",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 493
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15720",
+      "identity_tokens": [
+        "arXiv:2602.15720"
+      ],
+      "title": "ToaSt: Token Channel Selection and Structured Pruning for Efficient ViT",
+      "reason": "Vision Transformerの計算コスト削減として注意の構造化プルーニングと推論時のトークンチャネル選択を組み合わせたToaStの提案であり、対象はDeiTやSwin等の視覚モデルのFLOPs削減で、LLM推論システムへの直接貢献は要旨に確認できない。",
+      "source_url": "https://arxiv.org/abs/2602.15720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 494
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11945",
+      "identity_tokens": [
+        "arXiv:2505.11945"
+      ],
+      "title": "Top–Down Compression: Revisit Efficient Vision Token Projection for Visual Instruction Tuning",
+      "reason": "視覚指示チューニングにおける視覚トークン射影を上位からの圧縮で効率化し視覚トークンを75〜95％削減するLLaVA-Meteorの提案であり、VLMのトークン削減として推論効率に関連はするが主目的は視覚・言語アライメントの学習手法でありサービング機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2505.11945",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 495
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00025",
+      "identity_tokens": [
+        "arXiv:2604.00025"
+      ],
+      "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+      "reason": "大規模モデルが冗長な生成で小規模モデルに劣る逆スケーリング現象を31モデルの評価で分析し、簡潔さ制約というプロンプト設計で逆転することを示した能力評価研究であり、推論システムやデコード機構への技術的貢献は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2604.00025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 496
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:52abfa3bf570e7ff43d02cde2c9843ab1729e0f4",
+      "identity_tokens": [
+        "SemanticScholar:52abfa3bf570e7ff43d02cde2c9843ab1729e0f4"
+      ],
+      "title": "Towards Carbon-efficient LLM Life Cycle",
+      "reason": "生成AIのライフサイクル炭素排出をCPU・GPUのパラメータ化モデルで推定し、生成推論向けにバッチングやモデルシャーディング、並列化の組合せで炭素を17％改善できること等を示した研究であり、推論の計測・最適化には関連するが主眼は炭素モデリングでサービング機構自体の提案は薄い。",
+      "source_url": "https://www.semanticscholar.org/paper/52abfa3bf570e7ff43d02cde2c9843ab1729e0f4",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 497
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:f6b06fd0d5934422f800efe3677bcb209bec91ee",
+      "identity_tokens": [
+        "SemanticScholar:f6b06fd0d5934422f800efe3677bcb209bec91ee"
+      ],
+      "title": "T OWARDS P RIVACY -P RESERVING LLM I NFERENCE VIA C OLLABORATIVE O BFUSCATION (T ECHNICAL R EPORT )",
+      "reason": "クラウドLLM推論のプライバシーに対し、入力データとモデルパラメータを協調的に変換する共変難読化AloePriを提案し、既存LMaaS基盤と互換のまま671Bモデルで平文推論と同等の効率と精度損失0〜3.5％を実システムで示したプライバシー保護推論機構である。",
+      "source_url": "https://www.semanticscholar.org/paper/f6b06fd0d5934422f800efe3677bcb209bec91ee",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 498
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08580",
+      "identity_tokens": [
+        "arXiv:2605.08580"
+      ],
+      "title": "Slipstream: Trajectory-Grounded Compaction Validation for Long-Horizon Agents",
+      "reason": "長期間エージェントの文脈圧縮を非同期に並行実行し、継続するエージェント推論と照らして要約を検証するSlipstreamにより精度向上とエンドツーエンド遅延最大39.7％削減を示した研究であり、エージェント実行基盤として関連はあるが対象は圧縮検証ワークフローでLLMサービング中核機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.08580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 499
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14339",
+      "identity_tokens": [
+        "arXiv:2604.14339"
+      ],
+      "title": "Shuffle the Context: RoPE-Perturbed Self-Distillation for Long-Context Adaptation",
+      "reason": "短文脈モデルを長文脈へ適応させる際の位置依存の脆さを、RoPEインデックスを摂動した自己蒸留という学習正則化で改善する研究であり、RULER等での精度向上は微調整工程の成果であって推論時の機構やサービングへの直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.14339",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 500
+    }
+  ],
+  "parent_run_key": "muse-20261123-d50",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

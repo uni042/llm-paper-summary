@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d49::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2504.00911",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2504.00911"
+      ],
+      "title": "Foundation Models for Autonomous Driving System: An Initial Roadmap",
+      "reason": "基盤モデルの自動運転システムへの統合に関するロードマップで、知覚・推論・意思決定への応用とソフトウェア工学上の課題整理が中心であり、LLM推論やサービング機構への技術的貢献は要旨で確認できないため対象外。",
+      "source_url": "https://doi.org/10.48550/arXiv.2504.00911",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 441
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:04ef4c98101f869b1dc61b83ce7581d31969a780",
+      "identity_tokens": [
+        "SemanticScholar:04ef4c98101f869b1dc61b83ce7581d31969a780"
+      ],
+      "title": "Machine Learning Systems with Reduced Memory Requirements",
+      "reason": "メモリ要件削減を掲げる機械学習システムという題目で推論効率との関連は示唆されるが、Semantic Scholarが429を返しCrossref等でも一次要旨を取得できず、対象モデルや削減機構の具体性を確認できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/04ef4c98101f869b1dc61b83ce7581d31969a780",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 442
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20467",
+      "identity_tokens": [
+        "arXiv:2607.20467"
+      ],
+      "title": "DC-Leap: Training-Free Acceleration of dLLMs via Draft-Guided Contiguous Leaping Decoding",
+      "reason": "拡散LLMの並列デコードで過度に保守的な信頼度閾値による冗長な反復を、ドラフト誘導型の連続リープと動的連続検証で抑え、最大53倍級の高速化を示す学習不要なデコード加速であり推論への直接貢献が明確。",
+      "source_url": "https://arxiv.org/abs/2607.20467",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.04348",
+      "identity_tokens": [
+        "arXiv:2502.04348"
+      ],
+      "title": "Prompt-based Depth Pruning of Large Language Models",
+      "reason": "入力プロンプトに応じて省略するTransformerブロックを軽量ルーターで動的に選ぶPuDDingにより、静的深さプルーニングより精度を保ちつつLLM推論を加速する深さ削減手法で、推論コスト削減への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2502.04348",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3720562",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3720562"
+      ],
+      "title": "In-Browser Split Inference for Autoregressive Large Language Models With Activation Quantization",
+      "reason": "ブラウザ内での自己回帰LLM分割推論に活性化量子化を組み合わせる題目で分散推論と量子化の双方に関連するが、Crossrefに要旨がなく一次要旨を取得できず分割方式や量子化精度の具体性を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3720562",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.15589",
+      "identity_tokens": [
+        "arXiv:2603.15589"
+      ],
+      "title": "LEXI: Lossless Exponent Coding for Efficient Inter-Chiplet Communication in Hybrid LLMs",
+      "reason": "BF16指数部のエントロピーの低さを利用した可逆指数符号化LEXIでチップレット間通信とキャッシュ転送を圧縮し、JambaやQwen等で推論レイテンシを30〜35%削減するハードウェア寄りの推論高速化であり直接貢献が明確。",
+      "source_url": "https://arxiv.org/abs/2603.15589",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 446
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.16068",
+      "identity_tokens": [
+        "arXiv:2603.16068"
+      ],
+      "title": "Resource Consumption Threats in Large Language Models",
+      "reason": "LLMの資源消費を過剰生成で悪化させる脅威を、誘発から機構理解・緩和まで体系化したサーベイで、サービス可用性や効率と関連は深いが推論システム自体の新機構ではなく脅威分類が主目的のため境界域とする。",
+      "source_url": "https://arxiv.org/abs/2603.16068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 447
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:81fcd9309e1168fe0664d8df4213771e4ebfa343",
+      "identity_tokens": [
+        "SemanticScholar:81fcd9309e1168fe0664d8df4213771e4ebfa343"
+      ],
+      "title": "Scalable Visual Transformers with Hierarchical Pooling",
+      "reason": "階層的プーリングを持つスケーラブルな視覚Transformerという題目で計算効率化の可能性はあるが、Semantic Scholarが429を返し一次要旨を取得できず、LLM推論ではなく視覚モデル側の効率化かどうかも判別できないため保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/81fcd9309e1168fe0664d8df4213771e4ebfa343",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 448
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:13a5c0c10cf491295ba1d68888bec0851b8f3f13",
+      "identity_tokens": [
+        "SemanticScholar:13a5c0c10cf491295ba1d68888bec0851b8f3f13"
+      ],
+      "title": "Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference",
+      "reason": "MoE推論向けの動的エキスパート量子化という題目で推論向け量子化に直結し得るが、Semantic Scholarが429を返し一次要旨を取得できず、量子化の粒度や推論時適用の具体性を確認できないためタイトルだけで確定せず保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/13a5c0c10cf491295ba1d68888bec0851b8f3f13",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.02633",
+      "identity_tokens": [
+        "arXiv:2603.02633"
+      ],
+      "title": "Robust Heterogeneous Analog-Digital Computing for Mixture-of-Experts Models with Theoretical Generalization Guarantees",
+      "reason": "MoE推論のメモリ・エネルギー非効率に対し、アナログインメモリ計算のノイズに敏感なエキスパートを最大ニューロンノルムで判別してデジタル計算へ回す再学習不要な異種計算枠組みを提案し、DeepSeekMoE等で検証しており直接貢献が明確。",
+      "source_url": "https://arxiv.org/abs/2603.02633",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 450
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.20276",
+      "identity_tokens": [
+        "arXiv:2512.20276"
+      ],
+      "title": "ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge",
+      "reason": "エッジ上のVLAモデルが自己回帰デコードのメモリ律速で3〜5Hzに留まる問題へ、DecodeとPrefillを跨リクエストでパイプライン化するスケジューラと統合KVリングバッファで対処するActionFlowであり、エッジ推論高速化への直接貢献が明確。",
+      "source_url": "https://arxiv.org/abs/2512.20276",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 451
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539383",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539383"
+      ],
+      "title": "Endor: Exploit Nearly-Decode-Only Opportunities of LLM Reasoning on Near-Memory Architecture",
+      "reason": "LLM推論がほぼデコードのみになる機会をニアメモリアーキテクチャで活かすEndorという題目で推論ハードウェアに直結し得るが、Crossrefが429を返し一次要旨を取得できず機構の具体性を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539383",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 452
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.12935",
+      "identity_tokens": [
+        "arXiv:2606.12935"
+      ],
+      "title": "MARS: Margin-Adversarial Risk-controlled Stopping for Parallel LLM Test-time Scaling",
+      "reason": "並列テストタイムスケーリングで全推論トレースを完走させる無駄に対し、部分トレースの途中回答とマージン敵対的停止規則で早期終了するMARSを提案し、最終投票と一致する保証と計算削減を示す推論時計算制御であり直接貢献が明確。",
+      "source_url": "https://arxiv.org/abs/2606.12935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 453
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-1746",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1746"
+      ],
+      "title": "Attribution-Driven Adaptive Token Pruning for Transformers",
+      "reason": "帰属駆動の適応的トークンプルーニングという題目でTransformerのトークン削減による推論効率化に関連し得るが、NeurIPS proceedingsのCrossrefレコードに要旨がなく一次要旨を取得できず削減対象や推論時適用を確認できないため保留とする。",
+      "source_url": "https://doi.org/10.52202/085713-1746",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 454
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29499",
+      "identity_tokens": [
+        "arXiv:2609.29499"
+      ],
+      "title": "Task-Aware Spectral Pruning: A Mixture-of-Masks Framework for Efficient LLM Inference",
+      "reason": "タスクごとに異なるモジュール依存をスペクトル記述子と実測アブレーションで較正し、ターン単位に固定マスクを割り当てるTask-Aware Spectral Pruningで有効FLOPを43%削減しデコードレイテンシ低下も実測しており、LLM推論効率化への直接貢献が明確。",
+      "source_url": "https://arxiv.org/abs/2609.29499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 455
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:ec47f32c98b267265f80e149c2c6e5ba591a4392",
+      "identity_tokens": [
+        "SemanticScholar:ec47f32c98b267265f80e149c2c6e5ba591a4392"
+      ],
+      "title": "Fast LLM Inference with Parallel Prompting",
+      "reason": "並列プロンプティングによる高速LLM推論という題目でデコード方式の改良が示唆されるが、Semantic Scholarが429を返し一次要旨を取得できず、並列化の対象や検証方法の具体性を確認できないためタイトルだけで確定せず保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/ec47f32c98b267265f80e149c2c6e5ba591a4392",
+      "body_check": "abstract_not_obtained; S2/OpenAlex/Crossref rate-limited or no abstract; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 456
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11680",
+      "identity_tokens": [
+        "arXiv:2606.11680"
+      ],
+      "title": "Organize then Retrieve: Hierarchical Memory Navigation for Efficient Agents",
+      "reason": "LLMエージェントの作業メモリを階層構造化して検索するHORMAで、文脈肥大による推論コストとレイテンシの増大を抑える狙いはあるが、主たる貢献はエージェントの経験整理と検索でありサービング機構そのものではないため境界域とする。",
+      "source_url": "https://arxiv.org/abs/2606.11680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 457
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01137",
+      "identity_tokens": [
+        "arXiv:2411.01137"
+      ],
+      "title": "Data movement limits to frontier model training",
+      "reason": "データ移動がフロンティアモデルの学習スケーリングをどこまで制限するかを理論モデルで分析した論文で、対象は分散学習のFLOP上限とハードウェア利用率であり、推論やサービングへの直接貢献は要旨にないため対象外。",
+      "source_url": "https://arxiv.org/abs/2411.01137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 458
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.13046",
+      "identity_tokens": [
+        "arXiv:2405.13046"
+      ],
+      "title": "LeaPformer: Enabling Linear Transformers for Autoregressive and Simultaneous Tasks via Learned Proportions",
+      "reason": "位置ベース重み付けを学習した比率へ一般化するLeaPformerで線形Transformerを自己回帰タスクへ適用可能にし品質とスループットのトレードオフを示すが、主眼はモデルアーキテクチャの効率化であり推論システムとしての具体性は薄いため境界域とする。",
+      "source_url": "https://arxiv.org/abs/2405.13046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 459
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03197",
+      "identity_tokens": [
+        "arXiv:2606.03197"
+      ],
+      "title": "MemTrain: Self-Supervised Context Memory Training",
+      "reason": "LLMエージェントの文脈メモリ能力を自己教師ありのマスク再構成タスクで高めるMemTrainは学習フレームワークであり、推論時のメモリ機構やサービング高速化ではなく学習単独の改善に留まるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2606.03197",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T19:00:00+09:00",
+      "last_checked_at": "2026-11-23T19:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 460
+    }
+  ],
+  "parent_run_key": "muse-20261123-d49",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
