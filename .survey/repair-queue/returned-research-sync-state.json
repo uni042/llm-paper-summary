@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "22897e30521b54eee17b9d555de5f61a15a987a8",
+  "base_commit": "983cf6d7500704e3ffc507d3a7306f1bf7a9dc94",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -335,6 +335,7 @@
     "2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.json",
     "2025-2511.02130-re-forc-adaptive-reward-prediction-for-efficient-chain-of-thought-reasoning.json",
     "2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effects.json",
+    "2025-2511.03245-decoupled-multi-predictor-optimization-for-inference-efficient-model-tuning.json",
     "2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-training.json",
     "2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-generation.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
@@ -392,6 +393,9 @@
     "2025-oraclekv-question-independent-kv-cache-eviction.json",
     "2025-pqcache-product-quantization-based-kvcache-for-long-context-llm-inference.json",
     "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json",
+    "2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-acceleration-and-applications.json",
+    "2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-systems.json",
+    "2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-efficient-moe-inference.json",
     "2026-2601.03067-joint-encoding-of-kv-cache-blocks-for-scalable-llm-serving.json",
     "2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.json",
     "2026-2601.03506-qa-merging-query-adaptive-reasoning-via-layer-selective-model-merging.json",
@@ -577,6 +581,7 @@
     "2026-2604.17068-stability-weighted-decoding-for-diffusion-language-models.json",
     "2026-2604.17228-revisiting-auxiliary-losses-for-conditional-depth-routing-an-empirical-study.json",
     "2026-2604.17627-slo-guard-crash-aware-budget-consistent-autotuning-for-slo-constrained-llm-servi.json",
+    "2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-models.json",
     "2026-2604.18995-r2-dllm-accelerating-diffusion-large-language-models-via-spatio-temporal-redundancy-reduction.json",
     "2026-2604.19145-st-prune-training-free-spatio-temporal-token-pruning-for-vision-language-models-in-autonomous-driving.json",
     "2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.json",
@@ -50911,6 +50916,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2511.03245": {
+      "order": [
+        "2026-11-23T20:19:00+00:00",
+        "2025-2511.03245-decoupled-multi-predictor-optimization-for-inference-efficient-model-tuning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1360/nso/20260016": {
+      "order": [
+        "2026-11-23T20:20:32+00:00",
+        "2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-acceleration-and-applications.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.3390/electronics15112451": {
+      "order": [
+        "2026-11-23T20:22:04+00:00",
+        "2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3770743.3803978": {
+      "order": [
+        "2026-11-23T20:23:36+00:00",
+        "2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-efficient-moe-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.17709": {
+      "order": [
+        "2026-11-23T20:25:08+00:00",
+        "2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64512,6 +64562,21 @@
     "arxiv:2504.20922": [
       "papers/inference/99-other-inference-systems/2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.md",
       "papers/inference/99-other-inference-systems/2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.md"
+    ],
+    "arxiv:2511.03245": [
+      "papers/inference/99-other-inference-systems/2025-2511.03245-decoupled-multi-predictor-optimization-for-inference-efficient-model-tun.md"
+    ],
+    "doi:10.1360/nso/20260016": [
+      "papers/inference/05-speculative-decoding-moe/2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-accelerat.md"
+    ],
+    "doi:10.3390/electronics15112451": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-sys.md"
+    ],
+    "doi:10.1145/3770743.3803978": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-e.md"
+    ],
+    "arxiv:2604.17709": [
+      "papers/inference/99-other-inference-systems/2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-mod.md"
     ]
   }
 }

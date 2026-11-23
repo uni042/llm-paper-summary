@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（623本）
+## 自動生成の論文一覧（624本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1118,6 +1118,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU種類・テンソル並列度・精度を実測ベースの不確実性付き費用モデルで順位付けし、未知領域では推薦を控える起動助言器。460実測でスループット誤差6.2%、上位1位正解率95%を示す。
 
+- **2026-07 · [MoE-Balance: Unleashing the Full Potential of CPU-GPU Heterogeneity for Efficient MoE Inference](2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門家の実行時間を実測してCPUとGPUの負荷を均等化し、層跨ぎプリフェッチとチャンク転送でPCIe転送を隠すことで、メモリ制約下のMoE推論で最先端ハイブリッド比スループット1.6倍と遅延37.5パーセント減を達成したシステム。
+
 - **2026-07 · [LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters](2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   問いごとにモデルの系統・規模・量子化水準・実行装置を同時に選ぶエッジ向け調整方式で、精度の下限を制約に入れた最適化を5種類の予測器と近似手順で解き、実機57台で応答時間と資源利用を改善した。
@@ -2170,13 +2174,13 @@
   実装：[✓](https://github.com/Ying1123/VTC-artifact) ・ リポジトリ内被引用：98  
   仮想 トークン Counter（VTC）は、要求数ではなくクライアントごとに実際に処理した入力・出力トークンをサービス量として数え、累積サービス量が少ないクライアントから新しい要求を実行バッチへ入れる。空きGPUを意図的に遊ばせず、公平性と高い利用率を両立することを狙う。
 
+- **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：96  
+  根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
+
 - **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：95  
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
-
-- **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：95  
-  根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：88  

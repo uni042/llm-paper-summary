@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（218本）
+## 自動生成の論文一覧（219本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -429,6 +429,10 @@
 - **2026-06 · [Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation](2026-2606.11690-beyond-per-token-pricing-a-concurrency-aware-methodology-for-llm-infrast.md)**  
   実装：[✓](https://github.com/pChitral/vllm-cost-meter) ・ リポジトリ内被引用：0  
   本研究はこの差を、要求到着率を明示した費用測定問題として定式化する。ハードウェア、モデル構造、量子化精度、要求到着率、遅延目標を分け、同じGPUでも負荷によって費用がどの程度変わるかを実機で測る。H100 NVLの主実験では、3種類のモデルと2種類の精度の計6構成を7段階の要求率で測定し、同じ構成内で17.5～36.3倍の出力トークン単価差を観測した。
+
+- **2026-06 · [Benchmarking Large Language Model Inference on Limited-Resource Edge Systems](2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-sys.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  12件の小型・中型モデルについて生成型精度とJetson実機のスループット・電力を二重測定で結び付け、GPU実行が電力増にもかかわらずエネルギー効率を0.453から0.823トークン毎ジュールへ上げることと、精度と効率の交換がモデル規模で決まることを示すベンチマーク。
 
 - **2026-06 · [AVIS: Adaptive Test-Time Scaling for Vision-Language Models](2026-2606.11576-avis-adaptive-test-time-scaling-for-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1389本）
+## 自動生成の論文一覧（1391本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2582,6 +2582,10 @@
   実装：[✓](https://github.com/X-Xia0828/DepCap) ・ リポジトリ内被引用：0  
   DepCapは、拡散言語モデル（DLM）が文章をブロック単位で生成する際の二つの判断、すなわち「次のブロックをどこまで伸ばすか」と「そのブロック内のどの位置を同時に確定するか」を、異なる予測信号から決める学習不要の推論方式である。
 
+- **2026-04 · [DeInfer: Efficient Parallel Inferencing for Decomposed Large Language Models](2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分解済みLLMの並列推論を、低ランク空間での通信と固定バッファによるKV再構成で高速化し、NVLinkなし構成で最初のトークンまでの時間を約83パーセント削減する専用推論基盤。
+
 - **2026-04 · [D-QReLO: Training- and Data-Free Delta Compression for Large Language Models via Quantization and Residual Low-Rank Approximation](2026-2604.16940-d-qrelo-training-and-data-free-delta-compression-for-large-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模微調整で大きくなったデルタ重みを、1ビット量子化で大枠を捉えてから残差を低ランク近似で回収する二段圧縮で、圧縮率8分の1でも性能低下を平均6.17パーセントに抑える学習不要のデルタ圧縮。
@@ -3931,6 +3935,10 @@
 - **2025-11 · [DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams](2025-2511.17693-deepcot-deep-continual-transformers-for-real-time-inference-on-data-stre.md)**  
   実装：[✓](https://github.com/Atamarado/deepcot) ・ リポジトリ内被引用：0  
   DeepCoT（Deep Continual Transformer）は、映像・音声・テキストのストリームを移動窓で逐次処理する際、深いTransformerエンコーダで繰り返される過去トークンの計算を減らす方式である。原著のオンライン行動検出では通常のTransformerに対して23.65倍の相対実行速度、音楽分類では37.24倍を報告する。
+
+- **2025-11 · [Decoupled Multi-Predictor Optimization for Inference-Efficient Model Tuning](2025-2511.03245-decoupled-multi-predictor-optimization-for-inference-efficient-model-tun.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  早期終了の浅い層で衝突する基礎特徴と識別特徴を、バイパスモジュールと高次統計の予測器、二相の損失重みで分離し、約30パーセントの計算量で70パーセントを使う先行方式に並ぶ精度を出す微調整法。
 
 - **2025-11 · [BudgetMem: Training-Free Selective Memory for Cost-Efficient Long-Context Processing in Language Models](2025-2511.04919-budgetmem-training-free-selective-memory-for-cost-efficient-long-context.md)**  
   実装：[✓](https://github.com/Chandra-Alla/BudgetMem-paper) ・ リポジトリ内被引用：0  

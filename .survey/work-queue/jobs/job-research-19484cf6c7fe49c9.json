@@ -35,10 +35,15 @@
   "selection_reason": "Mixtral-8×7Bを対象に、実時間負荷に基づく細粒度の動的エキスパートスケジューラとPCIe転送と計算を重ねるプリフェッチ・チャンク転送でCPU-GPU異種資源を使うMoE推論システムであり、スループット1.6倍と遅延37.5%削減を示す直接のMoE推論貢献である。",
   "semantic_scholar_id": "110a994f859a5102c5027342cd587020170e4ef7",
   "source_url": "https://doi.org/10.1145/3770743.3803978",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoE-Balance: Unleashing the Full Potential of CPU-GPU Heterogeneity for Efficient MoE Inference",
   "type": "research",
   "venue": "Design Automation Conference",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-23T20:27:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-e.md",
+  "represented_canonical_id": "DOI:10.1145/3770743.3803978",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
