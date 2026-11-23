@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d7c088b432ad4e2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.30728",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.30728",
+    "identity_tokens": [
+      "arXiv:2605.30728"
+    ],
+    "reason": "GPUメモリを超えるテンソルのPCIe転送ボトルネックに対し可逆圧縮IBPを提案する研究で、学習と推論の両方を対象とする汎用ML向け手法であり、LLM推論固有の評価や機構は要旨で不明確なため保留とする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reducing the GPU Memory Bottleneck with Lossless Compression for ML"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d7c088b432a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-330b974a09cc9a7b-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2405.16555",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2405.16555",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2405.16555",
+      "arXiv:2405.16555"
+    ],
+    "reason": "要旨では熱伝導原理に基づくHeat Conduction Operatorを用いたvHeatがSwin Transformer比で最大3倍のスループット、GPUメモリ80%削減、FLOPs35%削減を達成すると示すが、対象は視覚表現モデルのバックボーンであり、効率指標はあるもののLLM推論システムへの直接の機構貢献ではないためborderlineとする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "vHeat: Building Vision Models upon Heat Conduction"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-330b974a09cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

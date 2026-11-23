@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dda0f163b86d5689-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:85fd3b8933fc6ed7572ff5fe0c14b1069c66290c",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:85fd3b8933fc6ed7572ff5fe0c14b1069c66290c",
+    "identity_tokens": [
+      "SemanticScholar:85fd3b8933fc6ed7572ff5fe0c14b1069c66290c"
+    ],
+    "reason": "秘密分散等の二者間機械学習プロトコルに関する論文だが、Semantic Scholar APIが429を返しOpenAlexも429で要旨を取得できずabstract_not_obtainedのため判定を保留する。安全な推論実行に関連し得る主題でありタイトルだけでは対象外と断定できないため境界事例とする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "M&M: Secure Two-Party Machine Learning through Efficient Modulus Conversion and Mixed-Mode Protocols"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dda0f163b86d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

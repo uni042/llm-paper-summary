@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dda0f163b86d5689-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.15652",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.15652",
+    "identity_tokens": [
+      "arXiv:2510.15652"
+    ],
+    "reason": "異種GPUクラスタで学習・推論リクエストをオンライン配分しエネルギーと性能要件を両立させるGOGHの提案であり、推論ワークロードの資源オーケストレーションには関連するが対象は汎用機械学習ワークロードでLLMサービング特有の機構は要旨からは不明瞭である。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GOGH: Correlation-Guided Orchestration of GPUs in Heterogeneous Clusters"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dda0f163b86d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

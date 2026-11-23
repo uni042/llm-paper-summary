@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-568559e5e8106d77-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.14865",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.14865",
+    "identity_tokens": [
+      "arXiv:2512.14865"
+    ],
+    "reason": "要旨は合成音声でなく自然な複数ターン対話でend-to-end音声対話システムを評価するAudio MultiChallengeベンチマークの提案であり、推論メモリや指示追従といった対話能力の測定が目的で、推論システムの高速化やサービング機構への貢献は示されていないためunrelatedとする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Audio MultiChallenge: A Multi-Turn Evaluation of Spoken Dialogue Systems on Natural Human Interaction"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-568559e5e810",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

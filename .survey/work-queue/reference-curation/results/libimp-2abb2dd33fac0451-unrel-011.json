@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2abb2dd33fac0451-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.01849",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.01849",
+    "identity_tokens": [
+      "arXiv:2607.01849"
+    ],
+    "reason": "MIDIからStrudelプログラムを復元する記号音楽デコンパイルを教師あり学習と強化学習で解くDecomposerの提案であり、音楽生成・変換の応用タスクであって推論システムの効率や基盤に関する貢献は確認できない。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Decomposer: Learning to Decompile Symbolic Music to Programs"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2abb2dd33fac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

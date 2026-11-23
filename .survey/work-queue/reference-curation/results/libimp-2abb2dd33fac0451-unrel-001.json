@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2abb2dd33fac0451-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.04786",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.04786",
+    "identity_tokens": [
+      "arXiv:2510.04786"
+    ],
+    "reason": "テスト時にタスク特化カリキュラムを自動構築し強化学習で継続学習するTTC-RLの提案であり、改善対象は数学・コードベンチマークのpass率という学習側の性能で、推論サービングやデコード高速化への技術的貢献は要旨に確認できない。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Learning on the Job: Test-Time Curricula for Targeted Reinforcement Learning"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2abb2dd33fac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

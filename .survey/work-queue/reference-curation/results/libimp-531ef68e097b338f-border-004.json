@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-531ef68e097b338f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c56313ded3bf1d0dffd7e3dab8d32e90d6bfaab5",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c56313ded3bf1d0dffd7e3dab8d32e90d6bfaab5",
+    "identity_tokens": [
+      "SemanticScholar:c56313ded3bf1d0dffd7e3dab8d32e90d6bfaab5"
+    ],
+    "reason": "長文書向けに高次表現を用いるマスク言語モデリングという題名のみで、一次要旨を取得できなかったため、注意機構の推論時効率や長文推論への具体的貢献を確認できず保留とする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": ": Masked Language Modeling with Higher-Level Representations for Long Documents"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-531ef68e097b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

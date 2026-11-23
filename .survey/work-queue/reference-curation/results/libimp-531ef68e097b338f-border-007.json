@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-531ef68e097b338f-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.08793",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.08793",
+    "identity_tokens": [
+      "arXiv:2505.08793"
+    ],
+    "reason": "資源制約デバイス上のオンボード学習を扱うサーベイで、モデル圧縮や推論高速化にも触れるが対象はエッジAI一般の学習・適応が中心であり、LLM推論に特化した具体的機構は要旨で薄いため保留とする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Onboard Optimization and Learning: A Survey"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-531ef68e097b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

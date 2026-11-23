@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-330b974a09cc9a7b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.02020",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.02020",
+    "identity_tokens": [
+      "arXiv:2401.02020"
+    ],
+    "reason": "要旨ではsoftmaxを不要とするSpiking Self-Attentionを備えたSpikformer V2を提案しImageNetでの高精度化を狙うスパイキングTransformerの研究であり、スパイク駆動の省エネルギー性は推論効率と無関係ではないが、対象は視覚SNNアーキテクチャでLLM推論への機構的貢献は示されていないためborderlineとする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spikformer V2: Join the High Accuracy Club on ImageNet with an SNN Ticket"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-330b974a09cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

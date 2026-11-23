@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-568559e5e8106d77-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.02943",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.02943",
+    "identity_tokens": [
+      "arXiv:2602.02943"
+    ],
+    "reason": "要旨はPredict-then-Optimizeパイプラインの分布外サンプルへの脆弱性に対し、拡散拡張と分布ロバストな意思決定焦点型学習を組み合わせる3D-Learningの枠組みであり、クラウドLLMサービングは適用例の一つに過ぎず、主題は予測誤差下の意思決定の汎化であって推論システムの機構ではないためunrelatedとする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "3D-Learning: Diffusion-Augmented Distributionally Robust Decision-Focused Learning"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-568559e5e810",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2abb2dd33fac0451-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.31500",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.31500",
+    "identity_tokens": [
+      "arXiv:2605.31500"
+    ],
+    "reason": "GNNの疎で不規則なメモリアクセスを対象にSpMMや注意層のGPUカーネルをIO意識的に実装し高速化する研究であり、カーネル最適化の知見はあるものの対象はグラフ学習の実行でLLM推論システムへの直接貢献ではない。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "On Efficient Scaling of GNNs via IO-Aware Layers Implementations"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2abb2dd33fac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

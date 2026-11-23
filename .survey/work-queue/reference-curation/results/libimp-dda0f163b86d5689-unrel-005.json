@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dda0f163b86d5689-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.15056",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.15056",
+    "identity_tokens": [
+      "arXiv:2411.15056"
+    ],
+    "reason": "商人単位で長期支払行動系列を折り畳み金融リスクを評価するLBSFの提案であり、オンライン金融サービスの信用リスク予測という応用タスクが主題で、LLM推論・サービング技術への貢献は要旨に確認できない。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Financial Risk Assessment via Long-term Payment Behavior Sequence Folding"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dda0f163b86d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

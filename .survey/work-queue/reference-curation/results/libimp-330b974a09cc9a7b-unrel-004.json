@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-330b974a09cc9a7b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:db3478fc7bc2a584121b628a90aeb8026fdad481",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:db3478fc7bc2a584121b628a90aeb8026fdad481",
+    "identity_tokens": [
+      "SemanticScholar:db3478fc7bc2a584121b628a90aeb8026fdad481"
+    ],
+    "reason": "要旨ではテキストや参照画像等のマルチモーダル制御を離散トークン列に統一し、非自己回帰生成で条件付き画像合成を行うUFC-BERTを提案しており、生成速度の改善は画像合成アーキテクチャ内の話であって、主題は衣服や顔画像の合成品質でありLLM推論システムへの貢献はないためunrelatedとする。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "UFC-BERT: Unifying Multi-Modal Controls for Conditional Image Synthesis"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-330b974a09cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

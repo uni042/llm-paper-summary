@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2abb2dd33fac0451-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.18031",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.18031",
+    "identity_tokens": [
+      "arXiv:2602.18031"
+    ],
+    "reason": "生成AIサービングの容量不足が真の需要を隠す予測誘発センサリングを扱い需要予測と強化学習による資源配分を提案するが、主題は意思決定理論と選択バイアス補正であり推論基盤のスケジューリング機構としての具体性は要旨だけでは判断しにくい。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Decision Support under Prediction-Induced Censoring"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2abb2dd33fac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-531ef68e097b338f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:874e9d2232fea04dfe57e020c80e6891ff3ab339",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:874e9d2232fea04dfe57e020c80e6891ff3ab339",
+    "identity_tokens": [
+      "SemanticScholar:874e9d2232fea04dfe57e020c80e6891ff3ab339"
+    ],
+    "reason": "文書間ニューラル機械翻訳の実証研究という題名のみで、一次要旨を取得できなかったため、推論効率やサービング機構への貢献の有無を具体的に確認できず、保留として扱う。",
+    "first_checked_at": "2026-11-23T07:33:27+00:00",
+    "last_checked_at": "2026-11-23T07:33:27+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Empirical Study of Document-to-document Neural Machine Translation"
+  },
+  "processed_at": "2026-11-23T07:33:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-531ef68e097b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
