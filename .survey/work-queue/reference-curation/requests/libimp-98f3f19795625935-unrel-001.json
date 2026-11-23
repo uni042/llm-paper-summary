@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-98f3f19795625935-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2107.03069",
+  "reason": "音声翻訳向けにLongformerエンコーダでスペクトログラムを直接処理し畳み込み層を省く構成だが、対象は音声翻訳モデルの符号化でありLLMの推論・サービングやデコード効率への直接貢献は要旨に示されていないため対象外とした。",
+  "title": "Efficient Transformer for Direct Speech Translation",
+  "identity_tokens": [
+    "arXiv:2107.03069"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98f3f1979562",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
