@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-postread",
+  "reference_main_sha": "31cf9bfa333d6875ee5029103ffdcdc5d8e52ece",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e",
+      "identity_tokens": [
+        "SemanticScholar:fccae56fabf060d73cec004e485ac401bfefae8e"
+      ],
+      "title": "Efficient Inference for Large Multimodal Models",
+      "reason": "Full text was obtained and read on 2026-11-24 (OpenReview-family OA PDF), but the paper is a proposal-stage preprint: the method is described in future tense ('we will design'), all experimental settings and baselines are planned, and it contains no quantitative results at all (its conclusion only anticipates a speedup ratio of over 2x). The Research quality gate (evaluation section grounded in primary results) cannot be met from this primary source, so it is recorded via the research postread route as borderline; re-check only if a version with actual evaluation appears.",
+      "source_url": "https://www.semanticscholar.org/paper/fccae56fabf060d73cec004e485ac401bfefae8e",
+      "body_check": "research_fulltext_relevance_review: OA full text read in full on 2026-11-24; proposal-stage preprint with no experiments, no baselines run, and no quantitative results; anticipated speedup only. Cannot satisfy the Research evaluation gate from primary facts.",
+      "first_checked_at": "2026-11-24T00:00:00+00:00",
+      "last_checked_at": "2026-11-24T00:00:00+00:00",
+      "linked_from": [],
+      "worklist_rank": 105,
+      "origin": "research_postread_relevance"
+    }
+  ]
+}
