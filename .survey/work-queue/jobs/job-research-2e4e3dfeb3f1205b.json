@@ -35,10 +35,15 @@
   "selection_reason": "GLITCHESはLLM推論のプリフィルが計算律速、デコードがメモリ律速である特性に基づきGPUをプリフィル、FPGAをデコードに割り当てる協調型異種システムで、HBMプロファイリングに基づくデータプリフェッチによりデコード時の帯域利用を改善し、スループット向上を示している。",
   "semantic_scholar_id": "478ba5f4185a506408d3c88d8b0d3e2cad2c6432",
   "source_url": "https://doi.org/10.1109/HPEC62836.2024.10938498",
-  "status": "ready",
+  "status": "superseded",
   "title": "GLITCHES: GPU-FPGA LLM Inference Through a Collaborative Heterogeneous System",
   "type": "research",
   "venue": "IEEE Conference on High Performance Extreme Computing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-23T20:16:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-sy.md",
+  "represented_canonical_id": "DOI:10.1109/HPEC62836.2024.10938498",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

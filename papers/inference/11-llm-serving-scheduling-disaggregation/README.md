@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（622本）
+## 自動生成の論文一覧（623本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2095,6 +2095,10 @@
 - **2025-04 · [BROS: Efficient LLM Serving on Hybrid Real-time and Best-effort Requests](2025-2504.0959-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   遅延重視のRTリクエストとスループット重視のBEリクエストを同じLLM基盤へ同居させるBROSは、SLO残り時間に基づく動的優先度スケジューリングと、KVキャッシュブロックを両種別が反対方向から共有する双方向レイアウトで、RT遅延を最大74.20%削減しつつBEスループットの低下を小さく抑える。
+
+- **2025-03 · [SLA-Awareness for AI-assisted coding](2025-2503.19876-sla-awareness-for-ai-assisted-coding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  混在するコーディング課題の連鎖全体へサービス品質目標から余裕時間を配分し、余裕基準のスケジューリングと違反数基準のスケーリングで、Ray Serve比で有効スループット10パーセント増と利用率41.1パーセント増を出す実行系CATO。
 
 - **2025-03 · [Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference](2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

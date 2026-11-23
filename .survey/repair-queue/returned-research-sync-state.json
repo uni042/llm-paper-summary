@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2b32cbe095820dd4c286af92a7c9e5c7e3cbe8e8",
+  "base_commit": "f713c1321d051b26bbd3f860eef249f0cda36ea7",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -103,8 +103,10 @@
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
     "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
+    "2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.json",
     "2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-linear-and-back.json",
     "2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.json",
+    "2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grained-weight-importance-assessment.json",
     "2024-2403.12688-seven-pruning-transformer-model-by-reserving-sentinels.json",
     "2024-2404.05843-softmax-attention-with-constant-cost-per-token.json",
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
@@ -178,6 +180,7 @@
     "2024-468b43887ef3-how-speculative-can-speculative-decoding-be.json",
     "2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
+    "2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-system.json",
     "2024-kivi-asymmetric-2bit-kv-cache-quantization.json",
     "2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.json",
     "2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.json",
@@ -211,6 +214,7 @@
     "2025-2503.13108-lifting-the-veil-on-visual-information-flow-in-mllms-unlocking-pathways-to-faster-inference.json",
     "2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.json",
     "2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decomposition.json",
+    "2025-2503.19876-sla-awareness-for-ai-assisted-coding.json",
     "2025-2503.20322-dynamic-pyramid-network-for-efficient-multimodal-large-language-models.json",
     "2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.json",
     "2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.json",
@@ -223,6 +227,7 @@
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
     "2025-2504.14941-windve-collaborative-cpu-npu-vector-embedding.json",
     "2025-2504.15475-speculative-sampling-via-exponential-races.json",
+    "2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.json",
     "2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.json",
     "2025-2505.00232-scaling-on-device-gpu-inference-for-large-generative-models.json",
     "2025-2505.02380-entrollm-entropy-encoded-weight-compression-for-efficient-large-language-model-inference-on-edge-devices.json",
@@ -50861,6 +50866,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2402.17652": {
+      "order": [
+        "2026-11-23T20:08:41+00:00",
+        "2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2403.10799": {
+      "order": [
+        "2026-11-23T20:10:02+00:00",
+        "2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grained-weight-importance-assessment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/HPEC62836.2024.10938498": {
+      "order": [
+        "2026-11-23T20:11:24+00:00",
+        "2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-system.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2503.19876": {
+      "order": [
+        "2026-11-23T20:12:45+00:00",
+        "2025-2503.19876-sla-awareness-for-ai-assisted-coding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.20922": {
+      "order": [
+        "2026-11-23T20:14:07+00:00",
+        "2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -64442,6 +64492,21 @@
     "doi:10.1145/3617689": [
       "papers/inference/99-other-inference-systems/2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-i.md",
       "papers/inference/99-other-inference-systems/2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-i.md"
+    ],
+    "arxiv:2402.17652": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.md"
+    ],
+    "arxiv:2403.10799": [
+      "papers/inference/99-other-inference-systems/2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grai.md"
+    ],
+    "doi:10.1109/hpec62836.2024.10938498": [
+      "papers/inference/99-other-inference-systems/2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-sy.md"
+    ],
+    "arxiv:2503.19876": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.19876-sla-awareness-for-ai-assisted-coding.md"
+    ],
+    "arxiv:2504.20922": [
+      "papers/inference/99-other-inference-systems/2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.md"
     ]
   }
 }

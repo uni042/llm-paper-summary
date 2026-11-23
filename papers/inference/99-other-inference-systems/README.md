@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1386本）
+## 自動生成の論文一覧（1389本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4420,6 +4420,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの低ビット事後量子化では、活性値の外れ値が量子化範囲を占有し、3〜4ビットの小さい整数レンジに通常の値を十分に割り当てられない。Mistral 7B v0.1を重み・活性・KVとも3ビット化した実験では、QuaRot単独の6課題平均18.43%がGBS併用58.31%へ改善した。
 
+- **2025-04 · [DYNAMAX: Dynamic computing for Transformers and Mamba based architectures](2025-2504.20922-dynamax-dynamic-computing-for-transformers-and-mamba-based-architectures.md)**  
+  実装：[✓](https://github.com/Xigm/DYNAMAX) ・ リポジトリ内被引用：0  
+  デコーダのみTransformerとMambaの後半層に早期終了分類器を付け、状態を持てるMambaブロック型分類器と上位候補を許す蒸留学習で、層の枝刈りより精度を保ちながらトークンごとの計算を動的に打ち切る枠組み。
+
 - **2025-04 · [DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models](2025-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SSMで浅い層の隠れ状態が深い層へ届く前に減衰する問題に対し、複数層の隠れ状態を選択的に射影・ゲートして現在の隠れ状態へ融合する密な層間接続DenseSSMを提案し、RetNetとMambaの精度を上げる。
@@ -5018,6 +5022,10 @@
   実装：[✓](https://github.com/Juntongkuki/Hyper-Compression) ・ リポジトリ内被引用：0  
   学習済み大規模言語モデルの重み容量を小さくする一般的な方法は、低ビット量子化、枝刈り、低ランク分解である。LLaMA2-7Bでは原著Table 5で保存容量12.50GB→4.80GB（2.60倍圧縮）、8課題の平均正答率65.88%→64.89%（0.99ポイント低下）を報告する。
 
+- **2024-09 · [GLITCHES: GPU-FPGA LLM Inference Through a Collaborative Heterogeneous System](2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-sy.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルをGPU、デコードをFPGAへ分担させ、KVキャッシュをPCIeで受け渡す異種混在推論で、FPGA側のデータプリフェッチによる帯域改善と合わせて、同価格帯のGPUのみの構成よりスループットとコスト効率を上げる。
+
 - **2024-08 · [Writing in the Margins: Better Inference Pattern for Long Context Retrieval](2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retriev.md)**  
   実装：[✓](https://github.com/writer/writing-in-the-margins) ・ リポジトリ内被引用：0  
   チャンク化プリフィルの各区間で質問関連部分を欄外メモとして抽出・分類し、残したメモだけを文脈末尾へ集約して再提示することで、中盤忘却を抑えて長文脈の多段推論と集約を改善するKVキャッシュ対応の推論パターン。
@@ -5109,6 +5117,10 @@
 - **2024-04 · [CQIL: Inference Latency Optimization with Concurrent Computation of Quasi-Independent Layers](2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi.md)**  
   実装：[✓](https://github.com/Photooon/CQIL) ・ リポジトリ内被引用：0  
   隣接層の入力が似ていることを使い、中間の層の群に入力を共有させて複数計算機で同時計算し、注意出力を群内で回すバイパスで損失を補う方式で、三百三十億パラメータのモデルの遅延を最大四十八・三パーセント削減し、課題の平均得点の低下を約二ポイントに抑えたと報告した。
+
+- **2024-03 · [Toward Adaptive Large Language Models Structured Pruning via Hybrid-grained Weight Importance Assessment](2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grai.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  粗い粒度と細かい粒度のテイラー重要度推定を層の役割に応じて適応的に融合する構造化枝刈りで、LLaMA-7Bを20パーセント削っても単一粒度方式より平均正解率を保ち、遅延を約1.82倍速くする。
 
 - **2024-03 · [QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning](2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

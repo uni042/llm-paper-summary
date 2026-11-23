@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（322本）
+## 自動生成の論文一覧（323本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1222,17 +1222,21 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   SharmaとGeipingのBinary Block Masking（BinBlkMsk）は、FlashAttentionのブロック分割を活用し、マスクに許可要素が一つもないブロックを実行せず、許可要素を含むブロックだけを処理する方式である。
 
+- **2024-04 · [The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms](2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  複数FPGAへ大規模モデルを展開する基盤と自動ツールを整え、I-BERTの符号器を6台のFPGAで実働させ、最新FPGAでの推定では高性能GPUに近い遅延へ届くことを示した、大規模トランスフォーマーのFPGA実装の実現可能性の検証。
+
 - **2024-05 · [CLAQ: Pushing the Limits of Low-Bit Post-Training Quantization for LLMs](2024-2405.17233-claq-pushing-the-limits-of-low-bit-post-training-quantization-for-llms.md)**  
   実装：[✓](https://github.com/fayuge/CLAQ) ・ リポジトリ内被引用：0  
   CLAQ（Column-Level 適応的 重み 量子化）は、LLMの重みを2〜4bitに圧縮するとき、全ての列へ同じ量子化方式・精度を割り当てると重要な外れ値情報が失われるという問題を扱う。6課題ゼロショット平均も純2bitの43.65%から64.29%へ改善する。
 
-- **2024-04 · [The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms](2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  複数FPGAへ大規模モデルを展開する基盤と自動ツールを整え、I-BERTの符号器を6台のFPGAで実働させ、最新FPGAでの推定では高性能GPUに近い遅延へ届くことを示した、大規模トランスフォーマーのFPGA実装の実現可能性の検証。
-
 - **2024-03 · [TaylorShift: Shifting the Complexity of Self-Attention from Squared to Linear (and Back) using Taylor-Softmax](2024-2403.02920-taylorshift-shifting-the-complexity-of-self-attention-from-squared-to-li.md)**  
   実装：[✓](https://github.com/tobna/TaylorShift) ・ リポジトリ内被引用：0  
   ソフトマックスの2次テイラー近似とテンソル積による再順序付けで、全トークン相互作用を保ちながら注意を線形時間化する方式を提案し、移行点の理論と実測の一致と精度低下なしを示した研究。
+
+- **2024-02 · [Compass: A Decentralized Scheduler for Latency-Sensitive ML Workflows](2024-2402.17652-compass-a-decentralized-scheduler-for-latency-sensitive-ml-workflows.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデル配置を織り込むタスク配置とGPUキャッシュ管理を統合した完全分散型スケジューラで、混在する機械学習ワークフローの平均遅延をHEFTの18.0秒から2.5秒へ下げ、キャッシュヒット率99パーセントを出す。
 
 - **2024-01 · [AutoChunk: Automated Activation Chunk for Memory-Efficient Long Sequence Inference](2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1249,7 +1253,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：55  
+  実装：✓ ・ リポジトリ内被引用：56  
   FlashDecoding++は、自己回帰型の大規模言語モデルで一語ずつ出力する復号段階を、GPUの演算資源とメモリ階層に合わせて高速化する推論エンジンである。論文が分離した三つの障害は、長い注意系列を分割したときの部分ソフトマックス結合同期、少数トークンを入力する細長い行列積のゼロ埋め、行列形状とGPUの種類を無視する固定実行方式である。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
