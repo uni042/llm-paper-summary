@@ -141,6 +141,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。
 
+- **2026-05 · [Stateful Inference for Low-Latency Multi-Agent Tool Calling](2026-2605.26289-stateful-inference-for-low-latency-multi-agent-tool-calling.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本論文は、複数のエージェントが道具呼出し（tool calling）を繰り返す大規模言語モデル（LLM）推論で、各ターンの会話履歴がほぼ前ターンの接頭辞になっている点を利用する推論サーバー設計を提案する。
+
 - **2026-05 · [Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems](2026-2605.22883-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-s.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   しかしエージェント型のシステムでは、利用者の一つの目的を達成するまでに計画の生成、道具の呼び出し、途中結果の検査、失敗後の再試行、最終回答の生成など、複数回の推論が連鎖する。x86の対応した目標集合でOOIは4.34倍、GraceのCPUとGPUを含めたローカル測定では7.63倍となった。
@@ -282,10 +286,6 @@
 - **2026-06 · [Libra: Efficient Resource Management for Agentic RL Post-Training](2026-2606.03077-libra-efficient-resource-management-for-agentic-rl-post-training.md)**  
   実装：[✓](https://github.com/NetX-lab/Libra) ・ リポジトリ内被引用：0  
   Libraは、ツール呼び出しを伴う大規模言語モデル（LLM）の強化学習後学習において、軌跡生成（Rollout）と勾配更新（学習）の双方を対象とする資源管理システムである。原著の最大改善はパイプライン処理能力4.2倍、報酬収束までの実時間2.7倍であり、初版の3.0倍・2.5倍と混同してはならない。
-
-- **2026-05 · [Stateful Inference for Low-Latency Multi-Agent Tool Calling](2026-2605.26289-stateful-inference-for-low-latency-multi-agent-tool-calling.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、複数のエージェントが道具呼出し（tool calling）を繰り返す大規模言語モデル（LLM）推論で、各ターンの会話履歴がほぼ前ターンの接頭辞になっている点を利用する推論サーバー設計を提案する。
 
 - **2026-05 · [MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading](2026-2605.10268-memreread-enhancing-agentic-long-context-reasoning-via-memory-guided-rer.md)**  
   実装：[✓](https://github.com/iiGray/MemReread) ・ リポジトリ内被引用：0  

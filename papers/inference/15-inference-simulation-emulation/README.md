@@ -460,18 +460,18 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/siasosp23/artifacts) ・ リポジトリ内被引用：4  
   Siaは、GPUの種類が混在する深層学習訓練クラスタで、各ジョブへ割り当てるGPUの種類・台数・バッチサイズを同時に決めるスケジューラである。原著は、44GPUの実機クラスタで既存のPolluxより平均ジョブ完了時間を約35〜50%、Gavelより約50%短縮したと報告する。
 
+- **2023-02 · [AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference with Transformers](2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transf.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  閾値比較だけで1クロックで活性値と重みを間引くDynaTranと、タイル化・データフロー・スパース配慮計算を備えたアクセラレータAccelTranを提案し、シミュレーションでサーバー版がA100比5.73倍のスループットと3.69倍低いエネルギーを示す。
+
 - **2023-05 · [Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator](2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-p.md)**  
   実装：[✓](https://github.com/zhuhanqing/Lightening-Transformer) ・ リポジトリ内被引用：0  
   両辺とも動的な行列積を光の干渉で一括計算する動的フォトニックテンソルコアと光配信による入力共有で、従来の光加速器比でエネルギー2.6倍以上・遅延12倍以上の改善をシミュレーションで示したTransformer向け光加速器。
 
-- **2023-02 · [AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference with Transformers](2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transf.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  閾値比較だけで1クロックで活性値と重みを間引くDynaTranと、タイル化・データフロー・スパース配慮計算を備えたアクセラレータAccelTranを提案し、シミュレーションでサーバー版がA100比5.73倍のスループットと3.69倍低いエネルギーを示す。
-
 ### 7年前（2019-12〜2020-11）
 
 - **2020-02 · [A3: Accelerating Attention Mechanisms in Neural Networks with Approximation](2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   通常の注意機構は、クエリベクトルと全キー行の内積を求め、softmaxで正規化し、値ベクトルを重み付き合成する。保守的設定は近似によるタスク精度の低下をおおむね1%に抑える一方、積極的設定はおおむね8%の精度低下を伴う。
 
 ### 9年前（2017-12〜2018-11）

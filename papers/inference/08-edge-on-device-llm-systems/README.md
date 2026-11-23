@@ -348,6 +348,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   クラウドに大きな言語モデル（LLM）を置き、端末やエッジに小さな言語モデル（SLM）を置く場合、単純な分担には二つの問題がある。システムプロンプトのように複数ユーザー間で再利用可能な文脈と、個人の質問のようにローカルに保持すべき入力を分離できれば、両者の妥協点を作れる。
 
+- **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
+  実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：1  
+  Mosaicは、事前学習済み大規模言語モデルを限られたメモリの装置へ配置するため、Transformerの各線形射影に異なる削減率を割り当てる方式である。通常の非構造化枝刈りは重みを零化するため品質を比較的保てるが、重み行列の寸法を縮めない限り汎用の密行列演算ではメモリや時間の削減に結びつきにくい。
+
 - **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Federated 注意機構（FedAttn）は、この協調推論を注意機構の段階で分散する方式として提案された。
@@ -380,10 +384,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   帯域制約下の多デバイスTransformer推論で、シーケンス並列に混合精度アテンション（ローカルは全精度、非ローカルはベクトル量子化コードで送信）を組み合わせ、ノイズ増強量子化と分散クラストークンで精度を守りながら通信量を最大2457.6分の1に圧縮した研究。
 
-- **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
-  実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：0  
-  Mosaicは、事前学習済み大規模言語モデルを限られたメモリの装置へ配置するため、Transformerの各線形射影に異なる削減率を割り当てる方式である。通常の非構造化枝刈りは重みを零化するため品質を比較的保てるが、重み行列の寸法を縮めない限り汎用の密行列演算ではメモリや時間の削減に結びつきにくい。
-
 - **2025-02 · [CoSMoEs: Compact Sparse Mixture of Experts](2025-2503.00245-cosmoes-compact-sparse-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末規模で計算量と総パラメータを揃えた公平な比較によりMoEが密モデルを上回ることを示し、重み分解エキスパートと、入れ替えを6倍減らすブロック単位選択損失でオフロード推論を1.5倍高速化した研究。
@@ -399,7 +399,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：75  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：76  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
@@ -437,7 +437,7 @@
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
 
 - **2023-09 · [LLMCad: Fast and Scalable On-device Large Language Model Inference](2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：30  
   端末で言語モデルを動かす場合、モデル重みがメモリ容量を超えると、生成のたびにストレージから重みを読み直すことがある。原著の構成は三つの機構からなる。Jetson TX2/Orin NXとAndroidスマートフォンで、標準の大型モデル単独生成に対してトークン当たり平均時間をIoT端末で2.9〜9.3倍、スマートフォンで3.47〜4.67倍短縮したと報告する。
 
 ### 5年前（2021-12〜2022-11）
