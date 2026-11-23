@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f4da02ab668ad696-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2303.11257",
+  "reason": "FP16/FP8等の低精度学習を初期化時の分散設計で安定化するunit scalingの提案で、BERT-Largeの学習効率が対象であり、推論向け量子化や推論高速化ではなく学習単独の低精度化にあたるため対象外である。",
+  "title": "Unit Scaling: Out-of-the-Box Low-Precision Training",
+  "identity_tokens": [
+    "arXiv:2303.11257"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4da02ab668a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

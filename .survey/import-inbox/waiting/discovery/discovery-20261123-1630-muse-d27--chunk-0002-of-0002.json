@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d27::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.13742",
+      "identity_tokens": [
+        "arXiv:2507.13742"
+      ],
+      "title": "Search-optimized quantization in biomedical ontology alignment",
+      "reason": "生物医学オントロジー対応付けでUMLSとのコサイン類似度を用い、Microsoft OliveとONNX Runtimeの最適化探索を適用する応用研究であり、量子化探索は配置手段にすぎず推論システム自体への技術的貢献は確認できないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2507.13742",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 301
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.16250",
+      "identity_tokens": [
+        "arXiv:2510.16250"
+      ],
+      "title": "One-Bit Quantization for Random Features Models",
+      "reason": "ランダム特徴モデルにおける1ビット量子化が汎化誤差を損なわないことを理論的に示し推論高速化も報告するが、対象は簡略化された理論モデルでありLLMや実推論基盤での量子化機構としての検証は限定的なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2510.16250",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 302
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13689",
+      "identity_tokens": [
+        "arXiv:2512.13689"
+      ],
+      "title": "LitePT: Lighter Yet Stronger Point Transformer",
+      "reason": "3D点群処理向けに初期層は畳み込み、深層は注意を使うLitePTという点群バックボーンを設計する研究であり、対象は点群認識モデル自体であってLLM推論や汎用推論システムへの直接貢献は確認できないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2512.13689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 303
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25041",
+      "identity_tokens": [
+        "arXiv:2606.25041"
+      ],
+      "title": "Wan-Streamer v0.1: End-to-end Real-time Interactive Foundation Models",
+      "reason": "言語・音声・映像を単一Transformerで扱いブロック因果注意で低遅延の双方向ストリーミングを実現するWan-Streamerを提示するが、中心は対話基盤モデル自体の生成能力であり推論基盤の分離可能な機構は要旨で明確でないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2606.25041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 304
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17046",
+      "identity_tokens": [
+        "arXiv:2602.17046"
+      ],
+      "title": "Dynamic System Instructions and Tool Exposure for Efficient Agentic LLMs",
+      "reason": "長期動作するLLMエージェント向けに各ステップで必要なシステム指示断片とツールだけを検索して文脈トークンを95%減らすITRを提案するが、対象はプロンプト構成とツール露出の制御でありサービングやデコード機構への直接貢献は薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2602.17046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 305
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18168",
+      "identity_tokens": [
+        "arXiv:2605.18168"
+      ],
+      "title": "Acoustic Interference: A New Paradigm Weaponizing Acoustic Latent Semantic for Universal Jailbreak against Large Audio Language Models",
+      "reason": "大規模音声言語モデルに対する音響潜在意味を用いた普遍的ジェイルブレイク攻撃を提案する安全性研究であり、推論の高速化やサービング、メモリ管理など推論システムへの技術的貢献は要旨にないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2605.18168",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 306
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.10913",
+      "identity_tokens": [
+        "arXiv:2603.10913"
+      ],
+      "title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
+      "reason": "LLMの応答空間で埋め込みを生成するよう特殊トークンを学習するLLM2Vec-Genはテキスト埋め込み表現学習の手法であり、推論実行やデコード、KVキャッシュ等の推論システム機構を扱っていないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2603.10913",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 307
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05365",
+      "identity_tokens": [
+        "arXiv:2607.05365"
+      ],
+      "title": "SPEARBench: A Benchmark for Naturalness Evaluation in Streaming Speech-to-Speech Language Models",
+      "reason": "ストリーミング音声対音声言語モデルの自然さを、応答遅延や話者交替、韻律など多面的に評価するSPEARBenchというベンチマークの提案であり、能力・品質評価のみで推論システムへの直接の技術的貢献はないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2607.05365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 308
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.01655",
+      "identity_tokens": [
+        "arXiv:2104.01655"
+      ],
+      "title": "Efficient Transformers in Reinforcement Learning using Actor-Learner Distillation",
+      "reason": "強化学習で大きな学習器から小さな行為器へ継続的に蒸留し行為時の遅延制約下で大容量モデルを使うActor-Learner Distillationを提案するが、対象はRLの学習と行為方策でありLLM推論システムではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2104.01655",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 309
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.16795",
+      "identity_tokens": [
+        "arXiv:2203.16795"
+      ],
+      "title": "Deformable Video Transformer",
+      "reason": "圧縮動画に含まれる動き情報から注目パッチを予測するDeformable Video Transformerは動画行動分類向けの注意モデルであり、推論システムやLLMサービング、デコード高速化を目的とした研究ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2203.16795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 310
+    }
+  ],
+  "parent_run_key": "muse-20261123-d27",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

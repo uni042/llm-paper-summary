@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6c1369724cd1c9f8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f",
+  "reason": "Semantic Scholar APIが429を返し代替経路でも要旨を取得できなかった上、題目自体も主題が判読しづらく、LLM推論システムへの直接貢献の有無を要旨なしに確定できないため、要旨未取得として保留とする。",
+  "title": "on Transformed Trivia",
+  "identity_tokens": [
+    "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c1369724cd1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

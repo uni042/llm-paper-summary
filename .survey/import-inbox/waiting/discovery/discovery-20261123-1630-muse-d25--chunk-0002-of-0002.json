@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d25::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f",
+      "identity_tokens": [
+        "SemanticScholar:c104c7cdf75e90921fe73ec70dbacc98a8d45b2f"
+      ],
+      "title": "on Transformed Trivia",
+      "reason": "Semantic Scholar APIが429を返し代替経路でも要旨を取得できなかった上、題目自体も主題が判読しづらく、LLM推論システムへの直接貢献の有無を要旨なしに確定できないため、要旨未取得として保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/c104c7cdf75e90921fe73ec70dbacc98a8d45b2f",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 241
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02401",
+      "identity_tokens": [
+        "arXiv:2510.02401"
+      ],
+      "title": "Linear RNNs for autoregressive generation of long music samples",
+      "reason": "生音声の自己回帰生成向け線形RNNであるHarmonicRNNの音楽サンプル生成研究であり、文脈並列は学習用途の記述で、LLM推論システムへの直接貢献は要旨に確認できないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2510.02401",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 242
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15324",
+      "identity_tokens": [
+        "arXiv:2610.15324"
+      ],
+      "title": "TempoKV: Predictive KV Cache Quantization for Autoregressive Video Generation",
+      "reason": "自己回帰動画生成で増大するKVキャッシュに対し、キーと値の時間的予測可能性の非対称性を利用して残差のみを低精度で保持する予測型KVキャッシュ量子化TempoKVを提案しており、KVキャッシュ圧縮への直接貢献が要旨で具体的である。",
+      "source_url": "https://arxiv.org/abs/2610.15324",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.10511",
+      "identity_tokens": [
+        "arXiv:2611.10511"
+      ],
+      "title": "CALFA-KV: Joint Calibration and Fisher-Guided Anchors for 1-Bit KV Cache Compression",
+      "reason": "1ビットKVキャッシュ圧縮CALFA-KVを提案し、量子化器の校正とFisher感度に基づく高精度アンカー保持を層・ヘッド単位の予算で組み合わせて再構成誤差を抑える手法であり、KVキャッシュ量子化への直接貢献が要旨で具体的である。",
+      "source_url": "https://arxiv.org/abs/2611.10511",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 244
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f375915dddc706d2df04ec103eb004fd71ec1a8f",
+      "identity_tokens": [
+        "SemanticScholar:f375915dddc706d2df04ec103eb004fd71ec1a8f"
+      ],
+      "title": "Learning@home: Crowdsourced Training of Large Neural Networks using Decentralized Mixture-of-Experts",
+      "reason": "Semantic Scholar APIの応答で要旨本文を取得できず代替経路でも確認できなかった。分散MoEをインターネット越しに扱う題目だが学習が中心とみられ、推論への直接貢献を要旨で確認できないため要旨未取得として保留とする。",
+      "source_url": "https://www.semanticscholar.org/paper/f375915dddc706d2df04ec103eb004fd71ec1a8f",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.11016",
+      "identity_tokens": [
+        "arXiv:2602.11016"
+      ],
+      "title": "From Buffers to Registers: Unlocking Fine-Grained FlashAttention with Hybrid-Bonded 3D NPU Co-Design",
+      "reason": "FlashAttentionのボトルネックがオンチップSRAMアクセスへ移ったことを実測し、ハイブリッド接合3D NPU上でレジスタ間通信と細粒度スケジューリングを行う3D-FlashAttentionを提案しており、注意カーネルと推論アクセラレータへの直接貢献が具体的である。",
+      "source_url": "https://arxiv.org/abs/2602.11016",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 246
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16971",
+      "identity_tokens": [
+        "arXiv:2412.16971"
+      ],
+      "title": "Part-Of-Speech Sensitivity of Routers in Mixture of Experts Models",
+      "reason": "MoEモデルのルータが品詞タグに応じて専門家へ振り分ける挙動を6モデルで分析した研究であり、MoE推論の理解には関わるが、推論高速化やスケジューリングの手法提案ではなく分析に留まるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2412.16971",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 247
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNET.2023.3339524",
+      "identity_tokens": [
+        "DOI:10.1109/TNET.2023.3339524"
+      ],
+      "title": "XAgg: Accelerating Heterogeneous Distributed Training Through XDP-Based Gradient Aggregation",
+      "reason": "分散学習の勾配集約をXDPベース集約器で高速化するXAggであり、要旨もパラメータサーバの通信ボトルネックと異種環境での学習集約を主題としており、推論ではなく学習専用の高速化のため対象外とする。",
+      "source_url": "https://doi.org/10.1109/TNET.2023.3339524",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 248
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19367",
+      "identity_tokens": [
+        "arXiv:2410.19367"
+      ],
+      "title": "BitPipe: Bidirectional Interleaved Pipeline Parallelism for Accelerating Large Models Training",
+      "reason": "大規模モデル学習向けの双方向インターリーブパイプライン並列BitPipeであり、要旨もGPT・BERT系モデルの学習スループット改善を明示する学習専用の並列化手法で、推論サービングへの貢献はないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2410.19367",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 249
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.09682",
+      "identity_tokens": [
+        "arXiv:2509.09682"
+      ],
+      "title": "Faster and Memory-Efficient Training of Sequential Recommendation Models for Large Catalogs",
+      "reason": "逐次推薦モデルの学習における交差エントロピー損失のGPU効率的実装CCEによる学習高速化・省メモリ化が主題であり、推薦モデルの推論サービングではなく学習単独の高速化のため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2509.09682",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 250
+    }
+  ],
+  "parent_run_key": "muse-20261123-d25",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d28::chunk-0002-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2606.22030",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2606.22030"
+      ],
+      "title": "Nous: A Predictive World Model for Long-Term Agent Memory",
+      "reason": "エージェント長期記憶をカテゴリ分布のベイズ更新で管理するNousについて信頼性条件付き更新や出所で上限を設ける汚染防御を検証するが、対象はエージェント記憶の信頼性でありLLM推論システムのメモリやデコード機構ではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2606.22030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 331
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04346",
+      "identity_tokens": [
+        "arXiv:2602.04346"
+      ],
+      "title": "MirrorLA: Reflecting Feature Map for Vision Linear Attention",
+      "reason": "Householder反射で特徴写像を非負象限へ回転させ線形注意の性能劣化を抑えるMirrorLAを提案し注意機構の計算量削減と関わるが、対象は視覚モデルの線形注意でありLLM推論でのカーネルやKVキャッシュへの適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2602.04346",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 332
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21465",
+      "identity_tokens": [
+        "arXiv:2609.21465"
+      ],
+      "title": "OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue",
+      "reason": "音声と映像を直接入力するネイティブ音視対話OmniVChatのデータ生成エンジン、ベンチと学習を扱う研究で、マルチモーダル対話のデータ・評価が主題であり推論システムやデコード技術への貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2609.21465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 333
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.11257",
+      "identity_tokens": [
+        "arXiv:2303.11257"
+      ],
+      "title": "Unit Scaling: Out-of-the-Box Low-Precision Training",
+      "reason": "FP16/FP8等の低精度学習を初期化時の分散設計で安定化するunit scalingの提案で、BERT-Largeの学習効率が対象であり、推論向け量子化や推論高速化ではなく学習単独の低精度化にあたるため対象外である。",
+      "source_url": "https://arxiv.org/abs/2303.11257",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 334
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.24474",
+      "identity_tokens": [
+        "arXiv:2510.24474"
+      ],
+      "title": "Decoupled MeanFlow: Turning Flow Models into Flow Maps for Accelerated Sampling",
+      "reason": "フロー写像化により拡散・フローモデルを1〜4ステップでサンプリングできるDecoupled MeanFlowを提案し生成サンプリング加速と関わるが、対象は画像生成モデルのサンプリングでありLLMのデコードや推論サービングへの適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2510.24474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 335
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.01905",
+      "identity_tokens": [
+        "arXiv:2503.01905"
+      ],
+      "title": "PaCA: Partial Connection Adaptation for Efficient Fine-Tuning",
+      "reason": "事前学習重みの一部接続だけを微調整するPaCAでLoRA比で学習時間22％・メモリ16％削減を示すが、対象はパラメータ効率的ファインチューニングという学習過程であり推論高速化への直接の貢献ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2503.01905",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 336
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.03704",
+      "identity_tokens": [
+        "arXiv:2509.03704"
+      ],
+      "title": "QuantV2X: A Fully Quantized Multi-Agent System for Cooperative Perception",
+      "reason": "V2X協調知覚のモデルと伝送メッセージを低ビット量子化するQuantV2Xで計算量と帯域を削減するが、対象は車両知覚という応用システムの量子化でありLLM推論向け量子化・圧縮への直接の知見は要旨からは限定的である。",
+      "source_url": "https://arxiv.org/abs/2509.03704",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 337
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539601",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539601"
+      ],
+      "title": "HAP: Accelerating DNNs with Resolution-Preserved Quantization by Harnessing Adaptive-Precision",
+      "reason": "適応精度量子化APQと専用アクセラレータで活性化の無損失圧縮と精度・性能トレードオフを実現するHAPだが、対象は一般DNN向けハードウェア加速でありLLM推論のモデル規模やKVキャッシュ等への適用は要旨で具体化されていない。",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539601",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 338
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08081",
+      "identity_tokens": [
+        "arXiv:2602.08081"
+      ],
+      "title": "Investigating Energy Bounds of Analog Compute-in-Memory With Local Normalization",
+      "reason": "アナログCompute-in-Memoryで局所正規化を行うGain-Ranging MACのエネルギー boundをモデル化し低ビット浮動小数点の動的範囲を扱うが、理論的なエネルギーモデル中心でLLM推論システムとしての実装・計測への直接性は限定的である。",
+      "source_url": "https://arxiv.org/abs/2602.08081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 339
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19004",
+      "identity_tokens": [
+        "arXiv:2606.19004"
+      ],
+      "title": "Spotlight: Synergizing Seed Exploration and Spot GPUs for DiT RL Post-Training",
+      "reason": "拡散TransformerのRL事後学習をスポットGPUとシード探索の並列化で安くするSpotlightの提案で、GPUスケジューリングを含むものの対象は学習・事後学習システムであり推論サービングやデコードへの貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2606.19004",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 340
+    }
+  ],
+  "parent_run_key": "muse-20261123-d28",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

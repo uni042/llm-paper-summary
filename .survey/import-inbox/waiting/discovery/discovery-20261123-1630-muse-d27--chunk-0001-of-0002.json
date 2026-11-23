@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261123-d27::chunk-0001-of-0002",
+  "reference_main_sha": "0cb12d65",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:0d1b320136ea6390320be2573733e87cf42e239c",
+      "identity_tokens": [
+        "SemanticScholar:0d1b320136ea6390320be2573733e87cf42e239c"
+      ],
+      "title": "AutoSync: Learning to Synchronize for Data-Parallel Distributed Deep Learning",
+      "reason": "データ並列分散学習における同期戦略をモデル構造とクラスタ構成から自動最適化し学習スループットを上げる研究であり、推論・サービングやデコードへの直接の技術的貢献は要旨に確認できないため対象外である。",
+      "source_url": "https://www.semanticscholar.org/paper/0d1b320136ea6390320be2573733e87cf42e239c",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03777",
+      "identity_tokens": [
+        "arXiv:2510.03777"
+      ],
+      "title": "GuidedSampling: Steering LLMs Towards Diverse Candidate Solutions at Inference-Time",
+      "reason": "推論時のRepeated Samplingの多様性不足に対し探索と生成を分離するGuidedSamplingを提案するが、主目的は候補解の多様性とpass率向上であり、サービング機構やデコード高速化のシステム貢献は薄いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2510.03777",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133514",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133514"
+      ],
+      "title": "Privacy-Preserving transformer inference with functional encryption for model-as-a-service",
+      "reason": "関数型暗号を用いるModel-as-a-Service向けTransformer推論のプライバシー保護を題するが、Crossref・OpenAlexで一次要旨を取得できず暗号推論の具体的な計算方式や性能への貢献を確認できないため、abstract_not_obtainedとして保留とする。",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.133514",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2212.10240",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2212.10240"
+      ],
+      "title": "Diff-Glat: Diffusion Glancing Transformer for Parallel Sequence to Sequence Learning",
+      "reason": "非自己回帰生成の多峰性問題へ拡散と残差グランシングサンプリングを導入し高速デコードを維持するDiff-Glatを提案するが、機械翻訳向け生成モデル自体の学習手法が中心でLLM推論基盤への直接貢献は限定的なため保留とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2212.10240",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.02799",
+      "identity_tokens": [
+        "arXiv:2403.02799"
+      ],
+      "title": "DPPA: Pruning Method for Large Language Model to Model Merging",
+      "reason": "複数ドメインの微調整モデルをマージする際のパラメータ競合を、剪定段階のDPPAで緩和する研究であり、推論向け圧縮や高速化を目的とした剪定ではなく推論システムへの直接貢献は確認できないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2403.02799",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/VLSITechnologyandCir65189.2025.11074875",
+      "identity_tokens": [
+        "DOI:10.23919/VLSITechnologyandCir65189.2025.11074875"
+      ],
+      "title": "Design Considerations for LLM Inference in Data Centers: Chip and Interconnect",
+      "reason": "データセンター向けLLM推論用チップについてFLOPs・メモリ帯域・容量・相互接続遅延を分析し、デコードでは帯域が律速であることを示して帯域増と容量削減や接続トポロジーの設計指針を提示する、LLM推論ハードウェアへの直接貢献である。",
+      "source_url": "https://doi.org/10.23919/VLSITechnologyandCir65189.2025.11074875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "identity_tokens": [
+        "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789"
+      ],
+      "title": "UvA-DARE (Digital Academic Repository) SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems",
+      "reason": "暗号化データ上のSecure Neural Network Inferenceについて、前処理とオンライン推論のジョブを重ねるオフライン・オンライン併用スケジューリングSwiftSNNIを提案し、マルチコア上でスループット向上と入力遅延削減を示す推論スケジューリングの直接貢献である。",
+      "source_url": "https://www.semanticscholar.org/paper/3bacbf132bda7b701e6eaf1ed54b52241b914789",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 287
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05718",
+      "identity_tokens": [
+        "arXiv:2604.05718"
+      ],
+      "title": "MPM: Mutual Pair Merging for Efficient Vision Transformers",
+      "reason": "Vision Transformerのトークン削減として相互近傍ペアを平均化するMPMを提案しセグメンテーションで実測遅延も評価するが、対象は画像分割向けViTのトークン集約でありLLM推論への直接の適用や機構は示されていないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2604.05718",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TASE.2024.3457829",
+      "identity_tokens": [
+        "DOI:10.1109/TASE.2024.3457829"
+      ],
+      "title": "SDD-DETR: Surface Defect Detection for No-Service Aero-Engine Blades With Detection Transformer",
+      "reason": "航空エンジンブレードの表面欠陥検出へDETRを適用し軽量モジュールで検出精度と速度を扱う応用研究であり、主目的は産業検査の検出性能であって汎用の推論システムやLLMサービングへの貢献ではないため対象外である。",
+      "source_url": "https://doi.org/10.1109/TASE.2024.3457829",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.11638",
+      "identity_tokens": [
+        "arXiv:2506.11638"
+      ],
+      "title": "LoRA-Gen: Specializing Large Language Model via Online LoRA Generation",
+      "reason": "クラウドの大規模モデルがエッジ小規模モデル向けLoRAパラメータを生成し入力文脈を短くして推論を2.1倍高速化すると述べるが、中心はタスク特化のためのLoRA生成と知識転移であり推論基盤の機構としての貢献は間接的なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2506.11638",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28292",
+      "identity_tokens": [
+        "arXiv:2605.28292"
+      ],
+      "title": "CIRF: Tokenizing Chain-of-Thoughts into Reusable Functional Units for Efficient Latent Reasoning in Large Language Models",
+      "reason": "明示的Chain-of-Thoughtを機能単位トークンへ変換し潜在推論でLLMの推論コスト削減を狙うCIRFを提案するが、微調整を伴う推論過程の表現手法が中心で、サービングやデコード機構の具体的な高速化は要旨で限定的なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2605.28292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IJCNN55064.2022.9891931",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN55064.2022.9891931"
+      ],
+      "title": "Hierarchical Cache Transformer: Dynamic Early Exit for Language Translation",
+      "reason": "言語翻訳の生成向けに階層キャッシュと動的早期終了を備えるHierarchical Cache Transformerを提案し、性能低下3%で推論を32%高速化したと示す、自然言語生成の推論高速化への具体的な直接貢献である。",
+      "source_url": "https://doi.org/10.1109/IJCNN55064.2022.9891931",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.07690",
+      "identity_tokens": [
+        "arXiv:2603.07690"
+      ],
+      "title": "FrameVGGT: Coherence-Preserving Memory for Bounded Streaming Geometry",
+      "reason": "ストリーミング3D幾何推定で無制限に増えるKVキャッシュを、フレーム単位のKVセグメントと原型で固定容量に保つFrameVGGTを提案するが、対象は言語モデルではなく視覚幾何TransformerでありLLM推論への直接性が弱いため保留とする。",
+      "source_url": "https://arxiv.org/abs/2603.07690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TMC.2026.3709190",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3709190"
+      ],
+      "title": "AccSI: Accelerating Serverless Inference via Edge-Assisted Pipelined Model Fetching",
+      "reason": "サーバーレスエッジ推論のコールドスタートに対し、分散エッジストレージからモデル層を先読みし取得・読込・推論をパイプライン化して重ねるAccSIを提案し完了時間を短縮する、サーバーレス推論基盤への直接貢献である。",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3709190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3627703.3629554",
+      "identity_tokens": [
+        "DOI:10.1145/3627703.3629554"
+      ],
+      "title": "Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation",
+      "reason": "データ・テンソル・パイプライン並列の組合せをボトルネック解消で自動構成するAcesoは大規模DNN学習の並列構成探索システムであり、推論やサービングではなく学習単独の高速化であるため対象外である。",
+      "source_url": "https://doi.org/10.1145/3627703.3629554",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 295
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3524059.3532366",
+      "identity_tokens": [
+        "DOI:10.1145/3524059.3532366"
+      ],
+      "title": "PAME: precision-aware multi-exit DNN serving for reducing latencies of batched inferences",
+      "reason": "バッチ推論では一部のクエリはモデル途中までで十分な精度が得られる点に着目し、多出口DNNモデルと推論エンジンのシステム設計を一体で提案するPAMEにより平均遅延を39.9%削減する、DNNサービングへの直接貢献である。",
+      "source_url": "https://doi.org/10.1145/3524059.3532366",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571238",
+      "identity_tokens": [
+        "DOI:10.1109/INFOCOM59046.2026.11571238"
+      ],
+      "title": "AdaptPipe: Mitigating Runtime Bubbles via Granularity-Adaptive Scheduling under Memory Constraints",
+      "reason": "大規模モデル学習のパイプライン並列で、前進・後進・重み演算の実行時間ばらつきによるランタイムバブルを粒度適応スケジューリングで埋めるAdaptPipeであり、対象は学習時の並列スケジュールであるため対象外である。",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.27855",
+      "identity_tokens": [
+        "arXiv:2604.27855"
+      ],
+      "title": "AI Inference as Relocatable Electricity Demand: A Latency-Constrained Energy-Geography Framework",
+      "reason": "地理分散AI推論の配置を電力価格・炭素強度・PUE・容量・ネットワーク遅延の制約付き最適化として定式化しエネルギーと遅延のフロンティアを論じるが、実装されたサービング機構ではなく枠組みとモデリングの提案にとどまるため保留とする。",
+      "source_url": "https://arxiv.org/abs/2604.27855",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 298
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.08029",
+      "identity_tokens": [
+        "arXiv:1909.08029"
+      ],
+      "title": "Heterogeneity-Aware Asynchronous Decentralized Training",
+      "reason": "異種環境での分散深層学習学習向けにAll-ReduceとAD-PSGDの長所を両立する非同期分散学習手法Ripplesを提案する研究であり、同期最適化の対象は学習スループットであって推論ではないため対象外である。",
+      "source_url": "https://arxiv.org/abs/1909.08029",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 299
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/EDGE62653.2024.00015",
+      "identity_tokens": [
+        "DOI:10.1109/EDGE62653.2024.00015"
+      ],
+      "title": "Navigator: A Decentralized Scheduler for Latency-Sensitive AI Workflows",
+      "reason": "エッジでのAI推論と生成クエリ処理を対象に、GPUメモリ管理とタスク配置を統合した分散スケジューラNavigatorを提案し、依存関係と同居配置を考慮してジョブ完了時間を削減する、遅延重視AIワークフロー実行基盤への直接貢献である。",
+      "source_url": "https://doi.org/10.1109/EDGE62653.2024.00015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-23T17:00:00+09:00",
+      "last_checked_at": "2026-11-23T17:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 300
+    }
+  ],
+  "parent_run_key": "muse-20261123-d27",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
