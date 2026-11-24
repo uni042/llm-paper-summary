@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1cd173050cd8a6fffbf5396d4dc0ab2cde9c0b25",
+  "base_commit": "216af6240610d6091a4b420f8dada89cd308a31e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -162,11 +162,13 @@
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
     "2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.json",
     "2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-platforms.json",
+    "2024-2404.16629-implementing-and-optimizing-the-scaled-dot-product-attention-on-streaming-dataflow.json",
     "2024-2405.00738-hlstransform-energy-efficient-llama-2-inference-on-fpgas-via-high-level-synthesis.json",
     "2024-2405.00888-dynamo-accelerating-language-model-inference-with-dynamic-multi-token-sampling.json",
     "2024-2405.05525-ditto-quantization-aware-secure-inference-of-transformers-upon-mpc.json",
     "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json",
     "2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-models.json",
+    "2024-2405.15877-basis-selection-low-rank-decomposition-of-pretrained-large-language-models-for-target-applications.json",
     "2024-2405.16283-turnip-a-nondeterministic-gpu-runtime-with-cpu-ram-offload.json",
     "2024-2405.17052-selfcp-compressing-over-limit-prompt-via-the-frozen-large-language-model-itself.json",
     "2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-language-models-using-second-order-matrix-derivative-in.json",
@@ -191,6 +193,7 @@
     "2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-end-efficiency.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
     "2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large-language-models.json",
+    "2024-2408.11799-practical-token-pruning-for-foundation-models-in-few-shot-conversational-virtual-assistant-systems.json",
     "2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retrieval.json",
     "2024-2409.02026-foundations-of-large-language-model-compression-part-1-weight-quantization.json",
     "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
@@ -202,6 +205,7 @@
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-formats.json",
+    "2024-2410.11857-llmbridge-reducing-costs-to-access-llms-in-a-prompt-centric-internet.json",
     "2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence-models.json",
     "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
     "2024-2410.14725-rethinking-token-reduction-for-state-space-models.json",
@@ -214,6 +218,7 @@
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.07066-zeroth-order-adaptive-neuron-alignment-based-pruning-without-re-training.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
+    "2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-inference-time-of-starcoder2.json",
     "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json",
     "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
@@ -52529,6 +52534,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2404.16629": {
+      "order": [
+        "2026-11-24T02:39:51+00:00",
+        "2024-2404.16629-implementing-and-optimizing-the-scaled-dot-product-attention-on-streaming-dataflow.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.15877": {
+      "order": [
+        "2026-11-24T02:40:58+00:00",
+        "2024-2405.15877-basis-selection-low-rank-decomposition-of-pretrained-large-language-models-for-target-applications.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2408.11799": {
+      "order": [
+        "2026-11-24T02:42:04+00:00",
+        "2024-2408.11799-practical-token-pruning-for-foundation-models-in-few-shot-conversational-virtual-assistant-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.11857": {
+      "order": [
+        "2026-11-24T02:43:11+00:00",
+        "2024-2410.11857-llmbridge-reducing-costs-to-access-llms-in-a-prompt-centric-internet.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2411.12758": {
+      "order": [
+        "2026-11-24T02:44:17+00:00",
+        "2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-inference-time-of-starcoder2.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66562,6 +66612,21 @@
     "arxiv:2402.00913": [
       "papers/inference/99-other-inference-systems/2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-expl.md",
       "papers/inference/99-other-inference-systems/2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-expl.md"
+    ],
+    "arxiv:2404.16629": [
+      "papers/inference/15-inference-simulation-emulation/2024-2404.16629-implementing-and-optimizing-the-scaled-dot-product-attention-on-streamin.md"
+    ],
+    "arxiv:2405.15877": [
+      "papers/inference/99-other-inference-systems/2024-2405.15877-basis-selection-low-rank-decomposition-of-pretrained-large-language-mode.md"
+    ],
+    "arxiv:2408.11799": [
+      "papers/inference/99-other-inference-systems/2024-2408.11799-practical-token-pruning-for-foundation-models-in-few-shot-conversational.md"
+    ],
+    "arxiv:2410.11857": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2410.11857-llmproxy-reducing-cost-to-access-large-language-models.md"
+    ],
+    "arxiv:2411.12758": [
+      "papers/inference/99-other-inference-systems/2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-i.md"
     ]
   }
 }

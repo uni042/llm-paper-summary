@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（115本）
+## 自動生成の論文一覧（116本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -477,6 +477,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-07 · [BiE: Bi-Exponent Block Floating-Point for Large Language Models Quantization](2024-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantizat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ブロック浮動小数点の共有指数を通常値用と外れ値用の2本に分け、閾値で振り分けることで、4ビットでも外れ値に通常値が潰されない量子化数値表現を提案し、OPT-66Bで整数6ビットの崩壊を回避しながらFP16比3.51倍のスループットを示す。
+
+- **2024-04 · [Implementing and Optimizing the Scaled Dot-Product Attention on Streaming Dataflow](2024-2404.16629-implementing-and-optimizing-the-scaled-dot-product-attention-on-streamin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ストリーミングデータフロー実行モデルへSDPAを行単位に載せ替え、割り算の順序替えとオンラインソフトマックスで深いFIFOを消し、中間メモリをO(N)からO(1)へ落とせることをサイクル精度シミュレーションで示した実装研究。
 
 ### 4年前（2022-12〜2023-11）
 

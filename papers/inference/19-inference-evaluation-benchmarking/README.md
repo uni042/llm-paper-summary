@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（226本）
+## 自動生成の論文一覧（227本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -881,6 +881,10 @@
 - **2024-11 · [PPLLaVA: Varied Video Sequence Understanding With Prompt Guidance](2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   指示文と各視覚トークンの関連度を重みに使う三次元畳み込み型プーリングで動画トークンを十八倍まで圧縮し、大規模動画ベンチマークで元モデルを上回る正解率と約三分の一の処理時間を両立した。テキスト符号器の文脈拡張が長い指示への対応を担う。
+
+- **2024-10 · [LLMProxy: Reducing Cost to Access Large Language Models](2024-2410.11857-llmproxy-reducing-cost-to-access-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデル選択・文脈管理・意味キャッシュの3つのLLMコスト最適化を、双方向APIを持つプロキシLLMProxyへ集約する設計を提案し、WhatsApp実サービス運用と評価で文脈コスト30〜50%減などを示した研究。
 
 - **2024-09 · [EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models](2024-2409.14595-echoatt-attend-copy-then-adjust-for-more-efficient-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

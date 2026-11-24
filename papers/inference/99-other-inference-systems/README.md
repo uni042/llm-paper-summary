@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1443本）
+## 自動生成の論文一覧（1446本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5126,6 +5126,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   手法は、行単位のトークン-wise Anchor 注意機構（TAA）、位置情報をアンカー内へ保持するMulti-Head Positional Encoding（MHPE）、浅い層のアンカーKVを深い層へ直接参照させる層-wise Anchor 注意機構（LAA）からなる。
 
+- **2024-11 · [An exploration of the effect of quantisation on energy consumption and inference time of StarCoder2](2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-i.md)**  
+  実装：[✓](https://github.com/ana-oprescu/GreenLLMs) ・ リポジトリ内被引用：0  
+  StarCoder2の量子化と枝刈りを実測し、bitsandbytes量子化はスループット低下のため消費エネルギーが19〜75パーセント増えること、末尾層の枝刈りはエネルギーを減らすが精度を大きく損なうことを示した測定研究。
+
 - **2024-11 · [A Runtime-Adaptive Transformer Neural Network Accelerator on FPGAs](2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.md)**  
   実装：[✓](https://github.com/Kabir-Ehsan/Transformer_on_FPGA) ・ リポジトリ内被引用：0  
   トランスフォーマー全体を対象に、モジュール化した高水準合成設計とタイリング、実行時適応を組み合わせた稠密計算向けFPGAアクセラレータ。
@@ -5193,6 +5197,10 @@
 - **2024-08 · [Writing in the Margins: Better Inference Pattern for Long Context Retrieval](2024-2408.14906-writing-in-the-margins-better-inference-pattern-for-long-context-retriev.md)**  
   実装：[✓](https://github.com/writer/writing-in-the-margins) ・ リポジトリ内被引用：0  
   チャンク化プリフィルの各区間で質問関連部分を欄外メモとして抽出・分類し、残したメモだけを文脈末尾へ集約して再提示することで、中盤忘却を抑えて長文脈の多段推論と集約を改善するKVキャッシュ対応の推論パターン。
+
+- **2024-08 · [Practical Token Pruning for Foundation Models in Few-shot Conversational Virtual Assistant Systems](2024-2408.11799-practical-token-pruning-for-foundation-models-in-few-shot-conversational.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意スコアから測る重要度で早い層1か所だけトークンを間引く学習不要の枝刈りと、設定を全タスク共通化する適応法で、文埋め込みモデルの推論を20〜34パーセント速くする実運用の報告。
 
 - **2024-08 · [LLM-Barber: Block-Aware Rebuilder for Sparsity Mask in One-Shot for Large Language Models](2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large.md)**  
   実装：[✓](https://github.com/YupengSu/LLM-Barber) ・ リポジトリ内被引用：0  
@@ -5281,6 +5289,10 @@
 - **2024-05 · [Distributed Inference Performance Optimization for LLMs on CPUs](2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPUだけの分散推論で、トークンIDのブロードキャスト、層あたり1回の同期、計算と通信の間のゼロコピーの三つにより通信を削り、Xeon 4台で72Bモデルをトークンあたり140ミリ秒で生成する実践報告。
+
+- **2024-05 · [Basis Selection: Low-Rank Decomposition of Pretrained Large Language Models for Target Applications](2024-2405.15877-basis-selection-low-rank-decomposition-of-pretrained-large-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み行列のSVD基底の重要度を対象用途のデータで再学習してから剪定し、新規基底で損失を補うことで、深い圧縮率でも精度を保つ用途特化型の低ランク圧縮。
 
 - **2024-05 · [Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information](2024-2405.17470-athena-efficient-block-wise-post-training-quantization-for-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
