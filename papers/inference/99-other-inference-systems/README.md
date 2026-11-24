@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1522本）
+## 自動生成の論文一覧（1526本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -36,6 +36,10 @@
   実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：11  
   再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
 
+- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
+  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：10  
+  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
+
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
@@ -43,10 +47,6 @@
 - **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
-
-- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
-  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：9  
-  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
 
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -555,6 +555,10 @@
 - **2026-08 · [Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs](2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-f.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   圧縮済み層を通した活性値で後段を較正し直し、圧縮後に測り直した層重要度で保持率を反復的に直す二つの補正により、学習なし低ランク圧縮のゼロショット正解率を最大で約1から2.5ポイント改善した分析と手法の論文である。
+
+- **2026-08 · [Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection](2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  文書を隠れ状態として事前に保存し質問時に初期状態へ注入することで、検索付き生成の入力処理を約27秒から6ミリ秒未満へ短縮し、質問応答の品質が文脈内検索とほぼ一致することを示した。
 
 - **2026-08 · [ResiSpec：残差分布整形による複数候補投機サンプリング](2026-2608.24411-resispec-enhancing-multi-candidate-speculative-sampling-via-residual-distribution-shaping.md)**  
   実装：[✓](https://github.com/Czzzk/Resispec) ・ リポジトリ内被引用：1  
@@ -1126,6 +1130,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   状態を持つエージェントのターン単位ルーティングを比較し、履歴を見ることが同じ振り分け率で成功率を3.3ポイント上げることと、切替の費用が方向で非対称であり下方の切替だけが短期間で元を取ることを示した分析研究。
 
+- **2026-10 · [Weighted State Souping for Efficient Long-Context Retrieval](2026-2610.25621-weighted-state-souping-for-efficient-long-context-retrieval.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キャッシュしたチャンク状態をクエリ依存の重みで合成する方式で、混み合った長文脈でも選択的検索を保ち、上位N件だけ使うスパース版では符号化コストを文脈長ほぼ非依存にする。
+
 - **2026-10 · [Vision Token Pruning via Query-Vision Interaction Decomposition](2026-2610.33215-vision-token-pruning-via-query-vision-interaction-decomposition.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   クエリと視覚の相互作用行列の低ランク構造を使い、上位の特異方向へ参加するトークンを残す学習なしの枝刈りQViDで、強い圧縮ほど既存手法より精度を保った研究。
@@ -1165,6 +1173,10 @@
 - **2026-10 · [The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases](2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   入力長と出力長を格子状に振った実測で、入力側の時間とエネルギーが入力長に線形と二次で伸びることを示し、時間の振る舞いが最も近い手元構成の対のモデルで商用モデルのエネルギーを推す方法により、未見構成でも時間で最大三・九七パーセント、エネルギーで最大二・四八パーセントの誤差で予測したと報告した。
+
+- **2026-10 · [The Physical Cost of Context: Quality-Constrained Resource Accounting for Coding Agents](2026-2610.34763-the-physical-cost-of-context-quality-constrained-resource-accounting-for.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文脈方針の評価を論理トークンから実行プリフィル・KV滞在・エネルギーへ直し、品質ゲートを通った方針だけを比べる会計手順で、先読みは呼出しとエネルギーを3割強減らす一方、履歴削除はトークンを減らしても実行量を6倍に増やすことを示す。
 
 - **2026-10 · [The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization](2026-2610.00983-the-devil-is-in-the-reconstruction-loss-scale-rethinking-optimization-in.md)**  
   実装：[✓](https://github.com/IntelChina-AI/RMSE) ・ リポジトリ内被引用：0  
@@ -1246,6 +1258,10 @@
   実装：[✓](https://github.com/Xiwei-web/PEPS) ・ リポジトリ内被引用：0  
   質問を座標系・対象・状態・指標の基本要素へ実行前に確定させ必要な分だけ道具で計算し検証で局所修復する枠組みで、三課題すべてで最良の正解率と、反復型方式より料金十五から二十三点五パーセント減と遅延三十二点三から三十八点二パーセント減を報告した。
 
+- **2026-10 · [ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories](2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md)**  
+  実装：[✓](https://github.com/ntumm120/paraTTT) ・ リポジトリ内被引用：0  
+  深い非線形メモリの勾配軌跡を3つのチャンク並列パスで反復精緻化し、テスト時学習層を誤差を揃えて32倍速く評価できるようにした並列化アルゴリズム。
+
 - **2026-10 · [PAIR: Memory-Efficient and Fast Inference with Reading–Reasoning Fusion](2026-2610.16003-pair-memory-efficient-and-fast-inference-with-reading-reasoning-fusion.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小さいReaderに全文脈を読ませ大きいReasonerには文脈を見せず、両者のロジットを固定重みで融合することで、大規模モデルの精度の89〜96%をKVメモリ約4分の1で保つ非対称な2モデル推論。
@@ -1313,6 +1329,10 @@
 - **2026-10 · [Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention](2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キー側はオジャ則、値側はデルタ則で、共有スロットを持つ2段階メモリの両側を誤差修正し、線形注意の想起性能を高めた回帰型アーキテクチャ。
+
+- **2026-10 · [FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG](2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  グラフ証拠の直列化順序最適化がNP困難であることを示し、証拠を再利用可能な潜在メモリとしてデコーダ注意へ注入し、テキストには少数の事実アンカーだけを残すことで、品質を上げながらTTFTを最大2.7倍高速化するグラフ型RAGの枠組みFuseRAG。
 
 - **2026-10 · [From Patching to Pruning Visual Computation in Vision Language Models](2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1749,10 +1769,6 @@
 - **2026-08 · [TailSieve: Partial-Rollout-Guided Tail Routing for LLM Rollouts](2026-2608.22788-tailsieve-partial-rollout-guided-tail-routing-for-llm-rollouts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TailSieveは、以前の部分生成で時間切れとなったプロンプト群を、追加の長さ予測モデルなしで長尾候補として選び、長尾専用プールと通常プールへ割り当てる。
-
-- **2026-08 · [Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection](2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  文書を隠れ状態として事前に保存し質問時に初期状態へ注入することで、検索付き生成の入力処理を約27秒から6ミリ秒未満へ短縮し、質問応答の品質が文脈内検索とほぼ一致することを示した。
 
 - **2026-08 · [StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs](2026-2608.13416-streamttt-reconciling-real-time-perception-and-long-term-memory-in-strea.md)**  
   実装：[✓](https://github.com/zeyun-zhong/StreamTTT) ・ リポジトリ内被引用：0  
@@ -5071,7 +5087,7 @@
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
-  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：53  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  

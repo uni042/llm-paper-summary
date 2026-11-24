@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fec38d7cc41af7ed4ddd736d037d57ed358940c9",
+  "base_commit": "082e1896ab07430a72f6eec630b6cbe9695af76c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1399,6 +1399,7 @@
     "2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augmented-generation-using-precomputed-kv-caches.json",
     "2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-efficiency.json",
     "2026-2610.22788-next-token-or-vector-learning-how-far-to-decode.json",
+    "2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-graph-based-rag.json",
     "2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.json",
     "2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut-driven-mixed-precision-acceleration.json",
     "2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-llms-inference.json",
@@ -1422,6 +1423,7 @@
     "2026-2610.24861-flowmaker-from-tasks-to-cost-efficient-generative-ai-workflow-deployments.json",
     "2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.json",
     "2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inference.json",
+    "2026-2610.25621-weighted-state-souping-for-efficient-long-context-retrieval.json",
     "2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-large-language-models.json",
     "2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-expert-pruning-for-mixture-of-experts-models.json",
     "2026-2610.25908-calm-consistency-aware-logit-masking-in-decoding-space-for-mitigating-overthinking.json",
@@ -1452,6 +1454,7 @@
     "2026-2610.29544-risk-kv-quality-aware-selective-kv-cache-reconstruction-for-distributed-llm-inference.json",
     "2026-2610.29545-pace-periodic-and-channel-aligned-encoding-of-four-bit-recurrent-states.json",
     "2026-2610.29662-spare-sparsity-allocation-via-routing-entropy-for-efficient-moes.json",
+    "2026-2610.29733-sakura-serving-attention-key-value-state-under-rate-adaptation-for-private-image-editing-on-phones.json",
     "2026-2610.29820-ulacache-unified-logical-addressing-for-sparse-llm-serving.json",
     "2026-2610.29873-hawk-heterogeneity-aware-kv-cache-transfer-for-efficient-gpu-npu-phase-disaggregated-llm-inference.json",
     "2026-2610.30206-moezip-routing-aware-kv-cache-compression-for-sparse-mixture-of-experts-llms.json",
@@ -1496,6 +1499,7 @@
     "2026-2610.34717-vla-hwbench-where-the-time-goes-when-vla-models-run-on-edge-hardware.json",
     "2026-2610.34721-prefetch-steered-routing-deterministic-cache-aware-expert-selection-for-offloaded-mixture-of-experts-decoding.json",
     "2026-2610.34731-mcf-a-memory-and-communication-aware-co-designed-framework-for-long-context-llm-inference.json",
+    "2026-2610.34763-the-physical-cost-of-context-quality-constrained-resource-accounting-for-coding-agents.json",
     "2026-2610.34824-sparta-a-sparse-ternary-llm-accelerator-with-adaptive-attention-and-unified-datapath-for-long-context-edge-inference.json",
     "2026-2610.34886-thinkbit-search-codewords-recalibrate-scales-select-by-reasoning.json",
     "2026-2610.35023-bellowskv-one-latent-for-many-layers-expanded-on-demand.json",
@@ -1527,6 +1531,7 @@
     "2026-2610.37921-fad-kv-adaptive-dictionary-kv-caching-for-efficient-reasoning-decoding.json",
     "2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-inference-serving.json",
     "2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-personal-devices.json",
+    "2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.json",
     "2026-2610.38303-don-t-ask-the-llm-visual-token-pruning-with-spectral-structure-and-semantic-relevance.json",
     "2026-2610.38331-multi-token-prediction-done-right.json",
     "2026-2610.38355-flatcake-a-flat-kvcache-storage-architecture-for-llm-serving.json",
@@ -54191,6 +54196,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.22818": {
+      "order": [
+        "2026-11-24T09:16:40+00:00",
+        "2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-graph-based-rag.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.25621": {
+      "order": [
+        "2026-11-24T09:18:15+00:00",
+        "2026-2610.25621-weighted-state-souping-for-efficient-long-context-retrieval.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.29733": {
+      "order": [
+        "2026-11-24T09:19:50+00:00",
+        "2026-2610.29733-sakura-serving-attention-key-value-state-under-rate-adaptation-for-private-image-editing-on-phones.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.34763": {
+      "order": [
+        "2026-11-24T09:21:25+00:00",
+        "2026-2610.34763-the-physical-cost-of-context-quality-constrained-resource-accounting-for-coding-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.38255": {
+      "order": [
+        "2026-11-24T09:22:59+00:00",
+        "2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68884,6 +68934,21 @@
     "arxiv:2610.22026": [
       "papers/inference/99-other-inference-systems/2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-s.md",
       "papers/inference/99-other-inference-systems/2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-s.md"
+    ],
+    "arxiv:2610.22818": [
+      "papers/inference/99-other-inference-systems/2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-.md"
+    ],
+    "arxiv:2610.25621": [
+      "papers/inference/99-other-inference-systems/2026-2610.25621-weighted-state-souping-for-efficient-long-context-retrieval.md"
+    ],
+    "arxiv:2610.29733": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.29733-sakura-serving-attention-key-value-state-under-rate-adaptation-for-priva.md"
+    ],
+    "arxiv:2610.34763": [
+      "papers/inference/99-other-inference-systems/2026-2610.34763-the-physical-cost-of-context-quality-constrained-resource-accounting-for.md"
+    ],
+    "arxiv:2610.38255": [
+      "papers/inference/99-other-inference-systems/2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "グラフ型RAGで検索グラフをテキスト化する際の構造劣化とKVキャッシュ再利用の非効率に対し、証拠内容を潜在表現へ移してデコーダ自己注意へ注入し、完全なトークン接頭辞一致を超えた証拠再利用を可能にすることでマルチホップQA推論のコストを下げる。",
   "semantic_scholar_id": "c15b96d60f9087d03fcdc8f14a06b49874671820",
   "source_url": "https://arxiv.org/abs/2610.22818",
-  "status": "ready",
+  "status": "superseded",
   "title": "FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T09:25:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-.md",
+  "represented_canonical_id": "arXiv:2610.22818",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（648本）
+## 自動生成の論文一覧（649本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -76,6 +76,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。
 
+- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
+  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：8  
+  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
+
 - **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
   実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：7  
   本論文のdLLM-Serveは、出力語彙の計算を小分けにして一時活性値の上限を固定する仕組み、更新局面と再利用局面を同じ実行回に詰め合わせるスケジューラ、注意ヘッドごとに重要なトークンを選びながら鍵・値を物理的に連続配置するキャッシュ管理を統合した。
@@ -83,10 +87,6 @@
 - **2026-05 · [SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters](2026-2605.00528-saga.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   エージェントの全ワークフローを単位にKV保持・セッション親和性・公平性を共同制御し、64基A100でタスク完了時間を幾何平均1.64倍短縮する。
-
-- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
-  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：7  
-  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
 
 - **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
   実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：7  
@@ -753,6 +753,10 @@
 - **2026-10 · [Stable Token-level Scheduling for Serverless LLM Inference](2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン間遅延の実測値を混雑信号として毎デコードステップでフィードバックし、残り出力トークン総量の上限であるトークンウィンドウを開閉して新規リクエストの受け入れをトークン単位で制御する、サーバーレス推論向けスケジューラ。
+
+- **2026-10 · [SAKURA: Serving Attention Key-Value State Under Rate Adaptation for Private Image Editing on Phones](2026-2610.29733-sakura-serving-attention-key-value-state-under-rate-adaptation-for-priva.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テンプレートの再利用KVを重要度重み付きの低ランク分解と量子化で段階化し、シャードごとに帯域へ適応して送ることで、端末上の画像編集で無圧縮比1.82倍の高速化と尾遅延の平均44パーセント削減を画質を保って得るクラウドと端末の協調方式。
 
 - **2026-10 · [Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading](2026-2610.40305-rimuru-unified-memory-management-for-modern-llm-serving-via-elastic-expe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2521,7 +2525,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1960  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1961  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
