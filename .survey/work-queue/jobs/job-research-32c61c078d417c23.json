@@ -35,10 +35,15 @@
   "selection_reason": "VLM推論で視覚トークン増大によるメモリ・計算オーバーヘッドとレイテンシ増を問題とし、重要トークンを特定できる注意ヘッドに絞って集約する学習不要の段階的視覚トークン剪定ProViPを提案しており、推論効率化への直接貢献が確認できる。",
   "semantic_scholar_id": "dc22abcf4c66a133510411e0496a1025ec0c2877",
   "source_url": "https://arxiv.org/abs/2608.25332",
-  "status": "ready",
+  "status": "superseded",
   "title": "Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T07:50:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-he.md",
+  "represented_canonical_id": "arXiv:2608.25332",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

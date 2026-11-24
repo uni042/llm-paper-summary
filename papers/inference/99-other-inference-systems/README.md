@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1502本）
+## 自動生成の論文一覧（1505本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1690,6 +1690,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   振り返りの方向を主成分分析と一般推論方向への直交化で純化し、安定する層だけに上限付きの射影除去を適用することで、学習なしに推論トークンを平均16.9パーセント減らし、数学課題では正解率をほぼ保った活性値制御の研究。
 
+- **2026-08 · [ProxyFormer: A Dual-Stream Proxy Architecture for Ultra-Long Context and High-Resolution Generation](2026-2608.23463-proxyformer-a-dual-stream-proxy-architecture-for-ultra-long-context-and-.md)**  
+  実装：[✓](https://github.com/simonFelix-Ai/proxy-former.git) ・ リポジトリ内被引用：0  
+  ローカル特徴を層ごとにプロキシへ圧縮し、大域相互作用を短いプロキシ空間だけに閉じ込め、結果をローカル側へ戻す二重ストリーム構造で、注意とKVキャッシュの費用を圧縮率の二乗・比例で削りながら情報の可逆性を保つ構造を提案した。
+
 - **2026-08 · [PI-Mem: Pushing Long-Context Reasoning to 3.6M Tokens with Parallel-Iterative Memory](2026-2608.03048-pi-mem-pushing-long-context-reasoning-to-3-6m-tokens-with-parallel-itera.md)**  
   実装：[✓](https://github.com/JetAstra/PI-Mem) ・ リポジトリ内被引用：0  
   全区間を共有メモリで並列に読み、証拠を選んで統合するターンを反復するメモリ方式で、360万トークンでもMemAgentより最大7.81ポイント高精度かつ最大6.1倍高速を記録する。
@@ -1702,9 +1706,17 @@
   実装：[✓](https://github.com/ScottZhang812/ParaTempo) ・ リポジトリ内被引用：0  
   各枝の中間答え分布を時間方向に平均した集中度で枝の収束を見極め、見込みの薄い枝を刈り、収束した枝を早期に終了させ、空いた計算を有望な枝のフォークへ回す、学習なしの非同期並列推論の制御方式。
 
+- **2026-08 · [Not All Attention Heads Contribute to Critical Visual Token Selection: Head-Aware Pruning Matters More](2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-he.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚トークンの重要度判定が少数の視覚ヘッドへ集中することを示し、骨格へ入る前の類似度削減と、浅い層は視覚ヘッドのみ・中間層は全ヘッドという段階的枝刈りを組み合わせ、88.9パーセント削減でも性能の95.9パーセント保持と1.62倍高速化を実現する。
+
 - **2026-08 · [Multi-Level Modeling of Large Language Model Inference Latency and Energy via Hybrid Analytical-Machine-Learning Predictors](2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   基本演算の解析推定、ブロック単位の機械学習予測、全体集約の三層で推論の遅延とエネルギーを予測するHYMELL。H100でLLaMA 3 8Bの誤差はプリフィルとデコードとも5パーセント未満だった。
+
+- **2026-08 · [Multi-Image Visual Token Pruning in Large Visual Language Models](2026-2608.26806-multi-image-visual-token-pruning-in-large-visual-language-models.md)**  
+  実装：[✓](https://github.com/zry13/AVTP) ・ リポジトリ内被引用：0  
+  隠れ状態の変化で重要度を測り、モデルに合う層と画像ごとの保持率を適応させる学習不要の視覚トークン枝刈りで、多画像推論を精度を保ちながら2倍速くする。
 
 - **2026-08 · [MARCH: Scaling Recurrent Memory with Content-Routed State Anchors](2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4967,7 +4979,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：123  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：124  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  

@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（100本）
+## 自動生成の論文一覧（101本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -70,7 +70,7 @@
   エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
 
 - **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   AVOは進化的プログラム探索の変異演算子を固定的なLLM生成呼出しから、過去の実装、ハードウェア資料、実行・性能測定へ自律的にアクセスしてコードの修正・検証を反復するエージェントへ置き換える。NVIDIA B200上のBF16注意カーネルを7日間自律改善し、40の成功版を記録。
 
 - **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
@@ -262,6 +262,10 @@
 - **2026-08 · [AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs](2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   軽量ドラフターだけが完全文脈を読み、完全/圧縮文脈のロジット差δと文脈発散連動の受理ゲートで、圧縮文脈しか見ない大規模検証器の精度を回復する非対称推測復号。
+
+- **2026-08 · [AsmEvo: Agentic Assembly-Level Optimization of AMD GPU Kernels with Functional Equivalence Verification](2026-2608.20711-asmevo-agentic-assembly-level-optimization-of-amd-gpu-kernels-with-funct.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  コンパイル済みAMDGPUバイナリだけを正しさの基準として、復元・ABI保持の再構築・差分検証のゲートの下でLLMエージェントがアセンブリを編集するコンパイル後最適化器で、ベンチマークとvLLM等の生産カーネルの両方で検証付きの高速化を示した研究。
 
 - **2026-07 · [The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI](2026-2607.06906-the-harness-effect-how-orchestration-design-sets-the-token-economics-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

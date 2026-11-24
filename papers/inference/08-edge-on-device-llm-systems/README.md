@@ -360,13 +360,13 @@
   実装：✓ ・ リポジトリ内被引用：3  
   提案方式の中核は、品質制約の下で消費エネルギーが小さい専門家集合を探す動的専門家選択（動的 専門家 Selection; DES）と、無線資源割当まで結合した共同専門家・副搬送波割当（Joint 専門家 and Subcarrier Allocation; JESA）である。
 
+- **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
+  実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：2  
+  大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
+
 - **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
-
-- **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
-  実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：1  
-  大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
 
 - **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

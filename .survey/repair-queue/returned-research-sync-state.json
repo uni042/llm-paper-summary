@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5a9e94ef30d83b594d902940baa3783846bfcf1e",
+  "base_commit": "30f03065173e440e5f11dddbfcd7f44731f88282",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1057,17 +1057,21 @@
     "2026-2608.20359-self-speculation-for-faster-reasoning-models.json",
     "2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-routing-for-agentic-llms-on-unified-memory.json",
     "2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context-transformers.json",
+    "2026-2608.20711-asmevo-agentic-assembly-level-optimization-of-amd-gpu-kernels-with-functional-equivalence-verification.json",
     "2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruning-of-large-language-models.json",
     "2026-2608.21362-kvboost-chunk-level-key-value-cache-reuse-with-deviation-guided-recomputation-for-efficient-large-language-model-inferen.json",
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
     "2026-2608.22708-cacherouter-a-dual-path-tool-routing-architecture-with-cache-preserving-main-model-isolation-for-long-tail-tool-discover.json",
     "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
+    "2026-2608.23463-proxyformer-a-dual-stream-proxy-architecture-for-ultra-long-context-and-high-resolution-generation.json",
     "2026-2608.23921-hap-head-adaptive-visual-token-pruning-via-cross-modal-alignment.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
     "2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.json",
     "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json",
+    "2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-head-aware-pruning-matters-more.json",
     "2026-2608.25542-reflection-steering-disentangling-reflection-from-reasoning-in-activation-space-for-token-efficient-inference.json",
     "2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-language-model-inference.json",
+    "2026-2608.26806-multi-image-visual-token-pruning-in-large-visual-language-models.json",
     "2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-quality-trade-off-in-autoregressive-models.json",
     "2026-2608.27128-small-frequency-corrections-can-change-what-survives-kv-cache-compression.json",
     "2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.json",
@@ -1075,6 +1079,7 @@
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
     "2026-2608.28003-a-method-for-layer-bit-width-allocation-in-llm-quantization-via-performance-maximization-under-a-quality-degradation-constraint.json",
     "2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference.json",
+    "2026-2608.28726-pro-router-token-aware-progressive-model-routing-with-adaptive-edge-cloud-collaboration-for-efficient-multimodal-llm-inf.json",
     "2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficient-reasoning.json",
     "2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.json",
     "2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for-hybrid-llms.json",
@@ -53841,6 +53846,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.20711": {
+      "order": [
+        "2026-11-24T07:41:49+00:00",
+        "2026-2608.20711-asmevo-agentic-assembly-level-optimization-of-amd-gpu-kernels-with-functional-equivalence-verification.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.23463": {
+      "order": [
+        "2026-11-24T07:43:22+00:00",
+        "2026-2608.23463-proxyformer-a-dual-stream-proxy-architecture-for-ultra-long-context-and-high-resolution-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.25332": {
+      "order": [
+        "2026-11-24T07:44:55+00:00",
+        "2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-head-aware-pruning-matters-more.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.26806": {
+      "order": [
+        "2026-11-24T07:46:28+00:00",
+        "2026-2608.26806-multi-image-visual-token-pruning-in-large-visual-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.28726": {
+      "order": [
+        "2026-11-24T07:48:01+00:00",
+        "2026-2608.28726-pro-router-token-aware-progressive-model-routing-with-adaptive-edge-cloud-collaboration-for-efficient-multimodal-llm-inf.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68394,6 +68444,21 @@
     "arxiv:2608.14586": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-h.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14586-efficient-block-layer-parallel-inference-for-vision-language-action-on-h.md"
+    ],
+    "arxiv:2608.20711": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2608.20711-asmevo-agentic-assembly-level-optimization-of-amd-gpu-kernels-with-funct.md"
+    ],
+    "arxiv:2608.23463": [
+      "papers/inference/99-other-inference-systems/2026-2608.23463-proxyformer-a-dual-stream-proxy-architecture-for-ultra-long-context-and-.md"
+    ],
+    "arxiv:2608.25332": [
+      "papers/inference/99-other-inference-systems/2026-2608.25332-not-all-attention-heads-contribute-to-critical-visual-token-selection-he.md"
+    ],
+    "arxiv:2608.26806": [
+      "papers/inference/99-other-inference-systems/2026-2608.26806-multi-image-visual-token-pruning-in-large-visual-language-models.md"
+    ],
+    "arxiv:2608.28726": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.28726-pro-router-token-aware-progressive-model-routing-with-adaptive-edge-clou.md"
     ]
   }
 }

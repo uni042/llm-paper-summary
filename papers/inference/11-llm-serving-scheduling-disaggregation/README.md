@@ -2398,13 +2398,13 @@
   実装：✓ ・ リポジトリ内被引用：11  
   SCLS（スライス単位スケジューリング）は、LLMの応答長が要求到着時に分からないことから生じる二つの資源浪費を解消するサービング手法である。著者らはAnt GroupのCodeFuse実運用要求記録を用い、8台のNVIDIA A100 80GBでLLaMA2-13Bを動かした。
 
+- **2024-05 · [PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services](2024-2405.14636-perllm-personalized-inference-scheduling-with-edge-cloud-collaboration-f.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
+
 - **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
   実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：11  
   検索拡張生成（Retrieval-Augmented Generation、RAG）では、生成開始前に一度だけ外部情報を検索する方式に加え、生成文が伸びる途中でも検索を繰り返す方式がある。1024トークン生成の端から端の遅延では、同等以上の困惑度を維持しながらRETRO比最大2.6倍の短縮を示す。
-
-- **2024-05 · [PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services](2024-2405.14636-perllm-personalized-inference-scheduling-with-edge-cloud-collaboration-f.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
 
 - **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  

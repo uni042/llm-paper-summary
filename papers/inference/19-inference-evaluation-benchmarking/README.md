@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（244本）
+## 自動生成の論文一覧（245本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -341,6 +341,10 @@
 - **2026-08 · [Ripple-Pivot Search: Active Parallel Decoding for Diffusion Large Language Models](2026-2608.11742-ripple-pivot-search-active-parallel-decoding-for-diffusion-large-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   中エントロピーの位置を先に確定する波及効果を使い、ピボット位置と置くトークンの両方を先読みで探す学習不要の探索で、拡散言語モデルの並列デコードを4〜10倍速くする方式。
+
+- **2026-08 · [Pro-Router: Token-Aware Progressive Model Routing with Adaptive Edge-Cloud Collaboration for Efficient Multimodal LLM Inference](2026-2608.28726-pro-router-token-aware-progressive-model-routing-with-adaptive-edge-clou.md)**  
+  実装：[✓](https://github.com/xinyuangui2/pro-router) ・ リポジトリ内被引用：0  
+  プロンプトの事前スコアと小モデル自身のトークン分布から読む自信で二段に振り分け、実測レートで配分を決めるエッジ・クラウド協調により、最高のルーティング精度と既存比75パーセント超のスループット向上を両立する研究。
 
 - **2026-08 · [PaDoc: Layout-Grounded Parallel Decoding for Document Parsing](2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.md)**  
   実装：[✓](https://github.com/Longin-Yu/Padoc) ・ リポジトリ内被引用：0  
