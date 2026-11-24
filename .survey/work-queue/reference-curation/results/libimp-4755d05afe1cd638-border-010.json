@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4755d05afe1cd638-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2",
+    "identity_tokens": [
+      "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2"
+    ],
+    "reason": "Sink-KV機構により64kステップ分の文脈内経験をフル注意で利用する身体性エージェント向け文脈内強化学習で、KV保持の工夫は含むが主目的は身体性AIの適応能力であり、LLM推論システムへの貢献は限定的である。",
+    "first_checked_at": "2026-11-24T21:43:55+00:00",
+    "last_checked_at": "2026-11-24T21:43:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ReLIC: A recipe for 64k steps In-Context Reinforcement Learning for Embodied AI"
+  },
+  "processed_at": "2026-11-24T21:43:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4755d05afe1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

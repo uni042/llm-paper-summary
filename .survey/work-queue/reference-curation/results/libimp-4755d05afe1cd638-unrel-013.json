@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4755d05afe1cd638-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.21734",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.21734",
+    "identity_tokens": [
+      "arXiv:2606.21734"
+    ],
+    "reason": "階層的に分割した長尺動画をプログラム的に探索し知覚と推論を分離する長尺動画理解の枠組みであり、目的は動画理解の精度であって推論システムの効率化ではない。",
+    "first_checked_at": "2026-11-24T21:43:55+00:00",
+    "last_checked_at": "2026-11-24T21:43:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "HPP: Hierarchical Programmatic Probing for Long Video Understanding by Decoupling Perception and Reasoning"
+  },
+  "processed_at": "2026-11-24T21:43:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4755d05afe1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

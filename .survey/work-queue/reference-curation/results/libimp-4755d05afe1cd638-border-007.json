@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4755d05afe1cd638-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.02890",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.02890",
+    "identity_tokens": [
+      "arXiv:2609.02890"
+    ],
+    "reason": "利用履歴を有界なペルソナへ蒸留して検索のクエリ毎コストを回避するパーソナライズ手法で、文脈コストの観点は推論に触れるが、主貢献は分類・回帰タスクでのパーソナライズ精度の比較であり推論システムへの寄与は薄い。",
+    "first_checked_at": "2026-11-24T21:43:55+00:00",
+    "last_checked_at": "2026-11-24T21:43:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bounded Personas Match Retrieval on Classification but Not Regression for a Frozen Agent"
+  },
+  "processed_at": "2026-11-24T21:43:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4755d05afe1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

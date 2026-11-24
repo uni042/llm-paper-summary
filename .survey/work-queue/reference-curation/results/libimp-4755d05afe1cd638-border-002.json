@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4755d05afe1cd638-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.02053",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.02053",
+    "identity_tokens": [
+      "arXiv:2402.02053"
+    ],
+    "reason": "反復的なLLM推論を学習済み方策で置換し、エージェント間対話の補助情報を圧縮することで信憑性のあるエージェント対話の維持コストを下げる枠組みで、推論呼び出し削減の発想はあるが、対象はエージェントシミュレーションの振る舞いであり推論システム機構の貢献は薄い。",
+    "first_checked_at": "2026-11-24T21:43:55+00:00",
+    "last_checked_at": "2026-11-24T21:43:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Affordable Generative Agents"
+  },
+  "processed_at": "2026-11-24T21:43:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4755d05afe1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

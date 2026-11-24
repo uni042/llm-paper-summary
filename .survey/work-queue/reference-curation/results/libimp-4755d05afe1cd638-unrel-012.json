@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4755d05afe1cd638-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2110.03450",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2110.03450",
+    "identity_tokens": [
+      "arXiv:2110.03450"
+    ],
+    "reason": "パラメータの一部を凍結する部分学習可能ネットワークで連合学習の通信コストを最大46倍削減する提案であり、分散学習の訓練効率化が目的で、LLM推論への具体的適用は確認できない学習単独の高速化である。",
+    "first_checked_at": "2026-11-24T21:43:55+00:00",
+    "last_checked_at": "2026-11-24T21:43:55+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Efficient and Private Federated Learning with Partially Trainable Networks"
+  },
+  "processed_at": "2026-11-24T21:43:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4755d05afe1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
