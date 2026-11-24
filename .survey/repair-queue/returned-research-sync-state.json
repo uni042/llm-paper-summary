@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "903fa1753bddfd11ec7b5ab21003835e66595556",
+  "base_commit": "f2737cce245d0a2de7adfa08997a0cb216f193c4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -77,13 +77,18 @@
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
     "0000-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-context-window-of-large-language-models.json",
+    "0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json",
     "0000-bc0dfc0b468d-cachegen-fast-context-loading-for-language-model-applications-via-kv-cache-streaming.json",
     "0000-bc17c2aed529-accelerating-best-of-n-via-speculative-rejection.json",
+    "0000-bd3d059f0121-leveraging-expert-usage-to-speed-up-llm-inference-with-expert-parallelism.json",
     "0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.json",
     "0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.json",
     "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json",
     "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json",
     "0000-c62b8e2ab730-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.json",
+    "0000-d3680518ecb7-fistapruner-layer-wise-post-training-pruning-for-large-language-models.json",
+    "0000-d3d38642ea10-o-rp-q-uant-g-eometric-o-rthogonal-r-esidual-p-rojection-for-m-ultiplier-f-ree-p-ower-of-t-wo-t-ransformer-q-uantization.json",
+    "0000-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantization.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
     "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json",
     "0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.json",
@@ -22575,8 +22580,8 @@
     },
     "arXiv:2605.26092": {
       "order": [
-        "2026-10-29T07:33:12+00:00",
-        "libfile_a219cd8eed248191b9b124070e25b261--2026-2605.26092-goquant-geometric-pot-quantization-research-20261029-1105-scheduled-chat-00-r01.json"
+        "2026-11-24T00:34:51+00:00",
+        "0000-d3d38642ea10-o-rp-q-uant-g-eometric-o-rthogonal-r-esidual-p-rojection-for-m-ultiplier-f-ree-p-ower-of-t-wo-t-ransformer-q-uantization.json"
       ],
       "status": "already_represented",
       "result": null,
@@ -51911,6 +51916,69 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-acl.367": {
+      "order": [
+        "2026-11-24T00:32:11+00:00",
+        "0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "3be9d60bca972ed8b63d5695d6226088466d0a6f7af661df7c664a20fb99af39",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.md",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.367",
+        "worker_completed_at": "2026-11-24T09:20:00+09:00",
+        "worker_run_key": "muse-final-20261124-b14w2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4254,
+          "body_paragraphs": 18,
+          "method_chars": 1726,
+          "method_paragraphs": 4,
+          "evaluation_chars": 497,
+          "limitation_chars": 237,
+          "insufficiency_flags": [
+            "評価説明量 497 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 497 < 500"
+        ],
+        "processed_at": "2026-11-24T00:32:11+00:00"
+      },
+      "return_count": 1
+    },
+    "DOI:10.1007/978-3-031-99854-6_10": {
+      "order": [
+        "2026-11-24T00:33:15+00:00",
+        "0000-bd3d059f0121-leveraging-expert-usage-to-speed-up-llm-inference-with-expert-parallelism.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.emnlp-main.1498": {
+      "order": [
+        "2026-11-24T00:34:18+00:00",
+        "0000-d3680518ecb7-fistapruner-layer-wise-post-training-pruning-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6": {
+      "order": [
+        "2026-11-24T00:35:54+00:00",
+        "0000-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65720,6 +65788,15 @@
     "semanticscholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-a91e8d907724-triinfer-hybrid-disaggregated-scheduling-for-multimodal-large-language-m.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-a91e8d907724-triinfer-hybrid-disaggregated-scheduling-for-multimodal-large-language-m.md"
+    ],
+    "doi:10.1007/978-3-031-99854-6_10": [
+      "papers/inference/12-moe-parallelism-communication/2025-bd3d059f0121-leveraging-expert-usage-to-speed-up-llm-inference-with-expert-parallelis.md"
+    ],
+    "doi:10.18653/v1/2025.emnlp-main.1498": [
+      "papers/inference/99-other-inference-systems/2025-d3680518ecb7-fistapruner-layer-wise-post-training-pruning-for-large-language-models.md"
+    ],
+    "semanticscholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6": [
+      "papers/inference/15-inference-simulation-emulation/2024-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantizat.md"
     ]
   }
 }

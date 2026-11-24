@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（78本）
+## 自動生成の論文一覧（79本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -305,6 +305,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  
   DMA-Latteは、AMD Instinct MI300Xの既存DMAハードウェアに備わる放送（broadcast）、交換（swap）、同一エンジンでの連続コピー（back-to-back copy）、依存条件付き事前発行（prelaunch）を組み合わせ、小粒度転送の非データ移動費用を削減する方式である。
 
+- **2025-08 · [Leveraging Expert Usage to Speed up LLM Inference with Expert Parallelism](2025-bd3d059f0121-leveraging-expert-usage-to-speed-up-llm-inference-with-expert-parallelis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパートの共起確率を使って共起の多い組を別GPUへ分ける静的配置を定式化し、NP完全性の証明とマッチングによる動的選択、貪欲配置を提示する。メモリが乏しい条件では期待並列時間がランダム配置より約30パーセント下がる。
+
 - **2025-07 · [Photonic Fabric Platform for AI Accelerators](2025-2507.14000-photonic-fabric-platform-for-ai-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案のPhotonic Fabric Appliance（PFA）は、HBM3EとDDR5を含むメモリモジュールを光スイッチで接続し、16モジュール構成で最大32TBの共有メモリと115Tbpsの全対全デジタル交換を想定する。
@@ -334,7 +338,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：35  
+  実装：✓ ・ リポジトリ内被引用：36  
   提案する三機構は動的ゲート（動的 Gating）、専門家バッファ（専門家 Buffering）、専門家負荷分散（専門家 読み込み Balancing）である。動的ゲートによる最大スループットは、静的方式比で言語モデル6.21～11.23倍、機械翻訳エンコーダ5.75～10.98倍、デコーダ2.58～5.71倍へ改善した。
 
 - **2023-06 · [ZeRO++: Extremely Efficient Collective Communication for Giant Model Training](2023-2306.10209-zero-extremely-efficient-collective-communication-for-giant-model-traini.md)**  

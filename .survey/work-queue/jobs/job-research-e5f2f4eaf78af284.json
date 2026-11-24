@@ -35,10 +35,15 @@
   "selection_reason": "MoE推論で共起頻度の高いエキスパートペアを別GPUへ配置するエキスパート並列マッピングを提案し、負荷不均衡による逐次処理を減らしてMixtralの推論時間を削減する分散推論最適化である",
   "semantic_scholar_id": "0b2be88abd437cd7084fdbb6a59c3f77d1438145",
   "source_url": "https://doi.org/10.1007/978-3-031-99854-6_10",
-  "status": "ready",
+  "status": "superseded",
   "title": "Leveraging Expert Usage to Speed up LLM Inference with Expert Parallelism",
   "type": "research",
   "venue": "European Conference on Parallel Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-24T00:37:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2025-bd3d059f0121-leveraging-expert-usage-to-speed-up-llm-inference-with-expert-parallelis.md",
+  "represented_canonical_id": "DOI:10.1007/978-3-031-99854-6_10",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
