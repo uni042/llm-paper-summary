@@ -448,6 +448,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   専門家を上部・下部へ分割し、頻出専門家の上部だけをGPUへ広く常駐させ、下部を次層予測で先読みするMoEオフロード方式。層別VRAM・分割比も適応設定し、TPOTを37.51〜65.73%削減する。
 
+- **2025-08 · [Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective](2025-2508.08531-profiling-large-language-model-inference-on-apple-silicon-a-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ローカルLLMの実行環境を選ぶ際、モデルが何GBに収まるか、何bitで量子化できるか、GPUの理論FLOPSがいくつかという指標だけでは実際の生成速度を予測できない。DeepSeek 236BのM2 Ultra上ではIQ2Mが57.33ms/トークンで最も遅く、サイズが約1.73倍のIQ4NLは1.21倍速い。
+
 - **2025-05 · [Speeding up Model Loading with fastsafetensors](2025-2505.23072-speeding-up-model-loading-with-fastsafetensors.md)**  
   実装：[✓](https://github.com/foundation-model-stack/fastsafetensors) ・ リポジトリ内被引用：3  
   fastsafetensorsは、safetensors形式の大規模モデルをストレージからGPUへロードする際、各テンソルをいったんホストメモリ上のPython/PyTorchオブジェクトとして逐次生成してからGPUへコピーする従来経路を改め、ファイル上の複数テンソルをまとめてGPUへ搬送し、GPU上でテンソル実体化・分割などの前処理を行うローダである。
@@ -455,10 +459,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-04 · [Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs](2025-2504.11765-shared-disk-kv-cache-rag.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。
-
-- **2025-08 · [Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective](2025-2508.08531-profiling-large-language-model-inference-on-apple-silicon-a-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  ローカルLLMの実行環境を選ぶ際、モデルが何GBに収まるか、何bitで量子化できるか、GPUの理論FLOPSがいくつかという指標だけでは実際の生成速度を予測できない。DeepSeek 236BのM2 Ultra上ではIQ2Mが57.33ms/トークンで最も遅く、サイズが約1.73倍のIQ4NLは1.21倍速い。
 
 - **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -507,7 +507,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：143  
+  実装：✓ ・ リポジトリ内被引用：144  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
@@ -527,7 +527,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
-  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：55  
   HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
