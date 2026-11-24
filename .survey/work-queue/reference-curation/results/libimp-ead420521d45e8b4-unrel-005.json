@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ead420521d45e8b4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3389/fgene.2022.885627",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3389/fgene.2022.885627",
+    "identity_tokens": [
+      "DOI:10.3389/fgene.2022.885627"
+    ],
+    "reason": "トランスフォーマと多スケール畳み込みによる酵素タンパク質の分類予測というバイオ応用がタイトルで明示されており、LLM推論システムとの関連はない。",
+    "first_checked_at": "2026-11-24T21:09:09+00:00",
+    "last_checked_at": "2026-11-24T21:09:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "An Interpretable Double-Scale Attention Model for Enzyme Protein Class Prediction Based on Transformer Encoders and Multi-Scale Convolutions"
+  },
+  "processed_at": "2026-11-24T21:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ead420521d45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

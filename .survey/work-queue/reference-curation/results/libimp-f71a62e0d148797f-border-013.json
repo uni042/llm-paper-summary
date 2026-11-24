@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f71a62e0d148797f-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.24050",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.24050",
+    "identity_tokens": [
+      "arXiv:2509.24050"
+    ],
+    "reason": "オンデバイスLLMが推論時に内部判断でクラウド支援を呼ぶかを決める協調推論で、ルーティング能力自体を事後学習でモデルへ内在化させる方式だが、主眼は協調推論の推論品質と振り分け判断の学習であり、サービング機構への貢献は薄い。",
+    "first_checked_at": "2026-11-24T21:09:09+00:00",
+    "last_checked_at": "2026-11-24T21:09:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bridging On-Device and Cloud LLMs for Collaborative Reasoning: A Unified Methodology for Local Routing and Post-Training"
+  },
+  "processed_at": "2026-11-24T21:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f71a62e0d148",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abe10d90cb7e8118-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.00297",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.00297",
+    "identity_tokens": [
+      "arXiv:2409.00297"
+    ],
+    "reason": "固定小数点演算下の量子化ネットワークの表現力を、固定小数点関数を表すための必要・十分条件と活性化関数の充足性で論じる理論研究で、量子化推論と関連はあるが、推論システムへの具体的な技術的貢献は薄い。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On Expressive Power of Quantized Neural Networks under Fixed-Point Arithmetic"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abe10d90cb7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9e2c8ed6c625b89-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.11096",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.11096",
+    "identity_tokens": [
+      "arXiv:2604.11096"
+    ],
+    "reason": "離散音声トークンを用いた多言語音声言語モデルの効率的な学習法（継続事前学習とモダリティ整列）の提案であり、対象は音声LLMの学習と応用であり推論システムへの貢献は確認できない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Efficient Training for Cross-lingual Speech Language Models"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9e2c8ed6c62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

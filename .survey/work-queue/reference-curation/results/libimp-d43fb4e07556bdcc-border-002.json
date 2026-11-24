@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d43fb4e07556bdcc-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:610adc92d05924e20633c2050138d997f5aaa384",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:610adc92d05924e20633c2050138d997f5aaa384",
+    "identity_tokens": [
+      "SemanticScholar:610adc92d05924e20633c2050138d997f5aaa384"
+    ],
+    "reason": "異種クラスタ上のLLM学習向けGPUメモリ統制（Baton）と題するが、一次要旨を取得できなかったことに加え、題材自体も学習側のメモリ管理であり推論サービングへの寄与は不明瞭である。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Baton: Orchestrating GPU Memory for LLM Training on Heterogeneous Cluster"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d43fb4e07556",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

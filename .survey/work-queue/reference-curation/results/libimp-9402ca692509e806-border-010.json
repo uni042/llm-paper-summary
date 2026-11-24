@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9402ca692509e806-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.12419",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.12419",
+    "identity_tokens": [
+      "arXiv:2507.12419"
+    ],
+    "reason": "エキスパート列を動的に選び幅と深さが可変な計算グラフを作るMixture of Raytraced Expertsで、適応的計算という発想は推論と接するが、提示は予備的な学習実験にとどまり推論サービングへの適用は示されていない。",
+    "first_checked_at": "2026-11-24T21:09:07+00:00",
+    "last_checked_at": "2026-11-24T21:09:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mixture of Raytraced Experts"
+  },
+  "processed_at": "2026-11-24T21:09:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9402ca692509",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

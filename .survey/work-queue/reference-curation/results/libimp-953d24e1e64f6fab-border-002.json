@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-953d24e1e64f6fab-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.26052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.26052",
+    "identity_tokens": [
+      "arXiv:2607.26052"
+    ],
+    "reason": "MoE-LoRAのルータ出力分布をトークンごとの不確実性信号とみなし、累積質量が閾値に達するまでエキスパートを活性化する適応的ルーティングCAREを提案し、活性エキスパート数を抑える機構自体は推論時の条件付き計算にも関わるが、検証は常識・数学・コード課題でのファインチューニング文脈が中心で、推論システムとしての評価がない。",
+    "first_checked_at": "2026-11-24T21:09:07+00:00",
+    "last_checked_at": "2026-11-24T21:09:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA"
+  },
+  "processed_at": "2026-11-24T21:09:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-953d24e1e64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

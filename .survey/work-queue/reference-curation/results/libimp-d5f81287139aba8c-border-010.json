@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5f81287139aba8c-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.25798",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.25798",
+    "identity_tokens": [
+      "arXiv:2605.25798"
+    ],
+    "reason": "DiSCはキャッシュ済みトークン再利用とソフトマックス閾値による疎性マスク再利用を備えた拡散モデル向けハードウェアアクセラレータだが、対象は画像拡散モデルの推論であり、LLM推論への直接の適用は示されていない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DiSC: Resolution-Scalable Acceleration of Diffusion Models by Exploiting Sparsity and Cached Token Reuse with Hash-based Distribution"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5f81287139a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

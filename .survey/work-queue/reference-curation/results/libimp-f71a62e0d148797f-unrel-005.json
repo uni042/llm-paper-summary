@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f71a62e0d148797f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.03549",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.03549",
+    "identity_tokens": [
+      "arXiv:2312.03549"
+    ],
+    "reason": "Holmesは異種NICが混在するクラスタ間での分散学習を対象に通信環境の不均一性へ適応する学習システムであり、対象はLLM学習の分散実行であって推論・サービングへの具体的適用は示されていない。",
+    "first_checked_at": "2026-11-24T21:09:09+00:00",
+    "last_checked_at": "2026-11-24T21:09:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Holmes: Towards Distributed Training Across Clusters with Heterogeneous NIC Environment"
+  },
+  "processed_at": "2026-11-24T21:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f71a62e0d148",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

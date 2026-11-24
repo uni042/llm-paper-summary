@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f439aeb5d4620844-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:94c30d3c03beace3ba0d7014e0b1852bb892133c",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:94c30d3c03beace3ba0d7014e0b1852bb892133c",
+    "identity_tokens": [
+      "SemanticScholar:94c30d3c03beace3ba0d7014e0b1852bb892133c"
+    ],
+    "reason": "DisCo Transformerは注意マスクで全トークンを並列生成しeasy-first推論で反復洗練する非自己回帰機械翻訳モデルで、並列デコード機構自体は推論高速化に通じるが、対象タスクは機械翻訳であり、LLM推論サービングへの直接の適用は示されていない。",
+    "first_checked_at": "2026-11-24T21:09:09+00:00",
+    "last_checked_at": "2026-11-24T21:09:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Non-autoregressive Machine Translation with Disentangled Context Transformer"
+  },
+  "processed_at": "2026-11-24T21:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f439aeb5d462",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

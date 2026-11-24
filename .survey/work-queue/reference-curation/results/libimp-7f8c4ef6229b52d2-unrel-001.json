@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f8c4ef6229b52d2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.19105",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.19105",
+    "identity_tokens": [
+      "arXiv:2505.19105"
+    ],
+    "reason": "潜在空間で状態空間モデルを回すLatent Mamba Operatorにより偏微分方程式の解作用素を近似するニューラルオペレータであり、対象は固体・流体の物理シミュレーションであってLLM推論ではない。",
+    "first_checked_at": "2026-11-24T21:09:07+00:00",
+    "last_checked_at": "2026-11-24T21:09:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Latent Mamba Operator for Partial Differential Equations"
+  },
+  "processed_at": "2026-11-24T21:09:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f8c4ef6229b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

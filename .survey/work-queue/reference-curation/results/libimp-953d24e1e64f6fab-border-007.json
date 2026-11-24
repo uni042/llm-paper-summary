@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-953d24e1e64f6fab-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.29979",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.29979",
+    "identity_tokens": [
+      "arXiv:2605.29979"
+    ],
+    "reason": "推論エンジン・注意バックエンド・ハードウェアの実装差が生む数値偏差がテキスト出力へ伝播することを利用し、LLMの推論システム構成を外部から指紋付けする手法であり、推論基盤の計測には関わるが主目的はセキュリティ上の識別で、推論効率化への貢献は薄い。",
+    "first_checked_at": "2026-11-24T21:09:07+00:00",
+    "last_checked_at": "2026-11-24T21:09:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fingerprinting Inference Systems of Large Language Models"
+  },
+  "processed_at": "2026-11-24T21:09:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-953d24e1e64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

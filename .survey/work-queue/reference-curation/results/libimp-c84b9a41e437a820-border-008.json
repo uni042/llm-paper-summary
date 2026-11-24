@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c84b9a41e437a820-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.24386",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.24386",
+    "identity_tokens": [
+      "arXiv:2512.24386"
+    ],
+    "reason": "RedunCutはライブ映像解析でモデルサイズ選択のサンプリング費用対効果を測るプランナと精度予測モデルにより計算コストを14〜62％削減するシステムだが、対象はカメラ映像のビジョンモデル推論でありLLMではない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RedunCut: Measurement-Driven Sampling and Accuracy Performance Modeling for Low-Cost Live Video Analytics"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c84b9a41e437",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f71a62e0d148797f-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.00237",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.00237",
+    "identity_tokens": [
+      "arXiv:2609.00237"
+    ],
+    "reason": "マルチエージェント協調で実行履歴全体を後段判断に渡す過負荷を避けるため、保持すべき進捗だけをゲート付きメモリルーティングで圧縮した状態として渡す手法だが、対象はエージェント編成の精度・コスト調整であり、推論サービング基盤の機構ではない。",
+    "first_checked_at": "2026-11-24T21:09:09+00:00",
+    "last_checked_at": "2026-11-24T21:09:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning What to Retain: Gated-Memory Routing for Efficient Collaboration in Multi-Agent LLM Systems"
+  },
+  "processed_at": "2026-11-24T21:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f71a62e0d148",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

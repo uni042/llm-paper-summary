@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f8c4ef6229b52d2-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.00938",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.00938",
+    "identity_tokens": [
+      "arXiv:2410.00938"
+    ],
+    "reason": "MoSは多数のカスタマイズモデルを同時サービングする際のGPUメモリ爆発を動機に、シャード共有とMoE風ルーティングでLoRAのパラメータを約8倍削減する適応手法であり、サービング動機はあるが提案自体はファインチューニング側のパラメータ共有である。",
+    "first_checked_at": "2026-11-24T21:09:07+00:00",
+    "last_checked_at": "2026-11-24T21:09:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MoS: Unleashing Parameter Efficiency of Low-Rank Adaptation with Mixture of Shards"
+  },
+  "processed_at": "2026-11-24T21:09:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f8c4ef6229b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

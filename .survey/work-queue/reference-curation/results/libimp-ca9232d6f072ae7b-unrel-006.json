@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca9232d6f072ae7b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:ab0f77b504ba5ee8d922573a9d5a0b9e0f7fec17",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:ab0f77b504ba5ee8d922573a9d5a0b9e0f7fec17",
+    "identity_tokens": [
+      "SemanticScholar:ab0f77b504ba5ee8d922573a9d5a0b9e0f7fec17"
+    ],
+    "reason": "タイトルが『Aerodynamics and Fluid Mechanics』という航空・流体力学の一般主題のみを示し、LLM推論システムとの接点がない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Aerodynamics and Fluid Mechanics"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca9232d6f072",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

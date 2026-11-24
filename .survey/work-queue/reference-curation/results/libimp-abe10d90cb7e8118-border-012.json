@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abe10d90cb7e8118-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/jiot.2026.3654102",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/jiot.2026.3654102",
+    "identity_tokens": [
+      "DOI:10.1109/jiot.2026.3654102"
+    ],
+    "reason": "構造的重要性認識に基づくLLM適応プルーニングと題するが、Crossrefに要旨が登録されておらずIEEEページからも一次要旨を取得できなかったため、剪定機構と推論効率の評価を一次要旨で検証できていない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Pruning for Large Language Models With Structural Importance Awareness"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abe10d90cb7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

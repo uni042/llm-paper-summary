@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5f81287139aba8c-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2603.14864",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2603.14864",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.14864",
+      "arXiv:2603.14864"
+    ],
+    "reason": "Shopping Companionは120万件超の商品プールに基づく跨セッション嗜好メモリ付き買い物タスクのベンチマークと記憶拡張LLMエージェントを提案するが、主目的はECタスクの能力評価と応用であり、エージェントメモリ機構の推論システムへの貢献は副次的である。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Shopping Companion: A Memory-Augmented LLM Agent for Real-World E-Commerce Tasks"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5f81287139a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

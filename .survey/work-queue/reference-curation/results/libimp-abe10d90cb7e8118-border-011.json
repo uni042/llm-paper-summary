@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abe10d90cb7e8118-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:50151ffcc8920fd98b3090fbc542201bc96c2fdf",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:50151ffcc8920fd98b3090fbc542201bc96c2fdf",
+    "identity_tokens": [
+      "SemanticScholar:50151ffcc8920fd98b3090fbc542201bc96c2fdf"
+    ],
+    "reason": "Simbaは状態空間モデルの上位層ほど冗長である観察に基づき、最終出力への大域的影響でトークンを剪定する階層的疎化でMambaと同等FLOPSで性能を上げるアーキテクチャ効率化であり、LLM推論サービングやデコード機構への直接の貢献ではない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sparsiﬁed State-Space Models are Eﬃcient Highway Networks"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abe10d90cb7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

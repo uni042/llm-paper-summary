@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-953d24e1e64f6fab-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.06941",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.06941",
+    "identity_tokens": [
+      "arXiv:2409.06941"
+    ],
+    "reason": "LLM学習のパイプライン並列に生じるバブルをサイドタスクに活用するFreeRideを提案し、推論を含むサイドタスク実行の仕組みはあるものの、主目的と評価は学習コスト削減と学習時GPU利用率の向上に置かれている。",
+    "first_checked_at": "2026-11-24T21:09:07+00:00",
+    "last_checked_at": "2026-11-24T21:09:07+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FreeRide: Harvesting Bubbles in Pipeline Parallelism"
+  },
+  "processed_at": "2026-11-24T21:09:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-953d24e1e64f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

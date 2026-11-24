@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c84b9a41e437a820-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.25987",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.25987",
+    "identity_tokens": [
+      "arXiv:2606.25987"
+    ],
+    "reason": "Weave of Formal ThoughtはTree-sitter仕様に対して健全かつ完全なGLRベースの制約付きデコーダと、文法記号を生成へ織り込む潜在変数ファインチューニングを提案するが、主眼は構文妥当性の形式保証であり推論効率の定量評価はない。",
+    "first_checked_at": "2026-11-24T21:09:08+00:00",
+    "last_checked_at": "2026-11-24T21:09:08+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Weave of Formal Thought"
+  },
+  "processed_at": "2026-11-24T21:09:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c84b9a41e437",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

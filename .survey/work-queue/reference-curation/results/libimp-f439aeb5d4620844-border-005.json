@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f439aeb5d4620844-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789",
+    "identity_tokens": [
+      "SemanticScholar:3bacbf132bda7b701e6eaf1ed54b52241b914789"
+    ],
+    "reason": "SwiftSNNIはマルチコア上のセキュアニューラルネットワーク推論の最適化スケジューリングと題する大学リポジトリ記録だが、Crossref・arXiv等の代替経路でも要旨を取得できなかったため、秘密計算推論のスケジューリング機構を検証できていない。",
+    "first_checked_at": "2026-11-24T21:09:09+00:00",
+    "last_checked_at": "2026-11-24T21:09:09+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UvA-DARE (Digital Academic Repository) SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems"
+  },
+  "processed_at": "2026-11-24T21:09:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f439aeb5d462",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
