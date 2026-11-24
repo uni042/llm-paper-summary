@@ -276,6 +276,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。
 
+- **2026-01 · [LLMs can Compress LLMs: Adaptive Pruning by Agents](2026-2601.09694-llms-can-compress-llms-adaptive-pruning-by-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本論文は、大規模言語モデル（LLM）の重みを間引く際、全層へ同じ間引き率を割り当てるのではなく、別のLLMを方針決定器として使う。
+
 - **2025-12 · [KV Admission: Learning What to Write for Efficient Long-Context LLM Inference](2025-2512.17452-kv-admission-learning-what-to-write-for-efficient-long-context-llm-infer.md)**  
   実装：[✓](https://github.com/EMCLab-Sinica/WG-KV) ・ リポジトリ内被引用：1  
   KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
@@ -834,10 +838,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   MagellanはLLMのコード生成エージェント、進化的探索、外部のハイパーパラメータ調整器を閉ループで結び、LLVMやXLAのコンパイラ最適化パスに組み込めるC++の判断規則を自動発見する。生成したポリシーを実際のコンパイラへ挿入して再ビルドし、アプリケーションの最終バイナリサイズや実行時間を報酬にして改善する。
 
-- **2026-01 · [LLMs can Compress LLMs: Adaptive Pruning by Agents](2026-2601.09694-llms-can-compress-llms-adaptive-pruning-by-agents.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、大規模言語モデル（LLM）の重みを間引く際、全層へ同じ間引き率を割り当てるのではなく、別のLLMを方針決定器として使う。
-
 - **2026-01 · [LatencyPrism: Online Non-intrusive Latency Sculpting for SLO-Guaranteed LLM Inference](2026-2601.09258-latencyprism-online-non-intrusive-latency-sculpting-for-slo-guaranteed-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LatencyPrismは、本番の大規模言語モデル（LLM）推論で、ユーザーの体感品質に影響する遅延の一時的な増大を、サービスを止めずに検知し、原因の切り分けに必要な実行情報を取得するシステムである。
@@ -925,7 +925,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   大規模言語モデルの重みを4ビットへ量子化すると、FP16と比べて保存量を大きく減らせる。Llama2-13Bの0.1 BPWでは重み保存量をFP16の26.06GBから0.84GBへ縮小し、31.02倍の圧縮を報告する。
 
 - **2025-08 · [Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md)**  
-  実装：[✓](https://github.com/yansikuan/memory-r1) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/yansikuan/memory-r1) ・ リポジトリ内被引用：7  
   メモリ-R1は、記憶を管理するエージェント（メモリ Manager）と、検索した記憶から回答するエージェント（Answer Agent）を分離し、どちらも最終回答の正しさを報酬とする強化学習（reinforcement learning）で訓練する。
 
 - **2025-04 · [Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures](2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled.md)**  
@@ -1234,13 +1234,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/microsoft/onnxruntime) ・ リポジトリ内被引用：16  
   LeanAttentionが減らすのは注意の数学的な計算量ではない。まったく同じ厳密注意を、長いKV文脈方向へ細かく分割し、GPUの全SMへ端数なく近い形で仕事を割り振る。デコードでは問い合わせが1トークンしかないため従来のタイル並列性が不足する、というハードウェア利用率の問題を解く。
 
+- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
+
 - **2024-04 · [DeFT: Decoding with Flash Tree-Attention for Efficient Tree-structured LLM Inference](2024-2404.00242-deft-decoding-with-flash-tree-attention-for-efficient-tree-structured-ll.md)**  
   実装：[✓](https://github.com/LINs-lab/DeFT) ・ リポジトリ内被引用：15  
   従来のGPU注意カーネルは通常の一本の系列を想定し、クエリごとに必要なKVを集めるため、同じ接頭辞のKVを何度もGPU広帯域メモリから共有メモリへ運ぶ。DeFT（デコード with Flash Tree-注意機構）は、木構造のKVと複数クエリを一緒に分割する際の基準を逆転させる。
-
-- **2024-05 · [Large Language Model Pruning](2024-2406.00030-large-language-model-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  ニューロン同士の相互情報量で冗長性を測り、カーネル幅の新しい推定で精度を高めた、教師なし・再学習不要の全結合層の構造的枝刈り手法。
 
 - **2024-06 · [ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization](2024-2406.05981-shiftaddllm-accelerating-pretrained-llms-via-post-training-multiplicatio.md)**  
   実装：[✓](https://github.com/GATECH-EIC/ShiftAddLLM) ・ リポジトリ内被引用：10  

@@ -46,13 +46,13 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：11  
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
 
+- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
+  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：9  
+  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
+
 - **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   CacheBridgeは出典モデルのKVを受信モデルのヘッド局所表現へ線形変換し、注意感度で係数を学習・GPU融合して、モデル切替時の再プリフィル計算と変換器容量を減らす方式。
-
-- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
-  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：8  
-  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
 
 - **2025-12 · [HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference](2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -363,7 +363,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
-  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：56  
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  

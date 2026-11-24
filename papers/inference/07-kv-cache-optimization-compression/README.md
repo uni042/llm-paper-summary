@@ -101,13 +101,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/zzbright1998/OjaKV) ・ リポジトリ内被引用：8  
   重要トークンをフルランク保持し、残りのKVキャッシュをOja則で文脈適応する低ランク部分空間へ圧縮して長文生成時の分布変化へ追随する。
 
+- **2026-07 · [C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference](2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md)**  
+  実装：[✓](https://github.com/s7a9/C2KV) ・ リポジトリ内被引用：8  
+  文書ごとに位置非依存で直接連結できる圧縮KVを学習抽出し、非prefix再利用のプリフィル削減とKV保存・転送・デコード帯域削減を同時に狙う。
+
 - **2026-06 · [RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention](2026-2606.06256-redknot-efficient-long-context-llm-serving-with-head-aware-kv-reuse-and-segpagedattention.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   従来のKV管理は全ヘッドを同じトークンブロックとして扱うが、RedKnotの測定では局所ヘッドが83.4〜96.8%、接頭辞変化に敏感な大域ヘッドは3.2〜16.6%に留まる。そこで大域ヘッドだけを広範囲に再計算し、局所ヘッドを再利用するElastic Sparsityと、ヘッド別のKVページを扱うSegPagedAttentionを組み合わせる。
-
-- **2026-07 · [C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference](2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md)**  
-  実装：[✓](https://github.com/s7a9/C2KV) ・ リポジトリ内被引用：7  
-  文書ごとに位置非依存で直接連結できる圧縮KVを学習抽出し、非prefix再利用のプリフィル削減とKV保存・転送・デコード帯域削減を同時に狙う。
 
 - **2026-04 · [IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs](2026-2604.10539-icecache-semantic-kv-offload.md)**  
   実装：[✓](https://github.com/yuzhenmao/IceCache) ・ リポジトリ内被引用：7  
@@ -165,6 +165,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Mambaaaaaaaaa/Judge-Q) ・ リポジトリ内被引用：5  
   既存の注意機構重みや本体Transformerを再学習せず、削除位置の選択を改善する設計である。論文の主評価は同じKV保持数における正解率・タスクスコアであり、追加soft トークンによるプリフィル計算を含めた実機のTTFT、TPOT、メモリピークやスループットの改善を実証したものではない。
 
+- **2026-02 · [IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning](2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-.md)**  
+  実装：[✓](https://github.com/FireRedTeam/IVC-Prune) ・ リポジトリ内被引用：5  
+  回転位置埋め込みが生む座標役の視覚トークンと意味的に重要な前景トークンを両方残す学習不要の枝刈りで、視覚トークンを約半分にしながら空間推論の精度をほぼ落とさない方式である。
+
 - **2026-01 · [OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration](2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md)**  
   実装：[✓](https://github.com/omnia-postech/OrbitFlow) ・ リポジトリ内被引用：5  
   OrbitFlowは、要求ごとのKVのGPU常駐量とCPU退避間隔をSLOに応じて動的再配置し、退避KVの転送を層計算へ重ねて長文待ち時間を減らす。
@@ -220,10 +224,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-03 · [EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction](2026-2603.22910-echokv-efficient-kv-cache-compression-via-similarity-based-reconstructio.md)**  
   実装：[✓](https://github.com/noforit/EchoKV) ・ リポジトリ内被引用：4  
   圧縮方式の一つである低ランク分解は、重み行列を変形して保存すべきKVの次元を減らすが、変形後のモデルを短文・長文の負荷に応じて元の通常推論へ戻すことが難しい。これらは圧縮率50%で精度が常に完全維持されるという結果ではなく、課題ごとの悪化もある。
-
-- **2026-02 · [IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning](2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-.md)**  
-  実装：[✓](https://github.com/FireRedTeam/IVC-Prune) ・ リポジトリ内被引用：4  
-  回転位置埋め込みが生む座標役の視覚トークンと意味的に重要な前景トークンを両方残す学習不要の枝刈りで、視覚トークンを約半分にしながら空間推論の精度をほぼ落とさない方式である。
 
 - **2025-12 · [Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers](2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md)**  
   実装：[✓](https://github.com/LivingFutureLab/FusedKV) ・ リポジトリ内被引用：4  
@@ -2101,6 +2101,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：5  
   意味的に近い別プロンプトをトークンLSHで対応付け、位置補正と層別再計算により完全一致なしでもKVを選択再利用する。
 
+- **2025-08 · [KV Cache Compression for Inference Efficiency in LLMs: A Review](2025-2508.06297-kv-cache-compression-for-inference-efficiency-in-llms-a-review.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  著者はKV圧縮を、重要なトークンを選んで残す方式、K/Vのビット幅を下げる量子化、注意構造やヘッドの冗長性を利用する方式、複数の技術を組み合わせる方式に分類する。
+
 - **2025-07 · [Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling](2025-2508.00904-forecasting-llm-inference-performance-via-hardware-agnostic-analytical-m.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   入力長、出力長、注意機構、量子化、演算融合、カーネルの効率が時間とともに変わるためである。Llama2-7Bを対象に、プレフィル（プリフィル）で入力長256から65,536へ増やすと、行列積（GEMM）の計算量構成比が99.0%から27.5%へ下がり、バッチ行列積（BMM）が1.0%から71.6%へ増えると推計した（表4）。
@@ -2132,10 +2136,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-08 · [SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference](2025-2508.02751-smallkv-small-model-assisted-compensation-of-kv-cache-compression-for-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   SmallKVは、長文脈の大規模言語モデル（LLM）の鍵・値キャッシュ（KV キャッシュ）を小さくする際、単純な重要度順位でトークンを消してしまうと必要な情報が失われる問題を、小型言語モデル（Small Language モデル; SLM）との協調で緩和する方式である。
-
-- **2025-08 · [KV Cache Compression for Inference Efficiency in LLMs: A Review](2025-2508.06297-kv-cache-compression-for-inference-efficiency-in-llms-a-review.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  著者はKV圧縮を、重要なトークンを選んで残す方式、K/Vのビット幅を下げる量子化、注意構造やヘッドの冗長性を利用する方式、複数の技術を組み合わせる方式に分類する。
 
 - **2025-06 · [AnTKV: Anchor Token-Aware Sub-Bit Vector Quantization for KV Cache in Large Language Models](2025-2506.19505-antkv-anchor-token-aware-sub-bit-vector-quantization-for-kv-cache-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -2348,7 +2348,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：591  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：593  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -2626,11 +2626,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：873  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：874  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：805  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：806  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  

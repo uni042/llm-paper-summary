@@ -740,6 +740,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   端末で簡単な要求を処理し、必要な時だけクラウドを呼ぶ方式は自然だが、呼出し回数が増えれば往復遅延が支配的になる。
 
+- **2025-07 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：5  
+  層の入出力の類似度から重要度を測る指標BIで冗長な層を見つけ、層を丸ごと削除するShortGPTと、生成トークンだけ全層を通すShortGPT-genで、約25%の層を削っても多肢選択で約9割、生成で97%の性能を保つ枝刈り手法。
+
 - **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
@@ -747,10 +751,6 @@
 - **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
-
-- **2025-07 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2025-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：4  
-  層の入出力の類似度から重要度を測る指標BIで冗長な層を見つけ、層を丸ごと削除するShortGPTと、生成トークンだけ全層を通すShortGPT-genで、約25%の層を削っても多肢選択で約9割、生成で97%の性能を保つ枝刈り手法。
 
 - **2025-06 · [Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques](2025-2506.06579-towards-efficient-multi-llm-inference-characterization-and-analysis-of-l.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -919,7 +919,7 @@
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
-  実装：✓ ・ リポジトリ内被引用：63  
+  実装：✓ ・ リポジトリ内被引用：64  
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
