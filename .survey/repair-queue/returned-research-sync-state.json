@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c1340dc48d450f280e125735c31bd0b8fde03f27",
+  "base_commit": "b4cbaa19d93a17f1881742e1de7a68976899a08b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1685,6 +1685,11 @@
     "2026-2611.26980-contexture-runtime-context-eviction-for-high-throughput-agent-serving.json",
     "2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.json",
     "2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-llm-inference-on-fpgas.json",
+    "2026-2611.27477-cannot-wait-to-verify-parallel-drafting-to-eliminate-verifier-idle-time-in-speculative-decoding.json",
+    "2026-2611.27596-isonomy-isolating-every-request-from-timing-side-channels-at-nearly-full-sharing-throughput-in-multi-instance-llm-prefil.json",
+    "2026-2611.27604-isomoe-placement-invariant-hybrid-cpu-gpu-moe-inference-with-lossless-12-bit-experts.json",
+    "2026-2611.27701-forest-coordinating-tree-based-hbf-rram-and-hbm-for-efficient-speculative-llm-inference.json",
+    "2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54885,6 +54890,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.27477": {
+      "order": [
+        "2026-11-24T11:43:39+00:00",
+        "2026-2611.27477-cannot-wait-to-verify-parallel-drafting-to-eliminate-verifier-idle-time-in-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.27596": {
+      "order": [
+        "2026-11-24T11:44:46+00:00",
+        "2026-2611.27596-isonomy-isolating-every-request-from-timing-side-channels-at-nearly-full-sharing-throughput-in-multi-instance-llm-prefil.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.27604": {
+      "order": [
+        "2026-11-24T11:45:53+00:00",
+        "2026-2611.27604-isomoe-placement-invariant-hybrid-cpu-gpu-moe-inference-with-lossless-12-bit-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.27701": {
+      "order": [
+        "2026-11-24T11:47:01+00:00",
+        "2026-2611.27701-forest-coordinating-tree-based-hbf-rram-and-hbm-for-efficient-speculative-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.27891": {
+      "order": [
+        "2026-11-24T11:48:08+00:00",
+        "2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69826,6 +69876,21 @@
     "arxiv:2611.27323": [
       "papers/inference/99-other-inference-systems/2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-l.md",
       "papers/inference/99-other-inference-systems/2026-2611.27323-cruella-a-unified-microscaling-and-floating-point-dot-product-unit-for-l.md"
+    ],
+    "arxiv:2611.27477": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.27477-cannot-wait-to-verify-parallel-drafting-to-eliminate-verifier-idle-time-.md"
+    ],
+    "arxiv:2611.27596": [
+      "papers/inference/99-other-inference-systems/2026-2611.27596-isonomy-isolating-every-request-from-timing-side-channels-at-nearly-full.md"
+    ],
+    "arxiv:2611.27604": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.27604-isomoe-placement-invariant-hybrid-cpu-gpu-moe-inference-with-lossless-12.md"
+    ],
+    "arxiv:2611.27701": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.27701-forest-coordinating-tree-based-hbf-rram-and-hbm-for-efficient-speculativ.md"
+    ],
+    "arxiv:2611.27891": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.md"
     ]
   }
 }

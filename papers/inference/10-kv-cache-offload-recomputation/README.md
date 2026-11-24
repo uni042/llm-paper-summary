@@ -202,6 +202,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：2  
   キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
 
+- **2026-09 · [SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference](2026-2609.23816-splash-high-bandwidth-flash-long-context.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  長文脈LLMでは、復号のたびに過去のキー・値（KV）キャッシュを読み直すため、文脈長と同時要求数の増加に伴って容量と帯域の双方が問題になる。CPU DRAM、CXL、SSDへ退避すれば容量は増えるが、HBMとの大きな帯域差が復号を律速する。
+
 - **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は固定Hadamard回転・正規化・4ビット符号帳でKVをオンチップNVM向けに量子化し、補助情報と読み出し再構成を減らして長文脈KVの面積・エネルギーを抑える。
@@ -304,10 +308,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントのツール待ち間隔と終了しやすさからセッション単位のKV再利用順位を作り、追い出しとSRAM/HBM間移動を同じ近メモリ制御器で決めることで、再プリフィルと階層アクセス遅延を減らす方式。
 
-- **2026-09 · [SPLASH: Co-Designing Sparse Attention with High-Bandwidth Flash for Efficient Long-Context Inference](2026-2609.23816-splash-high-bandwidth-flash-long-context.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  長文脈LLMでは、復号のたびに過去のキー・値（KV）キャッシュを読み直すため、文脈長と同時要求数の増加に伴って容量と帯域の双方が問題になる。CPU DRAM、CXL、SSDへ退避すれば容量は増えるが、HBMとの大きな帯域差が復号を律速する。
-
 - **2026-09 · [PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding](2026-2609.34555-pulseinfer-i-o-centric-sparse-kv-cache-offloading-for-efficient-long-con.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PulseInferは、長文脈LLMのデコードでKVキャッシュがGPUメモリを占有し、十分な同時要求を処理できない問題を扱う。KVキャッシュの大部分をCPU DRAMへ退避し、必要なブロックだけGPUへ戻す疎なオフロード方式は、GPU側の容量制限を緩和する。
@@ -359,7 +359,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：179  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：180  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  

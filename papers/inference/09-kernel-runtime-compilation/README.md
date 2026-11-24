@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（346本）
+## 自動生成の論文一覧（347本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -176,6 +176,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   本研究が問題にするのは、低精度の高速行列乗算で通常の正答率が保たれていても、言語モデルの出力が本来参照してはならない未来のトークンに依存することである。
 
+- **2026-09 · [Accelerating the Mitigation of LLM Inference Nondeterminism Across GPU Architectures](2026-2609.25624-accelerating-the-mitigation-of-llm-inference-nondeterminism-across-gpu-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  この論文が扱うのは、乱数を固定し、温度を0にした貪欲復号でも、同じ大規模言語モデル（LLM）がGPUの世代や同時処理数によって異なるトークンを出す問題である。これは「丸め差が十分小さければ結果がたまたま一致する」という従来の確率的対策ではなく、対象線形層に限り演算順を構造的に一致させる設計である。
+
 - **2026-08 · [Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference](2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-singl.md)**  
   実装：[✓](https://github.com/jmaczan/torch-webgpu) ・ リポジトリ内被引用：1  
   単一演算測定が同期を混ぜて発行費用を約20倍に膨らませることを暴き、連続発行測定で真の費用を測った上で、同じシェーダで発行だけを減らして53パーセント速くなる統制実験により、律速がカーネルではなく発行回数だと示した測定研究。
@@ -309,6 +313,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-11 · [LiquidCP: Decoupling Attention Tasks from Communication and Kernel Boundaries in Context Parallelism](2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-bounda.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意の作業を通信とカーネルの境界から切り離し、学習側では注意量とトークン量を両方均す配置と届いた範囲での随時実行、デコード側では注意と集約の完了を一緒に予測する分割計画で、中核注意を幾何平均で一点一八倍から一点三五倍速くしたと報告した。
+
+- **2026-11 · [IsoMoE: Placement-Invariant Hybrid CPU-GPU MoE Inference with Lossless 12-bit Experts](2026-2611.27604-isomoe-placement-invariant-hybrid-cpu-gpu-moe-inference-with-lossless-12.md)**  
+  実装：[✓](https://anonymous.4open.science/r/isomoe-artifact-9C21/) ・ リポジトリ内被引用：0  
+  CPUとGPUでエキスパートを分担するハイブリッドMoE推論で、配置が変わると出力まで変わる問題に対し、GPUがCPUの演算をビット単位で再現し、無損失12ビット形式をCPU向けの並びで保持することで、配置不変のビット同一出力を保ちながら平均1.26倍のデコード高速化を得る方式。
 
 - **2026-11 · [Fused-Softmax for efficient quantized attention](2026-2611.09225-fused-softmax-for-efficient-quantized-attention.md)**  
   実装：[✓](https://github.com/ROCm/aiter) ・ リポジトリ内被引用：0  
@@ -521,10 +529,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels](2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   新しい注意方式を論文で定義できても、そのまま高速に実行できるとは限らない。注意はクエリとキーの行列積、マスク、正規化、値との積などを繰り返し、処理を別々のGPUカーネルで行うと中間テンソルの書込みと再読込みが生じる。
-
-- **2026-09 · [Accelerating the Mitigation of LLM Inference Nondeterminism Across GPU Architectures](2026-2609.25624-accelerating-the-mitigation-of-llm-inference-nondeterminism-across-gpu-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  この論文が扱うのは、乱数を固定し、温度を0にした貪欲復号でも、同じ大規模言語モデル（LLM）がGPUの世代や同時処理数によって異なるトークンを出す問題である。これは「丸め差が十分小さければ結果がたまたま一致する」という従来の確率的対策ではなく、対象線形層に限り演算順を構造的に一致させる設計である。
 
 - **2026-09 · [A Multi-Engine Dataflow for MoE Decoding on AWS Tranium](2026-2609.21137-a-multi-engine-dataflow-for-moe-decoding-on-aws-tranium.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

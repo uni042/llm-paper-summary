@@ -569,6 +569,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Superone77/UniCache) ・ リポジトリ内被引用：1  
   課題ごとに変わるKVキャッシュの種類構成と種類ごとの圧縮の好みを、オフライン較正による方針割当てと注意誘導型の予算配分で扱う学習不要の圧縮枠組みで、理解と編集で5倍の圧縮と最大1.78倍の高速化を得た。
 
+- **2026-09 · [Preserving Provenance in Shared KV Caches for LLM Serving](2026-2609.38706-preserving-provenance-in-shared-kv-caches-for-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  テナント分離用のソルトを共有鍵に含めない条件では、応答時間から被害者のプロンプトを93%の正確さで識別できた。
+
 - **2026-09 · [Prefill-Free Cross-Family KV Cache Transfer for Heterogeneous Multi-Agent LLMs](2026-2609.32259-prefill-free-cross-family-kv-cache-transfer-for-heterogeneous-multi-agen.md)**  
   実装：[✓](https://github.com/daniel-eai/Prefill-Free-Multi-Agent-LLMs) ・ リポジトリ内被引用：1  
   ファミリーの違うモデル間で、文字境界のトークン対応、3層集約と統計量合わせの写像、注意と出力に合わせた較正の畳み込みにより、受信側プリフィルなしでキーと値のキャッシュを渡せるようにした転送方式。
@@ -1314,10 +1318,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Quality Recovery for Quantized KV Caches via Low-Rank Attention Adaptation](2026-2609.04263-quality-recovery-for-quantized-kv-caches-via-low-rank-attention-adaptati.md)**  
   実装：[✓](https://github.com/saifmb0/kvlora) ・ リポジトリ内被引用：0  
   キャッシュを4ビットや2ビットに量子化すれば保存量を減らせるが、量子化誤差が注意出力を変え、パープレキシティや長文脈検索の品質を落とす。
-
-- **2026-09 · [Preserving Provenance in Shared KV Caches for LLM Serving](2026-2609.38706-preserving-provenance-in-shared-kv-caches-for-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  テナント分離用のソルトを共有鍵に含めない条件では、応答時間から被害者のプロンプトを93%の正確さで識別できた。
 
 - **2026-09 · [Prefix Sharing Is a Sorting Problem](2026-2609.13692-prefix-sharing-sorting-problem.md)**  
   実装：[✓](https://github.com/Darrenus/prefix-sharing-is-sorting) ・ リポジトリ内被引用：0  
@@ -2169,6 +2169,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：4  
   SmallKVは、長文脈の大規模言語モデル（LLM）の鍵・値キャッシュ（KV キャッシュ）を小さくする際、単純な重要度順位でトークンを消してしまうと必要な情報が失われる問題を、小型言語モデル（Small Language モデル; SLM）との協調で緩和する方式である。
 
+- **2025-08 · [Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference](2025-2508.08438-selective-kv-cache-sharing-to-mitigate-timing-side-channels-in-llm-infer.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  SafeKVは、大規模言語モデル（LLM）の複数利用者向けサービングにおいて、プレフィックスのKVキャッシュを利用者間で共有する性能上の利益と、共有によるタイミング情報漏えいを両立させるシステムである。
+
 - **2025-06 · [AnTKV: Anchor Token-Aware Sub-Bit Vector Quantization for KV Cache in Large Language Models](2025-2506.19505-antkv-anchor-token-aware-sub-bit-vector-quantization-for-kv-cache-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   AnTKVは、TransformerのKVキャッシュを極端に低いビット幅へ圧縮したときの品質劣化を、トークンごとの誤差感度が均一ではないという観察から抑える方式である。FP16のアンカーが全体の1%でも、1bit以下の領域で大きな品質改善が報告される。
@@ -2204,10 +2208,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-09 · [OjaKV: Context-Aware Online Low-Rank KV Cache Compression](2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md)**  
   実装：[✓](https://github.com/zzbright1998/OjaKV) ・ リポジトリ内被引用：3  
   OjaKVは長文脈言語モデルのキー・バリュー（KV）キャッシュを低ランク射影で圧縮する際、校正データで決めた固定基底が実際の会話・コード・ニュースなどの分布変化に適合しなくなる問題を扱う。LongChat-7B-v1.5-32kの16K RULERでは、KV保存予算0.6倍の条件で静的PCAの平均正答率23.44%をOjaKVが39.99%へ改善した。
-
-- **2025-08 · [Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference](2025-2508.08438-selective-kv-cache-sharing-to-mitigate-timing-side-channels-in-llm-infer.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  SafeKVは、大規模言語モデル（LLM）の複数利用者向けサービングにおいて、プレフィックスのKVキャッシュを利用者間で共有する性能上の利益と、共有によるタイミング情報漏えいを両立させるシステムである。
 
 - **2025-07 · [Multi-matrix Factorization Attention](2025-98e1f6bbeb53-multi-matrix-factorization-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2392,7 +2392,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：420  
+  実装：✓ ・ リポジトリ内被引用：421  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -2491,13 +2491,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：55  
   鍵値活性のチャネル間依存を利用して複数チャネルを共同量子化し、極低ビットでも品質劣化を抑える連結量子化を提案する。
 
+- **2024-02 · [GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding](2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：52  
+  本論文は、大規模言語モデルの生成時に生じる逐次計算の待ち時間を、投機的復号（投機的復号）の二つの構成要素から短縮する研究である。投機的復号では軽量な下書きモデルが数トークンを先に提案し、大型の対象モデルが一度の前向き計算で提案を検証する。
+
 - **2024-02 · [Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference](2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/hdong920/LESS) ・ リポジトリ内被引用：52  
   LESSは、キー・値キャッシュ（Key-Value Cache; KVキャッシュ）の追い出しを「残すか捨てるか」の二択にしない。重要なトークンは従来どおり疎KVキャッシュへ明示的に残し、追い出すトークンは固定サイズの低ランク状態へ順次圧縮する。次の注意計算では両方を合成するため、疎キャッシュから消えたトークンにも低解像度ながら参照経路が残る。
-
-- **2024-02 · [GliDe with a CaPE: A Low-Hassle Method to Accelerate Speculative Decoding](2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：51  
-  本論文は、大規模言語モデルの生成時に生じる逐次計算の待ち時間を、投機的復号（投機的復号）の二つの構成要素から短縮する研究である。投機的復号では軽量な下書きモデルが数トークンを先に提案し、大型の対象モデルが一度の前向き計算で提案を検証する。
 
 - **2024-07 · [Model Tells You Where to Merge: Adaptive KV Cache Merging for LLMs on Long-Context Tasks](2024-2407.08454-model-tells-you-where-to-merge-adaptive-kv-cache-merging-for-llms-on-lon.md)**  
   実装：✓ ・ リポジトリ内被引用：50  
