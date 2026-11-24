@@ -89,6 +89,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：1  
   Gimbalは要求の残りプリフィル量・待機量・KV使用量と専門家負荷を同時に見て要求振り分けと専門家配置を協調し、MoEサービングのキュー偏りとホットスポットを減らす。
 
+- **2026-05 · [Federation of Experts: Communication Efficient Distributed Inference for Large Language Models](2026-2605.06206-federation-of-experts-communication-efficient-distributed-inference-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Federation of Experts（FoE）は、配送アルゴリズムだけを改善するのではなく、モデルの注意ヘッドと専門家の構造を一緒に分割する。著者は7B級と1B級のモデルを通常MoEと同条件で最初から学習し、単一ノードH100×8と2ノードH100×16で比較した。
+
 - **2026-05 · [EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization](2026-2605.14249-energylens-predictive-energy-aware-exploration-for-multi-gpu-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   EnergyLensは、演算を記号的に指定するだけで推論時のエネルギーと遅延を予測し、構成間のトレードオフを探索する枠組みである。
@@ -190,10 +194,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [GEM: GPU-Variability-Aware Expert-to-GPU Mapping For Mixture-of-Experts Models](2026-2605.19945-gem-gpu-variability-aware-expert-to-gpu-mapping-for-mixture-of-experts-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家並列（専門家 Parallelism; EP）を使う推論基盤は、専門家の重みを複数GPUに配置し、ルータが選んだ専門家へトークンを送信する。
-
-- **2026-05 · [Federation of Experts: Communication Efficient Distributed Inference for Large Language Models](2026-2605.06206-federation-of-experts-communication-efficient-distributed-inference-for-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Federation of Experts（FoE）は、配送アルゴリズムだけを改善するのではなく、モデルの注意ヘッドと専門家の構造を一緒に分割する。著者は7B級と1B級のモデルを通常MoEと同条件で最初から学習し、単一ノードH100×8と2ノードH100×16で比較した。
 
 - **2026-05 · [Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory](2026-2605.20982-diagnosing-overhead-in-dispatch-operations-cross-architecture-observator.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -328,7 +328,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   LongVILAは、長時間動画を理解する視覚言語モデル（Vision-Language モデル、VLM）の学習手順と分散実行基盤を同時に設計した研究である。256基のGPUを使うと勾配チェックポイントを使わず約200万トークンの学習文脈を扱え、従来のリング型系列並列に対して2.1〜5.7倍の訓練処理量を得る。
 
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
 
 - **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
@@ -356,7 +356,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：62  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：63  
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
