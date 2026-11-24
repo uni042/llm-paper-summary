@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e64de9b4dcd9c3ba8ed1a3572916925c7f55144c",
+  "base_commit": "6c5999815966364d88761ae1d05e75c37678edce",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -81,6 +81,7 @@
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
     "0000-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-context-window-of-large-language-models.json",
+    "0000-ba3a8b36c1eb-look-and-think-efficient-multimodal-reasoning-via-modality-decoupled-compression.json",
     "0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json",
     "0000-bc0dfc0b468d-cachegen-fast-context-loading-for-language-model-applications-via-kv-cache-streaming.json",
     "0000-bc17c2aed529-accelerating-best-of-n-via-speculative-rejection.json",
@@ -90,10 +91,12 @@
     "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json",
     "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json",
     "0000-c62b8e2ab730-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.json",
+    "0000-c67f95485dce-scope-boosting-llm-efficiency-with-scoped-position-encoding.json",
     "0000-d3680518ecb7-fistapruner-layer-wise-post-training-pruning-for-large-language-models.json",
     "0000-d3d38642ea10-o-rp-q-uant-g-eometric-o-rthogonal-r-esidual-p-rojection-for-m-ultiplier-f-ree-p-ower-of-t-wo-t-ransformer-q-uantization.json",
     "0000-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantization.json",
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
+    "0000-e2ef0dd2ed4d-flare-fine-grained-length-aware-routing-for-resource-efficient-heterogeneous-llm-serving.json",
     "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json",
     "0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.json",
     "0000-e92f51352226-l-ess-i-s-m-ore-t-raining-f-ree-s-parse-a-ttention-with-g-lobal-l-ocality-for-e-fficient-r-easoning.json",
@@ -118,6 +121,7 @@
     "2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.json",
     "2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.json",
     "2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.json",
+    "2022-51ecca33c669-dtqatten-leveraging-dynamic-token-based-quantization-for-efficient-attention-architecture.json",
     "2023-2301.10448-pre-computed-memory-or-on-the-fly-encoding-a-hybrid-approach-to-retrieval-augmentation-makes-the-most-of-your-compute.json",
     "2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-research-and-deployment.json",
     "2023-2302.11180-disco-distributed-inference-with-sparse-communications.json",
@@ -225,6 +229,7 @@
     "2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-inference-time-of-starcoder2.json",
     "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json",
     "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
+    "2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
     "2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.json",
@@ -52619,6 +52624,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-acl.1241": {
+      "order": [
+        "2026-11-24T02:59:36+00:00",
+        "0000-ba3a8b36c1eb-look-and-think-efficient-multimodal-reasoning-via-modality-decoupled-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1650": {
+      "order": [
+        "2026-11-24T03:01:12+00:00",
+        "0000-c67f95485dce-scope-boosting-llm-efficiency-with-scoped-position-encoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1018": {
+      "order": [
+        "2026-11-24T03:02:48+00:00",
+        "0000-e2ef0dd2ed4d-flare-fine-grained-length-aware-routing-for-resource-efficient-heterogeneous-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.23919/DATE54114.2022.9774692": {
+      "order": [
+        "2026-11-24T03:04:25+00:00",
+        "2022-51ecca33c669-dtqatten-leveraging-dynamic-token-based-quantization-for-efficient-attention-architecture.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2411.17773": {
+      "order": [
+        "2026-11-24T03:06:00+00:00",
+        "2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66688,6 +66738,21 @@
     "doi:10.18653/v1/2026.acl-long.1864": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-812fc13a8ba3-adamix-adaptive-mixing-for-short-and-long-reasoning-adapters.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-812fc13a8ba3-adamix-adaptive-mixing-for-short-and-long-reasoning-adapters.md"
+    ],
+    "doi:10.18653/v1/2026.findings-acl.1241": [
+      "papers/inference/99-other-inference-systems/2026-ba3a8b36c1eb-look-and-think-efficient-multimodal-reasoning-via-modality-decoupled-com.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1650": [
+      "papers/inference/99-other-inference-systems/2026-c67f95485dce-scope-boosting-llm-efficiency-with-scoped-position-encoding.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1018": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-e2ef0dd2ed4d-flare-fine-grained-length-aware-routing-for-resource-efficient-heterogen.md"
+    ],
+    "doi:10.23919/date54114.2022.9774692": [
+      "papers/inference/99-other-inference-systems/2022-51ecca33c669-dtqatten-leveraging-dynamic-token-based-quantization-for-efficient-atten.md"
+    ],
+    "arxiv:2411.17773": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.md"
     ]
   }
 }

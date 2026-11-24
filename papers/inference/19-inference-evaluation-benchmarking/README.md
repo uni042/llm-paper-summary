@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（229本）
+## 自動生成の論文一覧（230本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -645,7 +645,7 @@
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：34  
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
 
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  
@@ -889,6 +889,10 @@
 - **2024-11 · [PPLLaVA: Varied Video Sequence Understanding With Prompt Guidance](2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   指示文と各視覚トークンの関連度を重みに使う三次元畳み込み型プーリングで動画トークンを十八倍まで圧縮し、大規模動画ベンチマークで元モデルを上回る正解率と約三分の一の処理時間を両立した。テキスト符号器の文脈拡張が長い指示への対応を担う。
+
+- **2024-11 · [Efficient Multi-modal Large Language Models via Visual Token Grouping](2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  事前学習済みViTの中で意味トークンへ画像領域を集約させ、Gumbel-Softmaxの割り当てで視覚トークンを意味グループごとに統合し、LLaVA-1.5の視覚トークンを576から128へ減らして性能維持率97.5パーセントと推論時間27パーセント超削減を両立する手法。
 
 - **2024-10 · [LLMProxy: Reducing Cost to Access Large Language Models](2024-2410.11857-llmproxy-reducing-cost-to-access-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

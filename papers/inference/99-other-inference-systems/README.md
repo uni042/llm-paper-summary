@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1448本）
+## 自動生成の論文一覧（1451本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1826,6 +1826,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
 
+- **2026-07 · [SCOPE: Boosting LLM Efficiency with Scoped Position Encoding](2026-c67f95485dce-scope-boosting-llm-efficiency-with-scoped-position-encoding.md)**  
+  実装：[✓](https://github.com/oncemoe/ScoPE) ・ リポジトリ内被引用：0  
+  注意ヘッドごとに指数的に広がる振り返り範囲を与える構造的疎性を位置符号化そのものとして使う方式で、算術的な位置信号なしに長さ外挿と検索精度をRoPEより高め、長文脈プリフィルを約2倍速くする。
+
 - **2026-07 · [Saturation Makes Quantization Error Additive: A Coverage Model with a Certificate](2026-2607.12266-saturation-makes-quantization-error-additive-a-coverage-model-with-a-cer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   量子化損傷は損失の飽和のためほぼ加法的に振る舞うことを実測と理論で示し、孤立感度が構成損失を71から376パーセント過大評価する一方、層数+1パラメータの予測器が同一メモリ配分でModelOptよりKLを17から21パーセント下げた。
@@ -1881,6 +1885,10 @@
 - **2026-07 · [Multi-Mask Diffusion Language Models for Few-Step Generation](2026-2607.19686-multi-mask-diffusion-language-models-for-few-step-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   マスクを複数化し各トークンに指定マスクを持たせることで終端のエントロピー潰れを解消し、離散状態のまま少ステップ生成向けの整合性蒸留を可能にする拡散言語モデルの枠組み。
+
+- **2026-07 · [Look and Think: Efficient Multimodal Reasoning via Modality-Decoupled Compression](2026-ba3a8b36c1eb-look-and-think-efficient-multimodal-reasoning-via-modality-decoupled-com.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチモーダル推論を画像を見るステップと文章で考えるステップへ分け、考える間は視覚トークンを文脈から外し、終わったステップを圧縮することで、精度をほぼ保ったまま文脈長を6割前後削る微調整型の効率化。
 
 - **2026-07 · [LogbQuant: Quantizing Language Models in Logarithmic Space](2026-2607.01127-logbquant-quantizing-language-models-in-logarithmic-space.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3389,7 +3397,7 @@
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：59  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -3404,13 +3412,13 @@
   実装：✓ ・ リポジトリ内被引用：49  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
+- **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：46  
+  Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
+
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
   実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：45  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
-
-- **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：45  
-  Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：40  
@@ -3493,7 +3501,7 @@
   MiniMax-M1は、推論時に長い思考過程を生成する大規模言語モデルで、生成トークンが増えるほど従来のSoftmax注意の計算・記憶費用が膨らむ問題に対処する。モデル全体は4560億パラメータ、トークンごとの活性化は459億パラメータの混合専門家モデル（Mixture of エキスパート、MoE）である。
 
 - **2025-05 · [Let LRMs Break Free from Overthinking via Self-Braking Tuning](2025-2505.14604-let-lrms-break-free-from-overthinking-via-self-braking-tuning.md)**  
-  実装：[✓](https://github.com/ZJU-REAL/Self-Braking-Tuning) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/ZJU-REAL/Self-Braking-Tuning) ・ リポジトリ内被引用：9  
   従来の出力トークン予算や推論時の外部停止判定では、問題の難しさと必要な推論深度を一律に扱ったり、追加の判定機構が必要になったりする。
 
 - **2025-04 · [PLD+: Accelerating LLM Inference by Leveraging Language Model Artifacts](2025-1e04c2f7fc65-pld-accelerating-llm-inference-by-leveraging-language-model-artifacts.md)**  
@@ -5385,7 +5393,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：110  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：111  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -5666,6 +5674,10 @@
   実装：[✓](https://github.com/JunKong5/MPEE) ・ リポジトリ内被引用：0  
   層を抜ける縦の早期終了に、クラスアテンションで情報量の少ないトークンを融合トークンへ畳む横の早期終了を組み合わせ、分類器メモリと重み付き自己蒸留で浅い分類器の弱さを補って、GLUEで最大4.4倍のFLOPs削減を得る統合方式。
 
+- **2022-03 · [DTQAtten: Leveraging Dynamic Token-based Quantization for Efficient Attention Architecture](2022-51ecca33c669-dtqatten-leveraging-dynamic-token-based-quantization-for-efficient-atten.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  トークン重要度に応じて0／4／8ビットへ動的に振り分ける混合精度量子化と、同精度トークンの並べ替えでストールを消す可変速シストリックアレイを一体設計し、精度を保ったまま注意計算を高速化する。
+
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerの注意機構では、各入力位置が他の位置へどれだけ注意を向けるかを表す重みを計算し、その重みに基づいて値ベクトルを集約する。BERT、DistilBERT、Longformerに適用した実験では、GLUEの分類・類似度評価で精度をおおむね維持しつつ注意演算の計算量を大幅に減らせると報告する。
@@ -5765,7 +5777,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：298  
+  実装：✓ ・ リポジトリ内被引用：299  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

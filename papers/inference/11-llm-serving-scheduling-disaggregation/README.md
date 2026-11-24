@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（632本）
+## 自動生成の論文一覧（633本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1146,6 +1146,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Hybrid SWAの理論的KV削減を本番へ落とすため、Full/SWA二重KVプール、層単位先読み、分散GCache、KV親和ルーティング、プリフィル・デコード・マルチモーダル処理を一体最適化する。
 
+- **2026-07 · [FLARE: Fine-Grained Length-Aware Routing for Resource-Efficient Heterogeneous LLM Serving](2026-e2ef0dd2ed4d-flare-fine-grained-length-aware-routing-for-resource-efficient-heterogen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  出力長からクエリごとの遅延と費用を推定し、精度閾値を満たす候補から資源目的を最小化するモデルを選ぶことで、精度を保ったまま遅延と費用を大幅に削る多モデルルータ。
+
 - **2026-07 · [DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs](2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   中古V100を128台集めた実クラスタを1年運用し、デバイス単位のパイプライン並列で70B提供まで可能にした実証研究。費用優位は大きいが、炭素は電力条件次第で新世代機の40倍超にもなる。
@@ -1688,6 +1692,10 @@
   実装：[✓](https://github.com/kaist-ina/specedge) ・ リポジトリ内被引用：11  
   消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。
 
+- **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  チャットとコード生成のように異なるサービス品質目標（Service Level Objective; SLO）を持つ要求を一つの先着順で処理せず、入力長・予想出力長・要求ごとのSLOから「どの順序・どのバッチなら何件が期限内に終わるか」を推定し、焼きなまし法（シミュレーション Annealing）で優先順を探索する。
+
 - **2025-11 · [Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments](2024-2411.17741-chameleon-adapter-caching-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   多数LoRA提供で生じるアダプタ転送競合と要求時間のばらつきを、動的GPUアダプタキャッシュとサイズ認識型複数キュースケジューリングの協調で抑え、高負荷時のP99初回トークン時間を80.7%削減する。
@@ -1707,10 +1715,6 @@
 - **2025-04 · [Taming the Titans: A Survey of Efficient LLM Inference Serving](2025-2504.19720-taming-the-titans-a-survey-of-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   本論文は、これらを個別の高速化手法として列挙するだけでなく、単一インスタンス・クラスタ・新興用途・補助領域の四層に配置する。
-
-- **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  チャットとコード生成のように異なるサービス品質目標（Service Level Objective; SLO）を持つ要求を一つの先着順で処理せず、入力長・予想出力長・要求ごとのSLOから「どの順序・どのバッチなら何件が期限内に終わるか」を推定し、焼きなまし法（シミュレーション Annealing）で優先順を探索する。
 
 - **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
   実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：10  
