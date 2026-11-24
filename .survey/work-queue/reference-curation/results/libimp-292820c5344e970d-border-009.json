@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-292820c5344e970d-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/dac63849.2025.11133383",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/dac63849.2025.11133383",
+    "identity_tokens": [
+      "DOI:10.1109/dac63849.2025.11133383"
+    ],
+    "reason": "映像生成モデルの3Dフルアテンションのパターンをブロック対角構造へ並べ替え、ブロック単位混合精度量子化と専用PEアレイでCogVideoXを高速化するハードウェア・ソフトウェア協調設計。アテンション量子化の機構自体は推論高速化技術だが、対象と評価が映像生成DiT専用でLLM推論の評価がないため。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PARO: Hardware-Software Co-design with Pattern-aware Reorder-based Attention Quantization in Video Generation Models"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-292820c5344e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

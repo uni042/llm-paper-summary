@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2a24a21b5054866-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.17831",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.17831",
+    "identity_tokens": [
+      "arXiv:2610.17831"
+    ],
+    "reason": "コード編集を編集経路の予測として定式化し、変更領域に計算を集中させる並列デコードで低レイテンシな編集予測を行う拡散LLM手法。推論効率化の工夫はあるが、対象がIDEのコード編集予測というタスク特化の応用であり、汎用の推論システム機構としての評価ではないため。",
+    "first_checked_at": "2026-11-24T04:25:43+00:00",
+    "last_checked_at": "2026-11-24T04:25:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Diff Diffusion: Predicting Edit Paths with Diffusion Models for Efficient Code Editing"
+  },
+  "processed_at": "2026-11-24T04:25:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2a24a21b505",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

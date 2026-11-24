@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6dcb5e6d84203eff-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:b28e8a65316e52aec7e4116c6ad799819a27e9a2",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:b28e8a65316e52aec7e4116c6ad799819a27e9a2",
+    "identity_tokens": [
+      "SemanticScholar:b28e8a65316e52aec7e4116c6ad799819a27e9a2"
+    ],
+    "reason": "拡散Transformer（画像生成）向けに、非重要ブロックの注意スコアの分布安定性を利用してスキップしたブロックをTaylor展開で近似補償する区分的疎注意PISAを提案するもので、対象は視覚生成モデルでありLLM推論への適用は示されていない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "PISA: Piecewise Sparse Attention Is Wiser for Efficient Diffusion Transformers"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6dcb5e6d8420",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

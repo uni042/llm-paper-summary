@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6dcb5e6d84203eff-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37976",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37976",
+    "identity_tokens": [
+      "arXiv:2609.37976"
+    ],
+    "reason": "思考モデルの推論能力が非思考モデルの主特異方向の零空間成分に宿ることを示し、両チェックポイントをスペクトル的に合成して思考トークン量を減らす学習不要なS3を提案するが、機構はモデル合成というモデル側の操作であり、推論システム上でのレイテンシ等の実測は要旨では確認できない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "S3: Spectral Null-Space Swap Makes Reasoning Models Efficient"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6dcb5e6d8420",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

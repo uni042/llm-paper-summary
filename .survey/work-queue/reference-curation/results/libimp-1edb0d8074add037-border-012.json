@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1edb0d8074add037-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.21991",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.21991",
+    "identity_tokens": [
+      "arXiv:2509.21991"
+    ],
+    "reason": "低解像度で関連領域を特定し、その領域だけを原解像度で処理する2段階の粗密パイプラインで、視覚トークン数を抑えて高解像度VLM推論の計算コストを削減する手法。推論効率化の機構は具体的だが、対象が視覚言語モデルの視覚処理に限られ、LLMサービング一般への適用は確認できないため。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ERGO: Efficient High-Resolution Visual Understanding for Vision-Language Models"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1edb0d8074ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

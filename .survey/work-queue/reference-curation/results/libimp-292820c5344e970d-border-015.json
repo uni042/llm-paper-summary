@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-292820c5344e970d-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.03102",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.03102",
+    "identity_tokens": [
+      "arXiv:2606.03102"
+    ],
+    "reason": "テスト時スケーリングのサンプリング継続・停止をマルコフ決定過程として定式化し、答えの統計だけを使う軽量RLコントローラで正確さ・レイテンシ・計算コストのトレードオフを制御する手法。推論時の計算配分を扱うが、サービング機構ではなく推論タスク単位の方策学習であり、実行基盤への統合評価がないため。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Small RL Controller, Large Language Model: RL-Guided Adaptive Sampling for Test-Time Scaling"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-292820c5344e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

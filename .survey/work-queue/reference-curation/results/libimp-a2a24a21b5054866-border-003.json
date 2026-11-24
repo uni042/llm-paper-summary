@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2a24a21b5054866-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.11886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.11886",
+    "identity_tokens": [
+      "arXiv:2606.11886"
+    ],
+    "reason": "外部信号のクロックに同期して生成を行うフレーム同期ストリーミング推論のシステムStreamMUSEを、クライアント・サーバ構成と往復遅延のモデル化とともに提示する。推論システムの提案ではあるが、実証はライブ音楽伴奏という単一の創作応用に限られ、LLMサービング一般での評価は要旨に乏しいため。",
+    "first_checked_at": "2026-11-24T04:25:43+00:00",
+    "last_checked_at": "2026-11-24T04:25:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Real-Time Language Model Jamming: A Case Study for Live Music Accompaniment Generation"
+  },
+  "processed_at": "2026-11-24T04:25:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2a24a21b505",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

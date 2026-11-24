@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f41f4ce6c9436ceb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tcsi.2025.3527541",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tcsi.2025.3527541",
+    "identity_tokens": [
+      "DOI:10.1109/tcsi.2025.3527541"
+    ],
+    "reason": "混合粒度スパース性（MGS）によるウィンドウ型ViT向けアルゴリズム・ハードウェア協調アクセラレータで、トークン剪定と専用ハードウェアでViT推論を高速化するが、対象が視覚モデル専用でありLLM推論への直接の適用は要旨から確認できない。",
+    "first_checked_at": "2026-11-24T04:25:43+00:00",
+    "last_checked_at": "2026-11-24T04:25:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Efficient Window-Based Vision Transformer Accelerator via Mixed-Granularity Sparsity"
+  },
+  "processed_at": "2026-11-24T04:25:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f41f4ce6c943",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

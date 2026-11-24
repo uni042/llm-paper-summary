@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-221e0ddbb75213ce-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.01237",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.01237",
+    "identity_tokens": [
+      "arXiv:2601.01237"
+    ],
+    "reason": "Mamba等の状態空間モデルとLLaMAの長文コンテキストでの計算効率（メモリ・推論速度）を実測比較するベンチマーク研究で、推論効率の計測は含むが対象は代替アーキテクチャの表現効率分析を兼ね、治療対話セッションを題材とする評価であり新規の推論システム技術ではない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Benchmarking the Computational and Representational Efficiency of State Space Models against Transformers on Long-Context Dyadic Sessions"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-221e0ddbb752",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

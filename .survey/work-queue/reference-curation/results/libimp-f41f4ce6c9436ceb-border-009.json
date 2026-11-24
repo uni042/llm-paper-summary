@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f41f4ce6c9436ceb-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.16463",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.16463",
+    "identity_tokens": [
+      "arXiv:2505.16463"
+    ],
+    "reason": "AnchorFormerはアンカートークンとの二部注意で計算量をO(n^2)からO(mn)へ下げる効率的ViTアーキテクチャだが、評価は画像分類・検出・セグメンテーションの視覚タスクに限られ、LLM推論への適用は確認できない。",
+    "first_checked_at": "2026-11-24T04:25:43+00:00",
+    "last_checked_at": "2026-11-24T04:25:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AnchorFormer: Differentiable Anchor Attention for Efficient Vision Transformer"
+  },
+  "processed_at": "2026-11-24T04:25:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f41f4ce6c943",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

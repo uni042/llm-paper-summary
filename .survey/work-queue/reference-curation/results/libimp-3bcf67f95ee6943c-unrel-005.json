@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3bcf67f95ee6943c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/aiware69974.2025.00013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/aiware69974.2025.00013",
+    "identity_tokens": [
+      "DOI:10.1109/aiware69974.2025.00013"
+    ],
+    "reason": "コードLLMについて量子化がメンバーシップ推論によるプライバシーリスクへ与える影響を実証する研究であり、量子化を評価対象とするプライバシー分析であって推論効率化技術ではない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "How Does Quantization Impact Privacy Risk on LLMS for Code?"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3bcf67f95ee6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

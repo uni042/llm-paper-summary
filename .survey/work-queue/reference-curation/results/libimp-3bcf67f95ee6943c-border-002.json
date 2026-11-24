@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3bcf67f95ee6943c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.01601",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.01601",
+    "identity_tokens": [
+      "arXiv:2407.01601"
+    ],
+    "reason": "注意の異常分布（先頭トークンへの過大な注意）をwaiver現象の観点で解析する研究で、KVキャッシュ圧縮等の前提理解には関係するが、提示されるのは機構の分析であり推論システム技術そのものの提案ではない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unveiling and Controlling Anomalous Attention Distribution in Transformers"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3bcf67f95ee6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

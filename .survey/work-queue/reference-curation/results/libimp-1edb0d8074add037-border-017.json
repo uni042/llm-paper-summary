@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1edb0d8074add037-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.14553",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.14553",
+    "identity_tokens": [
+      "arXiv:2502.14553"
+    ],
+    "reason": "階層型デコーダで500万バイト級の文脈を単一GPUで学習可能にし、生成効率がほぼ線形であると述べるバイト言語モデルのアーキテクチャ研究。長系列生成の効率には触れるが、主貢献はアーキテクチャと学習可能性であり、推論時のメモリ・スループットの機構的評価は要旨に乏しいため。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multiscale Byte Language Models - A Hierarchical Architecture for Causal Million-Length Sequence Modeling"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1edb0d8074ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

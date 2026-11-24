@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-221e0ddbb75213ce-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.10664",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.10664",
+    "identity_tokens": [
+      "arXiv:2605.10664"
+    ],
+    "reason": "GCADは活性化ステアリングにおけるKVキャッシュ汚染を失敗要因として同定し注意レベルの介入で誘導の持続性を高める手法だが、目的はペルソナ誘導の品質・一貫性であり、KVキャッシュを扱っても推論効率化の技術ではない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Prompt-Activation Duality: Improving Activation Steering via Attention-Level Interventions"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-221e0ddbb752",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-93ba723da7a0f575-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:db8e837f22a4cc08146d4bbc040bd93cb51a5f99",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:db8e837f22a4cc08146d4bbc040bd93cb51a5f99",
+    "identity_tokens": [
+      "SemanticScholar:db8e837f22a4cc08146d4bbc040bd93cb51a5f99"
+    ],
+    "reason": "状態空間双対アルゴリズムへの内積型位置符号化の導入、動的マスク付き内関数注意、クロスドメインMoEを組み合わせた基盤モデルアーキテクチャの提案で、効率性も謳うが検証は言語モデリングの有効性が中心であり、推論時の実測は要旨では確認できない。",
+    "first_checked_at": "2026-11-24T04:25:42+00:00",
+    "last_checked_at": "2026-11-24T04:25:42+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Wonderful Matrices: More Efficient and Effective Architecture for Language Modeling Tasks"
+  },
+  "processed_at": "2026-11-24T04:25:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93ba723da7a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
