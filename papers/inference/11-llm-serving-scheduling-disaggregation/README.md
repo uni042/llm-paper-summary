@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（635本）
+## 自動生成の論文一覧（636本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2103,6 +2103,10 @@
 - **2025-07 · [InferLog: Accelerating LLM Inference for Online Log Parsing via ICL-oriented Prefix Caching](2025-2507.08523-inferlog-accelerating-llm-inference-for-online-log-parsing-via-icl-orien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ログ解析の文脈内学習の例と順序を過去リクエストの接頭辞に合わせてKVキャッシュ再利用を高め、メタ学習でvLLM設定も合わせることで、精度を保ったままp95遅延とスループットを大きく改善する推論最適化。
+
+- **2025-07 · [Exploring the Dynamic Scheduling Space of Real-Time Generative AI Applications on Emerging Heterogeneous Systems](2025-2507.14715-exploring-the-dynamic-scheduling-space-of-real-time-generative-ai-applic.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  実時間モデルと生成AIを同時実行するRTGenワークロードをAMD Ryzen AI実機で全バックエンド測定し、最適実行先がモデルと生成段階で逆転すること、EDFはLLMを飢餓させFCFSは期限違反57.6%に達すること、初回トークン優先のFTFがTTFTを保ちつつ違反率を約半減させることを示したスケジューリング空間の特性評価。
 
 - **2025-06 · [Optimizing MoE Routers: Design, Implementation, and Evaluation in Transformer Models](2025-2506.16419-optimizing-moe-routers-design-implementation-and-evaluation-in-transform.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

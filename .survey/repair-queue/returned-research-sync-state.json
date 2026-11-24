@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2af9b7d5121fdae2cf55bfdb2bc03564b5c75d59",
+  "base_commit": "20ab3f5ba2a650d408160ead4f50da2028a6c50b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -373,17 +373,22 @@
     "2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large-language-model-inference.json",
     "2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.json",
     "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json",
+    "2025-2507.14715-exploring-the-dynamic-scheduling-space-of-real-time-generative-ai-applications-on-emerging-heterogeneous-systems.json",
+    "2025-2507.17245-distrattention-an-efficient-and-flexible-self-attention-mechanism-on-modern-gpus.json",
     "2025-2507.17618-simlens-for-early-exit-in-large-language-models.json",
+    "2025-2508.01540-magicvl-2b-empowering-vision-language-models-on-mobile-devices-with-lightweight-visual-encoders-via-curriculum-learning.json",
     "2025-2508.03726-hierarchical-verification-of-speculative-beams-for-accelerating-llm-inference.json",
     "2025-2508.03760-flashcommunication-v2-bit-splitting-and-spike-reserving-for-any-bit-communication.json",
     "2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in-efficient-llm-reasoning.json",
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
     "2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.json",
     "2025-2508.09471-eggs-ptp-an-expander-graph-guided-structured-post-training-pruning-method-for-large-language-models.json",
+    "2025-2508.12590-energy-efficient-wireless-llm-inference-via-uncertainty-and-importance-aware-speculative-decoding.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
     "2025-2508.15828-z-pruner-post-training-pruning-of-large-language-models-for-efficiency-without-retraining.json",
     "2025-2508.16151-hardwired-neurons-language-processing-units-as-general-purpose-cognitive-substrates.json",
     "2025-2508.16680-calr-corrective-adaptive-low-rank-decomposition-for-efficient-llm-layer-compression.json",
+    "2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-reasoning-large-language-models.json",
     "2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with-hybrid-ckks-and-mpc.json",
     "2025-2509.00078-chipchat-low-latency-cascaded-conversational-agent-in-mlx.json",
     "2025-2509.03054-calibration-and-transformation-free-weight-only-llms-quantization-via-dynamic-grouping.json",
@@ -52809,6 +52814,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2507.14715": {
+      "order": [
+        "2026-11-24T03:39:34+00:00",
+        "2025-2507.14715-exploring-the-dynamic-scheduling-space-of-real-time-generative-ai-applications-on-emerging-heterogeneous-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.17245": {
+      "order": [
+        "2026-11-24T03:41:08+00:00",
+        "2025-2507.17245-distrattention-an-efficient-and-flexible-self-attention-mechanism-on-modern-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.01540": {
+      "order": [
+        "2026-11-24T03:42:42+00:00",
+        "2025-2508.01540-magicvl-2b-empowering-vision-language-models-on-mobile-devices-with-lightweight-visual-encoders-via-curriculum-learning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.12590": {
+      "order": [
+        "2026-11-24T03:44:16+00:00",
+        "2025-2508.12590-energy-efficient-wireless-llm-inference-via-uncertainty-and-importance-aware-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2508.17803": {
+      "order": [
+        "2026-11-24T03:45:50+00:00",
+        "2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-reasoning-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66950,6 +67000,21 @@
     "arxiv:2506.23635": [
       "papers/inference/12-moe-parallelism-communication/2025-2506.23635-towards-building-private-llms-exploring-multi-node-expert-parallelism-on.md",
       "papers/inference/12-moe-parallelism-communication/2025-2506.23635-towards-building-private-llms-exploring-multi-node-expert-parallelism-on.md"
+    ],
+    "arxiv:2507.14715": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.14715-exploring-the-dynamic-scheduling-space-of-real-time-generative-ai-applic.md"
+    ],
+    "arxiv:2507.17245": [
+      "papers/inference/99-other-inference-systems/2025-2507.17245-distrattention-an-efficient-and-flexible-self-attention-mechanism-on-mod.md"
+    ],
+    "arxiv:2508.01540": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2508.01540-magicvl-2b-empowering-vision-language-models-on-mobile-devices-with-ligh.md"
+    ],
+    "arxiv:2508.12590": [
+      "papers/inference/05-speculative-decoding-moe/2025-2508.12590-energy-efficient-wireless-llm-inference-via-uncertainty-and-importance-a.md"
+    ],
+    "arxiv:2508.17803": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-.md"
     ]
   }
 }

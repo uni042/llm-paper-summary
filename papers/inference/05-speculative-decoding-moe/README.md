@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（435本）
+## 自動生成の論文一覧（436本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1442,6 +1442,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   時間方向の逐次生成をモデル内部の層方向のカスケードへ移す設計である。原著Table 1のgreedy生成では、LLaMA3.1-8BのEAGLE-3平均高速化3.94倍に対してFastEagle4.74倍、Vicuna-13Bでは5.01倍から5.67倍となる。
 
+- **2025-08 · [Energy-Efficient Wireless LLM Inference via Uncertainty- and Importance-Aware Speculative Decoding](2025-2508.12590-energy-efficient-wireless-llm-inference-via-uncertainty-and-importance-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  不確実性と注意由来の重要度の両条件を満たすトークンだけをクラウド検証へ送る機会的スキップで、無線ハイブリッド推論の通信とエネルギーを4割前後削る投機的デコードの改良。
+
 - **2025-08 · [CARD: A Cache-Assisted Parallel Speculative Decoding Framework via Query-and-Correct Paradigm for Accelerating LLM Inference](2025-2508.04462-card-cache-assisted-parallel-speculative-decoding-for-efficient-large-la.md)**  
   実装：[✓](https://github.com/hunzhizi/CARD) ・ リポジトリ内被引用：0  
   CARDは、大規模言語モデル（LLM）の投機的復号（投機的復号）で、ドラフトモデルが候補を作り終わるまで対象モデルが待ち、対象モデルが検証している間ドラフトモデルが待つという相互待機を減らす方式である。
@@ -1727,7 +1731,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
-  実装：✓ ・ リポジトリ内被引用：162  
+  実装：✓ ・ リポジトリ内被引用：163  
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
 - **2023-11 · [REST: Retrieval-Based Speculative Decoding](2023-2311.08252-rest-retrieval-speculative-decoding.md)**  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（230本）
+## 自動生成の論文一覧（232本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -633,7 +633,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：49  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
@@ -795,6 +795,14 @@
 - **2025-08 · [Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking](2025-2508.10251-meta-metrics-and-best-practices-for-system-level-inference-performance-b.md)**  
   実装：[✓](https://github.com/IBM/fmwork) ・ リポジトリ内被引用：0  
   入力トークン長、出力トークン長、同時実行数、重み精度、テンソル並列数、推論エンジン、スケジューラ設定を変えると、初回トークン遅延（TTFT）、トークン間遅延（ITL）、総スループット（THP）は異なる。
+
+- **2025-08 · [MagicVL-2B: Empowering Vision-Language Models on Mobile Devices with Lightweight Visual Encoders via Curriculum Learning](2025-2508.01540-magicvl-2b-empowering-vision-language-models-on-mobile-devices-with-ligh.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  93Mの軽量視覚エンコーダとトークン単位の動的解像度でスマホ上の視覚処理を軽くし、複雑さで段階化したカリキュラム学習で精度を補う、モバイル向け視覚言語モデルの設計と実機評価。
+
+- **2025-08 · [DRQA: Dynamic Reasoning Quota Allocation for Controlling Overthinking in Reasoning Large Language Models](2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  バッチ推論で生じる資源競合による推論圧縮を、A/B/C判定の選好データとGRPOで単一質問推論へ移植し、正解率を上げながらトークンを約31%削減した過剰思考の制御手法。
 
 - **2025-05 · [Towards Efficient Key-Value Cache Management for Prefix Prefilling in LLM Inference](2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
