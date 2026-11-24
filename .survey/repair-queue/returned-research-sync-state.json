@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e8950f8092dd703080a3f88d792368a1be56ec7d",
+  "base_commit": "e83383c9ea1be009e166164c766c86c8cd0a7ab8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1102,16 +1102,21 @@
     "2026-2609.07008-redknot-mla-multi-head-offline-online-reuse-for-deepseek-v4-long-context-serving.json",
     "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
     "2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.json",
+    "2026-2609.09883-forward-free-llm-depth-pruning-via-weight-redundancy.json",
     "2026-2609.09989-stable-answers-unfinished-reasoning-self-consensus-early-exit-signal.json",
     "2026-2609.10264-maverick-private-and-verifiable-llm-inference-made-practical-via-matrix-vector.json",
     "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
+    "2026-2609.10441-convmem-convolutional-memory-for-long-context-reasoning.json",
     "2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.json",
+    "2026-2609.11192-flexcomp-one-model-for-every-ratio-in-context-compression.json",
     "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
     "2026-2609.15838-per-matrix-optimality-is-not-enough-three-level-optimization-for-low-rank-llm-compression.json",
     "2026-2609.15992-optimal-model-activation-policies-for-inference-networks-of-llms.json",
     "2026-2609.16915-rosetta-efficient-and-accurate-privacy-preserving-llm-decoding-via-hybrid-ckks-tfhe.json",
+    "2026-2609.17346-where-should-a-document-live-context-representations-or-parameters.json",
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
+    "2026-2609.18131-colla-q-toward-collaborative-experts-in-moe-quantization-via-minimax-precision-balancing.json",
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
     "2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-energy-and-performance-of-llm-test-time-scaling.json",
     "2026-2609.21483-weave-fine-grained-dynamic-sm-scheduling-in-an-moe-megakernel-for-compute-communication-overlap.json",
@@ -53891,6 +53896,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.09883": {
+      "order": [
+        "2026-11-24T07:53:32+00:00",
+        "2026-2609.09883-forward-free-llm-depth-pruning-via-weight-redundancy.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.10441": {
+      "order": [
+        "2026-11-24T07:55:10+00:00",
+        "2026-2609.10441-convmem-convolutional-memory-for-long-context-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.11192": {
+      "order": [
+        "2026-11-24T07:56:48+00:00",
+        "2026-2609.11192-flexcomp-one-model-for-every-ratio-in-context-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.17346": {
+      "order": [
+        "2026-11-24T07:58:24+00:00",
+        "2026-2609.17346-where-should-a-document-live-context-representations-or-parameters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.18131": {
+      "order": [
+        "2026-11-24T08:00:01+00:00",
+        "2026-2609.18131-colla-q-toward-collaborative-experts-in-moe-quantization-via-minimax-precision-balancing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68464,6 +68514,21 @@
     "arxiv:2608.28726": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2608.28726-pro-router-token-aware-progressive-model-routing-with-adaptive-edge-clou.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2608.28726-pro-router-token-aware-progressive-model-routing-with-adaptive-edge-clou.md"
+    ],
+    "arxiv:2609.09883": [
+      "papers/inference/99-other-inference-systems/2026-2609.09883-forward-free-llm-depth-pruning-via-weight-redundancy.md"
+    ],
+    "arxiv:2609.10441": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.10441-convmem-convolutional-memory-for-long-context-reasoning.md"
+    ],
+    "arxiv:2609.11192": [
+      "papers/inference/99-other-inference-systems/2026-2609.11192-flexcomp-one-model-for-every-ratio-in-context-compression.md"
+    ],
+    "arxiv:2609.17346": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.17346-where-should-a-document-live-context-representations-or-parameters.md"
+    ],
+    "arxiv:2609.18131": [
+      "papers/inference/06-moe-quantization-compression/2026-2609.18131-colla-q-toward-collaborative-experts-in-moe-quantization-via-minimax-pre.md"
     ]
   }
 }

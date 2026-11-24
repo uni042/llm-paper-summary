@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（30本）
+## 自動生成の論文一覧（31本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -51,6 +51,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2026-09 · [When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models](2026-2609.04453-expert-pruning-over-dispersed-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   強い負荷分散学習でルータ重要度が一様化したMoEでは通常の枝刈り基準が破綻することを示し、最悪影響領域を反復保護するMESAで25%専門家削減時の能力偏りを抑える。
+
+- **2026-09 · [Colla-Q: Toward Collaborative Experts in MoE Quantization via Minimax Precision Balancing](2026-2609.18131-colla-q-toward-collaborative-experts-in-moe-quantization-via-minimax-pre.md)**  
+  実装：[✓](https://github.com/mmai-laboratory/Colla_Q) ・ リポジトリ内被引用：0  
+  MoEを専門家の集合体とみなし、正解ラベルなしで測る活性値エントロピーと最悪専門家を底上げするミニマックス配分で量子化後の専門家性能を揃え、低ビットでも性能と較正データへの安定性を保つMoE量子化。
 
 - **2026-08 · [Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving](2026-2608.08910-tied-trit-planes.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -121,7 +125,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   SEER-MoEは、事前学習済みの混合専門家モデル（Mixture of エキスパート、MoE）のメモリ消費とトークン当たりの演算量を、別々の制約として削減する方式である。Mixtral 8×7Bは通常各トークンを二つの専門家へ送り、専門家部分の演算は推論全体の約55%を占める。
 
 - **2024-06 · [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：29  
   一律ビット幅ではなく、注意層・共有専門家・使用頻度・ブロック位置・線形重みの外れ値を手掛かりに精度を配分する効果を、同じ平均ビット予算で比較したベンチマーク。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  

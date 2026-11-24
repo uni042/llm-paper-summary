@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（245本）
+## 自動生成の論文一覧（246本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -229,6 +229,10 @@
 - **2026-09 · [Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization](2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークン枝刈りを、残すトークンの順位付けではなく、捨てるトークンを誰が代表するかという被覆最適化として定式化し、強い圧縮ほど既存方式を引き離した学習不要の枝刈り研究。
+
+- **2026-09 · [Where Should a Document Live: Context, Representations, or Parameters?](2026-2609.17346-where-should-a-document-live-context-representations-or-parameters.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文書知識の置き場として文脈、KV表現、パラメータを保存量を揃えて統制比較し、KV型のCartridgesが単一文書と複数文書の両方で最も正確だが忘却も伴うこと、Compactionとパラメータ型は複数文書の合成で崩れることを明らかにした比較研究。
 
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

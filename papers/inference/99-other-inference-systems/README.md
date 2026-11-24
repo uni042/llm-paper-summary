@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1505本）
+## 自動生成の論文一覧（1507本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -327,6 +327,10 @@
 - **2026-05 · [Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs](2026-2605.12460-multi-stream-llms-unblocking-language-models-with-parallel-streams-of-th.md)**  
   実装：[✓](https://github.com/seal-rg/streaming) ・ リポジトリ内被引用：2  
   Multi-Stream LLMsは、利用者、回答、内部思考、監査などの役割を独立したトークン列へ割り当て、一回の前向き計算で各列の次トークンを同時に生成するモデル形式を提案する。
+
+- **2026-05 · [Locality-Aware Redundancy Pruning for LLM Depth Compression](2026-2605.27786-locality-aware-redundancy-pruning-for-llm-depth-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  LoRP（Locality-Aware Redundancy Pruning）は、事前学習済み大規模言語モデルのTransformerブロックを、追加学習なしに削除する深さ枝刈り（depth 枝刈り）方式である。
 
 - **2026-05 · [IO-SVD: Input-Output Whitened SVD for Adaptive-Rank LLM Compression](2026-2605.15626-io-svd-input-output-whitened-svd-for-adaptive-rank-llm-compression.md)**  
   実装：[✓](https://github.com/mint-vu/IO-SVD) ・ リポジトリ内被引用：2  
@@ -671,10 +675,6 @@
 - **2026-05 · [MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization](2026-2605.24019-mgvq-synergizing-multi-dimensional-sensitivity-aware-and-gradient-hessia.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   感度の融合で重み行列の塊ごとにビットを配り、一次の勾配のずれまで補償する視覚言語モデル向けベクトル量子化を提案し、2ビットで最良の既存方式を1.3から4.9点上回った。
-
-- **2026-05 · [Locality-Aware Redundancy Pruning for LLM Depth Compression](2026-2605.27786-locality-aware-redundancy-pruning-for-llm-depth-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  LoRP（Locality-Aware Redundancy Pruning）は、事前学習済み大規模言語モデルのTransformerブロックを、追加学習なしに削除する深さ枝刈り（depth 枝刈り）方式である。
 
 - **2026-05 · [Gated Subspace Inference for Transformer Acceleration](2026-2605.03109-gated-subspace-inference-for-transformer-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1594,6 +1594,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   注意の共同目的で再構成とビット配分を統一するJABを検証し、注意だけでは感度配分が効く一方、全モデルでは行列の役割に基づく単純なオフセット規則が曲率基準を上回ることを示した混合精度量子化の分析研究。
 
+- **2026-09 · [Forward-Free LLM Depth Pruning via Weight Redundancy](2026-2609.09883-forward-free-llm-depth-pruning-via-weight-redundancy.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  較正データも順伝播も使わず、チェックポイントの重み同士の類似度（射影のCKAと相対スケール）から層間冗長性を推定して深さ枝刈りの除去ブロックを決めるWRPを提案し、活性値ベース方式に迫る精度を順伝播なしで達成した。
+
 - **2026-09 · [Fork-dLLM: Avoiding the Flexibility Trap in Diffusion Language Models](2026-2609.39859-fork-dllm-avoiding-the-flexibility-trap-in-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの信頼度型サンプラが分岐位置を後回しにして多様性を失う問題に対し、不確かなフォールバックステップでのみ左端確定の自己回帰順序へ切り替える混成サンプラで、自己回帰型と同等のpass@kを2〜3倍少ないモデル評価で達成し、同じ原理をGRPO後学習にも広げる研究。
@@ -1601,6 +1605,10 @@
 - **2026-09 · [FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward](2026-2609.33410-foldattention-declared-reference-softmax-for-fast-decode-and-determinist.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の自己回帰デコードでは、次の一トークンを作るたびに伸び続けるKVキャッシュを参照する。後方計算では、CTAごとの部分勾配を共通整数格子へ丸めて加算することで、加算順序に依存しない決定的な勾配を得る。
+
+- **2026-09 · [FlexComp: One Model for Every Ratio in Context Compression](2026-2609.11192-flexcomp-one-model-for-every-ratio-in-context-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文脈圧縮の率を学習から切り離し、予算を入力ごとにサンプリングする学習で1モデルを任意率対応にし、信頼度カスケードか予算予測器で入力ごとに率を選ぶことで、精度をほぼ保って平均最大266倍の圧縮とKVキャッシュ半減を実現する。
 
 - **2026-09 · [Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign](2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md)**  
   実装：[✓](https://github.com/CrucibleComputingGroup/fengshui) ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（339本）
+## 自動生成の論文一覧（340本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -485,6 +485,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering](2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MI250上のDeepSeek-V4-Flashで数値不具合を修復し、CDNA2向けカーネル・通信・事前充填最適化によりTP8復号をC64で1327.10トークン/秒まで実測した。
+
+- **2026-09 · [ConvMem: Convolutional Memory for Long-Context Reasoning](2026-2609.10441-convmem-convolutional-memory-for-long-context-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  質問付きの凍結モデルをカーネルとして文書を重なり窓で並列走査し、要約を対数深さの木で集約する学習不要の長文推論で、分布外課題でも強化学習型メモリの過適合を避けて精度を保つ。
 
 - **2026-09 · [AttnFuse: A Composable DSL for Compiling Attentions to Fused GPU Kernels](2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
