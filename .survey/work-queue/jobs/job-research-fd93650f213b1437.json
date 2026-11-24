@@ -35,10 +35,15 @@
   "selection_reason": "MaskLoRAはLoRA低ランク部分空間の表現シフトでトークンをスコアし微分可能ゲートでマスクすることで、GLUE等で精度を保ちつつ1.3-2.6倍のエンドツーエンド高速化を実現する言語モデル推論効率化手法。",
   "semantic_scholar_id": "fcd5f63a0fda589d84679f3b1ab4a3dda9a7c7d3",
   "source_url": "https://doi.org/10.18653/v1/2026.findings-eacl.300",
-  "status": "ready",
+  "status": "superseded",
   "title": "MaskLoRA: Low-Rank Subspace-Induced Token Masking for Efficient and Faithful Language Models",
   "type": "research",
   "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T02:56:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-0acd4305ac8f-masklora-low-rank-subspace-induced-token-masking-for-efficient-and-faith.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.findings-eacl.300",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

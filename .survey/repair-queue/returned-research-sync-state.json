@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4ac3f511a95ffd00150f739c63bd67a03745f3de",
+  "base_commit": "2bd1599fb067ef9935cb47af027d2a9222a164ba",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -32,6 +32,7 @@
     "0000-0427ffa977bc-smart-routing-cost-effective-multi-llm-serving-in-aios.json",
     "0000-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed-long-context-summarization.json",
     "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json",
+    "0000-0acd4305ac8f-masklora-low-rank-subspace-induced-token-masking-for-efficient-and-faithful-language-models.json",
     "0000-0f876c37e0b4-accelerating-inference-for-pretrained-language-models-by-unified-multi-perspective-early-exiting.json",
     "0000-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.json",
     "0000-10cd8299130f-fast-and-accurate-fisher-guided-quantization-via-efficient-kronecker-factorization.json",
@@ -61,9 +62,12 @@
     "0000-67a90d0976d5-a-multi-engine-dataflow-for-moe-decoding-on-scratchpad-based-tensor-accelerators.json",
     "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json",
     "0000-685f90406825-l-earning-w-hat-m-atters-s-upervising-s-parse-a-ttention-r-outing-with-c-ausal-e-vidence-s-ets.json",
+    "0000-6f8f63691373-hookmoe-a-learnable-performance-compensation-strategy-of-mixture-of-experts-for-llm-inference-acceleration.json",
+    "0000-73146b754a26-firewall-routing-blocking-leads-to-better-hybrid-inference-for-llms.json",
     "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
     "0000-770e9fc7a26c-uva-dare-digital-academic-repository-swiftsnni-optimized-scheduling-for-secure-neural-network-inference-snni-on-multi-co.json",
     "0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.json",
+    "0000-812fc13a8ba3-adamix-adaptive-mixing-for-short-and-long-reasoning-adapters.json",
     "0000-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correlation-assessment.json",
     "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json",
     "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json",
@@ -52579,6 +52583,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.findings-eacl.300": {
+      "order": [
+        "2026-11-24T02:48:49+00:00",
+        "0000-0acd4305ac8f-masklora-low-rank-subspace-induced-token-masking-for-efficient-and-faithful-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.emnlp-main.1610": {
+      "order": [
+        "2026-11-24T02:51:12+00:00",
+        "0000-6f8f63691373-hookmoe-a-learnable-performance-compensation-strategy-of-mixture-of-experts-for-llm-inference-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2025.emnlp-main.331": {
+      "order": [
+        "2026-11-24T02:52:47+00:00",
+        "0000-73146b754a26-firewall-routing-blocking-leads-to-better-hybrid-inference-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1864": {
+      "order": [
+        "2026-11-24T02:54:21+00:00",
+        "0000-812fc13a8ba3-adamix-adaptive-mixing-for-short-and-long-reasoning-adapters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66632,6 +66672,18 @@
     "arxiv:2411.12758": [
       "papers/inference/99-other-inference-systems/2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-i.md",
       "papers/inference/99-other-inference-systems/2024-2411.12758-an-exploration-of-the-effect-of-quantisation-on-energy-consumption-and-i.md"
+    ],
+    "doi:10.18653/v1/2026.findings-eacl.300": [
+      "papers/inference/99-other-inference-systems/2026-0acd4305ac8f-masklora-low-rank-subspace-induced-token-masking-for-efficient-and-faith.md"
+    ],
+    "doi:10.18653/v1/2025.emnlp-main.1610": [
+      "papers/inference/99-other-inference-systems/2025-6f8f63691373-hookmoe-a-learnable-performance-compensation-strategy-of-mixture-of-expe.md"
+    ],
+    "doi:10.18653/v1/2025.emnlp-main.331": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-73146b754a26-firewall-routing-blocking-leads-to-better-hybrid-inference-for-llms.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1864": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-812fc13a8ba3-adamix-adaptive-mixing-for-short-and-long-reasoning-adapters.md"
     ]
   }
 }

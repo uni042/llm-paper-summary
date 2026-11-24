@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（227本）
+## 自動生成の論文一覧（229本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -414,6 +414,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   原著はサービス指標の比較研究であり、GPU内部の暗号化処理、PCIe転送、HBM帯域、スケジューラのどれが何%の原因かまで分解したマイクロアーキテクチャ解析ではない。
 
+- **2026-07 · [AdaMix: Adaptive Mixing for Short and Long Reasoning Adapters](2026-812fc13a8ba3-adamix-adaptive-mixing-for-short-and-long-reasoning-adapters.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論の長さと深さを担う2つのLoRAアダプタを別々に強化学習で鍛え、問題の難しさに応じて重みを線形補間することで、考えすぎを削りながら難しい問題の精度も伸ばす適応型推論の枠組み。
+
 - **2026-06 · [The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference](2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一二二言語で推論エネルギーを実機計測し、トークン当たりで最大八・三倍、応答当たり総量で英語比一七九倍の言語間格差があること、その主因が低資源言語でのトークン単価上昇と出力トークン数膨張の掛け算であり、格差がモデル・ハードウェア・課題を変えても残ることを明らかにした。
@@ -735,6 +739,10 @@
 - **2025-11 · [Iris: First-Class Multi-GPU Programming Experience in Triton](2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.md)**  
   実装：[✓](https://github.com/ROCm/iris) ・ リポジトリ内被引用：0  
   対称メモリをTritonのタイル抽象へ持ち込み、計算と通信をタイル単位で重ねる融合カーネルを純粋なPythonとTritonで書ける複数GPU通信ライブラリ。集合通信比で平均1.21倍の高速化。
+
+- **2025-11 · [Firewall Routing: Blocking Leads to Better Hybrid Inference for LLMs](2025-73146b754a26-firewall-routing-blocking-leads-to-better-hybrid-inference-for-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  両モデルを複数回サンプリングして勝率をソフトなラベル化し、強いモデルでも解けないロングテールクエリを弱いモデル側へ遮断するルーター学習。APGRで最大5.29ポイント改善。
 
 - **2025-11 · [CoEdge-RAG: Optimizing Hierarchical Scheduling for Retrieval-Augmented LLMs in Collaborative Edge Computing](2025-2511.05915-coedge-rag-optimizing-hierarchical-scheduling-for-retrieval-augmented-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

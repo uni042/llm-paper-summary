@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1446本）
+## 自動生成の論文一覧（1448本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2770,6 +2770,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   4ビット重み・8ビット活性（W4A8）の推論では、活性の少数の極端な値が量子化範囲を支配する。結果として小さな重みの丸め誤差が増え、活性側の改善を重み側の劣化が相殺する。
 
+- **2026-03 · [MaskLoRA: Low-Rank Subspace-Induced Token Masking for Efficient and Faithful Language Models](2026-0acd4305ac8f-masklora-low-rank-subspace-induced-token-masking-for-efficient-and-faith.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LoRAが各トークンの表現を動かした大きさを重要度の物差しにして不要なトークンを推論から外し、予測の一致を保つ学習と組み合わせることで、根拠の忠実さを保ちながら推論を高速化するトークン選択の仕組み。
+
 - **2026-03 · [LooComp: Leverage Leave-One-Out Strategy to Encoder-only Transformer for Efficient Query-aware Context Compression](2026-2603.09222-loocomp-leverage-leave-one-out-strategy-to-encoder-only-transformer-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし検索件数を増やすと、無関係な文章も入力され、事前充填の計算量、入力トークン費用、モデルの注意の分散が問題になる。生成型の圧縮器は文書を短い文章へ書き換えられるが、圧縮器自体がトークンを逐次生成するため遅延が大きくなる。
@@ -4047,6 +4051,10 @@
 - **2025-11 · [Mosaic Pruning: A Hierarchical Framework for Generalizable Pruning of Mixture-of-Experts Models](2025-2511.19822-mosaic-pruning-a-hierarchical-framework-for-generalizable-pruning-of-mix.md)**  
   実装：[✓](https://github.com/Saul-James/MoP) ・ リポジトリ内被引用：0  
   専門家の機能的な似通いを領域横断の働き方でクラスタリングし、各群から最も代表的な専門家を残すことで、単一コーパス最適化の枝刈りが起こす専門領域での崩壊を避けるMoE枝刈り。
+
+- **2025-11 · [HookMoE: A learnable performance compensation strategy of Mixture-of-Experts for LLM inference acceleration](2025-6f8f63691373-hookmoe-a-learnable-performance-compensation-strategy-of-mixture-of-expe.md)**  
+  実装：[✓](https://github.com/KerwinKai/HookMoE) ・ リポジトリ内被引用：0  
+  MoEの活性化エキスパートを半分以下へ減らす代わりに、感度の高い1層へ小さな学習可能モジュールを挿入して表現のずれを補い、512件の較正だけで精度低下の大半を回復させる事後補償の枠組み。
 
 - **2025-11 · [Focused Chain-of-Thought: Efficient LLM Reasoning via Structured Input Information](2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
