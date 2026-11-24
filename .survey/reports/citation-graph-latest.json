@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T22:08:45+00:00",
+  "generated_at": "2026-11-24T22:14:02+00:00",
   "paper_count": 5489,
-  "edge_count": 69543,
+  "edge_count": 69548,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 30,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -316,7 +316,7 @@
     "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md": 2,
     "papers/inference/03-expert-prefetch/2026-dacc3922b5b4-two-stage-expert-offloading-for-domain-aware-moe-inference.md": 0,
     "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md": 1,
-    "papers/inference/04-conditional-computation/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md": 30,
+    "papers/inference/04-conditional-computation/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md": 31,
     "papers/inference/04-conditional-computation/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md": 52,
     "papers/inference/04-conditional-computation/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md": 75,
     "papers/inference/04-conditional-computation/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md": 54,
@@ -1295,7 +1295,7 @@
     "papers/inference/07-kv-cache-optimization-compression/2025-2510.11292-louiskv-efficient-kv-cache-retrieval-for-long-input-output-sequences.md": 2,
     "papers/inference/07-kv-cache-optimization-compression/2025-2510.12872-kvcomm-online-cross-context-kv-cache-communication-for-efficient-llm-bas.md": 33,
     "papers/inference/07-kv-cache-optimization-compression/2025-2510.13797-breadcrumbs-reasoning-memory-efficient-reasoning-with-compression-beacon.md": 1,
-    "papers/inference/07-kv-cache-optimization-compression/2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md": 22,
+    "papers/inference/07-kv-cache-optimization-compression/2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md": 23,
     "papers/inference/07-kv-cache-optimization-compression/2025-2510.16807-improving-model-representation-and-reducing-kv-cache-via-skip-connection.md": 3,
     "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md": 4,
     "papers/inference/07-kv-cache-optimization-compression/2025-2511.00868-flexicache-leveraging-temporal-stability-of-attention-heads-for-efficient-kv-cache-management.md": 3,
@@ -1970,7 +1970,7 @@
     "papers/inference/09-kernel-runtime-compilation/2024-2404.00242-deft-decoding-with-flash-tree-attention-for-efficient-tree-structured-ll.md": 15,
     "papers/inference/09-kernel-runtime-compilation/2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md": 30,
     "papers/inference/09-kernel-runtime-compilation/2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md": 1,
-    "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md": 27,
+    "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md": 28,
     "papers/inference/09-kernel-runtime-compilation/2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md": 16,
     "papers/inference/09-kernel-runtime-compilation/2024-2405.14597-integer-scale-a-free-lunch-for-faster-fine-grained-quantization-of-llms.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2024-2405.17233-claq-pushing-the-limits-of-low-bit-post-training-quantization-for-llms.md": 0,
@@ -2060,7 +2060,7 @@
     "papers/inference/09-kernel-runtime-compilation/2025-2510.21956-transformer-based-linear-attention-with-optimized-gpu-kernel-implementat.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2025-2510.25977-neuronmm-high-performance-matrix-multiplication-for-llm-inference-on-aws.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2025-2511.00576-flasheva-accelerating-llm-inference-via-efficient-attention.md": 0,
-    "papers/inference/09-kernel-runtime-compilation/2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md": 2,
+    "papers/inference/09-kernel-runtime-compilation/2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md": 3,
     "papers/inference/09-kernel-runtime-compilation/2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effect.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2025-2511.05978-kunlun-anomaly-troubleshooter-enabling-kernel-level-anomaly-detection-an.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2025-2511.06516-you-had-one-job-per-task-quantization-using-llms-hidden-representations.md": 1,
@@ -4507,7 +4507,7 @@
     "papers/inference/21-static-structured-pruning/2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large.md": 1,
     "papers/inference/21-static-structured-pruning/2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md": 2,
-    "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 127,
+    "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md": 126,
     "papers/inference/21-static-structured-pruning/2024-2403.10799-toward-adaptive-large-language-models-structured-pruning-via-hybrid-grai.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md": 0,
     "papers/inference/21-static-structured-pruning/2024-2406.00061-stat-shrinking-transformers-after-training.md": 2,
@@ -4662,7 +4662,7 @@
     "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md": 16,
     "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md": 12,
     "papers/inference/99-other-inference-systems/2020-2005.08025-intellicode-compose-code-generation-using-transformer.md": 8,
-    "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md": 11,
+    "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md": 12,
     "papers/inference/99-other-inference-systems/2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md": 3,
     "papers/inference/99-other-inference-systems/2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md": 9,
     "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md": 18,
@@ -4846,7 +4846,7 @@
     "papers/inference/99-other-inference-systems/2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md": 3,
     "papers/inference/99-other-inference-systems/2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md": 1,
     "papers/inference/99-other-inference-systems/2025-2502.16782-cipherprune-efficient-and-scalable-private-transformer-inference.md": 6,
-    "papers/inference/99-other-inference-systems/2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md": 0,
+    "papers/inference/99-other-inference-systems/2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md": 1,
     "papers/inference/99-other-inference-systems/2025-2502.18394-spectre-an-fft-based-efficient-drop-in-replacement-to-self-attention-for.md": 2,
     "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md": 47,
     "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md": 23,
@@ -35834,7 +35834,6 @@
       "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
       "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
       "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
-      "papers/inference/21-static-structured-pruning/2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md",
       "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
     ],
     "papers/inference/08-edge-on-device-llm-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md": [
@@ -37616,8 +37615,10 @@
       "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
       "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
       "papers/inference/09-kernel-runtime-compilation/2022-2205.14135-flashattention.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
       "papers/inference/09-kernel-runtime-compilation/2025-2501.01005-flashinfer-attention-engine-serving.md",
-      "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md"
     ],
     "papers/inference/09-kernel-runtime-compilation/2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -39008,6 +39009,7 @@
       "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
       "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
       "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.14973-attention-is-all-you-need-for-kv-cache-in-diffusion-llms.md",
       "papers/inference/07-kv-cache-optimization-compression/2025-2511.22333-pat-prefix-aware-attention-multi-tile-kernel.md",
       "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
@@ -40714,6 +40716,7 @@
       "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
       "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
       "papers/inference/09-kernel-runtime-compilation/2025-2501.01005-flashinfer-attention-engine-serving.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2604.14825-nautilus-an-auto-scheduling-tensor-compiler-for-efficient-tiled-gpu-kern.md",
       "papers/inference/09-kernel-runtime-compilation/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md"
     ],
@@ -41900,6 +41903,7 @@
       "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
     ],
     "papers/inference/10-kv-cache-offload-recomputation/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md": [
+      "papers/inference/04-conditional-computation/2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
@@ -41912,6 +41916,7 @@
       "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
       "papers/inference/20-linear-recurrent-language-models/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
       "papers/inference/20-linear-recurrent-language-models/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
+      "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md",
       "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
       "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md"
     ],

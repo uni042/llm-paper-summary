@@ -2152,6 +2152,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   M2R2は、言語モデルの中間残差表現が最終層の残差表現へどれだけ早く近づくかを、追加の軽量な計算経路で制御する方式である。
 
+- **2025-02 · [LLM Inference Acceleration via Efficient Operation Fusion](2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  レイヤー正規化とソフトマックスの分母集約を、後続の線形層との可換性を使って行列積の後へ繰り延べ、集約をSIMD側で並行実行して遅延を隠す代数等価な演算融合を提案し、自社アクセラレータCorsairでLlama 2/3の推論遅延を約20%削減したと報告する無損失の最適化。
+
 - **2025-02 · [LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning](2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md)**  
   実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：1  
   LIFT（Long Input 微調整）は、長い文書をそのままLLMの入力コンテキストへ入れる代わりに、文書から生成した質問・回答（QA）で短文脈モデルをテスト時に微調整し、文書の情報をモデルのパラメータへ内在化させる方式である。
@@ -2539,10 +2543,6 @@
 - **2025-02 · [Online Pseudo-average Shifting Attention (PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis](2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キーの擬似平均を行列積で引くオンライン処理と最大値の補正で、フラッシュアテンション全体を半精度化しても桁あふれしないようにする数値安定化手法。実モデルで注意スコアの値域を半精度の範囲へ戻した。
-
-- **2025-02 · [LLM Inference Acceleration via Efficient Operation Fusion](2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  レイヤー正規化とソフトマックスの分母集約を、後続の線形層との可換性を使って行列積の後へ繰り延べ、集約をSIMD側で並行実行して遅延を隠す代数等価な演算融合を提案し、自社アクセラレータCorsairでLlama 2/3の推論遅延を約20%削減したと報告する無損失の最適化。
 
 - **2025-02 · [HASSLE-free: A unified Framework for Sparse plus Low-Rank Matrix Decomposition for LLMs](2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decompos.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3174,13 +3174,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   量子化で重みを小さくする方法、不要な重みや構造を削る方法、大きな教師モデルから小さな生徒モデルへ知識を移す方法など、圧縮の選択肢は多い。
 
+- **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  
+  実装：[✓](https://github.com/laiguokun/Funnel-Transformer) ・ リポジトリ内被引用：12  
+  Funnel-Transformerは、すべての変換器層で入力トークン数と同じ長さの隠れ状態を維持することが、系列全体を一つの表現へ要約する分類・ランキング課題では冗長であるという着想から生まれた。これにより、出力長は短くしながら圧縮前の情報全体を参照できる。
+
 - **2020-04 · [Lite Transformer with Long-Short Range Attention](2020-2004.11886-lite-transformer-with-long-short-range-attention.md)**  
   実装：[✓](https://github.com/mit-han-lab/lite-transformer) ・ リポジトリ内被引用：12  
   Lite Transformerは、短い文章を処理する翻訳・要約・言語モデルを、限られた計算予算の端末で実行するためのモデル構造を提案したICLR 2020論文である。
-
-- **2020-06 · [Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing](2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md)**  
-  実装：[✓](https://github.com/laiguokun/Funnel-Transformer) ・ リポジトリ内被引用：11  
-  Funnel-Transformerは、すべての変換器層で入力トークン数と同じ長さの隠れ状態を維持することが、系列全体を一つの表現へ要約する分類・ランキング課題では冗長であるという着想から生まれた。これにより、出力長は短くしながら圧縮前の情報全体を参照できる。
 
 - **2020-06 · [Multi-Head Attention: Collaborate Instead of Concatenate](2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md)**  
   実装：[✓](https://github.com/epfml/collaborative-attention) ・ リポジトリ内被引用：9  
