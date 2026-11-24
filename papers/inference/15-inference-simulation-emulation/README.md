@@ -485,7 +485,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   Siaは、GPUの種類が混在する深層学習訓練クラスタで、各ジョブへ割り当てるGPUの種類・台数・バッチサイズを同時に決めるスケジューラである。原著は、44GPUの実機クラスタで既存のPolluxより平均ジョブ完了時間を約35〜50%、Gavelより約50%短縮したと報告する。
 
 - **2023-02 · [AccelTran: A Sparsity-Aware Accelerator for Dynamic Inference with Transformers](2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transf.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   閾値比較だけで1クロックで活性値と重みを間引くDynaTranと、タイル化・データフロー・スパース配慮計算を備えたアクセラレータAccelTranを提案し、シミュレーションでサーバー版がA100比5.73倍のスループットと3.69倍低いエネルギーを示す。
 
 - **2023-05 · [Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator](2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-p.md)**  
@@ -501,6 +501,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 9年前（2017-12〜2018-11）
 
 - **2017-12 · [Ray: A Distributed Framework for Emerging AI Applications](2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md)**  
-  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：31  
   Rayは、強化学習で頻繁に現れる「多数の環境を並列に動かす」「学習器で方策を更新する」「更新した方策を低遅延で実行する」という異質な仕事を、別々の分散基盤へ切り分けずに一つの実行系へ載せるための研究である。提案の中核は、状態を持たない遠隔関数を「タスク」、状態を保持する遠隔オブジェクトを「アクター」として同じ動的依存グラフへ埋め込むことである。
 <!-- survey:auto:end -->

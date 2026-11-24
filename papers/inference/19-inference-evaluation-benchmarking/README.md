@@ -889,7 +889,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：38  
+  実装：✓ ・ リポジトリ内被引用：39  
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
@@ -917,6 +917,6 @@
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 
 - **2021-11 · [You Only Sample (Almost) Once: Linear Cost Self-Attention Via Bernoulli Sampling](2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sam.md)**  
-  実装：[✓](https://github.com/mlpen/YOSO) ・ リポジトリ内被引用：0  
+  実装：[✓](https://github.com/mlpen/YOSO) ・ リポジトリ内被引用：1  
   ソフトマックス注意を、局所性鋭敏ハッシュの衝突によるベルヌーイサンプリングへ置き換え、系列長に比例する費用で長系列を学習できる注意機構YOSOを提案する。
 <!-- survey:auto:end -->
