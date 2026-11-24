@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（634本）
+## 自動生成の論文一覧（635本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1660,6 +1660,10 @@
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：13  
   固定した最大周波数でGPUを動かすと低負荷時に余分な電力を使うが、単純に周波数を下げると同時要求数やKVキャッシュ量が増えたとき遅延が悪化する。著者らは、要求の生成長を予測し、将来の各復号反復におけるバッチサイズとKVキャッシュ使用量を推定する。
 
+- **2025-03 · [Teola: Towards End-to-End Optimization of LLM-based Applications](2024-2407.00326-teola.md)**  
+  実装：[✓](https://github.com/NetX-lab/Ayo) ・ リポジトリ内被引用：13  
+  LLMアプリをプリミティブ依存グラフへ分解し、モジュール横断の並列化・パイプライン化とトポロジ認識バッチングでエンドツーエンド遅延を短縮する。
+
 - **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
   実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：12  
   マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
@@ -1679,10 +1683,6 @@
 - **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。
-
-- **2025-03 · [Teola: Towards End-to-End Optimization of LLM-based Applications](2024-2407.00326-teola.md)**  
-  実装：[✓](https://github.com/NetX-lab/Ayo) ・ リポジトリ内被引用：12  
-  LLMアプリをプリミティブ依存グラフへ分解し、モジュール横断の並列化・パイプライン化とトポロジ認識バッチングでエンドツーエンド遅延を短縮する。
 
 - **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -2051,6 +2051,10 @@
 - **2025-11 · [Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms](2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   デコード専用GPUの遊休SMへPEFT微調整を同居させ、KVキャッシュの空き領域の貸し出しと遅延予測に基づくSM配分で、推論QoSを守りつつ微調整スループットを平均46.2パーセント高めるサービング方式。
+
+- **2025-11 · [DyOrc: Efficient Serving of Dynamic Machine Learning Workflows](2025-05067fc6be56-dyorc-efficient-serving-of-dynamic-machine-learning-workflows.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  条件分岐で呼ぶ部品が変わる動的ワークフローを、部品ごとの独立サービス化とリクエストをまたぐバッチ処理、マルコフ予測による投機的スケジューリングと先行ロード、同一デバイス内のゼロコピー受け渡しで高速化し、実測で平均遅延を最大198%改善したサービングシステム。
 
 - **2025-11 · [Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication](2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

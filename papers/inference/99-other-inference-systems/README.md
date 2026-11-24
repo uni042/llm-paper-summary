@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1453本）
+## 自動生成の論文一覧（1456本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4576,6 +4576,10 @@
   実装：[✓](https://github.com/ZipECHO/Self-Draft) ・ リポジトリ内被引用：0  
   重みをメモリから読み出す費用が大きい状況では、1回の順伝播で得られるトークン数を増やすことが有効である。コーパスから固定的なn-gram候補を検索する方式も、実際の対話・コード生成との分布ずれに弱い。
 
+- **2025-04 · [HERA: Hybrid Edge-cloud Resource Allocation for Cost-Efficient AI Agents](2025-2504.00434-hera-hybrid-edge-cloud-resource-allocation-for-cost-efficient-ai-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントのサブタスク連鎖では振り分けが後続へ波及することに着目し、類似度予測・S-L距離・収束検出・サブタスク分解を階層化した振り分けで、サブタスクの約46パーセントをローカル小モデルへ逃がしてクラウド費用を19〜30パーセント削減する。
+
 - **2025-04 · [Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs](2025-2504.13989-gradual-binary-search-and-dimension-expansion-a-general-method-for-activ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの低ビット事後量子化では、活性値の外れ値が量子化範囲を占有し、3〜4ビットの小さい整数レンジに通常の値を十分に割り当てられない。Mistral 7B v0.1を重み・活性・KVとも3ビット化した実験では、QuaRot単独の6課題平均18.43%がGBS併用58.31%へ改善した。
@@ -4659,6 +4663,10 @@
 - **2025-02 · [MaskPrune: Mask-based LLM Pruning for Layer-wise Uniform Structures](2025-2502.14008-maskprune-mask-based-llm-pruning-for-layer-wise-uniform-structures.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   マスクと層共通の削減数をミニマックス最適化で同時学習し、全層で同じ形を保ったまま構造化枝刈りを行うことで、推論配置しやすい均一な圧縮モデルを得る方式。
+
+- **2025-02 · [LLM Inference Acceleration via Efficient Operation Fusion](2025-2502.17728-llm-inference-acceleration-via-efficient-operation-fusion.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  レイヤー正規化とソフトマックスの分母集約を、後続の線形層との可換性を使って行列積の後へ繰り延べ、集約をSIMD側で並行実行して遅延を隠す代数等価な演算融合を提案し、自社アクセラレータCorsairでLlama 2/3の推論遅延を約20%削減したと報告する無損失の最適化。
 
 - **2025-02 · [HASSLE-free: A unified Framework for Sparse plus Low-Rank Matrix Decomposition for LLMs](2025-2502.00899-hassle-free-a-unified-framework-for-sparse-plus-low-rank-matrix-decompos.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5326,6 +5334,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LongVQは、SSMの構造化長期記憶とベクトル量子化されたKeyによる固定長の注意を組み合わせ、系列長に対して線形時間で動作するハイブリッドモデルである。
 
+- **2024-04 · [Large Language Model Inference Acceleration Based on Hybrid Model Branch Prediction](2024-f00175abf388-large-language-model-inference-acceleration-based-on-hybrid-model-branch.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的サンプリングの検証待ちを、分岐予測で受理トークン数を先読みして小モデルの次ラウンド生成と大モデルの検証を重ねることで隠し、無損失のまま投機的サンプリングを上回る速度を出す方式。
+
 - **2024-04 · [HLSTransform: Energy-Efficient Llama 2 Inference on FPGAs Via High Level Synthesis](2024-2405.00738-hlstransform-energy-efficient-llama-2-inference-on-fpgas-via-high-level-.md)**  
   実装：[✓](https://github.com/HLSTransform/submission) ・ リポジトリ内被引用：0  
   Llama 2系の小規模モデルを高位合成と8ビット量子化でFPGAへ実装し、トークンあたりエネルギーをCPU比12.75分の1、GPU比8.25分の1へ下げながら、CPUの2.46倍の速度を保った省電力推論の実証。
@@ -5781,7 +5793,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：381  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：382  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
