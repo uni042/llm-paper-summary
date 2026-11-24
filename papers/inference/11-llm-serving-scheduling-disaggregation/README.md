@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（630本）
+## 自動生成の論文一覧（631本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1433,6 +1433,10 @@
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同一GPU内でプリフィル/デコードを非lockstep並行実行し、共有KVとCU maskingでSLOと利用率を両立、MI300X実機で有効スループット平均4.9倍を報告。
+
+- **2026-01 · [PROTEUS: SLA-Aware Routing via Lagrangian RL for Multi-LLM Serving Systems](2026-2601.19402-proteus-sla-aware-routing-via-lagrangian-rl-for-multi-llm-serving-system.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  正解率の下限目標を実行時入力として受け取り、ラグランジュ双対変数のフィードバックで目標から品質選好への写像を学ぶことで、単一モデルで全目標水準の下限遵守と大幅な費用削減を両立するルーター。
 
 - **2026-01 · [Mico: efficient query scheduling for multi-cloud deployed LLM inference service](2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

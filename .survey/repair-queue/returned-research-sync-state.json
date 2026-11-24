@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "63b64fdb41969ed219d60d7e3dd2b4fc6c57a7c3",
+  "base_commit": "6f4b10d13c72a551dc0bf0b36312443caaf2bda4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -458,8 +458,10 @@
     "2026-077aa1e5b2da-evolving-llms-from-next-token-prediction-to-multi-token-prediction-via-self-distillation.json",
     "2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.json",
     "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json",
+    "2026-14c95b8b5d41-perplexity-spectrum-calibration-for-post-training-pruning-of-large-language-models.json",
     "2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-acceleration-and-applications.json",
     "2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-systems.json",
+    "2026-1f137626e007-orca-an-efficient-computing-architecture-for-fault-tolerant-large-language-model-inference-via-outlier-aware-recalculati.json",
     "2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-efficient-moe-inference.json",
     "2026-2601.03067-joint-encoding-of-kv-cache-blocks-for-scalable-llm-serving.json",
     "2026-2601.03199-dip-dynamic-in-context-planner-for-diffusion-language-models.json",
@@ -481,10 +483,12 @@
     "2026-2601.14549-qmc-efficient-slm-edge-inference-via-outlier-aware-quantization-and-emergent-memories-co-design.json",
     "2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.json",
     "2026-2601.15296-entropy-tree-tree-based-decoding-with-entropy-guided-exploration.json",
+    "2026-2601.15380-you-need-better-attention-priors.json",
     "2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-long-context-inference.json",
     "2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.json",
     "2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasoning.json",
     "2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.json",
+    "2026-2601.19402-proteus-sla-aware-routing-via-lagrangian-rl-for-multi-llm-serving-systems.json",
     "2026-2601.20168-efficient-token-pruning-for-llada-v.json",
     "2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.json",
     "2026-2601.20408-meeting-slos-slashing-hours-automated-enterprise-llm-optimization-with-optikit.json",
@@ -492,6 +496,7 @@
     "2026-2601.20655-onepiece-a-large-scale-distributed-inference-system-with-rdma-for-complex-ai-generated-content-aigc-workflows.json",
     "2026-2601.20706-npu-design-for-diffusion-language-model-inference.json",
     "2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.json",
+    "2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-test-time-scaling.json",
     "2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.json",
     "2026-2601.22563-eugens-efficient-unified-and-general-dense-layers.json",
     "2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thought-reasoning-in-small-scale-large-reasoning-models.json",
@@ -52279,6 +52284,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.1109/IJCNN69854.2026.11728844": {
+      "order": [
+        "2026-11-24T01:30:05+00:00",
+        "2026-14c95b8b5d41-perplexity-spectrum-calibration-for-post-training-pruning-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3801976": {
+      "order": [
+        "2026-11-24T01:31:09+00:00",
+        "2026-1f137626e007-orca-an-efficient-computing-architecture-for-fault-tolerant-large-language-model-inference-via-outlier-aware-recalculati.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.15380": {
+      "order": [
+        "2026-11-24T01:32:13+00:00",
+        "2026-2601.15380-you-need-better-attention-priors.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.19402": {
+      "order": [
+        "2026-11-24T01:33:17+00:00",
+        "2026-2601.19402-proteus-sla-aware-routing-via-lagrangian-rl-for-multi-llm-serving-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.21684": {
+      "order": [
+        "2026-11-24T01:34:21+00:00",
+        "2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-test-time-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66212,6 +66262,21 @@
     "doi:10.1145/3805621.3807628": [
       "papers/inference/09-kernel-runtime-compilation/2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.md",
       "papers/inference/09-kernel-runtime-compilation/2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.md"
+    ],
+    "doi:10.1109/ijcnn69854.2026.11728844": [
+      "papers/inference/99-other-inference-systems/2026-14c95b8b5d41-perplexity-spectrum-calibration-for-post-training-pruning-of-large-langu.md"
+    ],
+    "doi:10.1145/3801976": [
+      "papers/inference/99-other-inference-systems/2026-1f137626e007-orca-an-efficient-computing-architecture-for-fault-tolerant-large-langua.md"
+    ],
+    "arxiv:2601.15380": [
+      "papers/inference/99-other-inference-systems/2026-2601.15380-you-need-better-attention-priors.md"
+    ],
+    "arxiv:2601.19402": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.19402-proteus-sla-aware-routing-via-lagrangian-rl-for-multi-llm-serving-system.md"
+    ],
+    "arxiv:2601.21684": [
+      "papers/inference/99-other-inference-systems/2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-tes.md"
     ]
   }
 }

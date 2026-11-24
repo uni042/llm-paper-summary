@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1425本）
+## 自動生成の論文一覧（1429本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2054,9 +2054,17 @@
   実装：[✓](https://github.com/HengHugoZhao/ProbMoE) ・ リポジトリ内被引用：0  
   ProbMoEはMoEのtop-kルーティングを専門家部分集合の確率分布として定式化し、学習時に確率的に選択した専門家を実行しつつ、集合制約下の厳密な周辺確率を直通勾配の代理に使う。OLMoEのGSMでは従来45.94%に対し50.19%、Qwen1.5-MoEの翻訳では30.00に対し39.23。
 
+- **2026-06 · [Perplexity-Spectrum Calibration for Post-Training Pruning of Large Language Models](2026-14c95b8b5d41-perplexity-spectrum-calibration-for-post-training-pruning-of-large-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  学習後枝刈りのキャリブレーション標本を、対象モデルのパープレキシティで測った難易度の中央値中心の窓から選ぶ方式。3つの7Bモデルと2つの枝刈り手法で、無作為抽出よりパープレキシティ悪化を20から26パーセント減らし、結果のばらつきも3.4から6.1倍小さくする。
+
 - **2026-06 · [Orchestra-o1: Omnimodal Agent Orchestration](2026-2606.13707-orchestra-o1-omnimodal-agent-orchestration.md)**  
   実装：[✓](https://github.com/zfkarl/Orchestra-o1) ・ リポジトリ内被引用：0  
   Orchestra-o1は、文字・画像・音声・動画が同時に含まれる複雑な質問を、主エージェント（MainAgent）が複数の部分課題へ分解し、専門の副エージェント（SubAgent）へ割り当てて実行する全モダリティ対応のエージェント統括（omnimodal agent orchestration）方式である。
+
+- **2026-06 · [OrCA: An Efficient Computing Architecture for Fault-Tolerant Large Language Model Inference via Outlier-Aware Recalculation](2026-1f137626e007-orca-an-efficient-computing-architecture-for-fault-tolerant-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  故障注入で見つけた、出力へ効くのは1から2パーセントの外れ値だけという性質を使い、外れ値の計算だけを冗長に再計算して守る階層型アクセラレータで、同等の面積のまま耐えられるビット誤り率を従来方式の約10倍へ上げる。
 
 - **2026-06 · [One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs](2026-2606.14277-one-layer-s-trash-is-another-layer-s-treasure-adaptive-layer-wise-visual.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3078,6 +3086,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   過負荷のエキスパートを低精度で複製し、重要度の低いエキスパートの量子化で予算を賄う、再学習不要のMoE負荷分散策。不均衡スコアを最大で約1.4倍分改善し精度をほぼ保つ。
 
+- **2026-01 · [You Need Better Attention Priors](2026-2601.15380-you-need-better-attention-priors.md)**  
+  実装：[✓](https://github.com/elonlit/goat) ・ リポジトリ内被引用：0  
+  注意の一様な事前分布を、フーリエ級数の相対位置成分とキー専用シンク成分からなる学習可能な事前分布へ置き換え、密なバイアスなしにFlashAttention互換の1回の内積注意で長文脈外挿とメモリ削減を得る機構。
+
 - **2026-01 · [When to Think Fast and Slow? AMOR: Adaptive Entropy Gate for Hybrid Models](2026-2602.13215-when-to-think-fast-and-slow-amor-adaptive-entropy-gate-for-hybrid-models.md)**  
   実装：[✓](https://github.com/HaoranZhengRaul/AMOR) ・ リポジトリ内被引用：0  
   AMOR（適応的 Metacognitive Output Router）は、Mamba2またはGated DeltaNetの再帰型言語モデルに、トークンごとに必要性を判定して実行する注意ブロックを追加する方式である。ゲートの発火率は学習中に約40%となり、発火しない位置では注意の問い合わせと出力計算を省略する。
@@ -3209,6 +3221,10 @@
 - **2026-01 · [Efficient Paths and Dense Rewards: Probabilistic Flow Reasoning for Large Language Models](2026-2601.09260-efficient-paths-and-dense-rewards-probabilistic-flow-reasoning-for-large.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   標準的な思考の連鎖は、最終解答の正誤だけでは途中の推論ステップの有用性を直接測れず、冗長な言い換えや誤った分岐を含みやすい。CoT-Flowは、問題xと時点iまでの生成列sを持つ状態Iiにおいて、正解yの負の対数確率 D(Ii)=-log p(y\|Ii) を難しさと定義する。
+
+- **2026-01 · [Do Not Waste Your Rollouts: Recycling Search Experience for Efficient Test-Time Scaling](2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-tes.md)**  
+  実装：[✓](https://github.com/WangXinglin/RSE) ・ リポジトリ内被引用：0  
+  捨てられていた推論軌跡から正と負の経験を蒸留して共有バンクに蓄え次ラウンドへ再利用し、同じ計算予算でテスト時探索の到達精度を上げる学習不要の再利用戦略。
 
 - **2026-01 · [dLLM-ASR: A Faster Diffusion LLM-based Framework for Speech Recognition](2026-2601.17902-dllm-asr-a-faster-diffusion-llm-based-framework-for-speech-recognition.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
