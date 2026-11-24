@@ -400,6 +400,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   大規模LLM推論で異なる入力・出力長の要求を混在処理する際、実測反復時間からプリフィル混在/デコード単独のサービス率を求め、流体最適化の占有率に追従してプリフィル受入れとデコード配置をゲート・ルート制御する研究。
 
+- **2026-02 · [InfMem: Learning System-2 Memory Control for Long-Context Agent](2026-2602.02704-infmem-learning-system-2-memory-control-for-long-context-agent.md)**  
+  実装：[✓](https://github.com/UCMP13753/InfMem) ・ リポジトリ内被引用：2  
+  100万トークン級の文書から複数箇所の証拠を集めて質問に答える場合、全文を一度に言語モデルへ入力する方式は文脈長と注意計算に制約される。推論時間は平均3.9倍、最大5.1倍短縮した。
+
 - **2026-01 · [FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection](2026-2601.03928-focusui-efficient-ui-grounding-via-position-preserving-visual-token-sele.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   指示に合うパッチだけを顕著性で残し、落とした区間を末尾の標識でつなぐ位置保存型の視覚トークン選択で、保持率30パーセントでもUI位置特定の精度低下を3.2ポイントに抑え、推論を1.44倍速くした。
@@ -584,6 +588,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   HexAGenTは逐次公開されるエージェントワークフローの完了危険度を追跡し、異種GPU上のプリフィル・デコード配置とキュー優先度を共同決定して、ワークフロー全体のSLO達成を改善する。
 
+- **2026-05 · [Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?](2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-saf.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  保存済み回答を根拠の重なりと版と裏付けで検証してから返す経路制御を提案し、誤った保存回答の割合を多段推論で0パーセント、多人数対話の資料変化で約34倍減に抑え、遅延は保存なしとほぼ同等に保った。
+
 - **2026-05 · [GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources](2026-2605.16867-goodserve-agentic-heterogeneous-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   出力長と各GPUの実効処理能力を予測し、SLOを満たす必要十分なGPUへ割り当て、実行中の違反リスクを軽量移行で補正してグッドプットを最大27.4%改善する。
@@ -671,10 +679,6 @@
 - **2026-02 · [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-dif.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   マスク拡散の除去段階は中間が最も容量に敏感で両端は置き換えに強いことを全探索と分布距離で示し、段階の25%を軽い4層モデルへ置く挟み込み型配置で計算量を16.7%減らし、生成困惑度の悪化を42.85から44.31（3.41%）に抑えた。
-
-- **2026-02 · [InfMem: Learning System-2 Memory Control for Long-Context Agent](2026-2602.02704-infmem-learning-system-2-memory-control-for-long-context-agent.md)**  
-  実装：[✓](https://github.com/UCMP13753/InfMem) ・ リポジトリ内被引用：1  
-  100万トークン級の文書から複数箇所の証拠を集めて質問に答える場合、全文を一度に言語モデルへ入力する方式は文脈長と注意計算に制約される。推論時間は平均3.9倍、最大5.1倍短縮した。
 
 - **2026-02 · [A State-Transition Framework for Efficient LLM Reasoning](2026-2602.01198-a-state-transition-framework-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1314,10 +1318,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   人間が逐次トークン表示を待たないエージェント処理に、対話向けの先頭トークン遅延（Time to First Token; TTFT）・出力トークン間隔（Time Per Output Token; TPOT）制約をそのまま課すと、長文脈・高並列ではGPUを小さな処理単位へ分割する費用が大きくなる。
 
-- **2026-05 · [Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?](2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-saf.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  保存済み回答を根拠の重なりと版と裏付けで検証してから返す経路制御を提案し、誤った保存回答の割合を多段推論で0パーセント、多人数対話の資料変化で約34倍減に抑え、遅延は保存なしとほぼ同等に保った。
-
 - **2026-05 · [Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines](2026-2605.25645-fine-tuning-and-serving-gemma-4-31b-on-google-cloud-tpu-a-technical-comp.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Gemma 4 31BをTPU v5p-8上で低ランク適応（LoRA）によって教師あり微調整し、TPU v6e-8上のvLLMで推論提供するための具体的な移植手順と、2基のNVIDIA H100 GPUとの実測比較をまとめる。学習ではTPU v5p-8が3.34時間、2×H100が5.39時間で、時間比は1.61倍。
@@ -1792,6 +1792,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   TBT違反が予測される時だけ単一GPUのSMをプリフィル/デコードへ動的分割し、集約方式のスループットと分離方式のisolationを両立する。
 
+- **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
+  実装：[✓](https://github.com/EfficientContext/ContextPilot) ・ リポジトリ内被引用：7  
+  ContextPilotは、検索拡張生成（Retrieval-Augmented Generation; RAG）、会話記憶、複数エージェントが同じ資料を繰り返し参照する状況で、長文脈の前処理（プリフィル）を減らす推論前段システムである。主要なRAG条件では既存方式比でプリフィル処理率が最大約3倍に改善する。
+
 - **2025-10 · [TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling](2025-2510.02758-tokenflow-responsive-llm-text-streaming-serving-under-request-burst-via-.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   TokenFlowが扱うのは、生成済みトークンを逐次ユーザーへ渡すストリーミング配信である。通常の推論器はできるだけ多くのトークンを生成するが、人が文章を読む速度はモデルの生成速度より遅い場合が多い。既に多くのトークンを生成した利用者の要求をGPU上で走らせ続ける一方、新しい利用者を長く待たせることは、総生成トークン数が高くても体感応答性を悪化させる。
@@ -1815,10 +1819,6 @@
 - **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
   実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：6  
   負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
-
-- **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
-  実装：[✓](https://github.com/EfficientContext/ContextPilot) ・ リポジトリ内被引用：6  
-  ContextPilotは、検索拡張生成（Retrieval-Augmented Generation; RAG）、会話記憶、複数エージェントが同じ資料を繰り返し参照する状況で、長文脈の前処理（プリフィル）を減らす推論前段システムである。主要なRAG条件では既存方式比でプリフィル処理率が最大約3倍に改善する。
 
 - **2025-10 · [When to Reason: Semantic Router for vLLM](2025-2510.08731-when-to-reason-semantic-router-for-vllm.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -1896,6 +1896,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   低ランク適応（Low-Rank Adaptation; LoRA）では大きな基盤モデルを共有し、サービスごとに小さなアダプタだけを切り替えられる。実トレース評価では、各LoRAサービスのSLO達成率を90%超に維持したまま、既存multi-LoRAサービング基盤に対して最大3.6倍高い要求到着率、または2.8倍大きいバースト性を処理できると報告する。
 
+- **2025-08 · [Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation](2025-2508.07675-semantic-caching-for-low-cost-llm-serving-from-offline-learning-to-onlin.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LLMサービングでは、同じ質問への回答を保存する通常の応答キャッシュによって再計算を減らせる。原著の評価は合成データ上の費用・後悔・切替回数が中心であり、実際の生成品質やGPU推論速度の実測改善と混同してはならない。
+
 - **2025-07 · [ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism](2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md)**  
   実装：[✓](https://github.com/hpdps-group/ElasticMM) ・ リポジトリ内被引用：4  
   テキスト要求とマルチモーダル要求を分離し、符号化・事前充填・復号ごとにGPU配分と並列度を動的変更することで、TTFTを最大4.2倍短縮しSLO内スループットを3.2〜4.5倍にする。
@@ -1935,10 +1939,6 @@
 - **2025-09 · [FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving](2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   混合精度モデル間で共有できるKVスラブと、精度別の限界メモリ効率・TTFT期限を使う二段スケジューリングにより、Prism相当方式比でSLO達成率最大2.2倍、生成スループット最大1.8倍を実現する。
-
-- **2025-08 · [Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation](2025-2508.07675-semantic-caching-for-low-cost-llm-serving-from-offline-learning-to-onlin.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  LLMサービングでは、同じ質問への回答を保存する通常の応答キャッシュによって再計算を減らせる。原著の評価は合成データ上の費用・後悔・切替回数が中心であり、実際の生成品質やGPU推論速度の実測改善と混同してはならない。
 
 - **2025-08 · [Equinox: Holistic Fair Scheduling in Serving Large Language Models](2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2024,6 +2024,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。
 
+- **2025-11 · [C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning](2025-2511.07396-c3po-optimized-large-language-model-cascades-with-probabilistic-cost-con.md)**  
+  実装：[✓](https://github.com/AntonValk/C3PO-LLM) ・ リポジトリ内被引用：1  
+  すべての質問を最も高価なモデルへ送るのではなく、小型モデルが容易な質問へ回答し、難しい質問だけを高性能モデルへ順に送る方式をカスケード推論（cascaded inference）という。
+
 - **2025-09 · [A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving](2025-2509.23384-synergysched-predictive-two-layer-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   オンライン性能モデルをエンジン内SLO対応処理群形成とクラスタ先読み配送の共通信号にし、二層間の情報断絶を閉じて動的・異種LLM配信の遅延とSLO達成率を改善する。
@@ -2087,10 +2091,6 @@
 - **2025-11 · [Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication](2025-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルの巨大な活性値転送がデコードを待たせる競合を、転送のチャンク分割と重み付き優先スケジューリング、空き時間に合わせたチャンク量の即時決定、マイクロバッチ拡張で解く分散サービングMoLinkを提案し、RTX 4090の3台構成でTTFTを最大46%削減した。
-
-- **2025-11 · [C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning](2025-2511.07396-c3po-optimized-large-language-model-cascades-with-probabilistic-cost-con.md)**  
-  実装：[✓](https://github.com/AntonValk/C3PO-LLM) ・ リポジトリ内被引用：0  
-  すべての質問を最も高価なモデルへ送るのではなく、小型モデルが容易な質問へ回答し、難しい質問だけを高性能モデルへ順に送る方式をカスケード推論（cascaded inference）という。
 
 - **2025-11 · [A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference](2025-2511.15950-a-scalable-northpole-system-with-end-to-end-vertical-integration-for-low.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2191,7 +2191,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：850  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：851  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2259,7 +2259,7 @@
   正確な生成長を当てる代わりに「どの要求が相対的に短いか」を学習し、その順位で連続バッチ処理を並べ替える。OPT-125M級の補助予測器、ListMLE、要求飢餓を防ぐ優先度昇格を組み合わせ、先着順より最短ジョブ優先に近い配信を実現する。
 
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
-  実装：✓ ・ リポジトリ内被引用：71  
+  実装：✓ ・ リポジトリ内被引用：72  
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
 
 - **2023-12 · [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)**  
@@ -2505,7 +2505,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1948  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1950  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
