@@ -1,0 +1,861 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261125-d11-b01",
+ "reference_main_sha": "69a2bec9",
+ "record_count": 50,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.18242",
+   "identity_tokens": [
+    "arXiv:2606.18242"
+   ],
+   "title": "EventDrive: Event Cameras for Vision-Language Driving Intelligence",
+   "reason": "EventDriveはイベントカメラとRGBを組み合わせた自動運転向け視覚言語モデルの知覚・意思決定が主題で、LLM推論基盤への技術的貢献は要旨に確認できない。",
+   "source_url": "https://arxiv.org/abs/2606.18242",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 373
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2607.22305",
+   "identity_tokens": [
+    "arXiv:2607.22305"
+   ],
+   "title": "A Roadmap to Impactful Pluralistic Alignment Research",
+   "reason": "多元的価値アラインメント研究の障壁とロードマップを論じる提言論文であり、推論・サービング等のシステム機構は扱われていない。",
+   "source_url": "https://arxiv.org/abs/2607.22305",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 374
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2609.12818",
+   "identity_tokens": [
+    "arXiv:2609.12818"
+   ],
+   "title": "Online Video Agent Harness for Long Video Understanding",
+   "reason": "VideoXAgentは長尺動画理解で証拠探索をオンライン化しコンテキスト腐敗と計算コストを抑えるが、主目的は動画理解エージェントの応用であり推論システムへの貢献は間接的である。",
+   "source_url": "https://arxiv.org/abs/2609.12818",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 375
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1007/s44443-026-00858-5",
+   "identity_tokens": [
+    "DOI:10.1007/s44443-026-00858-5"
+   ],
+   "title": "ST-GVMNet: a structure-texture dual-stream network fusing gating mechanism and V-Mamba for Dunhuang mural image inpainting",
+   "reason": "ST-GVMNetは敦煌壁画の画像インペインティング専用の構造・テクスチャ二流ネットワークであり、対象は文化財画像修復応用に限られる。",
+   "source_url": "https://doi.org/10.1007/s44443-026-00858-5",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 376
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "DOI:10.1109/ICDE65706.2026.00304",
+   "identity_tokens": [
+    "DOI:10.1109/ICDE65706.2026.00304"
+   ],
+   "title": "DM-RAG: Enhancing User Support in Dameng Databases with Retrieval-Augmented Generation",
+   "reason": "DM-RAGはDamengデータベースの利用者支援向けに階層チャンキング等を適応させたRAGフレームワークで、検索生成基盤との関連はあるが主目的は特定製品のサポート応用である。",
+   "source_url": "https://doi.org/10.1109/ICDE65706.2026.00304",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 377
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/icassp55912.2026.11462695",
+   "identity_tokens": [
+    "DOI:10.1109/icassp55912.2026.11462695"
+   ],
+   "title": "Uncertainty Factorization with Linear-Time Sequential Modeling for Speaker Embedding",
+   "reason": "タイトル自体が話者埋め込み（話者認識）という音声応用のための線形時間系列モデリングであることを明示しており、LLM推論システムの対象外である。",
+   "source_url": "https://doi.org/10.1109/icassp55912.2026.11462695",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 378
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1186/s12880-026-02418-9",
+   "identity_tokens": [
+    "DOI:10.1186/s12880-026-02418-9"
+   ],
+   "title": "MDVM-UNet: lumbar MRI segmentation and lordosis angle measurement via a dual-driven mechanism",
+   "reason": "MDVM-UNetは腰椎MRIのセグメンテーションと腰椎前弯角の自動計測を行う医用画像解析モデルであり、臨床診断支援が目的である。",
+   "source_url": "https://doi.org/10.1186/s12880-026-02418-9",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 379
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.3390/jimaging12030093",
+   "identity_tokens": [
+    "DOI:10.3390/jimaging12030093"
+   ],
+   "title": "LTPNet: Lesion-Aware Triple-Path Feature Fusion Network for Skin Lesion Segmentation",
+   "reason": "LTPNetは皮膚病変セグメンテーション専用の三経路特徴融合ネットワークであり、医用画像の病変境界描出が主題である。",
+   "source_url": "https://doi.org/10.3390/jimaging12030093",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 380
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2512.21803",
+   "identity_tokens": [
+    "arXiv:2512.21803"
+   ],
+   "title": "CellMamba: Adaptive Mamba for Accurate and Efficient Cell Detection",
+   "reason": "CellMambaは病理画像中の細胞検出に特化した軽量検出器であり、生物医学インスタンス検出という応用課題そのものが目的である。",
+   "source_url": "https://arxiv.org/abs/2512.21803",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 381
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2601.21955",
+   "identity_tokens": [
+    "arXiv:2601.21955"
+   ],
+   "title": "From Generative Modeling to Clinical Classification: A GPT-Based Architecture for EHR Notes",
+   "reason": "EHR臨床ノートの疾患分類にGPT系モデルを選択的微調整で適応させる臨床テキスト分類の研究であり、推論効率の機構ではない。",
+   "source_url": "https://arxiv.org/abs/2601.21955",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 382
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.06375",
+   "identity_tokens": [
+    "arXiv:2602.06375"
+   ],
+   "title": "Difficulty-Estimated Policy Optimization",
+   "reason": "Difficulty-Estimated Policy OptimizationはGRPOの勾配減衰に対処する強化学習の学習アルゴリズムであり、推論時の機構ではなく学習単独の高速化・安定化である。",
+   "source_url": "https://arxiv.org/abs/2602.06375",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 383
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2602.21401",
+   "identity_tokens": [
+    "arXiv:2602.21401"
+   ],
+   "title": "The Headless Firm: How AI Reshapes Enterprise Boundaries",
+   "reason": "The Headless FirmはエージェントAIが企業の調整コストと組織境界をどう変えるかを論じる経営・組織論であり、推論システム技術は扱わない。",
+   "source_url": "https://arxiv.org/abs/2602.21401",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 384
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2603.18533",
+   "identity_tokens": [
+    "arXiv:2603.18533"
+   ],
+   "title": "Balancing the Reasoning Load: Difficulty-Differentiated Policy Optimization with Length Redistribution for Efficient and Robust Reinforcement Learning",
+   "reason": "DDPOは推論モデルの過剰思考・過信に応じ学習を分ける強化学習アルゴリズムであり、生成長への影響は学習側の最適化結果であって推論機構ではない。",
+   "source_url": "https://arxiv.org/abs/2603.18533",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 385
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2604.02654",
+   "identity_tokens": [
+    "arXiv:2604.02654"
+   ],
+   "title": "Drift-Resilient Temporal Priors for Visual Tracking",
+   "reason": "DTPTrackは視覚追跡におけるモデルドリフト抑制モジュールであり、対象は物体追跡というコンピュータビジョン応用である。",
+   "source_url": "https://arxiv.org/abs/2604.02654",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 386
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2604.23941",
+   "identity_tokens": [
+    "arXiv:2604.23941"
+   ],
+   "title": "GoClick: Lightweight Element Grounding Model for Autonomous GUI Interaction",
+   "reason": "GoClickはモバイル等の資源制約デバイス上で動かす軽量なGUI要素グラウンディングモデルで、オンデバイス実行への配慮はあるが主貢献はグラウンディング精度とモデル小型化である。",
+   "source_url": "https://arxiv.org/abs/2604.23941",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 387
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.22775",
+   "identity_tokens": [
+    "arXiv:2605.22775"
+   ],
+   "title": "MambaGaze: Bidirectional Mamba with Explicit Missing Data Modeling for Cognitive Load Assessment from Eye-Gaze Tracking Data",
+   "reason": "MambaGazeは視線追跡データから認知負荷を評価するBi-Mambaフレームワークであり、ドライバ監視等の人間中心応用が目的である。",
+   "source_url": "https://arxiv.org/abs/2605.22775",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 388
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2605.26949",
+   "identity_tokens": [
+    "arXiv:2605.26949"
+   ],
+   "title": "DinoComplete: 3D Shape Completion with Distilled Semantic Priors and State Space Models",
+   "reason": "DinoCompleteはDINO特徴の意味事前分布を用いる3D形状補完手法であり、3次元再構成というビジョン応用が主題である。",
+   "source_url": "https://arxiv.org/abs/2605.26949",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 389
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2606.11913",
+   "identity_tokens": [
+    "arXiv:2606.11913"
+   ],
+   "title": "From Content to Knowledge: Lightning Fast Long-Video Understanding with Neural Knowledge Representations",
+   "reason": "Neural Knowledge Representationは長尺動画を小さな重みに蒸留して高速な問い合わせを狙うが、対象は動画理解の表現方式でありLLM推論基盤への適用は示されていない。",
+   "source_url": "https://arxiv.org/abs/2606.11913",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 390
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2606.25272",
+   "identity_tokens": [
+    "arXiv:2606.25272"
+   ],
+   "title": "Characterizing Robustness in Semantic Code Clone Detection",
+   "reason": "意味的コードクローン検出の書き換えに対する頑健性を体系的に評価する研究であり、検出器の評価方法論が主題で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2606.25272",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 391
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2607.11106",
+   "identity_tokens": [
+    "arXiv:2607.11106"
+   ],
+   "title": "Beyond the Eye: Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools",
+   "reason": "BEEは外部視覚ツールの反復呼び出しと画像再エンコードによる推論レイテンシを、自己制御型の暗黙的視覚ツールで削減する機構を提案し、MLLM推論オーバーヘッドへの直接の貢献が要旨で具体的である。",
+   "source_url": "https://arxiv.org/abs/2607.11106",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 392
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2608.02101",
+   "identity_tokens": [
+    "arXiv:2608.02101"
+   ],
+   "title": "Cross-Domain Hybrid OPD for Generalizable Search Agents",
+   "reason": "検索エージェントの能力を汎用性を損なわず高める強化学習の学習フレームワークであり、推論時の検索実行機構ではなく学習手法である。",
+   "source_url": "https://arxiv.org/abs/2608.02101",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 393
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2608.28192",
+   "identity_tokens": [
+    "arXiv:2608.28192"
+   ],
+   "title": "Locate Anything in Videos: Rethinking Efficient Generative Spatio-Temporal Video Grounding",
+   "reason": "Parallel Tube Decodingは時空間動画グラウンディングの軌跡デコードを並列化し逐次デコードのレイテンシを下げるが、対象タスク固有の生成形式に結びついた手法である。",
+   "source_url": "https://arxiv.org/abs/2608.28192",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 394
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2609.26086",
+   "identity_tokens": [
+    "arXiv:2609.26086"
+   ],
+   "title": "CoVeR: Coverage-Based Routing of Verifier Calls in Agentic Retrieval",
+   "reason": "CoVeRはエージェント検索で証拠カバレッジのマージンによりLLM検証器の呼び出しの大半を省略し、検証器が growing evidence を再処理する反復コストを直接削減する推論時ルーティング機構である。",
+   "source_url": "https://arxiv.org/abs/2609.26086",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 395
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.03039",
+   "identity_tokens": [
+    "arXiv:2610.03039"
+   ],
+   "title": "HyperThink: Text-to-Parameter Hypernetworks for Efficient Reasoning",
+   "reason": "HyperThinkは長文思考の逐次デコードによる推論時オーバーヘッドを、質問条件付きハイパーネットワークのパラメータ更新へ償却する方式で、推論レイテンシ削減を目的とした具体的機構が示されている。",
+   "source_url": "https://arxiv.org/abs/2610.03039",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 396
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2610.25646",
+   "identity_tokens": [
+    "arXiv:2610.25646"
+   ],
+   "title": "Spherical Fixed-Point Reasoners: Adaptive Loop Halting on the Hypersphere",
+   "reason": "Spherical Fixed-Point Reasonersはループ型Transformerの適応的停止を球面上で再定式化する理論的アーキテクチャ研究であり、推論計算量配分との関連はあるがシステム評価や実装貢献は要旨で薄い。",
+   "source_url": "https://arxiv.org/abs/2610.25646",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 397
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2404.08406",
+   "identity_tokens": [
+    "arXiv:2404.08406"
+   ],
+   "title": "MambaDFuse: A Mamba-based Dual-phase Model for Multi-modality Image Fusion",
+   "reason": "MambaDFuseはマルチモーダル画像融合のためのMambaモデルであり、リモートセンシング等の画像統合応用が目的である。",
+   "source_url": "https://arxiv.org/abs/2404.08406",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 398
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.11303",
+   "identity_tokens": [
+    "arXiv:2406.11303"
+   ],
+   "title": "VideoVista: A Versatile Benchmark for Video Understanding and Reasoning",
+   "reason": "VideoVistaは動画理解・推論能力を測る25,000問のベンチマークであり、能力評価のみで推論システムへの貢献はない。",
+   "source_url": "https://arxiv.org/abs/2406.11303",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 399
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.21906",
+   "identity_tokens": [
+    "arXiv:2505.21906"
+   ],
+   "title": "ChatVLA-2: Vision-Language-Action Model with Open-World Embodied Reasoning from Pretrained Knowledge",
+   "reason": "ChatVLA-2はロボット制御向け視覚言語行動モデルの具身推論能力を保つ学習手法であり、ロボティクス応用モデルの能力向上が主題である。",
+   "source_url": "https://arxiv.org/abs/2505.21906",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 400
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.10818",
+   "identity_tokens": [
+    "arXiv:2502.10818"
+   ],
+   "title": "On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging Recurrent and Graph Learning",
+   "reason": "GNNの勾配消失・過平滑化・過圧縮を線形制御理論で統一的に分析する理論研究であり、LLM推論とは無関係である。",
+   "source_url": "https://arxiv.org/abs/2502.10818",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 401
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2406.07230",
+   "identity_tokens": [
+    "arXiv:2406.07230"
+   ],
+   "title": "Needle In A Multimodal Haystack",
+   "reason": "MM-NIAHは長尺マルチモーダル文書の理解能力を測るベンチマークであり、能力評価のみでシステム機構の提案はない。",
+   "source_url": "https://arxiv.org/abs/2406.07230",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 402
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2405.03008",
+   "identity_tokens": [
+    "arXiv:2405.03008"
+   ],
+   "title": "DVMSR: Distillated Vision Mamba for Efficient Super-Resolution",
+   "reason": "DVMSRはVision Mambaと蒸留による画像超解像ネットワークであり、対象は画像復元応用であってLLM推論ではない。",
+   "source_url": "https://arxiv.org/abs/2405.03008",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 403
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2403.03900",
+   "identity_tokens": [
+    "arXiv:2403.03900"
+   ],
+   "title": "Mamba4Rec: Towards Efficient Sequential Recommendation with Selective State Space Models",
+   "reason": "Mamba4Recは逐次推薦に選択的状態空間モデルを適用する推薦システムであり、推論効率の言及は推薦タスク内のものである。",
+   "source_url": "https://arxiv.org/abs/2403.03900",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 404
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2409.15936",
+   "identity_tokens": [
+    "arXiv:2409.15936"
+   ],
+   "title": "DepMamba: Progressive Fusion Mamba for Multimodal Depression Detection",
+   "reason": "DepMambaは音声・映像融合によるうつ病検出のためのMambaモデルであり、精神疾患の検出という医療応用が目的である。",
+   "source_url": "https://arxiv.org/abs/2409.15936",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 406
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2402.07440",
+   "identity_tokens": [
+    "arXiv:2402.07440"
+   ],
+   "title": "Benchmarking and Building Long-Context Retrieval Models with LoCo and M2-BERT",
+   "reason": "LoCoとM2-BERTは長文脈検索エンコーダの事前学習と評価に関する研究で、長文脈処理との関連はあるが対象は検索モデル自体の学習でありLLM推論基盤ではない。",
+   "source_url": "https://arxiv.org/abs/2402.07440",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 407
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2403.05160",
+   "identity_tokens": [
+    "arXiv:2403.05160"
+   ],
+   "title": "MamMIL: Multiple Instance Learning for Whole Slide Images with State Space Models",
+   "reason": "MamMILは全スライド病理画像の複数インスタンス学習にMambaを組み合わせる病理診断向けフレームワークである。",
+   "source_url": "https://arxiv.org/abs/2403.05160",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 408
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2404.17858",
+   "identity_tokens": [
+    "arXiv:2404.17858"
+   ],
+   "title": "Revisiting Multi-modal Emotion Learning with Broad State Space Models and Probability-guidance Fusion",
+   "reason": "会話中のマルチモーダル感情認識を状態空間モデルで扱う研究であり、感情分類という応用課題が目的である。",
+   "source_url": "https://arxiv.org/abs/2404.17858",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 409
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2503.05500",
+   "identity_tokens": [
+    "arXiv:2503.05500"
+   ],
+   "title": "EuroBERT: Scaling Multilingual Encoders for European Languages",
+   "reason": "EuroBERTは欧州言語向け多言語エンコーダ系列の学習と評価であり、埋め込みモデルの能力向上が主題で推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2503.05500",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 410
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2405.17149",
+   "identity_tokens": [
+    "arXiv:2405.17149"
+   ],
+   "title": "LCM: Locally Constrained Compact Point Cloud Model for Masked Point Modeling",
+   "reason": "LCMはマスク点群モデリング向けの局所制約付き点群モデルであり、3次元点群解析というビジョン応用である。",
+   "source_url": "https://arxiv.org/abs/2405.17149",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 411
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2407.10005",
+   "identity_tokens": [
+    "arXiv:2407.10005"
+   ],
+   "title": "Fine-grained Analysis of In-context Linear Estimation: Data, Architecture, and Beyond",
+   "reason": "インコンテキスト線形推定の最適化・汎化地形を解析する理論研究であり、推論システムの機構提案ではない。",
+   "source_url": "https://arxiv.org/abs/2407.10005",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 412
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2212.10548",
+   "identity_tokens": [
+    "arXiv:2212.10548"
+   ],
+   "title": "T-Projection: High Quality Annotation Projection for Sequence Labeling Tasks",
+   "reason": "T-Projectionは系列ラベリングの注釈投影を大規模モデルと機械翻訳で高品質化する手法であり、NLPデータ作成応用である。",
+   "source_url": "https://arxiv.org/abs/2212.10548",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 413
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2411.07854",
+   "identity_tokens": [
+    "arXiv:2411.07854"
+   ],
+   "title": "Tucano: Advancing neural text generation for Portuguese",
+   "reason": "Tucanoはポルトガル語のニューラルテキスト生成のためのデータとモデル資源の構築であり、低資源言語の学習資源整備が主題である。",
+   "source_url": "https://arxiv.org/abs/2411.07854",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 414
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2503.05085",
+   "identity_tokens": [
+    "arXiv:2503.05085"
+   ],
+   "title": "S2S-Arena: Evaluating Paralinguistic Instruction Following in Speech-to-Speech Models",
+   "reason": "S2S-Arenaは音声対音声モデルのパラ言語的指示追従を評価するベンチマークであり、能力評価のみである。",
+   "source_url": "https://arxiv.org/abs/2503.05085",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 415
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2508.20478",
+   "identity_tokens": [
+    "arXiv:2508.20478"
+   ],
+   "title": "Video-MTR: Reinforced Multi-Turn Reasoning for Long Video Understanding",
+   "reason": "Video-MTRは長尺動画理解のために重要区間選択を強化学習で反復する動画推論フレームワークであり、動画理解応用が目的である。",
+   "source_url": "https://arxiv.org/abs/2508.20478",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 416
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.12171",
+   "identity_tokens": [
+    "arXiv:2502.12171"
+   ],
+   "title": "GoRA: Gradient-driven Adaptive Low Rank Adaptation",
+   "reason": "GoRAはLoRAのランク選択と初期化を勾配で適応させる微調整手法であり、学習側のパラメータ効率化であって推論機構ではない。",
+   "source_url": "https://arxiv.org/abs/2502.12171",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 417
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.15110",
+   "identity_tokens": [
+    "arXiv:2505.15110"
+   ],
+   "title": "RoT: Enhancing Table Reasoning with Iterative Row-Wise Traversals",
+   "reason": "RoTは表推論を行単位走査の反復で改善する推論手法であり、プロンプト上の推論手順の工夫であって推論システムではない。",
+   "source_url": "https://arxiv.org/abs/2505.15110",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 418
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2407.02518",
+   "identity_tokens": [
+    "arXiv:2407.02518"
+   ],
+   "title": "INDICT: Code Generation with Internal Dialogues of Critiques for Both Security and Helpfulness",
+   "reason": "INDICTはコード生成LLMに安全性と有用性の批評対話を持たせる枠組みであり、コード生成の安全性アラインメントが主題である。",
+   "source_url": "https://arxiv.org/abs/2407.02518",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2310.00795",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2310.00795"
+   ],
+   "title": "A Comprehensive Review of Generative AI in Healthcare",
+   "reason": "医療分野における生成AIの応用を網羅するレビューであり、医療画像・診断支援等の臨床応用紹介が内容である。",
+   "source_url": "https://doi.org/10.48550/arXiv.2310.00795",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2105.03458",
+   "identity_tokens": [
+    "arXiv:2105.03458"
+   ],
+   "title": "Duplex Sequence-to-Sequence Learning for Reversible Machine Translation",
+   "reason": "REDERは可逆機械翻訳のための双方向系列変換モデルであり、翻訳タスクのモデルアーキテクチャが主題である。",
+   "source_url": "https://arxiv.org/abs/2105.03458",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2503.13858",
+   "identity_tokens": [
+    "arXiv:2503.13858"
+   ],
+   "title": "MamBEV: Enabling State Space Models to Learn Birds-Eye-View Representations",
+   "reason": "MamBEVは自動運転向け鳥瞰図表現学習にMambaを用いる3次元知覚手法であり、運転支援の知覚応用である。",
+   "source_url": "https://arxiv.org/abs/2503.13858",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 422
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2408.12816",
+   "identity_tokens": [
+    "arXiv:2408.12816"
+   ],
+   "title": "O-Mamba: O-shape State-Space Model for Underwater Image Enhancement",
+   "reason": "O-Mambaは水中画像強調のための状態空間モデルであり、水中写真の画質改善という画像処理応用である。",
+   "source_url": "https://arxiv.org/abs/2408.12816",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-25T08:10:00+09:00",
+   "last_checked_at": "2026-11-25T08:10:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 423
+  }
+ ]
+}
