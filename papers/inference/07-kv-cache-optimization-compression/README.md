@@ -89,13 +89,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：10  
   調査エージェントが過去に開いた文書のうち不要になったものを、別の補助推論が意味的に判定し、主推論を止めずにKVキャッシュから削除する。
 
+- **2026-02 · [Learning to Evict from Key-Value Cache](2026-2602.10238-learning-to-evict-from-key-value-cache.md)**  
+  実装：[✓](https://github.com/apple/ml-learning-to-evict) ・ リポジトリ内被引用：10  
+  キーと値だけから将来の有用さを予測する順位付けを、ヘッドごとの小さな方策として強化学習で学ぶ追い出し方式で、手作り指標を上回り128K文脈へも一般化した。
+
 - **2026-05 · [RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory](2026-2605.06675-ratequant-optimal-mixed-precision-kv-cache-quantization-via-rate-distort.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   各ヘッドの損失勾配に基づく重要度と、量子化器固有の指数型ビット数・歪み関係を校正し、逆水充填法と整数ビットの限界利得選択で配分を決める。Qwen3/Llama3の5モデルと3種類の量子化器で評価し、平均4ビット時のTurboQuantにおける量子化劣化回復率は5モデル平均75.7%。
-
-- **2026-02 · [Learning to Evict from Key-Value Cache](2026-2602.10238-learning-to-evict-from-key-value-cache.md)**  
-  実装：[✓](https://github.com/apple/ml-learning-to-evict) ・ リポジトリ内被引用：9  
-  キーと値だけから将来の有用さを予測する順位付けを、ヘッドごとの小さな方策として強化学習で学ぶ追い出し方式で、手作り指標を上回り128K文脈へも一般化した。
 
 - **2025-12 · [MEPIC: Memory Efficient Position Independent Caching for LLM Serving](2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -152,6 +152,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   AsymCacheは、非連続KV区間を一つの注意カーネルで統合し、再利用確率と再計算遅延で追い出し、負荷適応チャンク化で長文サービングのGPU計算と管理費を減らす。
+
+- **2026-06 · [MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference](2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-conte.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  捨てたトークンの要約統計を保持し、その統計で追い出し先を選び、捨てた側の注意出力を近似で戻すことで、方向のずれによる誤差を抑えて全てのキャッシュ予算で先行方式を上回った。
 
 - **2026-06 · [MiniPIC: Flexible Position-Independent Caching in <100LOC](2026-2606.13126-minipic-flexible-position-independent-caching-in-100loc.md)**  
   実装：[✓](https://github.com/IBM/vllm) ・ リポジトリ内被引用：5  
@@ -232,10 +236,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [KV Cache Translation across Heterogeneous Large Language Models](2026-2607.28979-kv-cache-translation-across-heterogeneous-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   従来の単一射影や共有潜在空間を介す方式と異なり、MoTは複数の変換器を用意し、トークンごとに適切な変換器を上位K個選択して出力を混合する。Llama-3.2 3B、Gemma-3 4B、Qwen-3 4B間の異種変換を評価し、閉集合質問応答の平均正解率57.6%、抽出型質問応答の平均F1 0.42を報告する。
-
-- **2026-06 · [MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference](2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-conte.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  捨てたトークンの要約統計を保持し、その統計で追い出し先を選び、捨てた側の注意出力を近似で戻すことで、方向のずれによる誤差を抑えて全てのキャッシュ予算で先行方式を上回った。
 
 - **2026-06 · [Models Take Notes at Prefill: KV Cache Can Be Editable and Composable](2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md)**  
   実装：[✓](https://github.com/19PINE-AI/programmable-kv) ・ リポジトリ内被引用：4  
@@ -488,6 +488,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference](2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md)**  
   実装：[✓](https://github.com/ponytaill/HeteroCache) ・ リポジトリ内被引用：2  
   注意ヘッドの安定性と層内冗長性に応じてKV予算を細粒度配分し、代表ヘッドの注意ドリフト検知時だけCPUから非同期取得することで、224K文脈の復号を完全注意計算比約3倍高速化する。
+
+- **2026-01 · [Beyond Speedup -- Utilizing KV Cache for Sampling and Reasoning](2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.md)**  
+  実装：[✓](https://github.com/cmd2001/ICLR2026_KV-Embedding) ・ リポジトリ内被引用：2  
+  保持済みのKVキャッシュを表現として再利用し、自己評価と難易度予測による思考切替を行い、追加計算ほぼなしで生成トークンを最大5.7倍削減した。
 
 - **2025-12 · [V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval](2025-2512.12284-v-rex-real-time-streaming-video-llm-acceleration-via-dynamic-kv-cache-re.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -884,10 +888,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management](2026-2601.13631-contiguouskv-accelerating-llm-prefill-with-granularity-aligned-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   KV 枝刈りとI/Oの粒度をContiguousChunkへ統一し、二段非同期プリフェッチでSSD KV読み込みを計算と重ねてRe-プリフィルを最大3.85倍高速化する。
-
-- **2026-01 · [Beyond Speedup -- Utilizing KV Cache for Sampling and Reasoning](2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.md)**  
-  実装：[✓](https://github.com/cmd2001/ICLR2026_KV-Embedding) ・ リポジトリ内被引用：1  
-  保持済みのKVキャッシュを表現として再利用し、自己評価と難易度予測による思考切替を行い、追加計算ほぼなしで生成トークンを最大5.7倍削減した。
 
 - **2026-01 · [Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference](2026-2601.07667-adaptive-layer-selection-for-layer-wise-token-pruning-in-llm-inference.md)**  
   実装：[✓](https://github.com/TANIGUCHIREI/ASL) ・ リポジトリ内被引用：1  
@@ -2818,7 +2818,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：446  
+  実装：✓ ・ リポジトリ内被引用：444  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
@@ -2826,7 +2826,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
-  実装：✓ ・ リポジトリ内被引用：277  
+  実装：✓ ・ リポジトリ内被引用：278  
   Scissorhandsは、過去の注意重みが大きかったトークンは将来の生成でも高い注意を受けやすいという「重要性の持続性仮説（Persistence of Importance Hypothesis）」を提案する。
 
 - **2023-06 · [Augmenting Language Models with Long-Term Memory](2023-2306.07174-augmenting-language-models-with-long-term-memory.md)**  
