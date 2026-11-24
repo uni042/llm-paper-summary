@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71d831d26b7c9581-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.26262",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.26262",
+    "identity_tokens": [
+      "arXiv:2610.26262"
+    ],
+    "reason": "Dynamics-Aware Sparse Attentionは自己回帰ビデオ拡散Transformer向けに動的・静的領域を分離し、履歴KVキャッシュを動的フレーム中心に圧縮してビデオ生成の計算とメモリを削減する手法で、疎注意とKV圧縮の技術は推論効率化だが対象はLLMではなくビデオ生成モデルである。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dynamics-Aware Sparse Attention for Efficient Autoregressive Video Diffusion"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71d831d26b7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

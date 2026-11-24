@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-387110b8e35876b1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.13940",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.13940",
+    "identity_tokens": [
+      "arXiv:2510.13940"
+    ],
+    "reason": "Minimal Test-Time Interventionは推論時の不確実性が高エントロピーの少数トークンに局在する観察に基づき、その位置でのみ分類器フリーガイダンス等を介入する学習不要の枠組みだが、主目的は推論精度と安定性の改善であり計算効率化は副次的である。",
+    "first_checked_at": "2026-11-24T22:36:47+00:00",
+    "last_checked_at": "2026-11-24T22:36:47+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Less is More: Improving LLM Reasoning with Minimal Test-Time Intervention"
+  },
+  "processed_at": "2026-11-24T22:36:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-387110b8e358",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7478a5e4a631fa0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.16777",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.16777",
+    "identity_tokens": [
+      "arXiv:2412.16777"
+    ],
+    "reason": "HyperCLIPは小さい画像エンコーダの重みをテキスト入力ごとにハイパーネットワークで動的適応させ、ゼロショット画像分類器を1回のフォワードで生成する視覚言語アーキテクチャで、対象は視覚モデルの能力と配置容易性でありLLM推論ではない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "HyperCLIP: Adapting Vision-Language models with Hypernetworks"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7478a5e4a63",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

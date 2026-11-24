@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ca56cdc1094d4d1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.04723",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.04723",
+    "identity_tokens": [
+      "arXiv:2505.04723"
+    ],
+    "reason": "SOAEsV2は国有企業向けドメインLLMの継続事前学習・段階的SFT・蒸留強化した投機的デコード（1.39〜1.52倍）までを含む全パイプライン最適化だが、中心はドメイン適応の学習工程であり、推論高速化は一要素にとどまる。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SOAEsV2-7B/72B: Full-Pipeline Optimization for State-Owned Enterprise LLMs via Continual Pre-Training, Domain-Progressive SFT and Distillation-Enhanced Speculative Decoding"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ca56cdc1094",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

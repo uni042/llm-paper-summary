@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71d831d26b7c9581-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:eee8027bfe01c4a0de2531a49d962d0617ebe9b9",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:eee8027bfe01c4a0de2531a49d962d0617ebe9b9",
+    "identity_tokens": [
+      "SemanticScholar:eee8027bfe01c4a0de2531a49d962d0617ebe9b9"
+    ],
+    "reason": "量子化したLoRAエキスパートの混合でLLMの低コスト学習を目指すと題するが、要旨を取得できず（Crossref・arXivでも一致を確認できず）、量子化MoEの構成が学習コスト削減にとどまるのか推論時のエキスパート実行にも及ぶのかを一次要旨で検証できていない。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Quantized Mixture-of-LoRA-Experts for Low-Cost Training of Large Language Models"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71d831d26b7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

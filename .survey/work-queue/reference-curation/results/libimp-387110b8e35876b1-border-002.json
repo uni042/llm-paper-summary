@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-387110b8e35876b1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.28554",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.28554",
+    "identity_tokens": [
+      "arXiv:2603.28554"
+    ],
+    "reason": "Hydraは単一VLMに検索用LoRAアダプタの切替でColBERT式遅延相互作用検索と自己回帰生成の二つの頭を持たせ、別モデル運用のメモリと複雑さを減らすが、主対象は文書理解の検索・生成統合という応用であり推論システム機構の新規性は限定的である。",
+    "first_checked_at": "2026-11-24T22:36:47+00:00",
+    "last_checked_at": "2026-11-24T22:36:47+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model"
+  },
+  "processed_at": "2026-11-24T22:36:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-387110b8e358",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

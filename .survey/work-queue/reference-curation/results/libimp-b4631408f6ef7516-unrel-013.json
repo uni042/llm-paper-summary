@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4631408f6ef7516-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.04434",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.04434",
+    "identity_tokens": [
+      "arXiv:2611.04434"
+    ],
+    "reason": "小型視覚言語モデルによる認証付き厳密算術Sketchpadであり、タイトル自体がVLMの算術能力を対象としており推論システムではない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Sketchpad: certified exact arithmetic with a small vision-language model"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4631408f6ef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

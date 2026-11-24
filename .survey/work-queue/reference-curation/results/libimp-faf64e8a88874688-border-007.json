@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.07631",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.07631",
+    "identity_tokens": [
+      "arXiv:2608.07631"
+    ],
+    "reason": "PACEは全二重音声対話でクライアントの再生境界にモデル側文脈を錨付けし、割り込み後に未再生の応答を文脈から除く提供者非依存ミドルウェアだが、対象は対話整合性の回復であり、生成の高速化やサービング資源効率への直接の貢献は示されていない。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PACE: A Playback-Aligned Context Engine for LLM-Based Full-Duplex Voice Dialogue"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf64e8a8887",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e498d4c94b96cc25-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.14570",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.14570",
+    "identity_tokens": [
+      "arXiv:2605.14570"
+    ],
+    "reason": "拡散型LLM向けに自己回帰前提や反復サンプリングに頼らない軽量な不確実性定量化を初めて系統的に検討した研究で、対象はハルシネーション検出のための信頼性評価であり、推論高速化やサービング機構ではない。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Uncertainty Quantification for Large Language Diffusion Models"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e498d4c94b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

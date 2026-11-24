@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad28cc842d28c5f2-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2607.10110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2607.10110",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2607.10110",
+      "arXiv:2607.10110"
+    ],
+    "reason": "Looped Mamba等のループ型状態空間言語モデルをパラメータ一致条件で推論タスクで比較し計算深度の効果を示す研究で、適応的終了状態選択も題するが、評価はモジュラー演算等の制御された推論タスク上のアーキテクチャ探索であり、推論システムとしての効率機構の検証は薄い。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Looped State-Space Language Models with Adaptive Exit-State Selection"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad28cc842d28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

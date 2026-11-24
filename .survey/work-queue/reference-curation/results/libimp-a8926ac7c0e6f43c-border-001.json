@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8926ac7c0e6f43c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.37466",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.37466",
+    "identity_tokens": [
+      "arXiv:2610.37466"
+    ],
+    "reason": "H100の分散共有メモリにおけるフロアスイープ等の物理的非理想性がカーネル性能へ与える影響を実測・分析する研究で、大規模AI学習・推論双方に関わるハードウェア知見だが、LLM推論カーネルへの具体的な最適化提案ではない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Demystifying the Impact of Physical Non-Idealities on Kernel Performance"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8926ac7c0e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

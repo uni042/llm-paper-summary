@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88590bbe992400c9-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.03087",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.03087",
+    "identity_tokens": [
+      "arXiv:2610.03087"
+    ],
+    "reason": "Zephonは基盤モデルの学習データローディングについて、GPUトポロジ変更やチェックポイント再開をまたいで決定的なデータ順序を保つ弾性的決定性を提供するデータローダであり、対象は学習パイプラインで推論システムではない。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Zephon: Elastic Determinism for Online, Stateful Foundation Model Data Loading Pipelines"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88590bbe9924",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

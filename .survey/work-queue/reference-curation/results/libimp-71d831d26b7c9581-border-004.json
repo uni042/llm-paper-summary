@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71d831d26b7c9581-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/imc-ssgp67001.2025.11473981",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/imc-ssgp67001.2025.11473981",
+    "identity_tokens": [
+      "DOI:10.1109/imc-ssgp67001.2025.11473981"
+    ],
+    "reason": "4LMはRaspberry Pi等のエッジデバイスへ軽量LLMを配置し量子化でメモリと計算量を削って画像キャプションを行う枠組みで、モデルサイズとキャプション品質のトレードオフを検証するが、主眼はエッジ上の画像キャプションという応用配置であり新しい推論機構の提示は限定的である。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "4LM: Local Lightweight LLMs for Image Captioning on Embedded Systems"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71d831d26b7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

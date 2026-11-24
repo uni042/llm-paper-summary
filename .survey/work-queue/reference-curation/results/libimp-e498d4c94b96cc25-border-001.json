@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e498d4c94b96cc25-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.02304",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.02304",
+    "identity_tokens": [
+      "arXiv:2606.02304"
+    ],
+    "reason": "UCEはLLMエージェントの経験をMemory・Strategy・Workflow・Skillの4種の文脈ユニットとして外部ライブラリ化し、検索・使用実績による剪定・生成予算配分で進化させる枠組みだが、主眼はエージェントのタスク成功率向上であり、推論サービングやメモリ機構としての効率化の定量評価は要旨で示されていない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unified Context Evolution for LLM Agents"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e498d4c94b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

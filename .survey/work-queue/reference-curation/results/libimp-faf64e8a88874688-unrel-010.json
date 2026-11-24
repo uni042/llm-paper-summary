@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.20868",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.20868",
+    "identity_tokens": [
+      "arXiv:2509.20868"
+    ],
+    "reason": "StyleBenchはCoTやTree-of-Thought等の推論スタイルを容量制約下の設計選択として15モデルで比較評価するベンチマーク研究で、効率の観測は評価結果の一部にとどまり、推論システムの機構そのものへの貢献はない。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "StyleBench: Evaluating thinking styles in Large Language Models"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf64e8a8887",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:065f7724ea35bf1ca8d8b4415e47ae1bd2062824",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:065f7724ea35bf1ca8d8b4415e47ae1bd2062824",
+    "identity_tokens": [
+      "SemanticScholar:065f7724ea35bf1ca8d8b4415e47ae1bd2062824"
+    ],
+    "reason": "AdaPruneは疎正則化によるTransformer剪定と題する記録だが、取得できた経路では一次要旨を確認できず、剪定対象と推論時の削減効果を検証できていない。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdaPrune: Pruning Transformer with Sparse Regularization"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf64e8a8887",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

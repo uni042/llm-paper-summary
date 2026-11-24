@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ded524d30c2415b-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.10197",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.10197",
+    "identity_tokens": [
+      "arXiv:2212.10197"
+    ],
+    "reason": "多視点学習の補完性・合意原則に基づき多ヘッド自己注意を拡張したEITの提案で、評価対象は一般的な多視点学習タスクの精度であり、LLM推論への適用や効率化は扱われていない。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "EIT: Enhanced Interactive Transformer"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ded524d30c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.24124",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.24124",
+    "identity_tokens": [
+      "arXiv:2605.24124"
+    ],
+    "reason": "Kerrソリトンの非線形物理ダイナミクスで注意の重み計算を実行する光学ハードウェア注意をGPTへ適用し生成推論を実機で流して予測との高忠実な一致を示すが、物理デバイス上の実証段階であり実用的な推論システムとしての規模・速度の検証は限定的である。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A generative pre-trained transformer with Kerr-soliton attention"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf64e8a8887",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

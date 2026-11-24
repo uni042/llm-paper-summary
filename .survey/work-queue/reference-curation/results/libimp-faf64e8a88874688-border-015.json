@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2309.05503",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2309.05503",
+    "identity_tokens": [
+      "arXiv:2309.05503"
+    ],
+    "reason": "長系列向け効率的Transformer実装と2次元相対注意バイアスで複数ページ文書を一括処理する文書理解モデルで、長文脈注意の効率化要素はあるが、主目的は文書理解タスクの精度でありLLM推論基盤への適用は示されていない。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Long-Range Transformer Architectures for Document Understanding"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf64e8a8887",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

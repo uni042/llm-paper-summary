@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8dfb1b770be1133e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:a8a048b862cf84a78e0a3f2e8ca8979b7c70ddb7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:a8a048b862cf84a78e0a3f2e8ca8979b7c70ddb7",
+    "identity_tokens": [
+      "SemanticScholar:a8a048b862cf84a78e0a3f2e8ca8979b7c70ddb7"
+    ],
+    "reason": "Transformer注意フィルタによる感情予測タスクの説明可能性分析がタイトルに明示されており、感情分析の応用・解釈の話題で推論システムではない。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "An explainability analysis of a sentiment prediction task using a transformer-based attention ﬁlter"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8dfb1b770be1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

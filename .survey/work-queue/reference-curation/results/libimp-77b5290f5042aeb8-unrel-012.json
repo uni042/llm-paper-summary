@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-77b5290f5042aeb8-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.15765",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.15765",
+    "identity_tokens": [
+      "arXiv:2606.15765"
+    ],
+    "reason": "マルチタスク稠密予測のために視覚基盤モデルの編成を学習する研究で、タイトル自体がコンピュータビジョンの稠密予測応用を明示しており、LLM推論とは無関係である。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Learning to Orchestrate Vision Foundation Models for Multi-Task Dense Prediction"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-77b5290f5042",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

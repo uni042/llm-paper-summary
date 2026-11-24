@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7ac32d400cb78714-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a39ad79e0ce0f56f802584a6e5fb98b09e136411",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a39ad79e0ce0f56f802584a6e5fb98b09e136411",
+    "identity_tokens": [
+      "SemanticScholar:a39ad79e0ce0f56f802584a6e5fb98b09e136411"
+    ],
+    "reason": "LLMプルーニングのためのShapley値推定と題する記録だが、会場情報がなく一次要旨も取得できず、推定手法と剪定への適用方法を検証できなかったため保留寄りに倒す。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Opleiding DSAI Pruning-aware Shapley values estimation for Large Language Models"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7ac32d400cb7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-971682def3184de3-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2101.08890",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2101.08890",
+    "identity_tokens": [
+      "arXiv:2101.08890"
+    ],
+    "reason": "pQRNNは射影ベースで埋め込みを持たない小型エンコーダを学生として大規模事前学習モデルを蒸留し、mBERT教師の350分の1の大きさで意味解析タスクの性能の95.9％を保つが、対象は理解タスク用エンコーダの小型化であり、生成LLMのサービングやデコードへの適用は示されていない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Distilling Large Language Models into Tiny and Effective Students using pQRNN"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-971682def318",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

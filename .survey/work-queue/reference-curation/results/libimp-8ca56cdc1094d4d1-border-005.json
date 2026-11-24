@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ca56cdc1094d4d1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.11664",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.11664",
+    "identity_tokens": [
+      "arXiv:2511.11664"
+    ],
+    "reason": "rANS符号化と非対称整数量子化・疎テンソル表現で分割コンピューティングの中間特徴を軽量圧縮し伝送量と符号化レイテンシを下げる枠組みだが、評価対象はResNetやMobileNet等の汎用DNNのエッジ・クラウド分割推論であり、LLM推論への適用は示されていない。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Range Asymmetric Numeral Systems-Based Lightweight Intermediate Feature Compression for Split Computing of Deep Neural Networks"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ca56cdc1094",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.21313",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.21313",
+    "identity_tokens": [
+      "arXiv:2508.21313"
+    ],
+    "reason": "CDCDA-PLMはクラウド側LLMのデータ拡張で個人データを補い、PEFTで微調整した小型言語モデルを端末へ配置する枠組みで、オンデバイス推論の配置形態は含むが主貢献はパーソナライゼーション用データ拡張と学習であり、推論機構の最適化は薄い。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards On-device Personalization: Cloud-device Collaborative Data Augmentation for Efficient On-device Language Model"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf64e8a8887",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

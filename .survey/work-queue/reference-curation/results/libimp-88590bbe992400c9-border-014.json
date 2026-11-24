@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88590bbe992400c9-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.19610",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.19610",
+    "identity_tokens": [
+      "arXiv:2407.19610"
+    ],
+    "reason": "Mixture of Modular Expertsは知識蒸留とMoEを組み合わせ、多言語教師から言語・ドメイン別のモジュール型エキスパートへ蒸留して壊滅的忘却やモジュール性を扱う研究で、MoEのモジュール化要素はあるが主眼は多言語モデルの学習と適応であり、推論高速化の評価は示されていない。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T22:36:48+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mixture of Modular Experts: Distilling Knowledge from a Multilingual Teacher into Specialized Modular Language Models"
+  },
+  "processed_at": "2026-11-24T22:36:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88590bbe9924",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

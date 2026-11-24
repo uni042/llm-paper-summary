@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad28cc842d28c5f2-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.26128",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.26128",
+    "identity_tokens": [
+      "arXiv:2605.26128"
+    ],
+    "reason": "Constraint Taxはオンデバイス等の小規模言語モデルについて、JSON等の構造化出力制約が正答率へ与える損失を固定条件で分離測定するプロトコルを提案し商品GPUで1万5千生成を実測するが、対象は出力制約下の能力測定であり推論システムの高速化やスケジューリング機構ではない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Constraint Tax: Measuring Validity-Correctness Tradeoffs in Structured Outputs for Small Language Models"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad28cc842d28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

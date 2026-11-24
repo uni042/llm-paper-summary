@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e498d4c94b96cc25-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.22478",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.22478",
+    "identity_tokens": [
+      "arXiv:2601.22478"
+    ],
+    "reason": "検証可能報酬によるGRPOで生じる勾配消失と多様性崩壊に対し、入力変換で探索を促す学習手法であり、対象は推論LLMの強化学習手順であって推論システムではない。",
+    "first_checked_at": "2026-11-24T22:36:50+00:00",
+    "last_checked_at": "2026-11-24T22:36:50+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Transformation-Augmented GRPO for Enhancing Exploration in Reasoning of Large Language Models"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e498d4c94b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

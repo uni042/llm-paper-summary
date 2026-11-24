@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e498d4c94b96cc25-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.02540",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.02540",
+    "identity_tokens": [
+      "arXiv:2603.02540"
+    ],
+    "reason": "神経心理学的検査を基にLLMの基礎的認知能力を測るNeuroCognitionベンチマークの提案で、対象はモデルの能力評価そのものであり、推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "A Neuropsychologically Grounded Evaluation of LLM Cognitive Abilities"
+  },
+  "processed_at": "2026-11-24T22:36:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e498d4c94b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e498d4c94b96cc25-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.27765",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.27765",
+    "identity_tokens": [
+      "arXiv:2605.27765"
+    ],
+    "reason": "合格率で重み付けした自己蒸留により推論LLMの強化学習における信用割当を改善するSDPOの改良研究で、対象は推論モデルの学習アルゴリズムであり、推論システムへの適用は示されていない。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T22:36:49+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Restoring the Sweet Spot: Pass-Rate Weighted Self-Distillation for LLM Reasoning"
+  },
+  "processed_at": "2026-11-24T22:36:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e498d4c94b96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
