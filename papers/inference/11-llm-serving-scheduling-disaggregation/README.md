@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（641本）
+## 自動生成の論文一覧（642本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1229,6 +1229,10 @@
 - **2026-06 · [Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving](2026-2606.29708-demystifying-the-design-space-and-best-practices-for-heterogeneous-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の推論を事前充填（プリフィル）と逐次復号（デコード）に分離すると、各段階を異なるアクセラレータで実行できる。ただしこれは制約下で処理可能な到着率の変化であり、すべての推論処理が一律10倍速くなったという意味ではない。
+
+- **2026-06 · [Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving](2026-2606.27457-cluster-route-escalate-cascaded-framework-for-cost-aware-llm-serving.md)**  
+  実装：[✓](https://github.com/ymoslem/CRE-Router) ・ リポジトリ内被引用：0  
+  質問をクラスタ化して費用対誤りで生成前に振り分け、生成後は品質推定で不合格だけを強いモデルへ格上げする二段方式で、AIME 2024では強いモデル単独に0.7ポイント差まで迫りながら出力トークン当たり時間を18パーセント下げる。
 
 - **2026-06 · [BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference](2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2493,7 +2497,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1940  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1941  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

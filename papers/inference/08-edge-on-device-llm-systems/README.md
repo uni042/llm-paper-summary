@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（118本）
+## 自動生成の論文一覧（119本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -169,6 +169,10 @@
 - **2026-07 · [NPUsper: Eliminating Redundant Computation for Real-Time Whisper on Mobile NPUs](2026-2607.01108-npusper-eliminating-redundant-computation-for-real-time-whisper-on-mobil.md)**  
   実装：[✓](https://github.com/npusper/NPUsper) ・ リポジトリ内被引用：0  
   第一は、短い音声片に対するWhisperの幻覚を抑えるため、従来方式が毎回30秒近い入力を作り、既に処理した音声や無音埋めを再計算すること。
+
+- **2026-07 · [MORES: Mobile Reasoning-as-a-Service via Distributed LLM Inference-Time Scaling](2026-2607.08116-mores-mobile-reasoning-as-a-service-via-distributed-llm-inference-time-s.md)**  
+  実装：[✓](https://github.com/NICE-HKU/MORES) ・ リポジトリ内被引用：0  
+  潜在推論の再帰を端末とエッジサーバーへ分割し、再帰ステップ数と送信枝刈り率を意味ルーター付き混合専門家型の強化学習で決めることで、通常のソフトアクタークリティックより平均スループットを約18パーセント高める分散推論時スケーリング。
 
 - **2026-07 · [LightMoE: Task-Aware Expert Availability Management for Memory-Efficient MoE-LLM Inference](2026-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

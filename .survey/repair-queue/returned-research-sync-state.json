@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "23ad9fb50304b38f6a68fff3cde13aeb2b00c630",
+  "base_commit": "6c24ebf41975eb2e1f9ed251e4eaf93fb96264cc",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -917,6 +917,7 @@
     "2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branch-routing.json",
     "2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-scoring.json",
     "2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multimodal-reasoning.json",
+    "2026-2606.27457-cluster-route-escalate-cascaded-framework-for-cost-aware-llm-serving.json",
     "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json",
     "2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-efficient-rag.json",
     "2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-robotic-vlms-and-vlas.json",
@@ -929,10 +930,12 @@
     "2026-2607.01241-mapping-text-to-multiplex-graph-prompt-compression-as-levy-walk-guided-graph-pruning.json",
     "2026-2607.01308-cache-merging-as-a-convergent-replicated-state-for-multi-agent-latent-reasoning.json",
     "2026-2607.01792-partrep-learning-what-to-repeat-for-decoder-only-llms.json",
+    "2026-2607.02119-an-efficient-vllm-based-inference-pipeline-for-unified-audio-understanding-and-generation.json",
     "2026-2607.02521-tile-level-activation-overlap-for-efficient-llm-inference.json",
     "2026-2607.02522-multi-turn-distributed-inference-with-mixture-of-experts-for-6g-edge-cloud-networks.json",
     "2026-2607.03050-omnifocus-query-guided-modality-balanced-token-compression-for-omni-modal-large-language-models.json",
     "2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inference.json",
+    "2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.json",
     "2026-2607.04443-wan-streamer-v0-2-higher-resolution-same-latency.json",
     "2026-2607.04668-elastic-gang-per-token-membership-change-for-a-hard-barriered-llm-inference-gang-co-scheduled-with-os-processes.json",
     "2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-in-mobile-llm-inference.json",
@@ -942,6 +945,7 @@
     "2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.json",
     "2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.json",
     "2026-2607.08029-rethinking-small-vlm-quantization-from-component-wise-analysis-to-hardware-aware.json",
+    "2026-2607.08116-mores-mobile-reasoning-as-a-service-via-distributed-llm-inference-time-scaling.json",
     "2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.json",
     "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json",
     "2026-2607.09385-steel-sparsity-aware-fused-attention-for-energy-efficient-long-sequence-inference-on-amd-s-xdna-npu.json",
@@ -949,6 +953,7 @@
     "2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-language-models.json",
     "2026-2607.11211-fasttps-an-optimized-method-for-llm-token-phase-for-ai-accelerators.json",
     "2026-2607.11368-decomposing-runtime-kernel-and-quantization-speedups-via-a-matched-fp16-intermediate-a-hardware-conditioned-case-study-o.json",
+    "2026-2607.12161-token-reduction-is-not-cost-reduction.json",
     "2026-2607.12266-saturation-makes-quantization-error-additive-a-coverage-model-with-a-certificate.json",
     "2026-2607.14327-prem-learning-what-to-preserve-and-when-to-refresh-for-context-compression.json",
     "2026-2607.14427-per-token-fixed-point-convergence-in-depth-recurrent-transformers.json",
@@ -53591,6 +53596,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.27457": {
+      "order": [
+        "2026-11-24T06:29:47+00:00",
+        "2026-2606.27457-cluster-route-escalate-cascaded-framework-for-cost-aware-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.02119": {
+      "order": [
+        "2026-11-24T06:31:03+00:00",
+        "2026-2607.02119-an-efficient-vllm-based-inference-pipeline-for-unified-audio-understanding-and-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.04371": {
+      "order": [
+        "2026-11-24T06:32:19+00:00",
+        "2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.08116": {
+      "order": [
+        "2026-11-24T06:33:35+00:00",
+        "2026-2607.08116-mores-mobile-reasoning-as-a-service-via-distributed-llm-inference-time-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.12161": {
+      "order": [
+        "2026-11-24T06:34:51+00:00",
+        "2026-2607.12161-token-reduction-is-not-cost-reduction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68044,6 +68094,21 @@
     "arxiv:2606.26631": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multim.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multim.md"
+    ],
+    "arxiv:2606.27457": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.27457-cluster-route-escalate-cascaded-framework-for-cost-aware-llm-serving.md"
+    ],
+    "arxiv:2607.02119": [
+      "papers/inference/99-other-inference-systems/2026-2607.02119-an-efficient-vllm-based-inference-pipeline-for-unified-audio-understandi.md"
+    ],
+    "arxiv:2607.04371": [
+      "papers/inference/05-speculative-decoding-moe/2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.md"
+    ],
+    "arxiv:2607.08116": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2607.08116-mores-mobile-reasoning-as-a-service-via-distributed-llm-inference-time-s.md"
+    ],
+    "arxiv:2607.12161": [
+      "papers/inference/99-other-inference-systems/2026-2607.12161-token-reduction-is-not-cost-reduction.md"
     ]
   }
 }

@@ -62,6 +62,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：4  
   本論文は混合専門家（Mixture-of-Experts、MoE）モデルで、各層・各トークンが起動する専門家数を一律に減らすと品質が大きく悪化する問題に対し、モデル全体の専門家起動回数を固定したまま、層間とトークン間で予算を再配分するAlloc-MoEを提案する。
 
+- **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
+
 - **2026-01 · [Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs](2026-2602.00879-dynamic-expert-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
@@ -93,10 +97,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-04 · [Does a Global Perspective Help Prune Sparse MoEs Elegantly?](2026-2604.06542-global-perspective-moe-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   層間で異なる専門家冗長性を全体最適化し、エントロピー制約付き貪欲統合で枝刈り予算を非一様配分して同一圧縮率の精度保持を改善する。
-
-- **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
 
 - **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

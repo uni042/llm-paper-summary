@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1492本）
+## 自動生成の論文一覧（1494本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1806,6 +1806,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの無駄な再計算を、固定しきい値ではなく直近3ステップの信頼度軌跡のクラスタリングで意味的に安定したトークンを検出して凍結することで削り、品質を保ちながら短文脈で平均約4倍、長文脈で平均41倍高速化する方式Ada-DLM。
 
+- **2026-07 · [Token Reduction Is Not Cost Reduction](2026-2607.12161-token-reduction-is-not-cost-reduction.md)**  
+  実装：[✓](https://github.com/PointFiveLabs/ai-efficiency-benchmark) ・ リポジトリ内被引用：0  
+  コーディングエージェントの文脈削減を2908回の課金実行で対照測定し、費用の大半がプロンプトキャッシュであり、ツール出力を38パーセント削っても費用が6.8パーセント増えるなど、トークン削減と費用削減が切り離されることを示した実証研究。
+
 - **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
@@ -1989,6 +1993,10 @@
 - **2026-07 · [Anchoring the Cache: Mitigating Contextual Hallucination in KV-Compressed Long-Context Summarization](2026-07a1c74f044c-anchoring-the-cache-mitigating-contextual-hallucination-in-kv-compressed.md)**  
   実装：[✓](https://github.com/FYYFU/HeadKV) ・ リポジトリ内被引用：0  
   KVキャッシュ圧縮が長文要約の幻覚を最大3.36倍に悪化させることと、その原因が検索ヘッドの注意の原文から生成文への移行であることを示し、デコード時に検索ヘッドの生成済みキャッシュだけを除くHalluKVで、Llama-3-8Bでは幻覚を平均5.48ポイント下げつつ要約品質も保った。
+
+- **2026-07 · [An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation](2026-2607.02119-an-efficient-vllm-based-inference-pipeline-for-unified-audio-understandi.md)**  
+  実装：[✓](https://github.com/whr-a/vllm/tree/opuslm) ・ リポジトリ内被引用：0  
+  複数コードブックの音声トークン生成を主従分解でvLLMの単一ストリーム経路へ載せ、CFGの条件・無条件リクエストを対で同時スケジュールして、音声理解と生成を統合した高スループット推論パイプラインを実現する研究。
 
 - **2026-07 · [ACBQ: Adaptive Cross-Block Quantization of Large Language Models](2026-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3541,7 +3549,7 @@
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：31  
+  実装：✓ ・ リポジトリ内被引用：32  
   Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
 
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
@@ -4983,7 +4991,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：24  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  
@@ -5937,7 +5945,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：389  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：390  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
