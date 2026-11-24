@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-23T04:00:12+00:00",
-  "status": "issues_found",
-  "error_count": 1,
+  "checked_at": "2026-11-24T04:06:30+00:00",
+  "status": "passed",
+  "error_count": 0,
   "warning_count": 0,
-  "paper_count": 5040,
-  "latest_paper_commit": "2026-11-22T15:51:36+00:00",
+  "paper_count": 5288,
+  "latest_paper_commit": "2026-11-24T03:56:03+00:00",
   "queue": {
-    "job_count": 3312,
+    "job_count": 3839,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
-        "completed": 720,
+        "completed": 849,
         "processing": 7,
         "ready": 1
       },
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "ready": 1342,
-        "superseded": 1209,
+        "ready": 1495,
+        "superseded": 1454,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -63,32 +63,18 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-11-23T03:58:45+00:00",
-      "total": 5040,
-      "incomplete": 3,
-      "findings": [
-        {
-          "severity": "error",
-          "code": "citation_coverage_incomplete",
-          "detail": "citation coverage has 3 incomplete paper(s)",
-          "incomplete": 3
-        }
-      ]
+      "checked_at": "2026-11-24T04:05:37+00:00",
+      "total": 5288,
+      "incomplete": 0,
+      "findings": []
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-11-23T03:58:46+00:00",
-      "total": 5040,
+      "checked_at": "2026-11-24T04:05:37+00:00",
+      "total": 5288,
       "incomplete": 0,
       "findings": []
     }
   },
-  "findings": [
-    {
-      "severity": "error",
-      "code": "citation_coverage_incomplete",
-      "detail": "citation coverage has 3 incomplete paper(s)",
-      "incomplete": 3
-    }
-  ]
+  "findings": []
 }
