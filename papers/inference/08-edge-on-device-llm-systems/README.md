@@ -60,6 +60,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
 
+- **2026-04 · [SWARM-LLM: Collaborative Inference for Edge-based Small Language Models](2026-2606.14711-swarm-llm-collaborative-inference-for-edge-based-small-language-models.md)**  
+  実装：[✓](https://github.com/mdahshan/swarm_llm) ・ リポジトリ内被引用：1  
+  不確実性と安全性でクエリを振り分け、エッジの小規模モデルの群れで答えられない分だけクラウドの大きなモデルを召喚し、クラウド利用を約4分の1に抑える協調推論の制御層。
+
 - **2026-04 · [Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs](2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   NPUMoEは、Apple NPUで動的な専門家選択を固定容量のグループと共有計算グラフへ変換し、頻出群を常駐させて小粒度実行とCPU同期を減らす方式。
@@ -238,10 +242,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   通常の投機的デコード（投機的復号）は、小さなドラフトモデルが候補トークンを先に作り、大きな対象モデルが複数候補を一括検証することで、対象モデルの重み読み出しを複数トークンへ償却する。
 
-- **2026-04 · [SWARM-LLM: Collaborative Inference for Edge-based Small Language Models](2026-2606.14711-swarm-llm-collaborative-inference-for-edge-based-small-language-models.md)**  
-  実装：[✓](https://github.com/mdahshan/swarm_llm) ・ リポジトリ内被引用：0  
-  不確実性と安全性でクエリを振り分け、エッジの小規模モデルの群れで答えられない分だけクラウドの大きなモデルを召喚し、クラウド利用を約4分の1に抑える協調推論の制御層。
-
 - **2026-04 · [SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs](2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SHIELDはBF16活性値を符号・指数・仮数と寿命で分け、短命な仮数のeDRAM更新を止め、長寿命KVは周期を延ばして保持エネルギーを減らす方式。
@@ -305,7 +305,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：30  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
