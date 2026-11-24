@@ -1,0 +1,977 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8ca56cdc1094d4d1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8ca56cdc1094",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+    "arXiv:2410.13299",
+    "arXiv:2506.12473",
+    "arXiv:2507.05228",
+    "arXiv:2510.17364",
+    "arXiv:2602.11937",
+    "arXiv:2605.11196",
+    "arXiv:2606.04974",
+    "arXiv:2610.16744",
+    "arXiv:2610.21810"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4111cc29ddbea11430898385e799c87c5ea50f43",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:40:07.033267+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.13299",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.12473",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.05228",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.17364",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.11937",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.11196",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04974",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.16744",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21810",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Extending Puzzle for Mixture-of-Experts Reasoning Models with Application to GPT-OSS Acceleration",
+      "source_url": "https://arxiv.org/abs/2602.11937",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning-focused LLMs improve answer quality by generating longer reasoning traces, but the additional tokens dramatically increase serving cost, motivating inference optimization. We extend and apply Puzzle, a post-training neural architecture search (NAS) framework, to gpt-oss-120B to produce gpt-oss-puzzle-88B, a deployment-optimized derivative. Our approach combines heterogeneous MoE expert pruning, selective replacement of full-context attention with window attention, FP8 KV-cache quantization with calibrated scales, and post-training reinforcement learning to recover accuracy, while maintaining low generation length. In terms of per-token speeds, on an 8XH100 node we achieve 1.63X and 1.22X throughput speedups in long-context and short-context settings, respectively. gpt-oss-puzzle-88B also delivers throughput speedups of 2.82X on a single NVIDIA H100 GPU. However, because token counts can change with reasoning effort and model variants, per-token throughput (tok/s) and latency (ms/token) do not necessarily lead to end-to-end speedups: a 2X throughput gain is erased if traces grow 2X. Conversely, throughput gains can be spent on more reasoning tokens to improve accuracy; we therefore advocate request-level efficiency metrics that normalize throughput by tokens generated and trace an accuracy--speed frontier across reasoning efforts. We show that gpt-oss-puzzle-88B improves over gpt-oss-120B along the entire frontier, delivering up to 1.29X higher request-level efficiency. Across various benchmarks, gpt-oss-puzzle-88B matches or slightly exceeds the parent on suite-average accuracy across reasoning efforts, with retention ranging from 100.8% (high) to 108.2% (low), showing that post-training architecture search can substantially reduce inference costs without sacrificing quality.",
+      "identifiers": [
+        "SemanticScholar:172b7a007e4f426b02a27b90c5c42f5abb6e6908"
+      ],
+      "semantic_scholar_id": "172b7a007e4f426b02a27b90c5c42f5abb6e6908",
+      "canonical_id": "arXiv:2602.11937",
+      "arxiv_id": "2602.11937",
+      "doi": "10.48550/arXiv.2602.11937",
+      "authors": [
+        "Akhiad Bercovich",
+        "Nir Ailon",
+        "Vladimir Anisimov",
+        "Tomer Asida",
+        "Nave Assaf",
+        "Mohammad Dabbah",
+        "Ido Galil",
+        "Amnon Geifman",
+        "Yonatan Geifman",
+        "Izhak Golan",
+        "Roi Koren",
+        "Itay Levy",
+        "Zach Moshe",
+        "Pavlo Molchanov",
+        "Najeeb Nabwani",
+        "Mostofa Patwari",
+        "Omri Puny",
+        "Tomer Ronen",
+        "Itamar Schen",
+        "Elad Segal",
+        "Ido Shahaf",
+        "Oren Tropp",
+        "Ran Zilberstein",
+        "Ran El-Yaniv"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Variational Linear Attention: Stable Associative Memory for Long-Context Transformers",
+      "source_url": "https://arxiv.org/abs/2605.11196",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention reduces the quadratic cost of softmax attention to $\\mathcal{O}(T)$, but its memory state grows as $\\mathcal{O}(T)$ in Frobenius norm, causing progressive interference between stored associations. We introduce \\textbf{Variational Linear Attention} (VLA), which reframes the memory update as an online regularised least-squares problem with an adaptive penalty matrix maintained via the Sherman-Morrison rank-1 formula. We prove that normalising the write direction to unit length gives the recurrence Jacobian spectral norm exactly $1$ for all sequence lengths and head dimensions (Proposition 2), and that the state norm is self-limiting under bounded inputs (Proposition 1). Empirically, VLA reduces $\\|S_t\\|_F$ by $109\\times$ relative to standard linear attention at $T{=}1{,}000$, achieves near-perfect exact-match accuracy on multi-query associative recall within the effective per-head memory regime ($n_\\text{pairs}<d_h$), maintaining substantially higher retrieval performance than DeltaNet and standard linear attention under increasing memory load, and maintains 62\\% accuracy at the per-head capacity boundary. A Triton-fused kernel achieves $14\\times$ speedup over sequential Python and $\\mathcal{O}(T)$ scaling, crossing below softmax attention latency at approximately 43\\,000 tokens.",
+      "identifiers": [
+        "SemanticScholar:147a2f2ce44cd5346714ee2ba0a69c4278756ce8"
+      ],
+      "semantic_scholar_id": "147a2f2ce44cd5346714ee2ba0a69c4278756ce8",
+      "canonical_id": "arXiv:2605.11196",
+      "arxiv_id": "2605.11196",
+      "doi": "10.48550/arXiv.2605.11196",
+      "authors": [
+        "Vishal Pandey",
+        "Gopal Singh"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "N-Gram Memories at Two Bits: Quantizing Lookup Tables in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.21810",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conditional memory expands language-model capacity through selective lookup, but the full embedding table must remain available for every possible input. We introduce Conditional Program (CP), a compressed representation that reconstructs only the rows an input requests. CP represents each row by a short code and a local scale, with a reconstruction program shared across the table. We instantiate this representation with a Gaussian trellis, norm restoration and independently decodable row records. CP's two-bit code lowers output KL by 41--63\\% relative to 2-bit round-to-nearest. Analysis across three trained n-gram memory families shows that Gaussian-like coordinate statistics coexist with learned relationships among rows; at matched storage budgets, the shared trellis outperforms the fitted codebooks and low-rank residual variants we test. For DeepSeek, it reduces table storage from 203GB to 51GB, leaving room for larger workloads when the table is kept on GPU.",
+      "identifiers": [
+        "SemanticScholar:3d05d52ce814ecd610ada3a3de3e6449a3aa7613"
+      ],
+      "semantic_scholar_id": "3d05d52ce814ecd610ada3a3de3e6449a3aa7613",
+      "canonical_id": "arXiv:2610.21810",
+      "arxiv_id": "2610.21810",
+      "authors": [
+        "Donghoon Han",
+        "Minseop Jung",
+        "Dongjin Kwak",
+        "SeungJae Lee",
+        "Junhoo Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hidden No More: Attacking and Defending Private Third-Party LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "year": 2025,
+      "published": null,
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53"
+      ],
+      "semantic_scholar_id": "df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "canonical_id": "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "authors": [
+        "R. Thomas",
+        "Louai Zahran",
+        "Erica Choi",
+        "Akilesh Potti",
+        "Micah Goldblum",
+        "Arka Pal"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "TagRouter: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks",
+      "source_url": "https://arxiv.org/abs/2506.12473",
+      "year": 2025,
+      "published": "2025-06-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model routing allocates queries to the suitable model, improving system performance while reducing costs. However, existing routing methods face practical limitations that hinder scalability in large-scale applications and struggle to keep up with the rapid growth of the large language model (LLM) ecosystem. To tackle these challenges, we propose TagRouter, a training-free model routing method designed to optimize the synergy among multiple LLMs for open-domain text generation tasks. Experimental results demonstrate that TagRouter outperforms 13 baseline methods, increasing the accept rate of system by 6.15% and reducing costs by 17.20%, achieving optimal cost-efficiency. Our findings provides the LLM community with an efficient and scalable solution for model ensembling, offering users an evolvable\"super model.\"",
+      "identifiers": [
+        "SemanticScholar:536478d9b5cba55783472b17d25c0acb31de5834"
+      ],
+      "semantic_scholar_id": "536478d9b5cba55783472b17d25c0acb31de5834",
+      "canonical_id": "arXiv:2506.12473",
+      "arxiv_id": "2506.12473",
+      "doi": "10.48550/arXiv.2506.12473",
+      "authors": [
+        "Zhou Chen",
+        "Zhiqiang Wei",
+        "Yu-Qi Bai",
+        "Xuehan Xiong",
+        "Jian-Min Wu"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 528,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Recurrent Attention-based Token Selection for Efficient Streaming Video-LLMs",
+      "source_url": "https://arxiv.org/abs/2510.17364",
+      "year": 2025,
+      "published": "2025-10-20",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video Large Language Models (Video-LLMs) excel at understanding videos in-context, provided they have full access to the video when answering queries. However, these models face challenges in streaming scenarios where hour-long videos must be processed online, and questions need timely responses. In this work, we propose a training-free approach compatible with standard Video-LLMs, leveraging three key concepts: 1) LLM-informed selection of visual tokens to identify those that the LLM has attended to and contributed to its understanding of each short clip. Our attention-based selection allows us to discard up to ~95% of unimportant visual tokens with minimal performance loss; 2) Recurrent processing of past selected tokens to generate temporally coherent understanding of each processed clip; 3) Caption-based question answering for lightweight and accurate responses. Our method achieves state-of-the-art performance on streaming video benchmarks, striking a balance between efficiency and effectiveness.",
+      "identifiers": [
+        "SemanticScholar:7bb921663ebf8b401f56dfe00c2c371bbdcec4f9"
+      ],
+      "semantic_scholar_id": "7bb921663ebf8b401f56dfe00c2c371bbdcec4f9",
+      "canonical_id": "arXiv:2510.17364",
+      "arxiv_id": "2510.17364",
+      "doi": "10.48550/arXiv.2510.17364",
+      "authors": [
+        "Evangelos Dorovatas",
+        "Soroush Seifi",
+        "Gunshi Gupta",
+        "Rahaf Aljundi"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "SAID: Accelerating Diffusion-Based Language Models via Scaffold-Aware Iterative Decoding",
+      "source_url": "https://arxiv.org/abs/2606.04974",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (DLLMs) enable non-autoregressive generation by iteratively denoising corrupted token sequences with bidirectional context. Despite their ability to update multiple positions in parallel, inference remains costly due to the many denoising steps required for high-quality generation. We propose SAID, a Scaffold-Aware Iterative Decoding framework that accelerates DLLMs by reallocating computation across tokens. SAID first spends denoising computation on scaffold tokens to establish the coarse semantic structure, and then completes predictable detail tokens with fewer steps. We further adapt SAID to block-wise diffusion decoding and introduce Confidence-Hierarchical Layered Generation (CHLG), which assigns additional steps only to low-confidence tokens. Experiments on LLaDA-8B and LLaDA 1.5 across math, coding, and knowledge benchmarks show that SAID significantly accelerates DLLM inference with a maximum speedup of 9.1x while maintaining competitive performance. Our code is publicly available: https://github.com/TH-AI-Lab-PKU/SAID.",
+      "identifiers": [
+        "SemanticScholar:83a45e75c461101d231af4795d99f203912f94b0"
+      ],
+      "semantic_scholar_id": "83a45e75c461101d231af4795d99f203912f94b0",
+      "canonical_id": "arXiv:2606.04974",
+      "arxiv_id": "2606.04974",
+      "doi": "10.48550/arXiv.2606.04974",
+      "authors": [
+        "Na Li",
+        "Chengda Wang",
+        "Ming-Ju Gao",
+        "Hao Tang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FoveaTree: Information-Density Trees for Query-Guided Visual Token Pruning in Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.16744",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (Video LLMs) encode each frame into hundreds of visual tokens, making video inference expensive. Existing methods reduce this cost through similarity-based merging or attention-based selection but face two challenges: Hierarchy-blind Pruning, which overlooks regional compressibility and can discard critical evidence, and Attention Drift, where positional effects and attention sinks shift text-to-vision attention away from task relevance. We propose FoveaTree, a two-stage, training-free visual-token pruning framework. First, Merge-Gain Density Estimation measures the feature distortion caused by regional merging and constructs a quadtree-derived density map to guide token dropping, merging, and retention. Second, Attention Tree Pruning uses the surviving units and inherited tree topology to refine text-to-vision attention in intermediate LLM layers, preserving relevant regional evidence while removing low-relevance content. We evaluate FoveaTree on InternVL3.5-8B and Qwen3-VL-8B across five video question-answering benchmarks and one captioning benchmark at 50%, 30%, and 10% visual-token retention. FoveaTree consistently achieves overall state-of-the-art performance across the evaluated settings, offering a strong accuracy-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:2a207c127bc31628393e6fca815d6a3e020c80bf"
+      ],
+      "semantic_scholar_id": "2a207c127bc31628393e6fca815d6a3e020c80bf",
+      "canonical_id": "arXiv:2610.16744",
+      "arxiv_id": "2610.16744",
+      "authors": [
+        "Zi-Hang Meng",
+        "Wei-Dong Chen",
+        "De-Xiang Hong",
+        "Xin-Yan Liu",
+        "Zhen-Dong Mao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM-Rank: A Graph Theoretical Approach to Pruning Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.13299",
+      "year": 2024,
+      "published": "2024-10-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The evolving capabilities of large language models are accompanied by growing sizes and deployment costs, necessitating effective inference optimisation techniques. We propose a novel pruning method utilising centrality measures from graph theory, reducing both the computational requirements and the memory footprint of these models. Specifically, we devise a method for creating a weighted directed acyclical graph representation of multilayer perceptrons to which we apply a modified version of the weighted PageRank centrality measure to compute node importance scores. In combination with uniform pruning this leads to structured sparsity. We call this pruning method MLPRank. Furthermore we introduce an extension to decoder-only transformer models and call it LLMRank. For both variants we demonstrate a strong performance. With MLPRank on average leading to 6.09 % higher accuracy retention than three popular baselines and 13.42 % with LLMRank compared to two popular baselines. Code is available at https://github.com/amazon-science/llm-rank-pruning.",
+      "identifiers": [
+        "SemanticScholar:1f8d22855c22d4a9954cc3b48764cbc969466ddb"
+      ],
+      "semantic_scholar_id": "1f8d22855c22d4a9954cc3b48764cbc969466ddb",
+      "canonical_id": "arXiv:2410.13299",
+      "arxiv_id": "2410.13299",
+      "doi": "10.48550/arXiv.2410.13299",
+      "authors": [
+        "D. Hoffmann",
+        "Kailash Budhathoki",
+        "Matthäus Kleindessner"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 768,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cascade: Token-Sharded Private LLM Inference",
+      "source_url": "https://arxiv.org/abs/2507.05228",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLMs continue to increase in parameter size, the computational resources required to run them are available to fewer parties. Therefore, third-party inference services -- where LLMs are hosted by third parties with significant computational resources -- are becoming increasingly popular. However, third party inference raises critical concerns about user data privacy. To mitigate these risks, privacy researchers have developed provably secure schemes for third-party inference, such as Secure Multi-Party Computation (SMPC). However, SMPC protocols have significant computational and communication overhead, and do not scale to large models. In this work, we propose a new multi-party inference protocol, Cascade, that avoids these punitive costs by leveraging sharding in the sequence dimension to maintain privacy, trading off cryptographic privacy guarantees for increased performance and scalability. We demonstrate that Cascade is resistant to a generalization of a recent attack that is highly effective against other statistical privacy schemes, and that it is further resistant to learning-based attacks. As Cascade is orders of magnitude faster than existing schemes, our findings offer practical solutions for secure deployment of modern state-of-the-art LLMs.",
+      "identifiers": [
+        "SemanticScholar:31a13d8008a27b443ef3b67b321dd74e22106e2a"
+      ],
+      "semantic_scholar_id": "31a13d8008a27b443ef3b67b321dd74e22106e2a",
+      "canonical_id": "arXiv:2507.05228",
+      "arxiv_id": "2507.05228",
+      "doi": "10.48550/arXiv.2507.05228",
+      "authors": [
+        "R. Thomas",
+        "Louai Zahran",
+        "Erica Choi",
+        "Akilesh Potti",
+        "Micah Goldblum",
+        "Arka Pal"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.11937",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.11937",
+        "id:SemanticScholar:172b7a007e4f426b02a27b90c5c42f5abb6e6908",
+        "id:arXiv:2602.11937",
+        "title:extending puzzle for mixtureofexperts reasoning models with application to gptoss acceleration",
+        "url:https://arxiv.org/abs/2602.11937"
+      ],
+      "record": {
+        "title": "Extending Puzzle for Mixture-of-Experts Reasoning Models with Application to GPT-OSS Acceleration",
+        "source_url": "https://arxiv.org/abs/2602.11937",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning-focused LLMs improve answer quality by generating longer reasoning traces, but the additional tokens dramatically increase serving cost, motivating inference optimization. We extend and apply Puzzle, a post-training neural architecture search (NAS) framework, to gpt-oss-120B to produce gpt-oss-puzzle-88B, a deployment-optimized derivative. Our approach combines heterogeneous MoE expert pruning, selective replacement of full-context attention with window attention, FP8 KV-cache quantization with calibrated scales, and post-training reinforcement learning to recover accuracy, while maintaining low generation length. In terms of per-token speeds, on an 8XH100 node we achieve 1.63X and 1.22X throughput speedups in long-context and short-context settings, respectively. gpt-oss-puzzle-88B also delivers throughput speedups of 2.82X on a single NVIDIA H100 GPU. However, because token counts can change with reasoning effort and model variants, per-token throughput (tok/s) and latency (ms/token) do not necessarily lead to end-to-end speedups: a 2X throughput gain is erased if traces grow 2X. Conversely, throughput gains can be spent on more reasoning tokens to improve accuracy; we therefore advocate request-level efficiency metrics that normalize throughput by tokens generated and trace an accuracy--speed frontier across reasoning efforts. We show that gpt-oss-puzzle-88B improves over gpt-oss-120B along the entire frontier, delivering up to 1.29X higher request-level efficiency. Across various benchmarks, gpt-oss-puzzle-88B matches or slightly exceeds the parent on suite-average accuracy across reasoning efforts, with retention ranging from 100.8% (high) to 108.2% (low), showing that post-training architecture search can substantially reduce inference costs without sacrificing quality.",
+        "identifiers": [
+          "SemanticScholar:172b7a007e4f426b02a27b90c5c42f5abb6e6908"
+        ],
+        "semantic_scholar_id": "172b7a007e4f426b02a27b90c5c42f5abb6e6908",
+        "canonical_id": "arXiv:2602.11937",
+        "arxiv_id": "2602.11937",
+        "doi": "10.48550/arXiv.2602.11937",
+        "authors": [
+          "Akhiad Bercovich",
+          "Nir Ailon",
+          "Vladimir Anisimov",
+          "Tomer Asida",
+          "Nave Assaf",
+          "Mohammad Dabbah",
+          "Ido Galil",
+          "Amnon Geifman",
+          "Yonatan Geifman",
+          "Izhak Golan",
+          "Roi Koren",
+          "Itay Levy",
+          "Zach Moshe",
+          "Pavlo Molchanov",
+          "Najeeb Nabwani",
+          "Mostofa Patwari",
+          "Omri Puny",
+          "Tomer Ronen",
+          "Itamar Schen",
+          "Elad Segal",
+          "Ido Shahaf",
+          "Oren Tropp",
+          "Ran Zilberstein",
+          "Ran El-Yaniv"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 285,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.11196",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.11196",
+        "id:SemanticScholar:147a2f2ce44cd5346714ee2ba0a69c4278756ce8",
+        "id:arXiv:2605.11196",
+        "title:variational linear attention stable associative memory for longcontext transformers",
+        "url:https://arxiv.org/abs/2605.11196"
+      ],
+      "record": {
+        "title": "Variational Linear Attention: Stable Associative Memory for Long-Context Transformers",
+        "source_url": "https://arxiv.org/abs/2605.11196",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention reduces the quadratic cost of softmax attention to $\\mathcal{O}(T)$, but its memory state grows as $\\mathcal{O}(T)$ in Frobenius norm, causing progressive interference between stored associations. We introduce \\textbf{Variational Linear Attention} (VLA), which reframes the memory update as an online regularised least-squares problem with an adaptive penalty matrix maintained via the Sherman-Morrison rank-1 formula. We prove that normalising the write direction to unit length gives the recurrence Jacobian spectral norm exactly $1$ for all sequence lengths and head dimensions (Proposition 2), and that the state norm is self-limiting under bounded inputs (Proposition 1). Empirically, VLA reduces $\\|S_t\\|_F$ by $109\\times$ relative to standard linear attention at $T{=}1{,}000$, achieves near-perfect exact-match accuracy on multi-query associative recall within the effective per-head memory regime ($n_\\text{pairs}<d_h$), maintaining substantially higher retrieval performance than DeltaNet and standard linear attention under increasing memory load, and maintains 62\\% accuracy at the per-head capacity boundary. A Triton-fused kernel achieves $14\\times$ speedup over sequential Python and $\\mathcal{O}(T)$ scaling, crossing below softmax attention latency at approximately 43\\,000 tokens.",
+        "identifiers": [
+          "SemanticScholar:147a2f2ce44cd5346714ee2ba0a69c4278756ce8"
+        ],
+        "semantic_scholar_id": "147a2f2ce44cd5346714ee2ba0a69c4278756ce8",
+        "canonical_id": "arXiv:2605.11196",
+        "arxiv_id": "2605.11196",
+        "doi": "10.48550/arXiv.2605.11196",
+        "authors": [
+          "Vishal Pandey",
+          "Gopal Singh"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21810",
+      "identity_tokens": [
+        "id:SemanticScholar:3d05d52ce814ecd610ada3a3de3e6449a3aa7613",
+        "id:arXiv:2610.21810",
+        "title:ngram memories at two bits quantizing lookup tables in large language models",
+        "url:https://arxiv.org/abs/2610.21810"
+      ],
+      "record": {
+        "title": "N-Gram Memories at Two Bits: Quantizing Lookup Tables in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.21810",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Conditional memory expands language-model capacity through selective lookup, but the full embedding table must remain available for every possible input. We introduce Conditional Program (CP), a compressed representation that reconstructs only the rows an input requests. CP represents each row by a short code and a local scale, with a reconstruction program shared across the table. We instantiate this representation with a Gaussian trellis, norm restoration and independently decodable row records. CP's two-bit code lowers output KL by 41--63\\% relative to 2-bit round-to-nearest. Analysis across three trained n-gram memory families shows that Gaussian-like coordinate statistics coexist with learned relationships among rows; at matched storage budgets, the shared trellis outperforms the fitted codebooks and low-rank residual variants we test. For DeepSeek, it reduces table storage from 203GB to 51GB, leaving room for larger workloads when the table is kept on GPU.",
+        "identifiers": [
+          "SemanticScholar:3d05d52ce814ecd610ada3a3de3e6449a3aa7613"
+        ],
+        "semantic_scholar_id": "3d05d52ce814ecd610ada3a3de3e6449a3aa7613",
+        "canonical_id": "arXiv:2610.21810",
+        "arxiv_id": "2610.21810",
+        "authors": [
+          "Donghoon Han",
+          "Minseop Jung",
+          "Dongjin Kwak",
+          "SeungJae Lee",
+          "Junhoo Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "identity_tokens": [
+        "id:SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+        "title:hidden no more attacking and defending private thirdparty llm inference",
+        "url:https://www.semanticscholar.org/paper/df5070ce19b01e11c3d3eab69a7149ba253f0a53"
+      ],
+      "record": {
+        "title": "Hidden No More: Attacking and Defending Private Third-Party LLM Inference",
+        "source_url": "https://www.semanticscholar.org/paper/df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+        "year": 2025,
+        "published": null,
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53"
+        ],
+        "semantic_scholar_id": "df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+        "canonical_id": "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+        "authors": [
+          "R. Thomas",
+          "Louai Zahran",
+          "Erica Choi",
+          "Akilesh Potti",
+          "Micah Goldblum",
+          "Arka Pal"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 511,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.12473",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.12473",
+        "id:SemanticScholar:536478d9b5cba55783472b17d25c0acb31de5834",
+        "id:arXiv:2506.12473",
+        "title:tagrouter learning route to llms through tags for opendomain text generation tasks",
+        "url:https://arxiv.org/abs/2506.12473"
+      ],
+      "record": {
+        "title": "TagRouter: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks",
+        "source_url": "https://arxiv.org/abs/2506.12473",
+        "year": 2025,
+        "published": "2025-06-14",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model routing allocates queries to the suitable model, improving system performance while reducing costs. However, existing routing methods face practical limitations that hinder scalability in large-scale applications and struggle to keep up with the rapid growth of the large language model (LLM) ecosystem. To tackle these challenges, we propose TagRouter, a training-free model routing method designed to optimize the synergy among multiple LLMs for open-domain text generation tasks. Experimental results demonstrate that TagRouter outperforms 13 baseline methods, increasing the accept rate of system by 6.15% and reducing costs by 17.20%, achieving optimal cost-efficiency. Our findings provides the LLM community with an efficient and scalable solution for model ensembling, offering users an evolvable\"super model.\"",
+        "identifiers": [
+          "SemanticScholar:536478d9b5cba55783472b17d25c0acb31de5834"
+        ],
+        "semantic_scholar_id": "536478d9b5cba55783472b17d25c0acb31de5834",
+        "canonical_id": "arXiv:2506.12473",
+        "arxiv_id": "2506.12473",
+        "doi": "10.48550/arXiv.2506.12473",
+        "authors": [
+          "Zhou Chen",
+          "Zhiqiang Wei",
+          "Yu-Qi Bai",
+          "Xuehan Xiong",
+          "Jian-Min Wu"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 528,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.17364",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.17364",
+        "id:SemanticScholar:7bb921663ebf8b401f56dfe00c2c371bbdcec4f9",
+        "id:arXiv:2510.17364",
+        "title:recurrent attentionbased token selection for efficient streaming videollms",
+        "url:https://arxiv.org/abs/2510.17364"
+      ],
+      "record": {
+        "title": "Recurrent Attention-based Token Selection for Efficient Streaming Video-LLMs",
+        "source_url": "https://arxiv.org/abs/2510.17364",
+        "year": 2025,
+        "published": "2025-10-20",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video Large Language Models (Video-LLMs) excel at understanding videos in-context, provided they have full access to the video when answering queries. However, these models face challenges in streaming scenarios where hour-long videos must be processed online, and questions need timely responses. In this work, we propose a training-free approach compatible with standard Video-LLMs, leveraging three key concepts: 1) LLM-informed selection of visual tokens to identify those that the LLM has attended to and contributed to its understanding of each short clip. Our attention-based selection allows us to discard up to ~95% of unimportant visual tokens with minimal performance loss; 2) Recurrent processing of past selected tokens to generate temporally coherent understanding of each processed clip; 3) Caption-based question answering for lightweight and accurate responses. Our method achieves state-of-the-art performance on streaming video benchmarks, striking a balance between efficiency and effectiveness.",
+        "identifiers": [
+          "SemanticScholar:7bb921663ebf8b401f56dfe00c2c371bbdcec4f9"
+        ],
+        "semantic_scholar_id": "7bb921663ebf8b401f56dfe00c2c371bbdcec4f9",
+        "canonical_id": "arXiv:2510.17364",
+        "arxiv_id": "2510.17364",
+        "doi": "10.48550/arXiv.2510.17364",
+        "authors": [
+          "Evangelos Dorovatas",
+          "Soroush Seifi",
+          "Gunshi Gupta",
+          "Rahaf Aljundi"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04974",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04974",
+        "id:SemanticScholar:83a45e75c461101d231af4795d99f203912f94b0",
+        "id:arXiv:2606.04974",
+        "title:said accelerating diffusionbased language models via scaffoldaware iterative decoding",
+        "url:https://arxiv.org/abs/2606.04974"
+      ],
+      "record": {
+        "title": "SAID: Accelerating Diffusion-Based Language Models via Scaffold-Aware Iterative Decoding",
+        "source_url": "https://arxiv.org/abs/2606.04974",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (DLLMs) enable non-autoregressive generation by iteratively denoising corrupted token sequences with bidirectional context. Despite their ability to update multiple positions in parallel, inference remains costly due to the many denoising steps required for high-quality generation. We propose SAID, a Scaffold-Aware Iterative Decoding framework that accelerates DLLMs by reallocating computation across tokens. SAID first spends denoising computation on scaffold tokens to establish the coarse semantic structure, and then completes predictable detail tokens with fewer steps. We further adapt SAID to block-wise diffusion decoding and introduce Confidence-Hierarchical Layered Generation (CHLG), which assigns additional steps only to low-confidence tokens. Experiments on LLaDA-8B and LLaDA 1.5 across math, coding, and knowledge benchmarks show that SAID significantly accelerates DLLM inference with a maximum speedup of 9.1x while maintaining competitive performance. Our code is publicly available: https://github.com/TH-AI-Lab-PKU/SAID.",
+        "identifiers": [
+          "SemanticScholar:83a45e75c461101d231af4795d99f203912f94b0"
+        ],
+        "semantic_scholar_id": "83a45e75c461101d231af4795d99f203912f94b0",
+        "canonical_id": "arXiv:2606.04974",
+        "arxiv_id": "2606.04974",
+        "doi": "10.48550/arXiv.2606.04974",
+        "authors": [
+          "Na Li",
+          "Chengda Wang",
+          "Ming-Ju Gao",
+          "Hao Tang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.16744",
+      "identity_tokens": [
+        "id:SemanticScholar:2a207c127bc31628393e6fca815d6a3e020c80bf",
+        "id:arXiv:2610.16744",
+        "title:foveatree informationdensity trees for queryguided visual token pruning in video large language models",
+        "url:https://arxiv.org/abs/2610.16744"
+      ],
+      "record": {
+        "title": "FoveaTree: Information-Density Trees for Query-Guided Visual Token Pruning in Video Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.16744",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models (Video LLMs) encode each frame into hundreds of visual tokens, making video inference expensive. Existing methods reduce this cost through similarity-based merging or attention-based selection but face two challenges: Hierarchy-blind Pruning, which overlooks regional compressibility and can discard critical evidence, and Attention Drift, where positional effects and attention sinks shift text-to-vision attention away from task relevance. We propose FoveaTree, a two-stage, training-free visual-token pruning framework. First, Merge-Gain Density Estimation measures the feature distortion caused by regional merging and constructs a quadtree-derived density map to guide token dropping, merging, and retention. Second, Attention Tree Pruning uses the surviving units and inherited tree topology to refine text-to-vision attention in intermediate LLM layers, preserving relevant regional evidence while removing low-relevance content. We evaluate FoveaTree on InternVL3.5-8B and Qwen3-VL-8B across five video question-answering benchmarks and one captioning benchmark at 50%, 30%, and 10% visual-token retention. FoveaTree consistently achieves overall state-of-the-art performance across the evaluated settings, offering a strong accuracy-efficiency trade-off.",
+        "identifiers": [
+          "SemanticScholar:2a207c127bc31628393e6fca815d6a3e020c80bf"
+        ],
+        "semantic_scholar_id": "2a207c127bc31628393e6fca815d6a3e020c80bf",
+        "canonical_id": "arXiv:2610.16744",
+        "arxiv_id": "2610.16744",
+        "authors": [
+          "Zi-Hang Meng",
+          "Wei-Dong Chen",
+          "De-Xiang Hong",
+          "Xin-Yan Liu",
+          "Zhen-Dong Mao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.13299",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.13299",
+        "id:SemanticScholar:1f8d22855c22d4a9954cc3b48764cbc969466ddb",
+        "id:arXiv:2410.13299",
+        "title:llmrank a graph theoretical approach to pruning large language models",
+        "url:https://arxiv.org/abs/2410.13299"
+      ],
+      "record": {
+        "title": "LLM-Rank: A Graph Theoretical Approach to Pruning Large Language Models",
+        "source_url": "https://arxiv.org/abs/2410.13299",
+        "year": 2024,
+        "published": "2024-10-17",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The evolving capabilities of large language models are accompanied by growing sizes and deployment costs, necessitating effective inference optimisation techniques. We propose a novel pruning method utilising centrality measures from graph theory, reducing both the computational requirements and the memory footprint of these models. Specifically, we devise a method for creating a weighted directed acyclical graph representation of multilayer perceptrons to which we apply a modified version of the weighted PageRank centrality measure to compute node importance scores. In combination with uniform pruning this leads to structured sparsity. We call this pruning method MLPRank. Furthermore we introduce an extension to decoder-only transformer models and call it LLMRank. For both variants we demonstrate a strong performance. With MLPRank on average leading to 6.09 % higher accuracy retention than three popular baselines and 13.42 % with LLMRank compared to two popular baselines. Code is available at https://github.com/amazon-science/llm-rank-pruning.",
+        "identifiers": [
+          "SemanticScholar:1f8d22855c22d4a9954cc3b48764cbc969466ddb"
+        ],
+        "semantic_scholar_id": "1f8d22855c22d4a9954cc3b48764cbc969466ddb",
+        "canonical_id": "arXiv:2410.13299",
+        "arxiv_id": "2410.13299",
+        "doi": "10.48550/arXiv.2410.13299",
+        "authors": [
+          "D. Hoffmann",
+          "Kailash Budhathoki",
+          "Matthäus Kleindessner"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 768,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.05228",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.05228",
+        "id:SemanticScholar:31a13d8008a27b443ef3b67b321dd74e22106e2a",
+        "id:arXiv:2507.05228",
+        "title:cascade tokensharded private llm inference",
+        "url:https://arxiv.org/abs/2507.05228"
+      ],
+      "record": {
+        "title": "Cascade: Token-Sharded Private LLM Inference",
+        "source_url": "https://arxiv.org/abs/2507.05228",
+        "year": 2025,
+        "published": "2025-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLMs continue to increase in parameter size, the computational resources required to run them are available to fewer parties. Therefore, third-party inference services -- where LLMs are hosted by third parties with significant computational resources -- are becoming increasingly popular. However, third party inference raises critical concerns about user data privacy. To mitigate these risks, privacy researchers have developed provably secure schemes for third-party inference, such as Secure Multi-Party Computation (SMPC). However, SMPC protocols have significant computational and communication overhead, and do not scale to large models. In this work, we propose a new multi-party inference protocol, Cascade, that avoids these punitive costs by leveraging sharding in the sequence dimension to maintain privacy, trading off cryptographic privacy guarantees for increased performance and scalability. We demonstrate that Cascade is resistant to a generalization of a recent attack that is highly effective against other statistical privacy schemes, and that it is further resistant to learning-based attacks. As Cascade is orders of magnitude faster than existing schemes, our findings offer practical solutions for secure deployment of modern state-of-the-art LLMs.",
+        "identifiers": [
+          "SemanticScholar:31a13d8008a27b443ef3b67b321dd74e22106e2a"
+        ],
+        "semantic_scholar_id": "31a13d8008a27b443ef3b67b321dd74e22106e2a",
+        "canonical_id": "arXiv:2507.05228",
+        "arxiv_id": "2507.05228",
+        "doi": "10.48550/arXiv.2507.05228",
+        "authors": [
+          "R. Thomas",
+          "Louai Zahran",
+          "Erica Choi",
+          "Akilesh Potti",
+          "Micah Goldblum",
+          "Arka Pal"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:43eae96c6a3fbec7a58e493995c43d18f63c8abb2a22a29e67e3af14b9502e12",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

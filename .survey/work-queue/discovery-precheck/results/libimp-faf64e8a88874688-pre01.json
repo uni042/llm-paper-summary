@@ -1,0 +1,322 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-faf64e8a88874688-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-faf64e8a8887",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11465113",
+    "arXiv:2402.02563",
+    "arXiv:2610.01192"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4111cc29ddbea11430898385e799c87c5ea50f43",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:39:53.651780+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11465113",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2402.02563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.01192",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2402.02563",
+      "year": 2024,
+      "published": "2024-02-04",
+      "venue": null,
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown impressive emergent abilities in a wide range of tasks, but the associated expensive API cost greatly limits the real application. Previous works like chain-of-thought (CoT) and tree-of-thoughts (ToT) have predominately focused on enhancing accuracy, but overlook the rapidly increasing API cost, which could be particularly problematic for open-ended real-world tasks with huge solution spaces. Motivated by the dual process theory of human cognition, we propose\"Synergy of Thoughts\"(SoT) to unleash the synergistic potential of hybrid LLMs with different scales for efficient reasoning. By default, SoT uses smaller-scale language models to generate multiple low-cost intuitive thoughts, which resembles the parallel intuitions produced by System 1. We then design a confidence evaluator where the intuitive thoughts are cross-evaluated and introduce a controllable threshold mechanism to decide their mutual conflict. If these intuitive thoughts exhibit conflicts, SoT will invoke the reflective reasoning of scaled-up language models to emulate the intervention of System 2, which will override the intuitive thoughts and rectify the reasoning results. This framework is model-agnostic and training-free, which can be flexibly implemented with various off-the-shelf LLMs. Experiments on six representative reasoning tasks show that SoT substantially reduces the API cost by 38.3%-75.1%, and simultaneously achieves state-of-the-art reasoning accuracy and solution diversity. Notably, the average token cost reduction on open-ended tasks reaches up to 69.1%.",
+      "identifiers": [
+        "SemanticScholar:c993152d0858584dee2859c21e324ee811ec3991"
+      ],
+      "semantic_scholar_id": "c993152d0858584dee2859c21e324ee811ec3991",
+      "canonical_id": "arXiv:2402.02563",
+      "arxiv_id": "2402.02563",
+      "authors": [
+        "Yu Shang",
+        "Yu Li",
+        "Feng-Li Xu",
+        "Yong Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1024,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive-VoCo: Complexity-Aware Visual Token Compression for Vision-Language Models",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11465113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:463caa08f6275cf4ac850c64f78424b507add023"
+      ],
+      "semantic_scholar_id": "463caa08f6275cf4ac850c64f78424b507add023",
+      "doi": "10.1109/icassp55912.2026.11465113",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11465113",
+      "authors": [
+        "Xiao-Yang Guo",
+        "Jusheng Zhang",
+        "Ke-Ze Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashBack: Knowing When to Remember in Streaming Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01192",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming vision-language models must process continuously growing video streams under a bounded compute budget, creating a persistent tension between real-time perception and long-term memory. Retrieving historical information provides a natural remedy, yet historical recall is not uniformly beneficial: unnecessary history may introduce irrelevant context into current reasoning and interfere with native real-time perception. Effective streaming memory should therefore address not only what to remember, but also when and how to access it. To this end, we introduce FlashBack, a training-free framework for selective, multi-level memory in streaming vision-language models. Before retrieving history, FlashBack draws on the semantic understanding of the frozen streaming VLM to infer whether a query calls for historical evidence. This assessment determines whether inference remains on the Native trajectory or invokes an isolated Recall trajectory. The Recall trajectory combines recent context with retrieved long-term memory through a query-local Side-KV pathway, preserving local temporal continuity without modifying the persistent Native state. We instantiate FlashBack on StreamingVLM and Mage-VL-4B and evaluate it on OVO-Bench and StreamingBench. The results show improvements on several long-horizon and memory-dependent tasks while largely preserving real-time perception, with performance competitive with strong training-based streaming methods despite requiring no additional training. Our code will be announced later.",
+      "identifiers": [
+        "SemanticScholar:fff60e3ee05dc24ff75305edfee5d9bc7b712aef"
+      ],
+      "semantic_scholar_id": "fff60e3ee05dc24ff75305edfee5d9bc7b712aef",
+      "canonical_id": "arXiv:2610.01192",
+      "arxiv_id": "2610.01192",
+      "authors": [
+        "Yi Chen",
+        "Ming-Ming Yu",
+        "Rui-Qi Wang",
+        "Bo-Ran Wang",
+        "Xiao-Hang Cao",
+        "Chuning Tang",
+        "Jing-Min Chen",
+        "Jie Gu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.02563",
+      "identity_tokens": [
+        "id:SemanticScholar:c993152d0858584dee2859c21e324ee811ec3991",
+        "id:arXiv:2402.02563",
+        "title:synergyofthoughts eliciting efficient reasoning in hybrid language models",
+        "url:https://arxiv.org/abs/2402.02563"
+      ],
+      "record": {
+        "title": "Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models",
+        "source_url": "https://arxiv.org/abs/2402.02563",
+        "year": 2024,
+        "published": "2024-02-04",
+        "venue": null,
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown impressive emergent abilities in a wide range of tasks, but the associated expensive API cost greatly limits the real application. Previous works like chain-of-thought (CoT) and tree-of-thoughts (ToT) have predominately focused on enhancing accuracy, but overlook the rapidly increasing API cost, which could be particularly problematic for open-ended real-world tasks with huge solution spaces. Motivated by the dual process theory of human cognition, we propose\"Synergy of Thoughts\"(SoT) to unleash the synergistic potential of hybrid LLMs with different scales for efficient reasoning. By default, SoT uses smaller-scale language models to generate multiple low-cost intuitive thoughts, which resembles the parallel intuitions produced by System 1. We then design a confidence evaluator where the intuitive thoughts are cross-evaluated and introduce a controllable threshold mechanism to decide their mutual conflict. If these intuitive thoughts exhibit conflicts, SoT will invoke the reflective reasoning of scaled-up language models to emulate the intervention of System 2, which will override the intuitive thoughts and rectify the reasoning results. This framework is model-agnostic and training-free, which can be flexibly implemented with various off-the-shelf LLMs. Experiments on six representative reasoning tasks show that SoT substantially reduces the API cost by 38.3%-75.1%, and simultaneously achieves state-of-the-art reasoning accuracy and solution diversity. Notably, the average token cost reduction on open-ended tasks reaches up to 69.1%.",
+        "identifiers": [
+          "SemanticScholar:c993152d0858584dee2859c21e324ee811ec3991"
+        ],
+        "semantic_scholar_id": "c993152d0858584dee2859c21e324ee811ec3991",
+        "canonical_id": "arXiv:2402.02563",
+        "arxiv_id": "2402.02563",
+        "authors": [
+          "Yu Shang",
+          "Yu Li",
+          "Feng-Li Xu",
+          "Yong Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1024,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11465113",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11465113",
+        "id:SemanticScholar:463caa08f6275cf4ac850c64f78424b507add023",
+        "title:adaptivevoco complexityaware visual token compression for visionlanguage models",
+        "url:https://doi.org/10.1109/icassp55912.2026.11465113"
+      ],
+      "record": {
+        "title": "Adaptive-VoCo: Complexity-Aware Visual Token Compression for Vision-Language Models",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11465113",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:463caa08f6275cf4ac850c64f78424b507add023"
+        ],
+        "semantic_scholar_id": "463caa08f6275cf4ac850c64f78424b507add023",
+        "doi": "10.1109/icassp55912.2026.11465113",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11465113",
+        "authors": [
+          "Xiao-Yang Guo",
+          "Jusheng Zhang",
+          "Ke-Ze Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01192",
+      "identity_tokens": [
+        "id:SemanticScholar:fff60e3ee05dc24ff75305edfee5d9bc7b712aef",
+        "id:arXiv:2610.01192",
+        "title:flashback knowing when to remember in streaming visionlanguage models",
+        "url:https://arxiv.org/abs/2610.01192"
+      ],
+      "record": {
+        "title": "FlashBack: Knowing When to Remember in Streaming Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2610.01192",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming vision-language models must process continuously growing video streams under a bounded compute budget, creating a persistent tension between real-time perception and long-term memory. Retrieving historical information provides a natural remedy, yet historical recall is not uniformly beneficial: unnecessary history may introduce irrelevant context into current reasoning and interfere with native real-time perception. Effective streaming memory should therefore address not only what to remember, but also when and how to access it. To this end, we introduce FlashBack, a training-free framework for selective, multi-level memory in streaming vision-language models. Before retrieving history, FlashBack draws on the semantic understanding of the frozen streaming VLM to infer whether a query calls for historical evidence. This assessment determines whether inference remains on the Native trajectory or invokes an isolated Recall trajectory. The Recall trajectory combines recent context with retrieved long-term memory through a query-local Side-KV pathway, preserving local temporal continuity without modifying the persistent Native state. We instantiate FlashBack on StreamingVLM and Mage-VL-4B and evaluate it on OVO-Bench and StreamingBench. The results show improvements on several long-horizon and memory-dependent tasks while largely preserving real-time perception, with performance competitive with strong training-based streaming methods despite requiring no additional training. Our code will be announced later.",
+        "identifiers": [
+          "SemanticScholar:fff60e3ee05dc24ff75305edfee5d9bc7b712aef"
+        ],
+        "semantic_scholar_id": "fff60e3ee05dc24ff75305edfee5d9bc7b712aef",
+        "canonical_id": "arXiv:2610.01192",
+        "arxiv_id": "2610.01192",
+        "authors": [
+          "Yi Chen",
+          "Ming-Ming Yu",
+          "Rui-Qi Wang",
+          "Bo-Ran Wang",
+          "Xiao-Hang Cao",
+          "Chuning Tang",
+          "Jing-Min Chen",
+          "Jie Gu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5a98de816dfa5de36b5a23f0deed4d50dcfa7cfbc0851a16f96558369143c955",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

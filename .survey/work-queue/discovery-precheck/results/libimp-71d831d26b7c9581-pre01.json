@@ -1,0 +1,677 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-71d831d26b7c9581-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-71d831d26b7c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iscas56072.2025.11043703",
+    "DOI:10.1145/3820171.3806907",
+    "arXiv:2508.18227",
+    "arXiv:2510.14126",
+    "arXiv:2604.09150",
+    "arXiv:2608.23048",
+    "arXiv:2609.19104",
+    "arXiv:2611.08770"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4111cc29ddbea11430898385e799c87c5ea50f43",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:39:53.274474+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043703",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3820171.3806907",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:characterizing performanceenergy tradeoffs of large language models in multirequest workflows"
+    },
+    {
+      "requested_id": "arXiv:2508.18227",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.14126",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.09150",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.23048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.19104",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.08770",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Think Less, Know More: State-Aware Reasoning Compression with Knowledge Guidance for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2604.09150",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks by leveraging long Chain-of-Thought (CoT), but often suffer from overthinking, leading to excessive reasoning steps and high inference latency. Existing CoT compression methods struggle to balance accuracy and efficiency, and lack fine-grained, step-level adaptation to redundancy and reasoning bias. Therefore, we propose State-Aware Reasoning Compression with Knowledge Guidance (STACK), a framework that performs step-wise CoT compression by explicitly modeling stage-specific redundancy sources and integrating with a retrieval-augmented guidance. STACK constructs online long-short contrastive samples and dynamically switches between knowledge-guided compression for uncertain or biased reasoning state and self-prompted compression for overly long but confident state, complemented by an answer-convergence-based early stopping mechanism to suppress redundant verification. We further propose a reward-difference-driven training strategy by combining Proximal Policy Optimization (PPO) and Direct Preference Optimization (DPO), enabling models to learn state-conditioned compression strategies. Experiments on three mathematical reasoning benchmarks show that STACK achieves a superior accuracy-efficiency balance, reducing average response length by 59.9% while improving accuracy by 4.8 points over existing methods.",
+      "identifiers": [
+        "SemanticScholar:3a17fe45131ddc22b385e77014952d6565c829ab"
+      ],
+      "semantic_scholar_id": "3a17fe45131ddc22b385e77014952d6565c829ab",
+      "canonical_id": "arXiv:2604.09150",
+      "arxiv_id": "2604.09150",
+      "doi": "10.48550/arXiv.2604.09150",
+      "authors": [
+        "Yi Sui",
+        "Chao-Zhuo Li",
+        "Da-Wei Song"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.19104",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for these robots. The inference latency of VLA models directly affects robot responsiveness and motion smoothness. However, existing VLA inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of VLA inference. In this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. We further find that such similarity extends beyond observations and action trajectories to internal model states. Drawing on these observations, we present rMuscle, a real-time VLA inference framework inspired by human muscle memory. It exploits cross-execution similarity through a dual-phase muscle-memory cache. The Context Cache reuses visual-token outputs to reduce computation, while the Action Cache reuses neuron activation patterns to reduce weight accesses. We keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rMuscle achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.",
+      "identifiers": [
+        "SemanticScholar:6e6579b2c0af7400dc5fdd911b7594d8418052d8"
+      ],
+      "semantic_scholar_id": "6e6579b2c0af7400dc5fdd911b7594d8418052d8",
+      "canonical_id": "arXiv:2609.19104",
+      "arxiv_id": "2609.19104",
+      "doi": "10.48550/arXiv.2609.19104",
+      "authors": [
+        "Kai-Jun Zhou",
+        "Zhi-Yang Li",
+        "Le Chen",
+        "Jin-Yu Gu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling",
+      "source_url": "https://arxiv.org/abs/2608.23048",
+      "year": 2026,
+      "published": "2026-08-24",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Semi-structured $N$:$M$ sparsity has emerged as a practical direction for accelerating large language models (LLMs). However, existing learnable-mask approaches incur substantial parameter and memory overhead, limiting their scalability to large models and aggressive sparsity regimes. In this work, we revisit semi-structured pruning from a perspective that reconciles efficiency with scalability. We propose Reservoir of Importance (RoI), a lightweight semi-structured pruning framework that learns sparsity masks through differentiable subset sampling. Unlike prior methods that model full categorical distributions over all feasible $N$:$M$ patterns, RoI introduces a compact-logit parameterization for sparsity mask learning and performs sampling without replacement to select masks, thereby reducing trainable parameters from combinatorial complexity to $\\mathcal{O}({M})$. As a result, RoI requires 1.5-8.75$\\times$ fewer learnable parameters and significantly lower memory cost, while remaining fully aligned with hardware-friendly sparsity patterns. Extensive evaluations across multiple scales of the Qwen2.5 LLM family (0.5-7B parameters) demonstrate that RoI achieves competitive performance with strong memory efficiency, stability, and scalability to more aggressive $N$:$M$ sparsity patterns, offering a practical path toward efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:e3cd7a5960c6bc87e4d5d555a4c6dcc52a6a699c"
+      ],
+      "semantic_scholar_id": "e3cd7a5960c6bc87e4d5d555a4c6dcc52a6a699c",
+      "canonical_id": "arXiv:2608.23048",
+      "arxiv_id": "2608.23048",
+      "doi": "10.48550/arXiv.2608.23048",
+      "authors": [
+        "Ha Dinh",
+        "Xuan Duy Ta",
+        "K. Thân",
+        "Khac-Hoai Nam Bui"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "ReKV: Overlapping Quantized KV Transfer and Suffix Recomputation",
+      "source_url": "https://arxiv.org/abs/2611.08770",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill--decode disaggregation moves a prompt's key--value (KV) cache between workers before the first token can be generated. Reducing this handoff to either cache compression or recomputation misses a useful choice: which layers to transmit, at what precision, and which layers to execute again on the decode worker. ReKV transfers a quantized prefix KV cache and one BF16 boundary state, then reconstructs a contiguous suffix while the prefix is in flight. In a model-shaped synthetic benchmark on cross-node H100s, the Q8 configuration meeting separately evaluated quality criteria reduces 8K handoff latency by $2.36\\times$, $2.84\\times$, and $3.65\\times$ over BF16 transfer for Qwen2.5-7B, Qwen2.5-3B, and Qwen3-8B. It is also faster than the best measured transfer-only or recompute-only action at those points. A separate real-weight BF16 recomputation experiment reduces prefill-to-token-return time by $1.16$--$1.63\\times$. The preferred action changes with prompt length and link bandwidth.",
+      "identifiers": [
+        "SemanticScholar:7231a862d791bd73dee3aac18fdccd4d368f537d"
+      ],
+      "semantic_scholar_id": "7231a862d791bd73dee3aac18fdccd4d368f537d",
+      "canonical_id": "arXiv:2611.08770",
+      "arxiv_id": "2611.08770",
+      "authors": [
+        "Guang-Jian Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cortex: Workflow-Aware Resource Pooling and Scheduling for Agentic Serving",
+      "source_url": "https://arxiv.org/abs/2510.14126",
+      "year": 2025,
+      "published": "2025-10-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Cortex, a prototype workflow-aware serving platform designed for agentic workloads. The core principle of Cortex is stage isolation: it provisions dedicated resource pools for each distinct stage of an agentic workflow. This simple yet powerful strategy mitigates inter-stage interference in compute and memory, leading to better KV cache utilization, higher throughput, and more predictable performance. By customizing resource allocation and scheduling within each distinct stage of agentic workflows, Cortex lays the groundwork for more advanced, agent-native serving paradigms, including malleable resource management, speculative execution of workflow branches, and a shared, multi-tiered cache for\"agentic state.\"",
+      "identifiers": [
+        "SemanticScholar:959cac221126a46cbc6254c2c6a7d96f289cbbb6"
+      ],
+      "semantic_scholar_id": "959cac221126a46cbc6254c2c6a7d96f289cbbb6",
+      "canonical_id": "arXiv:2510.14126",
+      "arxiv_id": "2510.14126",
+      "doi": "10.48550/arXiv.2510.14126",
+      "authors": [
+        "Nikos Pagonas",
+        "Yeounoh Chung",
+        "Kostis Kaffes",
+        "Arvind Krishnamurthy"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A 65.1 TOPS/W Digital CIM Processor for Ultra-Low-Bit Transformers with Multiplexer-based Adder and Scaling Factor-based Reordering",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043703",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large-language-model (LLM) continues to expand in parameter size and improve performance, challenges related to latency and energy efficiency become increasingly significant. While low-bit weight quantization was proposed to alleviate the external memory access bottleneck, it remains insufficient to reduce overall energy consumption. In this paper, we use binarized LLM and design a novel Computing-in-Memory (CIM) processor to reduce both computation and memory energy. We propose three key techniques: 1) Multiplexer-based adder is proposed to replace first stage adders of adder tree with the simple multiplexers and inverter, reducing adder tree energy consumption by 58%, 2) Scaling factor-based reordering is proposed to reduce adder tree bit-width, resulting in an additional 28.6% energy reduction, 3) Cluster-level broadcasting and bit-spatial mapping is proposed to reduce internal memory access and increase bit-scalability. As a result, we can reduce the overall energy consumption by 69.7%, offering a more efficient solution for LLM inference tasks.",
+      "identifiers": [
+        "SemanticScholar:a25b81941cabf17d5cfde9ebd4638c631a40e374"
+      ],
+      "semantic_scholar_id": "a25b81941cabf17d5cfde9ebd4638c631a40e374",
+      "doi": "10.1109/ISCAS56072.2025.11043703",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043703",
+      "authors": [
+        "Nayeong Lee",
+        "Sangyeob Kim",
+        "Seongyon Hong",
+        "Jiwon Choi",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 548,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GM-Skip: Metric-Guided Transformer Block Skipping for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2508.18227",
+      "year": 2025,
+      "published": "2025-08-20",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based Vision-Language Models (VLMs) have achieved remarkable success in image captioning, object recognition, and visual reasoning, but their heavy computational overhead limits deployment in latency-sensitive settings such as autonomous driving. We introduce GM-Skip, a flexible and metric-adaptive framework for Transformer block skipping that accelerates VLM inference while preserving task performance. GM-Skip employs a greedy, metric-guided block selection strategy that leverages feedback from evaluation metrics (e.g., accuracy, CIDEr) to identify redundant layers, combined with a reverse-order deletion mechanism that preserves essential early representations. A score-sparsity balance objective further enables controllable trade-offs between efficiency and accuracy across tasks. Experiments on COCO, CODA, and realworld driving scenarios show that GM-Skip consistently improves inference speed with minimal performance loss. On COCO, it boosts single-object classification accuracy on the Person category by 19.1%-87.3% while skipping over 40% of Transformer blocks, enhances multi-object detection by 23.4% with 35% sparsity, and doubles the captioning quality (CIDEr) of Qwen-VL under comparable latency. When integrated into an autonomous vehicle running Autoware. Universe, GM-Skip achieves up to 45.4% latency reduction in real-world inference, validating its practical effectiveness for efficient, adaptive VLM deployment.",
+      "identifiers": [
+        "SemanticScholar:2effd9d2d267e4376cd03931d25df50406a95d9e"
+      ],
+      "semantic_scholar_id": "2effd9d2d267e4376cd03931d25df50406a95d9e",
+      "canonical_id": "arXiv:2508.18227",
+      "arxiv_id": "2508.18227",
+      "doi": "10.1109/CVPRF71909.2026.00276",
+      "authors": [
+        "Lian-Ming Huang",
+        "Hai-Bo Hu",
+        "Qiao Li",
+        "Xin He",
+        "Nan Guan",
+        "C. Xue"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 461,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.09150",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.09150",
+        "id:SemanticScholar:3a17fe45131ddc22b385e77014952d6565c829ab",
+        "id:arXiv:2604.09150",
+        "title:think less know more stateaware reasoning compression with knowledge guidance for efficient reasoning",
+        "url:https://arxiv.org/abs/2604.09150"
+      ],
+      "record": {
+        "title": "Think Less, Know More: State-Aware Reasoning Compression with Knowledge Guidance for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2604.09150",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks by leveraging long Chain-of-Thought (CoT), but often suffer from overthinking, leading to excessive reasoning steps and high inference latency. Existing CoT compression methods struggle to balance accuracy and efficiency, and lack fine-grained, step-level adaptation to redundancy and reasoning bias. Therefore, we propose State-Aware Reasoning Compression with Knowledge Guidance (STACK), a framework that performs step-wise CoT compression by explicitly modeling stage-specific redundancy sources and integrating with a retrieval-augmented guidance. STACK constructs online long-short contrastive samples and dynamically switches between knowledge-guided compression for uncertain or biased reasoning state and self-prompted compression for overly long but confident state, complemented by an answer-convergence-based early stopping mechanism to suppress redundant verification. We further propose a reward-difference-driven training strategy by combining Proximal Policy Optimization (PPO) and Direct Preference Optimization (DPO), enabling models to learn state-conditioned compression strategies. Experiments on three mathematical reasoning benchmarks show that STACK achieves a superior accuracy-efficiency balance, reducing average response length by 59.9% while improving accuracy by 4.8 points over existing methods.",
+        "identifiers": [
+          "SemanticScholar:3a17fe45131ddc22b385e77014952d6565c829ab"
+        ],
+        "semantic_scholar_id": "3a17fe45131ddc22b385e77014952d6565c829ab",
+        "canonical_id": "arXiv:2604.09150",
+        "arxiv_id": "2604.09150",
+        "doi": "10.48550/arXiv.2604.09150",
+        "authors": [
+          "Yi Sui",
+          "Chao-Zhuo Li",
+          "Da-Wei Song"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 228,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19104",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.19104",
+        "id:SemanticScholar:6e6579b2c0af7400dc5fdd911b7594d8418052d8",
+        "id:arXiv:2609.19104",
+        "title:rmuscle robotic muscle memory for efficient visionlanguageaction model inference",
+        "url:https://arxiv.org/abs/2609.19104"
+      ],
+      "record": {
+        "title": "rMuscle: Robotic Muscle Memory for Efficient Vision-Language-Action Model Inference",
+        "source_url": "https://arxiv.org/abs/2609.19104",
+        "year": 2026,
+        "published": "2026-09-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Factory work is a promising early scenario for embodied AI: assigning repetitive manual jobs to robots has clear economic payoff, and a structured station keeps the jobs tractable for current policies. Vision-Language-Action (VLA) models now dominate as the policy paradigm for these robots. The inference latency of VLA models directly affects robot responsiveness and motion smoothness. However, existing VLA inference frameworks do not fully exploit the characteristics of embodied workloads or account for the distinct bottlenecks across different stages of VLA inference. In this paper, we first characterize embodied workloads and identify substantial task similarity across repeated robot executions. We further find that such similarity extends beyond observations and action trajectories to internal model states. Drawing on these observations, we present rMuscle, a real-time VLA inference framework inspired by human muscle memory. It exploits cross-execution similarity through a dual-phase muscle-memory cache. The Context Cache reuses visual-token outputs to reduce computation, while the Action Cache reuses neuron activation patterns to reduce weight accesses. We keep both the cache memory footprint and access overhead low through online cache recomputation, sliding-window cache retrieval, and mask sharing across consecutive denoising steps. rMuscle achieves 1.29-1.42X speedup on RTX 4090 and Jetson Thor across LIBERO, RoboTwin, and physical manipulation tasks, while maintaining the original success rates on real-world robots.",
+        "identifiers": [
+          "SemanticScholar:6e6579b2c0af7400dc5fdd911b7594d8418052d8"
+        ],
+        "semantic_scholar_id": "6e6579b2c0af7400dc5fdd911b7594d8418052d8",
+        "canonical_id": "arXiv:2609.19104",
+        "arxiv_id": "2609.19104",
+        "doi": "10.48550/arXiv.2609.19104",
+        "authors": [
+          "Kai-Jun Zhou",
+          "Zhi-Yang Li",
+          "Le Chen",
+          "Jin-Yu Gu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 69,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23048",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.23048",
+        "id:SemanticScholar:e3cd7a5960c6bc87e4d5d555a4c6dcc52a6a699c",
+        "id:arXiv:2608.23048",
+        "title:reservoir of importance learning semistructured sparsity with differentiable subset sampling",
+        "url:https://arxiv.org/abs/2608.23048"
+      ],
+      "record": {
+        "title": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling",
+        "source_url": "https://arxiv.org/abs/2608.23048",
+        "year": 2026,
+        "published": "2026-08-24",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Semi-structured $N$:$M$ sparsity has emerged as a practical direction for accelerating large language models (LLMs). However, existing learnable-mask approaches incur substantial parameter and memory overhead, limiting their scalability to large models and aggressive sparsity regimes. In this work, we revisit semi-structured pruning from a perspective that reconciles efficiency with scalability. We propose Reservoir of Importance (RoI), a lightweight semi-structured pruning framework that learns sparsity masks through differentiable subset sampling. Unlike prior methods that model full categorical distributions over all feasible $N$:$M$ patterns, RoI introduces a compact-logit parameterization for sparsity mask learning and performs sampling without replacement to select masks, thereby reducing trainable parameters from combinatorial complexity to $\\mathcal{O}({M})$. As a result, RoI requires 1.5-8.75$\\times$ fewer learnable parameters and significantly lower memory cost, while remaining fully aligned with hardware-friendly sparsity patterns. Extensive evaluations across multiple scales of the Qwen2.5 LLM family (0.5-7B parameters) demonstrate that RoI achieves competitive performance with strong memory efficiency, stability, and scalability to more aggressive $N$:$M$ sparsity patterns, offering a practical path toward efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:e3cd7a5960c6bc87e4d5d555a4c6dcc52a6a699c"
+        ],
+        "semantic_scholar_id": "e3cd7a5960c6bc87e4d5d555a4c6dcc52a6a699c",
+        "canonical_id": "arXiv:2608.23048",
+        "arxiv_id": "2608.23048",
+        "doi": "10.48550/arXiv.2608.23048",
+        "authors": [
+          "Ha Dinh",
+          "Xuan Duy Ta",
+          "K. Thân",
+          "Khac-Hoai Nam Bui"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 92,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.08770",
+      "identity_tokens": [
+        "id:SemanticScholar:7231a862d791bd73dee3aac18fdccd4d368f537d",
+        "id:arXiv:2611.08770",
+        "title:rekv overlapping quantized kv transfer and suffix recomputation",
+        "url:https://arxiv.org/abs/2611.08770"
+      ],
+      "record": {
+        "title": "ReKV: Overlapping Quantized KV Transfer and Suffix Recomputation",
+        "source_url": "https://arxiv.org/abs/2611.08770",
+        "year": 2026,
+        "published": "2026-11-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefill--decode disaggregation moves a prompt's key--value (KV) cache between workers before the first token can be generated. Reducing this handoff to either cache compression or recomputation misses a useful choice: which layers to transmit, at what precision, and which layers to execute again on the decode worker. ReKV transfers a quantized prefix KV cache and one BF16 boundary state, then reconstructs a contiguous suffix while the prefix is in flight. In a model-shaped synthetic benchmark on cross-node H100s, the Q8 configuration meeting separately evaluated quality criteria reduces 8K handoff latency by $2.36\\times$, $2.84\\times$, and $3.65\\times$ over BF16 transfer for Qwen2.5-7B, Qwen2.5-3B, and Qwen3-8B. It is also faster than the best measured transfer-only or recompute-only action at those points. A separate real-weight BF16 recomputation experiment reduces prefill-to-token-return time by $1.16$--$1.63\\times$. The preferred action changes with prompt length and link bandwidth.",
+        "identifiers": [
+          "SemanticScholar:7231a862d791bd73dee3aac18fdccd4d368f537d"
+        ],
+        "semantic_scholar_id": "7231a862d791bd73dee3aac18fdccd4d368f537d",
+        "canonical_id": "arXiv:2611.08770",
+        "arxiv_id": "2611.08770",
+        "authors": [
+          "Guang-Jian Dong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14126",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14126",
+        "id:SemanticScholar:959cac221126a46cbc6254c2c6a7d96f289cbbb6",
+        "id:arXiv:2510.14126",
+        "title:cortex workflowaware resource pooling and scheduling for agentic serving",
+        "url:https://arxiv.org/abs/2510.14126"
+      ],
+      "record": {
+        "title": "Cortex: Workflow-Aware Resource Pooling and Scheduling for Agentic Serving",
+        "source_url": "https://arxiv.org/abs/2510.14126",
+        "year": 2025,
+        "published": "2025-10-15",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce Cortex, a prototype workflow-aware serving platform designed for agentic workloads. The core principle of Cortex is stage isolation: it provisions dedicated resource pools for each distinct stage of an agentic workflow. This simple yet powerful strategy mitigates inter-stage interference in compute and memory, leading to better KV cache utilization, higher throughput, and more predictable performance. By customizing resource allocation and scheduling within each distinct stage of agentic workflows, Cortex lays the groundwork for more advanced, agent-native serving paradigms, including malleable resource management, speculative execution of workflow branches, and a shared, multi-tiered cache for\"agentic state.\"",
+        "identifiers": [
+          "SemanticScholar:959cac221126a46cbc6254c2c6a7d96f289cbbb6"
+        ],
+        "semantic_scholar_id": "959cac221126a46cbc6254c2c6a7d96f289cbbb6",
+        "canonical_id": "arXiv:2510.14126",
+        "arxiv_id": "2510.14126",
+        "doi": "10.48550/arXiv.2510.14126",
+        "authors": [
+          "Nikos Pagonas",
+          "Yeounoh Chung",
+          "Kostis Kaffes",
+          "Arvind Krishnamurthy"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 405,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas56072.2025.11043703",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043703",
+        "id:SemanticScholar:a25b81941cabf17d5cfde9ebd4638c631a40e374",
+        "title:a 651 topsw digital cim processor for ultralowbit transformers with multiplexerbased adder and scaling factorbased reordering",
+        "url:https://doi.org/10.1109/ISCAS56072.2025.11043703"
+      ],
+      "record": {
+        "title": "A 65.1 TOPS/W Digital CIM Processor for Ultra-Low-Bit Transformers with Multiplexer-based Adder and Scaling Factor-based Reordering",
+        "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043703",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large-language-model (LLM) continues to expand in parameter size and improve performance, challenges related to latency and energy efficiency become increasingly significant. While low-bit weight quantization was proposed to alleviate the external memory access bottleneck, it remains insufficient to reduce overall energy consumption. In this paper, we use binarized LLM and design a novel Computing-in-Memory (CIM) processor to reduce both computation and memory energy. We propose three key techniques: 1) Multiplexer-based adder is proposed to replace first stage adders of adder tree with the simple multiplexers and inverter, reducing adder tree energy consumption by 58%, 2) Scaling factor-based reordering is proposed to reduce adder tree bit-width, resulting in an additional 28.6% energy reduction, 3) Cluster-level broadcasting and bit-spatial mapping is proposed to reduce internal memory access and increase bit-scalability. As a result, we can reduce the overall energy consumption by 69.7%, offering a more efficient solution for LLM inference tasks.",
+        "identifiers": [
+          "SemanticScholar:a25b81941cabf17d5cfde9ebd4638c631a40e374"
+        ],
+        "semantic_scholar_id": "a25b81941cabf17d5cfde9ebd4638c631a40e374",
+        "doi": "10.1109/ISCAS56072.2025.11043703",
+        "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043703",
+        "authors": [
+          "Nayeong Lee",
+          "Sangyeob Kim",
+          "Seongyon Hong",
+          "Jiwon Choi",
+          "Hoi-Jun Yoo"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 548,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.18227",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00276",
+        "id:SemanticScholar:2effd9d2d267e4376cd03931d25df50406a95d9e",
+        "id:arXiv:2508.18227",
+        "title:gmskip metricguided transformer block skipping for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2508.18227"
+      ],
+      "record": {
+        "title": "GM-Skip: Metric-Guided Transformer Block Skipping for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2508.18227",
+        "year": 2025,
+        "published": "2025-08-20",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based Vision-Language Models (VLMs) have achieved remarkable success in image captioning, object recognition, and visual reasoning, but their heavy computational overhead limits deployment in latency-sensitive settings such as autonomous driving. We introduce GM-Skip, a flexible and metric-adaptive framework for Transformer block skipping that accelerates VLM inference while preserving task performance. GM-Skip employs a greedy, metric-guided block selection strategy that leverages feedback from evaluation metrics (e.g., accuracy, CIDEr) to identify redundant layers, combined with a reverse-order deletion mechanism that preserves essential early representations. A score-sparsity balance objective further enables controllable trade-offs between efficiency and accuracy across tasks. Experiments on COCO, CODA, and realworld driving scenarios show that GM-Skip consistently improves inference speed with minimal performance loss. On COCO, it boosts single-object classification accuracy on the Person category by 19.1%-87.3% while skipping over 40% of Transformer blocks, enhances multi-object detection by 23.4% with 35% sparsity, and doubles the captioning quality (CIDEr) of Qwen-VL under comparable latency. When integrated into an autonomous vehicle running Autoware. Universe, GM-Skip achieves up to 45.4% latency reduction in real-world inference, validating its practical effectiveness for efficient, adaptive VLM deployment.",
+        "identifiers": [
+          "SemanticScholar:2effd9d2d267e4376cd03931d25df50406a95d9e"
+        ],
+        "semantic_scholar_id": "2effd9d2d267e4376cd03931d25df50406a95d9e",
+        "canonical_id": "arXiv:2508.18227",
+        "arxiv_id": "2508.18227",
+        "doi": "10.1109/CVPRF71909.2026.00276",
+        "authors": [
+          "Lian-Ming Huang",
+          "Hai-Bo Hu",
+          "Qiao Li",
+          "Xin He",
+          "Nan Guan",
+          "C. Xue"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 461,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:903cea4c142a57db0219e2eb9d17070496f583d207dc0a46799d6cb7c31a7d46",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

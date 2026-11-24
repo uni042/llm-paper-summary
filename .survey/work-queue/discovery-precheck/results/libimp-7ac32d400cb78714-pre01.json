@@ -1,0 +1,846 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7ac32d400cb78714-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7ac32d400cb7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11464991",
+    "DOI:10.1109/iscas56072.2025.11043162",
+    "DOI:10.18653/v1/2026.findings-acl.991",
+    "SemanticScholar:d387600e5150b381a306221a5bc9bd92aa99157b",
+    "SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2",
+    "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+    "arXiv:2303.09184",
+    "arXiv:2506.19651",
+    "arXiv:2607.20129"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4111cc29ddbea11430898385e799c87c5ea50f43",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:39:58.973405+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11464991",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043162",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.991",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:d387600e5150b381a306221a5bc9bd92aa99157b",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2303.09184",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.19651",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.20129",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CUSUM-Shaped Inference-Time Monitoring and Targeted Re-Decoding for Quantized Small Language Model Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.20129",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantized small reasoning models can enter repetitive or otherwise unproductive trajectories, yet standard decoding does not adapt to the trajectory as it unfolds. We study MGT-B, a fixed, weight-preserving controller that converts overlapping windows of uncertainty, repetition, and local-change features into position-conditional empirical tail probabilities. It accumulates mixture betting factors with a CUSUM-shaped reset, and, after an alarm, restores a coherent earlier token and key-value-cache state before constrained re-decoding. On MATH-500, a paired three-seed evaluation over 1,500 generations per method raises exact-normalized accuracy from 54.73% for vanilla decoding to 56.40% (+1.67 percentage points; problem-clustered bootstrap 95% CI [+0.47, +2.80]), while a prospectively profiled random-intervention control reaches 54.60%. The gain is positive in all three seeds and costs 5.14% more sampled tokens. Seed-0 ablations show that rollback alone does not explain the result and that an isolated repetition penalty is harmful. Five-sample self-consistency reaches 70.0% but uses about 4.84x as many tokens as MGT-B. On the harder, non-overlapping Omni-MATH evaluation, however, MGT-B obtains 16.60% versus 16.67% for vanilla (-0.07 points; clustered 95% CI [-0.33, +0.20]) with 2.10% more sampled tokens. Thus, MGT-B provides a modest, reproducible local improvement on MATH-500 in the studied configuration, but the effect does not transfer to Omni-MATH and should not be interpreted as a general improvement in mathematical reasoning.",
+      "identifiers": [
+        "SemanticScholar:1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb"
+      ],
+      "semantic_scholar_id": "1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb",
+      "canonical_id": "arXiv:2607.20129",
+      "arxiv_id": "2607.20129",
+      "doi": "10.48550/arXiv.2607.20129",
+      "authors": [
+        "E. Ettifouri",
+        "Ayoub Belfatmi",
+        "Mahaman Sanoussi Yahaya Alassan",
+        "Walid Dahhane"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 125,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memformer: The Memory-Augmented Transformer",
+      "source_url": "https://doi.org/10.48550/arXiv.2010.06891",
+      "year": 2020,
+      "published": "2020-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:d387600e5150b381a306221a5bc9bd92aa99157b"
+      ],
+      "semantic_scholar_id": "d387600e5150b381a306221a5bc9bd92aa99157b",
+      "doi": "10.48550/arXiv.2010.06891",
+      "canonical_id": "DOI:10.48550/arXiv.2010.06891",
+      "authors": [
+        "Qingyang Wu",
+        "Zhenzhong Lan",
+        "Jing Gu",
+        "Zhou Yu"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2232,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.991",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:3a2482a4c8834d2faa5a428ceab49816fbbc1077"
+      ],
+      "semantic_scholar_id": "3a2482a4c8834d2faa5a428ceab49816fbbc1077",
+      "doi": "10.18653/v1/2026.findings-acl.991",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.991",
+      "authors": [
+        "Yu-Hua Zhou",
+        "Shi-Chao Weng",
+        "Chang-Hai Zhou",
+        "Yu-Han Wu",
+        "Qian Qiao",
+        "Jun Gao",
+        "Fei Yang",
+        "Ai-Min Pan"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "MotionFusion: Fusing Motion and Saliency for Fast Video Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11464991",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:bf2524169c1cd6b92a27907f2623f9d138eaa39c"
+      ],
+      "semantic_scholar_id": "bf2524169c1cd6b92a27907f2623f9d138eaa39c",
+      "doi": "10.1109/icassp55912.2026.11464991",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464991",
+      "authors": [
+        "Chenxi Du",
+        "Ju Ren",
+        "Yao-Xue Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Speeding up Transformer Decoding via an Attention Refinement Network",
+      "source_url": "https://www.semanticscholar.org/paper/e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "year": 2022,
+      "published": null,
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3"
+      ],
+      "semantic_scholar_id": "e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "canonical_id": "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "authors": [
+        "Kaixin Wu",
+        "Yue Zhang",
+        "Bojie Hu",
+        "Tong Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1607,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training-Free Semantic Deferrals for Open-Ended LLM Cascades",
+      "source_url": "https://www.semanticscholar.org/paper/e182f592d7143f013e11f629d30ac48fe37f4ee2",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2"
+      ],
+      "semantic_scholar_id": "e182f592d7143f013e11f629d30ac48fe37f4ee2",
+      "canonical_id": "SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2",
+      "authors": [
+        "Duncan Soiffer",
+        "Steven Kolawole",
+        "Virginia Smith"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Block-wise Bit-Compression of Transformer-based Models",
+      "source_url": "https://arxiv.org/abs/2303.09184",
+      "year": 2023,
+      "published": "2023-03-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the popularity of the recent Transformer-based models represented by BERT, GPT-3 and ChatGPT, there has been state-of-the-art performance in a range of natural language processing tasks. However, the massive computations, huge memory footprint, and thus high latency of Transformer-based models is an inevitable challenge for the cloud with high real-time requirement. To tackle the issue, we propose BBCT, a method of block-wise bit-compression for transformer without retraining. Our method achieves more fine-grained compression of the whole transformer, including embedding, matrix multiplication, GELU, softmax, layer normalization, and all the intermediate results. As a case, we compress an efficient BERT with the method of BBCT. Our benchmark test results on General Language Understanding Evaluation (GLUE) show that BBCT can achieve less than 1% accuracy drop in most tasks.",
+      "identifiers": [
+        "SemanticScholar:9891d1b67c92f283aa283c27e87d0676c068a818"
+      ],
+      "semantic_scholar_id": "9891d1b67c92f283aa283c27e87d0676c068a818",
+      "canonical_id": "arXiv:2303.09184",
+      "arxiv_id": "2303.09184",
+      "doi": "10.48550/arXiv.2303.09184",
+      "authors": [
+        "Gao-Chen Dong",
+        "W. Chen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1349,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Reinforcement Learning-Based Retraining-Free Pruning for Encoder-Based Language Models",
+      "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043162",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Natural Language Processing (NLP) has achieved significant success in complex tasks across various domains, yet it also brings high computational costs and inference delays. Pruning, as a model optimization technique, can effectively reduce model complexity and enhance its generalization capability and efficiency. However, current encoder-based language model pruning algorithms often lack robust dynamic adaptability and tend to focus only on short-term optimal solutions, without fully considering the interactions between different solutions. This limits their ability to find global optima, thereby potentially impacting overall model performance. To address these challenges, we propose a structured pruning algorithm based on reinforcement learning, named RLM (Reinforcement Learning Masking), which includes QLOM (Q-Learning Optimization Mask) and QRMT (Quasi-Minimal Residual Mask Tuning) components. This algorithm aims to rapidly and effectively find global optima without the need for retraining. We evaluated this method using BERTBASE and DistilBERT models on the GLUE and SQuAD benchmarks. Experimental results show that RLM significantly enhances model accuracy in the SQuAD benchmark. Under a 60% FLOPs constraint, RLM achieves a 8.45% increase in F1 score compared to existing retraining-free pruning algorithms, demonstrating its effectiveness in improving performance while managing computational resources efficiently.",
+      "identifiers": [
+        "SemanticScholar:5c7eced03fa005b7a3f8f88fb48dc7573486e6b3"
+      ],
+      "semantic_scholar_id": "5c7eced03fa005b7a3f8f88fb48dc7573486e6b3",
+      "doi": "10.1109/ISCAS56072.2025.11043162",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043162",
+      "authors": [
+        "Bobin Xie",
+        "Ren-Da Han",
+        "Guang-Zhen Yao",
+        "Hai-Ming Li",
+        "Si Zhang",
+        "Yu-Tong Chen",
+        "Sandong Zhu",
+        "Long Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 548,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PEVLM: Parallel Encoding for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2506.19651",
+      "year": 2025,
+      "published": "2025-06-24",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated strong capabilities in multimodal understanding and generation tasks. However, their application to long video understanding remains hindered by the quadratic complexity of standard attention mechanisms. In this work, we introduce \\textbf{PEVLM}, a fine-tuning-free parallel encoding method designed to enhance the prefilling efficiency of VLMs in long video scenarios. PEVLM partitions the input video into context blocks with a shared sink block, while preserving sequential position embeddings to align the attention weight distribution with that of Full-Attention. This design reduces attention complexity from $O((T \\times N)^2)$ to $O(T \\times N)$ where $T$ is the number of frames and $N$ the number of tokens per frame, without sacrificing accuracy. Extensive experiments across multiple state-of-the-art models and benchmarks demonstrate that PEVLM consistently outperforms existing parallel encoding approaches, achieving up to \\textbf{7.47x} speedup in attention computation and reducing end-to-end latency by \\textbf{40\\%}. Remarkably, PEVLM not only maintains high accuracy, but in some settings even surpasses Full-Attention performance. Under strict latency constraints, it achieves substantial gains, improving accuracy from \\textbf{23.26\\%} to \\textbf{61.03\\%}. These results underscore the effectiveness of PEVLM for low-latency, long-context video understanding, making it a promising solution for real-world applications.",
+      "identifiers": [
+        "SemanticScholar:dbf94af11a1da086384fb81a1ddf1a67b01bf40e"
+      ],
+      "semantic_scholar_id": "dbf94af11a1da086384fb81a1ddf1a67b01bf40e",
+      "canonical_id": "arXiv:2506.19651",
+      "arxiv_id": "2506.19651",
+      "doi": "10.48550/arXiv.2506.19651",
+      "authors": [
+        "Letian Kang",
+        "Shi-Xian Luo",
+        "Yiqiang Li",
+        "Yu-Xin Yin",
+        "Shenxuan Zhou",
+        "Xiao-Yan Yu",
+        "Jin Yang",
+        "Yong Wu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 518,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.20129",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.20129",
+        "id:SemanticScholar:1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb",
+        "id:arXiv:2607.20129",
+        "title:cusumshaped inferencetime monitoring and targeted redecoding for quantized small language model reasoning",
+        "url:https://arxiv.org/abs/2607.20129"
+      ],
+      "record": {
+        "title": "CUSUM-Shaped Inference-Time Monitoring and Targeted Re-Decoding for Quantized Small Language Model Reasoning",
+        "source_url": "https://arxiv.org/abs/2607.20129",
+        "year": 2026,
+        "published": "2026-07-22",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantized small reasoning models can enter repetitive or otherwise unproductive trajectories, yet standard decoding does not adapt to the trajectory as it unfolds. We study MGT-B, a fixed, weight-preserving controller that converts overlapping windows of uncertainty, repetition, and local-change features into position-conditional empirical tail probabilities. It accumulates mixture betting factors with a CUSUM-shaped reset, and, after an alarm, restores a coherent earlier token and key-value-cache state before constrained re-decoding. On MATH-500, a paired three-seed evaluation over 1,500 generations per method raises exact-normalized accuracy from 54.73% for vanilla decoding to 56.40% (+1.67 percentage points; problem-clustered bootstrap 95% CI [+0.47, +2.80]), while a prospectively profiled random-intervention control reaches 54.60%. The gain is positive in all three seeds and costs 5.14% more sampled tokens. Seed-0 ablations show that rollback alone does not explain the result and that an isolated repetition penalty is harmful. Five-sample self-consistency reaches 70.0% but uses about 4.84x as many tokens as MGT-B. On the harder, non-overlapping Omni-MATH evaluation, however, MGT-B obtains 16.60% versus 16.67% for vanilla (-0.07 points; clustered 95% CI [-0.33, +0.20]) with 2.10% more sampled tokens. Thus, MGT-B provides a modest, reproducible local improvement on MATH-500 in the studied configuration, but the effect does not transfer to Omni-MATH and should not be interpreted as a general improvement in mathematical reasoning.",
+        "identifiers": [
+          "SemanticScholar:1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb"
+        ],
+        "semantic_scholar_id": "1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb",
+        "canonical_id": "arXiv:2607.20129",
+        "arxiv_id": "2607.20129",
+        "doi": "10.48550/arXiv.2607.20129",
+        "authors": [
+          "E. Ettifouri",
+          "Ayoub Belfatmi",
+          "Mahaman Sanoussi Yahaya Alassan",
+          "Walid Dahhane"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 125,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.48550/arxiv.2010.06891",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2010.06891",
+        "id:SemanticScholar:d387600e5150b381a306221a5bc9bd92aa99157b",
+        "id:arXiv:2010.06891",
+        "title:memformer the memoryaugmented transformer",
+        "url:https://doi.org/10.48550/arXiv.2010.06891"
+      ],
+      "record": {
+        "title": "Memformer: The Memory-Augmented Transformer",
+        "source_url": "https://doi.org/10.48550/arXiv.2010.06891",
+        "year": 2020,
+        "published": "2020-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:d387600e5150b381a306221a5bc9bd92aa99157b"
+        ],
+        "semantic_scholar_id": "d387600e5150b381a306221a5bc9bd92aa99157b",
+        "doi": "10.48550/arXiv.2010.06891",
+        "canonical_id": "DOI:10.48550/arXiv.2010.06891",
+        "authors": [
+          "Qingyang Wu",
+          "Zhenzhong Lan",
+          "Jing Gu",
+          "Zhou Yu"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2232,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.991",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.991",
+        "id:SemanticScholar:3a2482a4c8834d2faa5a428ceab49816fbbc1077",
+        "title:deputy accelerating large language model inference with dynamic lowrank substitution",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.991"
+      ],
+      "record": {
+        "title": "Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.991",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:3a2482a4c8834d2faa5a428ceab49816fbbc1077"
+        ],
+        "semantic_scholar_id": "3a2482a4c8834d2faa5a428ceab49816fbbc1077",
+        "doi": "10.18653/v1/2026.findings-acl.991",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.991",
+        "authors": [
+          "Yu-Hua Zhou",
+          "Shi-Chao Weng",
+          "Chang-Hai Zhou",
+          "Yu-Han Wu",
+          "Qian Qiao",
+          "Jun Gao",
+          "Fei Yang",
+          "Ai-Min Pan"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 146,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11464991",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11464991",
+        "id:SemanticScholar:bf2524169c1cd6b92a27907f2623f9d138eaa39c",
+        "title:motionfusion fusing motion and saliency for fast video large language model inference",
+        "url:https://doi.org/10.1109/icassp55912.2026.11464991"
+      ],
+      "record": {
+        "title": "MotionFusion: Fusing Motion and Saliency for Fast Video Large Language Model Inference",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11464991",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:bf2524169c1cd6b92a27907f2623f9d138eaa39c"
+        ],
+        "semantic_scholar_id": "bf2524169c1cd6b92a27907f2623f9d138eaa39c",
+        "doi": "10.1109/icassp55912.2026.11464991",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11464991",
+        "authors": [
+          "Chenxi Du",
+          "Ju Ren",
+          "Yao-Xue Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "identity_tokens": [
+        "id:SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+        "title:speeding up transformer decoding via an attention refinement network",
+        "url:https://www.semanticscholar.org/paper/e327d6794179139d4a3564effa26ab13a7f7b6c3"
+      ],
+      "record": {
+        "title": "Speeding up Transformer Decoding via an Attention Refinement Network",
+        "source_url": "https://www.semanticscholar.org/paper/e327d6794179139d4a3564effa26ab13a7f7b6c3",
+        "year": 2022,
+        "published": null,
+        "venue": "International Conference on Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3"
+        ],
+        "semantic_scholar_id": "e327d6794179139d4a3564effa26ab13a7f7b6c3",
+        "canonical_id": "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+        "authors": [
+          "Kaixin Wu",
+          "Yue Zhang",
+          "Bojie Hu",
+          "Tong Zhang"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1607,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2",
+      "identity_tokens": [
+        "id:SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2",
+        "title:trainingfree semantic deferrals for openended llm cascades",
+        "url:https://www.semanticscholar.org/paper/e182f592d7143f013e11f629d30ac48fe37f4ee2"
+      ],
+      "record": {
+        "title": "Training-Free Semantic Deferrals for Open-Ended LLM Cascades",
+        "source_url": "https://www.semanticscholar.org/paper/e182f592d7143f013e11f629d30ac48fe37f4ee2",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2"
+        ],
+        "semantic_scholar_id": "e182f592d7143f013e11f629d30ac48fe37f4ee2",
+        "canonical_id": "SemanticScholar:e182f592d7143f013e11f629d30ac48fe37f4ee2",
+        "authors": [
+          "Duncan Soiffer",
+          "Steven Kolawole",
+          "Virginia Smith"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2303.09184",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2303.09184",
+        "id:SemanticScholar:9891d1b67c92f283aa283c27e87d0676c068a818",
+        "id:arXiv:2303.09184",
+        "title:blockwise bitcompression of transformerbased models",
+        "url:https://arxiv.org/abs/2303.09184"
+      ],
+      "record": {
+        "title": "Block-wise Bit-Compression of Transformer-based Models",
+        "source_url": "https://arxiv.org/abs/2303.09184",
+        "year": 2023,
+        "published": "2023-03-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the popularity of the recent Transformer-based models represented by BERT, GPT-3 and ChatGPT, there has been state-of-the-art performance in a range of natural language processing tasks. However, the massive computations, huge memory footprint, and thus high latency of Transformer-based models is an inevitable challenge for the cloud with high real-time requirement. To tackle the issue, we propose BBCT, a method of block-wise bit-compression for transformer without retraining. Our method achieves more fine-grained compression of the whole transformer, including embedding, matrix multiplication, GELU, softmax, layer normalization, and all the intermediate results. As a case, we compress an efficient BERT with the method of BBCT. Our benchmark test results on General Language Understanding Evaluation (GLUE) show that BBCT can achieve less than 1% accuracy drop in most tasks.",
+        "identifiers": [
+          "SemanticScholar:9891d1b67c92f283aa283c27e87d0676c068a818"
+        ],
+        "semantic_scholar_id": "9891d1b67c92f283aa283c27e87d0676c068a818",
+        "canonical_id": "arXiv:2303.09184",
+        "arxiv_id": "2303.09184",
+        "doi": "10.48550/arXiv.2303.09184",
+        "authors": [
+          "Gao-Chen Dong",
+          "W. Chen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1349,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas56072.2025.11043162",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043162",
+        "id:SemanticScholar:5c7eced03fa005b7a3f8f88fb48dc7573486e6b3",
+        "title:a reinforcement learningbased retrainingfree pruning for encoderbased language models",
+        "url:https://doi.org/10.1109/ISCAS56072.2025.11043162"
+      ],
+      "record": {
+        "title": "A Reinforcement Learning-Based Retraining-Free Pruning for Encoder-Based Language Models",
+        "source_url": "https://doi.org/10.1109/ISCAS56072.2025.11043162",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Natural Language Processing (NLP) has achieved significant success in complex tasks across various domains, yet it also brings high computational costs and inference delays. Pruning, as a model optimization technique, can effectively reduce model complexity and enhance its generalization capability and efficiency. However, current encoder-based language model pruning algorithms often lack robust dynamic adaptability and tend to focus only on short-term optimal solutions, without fully considering the interactions between different solutions. This limits their ability to find global optima, thereby potentially impacting overall model performance. To address these challenges, we propose a structured pruning algorithm based on reinforcement learning, named RLM (Reinforcement Learning Masking), which includes QLOM (Q-Learning Optimization Mask) and QRMT (Quasi-Minimal Residual Mask Tuning) components. This algorithm aims to rapidly and effectively find global optima without the need for retraining. We evaluated this method using BERTBASE and DistilBERT models on the GLUE and SQuAD benchmarks. Experimental results show that RLM significantly enhances model accuracy in the SQuAD benchmark. Under a 60% FLOPs constraint, RLM achieves a 8.45% increase in F1 score compared to existing retraining-free pruning algorithms, demonstrating its effectiveness in improving performance while managing computational resources efficiently.",
+        "identifiers": [
+          "SemanticScholar:5c7eced03fa005b7a3f8f88fb48dc7573486e6b3"
+        ],
+        "semantic_scholar_id": "5c7eced03fa005b7a3f8f88fb48dc7573486e6b3",
+        "doi": "10.1109/ISCAS56072.2025.11043162",
+        "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043162",
+        "authors": [
+          "Bobin Xie",
+          "Ren-Da Han",
+          "Guang-Zhen Yao",
+          "Hai-Ming Li",
+          "Si Zhang",
+          "Yu-Tong Chen",
+          "Sandong Zhu",
+          "Long Zhang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 548,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.19651",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.19651",
+        "id:SemanticScholar:dbf94af11a1da086384fb81a1ddf1a67b01bf40e",
+        "id:arXiv:2506.19651",
+        "title:pevlm parallel encoding for visionlanguage models",
+        "url:https://arxiv.org/abs/2506.19651"
+      ],
+      "record": {
+        "title": "PEVLM: Parallel Encoding for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2506.19651",
+        "year": 2025,
+        "published": "2025-06-24",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have demonstrated strong capabilities in multimodal understanding and generation tasks. However, their application to long video understanding remains hindered by the quadratic complexity of standard attention mechanisms. In this work, we introduce \\textbf{PEVLM}, a fine-tuning-free parallel encoding method designed to enhance the prefilling efficiency of VLMs in long video scenarios. PEVLM partitions the input video into context blocks with a shared sink block, while preserving sequential position embeddings to align the attention weight distribution with that of Full-Attention. This design reduces attention complexity from $O((T \\times N)^2)$ to $O(T \\times N)$ where $T$ is the number of frames and $N$ the number of tokens per frame, without sacrificing accuracy. Extensive experiments across multiple state-of-the-art models and benchmarks demonstrate that PEVLM consistently outperforms existing parallel encoding approaches, achieving up to \\textbf{7.47x} speedup in attention computation and reducing end-to-end latency by \\textbf{40\\%}. Remarkably, PEVLM not only maintains high accuracy, but in some settings even surpasses Full-Attention performance. Under strict latency constraints, it achieves substantial gains, improving accuracy from \\textbf{23.26\\%} to \\textbf{61.03\\%}. These results underscore the effectiveness of PEVLM for low-latency, long-context video understanding, making it a promising solution for real-world applications.",
+        "identifiers": [
+          "SemanticScholar:dbf94af11a1da086384fb81a1ddf1a67b01bf40e"
+        ],
+        "semantic_scholar_id": "dbf94af11a1da086384fb81a1ddf1a67b01bf40e",
+        "canonical_id": "arXiv:2506.19651",
+        "arxiv_id": "2506.19651",
+        "doi": "10.48550/arXiv.2506.19651",
+        "authors": [
+          "Letian Kang",
+          "Shi-Xian Luo",
+          "Yiqiang Li",
+          "Yu-Xin Yin",
+          "Shenxuan Zhou",
+          "Xiao-Yan Yu",
+          "Jin Yang",
+          "Yong Wu"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 518,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e1cbc7255819aa6abc56ef0cefabd24f9c918c066a788eca1bbe5075c94887f2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,1271 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d68fe33c7bed28bf-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d68fe33c7bed",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.28522",
+    "arXiv:2611.28563",
+    "arXiv:2611.28702",
+    "arXiv:2611.29006",
+    "arXiv:2611.29066",
+    "arXiv:2611.29092",
+    "arXiv:2611.29497",
+    "arXiv:2611.29663",
+    "arXiv:2611.30027",
+    "arXiv:2611.30205",
+    "arXiv:2611.30417",
+    "arXiv:2611.30720",
+    "arXiv:2611.31105",
+    "arXiv:2611.31112"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4111cc29ddbea11430898385e799c87c5ea50f43",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 14,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 14,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:39:53.662981+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.28522",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.28563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.28702",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.29006",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.29066",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.29092",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.29497",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.29663",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.30027",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.30205",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.30417",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.30720",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.31105",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.31112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DisSparse: Pipelined Top-$p$ Sparse Attention for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2611.28522",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked by the memory demands of the key-value (KV) cache, whose size scales linearly with context length. Dynamic sparse attention reduces this bottleneck by fetching and attending only to a critical subset of tokens. The dominant primitive in dynamic sparse attention research and deployment is fixed-budget top-$k$ selection, which is favored because its deterministic block count aligns with the static memory allocation that systems like vLLM rely on. Top-$k$ uses a fixed budget regardless of how attention mass is distributed across heads, layers, and decode steps, leading to either wasted bandwidth on heads with peaky attention or dropped context on heads with diffuse attention. Top-$p$ (nucleus) selection adapts naturally to this variation but has seen limited adoption in production serving systems due to two system-level challenges: variable block counts that break deterministic block allocation and computationally expensive selection kernels that exceed the cost of attention itself. We present DisSparse, a serving system that integrates top-$p$ sparse attention into vLLM end-to-end. DisSparse decouples block selection from the scheduler's critical path, hides selection latency behind layer computation via a two-stream pipeline, and introduces a single-pass histogram-based top-$p$ kernel. We further observe intra-block sparsity, the inflation of selection budgets caused by mixing high- and low-importance tokens within fixed-size KV cache blocks, and address it with a token relocation kernel guided by accumulated prefill attention scores. Across long- and medium-context benchmarks on multiple models, DisSparse achieves 1.17x to 1.80x speedup in sparsity analysis (block selection) over state-of-the-art top-$p$ methods with negligible accuracy loss and supports up to 8x larger maximum batch sizes than dense vLLM under the same memory budget.",
+      "identifiers": [
+        "SemanticScholar:893716737951343e8e50eb2bb0ff894e979876e6"
+      ],
+      "semantic_scholar_id": "893716737951343e8e50eb2bb0ff894e979876e6",
+      "canonical_id": "arXiv:2611.28522",
+      "arxiv_id": "2611.28522",
+      "authors": [
+        "Nurlan Nazaraliyev",
+        "Elaheh Sadredini",
+        "N. Abu-Ghazaleh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Selective ROM Weight Storage for Responsive LLM Control on Edge Robots",
+      "source_url": "https://arxiv.org/abs/2611.28563",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge robots increasingly use large language models (LLMs) for complex tasks, demanding efficient inference alongside timely control. Limited memory capacity constrains model deployment, while repeated weight transfers during decoding compete with activations and KV cache for external bandwidth. Sequential generation of robot actions further delays decisions and periodic control on shared hardware. We present a hybrid memory architecture with heterogeneous scheduling to address these bottlenecks jointly. Banked ROM stores selected fixed weights and supplies a standard compute array through a dedicated datapath. LPDDR retains the remaining weights and mutable state, preserving model flexibility. Coordinated operand delivery and preemption at output slice boundaries accelerate inference while limiting interference with periodic control. A structured decision interface scores candidate phases in a single forward pass, avoiding sequential token generation for routine choices. Together, these mechanisms improve memory service, compute access, and decision execution for edge robotic workloads. Experiments with Qwen3-8B achieve a peak decode speedup of 1.56$\\times$ and reduce P99 task response time by a factor of approximately 227.27$\\times$, while completing 100.00\\% of the tested grasping and transport tasks.",
+      "identifiers": [
+        "SemanticScholar:310ba9b6012c8bd0966e2d3aaef2171b8e081433"
+      ],
+      "semantic_scholar_id": "310ba9b6012c8bd0966e2d3aaef2171b8e081433",
+      "canonical_id": "arXiv:2611.28563",
+      "arxiv_id": "2611.28563",
+      "authors": [
+        "Bo-Xiang Song",
+        "Zhi-Hong Chen",
+        "Xiao-Yu Hao",
+        "Jin-Hong Huang",
+        "Cheng-Kai Zhu",
+        "Jia-Qi Yang",
+        "Hong-Yang Pan",
+        "Chang-Hao Yan",
+        "Ke-Ren Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HiPerfCC-KVCache: Accelerating Confidential LLM Serving with Hierarchical KV Caching",
+      "source_url": "https://arxiv.org/abs/2611.28702",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hierarchical key-value (KV) caching reduces repeated prefill computation in large language model serving by retaining reusable state beyond GPU memory. Under GPU confidential computing (CC), however, protected transfers can erase this benefit. We show that bulk KV copies hold driver locks during prolonged CPU-side processing, stalling independent serving operations despite separate threads and streams. Our characterization on Hopper and Blackwell GPUs shows how lock scope, copy granularity, and allocation ownership affect foreground progress and transfer parallelism. Guided by these findings, we present HiPerfCC-KVCache, which manages resource lifetimes, prioritizes ready token readback between bounded backup submissions, and parallelizes KV restores through auxiliary contexts with shared GPU staging. Implemented in SGLang, HiPerfCC-KVCache uses existing protected transfer interfaces without hardware or driver changes. Across three models and three workloads on H200, HiPerfCC-KVCache achieves a geometric-mean output-token throughput speedup of $1.74\\times$ (up to $2.72\\times$) over the staged KV-transfer HiCache-Workers baseline at the highest tested loads. Mean time to first token decreases by 36% on average and up to 59%. The benefits generalize to RTX PRO 6000 Blackwell, with a geometric-mean throughput speedup of $1.28\\times$ (up to $2.20\\times$) over the same baseline. A capacity analysis further models and explains variation in gains and remaining gaps to CC-off serving.",
+      "identifiers": [
+        "SemanticScholar:1fd079668613cd2f49b2809e6b40d1203f1145a5"
+      ],
+      "semantic_scholar_id": "1fd079668613cd2f49b2809e6b40d1203f1145a5",
+      "canonical_id": "arXiv:2611.28702",
+      "arxiv_id": "2611.28702",
+      "authors": [
+        "Hao-Xuan Xu",
+        "Shao-Yu Wang",
+        "Ming-Hao Lin",
+        "Bei-Jie Liu",
+        "Po-Tung Yu",
+        "Yong-Qin Wang",
+        "V. Ulitzsch",
+        "Seo Jin Park",
+        "M. Annavaram",
+        "Meng-Yuan Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NoHairCache: Calibrate-Once KV Cache Eviction with One Power-Law Exponent",
+      "source_url": "https://arxiv.org/abs/2611.29006",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The decay exponent $\\alpha$ in KV-cache eviction is an intrinsic property of the model: calibrated once on a single corpus, it transfers directly across domains. Attention-based accumulation (H2O) and recency-based sliding windows (StreamingLLM) are two dominant eviction frameworks, often treated as unrelated, but we show that they are the two endpoints of a single power-law family: by scoring each token as $s_i = A_i \\cdot (t-i)^{-\\alpha}$, where $A_i$ is cumulative attention and $\\alpha$ controls the age penalty, H2O and StreamingLLM correspond to $\\alpha=0$ and $\\alpha\\to\\infty$, respectively (with StreamingLLM additionally hard-coding an attention-sink patch). The no-hair mechanism of \\citet{xiang2026nohair} bounds the admissible range of $\\alpha$, and the measured exponents agree: calibrating once on WikiText yields $[0.556, 0.822]$ for a representative model (Qwen2.5-1.5B-Instruct). The per-model ranges are consistent across five models (410M--1.5B) and independently match the optimal regions from perplexity sweeps. \\textsc{NoHairCache} achieves the lowest perplexity across three datasets (WikiText, PG19, and arXiv) without per-dataset tuning, outperforming both H2O and StreamingLLM ($p<0.05$ on all three datasets, with $0.06$--$0.10$ PPL gains over StreamingLLM at budget $512$). On downstream four-way multiple-choice QA, it matches or outperforms StreamingLLM across all nine (task, budget) cells, retaining $98.2\\%$ of full-cache accuracy on NarrativeQA at $25\\%$ retention versus $91.1\\%$ for StreamingLLM; per-cell McNemar tests are not significant, so QA is corroborating only. We release our calibration script and drop-in scorer upon publication.",
+      "identifiers": [
+        "SemanticScholar:a70f50ab3f463a3258fb5af022bd2ce55eeb26cc"
+      ],
+      "semantic_scholar_id": "a70f50ab3f463a3258fb5af022bd2ce55eeb26cc",
+      "canonical_id": "arXiv:2611.29006",
+      "arxiv_id": "2611.29006",
+      "authors": [
+        "Shu-Yang Xiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RES: Accelerating Diffusion Language Models with Rolling Entropy Sampling",
+      "source_url": "https://arxiv.org/abs/2611.29066",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A diffusion language sampler makes two choices for every position in its denoising window: where the next token comes from, and when the position is committed to the KV cache. Using the entropy-bound sampler in DiffusionGemma, we study two extremes of the second choice. Committing each token as soon as it is accepted removes the chance to revise it, which hurts when the entropy bound is relaxed to trade accuracy for speed. When accepted tokens are frozen, macro accuracy falls from 73% to 20% as the bound is relaxed, while the unfrozen sampler stays near 70%. Committing a whole block at once wastes computation, since tokens converge in a largely left-to-right order and more than half of the window holds already-final tokens by twenty denoising steps. These findings motivate the Rolling Entropy Sampler (RES), which commits a contiguous accepted prefix once it reaches a minimum length and keeps positions farther ahead open to revision. Unlike earlier rolling samplers, RES runs on uniform diffusion, where accepted tokens can still change, and it needs no training. Across seven benchmarks, RES increases tokens per forward pass from 19.3 to 25.5, while macro accuracy goes from 80.7% to 78.8%, and it extends the speed-quality Pareto frontier beyond what tuning the entropy bound alone reaches.",
+      "identifiers": [
+        "SemanticScholar:a31f930774b00ac272ece785641490606c5dd265"
+      ],
+      "semantic_scholar_id": "a31f930774b00ac272ece785641490606c5dd265",
+      "canonical_id": "arXiv:2611.29066",
+      "arxiv_id": "2611.29066",
+      "authors": [
+        "Patrick Pynadath",
+        "Nicolas Nieves",
+        "B. Shahriari",
+        "Jean Tarbouriech",
+        "Ru-Qi Zhang",
+        "Ivan Lobov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "One Million Tokens in 20GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2611.29092",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference on unified-memory edge machines is governed by KV-cache capacity and memory bandwidth. On a 32 GB Apple M6 Mac mini (26.8 GB Metal working set, 150 GB/s DRAM), the 26.4B looped Mixture-of-Experts model Inkling-2-Mini (48 logical visits, 1M native context) exhausts memory by 64K tokens in stock oMLX (and by 512K even after fixing its 40 sliding-window visits to bounded ring buffers). We show that three structural properties of modern hybrid NoPE architectures -- bounded sliding windows, a 1,024-token banded relative bias whose tail is identically zero, and unit-RMS value normalization -- combine with an orthonormal Subsampled Randomized Fourier Transform (SRFT) to enable calibration-free, scale-free 2.000-bit Value and 2.125-bit Key Lloyd-Max compression (2.0625 effective bits/coordinate, $7.76\\times$ smaller than bf16) on the 8 global visits'far prefix $[0, N-1024)$, merged with the exact bf16 local window and learned sink via online log-sum-exp. A custom GQA-packed Metal decode kernel with a 256-entry half4 LUT and Block-8 lazy exp2 rescaling reaches 73.4 GB/s and runs Inkling-2-Mini at 17.09 tok/s at 256K ($3.36\\times$ faster than bf16), 13.81 tok/s at 512K, and 9.52 tok/s at 1,048,576 tokens in 19.49 GiB peak memory (4.37 GiB KV). Across $4\\times 4096$ WikiText-2 windows, 3.06-bit SRFT is lossless ($\\Delta$PPL $= -0.007$), 2.56-bit K3/V2 adds $+0.024$, and 2.06-bit adds $+0.130$ while achieving 100% (3/3) exact 7-digit passkey retrieval at 8K, 16K, and 32K.",
+      "identifiers": [
+        "SemanticScholar:d035346d3ce3c791e44cb7d026bab75bca3f7e45"
+      ],
+      "semantic_scholar_id": "d035346d3ce3c791e44cb7d026bab75bca3f7e45",
+      "canonical_id": "arXiv:2611.29092",
+      "arxiv_id": "2611.29092",
+      "authors": [
+        "Mohamed Amine Bergach"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gossamer: A Utility-Driven Architecture for Constant-Budget KV Cache Compression in Reasoning LLMs",
+      "source_url": "https://arxiv.org/abs/2611.29497",
+      "year": 2026,
+      "published": "2026-11-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) are increasingly applied to complex reasoning tasks, yet their inference efficiency is fundamentally constrained by the rapid growth of the KV cache. As reasoning contexts extend to hundreds of thousands of tokens, the key-value (KV) cache becomes the dominant contributor to both memory footprint and bandwidth demand, tightly coupling computation with memory utilization and thereby limiting scalability. Existing compression methods, such as quantization and eviction, alleviate capacity pressure but remain purely algorithmic, often introducing additional passes and compute overhead that reduce system efficiency. This paper presents Gossamer, a KV cache compression architecture for reasoning LLMs that bridges the algorithm--system--hardware gap. Gossamer introduces a unified utility-based action framework that dynamically selects compression operations, quantization, merging, or eviction, under a constant KV cache budget. Through cross-domain co-design, we fuse cosine-similarity estimation directly into the attention computation, exploiting idle compute cycles to perform similarity evaluation without latency or bandwidth cost. We call this mechanism Free-Lunch Utilization. This enables real-time, fine-grained KV management with near-constant memory usage and negligible overhead. Under tight memory constraints, Gossamer sustains reasoning quality comparable to uncompressed inference while improving end-to-end throughput by up to 16.7$\\times$ over uncompressed baselines, 5.5$\\times$ and 4.9$\\times$ over the quantization-based Oaken and Ecco, and 1.8$\\times$ over the eviction-based R-KV.",
+      "identifiers": [
+        "SemanticScholar:d430a0ec077e87276370bef835c6c23242980820"
+      ],
+      "semantic_scholar_id": "d430a0ec077e87276370bef835c6c23242980820",
+      "canonical_id": "arXiv:2611.29497",
+      "arxiv_id": "2611.29497",
+      "authors": [
+        "Feng Cheng",
+        "Cong Guo",
+        "Jun-Yao Zhang",
+        "Haoxuan Shan",
+        "Chi-Yue Wei",
+        "Hong Wang",
+        "Hai Li",
+        "Yi-Ran Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Exact on Paper: Which LLM Serving Shortcuts Flip Graded Answers, Measured Against the Noise of Reordering the Same Requests",
+      "source_url": "https://arxiv.org/abs/2611.29663",
+      "year": 2026,
+      "published": "2026-11-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Teams enable serving features such as prefix caching, chunked prefill and speculative decoding after checking that benchmark accuracy is unchanged, because the engine documents them as exact. Accuracy is an aggregate, so a feature can hold it while flipping which requests are answered correctly. We serve one 4B instruction model in vLLM under nine single feature configurations and five replicas of a reference configuration, grade 3,380 requests from five benchmarks in every run, and compare each candidate with a restart floor (fresh process) and a scheduling floor (same requests in a different order). With default kernels every configuration keeps accuracy within one point, and the seven exact features flip the graded outcome of 1.47% (95% CI 1.13 to 1.85) to 1.78% (1.39 to 2.20) of requests, none above the scheduling floor of 1.72%, while the FP8 KV cache flips 3.36% (2.80 to 3.96), as many as FP8 weights. With batch invariant kernels all seven exact features, speculative decoding included, reproduce the reference text on every request, while the FP8 KV cache still flips 3.91% (3.28 to 4.53) of graded outcomes. A gate that compares against a single replica pair rejected an unchanged configuration, so we recommend certifying a serving change under batch invariant kernels, where the floor is zero, or against a scheduling floor measured from at least three replicas.",
+      "identifiers": [
+        "SemanticScholar:afaee1a3c532c2d1bddb2f552f112e3b0580b249"
+      ],
+      "semantic_scholar_id": "afaee1a3c532c2d1bddb2f552f112e3b0580b249",
+      "canonical_id": "arXiv:2611.29663",
+      "arxiv_id": "2611.29663",
+      "authors": [
+        "Sharven Rane"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast 4-bit KV-Cache Decoding on Hopper GPUs: Why Existing Kernels Are Slow and How to Fix Them",
+      "source_url": "https://arxiv.org/abs/2611.30027",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A 4-bit KV cache reads about half the bytes of FP8, but Hopper GPUs have no FP4 hardware and little instruction-issue capacity per byte of memory bandwidth, so 4-bit values must be decoded in software. On H200, vLLM's NVFP4 KV path (FlashInfer's decode) reaches 10-20% of memory bandwidth and is up to 1.7x slower than FP8. NVBit instruction counts show two causes: the kernels behind vLLM's 4-bit paths (FlashInfer NVFP4, Triton UltraQuant) execute 2-6x Hopper's issue budget per byte and serialize loading, decoding and matrix multiplies. Our Hopper-native decode kernel overlaps a TMA producer warp with two compute warpgroups, lays the cache out at write time so decoded values feed the tensor cores from registers, and swaps the matrix operands so small query groups need no padding. On H200 it reaches 67-75% of peak bandwidth at batch 32-128 and at all 11 shapes is 1.12-1.49x faster than the faster of XQA and FlashAttention-4's proposed native FP8. Inside vLLM, with an accuracy recipe (K mean removal and rotation, 4 BF16 sink tokens, BF16 layer 0), it decodes 1.12-1.64x faster per step on Llama-3.1-8B than vLLM's FlashInfer FP8 path at batch 8 and above (1.04-1.24x over FlashAttention-4's FP8), is level at batch 1, and holds 1.63x as many tokens. On one H200 under a reasoning-like request stream, the highest rate at which 99% of requests meet the latency targets is 1.23-1.32x FP8's on Llama-3.1-8B and 1.67-2.20x on Qwen2.5-72B, as the cache becomes the limit; prefill-heavy streams are worse (7% slower prefill). On five 7B-32B models, repeated runs show no significant accuracy difference from BF16 KV. In Qwen2-family models, whose reasoning variants collapse under FP8 KV, layer 0's key mean is almost entirely the key-projection bias identified by prior work, seen through RoPE and computable from the weights alone; keeping that layer in BF16 restores FP8 KV and, with K mean removal, 4-bit KV.",
+      "identifiers": [
+        "SemanticScholar:de9d0b6afa4766429b61045938a64ce11782fde9"
+      ],
+      "semantic_scholar_id": "de9d0b6afa4766429b61045938a64ce11782fde9",
+      "canonical_id": "arXiv:2611.30027",
+      "arxiv_id": "2611.30027",
+      "authors": [
+        "Jian Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PackLoop: Row-Packed Self-Speculative Decoding for Looped Language Models under Concurrency",
+      "source_url": "https://arxiv.org/abs/2611.30205",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models reuse one block of weights T times per token, trading parameters for test-time depth, but autoregressive decoding then pays T sequential passes per token. Self-speculative decoders recover 2-10x for a single request, yet their gains fade as requests share a GPU, and current practice is to speculate less as load grows. We show that what fails under load is the layout of speculative work, not speculation. In concurrent decoding the unit of cost is the row, one request advancing on one loop, which reads that loop's key-value (KV) cache once; additional positions inside a row are nearly free. Pipelined schedules such as the wavefront place every speculative position on a different loop, hence in a row of its own, so each token is still read T times. We present PackLoop, built on one principle: speculate only inside rows that are read anyway. Deep loops accumulate positions and advance them as a block in one row, context-copy proposals join the row that the first loop already reads, and a closed-form admission rule, the economic order quantity of inventory theory, sets how long to accumulate from a cost model calibrated once per engine. PackLoop is exact: in FP32 its output is token-for-token identical to autoregressive decoding, also under sampling and early exit. Across 164 load points spanning three GPUs, four Ouro models, six benchmarks, and contexts up to 32K tokens, one PackLoop configuration is faster than the best existing schedule, chosen per point, at 161 points (median 1.25x, up to 1.76x) and never significantly slower. Its lead grows with concurrency and context length, the regime in which existing self-speculation gains least.",
+      "identifiers": [
+        "SemanticScholar:163bfe1e0f5ae436c5cbf89fdc462a6b33abb2ca"
+      ],
+      "semantic_scholar_id": "163bfe1e0f5ae436c5cbf89fdc462a6b33abb2ca",
+      "canonical_id": "arXiv:2611.30205",
+      "arxiv_id": "2611.30205",
+      "authors": [
+        "Run-Guo Li",
+        "De-Zhen Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy",
+      "source_url": "https://arxiv.org/abs/2611.30417",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models with long contexts requires keeping the key-value (KV) cache of every request, which can exceed GPU memory capacity. Sparse attention reads only a small, query-dependent subset of this cache at each decoding step, yet must retain the full cache because later steps may select other entries. Processing-near-memory (PNM) devices attached through Compute Express Link (CXL) can hold the full cache and compute attention where it resides. Prior GPU-PNM systems for sparse attention are PNM-centric, processing most of the attention on the PNM. As existing CXL-PNM devices provide far less memory bandwidth than GPU HBM, this PNM-centric execution makes the PNM the bottleneck and leaves the GPU idle waiting for attention results. We present ANOR, a GPU-PNM joint acceleration system that exploits the selection locality of sparse attention by computing most of the attention on the GPU from a cache of recently selected entries and processing only the misses on the PNM. As the PNM processes cache misses directly, GPU cache updates can be decoupled from current-step execution. We develop a bounded cache-update policy that limits updates to the point where the hit ratio of later steps saturates, reducing GPU-facing link traffic. We add a small on-chip Early Streaming Buffer (ESB) that captures KV data during PNM attention and streams it to the GPU, avoiding most redundant DRAM reads despite the bandwidth mismatch between PNM memory and the GPU-facing link. We also propose an adaptive cache-factor mechanism that adjusts GPU cache size to the serving load, balancing hit ratio and batch size. Across two models and three long-context agentic workloads, ANOR improves decode throughput by 2.3x over HiSparse and 2.0x over a PNM baseline on average. These results show that PNM is most effective not as the primary attention engine but as a computing tier of the GPU memory hierarchy.",
+      "identifiers": [
+        "SemanticScholar:bd8e237fea855dc4dc677787699687559c84e5e4"
+      ],
+      "semantic_scholar_id": "bd8e237fea855dc4dc677787699687559c84e5e4",
+      "canonical_id": "arXiv:2611.30417",
+      "arxiv_id": "2611.30417",
+      "authors": [
+        "Hyunsu Ye",
+        "Hyunmin Choi",
+        "Jaehong Cho",
+        "Jaeseo Lee",
+        "Hyeongseok Gwak",
+        "Joohee Lee",
+        "Donguk Moon",
+        "Woosuk Chung",
+        "Hoshik Kim",
+        "Kiwan Maeng",
+        "Jongse Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Testing Quantized KV-Cache Maintenance: Encoding Layout and Historical Restoration",
+      "source_url": "https://arxiv.org/abs/2611.30720",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Repeating rows then selecting originals retains layout-dependent drift despite equal encoding counts. We measure when existing checks fail to establish preservation contracts in fixed quantized KV-cache implementations. In four-bit HQQ axis zero at sixteen cycles, median paired relative-L2 increases over same-shape re-encoding are 7.22 percentage points for Qwen3-1.7B and 11.59 for SmolLM3-3B. Matched encoded states cover sixteen shared questions per model at one and sixteen cycles. Axis one matches the shape-preserving control; lazy reorders preserve the initial state. On one known input, fixed update counts retain the difference; preserving group members removes it. Our prefix-view extension passes current-prefix checks yet changes history and next logits in six model/codec settings at residual capacities four and 128. Public lookup reaches this boundary, including one of four precommitted project-new GPU inputs; fixed query swaps isolate a conditional old-history effect. Checkpoint/dense rollback is exact. An explicit delayed lookup client admits a supported 129-token path excluded by native AR on one known context. Failed task-harm expansion precludes population failure-rate or general answer-degradation claims. Native MLX-LM fixtures expose stale caller caches; synchronization restores the tested in-place contract with native computations preserved. In rejection tests, stale callers change logits but not greedy tokens.",
+      "identifiers": [
+        "SemanticScholar:2b70f3b0a97536f737e96df836c4791eb735c215"
+      ],
+      "semantic_scholar_id": "2b70f3b0a97536f737e96df836c4791eb735c215",
+      "canonical_id": "arXiv:2611.30720",
+      "arxiv_id": "2611.30720",
+      "authors": [
+        "Zi-Yang Huang",
+        "Song-Wei Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2611.31105",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Updating an LLM adapter should not require replaying the full interaction history of every active session. Yet reusing key-value (KV) cache entries computed under an earlier version mixes model versions, while full-history re-prefill becomes increasingly costly as histories and session fleets grow. We introduce LiveLora, a model-runtime co-design for exact final-block KV cache migration. Frozen lower decoder blocks and fixed K/V adapter down-projections preserve each token's base projections and low-rank coordinates across adapter versions. The runtime reconstructs candidate K/V, reevaluates the latest token through the final block, and commits the adapter, cache, and next-token logits together. We prove continuation equivalence to full-history re-prefill in exact arithmetic under the stated model assumptions. On Qwen2.5-3B-Instruct, median paired publication speedups over full-history re-prefill average $68.98\\times$ across five runs for 32 active sessions with 8K tokens each. Serving benchmarks show approximately 4.8% decoding overhead relative to native cached decoding. Compared with retained-boundary replay, compact retention gives a $3.42\\times$ reduction in additional session storage at 8K, with similar measured publication-plus-decoding cost. LiveLora allows persistent LLM agents to adopt new adapter versions without replaying their full interaction histories.",
+      "identifiers": [
+        "SemanticScholar:7a975652956b7a07f9b76a0e080bcff93c71ecdc"
+      ],
+      "semantic_scholar_id": "7a975652956b7a07f9b76a0e080bcff93c71ecdc",
+      "canonical_id": "arXiv:2611.31105",
+      "arxiv_id": "2611.31105",
+      "authors": [
+        "Tian-Yi Huang",
+        "Samuel Xu",
+        "Ivy Gu",
+        "Nathan Huang",
+        "Si-Qi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Look Back, Draft Ahead: Corrective Prefix Attention for Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.31112",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel speculative decoders propose an entire token block at once, yet one early inconsistency can cause the target to reject its remaining suffix. We introduce Corrective Prefix Attention (CPA), which combines prefix-aware selection with autoregressive supervision to improve these parallel drafts. CPA lets each candidate attend to earlier choices within the block. Fixed candidate shortlists allow all pairwise interactions to be computed before selection, reducing the sequential walk to table lookups, accumulation and lightweight scoring rather than repeated neural evaluations. An auxiliary autoregressive loss trains the shared backbone on clean prefixes without adding an inference pass. Across eight math, code and dialogue benchmarks with Qwen3-4B and Qwen3-8B targets on Ascend NPUs, CPA commits 13--15\\% more tokens per verification round than DSpark and 25--26\\% more than DFlash. Its mean speedups reach $3.35\\times$ and $3.37\\times$ under greedy decoding and $2.86\\times$ under sampling for both targets. Ablations support both components, while capacity sweeps demonstrate that greater acceptance alone does not guarantee faster decoding. These results motivate correcting parallel proposals with causal information while keeping sequential computation inexpensive.",
+      "identifiers": [
+        "SemanticScholar:4529f75c95058f508a28bdb7dae4fd2eb91445df"
+      ],
+      "semantic_scholar_id": "4529f75c95058f508a28bdb7dae4fd2eb91445df",
+      "canonical_id": "arXiv:2611.31112",
+      "arxiv_id": "2611.31112",
+      "authors": [
+        "M. Moradi",
+        "Ali Pourranjbar",
+        "Zong-Zuo Wang",
+        "Ming-Ming Zhu",
+        "Ben Feng",
+        "Bo-Xing Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.28522",
+      "identity_tokens": [
+        "id:SemanticScholar:893716737951343e8e50eb2bb0ff894e979876e6",
+        "id:arXiv:2611.28522",
+        "title:dissparse pipelined topp sparse attention for longcontext llm serving",
+        "url:https://arxiv.org/abs/2611.28522"
+      ],
+      "record": {
+        "title": "DisSparse: Pipelined Top-$p$ Sparse Attention for Long-Context LLM Serving",
+        "source_url": "https://arxiv.org/abs/2611.28522",
+        "year": 2026,
+        "published": "2026-11-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM inference is bottlenecked by the memory demands of the key-value (KV) cache, whose size scales linearly with context length. Dynamic sparse attention reduces this bottleneck by fetching and attending only to a critical subset of tokens. The dominant primitive in dynamic sparse attention research and deployment is fixed-budget top-$k$ selection, which is favored because its deterministic block count aligns with the static memory allocation that systems like vLLM rely on. Top-$k$ uses a fixed budget regardless of how attention mass is distributed across heads, layers, and decode steps, leading to either wasted bandwidth on heads with peaky attention or dropped context on heads with diffuse attention. Top-$p$ (nucleus) selection adapts naturally to this variation but has seen limited adoption in production serving systems due to two system-level challenges: variable block counts that break deterministic block allocation and computationally expensive selection kernels that exceed the cost of attention itself. We present DisSparse, a serving system that integrates top-$p$ sparse attention into vLLM end-to-end. DisSparse decouples block selection from the scheduler's critical path, hides selection latency behind layer computation via a two-stream pipeline, and introduces a single-pass histogram-based top-$p$ kernel. We further observe intra-block sparsity, the inflation of selection budgets caused by mixing high- and low-importance tokens within fixed-size KV cache blocks, and address it with a token relocation kernel guided by accumulated prefill attention scores. Across long- and medium-context benchmarks on multiple models, DisSparse achieves 1.17x to 1.80x speedup in sparsity analysis (block selection) over state-of-the-art top-$p$ methods with negligible accuracy loss and supports up to 8x larger maximum batch sizes than dense vLLM under the same memory budget.",
+        "identifiers": [
+          "SemanticScholar:893716737951343e8e50eb2bb0ff894e979876e6"
+        ],
+        "semantic_scholar_id": "893716737951343e8e50eb2bb0ff894e979876e6",
+        "canonical_id": "arXiv:2611.28522",
+        "arxiv_id": "2611.28522",
+        "authors": [
+          "Nurlan Nazaraliyev",
+          "Elaheh Sadredini",
+          "N. Abu-Ghazaleh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.28563",
+      "identity_tokens": [
+        "id:SemanticScholar:310ba9b6012c8bd0966e2d3aaef2171b8e081433",
+        "id:arXiv:2611.28563",
+        "title:selective rom weight storage for responsive llm control on edge robots",
+        "url:https://arxiv.org/abs/2611.28563"
+      ],
+      "record": {
+        "title": "Selective ROM Weight Storage for Responsive LLM Control on Edge Robots",
+        "source_url": "https://arxiv.org/abs/2611.28563",
+        "year": 2026,
+        "published": "2026-11-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Edge robots increasingly use large language models (LLMs) for complex tasks, demanding efficient inference alongside timely control. Limited memory capacity constrains model deployment, while repeated weight transfers during decoding compete with activations and KV cache for external bandwidth. Sequential generation of robot actions further delays decisions and periodic control on shared hardware. We present a hybrid memory architecture with heterogeneous scheduling to address these bottlenecks jointly. Banked ROM stores selected fixed weights and supplies a standard compute array through a dedicated datapath. LPDDR retains the remaining weights and mutable state, preserving model flexibility. Coordinated operand delivery and preemption at output slice boundaries accelerate inference while limiting interference with periodic control. A structured decision interface scores candidate phases in a single forward pass, avoiding sequential token generation for routine choices. Together, these mechanisms improve memory service, compute access, and decision execution for edge robotic workloads. Experiments with Qwen3-8B achieve a peak decode speedup of 1.56$\\times$ and reduce P99 task response time by a factor of approximately 227.27$\\times$, while completing 100.00\\% of the tested grasping and transport tasks.",
+        "identifiers": [
+          "SemanticScholar:310ba9b6012c8bd0966e2d3aaef2171b8e081433"
+        ],
+        "semantic_scholar_id": "310ba9b6012c8bd0966e2d3aaef2171b8e081433",
+        "canonical_id": "arXiv:2611.28563",
+        "arxiv_id": "2611.28563",
+        "authors": [
+          "Bo-Xiang Song",
+          "Zhi-Hong Chen",
+          "Xiao-Yu Hao",
+          "Jin-Hong Huang",
+          "Cheng-Kai Zhu",
+          "Jia-Qi Yang",
+          "Hong-Yang Pan",
+          "Chang-Hao Yan",
+          "Ke-Ren Zhu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.28702",
+      "identity_tokens": [
+        "id:SemanticScholar:1fd079668613cd2f49b2809e6b40d1203f1145a5",
+        "id:arXiv:2611.28702",
+        "title:hiperfcckvcache accelerating confidential llm serving with hierarchical kv caching",
+        "url:https://arxiv.org/abs/2611.28702"
+      ],
+      "record": {
+        "title": "HiPerfCC-KVCache: Accelerating Confidential LLM Serving with Hierarchical KV Caching",
+        "source_url": "https://arxiv.org/abs/2611.28702",
+        "year": 2026,
+        "published": "2026-11-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hierarchical key-value (KV) caching reduces repeated prefill computation in large language model serving by retaining reusable state beyond GPU memory. Under GPU confidential computing (CC), however, protected transfers can erase this benefit. We show that bulk KV copies hold driver locks during prolonged CPU-side processing, stalling independent serving operations despite separate threads and streams. Our characterization on Hopper and Blackwell GPUs shows how lock scope, copy granularity, and allocation ownership affect foreground progress and transfer parallelism. Guided by these findings, we present HiPerfCC-KVCache, which manages resource lifetimes, prioritizes ready token readback between bounded backup submissions, and parallelizes KV restores through auxiliary contexts with shared GPU staging. Implemented in SGLang, HiPerfCC-KVCache uses existing protected transfer interfaces without hardware or driver changes. Across three models and three workloads on H200, HiPerfCC-KVCache achieves a geometric-mean output-token throughput speedup of $1.74\\times$ (up to $2.72\\times$) over the staged KV-transfer HiCache-Workers baseline at the highest tested loads. Mean time to first token decreases by 36% on average and up to 59%. The benefits generalize to RTX PRO 6000 Blackwell, with a geometric-mean throughput speedup of $1.28\\times$ (up to $2.20\\times$) over the same baseline. A capacity analysis further models and explains variation in gains and remaining gaps to CC-off serving.",
+        "identifiers": [
+          "SemanticScholar:1fd079668613cd2f49b2809e6b40d1203f1145a5"
+        ],
+        "semantic_scholar_id": "1fd079668613cd2f49b2809e6b40d1203f1145a5",
+        "canonical_id": "arXiv:2611.28702",
+        "arxiv_id": "2611.28702",
+        "authors": [
+          "Hao-Xuan Xu",
+          "Shao-Yu Wang",
+          "Ming-Hao Lin",
+          "Bei-Jie Liu",
+          "Po-Tung Yu",
+          "Yong-Qin Wang",
+          "V. Ulitzsch",
+          "Seo Jin Park",
+          "M. Annavaram",
+          "Meng-Yuan Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.29006",
+      "identity_tokens": [
+        "id:SemanticScholar:a70f50ab3f463a3258fb5af022bd2ce55eeb26cc",
+        "id:arXiv:2611.29006",
+        "title:nohaircache calibrateonce kv cache eviction with one powerlaw exponent",
+        "url:https://arxiv.org/abs/2611.29006"
+      ],
+      "record": {
+        "title": "NoHairCache: Calibrate-Once KV Cache Eviction with One Power-Law Exponent",
+        "source_url": "https://arxiv.org/abs/2611.29006",
+        "year": 2026,
+        "published": "2026-11-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The decay exponent $\\alpha$ in KV-cache eviction is an intrinsic property of the model: calibrated once on a single corpus, it transfers directly across domains. Attention-based accumulation (H2O) and recency-based sliding windows (StreamingLLM) are two dominant eviction frameworks, often treated as unrelated, but we show that they are the two endpoints of a single power-law family: by scoring each token as $s_i = A_i \\cdot (t-i)^{-\\alpha}$, where $A_i$ is cumulative attention and $\\alpha$ controls the age penalty, H2O and StreamingLLM correspond to $\\alpha=0$ and $\\alpha\\to\\infty$, respectively (with StreamingLLM additionally hard-coding an attention-sink patch). The no-hair mechanism of \\citet{xiang2026nohair} bounds the admissible range of $\\alpha$, and the measured exponents agree: calibrating once on WikiText yields $[0.556, 0.822]$ for a representative model (Qwen2.5-1.5B-Instruct). The per-model ranges are consistent across five models (410M--1.5B) and independently match the optimal regions from perplexity sweeps. \\textsc{NoHairCache} achieves the lowest perplexity across three datasets (WikiText, PG19, and arXiv) without per-dataset tuning, outperforming both H2O and StreamingLLM ($p<0.05$ on all three datasets, with $0.06$--$0.10$ PPL gains over StreamingLLM at budget $512$). On downstream four-way multiple-choice QA, it matches or outperforms StreamingLLM across all nine (task, budget) cells, retaining $98.2\\%$ of full-cache accuracy on NarrativeQA at $25\\%$ retention versus $91.1\\%$ for StreamingLLM; per-cell McNemar tests are not significant, so QA is corroborating only. We release our calibration script and drop-in scorer upon publication.",
+        "identifiers": [
+          "SemanticScholar:a70f50ab3f463a3258fb5af022bd2ce55eeb26cc"
+        ],
+        "semantic_scholar_id": "a70f50ab3f463a3258fb5af022bd2ce55eeb26cc",
+        "canonical_id": "arXiv:2611.29006",
+        "arxiv_id": "2611.29006",
+        "authors": [
+          "Shu-Yang Xiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.29066",
+      "identity_tokens": [
+        "id:SemanticScholar:a31f930774b00ac272ece785641490606c5dd265",
+        "id:arXiv:2611.29066",
+        "title:res accelerating diffusion language models with rolling entropy sampling",
+        "url:https://arxiv.org/abs/2611.29066"
+      ],
+      "record": {
+        "title": "RES: Accelerating Diffusion Language Models with Rolling Entropy Sampling",
+        "source_url": "https://arxiv.org/abs/2611.29066",
+        "year": 2026,
+        "published": "2026-11-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A diffusion language sampler makes two choices for every position in its denoising window: where the next token comes from, and when the position is committed to the KV cache. Using the entropy-bound sampler in DiffusionGemma, we study two extremes of the second choice. Committing each token as soon as it is accepted removes the chance to revise it, which hurts when the entropy bound is relaxed to trade accuracy for speed. When accepted tokens are frozen, macro accuracy falls from 73% to 20% as the bound is relaxed, while the unfrozen sampler stays near 70%. Committing a whole block at once wastes computation, since tokens converge in a largely left-to-right order and more than half of the window holds already-final tokens by twenty denoising steps. These findings motivate the Rolling Entropy Sampler (RES), which commits a contiguous accepted prefix once it reaches a minimum length and keeps positions farther ahead open to revision. Unlike earlier rolling samplers, RES runs on uniform diffusion, where accepted tokens can still change, and it needs no training. Across seven benchmarks, RES increases tokens per forward pass from 19.3 to 25.5, while macro accuracy goes from 80.7% to 78.8%, and it extends the speed-quality Pareto frontier beyond what tuning the entropy bound alone reaches.",
+        "identifiers": [
+          "SemanticScholar:a31f930774b00ac272ece785641490606c5dd265"
+        ],
+        "semantic_scholar_id": "a31f930774b00ac272ece785641490606c5dd265",
+        "canonical_id": "arXiv:2611.29066",
+        "arxiv_id": "2611.29066",
+        "authors": [
+          "Patrick Pynadath",
+          "Nicolas Nieves",
+          "B. Shahriari",
+          "Jean Tarbouriech",
+          "Ru-Qi Zhang",
+          "Ivan Lobov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.29092",
+      "identity_tokens": [
+        "id:SemanticScholar:d035346d3ce3c791e44cb7d026bab75bca3f7e45",
+        "id:arXiv:2611.29092",
+        "title:one million tokens in 20gb calibrationfree 2bit srft kvcache compression for looped moe inference on apple silicon",
+        "url:https://arxiv.org/abs/2611.29092"
+      ],
+      "record": {
+        "title": "One Million Tokens in 20GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon",
+        "source_url": "https://arxiv.org/abs/2611.29092",
+        "year": 2026,
+        "published": "2026-11-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference on unified-memory edge machines is governed by KV-cache capacity and memory bandwidth. On a 32 GB Apple M6 Mac mini (26.8 GB Metal working set, 150 GB/s DRAM), the 26.4B looped Mixture-of-Experts model Inkling-2-Mini (48 logical visits, 1M native context) exhausts memory by 64K tokens in stock oMLX (and by 512K even after fixing its 40 sliding-window visits to bounded ring buffers). We show that three structural properties of modern hybrid NoPE architectures -- bounded sliding windows, a 1,024-token banded relative bias whose tail is identically zero, and unit-RMS value normalization -- combine with an orthonormal Subsampled Randomized Fourier Transform (SRFT) to enable calibration-free, scale-free 2.000-bit Value and 2.125-bit Key Lloyd-Max compression (2.0625 effective bits/coordinate, $7.76\\times$ smaller than bf16) on the 8 global visits'far prefix $[0, N-1024)$, merged with the exact bf16 local window and learned sink via online log-sum-exp. A custom GQA-packed Metal decode kernel with a 256-entry half4 LUT and Block-8 lazy exp2 rescaling reaches 73.4 GB/s and runs Inkling-2-Mini at 17.09 tok/s at 256K ($3.36\\times$ faster than bf16), 13.81 tok/s at 512K, and 9.52 tok/s at 1,048,576 tokens in 19.49 GiB peak memory (4.37 GiB KV). Across $4\\times 4096$ WikiText-2 windows, 3.06-bit SRFT is lossless ($\\Delta$PPL $= -0.007$), 2.56-bit K3/V2 adds $+0.024$, and 2.06-bit adds $+0.130$ while achieving 100% (3/3) exact 7-digit passkey retrieval at 8K, 16K, and 32K.",
+        "identifiers": [
+          "SemanticScholar:d035346d3ce3c791e44cb7d026bab75bca3f7e45"
+        ],
+        "semantic_scholar_id": "d035346d3ce3c791e44cb7d026bab75bca3f7e45",
+        "canonical_id": "arXiv:2611.29092",
+        "arxiv_id": "2611.29092",
+        "authors": [
+          "Mohamed Amine Bergach"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 3,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.29497",
+      "identity_tokens": [
+        "id:SemanticScholar:d430a0ec077e87276370bef835c6c23242980820",
+        "id:arXiv:2611.29497",
+        "title:gossamer a utilitydriven architecture for constantbudget kv cache compression in reasoning llms",
+        "url:https://arxiv.org/abs/2611.29497"
+      ],
+      "record": {
+        "title": "Gossamer: A Utility-Driven Architecture for Constant-Budget KV Cache Compression in Reasoning LLMs",
+        "source_url": "https://arxiv.org/abs/2611.29497",
+        "year": 2026,
+        "published": "2026-11-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) are increasingly applied to complex reasoning tasks, yet their inference efficiency is fundamentally constrained by the rapid growth of the KV cache. As reasoning contexts extend to hundreds of thousands of tokens, the key-value (KV) cache becomes the dominant contributor to both memory footprint and bandwidth demand, tightly coupling computation with memory utilization and thereby limiting scalability. Existing compression methods, such as quantization and eviction, alleviate capacity pressure but remain purely algorithmic, often introducing additional passes and compute overhead that reduce system efficiency. This paper presents Gossamer, a KV cache compression architecture for reasoning LLMs that bridges the algorithm--system--hardware gap. Gossamer introduces a unified utility-based action framework that dynamically selects compression operations, quantization, merging, or eviction, under a constant KV cache budget. Through cross-domain co-design, we fuse cosine-similarity estimation directly into the attention computation, exploiting idle compute cycles to perform similarity evaluation without latency or bandwidth cost. We call this mechanism Free-Lunch Utilization. This enables real-time, fine-grained KV management with near-constant memory usage and negligible overhead. Under tight memory constraints, Gossamer sustains reasoning quality comparable to uncompressed inference while improving end-to-end throughput by up to 16.7$\\times$ over uncompressed baselines, 5.5$\\times$ and 4.9$\\times$ over the quantization-based Oaken and Ecco, and 1.8$\\times$ over the eviction-based R-KV.",
+        "identifiers": [
+          "SemanticScholar:d430a0ec077e87276370bef835c6c23242980820"
+        ],
+        "semantic_scholar_id": "d430a0ec077e87276370bef835c6c23242980820",
+        "canonical_id": "arXiv:2611.29497",
+        "arxiv_id": "2611.29497",
+        "authors": [
+          "Feng Cheng",
+          "Cong Guo",
+          "Jun-Yao Zhang",
+          "Haoxuan Shan",
+          "Chi-Yue Wei",
+          "Hong Wang",
+          "Hai Li",
+          "Yi-Ran Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.29663",
+      "identity_tokens": [
+        "id:SemanticScholar:afaee1a3c532c2d1bddb2f552f112e3b0580b249",
+        "id:arXiv:2611.29663",
+        "title:exact on paper which llm serving shortcuts flip graded answers measured against the noise of reordering the same requests",
+        "url:https://arxiv.org/abs/2611.29663"
+      ],
+      "record": {
+        "title": "Exact on Paper: Which LLM Serving Shortcuts Flip Graded Answers, Measured Against the Noise of Reordering the Same Requests",
+        "source_url": "https://arxiv.org/abs/2611.29663",
+        "year": 2026,
+        "published": "2026-11-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Teams enable serving features such as prefix caching, chunked prefill and speculative decoding after checking that benchmark accuracy is unchanged, because the engine documents them as exact. Accuracy is an aggregate, so a feature can hold it while flipping which requests are answered correctly. We serve one 4B instruction model in vLLM under nine single feature configurations and five replicas of a reference configuration, grade 3,380 requests from five benchmarks in every run, and compare each candidate with a restart floor (fresh process) and a scheduling floor (same requests in a different order). With default kernels every configuration keeps accuracy within one point, and the seven exact features flip the graded outcome of 1.47% (95% CI 1.13 to 1.85) to 1.78% (1.39 to 2.20) of requests, none above the scheduling floor of 1.72%, while the FP8 KV cache flips 3.36% (2.80 to 3.96), as many as FP8 weights. With batch invariant kernels all seven exact features, speculative decoding included, reproduce the reference text on every request, while the FP8 KV cache still flips 3.91% (3.28 to 4.53) of graded outcomes. A gate that compares against a single replica pair rejected an unchanged configuration, so we recommend certifying a serving change under batch invariant kernels, where the floor is zero, or against a scheduling floor measured from at least three replicas.",
+        "identifiers": [
+          "SemanticScholar:afaee1a3c532c2d1bddb2f552f112e3b0580b249"
+        ],
+        "semantic_scholar_id": "afaee1a3c532c2d1bddb2f552f112e3b0580b249",
+        "canonical_id": "arXiv:2611.29663",
+        "arxiv_id": "2611.29663",
+        "authors": [
+          "Sharven Rane"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.30027",
+      "identity_tokens": [
+        "id:SemanticScholar:de9d0b6afa4766429b61045938a64ce11782fde9",
+        "id:arXiv:2611.30027",
+        "title:fast 4bit kvcache decoding on hopper gpus why existing kernels are slow and how to fix them",
+        "url:https://arxiv.org/abs/2611.30027"
+      ],
+      "record": {
+        "title": "Fast 4-bit KV-Cache Decoding on Hopper GPUs: Why Existing Kernels Are Slow and How to Fix Them",
+        "source_url": "https://arxiv.org/abs/2611.30027",
+        "year": 2026,
+        "published": "2026-11-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A 4-bit KV cache reads about half the bytes of FP8, but Hopper GPUs have no FP4 hardware and little instruction-issue capacity per byte of memory bandwidth, so 4-bit values must be decoded in software. On H200, vLLM's NVFP4 KV path (FlashInfer's decode) reaches 10-20% of memory bandwidth and is up to 1.7x slower than FP8. NVBit instruction counts show two causes: the kernels behind vLLM's 4-bit paths (FlashInfer NVFP4, Triton UltraQuant) execute 2-6x Hopper's issue budget per byte and serialize loading, decoding and matrix multiplies. Our Hopper-native decode kernel overlaps a TMA producer warp with two compute warpgroups, lays the cache out at write time so decoded values feed the tensor cores from registers, and swaps the matrix operands so small query groups need no padding. On H200 it reaches 67-75% of peak bandwidth at batch 32-128 and at all 11 shapes is 1.12-1.49x faster than the faster of XQA and FlashAttention-4's proposed native FP8. Inside vLLM, with an accuracy recipe (K mean removal and rotation, 4 BF16 sink tokens, BF16 layer 0), it decodes 1.12-1.64x faster per step on Llama-3.1-8B than vLLM's FlashInfer FP8 path at batch 8 and above (1.04-1.24x over FlashAttention-4's FP8), is level at batch 1, and holds 1.63x as many tokens. On one H200 under a reasoning-like request stream, the highest rate at which 99% of requests meet the latency targets is 1.23-1.32x FP8's on Llama-3.1-8B and 1.67-2.20x on Qwen2.5-72B, as the cache becomes the limit; prefill-heavy streams are worse (7% slower prefill). On five 7B-32B models, repeated runs show no significant accuracy difference from BF16 KV. In Qwen2-family models, whose reasoning variants collapse under FP8 KV, layer 0's key mean is almost entirely the key-projection bias identified by prior work, seen through RoPE and computable from the weights alone; keeping that layer in BF16 restores FP8 KV and, with K mean removal, 4-bit KV.",
+        "identifiers": [
+          "SemanticScholar:de9d0b6afa4766429b61045938a64ce11782fde9"
+        ],
+        "semantic_scholar_id": "de9d0b6afa4766429b61045938a64ce11782fde9",
+        "canonical_id": "arXiv:2611.30027",
+        "arxiv_id": "2611.30027",
+        "authors": [
+          "Jian Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.30205",
+      "identity_tokens": [
+        "id:SemanticScholar:163bfe1e0f5ae436c5cbf89fdc462a6b33abb2ca",
+        "id:arXiv:2611.30205",
+        "title:packloop rowpacked selfspeculative decoding for looped language models under concurrency",
+        "url:https://arxiv.org/abs/2611.30205"
+      ],
+      "record": {
+        "title": "PackLoop: Row-Packed Self-Speculative Decoding for Looped Language Models under Concurrency",
+        "source_url": "https://arxiv.org/abs/2611.30205",
+        "year": 2026,
+        "published": "2026-11-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped language models reuse one block of weights T times per token, trading parameters for test-time depth, but autoregressive decoding then pays T sequential passes per token. Self-speculative decoders recover 2-10x for a single request, yet their gains fade as requests share a GPU, and current practice is to speculate less as load grows. We show that what fails under load is the layout of speculative work, not speculation. In concurrent decoding the unit of cost is the row, one request advancing on one loop, which reads that loop's key-value (KV) cache once; additional positions inside a row are nearly free. Pipelined schedules such as the wavefront place every speculative position on a different loop, hence in a row of its own, so each token is still read T times. We present PackLoop, built on one principle: speculate only inside rows that are read anyway. Deep loops accumulate positions and advance them as a block in one row, context-copy proposals join the row that the first loop already reads, and a closed-form admission rule, the economic order quantity of inventory theory, sets how long to accumulate from a cost model calibrated once per engine. PackLoop is exact: in FP32 its output is token-for-token identical to autoregressive decoding, also under sampling and early exit. Across 164 load points spanning three GPUs, four Ouro models, six benchmarks, and contexts up to 32K tokens, one PackLoop configuration is faster than the best existing schedule, chosen per point, at 161 points (median 1.25x, up to 1.76x) and never significantly slower. Its lead grows with concurrency and context length, the regime in which existing self-speculation gains least.",
+        "identifiers": [
+          "SemanticScholar:163bfe1e0f5ae436c5cbf89fdc462a6b33abb2ca"
+        ],
+        "semantic_scholar_id": "163bfe1e0f5ae436c5cbf89fdc462a6b33abb2ca",
+        "canonical_id": "arXiv:2611.30205",
+        "arxiv_id": "2611.30205",
+        "authors": [
+          "Run-Guo Li",
+          "De-Zhen Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.30417",
+      "identity_tokens": [
+        "id:SemanticScholar:bd8e237fea855dc4dc677787699687559c84e5e4",
+        "id:arXiv:2611.30417",
+        "title:anor scaling sparse attention with a gpupnm computing hierarchy",
+        "url:https://arxiv.org/abs/2611.30417"
+      ],
+      "record": {
+        "title": "ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy",
+        "source_url": "https://arxiv.org/abs/2611.30417",
+        "year": 2026,
+        "published": "2026-11-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving large language models with long contexts requires keeping the key-value (KV) cache of every request, which can exceed GPU memory capacity. Sparse attention reads only a small, query-dependent subset of this cache at each decoding step, yet must retain the full cache because later steps may select other entries. Processing-near-memory (PNM) devices attached through Compute Express Link (CXL) can hold the full cache and compute attention where it resides. Prior GPU-PNM systems for sparse attention are PNM-centric, processing most of the attention on the PNM. As existing CXL-PNM devices provide far less memory bandwidth than GPU HBM, this PNM-centric execution makes the PNM the bottleneck and leaves the GPU idle waiting for attention results. We present ANOR, a GPU-PNM joint acceleration system that exploits the selection locality of sparse attention by computing most of the attention on the GPU from a cache of recently selected entries and processing only the misses on the PNM. As the PNM processes cache misses directly, GPU cache updates can be decoupled from current-step execution. We develop a bounded cache-update policy that limits updates to the point where the hit ratio of later steps saturates, reducing GPU-facing link traffic. We add a small on-chip Early Streaming Buffer (ESB) that captures KV data during PNM attention and streams it to the GPU, avoiding most redundant DRAM reads despite the bandwidth mismatch between PNM memory and the GPU-facing link. We also propose an adaptive cache-factor mechanism that adjusts GPU cache size to the serving load, balancing hit ratio and batch size. Across two models and three long-context agentic workloads, ANOR improves decode throughput by 2.3x over HiSparse and 2.0x over a PNM baseline on average. These results show that PNM is most effective not as the primary attention engine but as a computing tier of the GPU memory hierarchy.",
+        "identifiers": [
+          "SemanticScholar:bd8e237fea855dc4dc677787699687559c84e5e4"
+        ],
+        "semantic_scholar_id": "bd8e237fea855dc4dc677787699687559c84e5e4",
+        "canonical_id": "arXiv:2611.30417",
+        "arxiv_id": "2611.30417",
+        "authors": [
+          "Hyunsu Ye",
+          "Hyunmin Choi",
+          "Jaehong Cho",
+          "Jaeseo Lee",
+          "Hyeongseok Gwak",
+          "Joohee Lee",
+          "Donguk Moon",
+          "Woosuk Chung",
+          "Hoshik Kim",
+          "Kiwan Maeng",
+          "Jongse Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.30720",
+      "identity_tokens": [
+        "id:SemanticScholar:2b70f3b0a97536f737e96df836c4791eb735c215",
+        "id:arXiv:2611.30720",
+        "title:testing quantized kvcache maintenance encoding layout and historical restoration",
+        "url:https://arxiv.org/abs/2611.30720"
+      ],
+      "record": {
+        "title": "Testing Quantized KV-Cache Maintenance: Encoding Layout and Historical Restoration",
+        "source_url": "https://arxiv.org/abs/2611.30720",
+        "year": 2026,
+        "published": "2026-11-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Repeating rows then selecting originals retains layout-dependent drift despite equal encoding counts. We measure when existing checks fail to establish preservation contracts in fixed quantized KV-cache implementations. In four-bit HQQ axis zero at sixteen cycles, median paired relative-L2 increases over same-shape re-encoding are 7.22 percentage points for Qwen3-1.7B and 11.59 for SmolLM3-3B. Matched encoded states cover sixteen shared questions per model at one and sixteen cycles. Axis one matches the shape-preserving control; lazy reorders preserve the initial state. On one known input, fixed update counts retain the difference; preserving group members removes it. Our prefix-view extension passes current-prefix checks yet changes history and next logits in six model/codec settings at residual capacities four and 128. Public lookup reaches this boundary, including one of four precommitted project-new GPU inputs; fixed query swaps isolate a conditional old-history effect. Checkpoint/dense rollback is exact. An explicit delayed lookup client admits a supported 129-token path excluded by native AR on one known context. Failed task-harm expansion precludes population failure-rate or general answer-degradation claims. Native MLX-LM fixtures expose stale caller caches; synchronization restores the tested in-place contract with native computations preserved. In rejection tests, stale callers change logits but not greedy tokens.",
+        "identifiers": [
+          "SemanticScholar:2b70f3b0a97536f737e96df836c4791eb735c215"
+        ],
+        "semantic_scholar_id": "2b70f3b0a97536f737e96df836c4791eb735c215",
+        "canonical_id": "arXiv:2611.30720",
+        "arxiv_id": "2611.30720",
+        "authors": [
+          "Zi-Yang Huang",
+          "Song-Wei Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.31105",
+      "identity_tokens": [
+        "id:SemanticScholar:7a975652956b7a07f9b76a0e080bcff93c71ecdc",
+        "id:arXiv:2611.31105",
+        "title:livelora exact kv cache migration across lora updates for llm agents",
+        "url:https://arxiv.org/abs/2611.31105"
+      ],
+      "record": {
+        "title": "LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2611.31105",
+        "year": 2026,
+        "published": "2026-11-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Updating an LLM adapter should not require replaying the full interaction history of every active session. Yet reusing key-value (KV) cache entries computed under an earlier version mixes model versions, while full-history re-prefill becomes increasingly costly as histories and session fleets grow. We introduce LiveLora, a model-runtime co-design for exact final-block KV cache migration. Frozen lower decoder blocks and fixed K/V adapter down-projections preserve each token's base projections and low-rank coordinates across adapter versions. The runtime reconstructs candidate K/V, reevaluates the latest token through the final block, and commits the adapter, cache, and next-token logits together. We prove continuation equivalence to full-history re-prefill in exact arithmetic under the stated model assumptions. On Qwen2.5-3B-Instruct, median paired publication speedups over full-history re-prefill average $68.98\\times$ across five runs for 32 active sessions with 8K tokens each. Serving benchmarks show approximately 4.8% decoding overhead relative to native cached decoding. Compared with retained-boundary replay, compact retention gives a $3.42\\times$ reduction in additional session storage at 8K, with similar measured publication-plus-decoding cost. LiveLora allows persistent LLM agents to adopt new adapter versions without replaying their full interaction histories.",
+        "identifiers": [
+          "SemanticScholar:7a975652956b7a07f9b76a0e080bcff93c71ecdc"
+        ],
+        "semantic_scholar_id": "7a975652956b7a07f9b76a0e080bcff93c71ecdc",
+        "canonical_id": "arXiv:2611.31105",
+        "arxiv_id": "2611.31105",
+        "authors": [
+          "Tian-Yi Huang",
+          "Samuel Xu",
+          "Ivy Gu",
+          "Nathan Huang",
+          "Si-Qi Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.31112",
+      "identity_tokens": [
+        "id:SemanticScholar:4529f75c95058f508a28bdb7dae4fd2eb91445df",
+        "id:arXiv:2611.31112",
+        "title:look back draft ahead corrective prefix attention for parallel speculative decoding",
+        "url:https://arxiv.org/abs/2611.31112"
+      ],
+      "record": {
+        "title": "Look Back, Draft Ahead: Corrective Prefix Attention for Parallel Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.31112",
+        "year": 2026,
+        "published": "2026-11-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parallel speculative decoders propose an entire token block at once, yet one early inconsistency can cause the target to reject its remaining suffix. We introduce Corrective Prefix Attention (CPA), which combines prefix-aware selection with autoregressive supervision to improve these parallel drafts. CPA lets each candidate attend to earlier choices within the block. Fixed candidate shortlists allow all pairwise interactions to be computed before selection, reducing the sequential walk to table lookups, accumulation and lightweight scoring rather than repeated neural evaluations. An auxiliary autoregressive loss trains the shared backbone on clean prefixes without adding an inference pass. Across eight math, code and dialogue benchmarks with Qwen3-4B and Qwen3-8B targets on Ascend NPUs, CPA commits 13--15\\% more tokens per verification round than DSpark and 25--26\\% more than DFlash. Its mean speedups reach $3.35\\times$ and $3.37\\times$ under greedy decoding and $2.86\\times$ under sampling for both targets. Ablations support both components, while capacity sweeps demonstrate that greater acceptance alone does not guarantee faster decoding. These results motivate correcting parallel proposals with causal information while keeping sequential computation inexpensive.",
+        "identifiers": [
+          "SemanticScholar:4529f75c95058f508a28bdb7dae4fd2eb91445df"
+        ],
+        "semantic_scholar_id": "4529f75c95058f508a28bdb7dae4fd2eb91445df",
+        "canonical_id": "arXiv:2611.31112",
+        "arxiv_id": "2611.31112",
+        "authors": [
+          "M. Moradi",
+          "Ali Pourranjbar",
+          "Zong-Zuo Wang",
+          "Ming-Ming Zhu",
+          "Ben Feng",
+          "Bo-Xing Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 1,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:41e403b53a53bbe4e6cb10b6093023ad9bf7b002763df9f2b3f03dcb6fdfae19",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
