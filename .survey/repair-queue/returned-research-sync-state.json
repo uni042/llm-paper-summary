@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a2c1873de14e4bde2e77a9743cddfbefdabf9f6a",
+  "base_commit": "337530300108108b51b2aacac54f3bc622c85a62",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -502,6 +502,7 @@
     "2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimization.json",
     "2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform-data-format-and-reduced-multiplications.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
+    "2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.json",
     "2025-61ee18f9ab39-accelerating-1-bit-llms-via-in-memory-computing-architectures.json",
     "2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.json",
     "2025-7e148a9b32f9-efficient-self-attention-with-smart-pruning-for-sustainable-large-language-models.json",
@@ -518,6 +519,8 @@
     "2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning.json",
     "2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.json",
     "2025-e5b6adde93fa-a-scalable-and-energy-efficient-processing-in-memory-architecture-for-gen-ai.json",
+    "2025-e7e57b78f540-a-deployment-aware-framework-for-carbon-and-water-efficient-llm-serving.json",
+    "2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.json",
     "2025-keeping-up-with-large-language-models-holistic-methodology.json",
     "2025-lesft-unlocking-edge-fine-tuning-sample-efficient-language-empowered-split-fine-tuning.json",
     "2025-oraclekv-question-independent-kv-cache-eviction.json",
@@ -527,6 +530,7 @@
     "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json",
     "2026-14c95b8b5d41-perplexity-spectrum-calibration-for-post-training-pruning-of-large-language-models.json",
     "2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-acceleration-and-applications.json",
+    "2026-1b586a81703a-myopia-rectification-kv-cache-pruning-for-mllms-via-dynamic-attention-subsidy-and-token-reclamation.json",
     "2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-systems.json",
     "2026-1f137626e007-orca-an-efficient-computing-architecture-for-fault-tolerant-large-language-model-inference-via-outlier-aware-recalculati.json",
     "2026-250fdcfdf661-moe-balance-unleashing-the-full-potential-of-cpu-gpu-heterogeneity-for-efficient-moe-inference.json",
@@ -537,6 +541,7 @@
     "2026-2601.06790-secmoe-communication-efficient-secure-moe-inference-via-select-then-compute.json",
     "2026-2601.06803-forest-before-trees-latent-superposition-for-efficient-visual-reasoning.json",
     "2026-2601.07212-mi-prun-optimize-large-language-model-pruning-via-mutual-information.json",
+    "2026-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.json",
     "2026-2601.08670-parallel-context-of-experts-decoding-for-retrieval-augmented-generation.json",
     "2026-2601.09865-advancing-model-refinement-muon-optimized-distillation-and-quantization-for-llm.json",
     "2026-2601.10274-queueing-aware-optimization-of-reasoning-tokens-for-accuracy-latency-trade-offs-in-llm-servers.json",
@@ -52991,6 +52996,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.1038/s41467-025-60802-5": {
+      "order": [
+        "2026-11-24T04:17:14+00:00",
+        "2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.3390/su172310473": {
+      "order": [
+        "2026-11-24T04:18:29+00:00",
+        "2025-e7e57b78f540-a-deployment-aware-framework-for-carbon-and-water-efficient-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/ICDEW67478.2025.00020": {
+      "order": [
+        "2026-11-24T04:19:43+00:00",
+        "2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/CVPRF71909.2026.00866": {
+      "order": [
+        "2026-11-24T04:20:55+00:00",
+        "2026-1b586a81703a-myopia-rectification-kv-cache-pruning-for-mllms-via-dynamic-attention-subsidy-and-token-reclamation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2601.07839": {
+      "order": [
+        "2026-11-24T04:22:08+00:00",
+        "2026-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67204,6 +67254,21 @@
     "doi:10.1145/3769304": [
       "papers/inference/17-pim-near-data-acceleration/2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform.md",
       "papers/inference/17-pim-near-data-acceleration/2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform.md"
+    ],
+    "doi:10.1038/s41467-025-60802-5": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.md"
+    ],
+    "doi:10.3390/su172310473": [
+      "papers/inference/15-inference-simulation-emulation/2025-e7e57b78f540-a-deployment-aware-framework-for-carbon-and-water-efficient-llm-serving.md"
+    ],
+    "doi:10.1109/icdew67478.2025.00020": [
+      "papers/inference/99-other-inference-systems/2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.md"
+    ],
+    "doi:10.1109/cvprf71909.2026.00866": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-1b586a81703a-myopia-rectification-kv-cache-pruning-for-mllms-via-dynamic-attention-su.md"
+    ],
+    "arxiv:2601.07839": [
+      "papers/inference/99-other-inference-systems/2025-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.md"
     ]
   }
 }

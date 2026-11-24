@@ -35,10 +35,15 @@
   "selection_reason": "LLM重みを疎行列と階層的低ランク因子分解に分けるHSS圧縮で、LLaMA-7Bの注意射影を対象にハードウェアフレンドリーな行列ベクトル積と大きなメモリ削減を perplexity を保ちつつ示しており、配置向け圧縮として具体的である。",
   "semantic_scholar_id": "ca976e23381d1c65bf47b53f495b9aa39c06d972",
   "source_url": "https://arxiv.org/abs/2601.07839",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hierarchical Sparse Plus Low Rank Compression of LLM",
   "type": "research",
   "venue": "ACM IKDD Conference on Data Science",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-24T04:24:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.md",
+  "represented_canonical_id": "arXiv:2601.07839",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

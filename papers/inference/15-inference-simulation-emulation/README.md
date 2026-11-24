@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（117本）
+## 自動生成の論文一覧（118本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -379,6 +379,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-11 · [From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models](2025-2511.02248-from-models-to-operators-rethinking-autoscaling-granularity-for-large-ge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの推論基盤では、負荷に応じてモデル全体の複製を増減することが一般的である。各演算子に異なる複製数、バッチ、並列度を割り当て、最後にGPUへ配置する。
+
+- **2025-11 · [A Deployment-Aware Framework for Carbon- and Water-Efficient LLM Serving](2025-e7e57b78f540-a-deployment-aware-framework-for-carbon-and-water-efficient-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  包括的な測定境界での炭素と水の同時会計と、5分窓ごとのMILPによる地域・バッチ・段階別配置・トークン長のSLO制約付き最適化を組み合わせ、シミュレーションでエネルギー約58パーセント、水約60パーセント、CO2約79パーセントの削減を示す枠組み。
 
 - **2025-10 · [HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference](2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

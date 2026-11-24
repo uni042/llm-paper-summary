@@ -767,7 +767,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：357  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：358  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -807,7 +807,7 @@
   系列が長くなるほど鍵値キャッシュは線形に増えるため、1トークンずつ生成する復号では演算より高帯域メモリからの読出しが律速になりやすい。論文の例ではLLaMA-2-7Bを半精度、128K文脈で使うと鍵値キャッシュだけで64GBになる。疎注意（sparse 注意機構）は全過去トークンの一部だけを注意計算へ入れることで、この読出し量を減らす。
 
 - **2024-10 · [ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity](2024-2410.08584-zipvl-accelerating-vision-language-models-through-dynamic-token-sparsity.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   入力全体を処理するプリフィル段階では注意計算が長い系列に対して重くなり、続くデコード段階では生成トークンが過去のKey/Value（KV）を繰り返し読み出すためメモリ帯域が問題になる。ただし、前者はバッチ1の最初のトークンまでの時間、後者は各方式が単一GPUで収容できる最大バッチを使った生成処理率であり、同じ測定条件の速度指標ではない。
 
 - **2024-06 · [Mixture of Attention Spans: Optimizing LLM Inference Efficiency with Heterogeneous Sliding-Window Lengths](2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md)**  

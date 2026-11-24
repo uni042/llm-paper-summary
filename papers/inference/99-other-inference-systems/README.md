@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1466本）
+## 自動生成の論文一覧（1468本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3346,6 +3346,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   対象言語の指示データをモデル自身に合成させ、頻度の高いキートークンだけへ語彙ヘッドを切り詰めることで、既存の枝刈りと量子化を低資源言語でも崩壊させずに効かせる言語適応型の圧縮枠組み。
 
+- **2025-12 · [Hierarchical Sparse Plus Low Rank Compression of LLM](2025-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.md)**  
+  実装：[✓](https://github.com/misterpawan/hi-solo-llm) ・ リポジトリ内被引用：0  
+  大きな重みをスパースに取り出し、残差をRCM順序付けしてから対角は密・非対角は低ランクという階層因数分解（HSS）で近似する重み圧縮sHSSを提案し、LLaMA-7Bの注意射影で保存量最大1.7倍削減とスパース＋SVD系より良いパープレキシティを示す。
+
 - **2025-12 · [Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression](2025-5f0897915cbf-glance2gaze-efficient-vision-language-models-from-glance-fusion-to-gaze-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   高解像度画像や動画では視覚トークン数が大きくなり、言語モデルの注意計算、鍵・値キャッシュ（KV キャッシュ）、初回トークン生成までの遅延が増加する。Glance2Gazeは、最初に画像全体を眺めて必要な細部へ視線を絞るという着想を二つの計算機構へ具体化する。
@@ -4560,6 +4564,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   繰り返すトークン部分列をプロンプト専用辞書付きのメタトークンへ置換する無損失なプロンプト圧縮で、木構造理解では27パーセント短縮しても精度低下が1ポイント未満にとどまる方式。
 
+- **2025-05 · [LLM-MS: A Multi-Model LLM Search Engine](2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数のオープンLLMへトークン予算を動的に配分する検索エンジンで、埋め込み類似度の採点で有望モデルへ生成を寄せて打ち切りを行うOUAと、UCB1バンディットで配分するMABにより、単体モデルより高い応答品質を少ないトークンで得る。
+
 - **2025-05 · [LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation](2025-2506.12038-lcd-advancing-extreme-low-bit-clustering-for-large-language-models-via-k.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LCDは密度に基づく重み代表値の初期化、ヘッセ対角近似による代表値更新、段階的・投機的な代表値数削減、層別活性平滑化を組み合わせる極低ビット量子化方式。A100上の報告速度改善はBERT-large最大6.2倍、LLaMA-2-7Bは4.7倍。
@@ -4950,13 +4958,13 @@
   実装：✓ ・ リポジトリ内被引用：8  
   枝刈り、量子化、知識蒸留、低ランク近似、パラメータ共有、効率的構造設計の六系統を、圧縮後の性能だけでなく、圧縮を実行するための学習・較正費用から比較するサーベイ。
 
+- **2024-04 · [Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs](2024-2404.10308-hierarchical-context-merging-better-long-context-understanding-for-pre-t.md)**  
+  実装：[✓](https://github.com/alinlab/HOMER) ・ リポジトリ内被引用：7  
+  HOMER（Hierarchical cOntext MERging）は、入力を小区間に分けて初期層を処理し、中間層へ進むにつれて隣接区間を統合する。ICLR 2024の原著では、Llama-2-13B-chatの32Kトークンにおけるパスキー検索正答率が80.4%、位置尺度変更方式との併用で86.0%だった。
+
 - **2024-06 · [DeciMamba: Exploring the Length Extrapolation Potential of Mamba](2024-2406.14528-decimamba-exploring-the-length-extrapolation-potential-of-mamba.md)**  
   実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：6  
   Mambaは選択的状態空間モデル（Selective State Space モデル; SSM）の一種で、注意機構のように系列長の二乗へ比例する全組合せを直接計算せず、再帰的な隠れ状態へ過去の情報を集約する。
-
-- **2024-04 · [Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs](2024-2404.10308-hierarchical-context-merging-better-long-context-understanding-for-pre-t.md)**  
-  実装：[✓](https://github.com/alinlab/HOMER) ・ リポジトリ内被引用：6  
-  HOMER（Hierarchical cOntext MERging）は、入力を小区間に分けて初期層を処理し、中間層へ進むにつれて隣接区間を統合する。ICLR 2024の原著では、Llama-2-13B-chatの32Kトークンにおけるパスキー検索正答率が80.4%、位置尺度変更方式との併用で86.0%だった。
 
 - **2024-03 · [SynCode: LLM Generation with Grammar Augmentation](2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md)**  
   実装：[✓](https://github.com/structuredllm/syncode) ・ リポジトリ内被引用：6  
@@ -5889,7 +5897,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：375  
+  実装：✓ ・ リポジトリ内被引用：376  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

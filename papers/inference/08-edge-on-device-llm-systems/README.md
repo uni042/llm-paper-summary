@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（117本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -395,6 +395,10 @@
 - **2025-08 · [Camel: Energy-Aware LLM Inference on Resource-Constrained Devices](2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エッジ推論のGPU周波数とバッチサイズの組み合わせを多腕バンディットとして探索し、事後分布の更新で最適構成を素早く見つけることで、Jetson AGX Orin上でエネルギー遅延積を既定構成比12.4から29.9パーセント下げるエネルギー管理の枠組み。
+
+- **2025-06 · [Ubiquitous memory augmentation via mobile multimodal embedding system](2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.md)**  
+  実装：[✓](https://github.com/caidongqi/Mobile-Search-Engine/tree/pc) ・ リポジトリ内被引用：0  
+  端末上のマルチモーダル埋め込みを早期終了の粗い埋め込みで肩代わりし、検索時に残りの層で仕上げるReminisceは、終了予測・共有LoRAによる癒合・投機的な細粒度検索の3設計で、精度低下を抑えながら平均12.4倍のスループットと大幅な省電力を達成する。
 
 - **2025-06 · [HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Optimization](2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
