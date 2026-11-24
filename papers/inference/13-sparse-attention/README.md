@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（225本）
+## 自動生成の論文一覧（226本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -45,7 +45,7 @@
   各層で繰り返す疎注意のトークン選択を一部の層だけで計算し、後続層に再利用する。30B DSAモデルの200K文脈でインデクサ計算を75%削減し、プリフィルを1.82倍、デコードを1.48倍高速化した。
 
 - **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
-  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：18  
   Qwen3.8-Flash-Nextは履歴を再帰状態へ要約し、圧縮した疎注意機構で長文脈を検索する。論文は1M文脈で注意機構の計算時間を短縮し、検索品質も比較する。
 
 - **2026-03 · [HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention](2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md)**  
@@ -68,13 +68,13 @@
   実装：[✓](https://github.com/qhfan/FlashPrefill) ・ リポジトリ内被引用：9  
   FlashPrefillは、長文脈の大規模言語モデル（LLM）が入力全体を一度に処理するプリフィル段階を高速化する、動的な疎注意（sparse 注意機構）の方式である。原著のQwen3-30B-A3B-Instruct-2507を用いた注意演算子比較では、密なFlashAttentionに対して4Kで1.71倍、256Kで27.78倍の高速化を報告する。
 
+- **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  HySparseは、長文脈言語モデルの注意計算と鍵・値キャッシュ（KVキャッシュ）を同時に削減するため、少数の全体注意層を後続の疎注意層の情報供給源として再利用する混合注意アーキテクチャである。従来の動的疎注意は、重要なトークンを予測する補助選択器が必要になり、選択誤差と計算費用が生じる。HySparseでは一つの全体注意層の後ろに複数の疎注意層を配置する。
+
 - **2026-02 · [ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference](2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-contex.md)**  
   実装：[✓](https://github.com/CURRENTF/ResidualKV) ・ リポジトリ内被引用：8  
   遠く離れた類似トークンを参照として引き、残差だけを小さく符号化して保存するKVキャッシュ圧縮で、捨てずに保存率を13から16パーセントまで下げ、選ばれたトークンだけを復元して計算も3割に抑えた。
-
-- **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  HySparseは、長文脈言語モデルの注意計算と鍵・値キャッシュ（KVキャッシュ）を同時に削減するため、少数の全体注意層を後続の疎注意層の情報供給源として再利用する混合注意アーキテクチャである。従来の動的疎注意は、重要なトークンを予測する補助選択器が必要になり、選択誤差と計算費用が生じる。HySparseでは一つの全体注意層の後ろに複数の疎注意層を配置する。
 
 - **2026-02 · [FASA: Frequency-aware Sparse Attention](2026-2602.03152-fasa-frequency-aware-sparse-attention.md)**  
   実装：[✓](https://github.com/wangyifei0047/FASA-ICLR2026) ・ リポジトリ内被引用：7  
@@ -289,6 +289,10 @@
 - **2026-11 · [Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention](2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-spar.md)**  
   実装：[✓](https://github.com/ArjunKrishnak/dsa-multi-layer-indexer) ・ リポジトリ内被引用：0  
   疎な注意の索引走査を注意の前から外し、前の層の選択で注意しながら自層の走査を裏で走らせる方式で、層間再利用と合成すると保持率二分の一で最大十四・五パーセント速くデコードでき、保持率を半分にしてもなお速いと報告した。
+
+- **2026-11 · [MemOnce: A Scalable Memory Architecture for Large Language Models](2026-2611.27973-memonce-a-scalable-memory-architecture-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長期記憶を持つ言語モデルで、KVキャッシュの線形増大と固定状態の細部喪失の両方を避けるため、最終層の隠れ状態だけを記憶として保持し必要時に層ごとのKVへ復号し、検索の索引計算を全層で一度だけ行うことで、文脈100万で記憶キャッシュを1313倍削減しながら全コンテキスト方式を性能で上回る記憶アーキテクチャ。
 
 - **2026-11 · [LeanSparse: Memory-Efficient Serving for Native Sparse-Attention LLMs](2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

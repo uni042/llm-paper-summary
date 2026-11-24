@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "17fd2377dd20d2676e039c8c03f43f6aed379d01",
+  "base_commit": "0df95c1b966eb3d28c77a26783ebb539b5282830",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1690,6 +1690,7 @@
     "2026-2611.27604-isomoe-placement-invariant-hybrid-cpu-gpu-moe-inference-with-lossless-12-bit-experts.json",
     "2026-2611.27701-forest-coordinating-tree-based-hbf-rram-and-hbm-for-efficient-speculative-llm-inference.json",
     "2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.json",
+    "2026-2611.27973-memonce-a-scalable-memory-architecture-for-large-language-models.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -1716,8 +1717,11 @@
     "2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.json",
     "2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.json",
     "2026-c303fad14871-latentllm-activation-aware-transform-to-multi-head-latent-attention.json",
+    "2026-c5badaa23ebf-fp2-a-2-bit-floating-point-format-for-edge-ai-inference-and-fine-tuning.json",
+    "2026-ca88519757de-coral-co-evolutionary-optimization-of-routing-and-adaptive-prompts-for-cost-efficient-llm-deployment.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-component-aware-self-speculative-decoding-hybrid-language-models.json",
+    "2026-dda87ed1e7bb-hardwired-neuron-language-processing-units-as-general-purpose-cognitive-substrates.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
     "2026-satoru-proactive-length-aware-scheduling-for-high-throughput-batch-llm-serving.json",
@@ -54935,6 +54939,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.27973": {
+      "order": [
+        "2026-11-24T11:52:35+00:00",
+        "2026-2611.27973-memonce-a-scalable-memory-architecture-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/TCSI.2025.3638831": {
+      "order": [
+        "2026-11-24T11:54:00+00:00",
+        "2026-c5badaa23ebf-fp2-a-2-bit-floating-point-format-for-edge-ai-inference-and-fine-tuning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.3389/frai.2026.1891737": {
+      "order": [
+        "2026-11-24T11:55:26+00:00",
+        "2026-ca88519757de-coral-co-evolutionary-optimization-of-routing-and-adaptive-prompts-for-cost-efficient-llm-deployment.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3779212.3790169": {
+      "order": [
+        "2026-11-24T11:56:54+00:00",
+        "2026-dda87ed1e7bb-hardwired-neuron-language-processing-units-as-general-purpose-cognitive-substrates.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69896,6 +69936,15 @@
     "arxiv:2611.27891": [
       "papers/inference/05-speculative-decoding-moe/2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.md",
       "papers/inference/05-speculative-decoding-moe/2026-2611.27891-speculative-decoding-is-less-speculative-than-you-think.md"
+    ],
+    "arxiv:2611.27973": [
+      "papers/inference/13-sparse-attention/2026-2611.27973-memonce-a-scalable-memory-architecture-for-large-language-models.md"
+    ],
+    "doi:10.1109/tcsi.2025.3638831": [
+      "papers/inference/99-other-inference-systems/2025-c5badaa23ebf-fp2-a-2-bit-floating-point-format-for-edge-ai-inference-and-fine-tuning.md"
+    ],
+    "doi:10.3389/frai.2026.1891737": [
+      "papers/inference/99-other-inference-systems/2026-ca88519757de-coral-co-evolutionary-optimization-of-routing-and-adaptive-prompts-for-c.md"
     ]
   }
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1542本）
+## 自動生成の論文一覧（1544本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1817,6 +1817,10 @@
 - **2026-09 · [DegreeSpar: Structured Degree Sparsity for Efficient Secure Transformer Inference](2026-2609.32204-degreespar-structured-degree-sparsity-for-efficient-secure-transformer-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   セキュアなトランスフォーマー推論の圧縮を、非線形多項式の次数という共通空間で構造化し、次数削減とトークン・次元の計算除去を一体で最適化して、精度を保ちながら基礎方式比2.29〜6.63倍の高速化を得る研究。
+
+- **2026-09 · [CORAL: Co-Evolutionary Optimization of Routing and Adaptive Prompts for Cost-Efficient LLM Deployment](2026-ca88519757de-coral-co-evolutionary-optimization-of-routing-and-adaptive-prompts-for-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プロンプトとモデルの割当てを別々に最適化する従来法の限界を示し、プロンプト集団とルータ集団を多目的共進化で同時に育てることで、同一精度での推論コストを最大31.4パーセント削減した研究。
 
 - **2026-09 · [Compression Beyond the Uncompressed: A Two-Stage Training Recipe for Soft Context Compression in RAG](2026-2609.05152-compression-beyond-the-uncompressed-a-two-stage-training-recipe-for-soft.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3650,6 +3654,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   高解像度画像や動画では視覚トークン数が大きくなり、言語モデルの注意計算、鍵・値キャッシュ（KV キャッシュ）、初回トークン生成までの遅延が増加する。Glance2Gazeは、最初に画像全体を眺めて必要な細部へ視線を絞るという着想を二つの計算機構へ具体化する。
 
+- **2025-12 · [FP2: A 2-bit Floating-Point Format for Edge-AI Inference and Fine-Tuning](2025-c5badaa23ebf-fp2-a-2-bit-floating-point-format-for-edge-ai-inference-and-fine-tuning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  隣接2値で符号と指数または仮数を共有し実効2ビットの浮動小数点形式を作り、積和をビット加算へ置き換えることで、FP4比47パーセントの容量削減と最大78パーセントの処理要素面積・電力削減を、精度低下1から2ポイント程度で両立させる形式と計算アーキテクチャ。
+
 - **2025-12 · [Efficient-VLN: A Simple yet Strong Baseline for Efficient Vision-Language Navigation](2025-2512.10310-efficient-vln-a-simple-yet-strong-baseline-for-efficient-vision-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論の中核は、回転位置埋め込み（Rotary Position Embedding; RoPE）を適用する前のKVをフレームごとに保存し、次の行動では必要な過去フレームのKVだけを選択して連続した位置IDで再回転する仕組みである。
@@ -3709,7 +3717,7 @@
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：51  
+  実装：✓ ・ リポジトリ内被引用：52  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
@@ -5146,13 +5154,13 @@
   実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：74  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
+- **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
+  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：55  
+  本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
+
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
   実装：✓ ・ リポジトリ内被引用：56  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
-
-- **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
-  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：54  
-  本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
   実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：50  
@@ -5785,7 +5793,7 @@
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：28  
   本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
