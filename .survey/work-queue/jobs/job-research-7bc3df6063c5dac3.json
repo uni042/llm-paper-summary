@@ -35,10 +35,15 @@
   "selection_reason": "凍結LLM多エージェント間で内部状態を共有する研究で、受信側が自身のKVキャッシュを保持しつつ相手のキャッシュへクロスアテンションする増強方式が再計算回避に有効であることを示し、KVキャッシュ共有による推論効率化への直接貢献が確認できる。",
   "semantic_scholar_id": "a1f2cbfdb500f824eba067d143a15d88d6849e57",
   "source_url": "https://arxiv.org/abs/2610.22026",
-  "status": "ready",
+  "status": "superseded",
   "title": "Augment the Cache, Replace the Activation: A 2x2 Study of Internal-State Sharing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T09:03:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-s.md",
+  "represented_canonical_id": "arXiv:2610.22026",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

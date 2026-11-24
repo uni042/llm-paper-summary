@@ -35,10 +35,15 @@
   "selection_reason": "注意KVと固定長回帰・畳み込み状態が混在するハイブリッドLLMサービング向けに、改変vLLM上で共有ページングやネイティブ二重プール等の4種のメモリ組織を実装比較しスループットと尾部完了時間を評価したサービングメモリ研究である。",
   "semantic_scholar_id": "85f017e79151c21cf4a8f7d8367388778e96486c",
   "source_url": "https://arxiv.org/abs/2610.15755",
-  "status": "ready",
+  "status": "superseded",
   "title": "Native Dual Pools or Shared Paging? Memory Organization for Concurrent Hybrid LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T09:03:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.15755-native-dual-pools-or-shared-paging-memory-organization-for-concurrent-hy.md",
+  "represented_canonical_id": "arXiv:2610.15755",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

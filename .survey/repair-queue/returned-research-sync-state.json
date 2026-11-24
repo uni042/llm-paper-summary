@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5e8060f445bfa3fed34a6c92dd9225c75682071f",
+  "base_commit": "0ff94d31f9d1e8750f09699cb3ec90b965071f5d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1292,6 +1292,7 @@
     "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
     "2026-2610.11214-bridging-kv-cache-quantization-and-linear-attention-from-theory-to-pretrained-weight-migration.json",
     "2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.json",
+    "2026-2610.11251-v-cola-vision-token-compression-with-linear-attention.json",
     "2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.json",
     "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
     "2026-2610.12214-diffuplex-accelerating-full-duplex-spoken-dialog-models-via-rolling-masked-diffusion.json",
@@ -1311,6 +1312,7 @@
     "2026-2610.14162-next-concept-modeling-fast-parallel-coarse-to-fine-text-generation.json",
     "2026-2610.14277-echo-error-compensated-4-bit-tensor-parallel-communication-for-llm-training-and-inference.json",
     "2026-2610.14389-measuring-the-inference-energy-efficiency-of-open-weight-llms-across-benchmarks-reasoning-modes-and-hardware.json",
+    "2026-2610.14448-kv4-rl-unlocking-faster-asynchronous-rollouts-for-rlvr-with-int4-kv-cache-quantization.json",
     "2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.json",
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
@@ -1330,8 +1332,10 @@
     "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json",
     "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json",
     "2026-2610.15721-to-cache-or-not-to-cache-understanding-and-mitigating-safety-incompatibility-in-cross-model-kv-cache-reuse.json",
+    "2026-2610.15755-native-dual-pools-or-shared-paging-memory-organization-for-concurrent-hybrid-llm-serving.json",
     "2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-across-gpu-architectures.json",
     "2026-2610.15921-fast-and-accurate-improving-personalized-llm-performance-by-semantic-concentration-inspired-workload-split-between-rag-and-fine-tuning.json",
+    "2026-2610.16003-pair-memory-efficient-and-fast-inference-with-reading-reasoning-fusion.json",
     "2026-2610.16165-think-before-you-speak-training-free-latent-communication-between-language-models.json",
     "2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-transformers.json",
     "2026-2610.16890-forge-procedural-weight-generation-for-sparse-moe-inference.json",
@@ -1388,6 +1392,7 @@
     "2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-models.json",
     "2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.json",
     "2026-2610.21815-exact-makespan-bounds-and-the-gpipe-homogeneity-bias-for-heterogeneous-llm-inference-pipelines.json",
+    "2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-sharing.json",
     "2026-2610.22099-tips-a-tiny-inference-time-policy-for-scaling-in-diffusion-language-models.json",
     "2026-2610.22130-dropkv-decoupling-residual-output-perturbation-for-near-optimal-kv-cache-eviction.json",
     "2026-2610.22543-on-the-spot-enhancing-speculative-decoding-for-diffusion-language-models-via-commit-order-prediction.json",
@@ -54141,6 +54146,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.11251": {
+      "order": [
+        "2026-11-24T08:54:12+00:00",
+        "2026-2610.11251-v-cola-vision-token-compression-with-linear-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14448": {
+      "order": [
+        "2026-11-24T08:55:49+00:00",
+        "2026-2610.14448-kv4-rl-unlocking-faster-asynchronous-rollouts-for-rlvr-with-int4-kv-cache-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15755": {
+      "order": [
+        "2026-11-24T08:57:27+00:00",
+        "2026-2610.15755-native-dual-pools-or-shared-paging-memory-organization-for-concurrent-hybrid-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.16003": {
+      "order": [
+        "2026-11-24T08:59:05+00:00",
+        "2026-2610.16003-pair-memory-efficient-and-fast-inference-with-reading-reasoning-fusion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22026": {
+      "order": [
+        "2026-11-24T09:00:42+00:00",
+        "2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-sharing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68814,6 +68864,21 @@
     "arxiv:2610.11214": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.11214-bridging-kv-cache-quantization-and-linear-attention-from-theory-to-pretr.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.11214-bridging-kv-cache-quantization-and-linear-attention-from-theory-to-pretr.md"
+    ],
+    "arxiv:2610.11251": [
+      "papers/inference/99-other-inference-systems/2026-2610.11251-v-cola-vision-token-compression-with-linear-attention.md"
+    ],
+    "arxiv:2610.14448": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.14448-kv4-rl-unlocking-faster-asynchronous-rollouts-for-rlvr-with-int4-kv-cach.md"
+    ],
+    "arxiv:2610.15755": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.15755-native-dual-pools-or-shared-paging-memory-organization-for-concurrent-hy.md"
+    ],
+    "arxiv:2610.16003": [
+      "papers/inference/99-other-inference-systems/2026-2610.16003-pair-memory-efficient-and-fast-inference-with-reading-reasoning-fusion.md"
+    ],
+    "arxiv:2610.22026": [
+      "papers/inference/99-other-inference-systems/2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-s.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "RLVRの非同期ロールアウトにおけるKV集中を分析し、INT4 KVキャッシュ量子化にアテンションシンク等のINT8保護を組み合わせたKV4-RLでロールアウトを1.80倍高速化しており、KVキャッシュ量子化への直接貢献がある。",
   "semantic_scholar_id": "68d22b7f2560dafec74c2bb25913c4ccafd6b2c1",
   "source_url": "https://arxiv.org/abs/2610.14448",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV4-RL: Unlocking Faster Asynchronous Rollouts for RLVR with INT4 KV Cache Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T09:03:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.14448-kv4-rl-unlocking-faster-asynchronous-rollouts-for-rlvr-with-int4-kv-cach.md",
+  "represented_canonical_id": "arXiv:2610.14448",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

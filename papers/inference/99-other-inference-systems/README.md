@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1519本）
+## 自動生成の論文一覧（1522本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -36,6 +36,10 @@
   実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：11  
   再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
 
+- **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
+
 - **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
@@ -43,10 +47,6 @@
 - **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：9  
   コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
-
-- **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
 
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -1130,6 +1130,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   動画の視覚トークンを、フレーム内の意味的統合の後にフレーム間の冗長統合を行う二軸の階層圧縮で減らし、EgoSchemaで精度を保ったまま遅延を4割下げ、保持率10パーセントでも単軸方式を上回るプラグイン。
 
+- **2026-10 · [V-CoLA: Vision Token Compression with Linear Attention](2026-2610.11251-v-cola-vision-token-compression-with-linear-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意の再帰状態への再構成のされ方から画像トークンの重要度を測り、重要度密度に応じた適応的マージで圧縮することで、ハイブリッド視覚言語モデルでトークン半減でも性能の99.5パーセントを保ちプリフィルを最大6.15倍速くする学習不要の圧縮法。
+
 - **2026-10 · [UNREAL: Unifying Retrieval and Long-Context with a Single Model](2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   凍結LLMの内部表現と学習した検索トークンだけで証拠チャンクを選び、外部検索モデルなしにコーパス検索と長文脈推論を一つの選択機構で統一する方式。
@@ -1237,6 +1241,10 @@
 - **2026-10 · [Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives](2026-2610.41389-parse-before-you-execute-efficient-spatial-reasoning-with-executable-pri.md)**  
   実装：[✓](https://github.com/Xiwei-web/PEPS) ・ リポジトリ内被引用：0  
   質問を座標系・対象・状態・指標の基本要素へ実行前に確定させ必要な分だけ道具で計算し検証で局所修復する枠組みで、三課題すべてで最良の正解率と、反復型方式より料金十五から二十三点五パーセント減と遅延三十二点三から三十八点二パーセント減を報告した。
+
+- **2026-10 · [PAIR: Memory-Efficient and Fast Inference with Reading–Reasoning Fusion](2026-2610.16003-pair-memory-efficient-and-fast-inference-with-reading-reasoning-fusion.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小さいReaderに全文脈を読ませ大きいReasonerには文脈を見せず、両者のロジットを固定重みで融合することで、大規模モデルの精度の89〜96%をKVメモリ約4分の1で保つ非対称な2モデル推論。
 
 - **2026-10 · [PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States](2026-2610.29545-pace-periodic-and-channel-aligned-encoding-of-four-bit-recurrent-states.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1425,6 +1433,10 @@
 - **2026-10 · [Balanced State Subspaces with Spectral Rank Allocation for Mamba-2 State Compression](2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Mamba-2の再帰状態を座標ではなくバランス部分空間で切り詰め、ランク予算をハンケルスペクトルで層ごとに配り直すことで、状態半減でもパープレキシティ増加0.3ポイントと検索性能の97パーセント保持を両立させた学習後圧縮。
+
+- **2026-10 · [Augment the Cache, Replace the Activation: A 2x2 Study of Internal-State Sharing](2026-2610.22026-augment-the-cache-replace-the-activation-a-2x2-study-of-internal-state-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェント間の内部状態共有は担い手と融合方法の組み合わせで決まり、KVキャッシュは増強、活性値は置換が正解という非対称な規則を、同一対照階段の2×2実験で示した研究。
 
 - **2026-10 · [Attention via Black-Box Vector Search](2026-2610.10135-attention-via-black-box-vector-search.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5035,7 +5047,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：126  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：127  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
