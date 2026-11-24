@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-057cc9d0c4836fb7-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.11588",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.11588",
+    "identity_tokens": [
+      "arXiv:2510.11588"
+    ],
+    "reason": "エージェントのポリシー文書をモデル事前知識へ内在化する手法はプロンプト処理の計算 overhead 削減に触れるが、主眼は業務規則の内在化である。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T23:11:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Analyzing and Internalizing Complex Policy Documents for LLM Agents"
+  },
+  "processed_at": "2026-11-24T23:11:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-057cc9d0c483",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

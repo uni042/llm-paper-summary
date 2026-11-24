@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-24T23:02:34+00:00",
-  "record_count": 15306,
+  "updated_at": "2026-11-24T23:12:00+00:00",
+  "record_count": 15310,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -217071,9 +217071,9 @@
       "identity_tokens": [
         "arXiv:2508.08636"
       ],
-      "reason": "InternBootcampは1,000超の検証可能タスク環境でLLMの推論能力を強化学習する枠組みと評価ベンチマークで、学習・能力評価が対象であり推論システムへの貢献はない。",
+      "reason": "InternBootcampは検証可能タスクのスケーリングでLLM推論能力を強化学習する枠組みであり、学習基盤の研究である。",
       "first_checked_at": "2026-11-24T22:15:35+00:00",
-      "last_checked_at": "2026-11-24T22:15:35+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217212,27 +217212,13 @@
       "identity_tokens": [
         "arXiv:2507.11737"
       ],
-      "reason": "動的計画法の問題定式化をLLMで自動化するためのベンチマークと枠組みの研究で、対象はオペレーションズリサーチへの応用であり推論システムの主題ではない。",
+      "reason": "動的計画法問題の定式化をLLMで自動化する研究であり、オペレーションズリサーチへの応用が主題である。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
       "title": "Auto-Formulating Dynamic Programming Problems with Large Language Models"
-    },
-    "arXiv:2212.10197": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2212.10197",
-      "identity_tokens": [
-        "arXiv:2212.10197"
-      ],
-      "reason": "多視点学習の補完性・合意原則に基づき多ヘッド自己注意を拡張したEITの提案で、評価対象は一般的な多視点学習タスクの精度であり、LLM推論への適用や効率化は扱われていない。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "title": "EIT: Enhanced Interactive Transformer"
     },
     "DOI:10.48550/arxiv.2603.01563": {
       "classification": "unrelated",
@@ -217269,9 +217255,9 @@
       "identity_tokens": [
         "arXiv:2605.18066"
       ],
-      "reason": "クラウドブロックストレージの仮想ディスク配置を、LLM由来の意味情報から時間的負荷位相を復元して最適化する研究で、LLMは意味抽出の道具として使われる応用であり、LLM推論システム自体を扱っていない。",
+      "reason": "TIDALはLLM由来の意味情報を用いるクラウドブロックストレージ配置であり、対象はストレージシステムでLLM推論ではない。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217409,9 +217395,9 @@
       "identity_tokens": [
         "arXiv:2402.18028"
       ],
-      "reason": "医療向けマルチモーダル基盤モデルのオープンソースプラットフォームで、タイトル自体が医療ドメインのプラットフォーム提供を明示しており、推論システム技術の研究ではない。",
+      "reason": "タイトル自体が医療向けマルチモーダル基盤モデルのプラットフォームという医療応用を明示している。タイトル先行走査で対象外と判定した。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217493,9 +217479,9 @@
       "identity_tokens": [
         "arXiv:2606.15765"
       ],
-      "reason": "マルチタスク稠密予測のために視覚基盤モデルの編成を学習する研究で、タイトル自体がコンピュータビジョンの稠密予測応用を明示しており、LLM推論とは無関係である。",
+      "reason": "視覚基盤モデル群を多タスク稠密予測へ編成する学習研究であり、視覚タスクの表現合成が主題である。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -217745,9 +217731,9 @@
       "identity_tokens": [
         "arXiv:2610.31566"
       ],
-      "reason": "顕微鏡細胞追跡という生物学画像領域のベンチマークがタイトルに明示されており、LLM推論システムとは無関係な異分野応用である。",
+      "reason": "タイトル自体が顕微鏡細胞追跡ベンチマークという生物学応用を明示している。タイトル先行走査で対象外と判定した。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -218713,9 +218699,9 @@
       "identity_tokens": [
         "arXiv:2505.18846"
       ],
-      "reason": "タイトルが示す主題は、6G無線ネットワークにおけるLLM駆動のAPT（持続的標的型攻撃）検出のレビューと分類であり、ネットワークセキュリティ応用が目的で、推論システム機構への貢献はタイトル上確認できない。",
+      "reason": "タイトル自体が6G無線ネットワークにおけるLLM駆動APT検出というセキュリティ応用を明示している。タイトル先行走査で対象外と判定した。",
       "first_checked_at": "2026-11-24T22:37:44+00:00",
-      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -219435,6 +219421,76 @@
         "worker-worklist discovery_review"
       ],
       "title": "Recent Progress in Understanding Transformer and Developing Its Surpasser: A Survey"
+    },
+    "arXiv:2508.14087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.14087",
+      "identity_tokens": [
+        "arXiv:2508.14087"
+      ],
+      "reason": "タイトル自体が原子核・素粒子物理学向け基盤モデルという物理学応用を明示している。タイトル先行走査で対象外と判定した。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "FM4NPP: A Scaling Foundation Model for Nuclear and Particle Physics"
+    },
+    "arXiv:2601.08893": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.08893",
+      "identity_tokens": [
+        "arXiv:2601.08893"
+      ],
+      "reason": "スペクトル生成フローモデルは物理学に着想を得た生成アーキテクチャの置換提案であり、能力の枠組みが主題で推論システムではない。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Spectral Generative Flow Models: A Physics-Inspired Replacement for Vectorized Large Language Models"
+    },
+    "arXiv:2601.21293": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21293",
+      "identity_tokens": [
+        "arXiv:2601.21293"
+      ],
+      "reason": "タイトル自体が回転機械の早期故障警告という産業設備応用を明示している。タイトル先行走査で対象外と判定した。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Reliability-Calibrated Edge-IoT Early Fault Warning for Rotating Machinery with a Physics-Guided Tiny-Mamba Transformer"
+    },
+    "arXiv:2603.26769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26769",
+      "identity_tokens": [
+        "arXiv:2603.26769"
+      ],
+      "reason": "圧縮VLMの視覚破損下での失敗様式を定量化する研究であり、エッジ展開の評価に留まり推論機構の提案はない。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Edge Reliability Gap in Vision-Language Models: Quantifying Failure Modes of Compressed VLMs Under Visual Corruption"
+    },
+    "arXiv:2610.00296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00296",
+      "identity_tokens": [
+        "arXiv:2610.00296"
+      ],
+      "reason": "トークンレベル確実性と正しさの関係を統制実験で再検討する研究であり、対象は推論・学習の代理指標の妥当性である。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "title": "Certainty Is Not Just Correctness: Rethinking Token-Level Certainty in LLM Reasoning"
     }
   }
 }

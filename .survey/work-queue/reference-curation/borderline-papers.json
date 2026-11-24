@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-24T23:02:34+00:00",
-  "record_count": 8989,
+  "updated_at": "2026-11-24T23:12:00+00:00",
+  "record_count": 8988,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -135715,21 +135715,6 @@
       "borderline_recheck_count": 0,
       "title": "From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion Model"
     },
-    "arXiv:2603.26769": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2603.26769",
-      "identity_tokens": [
-        "arXiv:2603.26769"
-      ],
-      "reason": "4ビット量子化したQwen2.5-VL-7Bと小型FP16モデルを視覚的破損下で比べ、物体盲・意味ドリフト等の失敗様式の分類で圧縮VLMのエッジ信頼性を診断する評価研究であり、圧縮モデル評価ではあるが推論システムの機構提案ではない。",
-      "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Edge Reliability Gap in Vision-Language Models: Quantifying Failure Modes of Compressed VLMs Under Visual Corruption"
-    },
     "arXiv:2604.19781": {
       "classification": "borderline",
       "canonical_id": "arXiv:2604.19781",
@@ -135744,21 +135729,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment"
-    },
-    "arXiv:2610.00296": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.00296",
-      "identity_tokens": [
-        "arXiv:2610.00296"
-      ],
-      "reason": "トークンレベル確実性が正しさの代理になるかを、質問単位の正答しやすさと同一質問内の正誤判別とに分けて統制評価した分析であり、確実性を使う推論手法の前提検証ではあるが推論システムの機構自体の提案ではない。",
-      "first_checked_at": "2026-11-24T22:15:34+00:00",
-      "last_checked_at": "2026-11-24T22:15:34+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Certainty Is Not Just Correctness: Rethinking Token-Level Certainty in LLM Reasoning"
     },
     "arXiv:2610.25835": {
       "classification": "borderline",
@@ -135961,9 +135931,9 @@
       "identity_tokens": [
         "arXiv:2609.01117"
       ],
-      "reason": "Latent Recurrent Thoughtsは凍結したLLMをデコーダとして使い、小型の回帰推論器が連続潜在思考を反復精緻化することで計算深さをモデル規模から切り離す潜在推論機構だが、主目的は推論能力の向上であり、トークン削減等の効率化の定量的な貢献は要旨で不明瞭である。",
+      "reason": "凍結LLMの潜在空間で推論を反復精緻化するLatent Recurrent Thoughtsは推論時計算の使い方に触れるが、対象は推論能力の改善である。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -135991,9 +135961,9 @@
       "identity_tokens": [
         "arXiv:2412.18811"
       ],
-      "reason": "DCISはRoPEスケーリング因子を分割統治の増分探索で初期化し微調整コストを下げてLLMの文脈長を外挿する手法で、長文脈推論の前提技術ではあるが、機構の中心は位置埋め込みの微調整手順であり推論時のシステム機構への直接の貢献は限定的である。",
+      "reason": "DCISはRoPEスケーリング因子探索でLLMの文脈長外挿の微調整コストを下げる枠組みであり、対象は適応学習側で推論機構ではない。",
       "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136300,21 +136270,6 @@
       "borderline_recheck_count": 0,
       "title": "The Fracture Bits in Large Language Models"
     },
-    "arXiv:2601.08893": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2601.08893",
-      "identity_tokens": [
-        "arXiv:2601.08893"
-      ],
-      "reason": "Spectral Generative Flow Modelsは、テキスト・動画をウェーブレット基底上の確率偏微分方程式の軌跡として扱い、大域注意を局所作用素とスペクトル射影へ置き換える物理着想の生成アーキテクチャで、疎性による計算効率を主張するが理論的枠組みの提示が中心であり、推論システムとしての実測評価は要旨上確認できない。",
-      "first_checked_at": "2026-11-24T22:36:48+00:00",
-      "last_checked_at": "2026-11-24T22:36:48+00:00",
-      "linked_from": [
-        "worker-worklist discovery_review"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Spectral Generative Flow Models: A Physics-Inspired Replacement for Vectorized Large Language Models"
-    },
     "arXiv:2602.16727": {
       "classification": "borderline",
       "canonical_id": "arXiv:2602.16727",
@@ -136576,9 +136531,9 @@
       "identity_tokens": [
         "arXiv:2502.07616"
       ],
-      "reason": "Tractable Transformers（Tracformer）は疎なTransformerエンコーダで局所・大域文脈を取り込み、未見の条件付き確率クエリへ汎化しやすくする非自己回帰生成モデルのアーキテクチャであり、主題は条件付き生成の扱いやすさで、推論効率やサービングへの寄与は要旨上不明瞭である。",
+      "reason": "扱いやすいTransformerによる柔軟な条件付き生成は非自己回帰生成の原理研究であり、生成効率は背景にあるが推論システム機構の提案は限定的である。",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136591,9 +136546,9 @@
       "identity_tokens": [
         "arXiv:2510.11588"
       ],
-      "reason": "方策文書の内在化は、プロンプト圧縮の系譜に連なる文脈内方策のモデル事前知識への埋め込みを、カテゴリ配慮型継続事前学習CAP-CPTで軽くする試みだが、機構の中心は教師あり微調整・継続事前学習という学習側の手法であり、推論時の圧縮・キャッシュ機構そのものではない。",
+      "reason": "エージェントのポリシー文書をモデル事前知識へ内在化する手法はプロンプト処理の計算 overhead 削減に触れるが、主眼は業務規則の内在化である。",
       "first_checked_at": "2026-11-24T22:36:49+00:00",
-      "last_checked_at": "2026-11-24T22:36:49+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -136832,9 +136787,9 @@
       "identity_tokens": [
         "arXiv:2607.16305"
       ],
-      "reason": "LookMEは大規模なマルチモーダル埋め込み表を分割保管しオンデマンドに読み込む階層ルックアップと疎な層注入で、VLMのメモリ使用量とレイテンシのトレードオフ改善を狙うが、主目的は視覚タスク性能を高める埋め込み強化であり、推論サービング機構への貢献は周辺的である。",
+      "reason": "LookMEはVLMの層注入向けルックアップ型埋め込みでMoE展開時のメモリと遅延に触れるが、主眼は埋め込み表現の設計である。",
       "first_checked_at": "2026-11-24T22:36:50+00:00",
-      "last_checked_at": "2026-11-24T22:36:50+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
       "linked_from": [
         "worker-worklist discovery_review"
       ],
@@ -137741,6 +137696,36 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Ripple Attention for Visual Perception with Sub-quadratic Complexity"
+    },
+    "arXiv:2212.10197": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.10197",
+      "identity_tokens": [
+        "arXiv:2212.10197"
+      ],
+      "reason": "EITの拡張多頭自己注意は多視点学習の原理に基づく注意機構の改良だが、表現力の改善が主題で推論効率の検証は要旨に乏しい。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EIT: Enhanced Interactive Transformer"
+    },
+    "arXiv:2610.05458": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05458",
+      "identity_tokens": [
+        "arXiv:2610.05458"
+      ],
+      "reason": "GPUベンダ間で同一言語モデルのロジットが食い違う現象の計測と緩和であり、推論実行の再現性に触れるが効率化機構ではない。",
+      "first_checked_at": "2026-11-24T23:11:59+00:00",
+      "last_checked_at": "2026-11-24T23:11:59+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Measuring and Reducing Cross-Vendor Mismatch in Language Models"
     }
   }
 }
