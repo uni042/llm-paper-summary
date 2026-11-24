@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1439本）
+## 自動生成の論文一覧（1443本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5326,6 +5326,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   標準Transformerの自己注意は、系列内の各トークンが過去の各トークンを参照するため、長い入力のプリフィルではトークン数の二乗に比例する注意計算を必要とする。生成時には過去のKey/ValueをKVキャッシュへ保持するため、文脈長とともにメモリ容量も増える。本論文は、線形注意を潜在変数を介した確率分布として解釈する。
 
+- **2024-02 · [Institutional Platform for Secure Self-Service Large Language Model Exploration](2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-expl.md)**  
+  実装：[✓](https://github.com/innovationcore/llmfactory) ・ リポジトリ内被引用：0  
+  機関内向けに、データ管理から学習ジョブ管理、LoRAXによるマルチアダプタ推論までをセルフサービス化し、孤立した計算資源をCrescoのエージェント網で暗号化・テナント分離つきに束ねる安全なLLM基盤の構築報告。
+
 - **2024-01 · [When Neural Code Completion Models Size up the Situation: Attaining Cheaper and Faster Completion through Dynamic Model Inference](2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheap.md)**  
   実装：[✓](https://github.com/v587su/SEC) ・ リポジトリ内被引用：0  
   中間層で十分なトークンは早期に出し、予測できない補完は丸ごと打ち切る二判断の動的推論で、コード補完を平均11.2パーセント速くし無駄な提案も減らす方式。
@@ -5338,6 +5342,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   各層並列のアダプター型コントローラーが強化学習で次の層を飛ばすか決める動的レイヤースキッピングで、静的スキップより高い品質を保ち、機械翻訳では全層モデルをも上回る。
 
+- **2023-12 · [Rethinking Compression: Reduced Order Modelling of Latent Features in Large Language Models](2023-2312.07046-rethinking-compression-reduced-order-modelling-of-latent-features-in-lar.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各層の出力特徴の主成分だけを残して重みを2つの低ランク行列へ再パラメータ化する、学習不要・CPUのみで実行できるLLM圧縮法。LLaMA-7Bの80%圧縮で調整済み構造化枝刈りを上回る。
+
 - **2023-12 · [A Performance Evaluation of a Quantized Large Language Model on Various Smartphones](2023-2312.12472-a-performance-evaluation-of-a-quantized-large-language-model-on-various-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対象はiPhone 14、14 Pro、14 Pro Max、15、15 Pro Maxの五機種で、llama.cppとGGUFを利用し、orcaminiv37Bを3bit small K-S量子化した約2.95GiBのモデルを使用する。
@@ -5345,7 +5353,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：362  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：363  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5377,7 +5385,7 @@
   従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
 
 - **2023-06 · [MiniLLM: On-Policy Distillation of Large Language Models](2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md)**  
-  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：51  
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
@@ -5535,6 +5543,14 @@
 - **2023-05 · [Finding the Pillars of Strength for Multi-Head Attention](2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.md)**  
   実装：[✓](https://github.com/SenticNet/GHA) ・ リポジトリ内被引用：0  
   多頭注意のヘッドをグループ内同質化とグループ間多様化の自己教師あり制約で分け、各グループの代表ヘッドだけを投票で残すことで、パラメータを32.1パーセント削りながら翻訳と要約で通常のTransformerを上回る注意機構の冗長性削減。
+
+- **2023-05 · [Cheaply Evaluating Inference Efficiency Metrics for Autoregressive Transformer APIs](2023-2305.02440-cheaply-evaluating-inference-efficiency-metrics-for-autoregressive-trans.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  APIの生の実行時間は提供者の最適化と負荷変動に汚染されるため、推論時間をプロンプト長と出力トークン数の線形和としてモデル化し、統一環境での「理想化実行時間」を少数クエリの回帰で推定して、モデル自体の効率と能力の交換関係を初めて比較した研究。
+
+- **2023-04 · [To Asymmetry and Beyond: Structured Pruning of Sequence to Sequence Models for Improved Inference Efficiency](2023-2304.02721-to-asymmetry-and-beyond-structured-pruning-of-sequence-to-sequence-model.md)**  
+  実装：[✓](https://github.com/spacemanidol/Efficient-Web-Scale-Absractive-Summarization) ・ リポジトリ内被引用：0  
+  要約向け系列変換モデルで、精度はエンコーダ・遅延はデコーダが支配するという非対称性を測り、デコーダ中心の構造化プルーニングで約3倍の推論高速化をROUGE-2約1ポイント低下で達成した研究。
 
 - **2023-02 · [DISCO: Distributed Inference with Sparse Communications](2023-2302.11180-disco-distributed-inference-with-sparse-communications.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5725,11 +5741,11 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：380  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：381  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：297  
+  実装：✓ ・ リポジトリ内被引用：298  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

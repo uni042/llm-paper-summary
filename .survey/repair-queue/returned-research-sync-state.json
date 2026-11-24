@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "60d672bdce34783cf8c68e314bdef7152dc9828a",
+  "base_commit": "ccb06d922b180446aa2c0af7c32b3635b907190d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -118,7 +118,9 @@
     "2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-research-and-deployment.json",
     "2023-2302.11180-disco-distributed-inference-with-sparse-communications.json",
     "2023-2302.14705-acceltran-a-sparsity-aware-accelerator-for-dynamic-inference-with-transformers.json",
+    "2023-2304.02721-to-asymmetry-and-beyond-structured-pruning-of-sequence-to-sequence-models-for-improved-inference-efficiency.json",
     "2023-2304.11520-processing-natural-language-on-embedded-devices-how-well-do-transformer-models-perform.json",
+    "2023-2305.02440-cheaply-evaluating-inference-efficiency-metrics-for-autoregressive-transformer-apis.json",
     "2023-2305.14380-finding-the-pillars-of-strength-for-multi-head-attention.json",
     "2023-2305.14405-neuralmatrix-compute-the-entire-neural-networks-with-linear-matrix-operations-for-efficient-inference.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
@@ -137,6 +139,8 @@
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
     "2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-schedule-search.json",
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
+    "2023-2312.07046-rethinking-compression-reduced-order-modelling-of-latent-features-in-large-language-models.json",
+    "2023-2312.17649-investigating-the-effects-of-sparse-attention-on-cross-encoders.json",
     "2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.json",
     "2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-inference-on-gpus.json",
     "2024-008c56d1c4fa-navigator-a-decentralized-scheduler-for-latency-sensitive-ai-workflows.json",
@@ -144,6 +148,7 @@
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheaper-and-faster-completion-through-dynamic-model-i.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
+    "2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-exploration.json",
     "2024-2402.03480-trillion-parameter-ai-serving-infrastructure-for-scientific-discovery-a-survey-and-vision.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
     "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
@@ -52479,6 +52484,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2304.02721": {
+      "order": [
+        "2026-11-24T02:28:53+00:00",
+        "2023-2304.02721-to-asymmetry-and-beyond-structured-pruning-of-sequence-to-sequence-models-for-improved-inference-efficiency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2305.02440": {
+      "order": [
+        "2026-11-24T02:30:26+00:00",
+        "2023-2305.02440-cheaply-evaluating-inference-efficiency-metrics-for-autoregressive-transformer-apis.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2312.07046": {
+      "order": [
+        "2026-11-24T02:32:00+00:00",
+        "2023-2312.07046-rethinking-compression-reduced-order-modelling-of-latent-features-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2312.17649": {
+      "order": [
+        "2026-11-24T02:33:32+00:00",
+        "2023-2312.17649-investigating-the-effects-of-sparse-attention-on-cross-encoders.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2402.00913": {
+      "order": [
+        "2026-11-24T02:35:05+00:00",
+        "2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-exploration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66492,6 +66542,21 @@
     "arxiv:2601.11252": [
       "papers/inference/99-other-inference-systems/2026-2601.11252-beyond-model-scaling-test-time-intervention-for-efficient-deep-reasoning.md",
       "papers/inference/99-other-inference-systems/2026-2601.11252-beyond-model-scaling-test-time-intervention-for-efficient-deep-reasoning.md"
+    ],
+    "arxiv:2304.02721": [
+      "papers/inference/99-other-inference-systems/2023-2304.02721-to-asymmetry-and-beyond-structured-pruning-of-sequence-to-sequence-model.md"
+    ],
+    "arxiv:2305.02440": [
+      "papers/inference/99-other-inference-systems/2023-2305.02440-cheaply-evaluating-inference-efficiency-metrics-for-autoregressive-trans.md"
+    ],
+    "arxiv:2312.07046": [
+      "papers/inference/99-other-inference-systems/2023-2312.07046-rethinking-compression-reduced-order-modelling-of-latent-features-in-lar.md"
+    ],
+    "arxiv:2312.17649": [
+      "papers/inference/13-sparse-attention/2023-2312.17649-investigating-the-effects-of-sparse-attention-on-cross-encoders.md"
+    ],
+    "arxiv:2402.00913": [
+      "papers/inference/99-other-inference-systems/2024-2402.00913-institutional-platform-for-secure-self-service-large-language-model-expl.md"
     ]
   }
 }
