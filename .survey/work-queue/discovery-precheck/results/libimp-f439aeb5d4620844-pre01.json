@@ -1,0 +1,420 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f439aeb5d4620844-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f439aeb5d462",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.26599/bdma.2025.9020025",
+    "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+    "arXiv:2401.12961",
+    "arXiv:2609.38521"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6d934a581193c289f74d541e4e9a08f30d1fe7ee",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:10:55.466912+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.26599/bdma.2025.9020025",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2401.12961",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38521",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dynamic Batch Processing with FlexiDecode Scheduler for Efficient LLM Inference in IIoT",
+      "source_url": "https://doi.org/10.26599/bdma.2025.9020025",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "Big Data Mining and Analytics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6b84834a987678b448fb0a462ae73ea526899047"
+      ],
+      "semantic_scholar_id": "6b84834a987678b448fb0a462ae73ea526899047",
+      "doi": "10.26599/bdma.2025.9020025",
+      "canonical_id": "DOI:10.26599/bdma.2025.9020025",
+      "authors": [
+        "Xiaocong Jia",
+        "Bruce Gu",
+        "Jin-Jun Chen",
+        "Long-Xiang Gao",
+        "Wei-Guang Pang",
+        "Guangtong Lv",
+        "Y. Qu",
+        "Lei Cui"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 358,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Eloquent: A More Robust Transmission Scheme for LLM Token Streaming",
+      "source_url": "https://arxiv.org/abs/2401.12961",
+      "year": 2024,
+      "published": "2024-01-23",
+      "venue": "NAIC",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To render each generated token in real-time for users, the Large Language Model (LLM) server generates tokens one by one and streams each token (or group of a few tokens) through the network to the user right after generation, which we refer to as LLM token streaming. However, under unstable network conditions, the LLM token streaming experience could suffer greatly from stalls since one packet loss could block the rendering of later tokens even if the packets containing them arrive on time. With a measurement study, we show that current applications suffer from increased stalls under unstable networks. For this emerging token streaming problem in LLM Chatbots that differs from previous multimedia and text applications, we propose a novel transmission scheme, called Eloquent, which puts newly generated tokens as well as currently unacknowledged tokens in the next outgoing packet. This ensures that each packet contains some new tokens and, in the meantime, is independently rendered when received, avoiding the aforementioned stalls caused by missing packets. Through simulation under various networks, we show Eloquent reduces stall ratio (proportion of token rendering wait time) by 71.0% compared to the retransmission method commonly used by real chatbot applications and by 31.6% compared to the baseline packet duplication scheme. By tailoring Eloquent to fit the token-by-token generation of LLM, we enable the Chatbots to respond like an eloquent speaker for users to better enjoy pervasive AI.",
+      "identifiers": [
+        "SemanticScholar:66fda72056a56470705b0cb524438341f1547310"
+      ],
+      "semantic_scholar_id": "66fda72056a56470705b0cb524438341f1547310",
+      "canonical_id": "arXiv:2401.12961",
+      "arxiv_id": "2401.12961",
+      "doi": "10.1145/3672198.3673797",
+      "authors": [
+        "Hanchen Li",
+        "Yu-Han Liu",
+        "Yihua Cheng",
+        "Siddhant Ray",
+        "Kun-Tai Du",
+        "Jun-Chen Jiang"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1036,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ShamAN-Q: Shampoo Augmented NanoQuant for Sub-1-bit LLM Weights",
+      "source_url": "https://arxiv.org/abs/2609.38521",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce ShamAN-Q, a sub-1-bit post-training quantization method that extends NanoQuant by replacing each its diagonal reconstruction geometry with a tractable dense curvature metric, using a general paradigm popularized by the Shampoo optimizer. For each linear weight, ShamAN-Q fits a Kronecker product to the empirical Fisher information matrix of a small calibration set by Kullback--Leibler minimization, forming a Mahalanobis reconstruction loss from the result. The continuous ADMM updates from NanoQuant become solutions to Sylvester equations, while its discrete projection and deployment format remain unchanged. Because the curvature is local to a given set of weights, ShamAN-Q re-measures the input curvature statistic for each layer immediately before layer factorization, periodically refreshing all statistics on the partially quantized model. ShamAN-Q also redistributes the uniform rank from NanoQuant across layers at the same total number of bits. On Qwen3-Base, ShamAN-Q lowers WikiText-2 perplexity at $\\approx$1 bpw from 27.56 to 22.96 (0.6B), 19.21 to 16.72 (1.7B), and 14.29 to 13.80 (4B) while matching or improving zero-shot accuracy on the Eleuther LM Evaluation Harness. On 0.6B, ShamAN-Q at $\\approx$0.8 bpw matches the published perplexity of NanoQuant at $\\approx$1.0 bpw.",
+      "identifiers": [
+        "SemanticScholar:a4dfc99e30a65c7a957c2ebdf4132a7ddd0f896f"
+      ],
+      "semantic_scholar_id": "a4dfc99e30a65c7a957c2ebdf4132a7ddd0f896f",
+      "canonical_id": "arXiv:2609.38521",
+      "arxiv_id": "2609.38521",
+      "doi": "10.48550/arXiv.2609.38521",
+      "authors": [
+        "Jonathan Mei",
+        "Sang Hyub Kim",
+        "Oliver Knitter",
+        "Chi Chen",
+        "M. Roetteler"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Resting Neurons, Active Insights: Robustify Activation Sparsity for Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/6058cd15d34b11b01994db453110fbcca3bb3bea",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea"
+      ],
+      "semantic_scholar_id": "6058cd15d34b11b01994db453110fbcca3bb3bea",
+      "canonical_id": "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+      "authors": [
+        "Haotian Xu",
+        "Jian-Nan Yang",
+        "Tian Gao",
+        "T. Weng",
+        "Teng-Fei Ma"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.26599/bdma.2025.9020025",
+      "identity_tokens": [
+        "id:DOI:10.26599/bdma.2025.9020025",
+        "id:SemanticScholar:6b84834a987678b448fb0a462ae73ea526899047",
+        "title:dynamic batch processing with flexidecode scheduler for efficient llm inference in iiot",
+        "url:https://doi.org/10.26599/bdma.2025.9020025"
+      ],
+      "record": {
+        "title": "Dynamic Batch Processing with FlexiDecode Scheduler for Efficient LLM Inference in IIoT",
+        "source_url": "https://doi.org/10.26599/bdma.2025.9020025",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "Big Data Mining and Analytics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6b84834a987678b448fb0a462ae73ea526899047"
+        ],
+        "semantic_scholar_id": "6b84834a987678b448fb0a462ae73ea526899047",
+        "doi": "10.26599/bdma.2025.9020025",
+        "canonical_id": "DOI:10.26599/bdma.2025.9020025",
+        "authors": [
+          "Xiaocong Jia",
+          "Bruce Gu",
+          "Jin-Jun Chen",
+          "Long-Xiang Gao",
+          "Wei-Guang Pang",
+          "Guangtong Lv",
+          "Y. Qu",
+          "Lei Cui"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 358,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2401.12961",
+      "identity_tokens": [
+        "id:DOI:10.1145/3672198.3673797",
+        "id:SemanticScholar:66fda72056a56470705b0cb524438341f1547310",
+        "id:arXiv:2401.12961",
+        "title:eloquent a more robust transmission scheme for llm token streaming",
+        "url:https://arxiv.org/abs/2401.12961"
+      ],
+      "record": {
+        "title": "Eloquent: A More Robust Transmission Scheme for LLM Token Streaming",
+        "source_url": "https://arxiv.org/abs/2401.12961",
+        "year": 2024,
+        "published": "2024-01-23",
+        "venue": "NAIC",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To render each generated token in real-time for users, the Large Language Model (LLM) server generates tokens one by one and streams each token (or group of a few tokens) through the network to the user right after generation, which we refer to as LLM token streaming. However, under unstable network conditions, the LLM token streaming experience could suffer greatly from stalls since one packet loss could block the rendering of later tokens even if the packets containing them arrive on time. With a measurement study, we show that current applications suffer from increased stalls under unstable networks. For this emerging token streaming problem in LLM Chatbots that differs from previous multimedia and text applications, we propose a novel transmission scheme, called Eloquent, which puts newly generated tokens as well as currently unacknowledged tokens in the next outgoing packet. This ensures that each packet contains some new tokens and, in the meantime, is independently rendered when received, avoiding the aforementioned stalls caused by missing packets. Through simulation under various networks, we show Eloquent reduces stall ratio (proportion of token rendering wait time) by 71.0% compared to the retransmission method commonly used by real chatbot applications and by 31.6% compared to the baseline packet duplication scheme. By tailoring Eloquent to fit the token-by-token generation of LLM, we enable the Chatbots to respond like an eloquent speaker for users to better enjoy pervasive AI.",
+        "identifiers": [
+          "SemanticScholar:66fda72056a56470705b0cb524438341f1547310"
+        ],
+        "semantic_scholar_id": "66fda72056a56470705b0cb524438341f1547310",
+        "canonical_id": "arXiv:2401.12961",
+        "arxiv_id": "2401.12961",
+        "doi": "10.1145/3672198.3673797",
+        "authors": [
+          "Hanchen Li",
+          "Yu-Han Liu",
+          "Yihua Cheng",
+          "Siddhant Ray",
+          "Kun-Tai Du",
+          "Jun-Chen Jiang"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1036,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38521",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.38521",
+        "id:SemanticScholar:a4dfc99e30a65c7a957c2ebdf4132a7ddd0f896f",
+        "id:arXiv:2609.38521",
+        "title:shamanq shampoo augmented nanoquant for sub1bit llm weights",
+        "url:https://arxiv.org/abs/2609.38521"
+      ],
+      "record": {
+        "title": "ShamAN-Q: Shampoo Augmented NanoQuant for Sub-1-bit LLM Weights",
+        "source_url": "https://arxiv.org/abs/2609.38521",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce ShamAN-Q, a sub-1-bit post-training quantization method that extends NanoQuant by replacing each its diagonal reconstruction geometry with a tractable dense curvature metric, using a general paradigm popularized by the Shampoo optimizer. For each linear weight, ShamAN-Q fits a Kronecker product to the empirical Fisher information matrix of a small calibration set by Kullback--Leibler minimization, forming a Mahalanobis reconstruction loss from the result. The continuous ADMM updates from NanoQuant become solutions to Sylvester equations, while its discrete projection and deployment format remain unchanged. Because the curvature is local to a given set of weights, ShamAN-Q re-measures the input curvature statistic for each layer immediately before layer factorization, periodically refreshing all statistics on the partially quantized model. ShamAN-Q also redistributes the uniform rank from NanoQuant across layers at the same total number of bits. On Qwen3-Base, ShamAN-Q lowers WikiText-2 perplexity at $\\approx$1 bpw from 27.56 to 22.96 (0.6B), 19.21 to 16.72 (1.7B), and 14.29 to 13.80 (4B) while matching or improving zero-shot accuracy on the Eleuther LM Evaluation Harness. On 0.6B, ShamAN-Q at $\\approx$0.8 bpw matches the published perplexity of NanoQuant at $\\approx$1.0 bpw.",
+        "identifiers": [
+          "SemanticScholar:a4dfc99e30a65c7a957c2ebdf4132a7ddd0f896f"
+        ],
+        "semantic_scholar_id": "a4dfc99e30a65c7a957c2ebdf4132a7ddd0f896f",
+        "canonical_id": "arXiv:2609.38521",
+        "arxiv_id": "2609.38521",
+        "doi": "10.48550/arXiv.2609.38521",
+        "authors": [
+          "Jonathan Mei",
+          "Sang Hyub Kim",
+          "Oliver Knitter",
+          "Chi Chen",
+          "M. Roetteler"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+      "identity_tokens": [
+        "id:SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+        "title:resting neurons active insights robustify activation sparsity for large language models",
+        "url:https://www.semanticscholar.org/paper/6058cd15d34b11b01994db453110fbcca3bb3bea"
+      ],
+      "record": {
+        "title": "Resting Neurons, Active Insights: Robustify Activation Sparsity for Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/6058cd15d34b11b01994db453110fbcca3bb3bea",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea"
+        ],
+        "semantic_scholar_id": "6058cd15d34b11b01994db453110fbcca3bb3bea",
+        "canonical_id": "SemanticScholar:6058cd15d34b11b01994db453110fbcca3bb3bea",
+        "authors": [
+          "Haotian Xu",
+          "Jian-Nan Yang",
+          "Tian Gao",
+          "T. Weng",
+          "Teng-Fei Ma"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:18bcf792845f3a16b1355af27483fdb40c108c1e37c24d739d99d20400259d38",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

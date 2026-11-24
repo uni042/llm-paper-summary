@@ -1,0 +1,241 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c84b9a41e437a820-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c84b9a41e437",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.19415",
+    "arXiv:2606.00601"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6d934a581193c289f74d541e4e9a08f30d1fe7ee",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:10:55.431493+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.19415",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.00601",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Scalable Prompt Routing via Fine-Grained Latent Task Discovery",
+      "source_url": "https://arxiv.org/abs/2603.19415",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prompt routing dynamically selects the most appropriate large language model from a pool of candidates for each query, optimizing performance while managing costs. As model pools scale to include dozens of frontier models with narrow performance gaps, existing approaches face significant challenges: manually defined task taxonomies cannot capture fine-grained capability distinctions, while monolithic routers struggle to differentiate subtle differences across diverse tasks. We propose a two-stage routing architecture that addresses these limitations through automated fine-grained task discovery and task-aware quality estimation. Our first stage employs graph-based clustering to discover latent task types and trains a classifier to assign prompts to discovered tasks. The second stage uses a mixture-of-experts architecture with task-specific prediction heads for specialized quality estimates. At inference, we aggregate predictions from both stages to balance task-level stability with prompt-specific adaptability. Evaluated on 10 benchmarks with 11 frontier models, our method consistently outperforms existing baselines and surpasses the strongest individual model while incurring less than half its cost.",
+      "identifiers": [
+        "SemanticScholar:233bc090d3780c074c132491391339415be82fde"
+      ],
+      "semantic_scholar_id": "233bc090d3780c074c132491391339415be82fde",
+      "canonical_id": "arXiv:2603.19415",
+      "arxiv_id": "2603.19415",
+      "doi": "10.48550/arXiv.2603.19415",
+      "authors": [
+        "Yunyi Zhang",
+        "Soji Adeshina",
+        "Sheng Guan",
+        "A. Ganesh",
+        "Zhen Han",
+        "Vassilis N. Ioannidis",
+        "H. Rangwala",
+        "G. Karypis"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 250,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ScanWeaver: Compiler-Driven Parallelization of Affine Recurrences via Associative Scan Lowering",
+      "source_url": "https://arxiv.org/abs/2606.00601",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Selective state-space models such as Mamba highlight the practical importance of input-dependent scan recurrences, which preserve linear-time sequence modeling while improving language modeling capabilities. However, these recurrences introduce stricter sequential dependencies than classical structured SSMs, limiting parallel execution on modern accelerators. We present \\textbf{ScanWeaver}, a compiler framework that transforms recurrence-based computations into associative scan representations and lowers them end-to-end to executable GPU programs. We use Mamba-style selective scan as a motivating example of a broader class of affine recurrences that arise in modern ML workloads. Rather than targeting a single model family, ScanWeaver elevates this recurrence structure to a first-class compiler abstraction, enabling systematic MLIR-based lowering to compiler-generated Blelloch scan execution on GPUs. Across forward selective-scan workloads with matched local recurrence semantics, we validate affine recurrence decomposition, Blelloch lowering, MLIR GPU lowering, executable artifact generation, and actual GPU execution from generated MLIR. We benchmark the resulting ScanWeaver GPU execution against PyTorch and CUDA sequential baselines, and include the Mamba kernel as a fused production baseline for systems context.",
+      "identifiers": [
+        "SemanticScholar:35189542f250aa17915b1b6ea03e3a335409ae0d"
+      ],
+      "semantic_scholar_id": "35189542f250aa17915b1b6ea03e3a335409ae0d",
+      "canonical_id": "arXiv:2606.00601",
+      "arxiv_id": "2606.00601",
+      "doi": "10.48550/arXiv.2606.00601",
+      "authors": [
+        "Qi Wu",
+        "P. Zolnikov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.19415",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.19415",
+        "id:SemanticScholar:233bc090d3780c074c132491391339415be82fde",
+        "id:arXiv:2603.19415",
+        "title:scalable prompt routing via finegrained latent task discovery",
+        "url:https://arxiv.org/abs/2603.19415"
+      ],
+      "record": {
+        "title": "Scalable Prompt Routing via Fine-Grained Latent Task Discovery",
+        "source_url": "https://arxiv.org/abs/2603.19415",
+        "year": 2026,
+        "published": "2026-03-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prompt routing dynamically selects the most appropriate large language model from a pool of candidates for each query, optimizing performance while managing costs. As model pools scale to include dozens of frontier models with narrow performance gaps, existing approaches face significant challenges: manually defined task taxonomies cannot capture fine-grained capability distinctions, while monolithic routers struggle to differentiate subtle differences across diverse tasks. We propose a two-stage routing architecture that addresses these limitations through automated fine-grained task discovery and task-aware quality estimation. Our first stage employs graph-based clustering to discover latent task types and trains a classifier to assign prompts to discovered tasks. The second stage uses a mixture-of-experts architecture with task-specific prediction heads for specialized quality estimates. At inference, we aggregate predictions from both stages to balance task-level stability with prompt-specific adaptability. Evaluated on 10 benchmarks with 11 frontier models, our method consistently outperforms existing baselines and surpasses the strongest individual model while incurring less than half its cost.",
+        "identifiers": [
+          "SemanticScholar:233bc090d3780c074c132491391339415be82fde"
+        ],
+        "semantic_scholar_id": "233bc090d3780c074c132491391339415be82fde",
+        "canonical_id": "arXiv:2603.19415",
+        "arxiv_id": "2603.19415",
+        "doi": "10.48550/arXiv.2603.19415",
+        "authors": [
+          "Yunyi Zhang",
+          "Soji Adeshina",
+          "Sheng Guan",
+          "A. Ganesh",
+          "Zhen Han",
+          "Vassilis N. Ioannidis",
+          "H. Rangwala",
+          "G. Karypis"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 250,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.00601",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.00601",
+        "id:SemanticScholar:35189542f250aa17915b1b6ea03e3a335409ae0d",
+        "id:arXiv:2606.00601",
+        "title:scanweaver compilerdriven parallelization of affine recurrences via associative scan lowering",
+        "url:https://arxiv.org/abs/2606.00601"
+      ],
+      "record": {
+        "title": "ScanWeaver: Compiler-Driven Parallelization of Affine Recurrences via Associative Scan Lowering",
+        "source_url": "https://arxiv.org/abs/2606.00601",
+        "year": 2026,
+        "published": "2026-05-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Selective state-space models such as Mamba highlight the practical importance of input-dependent scan recurrences, which preserve linear-time sequence modeling while improving language modeling capabilities. However, these recurrences introduce stricter sequential dependencies than classical structured SSMs, limiting parallel execution on modern accelerators. We present \\textbf{ScanWeaver}, a compiler framework that transforms recurrence-based computations into associative scan representations and lowers them end-to-end to executable GPU programs. We use Mamba-style selective scan as a motivating example of a broader class of affine recurrences that arise in modern ML workloads. Rather than targeting a single model family, ScanWeaver elevates this recurrence structure to a first-class compiler abstraction, enabling systematic MLIR-based lowering to compiler-generated Blelloch scan execution on GPUs. Across forward selective-scan workloads with matched local recurrence semantics, we validate affine recurrence decomposition, Blelloch lowering, MLIR GPU lowering, executable artifact generation, and actual GPU execution from generated MLIR. We benchmark the resulting ScanWeaver GPU execution against PyTorch and CUDA sequential baselines, and include the Mamba kernel as a fused production baseline for systems context.",
+        "identifiers": [
+          "SemanticScholar:35189542f250aa17915b1b6ea03e3a335409ae0d"
+        ],
+        "semantic_scholar_id": "35189542f250aa17915b1b6ea03e3a335409ae0d",
+        "canonical_id": "arXiv:2606.00601",
+        "arxiv_id": "2606.00601",
+        "doi": "10.48550/arXiv.2606.00601",
+        "authors": [
+          "Qi Wu",
+          "P. Zolnikov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:dc430bf4f70a7289d8555959791e31f7968c35f389f18c40833dfd20b284e2b8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

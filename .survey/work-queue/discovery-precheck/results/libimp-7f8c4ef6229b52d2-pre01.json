@@ -1,0 +1,324 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7f8c4ef6229b52d2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7f8c4ef6229b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.emnlp-industry.146",
+    "arXiv:2509.21743",
+    "arXiv:2510.05164"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6d934a581193c289f74d541e4e9a08f30d1fe7ee",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:10:54.854625+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.emnlp-industry.146",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.21743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05164",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Retrieval-of-Thought: Efficient Reasoning via Reusing Thoughts",
+      "source_url": "https://arxiv.org/abs/2509.21743",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models improve accuracy by producing long reasoning traces, but this inflates latency and cost, motivating inference-time efficiency. We propose Retrieval-of-Thought (RoT), which reuses prior reasoning as composable ``thought\"steps to guide new problems. RoT organizes steps into a thought graph with sequential and semantic edges to enable fast retrieval and flexible recombination. At inference, RoT retrieves query-relevant nodes and applies reward-guided traversal to assemble a problem-specific template that guides generation. This dynamic template reuse reduces redundant exploration and, therefore, reduces output tokens while preserving accuracy. We evaluate RoT on reasoning benchmarks with multiple models, measuring accuracy, token usage, latency, and memory overhead. Findings show small prompt growth but substantial efficiency gains, with RoT reducing output tokens by up to 40%, inference latency by 82%, and cost by 59% while maintaining accuracy. RoT establishes a scalable paradigm for efficient LRM reasoning via dynamic template construction through retrieval.",
+      "identifiers": [
+        "SemanticScholar:23cd5b22f89cb63442e78816abecb53d9c2cdfcb"
+      ],
+      "semantic_scholar_id": "23cd5b22f89cb63442e78816abecb53d9c2cdfcb",
+      "canonical_id": "arXiv:2509.21743",
+      "arxiv_id": "2509.21743",
+      "doi": "10.48550/arXiv.2509.21743",
+      "authors": [
+        "Ammar Ahmed",
+        "A. Khan",
+        "Ayaan Ahmad",
+        "Sheng Di",
+        "Zi-Rui Liu",
+        "Ali Anwar"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 424,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "SATER: A Self-Aware and Token-Efficient Approach to Routing and Cascading",
+      "source_url": "https://arxiv.org/abs/2510.05164",
+      "year": 2025,
+      "published": "2025-10-04",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) demonstrate remarkable performance across diverse tasks, yet their effectiveness frequently depends on costly commercial APIs or cloud services. Model selection thus entails a critical trade-off between performance and cost: high-performing LLMs typically incur substantial expenses, whereas budget-friendly small language models (SLMs) are constrained by limited capabilities. Current research primarily proposes two routing strategies: pre-generation routing and cascade routing. Both approaches have distinct characteristics, with cascade routing typically offering superior cost-effectiveness and accuracy despite its higher latency. To further address the limitations of both approaches, we introduce SATER, a dual-mode compatible approach that fine-tunes models through shortest-response preference optimization and a confidence-aware rejection mechanism. SATER significantly reduces redundant outputs and response times, while improving both the performance of pre-generation routing and the efficiency of cascade routing. Experiments across three SLMs and six datasets, varying in type and complexity, demonstrate that SATER achieves comparable performance while consistently reducing computational costs by over 50\\% and cascade latency by over 80\\%.",
+      "identifiers": [
+        "SemanticScholar:75ecba1affe9ca99240c0766ad4cccb4f7fc4ee8"
+      ],
+      "semantic_scholar_id": "75ecba1affe9ca99240c0766ad4cccb4f7fc4ee8",
+      "canonical_id": "arXiv:2510.05164",
+      "arxiv_id": "2510.05164",
+      "doi": "10.48550/arXiv.2510.05164",
+      "authors": [
+        "Yuan-Zhe Shen",
+        "Yide Liu",
+        "Zi-Su Huang",
+        "Rui-Cheng Yin",
+        "Xiao-Qing Zheng",
+        "Xuan-Jing Huang"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 416,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Confidence-Aware Reasoning: Optimizing Self-Guided Thinking Trajectories in Large Reasoning Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-industry.146",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:4b7c14a2eb0ac69d0e0562b12849892660519206"
+      ],
+      "semantic_scholar_id": "4b7c14a2eb0ac69d0e0562b12849892660519206",
+      "doi": "10.18653/v1/2025.emnlp-industry.146",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.146",
+      "authors": [
+        "Jia-Xin Zhang"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2509.21743",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.21743",
+        "id:SemanticScholar:23cd5b22f89cb63442e78816abecb53d9c2cdfcb",
+        "id:arXiv:2509.21743",
+        "title:retrievalofthought efficient reasoning via reusing thoughts",
+        "url:https://arxiv.org/abs/2509.21743"
+      ],
+      "record": {
+        "title": "Retrieval-of-Thought: Efficient Reasoning via Reusing Thoughts",
+        "source_url": "https://arxiv.org/abs/2509.21743",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 15,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models improve accuracy by producing long reasoning traces, but this inflates latency and cost, motivating inference-time efficiency. We propose Retrieval-of-Thought (RoT), which reuses prior reasoning as composable ``thought\"steps to guide new problems. RoT organizes steps into a thought graph with sequential and semantic edges to enable fast retrieval and flexible recombination. At inference, RoT retrieves query-relevant nodes and applies reward-guided traversal to assemble a problem-specific template that guides generation. This dynamic template reuse reduces redundant exploration and, therefore, reduces output tokens while preserving accuracy. We evaluate RoT on reasoning benchmarks with multiple models, measuring accuracy, token usage, latency, and memory overhead. Findings show small prompt growth but substantial efficiency gains, with RoT reducing output tokens by up to 40%, inference latency by 82%, and cost by 59% while maintaining accuracy. RoT establishes a scalable paradigm for efficient LRM reasoning via dynamic template construction through retrieval.",
+        "identifiers": [
+          "SemanticScholar:23cd5b22f89cb63442e78816abecb53d9c2cdfcb"
+        ],
+        "semantic_scholar_id": "23cd5b22f89cb63442e78816abecb53d9c2cdfcb",
+        "canonical_id": "arXiv:2509.21743",
+        "arxiv_id": "2509.21743",
+        "doi": "10.48550/arXiv.2509.21743",
+        "authors": [
+          "Ammar Ahmed",
+          "A. Khan",
+          "Ayaan Ahmad",
+          "Sheng Di",
+          "Zi-Rui Liu",
+          "Ali Anwar"
+        ],
+        "priority": 25,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 15,
+          "citation_count": 15,
+          "total": 25,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 424,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.05164",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.05164",
+        "id:SemanticScholar:75ecba1affe9ca99240c0766ad4cccb4f7fc4ee8",
+        "id:arXiv:2510.05164",
+        "title:sater a selfaware and tokenefficient approach to routing and cascading",
+        "url:https://arxiv.org/abs/2510.05164"
+      ],
+      "record": {
+        "title": "SATER: A Self-Aware and Token-Efficient Approach to Routing and Cascading",
+        "source_url": "https://arxiv.org/abs/2510.05164",
+        "year": 2025,
+        "published": "2025-10-04",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) demonstrate remarkable performance across diverse tasks, yet their effectiveness frequently depends on costly commercial APIs or cloud services. Model selection thus entails a critical trade-off between performance and cost: high-performing LLMs typically incur substantial expenses, whereas budget-friendly small language models (SLMs) are constrained by limited capabilities. Current research primarily proposes two routing strategies: pre-generation routing and cascade routing. Both approaches have distinct characteristics, with cascade routing typically offering superior cost-effectiveness and accuracy despite its higher latency. To further address the limitations of both approaches, we introduce SATER, a dual-mode compatible approach that fine-tunes models through shortest-response preference optimization and a confidence-aware rejection mechanism. SATER significantly reduces redundant outputs and response times, while improving both the performance of pre-generation routing and the efficiency of cascade routing. Experiments across three SLMs and six datasets, varying in type and complexity, demonstrate that SATER achieves comparable performance while consistently reducing computational costs by over 50\\% and cascade latency by over 80\\%.",
+        "identifiers": [
+          "SemanticScholar:75ecba1affe9ca99240c0766ad4cccb4f7fc4ee8"
+        ],
+        "semantic_scholar_id": "75ecba1affe9ca99240c0766ad4cccb4f7fc4ee8",
+        "canonical_id": "arXiv:2510.05164",
+        "arxiv_id": "2510.05164",
+        "doi": "10.48550/arXiv.2510.05164",
+        "authors": [
+          "Yuan-Zhe Shen",
+          "Yide Liu",
+          "Zi-Su Huang",
+          "Rui-Cheng Yin",
+          "Xiao-Qing Zheng",
+          "Xuan-Jing Huang"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 416,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.emnlp-industry.146",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.emnlp-industry.146",
+        "id:SemanticScholar:4b7c14a2eb0ac69d0e0562b12849892660519206",
+        "title:confidenceaware reasoning optimizing selfguided thinking trajectories in large reasoning models",
+        "url:https://doi.org/10.18653/v1/2025.emnlp-industry.146"
+      ],
+      "record": {
+        "title": "Confidence-Aware Reasoning: Optimizing Self-Guided Thinking Trajectories in Large Reasoning Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.emnlp-industry.146",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:4b7c14a2eb0ac69d0e0562b12849892660519206"
+        ],
+        "semantic_scholar_id": "4b7c14a2eb0ac69d0e0562b12849892660519206",
+        "doi": "10.18653/v1/2025.emnlp-industry.146",
+        "canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.146",
+        "authors": [
+          "Jia-Xin Zhang"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 511,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:51b788adda46920b3f54fb7b5aa0332e285a24167a6d00503d68bf5403f582d4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

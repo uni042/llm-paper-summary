@@ -1,0 +1,419 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ddb4b2cbc80f0942-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ddb4b2cbc80f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isvlsi65124.2025.11130305",
+    "DOI:10.1109/tcad.2024.3410841",
+    "arXiv:2403.17726",
+    "arXiv:2509.17000"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6d934a581193c289f74d541e4e9a08f30d1fe7ee",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:10:55.457849+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isvlsi65124.2025.11130305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tcad.2024.3410841",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2403.17726",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.17000",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tiny Models are the Computational Saver for Large Models",
+      "source_url": "https://arxiv.org/abs/2403.17726",
+      "year": 2024,
+      "published": "2024-03-26",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces TinySaver, an early-exit-like dynamic model compression approach which employs tiny models to substitute large models adaptively. Distinct from traditional compression techniques, dynamic methods like TinySaver can leverage the difficulty differences to allow certain inputs to complete their inference processes early, thereby conserving computational resources. Most existing early exit designs are implemented by attaching additional network branches to the model's backbone. Our study, however, reveals that completely independent tiny models can replace a substantial portion of the larger models' job with minimal impact on performance. Employing them as the first exit can remarkably enhance computational efficiency. By searching and employing the most appropriate tiny model as the computational saver for a given large model, the proposed approaches work as a novel and generic method to model compression. This finding will help the research community in exploring new compression methods to address the escalating computational demands posed by rapidly evolving AI models. Our evaluation of this approach in ImageNet-1k classification demonstrates its potential to reduce the number of compute operations by up to 90\\%, with only negligible losses in performance, across various modern vision models.",
+      "identifiers": [
+        "SemanticScholar:1cf631f867bc70379af7c557a81a28ac1d25ca25"
+      ],
+      "semantic_scholar_id": "1cf631f867bc70379af7c557a81a28ac1d25ca25",
+      "canonical_id": "arXiv:2403.17726",
+      "arxiv_id": "2403.17726",
+      "doi": "10.1007/978-3-031-72992-8_10",
+      "authors": [
+        "Qingyuan Wang",
+        "B. Cardiff",
+        "A. Frappé",
+        "Benoit Larras",
+        "Deepu John"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 973,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Deployment of Very Wide and Very Deep Hypersparse FFNs on FPGA",
+      "source_url": "https://doi.org/10.1109/ISVLSI65124.2025.11130305",
+      "year": 2025,
+      "published": "2025-07-06",
+      "venue": "IEEE Computer Society Annual Symposium on VLSI",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model compression techniques such as quantization and pruning have shown great promise in drastically reducing model size without degrading model effectiveness. Quantization of model parameters when combined with parameter pruning results in a significantly reduced model size. However, such sparse neural networks have irregular structures. As such the forward pass (inference step) of such networks cannot be executed efficiently by processing hardware like GPUs. FPGA’s offer a flexible platform to process irregular sparse networks. However, in order to fully realize the efficiency gains promised by the FPGA architecture, it is essential to minimize or completely eliminate off-chip memory accesses. Accommodating a large model completely on the FPGA fabric is restricted by the scarcity of available high-speed on-chip RAM, forcing a fraction of model weights to be stored in off-chip DRAM. We propose a method to accommodate very wide and very deep hypersparse feed forward networks (FFNs) completely on the FPGA fabric by compressing data structures in addition to quantizing the network parameters. Our method makes it possible to fit large FFNs completely on the FPGA fabric, resulting in inference performance almost 1000x higher than that of the state-of-the-art.",
+      "identifiers": [
+        "SemanticScholar:7ddcdd5e519a86d47da820d6b1727e3225b28221"
+      ],
+      "semantic_scholar_id": "7ddcdd5e519a86d47da820d6b1727e3225b28221",
+      "doi": "10.1109/ISVLSI65124.2025.11130305",
+      "canonical_id": "DOI:10.1109/ISVLSI65124.2025.11130305",
+      "authors": [
+        "Paramdeep Singh",
+        "D. Anastasiu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Overclocking: Dynamic Control of Thinking Path Length via Real-Time Reasoning Signals",
+      "source_url": "https://arxiv.org/abs/2509.17000",
+      "year": 2025,
+      "published": "2025-09-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) often suffer from computational inefficiency due to overthinking, where a fixed reasoning budget fails to match the varying complexity of tasks. To address this issue, we propose Adaptive Overclocking, a method that makes the overclocking hyperparameter $\\alpha$ dynamic and context-aware. Our method adjusts reasoning speed in real time through two complementary signals: (1) token-level model uncertainty for fine-grained step-wise control, and (2) input complexity estimation for informed initialization. We implement this approach with three strategies: Uncertainty-Aware Alpha Scheduling (UA-$\\alpha$S), Complexity-Guided Alpha Initialization (CG-$\\alpha$I), and a Hybrid Adaptive Control (HAC) that combines both. Experiments on GSM8K, MATH, and SVAMP show that HAC achieves superior accuracy-latency trade-offs, reducing unnecessary computation on simple problems while allocating more resources to challenging ones. By mitigating overthinking, Adaptive Overclocking enhances both efficiency and overall reasoning performance.",
+      "identifiers": [
+        "SemanticScholar:2372804a13c740293fa5f37b4e49b12855cb32a7"
+      ],
+      "semantic_scholar_id": "2372804a13c740293fa5f37b4e49b12855cb32a7",
+      "canonical_id": "arXiv:2509.17000",
+      "arxiv_id": "2509.17000",
+      "doi": "10.48550/arXiv.2509.17000",
+      "authors": [
+        "Shuhao Jiang",
+        "Song Wang",
+        "Yang Qiao",
+        "Chunpu Xu",
+        "Chaoyang Zheng",
+        "Sheng-Yin Zhou",
+        "Huan-Jun Wang",
+        "Fangming Li",
+        "Cong Zhang",
+        "Jiyu Wang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 429,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Automatic Mapping of Heterogeneous DNN Models on Adaptive Multiaccelerator Systems",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3410841",
+      "year": 2024,
+      "published": "2024-12-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As DNNs are developing rapidly, the computational and memory burden imposed on hardware systems grows exponentially. This becomes even more severe for large language models (LLMs) and multimodal models. As a promising solution that achieves high scalability and low manufacturing cost, multiaccelerator systems widely exist in data centers, cloud platforms, and mobile SoCs. Thus, a challenging problem arises: selecting a proper combination of accelerators from available designs and searching for efficient DNN mapping strategies, to fully exploit computation resources and communication bandwidth in the system. To this end, we propose MARS, a novel mapping framework that performs computation-aware accelerator selection and applies communication-aware sharding strategies to maximize parallelism. We also provide optimizations to overlap the computation and communication latency. Considering the high complexity of the design space, we propose two effective mapping algorithms to explore it. Experiments show that MARS achieves 34.3% latency reduction for DNN workloads compared to the baseline and 63.0% latency reduction on heterogeneous models compared to the corresponding state-of-the-art method.",
+      "identifiers": [
+        "SemanticScholar:edbe35dfc9d967a2d457183f1c078d5fa8602406"
+      ],
+      "semantic_scholar_id": "edbe35dfc9d967a2d457183f1c078d5fa8602406",
+      "doi": "10.1109/TCAD.2024.3410841",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3410841",
+      "authors": [
+        "Jie-Ru Zhao",
+        "Guan Shen",
+        "Wen-Chao Ding",
+        "Quan Chen",
+        "Min-Yi Guo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 723,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2403.17726",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-72992-8_10",
+        "id:SemanticScholar:1cf631f867bc70379af7c557a81a28ac1d25ca25",
+        "id:arXiv:2403.17726",
+        "title:tiny models are the computational saver for large models",
+        "url:https://arxiv.org/abs/2403.17726"
+      ],
+      "record": {
+        "title": "Tiny Models are the Computational Saver for Large Models",
+        "source_url": "https://arxiv.org/abs/2403.17726",
+        "year": 2024,
+        "published": "2024-03-26",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces TinySaver, an early-exit-like dynamic model compression approach which employs tiny models to substitute large models adaptively. Distinct from traditional compression techniques, dynamic methods like TinySaver can leverage the difficulty differences to allow certain inputs to complete their inference processes early, thereby conserving computational resources. Most existing early exit designs are implemented by attaching additional network branches to the model's backbone. Our study, however, reveals that completely independent tiny models can replace a substantial portion of the larger models' job with minimal impact on performance. Employing them as the first exit can remarkably enhance computational efficiency. By searching and employing the most appropriate tiny model as the computational saver for a given large model, the proposed approaches work as a novel and generic method to model compression. This finding will help the research community in exploring new compression methods to address the escalating computational demands posed by rapidly evolving AI models. Our evaluation of this approach in ImageNet-1k classification demonstrates its potential to reduce the number of compute operations by up to 90\\%, with only negligible losses in performance, across various modern vision models.",
+        "identifiers": [
+          "SemanticScholar:1cf631f867bc70379af7c557a81a28ac1d25ca25"
+        ],
+        "semantic_scholar_id": "1cf631f867bc70379af7c557a81a28ac1d25ca25",
+        "canonical_id": "arXiv:2403.17726",
+        "arxiv_id": "2403.17726",
+        "doi": "10.1007/978-3-031-72992-8_10",
+        "authors": [
+          "Qingyuan Wang",
+          "B. Cardiff",
+          "A. Frappé",
+          "Benoit Larras",
+          "Deepu John"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 973,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isvlsi65124.2025.11130305",
+      "identity_tokens": [
+        "id:DOI:10.1109/isvlsi65124.2025.11130305",
+        "id:SemanticScholar:7ddcdd5e519a86d47da820d6b1727e3225b28221",
+        "title:efficient deployment of very wide and very deep hypersparse ffns on fpga",
+        "url:https://doi.org/10.1109/ISVLSI65124.2025.11130305"
+      ],
+      "record": {
+        "title": "Efficient Deployment of Very Wide and Very Deep Hypersparse FFNs on FPGA",
+        "source_url": "https://doi.org/10.1109/ISVLSI65124.2025.11130305",
+        "year": 2025,
+        "published": "2025-07-06",
+        "venue": "IEEE Computer Society Annual Symposium on VLSI",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model compression techniques such as quantization and pruning have shown great promise in drastically reducing model size without degrading model effectiveness. Quantization of model parameters when combined with parameter pruning results in a significantly reduced model size. However, such sparse neural networks have irregular structures. As such the forward pass (inference step) of such networks cannot be executed efficiently by processing hardware like GPUs. FPGA’s offer a flexible platform to process irregular sparse networks. However, in order to fully realize the efficiency gains promised by the FPGA architecture, it is essential to minimize or completely eliminate off-chip memory accesses. Accommodating a large model completely on the FPGA fabric is restricted by the scarcity of available high-speed on-chip RAM, forcing a fraction of model weights to be stored in off-chip DRAM. We propose a method to accommodate very wide and very deep hypersparse feed forward networks (FFNs) completely on the FPGA fabric by compressing data structures in addition to quantizing the network parameters. Our method makes it possible to fit large FFNs completely on the FPGA fabric, resulting in inference performance almost 1000x higher than that of the state-of-the-art.",
+        "identifiers": [
+          "SemanticScholar:7ddcdd5e519a86d47da820d6b1727e3225b28221"
+        ],
+        "semantic_scholar_id": "7ddcdd5e519a86d47da820d6b1727e3225b28221",
+        "doi": "10.1109/ISVLSI65124.2025.11130305",
+        "canonical_id": "DOI:10.1109/ISVLSI65124.2025.11130305",
+        "authors": [
+          "Paramdeep Singh",
+          "D. Anastasiu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.17000",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.17000",
+        "id:SemanticScholar:2372804a13c740293fa5f37b4e49b12855cb32a7",
+        "id:arXiv:2509.17000",
+        "title:adaptive overclocking dynamic control of thinking path length via realtime reasoning signals",
+        "url:https://arxiv.org/abs/2509.17000"
+      ],
+      "record": {
+        "title": "Adaptive Overclocking: Dynamic Control of Thinking Path Length via Real-Time Reasoning Signals",
+        "source_url": "https://arxiv.org/abs/2509.17000",
+        "year": 2025,
+        "published": "2025-09-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) often suffer from computational inefficiency due to overthinking, where a fixed reasoning budget fails to match the varying complexity of tasks. To address this issue, we propose Adaptive Overclocking, a method that makes the overclocking hyperparameter $\\alpha$ dynamic and context-aware. Our method adjusts reasoning speed in real time through two complementary signals: (1) token-level model uncertainty for fine-grained step-wise control, and (2) input complexity estimation for informed initialization. We implement this approach with three strategies: Uncertainty-Aware Alpha Scheduling (UA-$\\alpha$S), Complexity-Guided Alpha Initialization (CG-$\\alpha$I), and a Hybrid Adaptive Control (HAC) that combines both. Experiments on GSM8K, MATH, and SVAMP show that HAC achieves superior accuracy-latency trade-offs, reducing unnecessary computation on simple problems while allocating more resources to challenging ones. By mitigating overthinking, Adaptive Overclocking enhances both efficiency and overall reasoning performance.",
+        "identifiers": [
+          "SemanticScholar:2372804a13c740293fa5f37b4e49b12855cb32a7"
+        ],
+        "semantic_scholar_id": "2372804a13c740293fa5f37b4e49b12855cb32a7",
+        "canonical_id": "arXiv:2509.17000",
+        "arxiv_id": "2509.17000",
+        "doi": "10.48550/arXiv.2509.17000",
+        "authors": [
+          "Shuhao Jiang",
+          "Song Wang",
+          "Yang Qiao",
+          "Chunpu Xu",
+          "Chaoyang Zheng",
+          "Sheng-Yin Zhou",
+          "Huan-Jun Wang",
+          "Fangming Li",
+          "Cong Zhang",
+          "Jiyu Wang"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 429,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2024.3410841",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2024.3410841",
+        "id:SemanticScholar:edbe35dfc9d967a2d457183f1c078d5fa8602406",
+        "title:automatic mapping of heterogeneous dnn models on adaptive multiaccelerator systems",
+        "url:https://doi.org/10.1109/TCAD.2024.3410841"
+      ],
+      "record": {
+        "title": "Automatic Mapping of Heterogeneous DNN Models on Adaptive Multiaccelerator Systems",
+        "source_url": "https://doi.org/10.1109/TCAD.2024.3410841",
+        "year": 2024,
+        "published": "2024-12-01",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As DNNs are developing rapidly, the computational and memory burden imposed on hardware systems grows exponentially. This becomes even more severe for large language models (LLMs) and multimodal models. As a promising solution that achieves high scalability and low manufacturing cost, multiaccelerator systems widely exist in data centers, cloud platforms, and mobile SoCs. Thus, a challenging problem arises: selecting a proper combination of accelerators from available designs and searching for efficient DNN mapping strategies, to fully exploit computation resources and communication bandwidth in the system. To this end, we propose MARS, a novel mapping framework that performs computation-aware accelerator selection and applies communication-aware sharding strategies to maximize parallelism. We also provide optimizations to overlap the computation and communication latency. Considering the high complexity of the design space, we propose two effective mapping algorithms to explore it. Experiments show that MARS achieves 34.3% latency reduction for DNN workloads compared to the baseline and 63.0% latency reduction on heterogeneous models compared to the corresponding state-of-the-art method.",
+        "identifiers": [
+          "SemanticScholar:edbe35dfc9d967a2d457183f1c078d5fa8602406"
+        ],
+        "semantic_scholar_id": "edbe35dfc9d967a2d457183f1c078d5fa8602406",
+        "doi": "10.1109/TCAD.2024.3410841",
+        "canonical_id": "DOI:10.1109/TCAD.2024.3410841",
+        "authors": [
+          "Jie-Ru Zhao",
+          "Guan Shen",
+          "Wen-Chao Ding",
+          "Quan Chen",
+          "Min-Yi Guo"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 723,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ec53f3ef2603ea9b591120bae6e04238b6a98a748430313b0492898f7a7cd173",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

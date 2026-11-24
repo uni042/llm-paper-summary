@@ -1,0 +1,454 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-abe10d90cb7e8118-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-abe10d90cb7e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.findings-emnlp.914",
+    "SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd",
+    "SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+    "SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+    "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+    "arXiv:2502.05798",
+    "arXiv:2505.16162",
+    "arXiv:2506.01084"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6d934a581193c289f74d541e4e9a08f30d1fe7ee",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "acl_anthology_record",
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:11:25.922877+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.914",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:faedkv infinitewindow fourier transform for unbiased kv cache compression"
+    },
+    {
+      "requested_id": "SemanticScholar:26737389fd1c3ab8d0a5c9157c64be732c4684bd",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.05926"
+    },
+    {
+      "requested_id": "SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2608.27128"
+    },
+    {
+      "requested_id": "arXiv:2502.05798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.16162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization"
+    },
+    {
+      "requested_id": "arXiv:2506.01084",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "zip2zip: Inference-Time Adaptive Tokenization via Online Compression",
+      "source_url": "https://arxiv.org/abs/2506.01084",
+      "year": 2025,
+      "published": "2025-06-01",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tokenization efficiency plays a critical role in the performance and cost of large language models (LLMs), yet most models rely on static tokenizers optimized on general-purpose corpora. These tokenizers'fixed vocabularies often fail to adapt to domain- or language-specific inputs, leading to longer token sequences and higher computational costs. We introduce zip2zip, a novel method for achieving context-adaptive tokenization in LLMs at inference time. Leveraging an online data compression algorithm (Lempel-Ziv-Welch), zip2zip dynamically expands its active vocabulary at inference time by continuously replacing fragmented token sequences with more compact hypertokens, which it can immediately output during generation. In doing so, the model refines its internal tokenization scheme to match the token distribution of the current context, reducing redundancy and improving representational efficiency. zip2zip consists of three key components: (1) a tokenizer based on Lempel-Ziv-Welch compression that incrementally merges co-occurring tokens into reusable hypertokens on the fly; (2) a dynamic embedding (and unembedding) layer that computes embeddings for newly formed hypertokens at runtime; and (3) a variant of autoregressive language modeling that pretrains the model to handle hypertokenized, compressed text sequences as inputs and outputs. We show that an existing LLM can be uptrained for zip2zip in 10 GPU-hours via parameter-efficient finetuning. The resulting LLM performs test-time adaptation, learning to use hypertokens in unseen contexts and reducing input and output tokens by 15-40%.",
+      "identifiers": [
+        "SemanticScholar:92764547846199c062f53dfb1176176e5517ae02"
+      ],
+      "semantic_scholar_id": "92764547846199c062f53dfb1176176e5517ae02",
+      "canonical_id": "arXiv:2506.01084",
+      "arxiv_id": "2506.01084",
+      "doi": "10.52202/085713-5077",
+      "authors": [
+        "Sai-Bo Geng",
+        "Nathan Ranchin",
+        "Yunzhen Yao",
+        "Maxime Peyrard",
+        "C. Wendler",
+        "M. Gastpar",
+        "Robert West"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 541,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification",
+      "source_url": "https://www.semanticscholar.org/paper/6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+      "year": 2023,
+      "published": null,
+      "venue": null,
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2"
+      ],
+      "semantic_scholar_id": "6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+      "canonical_id": "SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+      "authors": [
+        "Xupeng Miao",
+        "Gabriele Oliaro",
+        "Zhi-Hao Zhang",
+        "Xin-Hao Cheng",
+        "Zeyu Wang",
+        "Rae Ying Yee Wong",
+        "Alan Zhu",
+        "Lijie Yang",
+        "Xiaoxiang Shi",
+        "Chunan Shi",
+        "Zhuoming Chen",
+        "Daiyaan Arfeen",
+        "Reyna Abhyankar",
+        "Zhi-Hao Jia"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1242,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer",
+      "source_url": "https://arxiv.org/abs/2502.05798",
+      "year": 2025,
+      "published": "2025-02-09",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Transformers are emerging artificial intelligence (AI) models designed to process a mixture of signals from diverse modalities. Digital computing-in-memory (CIM) architectures are considered promising for achieving high efficiency while maintaining high accuracy. However, current digital CIM-based accelerators exhibit inflexibility in microarchitecture, dataflow, and pipeline to effectively accelerate multimodal Transformer. In this paper, we propose StreamDCIM, a tile-based streaming digital CIM accelerator for multimodal Transformers. It overcomes the above challenges with three features: First, we present a tile-based reconfigurable CIM macro microarchitecture with normal and hybrid reconfigurable modes to improve intra-macro CIM utilization. Second, we implement a mixed-stationary cross-forwarding dataflow with tile-based execution decoupling to exploit tile-level computation parallelism. Third, we introduce a ping-pong-like fine-grained compute-rewriting pipeline to overlap high-latency on-chip CIM rewriting. Experimental results show that StreamDCIM outperforms non-streaming and layer-based streaming CIM-based solutions by geomean 2.63×and 1.28× on typical multimodal Transformer models.",
+      "identifiers": [
+        "SemanticScholar:c3c543e95051c31990a024f1af007c4d6f320bdf"
+      ],
+      "semantic_scholar_id": "c3c543e95051c31990a024f1af007c4d6f320bdf",
+      "canonical_id": "arXiv:2502.05798",
+      "arxiv_id": "2502.05798",
+      "doi": "10.1109/ISCAS56072.2025.11043484",
+      "authors": [
+        "Shantian Qin",
+        "Ziqing Qiang",
+        "Zhi-Hua Fan",
+        "Wen-Ming Li",
+        "Xue-Jun An",
+        "Xiao-Chun Ye",
+        "Dong-Rui Fan"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 653,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding and Optimizing Multi-Stage AI Inference Pipelines",
+      "source_url": "https://www.semanticscholar.org/paper/4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe"
+      ],
+      "semantic_scholar_id": "4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+      "canonical_id": "SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2506.01084",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-5077",
+        "id:SemanticScholar:92764547846199c062f53dfb1176176e5517ae02",
+        "id:arXiv:2506.01084",
+        "title:zip2zip inferencetime adaptive tokenization via online compression",
+        "url:https://arxiv.org/abs/2506.01084"
+      ],
+      "record": {
+        "title": "zip2zip: Inference-Time Adaptive Tokenization via Online Compression",
+        "source_url": "https://arxiv.org/abs/2506.01084",
+        "year": 2025,
+        "published": "2025-06-01",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Tokenization efficiency plays a critical role in the performance and cost of large language models (LLMs), yet most models rely on static tokenizers optimized on general-purpose corpora. These tokenizers'fixed vocabularies often fail to adapt to domain- or language-specific inputs, leading to longer token sequences and higher computational costs. We introduce zip2zip, a novel method for achieving context-adaptive tokenization in LLMs at inference time. Leveraging an online data compression algorithm (Lempel-Ziv-Welch), zip2zip dynamically expands its active vocabulary at inference time by continuously replacing fragmented token sequences with more compact hypertokens, which it can immediately output during generation. In doing so, the model refines its internal tokenization scheme to match the token distribution of the current context, reducing redundancy and improving representational efficiency. zip2zip consists of three key components: (1) a tokenizer based on Lempel-Ziv-Welch compression that incrementally merges co-occurring tokens into reusable hypertokens on the fly; (2) a dynamic embedding (and unembedding) layer that computes embeddings for newly formed hypertokens at runtime; and (3) a variant of autoregressive language modeling that pretrains the model to handle hypertokenized, compressed text sequences as inputs and outputs. We show that an existing LLM can be uptrained for zip2zip in 10 GPU-hours via parameter-efficient finetuning. The resulting LLM performs test-time adaptation, learning to use hypertokens in unseen contexts and reducing input and output tokens by 15-40%.",
+        "identifiers": [
+          "SemanticScholar:92764547846199c062f53dfb1176176e5517ae02"
+        ],
+        "semantic_scholar_id": "92764547846199c062f53dfb1176176e5517ae02",
+        "canonical_id": "arXiv:2506.01084",
+        "arxiv_id": "2506.01084",
+        "doi": "10.52202/085713-5077",
+        "authors": [
+          "Sai-Bo Geng",
+          "Nathan Ranchin",
+          "Yunzhen Yao",
+          "Maxime Peyrard",
+          "C. Wendler",
+          "M. Gastpar",
+          "Robert West"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 541,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+      "identity_tokens": [
+        "id:SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+        "title:specinfer accelerating generative large language model serving with speculative inference and token tree verification",
+        "url:https://www.semanticscholar.org/paper/6aa43949a7bbe1f0a219c99510db81e6d9040fa2"
+      ],
+      "record": {
+        "title": "SpecInfer: Accelerating Generative Large Language Model Serving with Speculative Inference and Token Tree Verification",
+        "source_url": "https://www.semanticscholar.org/paper/6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+        "year": 2023,
+        "published": null,
+        "venue": null,
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2"
+        ],
+        "semantic_scholar_id": "6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+        "canonical_id": "SemanticScholar:6aa43949a7bbe1f0a219c99510db81e6d9040fa2",
+        "authors": [
+          "Xupeng Miao",
+          "Gabriele Oliaro",
+          "Zhi-Hao Zhang",
+          "Xin-Hao Cheng",
+          "Zeyu Wang",
+          "Rae Ying Yee Wong",
+          "Alan Zhu",
+          "Lijie Yang",
+          "Xiaoxiang Shi",
+          "Chunan Shi",
+          "Zhuoming Chen",
+          "Daiyaan Arfeen",
+          "Reyna Abhyankar",
+          "Zhi-Hao Jia"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1242,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.05798",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas56072.2025.11043484",
+        "id:SemanticScholar:c3c543e95051c31990a024f1af007c4d6f320bdf",
+        "id:arXiv:2502.05798",
+        "title:streamdcim a tilebased streaming digital cim accelerator with mixedstationary crossforwarding dataflow for multimodal transformer",
+        "url:https://arxiv.org/abs/2502.05798"
+      ],
+      "record": {
+        "title": "StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer",
+        "source_url": "https://arxiv.org/abs/2502.05798",
+        "year": 2025,
+        "published": "2025-02-09",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Transformers are emerging artificial intelligence (AI) models designed to process a mixture of signals from diverse modalities. Digital computing-in-memory (CIM) architectures are considered promising for achieving high efficiency while maintaining high accuracy. However, current digital CIM-based accelerators exhibit inflexibility in microarchitecture, dataflow, and pipeline to effectively accelerate multimodal Transformer. In this paper, we propose StreamDCIM, a tile-based streaming digital CIM accelerator for multimodal Transformers. It overcomes the above challenges with three features: First, we present a tile-based reconfigurable CIM macro microarchitecture with normal and hybrid reconfigurable modes to improve intra-macro CIM utilization. Second, we implement a mixed-stationary cross-forwarding dataflow with tile-based execution decoupling to exploit tile-level computation parallelism. Third, we introduce a ping-pong-like fine-grained compute-rewriting pipeline to overlap high-latency on-chip CIM rewriting. Experimental results show that StreamDCIM outperforms non-streaming and layer-based streaming CIM-based solutions by geomean 2.63×and 1.28× on typical multimodal Transformer models.",
+        "identifiers": [
+          "SemanticScholar:c3c543e95051c31990a024f1af007c4d6f320bdf"
+        ],
+        "semantic_scholar_id": "c3c543e95051c31990a024f1af007c4d6f320bdf",
+        "canonical_id": "arXiv:2502.05798",
+        "arxiv_id": "2502.05798",
+        "doi": "10.1109/ISCAS56072.2025.11043484",
+        "authors": [
+          "Shantian Qin",
+          "Ziqing Qiang",
+          "Zhi-Hua Fan",
+          "Wen-Ming Li",
+          "Xue-Jun An",
+          "Xiao-Chun Ye",
+          "Dong-Rui Fan"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 653,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+      "identity_tokens": [
+        "id:SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+        "title:understanding and optimizing multistage ai inference pipelines",
+        "url:https://www.semanticscholar.org/paper/4f8f2c068c9edbdee22e7705302a829fe8bdd3fe"
+      ],
+      "record": {
+        "title": "Understanding and Optimizing Multi-Stage AI Inference Pipelines",
+        "source_url": "https://www.semanticscholar.org/paper/4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe"
+        ],
+        "semantic_scholar_id": "4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+        "canonical_id": "SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe",
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:10ed6785e1403b09ae43cda36feb8f8eed235af0481cbf234dccf5c2d353a62e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
