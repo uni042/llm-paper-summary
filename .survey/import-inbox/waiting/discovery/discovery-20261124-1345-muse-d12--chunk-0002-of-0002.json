@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d12::chunk-0002-of-0002",
+  "reference_main_sha": "20cbdaeca4786bf4a65092bbab9c6629b5887c79",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:47270ee21b7b7ddde2fb834908cd046123423b25",
+      "identity_tokens": [
+        "SemanticScholar:47270ee21b7b7ddde2fb834908cd046123423b25"
+      ],
+      "title": "Large Language Models Compression via Low-Rank Feature Distillation",
+      "reason": "低ランク特徴蒸留によるLLM圧縮と題する記録だが、一次要旨を取得できる経路がなく、圧縮手法の詳細と推論効率への効果を検証できていない。",
+      "source_url": "https://www.semanticscholar.org/paper/47270ee21b7b7ddde2fb834908cd046123423b25",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:50bd0818a141f51c2ef8c06f4808ac430ab85b1e",
+      "identity_tokens": [
+        "SemanticScholar:50bd0818a141f51c2ef8c06f4808ac430ab85b1e"
+      ],
+      "title": "Multi-Resolution and Asymmetric Implementation of Attention in Transformers",
+      "reason": "Transformer注意の多解像度・非対称実装と題する記録だが、一次要旨を取得できる経路がなく、注意計算の推論効率への具体的な寄与を検証できていない。",
+      "source_url": "https://www.semanticscholar.org/paper/50bd0818a141f51c2ef8c06f4808ac430ab85b1e",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 93
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12823",
+      "identity_tokens": [
+        "arXiv:2603.12823"
+      ],
+      "title": "Adaptive Vision-Language Model Routing for Computer Use Agents",
+      "reason": "コンピュータ利用エージェント向けに動作難度と小モデルの確信度から視覚言語モデルを使い分ける適応ルーティングだが、対象はGUI操作エージェントという応用であり、LLMサービング一般のルーティング機構としての評価は限られる。",
+      "source_url": "https://arxiv.org/abs/2603.12823",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2603.08999",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.08999"
+      ],
+      "title": "Learning When to Sample: Confidence-Aware Self-Consistency for Efficient LLM Chain-of-Thought Reasoning",
+      "reason": "確信度で自己整合性の追加サンプリング要否を決めCoT推論コストを下げる枠組みだが、訓練・評価がMedQA等の医療質問応答に寄っており、汎用的な推論時計算配分としての検証範囲は狭い。",
+      "source_url": "https://doi.org/10.48550/arXiv.2603.08999",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16700",
+      "identity_tokens": [
+        "arXiv:2405.16700"
+      ],
+      "title": "Implicit Multimodal Alignment: On the Generalization of Frozen LLMs to Multimodal Inputs",
+      "reason": "凍結LLM内部で知覚トークンとテキストトークンが暗黙に整列していることを表現分析で示す研究で、能力・表現の理解が目的であり、推論高速化やサービングへの技術的貢献はない。",
+      "source_url": "https://arxiv.org/abs/2405.16700",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-srw.6",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-srw.6"
+      ],
+      "title": "Towards Codec-LM Co-design for Neural Codec Language Models",
+      "reason": "ニューラルコーデック言語モデルのコーデック・LM協調設計で推論速度2倍を示すが、対象はテキスト音声合成という音声生成応用であり、LLM推論システム一般への貢献は限定的である。",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-srw.6",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21258",
+      "identity_tokens": [
+        "arXiv:2510.21258"
+      ],
+      "title": "Correlation Dimension of Auto-Regressive Large Language Models",
+      "reason": "自己回帰LLMの相関次元というフラクタル幾何的指標で生成文の複雑さや退化を測る分析研究で、評価指標の提案にとどまり推論システムの高速化・メモリ・サービングへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.21258",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 98
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SusTech67720.2026.11536606",
+      "identity_tokens": [
+        "DOI:10.1109/SusTech67720.2026.11536606"
+      ],
+      "title": "Predictive Self-Healing for Multi-Agent LLM Pipelines Using Model Predictive Control",
+      "reason": "モデル予測制御によるマルチエージェントLLMパイプラインの自己修復と題するが、Crossrefに要旨がなく出版社ページでも要旨を確認できなかったため、制御機構とサービング信頼性への寄与を一次要旨で検証できていない。",
+      "source_url": "https://doi.org/10.1109/SusTech67720.2026.11536606",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 99
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38126",
+      "identity_tokens": [
+        "arXiv:2610.38126"
+      ],
+      "title": "Answer-Only Disclosure: Private-Context LLM Assistance over Web APIs with a Leakage Ledger",
+      "reason": "ADLERは協調デコードでクラウドへ漏れる下書きを防ぐ開示プロトコルと漏洩台帳を提案し投機的デコードの安全性を扱うが、目的はプライバシー保護であり推論効率化への貢献は示されていない。",
+      "source_url": "https://arxiv.org/abs/2610.38126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.09837",
+      "identity_tokens": [
+        "arXiv:2411.09837"
+      ],
+      "title": "Real-Time Adapting Routing (Rar): Improving Efficiency Through Continuous Learning in Software Powered by Layered Foundation Models",
+      "reason": "RARは基盤モデルへのリクエストルーティングを継続学習でリアルタイム適応させ、強いモデルへの振り分けを50.2％減らしながら品質の90.5％を維持する手法で、モデルルーティングによる推論コスト削減に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2411.09837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 103
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2509.17360",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2509.17360"
+      ],
+      "title": "Asteria: Semantic-Aware Cross-Region Caching for Agentic LLM Tool Access",
+      "reason": "Asteria（Cortex）は意味要素と意味検索索引による地域間セマンティックキャッシュでLLMエージェントの知識源アクセスのレイテンシとコストを下げるキャッシュアーキテクチャであり、エージェント推論のキャッシュ機構に直接貢献する。",
+      "source_url": "https://doi.org/10.48550/arXiv.2509.17360",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06480",
+      "identity_tokens": [
+        "arXiv:2603.06480"
+      ],
+      "title": "History-Conditioned Spatio-Temporal Visual Token Pruning for Efficient Vision-Language Navigation",
+      "reason": "視覚言語ナビゲーション向けに履歴条件付きの時空間視覚トークン剪定でVLA推論を軽くするが、主目的はロボットナビゲーションという応用であり、LLM／VLMサービング一般への機構的貢献は限られる。",
+      "source_url": "https://arxiv.org/abs/2603.06480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSI.2026.3669425",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2026.3669425"
+      ],
+      "title": "FlexiGen: An Automated AI Accelerator Generation Framework With Decoupled-Access-Execute and Dynamic Dataflows",
+      "reason": "分離アクセス実行と動的データフローを持つAI加速器自動生成フレームワークFlexiGenと題するが、Crossrefに要旨がなく出版社ページでも要旨を確認できなかったため、対象モデルと推論効率への効果を一次要旨で検証できていない。",
+      "source_url": "https://doi.org/10.1109/TCSI.2026.3669425",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 108
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38817",
+      "identity_tokens": [
+        "arXiv:2609.38817"
+      ],
+      "title": "When Reasoning Goes Astray: Attention Dynamics of Uncontrolled Reasoning",
+      "reason": "RADARは注意応答の動態から大規模推論モデルの暴走推論状態を検出し注意分布の再整列も試すが、中心は推論過程の分析であり、サービングでのコスト削減効果の実測は限定的である。",
+      "source_url": "https://arxiv.org/abs/2609.38817",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37017",
+      "identity_tokens": [
+        "arXiv:2609.37017"
+      ],
+      "title": "LatCom: Cross-Agent Latent Compression for Efficient Multi-Agent Collaboration",
+      "reason": "LatComは複数エージェントの潜在表現を固定スロット数へ横断圧縮し、受信側文脈の計算・メモリ・協調レイテンシの増大を抑える潜在協調の圧縮フレームワークで、マルチエージェント推論の効率化に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2609.37017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCWAMTIP68645.2025.11352704",
+      "identity_tokens": [
+        "DOI:10.1109/ICCWAMTIP68645.2025.11352704"
+      ],
+      "title": "Efficient Inference for Vision-Language-Action Models: A Comprehensive Review of Acceleration Techniques",
+      "reason": "視覚言語行動モデルの推論加速技術の包括的レビューと題するが、Crossrefに要旨がなく出版社ページでも要旨を確認できなかったため、レビューの範囲と推論システムへの位置づけを一次要旨で検証できていない。",
+      "source_url": "https://doi.org/10.1109/ICCWAMTIP68645.2025.11352704",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1210",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1210"
+      ],
+      "title": "EQUIP: EQUivariant preserving In-Place updates for Efficient Token Pruning",
+      "reason": "EQUIPはトークン剪定によるKVテンソルの穴と位置ずれに対し、同変性を保つインプレース更新でKVキャッシュのコピーとRoPE再計算を削減し平均1.62倍の高速化を示す手法で、KVキャッシュ管理に直接貢献する。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1210",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 113
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08131",
+      "identity_tokens": [
+        "arXiv:2601.08131"
+      ],
+      "title": "Attention Projection Mixing with Exogenous Anchors",
+      "reason": "ExoFormerは外部アンカー射影との混合で注意射影を層間再利用するアーキテクチャだが、示される利得は学習トークン効率と下流精度であり、推論時の計算・メモリ削減の実測はない。",
+      "source_url": "https://arxiv.org/abs/2601.08131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 114
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15762",
+      "identity_tokens": [
+        "arXiv:2608.15762"
+      ],
+      "title": "Global Simulation-Guided Dynamic Operator Scheduling for Efficient Multi-Tenant Model Serving",
+      "reason": "SliceSchedulerは大域マッピンググラフとシミュレータで演算子単位の配置を動的に決め、コンテナ内の短命な遊休スライスをSLAとメモリ安全を守って活用するマルチテナントモデルサービングシステムで、サービングスケジューリングに直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2608.15762",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 115
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.07149",
+      "identity_tokens": [
+        "arXiv:2611.07149"
+      ],
+      "title": "FastAFD: When Does Attention-FFN Disaggregation Pay on Rack-Scale NVLink?",
+      "reason": "FastAFDはGB200 NVL72上で注意とMoEを分離配置しマイクロバッチ間で重ね合わせ、最適なvLLM広域専門家並列と比較して最大1.17倍のデコードスループットと適用可否を予測する解析モデルを示すため、分散MoE推論に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2611.07149",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 116
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d12",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 40
+}

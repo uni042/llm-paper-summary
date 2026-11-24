@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d11::chunk-0003-of-0003",
+  "reference_main_sha": "20cbdaeca4786bf4a65092bbab9c6629b5887c79",
+  "record_count": 4,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3545008.3545052",
+      "identity_tokens": [
+        "DOI:10.1145/3545008.3545052"
+      ],
+      "title": "TCB: Accelerating Transformer Inference Services with Request Concatenation",
+      "reason": "可変長入力のパディング冗長を、複数リクエストを連結するConcatBatchingとそれを意識したオンラインスケジューリングで削減するTransformer推論サービスTCBを提案した、推論サービングのバッチング・スケジューリング研究である。",
+      "source_url": "https://doi.org/10.1145/3545008.3545052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 64
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108840",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.108840"
+      ],
+      "title": "WLR: Well-conditioned linear reconstruction for retraining-free pruning of LLMs",
+      "reason": "タイトルはLLMの再学習不要剪定のための良条件線形再構成を示すが、Crossref・OpenAlexのいずれでも要旨を取得できず、剪定機構の詳細や推論効率の評価を一次要旨で確認できなかったため、現時点では境界として記録する。",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.108840",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386208",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC69189.2026.11386208"
+      ],
+      "title": "RANQ: Region-Adaptive Non-uniform Quantization for Efficient LLM Compression",
+      "reason": "LLM重みの外れ値で低ビット量子化が劣化する問題に対し、中心領域と外れ値領域で別スケールを使う領域適応型非一様量子化RANQと、層ごとの再構成ベース閾値最適化を提案し、GPTQ等の既存PTQを上回った、推論向け重み量子化の研究である。",
+      "source_url": "https://doi.org/10.1109/ICEIC69189.2026.11386208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 66
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5753/eradrs.2026.21496",
+      "identity_tokens": [
+        "DOI:10.5753/eradrs.2026.21496"
+      ],
+      "title": "Go como Orquestrador de Treinamento e Serving para Cargas de Trabalho Transformer",
+      "reason": "GoによるTransformerワークロードの統括層（設定・学習制御・チェックポイント・gRPCサービング・Prometheus観測）をRust数値エンジンと分離して報告する短い実践論文で、サービングを含む基盤には関連するが、現状報告の段階であり推論効率への具体的な機構的貢献は要旨からは読み取れない。",
+      "source_url": "https://doi.org/10.5753/eradrs.2026.21496",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 67
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d11",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 44
+}

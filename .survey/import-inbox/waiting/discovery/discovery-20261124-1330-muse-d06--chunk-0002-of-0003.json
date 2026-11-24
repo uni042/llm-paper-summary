@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "reference_main_sha": "06fa235e4b200b1ea3146c018a35f3f8c827101a",
+  "run_key": "muse-final-20261124-d06::chunk-0002-of-0003",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08316",
+      "identity_tokens": [
+        "arXiv:2602.08316"
+      ],
+      "title": "SWE Context Bench: A Benchmark for Context Learning in Coding",
+      "reason": "コーディングエージェントの文脈理解・検索能力を測るベンチマークの提案であり、能力評価のみで推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2602.08316",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00425",
+      "identity_tokens": [
+        "arXiv:2602.00425"
+      ],
+      "title": "Segment-Level Attribution for Selective Learning of Long Reasoning Traces",
+      "reason": "長い推論トレースの区間別寄与度を統合勾配で測り、教師あり微調整のデータ選択に使う学習手法であり、対象は微調整データの精選で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.00425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2107.11817",
+      "identity_tokens": [
+        "arXiv:2107.11817"
+      ],
+      "title": "Go Wider Instead of Deeper",
+      "reason": "深さ方向のパラメータ共有に対し、幅方向へ行列を増やすパラメータ効率的なアーキテクチャを提案し、学習・推論に高度な並列化を要すると述べる。アーキテクチャ研究であり、推論効率の具体的な機構や評価は一次要旨で確認できない。",
+      "source_url": "https://arxiv.org/abs/2107.11817",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17829",
+      "identity_tokens": [
+        "arXiv:2603.17829"
+      ],
+      "title": "CodeScout: An Effective Recipe for Reinforcement Learning of Code Search Agents",
+      "reason": "コード探索エージェントを強化学習で訓練するレシピの研究で、主題はエージェントのコード局所化能力であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2603.17829",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.11399",
+      "identity_tokens": [
+        "arXiv:2607.11399"
+      ],
+      "title": "Agentic Routing: The Harness-Native Data Flywheel",
+      "reason": "エージェント実行ハーネスの状態（観測・中間失敗・フィードバック）に基づき、ステップ単位で単一モデルの選択や複数モデルのアンサンブルを選ぶルーティングの枠組みを提案する。モデルルーティングはサービングと接点があるが、主眼はエージェント実行の能力・コスト配分であり、推論基盤の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2607.11399",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.11362",
+      "identity_tokens": [
+        "arXiv:2512.11362"
+      ],
+      "title": "An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges",
+      "reason": "ロボティクス向けVision-Language-Actionモデルのモジュール・歴史・課題を整理したサーベイであり、対象分野がロボティクス応用で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2512.11362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09782",
+      "identity_tokens": [
+        "arXiv:2602.09782"
+      ],
+      "title": "Flexible Entropy Control in RLVR with a Gradient-Preserving Perspective",
+      "reason": "RLVRにおけるポリシーエントロピーの崩壊を、勾配保持クリッピングの観点から制御する強化学習の学習手法であり、対象は学習ダイナミクスで推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.09782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.10229",
+      "identity_tokens": [
+        "arXiv:2602.10229"
+      ],
+      "title": "Latent Thoughts Tuning: Bridging Context and Reasoning with Fused Information in Latent Tokens",
+      "reason": "潜在トークンで推論過程を表現するための学習後チューニングの枠組みで、主題は潜在推論の能力・安定性の改善であり、推論システムの効率機構ではない。",
+      "source_url": "https://arxiv.org/abs/2602.10229",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06520",
+      "identity_tokens": [
+        "arXiv:2601.06520"
+      ],
+      "title": "SkyNomad: On Using Multi-Region Spot Instances to Minimize AI Batch Job Cost",
+      "reason": "訓練・推論パイプライン等のAIバッチジョブを対象に、複数リージョンのスポットインスタンスの可用性・価格の時空間的な不均一性を利用して、締切制約の下でコストを最小化する調達・配置手法。クラウド資源スケジューリングとして関連するが、対象はバッチジョブ一般で、推論は対象ワークロードの一つに過ぎない。",
+      "source_url": "https://arxiv.org/abs/2601.06520",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 287
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.17869",
+      "identity_tokens": [
+        "arXiv:2602.17869"
+      ],
+      "title": "Learning Compact Video Representations for Efficient Long-form Video Understanding in Large Multimodal Models",
+      "reason": "長尺映像理解のため、情報密度に基づく適応的フレームサンプラと自己符号化器型の時空間映像圧縮器をマルチモーダルLLMと統合し、メモリ制約の下で多数のフレームを扱う。入力側の圧縮はマルチモーダル推論のメモリ効率に関わるが、主目的は映像理解の精度であり、推論システムとしての評価は限定的である。",
+      "source_url": "https://arxiv.org/abs/2602.17869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11290",
+      "identity_tokens": [
+        "arXiv:2606.11290"
+      ],
+      "title": "FlowBank: Query-Adaptive Agentic Workflows Optimization through Precompute-and-Reuse",
+      "reason": "オフライン探索で得たエージェントワークフローの集合を事前計算して再利用し、クエリごとにワークフローを生成する推論コストを削減する最適化の枠組み。再利用による推論コスト削減の仕組みはあるが、対象はエージェントワークフローの生成・選択という応用層の最適化であり、推論基盤の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2606.11290",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20062",
+      "identity_tokens": [
+        "arXiv:2607.20062"
+      ],
+      "title": "Solar Open 2 Technical Report",
+      "reason": "250BパラメータのMoE言語モデル自体の技術報告で、主題はモデルの学習と能力であり、推論サービングや実行基盤の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2607.20062",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CGO68049.2026.11394842",
+      "identity_tokens": [
+        "DOI:10.1109/CGO68049.2026.11394842"
+      ],
+      "title": "Fast Autoscheduling for Sparse ML Frameworks",
+      "reason": "疎テンソル計算の高速な自動スケジューリング（ループ順序・タイリング・形式推論）を備えたPyTorch向け疎テンソルコンパイラで、疎Transformer等で高速化を示す。カーネル・コンパイラ最適化として関連するが、対象は疎テンソル代数一般であり、LLM推論への直接の適用は限定的である。",
+      "source_url": "https://doi.org/10.1109/CGO68049.2026.11394842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.07022",
+      "identity_tokens": [
+        "arXiv:2601.07022"
+      ],
+      "title": "Solar Open Technical Report",
+      "reason": "102BパラメータのMoE言語モデル自体の技術報告で、主題はデータ合成と学習カリキュラムによるモデル構築であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2601.07022",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21493",
+      "identity_tokens": [
+        "arXiv:2603.21493"
+      ],
+      "title": "StreamingEval: A Unified Evaluation Protocol towards Realistic Streaming Video Understanding",
+      "reason": "ストリーミング映像理解の評価プロトコルとベンチマークの提案であり、能力評価の枠組みであって推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2603.21493",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24428",
+      "identity_tokens": [
+        "arXiv:2606.24428"
+      ],
+      "title": "Beyond Self-Reflection: An Execute-Distill-Verify Framework for Agentic Experience Learning",
+      "reason": "エージェントの経験学習のため、実行・蒸留・検証で教訓を構築するオフラインの枠組みで、主題はエージェントの学習方法であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2606.24428",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748173.3779207",
+      "identity_tokens": [
+        "DOI:10.1145/3748173.3779207"
+      ],
+      "title": "HiLFS: FPGA-Orchestrated File System for High-Level Synthesis",
+      "reason": "HLSで記述したFPGAアクセラレータからSSD等の高速ストレージへファイルシステム経由でアクセス可能にするFPGA統括型ファイルシステムで、LLMを含むデータ集約型応用を動機に挙げる。アクセラレータ向けI/O基盤として関連するが、LLM推論実行そのものへの機構的な貢献は間接的である。",
+      "source_url": "https://doi.org/10.1145/3748173.3779207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 295
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:42ac1fcd5dd73637237d95631f82b13df514cdec",
+      "identity_tokens": [
+        "SemanticScholar:42ac1fcd5dd73637237d95631f82b13df514cdec"
+      ],
+      "title": "Video-Browser: Towards Agentic Open-web Video Browsing",
+      "reason": "動画検索エージェントとそのベンチマークVideoBrowseCompの提案で、ピラミッド型知覚によるトークン削減は動画閲覧エージェントの応用内の最適化に留まり、主題はエージェントの質問応答能力である。",
+      "source_url": "https://www.semanticscholar.org/paper/42ac1fcd5dd73637237d95631f82b13df514cdec",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 296
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00901",
+      "identity_tokens": [
+        "arXiv:2604.00901"
+      ],
+      "title": "Experience as a Compass: Multi-agent RAG with Evolving Orchestration and Agent Prompts",
+      "reason": "マルチエージェントRAGの編成と各エージェントのプロンプトを階層的に進化させる枠組みで、主題はRAGの回答能力の改善であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2604.00901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 299
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.26845",
+      "identity_tokens": [
+        "arXiv:2605.26845"
+      ],
+      "title": "Birkhoff Decompositions and Photonic Interconnects Wait! Don’t Forget the Compute!",
+      "reason": "MoE実行のall-to-all通信について、dispatch–compute–combine構造がBirkhoff分解ベースの回路スケジューリングにバブルと小バッチ断片化をもたらすことを示し、マッチング数を抑えて通信と計算のオーバーラップ効率を改善する貪欲なmax-weight分解を提案する。MoEの分散実行通信への直接のシステム貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2605.26845",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:30:00+09:00",
+      "last_checked_at": "2026-11-24T13:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 300
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d06",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 47
+}

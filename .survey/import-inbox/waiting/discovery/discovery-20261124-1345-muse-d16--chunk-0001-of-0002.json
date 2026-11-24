@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-d16::chunk-0001-of-0002",
+  "reference_main_sha": "20cbdaeca4786bf4a65092bbab9c6629b5887c79",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104224",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104224"
+      ],
+      "title": "A soft-masking continual pre-training method based on domain knowledge relevance",
+      "reason": "DASはドメイン知識との関連度でユニット重要度を計算し、逆伝播の勾配をソフトマスクして破滅的忘却を防ぐ継続ドメイン適応事前学習の手法であり、対象は学習過程そのもので、推論・デコード・サービングへの適用は示されていない。",
+      "source_url": "https://doi.org/10.1016/j.ipm.2025.104224",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 268
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104408",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104408"
+      ],
+      "title": "QuFiH: Hybrid low-bit quantization and block-level parameter efficient fine-tuning for video hashing",
+      "reason": "低ビット量子化とブロック単位のパラメータ効率ファインチューニングを組み合わせた動画ハッシュ手法と題するが、Crossref・OpenAlex・出版社ページのいずれからも一次要旨を取得できず、量子化が対象とするのが動画検索モデルの重みなのかハッシュ符号なのか、LLM推論圧縮との関係を検証できなかった。",
+      "source_url": "https://doi.org/10.1016/j.ipm.2025.104408",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 270
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.09262",
+      "identity_tokens": [
+        "arXiv:2508.09262"
+      ],
+      "title": "Harnessing Input-Adaptive Inference for Efficient VLN",
+      "reason": "視覚言語ナビゲーション（VLN）向けに、パノラマビューの選択処理・重要度ベースの早期終了・既視ビューのキャッシュで計算量を半減させる入力適応推論だが、対象はナビゲーション用マルチモーダルTransformerであり、LLM推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2508.09262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 271
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-024-4354-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4354-y"
+      ],
+      "title": "Expansion of the memory pyramid in the era of large models: compute-intensive compute-in-memory and memory-intensive compute-in-memory",
+      "reason": "大規模モデル時代のメモリピラミッドを、SRAM/eDRAMベースの計算集約型CIMとDRAM/NVMベースのメモリ集約型CIMに再編して展望するレビューで、大モデル向けハードウェアの方向性は示すが、特定の推論システム機構や実測による裏付けはない。",
+      "source_url": "https://doi.org/10.1007/s11432-024-4354-y",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 272
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b8c7a5a5e81d46852ef7472097e11dcb30575212",
+      "identity_tokens": [
+        "SemanticScholar:b8c7a5a5e81d46852ef7472097e11dcb30575212"
+      ],
+      "title": "AutoAttention: Automatic Attention Head Selection Through Differentiable Pruning",
+      "reason": "微分可能な剪定による注意ヘッド自動選択と題し、構造化剪定系の引用文脈にあるが、Semantic Scholar以外の経路（Crossref・OpenAlex・検索）でも当該論文の一次要旨を確認できず、剪定対象モデルと推論高速化の実測を検証できなかった。",
+      "source_url": "https://www.semanticscholar.org/paper/b8c7a5a5e81d46852ef7472097e11dcb30575212",
+      "body_check": "abstract_not_obtained; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 274
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03614",
+      "identity_tokens": [
+        "arXiv:2508.03614"
+      ],
+      "title": "Minimal Convolutional RNNs Accelerate Spatiotemporal Learning",
+      "reason": "MinConvLSTM/MinConvGRUは最小RNNの対数領域prefix-sum定式化を畳み込み再帰モデルへ拡張し、Navier-Stokesとジオポテンシャルの時空間予測で学習を並列化・高速化する研究で、対象は科学計算向け時系列モデルの学習効率でありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2508.03614",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 275
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21557",
+      "identity_tokens": [
+        "arXiv:2601.21557"
+      ],
+      "title": "Meta Context Engineering via Agentic Skill Evolution",
+      "reason": "Meta Context Engineeringはエージェント型スキル進化で推論時コンテキストの工学的最適化を自動化する二層枠組みで、文脈使用量の効率も報告するが、主目的はタスク性能の向上であり、推論サービングやデコード機構への技術的貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2601.21557",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17187",
+      "identity_tokens": [
+        "arXiv:2603.17187"
+      ],
+      "title": "MetaClaw: Just Talk - An Agent That Meta-Learns and Evolves in the Wild",
+      "reason": "MetaClawは失敗軌跡からのスキル合成と、LoRAファインチューニング＋過程報酬RLによる機会的ポリシー最適化でLLMエージェントを継続進化させる枠組みで、主眼はエージェント能力のオンライン学習であり、推論システムの高速化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2603.17187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11716",
+      "identity_tokens": [
+        "arXiv:2604.11716"
+      ],
+      "title": "SWE-AGILE: A Software Agent Framework for Efficiently Managing Dynamic Reasoning Context",
+      "reason": "SWE-AGILEは詳細推論のスライディングウィンドウ保持と過去推論のReasoning Digestへの圧縮で、ソフトウェアエージェントの文脈爆発と再推論の冗長性を抑える動的推論文脈管理であり、文脈管理として推論効率に触れるが、主目的はSWEエージェントの推論品質と文脈制約の両立である。",
+      "source_url": "https://arxiv.org/abs/2604.11716",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14208",
+      "identity_tokens": [
+        "arXiv:2602.14208"
+      ],
+      "title": "Fast Catch-Up, Late Switching: Optimal Batch Size Scheduling via Functional Scaling Laws",
+      "reason": "関数スケーリング則で最適バッチサイズスケジュールを解析し、困難なタスクでは大バッチへの切替を学習終盤まで遅らせるのが最適であることをLLM事前学習実験で示す研究で、対象は学習時の最適化動態であり推論への適用はない。",
+      "source_url": "https://arxiv.org/abs/2602.14208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02073",
+      "identity_tokens": [
+        "arXiv:2604.02073"
+      ],
+      "title": "PLUME: Latent Reasoning Based Universal Multimodal Embedding",
+      "reason": "PLUMEは明示的CoTを連続潜在状態の短い自己回帰ロールアウトへ置き換え、埋め込み検索の推論を30倍超高速化する潜在推論枠組みだが、対象はマルチモーダル埋め込みモデルの検索推論という応用であり、LLM生成推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2604.02073",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13778",
+      "identity_tokens": [
+        "arXiv:2610.13778"
+      ],
+      "title": "ReplaySSM: Cache SSM Inputs, Not State",
+      "reason": "ReplaySSMはSSMの再帰をチェックポイントと直近入力バッファへ展開し、状態書き込みの回避・投機的デコードのバッファポインタによるロールバック・出力用と更新用で精度を分けたチェックポイントにより状態メモリトラフィックを半減させ、vLLM実装でMamba-2等のデコードを1.20〜1.47倍高速化しており、SSM推論のメモリI/O最適化に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2610.13778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11298",
+      "identity_tokens": [
+        "arXiv:2602.11298"
+      ],
+      "title": "Voxtral Realtime",
+      "reason": "Voxtral Realtimeは遅延ストリームモデリングと因果的音声エンコーダでサブ秒遅延のストリーミング音声認識を実現するモデル自体の発表であり、対象はASRという応用タスクのモデル提供で、LLM推論システムの機構ではない。",
+      "source_url": "https://arxiv.org/abs/2602.11298",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23864",
+      "identity_tokens": [
+        "arXiv:2603.23864"
+      ],
+      "title": "See, Remember, Explore: A Benchmark and Baselines for Streaming Spatial Reasoning",
+      "reason": "S3-Benchはストリーミング空間質問応答のベンチマークで、付随するAMF-VLMは長期観測を構造化メモリへ折り畳むメモリ圧縮を持つが、中心は具身エージェントの空間推論能力の評価と能動探索であり、推論システム機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2603.23864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 283
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18641",
+      "identity_tokens": [
+        "arXiv:2605.18641"
+      ],
+      "title": "Leveraging Latent Visual Reasoning in Silence",
+      "reason": "潜在視覚推論トークンを推論時に除去しても性能が落ちないことを示し、RL報酬で潜在トークンの学習時利用を促す分析・学習手法で、推論時には潜在生成がほぼ残らない設計であり、推論高速化の機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.18641",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02020",
+      "identity_tokens": [
+        "arXiv:2606.02020"
+      ],
+      "title": "Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning",
+      "reason": "CoTのエントロピー動態に不確実領域から確信領域への二相構造を見出し、CUSUM変化点検出による学習不要の早期終了でトークンを11.1％削減しつつ精度を上げ、確信領域信号でテスト時スケーリングの投票を重み付けする推論時制御枠組みであり、推論の早期終了機構に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2606.02020",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18702",
+      "identity_tokens": [
+        "arXiv:2602.18702"
+      ],
+      "title": "Think with Grounding: Curriculum Reinforced Reasoning with Video Grounding for Long Video Understanding",
+      "reason": "Video-TwGは長尺動画理解で必要時に質問関連クリップへオンデマンドに接地する思考接地パラダイムをカリキュラム強化学習で教える枠組みで、冗長な接地の削減は触れるが主目的は動画質問応答の能力向上であり、推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2602.18702",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.31986",
+      "identity_tokens": [
+        "arXiv:2606.31986"
+      ],
+      "title": "CoLT: Teaching Multi-Modal Models to Think with Chain of Latent Thoughts",
+      "reason": "CoLTは外部デコーダによる段階監督でマルチモーダルモデルに潜在思考連鎖を教え、テキストCoT比で推論時間を10.1倍短縮するが、本質は潜在推論を学習させる訓練枠組みであり、対象も視覚推論タスクの能力向上である。",
+      "source_url": "https://arxiv.org/abs/2606.31986",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27703",
+      "identity_tokens": [
+        "arXiv:2607.27703"
+      ],
+      "title": "SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them",
+      "reason": "SpatialCLIは専門視覚モデルを空間ツールとしてVLMに使わせ、成功軌跡の言語化でその知覚能力を内在化させる三段階枠組みで、主目的は具身エージェントの空間知覚能力の獲得であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2607.27703",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 290
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.01732",
+      "identity_tokens": [
+        "arXiv:2605.01732"
+      ],
+      "title": "EGAD: Entropy-Guided Adaptive Distillation for Token-Level Knowledge Transfer",
+      "reason": "EGADは教師エントロピーでトークン単位にカリキュラム・温度・蒸留深さを適応させる知識蒸留で、資源制約環境への展開を動機とするが、汎用の蒸留学習手法であり、生徒モデルの推論コストやサービングでの実測は示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.01732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T13:45:00+09:00",
+      "last_checked_at": "2026-11-24T13:45:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 293
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-d16",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 35
+}
