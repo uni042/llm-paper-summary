@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d68fe33c7bed28bf-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.28671",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.28671",
+    "identity_tokens": [
+      "arXiv:2611.28671"
+    ],
+    "reason": "MASSysはマルチエージェントLLMシステムのワークフロー性能がサービング基盤（サブストレート）や負荷条件に依存することを測るベンチマークだが、主対象はマルチエージェントシステムの評価方法論であり、サービング機構そのものへの技術的貢献は間接的であるためborderlineとした。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Evaluation Substrate Matters: Benchmarking Multi-Agent Serving Substrates"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d68fe33c7bed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

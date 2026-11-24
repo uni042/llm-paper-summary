@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc7d3278f9cfdaa7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.18846",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.18846",
+    "identity_tokens": [
+      "arXiv:2505.18846"
+    ],
+    "reason": "タイトルが示す主題は、6G無線ネットワークにおけるLLM駆動のAPT（持続的標的型攻撃）検出のレビューと分類であり、ネットワークセキュリティ応用が目的で、推論システム機構への貢献はタイトル上確認できない。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "LLM-Driven APT Detection for 6G Wireless Networks: A Systematic Review and Taxonomy"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc7d3278f9cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc7d3278f9cfdaa7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.14712",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.14712",
+    "identity_tokens": [
+      "arXiv:2404.14712"
+    ],
+    "reason": "タイトルが示す主題は、地球システム予測可能性のためのOak Ridge基盤モデルORBITであり、気象・地球科学向け基盤モデルの構築そのものが目的で、LLM推論・サービングへの貢献はタイトル上確認できない。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ORBIT: Oak Ridge Base Foundation Model for Earth System Predictability"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc7d3278f9cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

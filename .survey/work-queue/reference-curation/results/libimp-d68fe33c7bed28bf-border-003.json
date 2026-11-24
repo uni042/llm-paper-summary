@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d68fe33c7bed28bf-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.30404",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.30404",
+    "identity_tokens": [
+      "arXiv:2611.30404"
+    ],
+    "reason": "時系列基盤モデルのエッジ展開について、因果的注意のKVキャッシュや再帰状態を持続させて予測リフレッシュを増分化し、レイテンシとピークメモリを抑える検討だが、対象は時系列予測モデルでありLLM推論ではないためborderlineとした。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Time Series Foundation Models on the Edge"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d68fe33c7bed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

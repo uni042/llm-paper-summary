@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d68fe33c7bed28bf-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.28502",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.28502",
+    "identity_tokens": [
+      "arXiv:2611.28502"
+    ],
+    "reason": "Shoonyaはグラフデータベース内部に小型言語モデルの推論ランタイムを埋め込み、スキーマ時代で無効化される接頭辞KVキャッシュ等でTTFTを高速化する共設計システムだが、主目的はグラフDBとの結合による応用システム構築であり、LLMサービング一般への貢献は限定的であるためborderlineとした。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Shoonya: Zero-Socket In-Process Small Language Models for Graph Databases with Schema-Epoch KV Caching, Live Catalog Logit Masking, and Verifier-Advantage Distillation"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d68fe33c7bed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-24T22:36:50+00:00",
-  "record_count": 8947,
+  "updated_at": "2026-11-24T22:37:44+00:00",
+  "record_count": 8959,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -137110,6 +137110,186 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow"
+    },
+    "arXiv:2611.30704": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30704",
+      "identity_tokens": [
+        "arXiv:2611.30704"
+      ],
+      "reason": "自己回帰画像生成向けの自己投機的デコードについて、生成順序がドラフト・ターゲット不一致と早期棄却コストを通じて効率を決めることを理論解析し、順序を最適化するSAOを提案するが、対象は画像生成でありLLMテキスト推論ではないためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speculate in the Right Order: Efficient Self-Speculative Decoding for Autoregressive Image Generation"
+    },
+    "arXiv:2611.30328": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30328",
+      "identity_tokens": [
+        "arXiv:2611.30328"
+      ],
+      "reason": "Draft Forcingは自己回帰ビデオ生成向けに、ターゲットの隠れ状態で条件付けした特徴レベルドラフトと学習済み検証器によるチャンク単位投機的デコードを提案するが、対象はビデオ拡散モデルの生成でありLLM推論システムではないためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Draft Forcing: Target-guided Speculative Drafting and Learned Verifier for Autoregressive Video Generation"
+    },
+    "arXiv:2611.29460": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29460",
+      "identity_tokens": [
+        "arXiv:2611.29460"
+      ],
+      "reason": "文書からのキー情報抽出について、スキーマで構造が固定される性質を利用しCTCデコードで全値を並列予測する非自己回帰抽出器を提案し逐次生成のステップ数を固定化するが、主目的は抽出タスクの精度と速度であり、LLMサービング機構への貢献は副次的であるためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fill in the Blanks: Non-Autoregressive Schema-Parallel Key Information Extraction with CTC Decoding"
+    },
+    "arXiv:2611.29029": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29029",
+      "identity_tokens": [
+        "arXiv:2611.29029"
+      ],
+      "reason": "T2ISpecはテキスト画像生成向けに投機的デコード等の高速化手法をレイテンシ・ターゲット作業量・画質で評価するベンチマークとルーティングプラグインだが、対象領域は画像生成でありLLM推論の計測ではないためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "T2ISpec: Benchmarking Speculative Decoding for Text-to-Image Generation"
+    },
+    "arXiv:2611.29255": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29255",
+      "identity_tokens": [
+        "arXiv:2611.29255"
+      ],
+      "reason": "NoeVeraはLLMサービング最適化のために論文・コード・ベンチマーク・実験結果を来歴付き知識ベース化し、Vidur等のシミュレータを呼ぶエージェントで『何を調べるべきか』の意思決定を支援する枠組みだが、サービング機構そのものではなく最適化作業の支援であるためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NoeVera: Can Knowledge Guide Experiments and Experiments Refine Knowledge?"
+    },
+    "arXiv:2611.29188": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29188",
+      "identity_tokens": [
+        "arXiv:2611.29188"
+      ],
+      "reason": "浮動小数点LLM推論に対するゼロ知識証明について、正しく丸めた積を証明対象とすることでハードウェア非依存な証明を可能にする対話的証明を提案するが、目的は推論結果の検証可能性という暗号応用であり、推論の高速化やサービング機構への貢献ではないためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ziv Meets Sumcheck: Zero-Knowledge Proofs of Floating-Point LLM Inference"
+    },
+    "arXiv:2611.31184": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.31184",
+      "identity_tokens": [
+        "arXiv:2611.31184"
+      ],
+      "reason": "CodecOPSDはビデオ拡散モデルの条件トークンをビデオコーデックの冗長性検出で剪定し、KVキャッシュモードでメモリを最大73％削減してデノイジングを2倍高速化するが、対象は映像生成モデルでありLLM推論システムへの直接の貢献ではないためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On-Policy Codec Distillation for Efficient All-in-One Video Generation"
+    },
+    "arXiv:2611.30412": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30412",
+      "identity_tokens": [
+        "arXiv:2611.30412"
+      ],
+      "reason": "DMC-5は長期間エージェントの増大する対話軌跡を、汎用圧縮モデルと専門エージェントモデルの二重モデル協調でキャッシュ配慮型に圧縮する枠組みだが、主目的はエージェントの文脈管理と意思決定品質であり、推論システム機構への貢献は軌跡圧縮による入力削減にとどまるためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DMC-5: Dual-Model Collaboration with Cache-aware Context Compression for Long-horizon Agents"
+    },
+    "arXiv:2611.30404": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.30404",
+      "identity_tokens": [
+        "arXiv:2611.30404"
+      ],
+      "reason": "時系列基盤モデルのエッジ展開について、因果的注意のKVキャッシュや再帰状態を持続させて予測リフレッシュを増分化し、レイテンシとピークメモリを抑える検討だが、対象は時系列予測モデルでありLLM推論ではないためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Time Series Foundation Models on the Edge"
+    },
+    "arXiv:2611.29915": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.29915",
+      "identity_tokens": [
+        "arXiv:2611.29915"
+      ],
+      "reason": "NVIDIA GB10（DGX Spark等）でC2Cメモリトラフィックを測るテレメトリがない問題に対し、CUPTIのL2セクタカウンタ5種でGPUメモリトラフィックを実時間計測できることを示す計測手法だが、LLM推論に特化した内容ではなく汎用GPU計測であるためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Measuring GPU Memory Traffic on the NVIDIA GB10 Without C2C Telemetry"
+    },
+    "arXiv:2611.28671": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.28671",
+      "identity_tokens": [
+        "arXiv:2611.28671"
+      ],
+      "reason": "MASSysはマルチエージェントLLMシステムのワークフロー性能がサービング基盤（サブストレート）や負荷条件に依存することを測るベンチマークだが、主対象はマルチエージェントシステムの評価方法論であり、サービング機構そのものへの技術的貢献は間接的であるためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Evaluation Substrate Matters: Benchmarking Multi-Agent Serving Substrates"
+    },
+    "arXiv:2611.28502": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.28502",
+      "identity_tokens": [
+        "arXiv:2611.28502"
+      ],
+      "reason": "Shoonyaはグラフデータベース内部に小型言語モデルの推論ランタイムを埋め込み、スキーマ時代で無効化される接頭辞KVキャッシュ等でTTFTを高速化する共設計システムだが、主目的はグラフDBとの結合による応用システム構築であり、LLMサービング一般への貢献は限定的であるためborderlineとした。",
+      "first_checked_at": "2026-11-24T22:37:44+00:00",
+      "last_checked_at": "2026-11-24T22:37:44+00:00",
+      "linked_from": [
+        "latest_search arxiv api"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Shoonya: Zero-Socket In-Process Small Language Models for Graph Databases with Schema-Epoch KV Caching, Live Catalog Logit Masking, and Verifier-Advantage Distillation"
     }
   }
 }

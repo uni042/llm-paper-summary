@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ddfc41d52cf0e45-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.28793",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.28793",
+    "identity_tokens": [
+      "arXiv:2611.28793"
+    ],
+    "reason": "タイトル自体がストリーミング3次元再構成向けの時空間認識キャッシュ圧縮を明示しており、対象は3次元再構成の空間メモリであってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+    "first_checked_at": "2026-11-24T22:37:43+00:00",
+    "last_checked_at": "2026-11-24T22:37:43+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "title": "STAC++: Plug-and-Play Adaptive Spatio-Temporal Aware Cache Compression for Streaming 3D Reconstruction"
+  },
+  "processed_at": "2026-11-24T22:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ddfc41d52cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

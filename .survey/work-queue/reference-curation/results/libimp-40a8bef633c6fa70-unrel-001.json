@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40a8bef633c6fa70-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.12339",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.12339",
+    "identity_tokens": [
+      "arXiv:2504.12339"
+    ],
+    "reason": "GOAT-TTSはLLMベースのテキスト音声合成（TTS）モデルで、音声エンコーダとプロジェクタによるモダリティアライメント分岐で連続音響埋め込みを捉えてプロンプト音声の量子化による音響特徴の損失と転写依存を解消し、音声生成分岐では上位k層のモジュラー微調整と下位n層の凍結で言語理解の破滅的忘却を防ぐ二分岐アーキテクチャであり、主目的は表現力と写実性のある音声生成と方言音声データの有効性検証にある。多トークン予測はリアルタイムストリーミングTTSを支える付随要素として触れられるのみで、LLM推論のデコード高速化・サービング・KVキャッシュ等の推論システム機構としての提案や評価は示されておらず、推論システムへの直接の貢献はない。",
+    "first_checked_at": "2026-11-24T22:37:43+00:00",
+    "last_checked_at": "2026-11-24T22:37:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "GOAT-TTS: Expressive and Realistic Speech Generation via A Dual-Branch LLM"
+  },
+  "processed_at": "2026-11-24T22:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40a8bef633c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

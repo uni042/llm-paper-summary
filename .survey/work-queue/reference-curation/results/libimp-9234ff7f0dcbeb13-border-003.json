@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9234ff7f0dcbeb13-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.29460",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.29460",
+    "identity_tokens": [
+      "arXiv:2611.29460"
+    ],
+    "reason": "文書からのキー情報抽出について、スキーマで構造が固定される性質を利用しCTCデコードで全値を並列予測する非自己回帰抽出器を提案し逐次生成のステップ数を固定化するが、主目的は抽出タスクの精度と速度であり、LLMサービング機構への貢献は副次的であるためborderlineとした。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fill in the Blanks: Non-Autoregressive Schema-Parallel Key Information Extraction with CTC Decoding"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9234ff7f0dcb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

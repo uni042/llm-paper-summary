@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d68fe33c7bed28bf-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.29915",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.29915",
+    "identity_tokens": [
+      "arXiv:2611.29915"
+    ],
+    "reason": "NVIDIA GB10（DGX Spark等）でC2Cメモリトラフィックを測るテレメトリがない問題に対し、CUPTIのL2セクタカウンタ5種でGPUメモリトラフィックを実時間計測できることを示す計測手法だが、LLM推論に特化した内容ではなく汎用GPU計測であるためborderlineとした。",
+    "first_checked_at": "2026-11-24T22:37:44+00:00",
+    "last_checked_at": "2026-11-24T22:37:44+00:00",
+    "linked_from": [
+      "latest_search arxiv api"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Measuring GPU Memory Traffic on the NVIDIA GB10 Without C2C Telemetry"
+  },
+  "processed_at": "2026-11-24T22:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d68fe33c7bed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
