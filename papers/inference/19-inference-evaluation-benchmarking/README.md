@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（250本）
+## 自動生成の論文一覧（251本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -59,6 +59,10 @@
 - **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
+
+- **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
+  実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：1  
+  自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。
 
 - **2026-08 · [The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning](2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md)**  
   実装：[✓](https://github.com/dylanjayabahu/halt-vector) ・ リポジトリ内被引用：1  
@@ -242,6 +246,10 @@
   実装：[✓](https://github.com/szu-tera/CALM.git) ・ リポジトリ内被引用：0  
   試行回答の連続一致を検出した後も生成を打ち切らず、行動遷移点トークンのロジットを抑えることで冗長な再検討を減らし、トークンを約2割削減しながら精度を保つ学習不要のデコード手法。
 
+- **2026-10 · [A Case Study of a Multi-Agent Kernel-Optimization Loop That Learns a New AI Accelerator](2026-2610.38329-a-case-study-of-a-multi-agent-kernel-optimization-loop-that-learns-a-new.md)**  
+  実装：[✓](https://github.com/bgchun-fs/multi-agent-kernel-gen-loop) ・ リポジトリ内被引用：0  
+  未知のNPUとそのRust製ドメイン特化言語について、文書要約と実測とコンパイラ規則から知識基盤を自作して再検証し、設計木と役割分担の探索でGemma-4-12Bのカーネル3本を公式比で幾何平均9.293倍へ高速化したエージェントループの事例研究。
+
 - **2026-09 · [Who Speaks for the Pruned? Visual Token Pruning as Coverage Optimization](2026-2609.03158-who-speaks-for-the-pruned-visual-token-pruning-as-coverage-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークン枝刈りを、残すトークンの順位付けではなく、捨てるトークンを誰が代表するかという被覆最適化として定式化し、強い圧縮ほど既存方式を引き離した学習不要の枝刈り研究。
@@ -333,10 +341,6 @@
 - **2026-09 · [Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models](2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルの制約付きデコードで、制約を逐次状態ではなく因子グラフとして保持し変数消去で厳密に解く方式を提案し、全制約充足を小さな追加遅延で達成した研究。
-
-- **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
-  実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：0  
-  自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。
 
 - **2026-09 · [Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs](2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

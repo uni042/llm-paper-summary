@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1526本）
+## 自動生成の論文一覧（1529本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -272,6 +272,10 @@
   実装：[✓](https://github.com/Zengwh02/GlimpRouter) ・ リポジトリ内被引用：3  
   大規模推論モデルは長い思考過程を生成するため、回答までの待ち時間と計算費用が大きい。トークン単位で常時切り替えると、判定とモデル切替が頻繁になりやすい。
 
+- **2026-09 · [STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization](2026-2609.38169-stepquant-when-and-where-errors-matter-in-delta-rule-recurrent-state-qua.md)**  
+  実装：[✓](https://github.com/Dreamer-Toby/STEPQuant) ・ リポジトリ内被引用：2  
+  Gated DeltaNetやKimi Delta 注意機構の状態は通常FP32で保持され、要求ごとに持続するため、重みを4ビットへ圧縮した後は状態プールの容量がサービングの律速となり得る。
+
 - **2026-08 · [VPP: Virtual Pipeline Parallelism for Efficient Chunked Prefill in Long-Context LLM Inference](2026-2608.26523-vpp-virtual-pipeline-parallelism-for-efficient-chunked-prefill-in-long-c.md)**  
   実装：[✓](https://github.com/RookieCoder-Camera/vllm-ascend/tree/vpp-dev) ・ リポジトリ内被引用：2  
   非同期通信と要求間詰め込みを追加し、16基のAscend 910C上で長文脈の処理量を動的方式比最大13.1%、混合要求で最大6.7%改善した。
@@ -504,9 +508,17 @@
   実装：✓ ・ リポジトリ内被引用：1  
   両手法はさらにTransformer層間へ一様な疎性予算を与え、疎化への耐性が異なる層を区別しない。論文のC4評価では、Llama-2-7BとLlama-3-8Bの目標疎性30%、50%、70%で、TopK-GuidedはTEALおよびWINAと比べperplexityと8課題平均正解率の両方で全条件最高だった。
 
+- **2026-10 · [ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories](2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md)**  
+  実装：[✓](https://github.com/ntumm120/paraTTT) ・ リポジトリ内被引用：1  
+  深い非線形メモリの勾配軌跡を3つのチャンク並列パスで反復精緻化し、テスト時学習層を誤差を揃えて32倍速く評価できるようにした並列化アルゴリズム。
+
 - **2026-10 · [Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents](2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-mo.md)**  
   実装：[✓](https://github.com/stephen122204/mantra-energy/tree/paper-1) ・ リポジトリ内被引用：1  
   量子化エージェントのエネルギーをトークン単位ではなく完了タスク単位で測り直し、4ビットがトークン当たりでは安くても課題によっては完了当たり最大3.5倍高くなることと、その主因が余分なトークンであることを実機測定で示した。
+
+- **2026-10 · [Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention](2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  キー側はオジャ則、値側はデルタ則で、共有スロットを持つ2段階メモリの両側を誤差修正し、線形注意の想起性能を高めた回帰型アーキテクチャ。
 
 - **2026-09 · [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)**  
   実装：[✓](https://github.com/ifm-ai/uno) ・ リポジトリ内被引用：1  
@@ -515,10 +527,6 @@
 - **2026-09 · [Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison](2026-2609.28029-tensor-decomposition-of-transformer-key-value-caches-spectral-structure-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   この研究は、自己回帰Transformerの鍵・値キャッシュ（key-value キャッシュ; KVキャッシュ）を、注意ヘッド・トークン・特徴・隣接層の四つの軸を持つテンソルとして扱い、どの軸が実際に低ランク圧縮できるのかを調べる。RoPE後の鍵を圧縮すると、RoPE前に圧縮する場合に比べて同じ保存量での再構成誤差が相対41〜64%増す。
-
-- **2026-09 · [STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization](2026-2609.38169-stepquant-when-and-where-errors-matter-in-delta-rule-recurrent-state-qua.md)**  
-  実装：[✓](https://github.com/Dreamer-Toby/STEPQuant) ・ リポジトリ内被引用：1  
-  Gated DeltaNetやKimi Delta 注意機構の状態は通常FP32で保持され、要求ごとに持続するため、重みを4ビットへ圧縮した後は状態プールの容量がサービングの律速となり得る。
 
 - **2026-09 · [SMat-Attention: Structured Long-Context Sequence Modeling](2026-2609.36062-smat-attention-structured-long-context-sequence-modeling.md)**  
   実装：[✓](https://anonymous.4open.science/r/smat_attention/README.md) ・ リポジトリ内被引用：1  
@@ -1110,9 +1118,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文法では表せない変数同士の論理の制約を、各割当ての前に可能な領域を計算して文法へ変換することで生成の構成により保証し、模型の呼び出しを却下標本化より大幅に減らし、後戻りで促しに合わない割当てを九十八件中九十二件から十三件へ減らしたと報告した。
 
+- **2026-11 · [Quantizing Recurrent Language Models Is Easier Than You Think](2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.md)**  
+  実装：[✓](https://github.com/camail-official/LoReS) ・ リポジトリ内被引用：0  
+  リカレント言語モデルの量子化を状態外と状態内へ分け、減衰型リカレンスは外れ値が弱く量子化しやすいことと、バリュー軸グルーピング・減衰ベース混合精度・確率的丸めからなるLoReSで状態を8ビット化しても大規模ハイブリッドの精度がほぼ保たれることを示す研究。
+
 - **2026-11 · [Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models](2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   演算回数ではなくGPUエネルギーを直接測り、再帰方策ではバッチ共有が成立しないこと、専門家モデルではバッチ配慮型ルーティングが重み読みを25から31パーセント減らしトークンあたりエネルギーを12から18パーセント減らすことを示す実測研究。
+
+- **2026-11 · [Concise-9B: Removing the Slack from a Reasoning Model's Thinking](2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  答えが固まった後の思考であるスラックを強制読み出しで測り、最短の正解サンプルで自己学習して除去する研究。未見8983問でトークンを0.66倍にし、正解率は同等範囲を維持する。
 
 - **2026-11 · [Calibration of Large Model Quantization based on HiFloat4 Format](2026-2610.41112-calibration-of-large-model-quantization-based-on-hifloat4-format.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1258,10 +1274,6 @@
   実装：[✓](https://github.com/Xiwei-web/PEPS) ・ リポジトリ内被引用：0  
   質問を座標系・対象・状態・指標の基本要素へ実行前に確定させ必要な分だけ道具で計算し検証で局所修復する枠組みで、三課題すべてで最良の正解率と、反復型方式より料金十五から二十三点五パーセント減と遅延三十二点三から三十八点二パーセント減を報告した。
 
-- **2026-10 · [ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories](2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md)**  
-  実装：[✓](https://github.com/ntumm120/paraTTT) ・ リポジトリ内被引用：0  
-  深い非線形メモリの勾配軌跡を3つのチャンク並列パスで反復精緻化し、テスト時学習層を誤差を揃えて32倍速く評価できるようにした並列化アルゴリズム。
-
 - **2026-10 · [PAIR: Memory-Efficient and Fast Inference with Reading–Reasoning Fusion](2026-2610.16003-pair-memory-efficient-and-fast-inference-with-reading-reasoning-fusion.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小さいReaderに全文脈を読ませ大きいReasonerには文脈を見せず、両者のロジットを固定重みで融合することで、大規模モデルの精度の89〜96%をKVメモリ約4分の1で保つ非対称な2モデル推論。
@@ -1326,10 +1338,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   サムネイルの多様さで画像ごとの予算を動かし、質問との類似度でクロップへ配分し、共有空間で測った偏り除去済みの質問スコアと視覚的顕著性を融合して視覚トークンを選ぶ学習不要の階層型枝刈りで、保持率25パーセントで未枝刈り比98.0パーセントの性能と2.0倍のスループットを得た。
 
-- **2026-10 · [Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention](2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  キー側はオジャ則、値側はデルタ則で、共有スロットを持つ2段階メモリの両側を誤差修正し、線形注意の想起性能を高めた回帰型アーキテクチャ。
-
 - **2026-10 · [FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG](2026-2610.22818-fuserag-fusing-structure-and-evidence-into-inference-for-cost-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   グラフ証拠の直列化順序最適化がNP困難であることを示し、証拠を再利用可能な潜在メモリとしてデコーダ注意へ注入し、テキストには少数の事実アンカーだけを残すことで、品質を上げながらTTFTを最大2.7倍高速化するグラフ型RAGの枠組みFuseRAG。
@@ -1381,6 +1389,10 @@
 - **2026-10 · [DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs](2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重み再構成誤差の最小化で得た行と列の二重スケールを、そのまま活性値のチャネル再スケーリングに流用することで、調整データなしに重みと活性値の4ビット量子化をINT4からMX形式・NVFP4まで一つの手続きで実現する方式。
+
+- **2026-10 · [Dual DeltaNet: Value-Side Memory Reorganization for Linear Attention](2026-2610.38578-dual-deltanet-value-side-memory-reorganization-for-linear-attention.md)**  
+  実装：[✓](https://github.com/ReichtumQian/DualDeltaNet) ・ リポジトリ内被引用：0  
+  線形注意の固定サイズ状態に対し、キー側の値補正に加えて値の特徴からアドレスを再編成する値側デルタ則を導入し、針探し想起を大きく改善しつつデコードの演算密度も上げる両面補正の再帰モデル。
 
 - **2026-10 · [DPA-MoE: A Runtime Precision Control Framework for MoE Inference](2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5063,7 +5075,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：129  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：131  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
@@ -5079,7 +5091,7 @@
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：72  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  

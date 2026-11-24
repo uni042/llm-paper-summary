@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（649本）
+## 自動生成の論文一覧（650本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：43  
+  実装：✓ ・ リポジトリ内被引用：44  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter](2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md)**  
@@ -252,6 +252,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   TP/PP切替で重み・KV・通信群・ワーカーを作り直す代わりに、CPU共有重み、二次元KV移送、事前生成通信状態、待機ワーカーを再利用し、数秒で並列構成を変更できるLLMサービング方式。
 
+- **2026-05 · [RTP-LLM: High-Performance Alibaba LLM Inference Engine](2026-2605.29639-rtp-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  実運用LLM基盤で、要求をKV位置とGPU負荷に応じて振り分け、プリフィル/デコードを分離し、GPU〜分散ストレージのKV階層・高速読込・投機的復号を統合して待ち時間と容量負荷を減らす。
+
 - **2026-05 · [Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism](2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   多階層SLOの負荷変動に応じてテンソル並列度、プリフィル/デコードGPU配分、要求スケジューリングを同時に切り替え、重み再読込不要化と高速KV移行で再構成をミリ秒級に抑えるLLMサービング方式。
@@ -355,10 +359,6 @@
 - **2026-05 · [Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale](2026-2605.06113-balanceroute-data-parallel-online-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   同期障壁を持つデータ並列デコードで、各ワーカーの安全余裕をFスコアで評価して新規要求を割り当て、KV負荷の偏りと障壁待ちを抑えるオンラインルータBalanceRouteを提案する。
-
-- **2026-05 · [RTP-LLM: High-Performance Alibaba LLM Inference Engine](2026-2605.29639-rtp-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  実運用LLM基盤で、要求をKV位置とGPU負荷に応じて振り分け、プリフィル/デコードを分離し、GPU〜分散ストレージのKV階層・高速読込・投機的復号を統合して待ち時間と容量負荷を減らす。
 
 - **2026-05 · [PRISM: Fast Online LLM Serving via Scheduling-Memory Co-design](2026-2605.08581-prism-fast-online-llm-serving-via-scheduling-memory-co-design.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -757,6 +757,10 @@
 - **2026-10 · [SAKURA: Serving Attention Key-Value State Under Rate Adaptation for Private Image Editing on Phones](2026-2610.29733-sakura-serving-attention-key-value-state-under-rate-adaptation-for-priva.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   テンプレートの再利用KVを重要度重み付きの低ランク分解と量子化で段階化し、シャードごとに帯域へ適応して送ることで、端末上の画像編集で無圧縮比1.82倍の高速化と尾遅延の平均44パーセント削減を画質を保って得るクラウドと端末の協調方式。
+
+- **2026-10 · [RTP-LLM: Building an Evolvable and Reliable LLM Inference Engine at Alibaba Scale](2026-2611.00967-rtp-llm-building-an-evolvable-and-reliable-llm-inference-engine-at-aliba.md)**  
+  実装：[✓](https://github.com/alibaba/rtp-llm) ・ リポジトリ内被引用：0  
+  モデル実行（Python/PyTorch）とサービング制御（共有C++ランタイム）を明示的インターフェースで分離し、新モデル対応の変更をモデル層へ局所化することで、約100モデル・日次数百兆トークンの本番運用と継続的進化を両立させたAlibabaの推論エンジンRTP-LLMの設計・運用報告。
 
 - **2026-10 · [Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading](2026-2610.40305-rimuru-unified-memory-management-for-modern-llm-serving-via-elastic-expe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2243,7 +2247,7 @@
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：115  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：116  
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  

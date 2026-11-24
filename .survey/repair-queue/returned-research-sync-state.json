@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2b81cd59a9b07cf9384c1f284524bc4d32758769",
+  "base_commit": "190a8031567b85d0e35afad1a0a9f68e7ebedd4e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1533,8 +1533,10 @@
     "2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-personal-devices.json",
     "2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.json",
     "2026-2610.38303-don-t-ask-the-llm-visual-token-pruning-with-spectral-structure-and-semantic-relevance.json",
+    "2026-2610.38329-a-case-study-of-a-multi-agent-kernel-optimization-loop-that-learns-a-new-ai-accelerator.json",
     "2026-2610.38331-multi-token-prediction-done-right.json",
     "2026-2610.38355-flatcake-a-flat-kvcache-storage-architecture-for-llm-serving.json",
+    "2026-2610.38578-dual-deltanet-value-side-memory-reorganization-for-linear-attention.json",
     "2026-2610.38809-causal-attention-on-cpu-a-cache-aware-and-load-balanced-scheduling-kernel-for-prefill.json",
     "2026-2610.38822-copyloop-fast-looped-transformer-decoding-via-context-copying-and-shallow-screening.json",
     "2026-2610.38968-tabletune-measured-self-correcting-draft-length-tables-for-dynamic-speculative-decoding.json",
@@ -1592,13 +1594,16 @@
     "2026-2611.00506-weights-that-stay-on-chip-megakernels-for-serial-heads-in-speculative-decoding.json",
     "2026-2611.00646-when-shards-fly-cross-tensor-in-flight-conversion-for-low-latency-low-memory-weight-updates-in-disaggregated-rl.json",
     "2026-2611.00652-inference-first-training-underneath-layer-granular-lora-co-serving-with-layerloom.json",
+    "2026-2611.00967-rtp-llm-building-an-evolvable-and-reliable-llm-inference-engine-at-alibaba-scale.json",
     "2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attention.json",
     "2026-2611.01182-fast-and-exact-relative-position-attention-via-structure-aware-kernels.json",
     "2026-2611.01450-cipherflow-compiling-ai-programs-for-efficient-cryptographically-secure-inference.json",
     "2026-2611.01617-seeing-what-matters-verifying-what-pays-load-adaptive-speculative-decoding-for-vision-language-models.json",
     "2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-caching.json",
     "2026-2611.01859-apto-self-adaptive-cpu-gpu-hybrid-moe-inference-on-shared-pcs.json",
+    "2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.json",
     "2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.json",
+    "2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.json",
     "2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inverted-file-index.json",
     "2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.json",
     "2026-2611.02583-basiskv-value-latents-for-communication-and-key-routing.json",
@@ -54241,6 +54246,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.38329": {
+      "order": [
+        "2026-11-24T09:34:06+00:00",
+        "2026-2610.38329-a-case-study-of-a-multi-agent-kernel-optimization-loop-that-learns-a-new-ai-accelerator.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.38578": {
+      "order": [
+        "2026-11-24T09:35:02+00:00",
+        "2026-2610.38578-dual-deltanet-value-side-memory-reorganization-for-linear-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.00967": {
+      "order": [
+        "2026-11-24T09:35:57+00:00",
+        "2026-2611.00967-rtp-llm-building-an-evolvable-and-reliable-llm-inference-engine-at-alibaba-scale.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.01864": {
+      "order": [
+        "2026-11-24T09:36:53+00:00",
+        "2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.02278": {
+      "order": [
+        "2026-11-24T09:37:48+00:00",
+        "2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68954,6 +69004,21 @@
     "arxiv:2610.38255": [
       "papers/inference/99-other-inference-systems/2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md",
       "papers/inference/99-other-inference-systems/2026-2610.38255-parattt-parallelizing-test-time-training-layers-with-deep-memories.md"
+    ],
+    "arxiv:2610.38329": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.38329-a-case-study-of-a-multi-agent-kernel-optimization-loop-that-learns-a-new.md"
+    ],
+    "arxiv:2610.38578": [
+      "papers/inference/99-other-inference-systems/2026-2610.38578-dual-deltanet-value-side-memory-reorganization-for-linear-attention.md"
+    ],
+    "arxiv:2611.00967": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.00967-rtp-llm-building-an-evolvable-and-reliable-llm-inference-engine-at-aliba.md"
+    ],
+    "arxiv:2611.01864": [
+      "papers/inference/99-other-inference-systems/2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.md"
+    ],
+    "arxiv:2611.02278": [
+      "papers/inference/99-other-inference-systems/2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md"
     ]
   }
 }

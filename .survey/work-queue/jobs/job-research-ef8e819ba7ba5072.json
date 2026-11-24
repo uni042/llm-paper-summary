@@ -35,10 +35,15 @@
   "selection_reason": "推論モデルの思考トレースの無駄（答え確定後の継続生成）を計測し、最短の正解サンプルを保持する自己学習でQwen3.5-9B比0.66倍の生成トークン数に削減しており、推論時のトークン消費削減への直接貢献がある。",
   "semantic_scholar_id": "5dd8f30aafb13eee41930e54b048fa7b4bb21211",
   "source_url": "https://arxiv.org/abs/2611.02278",
-  "status": "ready",
+  "status": "superseded",
   "title": "Concise-9B: Removing the Slack from a Reasoning Model's Thinking",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T09:39:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md",
+  "represented_canonical_id": "arXiv:2611.02278",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
