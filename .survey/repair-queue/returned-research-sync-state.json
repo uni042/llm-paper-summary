@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c6e1b0b34a78a5b711d6e0ef5df4627d470e5eed",
+  "base_commit": "273ee3bac1233d31f4e28d82eea89be356bde46d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -697,6 +697,9 @@
     "2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-and-capacity-constraints.json",
     "2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answering.json",
     "2026-2603.29813-compiling-code-llms-into-lightweight-executables.json",
+    "2026-2604.00136-paretobandit-budget-paced-adaptive-routing-for-non-stationary-llm-serving.json",
+    "2026-2604.00317-from-skew-to-symmetry-node-interconnect-multi-path-balancing-with-execution-time-planning-for-modern-gpu-clusters.json",
+    "2026-2604.00754-stochastic-attention-connectome-inspired-randomized-routing-for-expressive-linear-time-attention.json",
     "2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-coding.json",
     "2026-2604.01220-universal-yoco-for-efficient-depth-scaling.json",
     "2026-2604.01609-swift-svd-theoretical-optimality-meets-practical-efficiency-in-low-rank-llm-compression.json",
@@ -710,6 +713,7 @@
     "2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-models.json",
     "2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.json",
     "2026-2604.04972-rcp-representation-consistency-pruner-for-mitigating-distribution-shift-in-large-vision-language-models.json",
+    "2026-2604.05250-dualdiffusion-a-speculative-decoding-strategy-for-masked-diffusion-models.json",
     "2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-language-model-inference.json",
     "2026-2604.06330-stdec-spatio-temporal-stability-guided-decoding-for-dllms.json",
     "2026-2604.06465-multi-objective-evolutionary-merging-enables-efficient-reasoning-models.json",
@@ -717,6 +721,7 @@
     "2026-2604.06787-when-is-thinking-enough-early-exit-via-sufficiency-assessment-for-efficient-reasoning.json",
     "2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.json",
     "2026-2604.07173-infinilora-disaggregated-multi-lora-serving.json",
+    "2026-2604.07526-from-llm-to-silicon-rl-driven-asic-architecture-exploration-for-on-device-ai-inference.json",
     "2026-2604.08964-breaking-block-boundaries-anchor-based-history-stable-decoding-for-diffusion-large-language-models.json",
     "2026-2604.09377-task-aware-llm-routing-with-multi-level-task-profile-guided-data-synthesis-for-cold-start.json",
     "2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.json",
@@ -53241,6 +53246,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.00136": {
+      "order": [
+        "2026-11-24T05:20:02+00:00",
+        "2026-2604.00136-paretobandit-budget-paced-adaptive-routing-for-non-stationary-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.00317": {
+      "order": [
+        "2026-11-24T05:21:37+00:00",
+        "2026-2604.00317-from-skew-to-symmetry-node-interconnect-multi-path-balancing-with-execution-time-planning-for-modern-gpu-clusters.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.00754": {
+      "order": [
+        "2026-11-24T05:23:12+00:00",
+        "2026-2604.00754-stochastic-attention-connectome-inspired-randomized-routing-for-expressive-linear-time-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.05250": {
+      "order": [
+        "2026-11-24T05:24:47+00:00",
+        "2026-2604.05250-dualdiffusion-a-speculative-decoding-strategy-for-masked-diffusion-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.07526": {
+      "order": [
+        "2026-11-24T05:26:21+00:00",
+        "2026-2604.07526-from-llm-to-silicon-rl-driven-asic-architecture-exploration-for-on-device-ai-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67554,6 +67604,21 @@
     "arxiv:2603.26557": [
       "papers/inference/99-other-inference-systems/2026-2603.26557-memboost-a-memory-boosted-framework-for-cost-aware-llm-inference.md",
       "papers/inference/99-other-inference-systems/2026-2603.26557-memboost-a-memory-boosted-framework-for-cost-aware-llm-inference.md"
+    ],
+    "arxiv:2604.00136": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00136-paretobandit-budget-paced-adaptive-routing-for-non-stationary-llm-servin.md"
+    ],
+    "arxiv:2604.00317": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2604.00317-from-skew-to-symmetry-node-interconnect-multi-path-balancing-with-execut.md"
+    ],
+    "arxiv:2604.00754": [
+      "papers/inference/99-other-inference-systems/2026-2604.00754-stochastic-attention-connectome-inspired-randomized-routing-for-expressi.md"
+    ],
+    "arxiv:2604.05250": [
+      "papers/inference/05-speculative-decoding-moe/2026-2604.05250-dualdiffusion-a-speculative-decoding-strategy-for-masked-diffusion-model.md"
+    ],
+    "arxiv:2604.07526": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2604.07526-from-llm-to-silicon-rl-driven-asic-architecture-exploration-for-on-devic.md"
     ]
   }
 }

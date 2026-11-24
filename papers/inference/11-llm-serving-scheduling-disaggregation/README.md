@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（638本）
+## 自動生成の論文一覧（639本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -687,6 +687,10 @@
 - **2026-01 · [RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference](2026-2601.01712-relaygr-scaling-long-sequence-generative-recommendation-via-cross-stage-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   そこでRelayGRは、選択的な先行実行、利用者IDによる同一インスタンスへの振分け、ホストメモリへの短期退避を一体で設計する。
+
+- **2026-01 · [PROTEUS: SLA-Aware Routing via Lagrangian RL for Multi-LLM Serving Systems](2026-2601.19402-proteus-sla-aware-routing-via-lagrangian-rl-for-multi-llm-serving-system.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  正解率の下限目標を実行時入力として受け取り、ラグランジュ双対変数のフィードバックで目標から品質選好への写像を学ぶことで、単一モデルで全目標水準の下限遵守と大幅な費用削減を両立するルーター。
 
 - **2025-12 · [xGR: Efficient Generative Recommendation Serving at Scale](2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1382,6 +1386,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   注意行列の全要素を計算せず重要なトークンだけを残す疎注意（sparse 注意機構）は有効だが、各注意ヘッドに同じトークン数を割り当てると、少数のトークンで十分なヘッドには過剰計算を与え、多くのトークンを必要とするヘッドでは重要な情報を捨てる。
 
+- **2026-03 · [ParetoBandit: Budget-Paced Adaptive Routing for Non-Stationary LLM Serving](2026-2604.00136-paretobandit-budget-paced-adaptive-routing-for-non-stationary-llm-servin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  予算上限を閉ループで守る主双対ペーサーと幾何的忘却を持つ文脈付きバンディットで、価格変動や密かな品質低下や新モデル追加に運用中適応するLLMルーター。
+
 - **2026-03 · [Parallel In-context Learning for Large Vision Language Models](2026-2603.16092-parallel-in-context-learning-for-large-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLaVA-OV-7BのMI-Bench-ICLで、例示数8→16→32に増やすと入力長は23,318→44,027→84,959トークン、平均遅延は1.004→2.376→3.479秒へ増加する。各群の予測を重み付き専門家積（weighted product of エキスパート、PoE）で統合し、全例示を一度に読んだときの分布を近似する。
@@ -1441,10 +1449,6 @@
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同一GPU内でプリフィル/デコードを非lockstep並行実行し、共有KVとCU maskingでSLOと利用率を両立、MI300X実機で有効スループット平均4.9倍を報告。
-
-- **2026-01 · [PROTEUS: SLA-Aware Routing via Lagrangian RL for Multi-LLM Serving Systems](2026-2601.19402-proteus-sla-aware-routing-via-lagrangian-rl-for-multi-llm-serving-system.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  正解率の下限目標を実行時入力として受け取り、ラグランジュ双対変数のフィードバックで目標から品質選好への写像を学ぶことで、単一モデルで全目標水準の下限遵守と大幅な費用削減を両立するルーター。
 
 - **2026-01 · [Mico: efficient query scheduling for multi-cloud deployed LLM inference service](2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1700,6 +1704,10 @@
   実装：✓ ・ リポジトリ内被引用：11  
   チャットとコード生成のように異なるサービス品質目標（Service Level Objective; SLO）を持つ要求を一つの先着順で処理せず、入力長・予想出力長・要求ごとのSLOから「どの順序・どのバッチなら何件が期限内に終わるか」を推定し、焼きなまし法（シミュレーション Annealing）で優先順を探索する。
 
+- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
+  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：11  
+  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
+
 - **2025-11 · [Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments](2024-2411.17741-chameleon-adapter-caching-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   多数LoRA提供で生じるアダプタ転送競合と要求時間のばらつきを、動的GPUアダプタキャッシュとサイズ認識型複数キュースケジューリングの協調で抑え、高負荷時のP99初回トークン時間を80.7%削減する。
@@ -1719,10 +1727,6 @@
 - **2025-04 · [Taming the Titans: A Survey of Efficient LLM Inference Serving](2025-2504.19720-taming-the-titans-a-survey-of-efficient-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   本論文は、これらを個別の高速化手法として列挙するだけでなく、単一インスタンス・クラスタ・新興用途・補助領域の四層に配置する。
-
-- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
-  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：10  
-  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
 
 - **2025-08 · [Optimal Scheduling Algorithms for LLM Inference: Theory and Practice](2025-2508.01002-optimal-scheduling-algorithms-for-llm-inference-theory-and-practice.md)**  
   実装：[✓](https://github.com/agrimUT/SLAI) ・ リポジトリ内被引用：9  

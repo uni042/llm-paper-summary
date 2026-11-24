@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1478本）
+## 自動生成の論文一覧（1479本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2538,6 +2538,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   端末推論のメモリ圧迫に対し、高帯域ストレージと接合型SRAMチップレットを階層ルーフラインの解析モデルで評価し、帯域・遅延の要求条件とデータ配置の指針を示すハードウェア技術の分析。
 
+- **2026-04 · [Stochastic Attention: Connectome-Inspired Randomized Routing for Expressive Linear-Time Attention](2026-2604.00754-stochastic-attention-connectome-inspired-randomized-routing-for-expressi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  窓注意の前後でトークン順序をランダムに入れ替えるだけのパラメータなし改良。固定窓が確率的な大域窓に変わり、同じ計算量で受容野が指数的に広がる。SWAとのゲート併用で局所性も保ち、学習なし適用でも全注意の品質へ近づく。
+
 - **2026-04 · [Stability-Weighted Decoding for Diffusion Language Models](2026-2604.17068-stability-weighted-decoding-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続ステップ間の予測の揺れでトークンの確定を遅らせる学習不要の調整器により、拡散言語モデルの並列復号で正解率を大きく上げながら関数評価回数も減らした。
@@ -3553,7 +3557,7 @@
   PLD+（プロンプト Lookup Decoding+）は、入力文脈の一部がそのまま出力にも現れる場合に、過去の入力トークン列を将来の出力候補として再利用する投機的復号法である。例えばコード編集で改行やインデント、識別子が何度も現れると、従来のPLDが最長の局所的な文字列一致だけで候補を選ぶと、同じ記号が出る別の場所を誤選択し、検証に失敗する。
 
 - **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
 
 - **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
@@ -4871,7 +4875,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：120  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：121  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  

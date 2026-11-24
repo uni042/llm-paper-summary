@@ -35,10 +35,15 @@
   "selection_reason": "GPUクラスタの異種インターコネクトでトラフィック偏りによりリンクが飽和する問題に対し、実行時計画で多経路へ容量正規化した混雑最小化の再配分を行うNIMBLEを提案し、偏ったAll-to-Allvで最大5.2倍、LLM MoEのエンドツーエンドでも1.35倍の改善を示す分散実行基盤である。",
   "semantic_scholar_id": "f06888176f2cad9f01aa3b9e7113363564f71d9f",
   "source_url": "https://arxiv.org/abs/2604.00317",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Skew to Symmetry: Node-Interconnect Multi-Path Balancing with Execution-time Planning for Modern GPU Clusters",
   "type": "research",
   "venue": "IEEE International Parallel and Distributed Processing Symposium",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:28:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.00317-from-skew-to-symmetry-node-interconnect-multi-path-balancing-with-execut.md",
+  "represented_canonical_id": "arXiv:2604.00317",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

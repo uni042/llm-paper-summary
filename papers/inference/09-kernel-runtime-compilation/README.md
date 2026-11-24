@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（331本）
+## 自動生成の論文一覧（333本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -279,6 +279,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-12 · [KV Admission: Learning What to Write for Efficient Long-Context LLM Inference](2025-2512.17452-kv-admission-learning-what-to-write-for-efficient-long-context-llm-infer.md)**  
   実装：[✓](https://github.com/EMCLab-Sinica/WG-KV) ・ リポジトリ内被引用：1  
   KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
+
+- **2025-12 · [Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics](2025-2512.12602-exact-flow-linear-attention-exact-solution-from-continuous-time-dynamics.md)**  
+  実装：[✓](https://github.com/declare-lab/EFLA) ・ リポジトリ内被引用：1  
+  厳密流線形注意（Exact Flow Linear 注意機構、EFLA）は、デルタ則更新が、入力を一つのトークン区間で固定した連続時間の微分方程式を前進オイラー法（explicit Euler）で一歩近似したものと解釈できることを示す。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -718,6 +722,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   静的Transformer演算をCUDA Graph再生、動的制御を実行時コンパイルへ分け、短系列・バッチ1推論の起動オーバーヘッドと尾部遅延を削減する。
 
+- **2026-04 · [From LLM to Silicon: RL-Driven ASIC Architecture Exploration for On-Device AI Inference](2026-2604.07526-from-llm-to-silicon-rl-driven-asic-architecture-exploration-for-on-devic.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ASICの設計空間全体を強化学習で探索するコンパイラ。メッシュ形状、コア別パラメータ、メモリ配分、演算子分割を単一の決定過程でSACが最適化し、ノードごとに人手調整なしでPPAの良い構成を導く。数値は解析モデルによる推定。
+
 - **2026-04 · [FluidGPU: Fine-Grained Kernel Disaggregation for Large Model Inference on Heterogeneous GPUs](2026-2604.10180-fluidgpu-fine-grained-kernel-disaggregation-for-large-model-inference-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、性能と価格の異なるGPUが混在するクラスタで、モデルのフェーズやTransformerブロックより細かいCUDAカーネル単位に処理を配置する推論実行基盤を提案する。
@@ -761,6 +769,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts](2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   50演算×FP32/BF16のMSKernelBenchと、律速別に選別したNsight Compute情報を計画・実装・コンパイル・デバッグの4担当へ渡すCUDAMasterで、多領域CUDA最適化を自動化し、o4-miniで正当性100%・基準超え94%を達成する。
+
+- **2026-03 · [From Skew to Symmetry: Node-Interconnect Multi-Path Balancing with Execution-time Planning for Modern GPU Clusters](2026-2604.00317-from-skew-to-symmetry-node-interconnect-multi-path-balancing-with-execut.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  偏った通信で一部のリンクだけが飽和する問題に対し、リンク負荷を見て最大混雑を最小化するようメッセージを複数パスへ実行時に再配分するランタイムNIMBLEを提案し、偏ったオールツーオールでNCCL比最大5.2倍、MoEのエンドツーエンドで最大1.35倍を示す。
 
 - **2026-02 · [The Quantization Trap: Breaking Linear Scaling Laws in Multi-Hop Reasoning](2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -822,10 +834,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   FFNの複数ヘッド化を、比率を保つ並列サブネットワークとSRAM上でオンライン計算する融合カーネルで実用化し、SwiGLUよりメモリを3から5倍削減し推論を最大1.08倍速くしながら品質も改善した研究。
 
-- **2025-12 · [Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics](2025-2512.12602-exact-flow-linear-attention-exact-solution-from-continuous-time-dynamics.md)**  
-  実装：[✓](https://github.com/declare-lab/EFLA) ・ リポジトリ内被引用：0  
-  厳密流線形注意（Exact Flow Linear 注意機構、EFLA）は、デルタ則更新が、入力を一つのトークン区間で固定した連続時間の微分方程式を前進オイラー法（explicit Euler）で一歩近似したものと解釈できることを示す。
-
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
@@ -837,7 +845,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：53  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
