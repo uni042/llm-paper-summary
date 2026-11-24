@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2cbee53b33f4018470bcedcf057df5fd41c9224d",
+  "base_commit": "f140715d339d0787aaff49262900c6b8d35eb8a6",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1152,6 +1152,7 @@
     "2026-2609.32900-constraints-are-graphs-not-chains-exact-decoding-for-diffusion-language-models.json",
     "2026-2609.33051-sketchssm-write-to-the-full-state-read-from-a-compact-sketch.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
+    "2026-2609.33465-gsm-efficient-language-modeling-with-shared-global-state.json",
     "2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix-replay-for-hybrid-llms.json",
     "2026-2609.33503-relaxkv-recomputation-guided-by-the-query-with-sparse-context-attention-for-efficient-kv-cache-reuse.json",
     "2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pruning.json",
@@ -1163,6 +1164,7 @@
     "2026-2609.34380-dps-dual-mode-precision-llm-serving-with-semi-unified-memory.json",
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
     "2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterogeneous-pim-architectures.json",
+    "2026-2609.34663-tool-waiting-and-re-arrival-in-compile-time-static-llm-serving-cost-mechanisms-and-configuration-selection.json",
     "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json",
     "2026-2609.34867-p4q-co-designing-token-pruning-and-quantization-for-vision-language-model-acceleration.json",
     "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json",
@@ -1171,9 +1173,11 @@
     "2026-2609.35579-output-aware-residual-stream-pruning-for-large-language-models.json",
     "2026-2609.35817-less-uniform-discrete-diffusion-is-more-powerful-and-scalable.json",
     "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json",
+    "2026-2609.36860-ironllm-forging-compact-edge-native-language-models-for-real-time-embodied-intelligence.json",
     "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
     "2026-2609.37042-gleanvid-complementary-token-selection-for-efficient-video-large-language-models.json",
     "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json",
+    "2026-2609.37345-when-to-retrieve-when-to-stay-uncertainty-aware-temporal-evidence-allocation-for-streaming-video-llms.json",
     "2026-2609.37362-pretrain-once-route-anywhere-towards-a-foundation-model-for-llm-routing.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.37590-focus-training-free-decision-preserving-context-compression-for-llm-agents.json",
@@ -1183,6 +1187,7 @@
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
     "2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generalization-limits.json",
+    "2026-2609.38997-settle-learning-when-to-stop-reasoning.json",
     "2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.json",
     "2026-2609.39334-taming-speculative-search-for-test-time-scaling-in-llm-serving.json",
     "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json",
@@ -53991,6 +53996,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.33465": {
+      "order": [
+        "2026-11-24T08:14:44+00:00",
+        "2026-2609.33465-gsm-efficient-language-modeling-with-shared-global-state.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.34663": {
+      "order": [
+        "2026-11-24T08:16:19+00:00",
+        "2026-2609.34663-tool-waiting-and-re-arrival-in-compile-time-static-llm-serving-cost-mechanisms-and-configuration-selection.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.36860": {
+      "order": [
+        "2026-11-24T08:17:55+00:00",
+        "2026-2609.36860-ironllm-forging-compact-edge-native-language-models-for-real-time-embodied-intelligence.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.37345": {
+      "order": [
+        "2026-11-24T08:19:31+00:00",
+        "2026-2609.37345-when-to-retrieve-when-to-stay-uncertainty-aware-temporal-evidence-allocation-for-streaming-video-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.38997": {
+      "order": [
+        "2026-11-24T08:21:06+00:00",
+        "2026-2609.38997-settle-learning-when-to-stop-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68604,6 +68654,21 @@
     "arxiv:2609.29664": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2609.29664-to-think-or-not-to-think-allocating-reasoning-where-it-helps.md"
+    ],
+    "arxiv:2609.33465": [
+      "papers/inference/99-other-inference-systems/2026-2609.33465-gsm-efficient-language-modeling-with-shared-global-state.md"
+    ],
+    "arxiv:2609.34663": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.34663-tool-waiting-and-re-arrival-in-compile-time-static-llm-serving-cost-mech.md"
+    ],
+    "arxiv:2609.36860": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2609.36860-ironllm-forging-compact-edge-native-language-models-for-real-time-embodi.md"
+    ],
+    "arxiv:2609.37345": [
+      "papers/inference/99-other-inference-systems/2026-2609.37345-when-to-retrieve-when-to-stay-uncertainty-aware-temporal-evidence-alloca.md"
+    ],
+    "arxiv:2609.38997": [
+      "papers/inference/99-other-inference-systems/2026-2609.38997-settle-learning-when-to-stop-reasoning.md"
     ]
   }
 }

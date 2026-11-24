@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（645本）
+## 自動生成の論文一覧（646本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：39  
+  実装：✓ ・ リポジトリ内被引用：41  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter](2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md)**  
@@ -858,6 +858,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU間のNVLink・PCIe・RDMA・TCP接続を調べてKV転送経路を選び、層計算へ重ねる方式とCXL容量階層を解析し、分離推論の転送待ちとHBM容量制約を減らす。
 
+- **2026-09 · [Tool Waiting and Re-arrival in Compile-Time-Static LLM Serving: Cost Mechanisms and Configuration Selection](2026-2609.34663-tool-waiting-and-re-arrival-in-compile-time-static-llm-serving-cost-mech.md)**  
+  実装：[✓](https://github.com/dongkyeomjang/escapement) ・ リポジトリ内被引用：0  
+  ツール待ちで再到着するエージェント型セッションを、設定がコンパイル時に固定されたNPUサービングで扱う際の費用機構を3つに分離し、時刻順シミュレータで2077候補から設定を選ぶことで実行費用を最大9.72パーセント下げる研究。
+
 - **2026-09 · [Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving](2026-2609.18112-fairinference-token-latency-fairness-multitenant.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離実行比δ以内のトークン遅延を保証するdeadline スケジューラとKV予約を統合し、高需要テナント下のp99 遅延 isolationを実現する。
@@ -1521,7 +1525,7 @@
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
-  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：59  
+  実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：60  
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2025-04 · [MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism](2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md)**  
@@ -2032,6 +2036,10 @@
   実装：[✓](https://github.com/AntonValk/C3PO-LLM) ・ リポジトリ内被引用：1  
   すべての質問を最も高価なモデルへ送るのではなく、小型モデルが容易な質問へ回答し、難しい質問だけを高性能モデルへ順に送る方式をカスケード推論（cascaded inference）という。
 
+- **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  マルチコアNPU向け多層シミュレータで、テンソル分割・コア配置・SRAM/HBM管理・プリフィルとデコードの分離/融合をQwen3各サイズで比較し、入力長・通信競合・負荷構成ごとに有利な設計を明らかにする研究。
+
 - **2025-09 · [A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving](2025-2509.23384-synergysched-predictive-two-layer-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   オンライン性能モデルをエンジン内SLO対応処理群形成とクラスタ先読み配送の共通信号にし、二層間の情報断絶を閉じて動的・異種LLM配信の遅延とSLO達成率を改善する。
@@ -2111,10 +2119,6 @@
 - **2025-10 · [Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion](2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-log.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   回答を要点と依存グラフへ分解して独立な要点を並行展開し、複数質問間では計算集約的な要点生成とメモリ集約的な展開を重ねるパイプラインで、推論の速度と品質を両立させる枠組み。
-
-- **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  マルチコアNPU向け多層シミュレータで、テンソル分割・コア配置・SRAM/HBM管理・プリフィルとデコードの分離/融合をQwen3各サイズで比較し、入力長・通信競合・負荷構成ごとに有利な設計を明らかにする研究。
 
 - **2025-10 · [Best of mini-N in-loop Sampling: A Contextual Quality Reward Model for Reliable and Efficient Best-of-N Sampling](2025-2510.04087-best-of-mini-n-in-loop-sampling-a-contextual-quality-reward-model-for-re.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

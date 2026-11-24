@@ -16,6 +16,10 @@
   実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：6  
   映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
 
+- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
+  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：4  
+  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
+
 - **2026-04 · [Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures](2026-2604.09048-watt-counts-energy-aware-benchmark-for-sustainable-llm-inference-on-hete.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
@@ -23,10 +27,6 @@
 - **2026-02 · [Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing](2026-2602.03845-parallel-probe-towards-efficient-parallel-thinking-via-2d-probing.md)**  
   実装：[✓](https://github.com/zhengkid/Parallel-Probe) ・ リポジトリ内被引用：4  
   多数派の答えが途中で既に確定していても、最後まで生成する方式では長い少数経路の完了待ちと総生成トークンが残る。論文の表1では、Qwen3-0.6Bの数学3ベンチマーク平均で、固定64経路の多数決に比べ正答率22.8%から23.3%へ変化しつつ、逐次トークン31.6千個から20.3千個、総トークン945.7千個から735.3千個へ減少した。
-
-- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
-  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：3  
-  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
 
 - **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
   実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：3  
@@ -56,9 +56,17 @@
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
 
+- **2026-08 · [The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning](2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md)**  
+  実装：[✓](https://github.com/dylanjayabahu/halt-vector) ・ リポジトリ内被引用：1  
+  答え確定前後の活性差から作った停止ベクトルへのステアリングを、軸外次元を固定した全ベクトル再構成で重みへ内在化し、24問の適合だけで未見ベンチマークの思考を約24パーセント、問題適応的に削減した研究。
+
 - **2026-08 · [Sliding-window beats linear attention](2026-2608.28444-sliding-window-beats-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
+
+- **2026-08 · [SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing](2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branc.md)**  
+  実装：[✓](https://github.com/Bl1nding/SABER) ・ リポジトリ内被引用：1  
+  推論の途中で「前の推論は間違い」と揺さぶる短い分岐を伸ばし、答えが揺らがなければ収束したとみなして早期終了する方式で、推論トークンを3から4割削りながら正解率を保った。
 
 - **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -334,17 +342,9 @@
   実装：[✓](https://github.com/Fcr09/thinking-hard-not-smart) ・ リポジトリ内被引用：0  
   長い思考を許す推論言語モデルは、一問ごとの数学・コード問題で精度を高められる。しかし現実の計算資源は有限であり、複数の依頼を同時に処理する場合には「どの問題へ何トークン使うか」「いつ諦めて別の問題へ進むか」という別の判断が必要になる。この論文は新しい高速化カーネルや推論サービング基盤を提案するものではない。
 
-- **2026-08 · [The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning](2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md)**  
-  実装：[✓](https://github.com/dylanjayabahu/halt-vector) ・ リポジトリ内被引用：0  
-  答え確定前後の活性差から作った停止ベクトルへのステアリングを、軸外次元を固定した全ベクトル再構成で重みへ内在化し、24問の適合だけで未見ベンチマークの思考を約24パーセント、問題適応的に削減した研究。
-
 - **2026-08 · [Task-Aware Spectral Pruning: A Mixture-of-Masks Framework for Efficient LLM Inference](2026-2609.29499-task-aware-spectral-pruning-a-mixture-of-masks-framework-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   スペクトル記述子が課題別除去損害を予測できるかを事前に判定し、通過時だけ課題族ごとの依存閉鎖マスクを構築してターン単位で振り分ける枝刈りで、70Bの計算量43パーセント削減時に保持率97.7パーセントとデコード1.44倍を両立する。
-
-- **2026-08 · [SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing](2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branc.md)**  
-  実装：[✓](https://github.com/Bl1nding/SABER) ・ リポジトリ内被引用：0  
-  推論の途中で「前の推論は間違い」と揺さぶる短い分岐を伸ばし、答えが揺らがなければ収束したとみなして早期終了する方式で、推論トークンを3から4割削りながら正解率を保った。
 
 - **2026-08 · [RUTA: Principled Visual Token Allocation via Rate-Utility Optimization](2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.md)**  
   実装：[✓](https://github.com/Multimedia-Analytics-Laboratory/RUTA) ・ リポジトリ内被引用：0  

@@ -44,6 +44,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   MoE自身の常駐層と少数ホットエキスパートをドラフト化し、投機検証でエキスパート転送を集約してCPU/SSDオフロードMoEの通信量と推論時間を削減する。
 
+- **2026-03 · [FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding](2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md)**  
+  実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：3  
+  すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
+
 - **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
@@ -103,10 +107,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-03 · [TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading](2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   高・中・低頻度専門家をGPU・行列演算CPU・DIMM近傍処理へ三分し、予測付き再配置で単一GPUのMoEオフロードを高速化する。
-
-- **2026-03 · [FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding](2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md)**  
-  実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：2  
-  すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
 
 - **2026-03 · [DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge](2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

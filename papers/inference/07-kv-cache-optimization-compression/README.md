@@ -34,7 +34,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-09 · [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   CED・CSA2の層間KV再利用・FP4 KV・SWA限定再実行を統合し、100万トークン対応552B MoEのグローバルKVを890 bytes/トークン、永続KVを前世代比約1/8へ圧縮する。
 
 - **2026-01 · [Fast KVzip: Efficient and Accurate LLM Inference with Gated KV Eviction](2026-2601.17668-fast-kvzip-efficient-and-accurate-llm-inference-with-gated-kv-eviction.md)**  
@@ -285,6 +285,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/an-yongqi/rest-kv) ・ リポジトリ内被引用：3  
   自己回帰生成では、過去トークンのキーとバリューを各層・各ヘッドに保存する。入力文脈が伸びるとキャッシュの占有量と復号時の読み出しが増え、長文脈の同時提供でメモリ容量・帯域の制約が強くなる。従来のH2OやSnapKVなどは注意重みの累積・観測窓内の集約を重視するが、トークンを削除するとソフトマックスの分母が変わり、残されたトークンへの注意が再分配される。
 
+- **2026-05 · [MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering](2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video-questio.md)**  
+  実装：[✓](https://github.com/IMBALDY/MuKV) ・ リポジトリ内被引用：3  
+  動画を区間・フレーム・パッチの3粒度のKVキャッシュで保持し、自己注意と周波数の二信号で圧縮して半階層検索する方式で、保存量を増やさずにストリーミング動画質問応答の精度を代表方式から数ポイント引き上げた。
+
 - **2026-05 · [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   KARAは、新しく増えたKV区間だけを一度ずつ圧縮し、重要トークンを可変長チャンクへ広げ、周期発動で再圧縮費を抑えて長い推論の同時実行数を保つ。
@@ -400,10 +404,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models](2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimod.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   固定した時間区切りをフレームと音声の対応に合わせて作り替えてから、映像と音声をそれぞれの冗長構造に合う方式で協調圧縮し、保持率44パーセントで全トークン並みの正解率を保った学習不要の圧縮方式。
-
-- **2026-05 · [MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering](2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video-questio.md)**  
-  実装：[✓](https://github.com/IMBALDY/MuKV) ・ リポジトリ内被引用：2  
-  動画を区間・フレーム・パッチの3粒度のKVキャッシュで保持し、自己注意と周波数の二信号で圧縮して半階層検索する方式で、保存量を増やさずにストリーミング動画質問応答の精度を代表方式から数ポイント引き上げた。
 
 - **2026-04 · [When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration](2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compressio.md)**  
   実装：[✓](https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay) ・ リポジトリ内被引用：2  
@@ -2634,7 +2634,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：443  
+  実装：✓ ・ リポジトリ内被引用：444  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  

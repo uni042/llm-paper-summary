@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1509本）
+## 自動生成の論文一覧（1512本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -232,6 +232,10 @@
   実装：[✓](https://github.com/MANGA-UOFA/Cactus) ・ リポジトリ内被引用：3  
   検証器が毎トークンの計算を繰り返す必要を減らす一方、草案器が提案したトークンを確率的に棄却するため、草案器と検証器の分布が異なると効率が落ちる。Qwen3-14Bを検証器、0.6Bを草案器としたSpec-Benchの6種類の課題では、自己回帰生成に対する総合速度倍率がSpSの1.81倍からCactusの1.88倍へ改善した。
 
+- **2026-03 · [TERMINATOR: Learning Optimal Exit Points for Early Stopping in Chain-of-Thought Reasoning](2026-2603.12529-terminator-learning-optimal-exit-points-for-early-stopping-in-chain-of-t.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  複雑な問題では思考が必要だが、答えが既に得られた後にも検算、別解探索、方針変更を続けることがある。実行時には未来の最終解答を参照せず、モデル最終層の隠れ状態から終了の可能性を予測し、複数トークンの多数決を経て を挿入する。Qwen3-8BのMATH-500では思考圧縮率45.1%（約54.9%削減）で、正答率91.1%から90.7%とほぼ同水準を維持した。
+
 - **2026-03 · [EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs](2026-2603.03681-evoprune-early-stage-visual-token-pruning-for-efficient-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   多くの既存削減方式は、視覚符号化器が全トークンを処理した後に削減を行うため、後段の言語モデルの事前入力処理は軽くできても、視覚符号化器がすでに使った演算量は取り戻せない。
@@ -388,10 +392,6 @@
   実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：2  
   TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
-- **2026-03 · [TERMINATOR: Learning Optimal Exit Points for Early Stopping in Chain-of-Thought Reasoning](2026-2603.12529-terminator-learning-optimal-exit-points-for-early-stopping-in-chain-of-t.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  複雑な問題では思考が必要だが、答えが既に得られた後にも検算、別解探索、方針変更を続けることがある。実行時には未来の最終解答を参照せず、モデル最終層の隠れ状態から終了の可能性を予測し、複数トークンの多数決を経て を挿入する。Qwen3-8BのMATH-500では思考圧縮率45.1%（約54.9%削減）で、正答率91.1%から90.7%とほぼ同水準を維持した。
-
 - **2026-03 · [Prune-then-Quantize or Quantize-then-Prune? Understanding the Impact of Compression Order in Joint Model Compression](2026-2603.18426-prune-then-quantize-or-quantize-then-prune-understanding-the-impact-of-c.md)**  
   実装：[✓](https://github.com/snudatalab/PQQP) ・ リポジトリ内被引用：2  
   本論文は、大規模言語モデル（LLM）を枝刈り（枝刈り）と量子化（量子化）の両方で圧縮する場合、どちらを先に適用すべきかを、圧縮率とモデル品質の関係から分析した研究である。枝刈り率5～30%、量子化4～8ビットを含む条件で、単独適用時の圧縮強度の差が大きいほど順序による品質差が大きくなる傾向を確認した。
@@ -515,6 +515,10 @@
 - **2026-09 · [SMat-Attention: Structured Long-Context Sequence Modeling](2026-2609.36062-smat-attention-structured-long-context-sequence-modeling.md)**  
   実装：[✓](https://anonymous.4open.science/r/smat_attention/README.md) ・ リポジトリ内被引用：1  
   SMat-注意機構は、過去へのアクセスを「任意の過去トークン」か「全履歴を一つに要約」かの二択とせず、選択できる過去トークン集合の組合せ的な豊かさをVC次元dで制御する。実験では、Mamba-2やGated DeltaNetに学習可能なプロフィールと4つの要約読出しを追加し、複数キー検索で精度を改善した。
+
+- **2026-09 · [ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding](2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-underst.md)**  
+  実装：[✓](https://github.com/CURRENTF/ShallowStream) ・ リポジトリ内被引用：1  
+  流入フレームは浅い層だけで処理してKVを履歴索引とし、質問時だけ浅い層の注意で証拠を選んで全層計算することで、ストリーミング動画理解のプリフィル遅延を最大52.1倍下げる深さ分離方式。
 
 - **2026-09 · [Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness](2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindne.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1434,6 +1438,10 @@
   実装：[✓](https://github.com/momentslab/awesome-efficient-videollm) ・ リポジトリ内被引用：0  
   動画言語モデルの高費用を、フレーム選択・符号器・接続部・言語モデル実行の4段階のどこで削るかで125件の効率化機構を分類し、条件のそろった比較だけを集約して、保持率25パーセント前後が精度維持の目安になることと、音声側と評価規約の空白を明らかにしたサーベイ。
 
+- **2026-09 · [When to Retrieve, When to Stay: Uncertainty-Aware Temporal Evidence Allocation for Streaming Video-LLMs](2026-2609.37345-when-to-retrieve-when-to-stay-uncertainty-aware-temporal-evidence-alloca.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  軽量エンコーダの類似度分布のエントロピーで意味検索と新しさの配分を適応させ、対象Video-LLMの視覚符号化を選ばれた観測だけに限定することで、ストリーミング動画理解の視覚処理費用を半分以下にする学習不要の証拠配分。
+
 - **2026-09 · [When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression](2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-conte.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実行済み推論を代理エントロピーで選んでオンラインに削除する学習不要の圧縮で、260課題の報酬を上げながら入力トークンを25.5パーセント削り、推論が忘れられるのは由来状態が外部化された後だと示した。
@@ -1478,9 +1486,9 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の多段推論では、全問い合わせを高価な大型モデルへ送る代わりに、まず小型モデルで回答し、難しいと判断したものだけ大型モデルへ送る。大型モデルの呼出し回数に予算があるとき、純利得が大きい問い合わせから優先して切り替える。
 
-- **2026-09 · [ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding](2026-2609.02780-shallowstream-index-shallow-then-answer-deep-for-streaming-video-underst.md)**  
-  実装：[✓](https://github.com/CURRENTF/ShallowStream) ・ リポジトリ内被引用：0  
-  流入フレームは浅い層だけで処理してKVを履歴索引とし、質問時だけ浅い層の注意で証拠を選んで全層計算することで、ストリーミング動画理解のプリフィル遅延を最大52.1倍下げる深さ分離方式。
+- **2026-09 · [Settle: Learning When to Stop Reasoning](2026-2609.38997-settle-learning-when-to-stop-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  完了トレースの答えの安定性から停止ラベルを作り、既存の推論終了トークンへ停止判断を二値監督と参照正則化で学習させることで、通常デコードのまま推論トークンを約4割削減する手法。
 
 - **2026-09 · [SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans](2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1585,6 +1593,10 @@
 - **2026-09 · [Gumbel Straight Flow: Distilling Autoregressive Models into One-step Flow Maps](2026-2610.00497-gumbel-straight-flow-distilling-autoregressive-models-into-one-step-flow.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   自己回帰モデルのガンベル最大化サンプリングが作る交わらない直線のノイズとデータの経路を教師とし、フローマップへ蒸留することで、並列な一段階生成を行う言語モデル。
+
+- **2026-09 · [GSM: Efficient Language Modeling with Shared Global State](2026-2609.33465-gsm-efficient-language-modeling-with-shared-global-state.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  履歴の選択と集約をエンコーダへ集中し、デコーダ全層が直近256位置の共有KV状態だけを読む構造で、履歴長に依らないデコーダ費用とキャッシュを実現しながら、強いスパース注意ベースラインと同等の性能と64K検索能力を保ったアーキテクチャ研究。
 
 - **2026-09 · [GroupMask: Layer-Adaptive Group-wise Sparsity for Semi-Structured LLM Pruning](2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pru.md)**  
   実装：[✓](https://github.com/ZhengaoLi/GroupMask) ・ リポジトリ内被引用：0  

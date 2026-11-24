@@ -35,10 +35,15 @@
   "selection_reason": "コンパイル時静的LLMサービングを対象に、ツール待ちと再到着がバッチバケット・最大バッチ・KVキャッシュスロット固定下で生む実行時間コストをシミュレータで解析し、2077構成から最低コスト構成を選ぶ直接のサービング研究。",
   "semantic_scholar_id": "9789670b4f2100d46c84be6eaf50c374c6b98cc7",
   "source_url": "https://arxiv.org/abs/2609.34663",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tool Waiting and Re-arrival in Compile-Time-Static LLM Serving: Cost Mechanisms and Configuration Selection",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T08:23:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.34663-tool-waiting-and-re-arrival-in-compile-time-static-llm-serving-cost-mech.md",
+  "represented_canonical_id": "arXiv:2609.34663",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
