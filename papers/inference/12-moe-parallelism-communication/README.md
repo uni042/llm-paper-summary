@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（81本）
+## 自動生成の論文一覧（82本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -304,6 +304,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2024-12 · [IFMoE: An Inference Framework Design for Fine-grained MoE](2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。
+
+- **2025-11 · [FarSkip-Collective: Unhobbling Blocking Communication in Mixture of Experts Models](2025-2511.11505-farskip-collective-unhobbling-blocking-communication-in-mixture-of-exper.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  残差の結線を変えて集合通信の結果を次の層へ後付けにし、古い・部分的な活性値で計算を先行させることで通信と計算を重ねる専門家混合の変換法で、109Bまでの全層変換と自己蒸留による精度回復、推論と学習の両方での重なりを実証する。
 
 - **2025-11 · [DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication](2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md)**  
   実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  

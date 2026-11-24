@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（103本）
+## 自動生成の論文一覧（114本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -56,6 +56,10 @@
 - **2026-05 · [Agentic AI Workload Characteristics](2026-2605.26297-agentic-ai-workload-characteristics.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。
+
+- **2026-02 · [RelayCaching：協調LLMの生成KVキャッシュ再利用](2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
 
 - **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -108,6 +112,10 @@
 - **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
   実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：2  
   通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
+
+- **2026-03 · [The Missing Memory Hierarchy: Demand Paging for LLM Context Windows](2026-2603.09023-pichay-demand-paging-context-windows.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  エージェント文脈を仮想メモリとしてページングし、古いツール結果を追い出して再参照時に復元する透明プロキシ。139万追い出しで0.0254%フォルト率を報告。
 
 - **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
   実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：2  
@@ -169,6 +177,10 @@
   実装：[✓](https://github.com/qiujihao19/LongVideo-R1) ・ リポジトリ内被引用：1  
   長尺動画を階層木として粗い要約から掘り下げ、答えに足りると判断したら探索を止めるエージェントで、網羅処理より大幅に少ないモデル呼出しでLVBench最高水準の正解率を得た。
 
+- **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
+  実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：1  
+  従来の記憶方式は履歴全体を事前に要約・索引化することが多いが、将来どの質問が来るかを知らずに情報を圧縮するため、不要な部分へ計算を費やしたり、後で必要になる詳細を失ったりする。
+
 - **2026-02 · [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybr.md)**  
   実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：1  
   大規模モデルの最初の1トークンの隠れ状態で関数検索と小規模モデルの生成を誘導し、固定構文はテンプレート注入で済ませる方式で、BFCL精度80.1パーセントと最速の0.828秒を両立した。
@@ -214,6 +226,10 @@
 - **2026-10 · [AgentWeave: Efficient Distributed Agent Serving via Flow Decomposition](2026-2610.14804-agentweave-efficient-distributed-agent-serving-via-flow-decomposition.md)**  
   実装：[✓](https://github.com/Guodanding/agentweave) ・ リポジトリ内被引用：0  
   集約型配置のブロッキングを、データを単位とする意味保存型のフロー分解と利得と費用を釣り合わせる適応スケジューラで解き、4種のエージェントでスループットを最大1.81倍へ上げる分散サービング方式。
+
+- **2026-09 · [When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression](2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-conte.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  実行済み推論を代理エントロピーで選んでオンラインに削除する学習不要の圧縮で、260課題の報酬を上げながら入力トークンを25.5パーセント削り、推論が忘れられるのは由来状態が外部化された後だと示した。
 
 - **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -295,6 +311,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントの停止中にプロンプトキャッシュを定期的に読み直して温め続ける方法を4事業者で実測し、最適な読み直し間隔は有効期限直前の約4分、損益分岐は約46分までという運用方針を導いた経済分析。
 
+- **2026-07 · [HACO: Hedged Agent Computing for Reliable LLM Systems](2026-2607.19215-haco-hedged-agent-computing-for-reliable-llm-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  役割呼び出しごとに品質・成功確率・遅延の見積もりから目標信頼度を満たす最小の冗長実行集合を選び、実行痕跡で候補と回線の見積もりを更新することで、劣化した実行ゾーンから自動で離れるエージェント実行制御の研究。
+
 - **2026-07 · [Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV](2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md)**  
   実装：[✓](https://github.com/oklen/Compute-Globally-Materialize-Locally) ・ リポジトリ内被引用：0  
   長い会話を続けるエージェントでは、過去の発話やツール結果を一度モデルに読み込ませ、各イベントのKV行を再利用する設計が考えられる。一方、意図的な値非明示の計算指示イベントを追加すると、同じモデルの追随回復率は6%から51%へ増えるが、二値以外の大きな値は保持しにくい。
@@ -311,6 +331,10 @@
   実装：[✓](https://github.com/EnVision-Research/StreamMA) ・ リポジトリ内被引用：0  
   従来の逐次転送（Serial）は、各エージェントが全推論段階を終えた後に回答全文を渡すため、処理経路が深くなるほど待ち時間が積み上がる。全文を受け取る方式では後期の誤りまで強く条件付けられるが、段階別転送では下流が信頼できる初期部分から独自の推論を始められる。
 
+- **2026-06 · [LLM Agents Are Latent Context Managers: Eliciting Self-Managed Context via State Proprioception](2026-2606.30005-llm-agents-are-latent-context-managers-eliciting-self-managed-context-vi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントに自分の文脈の状態を示すダッシュボードと、原文を失わない保管・復旧の道具を与える学習不要の層で、長期課題の成功率をLOCA-Benchで22.7から50.7パーセントへ引き上げた。
+
 - **2026-06 · [Libra: Efficient Resource Management for Agentic RL Post-Training](2026-2606.03077-libra-efficient-resource-management-for-agentic-rl-post-training.md)**  
   実装：[✓](https://github.com/NetX-lab/Libra) ・ リポジトリ内被引用：0  
   Libraは、ツール呼び出しを伴う大規模言語モデル（LLM）の強化学習後学習において、軌跡生成（Rollout）と勾配更新（学習）の双方を対象とする資源管理システムである。原著の最大改善はパイプライン処理能力4.2倍、報酬収束までの実時間2.7倍であり、初版の3.0倍・2.5倍と混同してはならない。
@@ -318,6 +342,10 @@
 - **2026-05 · [MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading](2026-2605.10268-memreread-enhancing-agentic-long-context-reasoning-via-memory-guided-rer.md)**  
   実装：[✓](https://github.com/iiGray/MemReread) ・ リポジトリ内被引用：0  
   MemRereadは、長い文書を固定容量の作業メモリへ逐次要約するエージェントに、不足した証拠を後から原文で再読する処理を加える研究である。履歴メモリを検索する方式でも、捨てられた情報が履歴に保存されていなければ検索対象にならない。
+
+- **2026-05 · [Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs](2026-2605.15077-concurrency-without-model-changes-future-based-asynchronous-function-cal.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一般的な同期方式では、モデルがツール呼出しを出力すると、その処理が完了するまで次の生成を止める。GPT-4oを用いたBFCL v4の検索ツール評価では、逐次同期呼出しと比べてタスク完了時間を1.26倍高速化した。
 
 - **2026-05 · [Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost](2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -338,6 +366,10 @@
 - **2026-04 · [EvolveRouter: Co-Evolving Routing and Prompt for Multi-Agent Question Answering](2026-2604.05149-evolverouter-co-evolving-routing-and-prompt-for-multi-agent-question-ans.md)**  
   実装：[✓](https://github.com/J-Huang01/EvolveRouter) ・ リポジトリ内被引用：0  
   あるモデルが低い正答率を示す原因は、モデル本体の能力不足だけでなく、与えられた役割指示の不適合にもある。逆に、すべてのエージェントを毎回呼び出す方式は、回答の質が低い参加者まで計算し、応答の待ち時間と呼出費用を増やす。
+
+- **2026-04 · [ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents](2026-2604.10352-clawvm-harness-managed-virtual-memory-for-stateful-tool-using-llm-agents.md)**  
+  実装：[✓](https://github.com/mpi-dsg/clawvm) ・ リポジトリ内被引用：0  
+  ClawVMは、長時間稼働し外部ツールを使うLLMエージェントで、プロンプト文脈を高速・小容量の作業メモリ、永続ファイルを低速・大容量の退避先とみなし、状態の常駐・縮退・書戻しをエージェント実行基盤（agent harness）に強制する仕組みである。
 
 - **2026-04 · [CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades](2026-2604.12262-cascadedebate-multi-agent-deliberation-for-cost-aware-llm-cascades.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -366,6 +398,18 @@
 - **2025-12 · [Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness](2025-d84a0fae3606-transcending-cost-quality-tradeoff-in-agent-serving-via-session-awarenes.md)**  
   実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：0  
   従来の単純な接頭辞一致キャッシュや最近使用順の退避では、この特徴を活かしにくい。NeurIPS 2025の実機評価では、AWエージェントでGPT-4oと近い品質を16.5%の費用で達成し、同一費用の費用・品質曲線に対して1.8倍の品質を報告する。
+
+- **2025-12 · [Reaching Agreement Among Reasoning LLM Agents](2025-2512.20184-reaching-agreement-among-reasoning-llm-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マルチエージェントの洗練を分散合意として形式化し、クォーラムと安定地平で確定するAegeanと、合意検出をサービング層へ埋め込むAegean-Serveで、遅延を最大20倍削減しながら精度を2.5パーセント以内に保つ研究。
+
+- **2025-12 · [Accelerating Language Model Workflows with Prompt Choreography](2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.md)**  
+  実装：[✓](https://github.com/tjbai/choreo) ・ リポジトリ内被引用：0  
+  文章ごとの鍵と値の符号化を全体で共有し、各呼び出しが任意の文章を任意の順序で参照できるようにして、追加学習でずれを直すことで、最初のトークンまでの時間を二・〇倍から六・二倍、全体でも二・二倍超速くしたと報告した。
+
+- **2025-12 · [A Plan Reuse Mechanism for LLM-Driven Agent](2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  意図分類と重要パラメータ抽出でパラメータを除いた文面の類似度を測り、構造化計画へ現在のパラメータを差し込む再利用で、エージェントの計画生成遅延を93パーセント減らす計画キャッシュ方式。
 
 ### 2年前（2024-12〜2025-11）
 

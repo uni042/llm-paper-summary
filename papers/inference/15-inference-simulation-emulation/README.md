@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（128本）
+## 自動生成の論文一覧（133本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -43,6 +43,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
   実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：10  
   分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。
+
+- **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
 
 - **2026-01 · [ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management](2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -146,6 +150,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   コーディングエージェントの休止状態を追い出さず保持する方が再計算より速いことに着目し、大容量のQLC高帯域フラッシュへ状態を置くLaFlashで、SLC方式とバッチ拡大の組み合わせに対し平均7.04倍のスループットと10.96倍のエネルギー効率を得る容量駆動の加速アーキテクチャ。
 
+- **2026-10 · [The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases](2026-2610.39621-the-real-cost-of-context-predicting-compute-time-and-energy-consumption-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  入力長と出力長を格子状に振った実測で、入力側の時間とエネルギーが入力長に線形と二次で伸びることを示し、時間の振る舞いが最も近い手元構成の対のモデルで商用モデルのエネルギーを推す方法により、未見構成でも時間で最大三・九七パーセント、エネルギーで最大二・四八パーセントの誤差で予測したと報告した。
+
 - **2026-10 · [SimServing: Native-Execution Simulation for Evolution-Resilient LLM Serving Configuration Tuning](2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   サービング管理ソフトウェアを再実装せずそのまま実行しGPU計算だけを遅延推定器へ替えることで、上流進化にずれない模擬を実現し、予測誤差を13.8パーセントから4.9パーセントへ下げた設定調整基盤。
@@ -217,6 +225,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-08 · [NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems](2026-2608.00867-nuna-characterizing-and-mitigating-non-uniform-network-access-in-multi-d.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   マルチダイGPUでチップ内の物理距離がGPU間通信遅延をばらつかせる現象を実測で示し、近い入出力ポートだけを使うルーティングとポート近傍への計算・データ配置で、小さなコレクティブを最大1.8倍、デコード時間を平均7パーセント速くした研究。
+
+- **2026-08 · [Multi-Level Modeling of Large Language Model Inference Latency and Energy via Hybrid Analytical-Machine-Learning Predictors](2026-2608.06723-multi-level-modeling-of-large-language-model-inference-latency-and-energ.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  基本演算の解析推定、ブロック単位の機械学習予測、全体集約の三層で推論の遅延とエネルギーを予測するHYMELL。H100でLLaMA 3 8Bの誤差はプリフィルとデコードとも5パーセント未満だった。
 
 - **2026-08 · [LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm](2026-2608.06135-llm-inference-under-bursty-workload-distribution-modifying-the-wait-algo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -388,6 +400,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：5  
   本研究は、一つの大規模言語モデル（LLM）を高速化するのではなく、複数のモデル推論・外部検索・ツール実行を含むエージェント全体を、異なる計算特性を持つ装置へ配置することを目的とする。音声対話エージェントを例にすると、音声認識、文脈検索、LLMによる応答生成、検索API、音声合成は互いに依存するが、同じGPUを使う必要はない。
 
+- **2025-06 · [MoE-GPS: Guidlines for Prediction Strategy for Dynamic Expert Duplication in MoE Load Balancing](2025-2506.07366-moe-gps-guidlines-for-prediction-strategy-for-dynamic-expert-duplication.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  MoE-GPSは、複数GPUに専門家を分散配置するMixture-of-Experts（MoE）モデルで、負荷分散のために人気専門家を複製するとき、どの程度細かくルーティング先を予測すべきかを選択する性能分析フレームワークである。MoE-GPSはこの交換条件をGPU計算・通信・予測費用へ分解し、システム全体の遅延が最小になる選択を示す。
+
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
   本研究が対象とするのは、あらかじめ処理する要求集合が分かっているオフライン推論であり、複数の大規模言語モデル（LLM）を一つのアプリケーション内で使う状況である。単一モデルの要求順序を最適化するだけでは、モデル間のGPU分配を決められない。SamuLLMはこれらを一つの計画問題として扱う。
@@ -395,6 +411,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-01 · [Serving Long-Context LLMs at the Mobile Edge: Test-Time Reinforcement Learning-based Model Caching and Inference Offloading](2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-lea.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈エージェント向けに、エッジへのモデルキャッシュとエッジ／クラウド間の推論オフロードをテスト時にも学習する強化学習T2DRLで一体に決め、二重オランダ式オークションで資源配分を補うことで、比較対象よりシステム費用を少なくとも30パーセント下げる枠組み。
+
+- **2025-10 · [Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling](2025-1fee57bdbc55-keeping-up-with-large-language-models-a-holistic-methodology-of-compute-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  分散LLMの解析的性能モデルへFlashAttention・MoE・トポロジ別通信を組み込んで並列化空間を5次元化し、チップレットの製造コストモデルまで統合することで、実機を作らずに性能とコストの交換関係を設計初期に探索できるようにしたモデル化方法論。
 
 - **2025-08 · [COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives](2025-2509.00599-comet-a-framework-for-modeling-compound-operation-dataflows-with-explici.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

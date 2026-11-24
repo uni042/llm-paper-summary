@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（122本）
+## 自動生成の論文一覧（128本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -36,9 +36,17 @@
   実装：✓ ・ リポジトリ内被引用：4  
   生成モデルと過程評価モデルを1枚のGPUに載せる場合には、両者へのKV領域の配分も難しい。FastTTSはこの三つの資源問題に対応する配信システムである。論文の主評価は単一のRTX 4090（24GB）で、AIME2024とAMC2023の数学問題を対象に、複数の生成器・検証器の組合せと探索枝数を比較する。
 
+- **2026-01 · [Native LLM and MLLM Inference at Scale on Apple Silicon](2026-2601.19139-native-llm-and-mllm-inference-at-scale-on-apple-silicon.md)**  
+  実装：[✓](https://github.com/waybarrios/vllm-mlx) ・ リポジトリ内被引用：4  
+  Apple SiliconはCPUとGPUが同じ物理メモリを利用する統合メモリ構成を持つため、一般的な独立GPU環境とはモデル重みや中間状態の管理条件が異なる。
+
 - **2026-06 · [Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design](2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   巨大MoEのCPU計算・DRAM帯域律速に対し、入力処理は必要重みをGPUへ細粒度転送し、生成はCPU専門家計算とGPU注意を重ねて元精度を保つ方式。
+
+- **2026-05 · [Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU](2026-2605.20706-llamaweb.md)**  
+  実装：[✓](https://github.com/ggml-org/llama.cpp) ・ リポジトリ内被引用：3  
+  LlamaWebは静的メモリ計画、端末適応型WebGPUカーネル、量子化対応をllama.cppへ統合し、ブラウザ推論のメモリ消費とデコード性能を改善する。
 
 - **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -63,6 +71,10 @@
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
+
+- **2026-04 · [Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM](2026-2604.18655-ondevice-multilora-runtime.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  実行時LoRA入力・NPU向け最適化・並行生成・自己投機的復号を統合し、Galaxy S24/S25で多用途LLMを単一グラフ展開する。
 
 - **2026-04 · [SWARM-LLM: Collaborative Inference for Edge-based Small Language Models](2026-2606.14711-swarm-llm-collaborative-inference-for-edge-based-small-language-models.md)**  
   実装：[✓](https://github.com/mdahshan/swarm_llm) ・ リポジトリ内被引用：1  
@@ -133,6 +145,10 @@
 - **2026-09 · [IronLLM: Forging Compact Edge-Native Language Models for Real-Time Embodied Intelligence](2026-2609.36860-ironllm-forging-compact-edge-native-language-models-for-real-time-embodi.md)**  
   実装：[✓](https://xpeng-robotics.github.io/iron-fm) ・ リポジトリ内被引用：0  
   エッジ向け654Mモデルの技術報告で、深度間でパラメータとKVを共有する軽量な複数トークン予測X-MTPと、巻き戻し不要のドラフトを実現する軽量検証ヘッドにより、ハイブリッド線形注意モデルでデコードを最大1.48倍高速化し、その品質上の代償まで測った研究。
+
+- **2026-09 · [IHS-LM: Intra-batch Hybrid Scheduling and Layer Migration for VLM Pipeline Inference Acceleration on Edge Devices](2026-9b405eddeda4-ihs-lm-intra-batch-hybrid-scheduling-and-layer-migration-for-vlm-pipeline-inference-acceleration-on-edge-devices.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KV容量連動のプリフィル/デコード混在スケジューリングと帯域感知型の境界層移行を統合し、異種Jetson上のVLM推論遅延を最大17.5%削減する。
 
 - **2026-09 · [Gradient Enhancement Task Aware Post-training Quantization](2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.md)**  
   実装：[✓](https://github.com/YihuaJerry/GTAQ.git) ・ リポジトリ内被引用：0  
@@ -368,6 +384,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
 
+- **2025-06 · [CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge](2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  装置に合わせた生成型の枝刈り整形と、要求ごとの適応の混合、層境界ごとの学習型の電圧・周波数制御を束ねた端末向け協調設計で、実測で最大11.92倍の高速化と最大7.36倍のエネルギー削減を示した。
+
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   提案方式の中核は、品質制約の下で消費エネルギーが小さい専門家集合を探す動的専門家選択（動的 専門家 Selection; DES）と、無線資源割当まで結合した共同専門家・副搬送波割当（Joint 専門家 and Subcarrier Allocation; JESA）である。
@@ -497,6 +517,10 @@
 - **2022-03 · [Overcoming Oscillations in Quantization-Aware Training](2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md)**  
   実装：[✓](https://github.com/qualcomm-ai-research/oscillations-qat) ・ リポジトリ内被引用：9  
   量子化対応学習（Quantization-Aware 学習; QAT）は、訓練中に低ビットの重みと活性を模擬し、推論時に使う整数化済みネットワークの精度を回復する手法である。ImageNetのMobileNetV3-Smallでは重み・活性3/3ビットのLSQ基準52.0%に対し、減衰59.0%、凍結58.9%を報告する。
+
+- **2022-07 · [STI: Turbocharge NLP Inference at the Edge via Elastic Pipelining](2022-2207.05022-sti-turbocharge-nlp-inference-at-the-edge-via-elastic-pipelining.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  Transformerをシャード単位で深さ・幅・ビット幅を調整できる弾力的なサブモデルにし、重要度順に入出力予算を配るパイプライン計画と小さなプリロードで、モバイル端末の数百ミリ秒目標を満たしながら常駐方式比でメモリを平均122倍削減する推論エンジン。
 
 ### 6年前（2020-12〜2021-11）
 

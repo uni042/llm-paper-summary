@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（31本）
+## 自動生成の論文一覧（46本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -14,9 +14,21 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
+- **2026-06 · [AlphaQ: Calibration-Free Bit Allocation for Mixture-of-Experts Quantization](2026-2606.04980-alphaq-calibration-free-bit-allocation-for-mixture-of-experts-quantizati.md)**  
+  実装：[✓](https://github.com/Superone77/AlphaQ) ・ リポジトリ内被引用：5  
+  しかし、推論時に選択され得る専門家の重みをGPUまたは周辺メモリへ配置する必要があるため、活性化の疎性がそのまま重みの記憶容量削減につながるわけではない。専門家ごとに2、3、4ビットなど異なる量子化精度を与えれば容量を減らせるが、どの専門家を高精度で守るかが問題になる。
+
 - **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
   実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：4  
   総パラメータ数が大きいモデルをGPUメモリへ載せるためには量子化が有効だが、すべての専門家を同じビット幅へ圧縮すると、特に1〜2ビットという極低精度で品質が大きく崩れる。
+
+- **2026-06 · [Less is MoE: Trimming Experts in Domain-Specialist Language Models](2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md)**  
+  実装：[✓](https://github.com/HectorHHZ/Less-is-MoE) ・ リポジトリ内被引用：3  
+  Less is MoEは、混合専門家モデル（Mixture of エキスパート、MoE）を圧縮する際に専門家を丸ごと削ると、一般常識の選択式問題では性能が残っても数学推論やコード生成が崩壊する原因を分析し、専門家内部の順伝播ネットワーク（FFN）中間次元を削るFisher-MoEを提案する研究である。
+
+- **2026-04 · [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md)**  
+  実装：[✓](https://github.com/nowazrabbani/moe_quantization) ・ リポジトリ内被引用：3  
+  本研究は、混合専門家モデル（Mixture-of-Experts、MoE）の推論メモリを減らすため、全専門家を同じビット幅へ量子化する代わりに、専門家ごとに1〜3ビットなど異なる精度を割り当てる方式を提案する。Mixtral 8x7Bの8課題平均では、専門家平均2.5ビットの提案方式が68.38%、比較方式PMQが67.53%だった。
 
 - **2026-07 · [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -26,23 +38,51 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/anik-jha/moep) ・ リポジトリ内被引用：2  
   Qwen3.6-35B-A3Bでは、専門家を各層50%保持するREAP方式によって総パラメータ数を36.0Bから19.0Bに減らし、HumanEval+の単発正答率（pass@1）は0.890から0.896となった。
 
+- **2026-07 · [COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution](2026-092a8a151f95-compel-compensated-mixture-of-experts-pruning-with-expert-layer-distribu.md)**  
+  実装：[✓](https://github.com/seohee0925/COMPEL) ・ リポジトリ内被引用：2  
+  COMPEL（Compensated Mixture-of-Experts Pruning with 専門家-層 distribution）は、混合専門家モデル（MoE）の全エキスパートを推論時に保持するメモリ負担を、モデルの各層で異なる冗長性を考慮して削減する剪定方式である。
+
 - **2026-05 · [ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression](2026-2605.29350-conmoe-expert-pool-consolidation-via-prototype-reassignment-for-moe-comp.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   ConMoEは、混合専門家モデル（Mixture-of-Experts; MoE）の推論に必要な専門家重みを、学習後の追加学習なしで縮小するための方式である。
+
+- **2026-02 · [Effective MoE-based LLM Compression by Exploiting Heterogeneous Inter-Group Experts Routing Frequency and Information Density](2026-2602.09316-effective-moe-based-llm-compression-by-exploiting-heterogeneous-inter-gr.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  RFID-MoEは、混合専門家（Mixture-of-Experts; MoE）型の大規模言語モデルを、事後学習の重み圧縮で小さくする研究である。論文はQwen3-235B-A22Bの総重み容量が8基のA100 40GB、合計320GBに収まらない例を挙げ、演算の疎性と保存容量の大きさが別問題であることを示す。
 
 - **2026-09 · [RAZOR: Pruning Replaceable Experts in LLMs](2026-2609.30465-razor-pruning-replaceable-experts-in-llms.md)**  
   実装：[✓](https://github.com/nick7nlp/Razor) ・ リポジトリ内被引用：1  
   専門家を丸ごと削除する専門家枝刈り（専門家 枝刈り）は、保持する重み容量を減らす直接的な方法だが、頻繁に使われない専門家を単純に捨てればよいとは限らない。
 
+- **2026-09 · [MoRA: MoE Pruning via Router Bias Learning and Expert Approximation](2026-2610.00367-mora-moe-pruning-via-router-bias-learning-and-expert-approximation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoRA（MoE Pruning via ルーティング Bias Learning and 専門家 Approximation）は、混合専門家（Mixture of エキスパート; MoE）型大規模言語モデルで、推論時に保持する専門家（専門家）の数を減らしながら、元モデルの生成品質をできるだけ保つ構造的な枝刈り方式である。
+
 - **2026-06 · [SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference](2026-2606.26587-sharq-bridging-activation-sparsity-and-fp4-quantization-for-llm-inferenc.md)**  
   実装：[✓](https://github.com/actypedef/SharQ) ・ リポジトリ内被引用：1  
   大規模言語モデルの線形層をFP4で実行すると演算密度を高められるが、入力によって変動する活性値には局所的な極大値が存在し、同じ量子化ブロックに属する通常値の分解能が犠牲になる。Llama-3.1-8Bの5課題平均正答率はNVFP4単独70.32%から71.55%に回復（FP16は72.50%）。
 
+- **2026-06 · [Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression](2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md)**  
+  実装：[✓](https://github.com/yifu-ding/MoE-Slimming) ・ リポジトリ内被引用：1  
+  専門家を丸ごと削除する従来方式では、重要度が高いと判定された専門家の内部にも残る冗長チャネルを見逃し、逆に頻度の低い専門家を全削除すると一部の入力に必要な能力を失う。著者らはDeepSeekとQwenの複数の混合専門家モデルを対象に、構造的枝刈り（structural 枝刈り）50%単独と、25%枝刈りに4ビット量子化を重ねた構成を比較した。
+
+- **2026-05 · [TileQ: Efficient Low-Rank Quantization of Mixture-of-Experts with 2D Tiling](2026-2605.09281-tileq-efficient-low-rank-quantization-of-mixture-of-experts-with-2d-tili.md)**  
+  実装：[✓](https://anonymous.4open.science/r/TileQ-BE20) ・ リポジトリ内被引用：1  
+  TileQは、混合専門家モデル（Mixture-of-Experts; MoE）の推論用重みを低ビット量子化する際、量子化誤差を修復する低ランク行列そのものが大量の専門家ごとに増殖する問題を扱う。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression](2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-com.md)**  
+  実装：[✓](https://github.com/ctxGou/MoE-Compression) ・ リポジトリ内被引用：0  
+  削除と統合には消えない構造的誤差があることを示し、共有基底を低ランク化して基底数を専門家数まで増やす重み再構成で、16Bから122Bの5モデル全てで三つの圧縮族の代表手法を上回り、26Bモデル圧縮率37パーセントでは平均点81.8対67.5の大差をつけた。
 
 - **2026-10 · [ProQuant: Preserving Expert Quality over Quantity in Ultra-Low-Bit Quantization of Mixture-of-Experts Models](2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quanti.md)**  
   実装：[✓](https://github.com/ThrowBug/ProQuant.git) ・ リポジトリ内被引用：0  
   MoEの混合精度量子化で、1ビットの劣化エキスパートを残さず0ビットで枝刈りしてビット予算を重要エキスパートへ回す配分最適化と、ルーティングを保ったまま誤差を補償する等価変換型のRMSNorm微調整を組み合わせ、平均1.5ビットでも生成品質を保つ手法。
+
+- **2026-10 · [DPA-MoE: A Runtime Precision Control Framework for MoE Inference](2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ルータが選んだ専門家への重み断片の配分を、ゲートスコアと事前計測した再構成残差から実行時に決め直すことで、同じ平均断片数の一律配分より出力分布のずれを最大4.5倍小さくし、同等の忠実度を22から44ギガバイト少ない重み量で達成した。
 
 - **2026-10 · [Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization](2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -59,6 +99,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2026-08 · [Tied Trit-Planes: Constraining PTQTP to a Uniform Nine-Level Quantizer, with a Persistent Folded Format for Disk-Streamed Mixture-of-Experts Serving](2026-2608.08910-tied-trit-planes.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPUや主記憶へ全専門家を置けない端末では必要な専門家をSSDから読むため、量子化は容量だけでなくSSD読込み量、専門家キャッシュ容量、実行カーネル入力まで同時に決める。DeepSeek-V4-Flash-0731のルーティング専門家を公開MXFP4重みから一括量子化し、64GBノートPCでSSDストリーミングした。
+
+- **2026-08 · [Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models](2026-2608.07890-router-sensitivity-under-lightweight-fine-tuning-identifies-prunable-exp.md)**  
+  実装：[✓](https://github.com/ianKa1/MoE_pruning) ・ リポジトリ内被引用：0  
+  混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで一部の専門家しか動かさないため演算量を抑えられるが、選択される可能性のある専門家の重み全体をメモリに保持する必要がある。専門家を丸ごと削除すればGPUメモリを減らせるものの、使用頻度や重みの大きさだけでは重要な専門家を誤って削除し、推論品質が急落することがある。
 
 ### 2年前（2024-12〜2025-11）
 
@@ -102,9 +146,17 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/krishnateja95/MoE-Mixed-Prec) ・ リポジトリ内被引用：2  
   MoPEQは、混合専門家モデル（Mixture of エキスパート、MoE）の重み容量を削減しながら推論品質を維持するため、各エキスパートへ一律の精度を割り当てず、重要度に応じて2・3・4ビットを選ぶ事後量子化方式である。
 
+- **2025-11 · [Mosaic Pruning: A Hierarchical Framework for Generalizable Pruning of Mixture-of-Experts Models](2025-2511.19822-mosaic-pruning-a-hierarchical-framework-for-generalizable-pruning-of-mix.md)**  
+  実装：[✓](https://github.com/Saul-James/MoP) ・ リポジトリ内被引用：1  
+  専門家の機能的な似通いを領域横断の働き方でクラスタリングし、各群から最も代表的な専門家を残すことで、単一コーパス最適化の枝刈りが起こす専門領域での崩壊を避けるMoE枝刈り。
+
 - **2025-10 · [MC#: Mixture Compressor for Mixture-of-Experts Large Models](2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md)**  
   実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture of エキスパート、MoE）は、トークンごとに一部の専門家だけを実行することで、総パラメータ数の大きさと実行計算量を切り離す。Mixtral-8x7Bでは、PMQにより16ビット版96.80GBの重みを平均2.05ビット・13.41GBへ圧縮する。
+
+- **2025-09 · [Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective](2025-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-thro.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エキスパートの重要度を協力ゲームのシャープレイ値で測り、ルーター誘導のモンテカルロ標本化と早期打ち切りで近似して枝刈りするShapley-MoE。Qwen2-57B-A14Bのエキスパートを25%削ってもパープレキシティ増加0.92で平均精度の96.4%以上を維持する。
 
 - **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
   実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：1  
@@ -113,6 +165,14 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2025-11 · [Exploiting the Experts: Unauthorized Compression in MoE-LLMs](2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   疎な実行によって計算量を抑えられる反面、特定課題で頻繁に使われるエキスパートを見分け、不要な部分を除いた小型派生モデルを作れる可能性がある。Mixtral-8x7Bを用いたGLUE分類では、全エキスパートを用いた平均精度86.1%に対し、各層で上位2エキスパートだけを保持すると78.9%、上位1のみでは71.4%となる。
+
+- **2025-07 · [Automated Fine-Grained Mixture-of-Experts Quantization](2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md)**  
+  実装：[✓](https://github.com/cei1ing4/Fine-Grained-MoE-Quantization) ・ リポジトリ内被引用：0  
+  エキスパートの重みで外れ値が偏るチャネルと、誤差に弱いダウンプロジェクションを観測し、分散・大きさ・外れ値割合から作る感度スコアでチャネルごとに2ビットと4ビットを自動配分して、MoEの学習後量子化の精度低下を抑える方式。
+
+- **2025-05 · [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](2025-2505.17639-premoe-proactive-inference-for-efficient-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/JarvisPei/PreMoe) ・ リポジトリ内被引用：0  
+  Mixture-of-Experts（MoE）は1トークン当たり一部の専門家（専門家）だけを実行するが、通常のサービングでは全専門家の重みをGPU/NPUメモリに常駐させる必要がある。PreMoEは、利用する領域をあらかじめ決められるなら、その領域で重要な専門家だけを残した小型MoEを、元モデルのルータlogitから再学習なしで事前構築する方式である。
 
 ### 3年前（2023-12〜2024-11）
 

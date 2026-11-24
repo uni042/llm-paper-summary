@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（133本）
+## 自動生成の論文一覧（137本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -205,6 +205,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-05 · [BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE](2026-2605.14438-beam-binary-expert-activation-masking.md)**  
   実装：[✓](https://github.com/Time-Rune/BEAM) ・ リポジトリ内被引用：1  
   固定Top-K候補を学習二値マスクでトークンごとに削り、vLLM CUDA実装で実際の専門家計算を省略する動的MoEルーティング。
+
+- **2026-02 · [MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models](2026-2602.06154-mose-mixture-of-slimmable-experts-for-efficient-and-adaptive-language-mo.md)**  
+  実装：[✓](https://github.com/tnurbek/mose) ・ リポジトリ内被引用：1  
+  MoSEは、混合専門家モデル（Mixture-of-Experts; MoE）の「専門家を何個選ぶか」に加え、「選んだ各専門家を何割の中間幅で実行するか」を推論時に変える研究である。主指標は一トークン当たり浮動小数点演算量（FLOPs/トークン）と品質であり、実機処理率は補助的な検証である。
 
 - **2026-01 · [Improving MoE Compute Efficiency by Composing Weight and Data Sparsity](2026-2601.15370-composing-weight-data-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -414,6 +418,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/szdtzpj/Breaking_the_moe_trilemma) ・ リポジトリ内被引用：1  
   パラメータ＋活性類似度で専門家を動的再編し、共有基底＋低ランク残差、階層ルーティング、INT4残差、NVMeオフロードを共同設計するMoE構造圧縮。
 
+- **2025-08 · [DualSparse-MoE: Coordinating Tensor/Neuron-Level Sparsity with Expert Partition and Reconstruction](2025-2508.18376-dualsparse-moe-coordinating-tensor-neuron-level-sparsity-with-expert-par.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  DualSparse-MoEはこの二種類の疎性を同時に使い、重要なニューロンの計算を残しながら、影響の小さいトークン・専門家演算を省くシステムである。原著のSGLang/H20評価では、約25%のMoE演算省略に対しMixtral・OLMoE・DeepSeekの平均精度低下は0.08〜0.28ポイントにとどまる。
+
 - **2025-11 · [AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert](2025-2511.18314-anyexperts-on-demand-expert-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン重要度から実専門家と仮想専門家の可変スロットを割り当て、固定Top-Kより細粒度にマルチモーダルMoEの計算予算を配分する。
@@ -441,6 +449,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-07 · [Accelerating Dense LLMs via L0-regularized Mixture-of-Experts](2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存の密な大規模言語モデル（LLM）を高速化するには、量子化・枝刈り・知識蒸留が使われるが、強い圧縮では能力低下が生じやすい。MMLU、GSM8K、HumanEval、BBHの4課題平均はほぼ維持され、推論速度は2.0〜2.5倍となる。
+
+- **2025-02 · [DSMoE: Matrix-Partitioned Experts with Dynamic Routing for Computation-Efficient Dense LLMs](2025-2502.12455-dsmoe-matrix-partitioned-experts-with-dynamic-routing-for-computation-ef.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  事前学習済み密モデルのFFN行列を分割してエキスパート化し、入力に応じて活性化するエキスパート数を動的に変えることで、知識を削除せずに計算量を削減する手法の研究。
 
 ### 3年前（2023-12〜2024-11）
 
@@ -507,6 +519,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2024-07 · [Mixture of A Million Experts](2024-2407.04153-mixture-of-a-million-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   混合専門家（Mixture of エキスパート、MoE）は多数の専門家のうち一部だけを活性化することで、総パラメータ容量と各トークンの計算を分離する。
+
+- **2024-03 · [Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA](2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md)**  
+  実装：[✓](https://github.com/chiyotsai/MoEfication-with-LoRA) ・ リポジトリ内被引用：0  
+  重要な結果は、モデル規模によって高速化の符号が逆転することである。著者の表4では、単一の画像処理用計算機ではなく、エヌビディアのRTX 3090で測った相対推論時間が、小型のT5-smallでは元の135.1%、T5-baseでは101.4%、T5-largeでは88.9%、T5-3Bでは71.1%となった。
 
 ### 4年前（2022-12〜2023-11）
 

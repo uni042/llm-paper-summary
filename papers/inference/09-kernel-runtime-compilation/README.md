@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（349本）
+## 自動生成の論文一覧（362本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -119,6 +119,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference](2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Ada-MKはLLMデコードをPTX命令水準の依存グラフへ分解し、共有メモリ配置とワープ役割をオフライン探索して分岐のないメガカーネルを生成し、L20でTensorRT-LLM比最大23.6%高速化する。
+
+- **2026-04 · [VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation](2026-2604.12798-vfa-relieving-vector-operations-in-flash-attention-with-global-maximum-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  FlashAttentionは、巨大な注意行列をGPUの高帯域メモリへ書き出さず、クエリ・キー・値を小さなブロックに分割してオンチップメモリで処理する。VFA（Vector Relieved Flash 注意機構）はこの残った部分に焦点を当てる。要旨ではC16V32という計算器構成を基準にC8V32、C4V32、C4V16で約2倍の高速化を報告する。
 
 - **2026-04 · [Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon](2026-2604.16957-open-tq-metal-fused-compressed-domain-attention-for-long-context-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -264,6 +268,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/yifu-ding/MP-Sparse-Attn) ・ リポジトリ内被引用：1  
   注意の対角付近だけを高精度に残す混合精度と、量子化前処理の全面融合により、低ビット注意の誤差と前処理費用を同時に抑えた。
 
+- **2026-04 · [DeInfer: Efficient Parallel Inferencing for Decomposed Large Language Models](2026-2604.17709-deinfer-efficient-parallel-inferencing-for-decomposed-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  分解済みLLMの並列推論を、低ランク空間での通信と固定バッファによるKV再構成で高速化し、NVLinkなし構成で最初のトークンまでの時間を約83パーセント削減する専用推論基盤。
+
 - **2026-04 · [Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs](2026-2604.07888-bit-by-bit-progressive-qat-strategy-with-outlier-channel-splitting-for-s.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Bit-by-Bitは、事前学習済みLLMを重み2ビット、活性化2ビットまで量子化したときの精度低下と学習不安定性を抑える量子化対応学習（QAT）の方式である。RTX 4090の行列ベクトル積単体では形状によって11倍を超える高速化がある一方、小さい形状ではBF16より遅い。
@@ -287,6 +295,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-02 · [Deep Kernel Fusion for Transformers](2026-2602.11808-deep-kernel-fusion-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。
+
+- **2026-01 · [Mosaic: Unlocking Long-Context Inference for Diffusion LLMs via Global Memory Planning and Dynamic Peak Taming](2026-2601.06562-mosaic-unlocking-long-context-inference-for-diffusion-llms-via-global-me.md)**  
+  実装：[✓](https://github.com/flashserve/Mosaic) ・ リポジトリ内被引用：1  
+  Mosaicは、拡散型大規模言語モデル（diffusion-based Large Language モデル; dLLM）の長文脈生成で生じる、鍵・値キャッシュではなく一時活性化が容量の限界になるという問題を解く推論基盤である。過去KVを長期保持する手法だけでは、この大きな一時メモリを削れない。
 
 - **2026-01 · [LLMs can Compress LLMs: Adaptive Pruning by Agents](2026-2601.09694-llms-can-compress-llms-adaptive-pruning-by-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -458,6 +470,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   再利用できる範囲の合意、キャッシュを削除されないように保護する処理、未計算部分のメモリ確保を同期的に行うと、GPUに次の入力を供給する頻度が下がり、段の間に空き時間が発生する。準備が整った要求は処理波（wave）に分割し、パイプラインを埋めるように波の大きさを動的に選ぶ。
 
+- **2026-09 · [Unleashing the Power of Equality Saturation for Tensor Program Superoptimization](2026-2609.12330-unleashing-the-power-of-equality-saturation-for-tensor-program-superopti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  特定の注意機構パターンを手書きで登録するのではなく、softmaxの依存関係を修復しながらreductionを融合する規則から、online softmaxを含む融合カーネルを導くことができる。
+
 - **2026-09 · [Understanding LLM Quantization through Activation-Guided Compensation and Orthogonal Residuals](2026-2609.21450-understanding-llm-quantization-through-activation-guided-compensation-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みと活性値をともに4ビットへ縮小する学習後量子化では、特定の活性値チャネルに継続的に現れる大きな値が、量子化に使用する尺度を広げ、通常値に割り当てられる表現段階を粗くする。
@@ -501,6 +517,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの自己回帰デコードは、次の1トークンを計算するたびにモデルの重みとKVキャッシュを読み込む。対話的な小バッチでは、GPUの演算器が飽和する前にHBMからの転送が律速になりやすい。通常の推論エンジンは線形層、正規化、RoPE、注意、KV書込み、語彙射影を別々のGPUカーネルで実行する。
+
+- **2026-09 · [FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward](2026-2609.33410-foldattention-declared-reference-softmax-for-fast-decode-and-determinist.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈の自己回帰デコードでは、次の一トークンを作るたびに伸び続けるKVキャッシュを参照する。後方計算では、CTAごとの部分勾配を共通整数格子へ丸めて加算することで、加算順序に依存しない決定的な勾配を得る。
 
 - **2026-09 · [Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with VOXEL](2026-2604.26821-exploring-the-efficiency-of-3d-stacked-ai-chip-architecture-for-llm-infe.md)**  
   実装：[✓](https://github.com/yiqiliu2/voxelsim) ・ リポジトリ内被引用：0  
@@ -806,6 +826,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、NVIDIAのタイル単位GPUプログラミング基盤CUDA Tile（CuTile）を採用すべき条件を、性能と開発工数の両面から実測した比較研究である。CuTileは行列積や注意計算をタイル演算として記述し、スレッド束、共有メモリ配置、レジスタ割当の一部をコンパイラへ任せる。主要結果は二面的である。
 
+- **2026-04 · [Efficient Matrix Implementation for Rotary Position Embedding](2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.md)**  
+  実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  
+  回転位置埋め込みの分割と結合を一つの構造化行列変換へ書き換える数学的に等価な再定式化で、多次元版まで統一し演算子単体で最大約3.7倍、モデル全体でも数パーセントの高速化と大幅な実装簡素化を得る方式。
+
 - **2026-04 · [Continuous Semantic Caching for Low-Cost LLM Serving](2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キャッシュの容量は有限であり、どの応答を保存すれば推論費用と不一致費用の合計を小さくできるかが問題になる。提案の中心は、近い問い合わせを代表点へまとめるε-netによる離散化と、観測された一部の推論費用から周辺の費用を推定するカーネルリッジ回帰（カーネル ridge regression; KRR）である。
@@ -838,6 +862,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   偏った通信で一部のリンクだけが飽和する問題に対し、リンク負荷を見て最大混雑を最小化するようメッセージを複数パスへ実行時に再配分するランタイムNIMBLEを提案し、偏ったオールツーオールでNCCL比最大5.2倍、MoEのエンドツーエンドで最大1.35倍を示す。
 
+- **2026-03 · [Compiling Code LLMs into Lightweight Executables](2026-2603.29813-compiling-code-llms-into-lightweight-executables.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブロック単位のコードブック量子化と、行列ベクトル積をBLASへ置き換えるLLVMパスを組み合わせ、7B級コードモデルを一般的なノートPCで最大10.5倍速く、6.4倍小さいメモリで動かす枠組み。
+
 - **2026-02 · [Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores](2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家の活性化頻度の偏りを使い、よく使う専門家は軽く、あまり使わない専門家は強く圧縮する。冷たい専門家は詰めて保存し実行時にハードウェア形式へ展開することで、疎テンソルコアの実行モデルを変えずにメモリを最大2.4倍圧縮する仕組み。
@@ -869,6 +897,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-01 · [SD-E2: Semantic Exploration for Reasoning Under Token Budgets](2026-2601.17982-sd-e2-semantic-exploration-for-reasoning-under-token-budgets.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小型言語モデルに複雑な問題を解かせる際、複数の解法を試すことは有効だが、生成トークン数には限りがある。結果・形式・長さを用いるGRPO-CFLの76.80%、意味を考慮しない探索・活用方式GRPO-CFEEの80.52%も上回る。
+
+- **2026-01 · [RadixMLP -- Intra-batch Deduplication for Causal Transformers](2026-2601.15013-radixmlp-intra-batch-deduplication.md)**  
+  実装：[✓](https://github.com/michaelfeil/radix-mlp) ・ リポジトリ内被引用：0  
+  RadixMLPは、同一バッチに入った複数の系列が長い接頭辞を共有している場合、共有部分の多層パーセプトロン（MLP）、層正規化（LayerNorm）、線形射影、埋め込みなどを何度も実行する無駄を削減する方式である。
 
 - **2026-01 · [Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve](2026-2601.21096-magellan-autonomous-discovery-of-novel-compiler-optimization-heuristics-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1196,6 +1228,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   Whisper推論の実測分解で読み込みと起動が全体の最大96パーセントを占めることを示し、アクセラレータ上の制御要素へ制御を寄せる三層スケジューリング、ゼロコピー、高速読み込みで起動費用と読み込み時間を桁違いに削る研究。
 
+- **2025-03 · [NM-SpMM: Accelerating Matrix Multiplication Using N:M Sparsity with GPGPU](2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.md)**  
+  実装：[✓](https://github.com/M-H482/NM-SpMM) ・ リポジトリ内被引用：0  
+  N:Mスパース行列積について疎性で計算律速からメモリ律速へ移ることを分析し、階層的ブロッキングと疎性に応じたパッキングおよびパイプラインで、汎用実装nmSPARSEより2.1倍速くするGPUカーネル。
+
 - **2025-02 · [AdaSplash: Adaptive Sparse Flash Attention](2025-2502.12082-adasplash-adaptive-sparse-flash-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常のsoftmax注意では、注意スコアが有限であれば全トークンへ正の確率が割り当てられる。合成8192要素の閾値計算ではTorch二分法36.67msに対しHalley-bisection2.38ms、約15倍の改善を報告する。
@@ -1322,13 +1358,25 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/ScaledFoundations/MatMamba) ・ リポジトリ内被引用：1  
   MatMambaは最大サイズのモデルの先頭部分に小さなモデルのパラメータを含める構造を採り、複数の粒度を共同学習することで、モデルの再学習なしにサイズを選べるようにする。原著§4.1.2は計算量を55%減らしつつ、検索精度の低下を0.5%未満に抑えた例を報告する。
 
+- **2024-10 · [FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs](2024-2410.16663-fastattention-extend-flashattention2-to-npus-and-low-resource-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FlashAttentionは注意重み行列をGPUの外部メモリに全量書き出さず、タイル単位の行列積とオンラインsoftmaxによって中間データの移動を抑える。
+
 - **2024-09 · [Efficiently Dispatching Flash Attention For Partially Filled Attention Masks](2024-2409.15097-efficiently-dispatching-flash-attention-for-partially-filled-attention-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   SharmaとGeipingのBinary Block Masking（BinBlkMsk）は、FlashAttentionのブロック分割を活用し、マスクに許可要素が一つもないブロックを実行せず、許可要素を含むブロックだけを処理する方式である。
 
+- **2024-05 · [Integer Scale: A Free Lunch for Faster Fine-grained Quantization of LLMs](2024-2405.14597-integer-scale-a-free-lunch-for-faster-fine-grained-quantization-of-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの重みを小さなグループに分けて量子化すると、グループごとに異なる量子化スケールを選べるため、粗い量子化より精度を維持しやすい。原著は最大1.85倍のFP16比エンドツーエンド速度改善、浮動小数点スケールの同等カーネル比最大1.83倍などを報告する。
+
 - **2024-04 · [The Feasibility of Implementing Large-Scale Transformers on Multi-FPGA Platforms](2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-p.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数FPGAへ大規模モデルを展開する基盤と自動ツールを整え、I-BERTの符号器を6台のFPGAで実働させ、最新FPGAでの推定では高性能GPUに近い遅延へ届くことを示した、大規模トランスフォーマーのFPGA実装の実現可能性の検証。
+
+- **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
+  実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  
+  RMSNormは多くのLLMで注意機構やFFNの直前に置かれ、活性ベクトルの二乗平均平方根で各要素を割り、学習済みスケールを掛ける。T4 GPUのnorm-then-project単体実験では、SmolLM2-135M相当の4096トークンで0.704msから0.468msへ、8192トークンで0.929msから0.599msへ短縮した。
 
 - **2024-05 · [CLAQ: Pushing the Limits of Low-Bit Post-Training Quantization for LLMs](2024-2405.17233-claq-pushing-the-limits-of-low-bit-post-training-quantization-for-llms.md)**  
   実装：[✓](https://github.com/fayuge/CLAQ) ・ リポジトリ内被引用：0  
@@ -1375,6 +1423,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
   実装：[✓](https://github.com/haoliuhl/ringattention) ・ リポジトリ内被引用：5  
   注意だけでなくFFNまで系列ブロック内で融合して学習時活性を保持しないBPT。A100/TPU v4でメモリ効率型注意より2〜4倍長い文脈を学習可能にし、1B・16Kでは通常Transformer比1.20倍の学習スループットを示す。
+
+- **2023-10 · [Improving Computation and Memory Efficiency for Real-world Transformer Inference on GPUs](2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  系列長の裾の重い分布が生むゼロ埋めの冗長を、自己注意の有効ミニブロックだけを実行する細粒度処理とブロック配置、チャンク単位のメモリ管理で削り、モデル全体の遅延と中間結果のメモリを大きく減らす統合解法。
 
 - **2023-07 · [QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models](2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md)**  
   実装：[✓](https://github.com/IST-DASLab/QIGen) ・ リポジトリ内被引用：0  

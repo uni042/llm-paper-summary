@@ -5,7 +5,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。将来需要の予測をcache保持判断に使い、必ずしも先読み転送しない方式も含む。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（19本）
+## 自動生成の論文一覧（21本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/)
 
@@ -13,6 +13,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
+
+- **2026-01 · [MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models](2026-2602.11192-melinoe-fine-tuning-enables-memory-efficient-inference-for-mixture-of-ex.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  MELINOEは、混合専門家モデル（MoE）の専門家重みをCPUへ退避する推論環境で、モデル自身の専門家選択を少数の再利用しやすい専門家へ寄せる手法である。著者らはOLMoE、Phi-3.5-MoE、Mixtral-8x7Bを対象に、H100、A100、RTX 4090のメモリ制限環境で評価した。
 
 - **2026-09 · [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -43,6 +47,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   しかし専門家の総重量は大きく、GPUにすべて常駐させると容量不足になりやすい。CPU側へ非活性専門家を退避し、必要なものだけGPUへ移せば容量は節約できるが、専門家が決まってから転送するとPCIeの待機が推論時間へ直接加算される。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference](2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inferenc.md)**  
+  実装：[✓](https://github.com/nezha-Anonymous/PDScope) ・ リポジトリ内被引用：0  
+  専門家の転送をめぐる入力処理と生成の板挟みを、段階別の予測・層をまたぐ計画・静的な実行の三層で解き、主流モデルで入力処理を最大十・三倍、生成を最大六・一倍速くし、次層予測の当たり率も九割超を示した。
 
 - **2026-10 · [DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop](2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.md)**  
   実装：[✓](https://github.com/haoruilee/DeepInfer-Mac) ・ リポジトリ内被引用：0  

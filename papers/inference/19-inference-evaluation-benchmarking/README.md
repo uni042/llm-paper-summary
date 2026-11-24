@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（256本）
+## 自動生成の論文一覧（276本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -23,6 +23,10 @@
 - **2026-04 · [Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures](2026-2604.09048-watt-counts-energy-aware-benchmark-for-sustainable-llm-inference-on-hete.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
+
+- **2026-03 · [Characterizing Performance-Energy Trade-offs of Large Language Models in Multi-Request Workflows](2026-2604.09611-characterizing-performance-energy-trade-offs-of-large-language-models-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  新しい推論カーネルの提案ではなく、既存の推論基盤をどの条件でどう設定すると効率が変わるかを調べる。A100 40GB上でLlama-2-7Bを使い、入力長、出力長、バッチサイズ、GPU電力上限を変える。
 
 - **2026-02 · [Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing](2026-2602.03845-parallel-probe-towards-efficient-parallel-thinking-via-2d-probing.md)**  
   実装：[✓](https://github.com/zhengkid/Parallel-Probe) ・ リポジトリ内被引用：4  
@@ -60,6 +64,10 @@
   実装：[✓](https://github.com/scale-snu/DyLLM) ・ リポジトリ内被引用：2  
   マスク拡散型の言語モデルは、応答系列をマスクから始め、複数トークンを並列に埋めながら反復的に復号する。salient位置ではFFNを再計算し、注意も正確に更新する。DyLLMは速度だけでなく品質を維持する運用点を探す方式である。
 
+- **2026-10 · [Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents](2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-mo.md)**  
+  実装：[✓](https://github.com/stephen122204/mantra-energy/tree/paper-1) ・ リポジトリ内被引用：1  
+  量子化エージェントのエネルギーをトークン単位ではなく完了タスク単位で測り直し、4ビットがトークン当たりでは安くても課題によっては完了当たり最大3.5倍高くなることと、その主因が余分なトークンであることを実機測定で示した。
+
 - **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
@@ -67,6 +75,10 @@
 - **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
   実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：1  
   自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。
+
+- **2026-09 · [A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality](2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect.md)**  
+  実装：[✓](https://github.com/jerrykaplan/Calibrated-Instrument) ・ リポジトリ内被引用：1  
+  判定器の偏りと雑音を帰無条件で較正し、同等性境界プラスマイナス0.3点の単一の物差しで量子化と早期終了と投機的復号の品質費用を分野別に比べ、費用が分野とモデルで大きく変わることを示した。
 
 - **2026-08 · [The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning](2026-2608.28859-the-halt-vector-internalizing-a-causal-steering-intervention-for-efficie.md)**  
   実装：[✓](https://github.com/dylanjayabahu/halt-vector) ・ リポジトリ内被引用：1  
@@ -95,6 +107,10 @@
 - **2026-06 · [NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation](2026-2606.27791-nll-guided-full-attention-layer-selection-for-training-free-sliding-wind.md)**  
   実装：[✓](https://gitlab.com/fars-a/nll-guided-swaa-layer-selection) ・ リポジトリ内被引用：1  
   長文脈LLMの事前充填（プリフィル）では、通常の全注意（full 注意機構; FA）の計算量が入力長に対して二乗で増える。36層のQwen3-4B-Thinking-2507とLongMemEval24kの評価では、9層（1/4）を全注意としたNLL-guidedが64.6%の正解率を得た。
+
+- **2026-06 · [Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study](2026-2606.21428-does-mixture-of-experts-actually-help-inference-on-consumer-and-edge-har.md)**  
+  実装：[✓](https://github.com/Analytics-Everywhere-Lab/edge-moe) ・ リポジトリ内被引用：1  
+  専門家モデルの疎な活性化が辺縁実機で効くかを同一条件で実測し、Jetsonでは同じ有効規模の密モデルより約31パーセント遅く電力2.1倍・メモリ天井到達となり、費用は有効ではなく総パラメータに追随すること、経路選択は計算の9パーセント未満で主因でないことを示した。
 
 - **2026-06 · [Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf](2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -152,7 +168,15 @@
   実装：✓ ・ リポジトリ内被引用：1  
   決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
 
+- **2025-12 · [ELANA: A Simple Energy and Latency Analyzer for LLMs](2025-2512.09946-elana-a-simple-energy-and-latency-analyzer-for-llms.md)**  
+  実装：[✓](https://github.com/enyac-group/Elana) ・ リポジトリ内被引用：1  
+  本論文は新しい推論アルゴリズムの高速化倍率を主張するものではなく、計測方法と計測例を提示する研究である。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Understanding the Energy Cost of Quantized Agents on Shared GPUs](2026-2610.41672-understanding-the-energy-cost-of-quantized-agents-on-shared-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  失敗分も含めた検証済み完了当たりのエネルギーで量子化を測り直し、固定した呼び出しでは10〜25%安い4ビット形式が実実行では余分な作業と未完了で49%高くなる一方、キャッシュ競合のある40GB配置では空きメモリの効果で安くなり、最安の精度は同時実行数と配置で変わることを実機で示した。
 
 - **2026-11 · [SHADOWPREFILL: Keeping Your Next Model Warm for Per-Step Model Routing in Agentic LLM Serving](2026-2611.13176-shadowprefill-keeping-your-next-model-warm-for-per-step-model-routing-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -174,6 +198,10 @@
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
   新旧のデータセンター向け図形処理装置を二つの独立クラスタで横断測定し、新装置が畳み込みで最大五・六倍、七百億の言語モデル推論で二十四から二十七パーセント遅い一方で大きな行列積の負荷では速いこと、遅さは基板電力の低さからカーネルごとの費用に帰着すること、同一半導体でも提供基盤の版で最初のトークンまでの時間が二・一倍変わることを示した。
 
+- **2026-11 · [Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models](2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  演算回数ではなくGPUエネルギーを直接測り、再帰方策ではバッチ共有が成立しないこと、専門家モデルではバッチ配慮型ルーティングが重み読みを25から31パーセント減らしトークンあたりエネルギーを12から18パーセント減らすことを示す実測研究。
+
 - **2026-11 · [CoPyro: Feeding Copy Proposals to Parallel Drafters](2026-2611.27217-copyro-feeding-copy-proposals-to-parallel-drafters.md)**  
   実装：[✓](https://github.com/dt-3t/CoPyro) ・ リポジトリ内被引用：0  
   文脈中の過去の出現からコピーした続きをマスクの代わりに並列ドラフターへ入力し、信頼性特徴とともに残す部分と直す部分を学ばせることで、受理長を最大5.08パーセント伸ばす投機的デコードの改良。
@@ -193,6 +221,10 @@
 - **2026-10 · [Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference](2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みのみ量子化10構成のエネルギー・速度・精度・メモリを5モデル・4タスク・4種のGPUで統一実測し、融合カーネル型の8ビット量子化が最大約4倍省エネルギーであることと、長入力・短出力で利得が最大になり実行時間がエネルギーの代理指標になることを明らかにした評価論文。
+
+- **2026-10 · [The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models](2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルだけを1ミリ秒刻みの電力計測で切り分け、入力トークンのエネルギー原単位が文脈長とエンジン最適化でどう変わるかをA100実機で示した計測研究。
 
 - **2026-10 · [Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing](2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -338,6 +370,10 @@
   実装：[✓](https://github.com/beesfleas/HoliBench) ・ リポジトリ内被引用：0  
   20モデル×7デバイス×3量子化×8推論系を精度・遅延・電力・メモリで統一測定し、実測プロファイルから制約付き配備構成まで選ぶ基盤。
 
+- **2026-09 · [Green AI: Cost of LLM-Based Code Completion](2026-2609.33918-green-ai-cost-of-llm-based-code-completion.md)**  
+  実装：[✓](https://doi.org/10.5281/zenodo.21971227) ・ リポジトリ内被引用：0  
+  コード補完のためにLLMをローカル実行する場合、モデルの正答率や生成速度だけでなく、入力文脈を処理するためのGPUエネルギーと、出力を逐次生成するためのGPUエネルギーを分けて評価する必要がある。量子化モデル、とくにQ4は同一モデル系のFP16に比べて省エネルギーな傾向があり、品質とエネルギーのPareto前線へ頻繁に現れる。
+
 - **2026-09 · [GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems](2026-2609.14864-gguf-metadata-prediction-of-single-sequence-llama-cpp-throughput-across-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ローカル大規模言語モデルを選ぶとき、GGUF形式の複数の量子化モデルを実際に読み込み、同じ入力長で速度を比較する作業は重い。
@@ -478,6 +514,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   推論の長さと深さを担う2つのLoRAアダプタを別々に強化学習で鍛え、問題の難しさに応じて重みを線形補間することで、考えすぎを削りながら難しい問題の精度も伸ばす適応型推論の枠組み。
 
+- **2026-06 · [Understanding Evaluation Illusion in Diffusion Large Language Models](2026-2606.29228-understanding-evaluation-illusion-in-diffusion-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は新しい復号器の提案ではなく、既存の復号方式を同じ条件で比較するための評価方法論の研究である。結果は、少し異なるテンプレートを使うだけで方式間の優劣が逆転し、単一テンプレートで測った「品質を維持した高速化」が再現しない場合があるというものだった。
+
 - **2026-06 · [The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference](2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一二二言語で推論エネルギーを実機計測し、トークン当たりで最大八・三倍、応答当たり総量で英語比一七九倍の言語間格差があること、その主因が低資源言語でのトークン単価上昇と出力トークン数膨張の掛け算であり、格差がモデル・ハードウェア・課題を変えても残ることを明らかにした。
@@ -498,9 +538,17 @@
   実装：[✓](https://github.com/txyang1/deeplook) ・ リポジトリ内被引用：0  
   推論トレースをセグメント単位で監視し、不確実性が集中する地点でのみ分岐して、先読み区間の平均信頼度で候補を順位付けし枝刈りする学習不要のデコーディング法を提案し、数学で精度を保ちながら生成トークンを大きく減らせることと、知識集約型課題では効かなくなる境界を示した研究。
 
+- **2026-06 · [Cold Start Latency of Quantized Small Language Models on Serverless CPU Infrastructure](2026-9a95feba0c73-cold-start-latency-of-quantized-small-language-models-on-serverless-cpu-.md)**  
+  実装：[✓](https://github.com/mingwho/slm-research) ・ リポジトリ内被引用：0  
+  本論文は、アクセス頻度の低い小型言語モデル（Small Language モデル; SLM）を、要求が来たときだけ起動するサーバーレス基盤で提供する際の遅延を測る研究である。利用者の要求がないときに実行環境をゼロへ縮退させられる反面、次の要求時にはコンテナを起こし、量子化重みを読み込み、トークンを生成する必要がある。
+
 - **2026-06 · [Characterizing Software Aging in GPU-Based LLM Serving Systems](2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   6種類のGPU LLMサービング構成を計216時間連続運転し、全構成でホスト側のメモリ経年劣化を検出。リーク率はvLLM V1単体+1.8KB/時からTriton+V0の+157KB/時まで大差があり、配置・ランタイム選択が長期信頼性を左右することを示す。
+
+- **2026-06 · [Breaking the Ice: Analyzing Cold Start Latency in vLLM](2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.md)**  
+  実装：[✓](https://github.com/upb-cn/vllm-startup-profiler) ・ リポジトリ内被引用：0  
+  vLLMの起動を6段階へ分解して初めて体系的に量り、全体が主にCPU律速で各段階が特定の量へほぼ線形に従うことを示し、段階別回帰の予測器で平均二乗誤差2.42秒の予測を達成した。
 
 - **2026-06 · [Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation](2026-2606.11690-beyond-per-token-pricing-a-concurrency-aware-methodology-for-llm-infrast.md)**  
   実装：[✓](https://github.com/pChitral/vllm-cost-meter) ・ リポジトリ内被引用：0  
@@ -642,6 +690,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   実サービスではツール呼び出し回数、生成トークン数、API料金に上限があるため、単に推論を長くする方式は適さない。原著はgpt-oss-20bとQwen3-30B-A3B-Instruct-2507を用い、HotpotQA、2WikiMultihopQA、MuSiQue、Bamboogleで評価した。
 
+- **2026-03 · [Diagnosing FP4 Inference: A Layer-Wise and Block-Wise Sensitivity Analysis of NVFP4 and MXFP4](2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FP4の感度を射影の種類とブロックの深さで切り分けた診断研究で、MLPの上向き・下向き射影が全規模・両形式で最も敏感であり、感度は最終ブロックだけに集中しないことを示した。
+
 - **2026-03 · [Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing](2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トランスフォーマーの手前で再構成可能な最小の複数尺度パッチを自己回帰的に選ぶ軽量な注視モジュールにより、視覚トークンを最大100分の1へ減らし、長尺・4K動画への拡張と精度向上を両立する。
@@ -678,6 +730,10 @@
   実装：[✓](https://doi.org/10.5281/zenodo.17638076) ・ リポジトリ内被引用：0  
   テンソルプログラムを記号実行で数式化し、スケッチ合成と実測コストモデルの分枝限定法で等価な高速プログラムを自動発見する超最適化器STENSO。NumPyで幾何平均3.8倍、JAXとPyTorchで1.6倍の高速化を報告する。
 
+- **2026-01 · [ProfInfer: An eBPF-based Fine-Grained LLM Inference Profiler](2026-2601.20755-profinfer-an-ebpf-based-fine-grained-llm-inference-profiler.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡張バークレーパケットフィルタの動的プローブで推論エンジンを書き換えずに四つの粒度で計測し、演算子・時系列・統計の三つの図へ変換する、速度低下4パーセント未満の細粒度プロファイラ。
+
 - **2026-01 · [Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference](2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模モデルの応答全体ではなく先頭の接頭辞だけをヒントとして買い、小規模モデルに最終応答を書かせる費用配分で、目標精度を保ちながら推論費用を33から65パーセント削減した。
@@ -713,6 +769,10 @@
 - **2025-12 · [Quantization Methods for Energy Efficient LLM Deployments](2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen3の6規模に6つの量子化方式を適用し精度保持率とエネルギーとスループットを実測した研究。原生対応のFP8とINT8が省エネと高速化で優れ、32BのFP8はFP16比で1トークンあたりエネルギーが半分以下になる一方、GPTQ 4ビットはエネルギーが基準超えになることを示す。
+
+- **2025-12 · [Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference](2025-2512.22695-modality-inflation-energy-characterization-and-optimization-opportunitie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画像入力を追加すると、視覚符号化器（vision encoder）が必要になるだけでなく、符号化結果が多数の視覚トークンとして言語モデルへ渡される。モデルはおおむね7B～8Bの言語モデル本体を持つが、視覚符号化器と画像のトークン化方式が異なる。代表的な条件では、画像入力によるエネルギー上乗せは17～94%の範囲だったと報告する。
 
 - **2025-12 · [HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices](2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -776,6 +836,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
 
+- **2025-10 · [Not All Bits Are Equal: Scale-Dependent Memory Optimization Strategies for Reasoning Models](2025-2510.10964-not-all-bits-are-equal-scale-dependent-memory-optimization-strategies-fo.md)**  
+  実装：[✓](https://github.com/krafton-ai/not-all-bits-are-equal) ・ リポジトリ内被引用：4  
+  長い思考列を出力する推論モデルでは、量子化してモデル重みを小さくすれば常に省メモリで高性能になる、という通常の指針が成立しない。原著のQwen3-4Bでは、4bit重みが2.49 GBであるのに対し、32kトークン相当のKVキャッシュは4.42 GBと約1.8倍に達する（原著§1）。
+
 - **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
@@ -819,6 +883,10 @@
 - **2025-05 · [Quantitative Analysis of Performance Drop in DeepSeek Model Quantization](2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md)**  
   実装：[✓](https://github.com/UnicomAI/DeepSeek-Eval) ・ リポジトリ内被引用：1  
   671BのDeepSeek-R1/V3を含む系列全体で2から8ビット量子化の性能低下を実測し、重要モジュールへ高精度を配る動的3ビット量子化DQ3KMが4ビット級の精度を281GBで達成することを示した評価報告。
+
+- **2025-04 · [LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi](2025-2504.02118-llmpi-optimizing-llms-for-high-throughput-on-raspberry-pi.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ラズベリーパイ五の実機で、二ビットから八ビットの学習後量子化と三値の学習済みモデルを速度・電力効率・意味品質で比べ、最小モデルは二ビットで三・八八倍速く四・三倍効率化する一方、八十億級は七十一倍速くなっても対話の下限に届かず、二ビットでは意味品質が急落することを示した。
 
 - **2025-02 · [Binary Neural Networks for Large Language Model: A Survey](2025-2502.19008-binary-neural-networks-for-large-language-model-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -900,6 +968,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   バッチ推論で生じる資源競合による推論圧縮を、A/B/C判定の選好データとGRPOで単一質問推論へ移植し、正解率を上げながらトークンを約31%削減した過剰思考の制御手法。
 
+- **2025-07 · [Characterizing State Space Model and Hybrid Language Model Performance with Long Context](2025-2507.12442-characterizing-state-space-model-and-hybrid-language-model-performance-w.md)**  
+  実装：[✓](https://github.com/sapmitra/ssm-scope) ・ リポジトリ内被引用：0  
+  近年はSSMと注意機構を組み合わせたHybridモデルも登場した。本論文は、RTX 4090（24GB）とJetson Orin Nano（8GB共有メモリ）を対象に、Transformer・SSM・Hybridの文脈長による性能逆転、メモリ上限、消費エネルギー、演算子別のボトルネックを計測したシステム特性評価である。
+
 - **2025-05 · [Towards Efficient Key-Value Cache Management for Prefix Prefilling in LLM Inference](2025-2505.21919-towards-efficient-key-value-cache-management-for-prefix-prefilling-in-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実運用トレースでKVキャッシュの再利用率と逐次・ランダムの混合アクセスを実証し、RedisとRDMA系キーバリューストアのメタデータ性能を実トレースで測って、接頭辞プリフィル専用のメタデータ管理が要ることを示した分析研究。
@@ -978,6 +1050,10 @@
   実装：✓ ・ リポジトリ内被引用：9  
   MoEのスケーリング則へ推論費用を組み込み、専門家数を増やした「損失最適」構成より、小さなMoEを多くのデータで学習する構成が配信費用まで含めて有利になる領域を示す。
 
+- **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
+  実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：3  
+  大規模言語モデルの圧縮では、重みを0にする枝刈りや、浮動小数点数を整数へ変換する量子化が、生成文をどの時点から変えてしまうかを把握する必要がある。この指標を使って行列ごとの枝刈り率を配分すると、Llama-2-13Bを全体75%疎化したとき、同じ平均疎化率の一様な大きさ基準の枝刈りより、WikiText2のPPLを13.512から8.101へ抑えられる。
+
 - **2024-10 · [LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment](2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-de.md)**  
   実装：[✓](https://github.com/AboveParadise/LLMCBench) ・ リポジトリ内被引用：1  
   圧縮性能から信頼性までの6軸で疎化と量子化の代表7手法を統一測定し、量子化が性能保持で優れること、重みのみ量子化が汎化で安定すること、疎化は学習が軽いが配布基盤の対応が未熟なことを明らかにした。
@@ -1015,6 +1091,10 @@
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：39  
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
+
+- **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
+  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：26  
+  困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
   実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：23  

@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（147本）
+## 自動生成の論文一覧（154本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -11,6 +11,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
+
+- **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
 - **2026-03 · [A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs](2025-2502.09921-hilos-near-storage-processing.md)**  
   実装：[✓](https://github.com/hongsunjang/HILOS/tree/asplos26) ・ リポジトリ内被引用：6  
@@ -79,6 +83,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-08 · [Potential Applications of HBF in LLM Serving Systems](2026-2608.13127-hbf-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本研究はHigh-Bandwidth FlashをHBMの代替でなく容量階層としてMoE専門家の複製と複数モデル重みの常駐を増やし、遠隔通信・読み込み・負荷偏りを減らせるか検討する。
+
+- **2026-08 · [FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration](2026-2608.25062-flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  高帯域フラッシュを巨大モデル重みの近接容量層として使い、動的読み出し結合・更新隔離・読み出し専用変換表で従来方式比六・二倍の復号処理量を実現する。
 
 - **2026-08 · [Cacheable by Design? Training Mixture-of-Experts Routers for Locality Against the Edge Memory-Bandwidth Wall: A Pre-Registered Negative Result with a Systems Measurement Study](2026-2608.18261-cacheable-by-design-expert-locality.md)**  
   実装：[✓](https://github.com/Shriniwas410/cacheable-by-design) ・ リポジトリ内被引用：2  
@@ -186,6 +194,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference](2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ビット量子化した重みとKVキャッシュをGPUに常駐させ、効くチャネルとトークンだけ追加の精度ビットをホストメモリやSSDから取り寄せ、取得と適用をずらして計算と重ねることで、2ビット重みで困惑度を9.46から8.40へ下げ、2ビット重みとKVのQwen3-8BでAIME正解率を11.0パーセントから47.1パーセントへ戻したと報告した。
+
 - **2026-11 · [Accelerating Offloading-Based MoE Inference by Interleaving Concurrent Requests](2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-r.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   予測で先読みせず、揃ったリクエストだけを先の層へ進めて本当の不足エキスパートを早く明かし読み込みと計算を重ねるBevyで、llama.cppの最大3.46倍、最速の先読み方式の最大1.55倍のデコードスループットを得る。
@@ -217,6 +229,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism](2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   静的重み用のメモリ内計算、動的データ用のメモリ近傍計算、部分結果集約用のネットワーク内計算を統合し、細粒度データ配置とプリフィル・デコード分離で通信とメモリ帯域の偏りを抑えるLLM推論アクセラレータ。
+
+- **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LeanStreamは、層内の部分残差から次層の重み優先度を更新し、重み読出し・GPU計算・キャッシュを非同期に重ねて、端末LLMのSSD待ちと予測ミスを減らす。
 
 - **2026-09 · [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](2026-2609.08682-hda-moe-3d-near-memory-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -277,6 +293,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-07 · [NELSSA: A GPU–PNM Heterogeneous System for Mixed-Length LLM Serving via Length–based Request Placement](2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   要求長に応じて短い注意機構をGPU、長い疎注意を実機PNMへ配置し、文脈成長時はキー・バリュー状態を背景移送して一方向に実行先を切り替え、混在長負荷のGPUメモリ圧迫と先頭待ちを抑える異種実行基盤。
+
+- **2026-07 · [Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing](2026-58b45f0ef5d5-kairox-adaptive-gpu-cpu-hybrid-llm-inference-via-online-neuron-balancing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  巨大な言語モデルでは重みをVRAMにすべて置けない場合、llama.cppの層単位オフロードではCPU側の層計算が直列経路の律速になりやすい。RTX 3080 Ti 12GBとRTX 4090 24GBを用いた実機で、活性化疎性を持つ複数の7B～66B級モデルを評価した。
 
 - **2026-07 · [HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference](2026-2607.11586-hcrmap.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -341,6 +361,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-04 · [DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference](2026-2604.26074-dak-direct-access-gpu-memory-offloading.md)**  
   実装：[✓](https://github.com/shouxulin/DirectAccessKernel) ・ リポジトリ内被引用：0  
   DAKはCPUメモリの重み・KVをGPU HBMへ先読みせずTMAで共有メモリへ直接運び、演算別オフロード率・輻輳制御・マルチキャストでHBM中継と帯域競合を減らす。
+
+- **2026-03 · [Pooling Engram Conditional Memory in Large Language Models using CXL](2026-2603.10087-pooling-engram-conditional-memory-in-large-language-models-using-cxl.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  条件付き記憶は言語モデルの条件付き記憶を、通常のTransformer計算から分離した大規模なN-gram埋め込み表で保持する。
 
 - **2026-02 · [DynSplit-KV: Dynamic Semantic Splitting for KVCache Compression in Efficient Long-Context LLM Inference](2026-2602.03184-dynsplit-kv-dynamic-semantic-splitting-for-kvcache-compression-in-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -467,6 +491,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
+
+- **2025-11 · [VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking](2025-2511.18692-vlm-in-a-flash-i-o-efficient-sparsification-of-vision-language-model-via.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  連続したニューロンの塊を単位に、重要度を推定遅延で割った効用で塊を選ぶ疎化と、連続分布に基づく遅延の見積もりにより、同等の精度でフラッシュ読み込みの遅延を二つの組み込み機器で平均二・一九倍と二・八九倍、最大四・六五倍と五・七六倍改善したと報告した。
 
 - **2025-08 · [FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern](2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

@@ -32,7 +32,7 @@
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（46本）
+## 自動生成の論文一覧（66本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/)
 
@@ -53,6 +53,14 @@
   実装：[✓](https://github.com/ngocbh/kalman-delta-networks) ・ リポジトリ内被引用：1  
   固定サイズの線形注意メモリに推定不確実性を持たせ、蓄積証拠に応じて上書き強度をカルマン利得から決めることで、長文脈検索と生成精度を改善する。
 
+- **2026-07 · [The Key to Going Linear: Analysis-Driven Transformer Linearization](2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  基盤を凍結して状態更新だけを比べ、ソフトマックスの一次近似が示すキー依存のランク1射影を備えるデルタ型が最も注意を近似できること、窓とシンクと短い畳み込みの処方で先行線形化のMMLUを上回ることを示した。
+
+- **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
+  実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：1  
+  線形注意（Linear 注意機構）や状態空間モデル（State Space モデル; SSM）は、入力履歴を固定長の再帰状態へ要約するため、過去の全トークンに対応する鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を保存する全注意と比べて、長文脈の記憶容量を一定に保ちやすい。
+
 - **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
@@ -63,6 +71,14 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-10 · [Multi-State Linear Attention with Generalized Second-Order Routing](2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多状態線形注意の集約重みを、セグメント内キーの一次・二次モーメントから復元した整列の平均と分散のゲート付き混合で決め、鋭く整列したキーを含むセグメントを取りこぼさないようにする集約機構。
+
+- **2026-10 · [Dynamical Memory Transformer: Selective Recurrent Memories with Constant Cost Attention](2026-2610.41850-dynamical-memory-transformer-selective-recurrent-memories-with-constant-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  過去を複数の力学的な記憶単位の固定長状態へ圧縮し、注意はトークン履歴ではなく記憶の出力へ向ける分離型の仕組みで、選択的複写で九十八・六八パーセントと最良の精度と強い長さ外挿を示す一方、大規模な言語モデルではMambaに劣り、生成は一トークン約一・六ミリ秒で状態六十八キロバイト一定だったと報告した。
+
 - **2026-09 · [Switching Linear Attention](2026-2609.39034-switching-linear-attention.md)**  
   実装：[✓](https://github.com/lindermanlab/switching-linear-attention) ・ リポジトリ内被引用：0  
   ソフトマックス注意（softmax 注意機構）は過去の各トークンの鍵と値を保持し、現在の問い合わせとの類似度に応じて必要な値を取り出す。1.3Bモデルの単一H100上の生成ではTransformer基準に対して全体スループットが4〜5倍になる一方、より単純なゲート付きDeltaNetより推論で1.25〜1.5倍遅く、学習では約2倍遅い。
@@ -70,6 +86,18 @@
 - **2026-08 · [SANE: State Anomaly Neutralization for Stable Extreme-Context Delta-Rule Models](2026-2608.22354-sane-state-anomaly-neutralization-for-stable-extreme-context-delta-rule-.md)**  
   実装：[✓](https://github.com/pass-lin/rwkv_ops) ・ リポジトリ内被引用：0  
   SANEはこの形状に合わせ、各チャンク末尾の状態行列を、入力に応じたヘッド別のしきい値で滑らかに圧縮する。
+
+- **2026-08 · [MARCH: Scaling Recurrent Memory with Content-Routed State Anchors](2026-2608.12435-march-scaling-recurrent-memory-with-content-routed-state-anchors.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MARCHは、再帰型言語モデルの「過去を固定サイズの状態に圧縮するため、後から古い情報を取り出しにくい」という問題を、累積再帰状態の履歴保存と内容に基づく検索で緩和する構造である。過去状態の読出しには追加費用があり、128KではTop-4の疎ルーティングが密なMARCHの学習処理量を2倍超に改善する。
+
+- **2026-08 · [Maglev: Sliding Recurrent Memory](2026-2608.02870-maglev-sliding-recurrent-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  435M規模、学習43.52Bトークン、最大系列長2048という制御された比較で、最良のQ/P分離パラメータ、整合損失重みλ=1は、通常の局所窓Transformerに対してFineWeb-Edu検証のビット/バイト（BPB）を0.7413から0.7251へ低下させ、下流精度平均を54.1から56.4へ改善した。
+
+- **2026-08 · [DeltaFlow: Noise-Adaptive Bidirectional Gated Delta Networks for Embedded Language Flows](2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  接頭辞を保ち本文だけ反転する双方向ゲート付きデルタネットワークと、拡散時刻で減衰と書込みを変える制御で、拡散言語モデルの除去雑音器を軽くし、生成困惑度を下げつつ長系列で2.72倍の処理速度を得た。
 
 - **2026-06 · [Do Language Models Need Sleep? Offline Recurrence for Improved Online Inference](2026-2605.26099-do-language-models-need-sleep-offline-recurrence-for-improved-online-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -87,13 +115,29 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Blurry Window 注意機構（BLA）は、長い系列の全トークンに注意を向ける通常の自己注意の代わりに、有限サイズの状態から過去の鍵・値情報を補間して読み出す注意機構である。規則学習課題RegBenchでは、比較した線形注意系の中でBLAとSWAが状態量の増加に応じて精度を改善し、BLAは小さな状態でも優位な条件があった。
 
+- **2026-04 · [Optimal Decay Spectra for Linear Recurrences](2026-2604.07658-optimal-decay-spectra-for-linear-recurrences.md)**  
+  実装：[✓](https://github.com/SiLifen/PoST) ・ リポジトリ内被引用：0  
+  MambaやRWKV、線形注意を使う系列モデルは、過去の情報を固定次元の状態へまとめて保存することで、生成時に全トークンのキー・値キャッシュを保持する通常の注意機構より、系列長に対する状態メモリの増加を抑えられる。
+
 - **2026-04 · [Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](2026-2604.24715-long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルを長文脈で使う場合、通常の全注意機構は過去のキーと値をトークン数に応じて保存し続けるため、GPUメモリが推論可能な文脈長を制約する。実行基盤側も改修し、8基のAMD MI300Xを使って最大約200万トークンの推論を実行した。
 
+- **2026-03 · [Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation](2026-2603.22333-graph-signal-processing-meets-mamba2-adaptive-filter-bank-via-delta-modu.md)**  
+  実装：[✓](https://github.com/yehjin-shin/HADES) ・ リポジトリ内被引用：0  
+  トークン列を線状グラフとみなし、状態空間モデルの再帰ヘッドを時変フィルタとして解釈するGraph Signal Processing（グラフ信号処理）の観点から設計する。
+
+- **2026-02 · [Softmax Linear Attention: Reclaiming Global Competition](2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  正規化による競争をトークン軸からヘッド軸へ移し、読み取りと書き込みの二重の門で線形注意へ勝者総取りを取り戻す枠組みで、GLAの検索平均を19.17%から26.88%へ上げ、UUID検索の8K条件ではGated DeltaNetを5.9%から37.4%へ改善した。
+
 - **2026-01 · [Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths](2026-2601.06463-gecko-an-efficient-neural-architecture-inherently-processing-sequences-w.md)**  
   実装：[✓](https://github.com/XuezheMax/gecko-llm) ・ リポジトリ内被引用：0  
   Geckoは、従来のTransformerで長い系列を扱う際の二乗注意計算と、固定窓に分割する方式で過去の情報が失われる問題を、モデル構造そのものから扱う研究である。
+
+- **2026-01 · [Elastic Spectral State Space Models for Train-Once Budgeted Inference](2026-2601.22488-elastic-spectral-state-space-models-for-train-once-budgeted-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  異なるGPUや端末で同じ系列モデルを提供する場合、計算予算ごとに別の小型モデルを学習する方法は、学習費用とモデル管理の両方を増やす。学習済みの幅・層数を後から単純に削っても、小型化された部分が単独で有効な予測器になるとは限らない。学習後は成分の接頭辞を物理的に切り出し、別の学習やチャネル選別を行わずに、複数のパラメータ数・実行予算に対応する。
 
 ### 2年前（2024-12〜2025-11）
 
@@ -117,15 +161,31 @@
   実装：[✓](https://github.com/LivingFutureLab/MeSH/) ・ リポジトリ内被引用：0  
   MeSH（メモリ-as-State-Highways）は、同じTransformerブロックを複数回適用する再帰Transformer（recursive transformer）の性能低下を抑えるため、反復ごとに読み書きを制御する状態メモリを導入する手法である。
 
+- **2025-10 · [Language Modeling With Factorization Memory](2025-2511.00315-language-modeling-with-factorization-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多数の再帰状態から親和性の高い上位k個だけを読み書きする疎な更新で、推論の定数費用を保ちながら状態容量を増やす再帰型言語モデル。長文脈外挿と推論速度でMamba-2を上回る。
+
+- **2025-09 · [Enhancing Linear Attention with Residual Learning](2025-2509.25223-enhancing-linear-attention-with-residual-learning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意機構は、履歴のkey/valueを固定サイズの状態行列に集約し、系列長に対して線形時間・一定の再帰状態メモリで生成できる。約1.5Bパラメータを100B トークンで学習した比較で、RDNはGated DeltaNet（GDN）のWikiText PPL 17.27から16.57へ、8課題平均正解率46.03%から47.20%へ改善した。
+
 - **2025-07 · [Scaling up the State Size of RNN LLMs for Long-Context Scenarios](2025-21fc56600ade-scaling-up-the-state-size-of-rnn-llms-for-long-context-scenarios.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerの自己注意（self-注意機構）は、過去の鍵・値（KV）を系列長に比例して保持し、特定位置の情報を取り出せる。400M級Gated DeltaNetの状態を8倍にすると、FDA・SWDE・SQuADの検索課題平均が28.03から37.39へ改善した。
+
+- **2025-04 · [DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models](2025-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SSMで浅い層の隠れ状態が深い層へ届く前に減衰する問題に対し、複数層の隠れ状態を選択的に射影・ゲートして現在の隠れ状態へ融合する密な層間接続DenseSSMを提案し、RetNetとMambaの精度を上げる。
 
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
   実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：355  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
+
+- **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：133  
+  これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2023-12 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
   実装：[✓](https://github.com/sustcsonglin/flash-linear-attention) ・ リポジトリ内被引用：130  
@@ -159,6 +219,10 @@
   実装：[✓](https://github.com/OpenNLPLab/lightning-attention) ・ リポジトリ内被引用：20  
   一覧用要約：Lightning 注意機構-2は因果線形注意を現在のタイル内と過去タイルからの寄与に分解し、タイル内を因果マスク付き通常行列積、タイル間を固定サイズの累積KV状態による右積で計算する。前向き・逆向きの両方をTritonで入出力認識型に実装し、長系列でも学習速度と作業メモリを安定させる。
 
+- **2024-10 · [LoLCATs: On Low-Rank Linearizing of Large Language Models](2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.md)**  
+  実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：16  
+  線形注意を元の注意出力に合わせる注意転移と低ランク適応だけの調整で線形化し、学習量を桁違いに減らしながらラマ3・8ビーのゼロショット差をほぼ閉じ、初めて4050億パラメータまで線形化した。
+
 - **2024-02 · [BlackMamba: Mixture of Experts for State-Space Models](2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md)**  
   実装：[✓](https://github.com/Zyphra/BlackMamba) ・ リポジトリ内被引用：5  
   選択的状態空間モデルの固定状態生成と、混合専門家層の疎な全結合計算を一つの言語モデルに組み込み、長系列生成・学習計算量・専門家の割当てを同時に評価した。
@@ -170,6 +234,14 @@
 - **2024-03 · [Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference](2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md)**  
   実装：[✓](https://github.com/h-zhao1997/cobra) ・ リポジトリ内被引用：4  
   提案の中心は、既存のMamba言語モデルへ視覚情報を接続する設計と学習方法を評価した点にある。単一のNVIDIA A100 PCIe 80GBで、画像1枚と同じ質問を入力し256トークンを生成する実験では、Cobra-3.5Bが1.54秒・166.47トークン/秒、MobileVLM v2-3Bが5.17秒・49.50トークン/秒である。
+
+- **2024-10 · [Taipan: Efficient and Expressive State Space Language Models with Selective Attention](2024-2410.18572-taipan-efficient-and-expressive-state-space-language-models-with-selecti.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  Taipanはこの弱点を、すべてのトークンへ全面的な注意を適用するのではなく、軽量な二値ゲートで選別したトークンの表現だけを補強することで緩和する。学習時には選択率が目標値15%へ近づく損失を加え、選別の離散性をStraight-Through Gumbel-Softmaxで扱う。
+
+- **2024-02 · [Unifying Linear-Time Attention via Latent Probabilistic Modelling](2024-2402.17512-unifying-linear-time-attention-via-latent-probabilistic-modelling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  標準Transformerの自己注意は、系列内の各トークンが過去の各トークンを参照するため、長い入力のプリフィルではトークン数の二乗に比例する注意計算を必要とする。生成時には過去のKey/ValueをKVキャッシュへ保持するため、文脈長とともにメモリ容量も増える。本論文は、線形注意を潜在変数を介した確率分布として解釈する。
 
 ### 4年前（2022-12〜2023-11）
 
@@ -213,6 +285,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   GPUで測った層単体の順方向計算は、ブロック再帰方式に対して単一頭BSTが6〜11倍速い。
 
+- **2022-12 · [Linearizing Transformer with Key-Value Memory](2022-2203.12644-linearizing-transformer-with-key-value-memory.md)**  
+  実装：[✓](https://github.com/jcyk/memsizer) ・ リポジトリ内被引用：2  
+  MemSizerはこの問題を、既存モデルのKVキャッシュだけを圧縮するのではなく、注意層そのものを別の演算へ置換して解く。一方、同じ比較の生成速度は3165対1932トークン/秒、メモリは3.373対19.21GBである。
+
 ### 5年前（2021-12〜2022-11）
 
 - **2022-02 · [Transformer Quality in Linear Time](2022-2202.10447-transformer-quality-in-linear-time.md)**  
@@ -230,6 +306,10 @@
 - **2022-02 · [Flowformer: Linearizing Transformers with Conservation Flows](2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md)**  
   実装：[✓](https://github.com/thuml/Flowformer) ・ リポジトリ内被引用：2  
   Flowformerは、自己注意（Self-注意機構）の計算量を系列長に対して線形に抑えつつ、通常のsoftmax注意が持つ「重要な位置を選んで重みを集中させる」性質を残そうとする研究である。
+
+- **2022-11 · [AAN+: Generalized Average Attention Network for Accelerating Neural Transformer](2022-ffa88b154f4f-aan-generalized-average-attention-network-for-accelerating-neural-transf.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  AAN+は、履歴を位置別・内容別の正のスコアで加重平均したベクトルへ圧縮し、ゲートで現在トークンと混ぜる。WMT14英独翻訳では、通常TransformerのBLEU 27.59に対しNerは27.56とほぼ同等で、デコード速度は1.30倍、学習速度は1.02倍となる。
 
 ### 7年前（2019-12〜2020-11）
 
