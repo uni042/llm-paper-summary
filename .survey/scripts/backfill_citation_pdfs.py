@@ -215,6 +215,11 @@ def backfill(repo_root: Path, limit: int, delay: float, apply: bool, retry_block
     for path in paper_paths(repo_root):
         rel = path.relative_to(repo_root).as_posix()
         meta, _ = front(path)
+        if not str(meta.get("canonical_id") or "").strip():
+            # Moved stubs and other non-paper files carry no front matter and
+            # no canonical identity, and the coverage audit does not count
+            # them either. Never spend the attempt budget on them.
+            continue
         if isinstance(meta.get("references"), list) and meta.get("references_checked_at"):
             continue
         prior = paper_state.get(rel) or {}
