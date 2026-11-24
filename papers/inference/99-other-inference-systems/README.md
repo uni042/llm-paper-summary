@@ -3520,6 +3520,10 @@
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：7  
   新しい注意機構や学習アルゴリズムではなく、ブラウザで効率的な言語モデル実行を成立させるシステム統合が主要な貢献である。ブラウザ版はネイティブ版より遅いが、復号処理率の約71.2～79.6%を保持した。
 
+- **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
+
 - **2025-10 · [xLLM Technical Report](2025-2510.14686-xllm-technical-report.md)**  
   実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：6  
   原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
@@ -3539,10 +3543,6 @@
 - **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：6  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
-
-- **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
 
 - **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
   実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：5  
@@ -4871,7 +4871,7 @@
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：30  
   線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
@@ -4915,7 +4915,7 @@
   従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
 
 - **2024-06 · [Hybrid SLM and LLM for Edge-Cloud Collaborative Inference](2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   本研究は、端末側で短い草稿を作り、クラウド側で草稿中のトークンをまとめて検証することで、品質と計算費用の間の連続的な選択肢を作る。GSM8KではLlama-2-7B単独の正答率21.68%、70B単独53.07%に対し、対数閾値−0.5の協調方式は52.24%を達成した。
 
 - **2024-03 · [Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2024-8166d1af62df-exploring-post-training-quantization-in-llms-from-comprehensive-study-to.md)**  
@@ -5441,7 +5441,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：365  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：366  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -5461,7 +5461,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：87  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
@@ -5496,13 +5496,13 @@
   実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：20  
   Xu、Shi、ChoiによるRECOMPは、検索拡張言語モデル（Retrieval-Augmented Language モデル、RALM）の推論時に、検索した文書をそのままモデルの文脈へ連結する方式を改める。原著は文脈トークン数を主要な効率指標とするため、文書量が5%になったという数値をGPU実行時間が20倍速くなったと読み替えてはならない。
 
+- **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
+  実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：20  
+  著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
+
 - **2023-05 · [Tabi: An Efficient Multi-Level Inference System for Large Language Models](2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
   Tabiは、大型の言語モデルを用いた分類・回帰サービスで、すべての要求に同じ大きなモデルを実行する無駄を削減する推論システムである。サービスが例えば分類正答率95%以上という精度下限を指定すると、従来の推論基盤は平均精度が下限を超える単一モデルを選び、簡単な入力にも難しい入力にも同じ計算を行う。
-
-- **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
-  実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：19  
-  著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
 
 - **2023-07 · [PUMA: Secure Inference of LLaMA-7B in Five Minutes](2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md)**  
   実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：19  
@@ -5667,7 +5667,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：205  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：206  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
@@ -5833,7 +5833,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：383  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：385  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

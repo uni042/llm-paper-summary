@@ -853,7 +853,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Medusaは、大規模言語モデル（large language モデル; LLM）を必要なときだけ起動するサーバーレス推論において、モデル重みの読み込み以外にも無視できない起動費用があることに着目したシステム論文である。
 
 - **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：19  
   タイル中心プリミティブから計算・通信融合カーネルを生成し、8×H800で非重畳比1.17〜20.76倍、8モデルのエンドツーエンドでPyTorch比平均1.32倍を達成する。
 
 - **2025-06 · [FlashMoE: Fast Distributed MoE in a Single Kernel](2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md)**  
@@ -872,13 +872,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/Anjiang-Wei/Astra) ・ リポジトリ内被引用：11  
   高水準PyTorchからCUDAを一から生成するのではなく、SGLangに既に存在する正しいCUDAカーネルを出発点にし、試験・プロファイル・計画・実装を別々の大規模言語モデル（Large Language モデル; LLM）エージェントへ分担する。
 
+- **2025-04 · [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-vi.md)**  
+  実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：10  
+  FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
+
 - **2025-04 · [70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DFloat11)](2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md)**  
   実装：[✓](https://github.com/LeanModels/DFloat11) ・ リポジトリ内被引用：10  
   DFloat11は、大規模言語モデルのBFloat16重みを数値を変えずに圧縮し、推論時にGPU上で必要な部分だけ復号する方式である。Llama 3.1 405Bの重み容量は約811.71GBから551.22GBへ減り、8台の80GB GPUを持つ単一ノードで可逆推論できる。
-
-- **2025-04 · [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-vi.md)**  
-  実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：9  
-  FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
 
 - **2025-06 · [LittleBit: Ultra Low-Bit Quantization via Latent Factorization](2025-2506.13771-littlebit-ultra-low-bit-quantization-via-latent-factorization.md)**  
   実装：[✓](https://github.com/SamsungLabs/LittleBit) ・ リポジトリ内被引用：8  
@@ -1273,7 +1273,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：665  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：667  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -1315,7 +1315,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：918  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：920  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

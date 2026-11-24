@@ -493,7 +493,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   オンラインの大規模言語モデル推論では、要求をまとめて実行することでGPUの行列積を効率化できる。MLSys 2025正式論文は、同一ホストのCPUを使う条件で、GPUのみの実行と比べてT4で最大7.5倍、A10Gで最大26%、H100で最大14%の処理率改善を報告する。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
+  実装：✓ ・ リポジトリ内被引用：50  
   FastDecodeは、言語モデルの逐次生成で巨大化する鍵・値キャッシュ（KVキャッシュ）をGPU外へ置くだけでなく、キャッシュを読む注意計算そのものを複数のCPUノードへ移す推論配信システムである。
 
 - **2024-10 · [Fast State Restoration in LLM Serving with HCache](2024-2410.05004-hcache-fast-state-restoration-llm-serving.md)**  
@@ -513,7 +513,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
 
 - **2024-11 · [Pie: Pooling CPU Memory for LLM Inference](2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   Pieが扱う問題は、言語モデル推論で鍵・値キャッシュ（KVキャッシュ）をGPUの高帯域メモリからCPUメモリへ退避すると、同時処理可能な要求は増えるものの、必要時の読み戻しが逐次生成を停止させることである。物理GPU KV領域が同じvLLMとの比較では、ShareGPTで最大1.9倍、Alpacaで最大1.5倍の処理能力を示す。
 
 - **2024-11 · [Do Large Language Models Need a Content Delivery Network?](2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md)**  
