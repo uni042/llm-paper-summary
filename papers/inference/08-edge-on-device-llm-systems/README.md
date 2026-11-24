@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（120本）
+## 自動生成の論文一覧（121本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -77,6 +77,10 @@
   連続制御の現在フレームのプリフィルと過去フレームのデコードを1バッチへ詰めるリクエスト間パイプライン化で、再学習なしにエッジ上の視覚言語行動モデルを2.55倍高速化する推論基盤。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [HyCoInfer: Cloud-Edge Collaborative Inference for Large Language Models on Heterogeneous GPU-FPGA Architectures](2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-o.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルをクラウドGPU、デコードをGPUとエッジFPGAへ分ける分離型サービングで、FPGA容量を織り込んだ役割分担と帯域適応型のKV圧縮と層単位転送により、500Mbps回線の長文質問応答でクラウドのみ比グッドプット4.11倍と遅延56.2パーセント減を出す協調推論システム。
 
 - **2026-10 · [TileWeave: Heterogeneous Tiling for Sparse Prefill on Mobile SoCs](2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

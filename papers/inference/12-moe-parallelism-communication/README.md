@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（80本）
+## 自動生成の論文一覧（81本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -110,6 +110,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   エキスパートストリーミングは専門家重みをチップレット間の細粒度マイクロスライスへ分け、高負荷・低負荷専門家を組み合わせてDDR読込、チップレット転送、計算を重ね、オンチップ容量不足を緩和する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Communicate the Change: Efficient Expert Parallelism via Activation Compression](2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compr.md)**  
+  実装：[✓](https://github.com/McGill-NLP/EchoMoE) ・ リポジトリ内被引用：0  
+  エキスパート並列の通信が隠れ状態の全次元を毎層送る冗長さに着目し、数層ごとに配る全幅の参照状態との差分だけを圧縮して送るEchoMoEで、ノード間通信を58パーセント減らしスループットを22.6パーセント上げながら平均性能の低下を3.8ポイントに抑える後付け改修法。
 
 - **2026-10 · [INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel Mixture-of-Experts Inference](2026-2610.36339-inc-moe-overlapping-in-network-collectives-and-expert-computation-for-ex.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

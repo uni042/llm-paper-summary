@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2ca522d0a3f2225eea0c57ba4607c2c5483c6783",
+  "base_commit": "d84d09b55ad9e06c37173105be70335bc2dba566",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1650,6 +1650,11 @@
     "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
+    "2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-on-heterogeneous-gpu-fpga-architectures.json",
+    "2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.json",
+    "2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compression.json",
+    "2026-2611.22280-xm-sparse-high-throughput-sparse-attention-llm-serving-over-scale-up-memory-pools.json",
+    "2026-2611.22296-specsearch-towards-hardware-aware-efficient-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54508,6 +54513,51 @@
         "processed_at": "2026-11-24T10:20:12+00:00"
       },
       "return_count": 2
+    },
+    "arXiv:2611.22086": {
+      "order": [
+        "2026-11-24T10:26:32+00:00",
+        "2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-on-heterogeneous-gpu-fpga-architectures.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.22191": {
+      "order": [
+        "2026-11-24T10:28:08+00:00",
+        "2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.22215": {
+      "order": [
+        "2026-11-24T10:29:43+00:00",
+        "2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.22280": {
+      "order": [
+        "2026-11-24T10:31:18+00:00",
+        "2026-2611.22280-xm-sparse-high-throughput-sparse-attention-llm-serving-over-scale-up-memory-pools.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.22296": {
+      "order": [
+        "2026-11-24T10:32:53+00:00",
+        "2026-2611.22296-specsearch-towards-hardware-aware-efficient-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69313,6 +69363,21 @@
     "doi:10.1109/icassp55912.2026.11460785": [
       "papers/inference/99-other-inference-systems/2026-97023514dc43-ecm-enhancing-compressibility-of-quantized-vision-encoder-and-llm-for-la.md",
       "papers/inference/99-other-inference-systems/2026-97023514dc43-ecm-enhancing-compressibility-of-quantized-vision-encoder-and-llm-for-la.md"
+    ],
+    "arxiv:2611.22086": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-o.md"
+    ],
+    "arxiv:2611.22191": [
+      "papers/inference/13-sparse-attention/2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.md"
+    ],
+    "arxiv:2611.22215": [
+      "papers/inference/12-moe-parallelism-communication/2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compr.md"
+    ],
+    "arxiv:2611.22280": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.22280-xm-sparse-high-throughput-sparse-attention-llm-serving-over-scale-up-mem.md"
+    ],
+    "arxiv:2611.22296": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.22296-specsearch-towards-hardware-aware-efficient-speculative-decoding.md"
     ]
   }
 }

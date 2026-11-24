@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（125本）
+## 自動生成の論文一覧（126本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -117,6 +117,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [XM-Sparse: High-Throughput Sparse-Attention LLM Serving over Scale-up Memory Pools](2026-2611.22280-xm-sparse-high-throughput-sparse-attention-llm-serving-over-scale-up-mem.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  スパース注意のKVと索引キーの両キャッシュをスケールアップメモリプールへ追い出し、アクセス様式ごとに取得機構を使い分けるXM-Sparseで、PCIeオフロード方式と比べて最大約5倍、同じ基盤への素朴な統合と比べても最大1.34倍のデコードスループットを得る提供システム。
 
 - **2026-11 · [SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains](2026-2611.08362-specctmc-exact-speculative-simulation-of-diffusion-language-model-contin.md)**  
   実装：[✓](https://github.com/kasakh/specctmc) ・ リポジトリ内被引用：0  
