@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d5480275c17ccac113022528c4ec6a671fd086a4",
+  "base_commit": "90764124ccba12d0dc037ab061075343885d85ca",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -73,6 +73,7 @@
     "0000-89ae46e494cf-jw-svd-bridging-the-cross-modal-mismatch-in-post-training-mllm-compression.json",
     "0000-8ac901573970-d-fss-a-tten-d-ynamic-f-ine-grained-s-tructured-s-parse-a-ttention-m-echanism.json",
     "0000-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.json",
+    "0000-a1f72e13ea4b-c-hunk-llm-a-l-ightweight-p-luggable-f-rame-work-for-a-ccelerating-llm-s-i-nference.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
     "0000-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modeling-of-information-capacity-and-spectral-structure.json",
     "0000-a7044071c51b-uva-dare-digital-academic-repository-reward-guided-speculative-decoding-for-efficient-llm-reasoning.json",
@@ -92,6 +93,7 @@
     "0000-c628deb0da62-discovering-important-experts-for-mixture-of-experts-models-pruning-through-a-theoretical-perspective.json",
     "0000-c62b8e2ab730-phase-scoped-query-layouts-for-reference-preserving-speculative-decoding.json",
     "0000-c67f95485dce-scope-boosting-llm-efficiency-with-scoped-position-encoding.json",
+    "0000-d2ff8abe23fb-t-owards-p-rivacy-p-reserving-llm-i-nference-via-c-ollaborative-o-bfuscation-t-echnical-r-eport.json",
     "0000-d3680518ecb7-fistapruner-layer-wise-post-training-pruning-for-large-language-models.json",
     "0000-d3d38642ea10-o-rp-q-uant-g-eometric-o-rthogonal-r-esidual-p-rojection-for-m-ultiplier-f-ree-p-ower-of-t-wo-t-ransformer-q-uantization.json",
     "0000-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantization.json",
@@ -233,8 +235,10 @@
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
     "2024-2412.01042-truncformer-private-llm-inference-using-only-truncations.json",
+    "2024-2412.03214-continual-low-rank-scaled-dot-product-attention.json",
     "2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-for-large-language-models.json",
     "2024-2412.05225-beexformer-a-fast-inferencing-binarized-transformer-with-early-exits.json",
+    "2024-2412.06106-efficient-context-propagating-perceiver-architectures-for-auto-regressive-language-modeling.json",
     "2024-2412.06458-pruning-all-rounder-rethinking-and-improving-inference-efficiency-for-large-vision-language-models.json",
     "2024-2412.10652-centaur-bridging-the-impossible-trinity-of-privacy-efficiency-and-performance-in-privacy-preserving-transformer-inferenc.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
@@ -247,6 +251,7 @@
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
     "2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.json",
     "2024-468b43887ef3-how-speculative-can-speculative-decoding-be.json",
+    "2024-8be7c3fc01e1-low-rank-approximation-for-sparse-attention-in-multi-modal-llms.json",
     "2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-understanding-tasks-and-machine-translation-using-r.json",
     "2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
@@ -52669,6 +52674,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "SemanticScholar:8d0525ec83fad54f638ac86ba0d428ae6226d8ad": {
+      "order": [
+        "2026-11-24T03:10:20+00:00",
+        "0000-a1f72e13ea4b-c-hunk-llm-a-l-ightweight-p-luggable-f-rame-work-for-a-ccelerating-llm-s-i-nference.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.01499": {
+      "order": [
+        "2026-11-24T03:11:14+00:00",
+        "0000-d2ff8abe23fb-t-owards-p-rivacy-p-reserving-llm-i-nference-via-c-ollaborative-o-bfuscation-t-echnical-r-eport.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.03214": {
+      "order": [
+        "2026-11-24T03:12:09+00:00",
+        "2024-2412.03214-continual-low-rank-scaled-dot-product-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2412.06106": {
+      "order": [
+        "2026-11-24T03:13:04+00:00",
+        "2024-2412.06106-efficient-context-propagating-perceiver-architectures-for-auto-regressive-language-modeling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/CVPR52733.2024.01306": {
+      "order": [
+        "2026-11-24T03:13:59+00:00",
+        "2024-8be7c3fc01e1-low-rank-approximation-for-sparse-attention-in-multi-modal-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66758,6 +66808,18 @@
     "arxiv:2411.17773": [
       "papers/inference/19-inference-evaluation-benchmarking/2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.md",
       "papers/inference/19-inference-evaluation-benchmarking/2024-2411.17773-efficient-multi-modal-large-language-models-via-visual-token-grouping.md"
+    ],
+    "arxiv:2603.01499": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.01499-towards-privacy-preserving-llm-inference-via-collaborative-obfuscation-t.md"
+    ],
+    "arxiv:2412.03214": [
+      "papers/inference/99-other-inference-systems/2024-2412.03214-continual-low-rank-scaled-dot-product-attention.md"
+    ],
+    "arxiv:2412.06106": [
+      "papers/inference/99-other-inference-systems/2024-2412.06106-enhanced-computationally-efficient-long-lora-inspired-perceiver-architec.md"
+    ],
+    "doi:10.1109/cvpr52733.2024.01306": [
+      "papers/inference/13-sparse-attention/2024-8be7c3fc01e1-low-rank-approximation-for-sparse-attention-in-multi-modal-llms.md"
     ]
   }
 }

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（222本）
+## 自動生成の論文一覧（223本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -829,6 +829,10 @@
 - **2024-07 · [Efficient Sparse Attention needs Adaptive Token Release](2024-2407.02328-efficient-sparse-attention-needs-adaptive-token-release.md)**  
   実装：[✓](https://github.com/WHUIR/ADORE) ・ リポジトリ内被引用：0  
   KVキャッシュから寄与の低いトークンを予測して解放し、後で必要になる解放済みトークンのKV状態を再構築して戻すことで、Llama-2 7Bの長生成でフル注意比221.8パーセントのスループット改善と品質維持を両立する。
+
+- **2024-06 · [Low-Rank Approximation for Sparse Attention in Multi-Modal LLMs](2024-8be7c3fc01e1-low-rank-approximation-for-sparse-attention-in-multi-modal-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  クエリとキーを低ランク空間へ射影した近似注意マップの順序で重要なペアだけを選び、自己注意の計算を半分以下にしながら精度をむしろ改善するスパース注意の学習法。
 
 - **2023-12 · [Investigating the Effects of Sparse Attention on Cross-Encoders](2023-2312.17649-investigating-the-effects-of-sparse-attention-on-cross-encoders.md)**  
   実装：[✓](https://github.com/webis-de/ECIR-24) ・ リポジトリ内被引用：0  

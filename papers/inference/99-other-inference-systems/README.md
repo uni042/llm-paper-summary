@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1451本）
+## 自動生成の論文一覧（1453本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4740,6 +4740,10 @@
   実装：[✓](https://github.com/jgcarrasco/circuit-extraction) ・ リポジトリ内被引用：0  
   注意ヘッドと多層パーセプトロンをKLダイバージェンスの増分で判定して実際に除去し、タスク専用の小さく高速な部分モデルを抽出する枝刈り手法。
 
+- **2024-12 · [Enhanced Computationally Efficient Long LoRA Inspired Perceiver Architectures for Auto-Regressive Language Modeling](2024-2412.06106-enhanced-computationally-efficient-long-lora-inspired-perceiver-architec.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PerceiverARの履歴情報が第1層で失われる弱点を、履歴を全層へ運ぶ3拡張と、セグメントを半分重ねて交差注意を行い受容野を層ごとに広げるLLPで改善し、注意計算を全注意の12%に抑えながらWikitext-103でPerceiverARの約5分の1の規模でより良いパープレキシティを達成した効率的注意アーキテクチャ研究。
+
 - **2024-12 · [CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models](2024-2412.03599-cptquant-a-novel-mixed-precision-post-training-quantization-techniques-f.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   層の感度を相関・枝刈り・摂動の3方法で測り、16・8・4ビットを層ごとに割り当てる混合精度の学習後量子化。最大4倍圧縮でも精度低下をFP16より小さく抑える。
@@ -4751,6 +4755,10 @@
 - **2024-12 · [Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners](2024-2412.04917-continuous-speech-tokens-makes-llms-robust-multi-modality-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声対話を言語モデルへ統合する際、文字列と同様に音声も離散トークンIDへ変換し、次のIDを分類する方式が広く用いられる。Mini-Omniの10.84に対しFlow-Omniは8.81で、絶対2.03ポイント、相対約18.7%の低下となる。
+
+- **2024-12 · [Continual Low-Rank Scaled Dot-product Attention](2024-2412.03214-continual-low-rank-scaled-dot-product-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ストリーム処理の継続推論向けに、Continual Transformerの差分更新へNyström低ランク近似を組み込んだ注意を定式化し、ランドマークの更新版と固定版を提示して、音声分類で通常注意の最大1850倍の演算削減と競合する精度を両立させた効率的注意の研究。
 
 - **2024-12 · [Constrained Decoding with Speculative Lookaheads](2024-2412.10418-constrained-decoding-with-speculative-lookaheads.md)**  
   実装：[✓](https://github.com/amazon-science/CDSL-NAACL2025) ・ リポジトリ内被引用：0  
@@ -5413,7 +5421,7 @@
   従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
 
 - **2023-06 · [MiniLLM: On-Policy Distillation of Large Language Models](2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md)**  
-  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：52  
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
@@ -5777,7 +5785,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：299  
+  実装：✓ ・ リポジトリ内被引用：301  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

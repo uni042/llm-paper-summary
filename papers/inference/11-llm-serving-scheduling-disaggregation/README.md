@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（633本）
+## 自動生成の論文一覧（634本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1369,6 +1369,10 @@
 - **2026-03 · [Understand and Accelerate Memory Processing Pipeline for Large Language Model Inference](2026-2603.29002-memory-processing-pipeline-gpu-fpga.md)**  
   実装：[✓](https://github.com/OswaldHe/HeteroLLM) ・ リポジトリ内被引用：0  
   疎注意・RAG・圧縮メモリを4段階の共通メモリ処理へ分解し、不規則・メモリ律速部分をFPGA、密計算をGPUへ割り当てて長文推論の遅延と消費エネルギーを削減する異種実行方式。
+
+- **2026-03 · [Towards Privacy-Preserving LLM Inference via Collaborative Obfuscation (Technical Report)](2026-2603.01499-towards-privacy-preserving-llm-inference-via-collaborative-obfuscation-t.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  入力とモデル重みを連動変換する共変難読化で、秘密のトークン置換を重みの中へ隠し、既存推論基盤のまま平文同等の効率と精度損失3.5%以下、反転攻撃でのトークン復元5%未満を両立したプライバシー保護推論。
 
 - **2026-03 · [StreamWise: Serving Multi-Modal Generation in Real-Time at Scale](2026-2603.05800-streamwise-serving-multi-modal-generation-in-real-time-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
