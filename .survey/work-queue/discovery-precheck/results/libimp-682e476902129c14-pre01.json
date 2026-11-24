@@ -1,0 +1,669 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-682e476902129c14-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-682e47690212",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3704440.3704777",
+    "arXiv:2507.12145",
+    "arXiv:2607.23373",
+    "arXiv:2608.04401",
+    "arXiv:2610.12959",
+    "arXiv:2610.34673",
+    "arXiv:2611.06513"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7ee9f908f1e3ace74f967398cf9f1fcfbbcc19af",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:14:23.481263+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3704440.3704777",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.12145",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.23373",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.04401",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.12959",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34673",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.06513",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "UltraViT: Latency-Optimized On-device Vision Encoder for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.23373",
+      "year": 2026,
+      "published": "2026-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) remain bottlenecked by massive computational footprints, precluding their deployment on resource-constrained edge devices. While efforts to compress LVLMs focus heavily on vision token reduction or smaller language models, the vision encoder is largely overlooked, typically deployed as a monolithic, computationally heavy feature extractor. Moreover, there is no previous effort that designs a vision encoder for LVLMs directly optimized for on-device latency. In this paper, we present UltraViT, a vision encoder for LVLMs, explicitly designed and optimized for on-device performance. Specifically, by taking into account real on-device latencies, we systematically design a pyramidal architecture that strategically integrates and adapts heterogeneous spatial mixers at the macro-block level. Furthermore, to pre-train UltraViT, we propose a novel two-stage generative pre-training strategy: cultivating rich spatial features via dense distillation, followed by direct generative supervision from a capacity-mixed frozen LLM. Compared to standard contrastive and SSL, we show that our pre-training is much more effective for achieving high-level semantic grounding for UltraViT needed for the subsequent generative multimodal alignment of LVLM training. Extensive experiments demonstrate that our on-device latency-informed design combined with our tailored training strategy establishes a new state-of-the-art for efficient LVLM encoding, significantly outperforming existing encoder-centric baselines while operating on-device at nearly 1.7xthe speed.",
+      "identifiers": [
+        "SemanticScholar:f3d1296c70603e1dbdf7d3391358d742f446dc0c"
+      ],
+      "semantic_scholar_id": "f3d1296c70603e1dbdf7d3391358d742f446dc0c",
+      "canonical_id": "arXiv:2607.23373",
+      "arxiv_id": "2607.23373",
+      "doi": "10.48550/arXiv.2607.23373",
+      "authors": [
+        "Ioannis Maniadis Metaxas",
+        "Adrian Bulat",
+        "Alberto Baldrati",
+        "Anestis Zaganidis",
+        "Yassine Ouali",
+        "Hyeonuk Kim",
+        "G. Tzimiropoulos"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Elbow-Based MoE Routing: A Training-Free Inference Time Plugin for Expert Selection",
+      "source_url": "https://arxiv.org/abs/2608.04401",
+      "year": 2026,
+      "published": "2026-08-05",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models enable model scaling while maintaining low inference-time compute by activating only a subset of experts per token. However, conventional routing relies on a fixed top-k selection, forcing the model to spend the same compute regardless of how many experts are relevant. We introduce elbow-based routing, a training-free inference-time modification that dynamically adjusts the number of experts on a per-token basis. Our method examines the sorted router probability distribution and identifies an elbow point that separates high- and low-probability experts. We find that most router distributions exhibit clear inflection points suitable for this strategy, and we show both theoretically and empirically that elbow-based routing preserves expert load balance. Experiments on a state-of-the-art MoE model demonstrate an average latency reduction of 5.3% while maintaining accuracy across six benchmarks.",
+      "identifiers": [
+        "SemanticScholar:af6934ca60d9b8bc44a611062c436c7ee34ff0ad"
+      ],
+      "semantic_scholar_id": "af6934ca60d9b8bc44a611062c436c7ee34ff0ad",
+      "canonical_id": "arXiv:2608.04401",
+      "arxiv_id": "2608.04401",
+      "doi": "10.48550/arXiv.2608.04401",
+      "authors": [
+        "Robin Pan",
+        "Raymond Liu",
+        "Daniel Fang",
+        "Adelina Andrei",
+        "Rosa Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 111,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Video Codec-Guided Training-Free Token Compression for Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.12959",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (VLLMs) rely on long visual token sequences to understand complex temporal content, which makes visual token compression important for efficient inference. Existing training-free compression methods mainly reduce the number of tokens sent to the language model, but the compression process itself can still require many visual feature comparisons, especially for intra-frame token protection and inter-frame temporal token merging. This paper proposes a video codec-guided training-free token compression method for VLLMs that uses coding information already available in compressed video as a low-cost search prior. The method aligns reference-frame dependencies, motion vectors, and residuals with the visual token grid. Residual information forms compact candidate pools for token protection, while motion information is propagated along reference-frame chains to construct localized candidates for temporal token merging between sparsely sampled frames. Local visual feature similarity comparison is then used within these candidates to make the final compression decisions, without modifying the base VLLM. Experiments on three representative VLLMs and four video-understanding benchmarks show that the proposed method achieves performance comparable to the state-of-the-art training-free baseline FlashVID, and in some settings surpasses it, while substantially reducing the feature comparisons required by token protection and temporal matching. These results demonstrate that codec information can effectively improve the accuracy-complexity tradeoff of video token compression.",
+      "identifiers": [
+        "SemanticScholar:c45ed4e7add875d6e335a3984c61824c49000f6f"
+      ],
+      "semantic_scholar_id": "c45ed4e7add875d6e335a3984c61824c49000f6f",
+      "canonical_id": "arXiv:2610.12959",
+      "arxiv_id": "2610.12959",
+      "authors": [
+        "Xi-Hua Sheng",
+        "Rui-Jie Liu",
+        "Chang-Wen Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Agent Memory as Recommendation: Recommender-System Design for Long-Term Memory of LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.34673",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents that serve users across many sessions must choose, for every request, the few stored memories that enter a limited context window. This choice largely decides whether the agent answers correctly, and it runs on every request at Web scale. This selection faces three challenges: a large and growing store, a per-request cost budget, and multi-session questions that need all of their evidence. Many memory systems build notes or graphs with hundreds to thousands of LLM calls per history, and each is designed on its own, so it is unclear which component yields the accuracy. These challenges mirror the properties of recommendation, so we formalize agent memory as budgeted slate recommendation, with the request as the user, stored memories as items and the context window as a slate. The formalization places memory systems in one design space of recommender cascades and factorizes accuracy into the completeness that each stage controls. Guided by it, we propose AgentMemRec, which adapts candidate generation, learning to rank and slate construction from recommender systems and selects memories without any LLM call. On multi-session questions of LongMemEval, AgentMemRec outperforms memory and context-selection methods, including A-Mem, HippoRAG 2, DynamicRAG and T-Mem, by 10 to 31 points of accuracy. It matches an LLM reranker that makes 64 calls per query at 3.2 times lower serving cost, and on LoCoMo it outperforms Mem0 and Zep without any LLM call at write time. The factorization attributes the gains to slates that more often hold all of the evidence, so recommender-system design offers an effective and efficient foundation for the long-term memory of LLM agents.",
+      "identifiers": [
+        "SemanticScholar:0329beecbb6c1f4fe36728a77536f0826550508c"
+      ],
+      "semantic_scholar_id": "0329beecbb6c1f4fe36728a77536f0826550508c",
+      "canonical_id": "arXiv:2610.34673",
+      "arxiv_id": "2610.34673",
+      "authors": [
+        "Xin-Yu Zhang",
+        "Wei-Wei Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HELIX: HEterogeneous LLM Inference with FleXible and Fine-Grained Partitioning",
+      "source_url": "https://arxiv.org/abs/2611.06513",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference is inherently heterogeneous, with performance bottlenecks shifting throughout inference phases down to individual operators. This has motivated heterogeneous serving systems that disaggregate execution across specialized accelerators, typically through fixed partitions such as prefill/decode or attention/FFN. However, these approaches commit to a partitioning strategy in advance, limiting their ability to adapt to different workloads and model architectures while forcing emerging accelerators into predefined roles. We present HELIX, a vLLM-based software stack that discovers, compiles and dispatches workload-aware partitions across heterogeneous accelerators at the operator granularity. At engine initialization, HELIX automatically determines hardware-specific operator placements that minimize execution latency, accounting for profiled execution costs, communication overheads, device capabilities, and memory constraints. It combines dynamic programming, piecewise compilation, and heterogeneous subgraph dispatch, enabling accelerators with partial operator coverage to participate in LLM inference without predefined model partitions. HELIX provides an open-source unified framework for exploring, evaluating, and integrating heterogeneous accelerators for LLM inference, lowering the barrier to emerging hardware by exposing them as subgraph executors. In systems combining H100 and B200 GPUs with emerging accelerators, HELIX resolves LLM partitions that multi-query decoding latency by up to 3$\\times$ for dense and sparse transformer models and up to 3.5$\\times$ for hybrid state-space models, relative to standard attention-FFN disaggregation.",
+      "identifiers": [
+        "SemanticScholar:cb8b52e42205273c20b75463e3b64bb95cbddd4d"
+      ],
+      "semantic_scholar_id": "cb8b52e42205273c20b75463e3b64bb95cbddd4d",
+      "canonical_id": "arXiv:2611.06513",
+      "arxiv_id": "2611.06513",
+      "authors": [
+        "V. Clerico",
+        "W. Simon",
+        "C. Lammie",
+        "Orhun Gorkem",
+        "A. Vasilopoulos",
+        "H. Tsai",
+        "J. Castrillón",
+        "Abu Sebastian",
+        "H. Benmeziane"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prism: Communication-efficient Distributed Inference for Foundation Models at Edge",
+      "source_url": "https://arxiv.org/abs/2507.12145",
+      "year": 2025,
+      "published": "2025-07-16",
+      "venue": "ACM Interational Symposium on Mobile Ad Hoc Networking and Computing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Foundation models (FMs) achieved remarkable success across vision and language tasks but pose significant challenges for deployment at the edge devices. This motivates the need for practical and efficient strategies for distributed inference at the edge. In this work, we propose Prism, a communication-efficient and compute-aware strategy for distributed Transformer inference. Prism leverages a Segment Means representation to approximate intermediate features, substantially reducing inter-device communication. Additionally, we restructure the self-attention to eliminate redundant computations caused by per-device Key/Value calculation in position-wise partitioning and design a partition-aware causal masking scheme tailored for autoregressive models. We evaluate Prism on ViT, BERT, and GPT-2 across diverse datasets, namely CIFAR-10, CIFAR-100, ImageNet-1k, GLUE, and CBT. Our results demonstrate substantial reductions in communication overhead (up to 99.2% for BERT at compression rate CR = 128) and per-device computation (51.24% for BERT at the same setting), with only minor accuracy degradation. This method offers a scalable and practical solution for deploying foundation models in distributed resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:bb8bcd88e229917ab7eb4e7d267fe812e700d256"
+      ],
+      "semantic_scholar_id": "bb8bcd88e229917ab7eb4e7d267fe812e700d256",
+      "canonical_id": "arXiv:2507.12145",
+      "arxiv_id": "2507.12145",
+      "doi": "10.1145/3842721.3850118",
+      "authors": [
+        "Muhammad Azlan Qazi",
+        "Alexandros Iosifidis",
+        "Qi Zhang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Comparative Analysis and Optimization of LoRA Adapter Co-serving for Large Language Models",
+      "source_url": "https://doi.org/10.1145/3704440.3704777",
+      "year": 2024,
+      "published": "2024-12-02",
+      "venue": "Middleware Demos/Posters/Doctoral Symposium",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are widely deployed across a range of applications, but their efficient use for serving diverse tasks remains a challenge due to the significant resource demands of running numerous specialized models. Parameter-efficient fine-tuning (PEFT) addresses this by allowing models to be adapted using only a small set of additional parameters, leaving the backbone model unchanged. The objective of this research is to develop a scheduling framework for parameter-efficient adapters that allows for the co-serving of both inference and fine-tuning tasks across multiple adapters, while sharing a single backbone model. By harnessing the benefits of parameter-efficient tuning, this approach minimizes the overhead associated with storing, loading, and running multiple task-specific models, thereby improving overall performance. To achieve this, we propose to conduct a comparative analysis of prior works evaluating their performance and resource management strategies in adapter-based serving. Through experiments, we assess the strengths and limitations of each approach, identifying opportunities for more efficient adapter and task management in future systems. This paper presents the problem, discusses the background of this early-stage project, and outlines a research plan for developing an efficient co-serving framework for LLM systems.",
+      "identifiers": [
+        "SemanticScholar:cb7c7e9904c76eee108f68a8360f8021fa97e625"
+      ],
+      "semantic_scholar_id": "cb7c7e9904c76eee108f68a8360f8021fa97e625",
+      "doi": "10.1145/3704440.3704777",
+      "canonical_id": "DOI:10.1145/3704440.3704777",
+      "authors": [
+        "Jia-Xuan Chen"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 722,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.23373",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.23373",
+        "id:SemanticScholar:f3d1296c70603e1dbdf7d3391358d742f446dc0c",
+        "id:arXiv:2607.23373",
+        "title:ultravit latencyoptimized ondevice vision encoder for large visionlanguage models",
+        "url:https://arxiv.org/abs/2607.23373"
+      ],
+      "record": {
+        "title": "UltraViT: Latency-Optimized On-device Vision Encoder for Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2607.23373",
+        "year": 2026,
+        "published": "2026-07-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) remain bottlenecked by massive computational footprints, precluding their deployment on resource-constrained edge devices. While efforts to compress LVLMs focus heavily on vision token reduction or smaller language models, the vision encoder is largely overlooked, typically deployed as a monolithic, computationally heavy feature extractor. Moreover, there is no previous effort that designs a vision encoder for LVLMs directly optimized for on-device latency. In this paper, we present UltraViT, a vision encoder for LVLMs, explicitly designed and optimized for on-device performance. Specifically, by taking into account real on-device latencies, we systematically design a pyramidal architecture that strategically integrates and adapts heterogeneous spatial mixers at the macro-block level. Furthermore, to pre-train UltraViT, we propose a novel two-stage generative pre-training strategy: cultivating rich spatial features via dense distillation, followed by direct generative supervision from a capacity-mixed frozen LLM. Compared to standard contrastive and SSL, we show that our pre-training is much more effective for achieving high-level semantic grounding for UltraViT needed for the subsequent generative multimodal alignment of LVLM training. Extensive experiments demonstrate that our on-device latency-informed design combined with our tailored training strategy establishes a new state-of-the-art for efficient LVLM encoding, significantly outperforming existing encoder-centric baselines while operating on-device at nearly 1.7xthe speed.",
+        "identifiers": [
+          "SemanticScholar:f3d1296c70603e1dbdf7d3391358d742f446dc0c"
+        ],
+        "semantic_scholar_id": "f3d1296c70603e1dbdf7d3391358d742f446dc0c",
+        "canonical_id": "arXiv:2607.23373",
+        "arxiv_id": "2607.23373",
+        "doi": "10.48550/arXiv.2607.23373",
+        "authors": [
+          "Ioannis Maniadis Metaxas",
+          "Adrian Bulat",
+          "Alberto Baldrati",
+          "Anestis Zaganidis",
+          "Yassine Ouali",
+          "Hyeonuk Kim",
+          "G. Tzimiropoulos"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 122,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04401",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.04401",
+        "id:SemanticScholar:af6934ca60d9b8bc44a611062c436c7ee34ff0ad",
+        "id:arXiv:2608.04401",
+        "title:elbowbased moe routing a trainingfree inference time plugin for expert selection",
+        "url:https://arxiv.org/abs/2608.04401"
+      ],
+      "record": {
+        "title": "Elbow-Based MoE Routing: A Training-Free Inference Time Plugin for Expert Selection",
+        "source_url": "https://arxiv.org/abs/2608.04401",
+        "year": 2026,
+        "published": "2026-08-05",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models enable model scaling while maintaining low inference-time compute by activating only a subset of experts per token. However, conventional routing relies on a fixed top-k selection, forcing the model to spend the same compute regardless of how many experts are relevant. We introduce elbow-based routing, a training-free inference-time modification that dynamically adjusts the number of experts on a per-token basis. Our method examines the sorted router probability distribution and identifies an elbow point that separates high- and low-probability experts. We find that most router distributions exhibit clear inflection points suitable for this strategy, and we show both theoretically and empirically that elbow-based routing preserves expert load balance. Experiments on a state-of-the-art MoE model demonstrate an average latency reduction of 5.3% while maintaining accuracy across six benchmarks.",
+        "identifiers": [
+          "SemanticScholar:af6934ca60d9b8bc44a611062c436c7ee34ff0ad"
+        ],
+        "semantic_scholar_id": "af6934ca60d9b8bc44a611062c436c7ee34ff0ad",
+        "canonical_id": "arXiv:2608.04401",
+        "arxiv_id": "2608.04401",
+        "doi": "10.48550/arXiv.2608.04401",
+        "authors": [
+          "Robin Pan",
+          "Raymond Liu",
+          "Daniel Fang",
+          "Adelina Andrei",
+          "Rosa Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 111,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.12959",
+      "identity_tokens": [
+        "id:SemanticScholar:c45ed4e7add875d6e335a3984c61824c49000f6f",
+        "id:arXiv:2610.12959",
+        "title:video codecguided trainingfree token compression for video large language models",
+        "url:https://arxiv.org/abs/2610.12959"
+      ],
+      "record": {
+        "title": "Video Codec-Guided Training-Free Token Compression for Video Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.12959",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models (VLLMs) rely on long visual token sequences to understand complex temporal content, which makes visual token compression important for efficient inference. Existing training-free compression methods mainly reduce the number of tokens sent to the language model, but the compression process itself can still require many visual feature comparisons, especially for intra-frame token protection and inter-frame temporal token merging. This paper proposes a video codec-guided training-free token compression method for VLLMs that uses coding information already available in compressed video as a low-cost search prior. The method aligns reference-frame dependencies, motion vectors, and residuals with the visual token grid. Residual information forms compact candidate pools for token protection, while motion information is propagated along reference-frame chains to construct localized candidates for temporal token merging between sparsely sampled frames. Local visual feature similarity comparison is then used within these candidates to make the final compression decisions, without modifying the base VLLM. Experiments on three representative VLLMs and four video-understanding benchmarks show that the proposed method achieves performance comparable to the state-of-the-art training-free baseline FlashVID, and in some settings surpasses it, while substantially reducing the feature comparisons required by token protection and temporal matching. These results demonstrate that codec information can effectively improve the accuracy-complexity tradeoff of video token compression.",
+        "identifiers": [
+          "SemanticScholar:c45ed4e7add875d6e335a3984c61824c49000f6f"
+        ],
+        "semantic_scholar_id": "c45ed4e7add875d6e335a3984c61824c49000f6f",
+        "canonical_id": "arXiv:2610.12959",
+        "arxiv_id": "2610.12959",
+        "authors": [
+          "Xi-Hua Sheng",
+          "Rui-Jie Liu",
+          "Chang-Wen Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34673",
+      "identity_tokens": [
+        "id:SemanticScholar:0329beecbb6c1f4fe36728a77536f0826550508c",
+        "id:arXiv:2610.34673",
+        "title:agent memory as recommendation recommendersystem design for longterm memory of llm agents",
+        "url:https://arxiv.org/abs/2610.34673"
+      ],
+      "record": {
+        "title": "Agent Memory as Recommendation: Recommender-System Design for Long-Term Memory of LLM Agents",
+        "source_url": "https://arxiv.org/abs/2610.34673",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) agents that serve users across many sessions must choose, for every request, the few stored memories that enter a limited context window. This choice largely decides whether the agent answers correctly, and it runs on every request at Web scale. This selection faces three challenges: a large and growing store, a per-request cost budget, and multi-session questions that need all of their evidence. Many memory systems build notes or graphs with hundreds to thousands of LLM calls per history, and each is designed on its own, so it is unclear which component yields the accuracy. These challenges mirror the properties of recommendation, so we formalize agent memory as budgeted slate recommendation, with the request as the user, stored memories as items and the context window as a slate. The formalization places memory systems in one design space of recommender cascades and factorizes accuracy into the completeness that each stage controls. Guided by it, we propose AgentMemRec, which adapts candidate generation, learning to rank and slate construction from recommender systems and selects memories without any LLM call. On multi-session questions of LongMemEval, AgentMemRec outperforms memory and context-selection methods, including A-Mem, HippoRAG 2, DynamicRAG and T-Mem, by 10 to 31 points of accuracy. It matches an LLM reranker that makes 64 calls per query at 3.2 times lower serving cost, and on LoCoMo it outperforms Mem0 and Zep without any LLM call at write time. The factorization attributes the gains to slates that more often hold all of the evidence, so recommender-system design offers an effective and efficient foundation for the long-term memory of LLM agents.",
+        "identifiers": [
+          "SemanticScholar:0329beecbb6c1f4fe36728a77536f0826550508c"
+        ],
+        "semantic_scholar_id": "0329beecbb6c1f4fe36728a77536f0826550508c",
+        "canonical_id": "arXiv:2610.34673",
+        "arxiv_id": "2610.34673",
+        "authors": [
+          "Xin-Yu Zhang",
+          "Wei-Wei Sun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.06513",
+      "identity_tokens": [
+        "id:SemanticScholar:cb8b52e42205273c20b75463e3b64bb95cbddd4d",
+        "id:arXiv:2611.06513",
+        "title:helix heterogeneous llm inference with flexible and finegrained partitioning",
+        "url:https://arxiv.org/abs/2611.06513"
+      ],
+      "record": {
+        "title": "HELIX: HEterogeneous LLM Inference with FleXible and Fine-Grained Partitioning",
+        "source_url": "https://arxiv.org/abs/2611.06513",
+        "year": 2026,
+        "published": "2026-11-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference is inherently heterogeneous, with performance bottlenecks shifting throughout inference phases down to individual operators. This has motivated heterogeneous serving systems that disaggregate execution across specialized accelerators, typically through fixed partitions such as prefill/decode or attention/FFN. However, these approaches commit to a partitioning strategy in advance, limiting their ability to adapt to different workloads and model architectures while forcing emerging accelerators into predefined roles. We present HELIX, a vLLM-based software stack that discovers, compiles and dispatches workload-aware partitions across heterogeneous accelerators at the operator granularity. At engine initialization, HELIX automatically determines hardware-specific operator placements that minimize execution latency, accounting for profiled execution costs, communication overheads, device capabilities, and memory constraints. It combines dynamic programming, piecewise compilation, and heterogeneous subgraph dispatch, enabling accelerators with partial operator coverage to participate in LLM inference without predefined model partitions. HELIX provides an open-source unified framework for exploring, evaluating, and integrating heterogeneous accelerators for LLM inference, lowering the barrier to emerging hardware by exposing them as subgraph executors. In systems combining H100 and B200 GPUs with emerging accelerators, HELIX resolves LLM partitions that multi-query decoding latency by up to 3$\\times$ for dense and sparse transformer models and up to 3.5$\\times$ for hybrid state-space models, relative to standard attention-FFN disaggregation.",
+        "identifiers": [
+          "SemanticScholar:cb8b52e42205273c20b75463e3b64bb95cbddd4d"
+        ],
+        "semantic_scholar_id": "cb8b52e42205273c20b75463e3b64bb95cbddd4d",
+        "canonical_id": "arXiv:2611.06513",
+        "arxiv_id": "2611.06513",
+        "authors": [
+          "V. Clerico",
+          "W. Simon",
+          "C. Lammie",
+          "Orhun Gorkem",
+          "A. Vasilopoulos",
+          "H. Tsai",
+          "J. Castrillón",
+          "Abu Sebastian",
+          "H. Benmeziane"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.12145",
+      "identity_tokens": [
+        "id:DOI:10.1145/3842721.3850118",
+        "id:SemanticScholar:bb8bcd88e229917ab7eb4e7d267fe812e700d256",
+        "id:arXiv:2507.12145",
+        "title:prism communicationefficient distributed inference for foundation models at edge",
+        "url:https://arxiv.org/abs/2507.12145"
+      ],
+      "record": {
+        "title": "Prism: Communication-efficient Distributed Inference for Foundation Models at Edge",
+        "source_url": "https://arxiv.org/abs/2507.12145",
+        "year": 2025,
+        "published": "2025-07-16",
+        "venue": "ACM Interational Symposium on Mobile Ad Hoc Networking and Computing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Foundation models (FMs) achieved remarkable success across vision and language tasks but pose significant challenges for deployment at the edge devices. This motivates the need for practical and efficient strategies for distributed inference at the edge. In this work, we propose Prism, a communication-efficient and compute-aware strategy for distributed Transformer inference. Prism leverages a Segment Means representation to approximate intermediate features, substantially reducing inter-device communication. Additionally, we restructure the self-attention to eliminate redundant computations caused by per-device Key/Value calculation in position-wise partitioning and design a partition-aware causal masking scheme tailored for autoregressive models. We evaluate Prism on ViT, BERT, and GPT-2 across diverse datasets, namely CIFAR-10, CIFAR-100, ImageNet-1k, GLUE, and CBT. Our results demonstrate substantial reductions in communication overhead (up to 99.2% for BERT at compression rate CR = 128) and per-device computation (51.24% for BERT at the same setting), with only minor accuracy degradation. This method offers a scalable and practical solution for deploying foundation models in distributed resource-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:bb8bcd88e229917ab7eb4e7d267fe812e700d256"
+        ],
+        "semantic_scholar_id": "bb8bcd88e229917ab7eb4e7d267fe812e700d256",
+        "canonical_id": "arXiv:2507.12145",
+        "arxiv_id": "2507.12145",
+        "doi": "10.1145/3842721.3850118",
+        "authors": [
+          "Muhammad Azlan Qazi",
+          "Alexandros Iosifidis",
+          "Qi Zhang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 496,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3704440.3704777",
+      "identity_tokens": [
+        "id:DOI:10.1145/3704440.3704777",
+        "id:SemanticScholar:cb7c7e9904c76eee108f68a8360f8021fa97e625",
+        "title:comparative analysis and optimization of lora adapter coserving for large language models",
+        "url:https://doi.org/10.1145/3704440.3704777"
+      ],
+      "record": {
+        "title": "Comparative Analysis and Optimization of LoRA Adapter Co-serving for Large Language Models",
+        "source_url": "https://doi.org/10.1145/3704440.3704777",
+        "year": 2024,
+        "published": "2024-12-02",
+        "venue": "Middleware Demos/Posters/Doctoral Symposium",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are widely deployed across a range of applications, but their efficient use for serving diverse tasks remains a challenge due to the significant resource demands of running numerous specialized models. Parameter-efficient fine-tuning (PEFT) addresses this by allowing models to be adapted using only a small set of additional parameters, leaving the backbone model unchanged. The objective of this research is to develop a scheduling framework for parameter-efficient adapters that allows for the co-serving of both inference and fine-tuning tasks across multiple adapters, while sharing a single backbone model. By harnessing the benefits of parameter-efficient tuning, this approach minimizes the overhead associated with storing, loading, and running multiple task-specific models, thereby improving overall performance. To achieve this, we propose to conduct a comparative analysis of prior works evaluating their performance and resource management strategies in adapter-based serving. Through experiments, we assess the strengths and limitations of each approach, identifying opportunities for more efficient adapter and task management in future systems. This paper presents the problem, discusses the background of this early-stage project, and outlines a research plan for developing an efficient co-serving framework for LLM systems.",
+        "identifiers": [
+          "SemanticScholar:cb7c7e9904c76eee108f68a8360f8021fa97e625"
+        ],
+        "semantic_scholar_id": "cb7c7e9904c76eee108f68a8360f8021fa97e625",
+        "doi": "10.1145/3704440.3704777",
+        "canonical_id": "DOI:10.1145/3704440.3704777",
+        "authors": [
+          "Jia-Xuan Chen"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 722,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bd2a8a9b5a72a0de68817f6efe5340666e033b2e929f36a8f81b9c99b03e5574",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

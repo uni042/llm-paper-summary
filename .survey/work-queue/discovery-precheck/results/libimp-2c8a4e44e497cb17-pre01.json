@@ -1,0 +1,499 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2c8a4e44e497cb17-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2c8a4e44e497",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icaiic68212.2026.11454159",
+    "arXiv:2502.16696",
+    "arXiv:2606.06745",
+    "arXiv:2607.28966",
+    "arXiv:2610.05458"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7ee9f908f1e3ace74f967398cf9f1fcfbbcc19af",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:14:23.065728+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icaiic68212.2026.11454159",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.16696",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.06745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.28966",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.05458",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "When to Think Deeply: Inhibitory Deliberation for LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.06745",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning Large Language Models can improve problem-solving performance through deliberative inference, but invoking slow reasoning for every input is computationally expensive and often unnecessary. We propose IDPR, a framework for response-conditioned inhibitory deliberation. IDPR first generates a concise intuitive answer and then uses an inhibition controller to decide whether that specific response should be released or suppressed in favor of slow reasoning. Unlike input-only routers, the inhibition controller conditions on the fast answer and fast-side evidence, including confidence, logit margin, parseability, and generation cost. We train the controller from paired fast-slow outcomes and select the inhibition threshold on a held-out validation set under an accuracy-first slow-call budget. On a held-out 5,000-example mathematical reasoning test set, IDPR invokes slow reasoning on only 8.20% of examples and improves accuracy from 47.90% to 48.92%. Under the same slow-call budget, random routing decreases accuracy to 46.76%, while the strongest confidence-based baseline reaches 48.22%. IDPR also achieves the highest corrective precision, showing that response-conditioned inhibition better identifies fast answers that benefit from slow reasoning.",
+      "identifiers": [
+        "SemanticScholar:ec30177fe23c3bf90cb9655bf69cbe5e31dcd1a8"
+      ],
+      "semantic_scholar_id": "ec30177fe23c3bf90cb9655bf69cbe5e31dcd1a8",
+      "canonical_id": "arXiv:2606.06745",
+      "arxiv_id": "2606.06745",
+      "doi": "10.48550/arXiv.2606.06745",
+      "authors": [
+        "Zhixuan He",
+        "Yue Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic LLM Routing and Selection based on User Preferences: Balancing Performance, Cost, and Ethics",
+      "source_url": "https://arxiv.org/abs/2502.16696",
+      "year": 2024,
+      "published": "2024-11-30",
+      "venue": "International Journal of Computer Applications",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the widespread deployment of large language models (LLMs) such as GPT4, BART, and LLaMA, the need for a system that can intelligently select the most suitable model for specific tasks while balancing cost, latency, accuracy, and ethical considerations has become increasingly important. Recognizing that not all tasks necessitate models with over 100 billion parameters, we introduce OptiRoute, an advanced model routing engine designed to dynamically select and route tasks to the optimal LLM based on detailed user-defined requirements. OptiRoute captures both functional (e.g., accuracy, speed, cost) and non-functional (e.g., helpfulness, harmlessness, honesty) criteria, leveraging lightweight task analysis and complexity estimation to efficiently match tasks with the best-fit models from a diverse array of LLMs. By employing a hybrid approach combining k-nearest neighbors (kNN) search and hierarchical filtering, OptiRoute optimizes for user priorities while minimizing computational overhead. This makes it ideal for real-time applications in cloud-based ML platforms, personalized AI services, and regulated industries.",
+      "identifiers": [
+        "SemanticScholar:5a20aa8d7e102a5ab02d492d0e52ed8338e6161a"
+      ],
+      "semantic_scholar_id": "5a20aa8d7e102a5ab02d492d0e52ed8338e6161a",
+      "canonical_id": "arXiv:2502.16696",
+      "arxiv_id": "2502.16696",
+      "doi": "10.5120/ijca2024924172",
+      "authors": [
+        "Deepak Babu Piskala",
+        "Vijay Raajaa",
+        "Sachin Mishra",
+        "Bruno Bozza"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 724,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond System Calls: Uncovering Hidden I/O Behavior of Mmap-Based On-Device LLMs",
+      "source_url": "https://doi.org/10.1109/ICAIIC68212.2026.11454159",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "Digital Signal Processing and Signal Processing Education Workshop",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing deployment of on-device large language models (LLMs) on smartphones has accelerated the adoption of memory-mapped I/O (mmap) as the default mechanism for loading model weights. Unlike traditional system call based access, mmap defers data loading to page faults, making storage activity invisible at the system-call level and requiring kernel-level tracing to understand real execution behavior. This paper uses ftrace to collect page-fault-driven page-cache loading events for mmap-based model access and uses this approach to analyze four representative on-device LLM workloads: text interaction, vision-language reasoning, audio transcription, and text-to-image generation. Our measurements show that mmapbased execution continues to perform large, predominantly sequential scans of model-weight files at each configuration or inference phase, with effective working-set sizes ranging from approximately 500 MB to over 3 GB. These findings indicate that the primary bottleneck for on-device LLM performance is the amount of DRAM available to maintain model pages in the page cache, rather than the choice of I/O interface. Ensuring sustained inference performance thus requires keeping a substantial portion of model weights resident in memory. Otherwise, page eviction leads to repeated major faults and degraded latency. The results highlight the need for memory-aware model deployment strategies, OS-level LLM-informed caching policies, and footprint-reduction techniques to support increasingly large models on resource-constrained mobile devices.",
+      "identifiers": [
+        "SemanticScholar:1474afae479547ede8bfc4d7ab70b94c3e06ed44"
+      ],
+      "semantic_scholar_id": "1474afae479547ede8bfc4d7ab70b94c3e06ed44",
+      "doi": "10.1109/ICAIIC68212.2026.11454159",
+      "canonical_id": "DOI:10.1109/ICAIIC68212.2026.11454159",
+      "authors": [
+        "Heejin Kim",
+        "Jeongha Lee",
+        "H. Bahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BLADE: Boundary-Expanded and Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.28966",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models often improve task performance by generating long reasoning traces, but the resulting computation is frequently wasted on redundant verification and revision. Existing probe-based early-exit approaches mainly inspect explicit self-doubt expressions, leaving many earlier termination opportunities undetected. Expanding inspection to ordinary reasoning boundaries improves coverage, but also exposes highly diverse intermediate states whose predictive information may reside in different hidden layers. We present Boundary-Expanded and Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning (BLADE), a lightweight framework that dynamically terminates reasoning by estimating whether the generated prefix is sufficient for correct answering. BLADE constructs multi-granular checkpoints from sentence, self-doubt, and paragraph boundaries, and derives robust training labels through repeated answer completions. It further learns a compact subset of informative probe layers instead of relying on fixed choices or expensive representations from all layers. At inference time, calibrated predictions are combined with checkpoint-specific confirmation rules to balance responsiveness and premature-exit risk. Experiments on five benchmarks and two Qwen3 reasoning models show that BLADE preserves near-baseline accuracy while reducing generated tokens by 24.8% on Qwen3-8B and 15.8% on Qwen3-4B. Ablation studies further confirm the benefits of diverse checkpoints and automatic layer selection, demonstrating an effective approach to more efficient LLM reasoning.",
+      "identifiers": [
+        "SemanticScholar:23570ad7f7d77e797ad564a94567960b1e2f9d4a"
+      ],
+      "semantic_scholar_id": "23570ad7f7d77e797ad564a94567960b1e2f9d4a",
+      "canonical_id": "arXiv:2607.28966",
+      "arxiv_id": "2607.28966",
+      "doi": "10.48550/arXiv.2607.28966",
+      "authors": [
+        "Keshu Fu",
+        "Ke-Qin Peng",
+        "Jun Bai",
+        "Shu-Han Qin",
+        "Chen Li",
+        "Jun-Zhu Liang",
+        "Yefei Chen",
+        "Jia-Qi Li",
+        "Yuanxin Ouyang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 116,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Measuring and Reducing Cross-Vendor Mismatch in Language Models",
+      "source_url": "https://arxiv.org/abs/2610.05458",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Running the same language model on different graphics processing unit (GPU) vendors can produce different logits, even when the model weights and inputs are the same. We analyze cross-vendor mismatch in two dense and two mixture-of-experts (MoE) models with five metric families, namely bitwise equality, logit differences, top-K consistency, token agreement, and task accuracy. We trace one source of the mismatch to accumulation order inside vendors'matrix instructions. Upcasting to FP32 reduces the dense model's logit error by 43% at three times the runtime, yet keeping only the MLPs in BF16 retains 94% of this gain at 1.3 times the runtime, so most of the cost of full upcasting buys little. In the MoE models, FP32 and FP16 both lower the probability error but raise the logit error and change expert selection, and FP16 fails in the dense model. An output-head low-rank adapter (LoRA) does not help either, since the final hidden state does not predict the mismatch. The mismatch also carries into training. With every seed fixed, a student distilled from a teacher running on AMD answers 431 MMLU questions differently from one distilled from the same teacher on NVIDIA. Under FP32 upcasting, bitwise equality barely changes while the output distributions move most of the way to the reference, so judging cross-vendor agreement by a single measure misreads both its cost and its gains. Code is available at https://github.com/crova-project/crova.",
+      "identifiers": [
+        "SemanticScholar:5843db4f1eac23b9a0115b30adc289781c3b99c5"
+      ],
+      "semantic_scholar_id": "5843db4f1eac23b9a0115b30adc289781c3b99c5",
+      "canonical_id": "arXiv:2610.05458",
+      "arxiv_id": "2610.05458",
+      "authors": [
+        "Erland Hilman Fuadi",
+        "Chong Tian",
+        "Xiao-Song Ma",
+        "Qi-Rong Ho"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.06745",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.06745",
+        "id:SemanticScholar:ec30177fe23c3bf90cb9655bf69cbe5e31dcd1a8",
+        "id:arXiv:2606.06745",
+        "title:when to think deeply inhibitory deliberation for llm reasoning",
+        "url:https://arxiv.org/abs/2606.06745"
+      ],
+      "record": {
+        "title": "When to Think Deeply: Inhibitory Deliberation for LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2606.06745",
+        "year": 2026,
+        "published": "2026-06-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning Large Language Models can improve problem-solving performance through deliberative inference, but invoking slow reasoning for every input is computationally expensive and often unnecessary. We propose IDPR, a framework for response-conditioned inhibitory deliberation. IDPR first generates a concise intuitive answer and then uses an inhibition controller to decide whether that specific response should be released or suppressed in favor of slow reasoning. Unlike input-only routers, the inhibition controller conditions on the fast answer and fast-side evidence, including confidence, logit margin, parseability, and generation cost. We train the controller from paired fast-slow outcomes and select the inhibition threshold on a held-out validation set under an accuracy-first slow-call budget. On a held-out 5,000-example mathematical reasoning test set, IDPR invokes slow reasoning on only 8.20% of examples and improves accuracy from 47.90% to 48.92%. Under the same slow-call budget, random routing decreases accuracy to 46.76%, while the strongest confidence-based baseline reaches 48.22%. IDPR also achieves the highest corrective precision, showing that response-conditioned inhibition better identifies fast answers that benefit from slow reasoning.",
+        "identifiers": [
+          "SemanticScholar:ec30177fe23c3bf90cb9655bf69cbe5e31dcd1a8"
+        ],
+        "semantic_scholar_id": "ec30177fe23c3bf90cb9655bf69cbe5e31dcd1a8",
+        "canonical_id": "arXiv:2606.06745",
+        "arxiv_id": "2606.06745",
+        "doi": "10.48550/arXiv.2606.06745",
+        "authors": [
+          "Zhixuan He",
+          "Yue Feng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 173,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.16696",
+      "identity_tokens": [
+        "id:DOI:10.5120/ijca2024924172",
+        "id:SemanticScholar:5a20aa8d7e102a5ab02d492d0e52ed8338e6161a",
+        "id:arXiv:2502.16696",
+        "title:dynamic llm routing and selection based on user preferences balancing performance cost and ethics",
+        "url:https://arxiv.org/abs/2502.16696"
+      ],
+      "record": {
+        "title": "Dynamic LLM Routing and Selection based on User Preferences: Balancing Performance, Cost, and Ethics",
+        "source_url": "https://arxiv.org/abs/2502.16696",
+        "year": 2024,
+        "published": "2024-11-30",
+        "venue": "International Journal of Computer Applications",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the widespread deployment of large language models (LLMs) such as GPT4, BART, and LLaMA, the need for a system that can intelligently select the most suitable model for specific tasks while balancing cost, latency, accuracy, and ethical considerations has become increasingly important. Recognizing that not all tasks necessitate models with over 100 billion parameters, we introduce OptiRoute, an advanced model routing engine designed to dynamically select and route tasks to the optimal LLM based on detailed user-defined requirements. OptiRoute captures both functional (e.g., accuracy, speed, cost) and non-functional (e.g., helpfulness, harmlessness, honesty) criteria, leveraging lightweight task analysis and complexity estimation to efficiently match tasks with the best-fit models from a diverse array of LLMs. By employing a hybrid approach combining k-nearest neighbors (kNN) search and hierarchical filtering, OptiRoute optimizes for user priorities while minimizing computational overhead. This makes it ideal for real-time applications in cloud-based ML platforms, personalized AI services, and regulated industries.",
+        "identifiers": [
+          "SemanticScholar:5a20aa8d7e102a5ab02d492d0e52ed8338e6161a"
+        ],
+        "semantic_scholar_id": "5a20aa8d7e102a5ab02d492d0e52ed8338e6161a",
+        "canonical_id": "arXiv:2502.16696",
+        "arxiv_id": "2502.16696",
+        "doi": "10.5120/ijca2024924172",
+        "authors": [
+          "Deepak Babu Piskala",
+          "Vijay Raajaa",
+          "Sachin Mishra",
+          "Bruno Bozza"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 724,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icaiic68212.2026.11454159",
+      "identity_tokens": [
+        "id:DOI:10.1109/icaiic68212.2026.11454159",
+        "id:SemanticScholar:1474afae479547ede8bfc4d7ab70b94c3e06ed44",
+        "title:beyond system calls uncovering hidden io behavior of mmapbased ondevice llms",
+        "url:https://doi.org/10.1109/ICAIIC68212.2026.11454159"
+      ],
+      "record": {
+        "title": "Beyond System Calls: Uncovering Hidden I/O Behavior of Mmap-Based On-Device LLMs",
+        "source_url": "https://doi.org/10.1109/ICAIIC68212.2026.11454159",
+        "year": 2026,
+        "published": "2026-02-24",
+        "venue": "Digital Signal Processing and Signal Processing Education Workshop",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing deployment of on-device large language models (LLMs) on smartphones has accelerated the adoption of memory-mapped I/O (mmap) as the default mechanism for loading model weights. Unlike traditional system call based access, mmap defers data loading to page faults, making storage activity invisible at the system-call level and requiring kernel-level tracing to understand real execution behavior. This paper uses ftrace to collect page-fault-driven page-cache loading events for mmap-based model access and uses this approach to analyze four representative on-device LLM workloads: text interaction, vision-language reasoning, audio transcription, and text-to-image generation. Our measurements show that mmapbased execution continues to perform large, predominantly sequential scans of model-weight files at each configuration or inference phase, with effective working-set sizes ranging from approximately 500 MB to over 3 GB. These findings indicate that the primary bottleneck for on-device LLM performance is the amount of DRAM available to maintain model pages in the page cache, rather than the choice of I/O interface. Ensuring sustained inference performance thus requires keeping a substantial portion of model weights resident in memory. Otherwise, page eviction leads to repeated major faults and degraded latency. The results highlight the need for memory-aware model deployment strategies, OS-level LLM-informed caching policies, and footprint-reduction techniques to support increasingly large models on resource-constrained mobile devices.",
+        "identifiers": [
+          "SemanticScholar:1474afae479547ede8bfc4d7ab70b94c3e06ed44"
+        ],
+        "semantic_scholar_id": "1474afae479547ede8bfc4d7ab70b94c3e06ed44",
+        "doi": "10.1109/ICAIIC68212.2026.11454159",
+        "canonical_id": "DOI:10.1109/ICAIIC68212.2026.11454159",
+        "authors": [
+          "Heejin Kim",
+          "Jeongha Lee",
+          "H. Bahn"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 273,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28966",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.28966",
+        "id:SemanticScholar:23570ad7f7d77e797ad564a94567960b1e2f9d4a",
+        "id:arXiv:2607.28966",
+        "title:blade boundaryexpanded and layeradaptive dynamic exit for efficient llm reasoning",
+        "url:https://arxiv.org/abs/2607.28966"
+      ],
+      "record": {
+        "title": "BLADE: Boundary-Expanded and Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2607.28966",
+        "year": 2026,
+        "published": "2026-07-31",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models often improve task performance by generating long reasoning traces, but the resulting computation is frequently wasted on redundant verification and revision. Existing probe-based early-exit approaches mainly inspect explicit self-doubt expressions, leaving many earlier termination opportunities undetected. Expanding inspection to ordinary reasoning boundaries improves coverage, but also exposes highly diverse intermediate states whose predictive information may reside in different hidden layers. We present Boundary-Expanded and Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning (BLADE), a lightweight framework that dynamically terminates reasoning by estimating whether the generated prefix is sufficient for correct answering. BLADE constructs multi-granular checkpoints from sentence, self-doubt, and paragraph boundaries, and derives robust training labels through repeated answer completions. It further learns a compact subset of informative probe layers instead of relying on fixed choices or expensive representations from all layers. At inference time, calibrated predictions are combined with checkpoint-specific confirmation rules to balance responsiveness and premature-exit risk. Experiments on five benchmarks and two Qwen3 reasoning models show that BLADE preserves near-baseline accuracy while reducing generated tokens by 24.8% on Qwen3-8B and 15.8% on Qwen3-4B. Ablation studies further confirm the benefits of diverse checkpoints and automatic layer selection, demonstrating an effective approach to more efficient LLM reasoning.",
+        "identifiers": [
+          "SemanticScholar:23570ad7f7d77e797ad564a94567960b1e2f9d4a"
+        ],
+        "semantic_scholar_id": "23570ad7f7d77e797ad564a94567960b1e2f9d4a",
+        "canonical_id": "arXiv:2607.28966",
+        "arxiv_id": "2607.28966",
+        "doi": "10.48550/arXiv.2607.28966",
+        "authors": [
+          "Keshu Fu",
+          "Ke-Qin Peng",
+          "Jun Bai",
+          "Shu-Han Qin",
+          "Chen Li",
+          "Jun-Zhu Liang",
+          "Yefei Chen",
+          "Jia-Qi Li",
+          "Yuanxin Ouyang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 116,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.05458",
+      "identity_tokens": [
+        "id:SemanticScholar:5843db4f1eac23b9a0115b30adc289781c3b99c5",
+        "id:arXiv:2610.05458",
+        "title:measuring and reducing crossvendor mismatch in language models",
+        "url:https://arxiv.org/abs/2610.05458"
+      ],
+      "record": {
+        "title": "Measuring and Reducing Cross-Vendor Mismatch in Language Models",
+        "source_url": "https://arxiv.org/abs/2610.05458",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Running the same language model on different graphics processing unit (GPU) vendors can produce different logits, even when the model weights and inputs are the same. We analyze cross-vendor mismatch in two dense and two mixture-of-experts (MoE) models with five metric families, namely bitwise equality, logit differences, top-K consistency, token agreement, and task accuracy. We trace one source of the mismatch to accumulation order inside vendors'matrix instructions. Upcasting to FP32 reduces the dense model's logit error by 43% at three times the runtime, yet keeping only the MLPs in BF16 retains 94% of this gain at 1.3 times the runtime, so most of the cost of full upcasting buys little. In the MoE models, FP32 and FP16 both lower the probability error but raise the logit error and change expert selection, and FP16 fails in the dense model. An output-head low-rank adapter (LoRA) does not help either, since the final hidden state does not predict the mismatch. The mismatch also carries into training. With every seed fixed, a student distilled from a teacher running on AMD answers 431 MMLU questions differently from one distilled from the same teacher on NVIDIA. Under FP32 upcasting, bitwise equality barely changes while the output distributions move most of the way to the reference, so judging cross-vendor agreement by a single measure misreads both its cost and its gains. Code is available at https://github.com/crova-project/crova.",
+        "identifiers": [
+          "SemanticScholar:5843db4f1eac23b9a0115b30adc289781c3b99c5"
+        ],
+        "semantic_scholar_id": "5843db4f1eac23b9a0115b30adc289781c3b99c5",
+        "canonical_id": "arXiv:2610.05458",
+        "arxiv_id": "2610.05458",
+        "authors": [
+          "Erland Hilman Fuadi",
+          "Chong Tian",
+          "Xiao-Song Ma",
+          "Qi-Rong Ho"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ec6bd255ca28a69162c1cb1bc8003151f3c15cdc9828c98bb0665bbeac601d5d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

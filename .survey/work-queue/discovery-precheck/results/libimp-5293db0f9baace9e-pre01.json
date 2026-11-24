@@ -1,0 +1,236 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5293db0f9baace9e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5293db0f9baa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2607.22595",
+    "arXiv:2608.06411"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7ee9f908f1e3ace74f967398cf9f1fcfbbcc19af",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:14:23.005060+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2607.22595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Learning to Predict Middle-Layer Attention in MLLMs for Visual Token Prunin",
+      "source_url": "https://arxiv.org/abs/2608.06411",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) achieve strong performance across diverse vision-language tasks, but their efficiency is limited by the cost of processing numerous visual tokens. Visual token pruning can reduce this cost, but requires accurate token importance estimates. Recent studies have demonstrated that text-to-vision attention from middle language model layers can effectively guide visual token pruning, typically using attention from a predefined middle layer to select the visual tokens to retain. Two problems therefore remain. First, our analysis shows that the layer whose attention is most responsive to the question varies substantially across samples, making a fixed layer suboptimal. Second, obtaining attention from the appropriate middle layer requires processing numerous visual tokens through several language model layers, by which point considerable computation has already been spent. To address both problems, we propose Middle-layer Attention Prediction (MAP), which uses Question Contrastive Teacher Selection to identify a sample-specific teacher layer by contrasting attention under the original and reference questions, and distills attention from the selected layer into a lightweight predictor that estimates visual token importance from multi-modal input features. During inference, MAP combines the predicted importance scores with a diversity criterion to prune visual tokens before the first language model layer. Thus, MAP requires no attention maps for pruning and remains compatible with existing inference acceleration techniques. Across ten benchmarks on LLaVA-NeXT-7B, MAP retains 97.5% of the unpruned model performance with only 5.56% of the visual tokens, yielding a 3.09x end-to-end speedup.",
+      "identifiers": [
+        "SemanticScholar:76ee3ab6386faaeca1a22c30c05c47d56960184f"
+      ],
+      "semantic_scholar_id": "76ee3ab6386faaeca1a22c30c05c47d56960184f",
+      "canonical_id": "arXiv:2608.06411",
+      "arxiv_id": "2608.06411",
+      "doi": "10.48550/arXiv.2608.06411",
+      "authors": [
+        "Yu-Yao Sun",
+        "Tao Deng",
+        "Shuang-Hua Li",
+        "De-Qing Wang",
+        "Hao Geng",
+        "Min-Jun Yu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OrigaMI: An LLM Serving System with First-Class Interpretability Apps",
+      "source_url": "https://arxiv.org/abs/2607.22595",
+      "year": 2026,
+      "published": "2026-06-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mechanistic interpretability (MI) enables monitoring and steering LLMs by operating on their internal state during inference. MI applications remain difficult to develop, expensive to execute, and challenging to manage at runtime. We present OrigaMI, a system that integrates MI applications as first-class components of LLM serving, enabling simplified development, efficient execution, and flexible deployment. Guided by a comprehensive analysis of modern MI applications, OrigaMI streamlines the MI applications development via a simple Python-based Domain Specific Language (DSL) for accessing intra- and inter-layer runtime model state at well-defined trigger points during inference. OrigaMI enables efficient access to ephemeral attention scores via a novel FlashInspect kernel that retains the performance benefits of FlashAttention. OrigaMI's compiler integrates multiple MI applications into the performance-optimized inference execution flow while ensuring conflict-free coexistence. OrigaMI's runtime supports dynamic, per-request activation and deactivation of MI applications without service interruption or performance degradation when inactive, leveraging OrigaMI's dynamic memory management and CUDA graph-compatible execution. We integrate OrigaMI with vLLM and evaluate ten MI applications, including sparse autoencoders, steering, and jailbreak detection, across four state-of-the-art LLMs. OrigaMI incurs negligible execution overhead, up to two orders of magnitude lower than existing frameworks, while enabling per-request activation and deactivation up to 1,000 times faster than alternatives. These results demonstrate that OrigaMI makes MI applications practical for deployment in production LLM serving systems.",
+      "identifiers": [
+        "SemanticScholar:78eecaa2babcbd8281ce564cb01d0adf0c7c894c"
+      ],
+      "semantic_scholar_id": "78eecaa2babcbd8281ce564cb01d0adf0c7c894c",
+      "canonical_id": "arXiv:2607.22595",
+      "arxiv_id": "2607.22595",
+      "authors": [
+        "Michael Blum",
+        "M. Silberstein",
+        "Yaniv David"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.06411",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.06411",
+        "id:SemanticScholar:76ee3ab6386faaeca1a22c30c05c47d56960184f",
+        "id:arXiv:2608.06411",
+        "title:learning to predict middlelayer attention in mllms for visual token prunin",
+        "url:https://arxiv.org/abs/2608.06411"
+      ],
+      "record": {
+        "title": "Learning to Predict Middle-Layer Attention in MLLMs for Visual Token Prunin",
+        "source_url": "https://arxiv.org/abs/2608.06411",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) achieve strong performance across diverse vision-language tasks, but their efficiency is limited by the cost of processing numerous visual tokens. Visual token pruning can reduce this cost, but requires accurate token importance estimates. Recent studies have demonstrated that text-to-vision attention from middle language model layers can effectively guide visual token pruning, typically using attention from a predefined middle layer to select the visual tokens to retain. Two problems therefore remain. First, our analysis shows that the layer whose attention is most responsive to the question varies substantially across samples, making a fixed layer suboptimal. Second, obtaining attention from the appropriate middle layer requires processing numerous visual tokens through several language model layers, by which point considerable computation has already been spent. To address both problems, we propose Middle-layer Attention Prediction (MAP), which uses Question Contrastive Teacher Selection to identify a sample-specific teacher layer by contrasting attention under the original and reference questions, and distills attention from the selected layer into a lightweight predictor that estimates visual token importance from multi-modal input features. During inference, MAP combines the predicted importance scores with a diversity criterion to prune visual tokens before the first language model layer. Thus, MAP requires no attention maps for pruning and remains compatible with existing inference acceleration techniques. Across ten benchmarks on LLaVA-NeXT-7B, MAP retains 97.5% of the unpruned model performance with only 5.56% of the visual tokens, yielding a 3.09x end-to-end speedup.",
+        "identifiers": [
+          "SemanticScholar:76ee3ab6386faaeca1a22c30c05c47d56960184f"
+        ],
+        "semantic_scholar_id": "76ee3ab6386faaeca1a22c30c05c47d56960184f",
+        "canonical_id": "arXiv:2608.06411",
+        "arxiv_id": "2608.06411",
+        "doi": "10.48550/arXiv.2608.06411",
+        "authors": [
+          "Yu-Yao Sun",
+          "Tao Deng",
+          "Shuang-Hua Li",
+          "De-Qing Wang",
+          "Hao Geng",
+          "Min-Jun Yu"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 112,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22595",
+      "identity_tokens": [
+        "id:SemanticScholar:78eecaa2babcbd8281ce564cb01d0adf0c7c894c",
+        "id:arXiv:2607.22595",
+        "title:origami an llm serving system with firstclass interpretability apps",
+        "url:https://arxiv.org/abs/2607.22595"
+      ],
+      "record": {
+        "title": "OrigaMI: An LLM Serving System with First-Class Interpretability Apps",
+        "source_url": "https://arxiv.org/abs/2607.22595",
+        "year": 2026,
+        "published": "2026-06-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mechanistic interpretability (MI) enables monitoring and steering LLMs by operating on their internal state during inference. MI applications remain difficult to develop, expensive to execute, and challenging to manage at runtime. We present OrigaMI, a system that integrates MI applications as first-class components of LLM serving, enabling simplified development, efficient execution, and flexible deployment. Guided by a comprehensive analysis of modern MI applications, OrigaMI streamlines the MI applications development via a simple Python-based Domain Specific Language (DSL) for accessing intra- and inter-layer runtime model state at well-defined trigger points during inference. OrigaMI enables efficient access to ephemeral attention scores via a novel FlashInspect kernel that retains the performance benefits of FlashAttention. OrigaMI's compiler integrates multiple MI applications into the performance-optimized inference execution flow while ensuring conflict-free coexistence. OrigaMI's runtime supports dynamic, per-request activation and deactivation of MI applications without service interruption or performance degradation when inactive, leveraging OrigaMI's dynamic memory management and CUDA graph-compatible execution. We integrate OrigaMI with vLLM and evaluate ten MI applications, including sparse autoencoders, steering, and jailbreak detection, across four state-of-the-art LLMs. OrigaMI incurs negligible execution overhead, up to two orders of magnitude lower than existing frameworks, while enabling per-request activation and deactivation up to 1,000 times faster than alternatives. These results demonstrate that OrigaMI makes MI applications practical for deployment in production LLM serving systems.",
+        "identifiers": [
+          "SemanticScholar:78eecaa2babcbd8281ce564cb01d0adf0c7c894c"
+        ],
+        "semantic_scholar_id": "78eecaa2babcbd8281ce564cb01d0adf0c7c894c",
+        "canonical_id": "arXiv:2607.22595",
+        "arxiv_id": "2607.22595",
+        "authors": [
+          "Michael Blum",
+          "M. Silberstein",
+          "Yaniv David"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 166,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3def5b825d290d1bdd21987659f82c10b6c8cb6edabbb3b71ab61471b788eea3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

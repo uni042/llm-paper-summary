@@ -1,0 +1,745 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1269ec33bb0f284f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1269ec33bb0f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/asicon66040.2025.11326469",
+    "DOI:10.1109/iccect68671.2026.11565091",
+    "DOI:10.1109/tcad.2024.3445263",
+    "DOI:10.1145/3816433",
+    "arXiv:2512.11851",
+    "arXiv:2606.02288",
+    "arXiv:2606.04236",
+    "arXiv:2609.36452"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7ee9f908f1e3ace74f967398cf9f1fcfbbcc19af",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:14:23.064627+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/asicon66040.2025.11326469",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iccect68671.2026.11565091",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tcad.2024.3445263",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3816433",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.11851",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02288",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.04236",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36452",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization",
+      "source_url": "https://arxiv.org/abs/2606.02288",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Massive activation spikes in Large Language Models (LLMs) severely degrade quantization by stretching dynamic ranges. While prior hypotheses characterize these as high-level scalar biases, we argue that they are merely the scalar intermediates of rigid, structural vector biases in the spike-carrying tokens. We show that these tokens converge to constant vectors after normalization that drive the attention sink and value-state drain mechanisms. We geometrically substantiate this by analyzing the coordination of projection weights: $W_K$ contrastively amplifies the vector, $W_Q$ aligns semantic tokens toward it, and $W_V$ projects it into the spectral null-space. Furthermore, we reveal that the model actively preserves these structural biases against Rotary Positional Embedding (RoPE) perturbations by localizing them in\"zones of rotational stability\"utilizing low-frequency bands and coherent channel pairs. Leveraging this, we propose INSERTQUANT, a post-training quantization (PTQ) framework that clamps spikes and restores their function via pre-computed template vectors. This renders activations strictly spike-free, enabling robust low-bit quantization with high fidelity. INSERTQUANT achieves parity with state-of-the-art per-tensor quantization methods on LLMs and uniquely generalizes beyond text to other modalities such as ViTs.",
+      "identifiers": [
+        "SemanticScholar:c4882a68ed0603a8d178b4174a22a10d3c0d5c73"
+      ],
+      "semantic_scholar_id": "c4882a68ed0603a8d178b4174a22a10d3c0d5c73",
+      "canonical_id": "arXiv:2606.02288",
+      "arxiv_id": "2606.02288",
+      "doi": "10.48550/arXiv.2606.02288",
+      "authors": [
+        "Yung-Chin Chen",
+        "Chung-Peng Lee",
+        "Ze-Wei Liou",
+        "Naveen Verma"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Supportive Token Revealing for Fast Diffusion Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2606.04236",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "Volume 1",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models can generate text efficiently by updating multiple masked positions in parallel, but this parallelism introduces a quality-latency trade-off. Aggressive decoding may commit mutually dependent tokens too early, while conservative decoding requires many denoising steps. Existing methods address this tension by deciding which tokens are safe to reveal using confidence or dependency criteria. However, avoiding unsafe commits does not necessarily make the remaining masked sequence easy to decode, since uncertain tokens may depend on masked tokens, creating a bottleneck for denoising steps. We propose AXON, a training-free module that can be added on top of existing parallel decoding strategies for diffusion language models. Rather than replacing the base decoder, AXON monitors the remaining uncertain masked tokens and intervenes only when their current state suggests that additional context is needed. It then shifts the criterion from which tokens are safest to reveal to which confident reveals would best support later denoising. AXON selects anchors, confident masked tokens that uncertain positions attend to, using attention, uncertainty, and confidence signals. Experiments on reasoning and code-generation benchmarks across multiple diffusion language models show that AXON improves the quality-latency trade-off of existing parallel decoders, often reducing the number of function evaluations while maintaining or improving accuracy.",
+      "identifiers": [
+        "SemanticScholar:4de6fb175c8985a57cfed93cd827d936f39efc53"
+      ],
+      "semantic_scholar_id": "4de6fb175c8985a57cfed93cd827d936f39efc53",
+      "canonical_id": "arXiv:2606.04236",
+      "arxiv_id": "2606.04236",
+      "doi": "10.48550/arXiv.2606.04236",
+      "authors": [
+        "Giries Abu Ayoub",
+        "Mario Barbara",
+        "Lluís Pastor-Pérez",
+        "T. Bien",
+        "Aneesh Barthakur",
+        "Alaa Maalouf",
+        "L. Mualem"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KV Cache Recycling to Expand Usable Context Capacity in Low Parameter LLMs",
+      "source_url": "https://arxiv.org/abs/2512.11851",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "International journal of research and scientific innovation",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Whether attention key value (KV) states computed for one prompt for a small LLM (not SLM as it is built on LLM architecture) can be reused to accelerate inference on a new similar prompt, giving an increase to the space to its context memory using an approach called token recycling. Using a standard Hugging Face setup with DialoGPT-medium (a 345M parameter GPT-2 style decoder trained on 147M Reddit exchanges, 2005-2017) as the testbed, we build a cache of past activations and get entries by sentence embeddings, then reuse cached past key values when the cached prompt is an exact prefix of the new input. We compare recycled vs. baseline runs on latency and output fidelity, and log reuse depth in tokens. Reproducibility requires no model modifications, cached KVs are serialized to the CPU, reloaded, and supplied to the generate function to continue decoding from the cached prefix. In tests, we observe consistent speedups when prefix overlap exists, with no material degradation in output semantics, and when overlap is absent, behavior matches baseline.",
+      "identifiers": [
+        "SemanticScholar:97f115dcf75fa9f310c56c1135ec4dc74bf12833"
+      ],
+      "semantic_scholar_id": "97f115dcf75fa9f310c56c1135ec4dc74bf12833",
+      "canonical_id": "arXiv:2512.11851",
+      "arxiv_id": "2512.11851",
+      "doi": "10.51244/ijrsi.2025.12120067",
+      "authors": [
+        "Prashant Pandey"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SkipHBM: Bridging the Granularity Gap in Sparse LLM Inference",
+      "source_url": "https://doi.org/10.1109/ICCECT68671.2026.11565091",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "2026 IEEE 4th International Conference on Control, Electronics and Computer Technology (ICCECT)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid scaling of LLMs and the widening gap between compute throughput and memory bandwidth, off- chip memory access has become the primary bottleneck for inference. Although pruning reduces the model size, it often fails to speed up inference because random pruning patterns do not match the fixed 32-byte burst of HBM. This mismatch forces the system to fetch useless data, wasting bandwidth. We propose SkipHBM to address this efficiency gap. Algorithmically, our Block-Wanda Pruner enforces Block-16 sparsity, using per- row independent thresholding to maintain high accuracy on dense models (e.g., Qwen-2.5). Physically, we modify the HBM Base Logic Die with a Skip Control Unit (SCU). Rather than transmitting zero-blocks, the SCU signals a compact “Zero-Tag”, which triggers Early Burst Termination at the controller. This mechanism clears the data bus for useful data. Simulations show that SkipHBM achieves a linear $1.22 \\times$ speedup at $18 \\%$ sparsity on Mistral and Qwen models, effectively aligning software sparsity with hardware constraints.",
+      "identifiers": [
+        "SemanticScholar:01dfb5eb22619588c97bda538a149c2c7268b994"
+      ],
+      "semantic_scholar_id": "01dfb5eb22619588c97bda538a149c2c7268b994",
+      "doi": "10.1109/ICCECT68671.2026.11565091",
+      "canonical_id": "DOI:10.1109/ICCECT68671.2026.11565091",
+      "authors": [
+        "Jia-Jie Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CPU-GPU Workload Distribution during Throughput-Oriented LLM Inference on Single-GPU Systems",
+      "source_url": "https://doi.org/10.1145/3816433",
+      "year": 2026,
+      "published": "2026-05-23",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have recently achieved remarkable performance in text generation, capturing the attention of a broad audience. This success, driven by the rapid growth in model parameters, comes at the expense of significantly higher operational costs and decreased processing speed. These costs, combined with privacy concerns around cloud-based deployments, have motivated research into running LLMs on commodity hardware. For example, researchers have used the memory hierarchy to boost throughput by increasing the number of batches. These studies, however, tend to overlook or inefficiently utilize the additional computational resources provided by the CPU. In this work, we present a dynamic workload allocation technique that efficiently distributes computation across all available hardware resources. The proposed method targets decoder-based models on standard general-purpose hardware, effectively minimizing idle periods for both the CPU and the GPU. Experiments show that our approach achieves up to 30% higher throughput compared to the state of the art, regardless of model architecture, LLM optimizations, and input batch sizes.",
+      "identifiers": [
+        "SemanticScholar:827a8c9855679fdeea7835e0d4bae3b4b9ee7795"
+      ],
+      "semantic_scholar_id": "827a8c9855679fdeea7835e0d4bae3b4b9ee7795",
+      "doi": "10.1145/3816433",
+      "canonical_id": "DOI:10.1145/3816433",
+      "authors": [
+        "Daon Park",
+        "Bernhard Egger"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reliable Parallel Decoding in Masked Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.36452",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models (MDLMs) can generate text efficiently by predicting multiple masked tokens in parallel, but predictions from the same forward pass are not necessarily reliable when committed together. We study when parallel commitment is reliable. Our diagnostics show that confidence alone does not determine a reliable commitment order: confident predictions near the end of the sequence can fix an answer before its supporting computations are established, and downstream predictions become less reliable as the uncertainty of their upstream context grows. At the same time, a single forward pass can already resolve several masked tokens, and predictions that remain stable across the final layers are more likely to be correct. Based on these findings, we propose Reliable Parallel Decoding (RPD), a training-free method that selects candidates by layerwise prediction stability and final confidence, and commits them under a cumulative entropy budget over their preceding masked positions. RPD defers predictions with uncertain upstream context while committing the remaining candidates in parallel, without relying on a fixed block schedule. Across mathematical reasoning and code generation benchmarks on LLaDA and Dream, RPD achieves the highest decoding throughput among the evaluated methods while maintaining or improving accuracy.",
+      "identifiers": [
+        "SemanticScholar:85bf395956ba940a58e0f5d516db758aae39d92d"
+      ],
+      "semantic_scholar_id": "85bf395956ba940a58e0f5d516db758aae39d92d",
+      "canonical_id": "arXiv:2609.36452",
+      "arxiv_id": "2609.36452",
+      "doi": "10.48550/arXiv.2609.36452",
+      "authors": [
+        "Zheng-Hao He",
+        "Bo-Han Liu",
+        "Guang-Zhi Xiong",
+        "Ai-Dong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Batched Inference in Conditional Neural Networks",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3445263",
+      "year": 2024,
+      "published": "2024-11-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conditional neural networks (NNs) are networks in which the computations performed vary based on the input. Many NNs of interest (such as autoregressive transformers for sequence generation tasks) are inherently conditional since they process variable-length inputs or produce variable-length outputs. In addition, popular NN optimization techniques, such as early exit, result in the computational footprint varying across inputs. Computational irregularity across inputs presents a challenge to batching, a technique widely used to improve hardware utilization and throughput during NN inference. To address this challenge, we propose BatchCond, an optimized batching framework for Conditional NNs that consists of two key steps: 1) computational similarity-driven batching (SimBatch) and 2) adaptive batch reorganization (ABR). SimBatch utilizes a lightweight DNN predictor to create batches of inputs that are more likely to share similar computational patterns, thereby reducing computational irregularity. Further, ABR addresses residual irregularity by dynamically splitting batches into computationally similar sub-batches in a hardware-aware manner. Our experiments demonstrate that BatchCond improves the overall throughput of batched inference by up to $6.6\\times $ (mean of $2.5\\times $ ) across a suite of diverse Conditional NNs, including early-exit networks, dynamic slimmable networks, and autoregressive transformers. Code is available at https://github.com/surya00060/BatchCond.",
+      "identifiers": [
+        "SemanticScholar:617692312cde5472735ed002d1d0165eacfab3d2"
+      ],
+      "semantic_scholar_id": "617692312cde5472735ed002d1d0165eacfab3d2",
+      "doi": "10.1109/TCAD.2024.3445263",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3445263",
+      "authors": [
+        "Surya Selvam",
+        "Amrit Nagarajan",
+        "A. Raghunathan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 753,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Hybrid Processing-in-Memory and Computing-in-Memory Architecture for Large Language Model Inference in Edge Devices",
+      "source_url": "https://doi.org/10.1109/ASICON66040.2025.11326469",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "International Conference on ASIC",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on resource-constrained edge devices is critically challenged by the \"memory wall\" bottleneck, where energy-intensive data movement between processors and memory dominates system costs. This paper introduces a hybrid Processing-in-Memory (PIM) and Computing-in-Memory (CIM) architecture that synergistically integrates DRAM-based PIM and SRAM-CIM to accelerate Transformer inference. Our key innovation lies in strategically partitioning the attention computation between the two technologies: SRAM-CIM efficiently handles the dynamic Value (V) cache operations prone to access conflicts in DRAM-PIM, while DRAM-PIM accelerates other linear layers. To maximize efficiency, we co-design a hierarchical channel-bank data mapping scheme and an asymmetry-aware workload assignment. Implemented and verified in 28nm technology, our architecture achieves a 1.51 times speedup and 1.24 times reduction in energy consumption compared to DRAM-PIM-only baselines in the focused Transformer layers for Llama2-7B inference, demonstrating potential for edge deployment.",
+      "identifiers": [
+        "SemanticScholar:7ce287a1a71eff4e423f8803f0980bad405ca8e9"
+      ],
+      "semantic_scholar_id": "7ce287a1a71eff4e423f8803f0980bad405ca8e9",
+      "doi": "10.1109/ASICON66040.2025.11326469",
+      "canonical_id": "DOI:10.1109/ASICON66040.2025.11326469",
+      "authors": [
+        "Yu-Jia Sun",
+        "Rui-chun Zhang",
+        "Yuanfeng Chen",
+        "Qiang Zhou",
+        "Xiao-Yong Xue",
+        "Xiao-Yang Zeng"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 399,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.02288",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02288",
+        "id:SemanticScholar:c4882a68ed0603a8d178b4174a22a10d3c0d5c73",
+        "id:arXiv:2606.02288",
+        "title:massive spikes in llms are bias vectors mechanistic uncovering and spikefree quantization",
+        "url:https://arxiv.org/abs/2606.02288"
+      ],
+      "record": {
+        "title": "Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization",
+        "source_url": "https://arxiv.org/abs/2606.02288",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Massive activation spikes in Large Language Models (LLMs) severely degrade quantization by stretching dynamic ranges. While prior hypotheses characterize these as high-level scalar biases, we argue that they are merely the scalar intermediates of rigid, structural vector biases in the spike-carrying tokens. We show that these tokens converge to constant vectors after normalization that drive the attention sink and value-state drain mechanisms. We geometrically substantiate this by analyzing the coordination of projection weights: $W_K$ contrastively amplifies the vector, $W_Q$ aligns semantic tokens toward it, and $W_V$ projects it into the spectral null-space. Furthermore, we reveal that the model actively preserves these structural biases against Rotary Positional Embedding (RoPE) perturbations by localizing them in\"zones of rotational stability\"utilizing low-frequency bands and coherent channel pairs. Leveraging this, we propose INSERTQUANT, a post-training quantization (PTQ) framework that clamps spikes and restores their function via pre-computed template vectors. This renders activations strictly spike-free, enabling robust low-bit quantization with high fidelity. INSERTQUANT achieves parity with state-of-the-art per-tensor quantization methods on LLMs and uniquely generalizes beyond text to other modalities such as ViTs.",
+        "identifiers": [
+          "SemanticScholar:c4882a68ed0603a8d178b4174a22a10d3c0d5c73"
+        ],
+        "semantic_scholar_id": "c4882a68ed0603a8d178b4174a22a10d3c0d5c73",
+        "canonical_id": "arXiv:2606.02288",
+        "arxiv_id": "2606.02288",
+        "doi": "10.48550/arXiv.2606.02288",
+        "authors": [
+          "Yung-Chin Chen",
+          "Chung-Peng Lee",
+          "Ze-Wei Liou",
+          "Naveen Verma"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.04236",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.04236",
+        "id:SemanticScholar:4de6fb175c8985a57cfed93cd827d936f39efc53",
+        "id:arXiv:2606.04236",
+        "title:supportive token revealing for fast diffusion language model decoding",
+        "url:https://arxiv.org/abs/2606.04236"
+      ],
+      "record": {
+        "title": "Supportive Token Revealing for Fast Diffusion Language Model Decoding",
+        "source_url": "https://arxiv.org/abs/2606.04236",
+        "year": 2026,
+        "published": "2026-06-02",
+        "venue": "Volume 1",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Discrete diffusion language models can generate text efficiently by updating multiple masked positions in parallel, but this parallelism introduces a quality-latency trade-off. Aggressive decoding may commit mutually dependent tokens too early, while conservative decoding requires many denoising steps. Existing methods address this tension by deciding which tokens are safe to reveal using confidence or dependency criteria. However, avoiding unsafe commits does not necessarily make the remaining masked sequence easy to decode, since uncertain tokens may depend on masked tokens, creating a bottleneck for denoising steps. We propose AXON, a training-free module that can be added on top of existing parallel decoding strategies for diffusion language models. Rather than replacing the base decoder, AXON monitors the remaining uncertain masked tokens and intervenes only when their current state suggests that additional context is needed. It then shifts the criterion from which tokens are safest to reveal to which confident reveals would best support later denoising. AXON selects anchors, confident masked tokens that uncertain positions attend to, using attention, uncertainty, and confidence signals. Experiments on reasoning and code-generation benchmarks across multiple diffusion language models show that AXON improves the quality-latency trade-off of existing parallel decoders, often reducing the number of function evaluations while maintaining or improving accuracy.",
+        "identifiers": [
+          "SemanticScholar:4de6fb175c8985a57cfed93cd827d936f39efc53"
+        ],
+        "semantic_scholar_id": "4de6fb175c8985a57cfed93cd827d936f39efc53",
+        "canonical_id": "arXiv:2606.04236",
+        "arxiv_id": "2606.04236",
+        "doi": "10.48550/arXiv.2606.04236",
+        "authors": [
+          "Giries Abu Ayoub",
+          "Mario Barbara",
+          "Lluís Pastor-Pérez",
+          "T. Bien",
+          "Aneesh Barthakur",
+          "Alaa Maalouf",
+          "L. Mualem"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.11851",
+      "identity_tokens": [
+        "id:DOI:10.51244/ijrsi.2025.12120067",
+        "id:SemanticScholar:97f115dcf75fa9f310c56c1135ec4dc74bf12833",
+        "id:arXiv:2512.11851",
+        "title:kv cache recycling to expand usable context capacity in low parameter llms",
+        "url:https://arxiv.org/abs/2512.11851"
+      ],
+      "record": {
+        "title": "KV Cache Recycling to Expand Usable Context Capacity in Low Parameter LLMs",
+        "source_url": "https://arxiv.org/abs/2512.11851",
+        "year": 2025,
+        "published": "2025-12-04",
+        "venue": "International journal of research and scientific innovation",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Whether attention key value (KV) states computed for one prompt for a small LLM (not SLM as it is built on LLM architecture) can be reused to accelerate inference on a new similar prompt, giving an increase to the space to its context memory using an approach called token recycling. Using a standard Hugging Face setup with DialoGPT-medium (a 345M parameter GPT-2 style decoder trained on 147M Reddit exchanges, 2005-2017) as the testbed, we build a cache of past activations and get entries by sentence embeddings, then reuse cached past key values when the cached prompt is an exact prefix of the new input. We compare recycled vs. baseline runs on latency and output fidelity, and log reuse depth in tokens. Reproducibility requires no model modifications, cached KVs are serialized to the CPU, reloaded, and supplied to the generate function to continue decoding from the cached prefix. In tests, we observe consistent speedups when prefix overlap exists, with no material degradation in output semantics, and when overlap is absent, behavior matches baseline.",
+        "identifiers": [
+          "SemanticScholar:97f115dcf75fa9f310c56c1135ec4dc74bf12833"
+        ],
+        "semantic_scholar_id": "97f115dcf75fa9f310c56c1135ec4dc74bf12833",
+        "canonical_id": "arXiv:2512.11851",
+        "arxiv_id": "2512.11851",
+        "doi": "10.51244/ijrsi.2025.12120067",
+        "authors": [
+          "Prashant Pandey"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 355,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccect68671.2026.11565091",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccect68671.2026.11565091",
+        "id:SemanticScholar:01dfb5eb22619588c97bda538a149c2c7268b994",
+        "title:skiphbm bridging the granularity gap in sparse llm inference",
+        "url:https://doi.org/10.1109/ICCECT68671.2026.11565091"
+      ],
+      "record": {
+        "title": "SkipHBM: Bridging the Granularity Gap in Sparse LLM Inference",
+        "source_url": "https://doi.org/10.1109/ICCECT68671.2026.11565091",
+        "year": 2026,
+        "published": "2026-04-28",
+        "venue": "2026 IEEE 4th International Conference on Control, Electronics and Computer Technology (ICCECT)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid scaling of LLMs and the widening gap between compute throughput and memory bandwidth, off- chip memory access has become the primary bottleneck for inference. Although pruning reduces the model size, it often fails to speed up inference because random pruning patterns do not match the fixed 32-byte burst of HBM. This mismatch forces the system to fetch useless data, wasting bandwidth. We propose SkipHBM to address this efficiency gap. Algorithmically, our Block-Wanda Pruner enforces Block-16 sparsity, using per- row independent thresholding to maintain high accuracy on dense models (e.g., Qwen-2.5). Physically, we modify the HBM Base Logic Die with a Skip Control Unit (SCU). Rather than transmitting zero-blocks, the SCU signals a compact “Zero-Tag”, which triggers Early Burst Termination at the controller. This mechanism clears the data bus for useful data. Simulations show that SkipHBM achieves a linear $1.22 \\times$ speedup at $18 \\%$ sparsity on Mistral and Qwen models, effectively aligning software sparsity with hardware constraints.",
+        "identifiers": [
+          "SemanticScholar:01dfb5eb22619588c97bda538a149c2c7268b994"
+        ],
+        "semantic_scholar_id": "01dfb5eb22619588c97bda538a149c2c7268b994",
+        "doi": "10.1109/ICCECT68671.2026.11565091",
+        "canonical_id": "DOI:10.1109/ICCECT68671.2026.11565091",
+        "authors": [
+          "Jia-Jie Fan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3816433",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816433",
+        "id:SemanticScholar:827a8c9855679fdeea7835e0d4bae3b4b9ee7795",
+        "title:cpugpu workload distribution during throughputoriented llm inference on singlegpu systems",
+        "url:https://doi.org/10.1145/3816433"
+      ],
+      "record": {
+        "title": "CPU-GPU Workload Distribution during Throughput-Oriented LLM Inference on Single-GPU Systems",
+        "source_url": "https://doi.org/10.1145/3816433",
+        "year": 2026,
+        "published": "2026-05-23",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have recently achieved remarkable performance in text generation, capturing the attention of a broad audience. This success, driven by the rapid growth in model parameters, comes at the expense of significantly higher operational costs and decreased processing speed. These costs, combined with privacy concerns around cloud-based deployments, have motivated research into running LLMs on commodity hardware. For example, researchers have used the memory hierarchy to boost throughput by increasing the number of batches. These studies, however, tend to overlook or inefficiently utilize the additional computational resources provided by the CPU. In this work, we present a dynamic workload allocation technique that efficiently distributes computation across all available hardware resources. The proposed method targets decoder-based models on standard general-purpose hardware, effectively minimizing idle periods for both the CPU and the GPU. Experiments show that our approach achieves up to 30% higher throughput compared to the state of the art, regardless of model architecture, LLM optimizations, and input batch sizes.",
+        "identifiers": [
+          "SemanticScholar:827a8c9855679fdeea7835e0d4bae3b4b9ee7795"
+        ],
+        "semantic_scholar_id": "827a8c9855679fdeea7835e0d4bae3b4b9ee7795",
+        "doi": "10.1145/3816433",
+        "canonical_id": "DOI:10.1145/3816433",
+        "authors": [
+          "Daon Park",
+          "Bernhard Egger"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 185,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36452",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.36452",
+        "id:SemanticScholar:85bf395956ba940a58e0f5d516db758aae39d92d",
+        "id:arXiv:2609.36452",
+        "title:reliable parallel decoding in masked diffusion language models",
+        "url:https://arxiv.org/abs/2609.36452"
+      ],
+      "record": {
+        "title": "Reliable Parallel Decoding in Masked Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2609.36452",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion language models (MDLMs) can generate text efficiently by predicting multiple masked tokens in parallel, but predictions from the same forward pass are not necessarily reliable when committed together. We study when parallel commitment is reliable. Our diagnostics show that confidence alone does not determine a reliable commitment order: confident predictions near the end of the sequence can fix an answer before its supporting computations are established, and downstream predictions become less reliable as the uncertainty of their upstream context grows. At the same time, a single forward pass can already resolve several masked tokens, and predictions that remain stable across the final layers are more likely to be correct. Based on these findings, we propose Reliable Parallel Decoding (RPD), a training-free method that selects candidates by layerwise prediction stability and final confidence, and commits them under a cumulative entropy budget over their preceding masked positions. RPD defers predictions with uncertain upstream context while committing the remaining candidates in parallel, without relying on a fixed block schedule. Across mathematical reasoning and code generation benchmarks on LLaDA and Dream, RPD achieves the highest decoding throughput among the evaluated methods while maintaining or improving accuracy.",
+        "identifiers": [
+          "SemanticScholar:85bf395956ba940a58e0f5d516db758aae39d92d"
+        ],
+        "semantic_scholar_id": "85bf395956ba940a58e0f5d516db758aae39d92d",
+        "canonical_id": "arXiv:2609.36452",
+        "arxiv_id": "2609.36452",
+        "doi": "10.48550/arXiv.2609.36452",
+        "authors": [
+          "Zheng-Hao He",
+          "Bo-Han Liu",
+          "Guang-Zhi Xiong",
+          "Ai-Dong Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tcad.2024.3445263",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcad.2024.3445263",
+        "id:SemanticScholar:617692312cde5472735ed002d1d0165eacfab3d2",
+        "title:efficient batched inference in conditional neural networks",
+        "url:https://doi.org/10.1109/TCAD.2024.3445263"
+      ],
+      "record": {
+        "title": "Efficient Batched Inference in Conditional Neural Networks",
+        "source_url": "https://doi.org/10.1109/TCAD.2024.3445263",
+        "year": 2024,
+        "published": "2024-11-01",
+        "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Conditional neural networks (NNs) are networks in which the computations performed vary based on the input. Many NNs of interest (such as autoregressive transformers for sequence generation tasks) are inherently conditional since they process variable-length inputs or produce variable-length outputs. In addition, popular NN optimization techniques, such as early exit, result in the computational footprint varying across inputs. Computational irregularity across inputs presents a challenge to batching, a technique widely used to improve hardware utilization and throughput during NN inference. To address this challenge, we propose BatchCond, an optimized batching framework for Conditional NNs that consists of two key steps: 1) computational similarity-driven batching (SimBatch) and 2) adaptive batch reorganization (ABR). SimBatch utilizes a lightweight DNN predictor to create batches of inputs that are more likely to share similar computational patterns, thereby reducing computational irregularity. Further, ABR addresses residual irregularity by dynamically splitting batches into computationally similar sub-batches in a hardware-aware manner. Our experiments demonstrate that BatchCond improves the overall throughput of batched inference by up to $6.6\\times $ (mean of $2.5\\times $ ) across a suite of diverse Conditional NNs, including early-exit networks, dynamic slimmable networks, and autoregressive transformers. Code is available at https://github.com/surya00060/BatchCond.",
+        "identifiers": [
+          "SemanticScholar:617692312cde5472735ed002d1d0165eacfab3d2"
+        ],
+        "semantic_scholar_id": "617692312cde5472735ed002d1d0165eacfab3d2",
+        "doi": "10.1109/TCAD.2024.3445263",
+        "canonical_id": "DOI:10.1109/TCAD.2024.3445263",
+        "authors": [
+          "Surya Selvam",
+          "Amrit Nagarajan",
+          "A. Raghunathan"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 753,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/asicon66040.2025.11326469",
+      "identity_tokens": [
+        "id:DOI:10.1109/asicon66040.2025.11326469",
+        "id:SemanticScholar:7ce287a1a71eff4e423f8803f0980bad405ca8e9",
+        "title:a hybrid processinginmemory and computinginmemory architecture for large language model inference in edge devices",
+        "url:https://doi.org/10.1109/ASICON66040.2025.11326469"
+      ],
+      "record": {
+        "title": "A Hybrid Processing-in-Memory and Computing-in-Memory Architecture for Large Language Model Inference in Edge Devices",
+        "source_url": "https://doi.org/10.1109/ASICON66040.2025.11326469",
+        "year": 2025,
+        "published": "2025-10-21",
+        "venue": "International Conference on ASIC",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) on resource-constrained edge devices is critically challenged by the \"memory wall\" bottleneck, where energy-intensive data movement between processors and memory dominates system costs. This paper introduces a hybrid Processing-in-Memory (PIM) and Computing-in-Memory (CIM) architecture that synergistically integrates DRAM-based PIM and SRAM-CIM to accelerate Transformer inference. Our key innovation lies in strategically partitioning the attention computation between the two technologies: SRAM-CIM efficiently handles the dynamic Value (V) cache operations prone to access conflicts in DRAM-PIM, while DRAM-PIM accelerates other linear layers. To maximize efficiency, we co-design a hierarchical channel-bank data mapping scheme and an asymmetry-aware workload assignment. Implemented and verified in 28nm technology, our architecture achieves a 1.51 times speedup and 1.24 times reduction in energy consumption compared to DRAM-PIM-only baselines in the focused Transformer layers for Llama2-7B inference, demonstrating potential for edge deployment.",
+        "identifiers": [
+          "SemanticScholar:7ce287a1a71eff4e423f8803f0980bad405ca8e9"
+        ],
+        "semantic_scholar_id": "7ce287a1a71eff4e423f8803f0980bad405ca8e9",
+        "doi": "10.1109/ASICON66040.2025.11326469",
+        "canonical_id": "DOI:10.1109/ASICON66040.2025.11326469",
+        "authors": [
+          "Yu-Jia Sun",
+          "Rui-chun Zhang",
+          "Yuanfeng Chen",
+          "Qiang Zhou",
+          "Xiao-Yong Xue",
+          "Xiao-Yang Zeng"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 399,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4afd33baa42ce4f19e384b9142d17b6bd5afe7f40e3f6473ad98e1d57fa41295",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

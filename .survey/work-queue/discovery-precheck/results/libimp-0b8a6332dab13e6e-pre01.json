@@ -1,0 +1,488 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0b8a6332dab13e6e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0b8a6332dab1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icassp55912.2026.11462099",
+    "DOI:10.18653/v1/2026.findings-eacl.193",
+    "DOI:10.23919/date69613.2026.11539717",
+    "arXiv:2512.16855",
+    "arXiv:2605.28115"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "7ee9f908f1e3ace74f967398cf9f1fcfbbcc19af",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T22:14:23.042267+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icassp55912.2026.11462099",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-eacl.193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.16855",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.28115",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Logits-Based Block Pruning with Affine Transformations for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-eacl.193",
+      "year": 2026,
+      "published": null,
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:9ebf5bcdf36d81637ae840770783f09d3b62f723"
+      ],
+      "semantic_scholar_id": "9ebf5bcdf36d81637ae840770783f09d3b62f723",
+      "doi": "10.18653/v1/2026.findings-eacl.193",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.193",
+      "authors": [
+        "Ze-Kun Hu",
+        "Yi-Chu Xu",
+        "De-Chuan Zhan"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "LUT-APP: Dynamic-Precision LUT-based Approximation Unifying Non-Linear Operations in Transformers",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539717",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device transformer inference faces a growing bottleneck in which non-linear functions (e.g., exponential (EXP), reciprocal, reciprocal square root, GeLU, and SiLU) contribute significantly to inference latency as matrix operations become highly optimized. Existing approximation methods either rely on operator-specific datapaths with poor hardware reusability or exhibit a suboptimal accuracy-resource balance with conventional look-up table (LUT)-based piecewise linear approximation (PWL) under stringent edge constraints. This work presents LUT-APP, a unified dynamic-precision LUT-based PWL approximation framework that reconciles accuracy and hardware efficiency across diverse non-linear operators. First, a dynamic fixed-point format (DFF) adaptively allocates bit-width based on input magnitude and parameter scaling to handle the wide dynamic range of EXP. Second, a genetic adaptive differential evolution (GADE) algorithm synthesizes non-uniform PWL segments to minimize approximation error for a given LUT budget. Third, hardware-efficient DFF processing units enable a unified INT8 multiply-add datapath, allowing a single reusable implementation across functions. Experimental results demonstrate that LUT-APP reduces approximation error by up to 6.87× versus state-of-the-art methods while preserving baseline accuracy in large language models and vision transformers without fine-tuning. Hardware synthesis with a 28nm technology shows 4.19× lower area and 3.26× lower power savings than existing LUT-based PWL approaches, validating LUT-APP as a practical, resource-constrained solution for on-device accelerators. We provide the LUT-APP implementation at https://github.com/IDSL-SeoulTech/LUT-APP",
+      "identifiers": [
+        "SemanticScholar:417fa619158095a9127ed9fe42563174c7c166f3"
+      ],
+      "semantic_scholar_id": "417fa619158095a9127ed9fe42563174c7c166f3",
+      "doi": "10.23919/DATE69613.2026.11539717",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539717",
+      "authors": [
+        "Seokkyu Yoon",
+        "Namjoon Kim",
+        "H. Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fourier Pruning for Large Language Models Compression",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11462099",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e53b4d417aabd4b49530d63204c02e6409bd6026"
+      ],
+      "semantic_scholar_id": "e53b4d417aabd4b49530d63204c02e6409bd6026",
+      "doi": "10.1109/icassp55912.2026.11462099",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462099",
+      "authors": [
+        "Junhao Wang",
+        "Guo-Xia Xu",
+        "Huimin Tong",
+        "Yi-Wei Chen",
+        "Gao-Chao Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CIVIC: End-to-End Sequence Compactness for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2605.28115",
+      "year": 2026,
+      "published": "2026-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) face severe memory and latency bottlenecks due to high-resolution visual tokens. While current token reduction methods theoretically save FLOPs, post-hoc pruning introduces structural overhead, failing to yield proportional wall-clock acceleration. However, enforcing a contiguous compact pathway risks geometric disorientation and loss of fine-grained localization. To overcome these barriers, this paper introduces CIVIC, a path-consistent compact visual inference framework. By maintaining compact sequence representations seamlessly across the vision encoder, projection layer, LLM prefill, and KV-cache, CIVIC avoids non-contiguous memory access and localized unmerging overheads. Evaluated on the Qwen3-VL architecture, CIVIC successfully translates sequence reductions into genuine physical hardware efficiency, shrinking KV-cache memory to approximately one-third of the baseline and reducing end-to-end inference latency. Enabled by text-aligned KL distillation and an adaptive spatial retention floor, CIVIC achieves these efficiency milestones without degrading accuracy across rigorous multimodal reasoning and visual grounding benchmarks.",
+      "identifiers": [
+        "SemanticScholar:e961c3aa2bd1786693673f6e6fa24773d5706285"
+      ],
+      "semantic_scholar_id": "e961c3aa2bd1786693673f6e6fa24773d5706285",
+      "canonical_id": "arXiv:2605.28115",
+      "arxiv_id": "2605.28115",
+      "doi": "10.48550/arXiv.2605.28115",
+      "authors": [
+        "Feng-Ze Yang",
+        "Bo Yu",
+        "Xue-Wen Luo",
+        "Cathy Liu",
+        "Chen-Xi Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TOGGLE: Temporal Logic-Guided Large Language Model Compression for Edge",
+      "source_url": "https://arxiv.org/abs/2512.16855",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) deliver exceptional performance across natural language tasks but demand substantial computational resources, limiting their deployment on resource-constrained edge devices. Existing compression techniques, such as quantization and pruning, often degrade critical linguistic properties and lack formal guarantees for preserving model behavior. We propose TOGGLE (Temporal Logic-Guided Large Language Model Compression), a novel framework that leverages Signal Temporal Logic (STL) to formally specify and enforce linguistic properties during compression. TOGGLE employs an STL robustness-guided Bayesian optimization to systematically explore layer-wise quantization and pruning configurations, generating compressed models that formally satisfy specified linguistic constraints without re-training or fine-tuning. Evaluating TOGGLE on four LLM architectures (GPT-2, DeepSeek-V2 7B, LLaMA 3 8B, and Mistral 7B), we achieve up to 3.3× reduction in computational costs (FLOPs) and up to a 68.8% reduction in model size while satisfying all linguistic properties. TOGGLE represents the first integration of formal methods into LLM compression, enabling efficient, verifiable deployment of LLMs on edge hardware.",
+      "identifiers": [
+        "SemanticScholar:b588fe1b5f537122f6ed938978ca4771e91f3802"
+      ],
+      "semantic_scholar_id": "b588fe1b5f537122f6ed938978ca4771e91f3802",
+      "canonical_id": "arXiv:2512.16855",
+      "arxiv_id": "2512.16855",
+      "doi": "10.1109/ICCAD66269.2025.11240962",
+      "authors": [
+        "Khurram Khalil",
+        "K. A. Hoque"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 394,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-eacl.193",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-eacl.193",
+        "id:SemanticScholar:9ebf5bcdf36d81637ae840770783f09d3b62f723",
+        "title:logitsbased block pruning with affine transformations for large language models",
+        "url:https://doi.org/10.18653/v1/2026.findings-eacl.193"
+      ],
+      "record": {
+        "title": "Logits-Based Block Pruning with Affine Transformations for Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-eacl.193",
+        "year": 2026,
+        "published": null,
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:9ebf5bcdf36d81637ae840770783f09d3b62f723"
+        ],
+        "semantic_scholar_id": "9ebf5bcdf36d81637ae840770783f09d3b62f723",
+        "doi": "10.18653/v1/2026.findings-eacl.193",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.193",
+        "authors": [
+          "Ze-Kun Hu",
+          "Yi-Chu Xu",
+          "De-Chuan Zhan"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 146,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539717",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539717",
+        "id:SemanticScholar:417fa619158095a9127ed9fe42563174c7c166f3",
+        "title:lutapp dynamicprecision lutbased approximation unifying nonlinear operations in transformers",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539717"
+      ],
+      "record": {
+        "title": "LUT-APP: Dynamic-Precision LUT-based Approximation Unifying Non-Linear Operations in Transformers",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539717",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On-device transformer inference faces a growing bottleneck in which non-linear functions (e.g., exponential (EXP), reciprocal, reciprocal square root, GeLU, and SiLU) contribute significantly to inference latency as matrix operations become highly optimized. Existing approximation methods either rely on operator-specific datapaths with poor hardware reusability or exhibit a suboptimal accuracy-resource balance with conventional look-up table (LUT)-based piecewise linear approximation (PWL) under stringent edge constraints. This work presents LUT-APP, a unified dynamic-precision LUT-based PWL approximation framework that reconciles accuracy and hardware efficiency across diverse non-linear operators. First, a dynamic fixed-point format (DFF) adaptively allocates bit-width based on input magnitude and parameter scaling to handle the wide dynamic range of EXP. Second, a genetic adaptive differential evolution (GADE) algorithm synthesizes non-uniform PWL segments to minimize approximation error for a given LUT budget. Third, hardware-efficient DFF processing units enable a unified INT8 multiply-add datapath, allowing a single reusable implementation across functions. Experimental results demonstrate that LUT-APP reduces approximation error by up to 6.87× versus state-of-the-art methods while preserving baseline accuracy in large language models and vision transformers without fine-tuning. Hardware synthesis with a 28nm technology shows 4.19× lower area and 3.26× lower power savings than existing LUT-based PWL approaches, validating LUT-APP as a practical, resource-constrained solution for on-device accelerators. We provide the LUT-APP implementation at https://github.com/IDSL-SeoulTech/LUT-APP",
+        "identifiers": [
+          "SemanticScholar:417fa619158095a9127ed9fe42563174c7c166f3"
+        ],
+        "semantic_scholar_id": "417fa619158095a9127ed9fe42563174c7c166f3",
+        "doi": "10.23919/DATE69613.2026.11539717",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539717",
+        "authors": [
+          "Seokkyu Yoon",
+          "Namjoon Kim",
+          "H. Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp55912.2026.11462099",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11462099",
+        "id:SemanticScholar:e53b4d417aabd4b49530d63204c02e6409bd6026",
+        "title:fourier pruning for large language models compression",
+        "url:https://doi.org/10.1109/icassp55912.2026.11462099"
+      ],
+      "record": {
+        "title": "Fourier Pruning for Large Language Models Compression",
+        "source_url": "https://doi.org/10.1109/icassp55912.2026.11462099",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:e53b4d417aabd4b49530d63204c02e6409bd6026"
+        ],
+        "semantic_scholar_id": "e53b4d417aabd4b49530d63204c02e6409bd6026",
+        "doi": "10.1109/icassp55912.2026.11462099",
+        "canonical_id": "DOI:10.1109/icassp55912.2026.11462099",
+        "authors": [
+          "Junhao Wang",
+          "Guo-Xia Xu",
+          "Huimin Tong",
+          "Yi-Wei Chen",
+          "Gao-Chao Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 205,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.28115",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.28115",
+        "id:SemanticScholar:e961c3aa2bd1786693673f6e6fa24773d5706285",
+        "id:arXiv:2605.28115",
+        "title:civic endtoend sequence compactness for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2605.28115"
+      ],
+      "record": {
+        "title": "CIVIC: End-to-End Sequence Compactness for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2605.28115",
+        "year": 2026,
+        "published": "2026-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) face severe memory and latency bottlenecks due to high-resolution visual tokens. While current token reduction methods theoretically save FLOPs, post-hoc pruning introduces structural overhead, failing to yield proportional wall-clock acceleration. However, enforcing a contiguous compact pathway risks geometric disorientation and loss of fine-grained localization. To overcome these barriers, this paper introduces CIVIC, a path-consistent compact visual inference framework. By maintaining compact sequence representations seamlessly across the vision encoder, projection layer, LLM prefill, and KV-cache, CIVIC avoids non-contiguous memory access and localized unmerging overheads. Evaluated on the Qwen3-VL architecture, CIVIC successfully translates sequence reductions into genuine physical hardware efficiency, shrinking KV-cache memory to approximately one-third of the baseline and reducing end-to-end inference latency. Enabled by text-aligned KL distillation and an adaptive spatial retention floor, CIVIC achieves these efficiency milestones without degrading accuracy across rigorous multimodal reasoning and visual grounding benchmarks.",
+        "identifiers": [
+          "SemanticScholar:e961c3aa2bd1786693673f6e6fa24773d5706285"
+        ],
+        "semantic_scholar_id": "e961c3aa2bd1786693673f6e6fa24773d5706285",
+        "canonical_id": "arXiv:2605.28115",
+        "arxiv_id": "2605.28115",
+        "doi": "10.48550/arXiv.2605.28115",
+        "authors": [
+          "Feng-Ze Yang",
+          "Bo Yu",
+          "Xue-Wen Luo",
+          "Cathy Liu",
+          "Chen-Xi Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 181,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.16855",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240962",
+        "id:SemanticScholar:b588fe1b5f537122f6ed938978ca4771e91f3802",
+        "id:arXiv:2512.16855",
+        "title:toggle temporal logicguided large language model compression for edge",
+        "url:https://arxiv.org/abs/2512.16855"
+      ],
+      "record": {
+        "title": "TOGGLE: Temporal Logic-Guided Large Language Model Compression for Edge",
+        "source_url": "https://arxiv.org/abs/2512.16855",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) deliver exceptional performance across natural language tasks but demand substantial computational resources, limiting their deployment on resource-constrained edge devices. Existing compression techniques, such as quantization and pruning, often degrade critical linguistic properties and lack formal guarantees for preserving model behavior. We propose TOGGLE (Temporal Logic-Guided Large Language Model Compression), a novel framework that leverages Signal Temporal Logic (STL) to formally specify and enforce linguistic properties during compression. TOGGLE employs an STL robustness-guided Bayesian optimization to systematically explore layer-wise quantization and pruning configurations, generating compressed models that formally satisfy specified linguistic constraints without re-training or fine-tuning. Evaluating TOGGLE on four LLM architectures (GPT-2, DeepSeek-V2 7B, LLaMA 3 8B, and Mistral 7B), we achieve up to 3.3× reduction in computational costs (FLOPs) and up to a 68.8% reduction in model size while satisfying all linguistic properties. TOGGLE represents the first integration of formal methods into LLM compression, enabling efficient, verifiable deployment of LLMs on edge hardware.",
+        "identifiers": [
+          "SemanticScholar:b588fe1b5f537122f6ed938978ca4771e91f3802"
+        ],
+        "semantic_scholar_id": "b588fe1b5f537122f6ed938978ca4771e91f3802",
+        "canonical_id": "arXiv:2512.16855",
+        "arxiv_id": "2512.16855",
+        "doi": "10.1109/ICCAD66269.2025.11240962",
+        "authors": [
+          "Khurram Khalil",
+          "K. A. Hoque"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 394,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:148b915193aa6866ade9caf18e9daf30a6c84e25542ac84cf0343b9998447f12",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
