@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（336本）
+## 自動生成の論文一覧（337本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -509,6 +509,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware](2026-2608.23807-serving-masked-diffusion-llms-characterization-and-design-principles-fro.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、マスク拡散言語モデル（masked diffusion language モデル、以下dLLM）を多数の利用者へ提供するとき、どの処理が遅延を生み、要求ごとの計算量がどのように変動し、バッチ処理で何を共有すべきかを実機で調べた特性分析である。新しい復号アルゴリズムや完成した推論サーバーの提案ではない。
+
+- **2026-08 · [Opt.Gear Technical Report](2026-2608.01034-opt-gear-technical-report.md)**  
+  実装：[✓](https://huggingface.co/OptGear) ・ リポジトリ内被引用：0  
+  局所層のKVキャッシュを固定長の畳み込み状態へ置き換えるConvKV-Gated Mixerと、ヘッシアン初期化つき量子化対応学習で、端末NPUでの高速推論とマイコン上での生成までを狙うオンデバイス基盤モデルOpt.Gearの技術報告。
 
 - **2026-08 · [OCGQuant: Outlier-Companion Grouping for NVFP4 Quantization](2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.md)**  
   実装：[✓](https://github.com/Eshamont/OCGQuant) ・ リポジトリ内被引用：0  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（241本）
+## 自動生成の論文一覧（243本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -350,6 +350,10 @@
   実装：[✓](https://github.com/Zishan-Shao/lowrankarena) ・ リポジトリ内被引用：0  
   特異値分解（Singular Value Decomposition; SVD）を使う低ランク圧縮は、重み行列を二つの小さな行列の積に分解し、保存するパラメータと演算量を減らす。
 
+- **2026-08 · [LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers](2026-2608.06867-llmrouter-unified-infrastructure-for-developing-evaluating-and-deploying.md)**  
+  実装：[✓](https://github.com/ulab-uiuc/LLMRouter) ・ リポジトリ内被引用：0  
+  LLMルーティングを5部品の逐次意思決定として統一し、18モデルを全クエリへ流して教師を作る評価基盤xRouteBenchと16種以上のルータ実装で、固定モデルより相対14.6パーセント良いルーティングと予算による順位逆転を示す基盤論文。
+
 - **2026-08 · [Launch-Bound and Substitutable: Why Three Inference Optimizations Fail to Pay Off in Mixture-of-Experts Models](2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEの融合カーネル・4/8ビット量子化・グラフコンパイルを単体とE2Eで測定し、局所高速化が起動律速や品質へどう波及するかを分解して、置換可能な最適化の限界を明らかにする研究。
@@ -405,6 +409,10 @@
 - **2026-07 · [ConvX: A Lightweight Converter to Bridge Indexed Dense Representations and Large Language Models for Retrieval-Augmented Generation](2026-2812aba9b42f-convx-a-lightweight-converter-to-bridge-indexed-dense-representations-an.md)**  
   実装：[✓](https://github.com/NLPlab-skku/ConvX) ・ リポジトリ内被引用：0  
   検索器が索引時に作った密ベクトルを、語彙復元で学習した軽量コンバータで固定個数のメモリスロットへ展開して生成モデルへ渡し、文書本文の再入力なしに16倍から128倍の圧縮率で検索付き生成を行う方式。
+
+- **2026-07 · [Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference](2026-2607.25018-conformal-cascade-distribution-free-accuracy-guarantees-for-multi-tier-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  カスケードの振り分けを信頼度閾値から適合予測集合の大きさへ替え、誤り予算から閾値を決めて分布に依らない精度保証を与え、72組の評価で49組で最良ヒューリスティクスを上回る方式。
 
 - **2026-07 · [C-PTQ: Fisher-weighted Channel-wise Sensitivity for Post-training Quantization of MLLMs](2026-2607.21076-c-ptq-fisher-weighted-channel-wise-sensitivity-for-post-training-quantiz.md)**  
   実装：[✓](https://github.com/renaissanceee/cptq) ・ リポジトリ内被引用：0  
@@ -957,7 +965,7 @@
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  
-  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/UMich-FATML/llm-routing) ・ リポジトリ内被引用：21  
   しかし実際のサービスでは、数学問題、法務文書、要約、常識質問など、タスクごとに得意なモデルが異なる。常に最も大きいモデルを呼ぶ方式は品質を得やすい反面、必要以上の推論計算を消費する。これらは品質と必要なモデル呼出し回数の評価であり、実際のGPU実行時間・請求金額の削減倍率を測定したものではない（原著§5、表1・2）。
 
 - **2023-05 · [A Quantitative Review on Language Model Efficiency Research](2023-2306.01768-a-quantitative-review-on-language-model-efficiency-research.md)**  

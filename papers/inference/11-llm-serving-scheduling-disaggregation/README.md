@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（643本）
+## 自動生成の論文一覧（644本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1153,6 +1153,10 @@
 - **2026-07 · [FLARE: Fine-Grained Length-Aware Routing for Resource-Efficient Heterogeneous LLM Serving](2026-e2ef0dd2ed4d-flare-fine-grained-length-aware-routing-for-resource-efficient-heterogen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   出力長からクエリごとの遅延と費用を推定し、精度閾値を満たす候補から資源目的を最小化するモデルを選ぶことで、精度を保ったまま遅延と費用を大幅に削る多モデルルータ。
+
+- **2026-07 · [FinCacheServe: Dependency-Consistent Answer Reuse for Cost-Efficient RAG Serving over Mutable Enterprise Documents](2026-2607.26076-fincacheserve-dependency-consistent-answer-reuse-for-cost-efficient-rag-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生成済み回答を企業意図と文書版・証拠指紋・道具指紋で守る回答キャッシュにより、更新に弱い再利用を避けながらホスト型7BトレースでLLM呼出しの53.27パーセントを省き、依存関係の古い出力は観測ゼロだった。
 
 - **2026-07 · [DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs](2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2319,7 +2323,7 @@
   TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。
 
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/ulab-uiuc/GraphRouter) ・ リポジトリ内被引用：31  
   常に最大モデルを使うと費用が高く、常に最小モデルを使うと精度が不足する。従来の二択ルータやモデル名だけを埋め込む方式では、候補モデルが増えた場合や新しいモデルが登場した場合に適切な選択が難しい。原著の主表では、品質と費用を同等に重視した条件の報酬が0.209となり、比較対象の最高0.196を上回った。
 
 - **2024-09 · [No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha](2024-2409.17264-no-request-left-behind-tackling-heterogeneity-in-long-context-llm-infere.md)**  
@@ -2501,7 +2505,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1947  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1948  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
