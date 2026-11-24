@@ -1,0 +1,690 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ff7a56296bdedd71-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ff7a56296bde",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.14620",
+    "arXiv:2508.10370",
+    "arXiv:2604.20452",
+    "arXiv:2607.14568",
+    "arXiv:2608.04169",
+    "arXiv:2609.32852",
+    "arXiv:2611.06500"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c76e1770bc7c82370ebe5da4ab8530f57d569d75",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:42:26.894881+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.14620",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.10370",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.20452",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.14568",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.04169",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32852",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.06500",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HaS: Accelerating RAG Through Homology-Aware Speculative Retrieval",
+      "source_url": "https://arxiv.org/abs/2604.20452",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "IEEE International Conference on Data Engineering",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-Augmented Generation (RAG) expands the knowledge boundary of large language models (LLMs) at inference by retrieving external documents as context. However, retrieval becomes increasingly time-consuming as the knowledge databases grow in size. Existing acceleration strategies either compromise accuracy through approximate retrieval, or achieve marginal gains by reusing results of strictly identical queries. We propose HaS, a homology-aware speculative retrieval framework that performs low-latency speculative retrieval over restricted scopes to obtain candidate documents, followed by validating whether they contain the required knowledge. The validation, grounded in the homology relation between queries, is formulated as a homologous query re-identification task: once a previously observed query is identified as a homologous re-encounter of the incoming query, the draft is deemed acceptable, allowing the system to bypass slow full-database retrieval. Benefiting from the prevalence of homologous queries under real-world popularity patterns, HaS achieves substantial efficiency gains. Extensive experiments demonstrate that HaS reduces retrieval latency by 23.74% and 36.99% across datasets with only a 1-2% marginal accuracy drop. As a plug-and-play solution, HaS also significantly accelerates complex multi-hop queries in modern agentic RAG pipelines. Source code is available at: https://github.com/ErrEqualsNil/HaS.",
+      "identifiers": [
+        "SemanticScholar:ec9e44f2b0d190f7ed2e2a5d2108c3cdbb8d7e9e"
+      ],
+      "semantic_scholar_id": "ec9e44f2b0d190f7ed2e2a5d2108c3cdbb8d7e9e",
+      "canonical_id": "arXiv:2604.20452",
+      "arxiv_id": "2604.20452",
+      "doi": "10.1109/ICDE65706.2026.00143",
+      "authors": [
+        "Peng Peng",
+        "Weiwei Lin",
+        "Wen-Tai Wu",
+        "Xin-Yang Wang",
+        "Yong-Heng Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "eMamba: Efficient Acceleration Framework for Mamba Models in Edge Computing",
+      "source_url": "https://arxiv.org/abs/2508.10370",
+      "year": 2025,
+      "published": "2025-08-14",
+      "venue": "ACM Transactions on Embedded Computing Systems",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State Space Model (SSM)-based machine learning architectures have recently gained significant attention for processing sequential data. Mamba, a recent sequence-to-sequence SSM, offers competitive accuracy with superior computational efficiency compared to state-of-the-art transformer models. While this advantage makes Mamba particularly promising for resource-constrained edge devices, no hardware acceleration frameworks are currently optimized for deploying it in such environments. This article presents eMamba, a comprehensive end-to-end hardware acceleration framework explicitly designed for deploying Mamba models on edge platforms. eMamba maximizes computational efficiency by replacing complex normalization layers with lightweight hardware-aware alternatives and approximating expensive operations, such as SiLU activation and exponentiation, considering the target applications. Then, it performs an approximation-aware neural architecture search (NAS) to tune the learnable parameters used during approximation. Evaluations with Fashion-MNIST, CIFAR-10, and MARS, an open-source human pose estimation dataset, show eMamba achieves comparable accuracy to state-of-the-art techniques using 1.63–19.9× fewer parameters. In addition, it generalizes well to large-scale natural language tasks, demonstrating stable perplexity across varying sequence lengths on the WikiText2 dataset. We also quantize and implement the entire eMamba pipeline on an AMD ZCU102 FPGA and ASIC using GlobalFoundries (GF) 22 nm technology. Experimental results show 4.95–5.62× lower latency and 2.22–9.95× higher throughput, with 4.77× smaller area, 9.84× lower power, and 48.6× lower energy consumption than baseline solutions while maintaining competitive accuracy.",
+      "identifiers": [
+        "SemanticScholar:dbc869cec0dd7d827f3d3607735ff333a4f60c82"
+      ],
+      "semantic_scholar_id": "dbc869cec0dd7d827f3d3607735ff333a4f60c82",
+      "canonical_id": "arXiv:2508.10370",
+      "arxiv_id": "2508.10370",
+      "doi": "10.1145/3762190",
+      "authors": [
+        "Jiyong Kim",
+        "Jaehoon Lee",
+        "Jia-Hao Lin",
+        "Alish Kanani",
+        "Sun Miao",
+        "U. Ogras",
+        "Jaehyun Park"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 467,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Modern Multimodal Assistant on a 6 GB 2011 GPU: Stage-Validated, All-GPU CUDA Inference for Fermi",
+      "source_url": "https://arxiv.org/abs/2607.14568",
+      "year": 2026,
+      "published": "2026-07-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A companion study ran a 35B mixture-of-experts model on a 2011 NVIDIA Tesla C2075 (Fermi, sm_20, 6GB) as a GPU-prefill/CPU-decode hybrid, because the 4-bit model did not fit in device memory (arXiv:2606.24031). This report keeps the hardware and asks what a model that fits can do: we deploy MiniCPM-V-4.6, a modern multimodal assistant pairing a SigLIP2 vision encoder and window-attention merger (16x visual token compression) with a compact hybrid gated-delta-net backbone, entirely on the GPU. Three results. (i) An all-GPU engine built on measured foundations: projections that dequantize 8-bit weights once and call the vendor SGEMM still in the last Fermi toolchain (64% of FP32 peak; our best hand-written GEMM hit 37%, wrongly called the ceiling); a chunked delta-rule rewrite of the recurrent layers, 2.8x faster than the sequential scan once attribution exposed one bad kernel; and a measured negative: 4-bit weights make decode slower than 8-bit here, since Fermi issues nibble-unpacking shifts at half rate. (ii) The vision side is a port with a proof obligation: we translate tower, merger, and projector to sm_20 CUDA, validating every stage against a locally generated reference forward (full tower 1.4e-5). One failure, position-embedding bucketization differing on exact rational ties, generalizes to a rule: float tie-breaking in index arithmetic is implementation-defined; call the reference operator, do not reimplement it. (iii) Long context exposes an O(N^2) wall short benchmarks hide: prefill falls from 114 tok/s at 2k tokens to 21 at 10k in a naive attention kernel; per-head vendor-GEMM calls writing into the existing score buffer (zero extra memory) restore a flat profile (408 at 2k, 361 at 10k; 17x), verified by exact needle retrieval from 60% depth. The same rewrite cuts image encoding 6x, to 0.93s. The system answers an image question end-to-end in 1.7s.",
+      "identifiers": [
+        "SemanticScholar:8dacaecd37c19b7fa54adb65c8c48c26049d7be0"
+      ],
+      "semantic_scholar_id": "8dacaecd37c19b7fa54adb65c8c48c26049d7be0",
+      "canonical_id": "arXiv:2607.14568",
+      "arxiv_id": "2607.14568",
+      "doi": "10.48550/arXiv.2607.14568",
+      "authors": [
+        "A. C. Opus",
+        "J.-Q. Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 131,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On Design Principles for Efficient Heterogeneous Dram-Pim-Gpu Systems",
+      "source_url": "https://arxiv.org/abs/2608.04169",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Heterogeneous DRAM-based processing-in-memory (PIM)-GPU systems promise significant efficiency gains for decode-phase large language model (LLM) inference, particularly in long-output generation, yet current design practices overlook critical factors that determine real-world performance. Through systematic evaluation of diverse architectures and workloads (OPT-7B/70B, Mamba2-2.7B/70B), we reveal three fundamental design principles: (i) static power consumption (DRAM leakage, refresh, and GPU idle power) can dominate the efficiency calculus, causing dynamic-only models to overestimate tokens/s/W by up to 3.85× for realistic deployments (Mamba2-2.7B, batch size 1, 128 input tokens, and 2,048 output tokens); (ii) decoding performance is monotonically non-decreasing with channel count across all evaluated models and workloads, generally plateauing at high channel counts for low-batch workloads; under a fixed-capacity sweep, all models instead share a common near-optimal hierarchy configuration, with substantially larger misconfiguration penalties for attention-based models; (iii) workload mapping strategies provide bounded improvements (up to 14.0%/17.4% kernel-level latency/energy reduction, up to 5.6% end-to-end gain) and are not primary bottlenecks. Significant efficiency gains require system-wide co-optimization. These principles provide design-space guidance for architects designing the next generation of memory-accelerated LLM systems.",
+      "identifiers": [
+        "SemanticScholar:1907b6a07378535cc0c18112246f3ca2ad823a8d"
+      ],
+      "semantic_scholar_id": "1907b6a07378535cc0c18112246f3ca2ad823a8d",
+      "canonical_id": "arXiv:2608.04169",
+      "arxiv_id": "2608.04169",
+      "doi": "10.1109/SOCC71045.2026.11773984",
+      "authors": [
+        "C. Lammie",
+        "H. Benmeziane",
+        "W. Simon",
+        "I. Boybat"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ARSM: Auto-Regressive State Machine for Agentic Reasoning Compression",
+      "source_url": "https://arxiv.org/abs/2609.32852",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Model (LLM)-based agents demonstrate strong capabilities in long-horizon tasks by interleaving reasoning with external environment interactions, the continuous accumulation of context rapidly creates a critical memory bottleneck. Existing memory compression methods rely on task-specific optimization or external auxiliary models, introducing significant computational overhead. Furthermore, the resulting compressed representations tend to lose structured relationships, leading to information dilution, attention collapse, and degraded decision consistency. To address these limitations, we propose Auto-Regressive State Machine (ARSM), a lightweight training-free framework that enables in-situ reasoning compression through structured state evolution. ARSM introduces two key components: (i) a trajectory abstraction mechanism that reorganizes interaction histories into compact Hypothesis-Action-Result (HAR) micro-chains; (ii) a dynamic state machine that regulates hierarchical memory through atomic operations and a compression-control parameter. These components are unified within an auto-regressive, self-compressive generation space, where each model output jointly performs external action execution and internal state updates. We evaluate ARSM on Webshop, Multi-Objective Multi-Hop QA, and SWE-Bench Lite datasets. Experimental results show that ARSM maintains the task performance while simultaneously reducing token consumption, offering a practical, cost-effective route toward scalable autonomous agents for long-horizon tasks.",
+      "identifiers": [
+        "SemanticScholar:f35bb6d76689b280f66516e4d0783e72c4feb7ac"
+      ],
+      "semantic_scholar_id": "f35bb6d76689b280f66516e4d0783e72c4feb7ac",
+      "canonical_id": "arXiv:2609.32852",
+      "arxiv_id": "2609.32852",
+      "doi": "10.48550/arXiv.2609.32852",
+      "authors": [
+        "Xia-Feng Man",
+        "Si-Yuan Ye",
+        "Xiao-Song Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "source_url": "https://arxiv.org/abs/2611.06500",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents typically append raw tool outputs to their context. Over multi-step interactions, long and noisy observations incur substantial context overhead and dilute the agent's attention to task-relevant information. Existing token pruning and summarization methods remain constrained by discrete text representations, limiting the achievable compression ratios. In this work, we challenge the prevailing assumption that agents must consume tool observations as explicit text tokens. To this end, we propose Coca-Cola, a continuous latent context compression model for LLM agents. Coca-Cola compresses tool observations into latent tokens and embeds them into the input embedding space of the agent. We further introduce Action-Preserving Training, which aligns the agent's next-action distributions under full and compressed observations. This trains the compression model to learn action-sufficient latent tokens that retain decision-critical information. Experiments with web-search agents on four QA benchmarks and two model families show that Coca-Cola reduces the agent's token consumption by 70.01%-89.24% and end-to-end runtime by 24.45%-55.97%, while consistently improving task performance. These results suggest that Coca-Cola offers a promising approach for context compression in agents. Our code is available at https://github.com/THU-Agent/Coca-cola.",
+      "identifiers": [
+        "SemanticScholar:8ad30080bc5995afb119b2919d1a92bab00d6540"
+      ],
+      "semantic_scholar_id": "8ad30080bc5995afb119b2919d1a92bab00d6540",
+      "canonical_id": "arXiv:2611.06500",
+      "arxiv_id": "2611.06500",
+      "authors": [
+        "Yue-Tong Liu",
+        "Zhe-Hao Zhou",
+        "Yi-Tong Zhang",
+        "Hao-Ru Chen",
+        "Jia Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Enhancing Learned Knowledge in LoRA Adapters Through Efficient Contrastive Decoding on Ascend NPUs",
+      "source_url": "https://arxiv.org/abs/2505.14620",
+      "year": 2025,
+      "published": "2025-05-20",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Huawei Cloud users leverage LoRA (Low-Rank Adaptation) as an efficient and scalable method to fine-tune and customize large language models (LLMs) for application-specific needs. However, tasks that require complex reasoning or deep contextual understanding are often hindered by biases or interference from the base model when using typical decoding methods like greedy or beam search. These biases can lead to generic or task-agnostic responses from the base model instead of leveraging the LoRA-specific adaptations. In this paper, we introduce Contrastive LoRA Decoding (CoLD), a novel decoding framework designed to maximize the use of task-specific knowledge in LoRA-adapted models, resulting in better downstream performance. CoLD utilizes contrastive decoding by scoring candidate tokens based on the divergence between the probability distributions of a LoRA-adapted expert model and the corresponding base model. This approach prioritizes tokens that better align with the LoRA's learned representations, enhancing performance for specialized tasks. Despite its effectiveness, a naive implementation of CoLD can be computationally expensive. Each decoding step requires evaluating multiple token candidates across both the base and expert models, creating significant inefficiencies. To address this challenge, we developed an optimized kernel for Huawei's Ascend NPU. CoLD demonstrates consistent performance improvements, achieving up to a 5.54% increase in task accuracy while reducing end-to-end latency by 28% compared to greedy decoding. This work offers valuable insights into practical and efficient decoding strategies for fine-tuned LLMs, particularly in resource-constrained environments, and has broad implications for applied data science in both cloud and on-premises settings.",
+      "identifiers": [
+        "SemanticScholar:779d6d31e59122d17a241c54f90cad37ca9cf645"
+      ],
+      "semantic_scholar_id": "779d6d31e59122d17a241c54f90cad37ca9cf645",
+      "canonical_id": "arXiv:2505.14620",
+      "arxiv_id": "2505.14620",
+      "doi": "10.1145/3711896.3737215",
+      "authors": [
+        "M. Heisler",
+        "Linzi Xing",
+        "Ge Shi",
+        "Hanieh Sadri",
+        "Gursimran Singh",
+        "Weiwei Zhang",
+        "Tao Ye",
+        "Ying Xiong",
+        "Yong Zhang",
+        "Zhenan Fan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 553,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.20452",
+      "identity_tokens": [
+        "id:DOI:10.1109/icde65706.2026.00143",
+        "id:SemanticScholar:ec9e44f2b0d190f7ed2e2a5d2108c3cdbb8d7e9e",
+        "id:arXiv:2604.20452",
+        "title:has accelerating rag through homologyaware speculative retrieval",
+        "url:https://arxiv.org/abs/2604.20452"
+      ],
+      "record": {
+        "title": "HaS: Accelerating RAG Through Homology-Aware Speculative Retrieval",
+        "source_url": "https://arxiv.org/abs/2604.20452",
+        "year": 2026,
+        "published": "2026-04-22",
+        "venue": "IEEE International Conference on Data Engineering",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-Augmented Generation (RAG) expands the knowledge boundary of large language models (LLMs) at inference by retrieving external documents as context. However, retrieval becomes increasingly time-consuming as the knowledge databases grow in size. Existing acceleration strategies either compromise accuracy through approximate retrieval, or achieve marginal gains by reusing results of strictly identical queries. We propose HaS, a homology-aware speculative retrieval framework that performs low-latency speculative retrieval over restricted scopes to obtain candidate documents, followed by validating whether they contain the required knowledge. The validation, grounded in the homology relation between queries, is formulated as a homologous query re-identification task: once a previously observed query is identified as a homologous re-encounter of the incoming query, the draft is deemed acceptable, allowing the system to bypass slow full-database retrieval. Benefiting from the prevalence of homologous queries under real-world popularity patterns, HaS achieves substantial efficiency gains. Extensive experiments demonstrate that HaS reduces retrieval latency by 23.74% and 36.99% across datasets with only a 1-2% marginal accuracy drop. As a plug-and-play solution, HaS also significantly accelerates complex multi-hop queries in modern agentic RAG pipelines. Source code is available at: https://github.com/ErrEqualsNil/HaS.",
+        "identifiers": [
+          "SemanticScholar:ec9e44f2b0d190f7ed2e2a5d2108c3cdbb8d7e9e"
+        ],
+        "semantic_scholar_id": "ec9e44f2b0d190f7ed2e2a5d2108c3cdbb8d7e9e",
+        "canonical_id": "arXiv:2604.20452",
+        "arxiv_id": "2604.20452",
+        "doi": "10.1109/ICDE65706.2026.00143",
+        "authors": [
+          "Peng Peng",
+          "Weiwei Lin",
+          "Wen-Tai Wu",
+          "Xin-Yang Wang",
+          "Yong-Heng Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 216,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.10370",
+      "identity_tokens": [
+        "id:DOI:10.1145/3762190",
+        "id:SemanticScholar:dbc869cec0dd7d827f3d3607735ff333a4f60c82",
+        "id:arXiv:2508.10370",
+        "title:emamba efficient acceleration framework for mamba models in edge computing",
+        "url:https://arxiv.org/abs/2508.10370"
+      ],
+      "record": {
+        "title": "eMamba: Efficient Acceleration Framework for Mamba Models in Edge Computing",
+        "source_url": "https://arxiv.org/abs/2508.10370",
+        "year": 2025,
+        "published": "2025-08-14",
+        "venue": "ACM Transactions on Embedded Computing Systems",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State Space Model (SSM)-based machine learning architectures have recently gained significant attention for processing sequential data. Mamba, a recent sequence-to-sequence SSM, offers competitive accuracy with superior computational efficiency compared to state-of-the-art transformer models. While this advantage makes Mamba particularly promising for resource-constrained edge devices, no hardware acceleration frameworks are currently optimized for deploying it in such environments. This article presents eMamba, a comprehensive end-to-end hardware acceleration framework explicitly designed for deploying Mamba models on edge platforms. eMamba maximizes computational efficiency by replacing complex normalization layers with lightweight hardware-aware alternatives and approximating expensive operations, such as SiLU activation and exponentiation, considering the target applications. Then, it performs an approximation-aware neural architecture search (NAS) to tune the learnable parameters used during approximation. Evaluations with Fashion-MNIST, CIFAR-10, and MARS, an open-source human pose estimation dataset, show eMamba achieves comparable accuracy to state-of-the-art techniques using 1.63–19.9× fewer parameters. In addition, it generalizes well to large-scale natural language tasks, demonstrating stable perplexity across varying sequence lengths on the WikiText2 dataset. We also quantize and implement the entire eMamba pipeline on an AMD ZCU102 FPGA and ASIC using GlobalFoundries (GF) 22 nm technology. Experimental results show 4.95–5.62× lower latency and 2.22–9.95× higher throughput, with 4.77× smaller area, 9.84× lower power, and 48.6× lower energy consumption than baseline solutions while maintaining competitive accuracy.",
+        "identifiers": [
+          "SemanticScholar:dbc869cec0dd7d827f3d3607735ff333a4f60c82"
+        ],
+        "semantic_scholar_id": "dbc869cec0dd7d827f3d3607735ff333a4f60c82",
+        "canonical_id": "arXiv:2508.10370",
+        "arxiv_id": "2508.10370",
+        "doi": "10.1145/3762190",
+        "authors": [
+          "Jiyong Kim",
+          "Jaehoon Lee",
+          "Jia-Hao Lin",
+          "Alish Kanani",
+          "Sun Miao",
+          "U. Ogras",
+          "Jaehyun Park"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 467,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14568",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.14568",
+        "id:SemanticScholar:8dacaecd37c19b7fa54adb65c8c48c26049d7be0",
+        "id:arXiv:2607.14568",
+        "title:a modern multimodal assistant on a 6 gb 2011 gpu stagevalidated allgpu cuda inference for fermi",
+        "url:https://arxiv.org/abs/2607.14568"
+      ],
+      "record": {
+        "title": "A Modern Multimodal Assistant on a 6 GB 2011 GPU: Stage-Validated, All-GPU CUDA Inference for Fermi",
+        "source_url": "https://arxiv.org/abs/2607.14568",
+        "year": 2026,
+        "published": "2026-07-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A companion study ran a 35B mixture-of-experts model on a 2011 NVIDIA Tesla C2075 (Fermi, sm_20, 6GB) as a GPU-prefill/CPU-decode hybrid, because the 4-bit model did not fit in device memory (arXiv:2606.24031). This report keeps the hardware and asks what a model that fits can do: we deploy MiniCPM-V-4.6, a modern multimodal assistant pairing a SigLIP2 vision encoder and window-attention merger (16x visual token compression) with a compact hybrid gated-delta-net backbone, entirely on the GPU. Three results. (i) An all-GPU engine built on measured foundations: projections that dequantize 8-bit weights once and call the vendor SGEMM still in the last Fermi toolchain (64% of FP32 peak; our best hand-written GEMM hit 37%, wrongly called the ceiling); a chunked delta-rule rewrite of the recurrent layers, 2.8x faster than the sequential scan once attribution exposed one bad kernel; and a measured negative: 4-bit weights make decode slower than 8-bit here, since Fermi issues nibble-unpacking shifts at half rate. (ii) The vision side is a port with a proof obligation: we translate tower, merger, and projector to sm_20 CUDA, validating every stage against a locally generated reference forward (full tower 1.4e-5). One failure, position-embedding bucketization differing on exact rational ties, generalizes to a rule: float tie-breaking in index arithmetic is implementation-defined; call the reference operator, do not reimplement it. (iii) Long context exposes an O(N^2) wall short benchmarks hide: prefill falls from 114 tok/s at 2k tokens to 21 at 10k in a naive attention kernel; per-head vendor-GEMM calls writing into the existing score buffer (zero extra memory) restore a flat profile (408 at 2k, 361 at 10k; 17x), verified by exact needle retrieval from 60% depth. The same rewrite cuts image encoding 6x, to 0.93s. The system answers an image question end-to-end in 1.7s.",
+        "identifiers": [
+          "SemanticScholar:8dacaecd37c19b7fa54adb65c8c48c26049d7be0"
+        ],
+        "semantic_scholar_id": "8dacaecd37c19b7fa54adb65c8c48c26049d7be0",
+        "canonical_id": "arXiv:2607.14568",
+        "arxiv_id": "2607.14568",
+        "doi": "10.48550/arXiv.2607.14568",
+        "authors": [
+          "A. C. Opus",
+          "J.-Q. Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 131,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04169",
+      "identity_tokens": [
+        "id:DOI:10.1109/socc71045.2026.11773984",
+        "id:SemanticScholar:1907b6a07378535cc0c18112246f3ca2ad823a8d",
+        "id:arXiv:2608.04169",
+        "title:on design principles for efficient heterogeneous drampimgpu systems",
+        "url:https://arxiv.org/abs/2608.04169"
+      ],
+      "record": {
+        "title": "On Design Principles for Efficient Heterogeneous Dram-Pim-Gpu Systems",
+        "source_url": "https://arxiv.org/abs/2608.04169",
+        "year": 2026,
+        "published": "2026-08-04",
+        "venue": "ACM Symposium on Cloud Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Heterogeneous DRAM-based processing-in-memory (PIM)-GPU systems promise significant efficiency gains for decode-phase large language model (LLM) inference, particularly in long-output generation, yet current design practices overlook critical factors that determine real-world performance. Through systematic evaluation of diverse architectures and workloads (OPT-7B/70B, Mamba2-2.7B/70B), we reveal three fundamental design principles: (i) static power consumption (DRAM leakage, refresh, and GPU idle power) can dominate the efficiency calculus, causing dynamic-only models to overestimate tokens/s/W by up to 3.85× for realistic deployments (Mamba2-2.7B, batch size 1, 128 input tokens, and 2,048 output tokens); (ii) decoding performance is monotonically non-decreasing with channel count across all evaluated models and workloads, generally plateauing at high channel counts for low-batch workloads; under a fixed-capacity sweep, all models instead share a common near-optimal hierarchy configuration, with substantially larger misconfiguration penalties for attention-based models; (iii) workload mapping strategies provide bounded improvements (up to 14.0%/17.4% kernel-level latency/energy reduction, up to 5.6% end-to-end gain) and are not primary bottlenecks. Significant efficiency gains require system-wide co-optimization. These principles provide design-space guidance for architects designing the next generation of memory-accelerated LLM systems.",
+        "identifiers": [
+          "SemanticScholar:1907b6a07378535cc0c18112246f3ca2ad823a8d"
+        ],
+        "semantic_scholar_id": "1907b6a07378535cc0c18112246f3ca2ad823a8d",
+        "canonical_id": "arXiv:2608.04169",
+        "arxiv_id": "2608.04169",
+        "doi": "10.1109/SOCC71045.2026.11773984",
+        "authors": [
+          "C. Lammie",
+          "H. Benmeziane",
+          "W. Simon",
+          "I. Boybat"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 112,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32852",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.32852",
+        "id:SemanticScholar:f35bb6d76689b280f66516e4d0783e72c4feb7ac",
+        "id:arXiv:2609.32852",
+        "title:arsm autoregressive state machine for agentic reasoning compression",
+        "url:https://arxiv.org/abs/2609.32852"
+      ],
+      "record": {
+        "title": "ARSM: Auto-Regressive State Machine for Agentic Reasoning Compression",
+        "source_url": "https://arxiv.org/abs/2609.32852",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Large Language Model (LLM)-based agents demonstrate strong capabilities in long-horizon tasks by interleaving reasoning with external environment interactions, the continuous accumulation of context rapidly creates a critical memory bottleneck. Existing memory compression methods rely on task-specific optimization or external auxiliary models, introducing significant computational overhead. Furthermore, the resulting compressed representations tend to lose structured relationships, leading to information dilution, attention collapse, and degraded decision consistency. To address these limitations, we propose Auto-Regressive State Machine (ARSM), a lightweight training-free framework that enables in-situ reasoning compression through structured state evolution. ARSM introduces two key components: (i) a trajectory abstraction mechanism that reorganizes interaction histories into compact Hypothesis-Action-Result (HAR) micro-chains; (ii) a dynamic state machine that regulates hierarchical memory through atomic operations and a compression-control parameter. These components are unified within an auto-regressive, self-compressive generation space, where each model output jointly performs external action execution and internal state updates. We evaluate ARSM on Webshop, Multi-Objective Multi-Hop QA, and SWE-Bench Lite datasets. Experimental results show that ARSM maintains the task performance while simultaneously reducing token consumption, offering a practical, cost-effective route toward scalable autonomous agents for long-horizon tasks.",
+        "identifiers": [
+          "SemanticScholar:f35bb6d76689b280f66516e4d0783e72c4feb7ac"
+        ],
+        "semantic_scholar_id": "f35bb6d76689b280f66516e4d0783e72c4feb7ac",
+        "canonical_id": "arXiv:2609.32852",
+        "arxiv_id": "2609.32852",
+        "doi": "10.48550/arXiv.2609.32852",
+        "authors": [
+          "Xia-Feng Man",
+          "Si-Yuan Ye",
+          "Xiao-Song Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 59,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.06500",
+      "identity_tokens": [
+        "id:SemanticScholar:8ad30080bc5995afb119b2919d1a92bab00d6540",
+        "id:arXiv:2611.06500",
+        "title:tools need not speak in text latent context compression for agents",
+        "url:https://arxiv.org/abs/2611.06500"
+      ],
+      "record": {
+        "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+        "source_url": "https://arxiv.org/abs/2611.06500",
+        "year": 2026,
+        "published": "2026-11-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) agents typically append raw tool outputs to their context. Over multi-step interactions, long and noisy observations incur substantial context overhead and dilute the agent's attention to task-relevant information. Existing token pruning and summarization methods remain constrained by discrete text representations, limiting the achievable compression ratios. In this work, we challenge the prevailing assumption that agents must consume tool observations as explicit text tokens. To this end, we propose Coca-Cola, a continuous latent context compression model for LLM agents. Coca-Cola compresses tool observations into latent tokens and embeds them into the input embedding space of the agent. We further introduce Action-Preserving Training, which aligns the agent's next-action distributions under full and compressed observations. This trains the compression model to learn action-sufficient latent tokens that retain decision-critical information. Experiments with web-search agents on four QA benchmarks and two model families show that Coca-Cola reduces the agent's token consumption by 70.01%-89.24% and end-to-end runtime by 24.45%-55.97%, while consistently improving task performance. These results suggest that Coca-Cola offers a promising approach for context compression in agents. Our code is available at https://github.com/THU-Agent/Coca-cola.",
+        "identifiers": [
+          "SemanticScholar:8ad30080bc5995afb119b2919d1a92bab00d6540"
+        ],
+        "semantic_scholar_id": "8ad30080bc5995afb119b2919d1a92bab00d6540",
+        "canonical_id": "arXiv:2611.06500",
+        "arxiv_id": "2611.06500",
+        "authors": [
+          "Yue-Tong Liu",
+          "Zhe-Hao Zhou",
+          "Yi-Tong Zhang",
+          "Hao-Ru Chen",
+          "Jia Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.14620",
+      "identity_tokens": [
+        "id:DOI:10.1145/3711896.3737215",
+        "id:SemanticScholar:779d6d31e59122d17a241c54f90cad37ca9cf645",
+        "id:arXiv:2505.14620",
+        "title:enhancing learned knowledge in lora adapters through efficient contrastive decoding on ascend npus",
+        "url:https://arxiv.org/abs/2505.14620"
+      ],
+      "record": {
+        "title": "Enhancing Learned Knowledge in LoRA Adapters Through Efficient Contrastive Decoding on Ascend NPUs",
+        "source_url": "https://arxiv.org/abs/2505.14620",
+        "year": 2025,
+        "published": "2025-05-20",
+        "venue": "Knowledge Discovery and Data Mining",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Huawei Cloud users leverage LoRA (Low-Rank Adaptation) as an efficient and scalable method to fine-tune and customize large language models (LLMs) for application-specific needs. However, tasks that require complex reasoning or deep contextual understanding are often hindered by biases or interference from the base model when using typical decoding methods like greedy or beam search. These biases can lead to generic or task-agnostic responses from the base model instead of leveraging the LoRA-specific adaptations. In this paper, we introduce Contrastive LoRA Decoding (CoLD), a novel decoding framework designed to maximize the use of task-specific knowledge in LoRA-adapted models, resulting in better downstream performance. CoLD utilizes contrastive decoding by scoring candidate tokens based on the divergence between the probability distributions of a LoRA-adapted expert model and the corresponding base model. This approach prioritizes tokens that better align with the LoRA's learned representations, enhancing performance for specialized tasks. Despite its effectiveness, a naive implementation of CoLD can be computationally expensive. Each decoding step requires evaluating multiple token candidates across both the base and expert models, creating significant inefficiencies. To address this challenge, we developed an optimized kernel for Huawei's Ascend NPU. CoLD demonstrates consistent performance improvements, achieving up to a 5.54% increase in task accuracy while reducing end-to-end latency by 28% compared to greedy decoding. This work offers valuable insights into practical and efficient decoding strategies for fine-tuned LLMs, particularly in resource-constrained environments, and has broad implications for applied data science in both cloud and on-premises settings.",
+        "identifiers": [
+          "SemanticScholar:779d6d31e59122d17a241c54f90cad37ca9cf645"
+        ],
+        "semantic_scholar_id": "779d6d31e59122d17a241c54f90cad37ca9cf645",
+        "canonical_id": "arXiv:2505.14620",
+        "arxiv_id": "2505.14620",
+        "doi": "10.1145/3711896.3737215",
+        "authors": [
+          "M. Heisler",
+          "Linzi Xing",
+          "Ge Shi",
+          "Hanieh Sadri",
+          "Gursimran Singh",
+          "Weiwei Zhang",
+          "Tao Ye",
+          "Ying Xiong",
+          "Yong Zhang",
+          "Zhenan Fan"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 553,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b042f504a5c1fa1c7c32e64ec426898102da214326b0a96bb88058c5887746e9",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

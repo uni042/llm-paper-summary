@@ -1,0 +1,448 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bb936f922cb39d55-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bb936f922cb3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.02972",
+    "arXiv:2601.20352",
+    "arXiv:2601.21619",
+    "arXiv:2606.26560"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c76e1770bc7c82370ebe5da4ab8530f57d569d75",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:42:24.534963+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.02972",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20352",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21619",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.26560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AMA: Adaptive Memory via Multi-Agent Collaboration",
+      "source_url": "https://arxiv.org/abs/2601.20352",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid evolution of Large Language Model (LLM) agents has necessitated robust memory systems to support cohesive long-term interaction and complex reasoning. Benefiting from the strong capabilities of LLMs, recent research focus has shifted from simple context extension to the development of dedicated agentic memory systems. However, existing approaches typically rely on rigid retrieval granularity, accumulation-heavy maintenance strategies, and coarse-grained update mechanisms. These design choices create a persistent mismatch between stored information and task-specific reasoning demands, while leading to the unchecked accumulation of logical inconsistencies over time. To address these challenges, we propose Adaptive Memory via Multi-Agent Collaboration (AMA), a novel framework that leverages coordinated agents to manage memory across multiple granularities. AMA employs a hierarchical memory design that dynamically aligns retrieval granularity with task complexity. Specifically, the Constructor and Retriever jointly enable multi-granularity memory construction and adaptive query routing. The Judge verifies the relevance and consistency of retrieved content, triggering iterative retrieval when evidence is insufficient or invoking the Refresher upon detecting logical conflicts. The Refresher then enforces memory consistency by performing targeted updates or removing outdated entries. Extensive experiments on challenging long-context benchmarks show that AMA significantly outperforms state-of-the-art baselines while reducing token consumption by approximately 80% compared to full-context methods, demonstrating its effectiveness in maintaining retrieval precision and long-term memory consistency.",
+      "identifiers": [
+        "SemanticScholar:a0ffed416f803e2ec27f87a5b1beafafa98cf2e6"
+      ],
+      "semantic_scholar_id": "a0ffed416f803e2ec27f87a5b1beafafa98cf2e6",
+      "canonical_id": "arXiv:2601.20352",
+      "arxiv_id": "2601.20352",
+      "doi": "10.48550/arXiv.2601.20352",
+      "authors": [
+        "Weiquan Huang",
+        "Zi-Xuan Wang",
+        "He-Hai Lin",
+        "Sudong Wang",
+        "Bo Xu",
+        "Qian Li",
+        "Bei-Er Zhu",
+        "Lin-Yi Yang",
+        "Cheng-Wei Qin"
+      ],
+      "priority": 119,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 119,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 300,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Correct, Concise and Complete: Multi-stage Training For Adaptive Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.02972",
+      "year": 2026,
+      "published": "2026-01-06",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The reasoning capabilities of large language models (LLMs) have improved substantially through increased test-time computation, typically in the form of intermediate tokens known as chain-of-thought (CoT). However, CoT often becomes unnecessarily long, increasing computation cost without actual accuracy gains or sometimes even degrading performance, a phenomenon known as ``overthinking''. We propose a multi-stage efficient reasoning method that combines supervised fine-tuning -- via rejection sampling or reasoning trace reformatting -- with reinforcement learning using an adaptive length penalty. We introduce a lightweight reward function that penalizes tokens generated after the first correct answer but encouraging self-verification only when beneficial. We conduct a holistic evaluation across seven diverse reasoning tasks, analyzing the accuracy-response length trade-off. Our approach reduces response length by an average of 28\\% for 8B models and 40\\% for 32B models, while incurring only minor performance drops of 1.6 and 2.5 points, respectively. Despite its conceptual simplicity, it achieves a superior trade-off compared to more complex state-of-the-art efficient reasoning methods, scoring 76.6, in terms of the area under the Overthinking-Adjusted Accuracy curve ($\\text{AUC}_{\\text{OAA}}$) -- 5 points above the base model and 2.5 points above the second-best approach.",
+      "identifiers": [
+        "SemanticScholar:43576cd273d91be1e4bc16db602aeb5226a46721"
+      ],
+      "semantic_scholar_id": "43576cd273d91be1e4bc16db602aeb5226a46721",
+      "canonical_id": "arXiv:2601.02972",
+      "arxiv_id": "2601.02972",
+      "doi": "10.48550/arXiv.2601.02972",
+      "authors": [
+        "Nathanaël Carraz Rakotonirina",
+        "Ren Pang",
+        "Neha Anna John",
+        "Michael Bohlke-Schneider",
+        "Momchil Hardalov"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 322,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Erase-then-Delta Attention: Decoupling Erase and Write Addresses in Delta-Rule Linear Attention",
+      "source_url": "https://arxiv.org/abs/2606.26560",
+      "year": 2026,
+      "published": "2026-06-25",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Delta-rule linear attention improves recurrent memory updates by correcting what is already stored at the current write address before writing new content. However, the active correction is still anchored to that same write address. As a result, stale information stored at a different address cannot be actively removed before new content is written elsewhere. We propose Erase-then-Delta Attention (EDA), a memory update rule that decouples where to erase from where to write. The key insight is that recurrent memory models should not only correct the current write, but also selectively suppress outdated memory at an independently chosen address. Concretely, our method first applies a targeted erase step along a learned erase direction, and then performs the standard delta-style corrective write along the current write direction. This preserves the corrective behavior of delta-rule updates while expanding their memory-management capacity. Language-model pretraining experiments across dense 2.5B and MoE 25B-A2.8B model families show that EDA performs best in both settings. The gain persists after 80B-token long-context midtraining of the MoE models, where EDA also performs best in long-context evaluations from 4k to 128k contexts. A compact update analysis and memory-state probes suggest why: EDA keeps the delta-rule corrective write intact while allocating an additional cleanup path most strongly when passive decay is weak. These results suggest that recurrent memory models should decide not only what to write, but also what stale information to erase and where.",
+      "identifiers": [
+        "SemanticScholar:9c7d8eb93ef915c9d6a92746be07336310d21103"
+      ],
+      "semantic_scholar_id": "9c7d8eb93ef915c9d6a92746be07336310d21103",
+      "canonical_id": "arXiv:2606.26560",
+      "arxiv_id": "2606.26560",
+      "doi": "10.48550/arXiv.2606.26560",
+      "authors": [
+        "Xiao Li",
+        "Chengruidong Zhang",
+        "Hao Luo",
+        "X. Lin",
+        "Ze-Kun Wang",
+        "Zihan Qiu",
+        "Yun-Fei Mao",
+        "Lang-Shi Chen",
+        "Man Yuan",
+        "Minmin Sun",
+        "Huiqiang Jiang",
+        "Siqi Zhang",
+        "Rui Men",
+        "Wei Hu",
+        "Gong Cheng",
+        "Bo Zheng",
+        "Dayiheng Liu",
+        "Jing-Ren Zhou"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the Overscaling Curse of Parallel Thinking: System Efficacy Contradicts Sample Efficiency",
+      "source_url": "https://arxiv.org/abs/2601.21619",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel thinking improves LLM reasoning through multi-path sampling and aggregation. In standard evaluations, due to a lack of sample-specific priors, all samples share a global budget chosen to maximize dataset accuracy. However, many samples reach their best accuracy with much smaller budgets, causing low budget utilization. This contradiction between system efficacy and sample efficiency constitutes the Overscaling Curse. In this paper, we first provide a formal analysis of the overscaling curse and quantify its prevalence and severity in real-world systems. To break it, we propose Latent Budget Predictor (LanBo), which probes model latent representations to predict sample-specific optimal budgets. LanBo significantly improves budget utilization while maintaining dataset accuracy. We further integrate LanBo into the full decoding pipeline, inspiring Pre-decoding Budget Adaptation (PreAda), a paradigm that allocates budgets before decoding to preserve decoding-time parallelization. LanBo substantially improves hardware-aware efficiency in latency and memory, demonstrating both its practical value and the promise of LanBo for efficient parallel decoding.",
+      "identifiers": [
+        "SemanticScholar:7499d73bef078e605781dc6388a97ad5f0adf1aa"
+      ],
+      "semantic_scholar_id": "7499d73bef078e605781dc6388a97ad5f0adf1aa",
+      "canonical_id": "arXiv:2601.21619",
+      "arxiv_id": "2601.21619",
+      "authors": [
+        "Yiming Wang",
+        "Zhuo-Sheng Zhang",
+        "Rui Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.20352",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20352",
+        "id:SemanticScholar:a0ffed416f803e2ec27f87a5b1beafafa98cf2e6",
+        "id:arXiv:2601.20352",
+        "title:ama adaptive memory via multiagent collaboration",
+        "url:https://arxiv.org/abs/2601.20352"
+      ],
+      "record": {
+        "title": "AMA: Adaptive Memory via Multi-Agent Collaboration",
+        "source_url": "https://arxiv.org/abs/2601.20352",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid evolution of Large Language Model (LLM) agents has necessitated robust memory systems to support cohesive long-term interaction and complex reasoning. Benefiting from the strong capabilities of LLMs, recent research focus has shifted from simple context extension to the development of dedicated agentic memory systems. However, existing approaches typically rely on rigid retrieval granularity, accumulation-heavy maintenance strategies, and coarse-grained update mechanisms. These design choices create a persistent mismatch between stored information and task-specific reasoning demands, while leading to the unchecked accumulation of logical inconsistencies over time. To address these challenges, we propose Adaptive Memory via Multi-Agent Collaboration (AMA), a novel framework that leverages coordinated agents to manage memory across multiple granularities. AMA employs a hierarchical memory design that dynamically aligns retrieval granularity with task complexity. Specifically, the Constructor and Retriever jointly enable multi-granularity memory construction and adaptive query routing. The Judge verifies the relevance and consistency of retrieved content, triggering iterative retrieval when evidence is insufficient or invoking the Refresher upon detecting logical conflicts. The Refresher then enforces memory consistency by performing targeted updates or removing outdated entries. Extensive experiments on challenging long-context benchmarks show that AMA significantly outperforms state-of-the-art baselines while reducing token consumption by approximately 80% compared to full-context methods, demonstrating its effectiveness in maintaining retrieval precision and long-term memory consistency.",
+        "identifiers": [
+          "SemanticScholar:a0ffed416f803e2ec27f87a5b1beafafa98cf2e6"
+        ],
+        "semantic_scholar_id": "a0ffed416f803e2ec27f87a5b1beafafa98cf2e6",
+        "canonical_id": "arXiv:2601.20352",
+        "arxiv_id": "2601.20352",
+        "doi": "10.48550/arXiv.2601.20352",
+        "authors": [
+          "Weiquan Huang",
+          "Zi-Xuan Wang",
+          "He-Hai Lin",
+          "Sudong Wang",
+          "Bo Xu",
+          "Qian Li",
+          "Bei-Er Zhu",
+          "Lin-Yi Yang",
+          "Cheng-Wei Qin"
+        ],
+        "priority": 119,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 119,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 300,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.02972",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.02972",
+        "id:SemanticScholar:43576cd273d91be1e4bc16db602aeb5226a46721",
+        "id:arXiv:2601.02972",
+        "title:correct concise and complete multistage training for adaptive reasoning",
+        "url:https://arxiv.org/abs/2601.02972"
+      ],
+      "record": {
+        "title": "Correct, Concise and Complete: Multi-stage Training For Adaptive Reasoning",
+        "source_url": "https://arxiv.org/abs/2601.02972",
+        "year": 2026,
+        "published": "2026-01-06",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The reasoning capabilities of large language models (LLMs) have improved substantially through increased test-time computation, typically in the form of intermediate tokens known as chain-of-thought (CoT). However, CoT often becomes unnecessarily long, increasing computation cost without actual accuracy gains or sometimes even degrading performance, a phenomenon known as ``overthinking''. We propose a multi-stage efficient reasoning method that combines supervised fine-tuning -- via rejection sampling or reasoning trace reformatting -- with reinforcement learning using an adaptive length penalty. We introduce a lightweight reward function that penalizes tokens generated after the first correct answer but encouraging self-verification only when beneficial. We conduct a holistic evaluation across seven diverse reasoning tasks, analyzing the accuracy-response length trade-off. Our approach reduces response length by an average of 28\\% for 8B models and 40\\% for 32B models, while incurring only minor performance drops of 1.6 and 2.5 points, respectively. Despite its conceptual simplicity, it achieves a superior trade-off compared to more complex state-of-the-art efficient reasoning methods, scoring 76.6, in terms of the area under the Overthinking-Adjusted Accuracy curve ($\\text{AUC}_{\\text{OAA}}$) -- 5 points above the base model and 2.5 points above the second-best approach.",
+        "identifiers": [
+          "SemanticScholar:43576cd273d91be1e4bc16db602aeb5226a46721"
+        ],
+        "semantic_scholar_id": "43576cd273d91be1e4bc16db602aeb5226a46721",
+        "canonical_id": "arXiv:2601.02972",
+        "arxiv_id": "2601.02972",
+        "doi": "10.48550/arXiv.2601.02972",
+        "authors": [
+          "Nathanaël Carraz Rakotonirina",
+          "Ren Pang",
+          "Neha Anna John",
+          "Michael Bohlke-Schneider",
+          "Momchil Hardalov"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 322,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26560",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.26560",
+        "id:SemanticScholar:9c7d8eb93ef915c9d6a92746be07336310d21103",
+        "id:arXiv:2606.26560",
+        "title:erasethendelta attention decoupling erase and write addresses in deltarule linear attention",
+        "url:https://arxiv.org/abs/2606.26560"
+      ],
+      "record": {
+        "title": "Erase-then-Delta Attention: Decoupling Erase and Write Addresses in Delta-Rule Linear Attention",
+        "source_url": "https://arxiv.org/abs/2606.26560",
+        "year": 2026,
+        "published": "2026-06-25",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Delta-rule linear attention improves recurrent memory updates by correcting what is already stored at the current write address before writing new content. However, the active correction is still anchored to that same write address. As a result, stale information stored at a different address cannot be actively removed before new content is written elsewhere. We propose Erase-then-Delta Attention (EDA), a memory update rule that decouples where to erase from where to write. The key insight is that recurrent memory models should not only correct the current write, but also selectively suppress outdated memory at an independently chosen address. Concretely, our method first applies a targeted erase step along a learned erase direction, and then performs the standard delta-style corrective write along the current write direction. This preserves the corrective behavior of delta-rule updates while expanding their memory-management capacity. Language-model pretraining experiments across dense 2.5B and MoE 25B-A2.8B model families show that EDA performs best in both settings. The gain persists after 80B-token long-context midtraining of the MoE models, where EDA also performs best in long-context evaluations from 4k to 128k contexts. A compact update analysis and memory-state probes suggest why: EDA keeps the delta-rule corrective write intact while allocating an additional cleanup path most strongly when passive decay is weak. These results suggest that recurrent memory models should decide not only what to write, but also what stale information to erase and where.",
+        "identifiers": [
+          "SemanticScholar:9c7d8eb93ef915c9d6a92746be07336310d21103"
+        ],
+        "semantic_scholar_id": "9c7d8eb93ef915c9d6a92746be07336310d21103",
+        "canonical_id": "arXiv:2606.26560",
+        "arxiv_id": "2606.26560",
+        "doi": "10.48550/arXiv.2606.26560",
+        "authors": [
+          "Xiao Li",
+          "Chengruidong Zhang",
+          "Hao Luo",
+          "X. Lin",
+          "Ze-Kun Wang",
+          "Zihan Qiu",
+          "Yun-Fei Mao",
+          "Lang-Shi Chen",
+          "Man Yuan",
+          "Minmin Sun",
+          "Huiqiang Jiang",
+          "Siqi Zhang",
+          "Rui Men",
+          "Wei Hu",
+          "Gong Cheng",
+          "Bo Zheng",
+          "Dayiheng Liu",
+          "Jing-Ren Zhou"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.21619",
+      "identity_tokens": [
+        "id:SemanticScholar:7499d73bef078e605781dc6388a97ad5f0adf1aa",
+        "id:arXiv:2601.21619",
+        "title:on the overscaling curse of parallel thinking system efficacy contradicts sample efficiency",
+        "url:https://arxiv.org/abs/2601.21619"
+      ],
+      "record": {
+        "title": "On the Overscaling Curse of Parallel Thinking: System Efficacy Contradicts Sample Efficiency",
+        "source_url": "https://arxiv.org/abs/2601.21619",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parallel thinking improves LLM reasoning through multi-path sampling and aggregation. In standard evaluations, due to a lack of sample-specific priors, all samples share a global budget chosen to maximize dataset accuracy. However, many samples reach their best accuracy with much smaller budgets, causing low budget utilization. This contradiction between system efficacy and sample efficiency constitutes the Overscaling Curse. In this paper, we first provide a formal analysis of the overscaling curse and quantify its prevalence and severity in real-world systems. To break it, we propose Latent Budget Predictor (LanBo), which probes model latent representations to predict sample-specific optimal budgets. LanBo significantly improves budget utilization while maintaining dataset accuracy. We further integrate LanBo into the full decoding pipeline, inspiring Pre-decoding Budget Adaptation (PreAda), a paradigm that allocates budgets before decoding to preserve decoding-time parallelization. LanBo substantially improves hardware-aware efficiency in latency and memory, demonstrating both its practical value and the promise of LanBo for efficient parallel decoding.",
+        "identifiers": [
+          "SemanticScholar:7499d73bef078e605781dc6388a97ad5f0adf1aa"
+        ],
+        "semantic_scholar_id": "7499d73bef078e605781dc6388a97ad5f0adf1aa",
+        "canonical_id": "arXiv:2601.21619",
+        "arxiv_id": "2601.21619",
+        "authors": [
+          "Yiming Wang",
+          "Zhuo-Sheng Zhang",
+          "Rui Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 299,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:357e0f44a07215eb01b03164b2fbdd0a415c1022c29c2ef8c4088b04c8e007b0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

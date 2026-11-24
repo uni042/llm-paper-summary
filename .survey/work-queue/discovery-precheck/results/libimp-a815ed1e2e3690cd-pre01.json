@@ -1,0 +1,437 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a815ed1e2e3690cd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a815ed1e2e36",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.14945",
+    "arXiv:2602.08948",
+    "arXiv:2603.04349",
+    "arXiv:2605.29438"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c76e1770bc7c82370ebe5da4ab8530f57d569d75",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:42:24.555030+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.14945",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08948",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04349",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29438",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CoRefine: Confidence-Guided Self-Refinement for Adaptive Test-Time Compute",
+      "source_url": "https://arxiv.org/abs/2602.08948",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) often rely on test-time scaling via parallel decoding (for example, 512 samples) to boost reasoning accuracy, but this incurs substantial compute. We introduce CoRefine, a confidence-guided self-refinement method that achieves competitive accuracy using a fraction of the tokens via a lightweight 211k-parameter Conv1D controller atop a frozen LLM. The controller consumes full-trace confidence to decide whether to halt, re-examine, or try a different approach, enabling targeted self-correction with an average of 2.7 refinement steps per problem and roughly 190-fold token reduction relative to 512-sample baselines. Across diverse reasoning benchmarks and three open-source models, the controller achieves 92.6 percent precision when it confidently halts, indicating that confidence dynamics reliably signal correctness without ground-truth verification. We extend this to CoRefine-Tree, a hybrid sequential-parallel variant that adaptively balances exploration and exploitation, with easy serving integration and verifier compatibility. By treating confidence as a control signal rather than a correctness guarantee, CoRefine provides a modular primitive for scalable reasoning and agentic settings with imperfect verifiers.",
+      "identifiers": [
+        "SemanticScholar:d9683b161e04de850508ea8ae99f5d9f1d2b0c90"
+      ],
+      "semantic_scholar_id": "d9683b161e04de850508ea8ae99f5d9f1d2b0c90",
+      "canonical_id": "arXiv:2602.08948",
+      "arxiv_id": "2602.08948",
+      "doi": "10.48550/arXiv.2602.08948",
+      "authors": [
+        "Chen Jin",
+        "Ryutaro Tanno",
+        "Tom Diethe",
+        "P. Teare"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TIDAL: Temporally Interleaved Diffusion and Action Loop for High-Frequency VLA Control",
+      "source_url": "https://arxiv.org/abs/2601.14945",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale Vision-Language-Action (VLA) models offer semantic generalization but suffer from high inference latency because they adopt a low-frequency batch-and-execute paradigm. This frequency mismatch creates an execution blind spot, causing failures in dynamic environments where targets move during the open-loop execution window. We propose TIDAL (Temporally Interleaved Diffusion and Action Loop), a hierarchical framework that decouples semantic reasoning from high-frequency actuation. TIDAL operates as a backbone-agnostic scheduler for diffusion-based VLAs, using a dual-frequency architecture to redistribute the computational budget. Specifically, a low-frequency macro-intent loop caches semantic embeddings, while a high-frequency micro-control loop interleaves single-step flow integration with execution, conditioning on the latest state fused with motion cues. To handle the resulting latency shift, we introduce a temporally misaligned training strategy where the policy learns stalenessaware compensation, conditioning on stale semantic intent alongside real-time proprioception. TIDAL is architectural, making it orthogonal to system-level optimizations. Experiments show an average 2.5x performance gain over open-loop baselines in dynamic interception tasks. Despite a slight decrease in static success rates, our approach yields a 4x increase in feedback frequency and extends the effective horizon of semantic embeddings beyond the native action chunk size. Under nonpaused physics and on a real robot, TIDAL remains robust to unmodeled dynamics, while standard open-loop baselines fail due to latency-induced error accumulation.",
+      "identifiers": [
+        "SemanticScholar:c77237548e14b5e13307d8d95c7c18b02ec2db47"
+      ],
+      "semantic_scholar_id": "c77237548e14b5e13307d8d95c7c18b02ec2db47",
+      "canonical_id": "arXiv:2601.14945",
+      "arxiv_id": "2601.14945",
+      "doi": "10.48550/arXiv.2601.14945",
+      "authors": [
+        "Yu-Teng Sun",
+        "Hao-Ran Wang",
+        "Ruofei Bai",
+        "Zheng-Guo Li",
+        "Jun Li",
+        "Meng Yee Michael Chuah",
+        "Wei-Yun Yau"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 307,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models",
+      "source_url": "https://arxiv.org/abs/2605.29438",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models are a powerful paradigm for generalist robotic control. However, their high computational cost and limited control frequency hinder real-time robotic manipulation, especially when large vision-language backbones and iterative action heads run at every control step. Existing VLA acceleration methods often optimize individual components or rely on fixed acceleration rules, treating different control steps with largely fixed computation and overlooking the non-uniform reasoning demands of sequential embodied control. Inspired by human motor control, where cognitive and feedback resources concentrate on goal-sensitive stages, we argue that VLA models should learn when to invest full computation and when to reuse prior computation. We propose ElegantVLA, a plug-in phase-adaptive inference framework that accelerates VLA models through intra-model dynamic compute scheduling. ElegantVLA introduces a lightweight scheduler that observes temporal representation similarity, robot-motion cues, and episode progress to jointly allocate computation across the vision encoder, LLM, and action head. For perception-language reasoning, the scheduler selects a five-level Vision-LLM compute mode, from full recomputation to multi-step temporal reuse, based on visual-language representation stability. For action generation, it selects a three-level denoising mode, reusing intermediate denoising states during stable motion while preserving full refinement for goal-sensitive stages. By coordinating these decisions, ElegantVLA offers a general acceleration framework for modern VLA pipelines with explicit action-generation modules, without modifying or retraining the base model. Experiments on GR00T and CogACT achieve up to 2.55x and 3.77x speedup, and on six real-world GR00T tasks ElegantVLA cuts computation by 2.18x while raising control frequency from 13.8 Hz to 26.3 Hz.",
+      "identifiers": [
+        "SemanticScholar:922638b3eac40136d0751c4f11dbdca573f128a2"
+      ],
+      "semantic_scholar_id": "922638b3eac40136d0751c4f11dbdca573f128a2",
+      "canonical_id": "arXiv:2605.29438",
+      "arxiv_id": "2605.29438",
+      "doi": "10.48550/arXiv.2605.29438",
+      "authors": [
+        "Ye Li",
+        "Hua-Nan Liu",
+        "Kang-Ye Ji",
+        "Yuan Meng",
+        "Jia-Jun Fan",
+        "Yuan-Song Wang",
+        "Shi-Yu Qin",
+        "Cheng-Lei Wu",
+        "Shuhui Xia",
+        "Zhi Wang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FocusGraph: Graph-Structured Frame Selection for Embodied Long Video Question Answering",
+      "source_url": "https://arxiv.org/abs/2603.04349",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Understanding long videos is crucial for embodied intelligent agents, as their performance depends on effectively accumulating and using long-horizon perceptual memories. Multimodal large language models (MLLMs) are increasingly used for long-video understanding, but their performance degrades and inference time increases as more frames are provided. Therefore, selecting informative keyframes is essential for efficient question answering over long videos. In this work, we develop FocusGraph, a framework for keyframe selection in egocentric long-video question answering. It includes a lightweight Scene-Graph LLM Selector that identifies query-relevant clips from compact graph-based captions, avoiding the need to process raw frame sequences at question time. From these clips, we extract keyframes using Patch-wise Sparse-Flow Retention (PSFR), an offline program-evolved method with no learned parameters at inference time, before passing them to an MLLM for answer generation. FocusGraph achieves state-of-the-art performance on FindingDory and HourVideo while reducing question-time inference cost compared with existing approaches.",
+      "identifiers": [
+        "SemanticScholar:5058a75b27c1f8cf5685b4bd04d2b9de658e1a0f"
+      ],
+      "semantic_scholar_id": "5058a75b27c1f8cf5685b4bd04d2b9de658e1a0f",
+      "canonical_id": "arXiv:2603.04349",
+      "arxiv_id": "2603.04349",
+      "doi": "10.48550/arXiv.2603.04349",
+      "authors": [
+        "T. Zemskova",
+        "S. Andryushenko",
+        "I. Obrubov",
+        "V. Khoruzhaia",
+        "Ekaterina Eroshenko",
+        "E. Derevyanka",
+        "Dmitry A. Yudin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.08948",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08948",
+        "id:SemanticScholar:d9683b161e04de850508ea8ae99f5d9f1d2b0c90",
+        "id:arXiv:2602.08948",
+        "title:corefine confidenceguided selfrefinement for adaptive testtime compute",
+        "url:https://arxiv.org/abs/2602.08948"
+      ],
+      "record": {
+        "title": "CoRefine: Confidence-Guided Self-Refinement for Adaptive Test-Time Compute",
+        "source_url": "https://arxiv.org/abs/2602.08948",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) often rely on test-time scaling via parallel decoding (for example, 512 samples) to boost reasoning accuracy, but this incurs substantial compute. We introduce CoRefine, a confidence-guided self-refinement method that achieves competitive accuracy using a fraction of the tokens via a lightweight 211k-parameter Conv1D controller atop a frozen LLM. The controller consumes full-trace confidence to decide whether to halt, re-examine, or try a different approach, enabling targeted self-correction with an average of 2.7 refinement steps per problem and roughly 190-fold token reduction relative to 512-sample baselines. Across diverse reasoning benchmarks and three open-source models, the controller achieves 92.6 percent precision when it confidently halts, indicating that confidence dynamics reliably signal correctness without ground-truth verification. We extend this to CoRefine-Tree, a hybrid sequential-parallel variant that adaptively balances exploration and exploitation, with easy serving integration and verifier compatibility. By treating confidence as a control signal rather than a correctness guarantee, CoRefine provides a modular primitive for scalable reasoning and agentic settings with imperfect verifiers.",
+        "identifiers": [
+          "SemanticScholar:d9683b161e04de850508ea8ae99f5d9f1d2b0c90"
+        ],
+        "semantic_scholar_id": "d9683b161e04de850508ea8ae99f5d9f1d2b0c90",
+        "canonical_id": "arXiv:2602.08948",
+        "arxiv_id": "2602.08948",
+        "doi": "10.48550/arXiv.2602.08948",
+        "authors": [
+          "Chen Jin",
+          "Ryutaro Tanno",
+          "Tom Diethe",
+          "P. Teare"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 288,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.14945",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.14945",
+        "id:SemanticScholar:c77237548e14b5e13307d8d95c7c18b02ec2db47",
+        "id:arXiv:2601.14945",
+        "title:tidal temporally interleaved diffusion and action loop for highfrequency vla control",
+        "url:https://arxiv.org/abs/2601.14945"
+      ],
+      "record": {
+        "title": "TIDAL: Temporally Interleaved Diffusion and Action Loop for High-Frequency VLA Control",
+        "source_url": "https://arxiv.org/abs/2601.14945",
+        "year": 2026,
+        "published": "2026-01-21",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale Vision-Language-Action (VLA) models offer semantic generalization but suffer from high inference latency because they adopt a low-frequency batch-and-execute paradigm. This frequency mismatch creates an execution blind spot, causing failures in dynamic environments where targets move during the open-loop execution window. We propose TIDAL (Temporally Interleaved Diffusion and Action Loop), a hierarchical framework that decouples semantic reasoning from high-frequency actuation. TIDAL operates as a backbone-agnostic scheduler for diffusion-based VLAs, using a dual-frequency architecture to redistribute the computational budget. Specifically, a low-frequency macro-intent loop caches semantic embeddings, while a high-frequency micro-control loop interleaves single-step flow integration with execution, conditioning on the latest state fused with motion cues. To handle the resulting latency shift, we introduce a temporally misaligned training strategy where the policy learns stalenessaware compensation, conditioning on stale semantic intent alongside real-time proprioception. TIDAL is architectural, making it orthogonal to system-level optimizations. Experiments show an average 2.5x performance gain over open-loop baselines in dynamic interception tasks. Despite a slight decrease in static success rates, our approach yields a 4x increase in feedback frequency and extends the effective horizon of semantic embeddings beyond the native action chunk size. Under nonpaused physics and on a real robot, TIDAL remains robust to unmodeled dynamics, while standard open-loop baselines fail due to latency-induced error accumulation.",
+        "identifiers": [
+          "SemanticScholar:c77237548e14b5e13307d8d95c7c18b02ec2db47"
+        ],
+        "semantic_scholar_id": "c77237548e14b5e13307d8d95c7c18b02ec2db47",
+        "canonical_id": "arXiv:2601.14945",
+        "arxiv_id": "2601.14945",
+        "doi": "10.48550/arXiv.2601.14945",
+        "authors": [
+          "Yu-Teng Sun",
+          "Hao-Ran Wang",
+          "Ruofei Bai",
+          "Zheng-Guo Li",
+          "Jun Li",
+          "Meng Yee Michael Chuah",
+          "Wei-Yun Yau"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 307,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29438",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29438",
+        "id:SemanticScholar:922638b3eac40136d0751c4f11dbdca573f128a2",
+        "id:arXiv:2605.29438",
+        "title:elegantvla learning when to think for efficient visionlanguageaction models",
+        "url:https://arxiv.org/abs/2605.29438"
+      ],
+      "record": {
+        "title": "ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models",
+        "source_url": "https://arxiv.org/abs/2605.29438",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models are a powerful paradigm for generalist robotic control. However, their high computational cost and limited control frequency hinder real-time robotic manipulation, especially when large vision-language backbones and iterative action heads run at every control step. Existing VLA acceleration methods often optimize individual components or rely on fixed acceleration rules, treating different control steps with largely fixed computation and overlooking the non-uniform reasoning demands of sequential embodied control. Inspired by human motor control, where cognitive and feedback resources concentrate on goal-sensitive stages, we argue that VLA models should learn when to invest full computation and when to reuse prior computation. We propose ElegantVLA, a plug-in phase-adaptive inference framework that accelerates VLA models through intra-model dynamic compute scheduling. ElegantVLA introduces a lightweight scheduler that observes temporal representation similarity, robot-motion cues, and episode progress to jointly allocate computation across the vision encoder, LLM, and action head. For perception-language reasoning, the scheduler selects a five-level Vision-LLM compute mode, from full recomputation to multi-step temporal reuse, based on visual-language representation stability. For action generation, it selects a three-level denoising mode, reusing intermediate denoising states during stable motion while preserving full refinement for goal-sensitive stages. By coordinating these decisions, ElegantVLA offers a general acceleration framework for modern VLA pipelines with explicit action-generation modules, without modifying or retraining the base model. Experiments on GR00T and CogACT achieve up to 2.55x and 3.77x speedup, and on six real-world GR00T tasks ElegantVLA cuts computation by 2.18x while raising control frequency from 13.8 Hz to 26.3 Hz.",
+        "identifiers": [
+          "SemanticScholar:922638b3eac40136d0751c4f11dbdca573f128a2"
+        ],
+        "semantic_scholar_id": "922638b3eac40136d0751c4f11dbdca573f128a2",
+        "canonical_id": "arXiv:2605.29438",
+        "arxiv_id": "2605.29438",
+        "doi": "10.48550/arXiv.2605.29438",
+        "authors": [
+          "Ye Li",
+          "Hua-Nan Liu",
+          "Kang-Ye Ji",
+          "Yuan Meng",
+          "Jia-Jun Fan",
+          "Yuan-Song Wang",
+          "Shi-Yu Qin",
+          "Cheng-Lei Wu",
+          "Shuhui Xia",
+          "Zhi Wang"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04349",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04349",
+        "id:SemanticScholar:5058a75b27c1f8cf5685b4bd04d2b9de658e1a0f",
+        "id:arXiv:2603.04349",
+        "title:focusgraph graphstructured frame selection for embodied long video question answering",
+        "url:https://arxiv.org/abs/2603.04349"
+      ],
+      "record": {
+        "title": "FocusGraph: Graph-Structured Frame Selection for Embodied Long Video Question Answering",
+        "source_url": "https://arxiv.org/abs/2603.04349",
+        "year": 2026,
+        "published": "2026-03-04",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Understanding long videos is crucial for embodied intelligent agents, as their performance depends on effectively accumulating and using long-horizon perceptual memories. Multimodal large language models (MLLMs) are increasingly used for long-video understanding, but their performance degrades and inference time increases as more frames are provided. Therefore, selecting informative keyframes is essential for efficient question answering over long videos. In this work, we develop FocusGraph, a framework for keyframe selection in egocentric long-video question answering. It includes a lightweight Scene-Graph LLM Selector that identifies query-relevant clips from compact graph-based captions, avoiding the need to process raw frame sequences at question time. From these clips, we extract keyframes using Patch-wise Sparse-Flow Retention (PSFR), an offline program-evolved method with no learned parameters at inference time, before passing them to an MLLM for answer generation. FocusGraph achieves state-of-the-art performance on FindingDory and HourVideo while reducing question-time inference cost compared with existing approaches.",
+        "identifiers": [
+          "SemanticScholar:5058a75b27c1f8cf5685b4bd04d2b9de658e1a0f"
+        ],
+        "semantic_scholar_id": "5058a75b27c1f8cf5685b4bd04d2b9de658e1a0f",
+        "canonical_id": "arXiv:2603.04349",
+        "arxiv_id": "2603.04349",
+        "doi": "10.48550/arXiv.2603.04349",
+        "authors": [
+          "T. Zemskova",
+          "S. Andryushenko",
+          "I. Obrubov",
+          "V. Khoruzhaia",
+          "Ekaterina Eroshenko",
+          "E. Derevyanka",
+          "Dmitry A. Yudin"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 265,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:20c4a4731044a420a909f7b4335e659fd7df4b7a7a33db4bff3ffcc397b9e9a3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

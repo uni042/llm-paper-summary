@@ -1,0 +1,590 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4755d05afe1cd638-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4755d05afe1c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.07490",
+    "arXiv:2507.03828",
+    "arXiv:2512.14332",
+    "arXiv:2610.00204",
+    "arXiv:2610.14074",
+    "arXiv:2610.22957"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c76e1770bc7c82370ebe5da4ab8530f57d569d75",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:42:24.549328+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.07490",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.03828",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.14332",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00204",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14074",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22957",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MoDEM: Mixture of Domain Expert Models",
+      "source_url": "https://arxiv.org/abs/2410.07490",
+      "year": 2024,
+      "published": "2024-10-09",
+      "venue": "Australasian Language Technology Association Workshop",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a novel approach to enhancing the performance and efficiency of large language models (LLMs) by combining domain prompt routing with domain-specialized models. We introduce a system that utilizes a BERT-based router to direct incoming prompts to the most appropriate domain expert model. These expert models are specifically tuned for domains such as health, mathematics and science. Our research demonstrates that this approach can significantly outperform general-purpose models of comparable size, leading to a superior performance-to-cost ratio across various benchmarks. The implications of this study suggest a potential shift in LLM development and deployment. Rather than focusing solely on creating increasingly large, general-purpose models, the future of AI may lie in developing ecosystems of smaller, highly specialized models coupled with sophisticated routing systems. This approach could lead to more efficient resource utilization, reduced computational costs, and superior overall performance.",
+      "identifiers": [
+        "SemanticScholar:c09ee0ac2bcbceee479021b00be4e19fe8c29f8e"
+      ],
+      "semantic_scholar_id": "c09ee0ac2bcbceee479021b00be4e19fe8c29f8e",
+      "canonical_id": "arXiv:2410.07490",
+      "arxiv_id": "2410.07490",
+      "doi": "10.48550/arXiv.2410.07490",
+      "authors": [
+        "Toby Simonds",
+        "Kemal Kurniawan",
+        "J. Lau"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 776,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "IMPACT: Importance-Aware Activation Space Reconstruction",
+      "source_url": "https://arxiv.org/abs/2507.03828",
+      "year": 2025,
+      "published": "2025-07-04",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve strong performance across diverse domains but remain difficult to deploy in resource-constrained environments due to their size. Low-rank compression is a common remedy, typically minimizing weight reconstruction error under the assumption that weights are low-rank. However, this assumption often does not hold in LLMs. In contrast, LLM activations exhibit a more pronounced low-rank structure, motivating approaches that minimize activation reconstruction error. This shift alone, however, is not sufficient: different activation dimensions contribute unequally to model performance, and treating them uniformly can lead to accuracy loss. We introduce IMPACT, an importance-aware activation reconstruction framework that links compression to its effect on model performance. IMPACT formulates compression as an optimization problem that integrates activation structure with gradient-based importance, deriving a closed-form solution where reconstruction bases arise from an importance-weighted activation covariance matrix. This yields low-rank compression explicitly optimized for accuracy preservation. Experiments across multiple models and tasks demonstrate that IMPACT achieves up to 55.4% greater model size reduction while maintaining accuracy comparable to or better than state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:8d68bd8d72e1d2952ca1b27feacea1b7b6acdaca"
+      ],
+      "semantic_scholar_id": "8d68bd8d72e1d2952ca1b27feacea1b7b6acdaca",
+      "canonical_id": "arXiv:2507.03828",
+      "arxiv_id": "2507.03828",
+      "doi": "10.48550/arXiv.2507.03828",
+      "authors": [
+        "M. Chowdhury",
+        "Daniel Agyei Asante",
+        "Er-Nie Chang",
+        "Yang Li"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Step-Tagging: Toward controlling the generation of Language Reasoning Models through step monitoring",
+      "source_url": "https://arxiv.org/abs/2512.14332",
+      "year": 2025,
+      "published": "2025-12-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The field of Language Reasoning Models (LRMs) has been very active over the past few years with advances in training and inference techniques enabling LRMs to reason longer, and more accurately. However, a growing body of studies show that LRMs are still inefficient, over-generating verification and reflection steps. To address this challenge, we introduce the Step-Tagging framework, a lightweight sentence-classifier enabling real-time annotation of the type of reasoning steps that an LRM is generating. To monitor reasoning behaviors, we introduced ReasonType: a novel taxonomy of reasoning steps. Building on this framework, we demonstrated that online monitoring of the count of specific steps can produce effective interpretable early stopping criteria of LRM inferences. We evaluate the Step-tagging framework on three open-source reasoning models across standard benchmark datasets: MATH500, GSM8K, AIME and non-mathematical tasks (GPQA and MMLU-Pro). We achieve 20 to 50% token reduction while maintaining comparable accuracy to standard generation, with largest gains observed on more computation-heavy tasks. This work offers a novel way to increase control over the generation of LRMs, and a new tool to study behaviors of LRMs.",
+      "identifiers": [
+        "SemanticScholar:390390d3b7fbdea3efb2d3e0de725e4e818b09bf"
+      ],
+      "semantic_scholar_id": "390390d3b7fbdea3efb2d3e0de725e4e818b09bf",
+      "canonical_id": "arXiv:2512.14332",
+      "arxiv_id": "2512.14332",
+      "doi": "10.48550/arXiv.2512.14332",
+      "authors": [
+        "Yannis Belkhiter",
+        "S. Tirupathi",
+        "Giulio Zizzo",
+        "John D. Kelleher"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 343,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Query Independent Variable Rate Visual Token Coding",
+      "source_url": "https://arxiv.org/abs/2610.00204",
+      "year": 2026,
+      "published": "2026-09-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual-token compression for vision--language models is posed almost entirely as a selection problem: decide which tokens to keep and discard the rest. The criteria that work best rank tokens by the attention the language model pays them, which makes the ranking a function of the question being asked. That is invisible in a single-turn benchmark and decisive whenever a compressed representation is written once and read many times, as when it is cached across the turns of a conversation or transmitted between a device and a server. We take the other half of the classical transform-coding toolkit instead: keep every token and vary its rate. A transform code exposes each token's measured distortion--rate curve, and a fixed bit budget is distributed across tokens by exact integer rate--distortion optimisation on those curves. No text enters the pipeline, so one compressed representation serves any query. At equal bit budgets, on two datasets and two capacities, it preserves the model's output distribution and its answers better than uniform-rate coding, the closed-form water-fill and distortion-ranked pruning. It matches attention-ranked pruning on the question pruning was tuned for, and overtakes it once the compressed image must answer a different question about the same image.",
+      "identifiers": [
+        "SemanticScholar:b2294212e046a2d6711d3cc96e489b94f23f609d"
+      ],
+      "semantic_scholar_id": "b2294212e046a2d6711d3cc96e489b94f23f609d",
+      "canonical_id": "arXiv:2610.00204",
+      "arxiv_id": "2610.00204",
+      "authors": [
+        "Hong-Bo Zhang",
+        "Zi-Hao Yang",
+        "Liu-Yang Song",
+        "Dan Yang",
+        "Hao-Yang Yao",
+        "Yan Wen",
+        "Zheng-Tao Yao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 65,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "One Model, Multiple Compute Budgets: Multi-Ratio ConceptMoE for Flexible Compute Across Turns",
+      "source_url": "https://arxiv.org/abs/2610.14074",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models typically support different inference budgets through separate model sizes or fixed compute configurations. In multi-turn interactions, however, compute demand can vary substantially across turns. Using a high-compute model for every turn wastes computation, while routing among independent models may require rebuilding model-specific history states after switches. We therefore ask whether a single shared model can support multiple compute budgets that can be flexibly assigned across turns. We introduce Multi-Ratio ConceptMoE, which jointly supports token-to-concept compression ratios of 2, 4, and 8 (CR2/CR4/CR8) within a shared backbone. Lightweight full-token modules reduce compression-independent cost, ratio-specific boundary routers support distinct compression levels, and cross-ratio training enables mixed-ratio processing within the same context. Across PTBench and SFTBench, the three fixed modes outperform their compute-matched MoE baselines in all 6 comparisons while remaining competitive with independently trained fixed-ratio specialists. On CodeChat and CoSQL, mixed-ratio inference improves the accuracy--compute trade-off, outperforming the Large MoE by 5.87 and 2.68 percentage points while reducing FLOPs by 41.1% and 12.3%, respectively. Under the same turn-wise budget schedule, Multi-Ratio ConceptMoE further reduces FLOPs by 78.4% and 46.9% relative to routing among independent models. These results demonstrate that a single shared model can provide multiple compute budgets for flexible compute allocation across turns.",
+      "identifiers": [
+        "SemanticScholar:2940d018e98c195f6493e957b68f31aa8877c73b"
+      ],
+      "semantic_scholar_id": "2940d018e98c195f6493e957b68f31aa8877c73b",
+      "canonical_id": "arXiv:2610.14074",
+      "arxiv_id": "2610.14074",
+      "authors": [
+        "Yi-Yang Fu",
+        "Zi-Hao Huang",
+        "Dong-Chen Han",
+        "Shu-Kai Gong",
+        "Zhen Dong",
+        "Qi-Yang Min",
+        "Da-Quan Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Query-adaptive Recurrent Tokenization",
+      "source_url": "https://arxiv.org/abs/2610.22957",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual information worth extracting from an image and the token budget it warrants depend on the text query. Yet modern vision and vision-language models largely encode images independently of the query and allocate a fixed visual token budget to every input. We introduce the Query-Adaptive Recurrent Tokenizer (QART), a backbone-agnostic module that makes visual representations both query-steerable and budget-adaptive. QART steers the visual representation toward query-relevant evidence while adapting its token budget to the amount of information required. Its key principle is simple. Additional tokens are allocated until the visual features relevant to the query are represented with sufficient fidelity. Starting from frozen encoder features, QART recurrently constructs a compact representation and uses reconstruction quality over the query-relevant visual support to control token allocation. On Visual7W and VQAv2, QART achieves 81.96% and 76.37% accuracy using only about 29 visual tokens, reducing token counts by 20-25x relative to dense VLM inputs. It further reaches 92.0% P@1 on CORE and 36.3% PR-AUC on PODS, outperforming SteerViT on PODS by 8.4%. Together, these results show that visual representations need not be fixed in either content or capacity and can instead adapt to what each query requires.",
+      "identifiers": [
+        "SemanticScholar:880af68552962e5697a5c10a752368a20c9717a5"
+      ],
+      "semantic_scholar_id": "880af68552962e5697a5c10a752368a20c9717a5",
+      "canonical_id": "arXiv:2610.22957",
+      "arxiv_id": "2610.22957",
+      "authors": [
+        "Bavesh Balaji",
+        "P. Gopinath",
+        "Pouya Sadeghi",
+        "Sirisha Rambhatla"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.07490",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.07490",
+        "id:SemanticScholar:c09ee0ac2bcbceee479021b00be4e19fe8c29f8e",
+        "id:arXiv:2410.07490",
+        "title:modem mixture of domain expert models",
+        "url:https://arxiv.org/abs/2410.07490"
+      ],
+      "record": {
+        "title": "MoDEM: Mixture of Domain Expert Models",
+        "source_url": "https://arxiv.org/abs/2410.07490",
+        "year": 2024,
+        "published": "2024-10-09",
+        "venue": "Australasian Language Technology Association Workshop",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose a novel approach to enhancing the performance and efficiency of large language models (LLMs) by combining domain prompt routing with domain-specialized models. We introduce a system that utilizes a BERT-based router to direct incoming prompts to the most appropriate domain expert model. These expert models are specifically tuned for domains such as health, mathematics and science. Our research demonstrates that this approach can significantly outperform general-purpose models of comparable size, leading to a superior performance-to-cost ratio across various benchmarks. The implications of this study suggest a potential shift in LLM development and deployment. Rather than focusing solely on creating increasingly large, general-purpose models, the future of AI may lie in developing ecosystems of smaller, highly specialized models coupled with sophisticated routing systems. This approach could lead to more efficient resource utilization, reduced computational costs, and superior overall performance.",
+        "identifiers": [
+          "SemanticScholar:c09ee0ac2bcbceee479021b00be4e19fe8c29f8e"
+        ],
+        "semantic_scholar_id": "c09ee0ac2bcbceee479021b00be4e19fe8c29f8e",
+        "canonical_id": "arXiv:2410.07490",
+        "arxiv_id": "2410.07490",
+        "doi": "10.48550/arXiv.2410.07490",
+        "authors": [
+          "Toby Simonds",
+          "Kemal Kurniawan",
+          "J. Lau"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 776,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.03828",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.03828",
+        "id:SemanticScholar:8d68bd8d72e1d2952ca1b27feacea1b7b6acdaca",
+        "id:arXiv:2507.03828",
+        "title:impact importanceaware activation space reconstruction",
+        "url:https://arxiv.org/abs/2507.03828"
+      ],
+      "record": {
+        "title": "IMPACT: Importance-Aware Activation Space Reconstruction",
+        "source_url": "https://arxiv.org/abs/2507.03828",
+        "year": 2025,
+        "published": "2025-07-04",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve strong performance across diverse domains but remain difficult to deploy in resource-constrained environments due to their size. Low-rank compression is a common remedy, typically minimizing weight reconstruction error under the assumption that weights are low-rank. However, this assumption often does not hold in LLMs. In contrast, LLM activations exhibit a more pronounced low-rank structure, motivating approaches that minimize activation reconstruction error. This shift alone, however, is not sufficient: different activation dimensions contribute unequally to model performance, and treating them uniformly can lead to accuracy loss. We introduce IMPACT, an importance-aware activation reconstruction framework that links compression to its effect on model performance. IMPACT formulates compression as an optimization problem that integrates activation structure with gradient-based importance, deriving a closed-form solution where reconstruction bases arise from an importance-weighted activation covariance matrix. This yields low-rank compression explicitly optimized for accuracy preservation. Experiments across multiple models and tasks demonstrate that IMPACT achieves up to 55.4% greater model size reduction while maintaining accuracy comparable to or better than state-of-the-art baselines.",
+        "identifiers": [
+          "SemanticScholar:8d68bd8d72e1d2952ca1b27feacea1b7b6acdaca"
+        ],
+        "semantic_scholar_id": "8d68bd8d72e1d2952ca1b27feacea1b7b6acdaca",
+        "canonical_id": "arXiv:2507.03828",
+        "arxiv_id": "2507.03828",
+        "doi": "10.48550/arXiv.2507.03828",
+        "authors": [
+          "M. Chowdhury",
+          "Daniel Agyei Asante",
+          "Er-Nie Chang",
+          "Yang Li"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.14332",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.14332",
+        "id:SemanticScholar:390390d3b7fbdea3efb2d3e0de725e4e818b09bf",
+        "id:arXiv:2512.14332",
+        "title:steptagging toward controlling the generation of language reasoning models through step monitoring",
+        "url:https://arxiv.org/abs/2512.14332"
+      ],
+      "record": {
+        "title": "Step-Tagging: Toward controlling the generation of Language Reasoning Models through step monitoring",
+        "source_url": "https://arxiv.org/abs/2512.14332",
+        "year": 2025,
+        "published": "2025-12-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The field of Language Reasoning Models (LRMs) has been very active over the past few years with advances in training and inference techniques enabling LRMs to reason longer, and more accurately. However, a growing body of studies show that LRMs are still inefficient, over-generating verification and reflection steps. To address this challenge, we introduce the Step-Tagging framework, a lightweight sentence-classifier enabling real-time annotation of the type of reasoning steps that an LRM is generating. To monitor reasoning behaviors, we introduced ReasonType: a novel taxonomy of reasoning steps. Building on this framework, we demonstrated that online monitoring of the count of specific steps can produce effective interpretable early stopping criteria of LRM inferences. We evaluate the Step-tagging framework on three open-source reasoning models across standard benchmark datasets: MATH500, GSM8K, AIME and non-mathematical tasks (GPQA and MMLU-Pro). We achieve 20 to 50% token reduction while maintaining comparable accuracy to standard generation, with largest gains observed on more computation-heavy tasks. This work offers a novel way to increase control over the generation of LRMs, and a new tool to study behaviors of LRMs.",
+        "identifiers": [
+          "SemanticScholar:390390d3b7fbdea3efb2d3e0de725e4e818b09bf"
+        ],
+        "semantic_scholar_id": "390390d3b7fbdea3efb2d3e0de725e4e818b09bf",
+        "canonical_id": "arXiv:2512.14332",
+        "arxiv_id": "2512.14332",
+        "doi": "10.48550/arXiv.2512.14332",
+        "authors": [
+          "Yannis Belkhiter",
+          "S. Tirupathi",
+          "Giulio Zizzo",
+          "John D. Kelleher"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 343,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00204",
+      "identity_tokens": [
+        "id:SemanticScholar:b2294212e046a2d6711d3cc96e489b94f23f609d",
+        "id:arXiv:2610.00204",
+        "title:query independent variable rate visual token coding",
+        "url:https://arxiv.org/abs/2610.00204"
+      ],
+      "record": {
+        "title": "Query Independent Variable Rate Visual Token Coding",
+        "source_url": "https://arxiv.org/abs/2610.00204",
+        "year": 2026,
+        "published": "2026-09-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual-token compression for vision--language models is posed almost entirely as a selection problem: decide which tokens to keep and discard the rest. The criteria that work best rank tokens by the attention the language model pays them, which makes the ranking a function of the question being asked. That is invisible in a single-turn benchmark and decisive whenever a compressed representation is written once and read many times, as when it is cached across the turns of a conversation or transmitted between a device and a server. We take the other half of the classical transform-coding toolkit instead: keep every token and vary its rate. A transform code exposes each token's measured distortion--rate curve, and a fixed bit budget is distributed across tokens by exact integer rate--distortion optimisation on those curves. No text enters the pipeline, so one compressed representation serves any query. At equal bit budgets, on two datasets and two capacities, it preserves the model's output distribution and its answers better than uniform-rate coding, the closed-form water-fill and distortion-ranked pruning. It matches attention-ranked pruning on the question pruning was tuned for, and overtakes it once the compressed image must answer a different question about the same image.",
+        "identifiers": [
+          "SemanticScholar:b2294212e046a2d6711d3cc96e489b94f23f609d"
+        ],
+        "semantic_scholar_id": "b2294212e046a2d6711d3cc96e489b94f23f609d",
+        "canonical_id": "arXiv:2610.00204",
+        "arxiv_id": "2610.00204",
+        "authors": [
+          "Hong-Bo Zhang",
+          "Zi-Hao Yang",
+          "Liu-Yang Song",
+          "Dan Yang",
+          "Hao-Yang Yao",
+          "Yan Wen",
+          "Zheng-Tao Yao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 65,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14074",
+      "identity_tokens": [
+        "id:SemanticScholar:2940d018e98c195f6493e957b68f31aa8877c73b",
+        "id:arXiv:2610.14074",
+        "title:one model multiple compute budgets multiratio conceptmoe for flexible compute across turns",
+        "url:https://arxiv.org/abs/2610.14074"
+      ],
+      "record": {
+        "title": "One Model, Multiple Compute Budgets: Multi-Ratio ConceptMoE for Flexible Compute Across Turns",
+        "source_url": "https://arxiv.org/abs/2610.14074",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models typically support different inference budgets through separate model sizes or fixed compute configurations. In multi-turn interactions, however, compute demand can vary substantially across turns. Using a high-compute model for every turn wastes computation, while routing among independent models may require rebuilding model-specific history states after switches. We therefore ask whether a single shared model can support multiple compute budgets that can be flexibly assigned across turns. We introduce Multi-Ratio ConceptMoE, which jointly supports token-to-concept compression ratios of 2, 4, and 8 (CR2/CR4/CR8) within a shared backbone. Lightweight full-token modules reduce compression-independent cost, ratio-specific boundary routers support distinct compression levels, and cross-ratio training enables mixed-ratio processing within the same context. Across PTBench and SFTBench, the three fixed modes outperform their compute-matched MoE baselines in all 6 comparisons while remaining competitive with independently trained fixed-ratio specialists. On CodeChat and CoSQL, mixed-ratio inference improves the accuracy--compute trade-off, outperforming the Large MoE by 5.87 and 2.68 percentage points while reducing FLOPs by 41.1% and 12.3%, respectively. Under the same turn-wise budget schedule, Multi-Ratio ConceptMoE further reduces FLOPs by 78.4% and 46.9% relative to routing among independent models. These results demonstrate that a single shared model can provide multiple compute budgets for flexible compute allocation across turns.",
+        "identifiers": [
+          "SemanticScholar:2940d018e98c195f6493e957b68f31aa8877c73b"
+        ],
+        "semantic_scholar_id": "2940d018e98c195f6493e957b68f31aa8877c73b",
+        "canonical_id": "arXiv:2610.14074",
+        "arxiv_id": "2610.14074",
+        "authors": [
+          "Yi-Yang Fu",
+          "Zi-Hao Huang",
+          "Dong-Chen Han",
+          "Shu-Kai Gong",
+          "Zhen Dong",
+          "Qi-Yang Min",
+          "Da-Quan Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.22957",
+      "identity_tokens": [
+        "id:SemanticScholar:880af68552962e5697a5c10a752368a20c9717a5",
+        "id:arXiv:2610.22957",
+        "title:queryadaptive recurrent tokenization",
+        "url:https://arxiv.org/abs/2610.22957"
+      ],
+      "record": {
+        "title": "Query-adaptive Recurrent Tokenization",
+        "source_url": "https://arxiv.org/abs/2610.22957",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual information worth extracting from an image and the token budget it warrants depend on the text query. Yet modern vision and vision-language models largely encode images independently of the query and allocate a fixed visual token budget to every input. We introduce the Query-Adaptive Recurrent Tokenizer (QART), a backbone-agnostic module that makes visual representations both query-steerable and budget-adaptive. QART steers the visual representation toward query-relevant evidence while adapting its token budget to the amount of information required. Its key principle is simple. Additional tokens are allocated until the visual features relevant to the query are represented with sufficient fidelity. Starting from frozen encoder features, QART recurrently constructs a compact representation and uses reconstruction quality over the query-relevant visual support to control token allocation. On Visual7W and VQAv2, QART achieves 81.96% and 76.37% accuracy using only about 29 visual tokens, reducing token counts by 20-25x relative to dense VLM inputs. It further reaches 92.0% P@1 on CORE and 36.3% PR-AUC on PODS, outperforming SteerViT on PODS by 8.4%. Together, these results show that visual representations need not be fixed in either content or capacity and can instead adapt to what each query requires.",
+        "identifiers": [
+          "SemanticScholar:880af68552962e5697a5c10a752368a20c9717a5"
+        ],
+        "semantic_scholar_id": "880af68552962e5697a5c10a752368a20c9717a5",
+        "canonical_id": "arXiv:2610.22957",
+        "arxiv_id": "2610.22957",
+        "authors": [
+          "Bavesh Balaji",
+          "P. Gopinath",
+          "Pouya Sadeghi",
+          "Sirisha Rambhatla"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:63ab0af7aa0cf4e93f86c62fc608910ba93ad2d09508ff48065e8b843323e0d5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

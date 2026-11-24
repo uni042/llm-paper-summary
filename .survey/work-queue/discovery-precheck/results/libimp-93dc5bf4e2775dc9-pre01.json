@@ -1,0 +1,322 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-93dc5bf4e2775dc9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-93dc5bf4e277",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.findings-acl.663",
+    "arXiv:2409.19488",
+    "arXiv:2601.09451"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c76e1770bc7c82370ebe5da4ab8530f57d569d75",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:42:24.531628+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.663",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.19488",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.09451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CrisPrune: Combining Contextual Relevance and Intrinsic Saliency for Efficient Visual Token Pruning in MLLMs",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.663",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:ee1e9c24e4a7d31952a19599e37674dbd15caff6"
+      ],
+      "semantic_scholar_id": "ee1e9c24e4a7d31952a19599e37674dbd15caff6",
+      "doi": "10.18653/v1/2026.findings-acl.663",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.663",
+      "authors": [
+        "Zi-Niu Liu",
+        "Shu-Heng Zhou",
+        "Ming-Qing Liu",
+        "Hao Deng",
+        "Hui-Jia Zhu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Late Breaking Results: Quamba-SE: Soft-edge Quantizer for Activations in State Space Models",
+      "source_url": "https://arxiv.org/abs/2601.09451",
+      "year": 2026,
+      "published": "2026-01-14",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Quamba-SE, a soft-edge quantizer for State Space Model (SSM) activation quantization. Unlike existing methods using standard INT8 operations, Quamba-SE employs three adaptive scales: high-precision for small values, standard scale for normal values, and low-precision for outliers. This preserves outlier information instead of hard clipping, while maintaining precision for other values. We evaluate on Mamba-130M across 6 zero-shot benchmarks. Results show that Quamba-SE consistently outperforms Quamba, achieving up to +2.68% on individual benchmarks and up to +0.83% improvement in the average accuracy of 6 datasets.",
+      "identifiers": [
+        "SemanticScholar:d862a93c8ef5eadf6ff7a8aea5c6d1e82c1c6e86"
+      ],
+      "semantic_scholar_id": "d862a93c8ef5eadf6ff7a8aea5c6d1e82c1c6e86",
+      "canonical_id": "arXiv:2601.09451",
+      "arxiv_id": "2601.09451",
+      "doi": "10.23919/DATE69613.2026.11539145",
+      "authors": [
+        "Yi-Zhi Chen",
+        "A. Hemani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 314,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A House United Within Itself: SLO-Awareness for On-Premises Containerized ML Inference Clusters via Faro",
+      "source_url": "https://arxiv.org/abs/2409.19488",
+      "year": 2024,
+      "published": "2024-09-29",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper tackles the challenge of running multiple ML inference jobs (models) under time-varying workloads, on a constrained on-premises production cluster. Our system Faro takes in latency Service Level Objectives (SLOs) for each job, auto-distills them into utility functions, \"sloppifies\" these utility functions to make them amenable to mathematical optimization, automatically predicts workload via probabilistic prediction, and dynamically makes implicit cross-job resource allocations, in order to satisfy cluster-wide objectives, e.g., total utility, fairness, and other hybrid variants. A major challenge Faro tackles is that using precise utilities and high-fidelity predictors, can be too slow (and in a sense too precise!) for the fast adaptation we require. Faro's solution is to \"sloppify\" (relax) its multiple design components to achieve fast adaptation without overly degrading solution quality. Faro is implemented in a stack consisting of Ray Serve running atop a Kubernetes cluster. Trace-driven cluster deployments show that Faro achieves 2.3×-23× lower SLO violations compared to state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:dbc57324658bd1db89e28fbf7d05d4466c501bcf"
+      ],
+      "semantic_scholar_id": "dbc57324658bd1db89e28fbf7d05d4466c501bcf",
+      "canonical_id": "arXiv:2409.19488",
+      "arxiv_id": "2409.19488",
+      "doi": "10.1145/3689031.3696071",
+      "authors": [
+        "Beomyeol Jeon",
+        "Chen Wang",
+        "Diana Arroyo",
+        "Alaa Youssef",
+        "Indranil Gupta"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 786,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.663",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.663",
+        "id:SemanticScholar:ee1e9c24e4a7d31952a19599e37674dbd15caff6",
+        "title:crisprune combining contextual relevance and intrinsic saliency for efficient visual token pruning in mllms",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.663"
+      ],
+      "record": {
+        "title": "CrisPrune: Combining Contextual Relevance and Intrinsic Saliency for Efficient Visual Token Pruning in MLLMs",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.663",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:ee1e9c24e4a7d31952a19599e37674dbd15caff6"
+        ],
+        "semantic_scholar_id": "ee1e9c24e4a7d31952a19599e37674dbd15caff6",
+        "doi": "10.18653/v1/2026.findings-acl.663",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.663",
+        "authors": [
+          "Zi-Niu Liu",
+          "Shu-Heng Zhou",
+          "Ming-Qing Liu",
+          "Hao Deng",
+          "Hui-Jia Zhu"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 146,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.09451",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539145",
+        "id:SemanticScholar:d862a93c8ef5eadf6ff7a8aea5c6d1e82c1c6e86",
+        "id:arXiv:2601.09451",
+        "title:late breaking results quambase softedge quantizer for activations in state space models",
+        "url:https://arxiv.org/abs/2601.09451"
+      ],
+      "record": {
+        "title": "Late Breaking Results: Quamba-SE: Soft-edge Quantizer for Activations in State Space Models",
+        "source_url": "https://arxiv.org/abs/2601.09451",
+        "year": 2026,
+        "published": "2026-01-14",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Quamba-SE, a soft-edge quantizer for State Space Model (SSM) activation quantization. Unlike existing methods using standard INT8 operations, Quamba-SE employs three adaptive scales: high-precision for small values, standard scale for normal values, and low-precision for outliers. This preserves outlier information instead of hard clipping, while maintaining precision for other values. We evaluate on Mamba-130M across 6 zero-shot benchmarks. Results show that Quamba-SE consistently outperforms Quamba, achieving up to +2.68% on individual benchmarks and up to +0.83% improvement in the average accuracy of 6 datasets.",
+        "identifiers": [
+          "SemanticScholar:d862a93c8ef5eadf6ff7a8aea5c6d1e82c1c6e86"
+        ],
+        "semantic_scholar_id": "d862a93c8ef5eadf6ff7a8aea5c6d1e82c1c6e86",
+        "canonical_id": "arXiv:2601.09451",
+        "arxiv_id": "2601.09451",
+        "doi": "10.23919/DATE69613.2026.11539145",
+        "authors": [
+          "Yi-Zhi Chen",
+          "A. Hemani"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 314,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.19488",
+      "identity_tokens": [
+        "id:DOI:10.1145/3689031.3696071",
+        "id:SemanticScholar:dbc57324658bd1db89e28fbf7d05d4466c501bcf",
+        "id:arXiv:2409.19488",
+        "title:a house united within itself sloawareness for onpremises containerized ml inference clusters via faro",
+        "url:https://arxiv.org/abs/2409.19488"
+      ],
+      "record": {
+        "title": "A House United Within Itself: SLO-Awareness for On-Premises Containerized ML Inference Clusters via Faro",
+        "source_url": "https://arxiv.org/abs/2409.19488",
+        "year": 2024,
+        "published": "2024-09-29",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper tackles the challenge of running multiple ML inference jobs (models) under time-varying workloads, on a constrained on-premises production cluster. Our system Faro takes in latency Service Level Objectives (SLOs) for each job, auto-distills them into utility functions, \"sloppifies\" these utility functions to make them amenable to mathematical optimization, automatically predicts workload via probabilistic prediction, and dynamically makes implicit cross-job resource allocations, in order to satisfy cluster-wide objectives, e.g., total utility, fairness, and other hybrid variants. A major challenge Faro tackles is that using precise utilities and high-fidelity predictors, can be too slow (and in a sense too precise!) for the fast adaptation we require. Faro's solution is to \"sloppify\" (relax) its multiple design components to achieve fast adaptation without overly degrading solution quality. Faro is implemented in a stack consisting of Ray Serve running atop a Kubernetes cluster. Trace-driven cluster deployments show that Faro achieves 2.3×-23× lower SLO violations compared to state-of-the-art systems.",
+        "identifiers": [
+          "SemanticScholar:dbc57324658bd1db89e28fbf7d05d4466c501bcf"
+        ],
+        "semantic_scholar_id": "dbc57324658bd1db89e28fbf7d05d4466c501bcf",
+        "canonical_id": "arXiv:2409.19488",
+        "arxiv_id": "2409.19488",
+        "doi": "10.1145/3689031.3696071",
+        "authors": [
+          "Beomyeol Jeon",
+          "Chen Wang",
+          "Diana Arroyo",
+          "Alaa Youssef",
+          "Indranil Gupta"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 786,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:de236e02141adf14181b57c3bc7fa05164739260ddc7c043ace2a1ac2862e94d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

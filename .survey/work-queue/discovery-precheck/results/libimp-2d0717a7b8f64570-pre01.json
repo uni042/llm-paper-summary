@@ -1,0 +1,576 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2d0717a7b8f64570-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2d0717a7b8f6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.14778/3725688.3725716",
+    "DOI:10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+    "DOI:10.7717/peerj-cs.3769",
+    "SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95",
+    "arXiv:2409.15298",
+    "arXiv:2506.01140"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c76e1770bc7c82370ebe5da4ab8530f57d569d75",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T21:42:24.556739+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.14778/3725688.3725716",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.7717/peerj-cs.3769",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2409.15298",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.01140",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Real-time and offline large language models on edge devices: a systematic review",
+      "source_url": "https://doi.org/10.7717/peerj-cs.3769",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "PeerJ Computer Science",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models have recently gained prominence for deployment on edge devices, owing to their potential to support privacy-preserving, low-latency, and offline inference. Nevertheless, their considerable computational and memory requirements present fundamental challenges in both real-time and offline scenarios. This systematic review synthesizes evidence from 49 studies identified through a structured search and screening process, of which 34 were included in the qualitative synthesis. Among these, a subset of studies providing sufficient methodological detail and full-text access was analyzed in depth to investigate techniques, challenges, and applications of Large Language Models (LLM) deployment on edge devices. The studies were identified through a structured search and screening process, and data were extracted regarding model types, hardware platforms, optimization strategies, and performance outcomes. Findings indicate that hardware acceleration, model compression, and hybrid edge–cloud strategies can yield latency reductions of up to 972×, memory savings of up to 130×, and energy efficiency improvements exceeding 1,600×, within the evaluated experimental settings, while largely preserving accuracy. Real-time deployments are predominantly applied in robotics, healthcare monitoring, and autonomous driving, whereas offline deployments are tailored to privacy-sensitive or batch-oriented contexts. The review also identifies persistent research gaps, including the absence of standardized benchmarks and the limited generalizability of results to real-world environments. It concludes by outlining future research directions, with particular emphasis on hardware–software co-design, federated learning, and secure task offloading.",
+      "identifiers": [
+        "SemanticScholar:715cff880949dee1342f90faed35230a218780b9"
+      ],
+      "semantic_scholar_id": "715cff880949dee1342f90faed35230a218780b9",
+      "doi": "10.7717/peerj-cs.3769",
+      "canonical_id": "DOI:10.7717/peerj-cs.3769",
+      "authors": [
+        "Erçin Dinçer",
+        "Zeynep Hilal Kilimci"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model",
+      "source_url": "https://arxiv.org/abs/2409.15298",
+      "year": 2024,
+      "published": "2024-09-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For reasons such as privacy, there are use cases for language models at the edge. This has given rise to small language models targeted for deployment in resource-constrained devices where energy efficiency is critical. Spiking neural networks (SNNs) offer a promising solution due to their energy efficiency, and there are already works on realizing transformer-based models on SNNs. However, key operations like softmax and layer normalization (LN) are difficult to implement on neuromorphic hardware, and many of these early works sidestepped them. To address these challenges, we introduce Sorbet, a transformer-based spiking language model that is more neuromorphic hardware-compatible. Sorbet incorporates a novel shifting-based softmax called PTsoftmax and a Bit Shifting PowerNorm (BSPN), both designed to replace the respective energy-intensive operations. By leveraging knowledge distillation and model quantization, Sorbet achieved a highly compressed binary weight model that maintains competitive performance while achieving $27.16\\times$ energy savings compared to BERT. We validate Sorbet through extensive testing on the GLUE benchmark and a series of ablation studies, demonstrating its potential as an energy-efficient solution for language model inference. Our code is publicly available at \\href{https://github.com/Kaiwen-Tang/Sorbet}{https://github.com/Kaiwen-Tang/Sorbet}",
+      "identifiers": [
+        "SemanticScholar:960d570013c60f5f8df50134a4824c0eb4012371"
+      ],
+      "semantic_scholar_id": "960d570013c60f5f8df50134a4824c0eb4012371",
+      "canonical_id": "arXiv:2409.15298",
+      "arxiv_id": "2409.15298",
+      "doi": "10.48550/arXiv.2409.15298",
+      "authors": [
+        "Kaiwen Tang",
+        "Zhang-Lu Yan",
+        "Weng-Fai Wong"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 27,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 811,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "LLM on the edge: the new frontier",
+      "source_url": "https://doi.org/10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+      "year": 2025,
+      "published": "2025-03-14",
+      "venue": "doors",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advent of large language models (LLMs) has revolutionized natural language processing, enabling unprece- dented capabilities in text generation, reasoning, and human-machine interaction. However, their deployment on resource-constrained edge devices presents significant challenges due to high computational complexity, large model sizes, and stringent latency and privacy requirements. This survey provides a comprehensive examina- tion of the emerging field of edge-based LLMs, exploring the techniques, frameworks, hardware solutions, and real-world applications that enable their efficient deployment at the edge. We review key strategies such as model quantization, pruning, knowledge distillation, and adapter tuning, alongside edge-cloud collaborative architectures like EdgeShard, Edge-LLM, and PAC. Additionally, we analyze hardware acceleration solutions, including Cambricon-LLM, AxLaM, and DTATrans/DTQAtten, and their role in overcoming resource limitations. The survey highlights diverse applications, from IoT and smart cities to personalized services and multi-modal intelligence, supported by case studies of real-world deployments. Finally, we discuss open challenges – such as resource efficiency, privacy, security, and scalability – and propose future research directions to advance this transformative technology.",
+      "identifiers": [
+        "SemanticScholar:70fac71aaa1b1531de657bcd524a35f554d9815a"
+      ],
+      "semantic_scholar_id": "70fac71aaa1b1531de657bcd524a35f554d9815a",
+      "doi": "10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+      "canonical_id": "DOI:10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+      "authors": [
+        "S. Semerikov",
+        "T. Vakaliuk",
+        "O. Kanevska",
+        "M. Moiseienko",
+        "I. Donchev",
+        "A. Kolhatin"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 620,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Structured Sparsity in Transformers for Efficient Inference",
+      "source_url": "https://www.semanticscholar.org/paper/93cf96c7da71a8811d065cef789cfedfaa62df95",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95"
+      ],
+      "semantic_scholar_id": "93cf96c7da71a8811d065cef789cfedfaa62df95",
+      "canonical_id": "SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95",
+      "authors": [
+        "Harry Dong",
+        "Beidi Chen",
+        "Yuejie Chi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GPEmu: A GPU Emulator for Faster and Cheaper Prototyping and Evaluation of Deep Learning System Research",
+      "source_url": "https://doi.org/10.14778/3725688.3725716",
+      "year": 2025,
+      "published": "2025-02-01",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep learning (DL) system research is often impeded by the limited availability and expensive costs of GPUs. In this paper, we introduce GPEmu, a GPU emulator for faster and cheaper prototyping and evaluation of deep learning system research without using real GPUs. GPEmu comes with four novel features: time emulation, memory emulation, distributed system support, and sharing support. We support over 30 DL models and 6 GPU models, the largest scale to date. We demonstrate the power of GPEmu by successfully reproducing the main results of nine recent publications and easily prototyping three new micro-optimizations.",
+      "identifiers": [
+        "SemanticScholar:20e038c4d0f340452d83094a02d938b6f15afd19"
+      ],
+      "semantic_scholar_id": "20e038c4d0f340452d83094a02d938b6f15afd19",
+      "doi": "10.14778/3725688.3725716",
+      "canonical_id": "DOI:10.14778/3725688.3725716",
+      "authors": [
+        "Meng Wang",
+        "Gus Waldspurger",
+        "Naufal Ananda",
+        "Yu-Yang Huang",
+        "K. Wiharja",
+        "J. Bent",
+        "Swaminathan Sundararaman",
+        "V. Chidambaram",
+        "Haryadi S. Gunawi"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 661,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory-Based Ternary LLMs",
+      "source_url": "https://arxiv.org/abs/2506.01140",
+      "year": 2025,
+      "published": "2025-06-01",
+      "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary large language models (LLMs), which use ternary precision weights and 8-bit activations, have demonstrated competitive performance while significantly reducing the high computational and memory requirements of full-precision LLMs. The energy efficiency and performance of ternary LLMs can be further improved by deploying them on ternary computing-in-memory (TCiM) accelerators, thereby alleviating the von-Neumann bottleneck. However, TCiM accelerators are prone to memory stuck-at faults (SAFs) leading to degradation in model accuracy. This is particularly severe for LLMs due to their low weight sparsity. To boost SAF tolerance of TCiM accelerators, we propose ReTern that is based on 1) fault-aware sign transformations (FASTs) and 2) TCiM bitcell reprogramming exploiting their natural redundancy. The key idea is to use FAST to minimize computation errors due to SAFs in +1/−1 weights, while the natural bitcell redundancy is exploited to target SAFs in 0 weights (zero-fix). Our experiments on BitNet b1.58 700M and 3B ternary LLMs show that our technique furnishes significant fault tolerance, notably ~35% reduction in perplexity on the Wikitext dataset in the presence of faults. These benefits come at the cost of <3%, <7%, and <1% energy, latency, and area overheads, respectively.",
+      "identifiers": [
+        "SemanticScholar:0ae62f335c05ab3b4eb3f1b0aef7187db54b7cf7"
+      ],
+      "semantic_scholar_id": "0ae62f335c05ab3b4eb3f1b0aef7187db54b7cf7",
+      "canonical_id": "arXiv:2506.01140",
+      "arxiv_id": "2506.01140",
+      "doi": "10.1109/TVLSI.2025.3585043",
+      "authors": [
+        "Akul Malhotra",
+        "Sumeet Kumar Gupta"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 541,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.7717/peerj-cs.3769",
+      "identity_tokens": [
+        "id:DOI:10.7717/peerj-cs.3769",
+        "id:SemanticScholar:715cff880949dee1342f90faed35230a218780b9",
+        "title:realtime and offline large language models on edge devices a systematic review",
+        "url:https://doi.org/10.7717/peerj-cs.3769"
+      ],
+      "record": {
+        "title": "Real-time and offline large language models on edge devices: a systematic review",
+        "source_url": "https://doi.org/10.7717/peerj-cs.3769",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "PeerJ Computer Science",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models have recently gained prominence for deployment on edge devices, owing to their potential to support privacy-preserving, low-latency, and offline inference. Nevertheless, their considerable computational and memory requirements present fundamental challenges in both real-time and offline scenarios. This systematic review synthesizes evidence from 49 studies identified through a structured search and screening process, of which 34 were included in the qualitative synthesis. Among these, a subset of studies providing sufficient methodological detail and full-text access was analyzed in depth to investigate techniques, challenges, and applications of Large Language Models (LLM) deployment on edge devices. The studies were identified through a structured search and screening process, and data were extracted regarding model types, hardware platforms, optimization strategies, and performance outcomes. Findings indicate that hardware acceleration, model compression, and hybrid edge–cloud strategies can yield latency reductions of up to 972×, memory savings of up to 130×, and energy efficiency improvements exceeding 1,600×, within the evaluated experimental settings, while largely preserving accuracy. Real-time deployments are predominantly applied in robotics, healthcare monitoring, and autonomous driving, whereas offline deployments are tailored to privacy-sensitive or batch-oriented contexts. The review also identifies persistent research gaps, including the absence of standardized benchmarks and the limited generalizability of results to real-world environments. It concludes by outlining future research directions, with particular emphasis on hardware–software co-design, federated learning, and secure task offloading.",
+        "identifiers": [
+          "SemanticScholar:715cff880949dee1342f90faed35230a218780b9"
+        ],
+        "semantic_scholar_id": "715cff880949dee1342f90faed35230a218780b9",
+        "doi": "10.7717/peerj-cs.3769",
+        "canonical_id": "DOI:10.7717/peerj-cs.3769",
+        "authors": [
+          "Erçin Dinçer",
+          "Zeynep Hilal Kilimci"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.15298",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.15298",
+        "id:SemanticScholar:960d570013c60f5f8df50134a4824c0eb4012371",
+        "id:arXiv:2409.15298",
+        "title:sorbet a neuromorphic hardwarecompatible transformerbased spiking language model",
+        "url:https://arxiv.org/abs/2409.15298"
+      ],
+      "record": {
+        "title": "Sorbet: A Neuromorphic Hardware-Compatible Transformer-Based Spiking Language Model",
+        "source_url": "https://arxiv.org/abs/2409.15298",
+        "year": 2024,
+        "published": "2024-09-04",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 17,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For reasons such as privacy, there are use cases for language models at the edge. This has given rise to small language models targeted for deployment in resource-constrained devices where energy efficiency is critical. Spiking neural networks (SNNs) offer a promising solution due to their energy efficiency, and there are already works on realizing transformer-based models on SNNs. However, key operations like softmax and layer normalization (LN) are difficult to implement on neuromorphic hardware, and many of these early works sidestepped them. To address these challenges, we introduce Sorbet, a transformer-based spiking language model that is more neuromorphic hardware-compatible. Sorbet incorporates a novel shifting-based softmax called PTsoftmax and a Bit Shifting PowerNorm (BSPN), both designed to replace the respective energy-intensive operations. By leveraging knowledge distillation and model quantization, Sorbet achieved a highly compressed binary weight model that maintains competitive performance while achieving $27.16\\times$ energy savings compared to BERT. We validate Sorbet through extensive testing on the GLUE benchmark and a series of ablation studies, demonstrating its potential as an energy-efficient solution for language model inference. Our code is publicly available at \\href{https://github.com/Kaiwen-Tang/Sorbet}{https://github.com/Kaiwen-Tang/Sorbet}",
+        "identifiers": [
+          "SemanticScholar:960d570013c60f5f8df50134a4824c0eb4012371"
+        ],
+        "semantic_scholar_id": "960d570013c60f5f8df50134a4824c0eb4012371",
+        "canonical_id": "arXiv:2409.15298",
+        "arxiv_id": "2409.15298",
+        "doi": "10.48550/arXiv.2409.15298",
+        "authors": [
+          "Kaiwen Tang",
+          "Zhang-Lu Yan",
+          "Weng-Fai Wong"
+        ],
+        "priority": 27,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 17,
+          "citation_count": 17,
+          "total": 27,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 811,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+      "identity_tokens": [
+        "id:DOI:10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+        "id:SemanticScholar:70fac71aaa1b1531de657bcd524a35f554d9815a",
+        "title:llm on the edge the new frontier",
+        "url:https://doi.org/10.55056/ceur-ws.org/vol-3943/paper28.pdf"
+      ],
+      "record": {
+        "title": "LLM on the edge: the new frontier",
+        "source_url": "https://doi.org/10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+        "year": 2025,
+        "published": "2025-03-14",
+        "venue": "doors",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The advent of large language models (LLMs) has revolutionized natural language processing, enabling unprece- dented capabilities in text generation, reasoning, and human-machine interaction. However, their deployment on resource-constrained edge devices presents significant challenges due to high computational complexity, large model sizes, and stringent latency and privacy requirements. This survey provides a comprehensive examina- tion of the emerging field of edge-based LLMs, exploring the techniques, frameworks, hardware solutions, and real-world applications that enable their efficient deployment at the edge. We review key strategies such as model quantization, pruning, knowledge distillation, and adapter tuning, alongside edge-cloud collaborative architectures like EdgeShard, Edge-LLM, and PAC. Additionally, we analyze hardware acceleration solutions, including Cambricon-LLM, AxLaM, and DTATrans/DTQAtten, and their role in overcoming resource limitations. The survey highlights diverse applications, from IoT and smart cities to personalized services and multi-modal intelligence, supported by case studies of real-world deployments. Finally, we discuss open challenges – such as resource efficiency, privacy, security, and scalability – and propose future research directions to advance this transformative technology.",
+        "identifiers": [
+          "SemanticScholar:70fac71aaa1b1531de657bcd524a35f554d9815a"
+        ],
+        "semantic_scholar_id": "70fac71aaa1b1531de657bcd524a35f554d9815a",
+        "doi": "10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+        "canonical_id": "DOI:10.55056/ceur-ws.org/vol-3943/paper28.pdf",
+        "authors": [
+          "S. Semerikov",
+          "T. Vakaliuk",
+          "O. Kanevska",
+          "M. Moiseienko",
+          "I. Donchev",
+          "A. Kolhatin"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 620,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95",
+      "identity_tokens": [
+        "id:SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95",
+        "title:towards structured sparsity in transformers for efficient inference",
+        "url:https://www.semanticscholar.org/paper/93cf96c7da71a8811d065cef789cfedfaa62df95"
+      ],
+      "record": {
+        "title": "Towards Structured Sparsity in Transformers for Efficient Inference",
+        "source_url": "https://www.semanticscholar.org/paper/93cf96c7da71a8811d065cef789cfedfaa62df95",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95"
+        ],
+        "semantic_scholar_id": "93cf96c7da71a8811d065cef789cfedfaa62df95",
+        "canonical_id": "SemanticScholar:93cf96c7da71a8811d065cef789cfedfaa62df95",
+        "authors": [
+          "Harry Dong",
+          "Beidi Chen",
+          "Yuejie Chi"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14778/3725688.3725716",
+      "identity_tokens": [
+        "id:DOI:10.14778/3725688.3725716",
+        "id:SemanticScholar:20e038c4d0f340452d83094a02d938b6f15afd19",
+        "title:gpemu a gpu emulator for faster and cheaper prototyping and evaluation of deep learning system research",
+        "url:https://doi.org/10.14778/3725688.3725716"
+      ],
+      "record": {
+        "title": "GPEmu: A GPU Emulator for Faster and Cheaper Prototyping and Evaluation of Deep Learning System Research",
+        "source_url": "https://doi.org/10.14778/3725688.3725716",
+        "year": 2025,
+        "published": "2025-02-01",
+        "venue": "Proceedings of the VLDB Endowment",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep learning (DL) system research is often impeded by the limited availability and expensive costs of GPUs. In this paper, we introduce GPEmu, a GPU emulator for faster and cheaper prototyping and evaluation of deep learning system research without using real GPUs. GPEmu comes with four novel features: time emulation, memory emulation, distributed system support, and sharing support. We support over 30 DL models and 6 GPU models, the largest scale to date. We demonstrate the power of GPEmu by successfully reproducing the main results of nine recent publications and easily prototyping three new micro-optimizations.",
+        "identifiers": [
+          "SemanticScholar:20e038c4d0f340452d83094a02d938b6f15afd19"
+        ],
+        "semantic_scholar_id": "20e038c4d0f340452d83094a02d938b6f15afd19",
+        "doi": "10.14778/3725688.3725716",
+        "canonical_id": "DOI:10.14778/3725688.3725716",
+        "authors": [
+          "Meng Wang",
+          "Gus Waldspurger",
+          "Naufal Ananda",
+          "Yu-Yang Huang",
+          "K. Wiharja",
+          "J. Bent",
+          "Swaminathan Sundararaman",
+          "V. Chidambaram",
+          "Haryadi S. Gunawi"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 661,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.01140",
+      "identity_tokens": [
+        "id:DOI:10.1109/tvlsi.2025.3585043",
+        "id:SemanticScholar:0ae62f335c05ab3b4eb3f1b0aef7187db54b7cf7",
+        "id:arXiv:2506.01140",
+        "title:retern exploiting natural redundancy and sign transformations for enhanced fault tolerance in computeinmemorybased ternary llms",
+        "url:https://arxiv.org/abs/2506.01140"
+      ],
+      "record": {
+        "title": "ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory-Based Ternary LLMs",
+        "source_url": "https://arxiv.org/abs/2506.01140",
+        "year": 2025,
+        "published": "2025-06-01",
+        "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ternary large language models (LLMs), which use ternary precision weights and 8-bit activations, have demonstrated competitive performance while significantly reducing the high computational and memory requirements of full-precision LLMs. The energy efficiency and performance of ternary LLMs can be further improved by deploying them on ternary computing-in-memory (TCiM) accelerators, thereby alleviating the von-Neumann bottleneck. However, TCiM accelerators are prone to memory stuck-at faults (SAFs) leading to degradation in model accuracy. This is particularly severe for LLMs due to their low weight sparsity. To boost SAF tolerance of TCiM accelerators, we propose ReTern that is based on 1) fault-aware sign transformations (FASTs) and 2) TCiM bitcell reprogramming exploiting their natural redundancy. The key idea is to use FAST to minimize computation errors due to SAFs in +1/−1 weights, while the natural bitcell redundancy is exploited to target SAFs in 0 weights (zero-fix). Our experiments on BitNet b1.58 700M and 3B ternary LLMs show that our technique furnishes significant fault tolerance, notably ~35% reduction in perplexity on the Wikitext dataset in the presence of faults. These benefits come at the cost of <3%, <7%, and <1% energy, latency, and area overheads, respectively.",
+        "identifiers": [
+          "SemanticScholar:0ae62f335c05ab3b4eb3f1b0aef7187db54b7cf7"
+        ],
+        "semantic_scholar_id": "0ae62f335c05ab3b4eb3f1b0aef7187db54b7cf7",
+        "canonical_id": "arXiv:2506.01140",
+        "arxiv_id": "2506.01140",
+        "doi": "10.1109/TVLSI.2025.3585043",
+        "authors": [
+          "Akul Malhotra",
+          "Sumeet Kumar Gupta"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 541,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cb784af39cae70905e9d930455e6ac3795711fc443dc4ec7ad0b4078ae5c91e4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
