@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b04::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:976d3da7b9cb198d8b054fab699c408fbbf54ea1",
+      "identity_tokens": [
+        "SemanticScholar:976d3da7b9cb198d8b054fab699c408fbbf54ea1"
+      ],
+      "title": "MIT Open Access Articles Understanding Communication Characteristics of Distributed Training",
+      "reason": "Systematically analyzes communication patterns and overhead in distributed training and fits an analytical overhead model; a training-systems measurement study with no inference content.",
+      "source_url": "https://www.semanticscholar.org/paper/976d3da7b9cb198d8b054fab699c408fbbf54ea1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21714",
+      "identity_tokens": [
+        "arXiv:2601.21714"
+      ],
+      "title": "E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory",
+      "reason": "E-mem reconstructs episodic context with multiple assistant agents instead of compressing memory for long-horizon LLM agents; agent memory architecture adjacent to inference context handling, but no serving/decoding technique.",
+      "source_url": "https://arxiv.org/abs/2601.21714",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JSSC.2025.3603187",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2025.3603187"
+      ],
+      "title": "T-REX: Hardware–Software Co-Optimized Transformer Accelerator With Reduced External Memory Access and Enhanced Hardware Utilization",
+      "reason": "T-REX is a hardware-software Transformer accelerator minimizing external memory access with compression and dynamic batching, but it also introduces a factorizing training method and targets training as well as inference; mixed scope, not clearly an inference-system contribution.",
+      "source_url": "https://doi.org/10.1109/JSSC.2025.3603187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00017",
+      "identity_tokens": [
+        "arXiv:2608.00017"
+      ],
+      "title": "Memory Reward Inflation in Self-Improving LLM Agents",
+      "reason": "Shows stored self-assessment rewards inflate for incorrect episodes in memory-based self-improving LLM agents (the Echo Gap); an analysis of agent memory systems, not an inference technique.",
+      "source_url": "https://arxiv.org/abs/2608.00017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.27666",
+      "identity_tokens": [
+        "arXiv:2603.27666"
+      ],
+      "title": "Gated Condition Injection without Multimodal Attention: Towards Controllable Linear-Attention Transformers",
+      "reason": "Builds controllable diffusion generation on linear-attention Transformers for secure on-device generation with gated condition injection; efficient architecture, but the target is image generation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2603.27666",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09036",
+      "identity_tokens": [
+        "arXiv:2605.09036"
+      ],
+      "title": "PACT: Peak-Aware Cross-Attention Graph Transformers for Efficient Storm-Surge Emulation",
+      "reason": "PACT is a peak-aware cross-attention graph Transformer that emulates storm surge from atmospheric forcing for coastal hazard assessment; a weather-prediction application, confirmed by the abstract.",
+      "source_url": "https://arxiv.org/abs/2605.09036",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13708",
+      "identity_tokens": [
+        "arXiv:2410.13708"
+      ],
+      "title": "On the Role of Attention Heads in Large Language Model Safety",
+      "reason": "Studies the role of attention heads in LLM safety via mechanistic interpretability metrics; a safety analysis with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2410.13708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 257
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3650212.3680371",
+      "identity_tokens": [
+        "DOI:10.1145/3650212.3680371"
+      ],
+      "title": "CoSec: On-the-Fly Security Hardening of Code LLMs via Supervised Co-decoding",
+      "reason": "CoSec hardens code LLMs at decoding time with a supervised co-decoding partner that steers away from vulnerable code; an inference-time decoding intervention, but for security rather than inference efficiency or serving.",
+      "source_url": "https://doi.org/10.1145/3650212.3680371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.12816",
+      "identity_tokens": [
+        "arXiv:2305.12816"
+      ],
+      "title": "Farewell to Aimless Large-scale Pretraining: Influential Subset Selection for Language Model",
+      "reason": "Influence Subset Selection picks a tiny influential subset of the pretraining corpus using end-task gradient matching; pretraining data efficiency, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2305.12816",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2306.01220",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2306.01220"
+      ],
+      "title": "Is Model Attention Aligned with Human Attention? An Empirical Study on Large Language Models for Code Generation",
+      "reason": "Empirically compares LLM attention with human programmer attention during code generation; an interpretability study with no inference-system contribution.",
+      "source_url": "https://doi.org/10.48550/arXiv.2306.01220",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 260
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics14132718",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14132718"
+      ],
+      "title": "Comparative Study on Energy Consumption of Neural Networks by Scaling of Weight-Memory Energy Versus Computing Energy for Implementing Low-Power Edge Intelligence",
+      "reason": "Compares how weight-memory versus compute energy scales for CNNs and LLM Transformers across batch sizes on edge intelligence; an energy measurement study relevant to inference deployment, but no new technique.",
+      "source_url": "https://doi.org/10.3390/electronics14132718",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 261
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.03142",
+      "identity_tokens": [
+        "arXiv:2402.03142"
+      ],
+      "title": "Less is KEN: a Universal and Simple Non-Parametric Pruning Algorithm for Large Language Models",
+      "reason": "KEN is a non-parametric unstructured pruning algorithm for LLMs based on kernel density estimation that preserves significant parameters and stores only the optimized subnetwork; direct LLM pruning for deployment.",
+      "source_url": "https://arxiv.org/abs/2402.03142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 262
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.01378",
+      "identity_tokens": [
+        "arXiv:2502.01378"
+      ],
+      "title": "CE-LoRA: Computation-Efficient LoRA Fine-Tuning for Language Models",
+      "reason": "CE-LoRA speeds up LoRA fine-tuning by approximating activation-gradient matrix multiplications; a fine-tuning efficiency method with no inference application.",
+      "source_url": "https://arxiv.org/abs/2502.01378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 263
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CCGridW69005.2026.00038",
+      "identity_tokens": [
+        "DOI:10.1109/CCGridW69005.2026.00038"
+      ],
+      "title": "Comparative Analysis of Model Pruning Approaches for Optimizing Small Language Models",
+      "reason": "Compares WANDA, RIA and a hybrid pruning method on small language models for healthcare deployment; a comparative pruning study in an application sector, with no new serving system.",
+      "source_url": "https://doi.org/10.1109/CCGridW69005.2026.00038",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 264
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05784",
+      "identity_tokens": [
+        "arXiv:2409.05784"
+      ],
+      "title": "Vector Quantized Diffusion Model Based Speech Bandwidth Extension",
+      "reason": "Uses vector-quantized diffusion over neural audio codec tokens for speech bandwidth extension; an audio signal-processing application, not LLM inference (the quantization is of audio features).",
+      "source_url": "https://arxiv.org/abs/2409.05784",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 265
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03417",
+      "identity_tokens": [
+        "arXiv:2601.03417"
+      ],
+      "title": "Implicit Graph, Explicit Retrieval: Towards Efficient and Interpretable Long-horizon Memory for Large Language Models",
+      "reason": "LatentGraphMem stores graph-structured memory in latent space with explicit subgraph retrieval for long-horizon LLM QA; a memory-system design for context handling, adjacent to but not an inference execution technique.",
+      "source_url": "https://arxiv.org/abs/2601.03417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 266
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14913",
+      "identity_tokens": [
+        "arXiv:2605.14913"
+      ],
+      "title": "Representative Attention For Vision Transformers",
+      "reason": "Representative Attention compresses spatial tokens into representation-space proxies for linear global attention in Vision Transformers; an efficient attention variant for vision models, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2605.14913",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 267
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.23373",
+      "identity_tokens": [
+        "arXiv:2607.23373"
+      ],
+      "title": "UltraViT: Latency-Optimized On-device Vision Encoder for Large Vision-Language Models",
+      "reason": "UltraViT designs a pyramidal vision encoder explicitly optimized against measured on-device latencies for large vision-language models; direct inference-latency optimization of an LVLM component.",
+      "source_url": "https://arxiv.org/abs/2607.23373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 268
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.13667",
+      "identity_tokens": [
+        "arXiv:2608.13667"
+      ],
+      "title": "Second Thought: Reasoning in Parallel as LLM Agents Act and Observe",
+      "reason": "Second Thought forks auxiliary reasoning branches that decode concurrently during ReAct action/observation idle windows and merges them back, relocating reasoning into otherwise wasted inference time; a direct inference-time execution framework.",
+      "source_url": "https://arxiv.org/abs/2608.13667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 269
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12959",
+      "identity_tokens": [
+        "arXiv:2610.12959"
+      ],
+      "title": "Video Codec-Guided Training-Free Token Compression for Video Large Language Models",
+      "reason": "Uses video codec motion vectors, residuals and reference dependencies as a cheap prior for training-free visual token compression in video LLMs; direct inference token compression for VLLMs.",
+      "source_url": "https://arxiv.org/abs/2610.12959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 270
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b04",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

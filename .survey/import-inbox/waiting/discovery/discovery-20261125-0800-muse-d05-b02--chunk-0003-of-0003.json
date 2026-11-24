@@ -1,0 +1,175 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d05-b02::chunk-0003-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.04124",
+      "identity_tokens": [
+        "arXiv:2405.04124"
+      ],
+      "title": "Comparative study of state-based neural networks for virtual analog audio effects modeling",
+      "reason": "Title explicitly limits the work to neural networks for virtual analog audio effects modeling, an audio-effects application, with no language-model inference subject in the title.",
+      "source_url": "https://arxiv.org/abs/2405.04124",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.15685",
+      "identity_tokens": [
+        "arXiv:2411.15685"
+      ],
+      "title": "State-Space Large Audio Language Models",
+      "reason": "State-space large audio language models replace quadratic transformer attention with SSMs to ease memory and time constraints in audio reasoning deployment; an alternative-architecture proposal for an audio application, with efficiency motivation but no LLM serving mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2411.15685",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05578",
+      "identity_tokens": [
+        "arXiv:2511.05578"
+      ],
+      "title": "UTF-8 Plumbing: Byte-level Tokenizers Unavoidably Enable LLMs to Generate Ill-formed UTF-8",
+      "reason": "Byte-level tokenizers are shown to unavoidably let LLMs emit ill-formed UTF-8; a tokenization correctness analysis with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2511.05578",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.05503",
+      "identity_tokens": [
+        "arXiv:2309.05503"
+      ],
+      "title": "Long-Range Transformer Architectures for Document Understanding",
+      "reason": "Long-range transformer variants using local, hierarchical and recurrent attention are explored for multi-page document understanding; efficient-attention architectures demonstrated on a document application rather than LLM serving, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2309.05503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.02209",
+      "identity_tokens": [
+        "arXiv:2508.02209"
+      ],
+      "title": "Balancing Information Accuracy and Response Timeliness in Networked LLMs",
+      "reason": "A networked system aggregates outputs of smaller specialized language models, trading information accuracy against response timeliness; a deployment-level composition study without a concrete serving or decoding mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2508.02209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01463",
+      "identity_tokens": [
+        "arXiv:2511.01463"
+      ],
+      "title": "HMVLM: Human Motion-Vision-Lanuage Model via MoE LoRA",
+      "reason": "HMVLM integrates 3D human motion into language models via MoE LoRA instruction tuning; a multimodal capability model for motion understanding with no inference contribution.",
+      "source_url": "https://arxiv.org/abs/2511.01463",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.14680",
+      "identity_tokens": [
+        "arXiv:2404.14680"
+      ],
+      "title": "Automated Multi-Language to English Machine Translation Using Generative Pre-Trained Transformers",
+      "reason": "Sixteen open GPT models are benchmarked zero-shot for multilingual-to-English translation; an application benchmark study with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2404.14680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18575",
+      "identity_tokens": [
+        "arXiv:2507.18575"
+      ],
+      "title": "Hybrid Transformer-Mamba Model for 3D Semantic Segmentation",
+      "reason": "HybridTM combines transformer global attention with Mamba linear processing for 3D semantic segmentation of point clouds; a 3D vision architecture with no LLM inference relevance.",
+      "source_url": "https://arxiv.org/abs/2507.18575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.03613",
+      "identity_tokens": [
+        "arXiv:2106.03613"
+      ],
+      "title": "RoSearch: Search for Robust Student Architectures When Distilling Pre-trained Language Models",
+      "reason": "RoSearch searches distilled student architectures that resist adversarial attacks when compressing pretrained language models; compression is via distillation architecture search with a robustness objective and training-time cost, so the inference contribution is indirect and borderline.",
+      "source_url": "https://arxiv.org/abs/2106.03613",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.07965",
+      "identity_tokens": [
+        "arXiv:2504.07965"
+      ],
+      "title": "Cat, Rat, Meow: On the Alignment of Language Model and Human Term-Similarity Judgments",
+      "reason": "Thirty-two language models are compared with human term-similarity judgments at behavioral and representational levels; a cognitive alignment evaluation with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2504.07965",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d05-b02",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d02-b03::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.07193",
+      "identity_tokens": [
+        "arXiv:2608.07193"
+      ],
+      "title": "An AI4AI Framework for Visual Token Pruning",
+      "reason": "視覚トークン剪定手法の設計自体をLLMに自動化させるAI4AI枠組みであり、MLLM推論コスト削減手法の生成へ直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2608.07193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 316
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.02031",
+      "identity_tokens": [
+        "arXiv:2307.02031"
+      ],
+      "title": "Improving Automatic Parallel Training via Balanced Memory Workload Optimization",
+      "reason": "メモリ負荷均衡による自動並列学習の改善が主題であり、対象は複数GPUでのTransformer学習で推論ではない。",
+      "source_url": "https://arxiv.org/abs/2307.02031",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICMLA66185.2025.00094",
+      "identity_tokens": [
+        "DOI:10.1109/ICMLA66185.2025.00094"
+      ],
+      "title": "Mamba World Model for RL: Enhancing Long-term Memory in Model-based Reinforcement Learning",
+      "reason": "Mambaワールドモデルによるモデルベース強化学習の長期記憶強化であり、ゲーム等のRL応用が対象でLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1109/ICMLA66185.2025.00094",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 318
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3636218.3636238",
+      "identity_tokens": [
+        "DOI:10.14778/3636218.3636238"
+      ],
+      "title": "FusionFlow: Accelerating Data Preparation for Machine Learning with Hybrid CPU-GPU Processing",
+      "reason": "FusionFlowはCPU-GPUハイブリッド処理による機械学習データ準備の高速化であり、学習前段のデータ拡張パイプラインが対象である。",
+      "source_url": "https://doi.org/10.14778/3636218.3636238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 319
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725843.3756092",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756092"
+      ],
+      "title": "SkipReduce: (Interconnection) Network Sparsity to Accelerate Distributed Machine Learning",
+      "reason": "SkipReduceは分散学習の集団通信を相互接続ネットワークの疎性で高速化する研究であり、対象は学習時の勾配通信である。",
+      "source_url": "https://doi.org/10.1145/3725843.3756092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 320
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00142",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00142"
+      ],
+      "title": "Cappuccino: Cost-Efficient Heterogeneous Lora Fine-Tuning Via Replica-Level Orchestration",
+      "reason": "Cappuccinoは共有クラスタ上のLoRA微調整ジョブをレプリカ単位で編成しGPU時間を削減するが、対象は微調整基盤であり推論サービングではない。",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00142",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 321
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICHBC68357.2025.11414599",
+      "identity_tokens": [
+        "DOI:10.1109/ICHBC68357.2025.11414599"
+      ],
+      "title": "Fine-Grained Asynchronous CPU-GPU Optimization for Efficient Large-Model Training",
+      "reason": "パラメータ単位の非同期CPU-GPU最適化で大規模モデル学習を高速化する研究であり、ZeRO-Offload系の学習時オフロードが対象である。",
+      "source_url": "https://doi.org/10.1109/ICHBC68357.2025.11414599",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 322
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCC.2026.3680955",
+      "identity_tokens": [
+        "DOI:10.1109/TCC.2026.3680955"
+      ],
+      "title": "AquaFed: Ascending Quantized Federated Learning on Heterogeneous Devices",
+      "reason": "AquaFedは異種デバイス上の量子化連合学習の学習効率を扱い、量子化も推論加速ではなくオンデバイス学習向けと明示される。",
+      "source_url": "https://doi.org/10.1109/TCC.2026.3680955",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22241",
+      "identity_tokens": [
+        "arXiv:2603.22241"
+      ],
+      "title": "MemDLM: Memory-Enhanced DLM Training",
+      "reason": "MemDLMは拡散言語モデルの学習目的を推論時の逐次デノイズ過程に合わせる学習手法であり、推論機構の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2603.22241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.03208",
+      "identity_tokens": [
+        "arXiv:2605.03208"
+      ],
+      "title": "Kerncap: Automated Kernel Extraction and Isolation for AMD GPUs",
+      "reason": "KerncapはAMD GPUカーネルの抽出・分離を自動化する調整支援ツールであり、推論カーネル開発の効率化には触れるが実行系機構ではない。",
+      "source_url": "https://arxiv.org/abs/2605.03208",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02954",
+      "identity_tokens": [
+        "arXiv:2608.02954"
+      ],
+      "title": "LowRank-SSM: Hardware-Software Co-Design for Rank-Reduced Mamba Acceleration on FPGA",
+      "reason": "LowRank-SSMはランク削減したMambaのFPGA向けハードウェア‐ソフトウェア協調設計であり、自己回帰推論の重み読出しコストを直接削減する。",
+      "source_url": "https://arxiv.org/abs/2608.02954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 326
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19801",
+      "identity_tokens": [
+        "arXiv:2610.19801"
+      ],
+      "title": "Delta Tokenizer: Reference-Identical Tokenization of Session Deltas and Segment-Parallelism for Long Prompts on Multicore CPUs",
+      "reason": "Delta Tokenizerはセッション差分だけを再トークン化しTTFTとサービング前端のCPU負荷を削減する、LLMサービングへ直接の機構である。",
+      "source_url": "https://arxiv.org/abs/2610.19801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.08770",
+      "identity_tokens": [
+        "arXiv:2611.08770"
+      ],
+      "title": "ReKV: Overlapping Quantized KV Transfer and Suffix Recomputation",
+      "reason": "ReKVはプリフィル‐デコード分離において量子化KV転送とサフィックス再計算を重ね合わせ、KVハンドオフの遅延を削減する。",
+      "source_url": "https://arxiv.org/abs/2611.08770",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3636534.3690694",
+      "identity_tokens": [
+        "DOI:10.1145/3636534.3690694"
+      ],
+      "title": "Turbocharge Speech Understanding with Pilot Inference",
+      "reason": "Pilot Inferenceによる音声理解パイプラインのエッジ高速化とオフロードは推論加速だが、対象は音声理解でありLLMサービングではない。",
+      "source_url": "https://doi.org/10.1145/3636534.3690694",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICNP61940.2024.10858546",
+      "identity_tokens": [
+        "DOI:10.1109/ICNP61940.2024.10858546"
+      ],
+      "title": "Kspeed: Beating I/O Bottlenecks of Data Provisioning for RDMA Training Clusters",
+      "reason": "KspeedはRDMA学習クラスタのデータ供給I/Oボトルネックを扱う研究であり、対象は学習時の前処理・データローディングである。",
+      "source_url": "https://doi.org/10.1109/ICNP61940.2024.10858546",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 330
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00594",
+      "identity_tokens": [
+        "arXiv:2502.00594"
+      ],
+      "title": "Fast Vision Mamba: Pooling Spatial Dimensions for Accelerated Processing",
+      "reason": "Fast Vision Mambaは空間次元プーリングで視覚SSMの処理を加速するが、対象は画像モデルでありLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2502.00594",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 331
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3699357",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3699357"
+      ],
+      "title": "RRLoRA: Refactorized Low-Rank Adaptation With Learning-Rate Restarts for Efficient Fine-Tuning",
+      "reason": "RRLoRAはLoRA微調整の学習時再因数分解による効率化であり、対象は微調整工程で推論への適用はない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3699357",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 332
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/HiPC58850.2023.00023",
+      "identity_tokens": [
+        "DOI:10.1109/HiPC58850.2023.00023"
+      ],
+      "title": "CAPTURE: Memory-Centric Partitioning for Distributed DNN Training with Hybrid Parallelism",
+      "reason": "CAPTUREはハイブリッド並列による分散DNN学習のメモリ中心的分割であり、学習基盤の研究で推論ではない。",
+      "source_url": "https://doi.org/10.1109/HiPC58850.2023.00023",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 333
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2103.15691",
+      "identity_tokens": [
+        "arXiv:2103.15691"
+      ],
+      "title": "ViViT: A Video Vision Transformer",
+      "reason": "ViViTは動画分類向け純Transformerアーキテクチャの提案であり、効率的変種も分類能力のための設計で推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2103.15691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 334
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.01476",
+      "identity_tokens": [
+        "arXiv:2407.01476"
+      ],
+      "title": "Tree Search for Language Model Agents",
+      "reason": "言語モデルエージェント向けの推論時木探索は探索による意思決定改善が主題であり、推論計算の配分には触れるが効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2407.01476",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 335
+    }
+  ],
+  "parent_run_key": "muse-20261125-d02-b03",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

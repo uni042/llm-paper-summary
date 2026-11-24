@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d06-b01::chunk-0003-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2103.16827",
+      "identity_tokens": [
+        "arXiv:2103.16827"
+      ],
+      "title": "Integer-Only Zero-Shot Quantization for Efficient Speech Recognition",
+      "reason": "本論文は音声認識モデルの整数のみゼロショット量子化でエッジ実行を可能にする研究であり、量子化機構は推論効率に関わるが対象はASR応用でLLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2103.16827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11449",
+      "identity_tokens": [
+        "arXiv:2506.11449"
+      ],
+      "title": "Dynamic Sparse Training of Diagonally Sparse Networks",
+      "reason": "DynaDiagは対角スパースネットワークの動的スパース学習法であり、学習過程の効率化が主対象で推論への具体的適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2506.11449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISVLSI54635.2022.00092",
+      "identity_tokens": [
+        "DOI:10.1109/ISVLSI54635.2022.00092"
+      ],
+      "title": "Accelerating NLP Tasks on FPGA with Compressed BERT and a Hardware-Oriented Early Exit Method",
+      "reason": "本論文は圧縮BERTと早期終了をFPGAへ実装しNLPタスクを高速化する研究だが、対象はBERT時代の組み込みNLPであり現在のLLM推論基盤への直接性は薄い。",
+      "source_url": "https://doi.org/10.1109/ISVLSI54635.2022.00092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.13730",
+      "identity_tokens": [
+        "arXiv:2205.13730"
+      ],
+      "title": "Understanding Long Programming Languages with Structure-Aware Sparse Attention",
+      "reason": "本論文は長大なコードを扱うため構造認識スパース注意をコード事前学習モデルへ導入する研究であり、注意効率に関わるが主対象はコード理解モデルの能力である。",
+      "source_url": "https://arxiv.org/abs/2205.13730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.07305",
+      "identity_tokens": [
+        "arXiv:2312.07305"
+      ],
+      "title": "SCCA: Shifted Cross Chunk Attention for long contextual semantic expansion",
+      "reason": "SCCAはシフト付きクロスチャンク注意で長文脈の意味拡張を行うスパース注意の提案だが、対象は一般の文脈モデリングでありLLM推論システムでの検証は確認できない。",
+      "source_url": "https://arxiv.org/abs/2312.07305",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.26277",
+      "identity_tokens": [
+        "arXiv:2509.26277"
+      ],
+      "title": "Cat: Post-training quantization error reduction via cluster-based affine transformation",
+      "reason": "Catはクラスタベースのアフィン変換で学習後量子化の誤差を減らす手法だが、要旨の対象は一般の深層ネットワークでありLLM推論への具体的な適用は明示されていない。",
+      "source_url": "https://arxiv.org/abs/2509.26277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15487",
+      "identity_tokens": [
+        "arXiv:2412.15487"
+      ],
+      "title": "Multi-LLM Text Summarization",
+      "reason": "Multi-LLM Text Summarizationは複数LLMの協調で要約を行う応用枠組みの研究であり、推論システムではなく要約タスクの生成・評価手順が主対象である。",
+      "source_url": "https://arxiv.org/abs/2412.15487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ncrna.2026.06.004",
+      "identity_tokens": [
+        "DOI:10.1016/j.ncrna.2026.06.004"
+      ],
+      "title": "LncPNdeep: A long non-coding RNA classifier based on large language model with peptide and nucleotide embedding",
+      "reason": "長鎖ノンコーディングRNA分類というバイオインフォマティクス応用がタイトルに明示され、LLM推論システムの対象外である。",
+      "source_url": "https://doi.org/10.1016/j.ncrna.2026.06.004",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 56
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:376aae9910576dad65f3da70308aaf6ba09a10b0",
+      "identity_tokens": [
+        "SemanticScholar:376aae9910576dad65f3da70308aaf6ba09a10b0"
+      ],
+      "title": "STformer: A Noise-Aware Efficient Spatio-Temporal Transformer Architecture for Traffic Forecasting",
+      "reason": "交通予測向け時空間Transformerがタイトルに明示された交通工学応用であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://www.semanticscholar.org/paper/376aae9910576dad65f3da70308aaf6ba09a10b0",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08671",
+      "identity_tokens": [
+        "arXiv:2602.08671"
+      ],
+      "title": "Input-Adaptive Spectral Feature Compression by Sequence Modeling for Source Separation",
+      "reason": "本論文は音源分離モデルの周波数特徴圧縮を扱う音響信号処理の研究であり、対象タスクは音楽・音響分離であってLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.08671",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 58
+    }
+  ],
+  "parent_run_key": "muse-20261125-d06-b01",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

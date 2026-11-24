@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d03-b01::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.11313",
+      "identity_tokens": [
+        "arXiv:2511.11313"
+      ],
+      "title": "DocSLM: A Small Vision-Language Model for Long Multimodal Document Understanding",
+      "reason": "DocSLM compresses each document page into a fixed-length multimodal sequence via a Hierarchical Multimodal Compressor, reporting 82% fewer visual tokens, 75% fewer parameters and 71% lower latency for long-document VLM inference on memory-constrained edge devices.",
+      "source_url": "https://arxiv.org/abs/2511.11313",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10491",
+      "identity_tokens": [
+        "arXiv:2410.10491"
+      ],
+      "title": "TWIST & SCOUT: Grounding Multimodal LLM-Experts by Forget-Free Tuning",
+      "reason": "TWIST is a twin-expert tuning module and SCOUT a synthetic dataset that teach pre-trained MLLMs visual grounding without forgetting; the contribution is capability training for grounding, with no inference-system mechanism.",
+      "source_url": "https://arxiv.org/abs/2410.10491",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25072",
+      "identity_tokens": [
+        "arXiv:2509.25072"
+      ],
+      "title": "Optimizing Privacy-Preserving Primitives to Support LLM-Scale Applications",
+      "reason": "Overview of hardware/software/algorithm co-design for MPC, zero-knowledge proofs and FHE at LLM scale; transformer inference under privacy primitives is only one of several contexts (DNN IP ownership, usage enforcement, private learning), and the paper is a progress overview rather than an inference system.",
+      "source_url": "https://arxiv.org/abs/2509.25072",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10889946",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10889946"
+      ],
+      "title": "The Impact of Decorrelation on Transformer Interpretation Methods: Applications to Clinical Speech AI",
+      "reason": "Studies how two decorrelation methods change Comprehensiveness and Sufficiency interpretation metrics for a BERT model in clinical speech AI; an interpretability analysis with no inference-efficiency contribution.",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10889946",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2511.06390",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2511.06390"
+      ],
+      "title": "Ghost in the Transformer: Tracing LLM Lineage with SVD-Fingerprint",
+      "reason": "GhostSpec builds SVD fingerprints from invariant products of attention weight matrices to trace LLM lineage and protect IP; model provenance verification, not an inference-system technique.",
+      "source_url": "https://doi.org/10.48550/arXiv.2511.06390",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12620",
+      "identity_tokens": [
+        "arXiv:2406.12620"
+      ],
+      "title": "What Makes Two Language Models Think Alike?",
+      "reason": "Maps activations of 43 language models onto interpretable linguistic features to explain representational similarity across model families; a scientific analysis paper with no inference mechanism.",
+      "source_url": "https://arxiv.org/abs/2406.12620",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.17187",
+      "identity_tokens": [
+        "arXiv:2502.17187"
+      ],
+      "title": "Evaluating Expert Contributions in a MoE LLM for Quiz-Based Tasks",
+      "reason": "Post-hoc evaluation of expert activation patterns and gating distributions in an MoE LLM on the MMLU quiz benchmark; capability/analysis of MoE behavior only, with no system contribution.",
+      "source_url": "https://arxiv.org/abs/2502.17187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17751",
+      "identity_tokens": [
+        "arXiv:2504.17751"
+      ],
+      "title": "Revisiting Reset Mechanisms in Spiking Neural Networks for Sequential Modeling: Specialized Discretization for Binary Activated RNN",
+      "reason": "Re-examines reset mechanisms and refractory periods in spiking neural networks viewed as binary-activated RNNs for sequential modeling; SNN theory outside LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2504.17751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18164",
+      "identity_tokens": [
+        "arXiv:2509.18164"
+      ],
+      "title": "DSFT: Inspiring Diffusion Large Language Models to Comprehend Mathematical and Logical Patterns",
+      "reason": "DSFT adjusts masking strategy and loss to teach diffusion LLMs mathematical and logical patterns, validated as a training/SFT recipe on LLaDA and Dream; training for capability, not inference.",
+      "source_url": "https://arxiv.org/abs/2509.18164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/INDISCON66021.2025.11252193",
+      "identity_tokens": [
+        "DOI:10.1109/INDISCON66021.2025.11252193"
+      ],
+      "title": "Small Language Models using Spiking Neural Networks: A Comprehensive Review",
+      "reason": "Comprehensive review of spiking-neural-network small language models (SpikeGPT, BrainGPT, conversion frameworks) for energy-efficient edge NLP; relevant to efficient inference but a survey with no new mechanism.",
+      "source_url": "https://doi.org/10.1109/INDISCON66021.2025.11252193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SYNASC69064.2025.00047",
+      "identity_tokens": [
+        "DOI:10.1109/SYNASC69064.2025.00047"
+      ],
+      "title": "ContaGPT: A Domain-Adapted LLM for Romanian Financial and Accounting Applications",
+      "reason": "ContaGPT is a Phi-4 model QLoRA fine-tuned on Romanian fiscal and ERP documents with a BM25/embedding RAG pipeline for financial and accounting queries; a domain-adapted application model.",
+      "source_url": "https://doi.org/10.1109/SYNASC69064.2025.00047",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14569/ijacsa.2024.0150870",
+      "identity_tokens": [
+        "DOI:10.14569/ijacsa.2024.0150870"
+      ],
+      "title": "Deep Learning and Computer Vision-Based System for Detecting and Separating Abnormal Bags in Automatic Bagging Machines",
+      "reason": "Lightweight ResNet with ghost convolution and distillation that detects and separates abnormal bags inside automatic bagging machines; an industrial computer-vision quality-control application.",
+      "source_url": "https://doi.org/10.14569/ijacsa.2024.0150870",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 412
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2506.09046",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.09046"
+      ],
+      "title": "Agentic Neural Networks: Self-Evolving Multi-Agent Systems via Textual Backpropagation",
+      "reason": "Agentic Neural Networks organize LLM agent teams as neural-network-like layers and optimize them by textual backpropagation; a multi-agent orchestration framework, not an inference serving or execution system.",
+      "source_url": "https://doi.org/10.48550/arXiv.2506.09046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 413
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08512",
+      "identity_tokens": [
+        "arXiv:2506.08512"
+      ],
+      "title": "MLVTG: Mamba-Based Feature Alignment and LLM-Driven Purification for Multi-Modal Video Temporal Grounding",
+      "reason": "MLVTG combines a Vision Mamba backbone (MambaAligner) with frozen LLM layers (LLMRefiner) to localize video clips for natural-language queries on QVHighlights/Charades-STA; a video temporal grounding task model.",
+      "source_url": "https://arxiv.org/abs/2506.08512",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.12866",
+      "identity_tokens": [
+        "arXiv:2509.12866"
+      ],
+      "title": "Leveraging Large Language Models to Effectively Generate Visual Data for Canine Musculoskeletal Diagnoses",
+      "reason": "Investigates whether LLMs can generate synthetic visual training data (colored strokes on a dog body map over 200 muscle/joint regions) for canine musculoskeletal diagnosis; a veterinary data-generation application.",
+      "source_url": "https://arxiv.org/abs/2509.12866",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08842",
+      "identity_tokens": [
+        "arXiv:2510.08842"
+      ],
+      "title": "Maple: A Multi-agent System for Portable Deep Learning across Clusters",
+      "reason": "Maple is a four-agent system that generates correct deep-learning training command lines for heterogeneous GPU clusters and SLURM/PBS schedulers; training-workflow tooling, not inference.",
+      "source_url": "https://arxiv.org/abs/2510.08842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05262",
+      "identity_tokens": [
+        "arXiv:2601.05262"
+      ],
+      "title": "LLM2IR: simple unsupervised contrastive learning makes long-context LLM great retriever",
+      "reason": "LLM2IR uses unsupervised contrastive learning to convert decoder-only LLMs into dense retrievers evaluated on LoCo/BEIR; a training method for retrieval capability, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.05262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 417
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02007",
+      "identity_tokens": [
+        "arXiv:2602.02007"
+      ],
+      "title": "Beyond RAG for Agent Memory: Retrieval by Decoupling and Aggregation",
+      "reason": "xMemory decouples agent interaction history into memory components and aggregates them into a revisable hierarchy for retrieval; it is an agent-memory organization scheme whose inference-system contribution (context retrieval cost/quality) is indirect.",
+      "source_url": "https://arxiv.org/abs/2602.02007",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 418
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.10615",
+      "identity_tokens": [
+        "arXiv:2602.10615"
+      ],
+      "title": "Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding",
+      "reason": "Wormhole accelerates packet-level discrete-event network simulation of large-model training via state memoization and steady-state fast-forwarding; a training-network simulator, adjacent to but not an inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2602.10615",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 419
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.00667",
+      "identity_tokens": [
+        "arXiv:2609.00667"
+      ],
+      "title": "From Saliency to Discriminability: Rank-Preserving Visual Token Pruning for VLM Rerankers",
+      "reason": "RaDiCal is a training-free visual token pruning framework for VLM listwise rerankers that fuses attention-entropy-calibrated saliency with a rank-discriminative prior, matching dense MRR@10 at a 20% visual token budget.",
+      "source_url": "https://arxiv.org/abs/2609.00667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 420
+    }
+  ],
+  "parent_run_key": "muse-20261125-d03-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

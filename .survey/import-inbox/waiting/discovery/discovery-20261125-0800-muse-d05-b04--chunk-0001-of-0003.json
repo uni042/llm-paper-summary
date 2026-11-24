@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d05-b04::chunk-0001-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21940",
+      "identity_tokens": [
+        "arXiv:2609.21940"
+      ],
+      "title": "AutoViewMem: Self-Configuring Orthogonal Views for Conversational Long-Term Memory",
+      "reason": "AutoViewMem self-configures orthogonal memory views to reduce semantic interference in top-K retrieval for conversational long-term memory; an agent memory representation method, adjacent to inference-time retrieval but not a serving contribution, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2609.21940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36976",
+      "identity_tokens": [
+        "arXiv:2609.36976"
+      ],
+      "title": "AMU:Admission and Memory Update for Personalized Conversations - Structured Memory with SLM Guided Control",
+      "reason": "AMU controls memory admission and updates for personalized conversations using structured memory with a small-model guided controller; a memory write-path governance method for assistants, not an inference system mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2609.36976",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14244",
+      "identity_tokens": [
+        "arXiv:2610.14244"
+      ],
+      "title": "Understanding the Power Consumption of Modern High Bandwidth Memory: Experimental Analysis and Modeling Using Real HBM2 DRAM Chips",
+      "reason": "Real HBM2 chips are experimentally characterized to build accurate power models and expose data-pattern-dependent consumption; memory-hardware measurement relevant to inference infrastructure, but a characterization study without an inference mechanism, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2610.14244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.25211",
+      "identity_tokens": [
+        "arXiv:2610.25211"
+      ],
+      "title": "NeuroAct: Advancing EEG Analysis and Decoding via Dual-Loop Autonomous Research",
+      "reason": "Title explicitly limits the work to EEG analysis and decoding via an autonomous research framework, a brain-signal application, with no LLM inference subject stated in the title.",
+      "source_url": "https://arxiv.org/abs/2610.25211",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.03743",
+      "identity_tokens": [
+        "arXiv:2611.03743"
+      ],
+      "title": "EvoMemState: Evolving Memory State for Personal Agents",
+      "reason": "EvoMemState maintains evolving memory state for personal LLM agents so new facts update and constrain earlier ones instead of sitting as independent facts; an agent memory consistency method without serving or decoding content, so borderline.",
+      "source_url": "https://arxiv.org/abs/2611.03743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.07661",
+      "identity_tokens": [
+        "arXiv:2308.07661"
+      ],
+      "title": "Attention Is Not All You Need Anymore",
+      "reason": "A family of drop-in self-attention replacements aims to preserve transformer performance while changing the attention computation; an architecture proposal whose abstract centers on performance retention rather than demonstrated LLM inference gains, so borderline.",
+      "source_url": "https://arxiv.org/abs/2308.07661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2102.07680",
+      "identity_tokens": [
+        "arXiv:2102.07680"
+      ],
+      "title": "Translational Equivariance in Kernelizable Attention",
+      "reason": "Kernelizable attention is given translational equivariance so relative-position inductive biases survive without materializing the full attention matrix; efficient-attention theory with an inference-relevant motivation but no LLM inference evaluation, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2102.07680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICDCS60910.2024.00015",
+      "identity_tokens": [
+        "DOI:10.1109/ICDCS60910.2024.00015"
+      ],
+      "title": "Portus: Efficient DNN Checkpointing to Persistent Memory with Zero-Copy",
+      "reason": "Portus checkpoints DNN models from GPUs to persistent memory over RDMA with a zero-copy three-level index; training checkpoint infrastructure, not inference serving or execution.",
+      "source_url": "https://doi.org/10.1109/ICDCS60910.2024.00015",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13697",
+      "identity_tokens": [
+        "arXiv:2510.13697"
+      ],
+      "title": "On Pretraining for Project-Level Code Completion",
+      "reason": "Repository-level pretraining strategies and a 16K context extension are studied for project-level code completion with OpenCoder; a pretraining study for a coding capability, not inference.",
+      "source_url": "https://arxiv.org/abs/2510.13697",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.01912",
+      "identity_tokens": [
+        "arXiv:2511.01912"
+      ],
+      "title": "EvoMem: Improving Multi-Agent Planning with Dual-Evolving Memory",
+      "reason": "EvoMem gives LLM multi-agent planning frameworks dual-evolving memory inspired by working memory; an agent planning memory method whose contribution is coordination quality, not inference systems, so borderline.",
+      "source_url": "https://arxiv.org/abs/2511.01912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20932",
+      "identity_tokens": [
+        "arXiv:2505.20932"
+      ],
+      "title": "QwT-v2: Practical, Effective and Efficient Post-Training Quantization",
+      "reason": "QwT-v2 improves post-training quantization with lightweight compensating structures while removing the extra latency and incompatibility of the original QwT; a practical quantization contribution directly reducing model inference resource use, hence accept.",
+      "source_url": "https://arxiv.org/abs/2505.20932",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2023.3340854",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2023.3340854"
+      ],
+      "title": "LongT5-Mulla: LongT5 With Multi-Level Local Attention for a Longer Sequence",
+      "reason": "LongT5-Mulla adds multi-level local attention so LongT5 handles longer sequences than full quadratic attention allows; an efficient-attention architecture variant for long-text tasks, but an older model-line study without LLM serving evidence, so borderline.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2023.3340854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08371",
+      "identity_tokens": [
+        "arXiv:2507.08371"
+      ],
+      "title": "The Curious Case of Factuality Finetuning: Models' Internal Beliefs Can Improve Factuality",
+      "reason": "Factuality finetuning is studied through models' internal beliefs to reduce hallucination with the right training data; a training-data study for output factuality with no inference contribution.",
+      "source_url": "https://arxiv.org/abs/2507.08371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15248",
+      "identity_tokens": [
+        "arXiv:2509.15248"
+      ],
+      "title": "Synthetic bootstrapped pretraining",
+      "reason": "Synthetic bootstrapped pretraining learns inter-document relations to synthesize a new corpus for joint LM pretraining; a pretraining data method with no inference mechanism.",
+      "source_url": "https://arxiv.org/abs/2509.15248",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3450439.3451856",
+      "identity_tokens": [
+        "DOI:10.1145/3450439.3451856"
+      ],
+      "title": "Affinitention nets: kernel perspective on attention architectures for set classification with applications to medical text and images",
+      "reason": "Affinitention nets give a kernel view of attention for set classification, applied to pathology slides and medical text; a medical/vision set-classification method with no LLM inference relevance.",
+      "source_url": "https://doi.org/10.1145/3450439.3451856",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.03251",
+      "identity_tokens": [
+        "arXiv:2210.03251"
+      ],
+      "title": "Small Character Models Match Large Word Models for Autocomplete Under Memory Constraints",
+      "reason": "Small character-level models match large word models for open-domain autocomplete under explicit memory constraints; model sizing under memory limits is inference-adjacent, but the study is a task comparison rather than an inference mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2210.03251",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.09166",
+      "identity_tokens": [
+        "arXiv:2501.09166"
+      ],
+      "title": "Attention is All You Need Until You Need Retention",
+      "reason": "A retention layer gives transformers persistent memory read by attention and written during use, reframed as social learning over other agents' behavior; a speculative architecture/memory proposal without an inference-system evaluation, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2501.09166",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10888801",
+      "identity_tokens": [
+        "DOI:10.1109/ICASSP49660.2025.10888801"
+      ],
+      "title": "GPT-C: Generative PrompT Compression",
+      "reason": "GPT-C generatively compresses long prompts to accelerate LLM inference and relieve context-window limits while preserving task performance; a direct prompt-compression contribution to inference cost, hence accept.",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10888801",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3744906",
+      "identity_tokens": [
+        "DOI:10.1145/3744906"
+      ],
+      "title": "Accelerating Parallel Structures in DNNs via Parallel Fusion and Operator Co-Optimization",
+      "reason": "Magneto is an ML compiler that broadens parallel fusion scope and co-optimizes operators to accelerate DNN inference; compiler-level inference optimization, but demonstrated for generic DNN structures rather than LLM serving, so borderline.",
+      "source_url": "https://doi.org/10.1145/3744906",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.03774",
+      "identity_tokens": [
+        "arXiv:2007.03774"
+      ],
+      "title": "The curious case of developmental BERTology: On sparsity, transfer learning, generalization and the brain",
+      "reason": "This essay connects developmental neuroscience with sparsity, transfer learning and generalization in BERT-era models; a perspective piece with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2007.03774",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d05-b04",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 46
+}

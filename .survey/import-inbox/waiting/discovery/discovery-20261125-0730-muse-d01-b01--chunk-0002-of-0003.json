@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d01-b01::chunk-0002-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVPR52688.2022.01201",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52688.2022.01201"
+      ],
+      "title": "Mr.BiQ: Post-Training Non-Uniform Quantization based on Minimizing the Reconstruction Error",
+      "reason": "Mr.BiQは再構成誤差最小化に基づく学習後非一様量子化でTransformerにも適用できるが、検証の中心は畳み込みネットワーク等の汎用モデルでありLLM推論への直接適用は限定的なため境界とする。",
+      "source_url": "https://doi.org/10.1109/CVPR52688.2022.01201",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.25635",
+      "identity_tokens": [
+        "arXiv:2609.25635"
+      ],
+      "title": "Shallow to Deep: Aligning Token Pruning with Stage-wise Roles in LVLMs",
+      "reason": "STDは大規模視覚言語モデルの層ごとの役割（浅層のエッジ検出等）に合わせ階層的に視覚トークンを剪定する枠組みであり、LVLM推論の計算コスト削減へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2609.25635",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3447217",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3447217"
+      ],
+      "title": "AttentionRC: A Novel Approach to Improve Locality Sensitive Hashing Attention on Dual-Addressing Memory",
+      "reason": "AttentionRCはRC-NVMの二重アドレス機能を使いLSH注意のデータ配置を最適化するが、対象はReformer型注意一般のハードウェアでありLLM推論システムでの評価が要旨にないため境界とする。",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3447217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ITSC60802.2025.11423431",
+      "identity_tokens": [
+        "DOI:10.1109/ITSC60802.2025.11423431"
+      ],
+      "title": "DSATFusion: Multi-Modal 3D Detection via Vision-Text Synergy with Dynamic Sparse Attention Temporal Fusion",
+      "reason": "DSATFusionは自動運転向けマルチモーダル3D物体検出に動的疎注意と時間融合を適用する応用研究であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/ITSC60802.2025.11423431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/RSP57251.2022.10039009",
+      "identity_tokens": [
+        "DOI:10.1109/RSP57251.2022.10039009"
+      ],
+      "title": "TernaryNeRF: Quantizing Voxel Grid-based NeRF Models",
+      "reason": "TernaryNeRFはInstantNeRF・TensoRFのボクセルグリッドを三値量子化してモデルサイズを削減するニューラルレンダリングの研究であり、AR/VR描画が対象でLLM推論システムではない。",
+      "source_url": "https://doi.org/10.1109/RSP57251.2022.10039009",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 61
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01759",
+      "identity_tokens": [
+        "arXiv:2605.01759"
+      ],
+      "title": "PointCSP: Cross-Sample Semantic Propagation and Stability Preservation in Self-Supervised Point Cloud Learning",
+      "reason": "PointCSPはシーンレベル点群の自己教師あり学習でサンプル間意味伝播を行う3Dビジョン手法であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2605.01759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.16422",
+      "identity_tokens": [
+        "arXiv:2210.16422"
+      ],
+      "title": "Toward Unifying Text Segmentation and Long Document Summarization",
+      "reason": "本論文はテキストセグメンテーションと抽出型要約を同時学習する長文書要約の研究であり、文書理解タスクの性能改善が目的で推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2210.16422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.09852",
+      "identity_tokens": [
+        "arXiv:2111.09852"
+      ],
+      "title": "The Power of Selecting Key Blocks with Local Pre-ranking for Long Document Information Retrieval",
+      "reason": "本論文は局所事前ランキングで重要ブロックを選ぶ長文書情報検索の手法であり、検索タスクの精度・処理方式の研究であってLLM推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2111.09852",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JIOT.2022.3177948",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2022.3177948"
+      ],
+      "title": "SensorFormer: Efficient Many-to-Many Sensor Calibration With Learnable Input Subsampling",
+      "reason": "SensorFormerは低コスト環境センサの較正に過去・未来の測定を使うTransformer応用であり、センサ較正という異分野応用でLLM推論とは無関係である。",
+      "source_url": "https://doi.org/10.1109/JIOT.2022.3177948",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2172/1890265",
+      "identity_tokens": [
+        "DOI:10.2172/1890265"
+      ],
+      "title": "Harmonized Automatic Relay Mitigation of Nefarious Intentional Events (HARMONIE) - Special Protection Scheme (SPS).",
+      "reason": "タイトル自体が電力系統の保護リレーに対するサイバー物理攻撃緩和（HARMONIE特殊保護スキーム）を明示しており、LLM推論システムとは無関係な電力分野の応用である。",
+      "source_url": "https://doi.org/10.2172/1890265",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30916",
+      "identity_tokens": [
+        "arXiv:2605.30916"
+      ],
+      "title": "Welfare, Improvability, and Variance: A Principal-Agent Approach to Optimal Benchmark Item Aggregation",
+      "reason": "タイトル自体が厚生・改善可能性・分散を扱うプリンシパルエージェント理論によるベンチマーク項目集約の経済学的研究を明示しており、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2605.30916",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.07360",
+      "identity_tokens": [
+        "arXiv:2006.07360"
+      ],
+      "title": "AlgebraNets",
+      "reason": "AlgebraNetsは複素数・四元数等の代数で重みと活性を表すネットワークのImageNet・言語モデリングでの基礎研究であり、推論システムの効率化機構ではない。",
+      "source_url": "https://arxiv.org/abs/2006.07360",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3657299",
+      "identity_tokens": [
+        "DOI:10.1145/3657299"
+      ],
+      "title": "FETILDA: Evaluation Framework for Effective Representations of Long Financial Documents",
+      "reason": "タイトル自体が長期金融文書の表現評価フレームワーク（FETILDA）を明示しており、金融文書応用が主題でLLM推論システムの技術ではない。",
+      "source_url": "https://doi.org/10.1145/3657299",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.15802",
+      "identity_tokens": [
+        "arXiv:2110.15802"
+      ],
+      "title": "BERMo: What can BERT learn from ELMo?",
+      "reason": "BERMoはELMo式の層表現の線形結合をBERTへ導入するアーキテクチャ改変で、SentEvalプロービングでの精度向上が目的であり、推論システムの効率化への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2110.15802",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ASENS64990.2025.11011188",
+      "identity_tokens": [
+        "DOI:10.1109/ASENS64990.2025.11011188"
+      ],
+      "title": "Norns: Leveraging Multi-Modal Mamba for Efficient Network Intrusion Detection via Integrating Comprehensive Flow Features and Packet Bytes",
+      "reason": "Nornsはフロー特徴とパケットバイトを統合するマルチモーダルMambaによるネットワーク侵入検知システムであり、セキュリティ応用であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.1109/ASENS64990.2025.11011188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IJCNN52387.2021.9533919",
+      "identity_tokens": [
+        "DOI:10.1109/IJCNN52387.2021.9533919"
+      ],
+      "title": "Matrix Shuffle- Exchange Networks for Hard 2D Tasks",
+      "reason": "Matrix Shuffle-Exchange Networksは2Dデータの長距離依存を扱う汎用ニューラルアーキテクチャで、行列・グラフ推論タスク向けでありLLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.1109/IJCNN52387.2021.9533919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.16482",
+      "identity_tokens": [
+        "arXiv:2409.16482"
+      ],
+      "title": "Generative AI-driven forecasting of oil production",
+      "reason": "本論文はTimeGradとInformerで複数油井の石油・水生産量を予測する時系列予測の応用研究であり、エネルギー分野の予測問題であってLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2409.16482",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2024.acl-long.270",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.270"
+      ],
+      "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
+      "reason": "RelayAttentionは長システムプロンプトを共有するバッチリクエストでKVペアの冗長なDRAM→SRAM転送を排除する注意アルゴリズムであり、LLMサービングのスループット改善に直接寄与する。",
+      "source_url": "https://doi.org/10.18653/v1/2024.acl-long.270",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04236",
+      "identity_tokens": [
+        "arXiv:2606.04236"
+      ],
+      "title": "Supportive Token Revealing for Fast Diffusion Language Model Decoding",
+      "reason": "AXONは離散拡散言語モデルの並列デコードに介入し、不確実なマスクトークンの状態を監視して denoising ステップのボトルネックを解消する学習不要モジュールであり、デコード高速化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2606.04236",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 82
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/EDM69524.2026.11632111",
+      "identity_tokens": [
+        "DOI:10.1109/EDM69524.2026.11632111"
+      ],
+      "title": "Quantised Small Language Models: An Empirical Study of INT8, AWQ and QLoRA on ConsumerGrade GPUs with 8 GB of Video Memory",
+      "reason": "本論文は8GB VRAMの消費者GPU上でINT8・AWQ・QLoRAを比較する小規模言語モデルの量子化実証研究であり、推論効率の計測が中心で新規機構の提案ではないため境界とする。",
+      "source_url": "https://doi.org/10.1109/EDM69524.2026.11632111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 85
+    }
+  ],
+  "parent_run_key": "muse-20261125-d01-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

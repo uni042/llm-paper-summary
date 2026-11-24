@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d02-b02::chunk-0003-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14314",
+      "identity_tokens": [
+        "arXiv:2604.14314"
+      ],
+      "title": "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines",
+      "reason": "DharmaOCRは推論コストも追跡する構造化OCR向け小規模言語モデルであり、応用モデル自体が主題で推論機構の提案は限定的である。",
+      "source_url": "https://arxiv.org/abs/2604.14314",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 306
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34700",
+      "identity_tokens": [
+        "arXiv:2610.34700"
+      ],
+      "title": "DPE-Rec: Diversity-Preserving and Efficient Diffusion Language Model Recommendation for Bundle Construction",
+      "reason": "DPE-Recはバンドル構築という推薦応用に拡散言語モデルを適用する研究であり、推論遅延の言及は応用の動機に留まる。",
+      "source_url": "https://arxiv.org/abs/2610.34700",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 307
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11179",
+      "identity_tokens": [
+        "arXiv:2502.11179"
+      ],
+      "title": "RT-DEMT: A hybrid real-time acupoint detection model combining mamba and transformer",
+      "reason": "タイトル自体がMambaとTransformerを組み合わせたリアルタイム経穴検出という医療応用を明示している。タイトル先行走査で対象外と判定した。",
+      "source_url": "https://arxiv.org/abs/2502.11179",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 308
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/FLLM67465.2025.11391052",
+      "identity_tokens": [
+        "DOI:10.1109/FLLM67465.2025.11391052"
+      ],
+      "title": "Performance and Cost Optimization of Federated LLM Agents in Edge Computing Environments",
+      "reason": "エッジ環境での連合LLMエージェントの性能・コスト最適化は配置問題として推論に触れるが、要旨ではサービング機構の具体性が乏しい。",
+      "source_url": "https://doi.org/10.1109/FLLM67465.2025.11391052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 309
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25535",
+      "identity_tokens": [
+        "arXiv:2509.25535"
+      ],
+      "title": "Meta-Router: Bridging Gold-standard and Preference-based Evaluations in Large Language Model Routing",
+      "reason": "Meta-Routerは推論コスト削減のためのLLMルーティングの教師信号問題を扱うが、貢献はルータ学習の評価設計であり実行系機構ではない。",
+      "source_url": "https://arxiv.org/abs/2509.25535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 310
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLUSTERWorkshops61563.2024.00027",
+      "identity_tokens": [
+        "DOI:10.1109/CLUSTERWorkshops61563.2024.00027"
+      ],
+      "title": "RAPID: A Rapid Automatic Parallelizer for Immense Deep Neural Networks",
+      "reason": "RAPIDは巨大DNN向けの階層的自動並列化プランナであり、データ・モデル・パイプライン並列の計画は主に学習実行を対象とする。",
+      "source_url": "https://doi.org/10.1109/CLUSTERWorkshops61563.2024.00027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 311
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.13941",
+      "identity_tokens": [
+        "arXiv:2409.13941"
+      ],
+      "title": "TalkMosaic: Interactive PhotoMosaic with Multi-modal LLM Q&A Interactions",
+      "reason": "TalkMosaicはフォトモザイク画像とマルチモーダルLLM Q&Aの対話的アート応用であり、推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2409.13941",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 312
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13810",
+      "identity_tokens": [
+        "arXiv:2605.13810"
+      ],
+      "title": "Provable Quantization with Randomized Hadamard Transform",
+      "reason": "ランダム化Hadamard変換による証明可能量子化はKVキャッシュ圧縮も応用先に含む理論研究だが、対象は汎用ベクトル量子化である。",
+      "source_url": "https://arxiv.org/abs/2605.13810",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00549",
+      "identity_tokens": [
+        "arXiv:2603.00549"
+      ],
+      "title": "PM2Lat: Highly Accurate and Generalized Prediction of DNN Execution Latency on GPUs",
+      "reason": "PM2LatはGPU上のDNN実行遅延を予測する枠組みであり推論遅延モデリングに触れるが、対象は汎用DNNでLLM特化ではない。",
+      "source_url": "https://arxiv.org/abs/2603.00549",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 314
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.22066",
+      "identity_tokens": [
+        "arXiv:2512.22066"
+      ],
+      "title": "Prefill vs. Decode Bottlenecks: SRAM-Frequency Tradeoffs and the Memory-Bandwidth Ceiling",
+      "reason": "プリフィルとデコードのボトルネックを分離しSRAM容量・周波数とメモリ帯域上限の観点からLLM推論のエネルギー効率をシミュレーションで分析する。",
+      "source_url": "https://arxiv.org/abs/2512.22066",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 315
+    }
+  ],
+  "parent_run_key": "muse-20261125-d02-b02",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

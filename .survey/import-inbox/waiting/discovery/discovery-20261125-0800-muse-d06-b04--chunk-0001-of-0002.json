@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d06-b04::chunk-0001-of-0002",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12078",
+      "identity_tokens": [
+        "arXiv:2602.12078"
+      ],
+      "title": "Tiny Recursive Reasoning with Mamba-2 Attention Hybrid",
+      "reason": "本論文はMamba-2注意ハイブリッドによる小規模再帰推論モデルのアーキテクチャ検討であり、推論タスク能力の研究で推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2602.12078",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.04120",
+      "identity_tokens": [
+        "arXiv:2606.04120"
+      ],
+      "title": "SaliMory: Orchestrating Cognitive Memory for Conversational Agents",
+      "reason": "SaliMoryは会話エージェントの認知的メモリを編成し文脈拡張の劣化を避ける枠組みであり、文脈管理は推論コストに関わるが主対象はエージェントの記憶運用である。",
+      "source_url": "https://arxiv.org/abs/2606.04120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 170
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.03369",
+      "identity_tokens": [
+        "arXiv:2304.03369"
+      ],
+      "title": "EGA-Depth: Efficient Guided Attention for Self-Supervised Multi-Camera Depth Estimation",
+      "reason": "自動運転車のマルチカメラ深度推定がタイトルに明示された知覚応用であり、LLM推論システムの対象外である。",
+      "source_url": "https://arxiv.org/abs/2304.03369",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.17081",
+      "identity_tokens": [
+        "arXiv:2408.17081"
+      ],
+      "title": "Stochastic Layer-Wise Shuffle for Improving Vision Mamba Training",
+      "reason": "本論文はVision Mambaの学習正則化手法であり、学習過程の改善が主対象で推論への具体的適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2408.17081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 173
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562246",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562246"
+      ],
+      "title": "STEAM-SSM: A Streaming-Tiled Efficient Accelerator for Mamba-2 SSM on FPGA",
+      "reason": "STEAM-SSMはMamba-2のSSMブロックをFPGA向けにストリーミングタイル化するアクセラレータであり、推論HWの機構ではあるが対象はLLMではなく状態空間モデルである。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562246",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 174
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01989",
+      "identity_tokens": [
+        "arXiv:2605.01989"
+      ],
+      "title": "DBLP: Phase-Aware Bounded-Loss Transport for Burst-Resilient Distributed ML Training",
+      "reason": "DBLPは分散機械学習学習のバースト耐性トランスポートの研究であり、対象は学習基盤のネットワーク層であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2605.01989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 175
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.19488",
+      "identity_tokens": [
+        "arXiv:2409.19488"
+      ],
+      "title": "A House United Within Itself: SLO-Awareness for On-Premises Containerized ML Inference Clusters via Faro",
+      "reason": "Faroはオンプレミスのコンテナ化ML推論クラスタでSLO認識スケジューリングを行うシステムだが、対象は汎用ML推論ジョブでありLLMサービングへの特化は確認できない。",
+      "source_url": "https://arxiv.org/abs/2409.19488",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 176
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22296",
+      "identity_tokens": [
+        "arXiv:2505.22296"
+      ],
+      "title": "360-LLaMA-Factory: Plug & Play Sequence Parallelism for Long Post-Training",
+      "reason": "本論文はLLaMA-Factoryへ系列並列を組み込む学習基盤の技術報告であり、対象は事後学習であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2505.22296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 177
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.17870",
+      "identity_tokens": [
+        "arXiv:2405.17870"
+      ],
+      "title": "Nezha: Breaking Multi-Rail Network Barriers for Distributed DNN Training",
+      "reason": "Nezhaは分散深層学習学習のマルチレール通信障壁を解く研究であり、対象は学習通信であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2405.17870",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 178
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.03601",
+      "identity_tokens": [
+        "arXiv:2408.03601"
+      ],
+      "title": "DRAMA: An Efficient End-to-end Motion Planner for Autonomous Driving with Mamba",
+      "reason": "自動運転向けエンドツーエンド運動計画がタイトルに明示された運転制御応用であり、LLM推論システムへの貢献は示されていない。",
+      "source_url": "https://arxiv.org/abs/2408.03601",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 181
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23886",
+      "identity_tokens": [
+        "arXiv:2609.23886"
+      ],
+      "title": "this-that-model-1.0: A typed decision model that decides in 30 ms, for a millionth of a cent",
+      "reason": "this-that-modelは型付き意思決定を30ミリ秒で返す小規模モデルを提案しフロンティアモデル呼び出しを置換する狙いだが、主対象は意思決定タスクのモデル自体であり推論基盤の機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2609.23886",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 182
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29438",
+      "identity_tokens": [
+        "arXiv:2605.29438"
+      ],
+      "title": "ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models",
+      "reason": "ElegantVLAは視覚言語行動モデルで思考の要否を学習し制御頻度を上げる研究であり、推論高速化に関わるが対象はロボット制御応用である。",
+      "source_url": "https://arxiv.org/abs/2605.29438",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 183
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16491",
+      "identity_tokens": [
+        "arXiv:2610.16491"
+      ],
+      "title": "Drafting Agents, Not Just Tokens: Speculative Recursive Self-Improvement for Agentic Systems",
+      "reason": "本論文は投機的デコードの草案・検証原理をエージェントの自己改善へ転用する枠組みであり、類推の適用であってトークンデコードの推論機構そのものではない。",
+      "source_url": "https://arxiv.org/abs/2610.16491",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 184
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13511",
+      "identity_tokens": [
+        "arXiv:2605.13511"
+      ],
+      "title": "Many-Shot CoT-ICL: Making In-Context Learning Truly Learn",
+      "reason": "本論文は多ショットCoT文脈内学習のスケーリング挙動を分析する研究であり、学習・能力の分析が主対象で推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.13511",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 185
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11456",
+      "identity_tokens": [
+        "arXiv:2602.11456"
+      ],
+      "title": "AuroraRL: Fast, Fault-Tolerant, and Cost-Efficient Reinforcement Learning over Decentralized Network",
+      "reason": "AuroraRLは分散ネットワーク上の強化学習基盤の高速化・耐障害化を扱う研究であり、対象はRL学習インフラであって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2602.11456",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 186
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26845",
+      "identity_tokens": [
+        "arXiv:2605.26845"
+      ],
+      "title": "Birkhoff Decompositions and Photonic Interconnects Wait! Don’t Forget the Compute!",
+      "reason": "本論文はフォトニック相互接続と計算の統合を論じるアーキテクチャ論であり、MoE通信は推論にも関わるが学習を含む展望的議論で具体的な推論機構の検証は限定的である。",
+      "source_url": "https://arxiv.org/abs/2605.26845",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 187
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05527",
+      "identity_tokens": [
+        "arXiv:2601.05527"
+      ],
+      "title": "DeMa: dual-path delay-aware Mamba for efficient multivariate time series analysis",
+      "reason": "DeMaは多変量時系列解析向けの遅延認識Mambaの研究であり、時系列タスクのモデルが対象でLLM推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2601.05527",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 188
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.00871",
+      "identity_tokens": [
+        "arXiv:2605.00871"
+      ],
+      "title": "NAKUL-Med: Spectral-Graph State Space Models with Dynamics Kernels for Medical Signals",
+      "reason": "医療信号解析向け状態空間モデルがタイトルに明示された医用信号応用であり、LLM推論システムの対象外である。",
+      "source_url": "https://arxiv.org/abs/2605.00871",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 189
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.04513",
+      "identity_tokens": [
+        "arXiv:2609.04513"
+      ],
+      "title": "Atlas: Optimizing Deployment of Compound AI Workflows on Heterogeneous Clusters",
+      "reason": "Atlasは異種クラスタ上で複合AIワークフローのデプロイを最適化する研究であり、サービング配置に関わるが対象は複合ワークフロー一般でLLM推論への直接性は限定的である。",
+      "source_url": "https://arxiv.org/abs/2609.04513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 190
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.14852",
+      "identity_tokens": [
+        "arXiv:2610.14852"
+      ],
+      "title": "Getting Space Right: Agentic Rewards for Image Generation",
+      "reason": "本論文は画像生成の空間的正確さをエージェント報酬で改善する強化学習の研究であり、対象は画像生成応用であって推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2610.14852",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 191
+    }
+  ],
+  "parent_run_key": "muse-20261125-d06-b04",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 29
+}

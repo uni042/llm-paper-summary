@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d06-b01::chunk-0001-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20776",
+      "identity_tokens": [
+        "arXiv:2505.20776"
+      ],
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "reason": "SpecExtendは長文脈で劣化する投機的デコードに対し、追加学習なしで組み込める拡張で投機的デコードの受理効率を改善する手法であり、デコード高速化への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2505.20776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03960",
+      "identity_tokens": [
+        "arXiv:2410.03960"
+      ],
+      "title": "SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation",
+      "reason": "SwiftKVはプロンプトが長い企業向け推論で後層プリフィルの計算を削減するモデル変換・蒸留手順を提案し、プリフィル最適化による推論高速化へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2410.03960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.22217",
+      "identity_tokens": [
+        "arXiv:2511.22217"
+      ],
+      "title": "Optimizing NetGPT via Routing-Based Synergy and Reinforcement Learning",
+      "reason": "NetGPTのクラウド・エッジ協調はネットワーク認識ルーティングとエッジ側自己改善で品質とコストを調整するもので、対象はネットワークエージェント運用であり推論基盤の機構への貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2511.22217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01756",
+      "identity_tokens": [
+        "arXiv:2606.01756"
+      ],
+      "title": "EvoCut: Multi-Layer Evolution-Aware Visual Token Compression for Efficient Large Vision-Language Models",
+      "reason": "EvoCutはLVLMの視覚トークンを層ごとの進化を踏まえて圧縮し推論効率を上げる手法だが、対象は画像・動画理解モデルの視覚トークンに限られLLM推論基盤への一般性は薄い。",
+      "source_url": "https://arxiv.org/abs/2606.01756",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02288",
+      "identity_tokens": [
+        "arXiv:2606.02288"
+      ],
+      "title": "Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization",
+      "reason": "本論文は大規模活性化スパイクがバイアスベクトルであることを機構的に示し、スパイクのない量子化を可能にする知見を与えるもので、LLM量子化の精度劣化要因への直接的な技術貢献である。",
+      "source_url": "https://arxiv.org/abs/2606.02288",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.02083",
+      "identity_tokens": [
+        "arXiv:2609.02083"
+      ],
+      "title": "XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression",
+      "reason": "XMergeは層の相対変化に基づくブロック選択と境界再構成でLLMの深さ圧縮を行い、標準的なサービング構造を保ったまま部署可能な圧縮手法であり、推論効率化へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2609.02083",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2401.12961",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2401.12961"
+      ],
+      "title": "Chatterbox: Robust Transport for LLM Token Streaming under Unstable Network",
+      "reason": "Chatterboxは不安定なネットワーク下でのLLMトークンストリーミング向けに堅牢なトランスポートを設計し、パケットロスによるストールへの対処を示すサービング配信基盤の研究である。",
+      "source_url": "https://doi.org/10.48550/arXiv.2401.12961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.23575",
+      "identity_tokens": [
+        "arXiv:2603.23575"
+      ],
+      "title": "APreQEL: Adaptive Mixed Precision Quantization For Edge LLMs",
+      "reason": "APreQELはエッジLLM向けに適応的混合精度量子化を提案し、メモリ制約下でのLLM配置とリアルタイム応答を狙うもので、オンデバイス推論の量子化へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2603.23575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.09837",
+      "identity_tokens": [
+        "arXiv:2411.09837"
+      ],
+      "title": "Real-Time Adapting Routing (Rar): Improving Efficiency Through Continuous Learning in Software Powered by Layered Foundation Models",
+      "reason": "Rarは基盤モデル利用ソフトウェアでリクエストをモデルサイズ別に振り分けるルーティングを継続学習で適応させる研究であり、推論コストへの関係はあるがサービング機構自体の貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2411.09837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TITS.2022.3197640",
+      "identity_tokens": [
+        "DOI:10.1109/TITS.2022.3197640"
+      ],
+      "title": "Learning All Dynamics: Traffic Forecasting via Locality-Aware Spatio-Temporal Joint Transformer",
+      "reason": "交通流・速度予測という交通工学応用がタイトルに明示され、LLM推論システムへの技術的貢献は示されていない。",
+      "source_url": "https://doi.org/10.1109/TITS.2022.3197640",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.11992",
+      "identity_tokens": [
+        "arXiv:2111.11992"
+      ],
+      "title": "Sparse Fusion for Multimodal Transformers",
+      "reason": "Sparse Fusionはマルチモーダル分類のための融合前スパース化を提案するモデル研究であり、推論システムではなく分類タスクのモデル精度・効率が主対象である。",
+      "source_url": "https://arxiv.org/abs/2111.11992",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMM.2026.3668560",
+      "identity_tokens": [
+        "DOI:10.1109/TMM.2026.3668560"
+      ],
+      "title": "LDT: Efficient Scalable Video Generation Using Linear Diffusion Transformer",
+      "reason": "LDTは線形注意でビデオ拡散生成の計算量を下げる生成モデルアーキテクチャの研究であり、対象はビデオ生成であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.1109/TMM.2026.3668560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.02332",
+      "identity_tokens": [
+        "arXiv:2406.02332"
+      ],
+      "title": "Extended Mind Transformers",
+      "reason": "Extended Mind Transformersは推論時に事前計算メモリバンクへアクセスできるようMemorizing Transformersを改良する研究だが、主眼は長入力の記憶能力であり推論システムの機構への貢献は間接的である。",
+      "source_url": "https://arxiv.org/abs/2406.02332",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15790",
+      "identity_tokens": [
+        "arXiv:2502.15790"
+      ],
+      "title": "Signal Collapse in One-Shot Pruning: When Sparse Models Fail to Distinguish Neural Representations",
+      "reason": "本論文はワンショットプルーニングの失敗要因として信号崩壊を同定する解析研究であり、プルーニング一般の知見ではあるがLLM推論への具体的な適用や機構の提案は確認できない。",
+      "source_url": "https://arxiv.org/abs/2502.15790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24358",
+      "identity_tokens": [
+        "arXiv:2608.24358"
+      ],
+      "title": "The Handoff Tax: Continuing Non-Native Trajectories in LLM Agents",
+      "reason": "Handoff Taxはコーディングエージェントのモデル切り替え時の品質・コスト変化を実証的に測る評価研究であり、推論システムへの技術的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2608.24358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.10959",
+      "identity_tokens": [
+        "arXiv:2503.10959"
+      ],
+      "title": "Ouromamba: a Data-Free Quantization Framework for Vision Mamba",
+      "reason": "OuromambaはビジョンMamba向けのデータフリー学習後量子化であり、量子化機構自体は推論効率化に関わるが対象が視覚モデルでありLLM推論への適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2503.10959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16791",
+      "identity_tokens": [
+        "arXiv:2512.16791"
+      ],
+      "title": "KineST: A Kinematics-guided Spatiotemporal State Space Model for Human Motion Tracking from Sparse Signals",
+      "reason": "疎な信号からの人体モーショントラッキングというAR/VR応用がタイトルに明示され、LLM推論システムの対象外である。",
+      "source_url": "https://arxiv.org/abs/2512.16791",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.10213",
+      "identity_tokens": [
+        "arXiv:2006.10213"
+      ],
+      "title": "SEAL: Segment-wise Extractive-Abstractive Long-form Text Summarization",
+      "reason": "SEALは長文要約のための抽出・抽象型seq2seqモデルを提案するタスクモデルの研究であり、推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2006.10213",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.05164",
+      "identity_tokens": [
+        "arXiv:2510.05164"
+      ],
+      "title": "SATER: A Self-Aware and Token-Efficient Approach to Routing and Cascading",
+      "reason": "SATERは自己認識に基づくルーティングとカスケードでLLM利用コストと性能のバランスを取る枠組みであり、推論コストに関わるが中核はモデル選択ポリシーでサービング機構の貢献は薄い。",
+      "source_url": "https://arxiv.org/abs/2510.05164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.19415",
+      "identity_tokens": [
+        "arXiv:2603.19415"
+      ],
+      "title": "Scalable Prompt Routing via Fine-Grained Latent Task Discovery",
+      "reason": "本論文は潜在タスク発見でプロンプトルーティングを大規模モデルプールへ拡張する研究であり、コスト最適化に関わるものの推論システムの実行機構への直接貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2603.19415",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 27
+    }
+  ],
+  "parent_run_key": "muse-20261125-d06-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

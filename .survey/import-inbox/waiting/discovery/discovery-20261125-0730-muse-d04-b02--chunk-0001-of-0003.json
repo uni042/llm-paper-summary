@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b02::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CVPRF71909.2026.00593",
+      "identity_tokens": [
+        "DOI:10.1109/CVPRF71909.2026.00593"
+      ],
+      "title": "PrismPrune: Decoupling Saliency and Diversity in Attention for Efficient Visual Token Pruning in VLMs",
+      "reason": "PrismPrune decouples saliency and diversity signals inside multi-head attention to prune visual tokens in VLMs, attacking the quadratic visual-token bottleneck; direct inference-time token pruning for VLMs.",
+      "source_url": "https://doi.org/10.1109/CVPRF71909.2026.00593",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 151
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15600",
+      "identity_tokens": [
+        "arXiv:2512.15600"
+      ],
+      "title": "How Smoothing is N-simplicial Attention?",
+      "reason": "Introduces N-simplicial attention with cost-effective simplex selection and analyzes its smoothing via Lipschitz bounds; an attention-variant architecture/theory study without an inference-system evaluation.",
+      "source_url": "https://arxiv.org/abs/2512.15600",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 152
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14568",
+      "identity_tokens": [
+        "arXiv:2607.14568"
+      ],
+      "title": "A Modern Multimodal Assistant on a 6 GB 2011 GPU: Stage-Validated, All-GPU CUDA Inference for Fermi",
+      "reason": "Reports an all-GPU CUDA inference engine running a multimodal MoE assistant entirely on a 6GB Fermi GPU, with measured GEMM and dequantization engineering; direct on-device inference systems work.",
+      "source_url": "https://arxiv.org/abs/2607.14568",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32852",
+      "identity_tokens": [
+        "arXiv:2609.32852"
+      ],
+      "title": "ARSM: Auto-Regressive State Machine for Agentic Reasoning Compression",
+      "reason": "ARSM compresses agentic reasoning context in-situ with an auto-regressive state machine to relieve agent memory bottlenecks; context compression for agents, adjacent to but not an LLM serving/decoding system.",
+      "source_url": "https://arxiv.org/abs/2609.32852",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 154
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.06500",
+      "identity_tokens": [
+        "arXiv:2611.06500"
+      ],
+      "title": "Tools Need Not Speak in Text: Latent Context Compression for Agents",
+      "reason": "Coca-Cola compresses tool observations into continuous latent tokens for LLM agents instead of raw text context; reduces agent context overhead, but is an agent-representation method rather than an inference system technique.",
+      "source_url": "https://arxiv.org/abs/2611.06500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 155
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2303.05378",
+      "identity_tokens": [
+        "arXiv:2303.05378"
+      ],
+      "title": "Greener yet Powerful: Taming Large Code Generation Models with Quantization",
+      "reason": "Quantizes large code generation models so they run on laptops and mid-size servers, explicitly targeting memory, latency and dollar cost of deployment; inference-oriented model quantization.",
+      "source_url": "https://arxiv.org/abs/2303.05378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2303.17612",
+      "identity_tokens": [
+        "arXiv:2303.17612"
+      ],
+      "title": "oBERTa: Improving Sparse Transfer Learning via improved initialization, distillation, and pruning regimes",
+      "reason": "oBERTa combines pruning, distillation and quantization regimes to produce RoBERTa models 3.8-24.3x faster for practitioners; direct inference-speed model compression.",
+      "source_url": "https://arxiv.org/abs/2303.17612",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 157
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.10623",
+      "identity_tokens": [
+        "arXiv:2510.10623"
+      ],
+      "title": "ADiP: Adaptive Precision Systolic Array for Matrix Multiplication Acceleration",
+      "reason": "ADiP is an adaptive-precision systolic array that reconfigures processing elements for quantized matrix multiplication in Transformers; accelerator hardware for transformer inference computation.",
+      "source_url": "https://arxiv.org/abs/2510.10623",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 158
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.04513",
+      "identity_tokens": [
+        "arXiv:2506.04513"
+      ],
+      "title": "Pruning Everything, Everywhere, All at Once",
+      "reason": "Prunes neurons and layers simultaneously across generic deep networks; a general structured-pruning method not specialized to or evaluated as an LLM inference technique.",
+      "source_url": "https://arxiv.org/abs/2506.04513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 159
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.00734",
+      "identity_tokens": [
+        "arXiv:2411.00734"
+      ],
+      "title": "Multilayer Dataflow: Orchestrate Butterfly Sparsity to Accelerate Attention Computation",
+      "reason": "Multilayer Dataflow orchestrates butterfly sparsity on a reconfigurable dataflow architecture to accelerate attention computation and cut its memory demands; attention acceleration hardware.",
+      "source_url": "https://arxiv.org/abs/2411.00734",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 160
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30963",
+      "identity_tokens": [
+        "arXiv:2605.30963"
+      ],
+      "title": "AMix-2: Establishing Protein as a Native Modality in Large Language Models",
+      "reason": "AMix-2 establishes protein sequences as a native modality of LLMs for biological reasoning and protein design; a biomedical foundation-model application with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2605.30963",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 161
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36653",
+      "identity_tokens": [
+        "arXiv:2609.36653"
+      ],
+      "title": "Scheduling Recursive Reasoning in Looped Transformers",
+      "reason": "TAPS schedules update scales along recurrent reasoning trajectories in looped Transformers at test time; it modulates test-time computation, but the contribution is a reasoning-dynamics method rather than a serving system.",
+      "source_url": "https://arxiv.org/abs/2609.36653",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 162
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21277",
+      "identity_tokens": [
+        "arXiv:2504.21277"
+      ],
+      "title": "Reinforced MLLM: A Survey on RL-Based Reasoning in Multimodal Large Language Models",
+      "reason": "A survey of reinforcement-learning-based reasoning in multimodal LLMs covering algorithms and reward designs; a capability survey with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2504.21277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16134",
+      "identity_tokens": [
+        "arXiv:2503.16134"
+      ],
+      "title": "Binarized Mamba-Transformer for Lightweight Quad Bayer HybridEVS Demosaicing",
+      "reason": "A binarized Mamba-Transformer performs Quad Bayer demosaicing for hybrid event cameras on mobile devices; an image-signal-processing application, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2503.16134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34736",
+      "identity_tokens": [
+        "arXiv:2609.34736"
+      ],
+      "title": "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing",
+      "reason": "SeLMRoute extracts candidate-independent semantic evidence from queries to learn LLM routing decisions under deployment objectives; routing research, but the abstract centers on evidence representation rather than serving-cost mechanics.",
+      "source_url": "https://arxiv.org/abs/2609.34736",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 165
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18943",
+      "identity_tokens": [
+        "arXiv:2409.18943"
+      ],
+      "title": "Ruler: A Model-Agnostic Method to Control Generated Length for Large Language Models",
+      "reason": "Ruler adds meta length tokens so LLMs follow target response lengths; an instruction-following capability method with no inference efficiency or systems contribution.",
+      "source_url": "https://arxiv.org/abs/2409.18943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 166
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5d4a2a1ec0c26ea1f4ff13fb73f7d3415268bc14",
+      "identity_tokens": [
+        "SemanticScholar:5d4a2a1ec0c26ea1f4ff13fb73f7d3415268bc14"
+      ],
+      "title": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device LLM Agents",
+      "reason": "Division-of-Thoughts decomposes tasks between on-device SLMs and cloud LLMs with a scheduler and adapter, cutting reasoning time and API cost; hybrid routing for agents, with inference savings secondary to the agent framework.",
+      "source_url": "https://www.semanticscholar.org/paper/5d4a2a1ec0c26ea1f4ff13fb73f7d3415268bc14",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 167
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14",
+      "identity_tokens": [
+        "SemanticScholar:94f94e8892261d0377159379ca5a166ceae19a14"
+      ],
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "reason": "PoWER-BERT progressively eliminates redundant intermediate word-vectors, chosen by attention-based significance, to cut BERT inference time up to 4.5x at under 1% accuracy loss; a direct inference acceleration method.",
+      "source_url": "https://www.semanticscholar.org/paper/94f94e8892261d0377159379ca5a166ceae19a14",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 168
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12255",
+      "identity_tokens": [
+        "arXiv:2603.12255"
+      ],
+      "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
+      "reason": "Spatial-TTT maintains spatial evidence over unbounded video streams with test-time training and sliding-window attention; an efficient streaming architecture for a spatial-intelligence application, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2603.12255",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01670",
+      "identity_tokens": [
+        "arXiv:2604.01670"
+      ],
+      "title": "Hierarchical Memory Orchestration for Personalized Persistent Agents",
+      "reason": "Hierarchical Memory Orchestration tiers interaction history with a compact primary cache for personalized agents on constrained devices; agent memory management adjacent to inference cost, but no serving/decoding mechanism.",
+      "source_url": "https://arxiv.org/abs/2604.01670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 170
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b02",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

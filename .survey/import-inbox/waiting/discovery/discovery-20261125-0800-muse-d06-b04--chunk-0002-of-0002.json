@@ -1,0 +1,168 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d06-b04::chunk-0002-of-0002",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 9,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.15947",
+      "identity_tokens": [
+        "arXiv:2305.15947"
+      ],
+      "title": "Online learning of long-range dependencies",
+      "reason": "本論文は長期依存のオンライン学習アルゴリズムの研究であり、学習手法そのものが主対象で推論システムへの貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2305.15947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 192
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.12086",
+      "identity_tokens": [
+        "arXiv:2305.12086"
+      ],
+      "title": "Prefix Propagation: Parameter-Efficient Tuning for Long Sequences",
+      "reason": "Prefix Propagationは長系列向けパラメータ効率チューニングの研究であり、適応のメモリ効率が主対象で推論高速化への具体的適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2305.12086",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 193
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.06892",
+      "identity_tokens": [
+        "arXiv:2505.06892"
+      ],
+      "title": "Learning Soft Sparse Shapes for Efficient Time-Series Classification",
+      "reason": "本論文は時系列分類のshapelet学習を扱うタスクモデルの研究であり、LLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2505.06892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 194
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.03923",
+      "identity_tokens": [
+        "arXiv:2210.03923"
+      ],
+      "title": "Sparse Teachers Can Be Dense with Knowledge",
+      "reason": "本論文は事前学習言語モデルの蒸留で教師の学生友好性を扱う学習研究であり、推論システムへの具体的適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2210.03923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 195
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3696348.3696856",
+      "identity_tokens": [
+        "DOI:10.1145/3696348.3696856"
+      ],
+      "title": "A case for server-scale photonic connectivity",
+      "reason": "本論文はサーバ規模フォトニック接続の必要性を論じるアーキテクチャ論であり、学習・推論双方の計算需要を動機とするが具体的な推論機構の提案ではない。",
+      "source_url": "https://doi.org/10.1145/3696348.3696856",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 196
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21734",
+      "identity_tokens": [
+        "arXiv:2606.21734"
+      ],
+      "title": "HPP: Hierarchical Programmatic Probing for Long Video Understanding by Decoupling Perception and Reasoning",
+      "reason": "HPPは長動画理解で知覚と推論を分離する階層的プロービングであり、VLMの処理効率に関わるが主対象は動画理解タスクの解法である。",
+      "source_url": "https://arxiv.org/abs/2606.21734",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 197
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12413",
+      "identity_tokens": [
+        "arXiv:2409.12413"
+      ],
+      "title": "DeFT-Mamba: Universal Multichannel Sound Separation and Polyphonic Audio Classification",
+      "reason": "マルチチャンネル音源分離と音響分類がタイトルに明示された音響処理応用であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2409.12413",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 198
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.146",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-industry.146"
+      ],
+      "title": "Confidence-Aware Reasoning: Optimizing Self-Guided Thinking Trajectories in Large Reasoning Models",
+      "reason": "Confidence-Aware Reasoningは推論時に信頼度で思考軌跡を剪定し過剰思考を抑える枠組みであり、推論コスト削減に関わるが制御は軌跡水準にとどまりシステム機構は薄い。",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-industry.146",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 199
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.02053",
+      "identity_tokens": [
+        "arXiv:2402.02053"
+      ],
+      "title": "Affordable Generative Agents",
+      "reason": "Affordable Generative Agentsは信憑性のあるLLMエージェント対話を低コストに維持する枠組みであり、運用コストに関わるが推論システムの機構への貢献は要旨からは限定的である。",
+      "source_url": "https://arxiv.org/abs/2402.02053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 200
+    }
+  ],
+  "parent_run_key": "muse-20261125-d06-b04",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 29
+}

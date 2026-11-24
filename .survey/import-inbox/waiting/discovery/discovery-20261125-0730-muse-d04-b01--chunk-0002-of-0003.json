@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b01::chunk-0002-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.15991",
+      "identity_tokens": [
+        "arXiv:2606.15991"
+      ],
+      "title": "Fearless Concurrency on the GPU",
+      "reason": "cuTile Rust extends Rust ownership to tile-based GPU kernel authoring with data-race freedom guarantees; a general GPU programming system, not an LLM inference kernel or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2606.15991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 121
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.07149",
+      "identity_tokens": [
+        "arXiv:2611.07149"
+      ],
+      "title": "FastAFD: When Does Attention-FFN Disaggregation Pay on Rack-Scale NVLink?",
+      "reason": "FastAFD builds an attention-FFN disaggregated MoE serving engine for GB200 NVL72 that overlaps MoE and attention microbatches and beats tuned vLLM wide expert parallelism on decode throughput; direct serving-system contribution.",
+      "source_url": "https://arxiv.org/abs/2611.07149",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 122
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.20959",
+      "identity_tokens": [
+        "arXiv:2502.20959"
+      ],
+      "title": "Cicada: A Pipeline-Efficient Approach to Serverless Inference with Decoupled Management",
+      "reason": "Cicada attacks serverless inference cold starts with pipelined model loading (MiniLoader, decoupled weight loading) coordinating compute, storage and scheduling; direct inference serving infrastructure.",
+      "source_url": "https://arxiv.org/abs/2502.20959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 123
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20745",
+      "identity_tokens": [
+        "arXiv:2512.20745"
+      ],
+      "title": "AgentMath: Empowering Mathematical Reasoning for Large Language Models via Tool-Augmented Agent",
+      "reason": "AgentMath builds tool-augmented SFT data and agentic RL so LLMs solve complex mathematics with code interpreters; a reasoning-capability framework with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2512.20745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 124
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03809",
+      "identity_tokens": [
+        "arXiv:2604.03809"
+      ],
+      "title": "Representational Collapse in Multi-Agent LLM Committees: Measurement and Diversity-Aware Consensus",
+      "reason": "Measures representational collapse in multi-agent LLM committees and adds a diversity-weighted consensus protocol with lower token cost; primarily a capability/measurement study of agent voting, not an inference system.",
+      "source_url": "https://arxiv.org/abs/2604.03809",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 125
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01167",
+      "identity_tokens": [
+        "arXiv:2602.01167"
+      ],
+      "title": "Do All Individual Layers Help? an Empirical Study of Task-Interfering Layers in Vision-Language Models",
+      "reason": "Empirical study of task-interfering layers in vision-language models via per-layer interventions; an analysis of model behavior with no compression, serving, or inference-efficiency method proposed.",
+      "source_url": "https://arxiv.org/abs/2602.01167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 126
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.00180",
+      "identity_tokens": [
+        "arXiv:2605.00180"
+      ],
+      "title": "RouteProfile: Graph-Based Profiling for Cold-Start LLM Routing",
+      "reason": "RouteProfile builds graph-based profiles of newly released LLMs from public signals so routers can cold-start model selection; it supports LLM routing but contributes profiling, not a serving or cost-optimization mechanism.",
+      "source_url": "https://arxiv.org/abs/2605.00180",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 127
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14273",
+      "identity_tokens": [
+        "arXiv:2410.14273"
+      ],
+      "title": "REEF: Representation Encoding Fingerprints for Large Language Models",
+      "reason": "REEF fingerprints whether a suspect LLM derives from a victim model using representation similarity for IP protection; model-provenance detection with no inference efficiency or systems content.",
+      "source_url": "https://arxiv.org/abs/2410.14273",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 128
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.06635",
+      "identity_tokens": [
+        "arXiv:2306.06635"
+      ],
+      "title": "2-D SSM: A General Spatial Layer for Visual Transformers",
+      "reason": "Proposes a 2-D state-space layer with efficient parameterization and accelerated computation inserted into Vision Transformers; an efficient vision architecture component, not an LLM inference system contribution.",
+      "source_url": "https://arxiv.org/abs/2306.06635",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 129
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03752",
+      "identity_tokens": [
+        "arXiv:2410.03752"
+      ],
+      "title": "Efficient Streaming LLM for Speech Recognition",
+      "reason": "SpeechLLM-XL uses chunked limited-window attention for linear-scaling streaming speech recognition; the efficiency technique is real but the target is a speech-recognition application model, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2410.03752",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 130
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.06512",
+      "identity_tokens": [
+        "arXiv:2402.06512"
+      ],
+      "title": "Multimodal Clinical Trial Outcome Prediction with Large Language Models",
+      "reason": "Title itself states the work predicts multimodal clinical trial outcomes with LLMs, a medical outcome-prediction application; no inference-system technique is indicated in the title.",
+      "source_url": "https://arxiv.org/abs/2402.06512",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 131
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-3624",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3624"
+      ],
+      "title": "More Than Just Functional: LLM-as-a-Critique for Efficient Code Generation",
+      "reason": "Uses a prompted LLM as an efficiency critique over the AST of generated code so code LLMs emit faster-running programs; the efficiency concerned is the generated code's runtime, not the LLM's inference system.",
+      "source_url": "https://doi.org/10.52202/085713-3624",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 132
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00520",
+      "identity_tokens": [
+        "arXiv:2602.00520"
+      ],
+      "title": "NEST: Nested Event Stream Transformer for Sequences of Multisets",
+      "reason": "NEST is a nested event-stream Transformer architecture for sequences of multisets such as EHR encounters; a domain sequence-modeling architecture with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2602.00520",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 133
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10848",
+      "identity_tokens": [
+        "arXiv:2607.10848"
+      ],
+      "title": "Predictive Divergence Masks for LLM RL",
+      "reason": "Predictive Divergence Masks change token masking criteria in PPO-style reinforcement learning for LLMs; a training-algorithm contribution with no inference application.",
+      "source_url": "https://arxiv.org/abs/2607.10848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 134
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05125",
+      "identity_tokens": [
+        "arXiv:2610.05125"
+      ],
+      "title": "Bayesian Entropy-based Reordering for Calibrated Diffusion Language Models",
+      "reason": "BayesER is a post-hoc Bayesian decoding framework that orders token commitment in masked diffusion language models by predictive entropy; decoding-time, but aimed at calibration of generation rather than inference efficiency or serving.",
+      "source_url": "https://arxiv.org/abs/2610.05125",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 135
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3677052.3698691",
+      "identity_tokens": [
+        "DOI:10.1145/3677052.3698691"
+      ],
+      "title": "Mixtures of Experts for Scaling up Neural Networks in Order Execution",
+      "reason": "Applies mixture-of-experts RL agents with spectral-clustering specialization to optimal order execution on NASDAQ Amazon stock data; a financial trading application, confirmed by the abstract.",
+      "source_url": "https://doi.org/10.1145/3677052.3698691",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 136
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05224",
+      "identity_tokens": [
+        "arXiv:2410.05224"
+      ],
+      "title": "Cookbook: A framework for improving LLM generative abilities via programmatic data generating templates",
+      "reason": "Cookbook programmatically generates synthetic instruction data to fine-tune LLM generative abilities; a training-data construction framework with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2410.05224",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 137
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.01039",
+      "identity_tokens": [
+        "arXiv:2512.01039"
+      ],
+      "title": "Joint Partitioning and Placement of Foundation Models for Real-Time Edge AI",
+      "reason": "Formalizes joint layer partitioning and placement of foundation models across heterogeneous edge infrastructure as runtime-resolved optimization under latency and utilization constraints; direct distributed inference orchestration.",
+      "source_url": "https://arxiv.org/abs/2512.01039",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 138
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.04749",
+      "identity_tokens": [
+        "arXiv:2508.04749"
+      ],
+      "title": "Bridging Brains and Models: MoE-Based Functional Lesions for Simulating and Rehabilitating Aphasia",
+      "reason": "Lesions components of an MoE language model to simulate aphasia subtypes and validates outputs against patient speech; a neuroscience/cognitive-modeling study, not an inference contribution.",
+      "source_url": "https://arxiv.org/abs/2508.04749",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 139
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02655",
+      "identity_tokens": [
+        "arXiv:2505.02655"
+      ],
+      "title": "SCFormer: Structured Channel-wise Transformer with Cumulative Historical State for Multivariate Time Series Forecasting",
+      "reason": "SCFormer adds temporal constraints and HiPPO historical state to a channel-wise Transformer for multivariate time-series forecasting; a forecasting architecture for a non-LLM application.",
+      "source_url": "https://arxiv.org/abs/2505.02655",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 140
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

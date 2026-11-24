@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d01-b01::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3820171.3806875",
+      "identity_tokens": [
+        "DOI:10.1145/3820171.3806875"
+      ],
+      "title": "SageServe: Optimizing LLM Serving on Cloud Data Centers with Forecast Aware Auto-Scaling",
+      "reason": "SageServeはMicrosoft Office 365の実推論ワークロード特性に基づき、短期リクエストルーティングと予測型オートスケーリングで混在SLAのLLMサービングを最適化する枠組みであり、サービング基盤への直接貢献が要旨で確認できる。",
+      "source_url": "https://doi.org/10.1145/3820171.3806875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.914",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.914"
+      ],
+      "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
+      "reason": "FAEDKVはInfinite-Window Fourier TransformでKVキャッシュを周波数領域へ変換し、学習不要で偏りのないKVキャッシュ圧縮を実現する手法であり、長文脈推論のメモリ削減に直接寄与する。",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.914",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.future.2026.108735",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2026.108735"
+      ],
+      "title": "Data-driven optimization of GPU efficiency for distributed LLM-adapter serving",
+      "reason": "本論文は分散LLMアダプタサービングについて、デジタルツインによる性能予測から最小GPU台数で処理できるアダプタ配置を計算し、GPU効率を最適化するパイプラインを提案しており、サービング配置問題への直接貢献である。",
+      "source_url": "https://doi.org/10.1016/j.future.2026.108735",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.26599/bdma.2025.9020025",
+      "identity_tokens": [
+        "DOI:10.26599/bdma.2025.9020025"
+      ],
+      "title": "Dynamic Batch Processing with FlexiDecode Scheduler for Efficient LLM Inference in IIoT",
+      "reason": "FlexiDecodeスケジューラはIIoT環境の変動するリクエスト量に対し動的バッチ処理でprefill/decodeを調整しLLM推論効率を高める提案であり、バッチング・スケジューリングへの直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.26599/bdma.2025.9020025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICCECT68671.2026.11565091",
+      "identity_tokens": [
+        "DOI:10.1109/ICCECT68671.2026.11565091"
+      ],
+      "title": "SkipHBM: Bridging the Granularity Gap in Sparse LLM Inference",
+      "reason": "SkipHBMはBlock-16疎性を強制するBlock-Wanda剪定と、HBMベースロジックダイ上のSkip Control UnitによるZero-Tag早期バースト終了を組み合わせ、疎なLLM推論のメモリ帯域浪費を削減する。",
+      "source_url": "https://doi.org/10.1109/ICCECT68671.2026.11565091",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463419",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463419"
+      ],
+      "title": "Training-Free Prompt Compression via Shallow-Layer Structural-Semantic Fusion",
+      "reason": "S2PCは浅い層でQuery-Key注意パターンとValue類似度を融合してトークン重要度を測る学習不要のプロンプト圧縮であり、長プロンプト処理の二次計算量を早期圧縮で削減する推論効率化手法である。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463419",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/DATE58400.2024.10546602",
+      "identity_tokens": [
+        "DOI:10.23919/DATE58400.2024.10546602"
+      ],
+      "title": "AttBind: Memory-Efficient Acceleration for Long-Range Attention Using Vector-Derived Symbolic Binding",
+      "reason": "AttBindはベクトル記号アーキテクチャのバインディング演算で多頭注意を線形計算量化しASICで加速するが、対象は長距離注意一般でありLLM推論システムへの適用・評価が要旨では限定的なため境界とする。",
+      "source_url": "https://doi.org/10.23919/DATE58400.2024.10546602",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.emnlp-industry.65",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.emnlp-industry.65"
+      ],
+      "title": "ProConSuL: Project Context for Code Summarization with LLMs",
+      "reason": "ProConSuLはコールグラフ由来のプロジェクト文脈とSFT＋選好整合によるコード要約の精度・幻覚低減が目的であり、推論システムの効率化ではなくLLMの能力改善・学習手法である。",
+      "source_url": "https://doi.org/10.18653/v1/2024.emnlp-industry.65",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3673038.3673045",
+      "identity_tokens": [
+        "DOI:10.1145/3673038.3673045"
+      ],
+      "title": "VitBit: Enhancing Embedded GPU Performance for AI Workloads through Register Operand Packing",
+      "reason": "VitBitは8ビット以下の任意整数形式をレジスタオペランドパッキングで処理する組み込みGPU向けソフトウェア手法だが、対象はDNNワークロード一般でLLM推論への特化した評価が要旨にないため境界とする。",
+      "source_url": "https://doi.org/10.1145/3673038.3673045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463221",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463221"
+      ],
+      "title": "APSDA: Adversarially Pruned Sparse Dynamic Attention for Robust Handwritten Text Recognition",
+      "reason": "APSDAは手書き文字認識のCNN-Transformer-CTCパイプライン向けに敵対的剪定付き疎動的注意を組み込む応用研究であり、対象はHTRタスクの頑健性であってLLM推論システムではない。",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11463221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21265",
+      "identity_tokens": [
+        "arXiv:2509.21265"
+      ],
+      "title": "MedVSR: Medical Video Super-Resolution with Cross State-Space Propagation",
+      "reason": "MedVSRは医療動画の超解像に特化し、状態空間モデルによるCross State-Space Propagationでフレーム整列誤差に対処する画像処理応用であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2509.21265",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s44443-026-01343-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01343-9"
+      ],
+      "title": "LODAR: layered optimization for distributed adaptive LLM routing",
+      "reason": "LODARは異種バックエンド間の分散LLMルーティングをmin-max負荷均衡問題として定式化し、進化的探索とオンライン適応でピーク利用率を下げるサービング基盤手法である。",
+      "source_url": "https://doi.org/10.1007/s44443-026-01343-9",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23977/acss.2024.080618",
+      "identity_tokens": [
+        "DOI:10.23977/acss.2024.080618"
+      ],
+      "title": "Sparse Attention Mechanisms in Large Language Models: Applications, Classification, Performance Analysis, and Optimization",
+      "reason": "本論文はLongformer・Reformer・BIGBIRD等の疎注意機構をglobal/local/hybridへ分類するレビューであり、LLMの長系列効率に関わるが新規の推論システム機構の提案ではないため境界とする。",
+      "source_url": "https://doi.org/10.23977/acss.2024.080618",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISPA67752.2025.00140",
+      "identity_tokens": [
+        "DOI:10.1109/ISPA67752.2025.00140"
+      ],
+      "title": "POU: Outlier Uniformity-Based Layer-Wise Pruning Method for Large Language Models",
+      "reason": "POUは外れ値均一性に基づくエントロピー型Layer Importance Scoreで層ごとの疎性を配分するLLM剪定手法であり、エッジ配備に向けた推論モデル圧縮へ直接寄与する。",
+      "source_url": "https://doi.org/10.1109/ISPA67752.2025.00140",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3637778",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3637778"
+      ],
+      "title": "Mamba-Based Deep Learning Methods in Medical Image Analysis: A Systematic Literature Review",
+      "reason": "本論文は医療画像解析におけるMamba利用の系統的文献レビューであり、対象領域は放射線画像等の臨床タスクで、LLM推論システムの技術ではない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3637778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.00759",
+      "identity_tokens": [
+        "arXiv:2012.00759"
+      ],
+      "title": "MaX-DeepLab: End-to-End Panoptic Segmentation with Mask Transformers",
+      "reason": "MaX-DeepLabはマスクTransformerによるエンドツーエンドのパノプティックセグメンテーション手法であり、画像セグメンテーション応用であってLLM推論システムとは無関係である。",
+      "source_url": "https://arxiv.org/abs/2012.00759",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.02111",
+      "identity_tokens": [
+        "arXiv:2102.02111"
+      ],
+      "title": "Introduction to Neural Transfer Learning With Transformers for Social Science Text Analysis",
+      "reason": "本論文は社会科学のテキスト分析にTransformer転移学習を使う方法の解説と比較であり、応用分野向けの入門的検討であって推論システムへの技術貢献はない。",
+      "source_url": "https://arxiv.org/abs/2102.02111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPCA61900.2025.00133",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA61900.2025.00133"
+      ],
+      "title": "eDKM: An Efficient and Accurate Train-Time Weight Clustering for Large Language Models",
+      "reason": "eDKMは微分可能KMeansによる学習時重みクラスタリングのメモリ複雑度を下げLLM圧縮を可能にするが、主眼は学習時オーバーヘッドの削減であり推論側の機構ではないため境界とする。",
+      "source_url": "https://doi.org/10.1109/HPCA61900.2025.00133",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3711896.3736841",
+      "identity_tokens": [
+        "DOI:10.1145/3711896.3736841"
+      ],
+      "title": "An Efficient White-box LLM Watermarking for IP Protection on Online Market Platforms",
+      "reason": "ELLMarkはオンラインマーケットでの知的財産保護を目的とするホワイトボックスLLM透かし手法であり、推論効率やサービング機構とは無関係である。",
+      "source_url": "https://doi.org/10.1145/3711896.3736841",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/LCA.2025.3609283",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2025.3609283"
+      ],
+      "title": "A Quantitative Analysis of Mamba-2-Based Large Language Model: Study of State Space Duality",
+      "reason": "本論文はMamba-2のState Space Dualityについてprefill推論時の計算・メモリ挙動を体系的に計測しボトルネックを同定する分析であり、具体的な高速化機構の提案までは含まないため境界とする。",
+      "source_url": "https://doi.org/10.1109/LCA.2025.3609283",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 47
+    }
+  ],
+  "parent_run_key": "muse-20261125-d01-b01",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

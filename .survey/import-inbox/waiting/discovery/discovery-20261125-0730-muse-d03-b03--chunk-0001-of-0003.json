@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d03-b03::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3801489.3806878",
+      "identity_tokens": [
+        "DOI:10.1145/3801489.3806878"
+      ],
+      "title": "Optimal Scheduling Algorithms for LLM Inference: Theory and Practice",
+      "reason": "Develops a theoretical framework for routing and scheduling in two-phase (prefill/decode) LLM inference and proposes the throughput-optimal Resource-Aware Dynamic scheduler plus the SLO-aware SLAI scheduler for time-between-token constraints.",
+      "source_url": "https://doi.org/10.1145/3801489.3806878",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+      "identity_tokens": [
+        "SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c"
+      ],
+      "title": "T WIN KV: A C OMPOSABLE R EPAIR P ASS FOR KV C ACHE E VICTION VIA P AIRWISE K EY R EDUNDANCY",
+      "reason": "TwinKV is a training-free KV cache eviction repair pass that discounts value energy by nonlocal post-RoPE key frequency, beating five compressed baselines on LongBench, LooGLE and RULER at 50-75% KV removal under an exact storage budget.",
+      "source_url": "https://www.semanticscholar.org/paper/7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38521",
+      "identity_tokens": [
+        "arXiv:2609.38521"
+      ],
+      "title": "ShamAN-Q: Shampoo Augmented NanoQuant for Sub-1-bit LLM Weights",
+      "reason": "ShamAN-Q is a sub-1-bit post-training quantization method that replaces NanoQuant diagonal reconstruction geometry with a Shampoo-style Kronecker-factored Fisher Mahalanobis loss, lowering Qwen3 perplexity at about 1 bit per weight.",
+      "source_url": "https://arxiv.org/abs/2609.38521",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3583780.3615495",
+      "identity_tokens": [
+        "DOI:10.1145/3583780.3615495"
+      ],
+      "title": "PS-SA: An Efficient Self-Attention via Progressive Sampling for User Behavior Sequence Modeling",
+      "reason": "PS-SA progressively samples valuable item pairs to make self-attention efficient for user behavior sequence modeling in recommender systems; a recommender-systems application of sparse attention.",
+      "source_url": "https://doi.org/10.1145/3583780.3615495",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.12473",
+      "identity_tokens": [
+        "arXiv:2506.12473"
+      ],
+      "title": "TagRouter: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks",
+      "reason": "TagRouter is a training-free tag-based routing method that allocates queries across multiple LLMs, raising system accept rate by 6.15% while reducing serving cost by 17.20% versus 13 baselines.",
+      "source_url": "https://arxiv.org/abs/2506.12473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02383",
+      "identity_tokens": [
+        "arXiv:2610.02383"
+      ],
+      "title": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
+      "reason": "Looped Prediction Transformers pretrain looped LMs so only the first recursion writes a KV cache and later recursions read the shared cache plus a short local window, cutting context memory 76-79% at better perplexity.",
+      "source_url": "https://arxiv.org/abs/2610.02383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04974",
+      "identity_tokens": [
+        "arXiv:2606.04974"
+      ],
+      "title": "SAID: Accelerating Diffusion-Based Language Models via Scaffold-Aware Iterative Decoding",
+      "reason": "SAID reallocates denoising computation across scaffold and detail tokens (plus confidence-hierarchical layered generation) to accelerate diffusion LLM inference up to 9.1x on LLaDA models.",
+      "source_url": "https://arxiv.org/abs/2606.04974",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.16744",
+      "identity_tokens": [
+        "arXiv:2610.16744"
+      ],
+      "title": "FoveaTree: Information-Density Trees for Query-Guided Visual Token Pruning in Video Large Language Models",
+      "reason": "FoveaTree is a two-stage training-free visual token pruning framework (merge-gain density quadtree plus attention tree pruning) that reduces the hundreds of per-frame visual tokens driving Video LLM inference cost.",
+      "source_url": "https://arxiv.org/abs/2610.16744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.13649",
+      "identity_tokens": [
+        "arXiv:2607.13649"
+      ],
+      "title": "CIMERA: Compute-in-Interconnect and Memory with Reconfigurable Precision for LLM Inference",
+      "reason": "CIMERA is a reconfigurable-precision LLM inference accelerator integrating compute-in-interconnect and memory to mitigate the memory wall, reporting up to 25x and 10x higher energy efficiency than an H100 for 1B and 13B models.",
+      "source_url": "https://arxiv.org/abs/2607.13649",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2108.01778",
+      "identity_tokens": [
+        "arXiv:2108.01778"
+      ],
+      "title": "Armour: Generalizable Compact Self-Attention for Vision Transformers",
+      "reason": "Armour is a compact, generalizable self-attention mechanism producing smaller and faster vision transformers; an efficient-attention contribution for ViTs rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2108.01778",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09902",
+      "identity_tokens": [
+        "arXiv:2602.09902"
+      ],
+      "title": "Routing, Cascades, and User Choice for LLMs",
+      "reason": "Models LLM routing and cascading as a Stackelberg game with a re-prompting user and characterizes provider-optimal versus user-preferred routes; routing policy theory without a serving system implementation.",
+      "source_url": "https://arxiv.org/abs/2602.09902",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12638",
+      "identity_tokens": [
+        "arXiv:2505.12638"
+      ],
+      "title": "ChromFound: Towards A Universal Foundation Model for Single-Cell Chromatin Accessibility Data",
+      "reason": "Title explicitly presents a foundation model for single-cell chromatin accessibility data, a genomics application domain.",
+      "source_url": "https://arxiv.org/abs/2505.12638",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.09131",
+      "identity_tokens": [
+        "arXiv:2606.09131"
+      ],
+      "title": "Late-Layer Fusion is Enough: Dual-Path Vision Token Routing for Multimodal Large Language Models under Visual Saturation",
+      "reason": "Dual-Path Vision Token Routing exploits the finding that vision tokens saturate by layer 4 in LLaVA-1.5, routing them through a late-layer-fusion path to remove redundant visual computation in MLLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.09131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/BigDIA60676.2023.10429754",
+      "identity_tokens": [
+        "DOI:10.1109/BigDIA60676.2023.10429754"
+      ],
+      "title": "A Novel Shortcut between Local Windows for Window-based Vision Transformers",
+      "reason": "Adds a local-window shortcut with spatial/channel transformations to window-based vision transformers, evaluated on CIFAR100/Tiny-ImageNet classification; a CV architecture tweak.",
+      "source_url": "https://doi.org/10.1109/BigDIA60676.2023.10429754",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13761",
+      "identity_tokens": [
+        "arXiv:2410.13761"
+      ],
+      "title": "GDeR: Safeguarding Efficiency, Balancing, and Robustness via Prototypical Graph Pruning",
+      "reason": "GDeR prunes training data for graph neural networks using prototypical graphs to preserve balance and robustness; training-data curation for GNNs.",
+      "source_url": "https://arxiv.org/abs/2410.13761",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14137",
+      "identity_tokens": [
+        "arXiv:2511.14137"
+      ],
+      "title": "Unifying Convolution and Attention via Convolutional Nearest Neighbors",
+      "reason": "ConvNN unifies convolution and self-attention as k-nearest-neighbor aggregation and validates hybrid layers on ImageNet classification; a computer-vision framework.",
+      "source_url": "https://arxiv.org/abs/2511.14137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01074",
+      "identity_tokens": [
+        "arXiv:2606.01074"
+      ],
+      "title": "When Is 0.1% Enough? Analyzing the Combined Effects of Dimensionality Reduction and Quantization on Text Embedding Compression",
+      "reason": "Systematically analyzes combined dimensionality reduction and quantization of text embeddings on MTEB, showing near-original scores at under 0.1% storage for classification; an embedding-compression study centered on storage rather than LLM inference execution.",
+      "source_url": "https://arxiv.org/abs/2606.01074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.09916",
+      "identity_tokens": [
+        "arXiv:2610.09916"
+      ],
+      "title": "NeuralZip: Reusable Setup for Fast Lossless Compression",
+      "reason": "NeuralZip losslessly compresses model weight checkpoints by grouping exponent distributions and sharing Huffman codes, making post-setup encoding 1.81-21.33x faster with exact reconstruction; it reduces weight storage/transfer, not inference computation.",
+      "source_url": "https://arxiv.org/abs/2610.09916",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15091",
+      "identity_tokens": [
+        "arXiv:2410.15091"
+      ],
+      "title": "Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion",
+      "reason": "Spatial-Mamba adds structure-aware state fusion with dilated convolutions so Mamba-style SSMs capture 2D image structure; a vision architecture.",
+      "source_url": "https://arxiv.org/abs/2410.15091",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.08325",
+      "identity_tokens": [
+        "arXiv:2306.08325"
+      ],
+      "title": "GCformer: An Efficient Solution for Accurate and Scalable Long-Term Multivariate Time Series Forecasting",
+      "reason": "GCformer combines a sublinear-complexity global convolution branch with a local transformer branch for long-term multivariate time series forecasting benchmarks; a forecasting task model.",
+      "source_url": "https://arxiv.org/abs/2306.08325",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 25
+    }
+  ],
+  "parent_run_key": "muse-20261125-d03-b03",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

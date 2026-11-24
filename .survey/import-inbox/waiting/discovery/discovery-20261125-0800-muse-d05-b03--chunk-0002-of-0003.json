@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d05-b03::chunk-0002-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15513",
+      "identity_tokens": [
+        "arXiv:2605.15513"
+      ],
+      "title": "CAPS: Cascaded Adaptive Pairwise Selection for Efficient Parallel Reasoning",
+      "reason": "CAPS cascades adaptive pairwise selection to cut the heavy verification cost of parallel reasoning aggregation at test time; it reduces inference-time compute of a reasoning procedure, but as an algorithmic selection scheme rather than a serving system, so borderline.",
+      "source_url": "https://arxiv.org/abs/2605.15513",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11626",
+      "identity_tokens": [
+        "arXiv:2601.11626"
+      ],
+      "title": "Concatenated Matrix SVD: Compression Bounds, Incremental Approximation, and Error-Constrained Clustering",
+      "reason": "Concatenated matrix SVD is analyzed for compression bounds and incremental approximation across matrix collections including neural network compression; generic numerical compression theory with only partial relevance to model inference, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2601.11626",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16206",
+      "identity_tokens": [
+        "arXiv:2603.16206"
+      ],
+      "title": "Offline Exploration-Aware Fine-Tuning for Long-Chain Mathematical Reasoning",
+      "reason": "Exploration-aware supervised fine-tuning shapes the initialization for RL with verifiable rewards on long-chain math reasoning; a training method with no inference mechanism.",
+      "source_url": "https://arxiv.org/abs/2603.16206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01590",
+      "identity_tokens": [
+        "arXiv:2607.01590"
+      ],
+      "title": "Hawk: Harnessing Hardware-Aware Knowledge for High-Performance NPU Kernel Generation",
+      "reason": "Hawk retrieves hardware-aware knowledge so LLMs can generate high-performance NPU kernels without violating memory hierarchies; the LLM is a code-generation tool and the product is kernel-development automation, adjacent to inference kernels but not an inference system, so borderline.",
+      "source_url": "https://arxiv.org/abs/2607.01590",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2603.27188",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.27188"
+      ],
+      "title": "Persistent Memory Through Triple-Loop Consolidation in a Non-Gradient Dissipative Cognitive Architecture",
+      "reason": "Triple-loop consolidation maintains persistent memory in a non-gradient dissipative cognitive architecture whose units are stochastically replaced; an alternative cognitive architecture unrelated to LLM inference systems.",
+      "source_url": "https://doi.org/10.48550/arXiv.2603.27188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26197",
+      "identity_tokens": [
+        "arXiv:2604.26197"
+      ],
+      "title": "Hierarchical Long-Term Semantic Memory for LinkedIn's Hiring Agent",
+      "reason": "A hierarchical long-term semantic memory system for LinkedIn's hiring agent extracts structured signals and supports low-latency retrieval at industrial scale; a production agent-memory system, but its contribution is memory quality for one application rather than LLM serving, so borderline.",
+      "source_url": "https://arxiv.org/abs/2604.26197",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11089",
+      "identity_tokens": [
+        "arXiv:2607.11089"
+      ],
+      "title": "OS-Pruner: Pruning Chains-of-Thought of Reasoning Models via Optimal Stopping",
+      "reason": "OS-Pruner prunes chains of thought in reasoning models via optimal stopping, avoiding static budgets and retraining while cutting latency and cost of redundant reasoning steps; a concrete inference-time reasoning-length optimization, hence accept.",
+      "source_url": "https://arxiv.org/abs/2607.11089",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22196",
+      "identity_tokens": [
+        "arXiv:2610.22196"
+      ],
+      "title": "Hy-Memory-30B-A3B: Attributed Reinforcement Learning for Long-Term Memory Writing",
+      "reason": "Hy-Memory-30B-A3B is a specialized model trained with attributed RL to execute memory write paths across external-memory frameworks, lowering reliance on general LLM writers; memory-writing specialization with a serving-cost motivation, but the contribution is a trained writer model, so borderline.",
+      "source_url": "https://arxiv.org/abs/2610.22196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.12895",
+      "identity_tokens": [
+        "arXiv:2102.12895"
+      ],
+      "title": "Evolving Attention with Residual Convolutions",
+      "reason": "Evolving attention propagates attention maps across layers through residual convolutions to improve transformer accuracy on NLP and vision; an accuracy-oriented architecture change with no inference efficiency claim.",
+      "source_url": "https://arxiv.org/abs/2102.12895",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.00558",
+      "identity_tokens": [
+        "arXiv:2005.00558"
+      ],
+      "title": "Pointer: Constrained Text Generation via Insertion-based Generative Pre-training",
+      "reason": "POINTER generates lexically constrained text by progressive parallel insertion with a pretrained transformer; a constrained generation method from the BERT/GPT-2 era with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2005.00558",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.03837",
+      "identity_tokens": [
+        "arXiv:2012.03837"
+      ],
+      "title": "Parallel Training of Deep Networks with Local Updates",
+      "reason": "Local-update parallel training removes synchronization across deep network blocks to parallelize training on large datasets; a training parallelization method, explicitly not inference.",
+      "source_url": "https://arxiv.org/abs/2012.03837",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.07745",
+      "identity_tokens": [
+        "arXiv:2510.07745"
+      ],
+      "title": "Parallel Test-Time Scaling for Latent Reasoning Models",
+      "reason": "Parallel test-time scaling is extended to latent reasoning models by adding sampling mechanisms in continuous reasoning space; an inference-time algorithmic scaling study without serving, decoding-system or efficiency mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2510.07745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2206.10844",
+      "identity_tokens": [
+        "arXiv:2206.10844"
+      ],
+      "title": "Quantization Robust Federated Learning for Efficient Inference on Heterogeneous Devices",
+      "reason": "Quantization-robust federated learning trains models that can be deployed at varied bit-widths for efficient inference on heterogeneous devices; the core contribution is federated training robustness, with inference efficiency as a deployment property, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2206.10844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.23464",
+      "identity_tokens": [
+        "arXiv:2605.23464"
+      ],
+      "title": "Unextractable Protocol Models: Collaborative Training and Inference without Weight Materialization",
+      "reason": "Unextractable Protocol Models shard a large network across mutually distrusting participants so full weights never materialize during collaborative training and serving; a decentralized trust framework whose inference aspect is inseparable from its training protocol, so borderline.",
+      "source_url": "https://arxiv.org/abs/2605.23464",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.05197",
+      "identity_tokens": [
+        "arXiv:2411.05197"
+      ],
+      "title": "Hardware and Software Platform Inference",
+      "reason": "This work shows buyers of hosted LLM inference cannot verify the advertised model or H100-class hardware and studies fingerprinting of the serving platform; measurement of inference services rather than a serving mechanism, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2411.05197",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TNSM.2024.3409701",
+      "identity_tokens": [
+        "DOI:10.1109/TNSM.2024.3409701"
+      ],
+      "title": "BCEdge: SLO-Aware DNN Inference Services With Adaptive Batch-Concurrent Scheduling on Edge Devices",
+      "reason": "BCEdge schedules multiple DNN inference services on edge devices with adaptive batch-concurrency under SLOs; edge DNN serving scheduling is close to the scope, but the models and evaluation are generic DNNs rather than LLM inference, so borderline.",
+      "source_url": "https://doi.org/10.1109/TNSM.2024.3409701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.11903",
+      "identity_tokens": [
+        "arXiv:2306.11903"
+      ],
+      "title": "Deep Fusion: Efficient Network Training via Pre-trained Initializations",
+      "reason": "Deep Fusion grows networks from pretrained initializations to cut deep network training cost, studying the mechanism of network growing; a training efficiency method with no inference contribution.",
+      "source_url": "https://arxiv.org/abs/2306.11903",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12167",
+      "identity_tokens": [
+        "arXiv:2510.12167"
+      ],
+      "title": "Towards Inference-time Scaling for Continuous Space Reasoning",
+      "reason": "Dropout-based sampling plus reward-model reranking is adapted to COCONUT continuous-space reasoning for inference-time scaling; an algorithmic test-time study without a serving or decoding-system mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2510.12167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.15746",
+      "identity_tokens": [
+        "arXiv:2508.15746"
+      ],
+      "title": "End-to-End Agentic RAG System Training for Traceable Diagnostic Reasoning",
+      "reason": "Deep-DxSearch trains an agentic RAG system end-to-end with RL for traceable clinical diagnostic reasoning; a healthcare application of LLM agents with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2508.15746",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12960",
+      "identity_tokens": [
+        "arXiv:2511.12960"
+      ],
+      "title": "ENGRAM: Effective, Lightweight Memory Orchestration for Conversational Agents",
+      "reason": "ENGRAM is a deliberately lightweight memory orchestration system giving conversational agents long-horizon consistency without knowledge-graph pipelines; agent memory infrastructure that shapes inference-time context, but focused on memory simplicity rather than serving efficiency, so borderline.",
+      "source_url": "https://arxiv.org/abs/2511.12960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d05-b03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

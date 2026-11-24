@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b03::chunk-0002-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04670",
+      "identity_tokens": [
+        "arXiv:2510.04670"
+      ],
+      "title": "Improving Multimodal Brain Encoding Model with Dynamic Subject-awareness Routing",
+      "reason": "AFIRE/MIND route multimodal tokens with subject-aware MoE gating to predict whole-brain fMRI responses; a neuroscience encoding-model application, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2510.04670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 221
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54254/2755-2721/43/20230815",
+      "identity_tokens": [
+        "DOI:10.54254/2755-2721/43/20230815"
+      ],
+      "title": "The metamorphosis of machine translation: The rise of neural machine translation and its challenges",
+      "reason": "A survey of machine translation's evolution from rule-based to neural approaches and their challenges; a historical overview with no inference-system contribution.",
+      "source_url": "https://doi.org/10.54254/2755-2721/43/20230815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 222
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s13042-025-02563-7",
+      "identity_tokens": [
+        "DOI:10.1007/s13042-025-02563-7"
+      ],
+      "title": "MS-NET-v2: modular selective network optimized by systematic generation of expert modules",
+      "reason": "MS-NET-v2 constructs modular expert subsets with selective inference execution for DNNs, improving adaptive-inference efficiency; generic modular inference, not LLM-specific serving.",
+      "source_url": "https://doi.org/10.1007/s13042-025-02563-7",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCCR65461.2025.11072564",
+      "identity_tokens": [
+        "DOI:10.1109/ICCCR65461.2025.11072564"
+      ],
+      "title": "EDVM: End-to-End Autonomous Driving Model with Vision Mamba",
+      "reason": "Title itself states the work is an end-to-end autonomous driving model with Vision Mamba, a self-driving perception/planning application; no inference-system technique is indicated in the title.",
+      "source_url": "https://doi.org/10.1109/ICCCR65461.2025.11072564",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 224
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1539",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.1539"
+      ],
+      "title": "DualRAG: A Dual-Process Approach to Integrate Reasoning and Retrieval for Multi-Hop Question Answering",
+      "reason": "DualRAG couples reasoning-augmented querying with progressive knowledge aggregation for multi-hop QA; a retrieval-reasoning framework for answer quality, not inference efficiency.",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.1539",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 225
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4b26311cfc5e289f417568decbedcd975f0f52bf",
+      "identity_tokens": [
+        "SemanticScholar:4b26311cfc5e289f417568decbedcd975f0f52bf"
+      ],
+      "title": "Lumilake: An Agentic Analytics Engine for AI4Science",
+      "reason": "Lumilake is an agentic analytics engine whose LLM-aware query optimization consolidates shared prefixes to maximize KV-cache reuse across workflow calls; it contains a real KV-reuse optimization, but the system target is analytics workflow execution, not LLM serving itself.",
+      "source_url": "https://www.semanticscholar.org/paper/4b26311cfc5e289f417568decbedcd975f0f52bf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 226
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427",
+      "identity_tokens": [
+        "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427"
+      ],
+      "title": "Self-Evolving Coding Agents",
+      "reason": "A survey taxonomizing self-evolving coding agents (what evolves, when, and driven by which code signals); a literature synthesis with no inference-system contribution.",
+      "source_url": "https://www.semanticscholar.org/paper/7ff9dd28fe3a88ea8cc3066f98a8a3e259296427",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 227
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.10681",
+      "identity_tokens": [
+        "arXiv:2405.10681"
+      ],
+      "title": "Know in AdVance: Linear-Complexity Forecasting of Ad Campaign Performance with Evolving User Interest",
+      "reason": "Title itself states the work forecasts advertising campaign performance from evolving user interest, a marketing prediction application; no inference-system technique is indicated in the title.",
+      "source_url": "https://arxiv.org/abs/2405.10681",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 228
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.08909",
+      "identity_tokens": [
+        "arXiv:2508.08909"
+      ],
+      "title": "Compass-Thinker-7B Technical Report",
+      "reason": "Compass-Thinker-7B is a technical report on an RL pipeline and curated data for training a 7B reasoning model; training work with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2508.08909",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 229
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/LCA.2026.3689575",
+      "identity_tokens": [
+        "DOI:10.1109/LCA.2026.3689575"
+      ],
+      "title": "KiF: Accelerating Low-Batch LLM Inference Using In-Flash KV Cache",
+      "reason": "KiF manages the KV cache inside flash chips with pseudo-SLC write management and an in-flash GEMV accelerator, delivering up to 4.1x throughput over SSD KV offloading for low-batch edge LLM inference; direct KV-cache system.",
+      "source_url": "https://doi.org/10.1109/LCA.2026.3689575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.18482",
+      "identity_tokens": [
+        "arXiv:2611.18482"
+      ],
+      "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+      "reason": "MMFlash adapts diffusion-drafter speculative decoding to vision-language models using a token-level visual-dependence metric to raise acceptance; direct speculative decoding for multimodal inference.",
+      "source_url": "https://arxiv.org/abs/2611.18482",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 231
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3651754",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3651754"
+      ],
+      "title": "Accelerated Optimization of Large Mixture-of-Experts Models by Density-Aware Multi-Stage Learning",
+      "reason": "Proposes density-aware multi-stage (easy-to-hard) learning to accelerate training of large MoE models; training optimization only, with no inference application stated.",
+      "source_url": "https://doi.org/10.1109/TPAMI.2026.3651754",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 232
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/MM.2026.3669502",
+      "identity_tokens": [
+        "DOI:10.1109/MM.2026.3669502"
+      ],
+      "title": "Architecting Long-Context Large Language Model Acceleration With Packing–Prefetch Scheduler and Ultralarge Capacity On-Chip Memories",
+      "reason": "Proposes a packing-prefetch scheduler with ultra-large on-chip M3D memories that hides KV-cache transfer overhead in long-context LLM inference, reporting 8.06x decode speedup; direct inference architecture.",
+      "source_url": "https://doi.org/10.1109/MM.2026.3669502",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 233
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v40i31.39789",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v40i31.39789"
+      ],
+      "title": "DIAA: A Decoding-Efficient Inference Acceleration Approach for On-Device Large Language Models",
+      "reason": "DIAA accelerates on-device LLM speculative decoding without a separate draft model's memory burden and with adaptive token trees; direct decoding acceleration for edge inference.",
+      "source_url": "https://doi.org/10.1609/aaai.v40i31.39789",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2311.04951",
+      "identity_tokens": [
+        "arXiv:2311.04951"
+      ],
+      "title": "Leveraging Speculative Sampling and KV-Cache Optimizations Together for Generative AI using OpenVINO",
+      "reason": "Demonstrates combining speculative sampling with KV-cache optimizations in OpenVINO to reduce text-generation latency; a direct, if tutorial-style, inference optimization contribution.",
+      "source_url": "https://arxiv.org/abs/2311.04951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IWQoS65803.2025.11143464",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS65803.2025.11143464"
+      ],
+      "title": "Birds in Cages: Edge Inference Allocation for Distributed LLM Deployment",
+      "reason": "Formulates allocation of distributed LLM inference tasks across heterogeneous edge servers under differing latency requirements and generative resource uncertainty; direct edge inference scheduling.",
+      "source_url": "https://doi.org/10.1109/IWQoS65803.2025.11143464",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.11864",
+      "identity_tokens": [
+        "arXiv:2412.11864"
+      ],
+      "title": "Investigating Mixture of Experts in Dense Retrieval",
+      "reason": "Investigates adding a single MoE block to dense retrieval models and measures retrieval effectiveness across benchmarks; an IR modeling study, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2412.11864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 237
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03464",
+      "identity_tokens": [
+        "arXiv:2406.03464"
+      ],
+      "title": "Node-wise Filtering in Graph Neural Networks: A Mixture of Experts Approach",
+      "reason": "Node-MoE selects graph filters per node with mixture-of-experts for node classification on mixed homophily graphs; a GNN modeling contribution, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2406.03464",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.02152",
+      "identity_tokens": [
+        "arXiv:2605.02152"
+      ],
+      "title": "SpecEdit: Training-Free Acceleration for Diffusion based Image Editing via Semantic Locking",
+      "reason": "SpecEdit accelerates diffusion-based image editing with training-free semantic-locked dynamic resolution; an inference acceleration method, but for image diffusion models rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2605.02152",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22867",
+      "identity_tokens": [
+        "arXiv:2603.22867"
+      ],
+      "title": "TRINE: A Token-Aware, Runtime-Adaptive FPGA Inference Engine for Multimodal AI",
+      "reason": "TRINE is a single-bitstream FPGA inference engine and compiler unifying ViT/CNN/GNN/Transformer layers with in-stream token pruning and dependency-aware kernel offloading; inference accelerator hardware including Transformer workloads.",
+      "source_url": "https://arxiv.org/abs/2603.22867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 240
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

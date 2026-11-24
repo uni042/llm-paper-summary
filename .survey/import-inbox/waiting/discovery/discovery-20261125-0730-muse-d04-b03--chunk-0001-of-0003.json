@@ -1,0 +1,355 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d04-b03::chunk-0001-of-0003",
+  "reference_main_sha": "7ee9f908",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.07490",
+      "identity_tokens": [
+        "arXiv:2410.07490"
+      ],
+      "title": "MoDEM: Mixture of Domain Expert Models",
+      "reason": "MoDEM routes prompts with a BERT router to domain-specialized expert LLMs and reports a better performance-to-cost ratio; a model-zoo deployment pattern, but the contribution is domain specialization rather than serving mechanics.",
+      "source_url": "https://arxiv.org/abs/2410.07490",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 201
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.03828",
+      "identity_tokens": [
+        "arXiv:2507.03828"
+      ],
+      "title": "IMPACT: Importance-Aware Activation Space Reconstruction",
+      "reason": "IMPACT performs importance-aware low-rank reconstruction of LLM activation spaces to compress large models for resource-constrained deployment; direct LLM compression for inference.",
+      "source_url": "https://arxiv.org/abs/2507.03828",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 202
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/AQTR70159.2026.11577940",
+      "identity_tokens": [
+        "DOI:10.1109/AQTR70159.2026.11577940"
+      ],
+      "title": "Finger Movement Estimation From Surface EMG Using Mamba Architecture",
+      "reason": "Title itself states the work estimates finger movements from surface EMG signals using a Mamba architecture, a biomedical signal-estimation application; no inference-system technique is indicated in the title.",
+      "source_url": "https://doi.org/10.1109/AQTR70159.2026.11577940",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 203
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/biomimetics11030214",
+      "identity_tokens": [
+        "DOI:10.3390/biomimetics11030214"
+      ],
+      "title": "HOIMamba: Bidirectional State-Space Modeling for Monocular 3D Human–Object Interaction Reconstruction",
+      "reason": "Title itself states the work reconstructs monocular 3D human-object interactions with bidirectional state-space modeling, a computer-vision reconstruction application; no inference-system technique is indicated in the title.",
+      "source_url": "https://doi.org/10.3390/biomimetics11030214",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 204
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.09503",
+      "identity_tokens": [
+        "arXiv:2407.09503"
+      ],
+      "title": "PARSE-Ego4D: Personal Action Recommendation Suggestions for Egocentric Videos",
+      "reason": "PARSE-Ego4D releases LLM-generated personal action recommendation annotations for egocentric videos; a dataset/annotation contribution with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2407.09503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 205
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.19720",
+      "identity_tokens": [
+        "arXiv:2512.19720"
+      ],
+      "title": "Per-Axis Weight Deltas for Frequent Model Updates",
+      "reason": "Stores fine-tuned model variants as 1-bit per-axis-scaled weight deltas with a streamlined loader, attacking checkpoint size and cold-start latency when serving many task-specialized LLMs; direct serving-system contribution.",
+      "source_url": "https://arxiv.org/abs/2512.19720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 206
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08753",
+      "identity_tokens": [
+        "arXiv:2603.08753"
+      ],
+      "title": "Permutation-Equivariant 2D State Space Models: Theory and Canonical Architecture for Multivariate Time Series",
+      "reason": "Characterizes permutation-equivariant 2D state-space models theoretically and applies them to multivariate time-series modeling; theory plus a forecasting-domain architecture, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2603.08753",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 207
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14926",
+      "identity_tokens": [
+        "arXiv:2605.14926"
+      ],
+      "title": "SCRWKV: Ultra-Compact Structure-Calibrated Vision-RWKV for Topological Crack Segmentation",
+      "reason": "Title itself states the work performs topological crack segmentation with an ultra-compact Vision-RWKV, an industrial image-segmentation application; no LLM inference-system technique is indicated in the title.",
+      "source_url": "https://arxiv.org/abs/2605.14926",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 208
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24584",
+      "identity_tokens": [
+        "arXiv:2605.24584"
+      ],
+      "title": "LAPLEX: The FFT of Learnable Laplace Kernels",
+      "reason": "LAPLEX defines trainable Laplace-kernel operators with FFT-like scaling for matrix-vector multiplication up to 1e9 dimensions; a general operator primitive that could serve inference, but no inference-system evaluation is given.",
+      "source_url": "https://arxiv.org/abs/2605.24584",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 209
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17391",
+      "identity_tokens": [
+        "arXiv:2606.17391"
+      ],
+      "title": "NarrativeWorldBench: A Frontier-Saturated Benchmark and a Latent World Model for Long-Horizon Co-Creative Audio Drama",
+      "reason": "NarrativeWorldBench benchmarks long-horizon co-creative audio drama generation and adds a latent world model; capability evaluation for a creative application, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2606.17391",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 210
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.02890",
+      "identity_tokens": [
+        "arXiv:2609.02890"
+      ],
+      "title": "Bounded Personas Match Retrieval on Classification but Not Regression for a Frozen Agent",
+      "reason": "PersonaLink distills user history into a bounded persona compared against retrieval at inference time for a frozen agent, explicitly trading per-query context cost against accuracy; inference-adjacent, but a personalization method, not a serving technique.",
+      "source_url": "https://arxiv.org/abs/2609.02890",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 211
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08820",
+      "identity_tokens": [
+        "arXiv:2610.08820"
+      ],
+      "title": "Task-Oriented Key-Layer KV Communication for Efficient Latent Multi-Agent Collaboration",
+      "reason": "KITE selects task-oriented key layers whose KV states are transmitted for latent multi-agent collaboration, cutting the communication and computation overhead of KV-based latent communication; direct KV-cache communication optimization.",
+      "source_url": "https://arxiv.org/abs/2610.08820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 212
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.19386",
+      "identity_tokens": [
+        "arXiv:2610.19386"
+      ],
+      "title": "STRATA: Self-Maintaining Structured Experience Graphs for Self-Evolving Language Agents",
+      "reason": "STRATA organizes agent experience into a self-maintaining three-layer graph for test-time self-evolution; agent memory architecture adjacent to inference cost, but no serving or decoding mechanism.",
+      "source_url": "https://arxiv.org/abs/2610.19386",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 213
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2",
+      "identity_tokens": [
+        "SemanticScholar:16da48fc1a2cd5ffbe3d95500eff4186fa102ac2"
+      ],
+      "title": "ReLIC: A recipe for 64k steps In-Context Reinforcement Learning for Embodied AI",
+      "reason": "ReLIC trains embodied agents for in-context RL over 64k steps with partial policy updates and a Sink-KV attention tweak; an RL training recipe for robot navigation, not an LLM inference system.",
+      "source_url": "https://www.semanticscholar.org/paper/16da48fc1a2cd5ffbe3d95500eff4186fa102ac2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 214
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.18472",
+      "identity_tokens": [
+        "arXiv:2506.18472"
+      ],
+      "title": "AViLA: Asynchronous Vision-Language Agent for Streaming Multimodal Data Interaction",
+      "reason": "AViLA frames query-evidence asynchrony for streaming vision-language agents and grounds responses in past and future streams; a streaming agent framework whose efficiency aspect is secondary to the interaction problem.",
+      "source_url": "https://arxiv.org/abs/2506.18472",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 215
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03501",
+      "identity_tokens": [
+        "arXiv:2504.03501"
+      ],
+      "title": "LV-MAE: Learning Long Video Representations Through Masked-Embedding Autoencoders",
+      "reason": "LV-MAE is a self-supervised masked-embedding autoencoder framework for long-video representations; representation learning with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2504.03501",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 216
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16146",
+      "identity_tokens": [
+        "arXiv:2412.16146"
+      ],
+      "title": "Mamba2D: A Natively Multi-Dimensional State-Space Model for Vision Tasks",
+      "reason": "Mamba2D re-derives selective SSMs with a native 2D scan for vision tasks and reports parameter-efficient ImageNet results; an efficient vision architecture, not an LLM inference system.",
+      "source_url": "https://arxiv.org/abs/2412.16146",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 217
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01384",
+      "identity_tokens": [
+        "arXiv:2507.01384"
+      ],
+      "title": "MUG: Pseudo Labeling Augmented Audio-Visual Mamba Network for Audio-Visual Video Parsing",
+      "reason": "MUG is an audio-visual Mamba network with pseudo-labeling for weakly-supervised audio-visual video parsing; a perception-task architecture with no inference-system content.",
+      "source_url": "https://arxiv.org/abs/2507.01384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 218
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.10.14.682350",
+      "identity_tokens": [
+        "DOI:10.1101/2025.10.14.682350"
+      ],
+      "title": "FlashRNA: An Efficient Model for Regulatory Genomics",
+      "reason": "Title itself states the work is an efficient model for regulatory genomics (FlashRNA), a computational-biology application; no LLM inference-system technique is indicated in the title.",
+      "source_url": "https://doi.org/10.1101/2025.10.14.682350",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 219
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01937",
+      "identity_tokens": [
+        "arXiv:2407.01937"
+      ],
+      "title": "Efficient-Empathy: Towards Efficient and Effective Selection of Empathy Data",
+      "reason": "Efficient-Empathy selects sensibility/rationality training data for empathetic dialogue models; data curation for a capability, not an inference system.",
+      "source_url": "https://arxiv.org/abs/2407.01937",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T07:30:00+09:00",
+      "last_checked_at": "2026-11-25T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 220
+    }
+  ],
+  "parent_run_key": "muse-20261125-d04-b03",
+  "chunk_index": 1,
+  "chunk_count": 3,
+  "source_record_count": 50
+}

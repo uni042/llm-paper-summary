@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261125-d05-b01::chunk-0002-of-0003",
+  "reference_main_sha": "0fdb3196",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3788853.3803078",
+      "identity_tokens": [
+        "DOI:10.1145/3788853.3803078"
+      ],
+      "title": "TokaDB: A Unified Storage Engine for Training-Serving Data Management in Large Recommendation Models",
+      "reason": "TokaDB is a storage engine for the training-serving data lifecycle of large recommendation models, handling behavior-sequence access and KV-cache-like data at exabyte scale; serving-adjacent data management for recommender models rather than LLM inference, so borderline.",
+      "source_url": "https://doi.org/10.1145/3788853.3803078",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17720",
+      "identity_tokens": [
+        "arXiv:2604.17720"
+      ],
+      "title": "FlashFPS: Efficient Farthest Point Sampling for Large-Scale Point Clouds via Pruning and Caching",
+      "reason": "FlashFPS prunes and caches farthest point sampling to cut inference latency in point-based neural networks for 3D point clouds; a geometry-processing operator optimization outside LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2604.17720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13708",
+      "identity_tokens": [
+        "arXiv:2606.13708"
+      ],
+      "title": "Tiara: A Programmable Line-Rate ISA for Remote Memory Access",
+      "reason": "Tiara defines a programmable line-rate ISA for remote memory access that resolves data-dependent indirection in one round trip, citing disaggregated LLM inference KV-cache resolution among several patterns; promising memory infrastructure but not LLM-inference-specific, so borderline.",
+      "source_url": "https://arxiv.org/abs/2606.13708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.23048",
+      "identity_tokens": [
+        "arXiv:2608.23048"
+      ],
+      "title": "Reservoir of Importance: Learning Semi-Structured Sparsity with Differentiable Subset Sampling",
+      "reason": "Reservoir of Importance learns semi-structured N:M sparsity masks for LLMs via differentiable subset sampling with low overhead, directly enabling structured-sparse LLM inference acceleration; a concrete pruning contribution for inference.",
+      "source_url": "https://arxiv.org/abs/2608.23048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.26262",
+      "identity_tokens": [
+        "arXiv:2610.26262"
+      ],
+      "title": "Dynamics-Aware Sparse Attention for Efficient Autoregressive Video Diffusion",
+      "reason": "Dynamics-aware sparse attention allocates computation to moving regions in autoregressive video diffusion transformers to cut their heavy compute and memory; an efficient-attention method, but for video generation rather than LLM inference, so borderline.",
+      "source_url": "https://arxiv.org/abs/2610.26262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICDE65448.2025.00175",
+      "identity_tokens": [
+        "DOI:10.1109/ICDE65448.2025.00175"
+      ],
+      "title": "CAM: Asynchronous GPU-Initiated, CPU-Managed SSD Management for Batching Storage Access",
+      "reason": "CAM lets GPUs initiate and manage NVMe SSD accesses asynchronously with CPU-managed batching to remove kernel overhead in accelerator-centric systems; generic GPU storage infrastructure that could serve inference data paths but is not inference-specific, hence borderline.",
+      "source_url": "https://doi.org/10.1109/ICDE65448.2025.00175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.14126",
+      "identity_tokens": [
+        "arXiv:2510.14126"
+      ],
+      "title": "Cortex: Workflow-Aware Resource Pooling and Scheduling for Agentic Serving",
+      "reason": "Cortex is a workflow-aware agentic serving platform that isolates per-stage resource pools, improving KV cache utilization, throughput and predictability for LLM agent workloads; a direct LLM serving/scheduling contribution.",
+      "source_url": "https://arxiv.org/abs/2510.14126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.13484",
+      "identity_tokens": [
+        "arXiv:2305.13484"
+      ],
+      "title": "Flover: A Temporal Fusion Framework for Efficient Autoregressive Model Parallel Inference",
+      "reason": "Flover temporally fuses weight loading across tokens in model-parallel autoregressive inference, reducing the repeated full-model weight loads that dominate sequential generation; a direct inference execution optimization.",
+      "source_url": "https://arxiv.org/abs/2305.13484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.09326",
+      "identity_tokens": [
+        "arXiv:2505.09326"
+      ],
+      "title": "Accelerating Machine Learning Systems via Category Theory: Applications to Spherical Attention for Gene Regulatory Networks",
+      "reason": "Category-theory neural circuit diagrams are used to guide compilation, with the concrete application being spherical attention for gene regulatory networks; a genomics application with no LLM inference contribution.",
+      "source_url": "https://arxiv.org/abs/2505.09326",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ASAP57973.2023.00024",
+      "identity_tokens": [
+        "DOI:10.1109/ASAP57973.2023.00024"
+      ],
+      "title": "Efficient 1D Grouped Convolution for PyTorch a Case Study: Fast On-Device Fine-Tuning for SqueezeBERT",
+      "reason": "This ASAP paper improves 1D grouped convolution memory management for on-device fine-tuning of SqueezeBERT; the work targets training/fine-tuning cost on edge GPUs, not inference execution.",
+      "source_url": "https://doi.org/10.1109/ASAP57973.2023.00024",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.04708",
+      "identity_tokens": [
+        "arXiv:2404.04708"
+      ],
+      "title": "Efficient Sparse Processing-in-Memory Architecture (ESPIM) for Machine Learning Inference",
+      "reason": "ESPIM is a sparse processing-in-memory architecture for memory-bandwidth-bound matrix-vector inference in ML models including transformers, tackling irregular sparse inference load imbalance in PIM hardware; a direct inference architecture contribution.",
+      "source_url": "https://arxiv.org/abs/2404.04708",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.01951",
+      "identity_tokens": [
+        "arXiv:2102.01951"
+      ],
+      "title": "Mind the Gap: Assessing Temporal Generalization in Neural Language Models",
+      "reason": "This study evaluates how Transformer-XL language models degrade when predicting text from future time periods; a temporal generalization evaluation with no inference-system mechanism.",
+      "source_url": "https://arxiv.org/abs/2102.01951",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.13958",
+      "identity_tokens": [
+        "arXiv:2501.13958"
+      ],
+      "title": "A Survey of Graph Retrieval-Augmented Generation for Customized Large Language Models",
+      "reason": "This survey covers graph retrieval-augmented generation for customizing LLMs, organizing retrieval structures used at inference time, but it is a survey of a RAG application area without a new serving or decoding mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2501.13958",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10547",
+      "identity_tokens": [
+        "arXiv:2601.10547"
+      ],
+      "title": "HeartMuLa: A Family of Open Sourced Music Foundation Models",
+      "reason": "Title explicitly presents a family of music foundation models for music understanding and generation, an audio-content application domain, with no inference-system subject in the title.",
+      "source_url": "https://arxiv.org/abs/2601.10547",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19657",
+      "identity_tokens": [
+        "arXiv:2601.19657"
+      ],
+      "title": "One Token Is Enough: Improving Diffusion Language Models with a Sink Token",
+      "reason": "A fixed sink token is proposed to stabilize the moving-sink phenomenon in diffusion language models during parallel generation; it concerns generation stability of an alternative LM paradigm rather than serving or decoding efficiency, hence borderline.",
+      "source_url": "https://arxiv.org/abs/2601.19657",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.14528",
+      "identity_tokens": [
+        "arXiv:2606.14528"
+      ],
+      "title": "BayLing-Duplex: Native Full-Duplex Speech Dialogue with a Single Autoregressive LLM",
+      "reason": "BayLing-Duplex builds a native full-duplex speech dialogue model on a single autoregressive LLM without external VAD; real-time interaction architecture for speech, adjacent to inference but primarily a speech-model capability contribution, so borderline.",
+      "source_url": "https://arxiv.org/abs/2606.14528",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28569",
+      "identity_tokens": [
+        "arXiv:2603.28569"
+      ],
+      "title": "CirrusBench: Evaluating LLM-based Agents Beyond Correctness in Real-World Cloud Service Environments",
+      "reason": "CirrusBench benchmarks LLM agents on real cloud-service customer cases beyond correctness, including resolution efficiency; an agent evaluation benchmark with no inference-system contribution.",
+      "source_url": "https://arxiv.org/abs/2603.28569",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15309",
+      "identity_tokens": [
+        "arXiv:2609.15309"
+      ],
+      "title": "When Agents Slow Down: Understanding LLM Agents'Test-Time Strategies via Elo-per-token Analysis",
+      "reason": "Elo-per-token analysis measures how LLM agents allocate test-time compute across long trajectories; an analysis/evaluation methodology for agent behavior, not an inference system or efficiency mechanism.",
+      "source_url": "https://arxiv.org/abs/2609.15309",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07547",
+      "identity_tokens": [
+        "arXiv:2606.07547"
+      ],
+      "title": "Liberating LLM Capabilities in Full-Duplex Speech Models",
+      "reason": "This work restructures full-duplex speech models so text-native outputs such as code and structured analysis remain first-class alongside speech; a capability/output-modality contribution without an inference-system mechanism.",
+      "source_url": "https://arxiv.org/abs/2606.07547",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.26728",
+      "identity_tokens": [
+        "arXiv:2603.26728"
+      ],
+      "title": "SEAR: Schema-Based Evaluation and Routing for LLM Gateways",
+      "reason": "SEAR defines a schema for evaluating production LLM responses and routing requests across multi-provider gateways using latency, cost and throughput signals; gateway routing infrastructure, but centered on evaluation data modeling rather than a serving mechanism, so borderline.",
+      "source_url": "https://arxiv.org/abs/2603.26728",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-25T08:00:00+09:00",
+      "last_checked_at": "2026-11-25T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ]
+    }
+  ],
+  "parent_run_key": "muse-20261125-d05-b01",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 50
+}
