@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-318d0b8691e60475-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3754598.3754656",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3754598.3754656",
+    "identity_tokens": [
+      "DOI:10.1145/3754598.3754656"
+    ],
+    "reason": "Primary full text for 'Automated FPGA Accelerator Generation Framework for Transformers with Dataflow Optimization' could not be obtained in the 2026-11-24 final-day OA sweep: ACM ICPP 2025; ACM DL paywall, no arXiv version; the first author's homepage lists the paper with a DOI link but no PDF, and no independent public version was confirmed. Research requires a readable primary full text, so this candidate is recorded as borderline via the research prescreen route; re-check only if a public full text appears.",
+    "first_checked_at": "2026-11-24T03:26:05+00:00",
+    "last_checked_at": "2026-11-24T03:26:05+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Automated FPGA Accelerator Generation Framework for Transformers with Dataflow Optimization"
+  },
+  "processed_at": "2026-11-24T03:26:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-318d0b8691e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
