@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f8d717f0809a10-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.10765",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.10765",
+    "identity_tokens": [
+      "arXiv:2601.10765"
+    ],
+    "reason": "剪定を進化的選択ダイナミクスとして定式化する研究だが、実証はMNIST上の小規模MLP（784-512-256-10）のニューロン集団のみであり、LLMやTransformer推論への適用・評価は一次要旨に一切示されていない。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Pruning as Evolution: Emergent Sparsity Through Selection Dynamics in Neural Networks"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f8d717f080",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

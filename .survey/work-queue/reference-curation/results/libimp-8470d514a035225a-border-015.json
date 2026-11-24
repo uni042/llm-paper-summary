@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8470d514a035225a-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.04901",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.04901",
+    "identity_tokens": [
+      "arXiv:2605.04901"
+    ],
+    "reason": "Transformerのセキュア推論におけるシャッフリング防御への攻撃と重み抽出可能性を示す安全性分析であり、セキュア推論の効率化機構そのものの提案ではなく、推論システムへの貢献は防御前提の見直しという間接的なものにとどまる。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the (In-)Security of the Shuffling Defense in the Transformer Secure Inference"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8470d514a035",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

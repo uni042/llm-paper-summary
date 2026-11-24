@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa00b631d2db8fe2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.03791",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.03791",
+    "identity_tokens": [
+      "arXiv:2402.03791"
+    ],
+    "reason": "テンソル並列を排しパイプライン並列とFSDPの併用で大規模モデルの学習を最大33%高速化する分散学習フレームワークであり、貢献は学習スループットと学習時メモリに限られ、推論への具体的適用は要旨に示されていない。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ZeroPP: Unleashing Exceptional Parallelism Efficiency through Tensor-Parallelism-Free Methodology"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa00b631d2db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

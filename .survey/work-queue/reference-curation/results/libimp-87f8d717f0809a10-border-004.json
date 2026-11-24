@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f8d717f0809a10-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.29526",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.29526",
+    "identity_tokens": [
+      "arXiv:2606.29526"
+    ],
+    "reason": "MIPI／MIPUは学習エンジンと推論エンジンの確率不一致（training-inference mismatch）を前提に、推論側ポリシーの単調改善を目的関数とするLLM強化学習の枠組みで、推論エンジンとの整合を扱う点は推論システムに接するが、成果はRL学習の安定化と推論性能向上でありサービング機構ではない。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f8d717f080",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

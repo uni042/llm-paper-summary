@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27c2b716f4e19327-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:507c16fc6fae3aaffe6d38ef039f9879743356ce",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:507c16fc6fae3aaffe6d38ef039f9879743356ce",
+    "identity_tokens": [
+      "SemanticScholar:507c16fc6fae3aaffe6d38ef039f9879743356ce"
+    ],
+    "reason": "Tuckerランクと回転残差のラグランジュ配分による近無損失KVキャッシュ圧縮と題するが、一次要旨をOpenAlex・Crossrefで取得できなかったため、圧縮機構の詳細と推論効果を一次要旨で検証できていない。",
+    "first_checked_at": "2026-11-24T10:19:58+00:00",
+    "last_checked_at": "2026-11-24T10:19:58+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A J O LT FOR THE KV C ACHE : N EAR -L OSSLESS KV C ACHE C OMPRESSION VIA J OINT L AGRANGIAN A LLOCATION OF T UCKER R ANKS AND A R OTATED R ESIDUAL FOR LLM S"
+  },
+  "processed_at": "2026-11-24T10:19:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27c2b716f4e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

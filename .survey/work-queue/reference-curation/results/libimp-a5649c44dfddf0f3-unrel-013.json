@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5649c44dfddf0f3-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2209.09735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2209.09735",
+    "identity_tokens": [
+      "arXiv:2209.09735"
+    ],
+    "reason": "注意重みを平滑化するRelaxed Attentionにより過学習の正則化と外部言語モデル統合を行う研究で、評価はリップリーディングと機械翻訳の精度であり、推論効率への貢献は扱われていないため対象外である。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Relaxed Attention for Transformer Models"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5649c44dfdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

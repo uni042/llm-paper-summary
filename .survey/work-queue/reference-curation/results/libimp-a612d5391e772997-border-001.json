@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a612d5391e772997-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:bc4bf86b9bd3bc4311ca64485a02323024f81ad4",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:bc4bf86b9bd3bc4311ca64485a02323024f81ad4",
+    "identity_tokens": [
+      "SemanticScholar:bc4bf86b9bd3bc4311ca64485a02323024f81ad4"
+    ],
+    "reason": "勾配ベースの学習済み実行時剪定による注意高速化と題するが、一次要旨をOpenAlex・Crossrefで取得できなかったため、剪定機構が推論時にどう作用しLLMへどう適用されるかを一次要旨で検証できていない。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Attention through Gradient-Based Learned Runtime Pruning"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a612d5391e77",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

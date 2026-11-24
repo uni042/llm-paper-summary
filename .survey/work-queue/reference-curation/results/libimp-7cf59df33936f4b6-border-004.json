@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7cf59df33936f4b6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2603.08999",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2603.08999",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.08999",
+      "arXiv:2603.08999"
+    ],
+    "reason": "確信度で自己整合性の追加サンプリング要否を決めCoT推論コストを下げる枠組みだが、訓練・評価がMedQA等の医療質問応答に寄っており、汎用的な推論時計算配分としての検証範囲は狭い。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning When to Sample: Confidence-Aware Self-Consistency for Efficient LLM Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7cf59df33936",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f8d717f0809a10-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2112.07198",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2112.07198",
+    "identity_tokens": [
+      "arXiv:2112.07198"
+    ],
+    "reason": "CAPは対照学習でタスク非依存知識とタスク固有知識を保ちながら事前学習言語モデルを構造・非構造剪定で圧縮する枠組みで、モデル圧縮として推論効率に通じるが、対象はBERT級PLMと下流タスクでありLLM推論システムへの具体的な適用は確認できない。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Dense to Sparse: Contrastive Pruning for Better Pre-trained Language Model Compression"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f8d717f080",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

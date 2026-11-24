@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8470d514a035225a-border-019",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.17304",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.17304",
+    "identity_tokens": [
+      "arXiv:2605.17304"
+    ],
+    "reason": "対話状態を意味的原子（コミットメント）として表現し検証可能にプロンプト・履歴を圧縮するContext Codecの形式枠組みであり、文脈圧縮として推論の文脈管理に隣接するが、実サービング機構や効率の実測は示されていない。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compress the Context, Keep the Commitments: A Formal Framework for Verifiable LLM Context Compression"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8470d514a035",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa00b631d2db8fe2-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.25952",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.25952",
+    "identity_tokens": [
+      "arXiv:2605.25952"
+    ],
+    "reason": "多視点の視覚表現を統合した後に適応ルータで視覚トークンを圧縮する視覚集合MoEによりVLM理解の効率化を狙うが、主眼はマルチモーダル理解の精度と圧縮率の両立であり、推論基盤としての機構評価は限られる。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VEN-VL: A Visual Ensemble MoE Framework for Effective and Efficient Multi-Modal Understanding"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa00b631d2db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

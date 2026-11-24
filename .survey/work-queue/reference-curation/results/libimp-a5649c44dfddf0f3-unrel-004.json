@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5649c44dfddf0f3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.05563",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.05563",
+    "identity_tokens": [
+      "arXiv:2501.05563"
+    ],
+    "reason": "GPUクラスタにおける分散深層学習の学習ジョブのオンラインスケジューリング（残り処理時間予測とA-SRPT割当て）の研究であり、対象は学習ワークロードのクラスタ運用であって推論サービングのスケジューリングではないため対象外である。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Prediction-Assisted Online Distributed Deep Learning Workload Scheduling in GPU Clusters"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5649c44dfdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

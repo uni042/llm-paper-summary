@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5649c44dfddf0f3-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.09065",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.09065",
+    "identity_tokens": [
+      "arXiv:2603.09065"
+    ],
+    "reason": "推論時にサンプリング戦略をプロンプト・トークン単位で適応させる軽量デコードアダプタを強化学習で学ぶ研究で、デコード過程そのものは対象範囲だが、主目的と評価は固定計算予算下での精度（Pass@1）向上であり、スループットやレイテンシ等システム効率への貢献は副次的である。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning Adaptive LLM Decoding"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5649c44dfdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

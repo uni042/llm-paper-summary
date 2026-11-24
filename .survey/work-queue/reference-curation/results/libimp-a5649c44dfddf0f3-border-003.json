@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5649c44dfddf0f3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2024.conll-1.5",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2024.conll-1.5",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.conll-1.5"
+    ],
+    "reason": "エンコーダ型言語モデル（BERT等）向けに再学習不要の構造化剪定Global-Prunerを提案し推論コスト削減を狙うが、対象はLLM以前のエンコーダモデルとGLUE/SQuAD評価であり、現在のLLM推論システムへの適用可能性は要旨の範囲では限定的である。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Global-Pruner: A Stable and Efficient Pruner for Retraining-Free Pruning of Encoder-Based Language Models"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5649c44dfdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa00b631d2db8fe2-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.10445",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.10445",
+    "identity_tokens": [
+      "arXiv:2404.10445"
+    ],
+    "reason": "学習済み拡散モデルへ疎マスクを導入しMACs半減とGPUで約1.2倍の高速化を示す疎化手法だが、対象は画像・動画生成の拡散モデルでありLLM推論ではない。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SparseDM: Toward Sparse Efficient Diffusion Models"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa00b631d2db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

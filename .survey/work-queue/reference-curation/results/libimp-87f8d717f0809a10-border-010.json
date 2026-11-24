@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87f8d717f0809a10-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.12785",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.12785",
+    "identity_tokens": [
+      "arXiv:2412.12785"
+    ],
+    "reason": "LLM内部の視覚領域に相当する層だけを選択的に更新してLVLM学習を効率化し、領域外層の剪定も提案する研究で、推論にも触れる剪定パラダイムを含むが、一次要旨の主眼は視覚指示チューニングの学習時間削減でありLLM推論システム機構ではない。",
+    "first_checked_at": "2026-11-24T10:19:59+00:00",
+    "last_checked_at": "2026-11-24T10:19:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Activating Distributed Visual Region within LLMs for Efficient and Effective Vision-Language Training and Inference"
+  },
+  "processed_at": "2026-11-24T10:19:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87f8d717f080",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

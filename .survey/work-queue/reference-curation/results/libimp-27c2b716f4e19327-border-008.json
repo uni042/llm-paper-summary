@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27c2b716f4e19327-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.12875",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.12875",
+    "identity_tokens": [
+      "arXiv:2509.12875"
+    ],
+    "reason": "LTA-thinkerは学習可能な事前分布で潜在思考ベクトルの分散を高め、意味整合と推論集中の損失で連続潜在空間推論を学習する枠組みで、テスト時スケーリングや潜在推論の計算効率にも触れるが、主眼は複雑推論の品質を上げる学習手法であり推論システム機構への貢献は薄い。",
+    "first_checked_at": "2026-11-24T10:19:58+00:00",
+    "last_checked_at": "2026-11-24T10:19:58+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LTA-thinker: Latent Thought-Augmented Training Framework for Large Language Models on Complex Reasoning"
+  },
+  "processed_at": "2026-11-24T10:19:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27c2b716f4e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

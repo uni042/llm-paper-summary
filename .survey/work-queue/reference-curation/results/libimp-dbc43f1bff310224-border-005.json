@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbc43f1bff310224-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/jssc.2025.3602940",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/jssc.2025.3602940",
+    "identity_tokens": [
+      "DOI:10.1109/jssc.2025.3602940"
+    ],
+    "reason": "トークン剪定をアナログCIMコア、残りの注意計算をデジタルコアに分けるハイブリッド注意アクセラレータHyAttのシリコン実装だが、対象はTransformer一般の注意機構であり、LLM推論の規模やサービング条件での評価は要旨に含まれず、LLM推論システムへの直接性は限定的である。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HyAtt: A Hybrid Attention Accelerator for Transformers With Analog In-Memory Computing"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbc43f1bff31",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

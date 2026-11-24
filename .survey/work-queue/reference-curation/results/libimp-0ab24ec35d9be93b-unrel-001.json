@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0ab24ec35d9be93b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.15622",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.15622",
+    "identity_tokens": [
+      "arXiv:2604.15622"
+    ],
+    "reason": "視覚基盤モデルDINOの蒸留によるエッジ向け開放語彙検出が主題で、LLM推論システムとは対象領域が異なる。",
+    "first_checked_at": "2026-11-24T10:19:58+00:00",
+    "last_checked_at": "2026-11-24T10:19:58+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "AdaDINO: Context-Adaptive DINO-Distilled Vision Foundation Models for Efficient Open-Vocabulary Edge Inference"
+  },
+  "processed_at": "2026-11-24T10:19:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0ab24ec35d9b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

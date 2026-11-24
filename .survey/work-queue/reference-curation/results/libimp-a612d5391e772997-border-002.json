@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a612d5391e772997-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a44462bf27c68cf1265dcef4400d2e7e5d9e46f6",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a44462bf27c68cf1265dcef4400d2e7e5d9e46f6",
+    "identity_tokens": [
+      "SemanticScholar:a44462bf27c68cf1265dcef4400d2e7e5d9e46f6"
+    ],
+    "reason": "無損失精度とミリ秒級レイテンシをうたう安全な3者間Transformer推論プロトコルSTIPと題するが、一次要旨をOpenAlex・Crossrefで取得できなかったため、秘密計算プロトコルの構成と推論性能を一次要旨で検証できていない。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "STIP: Secure Three-Party Transformer Inference Protocol with Lossless Accuracy and Millisecond-Level Latency"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a612d5391e77",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

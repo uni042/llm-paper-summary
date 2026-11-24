@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa00b631d2db8fe2-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.15706",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.15706",
+    "identity_tokens": [
+      "arXiv:2605.15706"
+    ],
+    "reason": "推論時に文脈認識型の微分可能ルーティングでエージェントを動的に活性化するマルチエージェント枠組みだが、対象は推論基盤ではなく推論タスク上の協調推論手法であり、サービングやコストの定量評価が主眼ではない。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Differentiable Mixture-of-Agents Incentivizes Swarm Intelligence of Large Language Models"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa00b631d2db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5649c44dfddf0f3-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.17025",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.17025",
+    "identity_tokens": [
+      "arXiv:2405.17025"
+    ],
+    "reason": "スライディングウィンドウ注意の構造化スパース性をFPGAデータフローで活かすアクセラレータSWATで、長文脈注意の高速化という点では関連するが、対象はウィンドウ注意Transformer一般であり、LLMサービングや大規模LLM推論での評価は要旨に含まれない。",
+    "first_checked_at": "2026-11-24T10:20:00+00:00",
+    "last_checked_at": "2026-11-24T10:20:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SWAT: Scalable and Efficient Window Attention-based Transformers Acceleration on FPGAs"
+  },
+  "processed_at": "2026-11-24T10:20:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5649c44dfdd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
