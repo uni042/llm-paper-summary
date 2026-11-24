@@ -356,6 +356,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：6  
   大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
 
+- **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
+  実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：5  
+  大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
+
 - **2025-07 · [Quantifying the Energy Consumption and Carbon Emissions of LLM Inference via Simulations](2025-2507.11417-quantifying-the-energy-consumption-and-carbon-emissions-of-llm-inference.md)**  
   実装：[✓](https://github.com/ozcanmiraay/vidur-energy) ・ リポジトリ内被引用：5  
   LLMの推論基盤は、要求到着率、入力と出力の長さ、バッチ編成、モデル並列方式によってGPUの使用状況が大きく変わる。A100上のCodeLlama-34Bの並列構成比較では、平均GPU電力213.2～355.3W、総エネルギー0.16～0.56kWhと構成によって大きく変わる。
@@ -363,10 +367,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-07 · [Efficient and Scalable Agentic AI with Heterogeneous Systems](2025-2507.19635-efficient-and-scalable-agentic-ai-with-heterogeneous-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   本研究は、一つの大規模言語モデル（LLM）を高速化するのではなく、複数のモデル推論・外部検索・ツール実行を含むエージェント全体を、異なる計算特性を持つ装置へ配置することを目的とする。音声対話エージェントを例にすると、音声認識、文脈検索、LLMによる応答生成、検索API、音声合成は互いに依存するが、同じGPUを使う必要はない。
-
-- **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
-  実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：4  
-  大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
