@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ff02d998ef40cbf1f26a2efebf4d17a8bc094395",
+  "base_commit": "6fa77c4f8c204b3e4ae6f0ed7cfd0e14ed6b7153",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -92,9 +92,13 @@
     "0000-dfdc64e55769-boosting-long-context-information-seeking-via-query-guided-activation-refilling.json",
     "0000-e69ef400b29d-towards-efficient-and-effective-diffusion-language-model-inference-via-semantic-aware-adaptive-denoising.json",
     "0000-e72658ea1043-acbq-adaptive-cross-block-quantization-of-large-language-models.json",
+    "0000-e92f51352226-l-ess-i-s-m-ore-t-raining-f-ree-s-parse-a-ttention-with-g-lobal-l-ocality-for-e-fficient-r-easoning.json",
     "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json",
+    "0000-f1582c313b41-conditional-computation-of-transformer-models-for-efficient-inference.json",
+    "0000-f278c17aab4e-swaa-sliding-window-attention-adaptation-for-efficient-long-context-llms-without-pretraining.json",
     "0000-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inference.json",
     "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json",
+    "0000-f8c915c11b49-verification-exploiting-information-gain-for-speculative-decoding.json",
     "0000-fa1fcbb12370-quantize-what-counts-bit-allocation-insights-informed-by-spectral-gaps-in-keys-and-values.json",
     "0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.json",
     "1802.05799-horovod.json",
@@ -132,6 +136,7 @@
     "2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.json",
     "2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-inference-on-gpus.json",
     "2024-008c56d1c4fa-navigator-a-decentralized-scheduler-for-latency-sensitive-ai-workflows.json",
+    "2024-0f63b674eee9-arlo-serving-transformer-based-language-models-with-dynamic-input-lengths.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheaper-and-faster-completion-through-dynamic-model-i.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
@@ -51979,6 +51984,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2508.07101": {
+      "order": [
+        "2026-11-24T00:39:41+00:00",
+        "0000-e92f51352226-l-ess-i-s-m-ore-t-raining-f-ree-s-parse-a-ttention-with-g-lobal-l-ocality-for-e-fficient-r-easoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f": {
+      "order": [
+        "2026-11-24T00:40:06+00:00",
+        "0000-f1582c313b41-conditional-computation-of-transformer-models-for-efficient-inference.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:a761c80382d1f4e379e88e06ef4ee993d6b20a9f": {
+      "order": [
+        "2026-11-24T00:40:55+00:00",
+        "0000-f278c17aab4e-swaa-sliding-window-attention-adaptation-for-efficient-long-context-llms-without-pretraining.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd": {
+      "order": [
+        "2026-11-24T00:41:20+00:00",
+        "0000-f8c915c11b49-verification-exploiting-information-gain-for-speculative-decoding.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3673038.3673124": {
+      "order": [
+        "2026-11-24T00:42:08+00:00",
+        "2024-0f63b674eee9-arlo-serving-transformer-based-language-models-with-dynamic-input-lengths.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65800,6 +65850,15 @@
     "semanticscholar:b3156ef0ede90712840f6bb639fb3295b2fa7bf6": [
       "papers/inference/15-inference-simulation-emulation/2024-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantizat.md",
       "papers/inference/15-inference-simulation-emulation/2024-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantizat.md"
+    ],
+    "arxiv:2508.07101": [
+      "papers/inference/13-sparse-attention/2025-2508.07101-less-is-more-training-free-sparse-attention-with-global-locality-for-eff.md"
+    ],
+    "semanticscholar:a761c80382d1f4e379e88e06ef4ee993d6b20a9f": [
+      "papers/inference/99-other-inference-systems/2025-2512.10411-swaa-sliding-window-attention-adaptation-for-efficient-long-context-llms.md"
+    ],
+    "doi:10.1145/3673038.3673124": [
+      "papers/inference/15-inference-simulation-emulation/2024-0f63b674eee9-arlo-serving-transformer-based-language-models-with-dynamic-input-length.md"
     ]
   }
 }

@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（112本）
+## 自動生成の論文一覧（113本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -461,6 +461,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-09 · [CMN: a co-designed neural architecture search for efficient computing-in-memory-based mixture-of-experts](2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   進化計算で専門家の配置・数・次元を探し、粒子群最適化でメモリ内計算ハードウェアを合わせる入れ子の協調探索CMNで、端末向けMoEのエネルギー・遅延・大きさを制約ごとに最適化する。
+
+- **2024-08 · [Arlo: Serving Transformer-based Language Models with Dynamic Input Lengths](2024-0f63b674eee9-arlo-serving-transformer-based-language-models-with-dynamic-input-length.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  入力長の上限が違う静的コンパイル済みランタイムを複数用意し、整数線形計画法による周期的なGPU配分と多段キューの振り分けで使い分けることで、ゼロ埋めの無駄と動的コンパイルの遅さを同時に避けるサービング方式。
 
 - **2024-07 · [BiE: Bi-Exponent Block Floating-Point for Large Language Models Quantization](2024-d7562782eec1-bie-bi-exponent-block-floating-point-for-large-language-models-quantizat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

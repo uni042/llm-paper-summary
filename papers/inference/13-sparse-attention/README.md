@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（220本）
+## 自動生成の論文一覧（221本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -655,6 +655,10 @@
 - **2025-10 · [NOSA: Native and Offloadable Sparse Attention](2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md)**  
   実装：[✓](https://github.com/thunlp/NOSA) ・ リポジトリ内被引用：9  
   NOSAは、学習可能な疎注意（trainable sparse 注意機構）とCPUへのKVキャッシュ退避を両立させるために、注意先の選択パターンを学習段階から転送局所性の高いものへ制約する手法である。
+
+- **2025-08 · [Less Is More: Training-Free Sparse Attention with Global Locality for Efficient Reasoning](2025-2508.07101-less-is-more-training-free-sparse-attention-with-global-locality-for-eff.md)**  
+  実装：[✓](https://github.com/DerrickYLJ/LessIsMore) ・ リポジトリ内被引用：7  
+  推論時のトークン重要度がヘッドを越えて共有される性質を使い、全ヘッド統合の選択と直近窓の固定配分で、予算2Kでも全注意並みの精度を保つ学習不要のスパース注意。
 
 - **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
