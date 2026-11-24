@@ -21,7 +21,7 @@
   著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
 
 - **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
-  実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：13  
   LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
 
 - **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
@@ -711,6 +711,10 @@
 - **2026-05 · [Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation](2026-2605.30753-efficient-diffusion-llms-via-temporal-spatial-parallel-decoding-and-conf.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   自己回帰型モデルは基本的に次の一語を順番に生成するのに対し、マスク型dLLMは多数の未確定位置を同時に予測し、確信度の低い位置を再びマスクして次の反復で修正する。
+
+- **2026-05 · [Efficient Cooperation-Aware Key and Value Management for LLM Inference](2026-3089a0084f72-efficient-cooperation-aware-key-and-value-management-for-llm-inference.md)**  
+  実装：[✓](https://github.com/ZJU-DIVER/CoKV) ・ リポジトリ内被引用：1  
+  得られたSSVは事前にモデルと検証データから計算し、実行時にはヘッド群別の保持トークン数やKV量子化ビット数の重みとして使う。Qwen3-32Bで平均128組のKVを保持する設定では、GSM8Kの正答率82.10%、MATH 46.17%を報告し、比較した圧縮方式を上回る。
 
 - **2026-05 · [EchoPrune: Interpreting Redundancy as Temporal Echoes for Efficient VideoLLMs](2026-2605.10050-echoprune-interpreting-redundancy-as-temporal-echoes-for-efficient-video.md)**  
   実装：[✓](https://github.com/renaissanceee/EchoPrune) ・ リポジトリ内被引用：1  
@@ -2610,10 +2614,6 @@
   実装：[✓](https://github.com/bingjunluo/ST-GridPool) ・ リポジトリ内被引用：0  
   階層的な時間区間のフレームを格子状に組み合わせ、区間末尾へ多時間尺度の要約を埋め込むPyramid Temporal Gridding（PTG）と、視覚特徴のL2ノルムを重みに使うNorm-based Spatial Pooling（NSP）を統合する。
 
-- **2026-05 · [Efficient Cooperation-Aware Key and Value Management for LLM Inference](2026-3089a0084f72-efficient-cooperation-aware-key-and-value-management-for-llm-inference.md)**  
-  実装：[✓](https://github.com/ZJU-DIVER/CoKV) ・ リポジトリ内被引用：0  
-  得られたSSVは事前にモデルと検証データから計算し、実行時にはヘッド群別の保持トークン数やKV量子化ビット数の重みとして使う。Qwen3-32Bで平均128組のKVを保持する設定では、GSM8Kの正答率82.10%、MATH 46.17%を報告し、比較した圧縮方式を上回る。
-
 - **2026-05 · [Dropping the Anchor: Statistical Context Summarization for Distributed Systems via Pulsar Attention](2026-2607.20457-dropping-the-anchor-statistical-context-summarization-for-distributed-sy.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存のStar 注意機構は、系列を連続ブロックに分けて各GPUで並列符号化し、生成時には各GPUの注意結果を統合する。しかし、長い文書の後半を担当するGPUにも、文書の先頭しか参照できないアンカーを繰り返し処理させることになり、局所入力が本来のブロックの約2倍になる。
@@ -3988,6 +3988,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
 
+- **2024-12 · [TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs](2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  対象領域に要らない層を微調整の途中で一層ずつ落とす漸進的な深さ削減で、七十億級モデルを半分ほどに圧縮しても医療の正解率を五四・六パーセントから五三・一パーセントに保ち、消費者向け装置で量子化や枝刈りの二・一倍から五・七倍の処理量を得て、併用時は記憶量八分の一で四・五倍になったと報告した。
+
 - **2025-11 · [VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking](2025-2511.18692-vlm-in-a-flash-i-o-efficient-sparsification-of-vision-language-model-via.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   連続したニューロンの塊を単位に、重要度を推定遅延で割った効用で塊を選ぶ疎化と、連続分布に基づく遅延の見積もりにより、同等の精度でフラッシュ読み込みの遅延を二つの組み込み機器で平均二・一九倍と二・八九倍、最大四・六五倍と五・七六倍改善したと報告した。
@@ -4152,9 +4156,9 @@
   実装：[✓](https://github.com/CSU-ModelCompression/BAQ) ・ リポジトリ内被引用：1  
   BAQ（Bit Allocation Quantization）は、大規模言語モデルの事後量子化で各列に同じビット数を割り当てることの非効率を、逆ヘッセ行列に基づく感度係数から計算した列別ビット幅で改善する手法である。
 
-- **2025-05 · [Scaling Reasoning without Attention](2025-2505.22425-scaling-reasoning-without-attention.md)**  
-  実装：[✓](https://github.com/inclusionAI/PromptCoT) ・ リポジトリ内被引用：1  
-  KVキャッシュを持たないMamba-2の状態空間双対層だけで推論モデルを構成し、PromptCoTの合成データによる2段階カリキュラムで鍛えた研究。7Bで27B級の推論性能と、メモリ制限下で最大3.66倍のスループットを示した。
+- **2025-05 · [QStore: Quantization-Aware Compressed Model Storage](2025-2505.04081-qstore-quantization-aware-compressed-model-storage.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  低精度モデルと復元用の条件付き情報だけを保持する無損失の統合保管形式で、量子化関数と量子化後の値による二重のグループ化で条件付き情報を圧縮し、六つのモデルで保管量を最大で無圧縮の二・二分の一、読み込みを最大で一・八倍速くしたと報告した。
 
 - **2025-05 · [DINGO: Constrained Inference for Diffusion LLMs](2025-2505.23061-dingo-constrained-inference-for-diffusion-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -4251,10 +4255,6 @@
 - **2025-01 · [DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory](2025-2501.06417-discquant-a-quantization-method-for-neural-networks-inspired-by-discrepa.md)**  
   実装：[✓](https://github.com/jerry-chee/DiscQuant) ・ リポジトリ内被引用：1  
   DiscQuantは、事前学習済みLLMの重みを低ビット化する際、量子化格子を設計した後の「各重みを上側と下側のどちらへ丸めるか」という問題を解く。原著の代表例では、Phi-3-mini-4k-instructを平均3.25ビットで量子化したGSM8kの正答率が、DiscQuant64%、GPTQ54%、RTN31%、無量子化84%である。
-
-- **2024-12 · [TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs](2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  対象領域に要らない層を微調整の途中で一層ずつ落とす漸進的な深さ削減で、七十億級モデルを半分ほどに圧縮しても医療の正解率を五四・六パーセントから五三・一パーセントに保ち、消費者向け装置で量子化や枝刈りの二・一倍から五・七倍の処理量を得て、併用時は記憶量八分の一で四・五倍になったと報告した。
 
 - **2025-11 · [Word Salad Chopper: Reasoning Models Waste A Ton Of Decoding Budget On Useless Repetitions, Self-Knowingly](2025-2511.00536-word-salad-chopper-reasoning-models-waste-a-ton-of-decoding-budget-on-us.md)**  
   実装：[✓](https://github.com/wenyaxie023/WordSaladChopper) ・ リポジトリ内被引用：0  
@@ -4764,13 +4764,13 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
 
+- **2025-05 · [Scaling Reasoning without Attention](2025-2505.22425-scaling-reasoning-without-attention.md)**  
+  実装：[✓](https://github.com/inclusionAI/PromptCoT) ・ リポジトリ内被引用：0  
+  KVキャッシュを持たないMamba-2の状態空間双対層だけで推論モデルを構成し、PromptCoTの合成データによる2段階カリキュラムで鍛えた研究。7Bで27B級の推論性能と、メモリ制限下で最大3.66倍のスループットを示した。
+
 - **2025-05 · [QwenLong-CPRS: Towards ∞-LLMs with Dynamic Context Optimization](2025-2505.18092-qwenlong-cprs-towards-llms-with-dynamic-context-optimization.md)**  
   実装：[✓](https://github.com/Tongyi-Zhiwen/QwenLong-CPRS) ・ リポジトリ内被引用：0  
   生成モデルの前段で、自然言語の指示に沿って長文脈から必要なトークンだけを多粒度で残す圧縮モデルにより、プリフィル費用を下げながら長文脈性能を上げる方式。
-
-- **2025-05 · [QStore: Quantization-Aware Compressed Model Storage](2025-2505.04081-qstore-quantization-aware-compressed-model-storage.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  低精度モデルと復元用の条件付き情報だけを保持する無損失の統合保管形式で、量子化関数と量子化後の値による二重のグループ化で条件付き情報を圧縮し、六つのモデルで保管量を最大で無圧縮の二・二分の一、読み込みを最大で一・八倍速くしたと報告した。
 
 - **2025-05 · [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](2025-2505.17639-premoe-proactive-inference-for-efficient-mixture-of-experts.md)**  
   実装：[✓](https://github.com/JarvisPei/PreMoe) ・ リポジトリ内被引用：0  
@@ -5067,11 +5067,11 @@
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：53  
+  実装：✓ ・ リポジトリ内被引用：54  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
-  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：52  
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
@@ -5110,13 +5110,13 @@
   実装：[✓](https://github.com/ziplab/LongVLM) ・ リポジトリ内被引用：17  
   LongVLMは、長時間動画を入力する視覚言語モデル（Vision-Language モデル; VLM）で、画像符号化器から出る大量の視覚トークンを短時間区間ごとに統合する。100フレームを224×224画素で符号化し、元のパッチ特徴が約25,600トークンになる設定で、10区間×30トークンと全体特徴5トークンの計305視覚トークンへまとめる。
 
+- **2024-10 · [LoLCATs: On Low-Rank Linearizing of Large Language Models](2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.md)**  
+  実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：16  
+  線形注意を元の注意出力に合わせる注意転移と低ランク適応だけの調整で線形化し、学習量を桁違いに減らしながらラマ3・8ビーのゼロショット差をほぼ閉じ、初めて4050億パラメータまで線形化した。
+
 - **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：16  
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
-
-- **2024-10 · [LoLCATs: On Low-Rank Linearizing of Large Language Models](2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/lolcats) ・ リポジトリ内被引用：15  
-  線形注意を元の注意出力に合わせる注意転移と低ランク適応だけの調整で線形化し、学習量を桁違いに減らしながらラマ3・8ビーのゼロショット差をほぼ閉じ、初めて4050億パラメータまで線形化した。
 
 - **2024-10 · [AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models](2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md)**  
   実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：15  
@@ -6113,7 +6113,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：389  
+  実装：✓ ・ リポジトリ内被引用：390  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）
