@@ -1,0 +1,907 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b3bd4605e0f24811-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b3bd4605e0f2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.22086",
+    "arXiv:2611.22191",
+    "arXiv:2611.22296",
+    "arXiv:2611.23835",
+    "arXiv:2611.25436",
+    "arXiv:2611.26619",
+    "arXiv:2611.26976",
+    "arXiv:2611.27217",
+    "arXiv:2611.27477",
+    "arXiv:2611.27891"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e6b47b0401dbab290196f50422f2fcfbf638fe72",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T00:57:45.771898+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.22086",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.22191",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.22296",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.23835",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.25436",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26619",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26976",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27217",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27477",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27891",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HyCoInfer: Cloud-Edge Collaborative Inference for Large Language Models on Heterogeneous GPU-FPGA Architectures",
+      "source_url": "https://arxiv.org/abs/2611.22086",
+      "year": 2026,
+      "published": "2026-11-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving relies predominantly on cloud GPUs, yet autoregressive decoding is memory-bound and often leaves their arithmetic units underutilized. Edge FPGAs offer attractive decoding efficiency, but are ill suited to sustaining a high-concurrency serving workload alone. This paper presents HyCoInfer, a heterogeneous cloud-edge serving system that assigns prefill to cloud GPUs and distributes decoding across cloud GPUs and edge FPGAs. The design addresses three barriers to practical offloading: capacity balancing across heterogeneous accelerators, the large KV cache crossing a constrained wide-area link, and the latency added by heterogeneous execution. HyCoInfer incorporates FPGA decode capacity into GPU prefill/decode role partitioning and places requests according to queue load, prompt length, and network state. It further combines layer-wise pipelined transfer, decoder-side precomputation, and bandwidth-adaptive KV cache compression based on residual vector quantization. We implement HyCoInfer using two NVIDIA V100 GPUs and an AMD Xilinx Alveo U280 and evaluate it over 100-1000 Mbps links. At 500 Mbps, HyCoInfer delivers up to 4.11 times the request goodput of cloud-only vLLM and reduces mean end-to-end latency by up to 61.1%. Across different network conditions and workloads, the system improves overall serving capacity, with the largest gains on communication-intensive tasks, and reduces per-request energy.",
+      "identifiers": [
+        "SemanticScholar:a79239b429afd8a93e3cd50794c2536eb38f4c3c"
+      ],
+      "semantic_scholar_id": "a79239b429afd8a93e3cd50794c2536eb38f4c3c",
+      "canonical_id": "arXiv:2611.22086",
+      "arxiv_id": "2611.22086",
+      "authors": [
+        "Ze-Wen Huang",
+        "Xiang-Wen Zhuge",
+        "Yin Hu",
+        "Zheng Yang",
+        "Qiang Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 7,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RISA: Recoverable Sparse Attention for Block-Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2611.22191",
+      "year": 2026,
+      "published": "2026-11-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-wise diffusion language models (DLMs) refine multiple tokens in parallel, offering an alternative to token-by-token autoregressive decoding. Their long-context inference, however, remains bottlenecked by memory-bound attention: every denoising step repeatedly reads a growing historical key--value (KV) cache. Directly applying sparse attention does not fully solve this problem, because different queries can select different pages, inflating the block's collective read set, while repeated support construction adds overhead and permanent eviction can discard information needed later. We present RISA, a recoverable sparse-attention method with shared read plans for block-wise DLMs. RISA exploits the fact that historical KV remains fixed within a block while queries evolve across denoising steps. Newly generated history is organized into exact priority and recovery tiers; seed queries then build a protected, bounded read plan whose indices are reused across the block while attention is recomputed with fresh queries and current-block KV. This separates history preservation from repeated reading and amortizes sparse-support construction without changing the backbone or decoder. On DreamReasoner-8B, RISA retains comparable task performance. At 32K, the default configuration speeds up attention by $2.67\\times$ and fixed-trajectory requests by $1.36\\times$ over dense, and attention speedup reaches $5.53\\times$ at 128K. Across eight settings on three models, RISA decodes faster than the tested MAGE, QUEST, and LoSA budgets at matched KL.",
+      "identifiers": [
+        "SemanticScholar:80b66090e717b230c4be1d3d10b046ff00f4e43f"
+      ],
+      "semantic_scholar_id": "80b66090e717b230c4be1d3d10b046ff00f4e43f",
+      "canonical_id": "arXiv:2611.22191",
+      "arxiv_id": "2611.22191",
+      "authors": [
+        "Xin-Rui Zhong",
+        "Fan-Jiang Ye",
+        "Yu-Ke Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 7,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpecSearch: Towards Hardware-Aware Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.22296",
+      "year": 2026,
+      "published": "2026-11-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference, but its optimal configuration depends jointly on workload characteristics, GPU hardware, and available memory. For example, on the RTX~5090, the state-of-the-art speculative drafter DFlash achieves $3.50\\times$ the throughput of autoregressive (AR) decoding at low concurrency, but only $0.76\\times$ at high concurrency with short outputs. We present SpecSearch, a hardware-aware search engine that jointly optimizes decoding strategy, draft length, and precision across workload--GPU pairs. Its analytical cost model captures memory and compute constraints to identify feasible configurations and narrow the search space for throughput optimization. Guided by this model, calibration measurements are collected from multiple GPUs. Using the measurements, a Jev-based predictor learns to select high-throughput decoding configurations on held-out GPUs without requiring deployment-GPU calibration. The predictor is parameter-efficiently trained on calibration data, while adapting a frozen Qwen3-4B using LoRA adapters and a linear correction layer. Across NVIDIA RTX~5090, H100, L40 and AMD MI300X GPUs, SpecSearch with full calibration achieves an average of $2.01\\times$ the throughput of AR and $1.36\\times$ the throughput of SD, both served by vLLM. The proposed Jev-based predictor closely matches this search performance with $1.30\\times$ throughput improvement over SD with vLLM, while eliminating the need for held-out GPU calibration. Additionally, it retains $97.36\\%$ of the throughput achieved by SpecSearch that utilizes full calibration.",
+      "identifiers": [
+        "SemanticScholar:75222fa5d9b1ed4653c1efbfec582ec014699e17"
+      ],
+      "semantic_scholar_id": "75222fa5d9b1ed4653c1efbfec582ec014699e17",
+      "canonical_id": "arXiv:2611.22296",
+      "arxiv_id": "2611.22296",
+      "authors": [
+        "Selin Yildirim",
+        "Ali Zeyrek",
+        "De-Ming Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 7,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.23835",
+      "year": 2026,
+      "published": "2026-11-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is widely used to speed up generation in large language models (LLMs), with a small draft model proposing tokens that one forward pass of the target model verifies. Draft models that read the target's hidden states, such as DFlash and EAGLE-3, typically inherit the target's hidden width. We show that the draft's whole residual stream can run at half or a quarter of that width while largely preserving acceptance. For DFlash, which borrows the target's vocabulary projection, the trained output adapter folds into it, giving one narrower projection with logits unchanged up to floating-point rounding. We test two drafter families, DFlash and EAGLE-3, on two targets, Qwen3-8B (NVFP4) and GPT-OSS-20B (MXFP4), in SGLang on a B200 and a DGX Spark (GB10). At batch size 1 and temperature 0, narrowing the draft to half or a quarter width speeds up end-to-end decoding by 1.06-1.12x on B200 and 1.13-1.44x on GB10. The speedup holds at larger batch sizes. From batch 32 to the largest batch each GPU fits, narrowing reaches up to 1.21x on both GPUs, and no narrow draft is slower than full width.",
+      "identifiers": [
+        "SemanticScholar:6300eff80e6aa2fea81387489be3b80008d8e8c1"
+      ],
+      "semantic_scholar_id": "6300eff80e6aa2fea81387489be3b80008d8e8c1",
+      "canonical_id": "arXiv:2611.23835",
+      "arxiv_id": "2611.23835",
+      "authors": [
+        "Alagappan Valliappan",
+        "Ankit More",
+        "Dheevatsa Mudigere",
+        "Jatin Mitra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Raptor: Rejection-aware Adaptive Tree based on Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.25436",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tree-structured speculative decoding accelerates vision-language models (VLMs) by verifying multiple candidate continuations in parallel. However, long visual contexts increase the cost of speculative computation, making candidate coverage and redundant expansion important considerations beyond tree topology adaptation. We propose Raptor, a training-free framework that uses rejection feedback to jointly regulate candidate coverage and drafting effort. Our key insight is that acceptance length alone cannot distinguish insufficient candidate coverage from excessive deep expansion, and these conditions require different allocation decisions. Raptor therefore extracts complementary rejection-aware signals to characterize speculative progress, frontier coverage, and redundant expansion. These signals jointly guide bounded, momentum-smoothed updates of tree depth, branching width, and drafting budget, together with execution control that limits unnecessary drafting and progressively restores expansion when appropriate. Extensive experiments with two VLMs across seven multimodal benchmarks demonstrate the effectiveness of Raptor, achieving up to 2.39x average speedup over autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:5ec961a504056b1e1a851f91c2a66e5aee60617c"
+      ],
+      "semantic_scholar_id": "5ec961a504056b1e1a851f91c2a66e5aee60617c",
+      "canonical_id": "arXiv:2611.25436",
+      "arxiv_id": "2611.25436",
+      "authors": [
+        "Qi-Shu Hu",
+        "Hao-Zhao Wang",
+        "Zi-Cong Hong",
+        "Yu-Feng Zhan",
+        "Yuan-Qing Xia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+      "source_url": "https://arxiv.org/abs/2611.26619",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
+      "identifiers": [
+        "SemanticScholar:441a056f1e063afa477459e7da31726c12621880"
+      ],
+      "semantic_scholar_id": "441a056f1e063afa477459e7da31726c12621880",
+      "canonical_id": "arXiv:2611.26619",
+      "arxiv_id": "2611.26619",
+      "authors": [
+        "Jin-Bin Luo",
+        "Xiao-Zhe Yao",
+        "Shang Yang",
+        "Zhi-Jian Liu",
+        "Song Han",
+        "Qing-Hao Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MixFold: Sub-4-Bit Mixed-Precision LLM Inference via Output-Channel Grouping on Mobile NPUs",
+      "source_url": "https://arxiv.org/abs/2611.26976",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sub-4-bit quantization allows mobile devices to run larger LLMs, but its memory savings do not always translate into faster decoding on mobile NPUs. Their matrix units support only a few native integer datatypes, and converting unsupported weight formats on the vector unit can erase the gains from fewer bits. Mixed precision faces an additional constraint: each matrix-unit tile uses one datatype. MixFold executes 3-bit and perfectly symmetric 2-bit weights using native integer operations without expanding the weights to wider datatypes during decoding. MixFold then assigns datatypes to output-channel groups aligned with the matrix-unit tiles, enabling finer-than-layer assignment without disrupting matrix-unit execution. We compare MixFold with llama.cpp Hexagon backend on the Qualcomm Hexagon NPU of a Snapdragon 8 Elite Gen 5. Across the Qwen3 model family, MixFold achieves comparable or higher accuracy than llama.cpp's sub-4-bit formats at matched bits per weight, while decoding 1.16-1.41 times faster and generating 1.5-4.3 times more tokens per joule.",
+      "identifiers": [
+        "SemanticScholar:148ad56c07b9991091bc7644d50b6cb8cb4627e4"
+      ],
+      "semantic_scholar_id": "148ad56c07b9991091bc7644d50b6cb8cb4627e4",
+      "canonical_id": "arXiv:2611.26976",
+      "arxiv_id": "2611.26976",
+      "authors": [
+        "Vinnam Kim",
+        "Seong Hoon Seo",
+        "Junhan Kim",
+        "J. You",
+        "Angelica Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoPyro: Feeding Copy Proposals to Parallel Drafters",
+      "source_url": "https://arxiv.org/abs/2611.27217",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates language generation by letting a target model verify several draft tokens in one forward pass. Earlier neural drafters such as EAGLE extend each candidate sequence one token at a time. Recent work has turned to parallel drafters such as DFlash, which predict a whole block at once. Another approach uses n-gram retrieval to find an earlier occurrence of the current context suffix and copy the tokens that followed it directly into the draft. We introduce CoPyro, which feeds these copied tokens into a parallel drafter in place of masks. The drafter learns from context which tokens to keep and which to revise as it predicts the block in its usual forward pass. Across eight benchmarks on Qwen3-4B, CoPyro improves overall acceptance length for all four parallel drafters tested, with gains of 2.19-5.08% when trained on 100K samples. With DFlash trained on 710K samples, overall gains range from 1.08% to 2.00% across the tested model sizes and temperatures. Code generation benefits most in both settings. On Qwen3-8B, processing the proposals adds an average of 0.24 ms per decoding round in Transformers.",
+      "identifiers": [
+        "SemanticScholar:925f142c59457f6d4323ffaf85a0502917dc3ecc"
+      ],
+      "semantic_scholar_id": "925f142c59457f6d4323ffaf85a0502917dc3ecc",
+      "canonical_id": "arXiv:2611.27217",
+      "arxiv_id": "2611.27217",
+      "authors": [
+        "Hong-Kai Zheng",
+        "Pi-Ji Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cannot Wait to Verify: Parallel Drafting to Eliminate Verifier Idle Time in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.27477",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive inference in large transformer models is limited by token-level sequential execution, resulting in high latency and low GPU utilization. Speculative decoding (SD) mitigates this bottleneck by introducing a draft-and-verifier model. However, the drafting stage remains sequential, leaving the verifier idle and underutilizing compute. To address this, we propose a plug-and-play drafting adaptive drafting method that parallelizes inference across transformer layers during draft generation. Starting from a shared hidden state, our approach evaluates multiple layers in parallel and verifies consistency by measuring divergence in hidden-state space. Layer-wise draft states are accepted when deviations are small; otherwise, a correction step is applied. By exploiting redundancy across transformer layers, our method accelerates draft generation and improves hardware utilization without modifying architectures or requiring retraining. Experimental results on NLP tasks show that our method speeds up the drafting stage by up to $1.65\\times$ with minimal degradation in accuracy, while maintaining the same performance as SD.",
+      "identifiers": [
+        "SemanticScholar:0831441826f62e16f6c7a3b8f849124cde30bd31"
+      ],
+      "semantic_scholar_id": "0831441826f62e16f6c7a3b8f849124cde30bd31",
+      "canonical_id": "arXiv:2611.27477",
+      "arxiv_id": "2611.27477",
+      "authors": [
+        "D. J. Bajpai",
+        "Arun Verma",
+        "M. Hanawal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Speculative Decoding Is Less Speculative Than You Think",
+      "source_url": "https://arxiv.org/abs/2611.27891",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates language-model inference by preparing candidate continuations before the target model generates them. Its efficiency depends on how well limited drafting computation anticipates the path the target will actually follow. Anticipating this path involves two sources of uncertainty: the target model's predictions and the randomness of sampling. Yet the former requires a target-model forward pass, while the latter can be fixed before drafting. Building on this observation, we introduce DICE (Draw-Informed Candidate Selection), which pre-samples and synchronizes verification randomness across drafting and verification. By combining these known draws with predictions from an existing drafter, DICE allocates computation toward continuations more likely to be used in the current sampling run. This principle guides node selection throughout draft-tree construction and extends to asynchronous prefetching, where DICE predicts which next-round drafts to prepare. Without additional drafter training or changes to the target sampling distribution, DICE achieves state-of-the-art decoding throughput across diverse settings, with speedups of up to 24.6pp over strong baselines.",
+      "identifiers": [
+        "SemanticScholar:cd36892072aeac1c956936f0ac9530af54060c56"
+      ],
+      "semantic_scholar_id": "cd36892072aeac1c956936f0ac9530af54060c56",
+      "canonical_id": "arXiv:2611.27891",
+      "arxiv_id": "2611.27891",
+      "authors": [
+        "Guan-Ning Zeng",
+        "Andrea Zanette"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.22086",
+      "identity_tokens": [
+        "id:SemanticScholar:a79239b429afd8a93e3cd50794c2536eb38f4c3c",
+        "id:arXiv:2611.22086",
+        "title:hycoinfer cloudedge collaborative inference for large language models on heterogeneous gpufpga architectures",
+        "url:https://arxiv.org/abs/2611.22086"
+      ],
+      "record": {
+        "title": "HyCoInfer: Cloud-Edge Collaborative Inference for Large Language Models on Heterogeneous GPU-FPGA Architectures",
+        "source_url": "https://arxiv.org/abs/2611.22086",
+        "year": 2026,
+        "published": "2026-11-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving relies predominantly on cloud GPUs, yet autoregressive decoding is memory-bound and often leaves their arithmetic units underutilized. Edge FPGAs offer attractive decoding efficiency, but are ill suited to sustaining a high-concurrency serving workload alone. This paper presents HyCoInfer, a heterogeneous cloud-edge serving system that assigns prefill to cloud GPUs and distributes decoding across cloud GPUs and edge FPGAs. The design addresses three barriers to practical offloading: capacity balancing across heterogeneous accelerators, the large KV cache crossing a constrained wide-area link, and the latency added by heterogeneous execution. HyCoInfer incorporates FPGA decode capacity into GPU prefill/decode role partitioning and places requests according to queue load, prompt length, and network state. It further combines layer-wise pipelined transfer, decoder-side precomputation, and bandwidth-adaptive KV cache compression based on residual vector quantization. We implement HyCoInfer using two NVIDIA V100 GPUs and an AMD Xilinx Alveo U280 and evaluate it over 100-1000 Mbps links. At 500 Mbps, HyCoInfer delivers up to 4.11 times the request goodput of cloud-only vLLM and reduces mean end-to-end latency by up to 61.1%. Across different network conditions and workloads, the system improves overall serving capacity, with the largest gains on communication-intensive tasks, and reduces per-request energy.",
+        "identifiers": [
+          "SemanticScholar:a79239b429afd8a93e3cd50794c2536eb38f4c3c"
+        ],
+        "semantic_scholar_id": "a79239b429afd8a93e3cd50794c2536eb38f4c3c",
+        "canonical_id": "arXiv:2611.22086",
+        "arxiv_id": "2611.22086",
+        "authors": [
+          "Ze-Wen Huang",
+          "Xiang-Wen Zhuge",
+          "Yin Hu",
+          "Zheng Yang",
+          "Qiang Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 7,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.22191",
+      "identity_tokens": [
+        "id:SemanticScholar:80b66090e717b230c4be1d3d10b046ff00f4e43f",
+        "id:arXiv:2611.22191",
+        "title:risa recoverable sparse attention for blockdiffusion language models",
+        "url:https://arxiv.org/abs/2611.22191"
+      ],
+      "record": {
+        "title": "RISA: Recoverable Sparse Attention for Block-Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2611.22191",
+        "year": 2026,
+        "published": "2026-11-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-wise diffusion language models (DLMs) refine multiple tokens in parallel, offering an alternative to token-by-token autoregressive decoding. Their long-context inference, however, remains bottlenecked by memory-bound attention: every denoising step repeatedly reads a growing historical key--value (KV) cache. Directly applying sparse attention does not fully solve this problem, because different queries can select different pages, inflating the block's collective read set, while repeated support construction adds overhead and permanent eviction can discard information needed later. We present RISA, a recoverable sparse-attention method with shared read plans for block-wise DLMs. RISA exploits the fact that historical KV remains fixed within a block while queries evolve across denoising steps. Newly generated history is organized into exact priority and recovery tiers; seed queries then build a protected, bounded read plan whose indices are reused across the block while attention is recomputed with fresh queries and current-block KV. This separates history preservation from repeated reading and amortizes sparse-support construction without changing the backbone or decoder. On DreamReasoner-8B, RISA retains comparable task performance. At 32K, the default configuration speeds up attention by $2.67\\times$ and fixed-trajectory requests by $1.36\\times$ over dense, and attention speedup reaches $5.53\\times$ at 128K. Across eight settings on three models, RISA decodes faster than the tested MAGE, QUEST, and LoSA budgets at matched KL.",
+        "identifiers": [
+          "SemanticScholar:80b66090e717b230c4be1d3d10b046ff00f4e43f"
+        ],
+        "semantic_scholar_id": "80b66090e717b230c4be1d3d10b046ff00f4e43f",
+        "canonical_id": "arXiv:2611.22191",
+        "arxiv_id": "2611.22191",
+        "authors": [
+          "Xin-Rui Zhong",
+          "Fan-Jiang Ye",
+          "Yu-Ke Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 7,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.22296",
+      "identity_tokens": [
+        "id:SemanticScholar:75222fa5d9b1ed4653c1efbfec582ec014699e17",
+        "id:arXiv:2611.22296",
+        "title:specsearch towards hardwareaware efficient speculative decoding",
+        "url:https://arxiv.org/abs/2611.22296"
+      ],
+      "record": {
+        "title": "SpecSearch: Towards Hardware-Aware Efficient Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.22296",
+        "year": 2026,
+        "published": "2026-11-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference, but its optimal configuration depends jointly on workload characteristics, GPU hardware, and available memory. For example, on the RTX~5090, the state-of-the-art speculative drafter DFlash achieves $3.50\\times$ the throughput of autoregressive (AR) decoding at low concurrency, but only $0.76\\times$ at high concurrency with short outputs. We present SpecSearch, a hardware-aware search engine that jointly optimizes decoding strategy, draft length, and precision across workload--GPU pairs. Its analytical cost model captures memory and compute constraints to identify feasible configurations and narrow the search space for throughput optimization. Guided by this model, calibration measurements are collected from multiple GPUs. Using the measurements, a Jev-based predictor learns to select high-throughput decoding configurations on held-out GPUs without requiring deployment-GPU calibration. The predictor is parameter-efficiently trained on calibration data, while adapting a frozen Qwen3-4B using LoRA adapters and a linear correction layer. Across NVIDIA RTX~5090, H100, L40 and AMD MI300X GPUs, SpecSearch with full calibration achieves an average of $2.01\\times$ the throughput of AR and $1.36\\times$ the throughput of SD, both served by vLLM. The proposed Jev-based predictor closely matches this search performance with $1.30\\times$ throughput improvement over SD with vLLM, while eliminating the need for held-out GPU calibration. Additionally, it retains $97.36\\%$ of the throughput achieved by SpecSearch that utilizes full calibration.",
+        "identifiers": [
+          "SemanticScholar:75222fa5d9b1ed4653c1efbfec582ec014699e17"
+        ],
+        "semantic_scholar_id": "75222fa5d9b1ed4653c1efbfec582ec014699e17",
+        "canonical_id": "arXiv:2611.22296",
+        "arxiv_id": "2611.22296",
+        "authors": [
+          "Selin Yildirim",
+          "Ali Zeyrek",
+          "De-Ming Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 7,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.23835",
+      "identity_tokens": [
+        "id:SemanticScholar:6300eff80e6aa2fea81387489be3b80008d8e8c1",
+        "id:arXiv:2611.23835",
+        "title:narrowspec draft hidden width need not match the target in speculative decoding",
+        "url:https://arxiv.org/abs/2611.23835"
+      ],
+      "record": {
+        "title": "NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.23835",
+        "year": 2026,
+        "published": "2026-11-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding is widely used to speed up generation in large language models (LLMs), with a small draft model proposing tokens that one forward pass of the target model verifies. Draft models that read the target's hidden states, such as DFlash and EAGLE-3, typically inherit the target's hidden width. We show that the draft's whole residual stream can run at half or a quarter of that width while largely preserving acceptance. For DFlash, which borrows the target's vocabulary projection, the trained output adapter folds into it, giving one narrower projection with logits unchanged up to floating-point rounding. We test two drafter families, DFlash and EAGLE-3, on two targets, Qwen3-8B (NVFP4) and GPT-OSS-20B (MXFP4), in SGLang on a B200 and a DGX Spark (GB10). At batch size 1 and temperature 0, narrowing the draft to half or a quarter width speeds up end-to-end decoding by 1.06-1.12x on B200 and 1.13-1.44x on GB10. The speedup holds at larger batch sizes. From batch 32 to the largest batch each GPU fits, narrowing reaches up to 1.21x on both GPUs, and no narrow draft is slower than full width.",
+        "identifiers": [
+          "SemanticScholar:6300eff80e6aa2fea81387489be3b80008d8e8c1"
+        ],
+        "semantic_scholar_id": "6300eff80e6aa2fea81387489be3b80008d8e8c1",
+        "canonical_id": "arXiv:2611.23835",
+        "arxiv_id": "2611.23835",
+        "authors": [
+          "Alagappan Valliappan",
+          "Ankit More",
+          "Dheevatsa Mudigere",
+          "Jatin Mitra"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.25436",
+      "identity_tokens": [
+        "id:SemanticScholar:5ec961a504056b1e1a851f91c2a66e5aee60617c",
+        "id:arXiv:2611.25436",
+        "title:raptor rejectionaware adaptive tree based on speculative decoding",
+        "url:https://arxiv.org/abs/2611.25436"
+      ],
+      "record": {
+        "title": "Raptor: Rejection-aware Adaptive Tree based on Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.25436",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Tree-structured speculative decoding accelerates vision-language models (VLMs) by verifying multiple candidate continuations in parallel. However, long visual contexts increase the cost of speculative computation, making candidate coverage and redundant expansion important considerations beyond tree topology adaptation. We propose Raptor, a training-free framework that uses rejection feedback to jointly regulate candidate coverage and drafting effort. Our key insight is that acceptance length alone cannot distinguish insufficient candidate coverage from excessive deep expansion, and these conditions require different allocation decisions. Raptor therefore extracts complementary rejection-aware signals to characterize speculative progress, frontier coverage, and redundant expansion. These signals jointly guide bounded, momentum-smoothed updates of tree depth, branching width, and drafting budget, together with execution control that limits unnecessary drafting and progressively restores expansion when appropriate. Extensive experiments with two VLMs across seven multimodal benchmarks demonstrate the effectiveness of Raptor, achieving up to 2.39x average speedup over autoregressive decoding.",
+        "identifiers": [
+          "SemanticScholar:5ec961a504056b1e1a851f91c2a66e5aee60617c"
+        ],
+        "semantic_scholar_id": "5ec961a504056b1e1a851f91c2a66e5aee60617c",
+        "canonical_id": "arXiv:2611.25436",
+        "arxiv_id": "2611.25436",
+        "authors": [
+          "Qi-Shu Hu",
+          "Hao-Zhao Wang",
+          "Zi-Cong Hong",
+          "Yu-Feng Zhan",
+          "Yuan-Qing Xia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26619",
+      "identity_tokens": [
+        "id:SemanticScholar:441a056f1e063afa477459e7da31726c12621880",
+        "id:arXiv:2611.26619",
+        "title:tidecache efficient hybrid llm serving with transparent cache management and layerwise streaming",
+        "url:https://arxiv.org/abs/2611.26619"
+      ],
+      "record": {
+        "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+        "source_url": "https://arxiv.org/abs/2611.26619",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
+        "identifiers": [
+          "SemanticScholar:441a056f1e063afa477459e7da31726c12621880"
+        ],
+        "semantic_scholar_id": "441a056f1e063afa477459e7da31726c12621880",
+        "canonical_id": "arXiv:2611.26619",
+        "arxiv_id": "2611.26619",
+        "authors": [
+          "Jin-Bin Luo",
+          "Xiao-Zhe Yao",
+          "Shang Yang",
+          "Zhi-Jian Liu",
+          "Song Han",
+          "Qing-Hao Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26976",
+      "identity_tokens": [
+        "id:SemanticScholar:148ad56c07b9991091bc7644d50b6cb8cb4627e4",
+        "id:arXiv:2611.26976",
+        "title:mixfold sub4bit mixedprecision llm inference via outputchannel grouping on mobile npus",
+        "url:https://arxiv.org/abs/2611.26976"
+      ],
+      "record": {
+        "title": "MixFold: Sub-4-Bit Mixed-Precision LLM Inference via Output-Channel Grouping on Mobile NPUs",
+        "source_url": "https://arxiv.org/abs/2611.26976",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sub-4-bit quantization allows mobile devices to run larger LLMs, but its memory savings do not always translate into faster decoding on mobile NPUs. Their matrix units support only a few native integer datatypes, and converting unsupported weight formats on the vector unit can erase the gains from fewer bits. Mixed precision faces an additional constraint: each matrix-unit tile uses one datatype. MixFold executes 3-bit and perfectly symmetric 2-bit weights using native integer operations without expanding the weights to wider datatypes during decoding. MixFold then assigns datatypes to output-channel groups aligned with the matrix-unit tiles, enabling finer-than-layer assignment without disrupting matrix-unit execution. We compare MixFold with llama.cpp Hexagon backend on the Qualcomm Hexagon NPU of a Snapdragon 8 Elite Gen 5. Across the Qwen3 model family, MixFold achieves comparable or higher accuracy than llama.cpp's sub-4-bit formats at matched bits per weight, while decoding 1.16-1.41 times faster and generating 1.5-4.3 times more tokens per joule.",
+        "identifiers": [
+          "SemanticScholar:148ad56c07b9991091bc7644d50b6cb8cb4627e4"
+        ],
+        "semantic_scholar_id": "148ad56c07b9991091bc7644d50b6cb8cb4627e4",
+        "canonical_id": "arXiv:2611.26976",
+        "arxiv_id": "2611.26976",
+        "authors": [
+          "Vinnam Kim",
+          "Seong Hoon Seo",
+          "Junhan Kim",
+          "J. You",
+          "Angelica Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27217",
+      "identity_tokens": [
+        "id:SemanticScholar:925f142c59457f6d4323ffaf85a0502917dc3ecc",
+        "id:arXiv:2611.27217",
+        "title:copyro feeding copy proposals to parallel drafters",
+        "url:https://arxiv.org/abs/2611.27217"
+      ],
+      "record": {
+        "title": "CoPyro: Feeding Copy Proposals to Parallel Drafters",
+        "source_url": "https://arxiv.org/abs/2611.27217",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates language generation by letting a target model verify several draft tokens in one forward pass. Earlier neural drafters such as EAGLE extend each candidate sequence one token at a time. Recent work has turned to parallel drafters such as DFlash, which predict a whole block at once. Another approach uses n-gram retrieval to find an earlier occurrence of the current context suffix and copy the tokens that followed it directly into the draft. We introduce CoPyro, which feeds these copied tokens into a parallel drafter in place of masks. The drafter learns from context which tokens to keep and which to revise as it predicts the block in its usual forward pass. Across eight benchmarks on Qwen3-4B, CoPyro improves overall acceptance length for all four parallel drafters tested, with gains of 2.19-5.08% when trained on 100K samples. With DFlash trained on 710K samples, overall gains range from 1.08% to 2.00% across the tested model sizes and temperatures. Code generation benefits most in both settings. On Qwen3-8B, processing the proposals adds an average of 0.24 ms per decoding round in Transformers.",
+        "identifiers": [
+          "SemanticScholar:925f142c59457f6d4323ffaf85a0502917dc3ecc"
+        ],
+        "semantic_scholar_id": "925f142c59457f6d4323ffaf85a0502917dc3ecc",
+        "canonical_id": "arXiv:2611.27217",
+        "arxiv_id": "2611.27217",
+        "authors": [
+          "Hong-Kai Zheng",
+          "Pi-Ji Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27477",
+      "identity_tokens": [
+        "id:SemanticScholar:0831441826f62e16f6c7a3b8f849124cde30bd31",
+        "id:arXiv:2611.27477",
+        "title:cannot wait to verify parallel drafting to eliminate verifier idle time in speculative decoding",
+        "url:https://arxiv.org/abs/2611.27477"
+      ],
+      "record": {
+        "title": "Cannot Wait to Verify: Parallel Drafting to Eliminate Verifier Idle Time in Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.27477",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive inference in large transformer models is limited by token-level sequential execution, resulting in high latency and low GPU utilization. Speculative decoding (SD) mitigates this bottleneck by introducing a draft-and-verifier model. However, the drafting stage remains sequential, leaving the verifier idle and underutilizing compute. To address this, we propose a plug-and-play drafting adaptive drafting method that parallelizes inference across transformer layers during draft generation. Starting from a shared hidden state, our approach evaluates multiple layers in parallel and verifies consistency by measuring divergence in hidden-state space. Layer-wise draft states are accepted when deviations are small; otherwise, a correction step is applied. By exploiting redundancy across transformer layers, our method accelerates draft generation and improves hardware utilization without modifying architectures or requiring retraining. Experimental results on NLP tasks show that our method speeds up the drafting stage by up to $1.65\\times$ with minimal degradation in accuracy, while maintaining the same performance as SD.",
+        "identifiers": [
+          "SemanticScholar:0831441826f62e16f6c7a3b8f849124cde30bd31"
+        ],
+        "semantic_scholar_id": "0831441826f62e16f6c7a3b8f849124cde30bd31",
+        "canonical_id": "arXiv:2611.27477",
+        "arxiv_id": "2611.27477",
+        "authors": [
+          "D. J. Bajpai",
+          "Arun Verma",
+          "M. Hanawal"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27891",
+      "identity_tokens": [
+        "id:SemanticScholar:cd36892072aeac1c956936f0ac9530af54060c56",
+        "id:arXiv:2611.27891",
+        "title:speculative decoding is less speculative than you think",
+        "url:https://arxiv.org/abs/2611.27891"
+      ],
+      "record": {
+        "title": "Speculative Decoding Is Less Speculative Than You Think",
+        "source_url": "https://arxiv.org/abs/2611.27891",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates language-model inference by preparing candidate continuations before the target model generates them. Its efficiency depends on how well limited drafting computation anticipates the path the target will actually follow. Anticipating this path involves two sources of uncertainty: the target model's predictions and the randomness of sampling. Yet the former requires a target-model forward pass, while the latter can be fixed before drafting. Building on this observation, we introduce DICE (Draw-Informed Candidate Selection), which pre-samples and synchronizes verification randomness across drafting and verification. By combining these known draws with predictions from an existing drafter, DICE allocates computation toward continuations more likely to be used in the current sampling run. This principle guides node selection throughout draft-tree construction and extends to asynchronous prefetching, where DICE predicts which next-round drafts to prepare. Without additional drafter training or changes to the target sampling distribution, DICE achieves state-of-the-art decoding throughput across diverse settings, with speedups of up to 24.6pp over strong baselines.",
+        "identifiers": [
+          "SemanticScholar:cd36892072aeac1c956936f0ac9530af54060c56"
+        ],
+        "semantic_scholar_id": "cd36892072aeac1c956936f0ac9530af54060c56",
+        "canonical_id": "arXiv:2611.27891",
+        "arxiv_id": "2611.27891",
+        "authors": [
+          "Guan-Ning Zeng",
+          "Andrea Zanette"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:777b23f505e603eac5d2f55218bbd37cab60a3cfaf1ac8854bb8637fa2e0f718",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

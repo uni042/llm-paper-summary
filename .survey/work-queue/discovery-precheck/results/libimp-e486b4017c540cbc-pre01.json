@@ -1,0 +1,684 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e486b4017c540cbc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e486b4017c54",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.23558",
+    "arXiv:2611.24085",
+    "arXiv:2611.24119",
+    "arXiv:2611.24891",
+    "arXiv:2611.25091",
+    "arXiv:2611.26657",
+    "arXiv:2611.27604"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e6b47b0401dbab290196f50422f2fcfbf638fe72",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T00:57:49.889026+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.23558",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.24085",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.24119",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.24891",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.25091",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26657",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27604",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Towards Fair Resource Sharing in Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2611.23558",
+      "year": 2026,
+      "published": "2026-11-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM agents increasingly execute complex, multi-step tasks on shared inference infrastructure, resource contention across the end-to-end LLM serving stack causes severe and uneven slowdowns across agents. Existing agentic serving systems primarily optimize throughput and latency, with comparatively limited attention to fairness among concurrent agents. Although fairness has been studied in conventional LLM serving at the token and request levels, these approaches do not fully capture cumulative delays and stateful resource dependencies across successive LLM calls within an agent. Moreover, interference spans request routing, runtime scheduling, and hardware resources, making agent-level fairness challenging to define and optimize across an end-to-end serving stack. This paper presents a cross-layer framework to define agent-level fairness, attribute sources of unfairness, and optimize fairness while preserving throughput. To account for agents with widely varying execution demands, we build a theoretical foundation to define fairness using slowdown relative to standalone execution. Our empirical analysis reveals that routing, runtime scheduling, and hardware contention jointly determine fairness, with performance-oriented policies often leading to prolonged queuing delays. To optimize fairness, we introduce Duru, which monitors each agent's slowdown and uses this signal to guide admission and scheduling decisions across the router and runtime. Duru further alleviates starvation through admission exceptions and integrates slowdown-driven autoscaling to adhere to Service-Level Objectives (SLOs). Our evaluation across various benchmarks and hardware platforms shows that Duru reduces 99th-percentile normalized slowdown by a geometric mean of 44.4% (up to 79.5%) while delivering 91.8-127.4% of the state-of-the-art system's throughput.",
+      "identifiers": [
+        "SemanticScholar:c086e63208b8ac3b294f200f1fde4f4b625ed605"
+      ],
+      "semantic_scholar_id": "c086e63208b8ac3b294f200f1fde4f4b625ed605",
+      "canonical_id": "arXiv:2611.23558",
+      "arxiv_id": "2611.23558",
+      "authors": [
+        "Sehyeon Lee",
+        "Yu-Chen Xia",
+        "Zhao-Yang Hong",
+        "Jin-Rui Hu",
+        "Anuradha Pandey",
+        "Evan Zhao",
+        "Ankita Nayak",
+        "Nishil Talati"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 7,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LEDGE: An Efficient Simulator for Distributed LLM Serving on Heterogeneous Edge Devices",
+      "source_url": "https://arxiv.org/abs/2611.24085",
+      "year": 2026,
+      "published": "2026-11-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Evaluating distributed large language model (LLM) serving on heterogeneous edge devices requires exploring diverse model partitions, device placements, and network conditions, making repeated physical experiments costly. An efficient simulator for edge LLM serving must support diverse, fine-grained placement configurations, capture runtime behavior, and accurately predict execution times while keeping simulation overhead low. We present LEDGE, a lightweight simulator for fast, fine-grained evaluation of distributed LLM serving on heterogeneous edge devices without executing tensor operations. LEDGE constructs event graphs supporting non-uniform tensor and pipeline parallelism, estimates execution costs using reusable performance models calibrated from end-to-end measurements, and simulates shared-link contention. We evaluate LEDGE on a heterogeneous testbed of 10 Jetson and Raspberry Pi devices, covering 17 model--precision combinations across 4 LLM families. On Qwen deployments, LEDGE achieves request-level mean absolute percentage errors below 3.6% and a 135.3 times aggregate speedup over physical inference. Performance model calibrated on one LLM family yield 7.44% zero-shot end-to-end latency MAPE across three other families. Further simulations show how shared-link contention affects placement decisions and network topology constrains scaling. Across four edge environments, LEDGE completes 26,773 simulation runs in 83.8 minutes, enabling efficient exploration of deployment strategies under diverse resource conditions and serving objectives. The source code is publicly available at https://github.com/gdfwj/LEDGE.",
+      "identifiers": [
+        "SemanticScholar:320751f68fc465d0ad258677a771225456ed05fb"
+      ],
+      "semantic_scholar_id": "320751f68fc465d0ad258677a771225456ed05fb",
+      "canonical_id": "arXiv:2611.24085",
+      "arxiv_id": "2611.24085",
+      "authors": [
+        "Zi-Hao Wang",
+        "Ye Tian",
+        "Tajana Rosing",
+        "N. Venkatasubramanian"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "eFAIR: Fair LLM Serving under Hourly Electricity Commitments",
+      "source_url": "https://arxiv.org/abs/2611.24119",
+      "year": 2026,
+      "published": "2026-11-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Datacenters can procure electricity in day-ahead markets by committing to energy purchases for individual hours. For LLM services operating within these hourly budgets, maximizing aggregate throughput alone may still leave individual requests waiting or receiving much slower service than desired. Fair serving therefore requires improving service for poorly served requests while reserving electricity for later arrivals whose timing and demand are unknown. To compare service across requests, we define normalized throughput as each request's actual output rate divided by the product of its standalone throughput and its service entitlement, a positive weight representing its desired service level. Using this measure, we formulate fair serving as leximin optimization under an hourly electricity constraint, prioritizing requests with the lowest normalized throughput. To address this problem, we present eFAIR, an online scheduler that coordinates request dispatching, electricity budget allocation, and GPU frequency selection through a common normalized-throughput target. Specifically, request dispatching prioritizes requests by desired service level and progress; electricity budget allocation reserves electricity for current and expected future work; and frequency selection uses electricity savings to raise GPU frequencies for requests with higher desired service levels. Evaluations on H20 and H200 configurations, each with 32 replicas, show that eFAIR improves the tenth percentile of normalized throughput by 28.0%-31.0% over the best budget-feasible baseline, while keeping absolute deviations from the hourly electricity commitment below 0.26%. eFAIR also improves throughput balance among concurrent requests and aligns electricity allocation more closely with service demand over time. Together, these results demonstrate how eFAIR improves request-level fairness within an hourly commitment.",
+      "identifiers": [
+        "SemanticScholar:8d46c3db868f2f84520f8fa717c56371ee380b2f"
+      ],
+      "semantic_scholar_id": "8d46c3db868f2f84520f8fa717c56371ee380b2f",
+      "canonical_id": "arXiv:2611.24119",
+      "arxiv_id": "2611.24119",
+      "authors": [
+        "You Peng",
+        "You-He Jiang",
+        "Chen Wang",
+        "Bin-Hang Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity",
+      "source_url": "https://arxiv.org/abs/2611.24891",
+      "year": 2026,
+      "published": "2026-11-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A fixed dispatch rate for LLM inference becomes stale as serving fleets resize and request sizes change. Generative output length is unknown at admission, and shared provider pools can lose capacity. We present Cap-and-Track, a design for asynchronous inference across provider capacity and internal GPUs. Meta's traffic shaper implements Cap-and-Track for post and live-video understanding. Refusals signal the backend's current admission ceiling. Durable priority queues hold excess work outside execution, including refused requests for retry. Cap is a fail-fast admission check at the saturated resource that refuses work before a long wait. Using only those refusals, the Track dispatcher probes upward and backs off. It follows the ceiling without output-length prediction or a fleet-level rate to retune. In a concurrent same-traffic production A/B, the shaper ran per-replica Cap plus Track. It served a classifier on 43% fewer H100s than its queued, fixed-rate precursor, though lower-priority work waited longer at backfill peaks. In steady-capacity real-engine replay, Track ran within 1% of the goodput of a fixed rate tuned above measured capacity, with about a quarter of that rate's refusal share. The shaper carries more than 300 million online requests and hundreds of terabytes of media a day. During a backfill, it handled 1.1 billion requests in its busiest 24 hours. Lessons include keeping queues inside inference engines just long enough to fill batches, steering dispatch by capacity refusals alone, keeping dispatch stateful, and sizing fleets by how long low-priority work can wait.",
+      "identifiers": [
+        "SemanticScholar:b73c8c7ab02e2f3f3354a353a146be56c58e1213"
+      ],
+      "semantic_scholar_id": "b73c8c7ab02e2f3f3354a353a146be56c58e1213",
+      "canonical_id": "arXiv:2611.24891",
+      "arxiv_id": "2611.24891",
+      "authors": [
+        "Benjamin Novotny",
+        "Doug Szeto",
+        "Chang Wang",
+        "Shi-Cheng Chen",
+        "Ge-Ge Yuan",
+        "Bob Kamma",
+        "Michael Ge",
+        "John Xin Zhou",
+        "Andrea Olgiati"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Berth: SLO-Preserving GPU Sharing Without New Preemption",
+      "source_url": "https://arxiv.org/abs/2611.25091",
+      "year": 2026,
+      "published": "2026-11-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference services keep GPUs reserved for their worst-case load, and most of that capacity sits idle. Filling it with best-effort work such as training is the obvious remedy, and latency is why it rarely happens: on a shared GPU, a request that must finish within milliseconds finds the best-effort job's kernels running or queued ahead of it. Spatial sharing cannot evict them, temporal sharing gives the request only its turn, and hardware partitioning protects it by idling what it does not use. Systems that keep both the SLO and the utilization have reached inside the stack (rewriting kernels, patching the driver, instrumenting the framework), which the operator of a closed GPU stack cannot do. This paper argues that reaching inside is unnecessary. The time-slicer built into commodity GPUs already preempts a running kernel within a fraction of a millisecond and switches the moment a context runs out of work; what it lacks is priority, and priority can be created from outside by controlling what the best-effort context has to run. Berth is a user-space system built on this observation: a preloaded shim feeds the best-effort job to the GPU only when no request needs it (feed control), a declared deadline reference extends the rule to continuous-batching LLM engines, and a shortened best-effort time slice, set without privileges, bounds what a long kernel can cost. Berth changes no application, framework, kernel or driver. Across 31 scenario points with MLPerf SLOs and 13 baselines, Berth meets SLOs within a few percentage points of running alone, above every baseline, with 2.7-3.5x the best-effort throughput of the strongest ones; beside LLM serving, it meets per-token targets for nearly every request while training keeps running. Sharing a closed GPU under SLOs needs no new preemption mechanism, only control over what the existing one sees.",
+      "identifiers": [
+        "SemanticScholar:8b46c24f1a8756020114160fce1c0e27f14a5da3"
+      ],
+      "semantic_scholar_id": "8b46c24f1a8756020114160fce1c0e27f14a5da3",
+      "canonical_id": "arXiv:2611.25091",
+      "arxiv_id": "2611.25091",
+      "authors": [
+        "Mohammadali Khodabandehlou",
+        "Mahdi Alizadeh",
+        "Lei Gao",
+        "M. Annavaram",
+        "B. Krishnamachari"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BitPrefill: W1.58A4 Tensor-Core Acceleration for Compute-Bound LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2611.26657",
+      "year": 2026,
+      "published": "2026-11-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit quantization reduces large language model (LLM) inference cost, yet implementations optimized for memory-bound decode can leave compute-bound prefill on BF16 tensor cores. This gap matters for input-heavy workloads, including long-context and multimodal applications, where prefill can account for a substantial fraction of inference latency. We propose a W1.58A4 operator that quantizes weights to ternary values and activations to 4-bit, while executing the linear projection on native INT4 general matrix multiply (GEMM) tensor cores, turning prefill from a full-precision matrix multiply into a low-bit one. We deploy the operator for BitNet-b1.58 on a single RTX 4090 and a Jetson Orin Nano edge device, and report GEMM-kernel latency, end-to-end LLMs prefill latency, and task accuracy against bf16 and BitNet/BitBLAS baselines. Our proposed kernel achieves ~1.42x acceleration compared to the original BF16 prefill phase, with negligible reduction on model accuracy.",
+      "identifiers": [
+        "SemanticScholar:760560f7f4e153ad5a411091f5e3618bd78eab8c"
+      ],
+      "semantic_scholar_id": "760560f7f4e153ad5a411091f5e3618bd78eab8c",
+      "canonical_id": "arXiv:2611.26657",
+      "arxiv_id": "2611.26657",
+      "authors": [
+        "Fang Chen",
+        "Xu-Ming Chen",
+        "S. Kuppannagari",
+        "G. Datta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "IsoMoE: Placement-Invariant Hybrid CPU-GPU MoE Inference with Lossless 12-bit Experts",
+      "source_url": "https://arxiv.org/abs/2611.27604",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models scale model capacity at low computational cost. Hybrid CPU-GPU inference offloads some experts to the CPU, enabling a single GPU to run MoE models larger than its memory. Expert placement changes with free GPU memory and should only affect speed. However, the greedy decoding outputs of existing hybrid engines change with placement. This is because the two devices use different arithmetic to compute experts. In addition, decoding is limited by CPU memory bandwidth. Lossless compression reduces memory traffic, but the CPU decompresses entropy-coded formats too slowly to keep up with memory reads. To address these challenges, we propose IsoMoE, an efficient hybrid MoE inference system that guarantees that its outputs do not change with expert placement. IsoMoE introduces (i) a GPU expert kernel that bitwise replays the arithmetic of the CPU expert kernel, (ii) a memory layout that allows the CPU to efficiently compute lossless 12-bit experts using AVX-512 dot-product instructions, and (iii) a dual micro-batch pipeline that overlaps CPU and GPU computation without changing the outputs. Experimental results on three MoE models show that IsoMoE produces bitwise identical outputs across different expert placements. It is also faster than the fastest baseline in every setting, achieving an average decoding speedup of 1.26$\\times$ and a maximum speedup of 1.54$\\times$. Our source code is publicly available at https://anonymous.4open.science/r/isomoe-artifact-9C21/.",
+      "identifiers": [
+        "SemanticScholar:cd0fdb4376c59d409f4fb1615cced710dfd933d6"
+      ],
+      "semantic_scholar_id": "cd0fdb4376c59d409f4fb1615cced710dfd933d6",
+      "canonical_id": "arXiv:2611.27604",
+      "arxiv_id": "2611.27604",
+      "authors": [
+        "Hang Gu",
+        "Teng Wang",
+        "Zhen-Dong Zheng",
+        "Qian-Yu Cheng",
+        "Wenqi Lou",
+        "Lei Gong",
+        "Xi Li",
+        "Xue-Hai Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.23558",
+      "identity_tokens": [
+        "id:SemanticScholar:c086e63208b8ac3b294f200f1fde4f4b625ed605",
+        "id:arXiv:2611.23558",
+        "title:towards fair resource sharing in agentic llm serving",
+        "url:https://arxiv.org/abs/2611.23558"
+      ],
+      "record": {
+        "title": "Towards Fair Resource Sharing in Agentic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2611.23558",
+        "year": 2026,
+        "published": "2026-11-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLM agents increasingly execute complex, multi-step tasks on shared inference infrastructure, resource contention across the end-to-end LLM serving stack causes severe and uneven slowdowns across agents. Existing agentic serving systems primarily optimize throughput and latency, with comparatively limited attention to fairness among concurrent agents. Although fairness has been studied in conventional LLM serving at the token and request levels, these approaches do not fully capture cumulative delays and stateful resource dependencies across successive LLM calls within an agent. Moreover, interference spans request routing, runtime scheduling, and hardware resources, making agent-level fairness challenging to define and optimize across an end-to-end serving stack. This paper presents a cross-layer framework to define agent-level fairness, attribute sources of unfairness, and optimize fairness while preserving throughput. To account for agents with widely varying execution demands, we build a theoretical foundation to define fairness using slowdown relative to standalone execution. Our empirical analysis reveals that routing, runtime scheduling, and hardware contention jointly determine fairness, with performance-oriented policies often leading to prolonged queuing delays. To optimize fairness, we introduce Duru, which monitors each agent's slowdown and uses this signal to guide admission and scheduling decisions across the router and runtime. Duru further alleviates starvation through admission exceptions and integrates slowdown-driven autoscaling to adhere to Service-Level Objectives (SLOs). Our evaluation across various benchmarks and hardware platforms shows that Duru reduces 99th-percentile normalized slowdown by a geometric mean of 44.4% (up to 79.5%) while delivering 91.8-127.4% of the state-of-the-art system's throughput.",
+        "identifiers": [
+          "SemanticScholar:c086e63208b8ac3b294f200f1fde4f4b625ed605"
+        ],
+        "semantic_scholar_id": "c086e63208b8ac3b294f200f1fde4f4b625ed605",
+        "canonical_id": "arXiv:2611.23558",
+        "arxiv_id": "2611.23558",
+        "authors": [
+          "Sehyeon Lee",
+          "Yu-Chen Xia",
+          "Zhao-Yang Hong",
+          "Jin-Rui Hu",
+          "Anuradha Pandey",
+          "Evan Zhao",
+          "Ankita Nayak",
+          "Nishil Talati"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 7,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.24085",
+      "identity_tokens": [
+        "id:SemanticScholar:320751f68fc465d0ad258677a771225456ed05fb",
+        "id:arXiv:2611.24085",
+        "title:ledge an efficient simulator for distributed llm serving on heterogeneous edge devices",
+        "url:https://arxiv.org/abs/2611.24085"
+      ],
+      "record": {
+        "title": "LEDGE: An Efficient Simulator for Distributed LLM Serving on Heterogeneous Edge Devices",
+        "source_url": "https://arxiv.org/abs/2611.24085",
+        "year": 2026,
+        "published": "2026-11-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Evaluating distributed large language model (LLM) serving on heterogeneous edge devices requires exploring diverse model partitions, device placements, and network conditions, making repeated physical experiments costly. An efficient simulator for edge LLM serving must support diverse, fine-grained placement configurations, capture runtime behavior, and accurately predict execution times while keeping simulation overhead low. We present LEDGE, a lightweight simulator for fast, fine-grained evaluation of distributed LLM serving on heterogeneous edge devices without executing tensor operations. LEDGE constructs event graphs supporting non-uniform tensor and pipeline parallelism, estimates execution costs using reusable performance models calibrated from end-to-end measurements, and simulates shared-link contention. We evaluate LEDGE on a heterogeneous testbed of 10 Jetson and Raspberry Pi devices, covering 17 model--precision combinations across 4 LLM families. On Qwen deployments, LEDGE achieves request-level mean absolute percentage errors below 3.6% and a 135.3 times aggregate speedup over physical inference. Performance model calibrated on one LLM family yield 7.44% zero-shot end-to-end latency MAPE across three other families. Further simulations show how shared-link contention affects placement decisions and network topology constrains scaling. Across four edge environments, LEDGE completes 26,773 simulation runs in 83.8 minutes, enabling efficient exploration of deployment strategies under diverse resource conditions and serving objectives. The source code is publicly available at https://github.com/gdfwj/LEDGE.",
+        "identifiers": [
+          "SemanticScholar:320751f68fc465d0ad258677a771225456ed05fb"
+        ],
+        "semantic_scholar_id": "320751f68fc465d0ad258677a771225456ed05fb",
+        "canonical_id": "arXiv:2611.24085",
+        "arxiv_id": "2611.24085",
+        "authors": [
+          "Zi-Hao Wang",
+          "Ye Tian",
+          "Tajana Rosing",
+          "N. Venkatasubramanian"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.24119",
+      "identity_tokens": [
+        "id:SemanticScholar:8d46c3db868f2f84520f8fa717c56371ee380b2f",
+        "id:arXiv:2611.24119",
+        "title:efair fair llm serving under hourly electricity commitments",
+        "url:https://arxiv.org/abs/2611.24119"
+      ],
+      "record": {
+        "title": "eFAIR: Fair LLM Serving under Hourly Electricity Commitments",
+        "source_url": "https://arxiv.org/abs/2611.24119",
+        "year": 2026,
+        "published": "2026-11-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Datacenters can procure electricity in day-ahead markets by committing to energy purchases for individual hours. For LLM services operating within these hourly budgets, maximizing aggregate throughput alone may still leave individual requests waiting or receiving much slower service than desired. Fair serving therefore requires improving service for poorly served requests while reserving electricity for later arrivals whose timing and demand are unknown. To compare service across requests, we define normalized throughput as each request's actual output rate divided by the product of its standalone throughput and its service entitlement, a positive weight representing its desired service level. Using this measure, we formulate fair serving as leximin optimization under an hourly electricity constraint, prioritizing requests with the lowest normalized throughput. To address this problem, we present eFAIR, an online scheduler that coordinates request dispatching, electricity budget allocation, and GPU frequency selection through a common normalized-throughput target. Specifically, request dispatching prioritizes requests by desired service level and progress; electricity budget allocation reserves electricity for current and expected future work; and frequency selection uses electricity savings to raise GPU frequencies for requests with higher desired service levels. Evaluations on H20 and H200 configurations, each with 32 replicas, show that eFAIR improves the tenth percentile of normalized throughput by 28.0%-31.0% over the best budget-feasible baseline, while keeping absolute deviations from the hourly electricity commitment below 0.26%. eFAIR also improves throughput balance among concurrent requests and aligns electricity allocation more closely with service demand over time. Together, these results demonstrate how eFAIR improves request-level fairness within an hourly commitment.",
+        "identifiers": [
+          "SemanticScholar:8d46c3db868f2f84520f8fa717c56371ee380b2f"
+        ],
+        "semantic_scholar_id": "8d46c3db868f2f84520f8fa717c56371ee380b2f",
+        "canonical_id": "arXiv:2611.24119",
+        "arxiv_id": "2611.24119",
+        "authors": [
+          "You Peng",
+          "You-He Jiang",
+          "Chen Wang",
+          "Bin-Hang Yuan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.24891",
+      "identity_tokens": [
+        "id:SemanticScholar:b73c8c7ab02e2f3f3354a353a146be56c58e1213",
+        "id:arXiv:2611.24891",
+        "title:capandtrack optimizing llm inference request dispatch across shifting capacity",
+        "url:https://arxiv.org/abs/2611.24891"
+      ],
+      "record": {
+        "title": "Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity",
+        "source_url": "https://arxiv.org/abs/2611.24891",
+        "year": 2026,
+        "published": "2026-11-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A fixed dispatch rate for LLM inference becomes stale as serving fleets resize and request sizes change. Generative output length is unknown at admission, and shared provider pools can lose capacity. We present Cap-and-Track, a design for asynchronous inference across provider capacity and internal GPUs. Meta's traffic shaper implements Cap-and-Track for post and live-video understanding. Refusals signal the backend's current admission ceiling. Durable priority queues hold excess work outside execution, including refused requests for retry. Cap is a fail-fast admission check at the saturated resource that refuses work before a long wait. Using only those refusals, the Track dispatcher probes upward and backs off. It follows the ceiling without output-length prediction or a fleet-level rate to retune. In a concurrent same-traffic production A/B, the shaper ran per-replica Cap plus Track. It served a classifier on 43% fewer H100s than its queued, fixed-rate precursor, though lower-priority work waited longer at backfill peaks. In steady-capacity real-engine replay, Track ran within 1% of the goodput of a fixed rate tuned above measured capacity, with about a quarter of that rate's refusal share. The shaper carries more than 300 million online requests and hundreds of terabytes of media a day. During a backfill, it handled 1.1 billion requests in its busiest 24 hours. Lessons include keeping queues inside inference engines just long enough to fill batches, steering dispatch by capacity refusals alone, keeping dispatch stateful, and sizing fleets by how long low-priority work can wait.",
+        "identifiers": [
+          "SemanticScholar:b73c8c7ab02e2f3f3354a353a146be56c58e1213"
+        ],
+        "semantic_scholar_id": "b73c8c7ab02e2f3f3354a353a146be56c58e1213",
+        "canonical_id": "arXiv:2611.24891",
+        "arxiv_id": "2611.24891",
+        "authors": [
+          "Benjamin Novotny",
+          "Doug Szeto",
+          "Chang Wang",
+          "Shi-Cheng Chen",
+          "Ge-Ge Yuan",
+          "Bob Kamma",
+          "Michael Ge",
+          "John Xin Zhou",
+          "Andrea Olgiati"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.25091",
+      "identity_tokens": [
+        "id:SemanticScholar:8b46c24f1a8756020114160fce1c0e27f14a5da3",
+        "id:arXiv:2611.25091",
+        "title:berth slopreserving gpu sharing without new preemption",
+        "url:https://arxiv.org/abs/2611.25091"
+      ],
+      "record": {
+        "title": "Berth: SLO-Preserving GPU Sharing Without New Preemption",
+        "source_url": "https://arxiv.org/abs/2611.25091",
+        "year": 2026,
+        "published": "2026-11-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference services keep GPUs reserved for their worst-case load, and most of that capacity sits idle. Filling it with best-effort work such as training is the obvious remedy, and latency is why it rarely happens: on a shared GPU, a request that must finish within milliseconds finds the best-effort job's kernels running or queued ahead of it. Spatial sharing cannot evict them, temporal sharing gives the request only its turn, and hardware partitioning protects it by idling what it does not use. Systems that keep both the SLO and the utilization have reached inside the stack (rewriting kernels, patching the driver, instrumenting the framework), which the operator of a closed GPU stack cannot do. This paper argues that reaching inside is unnecessary. The time-slicer built into commodity GPUs already preempts a running kernel within a fraction of a millisecond and switches the moment a context runs out of work; what it lacks is priority, and priority can be created from outside by controlling what the best-effort context has to run. Berth is a user-space system built on this observation: a preloaded shim feeds the best-effort job to the GPU only when no request needs it (feed control), a declared deadline reference extends the rule to continuous-batching LLM engines, and a shortened best-effort time slice, set without privileges, bounds what a long kernel can cost. Berth changes no application, framework, kernel or driver. Across 31 scenario points with MLPerf SLOs and 13 baselines, Berth meets SLOs within a few percentage points of running alone, above every baseline, with 2.7-3.5x the best-effort throughput of the strongest ones; beside LLM serving, it meets per-token targets for nearly every request while training keeps running. Sharing a closed GPU under SLOs needs no new preemption mechanism, only control over what the existing one sees.",
+        "identifiers": [
+          "SemanticScholar:8b46c24f1a8756020114160fce1c0e27f14a5da3"
+        ],
+        "semantic_scholar_id": "8b46c24f1a8756020114160fce1c0e27f14a5da3",
+        "canonical_id": "arXiv:2611.25091",
+        "arxiv_id": "2611.25091",
+        "authors": [
+          "Mohammadali Khodabandehlou",
+          "Mahdi Alizadeh",
+          "Lei Gao",
+          "M. Annavaram",
+          "B. Krishnamachari"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26657",
+      "identity_tokens": [
+        "id:SemanticScholar:760560f7f4e153ad5a411091f5e3618bd78eab8c",
+        "id:arXiv:2611.26657",
+        "title:bitprefill w158a4 tensorcore acceleration for computebound llm prefill",
+        "url:https://arxiv.org/abs/2611.26657"
+      ],
+      "record": {
+        "title": "BitPrefill: W1.58A4 Tensor-Core Acceleration for Compute-Bound LLM Prefill",
+        "source_url": "https://arxiv.org/abs/2611.26657",
+        "year": 2026,
+        "published": "2026-11-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit quantization reduces large language model (LLM) inference cost, yet implementations optimized for memory-bound decode can leave compute-bound prefill on BF16 tensor cores. This gap matters for input-heavy workloads, including long-context and multimodal applications, where prefill can account for a substantial fraction of inference latency. We propose a W1.58A4 operator that quantizes weights to ternary values and activations to 4-bit, while executing the linear projection on native INT4 general matrix multiply (GEMM) tensor cores, turning prefill from a full-precision matrix multiply into a low-bit one. We deploy the operator for BitNet-b1.58 on a single RTX 4090 and a Jetson Orin Nano edge device, and report GEMM-kernel latency, end-to-end LLMs prefill latency, and task accuracy against bf16 and BitNet/BitBLAS baselines. Our proposed kernel achieves ~1.42x acceleration compared to the original BF16 prefill phase, with negligible reduction on model accuracy.",
+        "identifiers": [
+          "SemanticScholar:760560f7f4e153ad5a411091f5e3618bd78eab8c"
+        ],
+        "semantic_scholar_id": "760560f7f4e153ad5a411091f5e3618bd78eab8c",
+        "canonical_id": "arXiv:2611.26657",
+        "arxiv_id": "2611.26657",
+        "authors": [
+          "Fang Chen",
+          "Xu-Ming Chen",
+          "S. Kuppannagari",
+          "G. Datta"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27604",
+      "identity_tokens": [
+        "id:SemanticScholar:cd0fdb4376c59d409f4fb1615cced710dfd933d6",
+        "id:arXiv:2611.27604",
+        "title:isomoe placementinvariant hybrid cpugpu moe inference with lossless 12bit experts",
+        "url:https://arxiv.org/abs/2611.27604"
+      ],
+      "record": {
+        "title": "IsoMoE: Placement-Invariant Hybrid CPU-GPU MoE Inference with Lossless 12-bit Experts",
+        "source_url": "https://arxiv.org/abs/2611.27604",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models scale model capacity at low computational cost. Hybrid CPU-GPU inference offloads some experts to the CPU, enabling a single GPU to run MoE models larger than its memory. Expert placement changes with free GPU memory and should only affect speed. However, the greedy decoding outputs of existing hybrid engines change with placement. This is because the two devices use different arithmetic to compute experts. In addition, decoding is limited by CPU memory bandwidth. Lossless compression reduces memory traffic, but the CPU decompresses entropy-coded formats too slowly to keep up with memory reads. To address these challenges, we propose IsoMoE, an efficient hybrid MoE inference system that guarantees that its outputs do not change with expert placement. IsoMoE introduces (i) a GPU expert kernel that bitwise replays the arithmetic of the CPU expert kernel, (ii) a memory layout that allows the CPU to efficiently compute lossless 12-bit experts using AVX-512 dot-product instructions, and (iii) a dual micro-batch pipeline that overlaps CPU and GPU computation without changing the outputs. Experimental results on three MoE models show that IsoMoE produces bitwise identical outputs across different expert placements. It is also faster than the fastest baseline in every setting, achieving an average decoding speedup of 1.26$\\times$ and a maximum speedup of 1.54$\\times$. Our source code is publicly available at https://anonymous.4open.science/r/isomoe-artifact-9C21/.",
+        "identifiers": [
+          "SemanticScholar:cd0fdb4376c59d409f4fb1615cced710dfd933d6"
+        ],
+        "semantic_scholar_id": "cd0fdb4376c59d409f4fb1615cced710dfd933d6",
+        "canonical_id": "arXiv:2611.27604",
+        "arxiv_id": "2611.27604",
+        "authors": [
+          "Hang Gu",
+          "Teng Wang",
+          "Zhen-Dong Zheng",
+          "Qian-Yu Cheng",
+          "Wenqi Lou",
+          "Lei Gong",
+          "Xi Li",
+          "Xue-Hai Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:064fb62ec9574f462a23cc85d6b7ab34f9a9da70aed28bb4f1505125d10a8a2d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,1076 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8daf151e9d708f5e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8daf151e9d70",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.25813",
+    "arXiv:2611.26020",
+    "arXiv:2611.26106",
+    "arXiv:2611.26435",
+    "arXiv:2611.26857",
+    "arXiv:2611.26902",
+    "arXiv:2611.26980",
+    "arXiv:2611.27323",
+    "arXiv:2611.27596",
+    "arXiv:2611.27701",
+    "arXiv:2611.27973"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e6b47b0401dbab290196f50422f2fcfbf638fe72",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T00:57:49.878108+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.25813",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26020",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26106",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26435",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26857",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26902",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.26980",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27323",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27596",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27701",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.27973",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Efficient and Robust Drafting with Multi-Token Prediction",
+      "source_url": "https://arxiv.org/abs/2611.25813",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has emerged as a critical technique for accelerating Large Language Model (LLM) inference by decoupling generation into a drafting phase and a parallel verification phase. A crucial challenge is therefore designing a drafter that is both lightweight and accurate enough to approximate the predictions of the target model. We present a highly optimized Multi-Token Prediction (MTP) architecture that extends existing backbone LLMs to efficiently produce high-quality drafts. Built around a single shared drafting head, our approach features three core architectural optimizations: target activation injection to anchor semantic planning, zero-copy KV-cache cross-attention to bypass prefill compute and reduce memory overhead, and an efficient clustered vocabulary projection to reduce the cost of full-vocabulary decoding. Testing these improvements with the Gemma 4 model family, our G-MTP shows out-of-the-box speedups for both large server-side setups (up to 3.1$\\times$) and smaller models targeting memory-constrained on-device environments (up to 2.3$\\times$ on H100 and up to 2.2$\\times$ on a smartphone GPU). In addition, we present parameter-efficient fine-tuning recipes for G-MTP that keep the drafter aligned with the backbone LLM under domain shift, requiring up to 1.83$\\times$ fewer target forward passes than tuning only the backbone.",
+      "identifiers": [
+        "SemanticScholar:2662fd80cf75665532b1bd8d6041576f3238409a"
+      ],
+      "semantic_scholar_id": "2662fd80cf75665532b1bd8d6041576f3238409a",
+      "canonical_id": "arXiv:2611.25813",
+      "arxiv_id": "2611.25813",
+      "authors": [
+        "Filippo Galgani",
+        "Zi-Wei Ji",
+        "Omri Homburger",
+        "Ganesh Jawahar",
+        "M. Ramanovich",
+        "I. Korotkov",
+        "Luciano Martins",
+        "Utku Evci",
+        "Edouard Yvinec",
+        "Pooja Consul",
+        "Vivek Kumar",
+        "Tal Schuster"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2611.26020",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid language models combine self-attention with recurrent layers whose in-place state updates restrict prefix reuse to exact saved positions. Saving states on a coarse grid wastes reusable prefixes, whereas existing fine-grained exact caches must cut the prefill forward pass at each mid-prompt checkpoint, adding scheduler steps that outweigh the reuse gains under load. We observe that across multi-turn chat, agent loops, document question answering, and tree search, prefix reuse almost always ends at structural boundaries predictable in advance, such as turn ends and known branch points. We present FrontierReplay, a prefix caching system that materializes exact checkpoints at these boundaries without cutting the prefill. While the forward pass runs uncut, FrontierReplay logs a short window of recurrent-layer inputs and invokes a cross-layer, state-only replay kernel to build the target state 6-37x cheaper per token than full recomputation without host synchronization. A frontier-aware retention policy prioritizes active anchors and proven branches while lending dead checkpoint slots to the attention KV cache. Across diverse hybrid architectures, model scales, and workloads, FrontierReplay delivers clear gains over existing exact caches, lowering median time to first token (TTFT) by 16-89% (up to 8.9x), raising 80% service-level objective (SLO) capacity by up to 1.73x, and improving goodput by up to 4.26x (3.67x at larger scales). Compared with approximate replay methods, FrontierReplay delivers up to 1.54x higher goodput while preserving exact task accuracy, avoiding the up to 17% accuracy drop suffered by approximation on long contexts.",
+      "identifiers": [
+        "SemanticScholar:26d9f6ad011faba4f8a86bae5d960129b8b5d28d"
+      ],
+      "semantic_scholar_id": "26d9f6ad011faba4f8a86bae5d960129b8b5d28d",
+      "canonical_id": "arXiv:2611.26020",
+      "arxiv_id": "2611.26020",
+      "authors": [
+        "Ze-Kun Wang",
+        "Yi-Zhuo Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AscMLA: Unlocking FP4 Efficiency for Long-Context MLA Decoding through Asymmetric Scaling",
+      "source_url": "https://arxiv.org/abs/2611.26106",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding repeatedly reads a growing KV cache. FP4 reduces cache storage and traffic but needs block scaling to handle its limited dynamic range. Applying FP4 to multi-head latent attention (MLA) requires reconciling different K/V scaling requirements on a shared latent. Existing approaches address this mismatch through dequantization or separate encodings, adding execution or storage overhead. We present AscMLA, which combines asymmetric K/V scaling with pipelined scale delivery to process a single FP4 payload directly. AscMLA uses 38.2% less cache memory than FP8 and achieves geometric-mean speedups of 1.35x over TRT-LLM's FP8 and 1.26x over CAKE's NVFP4 MLA kernels.",
+      "identifiers": [
+        "SemanticScholar:3140c648979e172fb67dff1bb1e209ec50775d59"
+      ],
+      "semantic_scholar_id": "3140c648979e172fb67dff1bb1e209ec50775d59",
+      "canonical_id": "arXiv:2611.26106",
+      "arxiv_id": "2611.26106",
+      "authors": [
+        "Ze-Chun Zhou",
+        "Zhi-Yong Zheng",
+        "Xiao-Min Zhang",
+        "Lin Ye",
+        "Han Li",
+        "Jing-Wei Sun",
+        "Guang-Zhong Sun",
+        "Jing Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Aggron: Aggressive Compression of Agentic KV Caches during Head-of-Line Stalls in the Request Queue",
+      "source_url": "https://arxiv.org/abs/2611.26435",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents run long, multi-turn programs whose contexts grow at every step, and serving them is limited by KV cache capacity. To alleviate this limitation, systems use context compression techniques, which typically wait until the KV cache crosses a large threshold and then summarize large spans of history at once, either in the background while the agent progresses or on the critical path. These summarizations can be done using the same model running on the same engine, or using the same or a different model running on extra hardware. When running on the same engine, summarization competes with the requests being served for both compute and memory capacity. To maximize the cost-effectiveness of summarization, this paper presents a new serving system called {\\em Aggron}. Aggron summarizes agentic requests at every turn and selectively summarizes only certain parts of the KV cache. As a result, Aggron retains accuracy and keeps summarization requests lightweight. Moreover, Aggron launches summarization requests from a separate {\\em Summarization Queue} while the corresponding agentic request whose KV cache we want to compress is stalled in the main request queue due to head-of-line stalls. The Summarization queue utilizes compute and memory capacity left over by the head-of-line stalls in the main queue. Further, to maximize efficiency, the server issues summarizations only when it predicts that they can complete before the corresponding agentic request will finally execute. In our evaluation, we compare Aggron to state-of-the-art asynchronous summarization. At high load, Aggron reduces P99 program latency by $27$--$31\\%$, and raises throughput by $1.34$--$1.40\\times$.",
+      "identifiers": [
+        "SemanticScholar:7beb7d5ca3a58bf3261d4c044c578bd99a9028cd"
+      ],
+      "semantic_scholar_id": "7beb7d5ca3a58bf3261d4c044c578bd99a9028cd",
+      "canonical_id": "arXiv:2611.26435",
+      "arxiv_id": "2611.26435",
+      "authors": [
+        "Rishabh Ravi",
+        "Tony Hong",
+        "Chen Wang",
+        "Yue Zhu",
+        "Meng-Mei Ye",
+        "Hubertus Franke",
+        "Fan Lai",
+        "J. Torrellas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CarrierKV: An Edge LLM Accelerator with Positional Carrier Decomposition for Low-Bit KV Cache",
+      "source_url": "https://arxiv.org/abs/2611.26857",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding on edge devices is limited by DRAM, because every generated token reads the whole, growing KV cache. 4-bit block-scaled formats such as NVFP4 reduce this traffic but degrade accuracy: on Qwen3-4B, NVFP4 lowers 32K RULER (seven tasks) from 92.6 to 79.4, and a Hadamard rotation lowers it further to 57.7. We observe that most of the key energy is a positional carrier, one per-head vector that rotary position embedding (RoPE) rotates with position. In NVFP4, it sets the shared scale of most key blocks and lowers the signal-to-quantization-noise ratio of the content by about 5 dB, nearly one bit, yet it depends only on that vector and the position. We therefore introduce positional carrier decomposition, which removes the carrier before RoPE and stores only the content residual. We design a KV path that rotates and quantizes keys only after this removal and computes each attention score directly on the 4-bit code. We also design a positional phase engine that regenerates the carrier's score term for one key per cycle. At the same cache size as NVFP4, CarrierKV raises 32K RULER on Qwen3-4B from 79.4 to 91.1 and lowers the 32K PG19 perplexity increase of NVFP4 by 1.8 to 5.9 times on four models, outperforming SageAttention and P3-LLM on all four. Its loss also stays nearly flat as the cache grows, while that of NVFP4 rises. In a 22 nm FDSOI process at 600 MHz, CarrierKV's hardware increases the area of the NVFP4 accelerator by 2.9% and the energy of a 20K-token reasoning request on Qwen3-4B by 0.12% at the same decode latency. On Qwen3-4B at 32K, CarrierKV has a better RULER score than FP8 keys (91.1 against 89.3) and uses 13.7% less energy per token. The decomposition also lowers the 32K perplexity increase of 3-bit TurboQuant keys on Qwen3-4B from 69.7 to 0.76.",
+      "identifiers": [
+        "SemanticScholar:5537ed9c902a6efd7255914f42edbf1c423dcfac"
+      ],
+      "semantic_scholar_id": "5537ed9c902a6efd7255914f42edbf1c423dcfac",
+      "canonical_id": "arXiv:2611.26857",
+      "arxiv_id": "2611.26857",
+      "authors": [
+        "Jun-Yi Luo",
+        "Xin Jiang",
+        "Rui-Chen Qi",
+        "Gregory Kielian",
+        "Quan Cheng",
+        "Mehdi Saligane"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs",
+      "source_url": "https://arxiv.org/abs/2611.26902",
+      "year": 2026,
+      "published": "2026-11-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "An embodied agent cannot afford a large vision-language model (VLM) at every step of a long video, so a cascade runs a small VLM continuously and escalates only uncertain decisions to a large one. Each escalation, however, forces the large model to re-encode a history the small model has already perceived, and this dominates its cost. We present Baton, which hands the large model the small model's visual memory, its key-value (KV) cache over the history. Baton rests on one finding: the large model needs a usable memory, not a faithful copy of its own. A map trained to reproduce the large model's cache matches it most closely, yet brings no gain over the small model alone. Baton instead distills a per-layer linear map, without labels, from the large model's own answers, with the large model encoding only the current frame. Interventions on the map trace the gain to one direction, carried by the middle third of the large model's layers. On RoboMME, Baton beats the small model alone, a pruned or shortened re-watch, and a text memory; as the escalation channel of a cascade it matches re-watching to within about one point at 28-47% less compute, and 8x less per escalation at 64 frames. Its gain grows with the large model, from 8B to 32B, tracks the large model's headroom across eight model pairs from four families, and transfers zero-shot to OpenEQA.",
+      "identifiers": [
+        "SemanticScholar:2896e0c862adad04e203b7ef69a16edfc36506dc"
+      ],
+      "semantic_scholar_id": "2896e0c862adad04e203b7ef69a16edfc36506dc",
+      "canonical_id": "arXiv:2611.26902",
+      "arxiv_id": "2611.26902",
+      "authors": [
+        "Qiang Zhou",
+        "Jia-Ning Deng",
+        "Siyan Dong",
+        "Jing-Xian Chen",
+        "Han-Yi Lin",
+        "Jing-Tong Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Contexture: Runtime Context Eviction for High-Throughput Agent Serving",
+      "source_url": "https://arxiv.org/abs/2611.26980",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents such as Hermes, OpenClaw, and Codex repeatedly resend growing execution histories, increasing shared GPU key-value (KV) cache demand in high-bandwidth memory (HBM). We show that shared KV capacity limits agent-serving throughput. Existing context-reduction methods lack global cache-state visibility, while runtime KV managers lack tool-execution information. Tracing tokens to their originating tool operations reveals that later operations supersede earlier outputs and associated turns, identifying 64% of recorded final-history tokens as removal candidates. We present Contexture, a harness- and model-agnostic architecture for runtime context eviction. Contexture separates the harness's full conversation history from the model's execution context, reducing subsequent requests'KV demand without modifying harness logic or model execution. It combines tool-execution information with global visibility into shared KV pressure and prefix residency: supersession identifies removal candidates, while runtime state determines when removal justifies sacrificing cached computation. This coordination reduces memory demand and decode KV traffic while limiting re-prefill interference with concurrent decoding, without additional model calls or training. Across two models, two harnesses, and two benchmarks, Contexture improves throughput under SLO by 20-73% over the best of no eviction, harness compaction, AgentDiet, and Continuum, and by 7-63% over observation masking in five of eight configurations, and reduces GPU energy per completed session by up to 11%. It also raises throughput under SLO by 23% over LMCache alone on H100. Live-agent experiments show a mean accuracy improvement of 1.4 percentage points over unloaded no eviction, with a worst-case loss of 3.7 points, while observation masking loses 3-28 points.",
+      "identifiers": [
+        "SemanticScholar:5300c09ee0e05400a594dda8ae52bf58a5c9edf5"
+      ],
+      "semantic_scholar_id": "5300c09ee0e05400a594dda8ae52bf58a5c9edf5",
+      "canonical_id": "arXiv:2611.26980",
+      "arxiv_id": "2611.26980",
+      "authors": [
+        "Colin Hong",
+        "Bryan Shan",
+        "Wei Siong Pang",
+        "Cheng-Zhi Lu",
+        "Xu Guo",
+        "N. Shivaraman",
+        "Tao Luo",
+        "Esha Choukse",
+        "K. Lin",
+        "Dmitrii Ustiugov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cruella: A Unified Microscaling and Floating-Point Dot-Product Unit for LLM Inference on FPGAs",
+      "source_url": "https://arxiv.org/abs/2611.27323",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The number formats that accelerators execute natively are fixed at fabrication, yet large language model (LLM) checkpoints are released with MXFP4 weights in the Microscaling (MX) formats standardized in 2023. FPGAs adopt new formats through bitstreams. However, to the best of our knowledge, no deployed FPGA LLM accelerator executes MXFP4 weights alongside BF16 products. We characterize the decoding of MXFP4 checkpoints, whose layers alternate between MXFP4$\\times$BF16 products and BF16$\\times$BF16 products of attention and BF16 layers. With a BF16 KV cache, BF16$\\times$BF16 products take 56%-77% of the datapath time, during which a separate MXFP4 unit idles. We present Cruella, whose unified dot-product unit (UDPU) executes both product types on one DSP array and reduction pipeline. First, per-group pre-alignment keeps this pipeline at the BF16 width and changes perplexity by at most 0.7%. Second, pre-adder packing places two signed MXFP4$\\times$BF16 products in one DSP48E2 multiplier with an exact correction. On an Alveo U55C, the UDPU needs 23% fewer DSP slices and 36% fewer LUTs than separate MXFP4 and BF16 units of equal throughput. On this board, MXFP4 weights speed up decoding by 1.15$\\times$-1.87$\\times$ over BF16 weights, and an NVIDIA A40 GPU decodes faster but spends 0.92$\\times$-2.01$\\times$ the board's energy per token.",
+      "identifiers": [
+        "SemanticScholar:1ce4159d4351ffcbda77aa702142621b2d764c22"
+      ],
+      "semantic_scholar_id": "1ce4159d4351ffcbda77aa702142621b2d764c22",
+      "canonical_id": "arXiv:2611.27323",
+      "arxiv_id": "2611.27323",
+      "authors": [
+        "Jin-Ho Yang",
+        "Taehyeong Kim",
+        "Mincheol Cha",
+        "Hyeoncheol Kim",
+        "Donggeun Kim",
+        "Nahye Kim",
+        "Yu-Jin Lee",
+        "Ryeowook Ko",
+        "Woong Gyu Park",
+        "Jiwoong Park",
+        "Junsoo Kim",
+        "Taehyeong Kim",
+        "Yongjun Park",
+        "Seongmin Hong",
+        "Joo-Young Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Isonomy: Isolating Every Request from Timing Side Channels at Nearly Full-Sharing Throughput in Multi-Instance LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2611.27596",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many long prompts share a prefix, and reusing its cached keys and values saves prefill computation. A cache hit, however, makes the first token arrive earlier and can reveal that another request used the same prefix, so providers share the cache only within an account. Under least privilege, even permission to send and pay for requests should not expose other requests'prompts in the same account. This matters because agents send unreviewed requests carrying private data, resellers pool users behind one account, and creden-tials can be stolen. Isonomy therefore isolates each request by default and lets requests opt into explicit sharing groups. Rather than give up reuse, it keeps one cache shared across accounts and hides only hits on prefixes cached outside a request's group. We target deployments where clients cannot observe one another's load, because there it suffices to hide these hits in the request's own timing. On three commercial APIs, our listeners could not distinguish added prefill work from a short request beyond measurement noise. Built on vLLM, Isonomy's gateway applies the deployment's routing rule to load and visible cache entries only, which yields the instance where the request would run if hidden hits missed. On that instance, the prediction mode estimates when the first token would be ready from the queue and the visible prefix, and gates its release. The execution mode instead reserves the work a hidden hit skips and fills it with other requests'prompts where possible. In direct-probe tests on two, four, and eight instances with every request isolated, both modes kept the upper bound on a probe's advantage within measure-ment noise at both prefix lengths. At saturation, the prediction mode retains 0.98 of unprotected sharing's throughput on two workloads with account labels, whereas isolation by account retains 0.95, or 0.80 where more reuse crosses accounts.",
+      "identifiers": [
+        "SemanticScholar:e2568ae4b6678becca07ea1a5b2cb0c9060c6c4f"
+      ],
+      "semantic_scholar_id": "e2568ae4b6678becca07ea1a5b2cb0c9060c6c4f",
+      "canonical_id": "arXiv:2611.27596",
+      "arxiv_id": "2611.27596",
+      "authors": [
+        "Bowen Sun",
+        "Chao-Wei Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FOREST: Coordinating Tree-based HBF, RRAM, and HBM for Efficient Speculative LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.27701",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference by combining lightweight drafting with parallel target-model verification. However, its stages impose distinct resource demands: target verification requires high-throughput access to large weight sets, sequential drafting executes a compact model under tight latency constraints, and long-context attention processes growing key-value (KV) caches. Conventional GPU-centric SD systems serve these workloads through shared HBM-centric memory and general-purpose compute, creating mismatches in capacity, bandwidth, and computation. These mismatches constrain deployable model-context configurations and limit the efficiency of bandwidth-bound and latency-sensitive operations. We propose FOREST, a heterogeneous memory-centric architecture coordinating HBF, 3D-stacked RRAM, and HBM memory-compute trees for efficient SD. It features: (1) compute-aligned 3D RRAM, combining ultra-wide, low-frequency reads with clock-decoupled interfaces and overlapped SRAM-DCIM weight refills for latency-sensitive drafting; (2) cross-tree numerical co-design, moving block-scaled Q/K/V preprocessing to HBF and RRAM root plates and enabling block-floating-point (BFP) attention with pipelined softmax reduction in the HBM tree; and (3) HBF-aware SD design-space exploration, revealing how bandwidth-compute provisioning and model scale determine performance, energy, and cost trade-offs. Evaluated across six SD configurations spanning 32B-405B target models, FOREST achieves up to 5.5x end-to-end speedup, 11.46x higher decode throughput, and 16.5x higher decode energy efficiency over NVIDIA A800 GPU-based SD baselines. Under a modeled total cost of ownership, FOREST delivers up to 6.73x higher token-generation cost efficiency.",
+      "identifiers": [
+        "SemanticScholar:1051a1606a69349242579a50956ab0207504a384"
+      ],
+      "semantic_scholar_id": "1051a1606a69349242579a50956ab0207504a384",
+      "canonical_id": "arXiv:2611.27701",
+      "arxiv_id": "2611.27701",
+      "authors": [
+        "Hao Ding",
+        "Zheng Shi",
+        "Dong-Xue Zhao",
+        "Hui-Ying Bian",
+        "Meng Li",
+        "Xu Zheng",
+        "Kun Wang",
+        "N. Wu",
+        "Jie Chen",
+        "Yi-Mao Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2611.27973",
+      "year": 2026,
+      "published": "2026-11-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details. We introduce MemOnce, a foundation architecture that learns scalable memory states for language models. MemOnce is based on two core designs: (a) Memory encoder-decoder: it caches only a small subset of final-layer hidden states as compact memory representations and dynamically decodes them back into KV caches for attention layers; (b) Memory sparse attention: for each continual input, MemOnce adaptively retrieves relevant memory representations, with the sparse indices computed only once across layers. Coupling these two designs enables efficient on-the-fly memory loading and KV cache decoding, drastically reducing the GPU memory footprint and achieving linear-time complexity. We conduct extensive experiments to show that MemOnce outperforms Transformers and other architectures across varying model sizes, context lengths, and training paradigms (pretraining and post-training adaptation). In particular, adapting Qwen3.5-4B with MemOnce reduces memory state cache by 1313$\\times$ and prefill latency by 6.9$\\times$ at 1M context, and improves throughput by 3.5$\\times$ and overall memory performance by +5.77%. Finally, MemOnce generalizes zero-shot to downstream representation tasks, achieving competitive results against specialized models.",
+      "identifiers": [
+        "SemanticScholar:c23c67fdb40e74d453d77472217ee778cd0a0614"
+      ],
+      "semantic_scholar_id": "c23c67fdb40e74d453d77472217ee778cd0a0614",
+      "canonical_id": "arXiv:2611.27973",
+      "arxiv_id": "2611.27973",
+      "authors": [
+        "Chang Nie",
+        "Chaoyou Fu",
+        "Song-Lin Liu",
+        "Yi-Qing Hu",
+        "Caifeng Shan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.25813",
+      "identity_tokens": [
+        "id:SemanticScholar:2662fd80cf75665532b1bd8d6041576f3238409a",
+        "id:arXiv:2611.25813",
+        "title:efficient and robust drafting with multitoken prediction",
+        "url:https://arxiv.org/abs/2611.25813"
+      ],
+      "record": {
+        "title": "Efficient and Robust Drafting with Multi-Token Prediction",
+        "source_url": "https://arxiv.org/abs/2611.25813",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has emerged as a critical technique for accelerating Large Language Model (LLM) inference by decoupling generation into a drafting phase and a parallel verification phase. A crucial challenge is therefore designing a drafter that is both lightweight and accurate enough to approximate the predictions of the target model. We present a highly optimized Multi-Token Prediction (MTP) architecture that extends existing backbone LLMs to efficiently produce high-quality drafts. Built around a single shared drafting head, our approach features three core architectural optimizations: target activation injection to anchor semantic planning, zero-copy KV-cache cross-attention to bypass prefill compute and reduce memory overhead, and an efficient clustered vocabulary projection to reduce the cost of full-vocabulary decoding. Testing these improvements with the Gemma 4 model family, our G-MTP shows out-of-the-box speedups for both large server-side setups (up to 3.1$\\times$) and smaller models targeting memory-constrained on-device environments (up to 2.3$\\times$ on H100 and up to 2.2$\\times$ on a smartphone GPU). In addition, we present parameter-efficient fine-tuning recipes for G-MTP that keep the drafter aligned with the backbone LLM under domain shift, requiring up to 1.83$\\times$ fewer target forward passes than tuning only the backbone.",
+        "identifiers": [
+          "SemanticScholar:2662fd80cf75665532b1bd8d6041576f3238409a"
+        ],
+        "semantic_scholar_id": "2662fd80cf75665532b1bd8d6041576f3238409a",
+        "canonical_id": "arXiv:2611.25813",
+        "arxiv_id": "2611.25813",
+        "authors": [
+          "Filippo Galgani",
+          "Zi-Wei Ji",
+          "Omri Homburger",
+          "Ganesh Jawahar",
+          "M. Ramanovich",
+          "I. Korotkov",
+          "Luciano Martins",
+          "Utku Evci",
+          "Edouard Yvinec",
+          "Pooja Consul",
+          "Vivek Kumar",
+          "Tal Schuster"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26020",
+      "identity_tokens": [
+        "id:SemanticScholar:26d9f6ad011faba4f8a86bae5d960129b8b5d28d",
+        "id:arXiv:2611.26020",
+        "title:frontierreplay splitfree exact prefix caching for hybrid language models",
+        "url:https://arxiv.org/abs/2611.26020"
+      ],
+      "record": {
+        "title": "FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models",
+        "source_url": "https://arxiv.org/abs/2611.26020",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid language models combine self-attention with recurrent layers whose in-place state updates restrict prefix reuse to exact saved positions. Saving states on a coarse grid wastes reusable prefixes, whereas existing fine-grained exact caches must cut the prefill forward pass at each mid-prompt checkpoint, adding scheduler steps that outweigh the reuse gains under load. We observe that across multi-turn chat, agent loops, document question answering, and tree search, prefix reuse almost always ends at structural boundaries predictable in advance, such as turn ends and known branch points. We present FrontierReplay, a prefix caching system that materializes exact checkpoints at these boundaries without cutting the prefill. While the forward pass runs uncut, FrontierReplay logs a short window of recurrent-layer inputs and invokes a cross-layer, state-only replay kernel to build the target state 6-37x cheaper per token than full recomputation without host synchronization. A frontier-aware retention policy prioritizes active anchors and proven branches while lending dead checkpoint slots to the attention KV cache. Across diverse hybrid architectures, model scales, and workloads, FrontierReplay delivers clear gains over existing exact caches, lowering median time to first token (TTFT) by 16-89% (up to 8.9x), raising 80% service-level objective (SLO) capacity by up to 1.73x, and improving goodput by up to 4.26x (3.67x at larger scales). Compared with approximate replay methods, FrontierReplay delivers up to 1.54x higher goodput while preserving exact task accuracy, avoiding the up to 17% accuracy drop suffered by approximation on long contexts.",
+        "identifiers": [
+          "SemanticScholar:26d9f6ad011faba4f8a86bae5d960129b8b5d28d"
+        ],
+        "semantic_scholar_id": "26d9f6ad011faba4f8a86bae5d960129b8b5d28d",
+        "canonical_id": "arXiv:2611.26020",
+        "arxiv_id": "2611.26020",
+        "authors": [
+          "Ze-Kun Wang",
+          "Yi-Zhuo Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26106",
+      "identity_tokens": [
+        "id:SemanticScholar:3140c648979e172fb67dff1bb1e209ec50775d59",
+        "id:arXiv:2611.26106",
+        "title:ascmla unlocking fp4 efficiency for longcontext mla decoding through asymmetric scaling",
+        "url:https://arxiv.org/abs/2611.26106"
+      ],
+      "record": {
+        "title": "AscMLA: Unlocking FP4 Efficiency for Long-Context MLA Decoding through Asymmetric Scaling",
+        "source_url": "https://arxiv.org/abs/2611.26106",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context decoding repeatedly reads a growing KV cache. FP4 reduces cache storage and traffic but needs block scaling to handle its limited dynamic range. Applying FP4 to multi-head latent attention (MLA) requires reconciling different K/V scaling requirements on a shared latent. Existing approaches address this mismatch through dequantization or separate encodings, adding execution or storage overhead. We present AscMLA, which combines asymmetric K/V scaling with pipelined scale delivery to process a single FP4 payload directly. AscMLA uses 38.2% less cache memory than FP8 and achieves geometric-mean speedups of 1.35x over TRT-LLM's FP8 and 1.26x over CAKE's NVFP4 MLA kernels.",
+        "identifiers": [
+          "SemanticScholar:3140c648979e172fb67dff1bb1e209ec50775d59"
+        ],
+        "semantic_scholar_id": "3140c648979e172fb67dff1bb1e209ec50775d59",
+        "canonical_id": "arXiv:2611.26106",
+        "arxiv_id": "2611.26106",
+        "authors": [
+          "Ze-Chun Zhou",
+          "Zhi-Yong Zheng",
+          "Xiao-Min Zhang",
+          "Lin Ye",
+          "Han Li",
+          "Jing-Wei Sun",
+          "Guang-Zhong Sun",
+          "Jing Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26435",
+      "identity_tokens": [
+        "id:SemanticScholar:7beb7d5ca3a58bf3261d4c044c578bd99a9028cd",
+        "id:arXiv:2611.26435",
+        "title:aggron aggressive compression of agentic kv caches during headofline stalls in the request queue",
+        "url:https://arxiv.org/abs/2611.26435"
+      ],
+      "record": {
+        "title": "Aggron: Aggressive Compression of Agentic KV Caches during Head-of-Line Stalls in the Request Queue",
+        "source_url": "https://arxiv.org/abs/2611.26435",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents run long, multi-turn programs whose contexts grow at every step, and serving them is limited by KV cache capacity. To alleviate this limitation, systems use context compression techniques, which typically wait until the KV cache crosses a large threshold and then summarize large spans of history at once, either in the background while the agent progresses or on the critical path. These summarizations can be done using the same model running on the same engine, or using the same or a different model running on extra hardware. When running on the same engine, summarization competes with the requests being served for both compute and memory capacity. To maximize the cost-effectiveness of summarization, this paper presents a new serving system called {\\em Aggron}. Aggron summarizes agentic requests at every turn and selectively summarizes only certain parts of the KV cache. As a result, Aggron retains accuracy and keeps summarization requests lightweight. Moreover, Aggron launches summarization requests from a separate {\\em Summarization Queue} while the corresponding agentic request whose KV cache we want to compress is stalled in the main request queue due to head-of-line stalls. The Summarization queue utilizes compute and memory capacity left over by the head-of-line stalls in the main queue. Further, to maximize efficiency, the server issues summarizations only when it predicts that they can complete before the corresponding agentic request will finally execute. In our evaluation, we compare Aggron to state-of-the-art asynchronous summarization. At high load, Aggron reduces P99 program latency by $27$--$31\\%$, and raises throughput by $1.34$--$1.40\\times$.",
+        "identifiers": [
+          "SemanticScholar:7beb7d5ca3a58bf3261d4c044c578bd99a9028cd"
+        ],
+        "semantic_scholar_id": "7beb7d5ca3a58bf3261d4c044c578bd99a9028cd",
+        "canonical_id": "arXiv:2611.26435",
+        "arxiv_id": "2611.26435",
+        "authors": [
+          "Rishabh Ravi",
+          "Tony Hong",
+          "Chen Wang",
+          "Yue Zhu",
+          "Meng-Mei Ye",
+          "Hubertus Franke",
+          "Fan Lai",
+          "J. Torrellas"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26857",
+      "identity_tokens": [
+        "id:SemanticScholar:5537ed9c902a6efd7255914f42edbf1c423dcfac",
+        "id:arXiv:2611.26857",
+        "title:carrierkv an edge llm accelerator with positional carrier decomposition for lowbit kv cache",
+        "url:https://arxiv.org/abs/2611.26857"
+      ],
+      "record": {
+        "title": "CarrierKV: An Edge LLM Accelerator with Positional Carrier Decomposition for Low-Bit KV Cache",
+        "source_url": "https://arxiv.org/abs/2611.26857",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context decoding on edge devices is limited by DRAM, because every generated token reads the whole, growing KV cache. 4-bit block-scaled formats such as NVFP4 reduce this traffic but degrade accuracy: on Qwen3-4B, NVFP4 lowers 32K RULER (seven tasks) from 92.6 to 79.4, and a Hadamard rotation lowers it further to 57.7. We observe that most of the key energy is a positional carrier, one per-head vector that rotary position embedding (RoPE) rotates with position. In NVFP4, it sets the shared scale of most key blocks and lowers the signal-to-quantization-noise ratio of the content by about 5 dB, nearly one bit, yet it depends only on that vector and the position. We therefore introduce positional carrier decomposition, which removes the carrier before RoPE and stores only the content residual. We design a KV path that rotates and quantizes keys only after this removal and computes each attention score directly on the 4-bit code. We also design a positional phase engine that regenerates the carrier's score term for one key per cycle. At the same cache size as NVFP4, CarrierKV raises 32K RULER on Qwen3-4B from 79.4 to 91.1 and lowers the 32K PG19 perplexity increase of NVFP4 by 1.8 to 5.9 times on four models, outperforming SageAttention and P3-LLM on all four. Its loss also stays nearly flat as the cache grows, while that of NVFP4 rises. In a 22 nm FDSOI process at 600 MHz, CarrierKV's hardware increases the area of the NVFP4 accelerator by 2.9% and the energy of a 20K-token reasoning request on Qwen3-4B by 0.12% at the same decode latency. On Qwen3-4B at 32K, CarrierKV has a better RULER score than FP8 keys (91.1 against 89.3) and uses 13.7% less energy per token. The decomposition also lowers the 32K perplexity increase of 3-bit TurboQuant keys on Qwen3-4B from 69.7 to 0.76.",
+        "identifiers": [
+          "SemanticScholar:5537ed9c902a6efd7255914f42edbf1c423dcfac"
+        ],
+        "semantic_scholar_id": "5537ed9c902a6efd7255914f42edbf1c423dcfac",
+        "canonical_id": "arXiv:2611.26857",
+        "arxiv_id": "2611.26857",
+        "authors": [
+          "Jun-Yi Luo",
+          "Xin Jiang",
+          "Rui-Chen Qi",
+          "Gregory Kielian",
+          "Quan Cheng",
+          "Mehdi Saligane"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26902",
+      "identity_tokens": [
+        "id:SemanticScholar:2896e0c862adad04e203b7ef69a16edfc36506dc",
+        "id:arXiv:2611.26902",
+        "title:perceive once escalate on demand handing off visual kv memory from small to large vlms",
+        "url:https://arxiv.org/abs/2611.26902"
+      ],
+      "record": {
+        "title": "Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs",
+        "source_url": "https://arxiv.org/abs/2611.26902",
+        "year": 2026,
+        "published": "2026-11-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "An embodied agent cannot afford a large vision-language model (VLM) at every step of a long video, so a cascade runs a small VLM continuously and escalates only uncertain decisions to a large one. Each escalation, however, forces the large model to re-encode a history the small model has already perceived, and this dominates its cost. We present Baton, which hands the large model the small model's visual memory, its key-value (KV) cache over the history. Baton rests on one finding: the large model needs a usable memory, not a faithful copy of its own. A map trained to reproduce the large model's cache matches it most closely, yet brings no gain over the small model alone. Baton instead distills a per-layer linear map, without labels, from the large model's own answers, with the large model encoding only the current frame. Interventions on the map trace the gain to one direction, carried by the middle third of the large model's layers. On RoboMME, Baton beats the small model alone, a pruned or shortened re-watch, and a text memory; as the escalation channel of a cascade it matches re-watching to within about one point at 28-47% less compute, and 8x less per escalation at 64 frames. Its gain grows with the large model, from 8B to 32B, tracks the large model's headroom across eight model pairs from four families, and transfers zero-shot to OpenEQA.",
+        "identifiers": [
+          "SemanticScholar:2896e0c862adad04e203b7ef69a16edfc36506dc"
+        ],
+        "semantic_scholar_id": "2896e0c862adad04e203b7ef69a16edfc36506dc",
+        "canonical_id": "arXiv:2611.26902",
+        "arxiv_id": "2611.26902",
+        "authors": [
+          "Qiang Zhou",
+          "Jia-Ning Deng",
+          "Siyan Dong",
+          "Jing-Xian Chen",
+          "Han-Yi Lin",
+          "Jing-Tong Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.26980",
+      "identity_tokens": [
+        "id:SemanticScholar:5300c09ee0e05400a594dda8ae52bf58a5c9edf5",
+        "id:arXiv:2611.26980",
+        "title:contexture runtime context eviction for highthroughput agent serving",
+        "url:https://arxiv.org/abs/2611.26980"
+      ],
+      "record": {
+        "title": "Contexture: Runtime Context Eviction for High-Throughput Agent Serving",
+        "source_url": "https://arxiv.org/abs/2611.26980",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents such as Hermes, OpenClaw, and Codex repeatedly resend growing execution histories, increasing shared GPU key-value (KV) cache demand in high-bandwidth memory (HBM). We show that shared KV capacity limits agent-serving throughput. Existing context-reduction methods lack global cache-state visibility, while runtime KV managers lack tool-execution information. Tracing tokens to their originating tool operations reveals that later operations supersede earlier outputs and associated turns, identifying 64% of recorded final-history tokens as removal candidates. We present Contexture, a harness- and model-agnostic architecture for runtime context eviction. Contexture separates the harness's full conversation history from the model's execution context, reducing subsequent requests'KV demand without modifying harness logic or model execution. It combines tool-execution information with global visibility into shared KV pressure and prefix residency: supersession identifies removal candidates, while runtime state determines when removal justifies sacrificing cached computation. This coordination reduces memory demand and decode KV traffic while limiting re-prefill interference with concurrent decoding, without additional model calls or training. Across two models, two harnesses, and two benchmarks, Contexture improves throughput under SLO by 20-73% over the best of no eviction, harness compaction, AgentDiet, and Continuum, and by 7-63% over observation masking in five of eight configurations, and reduces GPU energy per completed session by up to 11%. It also raises throughput under SLO by 23% over LMCache alone on H100. Live-agent experiments show a mean accuracy improvement of 1.4 percentage points over unloaded no eviction, with a worst-case loss of 3.7 points, while observation masking loses 3-28 points.",
+        "identifiers": [
+          "SemanticScholar:5300c09ee0e05400a594dda8ae52bf58a5c9edf5"
+        ],
+        "semantic_scholar_id": "5300c09ee0e05400a594dda8ae52bf58a5c9edf5",
+        "canonical_id": "arXiv:2611.26980",
+        "arxiv_id": "2611.26980",
+        "authors": [
+          "Colin Hong",
+          "Bryan Shan",
+          "Wei Siong Pang",
+          "Cheng-Zhi Lu",
+          "Xu Guo",
+          "N. Shivaraman",
+          "Tao Luo",
+          "Esha Choukse",
+          "K. Lin",
+          "Dmitrii Ustiugov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27323",
+      "identity_tokens": [
+        "id:SemanticScholar:1ce4159d4351ffcbda77aa702142621b2d764c22",
+        "id:arXiv:2611.27323",
+        "title:cruella a unified microscaling and floatingpoint dotproduct unit for llm inference on fpgas",
+        "url:https://arxiv.org/abs/2611.27323"
+      ],
+      "record": {
+        "title": "Cruella: A Unified Microscaling and Floating-Point Dot-Product Unit for LLM Inference on FPGAs",
+        "source_url": "https://arxiv.org/abs/2611.27323",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The number formats that accelerators execute natively are fixed at fabrication, yet large language model (LLM) checkpoints are released with MXFP4 weights in the Microscaling (MX) formats standardized in 2023. FPGAs adopt new formats through bitstreams. However, to the best of our knowledge, no deployed FPGA LLM accelerator executes MXFP4 weights alongside BF16 products. We characterize the decoding of MXFP4 checkpoints, whose layers alternate between MXFP4$\\times$BF16 products and BF16$\\times$BF16 products of attention and BF16 layers. With a BF16 KV cache, BF16$\\times$BF16 products take 56%-77% of the datapath time, during which a separate MXFP4 unit idles. We present Cruella, whose unified dot-product unit (UDPU) executes both product types on one DSP array and reduction pipeline. First, per-group pre-alignment keeps this pipeline at the BF16 width and changes perplexity by at most 0.7%. Second, pre-adder packing places two signed MXFP4$\\times$BF16 products in one DSP48E2 multiplier with an exact correction. On an Alveo U55C, the UDPU needs 23% fewer DSP slices and 36% fewer LUTs than separate MXFP4 and BF16 units of equal throughput. On this board, MXFP4 weights speed up decoding by 1.15$\\times$-1.87$\\times$ over BF16 weights, and an NVIDIA A40 GPU decodes faster but spends 0.92$\\times$-2.01$\\times$ the board's energy per token.",
+        "identifiers": [
+          "SemanticScholar:1ce4159d4351ffcbda77aa702142621b2d764c22"
+        ],
+        "semantic_scholar_id": "1ce4159d4351ffcbda77aa702142621b2d764c22",
+        "canonical_id": "arXiv:2611.27323",
+        "arxiv_id": "2611.27323",
+        "authors": [
+          "Jin-Ho Yang",
+          "Taehyeong Kim",
+          "Mincheol Cha",
+          "Hyeoncheol Kim",
+          "Donggeun Kim",
+          "Nahye Kim",
+          "Yu-Jin Lee",
+          "Ryeowook Ko",
+          "Woong Gyu Park",
+          "Jiwoong Park",
+          "Junsoo Kim",
+          "Taehyeong Kim",
+          "Yongjun Park",
+          "Seongmin Hong",
+          "Joo-Young Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27596",
+      "identity_tokens": [
+        "id:SemanticScholar:e2568ae4b6678becca07ea1a5b2cb0c9060c6c4f",
+        "id:arXiv:2611.27596",
+        "title:isonomy isolating every request from timing side channels at nearly fullsharing throughput in multiinstance llm prefill",
+        "url:https://arxiv.org/abs/2611.27596"
+      ],
+      "record": {
+        "title": "Isonomy: Isolating Every Request from Timing Side Channels at Nearly Full-Sharing Throughput in Multi-Instance LLM Prefill",
+        "source_url": "https://arxiv.org/abs/2611.27596",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many long prompts share a prefix, and reusing its cached keys and values saves prefill computation. A cache hit, however, makes the first token arrive earlier and can reveal that another request used the same prefix, so providers share the cache only within an account. Under least privilege, even permission to send and pay for requests should not expose other requests'prompts in the same account. This matters because agents send unreviewed requests carrying private data, resellers pool users behind one account, and creden-tials can be stolen. Isonomy therefore isolates each request by default and lets requests opt into explicit sharing groups. Rather than give up reuse, it keeps one cache shared across accounts and hides only hits on prefixes cached outside a request's group. We target deployments where clients cannot observe one another's load, because there it suffices to hide these hits in the request's own timing. On three commercial APIs, our listeners could not distinguish added prefill work from a short request beyond measurement noise. Built on vLLM, Isonomy's gateway applies the deployment's routing rule to load and visible cache entries only, which yields the instance where the request would run if hidden hits missed. On that instance, the prediction mode estimates when the first token would be ready from the queue and the visible prefix, and gates its release. The execution mode instead reserves the work a hidden hit skips and fills it with other requests'prompts where possible. In direct-probe tests on two, four, and eight instances with every request isolated, both modes kept the upper bound on a probe's advantage within measure-ment noise at both prefix lengths. At saturation, the prediction mode retains 0.98 of unprotected sharing's throughput on two workloads with account labels, whereas isolation by account retains 0.95, or 0.80 where more reuse crosses accounts.",
+        "identifiers": [
+          "SemanticScholar:e2568ae4b6678becca07ea1a5b2cb0c9060c6c4f"
+        ],
+        "semantic_scholar_id": "e2568ae4b6678becca07ea1a5b2cb0c9060c6c4f",
+        "canonical_id": "arXiv:2611.27596",
+        "arxiv_id": "2611.27596",
+        "authors": [
+          "Bowen Sun",
+          "Chao-Wei Xiao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27701",
+      "identity_tokens": [
+        "id:SemanticScholar:1051a1606a69349242579a50956ab0207504a384",
+        "id:arXiv:2611.27701",
+        "title:forest coordinating treebased hbf rram and hbm for efficient speculative llm inference",
+        "url:https://arxiv.org/abs/2611.27701"
+      ],
+      "record": {
+        "title": "FOREST: Coordinating Tree-based HBF, RRAM, and HBM for Efficient Speculative LLM Inference",
+        "source_url": "https://arxiv.org/abs/2611.27701",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference by combining lightweight drafting with parallel target-model verification. However, its stages impose distinct resource demands: target verification requires high-throughput access to large weight sets, sequential drafting executes a compact model under tight latency constraints, and long-context attention processes growing key-value (KV) caches. Conventional GPU-centric SD systems serve these workloads through shared HBM-centric memory and general-purpose compute, creating mismatches in capacity, bandwidth, and computation. These mismatches constrain deployable model-context configurations and limit the efficiency of bandwidth-bound and latency-sensitive operations. We propose FOREST, a heterogeneous memory-centric architecture coordinating HBF, 3D-stacked RRAM, and HBM memory-compute trees for efficient SD. It features: (1) compute-aligned 3D RRAM, combining ultra-wide, low-frequency reads with clock-decoupled interfaces and overlapped SRAM-DCIM weight refills for latency-sensitive drafting; (2) cross-tree numerical co-design, moving block-scaled Q/K/V preprocessing to HBF and RRAM root plates and enabling block-floating-point (BFP) attention with pipelined softmax reduction in the HBM tree; and (3) HBF-aware SD design-space exploration, revealing how bandwidth-compute provisioning and model scale determine performance, energy, and cost trade-offs. Evaluated across six SD configurations spanning 32B-405B target models, FOREST achieves up to 5.5x end-to-end speedup, 11.46x higher decode throughput, and 16.5x higher decode energy efficiency over NVIDIA A800 GPU-based SD baselines. Under a modeled total cost of ownership, FOREST delivers up to 6.73x higher token-generation cost efficiency.",
+        "identifiers": [
+          "SemanticScholar:1051a1606a69349242579a50956ab0207504a384"
+        ],
+        "semantic_scholar_id": "1051a1606a69349242579a50956ab0207504a384",
+        "canonical_id": "arXiv:2611.27701",
+        "arxiv_id": "2611.27701",
+        "authors": [
+          "Hao Ding",
+          "Zheng Shi",
+          "Dong-Xue Zhao",
+          "Hui-Ying Bian",
+          "Meng Li",
+          "Xu Zheng",
+          "Kun Wang",
+          "N. Wu",
+          "Jie Chen",
+          "Yi-Mao Cai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.27973",
+      "identity_tokens": [
+        "id:SemanticScholar:c23c67fdb40e74d453d77472217ee778cd0a0614",
+        "id:arXiv:2611.27973",
+        "title:memonce a scalable memory architecture for large language models",
+        "url:https://arxiv.org/abs/2611.27973"
+      ],
+      "record": {
+        "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2611.27973",
+        "year": 2026,
+        "published": "2026-11-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic computational complexity as the context expands. In contrast, linear-time architectures compress history into fixed-size states, but struggle to retain fine-grained details. We introduce MemOnce, a foundation architecture that learns scalable memory states for language models. MemOnce is based on two core designs: (a) Memory encoder-decoder: it caches only a small subset of final-layer hidden states as compact memory representations and dynamically decodes them back into KV caches for attention layers; (b) Memory sparse attention: for each continual input, MemOnce adaptively retrieves relevant memory representations, with the sparse indices computed only once across layers. Coupling these two designs enables efficient on-the-fly memory loading and KV cache decoding, drastically reducing the GPU memory footprint and achieving linear-time complexity. We conduct extensive experiments to show that MemOnce outperforms Transformers and other architectures across varying model sizes, context lengths, and training paradigms (pretraining and post-training adaptation). In particular, adapting Qwen3.5-4B with MemOnce reduces memory state cache by 1313$\\times$ and prefill latency by 6.9$\\times$ at 1M context, and improves throughput by 3.5$\\times$ and overall memory performance by +5.77%. Finally, MemOnce generalizes zero-shot to downstream representation tasks, achieving competitive results against specialized models.",
+        "identifiers": [
+          "SemanticScholar:c23c67fdb40e74d453d77472217ee778cd0a0614"
+        ],
+        "semantic_scholar_id": "c23c67fdb40e74d453d77472217ee778cd0a0614",
+        "canonical_id": "arXiv:2611.27973",
+        "arxiv_id": "2611.27973",
+        "authors": [
+          "Chang Nie",
+          "Chaoyou Fu",
+          "Song-Lin Liu",
+          "Yi-Qing Hu",
+          "Caifeng Shan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0329e6e6b252448e5a079943524772c431db449948a13827d007355a88889be7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
