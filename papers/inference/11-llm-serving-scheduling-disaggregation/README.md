@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（639本）
+## 自動生成の論文一覧（640本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1353,6 +1353,10 @@
 - **2026-04 · [Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference](2026-2604.07472-fast-heterogeneous-serving-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   異種GPU・モデル・TP/PP・ルーティングを制約認識型貪欲法で共同配置し、Azure トレース較正の大規模問題で1秒未満・厳密ソルバー比260倍超高速に実行可能解を得る。
+
+- **2026-04 · [FaaSMoE: A Serverless Framework for Multi-Tenant Mixture-of-Experts Serving](2026-2604.26881-faasmoe-a-serverless-framework-for-multi-tenant-mixture-of-experts-servi.md)**  
+  実装：[✓](https://github.com/Mhwwww/FaaSMoE) ・ リポジトリ内被引用：0  
+  専門家をFaaS関数として切り出してテナント間で共有し、常駐メモリとCPUを全モデル複製方式の3分の1未満へ減らす、マルチテナント向けのサーバーレスな混合専門家サービング基盤。
 
 - **2026-04 · [Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization](2026-2604.21072-bloombee-internet-scale-distributed-inference.md)**  
   実装：[✓](https://github.com/ai-decentralized/BloomBee) ・ リポジトリ内被引用：0  

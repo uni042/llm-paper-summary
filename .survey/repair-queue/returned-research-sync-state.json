@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2c695391a5377d1c356629e45cba635e84a91b7a",
+  "base_commit": "157ab03f13df38099fe09e7c02aaa201e165957b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -758,10 +758,14 @@
     "2026-2604.18995-r2-dllm-accelerating-diffusion-large-language-models-via-spatio-temporal-redundancy-reduction.json",
     "2026-2604.19145-st-prune-training-free-spatio-temporal-token-pruning-for-vision-language-models-in-autonomous-driving.json",
     "2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.json",
+    "2026-2604.20500-efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees.json",
     "2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.json",
+    "2026-2604.21057-traces-tagging-reasoning-steps-for-adaptive-cost-efficient-early-stopping.json",
     "2026-2604.22050-layerboost-layer-aware-attention-reduction-for-efficient-llms.json",
     "2026-2604.22281-docprune-efficient-document-question-answering-via-background-question-and-comprehension-aware-token-pruning.json",
     "2026-2604.22577-quantclaw-precision-where-it-matters-for-openclaw.json",
+    "2026-2604.22583-adaptive-head-budgeting-for-efficient-multi-head-attention.json",
+    "2026-2604.23108-mixture-of-heterogeneous-grouped-experts-for-language-modeling.json",
     "2026-2604.23717-headrouter-dynamic-head-weight-routing-for-task-adaptive-audio-token-pruning.json",
     "2026-2604.23994-when-to-commit-towards-variable-size-self-contained-blocks-for-discrete-diffusion-language-models.json",
     "2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-memory-architecture.json",
@@ -770,6 +774,7 @@
     "2026-2604.26209-breaking-the-autoregressive-chain-hyper-parallel-decoding-for-efficient-llm-based-attribute-value-extraction.json",
     "2026-2604.26294-folding-tensor-and-sequence-parallelism-for-memory-efficient-transformers.json",
     "2026-2604.26378-coquant-joint-weight-activation-subspace-projection-for-mixed-precision-llms.json",
+    "2026-2604.26881-faasmoe-a-serverless-framework-for-multi-tenant-mixture-of-experts-serving.json",
     "2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consumer-grade-llm-inference.json",
     "2026-2605.01058-leap-layer-wise-exit-aware-pretraining-for-efficient-transformer-inference.json",
     "2026-2605.01627-bsi-importance-guided-basis-selection-for-low-rank-decomposition.json",
@@ -53341,6 +53346,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.20500": {
+      "order": [
+        "2026-11-24T05:39:39+00:00",
+        "2026-2604.20500-efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.21057": {
+      "order": [
+        "2026-11-24T05:40:47+00:00",
+        "2026-2604.21057-traces-tagging-reasoning-steps-for-adaptive-cost-efficient-early-stopping.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.22583": {
+      "order": [
+        "2026-11-24T05:41:55+00:00",
+        "2026-2604.22583-adaptive-head-budgeting-for-efficient-multi-head-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.23108": {
+      "order": [
+        "2026-11-24T05:43:03+00:00",
+        "2026-2604.23108-mixture-of-heterogeneous-grouped-experts-for-language-modeling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.26881": {
+      "order": [
+        "2026-11-24T05:44:11+00:00",
+        "2026-2604.26881-faasmoe-a-serverless-framework-for-multi-tenant-mixture-of-experts-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67694,6 +67744,21 @@
     "arxiv:2604.17182": [
       "papers/inference/09-kernel-runtime-compilation/2026-2604.17182-layer-wise-moe-routing-locality-under-shared-prefix-code-generation-toke.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2604.17182-layer-wise-moe-routing-locality-under-shared-prefix-code-generation-toke.md"
+    ],
+    "arxiv:2604.20500": [
+      "papers/inference/99-other-inference-systems/2026-2604.20500-efficient-test-time-inference-via-deterministic-exploration-of-truncated.md"
+    ],
+    "arxiv:2604.21057": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2604.21057-traces-tagging-reasoning-steps-for-adaptive-cost-efficient-early-stoppin.md"
+    ],
+    "arxiv:2604.22583": [
+      "papers/inference/99-other-inference-systems/2026-2604.22583-adaptive-head-budgeting-for-efficient-multi-head-attention.md"
+    ],
+    "arxiv:2604.23108": [
+      "papers/inference/99-other-inference-systems/2026-2604.23108-mixture-of-heterogeneous-grouped-experts-for-language-modeling.md"
+    ],
+    "arxiv:2604.26881": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.26881-faasmoe-a-serverless-framework-for-multi-tenant-mixture-of-experts-servi.md"
     ]
   }
 }

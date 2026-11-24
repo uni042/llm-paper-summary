@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1481本）
+## 自動生成の論文一覧（1484本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2618,6 +2618,10 @@
   実装：[✓](https://github.com/imagination-research/NI-Sampling) ・ リポジトリ内被引用：0  
   そのため従来の全段階方式は一回のモデル実行で一位置だけを確定し、長さ512の出力では原則512回の推論が必要となる。ICLR 2026の論文に記載された単一GPU評価では、LLaDA-8B-InstructのMBPP、生成長512で全段階方式19.1トークン/秒に対し273.8トークン/秒（14.3倍）を報告する。
 
+- **2026-04 · [Mixture of Heterogeneous Grouped Experts for Language Modeling](2026-2604.23108-mixture-of-heterogeneous-grouped-experts-for-language-modeling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大きさの異なる専門家グループと二段階ルーティングでトークンの難しさに計算量を合わせ、補助損失とGPU配置の工夫で負荷均衡を保ちながら、均一MoEより総パラメータ約20パーセント減で同等以上の性能を得るMoEアーキテクチャ。
+
 - **2026-04 · [MIPT-SSM: Scaling Language Models with O(1) Inference Cache via Phase Transitions](2026-2604.07716-mipt-ssm-scaling-language-models-with-o-1-inference-cache-via-phase-tran.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   学習される測定率で波の相と粒子の相を切り替える状態空間モデルにより、系列長8192でTransformerの34,651MBに対し810MBのメモリで済み、AG Newsの精度は0.905でTransformerの0.736を上回った。
@@ -2678,6 +2682,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。
 
+- **2026-04 · [Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees](2026-2604.20500-efficient-test-time-inference-via-deterministic-exploration-of-truncated.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  打ち切り標本のデコード木を復元標本せず相異なる葉として決定的に列挙し、共有プリフィックスの再利用と早期停止で、自己整合性より少ない新規トークンで高い多数決正解率とコード通過率を得るテスト時推論法。
+
 - **2026-04 · [Efficient Matrix Implementation for Rotary Position Embedding](2026-2604.09742-efficient-matrix-implementation-for-rotary-position-embedding.md)**  
   実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  
   回転位置埋め込みの分割と結合を一つの構造化行列変換へ書き換える数学的に等価な再定式化で、多次元版まで統一し演算子単体で最大約3.7倍、モデル全体でも数パーセントの高速化と大幅な実装簡素化を得る方式。
@@ -2737,6 +2745,10 @@
 - **2026-04 · [Adaptive Parallel Monte Carlo Tree Search for Efficient Test-time Compute Scaling](2026-2604.00510-adaptive-parallel-monte-carlo-tree-search-for-efficient-test-time-comput.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   成功候補を早期発見した場合に打ち切る「正の早期終了」は効果があるが、いくら探索しても十分な報酬に達しない要求には効かず、同時処理時の長い裾の遅延が残る。推論サーバーvLLMへ統合し、4基のNVIDIA H100でLlama-3.1-8B-InstructとQwen2.5-14B-Instructを評価した。
+
+- **2026-04 · [Adaptive Head Budgeting for Efficient Multi-Head Attention](2026-2604.22583-adaptive-head-budgeting-for-efficient-multi-head-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  入力ごとに使う注意ヘッドの数と顔ぶれを学習して選び、分類課題で計算量を減らしながら正解率を維持または改善する、予算適応型の多ヘッド注意。
 
 - **2026-04 · [Absorber LLM: Harnessing Causal Synchronization for Test-Time Training](2026-2604.20915-absorber-llm-harnessing-causal-synchronization-for-test-time-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3461,7 +3473,7 @@
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
-  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：53  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
@@ -3469,11 +3481,11 @@
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：48  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：47  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
@@ -5893,7 +5905,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：387  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：388  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
