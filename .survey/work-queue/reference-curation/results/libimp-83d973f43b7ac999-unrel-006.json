@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83d973f43b7ac999-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2210.16422",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2210.16422",
+    "identity_tokens": [
+      "arXiv:2210.16422"
+    ],
+    "reason": "本論文はテキストセグメンテーションと抽出型要約を同時学習する長文書要約の研究であり、文書理解タスクの性能改善が目的で推論システムの効率化ではない。",
+    "first_checked_at": "2026-11-24T23:02:33+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Toward Unifying Text Segmentation and Long Document Summarization"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83d973f43b7a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

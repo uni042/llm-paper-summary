@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5beda8173232d2d-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.10543",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.10543",
+    "identity_tokens": [
+      "arXiv:2411.10543"
+    ],
+    "reason": "SoftLMsは特異値へのソフト閾値で層ごとのランクを自動決定する言語モデルの低ランク圧縮手法だが、要旨では圧縮率と精度の検討が中心で推論時の実測効果が限定的なため境界とする。",
+    "first_checked_at": "2026-11-24T23:02:34+00:00",
+    "last_checked_at": "2026-11-24T23:02:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SoftLMs: Efficient Adaptive Low-Rank Approximation of Language Models using Soft-Thresholding Mechanism"
+  },
+  "processed_at": "2026-11-24T23:02:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5beda817323",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

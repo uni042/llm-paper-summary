@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-988b8c8909a8da82-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.03099",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.03099",
+    "identity_tokens": [
+      "arXiv:2506.03099"
+    ],
+    "reason": "TalkingMachinesは動画生成モデルをリアルタイム音声駆動アニメータへ変換する効率化を含むが、対象はメディア生成でありLLMサービングではない。",
+    "first_checked_at": "2026-11-24T23:02:33+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TalkingMachines: Real-Time Audio-Driven FaceTime-Style Video via Autoregressive Diffusion Models"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-988b8c8909a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

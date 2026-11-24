@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a003d033789ed6c-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03632",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03632",
+    "identity_tokens": [
+      "arXiv:2602.03632"
+    ],
+    "reason": "CALMは小規模言語モデル基盤システム向けのQoS配慮ルーティング編成であり、サービングに触れるが要旨ではルーティング機構の具体性が限定的である。",
+    "first_checked_at": "2026-11-24T23:02:33+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CALM: A Self-Adaptive Orchestration Approach for QoS-Aware Routing in Small Language Model based Systems"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a003d033789",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

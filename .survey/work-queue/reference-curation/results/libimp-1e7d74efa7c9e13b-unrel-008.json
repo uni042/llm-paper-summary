@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e7d74efa7c9e13b-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.00759",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.00759",
+    "identity_tokens": [
+      "arXiv:2012.00759"
+    ],
+    "reason": "MaX-DeepLabはマスクTransformerによるエンドツーエンドのパノプティックセグメンテーション手法であり、画像セグメンテーション応用であってLLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-24T22:36:49+00:00",
+    "last_checked_at": "2026-11-24T23:02:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "MaX-DeepLab: End-to-End Panoptic Segmentation with Mask Transformers"
+  },
+  "processed_at": "2026-11-24T23:02:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e7d74efa7c9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

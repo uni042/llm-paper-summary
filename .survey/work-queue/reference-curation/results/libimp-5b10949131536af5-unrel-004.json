@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b10949131536af5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.00809",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.00809",
+    "identity_tokens": [
+      "arXiv:2310.00809"
+    ],
+    "reason": "因果推論と注意の双対性に基づく因果基盤モデルの提案であり、処置効果推定という応用が目的で推論効率とは無関係である。",
+    "first_checked_at": "2026-11-24T23:02:33+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Towards Causal Foundation Model: on Duality between Causal Inference and Attention"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b1094913153",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

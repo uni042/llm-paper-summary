@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83d973f43b7ac999-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/rsp57251.2022.10039009",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/rsp57251.2022.10039009",
+    "identity_tokens": [
+      "DOI:10.1109/rsp57251.2022.10039009"
+    ],
+    "reason": "TernaryNeRFはInstantNeRF・TensoRFのボクセルグリッドを三値量子化してモデルサイズを削減するニューラルレンダリングの研究であり、AR/VR描画が対象でLLM推論システムではない。",
+    "first_checked_at": "2026-11-24T23:02:33+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "TernaryNeRF: Quantizing Voxel Grid-based NeRF Models"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83d973f43b7a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

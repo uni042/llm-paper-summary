@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-475f4676c1b7cf5a-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.02482",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.02482",
+    "identity_tokens": [
+      "arXiv:2606.02482"
+    ],
+    "reason": "X-Streamは複数ストリーム動画理解のベンチマーク構築と能力評価のみで、推論システムへの技術的貢献がない。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T23:02:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "X-Stream: Exploring MLLMs as Multiplexers for Multi-Stream Understanding"
+  },
+  "processed_at": "2026-11-24T23:02:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-475f4676c1b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

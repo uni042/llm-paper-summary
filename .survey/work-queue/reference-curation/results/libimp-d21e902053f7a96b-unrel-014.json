@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d21e902053f7a96b-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.09488",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.09488",
+    "identity_tokens": [
+      "arXiv:2310.09488"
+    ],
+    "reason": "タイトル自体が多変量時系列予測（長期予測LTSF）の改良を明示しており、予測タスクの応用研究であってLLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-24T21:43:56+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "ARM: Refining Multivariate Forecasting with Adaptive Temporal-Contextual Learning"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d21e902053f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

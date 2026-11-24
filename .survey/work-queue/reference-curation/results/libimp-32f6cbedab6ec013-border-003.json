@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-32f6cbedab6ec013-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.06833",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.06833",
+    "identity_tokens": [
+      "arXiv:2610.06833"
+    ],
+    "reason": "本論文はループ言語モデルの固定点性質を使い、デコード時の終端KV共有や高速prefill蒸留生徒等を示すが、学習・RL更新の効率化も大きな比重を占め推論専用機構ではないため境界とする。",
+    "first_checked_at": "2026-11-24T23:02:32+00:00",
+    "last_checked_at": "2026-11-24T23:02:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points"
+  },
+  "processed_at": "2026-11-24T23:02:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32f6cbedab6e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

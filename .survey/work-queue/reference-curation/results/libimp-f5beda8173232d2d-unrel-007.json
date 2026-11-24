@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5beda8173232d2d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/app12178805",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/app12178805",
+    "identity_tokens": [
+      "DOI:10.3390/app12178805"
+    ],
+    "reason": "本論文は単語埋め込みから事前学習言語モデルまでの発展を概観する入門的レビューであり、推論システムの技術貢献はない。",
+    "first_checked_at": "2026-11-24T21:39:11+00:00",
+    "last_checked_at": "2026-11-24T23:02:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "From Word Embeddings to Pre-Trained Language Models: A State-of-the-Art Walkthrough"
+  },
+  "processed_at": "2026-11-24T23:02:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5beda817323",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b31839270d88bade-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14314",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14314",
+    "identity_tokens": [
+      "arXiv:2604.14314"
+    ],
+    "reason": "DharmaOCRは推論コストも追跡する構造化OCR向け小規模言語モデルであり、応用モデル自体が主題で推論機構の提案は限定的である。",
+    "first_checked_at": "2026-11-24T22:36:48+00:00",
+    "last_checked_at": "2026-11-24T23:02:33+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines"
+  },
+  "processed_at": "2026-11-24T23:02:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b31839270d88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

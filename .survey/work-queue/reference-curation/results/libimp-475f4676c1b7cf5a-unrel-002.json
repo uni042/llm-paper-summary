@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-475f4676c1b7cf5a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.04655",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.04655",
+    "identity_tokens": [
+      "arXiv:2502.04655"
+    ],
+    "reason": "タイトル自体が誤情報・偽情報へのエンゲージメント予測というソーシャルメディア分析応用を明示している。タイトル先行走査で対象外と判定した。",
+    "first_checked_at": "2026-11-24T23:02:32+00:00",
+    "last_checked_at": "2026-11-24T23:02:32+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Before It's Too Late: A State Space Model for the Early Prediction of Misinformation and Disinformation Engagement"
+  },
+  "processed_at": "2026-11-24T23:02:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-475f4676c1b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
