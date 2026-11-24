@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1512本）
+## 自動生成の論文一覧（1517本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -88,6 +88,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   DEERは、投機的復号の候補生成器を、左から右へ逐次生成する小型自己回帰モデルから、複数位置をまとめて予測できる離散拡散言語モデル（discrete diffusion language モデル）へ置き換える方式である。
 
+- **2026-05 · [LoopQ: Quantization for Looped Language Models](2026-2605.16343-loopq-quantization-for-looped-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  従来の事後量子化（PTQ）は同一重みに同じ変換行列と尺度を適用し続けるため、周回ごとに活性化の大きさ・方向が変わると丸め誤差やクリッピングが生じる。W4A4条件で4バックボーンの5課題平均正答率は静的PTQ最良比較方式に対して相対平均67.8%改善し、8つのバックボーン×データセット条件のPPL相対減少は下限代入による保守的平均75.2%と報告した。
+
 - **2026-04 · [GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling](2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md)**  
   実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：6  
   大規模言語モデルを2～3ビット程度に圧縮すると、重みの転送量と常駐メモリを大幅に減らせる。Llama-3.1-8B/70Bの2ビット評価で従来スカラー量子化より高い精度を示し、Qwen3-8Bの既存GGUF K-Quantチェックポイントを同じ保存形式のまま改善する点が実用上重要である。
@@ -111,10 +115,6 @@
 - **2026-05 · [SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems](2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   将来要求の助言信号でKVキャッシュを事前移動し、層優先度と協調HBM管理で不確実性を吸収して計算・メモリ分離を低遅延化する。
-
-- **2026-05 · [LoopQ: Quantization for Looped Language Models](2026-2605.16343-loopq-quantization-for-looped-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  従来の事後量子化（PTQ）は同一重みに同じ変換行列と尺度を適用し続けるため、周回ごとに活性化の大きさ・方向が変わると丸め誤差やクリッピングが生じる。W4A4条件で4バックボーンの5課題平均正答率は静的PTQ最良比較方式に対して相対平均67.8%改善し、8つのバックボーン×データセット条件のPPL相対減少は下限代入による保守的平均75.2%と報告した。
 
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -328,6 +328,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   ScaleSweepは、NVIDIA Blackwell世代でハードウェア対応するNVFP4の重み・活性値・KVキャッシュ・query状態の量子化について、16要素ブロックのFP8スケールの選び方を改善する後学習量子化（PTQ）手法である。これはBF16比約93.9%の平均性能回復である。
 
+- **2026-05 · [Probabilistic Tiny Recursive Model](2026-2605.19943-probabilistic-tiny-recursive-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  数独や格子型の制約充足問題で高い精度を示す一方、決定的な更新では誤った解の近傍へ収束し、再帰を増やしても抜け出せないことがある。推論時の追加計算を、再帰を長くする「深さ」だけでなく、並列に試す「幅」へ割り当てる方式である。
+
 - **2026-05 · [Nearly Optimal Attention Coresets](2026-2605.05602-nearly-optimal-attention-coresets.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈LLMのKVキャッシュを元の鍵・値対の部分集合へ縮約する際、全てのノルム有界な問い合わせに対して注意出力誤差をε以内に保つコアセットの存在上界と情報理論的下界を証明。計算可能な高速KV削除アルゴリズムや実モデルの品質・速度改善を実証する論文ではない。
@@ -431,6 +435,10 @@
 - **2026-02 · [Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts](2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md)**  
   実装：[✓](https://github.com/wenhaoli-xmu/OOMB) ・ リポジトリ内被引用：2  
   チャンク再計算・ページ化KV/勾配・非同期CPUオフロード・疎注意を統合し、Qwen2.5-7Bの4M文脈学習を単一H200で実現する。
+
+- **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
 
 - **2026-02 · [FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment](2026-2602.02680-flexrank-nested-low-rank-knowledge-decomposition-for-adaptive-model-depl.md)**  
   実装：[✓](https://github.com/RickZack/FlexRank) ・ リポジトリ内被引用：2  
@@ -604,6 +612,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   拡散型言語モデルの量子化で、マスク状態ごとに活性変換を分け、注意出力へブロック単位の補償を入れて誤差の蓄積を抑える学習後量子化。4ビット条件で比較対象を上回り、最大1.69倍の高速化と3.14倍のメモリ削減を示した。
 
+- **2026-06 · [Skip a Layer or Loop It? Learning Program-of-Layers in LLMs](2026-2606.06574-skip-a-layer-or-loop-it-learning-program-of-layers-in-llms.md)**  
+  実装：[✓](https://github.com/tianyi-lab/PoLar) ・ リポジトリ内被引用：1  
+  本論文は、学習済みの各層を関数とみなし、その呼出し順と回数を入力に応じて変える「層プログラム（Program-of-Layers; PoLar）」を提案する。Qwen1.5-MoE-A2.7B-Chatの24層を対象にした実測では、予測器・埋め込み器・候補探索を含む追加費用は合計3.05ミリ秒、通常の全層実行の0.8%だった。
+
 - **2026-06 · [PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics](2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stre.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   残差ストリームの動態から量子化に弱い層を見つけ、その層だけ活性値を8ビットへ上げる混合精度方針。回転系の学習後量子化へそのまま重ねられ、4ビット設定のパープレキシティと下流精度を一貫して改善する。
@@ -671,10 +683,6 @@
 - **2026-05 · [Pruning and Distilling Mixture-of-Experts into Dense Language Models](2026-2605.28207-pruning-and-distilling-mixture-of-experts-into-dense-language-models.md)**  
   実装：[✓](https://github.com/krafton-ai/moe-to-dense) ・ リポジトリ内被引用：1  
   演算量は小さくても、すべての専門家をGPUメモリへ常駐させる場合の容量は大きい。CPUへ退避すれば容量制約を緩和できるが、専門家の転送が遅延や帯域を圧迫する。Qwen3-30B-A3Bから約3.3Bの密な生徒モデルを作った実験では、約4Bトークンの蒸留後に5課題の平均58.10%を達成した。
-
-- **2026-05 · [Probabilistic Tiny Recursive Model](2026-2605.19943-probabilistic-tiny-recursive-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  数独や格子型の制約充足問題で高い精度を示す一方、決定的な更新では誤った解の近傍へ収束し、再帰を増やしても抜け出せないことがある。推論時の追加計算を、再帰を長くする「深さ」だけでなく、並列に試す「幅」へ割り当てる方式である。
 
 - **2026-05 · [Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics](2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -939,10 +947,6 @@
 - **2026-02 · [MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models](2026-2602.06154-mose-mixture-of-slimmable-experts-for-efficient-and-adaptive-language-mo.md)**  
   実装：[✓](https://github.com/tnurbek/mose) ・ リポジトリ内被引用：1  
   MoSEは、混合専門家モデル（Mixture-of-Experts; MoE）の「専門家を何個選ぶか」に加え、「選んだ各専門家を何割の中間幅で実行するか」を推論時に変える研究である。主指標は一トークン当たり浮動小数点演算量（FLOPs/トークン）と品質であり、実機処理率は補助的な検証である。
-
-- **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
 
 - **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：1  
@@ -1278,6 +1282,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   サムネイルの多様さで画像ごとの予算を動かし、質問との類似度でクロップへ配分し、共有空間で測った偏り除去済みの質問スコアと視覚的顕著性を融合して視覚トークンを選ぶ学習不要の階層型枝刈りで、保持率25パーセントで未枝刈り比98.0パーセントの性能と2.0倍のスループットを得た。
 
+- **2026-10 · [Gated Slot Attention-2: Two-Sided Associative Memory Correction in Linear Attention](2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キー側はオジャ則、値側はデルタ則で、共有スロットを持つ2段階メモリの両側を誤差修正し、線形注意の想起性能を高めた回帰型アーキテクチャ。
+
 - **2026-10 · [From Patching to Pruning Visual Computation in Vision Language Models](2026-2610.03389-from-patching-to-pruning-visual-computation-in-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   活性パッチングの診断を推論へ転用し、視覚トークンの射影を中立な代理活性へ置換できる安全な層を検証で特定して、トークンを消さずに視覚計算の55パーセントを削減する方式。
@@ -1317,6 +1325,10 @@
 - **2026-10 · [Dynamical Memory Transformer: Selective Recurrent Memories with Constant Cost Attention](2026-2610.41850-dynamical-memory-transformer-selective-recurrent-memories-with-constant-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去を複数の力学的な記憶単位の固定長状態へ圧縮し、注意はトークン履歴ではなく記憶の出力へ向ける分離型の仕組みで、選択的複写で九十八・六八パーセントと最良の精度と強い長さ外挿を示す一方、大規模な言語モデルではMambaに劣り、生成は一トークン約一・六ミリ秒で状態六十八キロバイト一定だったと報告した。
+
+- **2026-10 · [Dynamic Routing as a New Dimension for Test-time Versatility of LLMs](2026-2610.04751-dynamic-routing-as-a-new-dimension-for-test-time-versatility-of-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層のスキップと繰り返しからなる実行プログラムを、課題のデモンストレーション数件への適合とモデル自身の信頼度による調停で推論時に選ぶ学習不要の方式を検証し、MMLUとARC-AGIで思考の連鎖と相補的な精度向上と、その潜在能力が事後学習で選択不能になる過程を明らかにした研究。
 
 - **2026-10 · [DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs](2026-2610.13767-dualquant-dual-scale-calibration-free-weight-and-activation-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1401,6 +1413,10 @@
 - **2026-10 · [Attention via Black-Box Vector Search](2026-2610.10135-attention-via-black-box-vector-search.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ブラックボックスの最大内積探索だけで注意を近似するときの取得キー数の限界を優先サンプリングで統一的に示し、1次元拡張で文脈長に依存しない取得を実現する理論と実装。
+
+- **2026-10 · [ApexQuant: Data-Free Elastic Quantization by Residual Re-Isotropization](2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.md)**  
+  実装：[✓](https://github.com/afristrup/ApexQuant) ・ リポジトリ内被引用：0  
+  残差へ毎回新しい回転を掛けて再量子化を繰り返すデータフリー量子化で、誤差の幾何級数的減衰を理論で保証し、1つの成果物の接頭辞がそのまま低精度モデルになる弾力性を持つ。
 
 - **2026-10 · [Advancing SVD-based LLM Compression via Layer-Wise Error Model Search](2026-2610.32878-advancing-svd-based-llm-compression-via-layer-wise-error-model-search.md)**  
   実装：[✓](https://lems-svd.github.io) ・ リポジトリ内被引用：0  
@@ -1554,6 +1570,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   行列ベクトル積の委譲に、符号とスパースチャレンジによる情報理論的に健全な検証とLPN系マスクのプライバシーを組み合わせ、サーバ負担ほぼゼロで私的かつ検証可能なLLM推論を実現するMaverickの研究。
 
+- **2026-09 · [Low-Discrepancy Dither for Quantized Recurrent State Caches](2026-2609.39185-low-discrepancy-dither-for-quantized-recurrent-state-caches.md)**  
+  実装：[✓](https://github.com/nssprogrammer/ssm-dither) ・ リポジトリ内被引用：0  
+  再帰状態キャッシュの丸め規則として、乱数の代わりに黄金比の低不一致列を使う決定論的ディザを提案し、確率的丸めよりKLダイバージェンスを主比較の全設定で11から49パーセント下げ、最近傍丸めが長生成で崩れる理由も理論と実測で示す。
+
 - **2026-09 · [LILA: Data-Free Structured Pruning of LLMs via Latent Spectral Geometry](2026-2609.11163-lila-data-free-structured-pruning-of-llms-via-latent-spectral-geometry.md)**  
   実装：[✓](https://anonymous.4open.science/r/LILA-33CB) ・ リポジトリ内被引用：0  
   重みの非負行列因子分解と特異値分布のコルモゴロフ・スミルノフ距離だけで全結合ニューロンの重要度を決めるデータ不要の構造化枝刈りで、キャリブレーション済み手法を上回る精度と最大1.64倍の推論高速化を示す。
@@ -1665,6 +1685,10 @@
 - **2026-09 · [Beyond One-Size-Fits-All: Sample-Adaptive Strategy Routing for Vision Token Pruning in MLLMs](2026-2609.10346-beyond-one-size-fits-all-sample-adaptive-strategy-routing-for-vision-tok.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   VIP-Routerは画像と質問ごとにFastV、VisionZip、PruMerge+、DART、無圧縮Fullから最適なvisual-トークン 枝刈り方針を選ぶ軽量ルータ。枝刈り-sensitiveなVTC-Bench Group Aでは5保持率平均accuracy 40.35%→51.19%、utility 30.88→37.68。
+
+- **2026-09 · [A Tilted Bowl Is Not a Slippery Slope: Compressing Looped Models](2026-2609.39277-a-tilted-bowl-is-not-a-slippery-slope-compressing-looped-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  圧縮したループ型モデルの崩壊は誤差の蓄積ではなく静定点のずれであり、押しと部屋で崩壊を予測でき、最後の数回の8ビットループで回復できることを示し、停止と仕上げの制御器で精度を最大15ポイント上げる研究。
 
 - **2026-08 · [VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction](2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2137,10 +2161,6 @@
 - **2026-06 · [SMEPilot: Characterizing and Optimizing LLM Inference with Scalable Matrix Extensions](2026-2606.16332-smepilot-characterizing-and-optimizing-llm-inference-with-scalable-matrix-extensions.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU内のSMEと通常コアを共有帯域込みのルーフラインで使い分け、タイル分割・注意パイプライン・配置再利用によりLLM推論をllama.cpp比最大3.94倍高速化する。
-
-- **2026-06 · [Skip a Layer or Loop It? Learning Program-of-Layers in LLMs](2026-2606.06574-skip-a-layer-or-loop-it-learning-program-of-layers-in-llms.md)**  
-  実装：[✓](https://github.com/tianyi-lab/PoLar) ・ リポジトリ内被引用：0  
-  本論文は、学習済みの各層を関数とみなし、その呼出し順と回数を入力に応じて変える「層プログラム（Program-of-Layers; PoLar）」を提案する。Qwen1.5-MoE-A2.7B-Chatの24層を対象にした実測では、予測器・埋め込み器・候補探索を含む追加費用は合計3.05ミリ秒、通常の全層実行の0.8%だった。
 
 - **2026-06 · [Signed Symmetric Quantization for Few-Bit Integers](2026-2607.08779-signed-symmetric-quantization-for-few-bit-integers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

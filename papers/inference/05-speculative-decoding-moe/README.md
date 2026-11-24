@@ -470,6 +470,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/ZhouYuxuanYX/Fast-HSD) ・ リポジトリ内被引用：1  
   投機的復号は軽量なドラフトモデルqが候補を提案し、ターゲットモデルpがまとめて検証することで、逐次生成のターゲット順伝播 pass回数を減らす。EAGLE-3を用いたLlama-3.1-8Bの比較では、η-samplingをターゲットへ正しく適用したMATH正答率76.12%に対し、typical acceptanceは69.84%だった。
 
+- **2026-07 · [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.md)**  
+  実装：[✓](https://github.com/NVIDIA/Model-Optimizer/tree/main/modelopt/torch/puzzletron) ・ リポジトリ内被引用：1  
+  ハイブリッドMoEのNemotron-3-Superを、圧縮と蒸留回復を繰り返すIterative Puzzleで総75.3B・活性9.3Bへ不均一に削り、サーバスループット約2倍と100万トークン同時実行8件を精度近接のまま得る圧縮報告。
+
 - **2026-07 · [Margins, Not Windows: Training-Free Per-Step Lossy Speculative Decoding](2026-2609.02897-margins-not-windows-training-free-per-step-lossy-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号は小さな下書きモデルに複数トークンまたは候補木を作らせ、targetモデルがまとめて検証することでこの逐次性を緩める。代表結果として、単一A100上の主評価で両軸併用方式は9条件すべてでEAGLE-3を上回り、モデル平均の高速化倍率は16–44%、最大改善は56%だった。
@@ -923,10 +927,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [SPIDE: Serial and Parallel Intertwined Speculative Decoding](2026-6403c69c2ddc-spide-serial-and-parallel-intertwined-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の自己回帰復号では、ターゲットLLMを生成トークンごとに実行するため、大規模モデルの重み読み出しと逐次依存が生成遅延を支配する。標準SDは小さな草稿モデルが複数トークンを先行生成し、大きなターゲットが一度の順伝播で検証することで、この逐次依存を減らす。自己回帰生成に対する壁時計時間の高速化は平均3.25倍、最大4.56倍。
-
-- **2026-07 · [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.md)**  
-  実装：[✓](https://github.com/NVIDIA/Model-Optimizer/tree/main/modelopt/torch/puzzletron) ・ リポジトリ内被引用：0  
-  ハイブリッドMoEのNemotron-3-Superを、圧縮と蒸留回復を繰り返すIterative Puzzleで総75.3B・活性9.3Bへ不均一に削り、サーバスループット約2倍と100万トークン同時実行8件を精度近接のまま得る圧縮報告。
 
 - **2026-07 · [HCSpec: Two-Tier Horizontal Cascade Speculative Decoding for High-Efficiency Large Language Model Inference](2026-e55859d7e526-hcspec-two-tier-horizontal-cascade-speculative-decoding-for-high-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

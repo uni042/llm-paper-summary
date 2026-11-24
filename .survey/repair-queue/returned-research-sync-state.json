@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a51b025aaf4abb35178ce1cb82348b488c9f3944",
+  "base_commit": "38b78de82ffdc1cca7951e358be3c5fde554e6d4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1189,6 +1189,8 @@
     "2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generalization-limits.json",
     "2026-2609.38997-settle-learning-when-to-stop-reasoning.json",
     "2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.json",
+    "2026-2609.39185-low-discrepancy-dither-for-quantized-recurrent-state-caches.json",
+    "2026-2609.39277-a-tilted-bowl-is-not-a-slippery-slope-compressing-looped-models.json",
     "2026-2609.39334-taming-speculative-search-for-test-time-scaling-in-llm-serving.json",
     "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json",
     "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json",
@@ -1212,6 +1214,7 @@
     "2026-2610.02732-servetwin-a-benchmark-validated-simulator-for-distributed-llm-architecture-exploration.json",
     "2026-2610.02800-bitnest-bit-nested-speculative-decoding-for-memory-efficient-llm-inference-acceleration.json",
     "2026-2610.02815-is-kv-online-low-rank-kv-cache-compression-via-block-incremental-svd.json",
+    "2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear-attention.json",
     "2026-2610.02953-slimkv-joint-token-feature-kv-cache-compression-with-reconstruction-free-beacon-attention.json",
     "2026-2610.03007-avokv-e-payload-aware-kv-cache-eviction-for-long-reasoning.json",
     "2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.json",
@@ -1227,6 +1230,7 @@
     "2026-2610.04473-inferopt-constrained-multi-objective-search-for-llm-inference-configurations.json",
     "2026-2610.04537-phasegate-phase-aware-cpu-retrieval-scheduling-for-on-device-llms-on-unified-memory.json",
     "2026-2610.04635-latentindex-cross-layer-sharing-with-layer-specific-selection-for-sparse-attention.json",
+    "2026-2610.04751-dynamic-routing-as-a-new-dimension-for-test-time-versatility-of-llms.json",
     "2026-2610.04753-more-value-per-key-asymmetric-sparse-attention-for-faster-llm-decoding.json",
     "2026-2610.04912-static-bootstrap-placement-for-encrypted-language-model-decoding.json",
     "2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-lora-assisted-on-premise-llm-deployment.json",
@@ -1258,6 +1262,7 @@
     "2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buys-and-when-you-can-tell.json",
     "2026-2610.07822-nucleus-speculative-decoding-plausibility-aware-verification-beyond-exact-distribution.json",
     "2026-2610.07863-refold-training-free-reversible-inter-turn-context-folding-for-long-horizon-agents.json",
+    "2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.json",
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
     "2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp4-quantization.json",
     "2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-depth-synchronized-batching.json",
@@ -54041,6 +54046,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.39185": {
+      "order": [
+        "2026-11-24T08:26:24+00:00",
+        "2026-2609.39185-low-discrepancy-dither-for-quantized-recurrent-state-caches.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.39277": {
+      "order": [
+        "2026-11-24T08:28:00+00:00",
+        "2026-2609.39277-a-tilted-bowl-is-not-a-slippery-slope-compressing-looped-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.02816": {
+      "order": [
+        "2026-11-24T08:29:37+00:00",
+        "2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.04751": {
+      "order": [
+        "2026-11-24T08:31:13+00:00",
+        "2026-2610.04751-dynamic-routing-as-a-new-dimension-for-test-time-versatility-of-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07904": {
+      "order": [
+        "2026-11-24T08:32:49+00:00",
+        "2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -68674,6 +68724,21 @@
     "arxiv:2609.38997": [
       "papers/inference/99-other-inference-systems/2026-2609.38997-settle-learning-when-to-stop-reasoning.md",
       "papers/inference/99-other-inference-systems/2026-2609.38997-settle-learning-when-to-stop-reasoning.md"
+    ],
+    "arxiv:2609.39185": [
+      "papers/inference/99-other-inference-systems/2026-2609.39185-low-discrepancy-dither-for-quantized-recurrent-state-caches.md"
+    ],
+    "arxiv:2609.39277": [
+      "papers/inference/99-other-inference-systems/2026-2609.39277-a-tilted-bowl-is-not-a-slippery-slope-compressing-looped-models.md"
+    ],
+    "arxiv:2610.02816": [
+      "papers/inference/99-other-inference-systems/2026-2610.02816-gated-slot-attention-2-two-sided-associative-memory-correction-in-linear.md"
+    ],
+    "arxiv:2610.04751": [
+      "papers/inference/99-other-inference-systems/2026-2610.04751-dynamic-routing-as-a-new-dimension-for-test-time-versatility-of-llms.md"
+    ],
+    "arxiv:2610.07904": [
+      "papers/inference/99-other-inference-systems/2026-2610.07904-apexquant-data-free-elastic-quantization-by-residual-re-isotropization.md"
     ]
   }
 }
