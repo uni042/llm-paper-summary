@@ -1574,6 +1574,10 @@
   実装：[✓](https://github.com/ilur98/DGQ) ・ リポジトリ内被引用：3  
   しかし、重みを小さなグループ単位で4ビット量子化すると、グループごとに尺度が異なるため、整数の行列積を区切って浮動小数点で部分和を結合する必要が生じる。原著はLLaMA、LLaMA 2、OPTなどで困惑度とゼロショット推論精度を評価し、単一A100 80GBでの実行時間・メモリ使用量を測定した。
 
+- **2023-09 · [eDKM: An Efficient and Accurate Train-time Weight Clustering for Large Language Models](2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  微分可能な重みクラスタリングDKMの注意マップを、装置間の重複コピー除去、重み値の一意化、索引の分割で約130分の1へ圧縮し、LLaMA-7Bの学習時3ビット圧縮を可能にするメモリ効率化。
+
 - **2023-05 · [Revisiting Offline Compression: Going Beyond Factorization-based Methods for Transformer Language Models](2023-2302.04045-revisiting-offline-compression-going-beyond-factorization-based-methods-.md)**  
   実装：[✓](https://github.com/MohammadrezaBanaei/auto-encoder-based-transformer-compression) ・ リポジトリ内被引用：1  
   本研究は、既に学習されたTransformerの重み行列を、事前学習モデル全体の再訓練や蒸留を行わずに小さくする「オフライン圧縮」を対象とする。
@@ -1585,10 +1589,6 @@
 - **2023-10 · [Zero-Shot Sharpness-Aware Quantization for Pre-trained Language Models](2023-2310.13315-zero-shot-sharpness-aware-quantization-for-pre-trained-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   データなし量子化の敵対的学習にシャープネス配慮を入れて平坦な解へ寄せるSAM-SGAにより、BERT系とGPT系の11課題で一貫して精度を改善し、低精度条件では平均で最大6.98ポイント回復させる。
-
-- **2023-09 · [eDKM: An Efficient and Accurate Train-time Weight Clustering for Large Language Models](2023-2309.00964-edkm-an-efficient-and-accurate-train-time-weight-clustering-for-large-la.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  微分可能な重みクラスタリングDKMの注意マップを、装置間の重複コピー除去、重み値の一意化、索引の分割で約130分の1へ圧縮し、LLaMA-7Bの学習時3ビット圧縮を可能にするメモリ効率化。
 
 - **2023-06 · [Binary and Ternary Natural Language Generation](2023-2306.01841-binary-and-ternary-natural-language-generation.md)**  
   実装：[✓](https://github.com/facebookresearch/Ternary_Binary_Transformer) ・ リポジトリ内被引用：0  
