@@ -166,7 +166,7 @@
   中核は、SmolVLM-2を使う視覚言語部の上位層を省略し、1画像の視覚トークンを64個に抑え、行動専門家（action 専門家）に交差注意と自己注意を交互に配置する設計である。実機のPick-Placeでは同期推論の平均完了時間13.75秒に対し、非同期推論は9.70秒、固定時間内の成功した物体移動数は9個から19個へ増えた。
 
 - **2025-03 · [Týr-the-Pruner: Structural Pruning LLMs via Global Sparsity Distribution Optimization](2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md)**  
-  実装：[✓](https://github.com/AMD-AGI/Tyr-the-Pruner) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/AMD-AGI/Tyr-the-Pruner) ・ リポジトリ内被引用：5  
   各層を複数の疎率で切った複製の束から全体の疎率配分を進化的探索で選ぶ全体枝刈りで、七百億級モデルを半分切っても下流の平均正解率を元の九十七パーセントに保ち、八十億級の三十七・五パーセント枝刈りでは従来の最良手法より困惑度が三・四五低く正解率が十・二六ポイント高かったと報告した。
 
 - **2024-12 · [TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs](2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.md)**  
@@ -272,7 +272,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：133  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：130  
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
 
 - **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  

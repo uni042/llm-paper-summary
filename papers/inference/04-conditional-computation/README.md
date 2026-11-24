@@ -900,6 +900,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：1  
   主目的は視覚トークンの数を減らしてLLM側の事前入力処理（プリフィル）を軽くすることで、視覚エンコーダそのものを低ビット化する手法ではない。LLaVA-1.5では視覚トークンを約50%へ減らして複数の画像質問応答指標を維持し、Video-LLaVAではさらに高い冗長性を利用した削減を報告する。
 
+- **2024-07 · [Turbo: Informativity-Driven Acceleration Plug-In for Vision-Language Large Models](2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-larg.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  相互冗長度と意味的価値を合わせた情報度で視覚と言語のトークンを並べ替え、冗長なものを統合する再学習不要の差し込みで、視覚言語モデルを理解課題で約2倍、生成課題で約1.6倍速くする方式。
+
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案は、共通の基盤重みを残したまま、出口ごとに独立した低階数適応器（Low-Rank Adaptation; LoRA）を配置する方式である。
@@ -911,10 +915,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2024-10 · [From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression](2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prom.md)**  
   実装：[✓](https://github.com) ・ リポジトリ内被引用：0  
   複数文書リーダーのクロス注意を重要度としてチャンクと文の二段でプロンプトを間引く圧縮法で、疑似ラベルなしに全体文脈を捉え、5倍から6倍の圧縮で精度首位と最速級の圧縮速度を両立する方式。
-
-- **2024-07 · [Turbo: Informativity-Driven Acceleration Plug-In for Vision-Language Large Models](2024-2407.11717-turbo-informativity-driven-acceleration-plug-in-for-vision-language-larg.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  相互冗長度と意味的価値を合わせた情報度で視覚と言語のトークンを並べ替え、冗長なものを統合する再学習不要の差し込みで、視覚言語モデルを理解課題で約2倍、生成課題で約1.6倍速くする方式。
 
 - **2024-07 · [FlexAttention for Efficient High-Resolution Vision-Language Models](2024-2407.20228-flexattention-for-efficient-high-resolution-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
