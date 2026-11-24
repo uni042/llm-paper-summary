@@ -2012,6 +2012,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデルの重みを学習後に削減する際、既存のMagnitude、SparseGPT、Wandaなどは、重みを残す重要度の測り方を工夫してきた。その後、各層の疎度を遺伝的アルゴリズムに似た進化的探索で調整する。代表例はLLaMA-13B、WikiText、75%削減、ブロック幅M=4のWandaである。
 
+- **2025-03 · [StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition](2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-ev.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  状態空間モデルによる定数費用の知覚と、言語モデルの浅い層を転用した認知ゲートで、毎秒100フレームのストリーミング動画へ能動的に応答する枠組み。
+
 - **2025-02 · [SPECTRE: An FFT-Based Efficient Drop-In Replacement to Self-Attention for Long Contexts](2025-2502.18394-spectre-an-fft-based-efficient-drop-in-replacement-to-self-attention-for.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   SPECTREは、系列長$n$に対して二乗で増える通常の自己注意（Self-注意機構）を、実数高速フーリエ変換（Real Fast Fourier Transform、RFFT）、内容適応の周波数ゲート、逆変換の組合せで置き換える方式である。
@@ -2131,10 +2135,6 @@
 - **2025-03 · [Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer](2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md)**  
   実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
   本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
-
-- **2025-03 · [StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition](2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-ev.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  状態空間モデルによる定数費用の知覚と、言語モデルの浅い層を転用した認知ゲートで、毎秒100フレームのストリーミング動画へ能動的に応答する枠組み。
 
 - **2025-03 · [STADE: Standard Deviation as a Pruning Metric](2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md)**  
   実装：[✓](https://github.com/Coello-dev/STADE) ・ リポジトリ内被引用：1  
@@ -2730,6 +2730,10 @@
   実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：3  
   枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
 
+- **2024-10 · [Rethinking Token Reduction for State Space Models](2024-2410.14725-rethinking-token-reduction-for-state-space-models.md)**  
+  実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：2  
+  Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
+
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   実験は画像分類用の視覚Transformer（ViT）であり、LLMのKVキャッシュ圧縮やGPU推論時間の改善を直接実証したものではない。
@@ -2753,10 +2757,6 @@
 - **2024-10 · [Scaling Stick-Breaking Attention: An Efficient Implementation and In-depth Study](2024-2410.17980-scaling-stick-breaking-attention-an-efficient-implementation-and-in-dept.md)**  
   実装：[✓](https://github.com/shawntan/stickbreaking-attention) ・ リポジトリ内被引用：1  
   本論文は、通常のTransformerが採用する正規化指数関数（softmax）に基づく自己注意（self-注意機構）を、棒折り過程（stick-breaking process）で定義される別の注意重みへ置き換える研究である。
-
-- **2024-10 · [Rethinking Token Reduction for State Space Models](2024-2410.14725-rethinking-token-reduction-for-state-space-models.md)**  
-  実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：1  
-  Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
 
 - **2024-10 · [Optimized Spatial Architecture Mapping Flow for Transformer Accelerators](2024-2410.07407-optimized-spatial-architecture-mapping-flow-for-transformer-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

@@ -14,32 +14,32 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
-- **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
-  実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：13  
-  LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
-
 - **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
   実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：13  
   入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
+
+- **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
+  実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：12  
+  LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
 
 - **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
   実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：11  
   動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
 
+- **2026-02 · [ApET: Approximation-Error Guided Token Compression for Efficient VLMs](2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md)**  
+  実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：9  
+  視覚トークンの重要度を注意ではなく線形再構成の誤差で測って圧縮する学習不要の方式で、約9割のトークン削減でも性能をほぼ保ち、高速注意カーネルとも併用できる。
+
 - **2026-04 · [Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding](2026-2604.12358-why-and-when-visual-token-pruning-fails-a-study-on-relevant-visual-infor.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   そのうえで、生成中の注意分布が初期状態から変化した時だけ、退避しておいた視覚トークンを選び直す生成段階移動対応トークン削減（デコード-stage Shift-aware トークン 枝刈り; DSTP）を提案する。
-
-- **2026-02 · [ApET: Approximation-Error Guided Token Compression for Efficient VLMs](2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md)**  
-  実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：8  
-  視覚トークンの重要度を注意ではなく線形再構成の誤差で測って圧縮する学習不要の方式で、約9割のトークン削減でも性能をほぼ保ち、高速注意カーネルとも併用できる。
 
 - **2026-03 · [AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models](2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md)**  
   実装：[✓](https://github.com/cvsp-lab/AgilePruner) ・ リポジトリ内被引用：7  
   従来の注意重視方式は画像符号化器のクラス・トークンが強く注目する領域を残す。LLaVA-1.5-7B、TextVQA、RTX 4090の単一GPU評価で、64個を残す設定は576個を残す基準に対して推論計算量3.14→0.48兆FLOPs、1画像遅延172→115 ms、GPUメモリ13.60→13.30 GBとなった。
 
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：5  
   LLaVA-v1.5では1画像576トークン、LLaVA-NeXTの高解像度入力では最大2,880トークンとなり、画像の背景や類似領域にも長い系列を割り当てる。LLaVA-v1.5-7Bの8課題では、視覚トークンを平均576個から32個へ削減しても、元モデルを100%とした平均相対性能94.8%を維持した。
 
 - **2026-03 · [DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression](2026-2603.15685-dash-dynamic-audio-driven-semantic-chunking-for-efficient-omnimodal-toke.md)**  
@@ -114,6 +114,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：2  
   長い動画を扱う視覚言語モデルでは、各フレームを多数の視覚トークンへ変換して言語モデルへ入力するため、動画が長くなると事前充填（プリフィル）の計算量とメモリが増大する。著者はこの現象を「状態付き圧縮」と捉え、浅い層では多くのトークンを保持し、深い層へ進むほど段階的に削減する方式を設計した。
 
+- **2026-02 · [DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference](2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-a.md)**  
+  実装：[✓](https://github.com/AMD-AGI/DUET-VLM) ・ リポジトリ内被引用：2  
+  視覚側の局所クラスタ集約と、言語側のテキスト誘導の段階的ドロップを組み合わせた二段の視覚トークン削減。67パーセント削減でも精度の99パーセント前後を保ち、学習時間も3割減らす。
+
 - **2025-12 · [Towards Lossless Ultimate Vision Token Compression for VLMs](2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   視覚符号器では空間軸に沿う反復統合で、言語モデル側では周波数の低域通過で視覚トークンを最終層まで段階的に消す学習不要の圧縮により、約2倍の高速化とほぼ無劣化の精度を両立した。
@@ -153,6 +157,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-07 · [CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large Vision-Language Models](2026-2605.13178-clip-tricks-you-training-free-token-pruning-for-efficient-pixel-groundin.md)**  
   実装：[✓](https://github.com/sejong-rcv/LiteLVLM) ・ リポジトリ内被引用：1  
   一般的な画像理解向け視覚トークン枝刈りは、画像の全体表現への寄与や画像・テキストの高い類似度を手掛かりにトークンを残す。GLaMMの元の576視覚トークンを192に削減したとき、8評価分割平均の領域分割指標は75.5から68.1となり、元性能の90.3%を維持した。
+
+- **2026-06 · [Stepwise Token Selection for Efficient Multimodal Large Language Models](2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚トークンを既選択分を条件に1個ずつ選び、学習した終了動作で個数も決める逐次選択方式で、固定比率の枝刈りを全削減水準で上回り、約9割削減でも精度の94.6パーセントを保った。
 
 - **2026-06 · [Skip a Layer or Loop It? Learning Program-of-Layers in LLMs](2026-2606.06574-skip-a-layer-or-loop-it-learning-program-of-layers-in-llms.md)**  
   実装：[✓](https://github.com/tianyi-lab/PoLar) ・ リポジトリ内被引用：1  
@@ -221,10 +229,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-02 · [Focus-Scan-Refine: From Human Visual Perception to Efficient Visual Token Pruning](2026-2602.05809-focus-scan-refine-from-human-visual-perception-to-efficient-visual-token.md)**  
   実装：[✓](https://github.com/ILOT-code/FSR) ・ リポジトリ内被引用：1  
   高解像度画像や複数フレームの動画ではトークン数が増え、事前充填の演算量、注意機構に必要な記憶量、鍵・値キャッシュ（KV キャッシュ）の容量が増加する。LLaVA-1.5-7Bで視覚トークンを576個から64個へ削減すると、9種類の評価を正規化した平均性能保持率は96.1%であり、比較対象のCDPrunerは95.7%、VisPrunerは93.5%だった。
-
-- **2026-02 · [DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference](2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-a.md)**  
-  実装：[✓](https://github.com/AMD-AGI/DUET-VLM) ・ リポジトリ内被引用：1  
-  視覚側の局所クラスタ集約と、言語側のテキスト誘導の段階的ドロップを組み合わせた二段の視覚トークン削減。67パーセント削減でも精度の99パーセント前後を保ち、学習時間も3割減らす。
 
 - **2026-02 · [CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill](2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -407,10 +411,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-06 · [Stop When Further Reasoning Won't Help: Attention-State Adaptive Generation in Reasoning Models](2026-2606.15070-stop-when-further-reasoning-won-t-help-attention-state-adaptive-generati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   中間答えの確信度と注意エントロピーの低下を合わせて推論の収束を見極める早期終了と介入の方式で、推論モデルの正解率を上げながら生成トークンを約4割減らした。
-
-- **2026-06 · [Stepwise Token Selection for Efficient Multimodal Large Language Models](2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  視覚トークンを既選択分を条件に1個ずつ選び、学習した終了動作で個数も決める逐次選択方式で、固定比率の枝刈りを全削減水準で上回り、約9割削減でも精度の94.6パーセントを保った。
 
 - **2026-06 · [One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs](2026-2606.14277-one-layer-s-trash-is-another-layer-s-treasure-adaptive-layer-wise-visual.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -789,7 +789,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   LayerSkipは、大規模言語モデルの全ての層を毎トークン実行する代わりに、浅い層から次トークンを予測できるよう学習し、その予測を同じモデルの残りの層で検証する方式である。下書きモデルの生成結果を大きなモデルで一括検証することで生成時間を短縮できるが、二つのモデルの重みや鍵・値キャッシュを管理する必要がある。
 
 - **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
-  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：133  
+  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：132  
   大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
 
 - **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  

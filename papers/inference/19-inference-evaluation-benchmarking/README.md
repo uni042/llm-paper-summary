@@ -64,6 +64,10 @@
   実装：[✓](https://github.com/scale-snu/DyLLM) ・ リポジトリ内被引用：2  
   マスク拡散型の言語モデルは、応答系列をマスクから始め、複数トークンを並列に埋めながら反復的に復号する。salient位置ではFFNを再計算し、注意も正確に更新する。DyLLMは速度だけでなく品質を維持する運用点を探す方式である。
 
+- **2026-03 · [Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing](2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  視覚トランスフォーマーの手前で再構成可能な最小の複数尺度パッチを自己回帰的に選ぶ軽量な注視モジュールにより、視覚トークンを最大100分の1へ減らし、長尺・4K動画への拡張と精度向上を両立する。
+
 - **2026-10 · [Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents](2026-2610.32417-measuring-the-energy-cost-of-completing-tasks-with-quantized-language-mo.md)**  
   実装：[✓](https://github.com/stephen122204/mantra-energy/tree/paper-1) ・ リポジトリ内被引用：1  
   量子化エージェントのエネルギーをトークン単位ではなく完了タスク単位で測り直し、4ビットがトークン当たりでは安くても課題によっては完了当たり最大3.5倍高くなることと、その主因が余分なトークンであることを実機測定で示した。
@@ -167,10 +171,6 @@
 - **2026-03 · [Token Reduction via Local and Global Contexts Optimization for Efficient Video Large Language Models](2026-2603.01400-token-reduction-via-local-and-global-contexts-optimization-for-efficient.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AOT（local-global Anchor Optimal Transport）は、動画対応の大規模言語モデル（Video LLM）の入力に含まれる視覚トークンを、追加学習なしで削減する方式である。LLaVA-OneVision-7Bの無圧縮平均58.4に対し、視覚トークン10%保持のAOTは平均57.0で、元性能の97.6%を維持した。
-
-- **2026-03 · [Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing](2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  視覚トランスフォーマーの手前で再構成可能な最小の複数尺度パッチを自己回帰的に選ぶ軽量な注視モジュールにより、視覚トークンを最大100分の1へ減らし、長尺・4K動画への拡張と精度向上を両立する。
 
 - **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
