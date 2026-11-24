@@ -12,9 +12,9 @@
   "relevance_quota": {
     "enabled": true,
     "mode": "quarantine",
-    "retain_percent": 50,
+    "retain_percent": 75,
     "min_candidates": 100,
     "selection": "same-lineage-forward-citation-count-then-topic-then-priority",
-    "note": "50% of candidates remaining AFTER mechanical quarantine; loosened from 5% to 25% on 2026-11-23 and further to 50% on 2026-11-23 night run under user authorization (loosen when Discovery candidates are scarce). change retain_percent (1..100) freely. No automatic audit revival; all source records remain untouched."
+    "note": "75% of candidates remaining AFTER mechanical quarantine; loosened from 5% to 25% on 2026-11-23, to 50% on 2026-11-23 night run, and to 75% on 2026-11-24 final day under user authorization (loosen when Discovery candidates are scarce). change retain_percent (1..100) freely. No automatic audit revival; all source records remain."
   }
 }
