@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c1a153c4e172e8e5-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2611.27951",
+  "reason": "長文脈向けにhub-and-spoke最適輸送でdense attentionを置き換え、TritonカーネルでFlashAttentionより高速な演算子マイクロベンチマークを示す一方、多層LM実行はunfused経路で学習・検索精度の検証が中心であり、LLM推論システムとしての実運用貢献はまだ限定的なためborderlineとした。",
+  "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed",
+  "identity_tokens": [
+    "arXiv:2611.27951"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1a153c4e172",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

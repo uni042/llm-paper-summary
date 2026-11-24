@@ -1,0 +1,315 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-latest-a::chunk-0002-of-0004",
+  "reference_main_sha": "dcddd106cdf122ba9d495d5928edc5e8b4eff02d",
+  "record_count": 20,
+  "origin": "discovery_latest_search",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25614",
+      "identity_tokens": [
+        "arXiv:2611.25614"
+      ],
+      "title": "Don't Lose the Future: Latent-Aware 4-Bit Quantization of World Action Models",
+      "reason": "LAQはロボット搭載向けWorld Action Modelの重み・活性化・KVキャッシュを4ビット量子化する手法であり、量子化技術は関連するが対象が世界モデルでありLLM推論への直接適用は未確認のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.25614",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.25433",
+      "identity_tokens": [
+        "arXiv:2611.25433"
+      ],
+      "title": "RoCoKV: Accelerating LLM Inference Serving through Uncertainty and Redundancy Aware KV Cache Compression",
+      "reason": "RoCoKVは大規模推論モデルの生成トレースに特化し、不確実性ガイド適応プルーニングと冗長性認識でKVキャッシュを圧縮する手法であり、推論サービングのKV圧縮への直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.25433",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.25112",
+      "identity_tokens": [
+        "arXiv:2611.25112"
+      ],
+      "title": "TripleKV: Predict, Prefetch, Protect -- KV Cache Management for AI Agents",
+      "reason": "TripleKVはエージェントのツール実行時間にKVブロックのプリフェッチを隠す3階層KVキャッシュ管理システムであり、数百GiB級ワーキングセットの階層メモリ管理への直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.25112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.24619",
+      "identity_tokens": [
+        "arXiv:2611.24619"
+      ],
+      "title": "GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits",
+      "reason": "GateWatchはSAE特徴を使うBoolean回路プローブでLLMの振る舞いを監視する安全性モニタリング手法であり、監視自体の軽量化が主題で、モデル推論・サービング機構への貢献は要旨に確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.24619",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.24373",
+      "identity_tokens": [
+        "arXiv:2611.24373"
+      ],
+      "title": "CanopyKV: Remember beyond the Crop for Fast Active Visual Reasoning",
+      "reason": "CanopyKVは能動的視覚推論で蓄積するクロップと推論トークンのKVキャッシュを、局所的に置換された証拠と相補的情報を区別して圧縮する手法であり、マルチモーダル推論のKV圧縮への直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.24373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.24301",
+      "identity_tokens": [
+        "arXiv:2611.24301"
+      ],
+      "title": "LoopCache: Accelerating Long-Context Self-Speculative Decoding for Looped Transformers",
+      "reason": "LoopCacheはループTransformerの自己投機的デコードでループ別KVキャッシュと中間予測変化を利用してドラフトを適応させる手法であり、投機的デコード高速化への直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.24301",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24276",
+      "identity_tokens": [
+        "arXiv:2611.24276"
+      ],
+      "title": "When Shuffling Fails: Token Recovery from Obfuscated KV Caches",
+      "reason": "本論文はシャッフル難読化されたKVキャッシュから入力対称性を利用してトークンを復元できることを示す安全性分析であり、KVキャッシュ共有機構が対象だが推論効率への貢献ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.24276",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24259",
+      "identity_tokens": [
+        "arXiv:2611.24259"
+      ],
+      "title": "Do VLMs Need to Keep Looking at Long Videos? Write It Down, Then Look Away",
+      "reason": "LookAwayは長尺ビデオVLMで先にタイムスタンプ付きノートを書かせてからビデオのKVキャッシュを推論エンジンから隠す手法であり、推論時の再読削減が示されるが、機構の中心はモデル側のノート生成戦略のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.24259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.23769",
+      "identity_tokens": [
+        "arXiv:2611.23769"
+      ],
+      "title": "Keep the Reasoning, Read the Image: On-Demand Visual KV for Multi-Turn Reasoning VLMs",
+      "reason": "本論文はマルチターン推論VLMで画像KVが推論トークンに押し出される問題に対し、視覚リザーブを退避から保護するオンデマンド視覚KV保持方針を提案しており、KVキャッシュ保持方針への直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.23769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23570",
+      "identity_tokens": [
+        "arXiv:2611.23570"
+      ],
+      "title": "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message",
+      "reason": "本論文はマルチエージェント間で他者のメッセージ（テキストまたは潜在KV）を省略できる条件を信頼度で認証し遅延を削減する研究であり、対象はエージェント間通信の判断機構で、推論エンジン内部の機構ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.23570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.23226",
+      "identity_tokens": [
+        "arXiv:2611.23226"
+      ],
+      "title": "FastFrames: Video Generation at Interactive Latency",
+      "reason": "FastFramesは自己回帰ビデオ拡散モデルの対話的生成を高速化する研究で、VAEデコードやKV更新のプロファイリングを含むが対象はビデオ生成パイプラインであり、LLM推論システムへの貢献は確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.23226",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.23035",
+      "identity_tokens": [
+        "arXiv:2611.23035"
+      ],
+      "title": "Storing the Gemma 4 K=V Cache Once: Exact Global-KV Memory Savings in a Paged Serving Engine with Unchanged Attention Kernels",
+      "reason": "本論文はGemma 4のグローバル注意でK=V関係を利用し、ページ型サービングエンジンでKVキャッシュを1行だけ保存して既存注意カーネルから二重ビューで読む正確なメモリ削減手法であり、直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.23035",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.22746",
+      "identity_tokens": [
+        "arXiv:2611.22746"
+      ],
+      "title": "LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF",
+      "reason": "LaFlashはコーディングエージェントの永続状態とKVキャッシュの再活性化費用に対し、状態増幅を織り込んだ容量駆動配分とQLC-HBF階層で高速化する方式であり、階層メモリへの直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.22746",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.22426",
+      "identity_tokens": [
+        "arXiv:2611.22426"
+      ],
+      "title": "InfuseLoop: Cross-Trajectory Latent Injection for Scalable Parallel Looped Transformers",
+      "reason": "InfuseLoopは並列ループTransformerの深さスケーリングにおける学習損失スパイクと品質向上の逓減を扱う学習・アーキテクチャ研究であり、推論時の機構への貢献は要旨に確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.22426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22356",
+      "identity_tokens": [
+        "arXiv:2611.22356"
+      ],
+      "title": "SR-VLA: Stall-Reduced VLA Execution via Predicted-Input Lookahead and Selective KV Cache Repair",
+      "reason": "SR-VLAはVLAポリシーの制御停滞を予測入力の先行推論と選択的KVキャッシュ修復で隠す手法であり、KV再利用の機構は関連するがロボット制御実行への応用が主目的のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.22356",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23339",
+      "identity_tokens": [
+        "arXiv:2611.23339"
+      ],
+      "title": "Optimize the Cob, Then the Kernel: Optimizing Beam Search for Generative Recommendation Inference",
+      "reason": "本論文は生成推薦のビームサーチ推論をvLLM上でTree Attentionにより最適化し共有プレフィックスのKV再読を削減するが、主目的が推薦推論という応用ワークロードの最適化のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.23339",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22304",
+      "identity_tokens": [
+        "arXiv:2611.22304"
+      ],
+      "title": "Cross-Modal StateKV Injection for Communication in Multi-LLM Systems across Temporal Segments",
+      "reason": "StateKV Injectionは複数マルチモーダルLLM間で視覚KV状態を整列・射影して通信する枠組みであり、KV状態の転用という機構は関連するが、ビデオ理解のためのモデル間通信応用が主目的のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.22304",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.22280",
+      "identity_tokens": [
+        "arXiv:2611.22280"
+      ],
+      "title": "XM-Sparse: High-Throughput Sparse-Attention LLM Serving over Scale-up Memory Pools",
+      "reason": "XM-Sparseはスケールアップメモリプールへのスパース注意KVオフロードで、デコードスループットを制限する要因を分析し高スループットなスパース注意LLMサービングを実現するシステムであり、直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.22280",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22243",
+      "identity_tokens": [
+        "arXiv:2611.22243"
+      ],
+      "title": "From Token Changes to Task Failures: Bit Flips in a Shared KV-Cache Block",
+      "reason": "本論文はプレフィックスキャッシュで共有されるKVブロックへのビット反転フォールト注入が応答の誤りに与える影響をvLLMで測定する信頼性研究であり、サービング機構の計測だが新規の推論技術ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.22243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22238",
+      "identity_tokens": [
+        "arXiv:2611.22238"
+      ],
+      "title": "Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching",
+      "reason": "本論文はプレフィックスキャッシュ下でコーディングエージェントのコンテキスト追加・削除が費用に与える影響を2万回超の実行で測定する実証研究であり、キャッシュ経済性の知見はあるが新規システム機構の提案ではないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.22238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-latest-a",
+  "chunk_index": 2,
+  "chunk_count": 4,
+  "source_record_count": 75
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-latest-a::chunk-0001-of-0004",
+  "reference_main_sha": "dcddd106cdf122ba9d495d5928edc5e8b4eff02d",
+  "record_count": 20,
+  "origin": "discovery_latest_search",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.27973",
+      "identity_tokens": [
+        "arXiv:2611.27973"
+      ],
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "reason": "MemOnceは層別KVキャッシュの線形なGPUメモリ増大に対し、再利用可能な学習済みメモリ状態で履歴を保持する基盤アーキテクチャを提案し、長文脈・継続対話時の推論メモリと計算量の削減を一次要旨で具体的に示しているため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.27973",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.27901",
+      "identity_tokens": [
+        "arXiv:2611.27901"
+      ],
+      "title": "QuantStream3D: Geometry-Aligned Low-Bit KV Cache Quantization for Streaming Visual Geometry Transformers",
+      "reason": "QuantStream3Dはストリーミング視覚ジオメトリTransformer向けの低ビットKVキャッシュ量子化であり、幾何感度とキャッシュ不整合という固有課題への対処が中心で、LLM推論への直接適用は要旨から確認できないため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.27901",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.27701",
+      "identity_tokens": [
+        "arXiv:2611.27701"
+      ],
+      "title": "FOREST: Coordinating Tree-based HBF, RRAM, and HBM for Efficient Speculative LLM Inference",
+      "reason": "FORESTは投機的LLM推論のドラフト・検証・長文脈注意が要求する帯域と容量の不整合に対し、HBF・RRAM・HBMを協調させる専用メモリ階層を提案しており、推論ハードウェアへの直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.27701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.27596",
+      "identity_tokens": [
+        "arXiv:2611.27596"
+      ],
+      "title": "Isonomy: Isolating Every Request from Timing Side Channels at Nearly Full-Sharing Throughput in Multi-Instance LLM Prefill",
+      "reason": "Isonomyはプレフィックスキャッシュ共有によるタイミングサイドチャネルに対し、マルチインスタンスLLMプリフィルでリクエスト単位の分離をほぼ全共有スループットで実現する方式であり、サービングのキャッシュ共有機構への直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.27596",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.27323",
+      "identity_tokens": [
+        "arXiv:2611.27323"
+      ],
+      "title": "Cruella: A Unified Microscaling and Floating-Point Dot-Product Unit for LLM Inference on FPGAs",
+      "reason": "CruellaはMXFP4重みとBF16積が混在するLLMチェックポイントのデコードをFPGAで実行するマイクロスケーリング対応ドット積ユニットであり、推論アクセラレータの数値形式実行への直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.27323",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27317",
+      "identity_tokens": [
+        "arXiv:2611.27317"
+      ],
+      "title": "Do Language Models Know Which Words Steer Their Reasoning?",
+      "reason": "本論文はLeave-One-Out Word JSD分析でCoTを誘導する単語の影響を調べる推論過程の解釈可能性研究であり、推論速度・メモリ・サービング機構への技術的貢献は要旨に確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.27317",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27074",
+      "identity_tokens": [
+        "arXiv:2611.27074"
+      ],
+      "title": "Hindsight Forcing: Learning Better History from the Future in Autoregressive Video Diffusion",
+      "reason": "Hindsight Forcingは自己回帰ビデオ拡散モデルの自己ロールアウト学習で履歴勾配を扱う生成品質の学習手法であり、LLM推論システムへの貢献は要旨に確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.27074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.26980",
+      "identity_tokens": [
+        "arXiv:2611.26980"
+      ],
+      "title": "Contexture: Runtime Context Eviction for High-Throughput Agent Serving",
+      "reason": "Contextureはエージェントサービングでツール実行由来トークンの supersede 関係を使い、実行時コンテキスト退避で共有GPU KVキャッシュ需要を削減するランタイムであり、サービングスループットへの直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.26980",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.26975",
+      "identity_tokens": [
+        "arXiv:2611.26975"
+      ],
+      "title": "Run One, Get Two: Near-Free Streaming Safety Checks for Local LLMs",
+      "reason": "ToRAはローカルLLMのデコード行に安全検査モデルを相乗りさせ重みとKVキャッシュを共有するが、主目的はストリーミング安全検査の精度と費用の両立であり、汎用推論機構としての貢献は限定的なため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.26975",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.26902",
+      "identity_tokens": [
+        "arXiv:2611.26902"
+      ],
+      "title": "Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs",
+      "reason": "Batonは小規模VLMから大規模VLMへのエスカレーション時に視覚KVキャッシュを写像して引き渡し、履歴の再エンコード費用を削減する推論カスケード機構であり、推論コスト削減への直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.26902",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.26857",
+      "identity_tokens": [
+        "arXiv:2611.26857"
+      ],
+      "title": "CarrierKV: An Edge LLM Accelerator with Positional Carrier Decomposition for Low-Bit KV Cache",
+      "reason": "CarrierKVはRoPEの位置キャリア成分を分離して低ビットKVキャッシュ量子化の精度劣化を抑えるエッジLLMアクセラレータであり、長文脈デコードのDRAM帯域削減への直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.26857",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.26540",
+      "identity_tokens": [
+        "arXiv:2611.26540"
+      ],
+      "title": "AURA: AUdio-dRiven streaming Avatar",
+      "reason": "AURAは音声駆動トーキングヘッドのビデオ拡散モデルで、ローリングKVキャッシュは拡散生成内部の実装要素にすぎず、LLM推論システムへの技術的貢献は要旨に確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.26540",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.26435",
+      "identity_tokens": [
+        "arXiv:2611.26435"
+      ],
+      "title": "Aggron: Aggressive Compression of Agentic KV Caches during Head-of-Line Stalls in the Request Queue",
+      "reason": "AggronはエージェントのKVキャッシュ圧縮をリクエストキューのヘッドオブライン停滞時間に実行し、重要パスへの干渉なしにキャッシュ容量圧力を下げる方式であり、エージェントサービングへの直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.26435",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.26334",
+      "identity_tokens": [
+        "arXiv:2611.26334"
+      ],
+      "title": "Online Temporal Rotations for 2 Bit KV-Cache Quantization in Video Diffusion Transformers",
+      "reason": "TRQはビデオ拡散Transformerのデノイジング間KVキャッシュを時間近傍回転で2ビット量子化する手法であり、KV量子化技術自体は関連するが対象がビデオ生成モデルでLLM推論への適用は未確認のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.26334",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.26106",
+      "identity_tokens": [
+        "arXiv:2611.26106"
+      ],
+      "title": "AscMLA: Unlocking FP4 Efficiency for Long-Context MLA Decoding through Asymmetric Scaling",
+      "reason": "AscMLAはMLAの共有潜在に対するK/V非対称スケーリングでFP4 KVキャッシュを直接処理し、キャッシュメモリをFP8比で削減する長文脈デコード手法であり、KVキャッシュ圧縮への直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.26106",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.26020",
+      "identity_tokens": [
+        "arXiv:2611.26020"
+      ],
+      "title": "FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models",
+      "reason": "FrontierReplayは再帰層を持つハイブリッド言語モデルで構造境界を予測して状態を保存し、プリフィルを分割しない正確なプレフィックスキャッシュを実現する方式であり、プレフィックス再利用への直接貢献が確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.26020",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25945",
+      "identity_tokens": [
+        "arXiv:2611.25945"
+      ],
+      "title": "BlockJack: Cross-Tenant Redirection Fault Attacks on Paged KV Cache Address Translation in LLM Serving",
+      "reason": "BlockJackはvLLM等のページ型KVキャッシュのアドレス変換層へのフォールト攻撃を分析する研究であり、サービング機構そのものが対象だが、推論効率への技術的貢献ではなく安全性分析のため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.25945",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.25865",
+      "identity_tokens": [
+        "arXiv:2611.25865"
+      ],
+      "title": "Thinking in Streams: Proactive Spatial Reasoning with Vision-Language Models",
+      "reason": "ProSpaceはストリーミングビデオに対する能動的空間推論のベンチマークとVLMの教師あり学習が主題であり、推論システムのメモリ・速度・サービングへの貢献は要旨に確認できないため対象外とした。",
+      "source_url": "https://arxiv.org/abs/2611.25865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.25813",
+      "identity_tokens": [
+        "arXiv:2611.25813"
+      ],
+      "title": "Efficient and Robust Drafting with Multi-Token Prediction",
+      "reason": "本論文は単一共有ドラフトヘッドによるMulti-Token Predictionドラフタの構造最適化で投機的デコードのドラフト品質と軽量さを両立させる手法であり、投機的デコードへの直接貢献が要旨で確認できるため対象とした。",
+      "source_url": "https://arxiv.org/abs/2611.25813",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25669",
+      "identity_tokens": [
+        "arXiv:2611.25669"
+      ],
+      "title": "Ask in the Crowd: Differentially Private LLM Inference via Dummy-Augmented Shuffling",
+      "reason": "DP-SPDはダミー拡張シャッフルでクエリを隠す差分プライベートLLM推論フレームワークであり、推論時処理が対象だが主目的はプライバシー保護と精度の両立で、推論効率・システム機構への貢献は限定的なため境界とした。",
+      "source_url": "https://arxiv.org/abs/2611.25669",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    }
+  ],
+  "parent_run_key": "muse-final-20261124-latest-a",
+  "chunk_index": 1,
+  "chunk_count": 4,
+  "source_record_count": 75
+}
