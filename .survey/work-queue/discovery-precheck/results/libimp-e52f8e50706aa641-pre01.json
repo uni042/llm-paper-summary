@@ -1,0 +1,233 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e52f8e50706aa641-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e52f8e50706a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.02874",
+    "arXiv:2608.11879"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5ad19cafc31e54f24b5148ff39c87b732774102b",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T04:44:02.345609+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.02874",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.11879",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Think in Parallel, Answer as One: Logit Averaging for Open-Ended Reasoning",
+      "source_url": "https://arxiv.org/abs/2512.02874",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Majority voting has proven effective for close-ended question answering by aggregating parallel reasoning traces. However, it is not directly applicable to open-ended reasoning, such as code generation and web-based deep research, where a\"majority\"over complete solutions is ill-defined. We introduce ThinkMerge, a training-free, plug-and-play decoding strategy that runs K parallel reasoning traces and averages their next-token logits at synchronization points to produce a single coherent output. ThinkMerge integrates seamlessly with vLLM/SGLang and remains compatible with standard decoding techniques such as Top-p/Top-k. Empirically, it matches or surpasses majority voting on AIME and GPQA, while delivering consistent gains on open-ended coding tasks: on LiveCodeBench (hard), pass@1 improves by +8.28% for DeepCoder-14B-Preview and +7.58% for Qwen3-8B. Beyond code, we further show that ThinkMerge improves web-based deep-research agents (e.g., WebSailor-7B/32B) across GAIA, BrowseComp-en/zh, and XbenchDeepSearch. These results demonstrate that parallel test-time scaling can benefit open-ended reasoning without relying on voting over complete outputs.",
+      "identifiers": [
+        "SemanticScholar:255501f3ab861418b62a8941c9fa843c9d57938d"
+      ],
+      "semantic_scholar_id": "255501f3ab861418b62a8941c9fa843c9d57938d",
+      "canonical_id": "arXiv:2512.02874",
+      "arxiv_id": "2512.02874",
+      "doi": "10.48550/arXiv.2512.02874",
+      "authors": [
+        "Hao-Nan Wang",
+        "Chao Du",
+        "Kenji Kawaguchi",
+        "Tian-Yu Pang"
+      ],
+      "priority": 117,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 117,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 357,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems",
+      "source_url": "https://arxiv.org/abs/2608.11879",
+      "year": 2026,
+      "published": "2026-08-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-running conversational agents increasingly rely on a memory system to avoid resending the whole conversation each turn, yet how much that costs to serve has received little systematic benchmarking. We compare three memory systems (Mem0, Hindsight, and Mastra Observational Memory) against two reference strategies -- a fixed-size rolling window and resubmitting the full transcript -- across two backbones and conversations of up to 400 turns, pairing every cost measurement with answer accuracy on 665 LoCoMo questions. First, a memory system's serving cost cannot be predicted from conversation length and message size alone: a regression that tracks the two reference strategies closely misses the memory systems by 18-69%, their cost driven instead by internal memory behavior. Second, a break-even analysis shows that whether -- and when -- a memory system becomes cheaper to serve than the full transcript is highly sensitive to the system and the backbone, from the first tens of turns for the cheapest to never within 400 turns for the most expensive. Third, no system wins on both axes: accuracy spans 21-54%, and the backbone choice drives cost as much as the memory system does.",
+      "identifiers": [
+        "SemanticScholar:87978cec653d3cfd7fc7d5929a2338fdff760f09"
+      ],
+      "semantic_scholar_id": "87978cec653d3cfd7fc7d5929a2338fdff760f09",
+      "canonical_id": "arXiv:2608.11879",
+      "arxiv_id": "2608.11879",
+      "doi": "10.48550/arXiv.2608.11879",
+      "authors": [
+        "Natchanon Pollertlam",
+        "Witchayut Kornsuwannawit"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.02874",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.02874",
+        "id:SemanticScholar:255501f3ab861418b62a8941c9fa843c9d57938d",
+        "id:arXiv:2512.02874",
+        "title:think in parallel answer as one logit averaging for openended reasoning",
+        "url:https://arxiv.org/abs/2512.02874"
+      ],
+      "record": {
+        "title": "Think in Parallel, Answer as One: Logit Averaging for Open-Ended Reasoning",
+        "source_url": "https://arxiv.org/abs/2512.02874",
+        "year": 2025,
+        "published": "2025-12-02",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Majority voting has proven effective for close-ended question answering by aggregating parallel reasoning traces. However, it is not directly applicable to open-ended reasoning, such as code generation and web-based deep research, where a\"majority\"over complete solutions is ill-defined. We introduce ThinkMerge, a training-free, plug-and-play decoding strategy that runs K parallel reasoning traces and averages their next-token logits at synchronization points to produce a single coherent output. ThinkMerge integrates seamlessly with vLLM/SGLang and remains compatible with standard decoding techniques such as Top-p/Top-k. Empirically, it matches or surpasses majority voting on AIME and GPQA, while delivering consistent gains on open-ended coding tasks: on LiveCodeBench (hard), pass@1 improves by +8.28% for DeepCoder-14B-Preview and +7.58% for Qwen3-8B. Beyond code, we further show that ThinkMerge improves web-based deep-research agents (e.g., WebSailor-7B/32B) across GAIA, BrowseComp-en/zh, and XbenchDeepSearch. These results demonstrate that parallel test-time scaling can benefit open-ended reasoning without relying on voting over complete outputs.",
+        "identifiers": [
+          "SemanticScholar:255501f3ab861418b62a8941c9fa843c9d57938d"
+        ],
+        "semantic_scholar_id": "255501f3ab861418b62a8941c9fa843c9d57938d",
+        "canonical_id": "arXiv:2512.02874",
+        "arxiv_id": "2512.02874",
+        "doi": "10.48550/arXiv.2512.02874",
+        "authors": [
+          "Hao-Nan Wang",
+          "Chao Du",
+          "Kenji Kawaguchi",
+          "Tian-Yu Pang"
+        ],
+        "priority": 117,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 117,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 357,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.11879",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.11879",
+        "id:SemanticScholar:87978cec653d3cfd7fc7d5929a2338fdff760f09",
+        "id:arXiv:2608.11879",
+        "title:total recall at what cost benchmarking the serving cost of agentic memory systems",
+        "url:https://arxiv.org/abs/2608.11879"
+      ],
+      "record": {
+        "title": "Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems",
+        "source_url": "https://arxiv.org/abs/2608.11879",
+        "year": 2026,
+        "published": "2026-08-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-running conversational agents increasingly rely on a memory system to avoid resending the whole conversation each turn, yet how much that costs to serve has received little systematic benchmarking. We compare three memory systems (Mem0, Hindsight, and Mastra Observational Memory) against two reference strategies -- a fixed-size rolling window and resubmitting the full transcript -- across two backbones and conversations of up to 400 turns, pairing every cost measurement with answer accuracy on 665 LoCoMo questions. First, a memory system's serving cost cannot be predicted from conversation length and message size alone: a regression that tracks the two reference strategies closely misses the memory systems by 18-69%, their cost driven instead by internal memory behavior. Second, a break-even analysis shows that whether -- and when -- a memory system becomes cheaper to serve than the full transcript is highly sensitive to the system and the backbone, from the first tens of turns for the cheapest to never within 400 turns for the most expensive. Third, no system wins on both axes: accuracy spans 21-54%, and the backbone choice drives cost as much as the memory system does.",
+        "identifiers": [
+          "SemanticScholar:87978cec653d3cfd7fc7d5929a2338fdff760f09"
+        ],
+        "semantic_scholar_id": "87978cec653d3cfd7fc7d5929a2338fdff760f09",
+        "canonical_id": "arXiv:2608.11879",
+        "arxiv_id": "2608.11879",
+        "doi": "10.48550/arXiv.2608.11879",
+        "authors": [
+          "Natchanon Pollertlam",
+          "Witchayut Kornsuwannawit"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3536eb900952061678b60384dae0e49a553726e2420446bb0c00a78ab56f3cc2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

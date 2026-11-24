@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8f8419cd42d7d4ce-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8f8419cd42d7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:90b9c57465331def4df61ad399866325cf12e342",
+    "arXiv:2605.01060"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5ad19cafc31e54f24b5148ff39c87b732774102b",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-24T04:43:31.913876+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:90b9c57465331def4df61ad399866325cf12e342",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.01060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SURGE: SuperBatch Unified Resource-efficient GPU Encoding for Heterogeneous Partitioned Data",
+      "source_url": "https://arxiv.org/abs/2605.01060",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present SURGE, a streaming GPU encoding system deployed in production to generate embeddings for over 800 million texts across 40,000 logical partitions. Production embedding pipelines face a tension between logical data partitioning and efficient GPU utilization: processing each partition independently incurs $P$ inter-process communication (IPC) calls whose overhead limits throughput for compute-light models. Our contributions are analytical: (i) a cost model (Theorem 1) predicting throughput within 2% across three encoders spanning a 15$\\times$ parameter range; (ii) a memory-safety bound (Lemma 3) enabling a streaming two-threshold policy with peak memory $O(B_{\\min} + n_{\\max})$ rather than $O(N)$; and (iii) a $\\phi$/CV decision framework characterizing when the pattern applies beyond our workload. The naive fix of batching at fixed size requires $O(N)$ peak memory (32.7 GB at 10M texts; infeasible beyond ~60M on 192 GB nodes), produces no output until all encoding completes, and offers no fault tolerance. SURGE achieves the same throughput with $O(B_{\\min} + n_{\\max})$ bounded memory (2.6 GB), 68$\\times$ faster time-to-first-output, and crash recovery at SuperBatch granularity. On 10M texts with 4 NVIDIA L4 GPUs, SURGE delivers 26,413 texts/s -- matching fixed-batch throughput while using 12.6$\\times$ less memory. We validate on bge-base (109M, $d$=768, error 1.3%) and across log-normal $\\sigma$ in {1.0, 1.72, 2.5} (speedup invariant within $\\pm$3%), and compare against a partition-batched baseline (PB-PBP-LB), against which SURGE retains a 7% throughput edge and 2.5$\\times$ faster TTFO. Complementary engineering -- zero-copy Arrow serialization (22-25$\\times$ speedup) and async I/O pipelining (up to 93% benefit) -- realizes the design but is not the contribution.",
+      "identifiers": [
+        "SemanticScholar:62e1d581e14a9af3e26d57488f910a7555c44042"
+      ],
+      "semantic_scholar_id": "62e1d581e14a9af3e26d57488f910a7555c44042",
+      "canonical_id": "arXiv:2605.01060",
+      "arxiv_id": "2605.01060",
+      "doi": "10.48550/arXiv.2605.01060",
+      "authors": [
+        "Shashank Kapadia",
+        "Deep Naryan Mishra",
+        "Sujal Reddy Alugubelli",
+        "Ajay Kumar",
+        "Swapnil Yadav",
+        "R. Bhatia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Computing: The Key to Powering the Future of AI Agent Inference",
+      "source_url": "https://www.semanticscholar.org/paper/90b9c57465331def4df61ad399866325cf12e342",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:90b9c57465331def4df61ad399866325cf12e342"
+      ],
+      "semantic_scholar_id": "90b9c57465331def4df61ad399866325cf12e342",
+      "canonical_id": "SemanticScholar:90b9c57465331def4df61ad399866325cf12e342",
+      "authors": [
+        "Aaron Zhao",
+        "Jun-Yi Liu",
+        "M. Research",
+        "Timothy M. Jones",
+        "Robert D. Mullins"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.01060",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.01060",
+        "id:SemanticScholar:62e1d581e14a9af3e26d57488f910a7555c44042",
+        "id:arXiv:2605.01060",
+        "title:surge superbatch unified resourceefficient gpu encoding for heterogeneous partitioned data",
+        "url:https://arxiv.org/abs/2605.01060"
+      ],
+      "record": {
+        "title": "SURGE: SuperBatch Unified Resource-efficient GPU Encoding for Heterogeneous Partitioned Data",
+        "source_url": "https://arxiv.org/abs/2605.01060",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present SURGE, a streaming GPU encoding system deployed in production to generate embeddings for over 800 million texts across 40,000 logical partitions. Production embedding pipelines face a tension between logical data partitioning and efficient GPU utilization: processing each partition independently incurs $P$ inter-process communication (IPC) calls whose overhead limits throughput for compute-light models. Our contributions are analytical: (i) a cost model (Theorem 1) predicting throughput within 2% across three encoders spanning a 15$\\times$ parameter range; (ii) a memory-safety bound (Lemma 3) enabling a streaming two-threshold policy with peak memory $O(B_{\\min} + n_{\\max})$ rather than $O(N)$; and (iii) a $\\phi$/CV decision framework characterizing when the pattern applies beyond our workload. The naive fix of batching at fixed size requires $O(N)$ peak memory (32.7 GB at 10M texts; infeasible beyond ~60M on 192 GB nodes), produces no output until all encoding completes, and offers no fault tolerance. SURGE achieves the same throughput with $O(B_{\\min} + n_{\\max})$ bounded memory (2.6 GB), 68$\\times$ faster time-to-first-output, and crash recovery at SuperBatch granularity. On 10M texts with 4 NVIDIA L4 GPUs, SURGE delivers 26,413 texts/s -- matching fixed-batch throughput while using 12.6$\\times$ less memory. We validate on bge-base (109M, $d$=768, error 1.3%) and across log-normal $\\sigma$ in {1.0, 1.72, 2.5} (speedup invariant within $\\pm$3%), and compare against a partition-batched baseline (PB-PBP-LB), against which SURGE retains a 7% throughput edge and 2.5$\\times$ faster TTFO. Complementary engineering -- zero-copy Arrow serialization (22-25$\\times$ speedup) and async I/O pipelining (up to 93% benefit) -- realizes the design but is not the contribution.",
+        "identifiers": [
+          "SemanticScholar:62e1d581e14a9af3e26d57488f910a7555c44042"
+        ],
+        "semantic_scholar_id": "62e1d581e14a9af3e26d57488f910a7555c44042",
+        "canonical_id": "arXiv:2605.01060",
+        "arxiv_id": "2605.01060",
+        "doi": "10.48550/arXiv.2605.01060",
+        "authors": [
+          "Shashank Kapadia",
+          "Deep Naryan Mishra",
+          "Sujal Reddy Alugubelli",
+          "Ajay Kumar",
+          "Swapnil Yadav",
+          "R. Bhatia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 207,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:90b9c57465331def4df61ad399866325cf12e342",
+      "identity_tokens": [
+        "id:SemanticScholar:90b9c57465331def4df61ad399866325cf12e342",
+        "title:computing the key to powering the future of ai agent inference",
+        "url:https://www.semanticscholar.org/paper/90b9c57465331def4df61ad399866325cf12e342"
+      ],
+      "record": {
+        "title": "Computing: The Key to Powering the Future of AI Agent Inference",
+        "source_url": "https://www.semanticscholar.org/paper/90b9c57465331def4df61ad399866325cf12e342",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:90b9c57465331def4df61ad399866325cf12e342"
+        ],
+        "semantic_scholar_id": "90b9c57465331def4df61ad399866325cf12e342",
+        "canonical_id": "SemanticScholar:90b9c57465331def4df61ad399866325cf12e342",
+        "authors": [
+          "Aaron Zhao",
+          "Jun-Yi Liu",
+          "M. Research",
+          "Timothy M. Jones",
+          "Robert D. Mullins"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5de71dbe3d24f50ac03b0ea232d8095598ea6e77cb29e1e470283b50ba00c2fe",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
