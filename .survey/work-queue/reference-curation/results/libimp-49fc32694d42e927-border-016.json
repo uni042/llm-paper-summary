@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-49fc32694d42e927-border-016",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2210.16643",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2210.16643",
+    "identity_tokens": [
+      "arXiv:2210.16643"
+    ],
+    "reason": "キー・クエリ積の性質から線形時間の注意を構築し音声認識で精度を改善するXNOR-Formerだが、対象は音声Transformerの効率化でありLLM推論への直接の適用は示されていない。",
+    "first_checked_at": "2026-11-24T10:53:59+00:00",
+    "last_checked_at": "2026-11-24T10:53:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "XNOR-FORMER: Learning Accurate Approximations in Long Speech Transformers"
+  },
+  "processed_at": "2026-11-24T10:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-49fc32694d42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

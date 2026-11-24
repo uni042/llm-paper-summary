@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8868b67fb6c34e59-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.15894",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.15894",
+    "identity_tokens": [
+      "arXiv:2610.15894"
+    ],
+    "reason": "LLMコード修復の探索で修正候補を生成前に順位付けし改訂回数と出力トークンを削減する学習型ポリシーCodeTriageを提案するが、主対象はコード修復という応用の探索効率であり、汎用推論システムへの機構的一般性は限定的である。",
+    "first_checked_at": "2026-11-24T10:53:59+00:00",
+    "last_checked_at": "2026-11-24T10:53:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Make Every Expansion Count: Learning to Search Efficiently in LLM Code Repair"
+  },
+  "processed_at": "2026-11-24T10:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8868b67fb6c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc8b87081c38936b-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.29493",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.29493",
+    "identity_tokens": [
+      "arXiv:2603.29493"
+    ],
+    "reason": "MemFactoryはメモリ拡張エージェントの抽出・更新・検索パイプラインを統一する学習・推論フレームワークだが、主眼はモジュール化と開発基盤の提供にあり、推論効率そのものへの機構的貢献は要旨では拡散している。",
+    "first_checked_at": "2026-11-24T10:54:00+00:00",
+    "last_checked_at": "2026-11-24T10:54:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemFactory: Unified Inference & Training Framework for Agent Memory"
+  },
+  "processed_at": "2026-11-24T10:54:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc8b87081c38",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

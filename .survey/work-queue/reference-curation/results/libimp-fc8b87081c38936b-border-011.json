@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc8b87081c38936b-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.19771",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.19771",
+    "identity_tokens": [
+      "arXiv:2604.19771"
+    ],
+    "reason": "CognisはBM25とベクトル検索をRRFで融合する会話エージェント向けメモリ・アーキテクチャで本番運用されるが、評価の主軸はLoCoMo等の回答精度であり、推論効率への貢献は検索パイプラインの副次的なものにとどまる。",
+    "first_checked_at": "2026-11-24T10:54:00+00:00",
+    "last_checked_at": "2026-11-24T10:54:00+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cognis: Context-Aware Memory for Conversational AI Agents"
+  },
+  "processed_at": "2026-11-24T10:54:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc8b87081c38",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

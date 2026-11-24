@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-656264322e6285e3-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c82faf9d9b470588d63c13dc82ee57ebf0cb3357",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c82faf9d9b470588d63c13dc82ee57ebf0cb3357",
+    "identity_tokens": [
+      "SemanticScholar:c82faf9d9b470588d63c13dc82ee57ebf0cb3357"
+    ],
+    "reason": "拡散LLMにおけるコミットメント順序（Answer First, Reason Later）を扱うと題するが、Crossref・出版社経路で一次要旨を取得できず、拡散デコード効率への具体的な貢献を検証できていない。",
+    "first_checked_at": "2026-11-24T10:53:59+00:00",
+    "last_checked_at": "2026-11-24T10:53:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A NSWER F IRST , R EASON L ATER : C OMMITMENT O RDER IN D IFFUSION LLM S"
+  },
+  "processed_at": "2026-11-24T10:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-656264322e62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

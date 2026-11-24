@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-656264322e6285e3-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.05152",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.05152",
+    "identity_tokens": [
+      "arXiv:2602.05152"
+    ],
+    "reason": "検索拡張生成でクエリ時適応の成果を検索索引側へ永続化するEvolving Retrieval Memoryを提案し推論時コストの繰り返し回避をうたうが、主貢献は検索品質と索引更新でありLLM推論システムへの効率貢献は間接的である。",
+    "first_checked_at": "2026-11-24T10:53:59+00:00",
+    "last_checked_at": "2026-11-24T10:53:59+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RAG without Forgetting: Continual Query-Infused Key Memory"
+  },
+  "processed_at": "2026-11-24T10:53:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-656264322e62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
