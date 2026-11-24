@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "936ae52438f86976fada3fbad353a40052004a11",
+  "base_commit": "677246dc0f9f1df5f8cf5e311dbdfe4f775feb79",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -103,6 +103,7 @@
     "0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.json",
     "1802.05799-horovod.json",
     "2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.json",
+    "2021-2105.04779-el-attention-memory-efficient-lossless-attention-for-generation.json",
     "2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-and-far-field-attention.json",
     "2021-2108.09193-smart-bird-learnable-sparse-attention-for-efficient-and-effective-transformer.json",
     "2021-2111.09714-you-only-sample-almost-once-linear-cost-self-attention-via-bernoulli-sampling.json",
@@ -143,6 +144,7 @@
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheaper-and-faster-completion-through-dynamic-model-i.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
+    "2024-2402.03480-trillion-parameter-ai-serving-infrastructure-for-scientific-discovery-a-survey-and-vision.json",
     "2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformers.json",
     "2024-2402.09773-nuteprune-efficient-progressive-pruning-with-numerous-teachers-for-large-language-models.json",
     "2024-2402.14808-relayattention-for-efficient-large-language-model-serving-with-long-system-prompts.json",
@@ -155,6 +157,8 @@
     "2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi-independent-layers.json",
     "2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.json",
     "2024-2404.16158-the-feasibility-of-implementing-large-scale-transformers-on-multi-fpga-platforms.json",
+    "2024-2405.00738-hlstransform-energy-efficient-llama-2-inference-on-fpgas-via-high-level-synthesis.json",
+    "2024-2405.00888-dynamo-accelerating-language-model-inference-with-dynamic-multi-token-sampling.json",
     "2024-2405.05525-ditto-quantization-aware-secure-inference-of-transformers-upon-mpc.json",
     "2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-method-for-llms.json",
     "2024-2405.15346-bisup-bidirectional-quantization-error-suppression-for-large-language-models.json",
@@ -205,6 +209,7 @@
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.07066-zeroth-order-adaptive-neuron-alignment-based-pruning-without-re-training.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
+    "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json",
     "2024-2411.14345-layer-pruning-with-consensus-a-triple-win-solution.json",
     "2024-2411.17847-softmap-software-hardware-co-design-for-integer-only-softmax-on-associative-processors.json",
     "2024-2411.18148-a-runtime-adaptive-transformer-neural-network-accelerator-on-fpgas.json",
@@ -52329,6 +52334,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2105.04779": {
+      "order": [
+        "2026-11-24T01:49:20+00:00",
+        "2021-2105.04779-el-attention-memory-efficient-lossless-attention-for-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2402.03480": {
+      "order": [
+        "2026-11-24T01:50:53+00:00",
+        "2024-2402.03480-trillion-parameter-ai-serving-infrastructure-for-scientific-discovery-a-survey-and-vision.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.00738": {
+      "order": [
+        "2026-11-24T01:52:26+00:00",
+        "2024-2405.00738-hlstransform-energy-efficient-llama-2-inference-on-fpgas-via-high-level-synthesis.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2405.00888": {
+      "order": [
+        "2026-11-24T01:53:59+00:00",
+        "2024-2405.00888-dynamo-accelerating-language-model-inference-with-dynamic-multi-token-sampling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2411.12992": {
+      "order": [
+        "2026-11-24T01:55:33+00:00",
+        "2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connected-layers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66282,6 +66332,21 @@
     "arxiv:2601.21684": [
       "papers/inference/99-other-inference-systems/2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-tes.md",
       "papers/inference/99-other-inference-systems/2026-2601.21684-do-not-waste-your-rollouts-recycling-search-experience-for-efficient-tes.md"
+    ],
+    "arxiv:2105.04779": [
+      "papers/inference/99-other-inference-systems/2021-2105.04779-el-attention-memory-efficient-lossless-attention-for-generation.md"
+    ],
+    "arxiv:2402.03480": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.03480-trillion-parameter-ai-serving-infrastructure-for-scientific-discovery-a-.md"
+    ],
+    "arxiv:2405.00738": [
+      "papers/inference/99-other-inference-systems/2024-2405.00738-hlstransform-energy-efficient-llama-2-inference-on-fpgas-via-high-level-.md"
+    ],
+    "arxiv:2405.00888": [
+      "papers/inference/99-other-inference-systems/2024-2405.00888-dynamo-accelerating-language-model-inference-with-dynamic-multi-token-sa.md"
+    ],
+    "arxiv:2411.12992": [
+      "papers/inference/99-other-inference-systems/2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connecte.md"
     ]
   }
 }

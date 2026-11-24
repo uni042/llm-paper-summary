@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（631本）
+## 自動生成の論文一覧（632本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -2445,6 +2445,10 @@
 - **2024-03 · [SEVEN: Pruning Transformer Model by Reserving Sentinels](2024-2403.12688-seven-pruning-transformer-model-by-reserving-sentinels.md)**  
   実装：[✓](https://github.com/xiaojinying/SEVEN) ・ リポジトリ内被引用：0  
   勾配ノイズに惑わされず一貫して感度が高い重みを見張りとして残すTransformer向け非構造化枝刈りで、学習前と学習中の二形式を持ち、CLIPとBERTの多課題で疎さが高いほど先行手法との差が広がることを示した研究。
+
+- **2024-02 · [Trillion Parameter AI Serving Infrastructure for Scientific Discovery: A Survey and Vision](2024-2402.03480-trillion-parameter-ai-serving-infrastructure-for-scientific-discovery-a-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  1兆パラメータ級モデルを科学研究へ提供する基盤について、答えだけではない埋め込みや中間表現へのアクセスを含む三つの推論形態と八つの課題群を整理し、柔軟さと効率を両立する基盤への投資を提言する調査と将来像。
 
 - **2023-12 · [Linear Attention via Orthogonal Memory](2023-2312.11135-linear-attention-via-orthogonal-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

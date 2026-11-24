@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1429本）
+## 自動生成の論文一覧（1433本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -5082,6 +5082,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   KVキャッシュの冗長度が最も増えないベクトルを貪欲に選んで代表だけを残す学習不要の圧縮で、文脈窓を3倍へ広げてもパスキー検索100パーセントを保ち、微調整済み長文脈モデルを実課題で上回る。
 
+- **2024-11 · [MemoryFormer: Minimize Transformer Computation by Removing Fully-Connected Layers](2024-2411.12992-memoryformer-minimize-transformer-computation-by-removing-fully-connecte.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全結合層を行列積からハッシュ表検索へ置き換えて注意以外の計算をほぼ消し、ブロック計算を約19パーセントまで減らしながらPythia同規模の平均正解率を上回る。
+
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案は、共通の基盤重みを残したまま、出口ごとに独立した低階数適応器（Low-Rank Adaptation; LoRA）を配置する方式である。
@@ -5246,6 +5250,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   テンソル並列の全分割戦略を記号探索してパレート最適な3方式を残し、入力長とGPU特性の閾値で実行時に切り替える動的分割で、L4上のLlama 2で初回トークンまでの時間を最大40パーセント、遅延を最大18パーセント削減する修士論文。
 
+- **2024-05 · [DynaMo: Accelerating Language Model Inference with Dynamic Multi-Token Sampling](2024-2405.00888-dynamo-accelerating-language-model-inference-with-dynamic-multi-token-sa.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存モデルの重みを流用した軽い学習で複数トークンを同時予測し、共起重みマスキングと適応的閾値で同時分布を整え信頼度に応じて出す個数を動的に変えるDynaMoで、同等品質のまま2.57倍の生成高速化を得る。
+
 - **2024-05 · [Distributed Inference Performance Optimization for LLMs on CPUs](2024-2407.00029-distributed-inference-performance-optimization-for-llms-on-cpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPUだけの分散推論で、トークンIDのブロードキャスト、層あたり1回の同期、計算と通信の間のゼロコピーの三つにより通信を削り、Xeon 4台で72Bモデルをトークンあたり140ミリ秒で生成する実践報告。
@@ -5257,6 +5265,10 @@
 - **2024-04 · [LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory](2024-2404.11163-longvq-long-sequence-modeling-with-vector-quantization-on-structured-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LongVQは、SSMの構造化長期記憶とベクトル量子化されたKeyによる固定長の注意を組み合わせ、系列長に対して線形時間で動作するハイブリッドモデルである。
+
+- **2024-04 · [HLSTransform: Energy-Efficient Llama 2 Inference on FPGAs Via High Level Synthesis](2024-2405.00738-hlstransform-energy-efficient-llama-2-inference-on-fpgas-via-high-level-.md)**  
+  実装：[✓](https://github.com/HLSTransform/submission) ・ リポジトリ内被引用：0  
+  Llama 2系の小規模モデルを高位合成と8ビット量子化でFPGAへ実装し、トークンあたりエネルギーをCPU比12.75分の1、GPU比8.25分の1へ下げながら、CPUの2.46倍の速度を保った省電力推論の実証。
 
 - **2024-04 · [CQIL: Inference Latency Optimization with Concurrent Computation of Quasi-Independent Layers](2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi.md)**  
   実装：[✓](https://github.com/Photooon/CQIL) ・ リポジトリ内被引用：0  
@@ -5635,6 +5647,10 @@
 - **2021-08 · [FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention](2021-2108.02347-fmmformer-efficient-and-flexible-transformer-via-decomposed-near-field-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意を帯行列で厳密に計算する近傍成分と、複数特徴写像の低ランク近似で表す遠方成分へ分け、線形の時間とメモリを保ったまま長距離課題五件の平均正解率で標準の変換器を上回った。
+
+- **2021-05 · [EL-Attention: Memory Efficient Lossless Attention for Generation](2021-2105.04779-el-attention-memory-efficient-lossless-attention-for-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  クエリだけを広げキーとバリューは隠れ状態を共有してマルチヘッド注意と同一結果を返す無損失注意で、保存量を96分の1へ減らし生成を最大5.3倍速くする。
 
 - **2021-04 · [TPrune](2021-a15e1294d14f-tprune.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
