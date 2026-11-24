@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（123本）
+## 自動生成の論文一覧（124本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -225,6 +225,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。
+
+- **2026-07 · [Learning to Compress: Energy-Aware Large Language Model Serving via Adaptive KV Caching](2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adapt.md)**  
+  実装：[✓](https://github.com/cybsbbb/LLM_energy_optimization_rl) ・ リポジトリ内被引用：0  
+  電力価格と負荷を見てKVキャッシュの圧縮率を10秒ごとに強化学習で切り替えるサービング制御で、シミュレーション上、無圧縮よりエネルギーを約20パーセント減らしつつ成功率97パーセントと品質を大きく保つ。
 
 - **2026-07 · [ELiTeFormer: An Efficient Transformer for FPGAs](2026-2607.03652-eliteformer-an-efficient-transformer-for-fpgas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

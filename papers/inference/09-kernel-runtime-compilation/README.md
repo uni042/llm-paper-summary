@@ -56,17 +56,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：8  
   実LLM serving由来のGPUカーネル課題を統一トレースで検証し、エージェント生成カーネルをSGLang/vLLMへ低オーバーヘッドで動的適用する閉ループ基盤。
 
-- **2026-06 · [FOCUS: DLLMs Know How to Tame Their Compute Bound](2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md)**  
-  実装：[✓](https://github.com/sands-lab/FOCUS) ・ リポジトリ内被引用：4  
-  拡散型言語モデル（diffusion language モデル、DLLM）は、マスクされた複数のトークンを一つのブロックとして反復的に復元する。自己回帰型言語モデルと違い、各反復でブロック内の複数位置を同時に処理できるが、実際に確定する位置が少ないと大部分の計算は次の反復でやり直される。直近の確定数と差分の分布から保持予算を決め、上位候補を残す。
-
 - **2026-05 · [KVBuffer: IO-aware Serving for Linear Attention](2026-2605.19049-kvbuffer-io-aware-serving-for-linear-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   KVBufferは、線形注意（linear 注意機構）を使う大規模言語モデル（LLM）の推論サービングにおいて、毎トークン更新される大きな内部状態へのメモリアクセスを減らすための機構である。
 
 - **2026-02 · [On State Reduction in Linear Attention](2026-2602.04852-on-state-reduction-in-linear-attention.md)**  
-  実装：[✓](https://github.com/camail-official/LinearAttentionPruning) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/camail-official/LinearAttentionPruning) ・ リポジトリ内被引用：5  
   線形注意（linear 注意機構）は、通常のソフトマックス注意と異なり、過去のトークンを固定サイズの行列型状態へ逐次圧縮できる。Gated DeltaNet 1.3Bでは、状態次元を50%削減し回復用微調整を行った場合、WikiText-2困惑度は元モデル16.8に対しDRRQRで16.3、ゼロショット平均精度は59.4から58.0となった。
+
+- **2026-06 · [FOCUS: DLLMs Know How to Tame Their Compute Bound](2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md)**  
+  実装：[✓](https://github.com/sands-lab/FOCUS) ・ リポジトリ内被引用：4  
+  拡散型言語モデル（diffusion language モデル、DLLM）は、マスクされた複数のトークンを一つのブロックとして反復的に復元する。自己回帰型言語モデルと違い、各反復でブロック内の複数位置を同時に処理できるが、実際に確定する位置が少ないと大部分の計算は次の反復でやり直される。直近の確定数と差分の分布から保持予算を決め、上位候補を残す。
 
 - **2026-02 · [MetaAttention: A Unified and Performant Attention Framework across Hardware Backends](2026-2502.15349-metaattention-a-unified-and-performant-attention-framework-across-hardwa.md)**  
   実装：[✓](https://github.com/SJTU-IPADS/MetaAttention) ・ リポジトリ内被引用：4  
@@ -75,6 +75,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   原著は平均4トークンを1概念へ圧縮するR=4の条件を中心に、通常の1.3B Transformerと、概念段に容量を再配分した2.3B DLCMを比較した。両者の推論浮動小数点演算量（FLOPs）を近づけた条件で、12種類のゼロショット課題の平均正解率は41.23%から43.92%へ2.69ポイント改善した。
+
+- **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
 
 - **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
   実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：3  
@@ -103,10 +107,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization](2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quant.md)**  
   実装：[✓](https://github.com/leapquant/LeapQuant) ・ リポジトリ内被引用：2  
   線形注意の再帰状態を窓ごとに1回だけ量子化し、外れ値を高精度の補償トークンへ逃がす学習不要の方式で、8ビットでも精度をほぼ保ちながら状態転送を3.4倍減らしデコードを高速化した。
-
-- **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
 
 - **2026-06 · [Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models](2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md)**  
   実装：[✓](https://github.com/menik1126/Prefilling-dLLM) ・ リポジトリ内被引用：2  

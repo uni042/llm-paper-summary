@@ -326,6 +326,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：2  
   投機的 検証（SV、投機的検証） は、草稿モデルが先読み生成した複数トークンを大きな標的モデルで検証する投機的復号（投機的復号; SD）に、小さな補助モデル（companion モデル）を追加して受理確率を予測し、検証すべきトークン数を動的に選ぶ方式である。
 
+- **2026-07 · [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.md)**  
+  実装：[✓](https://github.com/NVIDIA/Model-Optimizer/tree/main/modelopt/torch/puzzletron) ・ リポジトリ内被引用：2  
+  ハイブリッドMoEのNemotron-3-Superを、圧縮と蒸留回復を繰り返すIterative Puzzleで総75.3B・活性9.3Bへ不均一に削り、サーバスループット約2倍と100万トークン同時実行8件を精度近接のまま得る圧縮報告。
+
 - **2026-07 · [A Practical Investigation of Training-free Relaxed Speculative Decoding](2026-2607.08690-a-practical-investigation-of-training-free-relaxed-speculative-decoding.md)**  
   実装：[✓](https://github.com/graphcore-research/relaxed-spec-dec-repro) ・ リポジトリ内被引用：2  
   本論文は新しい単一の投機的復号アルゴリズムを提案するのではなく、既存の緩和型投機的復号（relaxed 投機的復号）を統一的に定式化し、実際に採用すると何が起こるかを比較する研究である。これに対し緩和型は、あえて検証モデルの分布からずらして受理率を上げ、速度や能力の改善を狙う。
@@ -469,10 +473,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes](2026-2607.26627-revisiting-lossy-verification-in-speculative-decoding-mechanisms-trade-o.md)**  
   実装：[✓](https://github.com/ZhouYuxuanYX/Fast-HSD) ・ リポジトリ内被引用：1  
   投機的復号は軽量なドラフトモデルqが候補を提案し、ターゲットモデルpがまとめて検証することで、逐次生成のターゲット順伝播 pass回数を減らす。EAGLE-3を用いたLlama-3.1-8Bの比較では、η-samplingをターゲットへ正しく適用したMATH正答率76.12%に対し、typical acceptanceは69.84%だった。
-
-- **2026-07 · [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](2026-2607.04371-nemotron-labs-3-puzzle-75b-a9b-compressing-hybrid-moe-llms.md)**  
-  実装：[✓](https://github.com/NVIDIA/Model-Optimizer/tree/main/modelopt/torch/puzzletron) ・ リポジトリ内被引用：1  
-  ハイブリッドMoEのNemotron-3-Superを、圧縮と蒸留回復を繰り返すIterative Puzzleで総75.3B・活性9.3Bへ不均一に削り、サーバスループット約2倍と100万トークン同時実行8件を精度近接のまま得る圧縮報告。
 
 - **2026-07 · [Margins, Not Windows: Training-Free Per-Step Lossy Speculative Decoding](2026-2609.02897-margins-not-windows-training-free-per-step-lossy-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1735,7 +1735,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：570  
+  実装：✓ ・ リポジトリ内被引用：571  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

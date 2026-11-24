@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ce7cc22e2039a88b9dc320fd6c7cfcda23ba4aa6",
+  "base_commit": "db0841caca47a0323e452e414df1954eb44497a7",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1620,7 +1620,9 @@
     "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
     "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json",
     "2026-2611.04671-leansparse-memory-efficient-serving-for-native-sparse-attention-llms.json",
+    "2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-requests.json",
     "2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-the-drafter.json",
+    "2026-2611.06084-shallow-encoding-emits-deep-memories.json",
     "2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reduction-in-moe-serving.json",
     "2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contextual-compatibility-in-non-prefix-reuse.json",
     "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
@@ -1638,15 +1640,18 @@
     "2026-2611.10165-autoematic-runtime-adaptive-mixed-precision-llm-inference-via-automatic-exponent-mantissa-refinement.json",
     "2026-2611.10432-d-real-acceptance-length-optimization-with-unbiased-gradients-for-speculative-decoding.json",
     "2026-2611.10511-calfa-kv-joint-calibration-and-fisher-guided-anchors-for-1-bit-kv-cache-compression.json",
+    "2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-routers.json",
     "2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-experts-and-recurrent-models.json",
     "2026-2611.12356-dforktree-accelerating-speculative-decoding-with-fork-aware-block-diffusion-draft-trees.json",
     "2026-2611.13017-multi-future-drafting-mixture-block-drafters-for-tree-verified-speculative-decoding.json",
+    "2026-2611.13176-shadowprefill-keeping-your-next-model-warm-for-per-step-model-routing-in-agentic-llm-serving.json",
     "2026-2611.13412-bursts-that-outlast-themselves-persistent-degradation-in-prefix-cached-agent-serving.json",
     "2026-2611.13442-forespark-joint-draft-and-verification-budget-scheduling-for-parallel-speculative-decoding.json",
     "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
+    "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-3d4df1e5f969-leaf-a-low-latency-evaluation-architecture-for-feedforward-block-in-privacy-preserving-transformer-inference.json",
     "2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-serving-configuration-tuning.json",
     "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
@@ -54291,6 +54296,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.04794": {
+      "order": [
+        "2026-11-24T09:41:13+00:00",
+        "2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-requests.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06084": {
+      "order": [
+        "2026-11-24T09:42:00+00:00",
+        "2026-2611.06084-shallow-encoding-emits-deep-memories.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.10848": {
+      "order": [
+        "2026-11-24T09:42:47+00:00",
+        "2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-routers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.13176": {
+      "order": [
+        "2026-11-24T09:43:36+00:00",
+        "2026-2611.13176-shadowprefill-keeping-your-next-model-warm-for-per-step-model-routing-in-agentic-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/PESGM58988.2026.11693290": {
+      "order": [
+        "2026-11-24T09:44:27+00:00",
+        "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69024,6 +69074,21 @@
     "arxiv:2611.02278": [
       "papers/inference/99-other-inference-systems/2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md",
       "papers/inference/99-other-inference-systems/2026-2611.02278-concise-9b-removing-the-slack-from-a-reasoning-model-s-thinking.md"
+    ],
+    "arxiv:2611.04794": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-r.md"
+    ],
+    "arxiv:2611.06084": [
+      "papers/inference/99-other-inference-systems/2026-2611.06084-shallow-encoding-emits-deep-memories.md"
+    ],
+    "arxiv:2611.10848": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-rou.md"
+    ],
+    "arxiv:2611.13176": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2611.13176-shadowprefill-keeping-your-next-model-warm-for-per-step-model-routing-in.md"
+    ],
+    "doi:10.1109/pesgm58988.2026.11693290": [
+      "papers/inference/15-inference-simulation-emulation/2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adapt.md"
     ]
   }
 }

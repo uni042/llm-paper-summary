@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（146本）
+## 自動生成の論文一覧（147本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -136,6 +136,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   退避した重みの読み方を元形式・圧縮近似・省略の三段階に分け、活性値の大きさで割り当てることで、間引きの品質急落を避けながら生成を最大5.57倍高速化した手法。
 
+- **2026-09 · [SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC](2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エキスパート単位のSSD直接読出し、SSD・RAM・VRAM三階層キャッシュ、CPU・GPU実行分担を統合し、巨大MoEを一般消費者向けPCで高速に実行する。
+
 - **2026-09 · [SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading](2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   専門家活性化の系列予測、期限付きプリフェッチ、将来予測キャッシュ、CUDA Graph互換実行を統合し、MoEオフロードの転送待ちと実行時オーバーヘッドを同時に削減する。
@@ -174,6 +178,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [Accelerating Offloading-Based MoE Inference by Interleaving Concurrent Requests](2026-2611.04794-accelerating-offloading-based-moe-inference-by-interleaving-concurrent-r.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  予測で先読みせず、揃ったリクエストだけを先の層へ進めて本当の不足エキスパートを早く明かし読み込みと計算を重ねるBevyで、llama.cppの最大3.46倍、最速の先読み方式の最大1.55倍のデコードスループットを得る。
+
 - **2026-10 · [Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs](2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-languag.md)**  
   実装：[✓](https://github.com/balkeumlabs/LLM-on-CPU) ・ リポジトリ内被引用：0  
   消費者向け機械の画像処理装置では容量不足で載らない270億パラメータ級の臨床向けモデルを、システムメモリへ4ビット量子化で常駐させることで中央処理装置だけで動かせることを、機械2台の実測で示し、その速度と電力と連合通信量の代償を正直に測った研究。
@@ -181,10 +189,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   学習済み事前ルータの予測を実ルーティングとして一トークン先行させ、SSD上のMoE重みを計算と重ねて配送し、35B級を約3GiBで動かす。
-
-- **2026-09 · [SSD-LLaMA: SSD-Native Inference for Trillion-Parameter MoE at 1+ Token/s on a Consumer PC](2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  エキスパート単位のSSD直接読出し、SSD・RAM・VRAM三階層キャッシュ、CPU・GPU実行分担を統合し、巨大MoEを一般消費者向けPCで高速に実行する。
 
 - **2026-09 · [PATTON: Enabling Commodity PIM for Production LLM Serving](2026-2609.11392-patton-commodity-pim-production-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -511,11 +515,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：105  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：106  
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
-  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：94  
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  

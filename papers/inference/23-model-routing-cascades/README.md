@@ -50,18 +50,18 @@
 
 ### 2年前（2024-12〜2025-11）
 
+- **2025-08 · [Cost-Aware Contrastive Routing for LLMs](2025-2508.12491-cost-aware-contrastive-routing-for-llms.md)**  
+  実装：[✓](https://github.com/rezashkv/cscr) ・ リポジトリ内被引用：4  
+  CSCR（コスト-Spectrum Contrastive Router）は、質問の特徴と候補モデルの能力を同じベクトル空間へ配置し、正答できるモデルを費用帯ごとに区別する対照学習を行うことで、この選択を軽い近傍検索へ置き換える。
+
 - **2025-07 · [R-Stitch: Dynamic Trajectory Stitching for Efficient Reasoning](2025-2507.17307-r-stitch-dynamic-trajectory-stitching-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   R-Stitchは、長い思考過程（Chain-of-Thought、CoT）を生成する際、小型言語モデル（SLM）が確信を持って生成できる部分は小型側に任せ、難しいトークンだけ大型言語モデル（LLM）へ移す方式である。
 
-- **2025-08 · [Cost-Aware Contrastive Routing for LLMs](2025-2508.12491-cost-aware-contrastive-routing-for-llms.md)**  
-  実装：[✓](https://github.com/rezashkv/cscr) ・ リポジトリ内被引用：3  
-  CSCR（コスト-Spectrum Contrastive Router）は、質問の特徴と候補モデルの能力を同じベクトル空間へ配置し、正答できるモデルを費用帯ごとに区別する対照学習を行うことで、この選択を軽い近傍検索へ置き換える。
-
 ### 3年前（2023-12〜2024-11）
 
 - **2024-04 · [Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing](2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md)**  
-  実装：[✓](https://github.com/m365-core/hybrid_llm_routing) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/m365-core/hybrid_llm_routing) ・ リポジトリ内被引用：87  
   同じ大規模言語モデル（LLM）を全要求へ使うと、単純な質問にも高価な推論計算を割り当てる。小型Llama-2 7B／大型Llama-2 13Bの組合せでは、検証集合で品質低下を1%以下にするしきい値を選んだ確率的ルータが、テスト集合で96.80%の要求を小型へ送ったが、品質低下は1.42%となった。
 
 - **2024-02 · [Large Language Model Cascades with Mixture of Thought Representations for Cost-efficient Reasoning](2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md)**  

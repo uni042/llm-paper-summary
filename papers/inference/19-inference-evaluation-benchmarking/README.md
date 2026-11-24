@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（251本）
+## 自動生成の論文一覧（253本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -76,6 +76,10 @@
   実装：[✓](https://github.com/Bl1nding/SABER) ・ リポジトリ内被引用：1  
   推論の途中で「前の推論は間違い」と揺さぶる短い分岐を伸ばし、答えが揺らがなければ収束したとみなして早期終了する方式で、推論トークンを3から4割削りながら正解率を保った。
 
+- **2026-08 · [LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers](2026-2608.06867-llmrouter-unified-infrastructure-for-developing-evaluating-and-deploying.md)**  
+  実装：[✓](https://github.com/ulab-uiuc/LLMRouter) ・ リポジトリ内被引用：1  
+  LLMルーティングを5部品の逐次意思決定として統一し、18モデルを全クエリへ流して教師を作る評価基盤xRouteBenchと16種以上のルータ実装で、固定モデルより相対14.6パーセント良いルーティングと予算による順位逆転を示す基盤論文。
+
 - **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   復号済みトークンを候補と確定へ分け、候補を信頼度の高い文脈だけで検証して検証文脈の汚染を断つ取消可能復号で、Saber比2.71倍の高速化と品質改善を両立した。
@@ -146,6 +150,10 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [SHADOWPREFILL: Keeping Your Next Model Warm for Per-Step Model Routing in Agentic LLM Serving](2026-2611.13176-shadowprefill-keeping-your-next-model-warm-for-per-step-model-routing-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデル切り替えで失われるプリフィックス再利用を、選ばれていないモデルの余裕容量で文脈を影プリフィルして先回りすることで回復する方式。切り替え遅延を最大21.4パーセント、トークン費用を最大46.1パーセント削減する。
+
 - **2026-11 · [SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving](2026-2611.06147-safestart-mitigating-the-overlooked-safety-cost-of-active-expert-reducti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパート削減によるMoE高速化が精度をほぼ保ったまま拒否だけを弱めることを実測で示し、原因が応答の冒頭にあることを特定して、冒頭だけ全エキスパートで計算するSafeStartで高速化の大半と拒否の両方を保つ対策を与えた研究。
@@ -153,6 +161,10 @@
 - **2026-11 · [R^2-Omni: Reducing Structural and Precision Redundancy in Omni-LLMs for Long-Form Generation](2026-2611.03247-r-2-omni-reducing-structural-and-precision-redundancy-in-omni-llms-for-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   質問への注意ではなく時空間類似と局所連続性でマルチモーダルトークンを統合し、残したKVキャッシュの値の精度を注意出力誤差と音声映像の整合で配分することで、長文生成の品質を保ちながらメモリを約5倍削減する手法。
+
+- **2026-11 · [MultiTurnRoute: A Platform for Building and Evaluating Multi-Turn LLM Routers](2026-2611.10848-multiturnroute-a-platform-for-building-and-evaluating-multi-turn-llm-rou.md)**  
+  実装：[✓](https://github.com/loopleap-lab/MultiTurnRoute) ・ リポジトリ内被引用：0  
+  複数ターン会話向けに、対話状態と各モデルのキャッシュ済みプレフィックスをルーターへ渡す基盤と評価Arenaを構築し、ゲート付き対話状態とキャッシュ割引で品質と費用を別々に見積もるルーターが最強モデルの品質に届く費用を最大20.3パーセント削減する。
 
 - **2026-11 · [Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads](2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b2.md)**  
   実装：[✓](https://github.com/MohsenZand/GPUBenchmarking) ・ リポジトリ内被引用：0  
@@ -381,10 +393,6 @@
 - **2026-08 · [LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression](2026-2608.26389-lowrankarena-a-standardized-evaluation-platform-for-svd-based-llm-compre.md)**  
   実装：[✓](https://github.com/Zishan-Shao/lowrankarena) ・ リポジトリ内被引用：0  
   特異値分解（Singular Value Decomposition; SVD）を使う低ランク圧縮は、重み行列を二つの小さな行列の積に分解し、保存するパラメータと演算量を減らす。
-
-- **2026-08 · [LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers](2026-2608.06867-llmrouter-unified-infrastructure-for-developing-evaluating-and-deploying.md)**  
-  実装：[✓](https://github.com/ulab-uiuc/LLMRouter) ・ リポジトリ内被引用：0  
-  LLMルーティングを5部品の逐次意思決定として統一し、18モデルを全クエリへ流して教師を作る評価基盤xRouteBenchと16種以上のルータ実装で、固定モデルより相対14.6パーセント良いルーティングと予算による順位逆転を示す基盤論文。
 
 - **2026-08 · [Launch-Bound and Substitutable: Why Three Inference Optimizations Fail to Pay Off in Mixture-of-Experts Models](2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
