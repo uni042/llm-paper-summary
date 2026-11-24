@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（40本）
+## 自動生成の論文一覧（41本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -164,6 +164,10 @@
 - **2025-08 · [Accelerating 1-Bit LLMs Via in-Memory Computing Architectures](2025-2504.01994-accelerating-1-bit-llms-via-in-memory-computing-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   1ビット言語モデルの射影層をアナログインメモリ計算へ、注意ヘッドをデジタルシストリックアレイへ割り当てる混成加速器で、文脈長128のOPT 6.7Bで毎秒トークン79.2倍を記録する一方、エネルギー効率は長文脈と大規模モデルでのみ逆転することを示す研究。
+
+- **2025-11 · [Towards Floating Point-Based AI Acceleration: Hybrid PIM with Non-Uniform Data Format and Reduced Multiplications](2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform.md)**  
+  実装：[✓](https://github.com/gld17/PN) ・ リポジトリ内被引用：0  
+  演算の量子化感度に応じてデータ形式を使い分けるハイブリッドPIMの提案。MVMにはRRAMクロスバのシフト加算を保つ非一様形式PN、要素積と深さ方向畳み込みには対数近似で乗算を加算へ変える近似FP乗算を3D-SRAMで実行し、FP並み精度でGPU比最大99.4倍の高速化と5697.7倍の効率改善を示した研究。
 
 - **2025-03 · [MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration](2025-2503.23817-mvdram-enabling-gemv-execution-in-unmodified-dram-for-low-bit-llm-accele.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "63ab8433186f72d21d1dc52d057104f16ee501f3",
+  "base_commit": "7ad55577a6d01987fad237e7736b22a0795b2f72",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -286,6 +286,7 @@
     "2025-2503.00245-cosmoes-compact-sparse-mixture-of-experts.json",
     "2025-2503.01253-nm-spmm-accelerating-matrix-multiplication-using-n-m-sparsity-with-gpgpu.json",
     "2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-llm-inference-algorithms-and-numerical-analysis.json",
+    "2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.json",
     "2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-all-you-need-for-mha.json",
     "2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.json",
     "2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-event-gated-cognition.json",
@@ -303,6 +304,7 @@
     "2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.json",
     "2025-2504.02118-llmpi-optimizing-llms-for-high-throughput-on-raspberry-pi.json",
     "2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algorithm.json",
+    "2025-2504.03775-flowkv-low-latency-transfer-load-aware.json",
     "2025-2504.04024-window-token-concatenation-for-efficient-visual-large-language-models.json",
     "2025-2504.05352-achieving-binary-weight-and-activation-for-llms-using-post-training-quantization.json",
     "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
@@ -470,6 +472,7 @@
     "2025-2512.06727-kv-car-kv-cache-compression-using-autoencoders-and-kv-reuse-in-large-language-models.json",
     "2025-2512.06869-role-aware-heuristic-episodic-attention-for-conversational-llms.json",
     "2025-2512.06989-flash-multi-head-feed-forward-network.json",
+    "2025-2512.07855-lapa-log-domain-prediction-driven-dynamic-sparsity-accelerator-for-transformer-model.json",
     "2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-energy-debugging.json",
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
     "2025-2512.09927-token-expand-merge-training-free-token-compression-for-vision-language-action-models.json",
@@ -491,11 +494,13 @@
     "2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-model-inference.json",
     "2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-resource-constrained-gpus.json",
     "2025-2512.21309-a-plan-reuse-mechanism-for-llm-driven-agent.json",
+    "2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.json",
     "2025-2512.23029-viability-and-performance-of-a-private-llm-server-for-smbs-a-benchmark-analysis-of-qwen3-30b-on-consumer-grade-hardware.json",
     "2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.json",
     "2025-2601.14260-end-to-end-transformer-acceleration-through-processing-in-memory-architectures.json",
     "2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.json",
     "2025-3b8e234e37c9-hape-hardware-aware-llm-pruning-for-efficient-on-device-inference-optimization.json",
+    "2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform-data-format-and-reduced-multiplications.json",
     "2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.json",
     "2025-61ee18f9ab39-accelerating-1-bit-llms-via-in-memory-computing-architectures.json",
     "2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.json",
@@ -15287,8 +15292,8 @@
     },
     "arXiv:2503.03777": {
       "order": [
-        "2026-10-19T04:49:58+00:00",
-        "libfile_a8c8bd309cec8191b83b77c57c1c2c90--2025-2503.03777-flexinfer-async-offload-quality-repair-20261019-1245-scheduled-chat-45-r01.json"
+        "2026-11-24T04:10:22+00:00",
+        "2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.json"
       ],
       "status": "already_represented",
       "result": null,
@@ -30597,8 +30602,8 @@
     },
     "arXiv:2504.03775": {
       "order": [
-        "2026-10-27T16:37:42+00:00",
-        "libfile_8378332b63988191afda95bd8735a8ea--2025-2504.03775-flowkv-standard-evaluation-repair-20261028-0001-scheduled-chat-00-r01.json"
+        "2026-11-24T04:10:49+00:00",
+        "2025-2504.03775-flowkv-low-latency-transfer-load-aware.json"
       ],
       "status": "already_represented",
       "result": null,
@@ -52959,6 +52964,33 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2512.07855": {
+      "order": [
+        "2026-11-24T04:11:41+00:00",
+        "2025-2512.07855-lapa-log-domain-prediction-driven-dynamic-sparsity-accelerator-for-transformer-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2512.22925": {
+      "order": [
+        "2026-11-24T04:12:34+00:00",
+        "2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3769304": {
+      "order": [
+        "2026-11-24T04:13:25+00:00",
+        "2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform-data-format-and-reduced-multiplications.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67160,6 +67192,15 @@
     "arxiv:2511.19438": [
       "papers/inference/09-kernel-runtime-compilation/2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-l.md",
       "papers/inference/09-kernel-runtime-compilation/2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-l.md"
+    ],
+    "arxiv:2512.07855": [
+      "papers/inference/99-other-inference-systems/2025-2512.07855-lapa-log-domain-prediction-driven-dynamic-sparsity-accelerator-for-trans.md"
+    ],
+    "arxiv:2512.22925": [
+      "papers/inference/15-inference-simulation-emulation/2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.md"
+    ],
+    "doi:10.1145/3769304": [
+      "papers/inference/17-pim-near-data-acceleration/2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform.md"
     ]
   }
 }

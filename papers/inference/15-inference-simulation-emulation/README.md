@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（117本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -321,6 +321,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-12 · [DCO: Dynamic Cache Orchestration for LLM Accelerators through Predictive Management](2025-2512.07312-dco-dynamic-cache-orchestration-for-llm-accelerators-through-predictive-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DCOは、複数の人工知能演算コアが共有する最終段キャッシュ（last-level キャッシュ、LLC）を、単なる過去のアクセス時刻ではなく、演算グラフから分かるテンソルの参照予定回数とデータフローに従って管理する提案である。論文v2のHTML本文は従来LRUに対する最大1.90倍の速度向上を記す。
+
+- **2025-12 · [Argus: Token Aware Distributed LLM Inference Optimization](2025-2512.22925-argus-token-aware-distributed-llm-inference-optimization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生成前に出力トークン長を予測するLASと、リアプノフ最適化で長期QoEを解くオフロード決定IODCCを組み合わせ、エッジ・クラウド間のリクエスト振り分けを自己回帰生成の時間ばらつきに適応させるArgusを提案し、実トレースのシミュレーションで比較手法を上回る。
 
 ### 2年前（2024-12〜2025-11）
 

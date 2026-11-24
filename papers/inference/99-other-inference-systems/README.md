@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1465本）
+## 自動生成の論文一覧（1466本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4063,6 +4063,10 @@
 - **2025-11 · [Mosaic Pruning: A Hierarchical Framework for Generalizable Pruning of Mixture-of-Experts Models](2025-2511.19822-mosaic-pruning-a-hierarchical-framework-for-generalizable-pruning-of-mix.md)**  
   実装：[✓](https://github.com/Saul-James/MoP) ・ リポジトリ内被引用：0  
   専門家の機能的な似通いを領域横断の働き方でクラスタリングし、各群から最も代表的な専門家を残すことで、単一コーパス最適化の枝刈りが起こす専門領域での崩壊を避けるMoE枝刈り。
+
+- **2025-11 · [LAPA: Log-Domain Prediction-Driven Dynamic Sparsity Accelerator for Transformer Model](2025-2512.07855-lapa-log-domain-prediction-driven-dynamic-sparsity-accelerator-for-trans.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  QKV生成と注意の両段階へ動的スパース化を広げるクロスステージスパース化を、片側だけ対数変換するALOC、多ラウンド段階絞り込みのMRSA、ソート不要のDDFで低電力に予測し、28nm実装でSpatten比3.52倍のエネルギー効率を達成したTransformerアクセラレータの協調設計。
 
 - **2025-11 · [HookMoE: A learnable performance compensation strategy of Mixture-of-Experts for LLM inference acceleration](2025-6f8f63691373-hookmoe-a-learnable-performance-compensation-strategy-of-mixture-of-expe.md)**  
   実装：[✓](https://github.com/KerwinKai/HookMoE) ・ リポジトリ内被引用：0  
