@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1423本）
+## 自動生成の論文一覧（1425本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2638,6 +2638,10 @@
   実装：[✓](https://github.com/amazon-science/expert-upcycling) ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンが多数の専門家のうち一部だけを実行することで、総パラメータ数とトークン当たり演算量を切り離す。32専門家を64専門家へ増やした場合、50%の継続事前学習予算で13Bを最初から訓練する方式よりGPU時間を約32%節約し、検証損失を1.308から1.305へ下げた。
 
+- **2026-04 · [Evolving LLMs from Next-Token Prediction to Multi-Token Prediction via Self-Distillation](2026-077aa1e5b2da-evolving-llms-from-next-token-prediction-to-multi-token-prediction-via-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対象モデルを凍結し、その出力分布を1トークンずらして教師にする自己蒸留で軽量なマルチトークン予測モジュールを後付け学習する方式。Qwen3-8Bで受理長が従来のラベル学習の2.35から2.52へ上がり、学習量は対象モデルの事前学習の450分の1で済む。
+
 - **2026-04 · [ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving](2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。
@@ -4108,6 +4112,10 @@
   実装：[✓](https://anonymous.4open.science/r/CoRoVA) ・ リポジトリ内被引用：0  
   検索した別ファイル断片を1件1ベクトルへ圧縮して射影し、10トークンだけを入力へ足すことで、コード補完の品質を保ちながら最初のトークンまでの時間を20パーセントから38パーセント減らす方式。
 
+- **2025-10 · [Computationally Efficient FPGA-based Large Language Model Inference for Real-Time Decision-Making in Robotic Systems](2025-5c6550db1690-computationally-efficient-fpga-based-large-language-model-inference-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLaMA 2-7Bをロボットへ搭載するため、グループ量子化と混合精度、注意の削減を、FPGAロジックとAIエンジンとCPUへ演算を割り振るヘテロジニアス実装と組み合わせ、Jetson AGX Orin比1.95倍のスループットと18ワット動作を実機で示した研究。
+
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
   従って「注意計算全体をゼロにする」方式ではない。著者の実測はCPUで平均1.2倍のエンドツーエンド（E2E）高速化、自己注意部分で平均2倍、GPUでE2E平均1.6倍、注意部分で平均3倍を報告する。
@@ -4806,6 +4814,10 @@
   実装：✓ ・ リポジトリ内被引用：11  
   各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
 
+- **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
+
 - **2024-10 · [SIGMA: Secure GPT Inference with Function Secret Sharing](2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md)**  
   実装：[✓](https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma) ・ リポジトリ内被引用：9  
   SIGMAは関数秘密分散（Function Secret Sharing; FSS）によって複雑な非線形演算を二者間で実現し、事前に作った暗号鍵を使ってオンライン時の通信を抑える。代表結果は、系列長128の二者間オンライン推論において、既存のGPU秘匿計算系CrypTenより12.2～19倍短い実行時間である。
@@ -4817,10 +4829,6 @@
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：9  
   大規模言語モデルを多くの下流タスクへ適応させるとき、全パラメータを更新する方式は学習用メモリと計算時間が大きい。著者の概要にある「約30%のトークン計算遅延削減」は、元のMixLoRA実装に対する最適化効果を指す総括値であり、通常LoRAより30%速いという意味ではない。
-
-- **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
 
 - **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：9  

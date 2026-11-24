@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（114本）
+## 自動生成の論文一覧（115本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -407,6 +407,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-05 · [DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model](2025-2505.19349-deca-a-near-core-llm-decompression-accelerator-grounded-on-a-3d-roofline.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   圧縮重みの解凍をコア近傍アクセラレータへ逃がし、アウトオブオーダ起動で遅延を隠すDECAと、三資源で性能を説明する三次元ルーフサーフェスモデルにより、圧縮行列演算を最大4倍、70B級モデルの次トークン生成を1.6倍から2.6倍高速化する。
+
+- **2025-05 · [A Scalable and Energy-Efficient Processing-in-Memory Architecture for Gen-AI](2025-e5b6adde93fa-a-scalable-and-energy-efficient-processing-in-memory-architecture-for-ge.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HBMのバンク直近に閾値論理の極小演算要素を並べ、行列積をDRAM内部で実行するPIMで、HAIMA比で最大71倍のエネルギー効率をシミュレーションで示す。
 
 - **2025-03 · [Fake Runs, Real Fixes - Analyzing xPU Performance Through Simulation](2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

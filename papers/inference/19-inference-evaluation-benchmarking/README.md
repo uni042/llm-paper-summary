@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（224本）
+## 自動生成の論文一覧（225本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -613,6 +613,10 @@
 - **2025-12 · [Sliced ReLU attention: Quasi-linear contextual expressivity via sorting](2025-2512.11411-sliced-relu-attention-quasi-linear-contextual-expressivity-via-sorting.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   クエリとキーの差の一次元射影へReLUを適用し、ソートと累積和で注意をO(n log n)で厳密計算する注意機構で、普遍近似の理論保証を保ちながらLRA平均正解率をソフトマックスの59.8パーセントから62.9パーセントへ上げる。
+
+- **2025-12 · [Quantization Methods for Energy Efficient LLM Deployments](2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Qwen3の6規模に6つの量子化方式を適用し精度保持率とエネルギーとスループットを実測した研究。原生対応のFP8とINT8が省エネと高速化で優れ、32BのFP8はFP16比で1トークンあたりエネルギーが半分以下になる一方、GPTQ 4ビットはエネルギーが基準超えになることを示す。
 
 - **2025-12 · [HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices](2025-2512.14052-hypervl-an-efficient-and-dynamic-multimodal-large-language-model-for-edg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

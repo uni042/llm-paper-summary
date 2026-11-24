@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（327本）
+## 自動生成の論文一覧（328本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -701,6 +701,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Screening Is Enough](2026-2604.01178-screening-is-enough.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、通常のソフトマックス注意（softmax 注意機構）が各問い合わせについて全鍵の重みを合計1に正規化するため、「どの鍵も十分に関連しない」という状態を直接表現しにくい点に着目する。パラメータ規模に関する近似的な学習曲線からは、同等の検証損失に必要なパラメータが約30%少ないと推定する。
+
+- **2026-04 · [Reducing Language Model Inference Latency using CPU-Assisted Serving](2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.md)**  
+  実装：[✓](https://github.com/tgasla/cpu-assisted-lm-serving/) ・ リポジトリ内被引用：0  
+  GPU仮想化のAPIリモーティングで遊休CPUノードを推論サーバ化し、実測遅延に基づく動的振り分けと組み合わせて、CPU律速な小規模言語モデルの推論遅延を最大98パーセント削減するクラスタ側サービング方式。
 
 - **2026-04 · [Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU](2026-2604.15464-ragged-paged-attention-a-high-performance-and-flexible-llm-inference-ker.md)**  
   実装：[✓](https://github.com/vllm-project/tpu-inference/blob/main/tpu_inference/kernels/ragged_paged_attention/v3/kernel.py) ・ リポジトリ内被引用：0  

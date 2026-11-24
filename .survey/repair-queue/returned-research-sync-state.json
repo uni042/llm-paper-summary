@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1f0584c102f2414370b510fbab905611afbedf4d",
+  "base_commit": "6bcd5b3e8b2f1307713a0f8e0704bb797863372c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -442,16 +442,21 @@
     "2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-shenwei-ai-accelerator.json",
     "2025-addressing-activation-outliers-in-llms-ptq-survey.json",
     "2025-af96f29ab97d-towards-ml-system-extensibility.json",
+    "2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.json",
     "2025-bb64608d032b-paco-predictive-auto-configuration-for-slo-constrained-large-language-model-inference-serving.json",
     "2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.json",
     "2025-d1489180a09a-attention-level-speculation.json",
     "2025-d9e213765995-accelerating-rag-systems-a-performance-oriented-systematic-mapping.json",
+    "2025-da55ad6c4c3d-computationally-efficient-fpga-based-large-language-model-inference-for-real-time-decision-making-in-robotic-systems.json",
     "2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning.json",
     "2025-e4d39853fadd-teas-token-and-energy-aware-autoscaling-for-cost-efficient-llm-serving.json",
+    "2025-e5b6adde93fa-a-scalable-and-energy-efficient-processing-in-memory-architecture-for-gen-ai.json",
     "2025-keeping-up-with-large-language-models-holistic-methodology.json",
     "2025-lesft-unlocking-edge-fine-tuning-sample-efficient-language-empowered-split-fine-tuning.json",
     "2025-oraclekv-question-independent-kv-cache-eviction.json",
     "2025-pqcache-product-quantization-based-kvcache-for-long-context-llm-inference.json",
+    "2026-077aa1e5b2da-evolving-llms-from-next-token-prediction-to-multi-token-prediction-via-self-distillation.json",
+    "2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.json",
     "2026-0ef8e5385098-reasoning-aware-error-bounded-kv-cache-compression-and-sparse-attention-for-long-context-llms.json",
     "2026-14ed0b92764b-a-survey-on-edge-multimodal-large-models-compression-inference-acceleration-and-applications.json",
     "2026-1b6cd9d3f031-benchmarking-large-language-model-inference-on-limited-resource-edge-systems.json",
@@ -52229,6 +52234,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.34190/icair.5.1.4367": {
+      "order": [
+        "2026-11-24T01:20:56+00:00",
+        "2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/iros60139.2025.11247019": {
+      "order": [
+        "2026-11-24T01:22:08+00:00",
+        "2025-da55ad6c4c3d-computationally-efficient-fpga-based-large-language-model-inference-for-real-time-decision-making-in-robotic-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/JETCAS.2025.3566929": {
+      "order": [
+        "2026-11-24T01:23:20+00:00",
+        "2025-e5b6adde93fa-a-scalable-and-energy-efficient-processing-in-memory-architecture-for-gen-ai.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.3390/electronics15071533": {
+      "order": [
+        "2026-11-24T01:24:31+00:00",
+        "2026-077aa1e5b2da-evolving-llms-from-next-token-prediction-to-multi-token-prediction-via-self-distillation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3805621.3807628": {
+      "order": [
+        "2026-11-24T01:25:43+00:00",
+        "2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66142,6 +66192,21 @@
     "doi:10.1631/fitee.2400453": [
       "papers/inference/09-kernel-runtime-compilation/2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-s.md",
       "papers/inference/09-kernel-runtime-compilation/2025-9d0005ab2d5d-minimizing-transformer-inference-overhead-using-controlling-element-on-s.md"
+    ],
+    "doi:10.34190/icair.5.1.4367": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-b174259d82b3-quantization-methods-for-energy-efficient-llm-deployments.md"
+    ],
+    "doi:10.1109/iros60139.2025.11247019": [
+      "papers/inference/99-other-inference-systems/2025-5c6550db1690-computationally-efficient-fpga-based-large-language-model-inference-for-.md"
+    ],
+    "doi:10.1109/jetcas.2025.3566929": [
+      "papers/inference/15-inference-simulation-emulation/2025-e5b6adde93fa-a-scalable-and-energy-efficient-processing-in-memory-architecture-for-ge.md"
+    ],
+    "doi:10.3390/electronics15071533": [
+      "papers/inference/99-other-inference-systems/2026-077aa1e5b2da-evolving-llms-from-next-token-prediction-to-multi-token-prediction-via-s.md"
+    ],
+    "doi:10.1145/3805621.3807628": [
+      "papers/inference/09-kernel-runtime-compilation/2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.md"
     ]
   }
 }

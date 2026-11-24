@@ -35,10 +35,15 @@
   "selection_reason": "要旨ではGPU不足下の言語モデル推論遅延を削減するため、遊休CPUノードからGPU仮想化で遠隔GPUへAPIコールを転送しCPU側計算と組み合わせるCPU支援サービングを提案しており、推論サービングの資源活用への直接貢献が具体的である。",
   "semantic_scholar_id": "95401e1ee634bc1d8ccb577ae9c0e7e87c7d5341",
   "source_url": "https://doi.org/10.1145/3805621.3807628",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reducing Language Model Inference Latency using CPU-Assisted Serving",
   "type": "research",
   "venue": "EuroMLSys@EuroSys",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T01:27:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-0ed1914daa9a-reducing-language-model-inference-latency-using-cpu-assisted-serving.md",
+  "represented_canonical_id": "DOI:10.1145/3805621.3807628",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
