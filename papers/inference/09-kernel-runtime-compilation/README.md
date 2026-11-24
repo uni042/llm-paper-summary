@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（347本）
+## 自動生成の論文一覧（349本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -750,6 +750,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   同一重みを実行カーネルで添字付けし、ロジット差から分布・報酬・勾配バイアスへの bound と、スライス別に許容ドリフトと対処を宣言するカーネル契約を提案し、vLLMとHugging Faceの9構成で検証した研究。
 
+- **2026-04 · [Towards a Solution to the Management Scaling Paradox in Distributed LLM Inference](2026-f2a77ecc52ae-towards-a-solution-to-the-management-scaling-paradox-in-distributed-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分離型推論でKVキャッシュ管理のユーザ空間オーバーヘッドがヒット率とともに膨らむ逆説を定量化し、カーネル内のコンテンツアドレス型PGASで無調整にチャンクを引けるRMCによりTTFTを1.1〜1.3倍短縮する提案。
+
 - **2026-04 · [SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models](2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   先頭トークンに注意重みが集中する注意の沈み込み（注意機構 sink）を、重要な履歴情報を保持するための目印としてだけでなく、「現在の注意出力がほぼゼロとなり、残差流への更新が小さい」状態を示す手掛かりとして解釈する。原著はNVIDIA RTX PRO 6000で512Kトークン文脈の復号を最大2.03倍高速化したと報告する。
@@ -833,6 +837,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [From Skew to Symmetry: Node-Interconnect Multi-Path Balancing with Execution-time Planning for Modern GPU Clusters](2026-2604.00317-from-skew-to-symmetry-node-interconnect-multi-path-balancing-with-execut.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   偏った通信で一部のリンクだけが飽和する問題に対し、リンク負荷を見て最大混雑を最小化するようメッセージを複数パスへ実行時に再配分するランタイムNIMBLEを提案し、偏ったオールツーオールでNCCL比最大5.2倍、MoEのエンドツーエンドで最大1.35倍を示す。
+
+- **2026-02 · [Xami: Expert-Aware Adaptive Compression for Mixture-of-Experts on Sparse Tensor Cores](2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門家の活性化頻度の偏りを使い、よく使う専門家は軽く、あまり使わない専門家は強く圧縮する。冷たい専門家は詰めて保存し実行時にハードウェア形式へ展開することで、疎テンソルコアの実行モデルを変えずにメモリを最大2.4倍圧縮する仕組み。
 
 - **2026-02 · [The Quantization Trap: Breaking Linear Scaling Laws in Multi-Hop Reasoning](2026-2602.13595-the-quantization-trap-breaking-linear-scaling-laws-in-multi-hop-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

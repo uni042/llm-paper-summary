@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5e149ba196198d48b9e09292bb32ee770e0fe14a",
+  "base_commit": "1ec22044cc7147adba0f7ee0ce6fd3e9b284125b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1723,6 +1723,9 @@
     "2026-component-aware-self-speculative-decoding-hybrid-language-models.json",
     "2026-dda87ed1e7bb-hardwired-neuron-language-processing-units-as-general-purpose-cognitive-substrates.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
+    "2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.json",
+    "2026-f2a77ecc52ae-towards-a-solution-to-the-management-scaling-paradox-in-distributed-llm-inference.json",
+    "2026-f76fb0259420-vocalnet-m2-advancing-low-latency-spoken-language-modeling-via-integrated-multi-codebook-tokenization-and-multi-token-pr.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
     "2026-satoru-proactive-length-aware-scheduling-for-high-throughput-batch-llm-serving.json",
     "20261004-1830-codex-local-r19--26b2361b8288f0261f2a875e5765c69b1d05469846e000fe2ee2542beee7586d--arxiv-2405-14366.json",
@@ -7024,6 +7027,7 @@
     "retry-research-24a61e23573e--libfile_bc9de1ad5e408191a611ac34dd283e7f--2024-2403.00835-cllms-under16kb-reaudit-20261008-1812-scheduled-chat-00-r01.json",
     "retry-research-250683951139--file_0000000080f0820b8279061a55f87983--2023-2311.08692-zooter-under16kb-reaudit-20261009-0157-scheduled-chat-00-r01.json",
     "retry-research-251ca153f01d--libfile_3cc79a5ab610819186a71420387e4308--2607.23765-wiserouter.json",
+    "retry-research-255b76df54fa--2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.json",
     "retry-research-25661f688107--libfile_bd133ca803d081919bfc3269c644f06f--2025-2502.17605-picaso-permutation-invariant-ssm-context-composition-research-20261023-12.json",
     "retry-research-256c23cd6baa--2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "retry-research-2585feb004e0--libfile_e47568d139fc8191857e8a9e210117f4--2026-laco-layerwise-compensation-pruned-llm-research-20261013-1430-scheduled-chat-30-r01.json",
@@ -7387,6 +7391,7 @@
     "retry-research-82ca7ca7554c--libfile_b2985d9c7ba08191be26e0df7bf84b82--2608.13524-dartree.json",
     "retry-research-839fe415f343--2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
     "retry-research-83aeb023d444--libfile_d0ceaac79a708191aeba309de18b37d9--2026-2608.26112-treegraft-metadata-completed-20261024-1245-scheduled-chat-45-r01.json",
+    "retry-research-83d3c75ebd2f--0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json",
     "retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261.json",
     "retry-research-849a4ea577b5--libfile_19deb6b02de08191b68cefa1e6129d8e--2026-2601.22362-llm-energy-quantization-batching-serving-research-20261013-2230-scheduled.json",
     "retry-research-84bcea17b074--libfile_0dfdf87f85f881919ca4d839f6a2ef24--2025-doi-10.52202-085713-4569-dynapipe-dynamic-layer-redistribution-research-20261018-225.json",
@@ -52215,8 +52220,8 @@
     },
     "DOI:10.18653/v1/2026.findings-acl.367": {
       "order": [
-        "2026-11-24T00:32:11+00:00",
-        "0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json"
+        "2026-11-24T12:04:27+00:00",
+        "retry-research-83d3c75ebd2f--0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.json"
       ],
       "status": "blocked_quality",
       "result": {
@@ -52226,7 +52231,7 @@
         "source_sha256": "3be9d60bca972ed8b63d5695d6226088466d0a6f7af661df7c664a20fb99af39",
         "normalized_source_sha256": null,
         "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.md",
+        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-83d3c75ebd2f--0000-ba821ec03101-eop-llm-energy-oriented-pruning-for-large-language-models.md",
         "canonical_id": "DOI:10.18653/v1/2026.findings-acl.367",
         "worker_completed_at": "2026-11-24T09:20:00+09:00",
         "worker_run_key": "muse-final-20261124-b14w2",
@@ -52245,9 +52250,9 @@
         "failures": [
           "説明不足トリガー: 評価説明量 497 < 500"
         ],
-        "processed_at": "2026-11-24T00:32:11+00:00"
+        "processed_at": "2026-11-24T12:04:27+00:00"
       },
-      "return_count": 2
+      "return_count": 3
     },
     "DOI:10.1007/978-3-031-99854-6_10": {
       "order": [
@@ -54519,8 +54524,8 @@
     },
     "DOI:10.23919/DATE69613.2026.11539743": {
       "order": [
-        "2026-11-24T10:20:12+00:00",
-        "2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.json"
+        "2026-11-24T12:04:25+00:00",
+        "retry-research-255b76df54fa--2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.json"
       ],
       "status": "blocked_quality",
       "result": {
@@ -54530,7 +54535,7 @@
         "source_sha256": "329e6260d6a2a27ac1c4face16c64126aa4ff0d7c6bf4871795e5df49293a65c",
         "normalized_source_sha256": null,
         "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.md",
+        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-255b76df54fa--2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.md",
         "canonical_id": "DOI:10.23919/DATE69613.2026.11539743",
         "worker_completed_at": "2026-11-24T09:20:00+09:00",
         "worker_run_key": "muse-final-20261124-b14w2",
@@ -54549,9 +54554,9 @@
         "failures": [
           "説明不足トリガー: 評価説明量 499 < 500"
         ],
-        "processed_at": "2026-11-24T10:20:12+00:00"
+        "processed_at": "2026-11-24T12:04:25+00:00"
       },
-      "return_count": 2
+      "return_count": 3
     },
     "arXiv:2611.22086": {
       "order": [
@@ -54973,6 +54978,33 @@
         "2026-dda87ed1e7bb-hardwired-neuron-language-processing-units-as-general-purpose-cognitive-substrates.json"
       ],
       "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.36227/techrxiv.177205041.14536362/v1": {
+      "order": [
+        "2026-11-24T12:01:49+00:00",
+        "2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-tensor-cores.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3805621.3807658": {
+      "order": [
+        "2026-11-24T12:03:06+00:00",
+        "2026-f2a77ecc52ae-towards-a-solution-to-the-management-scaling-paradox-in-distributed-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/icassp55912.2026.11461309": {
+      "order": [
+        "2026-11-24T12:04:22+00:00",
+        "2026-f76fb0259420-vocalnet-m2-advancing-low-latency-spoken-language-modeling-via-integrated-multi-codebook-tokenization-and-multi-token-pr.json"
+      ],
+      "status": "imported",
       "result": null,
       "return_count": 0
     }
@@ -69948,6 +69980,15 @@
     "doi:10.3389/frai.2026.1891737": [
       "papers/inference/99-other-inference-systems/2026-ca88519757de-coral-co-evolutionary-optimization-of-routing-and-adaptive-prompts-for-c.md",
       "papers/inference/99-other-inference-systems/2026-ca88519757de-coral-co-evolutionary-optimization-of-routing-and-adaptive-prompts-for-c.md"
+    ],
+    "doi:10.36227/techrxiv.177205041.14536362/v1": [
+      "papers/inference/09-kernel-runtime-compilation/2026-ed5f0e8fb57d-xami-expert-aware-adaptive-compression-for-mixture-of-experts-on-sparse-.md"
+    ],
+    "doi:10.1145/3805621.3807658": [
+      "papers/inference/09-kernel-runtime-compilation/2026-f2a77ecc52ae-towards-a-solution-to-the-management-scaling-paradox-in-distributed-llm-.md"
+    ],
+    "doi:10.1109/icassp55912.2026.11461309": [
+      "papers/inference/99-other-inference-systems/2026-2511.10232-vocalnet-m2-advancing-low-latency-spoken-language-modeling-via-integrate.md"
     ]
   }
 }
