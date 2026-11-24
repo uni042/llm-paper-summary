@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3e503c06d5c5bc18b03fac3dbc4bd592c06e16ad",
+  "base_commit": "4af914b7cef287b6da675dae1cfd77baae5cd13c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1668,7 +1668,11 @@
     "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json",
     "2026-7c3882fcb8c1-pruneprivytune-accelerating-language-models-with-pruning-and-differentially-private-fine-tuning.json",
     "2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.json",
+    "2026-821af81d8bc3-iroknight-ownership-preserving-neural-acceleration-for-inference-serving.json",
+    "2026-8d428e79f81e-hardware-characterization-of-diffusion-vs-autoregressive-language-model-inference-compute-vs-memory-bottlenecks.json",
     "2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.json",
+    "2026-97023514dc43-ecm-enhancing-compressibility-of-quantized-vision-encoder-and-llm-for-large-vision-language-models.json",
+    "2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.json",
     "2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.json",
     "2026-be7fa99be335-interaction-effects-in-hybrid-compression-of-small-language-models.json",
     "2026-c303fad14871-latentllm-activation-aware-transform-to-multi-head-latent-attention.json",
@@ -54441,6 +54445,69 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.1109/ISCA66397.2026.00087": {
+      "order": [
+        "2026-11-24T10:16:45+00:00",
+        "2026-821af81d8bc3-iroknight-ownership-preserving-neural-acceleration-for-inference-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/IISWC71020.2026.00031": {
+      "order": [
+        "2026-11-24T10:18:06+00:00",
+        "2026-8d428e79f81e-hardware-characterization-of-diffusion-vs-autoregressive-language-model-inference-compute-vs-memory-bottlenecks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/icassp55912.2026.11460785": {
+      "order": [
+        "2026-11-24T10:20:10+00:00",
+        "2026-97023514dc43-ecm-enhancing-compressibility-of-quantized-vision-encoder-and-llm-for-large-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.23919/DATE69613.2026.11539743": {
+      "order": [
+        "2026-11-24T10:20:12+00:00",
+        "2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "329e6260d6a2a27ac1c4face16c64126aa4ff0d7c6bf4871795e5df49293a65c",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-a2b6831ca639-gcpt-gradient-aware-clustering-method-for-efficient-post-training-quantization-in-large-neural-networks.md",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539743",
+        "worker_completed_at": "2026-11-24T09:20:00+09:00",
+        "worker_run_key": "muse-final-20261124-b14w2",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4559,
+          "body_paragraphs": 18,
+          "method_chars": 1817,
+          "method_paragraphs": 4,
+          "evaluation_chars": 499,
+          "limitation_chars": 267,
+          "insufficiency_flags": [
+            "評価説明量 499 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 499 < 500"
+        ],
+        "processed_at": "2026-11-24T10:20:12+00:00"
+      },
+      "return_count": 1
     }
   },
   "imported_paper_paths": {
@@ -69234,6 +69301,15 @@
     "doi:10.1007/s10994-026-07016-y": [
       "papers/inference/99-other-inference-systems/2026-7c3882fcb8c1-pruneprivytune-accelerating-language-models-with-pruning-and-differentia.md",
       "papers/inference/99-other-inference-systems/2026-7c3882fcb8c1-pruneprivytune-accelerating-language-models-with-pruning-and-differentia.md"
+    ],
+    "doi:10.1109/isca66397.2026.00087": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-821af81d8bc3-iroknight-ownership-preserving-neural-acceleration-for-inference-serving.md"
+    ],
+    "doi:10.1109/iiswc71020.2026.00031": [
+      "papers/inference/09-kernel-runtime-compilation/2026-8d428e79f81e-hardware-characterization-of-diffusion-vs-autoregressive-language-model-.md"
+    ],
+    "doi:10.1109/icassp55912.2026.11460785": [
+      "papers/inference/99-other-inference-systems/2026-97023514dc43-ecm-enhancing-compressibility-of-quantized-vision-encoder-and-llm-for-la.md"
     ]
   }
 }

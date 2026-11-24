@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（342本）
+## 自動生成の論文一覧（343本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -465,6 +465,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Hardware-Native Joint Sparse-Quantization for Trillion-Scale Mixture-of-Experts](2026-2610.02241-hardware-native-joint-sparse-quantization-for-trillion-scale-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エキスパート重みの疎性パターン選択を連続緩和で量子化と同時に学習し、対になった4対8のNVFP4表現へ圧縮して、スパーステンソルコア向けのグループ化した疎行列積で実行する、兆級MoE向けの共設計圧縮枠組み。
+
+- **2026-09 · [Hardware Characterization of Diffusion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks](2026-8d428e79f81e-hardware-characterization-of-diffusion-vs-autoregressive-language-model-.md)**  
+  実装：[✓](https://doi.org/10.5281/zenodo.21839997) ・ リポジトリ内被引用：0  
+  拡散言語モデルの推論をGPUカーネルとメモリ階層で実測し、自己回帰デコードと違って計算律速で活性値支配的であり、ブロック長がハードウェア調整パラメータになることを示した特性分析。
 
 - **2026-09 · [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1321,7 +1325,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：677  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：678  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
