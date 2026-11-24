@@ -685,7 +685,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：196  
+  実装：✓ ・ リポジトリ内被引用：197  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
@@ -836,6 +836,10 @@
   実装：[✓](https://github.com/attention-survey/Efficient_Attention_Survey) ・ リポジトリ内被引用：1  
   原著は20ページで、注意計算の数式、GPUの演算性能とメモリ帯域、事前入力処理と復号の律速差を説明したうえで、ハードウェア効率化、コンパクト注意（Compact 注意機構）、疎注意（Sparse 注意機構）、線形注意（Linear 注意機構）の四系統を共通の記法で比較する。
 
+- **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
+  実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：1  
+  Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
+
 - **2025-11 · [OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs](2025-2511.12201-omnisparse-training-aware-fine-grained-sparse-attention-for-long-video-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の疎注意は推論時に重要そうな鍵だけを残す方式が多く、全注意で学習したモデルへ疎化を後付けすると、学習時と推論時の注意分布の不一致が生じる。論文の表1では、256フレーム・約65,600トークン条件で注意演算量を72.6%、鍵・値キャッシュ容量を53.4%削減しながら、動画質問応答の精度を概ね維持した。
@@ -855,10 +859,6 @@
 - **2025-06 · [Accelerating Sparse Transformer Inference on GPU](2025-2506.06095-accelerating-sparse-transformer-inference-on-gpu.md)**  
   実装：[✓](https://github.com/HeyDavid633/PPoPP26-pap161-AE) ・ リポジトリ内被引用：0  
   STOF（Sparse Transformer with Operator Fusion）は、Transformerの疎な注意マスクをGPU上で実際の計算削減へ結び付けることと、注意演算の後に続く行列積・正規化・加算などの融合境界を入力形状に応じて選ぶことを、ひとつの推論実行基盤として扱う。主張は二層に分けて読む必要がある。
-
-- **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
-  実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
-  Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
 
 - **2025-02 · [Neural Attention Search](2025-2502.13251-neural-attention-search.md)**  
   実装：[✓](https://github.com/automl/NeuralAttentionSearch) ・ リポジトリ内被引用：0  
@@ -1055,7 +1055,7 @@
 ### 7年前（2019-12〜2020-11）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：283  
+  実装：✓ ・ リポジトリ内被引用：284  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  

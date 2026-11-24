@@ -880,6 +880,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   半構造化N:M疎性は、各M要素のうちN要素を残す制約を設ける。2:4、4:8、8:16、16:32はいずれも50%の要素をゼロ化するが、ブロックが大きいほど、どの要素を残すかの組合せが増える。したがって本研究は「半構造化活性疎性が現時点で実用上安全」と結論するより、将来ハードウェアの設計選択を促す精度とコストの基礎ベンチマークとして読むべきである。
 
+- **2025-05 · [ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads](2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md)**  
+  実装：[✓](https://github.com/ZeroNLP/ResDecode) ・ リポジトリ内被引用：1  
+  投機的復号では軽いドラフト側が複数の未来トークンを先読みし、対象の大きな言語モデルが候補をまとめて検証する。対象モデルの検証を通った候補だけを採用するため、単にドラフトを高速化するだけでなく、候補の採択長と検証費用の均衡が重要になる。
+
 - **2025-05 · [Quantitative Analysis of Performance Drop in DeepSeek Model Quantization](2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md)**  
   実装：[✓](https://github.com/UnicomAI/DeepSeek-Eval) ・ リポジトリ内被引用：1  
   671BのDeepSeek-R1/V3を含む系列全体で2から8ビット量子化の性能低下を実測し、重要モジュールへ高精度を配る動的3ビット量子化DQ3KMが4ビット級の精度を281GBで達成することを示した評価報告。
@@ -979,10 +983,6 @@
 - **2025-05 · [Resource-Efficient Language Models: Quantization for Fast and Accessible Inference](2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、大規模言語モデルを一般利用者の限られた計算資源で動かすための後学習量子化を解説する文献レビューである。
-
-- **2025-05 · [ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads](2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md)**  
-  実装：[✓](https://github.com/ZeroNLP/ResDecode) ・ リポジトリ内被引用：0  
-  投機的復号では軽いドラフト側が複数の未来トークンを先読みし、対象の大きな言語モデルが候補をまとめて検証する。対象モデルの検証を通った候補だけを採用するため、単にドラフトを高速化するだけでなく、候補の採択長と検証費用の均衡が重要になる。
 
 - **2025-05 · [LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead](2025-2505.16221-lightrouter-towards-efficient-llm-collaboration-with-minimal-overhead.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
