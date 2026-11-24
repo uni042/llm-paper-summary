@@ -1,0 +1,79 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-final-20261124-d21-title",
+ "reference_main_sha": "a8a7722945ec0eba54024feb8dbf3b95ad1c402d",
+ "record_count": 4,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.18533",
+   "identity_tokens": [
+    "arXiv:2510.18533"
+   ],
+   "title": "Noise-Conditioned Mixture-of-Experts Framework for Robust Speaker Verification",
+   "reason": "タイトルが話者照合（音声バイオメトリクス応用）を明示しており、MoEはその話者照合モデルの内部構成要素にすぎず、LLM推論システムの主題ではない。",
+   "source_url": "https://arxiv.org/abs/2510.18533",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 32
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2401.17868",
+   "identity_tokens": [
+    "arXiv:2401.17868"
+   ],
+   "title": "Convolution Meets LoRA: Parameter Efficient Finetuning for Segment Anything Model",
+   "reason": "タイトルがSegment Anything Modelのパラメータ効率ファインチューニングを明示しており、対象は画像セグメンテーション用ビジョンモデルの微調整であってLLM推論システムの主題ではない。",
+   "source_url": "https://arxiv.org/abs/2401.17868",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 33
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2410.02749",
+   "identity_tokens": [
+    "arXiv:2410.02749"
+   ],
+   "title": "Training Language Models on Synthetic Edit Sequences Improves Code Synthesis",
+   "reason": "タイトルが合成編集系列による言語モデルの学習でコード合成能力を改善する学習手法を明示しており、推論・デコード機構の主題ではない。",
+   "source_url": "https://arxiv.org/abs/2410.02749",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 59
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2501.15087",
+   "identity_tokens": [
+    "arXiv:2501.15087"
+   ],
+   "title": "Multi-Grained Patch Training for Efficient LLM-based Recommendation",
+   "reason": "タイトルがLLMベース推薦のためのパッチ学習を明示しており、対象は推薦システムという応用領域の学習手法であってLLM推論システムの主題ではない。",
+   "source_url": "https://arxiv.org/abs/2501.15087",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 68
+  }
+ ]
+}

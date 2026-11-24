@@ -1,0 +1,96 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "reference_main_sha": "a8a7722945ec0eba54024feb8dbf3b95ad1c402d",
+ "origin": "discovery_worklist",
+ "run_key": "muse-final-20261124-d19-title",
+ "record_count": 5,
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.3390/s26175661",
+   "identity_tokens": [
+    "DOI:10.3390/s26175661"
+   ],
+   "title": "GMoE-AD: Generalized Hyperspectral Anomaly Detection via Mixture-of-Experts and Domain-Invariant Learning",
+   "reason": "ハイパースペクトル画像の異常検出という画像センシング応用がタイトルで明示されており、MoEとドメイン不変学習の利用も当該応用課題のためのもので、LLM推論システムとの関連はない。",
+   "source_url": "https://doi.org/10.3390/s26175661",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 419
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2412.00316",
+   "identity_tokens": [
+    "arXiv:2412.00316"
+   ],
+   "title": "HiMoE: Heterogeneity-Informed Mixture-of-Experts for Fair Spatial-Temporal Forecasting",
+   "reason": "空間・時間予測（時空間予測）への応用がタイトルで明示されており、異種性配慮型MoEも予測精度と公平性のための応用手法で、LLM推論システムとの関連はない。",
+   "source_url": "https://arxiv.org/abs/2412.00316",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 420
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ACCESS.2026.3671485",
+   "identity_tokens": [
+    "DOI:10.1109/ACCESS.2026.3671485"
+   ],
+   "title": "Predicting Ship Main Engine Fuel Oil Consumption Using a Mixture of Experts Approach",
+   "reason": "船舶主機関の燃料消費予測という海運応用がタイトルで明示されており、Mixture of Expertsも予測モデルの構成要素にすぎず、LLM推論システムとの関連はない。",
+   "source_url": "https://doi.org/10.1109/ACCESS.2026.3671485",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 421
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1016/j.pmcj.2025.102044",
+   "identity_tokens": [
+    "DOI:10.1016/j.pmcj.2025.102044"
+   ],
+   "title": "Continual learning in sensor-based human activity recognition with dynamic mixture of experts",
+   "reason": "センサベースの人間活動認識というセンシング応用での継続学習がタイトルで明示されており、動的MoEも当該応用のためのもので、LLM推論システムとの関連はない。",
+   "source_url": "https://doi.org/10.1016/j.pmcj.2025.102044",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 424
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.3389/fgene.2022.885627",
+   "identity_tokens": [
+    "DOI:10.3389/fgene.2022.885627"
+   ],
+   "title": "An Interpretable Double-Scale Attention Model for Enzyme Protein Class Prediction Based on Transformer Encoders and Multi-Scale Convolutions",
+   "reason": "トランスフォーマと多スケール畳み込みによる酵素タンパク質の分類予測というバイオ応用がタイトルで明示されており、LLM推論システムとの関連はない。",
+   "source_url": "https://doi.org/10.3389/fgene.2022.885627",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T14:00:00+09:00",
+   "last_checked_at": "2026-11-24T14:00:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 462
+  }
+ ]
+}
