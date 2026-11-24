@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0576fc799dcdfb6d-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.02073",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.02073",
+    "identity_tokens": [
+      "arXiv:2604.02073"
+    ],
+    "reason": "PLUMEは明示的CoTを連続潜在状態の短い自己回帰ロールアウトへ置き換え、埋め込み検索の推論を30倍超高速化する潜在推論枠組みだが、対象はマルチモーダル埋め込みモデルの検索推論という応用であり、LLM生成推論システムの機構ではない。",
+    "first_checked_at": "2026-11-24T10:57:43+00:00",
+    "last_checked_at": "2026-11-24T10:57:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PLUME: Latent Reasoning Based Universal Multimodal Embedding"
+  },
+  "processed_at": "2026-11-24T10:57:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0576fc799dcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

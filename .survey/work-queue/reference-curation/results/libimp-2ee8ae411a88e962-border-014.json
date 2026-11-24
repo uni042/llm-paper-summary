@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ee8ae411a88e962-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2205.15317",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2205.15317",
+    "identity_tokens": [
+      "arXiv:2205.15317"
+    ],
+    "reason": "Chefs' Random Tablesは正のランダム特徴でソフトマックスカーネルを不偏推定し低ランクTransformerへ線形時間・空間で適用する近似理論だが、対象はカーネル近似の汎用理論であり、LLM推論カーネルとしての実装・実測は示されていない。",
+    "first_checked_at": "2026-11-24T10:57:43+00:00",
+    "last_checked_at": "2026-11-24T10:57:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Chefs' Random Tables: Non-Trigonometric Random Features"
+  },
+  "processed_at": "2026-11-24T10:57:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ee8ae411a88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

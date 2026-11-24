@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ee8ae411a88e962-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.15128",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.15128",
+    "identity_tokens": [
+      "arXiv:2609.15128"
+    ],
+    "reason": "Omni-Streaming Thinkingは未検証の主張を保留として検証区間と紐付け、反証時に依存状態の影響を弱める構造化出力でストリーミング全モーダル推論の早期確約失敗を防ぐが、主目的は音声視覚推論の正確性であり、推論効率の機構ではない。",
+    "first_checked_at": "2026-11-24T10:57:43+00:00",
+    "last_checked_at": "2026-11-24T10:57:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Omni-Streaming Thinking"
+  },
+  "processed_at": "2026-11-24T10:57:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ee8ae411a88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

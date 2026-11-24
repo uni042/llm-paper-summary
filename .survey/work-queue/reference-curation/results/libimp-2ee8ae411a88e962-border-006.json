@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ee8ae411a88e962-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.22838",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.22838",
+    "identity_tokens": [
+      "arXiv:2512.22838"
+    ],
+    "reason": "GANNSはメモリ常駐のグラフ抽象とSSD上のクラスタ別索引で大規模近似最近傍探索のアウトオブコア提供を高速化する検索エンジンで、ベクトル検索基盤としては推論周辺だが、LLMの生成推論・サービング機構そのものではない。",
+    "first_checked_at": "2026-11-24T10:57:43+00:00",
+    "last_checked_at": "2026-11-24T10:57:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OrchANN: Hierarchical Orchestration for Skewed Out-of-Core Vector Search"
+  },
+  "processed_at": "2026-11-24T10:57:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ee8ae411a88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

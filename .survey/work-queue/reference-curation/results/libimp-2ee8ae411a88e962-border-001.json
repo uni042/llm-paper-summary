@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2ee8ae411a88e962-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.28516",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.28516",
+    "identity_tokens": [
+      "arXiv:2607.28516"
+    ],
+    "reason": "GenEvAはフレーム選択後の段階でクエリ条件付き証拠分布により潜在証拠を集約し、動画トークンの追加を0.11〜0.40％に抑える長尺動画理解の枠組みだが、主目的は跨フレーム証拠統合による質問応答精度の向上であり、推論機構の提案ではない。",
+    "first_checked_at": "2026-11-24T10:57:43+00:00",
+    "last_checked_at": "2026-11-24T10:57:43+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Frame Selection: Generative Latent Evidence Aggregation for Long-Video Understanding"
+  },
+  "processed_at": "2026-11-24T10:57:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2ee8ae411a88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
