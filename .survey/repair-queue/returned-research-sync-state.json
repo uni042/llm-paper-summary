@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "33e5ab370dd32ef6b3684ac297536c4855d597a7",
+  "base_commit": "c6fea1584f042b4adb72ef2e3c76e576035394e2",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -195,6 +195,7 @@
     "2024-2410.11203-error-diffusion-post-training-quantization-with-block-scaled-number-formats.json",
     "2024-2410.12982-flash-inference-near-linear-time-inference-for-long-convolution-sequence-models.json",
     "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
+    "2024-2410.14725-rethinking-token-reduction-for-state-space-models.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json",
     "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic.json",
     "2024-2410.20488-firp-faster-llm-inference-via-future-intermediate-representation-prediction.json",
@@ -233,6 +234,7 @@
     "2025-2501.01672-practical-secure-inference-algorithm-for-a-fine-tuned-large-language-model-based-on-fully-homomorphic-encryption.json",
     "2025-2501.07139-flexquant-elastic-quantization-framework-for-locally-hosted-llm-on-edge-devices.json",
     "2025-2501.08631-swsc-shared-weight-for-similar-channel-in-llm.json",
+    "2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-learning-based-model-caching-and-inference-offloadi.json",
     "2025-2501.15665-stagformer-time-staggering-transformer-decoding-for-runninglayers-in-parallel.json",
     "2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.json",
     "2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pretrained-llms.json",
@@ -253,6 +255,7 @@
     "2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-llm-inference-algorithms-and-numerical-analysis.json",
     "2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-all-you-need-for-mha.json",
     "2025-2503.06184-sample-aware-adaptive-structured-pruning-for-large-language-models.json",
+    "2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-event-gated-cognition.json",
     "2025-2503.07657-splitquantv2-enhancing-low-bit-quantization-of-llms-without-gpus.json",
     "2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe-inference.json",
     "2025-2503.09657-tyr-the-pruner-structural-pruning-via-global-sparsity-distribution.json",
@@ -283,6 +286,7 @@
     "2025-2505.04081-qstore-quantization-aware-compressed-model-storage.json",
     "2025-2505.07531-quantx-a-framework-for-hardware-aware-quantization-of-generative-ai-workloads.json",
     "2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.json",
+    "2025-2505.09663-analog-foundation-models.json",
     "2025-2505.10118-why-1-1-1-in-visual-token-pruning-beyond-naive-integration-via-multi-objective-balanced-covering.json",
     "2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-generation.json",
     "2025-2505.10951-subgcache-accelerating-graph-based-rag-with-subgraph-level-kv-cache.json",
@@ -306,6 +310,7 @@
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
     "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json",
     "2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.json",
+    "2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.json",
     "2025-2506.08436-olica-efficient-structured-pruning-of-large-language-models-without-retraining.json",
     "2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.json",
     "2025-2506.10446-fast-on-the-easy-deep-on-the-hard-efficient-reasoning-via-powered-length-penalty.json",
@@ -52129,6 +52134,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2410.14725": {
+      "order": [
+        "2026-11-24T01:06:04+00:00",
+        "2024-2410.14725-rethinking-token-reduction-for-state-space-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2501.14205": {
+      "order": [
+        "2026-11-24T01:06:58+00:00",
+        "2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-learning-based-model-caching-and-inference-offloadi.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2503.06220": {
+      "order": [
+        "2026-11-24T01:07:52+00:00",
+        "2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-event-gated-cognition.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.09663": {
+      "order": [
+        "2026-11-24T01:08:45+00:00",
+        "2025-2505.09663-analog-foundation-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.07639": {
+      "order": [
+        "2026-11-24T01:09:39+00:00",
+        "2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -66002,6 +66052,21 @@
     "arxiv:2408.00008": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-en.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00008-scalellm-a-resource-frugal-llm-serving-framework-by-optimizing-end-to-en.md"
+    ],
+    "arxiv:2410.14725": [
+      "papers/inference/99-other-inference-systems/2024-2410.14725-rethinking-token-reduction-for-state-space-models.md"
+    ],
+    "arxiv:2501.14205": [
+      "papers/inference/15-inference-simulation-emulation/2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-lea.md"
+    ],
+    "arxiv:2503.06220": [
+      "papers/inference/99-other-inference-systems/2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-ev.md"
+    ],
+    "arxiv:2505.09663": [
+      "papers/inference/99-other-inference-systems/2025-2505.09663-analog-foundation-models.md"
+    ],
+    "arxiv:2506.07639": [
+      "papers/inference/99-other-inference-systems/2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.md"
     ]
   }
 }

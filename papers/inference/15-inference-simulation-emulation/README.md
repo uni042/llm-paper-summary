@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（113本）
+## 自動生成の論文一覧（114本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -347,6 +347,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
   本研究が対象とするのは、あらかじめ処理する要求集合が分かっているオフライン推論であり、複数の大規模言語モデル（LLM）を一つのアプリケーション内で使う状況である。単一モデルの要求順序を最適化するだけでは、モデル間のGPU分配を決められない。SamuLLMはこれらを一つの計画問題として扱う。
+
+- **2025-01 · [Serving Long-Context LLMs at the Mobile Edge: Test-Time Reinforcement Learning-based Model Caching and Inference Offloading](2025-2501.14205-serving-long-context-llms-at-the-mobile-edge-test-time-reinforcement-lea.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  長文脈エージェント向けに、エッジへのモデルキャッシュとエッジ／クラウド間の推論オフロードをテスト時にも学習する強化学習T2DRLで一体に決め、二重オランダ式オークションで資源配分を補うことで、比較対象よりシステム費用を少なくとも30パーセント下げる枠組み。
 
 - **2025-08 · [COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives](2025-2509.00599-comet-a-framework-for-modeling-compound-operation-dataflows-with-explici.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

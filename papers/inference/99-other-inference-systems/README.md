@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1418本）
+## 自動生成の論文一覧（1422本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4376,6 +4376,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   正解報酬へ長さのべき乗に反比例する項を加え、短い応答ほど長さ差が効き長い応答では効かない報酬にすることで、易しい問題のトークンを最大で約九割減らしつつ難しい問題の精度を保った。
 
+- **2025-06 · [Fast ECoT: Efficient Embodied Chain-of-Thought via Thoughts Reuse](2025-2506.07639-fast-ecot-efficient-embodied-chain-of-thought-via-thoughts-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  具身推論の時間的局所性を使い、前ステップの思考の再利用と推論段階の並列生成と非同期実行で、ECoTの遅延を最大約7.5倍速くしながら成功率を保つFast ECoTを提案する。
+
 - **2025-06 · [Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models](2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論特化言語モデルが長い思考過程を生成する際、誤りを見つけて解き直す有用な反省と、既に正しい途中計算を繰り返し肯定するだけの冗長な反省が混在する。本研究は後者を自己確認型反省と呼び、反省文を開始する語の生成確率に偏りがあることを利用して、必要な推論をなるべく残しながら冗長な出力を減らす。ただし平均正解率は64.9%から64.2%へ0.7ポイント下がった。
@@ -4484,6 +4488,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   エッジでマルチモーダルLLM（MLLM）を実行する際、画像などをトークンに変換するエンコーダ、入力トークンをまとめて処理するLLM プリフィル、出力トークンを逐次生成するデコードでは、計算とメモリの比率が大きく異なる。ただし、これらは実チップを製造して測定した数字ではなく、シミュレーション・実装設計評価に基づく比較である。
 
+- **2025-05 · [Analog Foundation Models](2025-2505.09663-analog-foundation-models.md)**  
+  実装：[✓](https://github.com/IBM/analog-foundation-models) ・ リポジトリ内被引用：0  
+  アナログインメモリ計算のノイズと低精度の入力量子化へ大規模言語モデルを頑健化する訓練法で、知識蒸留の後にノイズ注入と重みの切り捨てと静的量子化を組み合わせ、ハードウェア現実的なノイズ下でも16ビット精度との平均差をPhi-3-miniで3.7ポイントまで縮める方式。
+
 - **2025-04 · [TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models](2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-model.md)**  
   実装：[✓](https://github.com/G-JWLee/TAMP) ・ リポジトリ内被引用：0  
   マルチモーダルモデルの枝刈りで、出力トークンの多様性が高い層ほど残すパラメータを増やし、注意スコアで選んだ代表入力トークンだけで重み重要度を計算することで、高スパーシティでも多モダリティ理解を保つ枠組みを提案した研究。
@@ -4519,6 +4527,10 @@
 - **2025-03 · [Text Compression for Efficient Language Generation](2025-2503.11426-text-compression-for-efficient-language-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文を一つの埋め込みへ圧縮し、完了した文の埋め込みをキャッシュして生成する階層型モデルで、小規模領域で計算量最大約10倍と速度最大3倍の効率を得る一方、品質の代償も測る研究。
+
+- **2025-03 · [StreamMind: Unlocking Full Frame Rate Streaming Video Dialogue through Event-Gated Cognition](2025-2503.06220-streammind-unlocking-full-frame-rate-streaming-video-dialogue-through-ev.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  状態空間モデルによる定数費用の知覚と、言語モデルの浅い層を転用した認知ゲートで、毎秒100フレームのストリーミング動画へ能動的に応答する枠組み。
 
 - **2025-03 · [SplitQuantV2: Enhancing Low-Bit Quantization of LLMs Without GPUs](2025-2503.07657-splitquantv2-enhancing-low-bit-quantization-of-llms-without-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4687,7 +4699,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：117  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：118  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -4695,7 +4707,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：101  
+  実装：✓ ・ リポジトリ内被引用：102  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -5065,6 +5077,10 @@
 - **2024-10 · [Two are better than one: Context window extension with multi-grained self-injection](2024-2410.19318-two-are-better-than-one-context-window-extension-with-multi-grained-self.md)**  
   実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  
   一方、単純に過去文脈を一様圧縮すると、質問に必要な細かい事実まで失われやすい。論文要旨の速度改善（ストリーミング型比約2倍、エンコーダ・デコーダ型比約3倍）は対象実装・装置での比較であり、一般的なLLM推論のトークン/s改善倍率と同一視しない。
+
+- **2024-10 · [Rethinking Token Reduction for State Space Models](2024-2410.14725-rethinking-token-reduction-for-state-space-models.md)**  
+  実装：[✓](https://github.com/wuyushuwys/ToR_SSM) ・ リポジトリ内被引用：0  
+  Mamba向けに、隠れ状態由来の重要度でトークンを分類し枝刈りとマージを使い分ける学習後トークン削減を作り、演算2割減でも既存削減法より平均正解率を約9ポイント高く保つ。
 
 - **2024-10 · [From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression](2024-2410.04139-from-reading-to-compressing-exploring-the-multi-document-reader-for-prom.md)**  
   実装：[✓](https://github.com) ・ リポジトリ内被引用：0  
