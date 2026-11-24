@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-93dc5bf4e2775dc9-unrel-014",
+  "operation": "mark_unrelated",
+  "canonical_id": "SemanticScholar:1c53b738f6bf687e7774e32f23eccfd7f91f933a",
+  "reason": "オンポリシーRLHFの学習メモリについて、推論時に materialize したKVコンテキストを再利用してトークン間依存を解き、部分系列ストリーミングで学習するMetroRLHFだが、目的はRLHF学習時のピークメモリ削減であり学習単独の文脈である。",
+  "title": "MetroRLHF: Enabling Memory-Effective Training for On-Policy RLHF via Adaptive Sequence Streaming",
+  "identity_tokens": [
+    "SemanticScholar:1c53b738f6bf687e7774e32f23eccfd7f91f933a"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-93dc5bf4e277",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
