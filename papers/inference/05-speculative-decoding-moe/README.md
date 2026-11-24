@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（444本）
+## 自動生成の論文一覧（445本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -39,7 +39,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   並列投機ドラフタで、受理接頭辞長への位置別寄与から交差エントロピー重みを毎例動的に計算し、固定位置減衰より受理長と実測高速化を改善する。
 
 - **2026-01 · [TALON: Confidence-Aware Speculative Decoding with Adaptive Token Trees](2026-2601.07353-talon-confidence-aware-speculative-decoding-with-adaptive-draft-length.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   投機木の形をあらかじめ「幅10・深さ8」のように固定すると、簡単な箇所では深さが足りず、難しい箇所では大量の枝を作って捨てる。TALONは総ノード数だけを固定し、ドラフトモデルの確信度に応じて予算を深さと幅へその場で配分する。
 
 - **2025-12 · [Speculative Decoding: Performance or Illusion?](2026-2601.11580-speculative-decoding-performance-or-illusion.md)**  
@@ -611,6 +611,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-11 · [REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding](2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-dec.md)**  
   実装：[✓](https://github.com/King-ty/speculators/tree/real-loss) ・ リポジトリ内被引用：0  
   ブロック目的の近似が落とす分岐依存を共分散として特定し、経路の重みによる偏りのない推定と周辺化で厳密な期待受理長を学ぶ損失を作り、確率的な受理長四・七九二で全ての比較目的を上回り勾配分散も五割強減らしたと報告した。
+
+- **2026-11 · [Raptor: Rejection-aware Adaptive Tree based on Speculative Decoding](2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚言語モデルの木構造投機的デコーディングで、検証の棄却結果から候補カバレッジの不足と深すぎる展開の浪費を読み分け、木の深さ・幅・予算と展開の実行範囲を毎ラウンド適応させる学習不要の制御法。自己回帰デコーディング比で最大で平均2.39倍の高速化を示した。
 
 - **2026-11 · [NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding](2026-2611.23835-narrowspec-draft-hidden-width-need-not-match-the-target-in-speculative-d.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1751,7 +1755,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：573  
+  実装：✓ ・ リポジトリ内被引用：574  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

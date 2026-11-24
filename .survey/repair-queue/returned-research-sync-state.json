@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e3fd4582ea0db060a37c46d73529fc332512a077",
+  "base_commit": "86585d9df84fbc2c2658db79d4a445531da475ef",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1665,6 +1665,11 @@
     "2026-2611.24119-efair-fair-llm-serving-under-hourly-electricity-commitments.json",
     "2026-2611.24301-loopcache-accelerating-long-context-self-speculative-decoding-for-looped-transformers.json",
     "2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.json",
+    "2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.json",
+    "2026-2611.25091-berth-slo-preserving-gpu-sharing-without-new-preemption.json",
+    "2026-2611.25112-triplekv-predict-prefetch-protect-kv-cache-management-for-ai-agents.json",
+    "2026-2611.25433-rocokv-accelerating-llm-inference-serving-through-uncertainty-and-redundancy-aware-kv-cache-compression.json",
+    "2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54658,6 +54663,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.24891": {
+      "order": [
+        "2026-11-24T10:55:52+00:00",
+        "2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "f9006b6604b368661bffc1e6d353ffb6c24b748fbc04c5a8f55d1ad159833c16",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2026-2611.24891-cap-and-track-optimizing-llm-inference-request-dispatch-across-shifting-capacity.md",
+        "canonical_id": "arXiv:2611.24891",
+        "worker_completed_at": "2026-11-24T19:15:00+09:00",
+        "worker_run_key": "muse-final2-20261124-f6",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3720,
+          "body_paragraphs": 16,
+          "method_chars": 1573,
+          "method_paragraphs": 4,
+          "evaluation_chars": 498,
+          "limitation_chars": 202,
+          "insufficiency_flags": [
+            "評価説明量 498 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 498 < 500"
+        ],
+        "processed_at": "2026-11-24T10:55:52+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2611.25091": {
+      "order": [
+        "2026-11-24T10:57:30+00:00",
+        "2026-2611.25091-berth-slo-preserving-gpu-sharing-without-new-preemption.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.25112": {
+      "order": [
+        "2026-11-24T10:59:07+00:00",
+        "2026-2611.25112-triplekv-predict-prefetch-protect-kv-cache-management-for-ai-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.25433": {
+      "order": [
+        "2026-11-24T11:00:46+00:00",
+        "2026-2611.25433-rocokv-accelerating-llm-inference-serving-through-uncertainty-and-redundancy-aware-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.25436": {
+      "order": [
+        "2026-11-24T11:02:25+00:00",
+        "2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69523,6 +69600,18 @@
     "arxiv:2611.24373": [
       "papers/inference/99-other-inference-systems/2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.md",
       "papers/inference/99-other-inference-systems/2026-2611.24373-canopykv-remember-beyond-the-crop-for-fast-active-visual-reasoning.md"
+    ],
+    "arxiv:2611.25091": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.25091-berth-slo-preserving-gpu-sharing-without-new-preemption.md"
+    ],
+    "arxiv:2611.25112": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.25112-triplekv-predict-prefetch-protect-kv-cache-management-for-ai-agents.md"
+    ],
+    "arxiv:2611.25433": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.25433-rocokv-accelerating-llm-inference-serving-through-uncertainty-and-redund.md"
+    ],
+    "arxiv:2611.25436": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.25436-raptor-rejection-aware-adaptive-tree-based-on-speculative-decoding.md"
     ]
   }
 }

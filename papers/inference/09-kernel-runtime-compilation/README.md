@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（344本）
+## 自動生成の論文一覧（345本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -176,6 +176,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/jmaczan/torch-webgpu) ・ リポジトリ内被引用：1  
   単一演算測定が同期を混ぜて発行費用を約20倍に膨らませることを暴き、連続発行測定で真の費用を測った上で、同じシェーダで発行だけを減らして53パーセント速くなる統制実験により、律速がカーネルではなく発行回数だと示した測定研究。
 
+- **2026-08 · [Determinism-Preserving GPU Spatial Sharing with Vitamin-E](2026-2603.15042-determinism-preserving-gpu-spatial-sharing-with-vitamin-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Vitamin-Eは、カーネル起動時のバイナリ・グリッド・ブロック・依存順序を固定したまま、各起動を利用可能な物理SM集合へ遅延結合する。2026年8月5日のarXiv v4で題名・方式が更新された同一論文である。v4はH20/H200で実機評価し、固定構造で決定的な処理のビット単位一致を確認した。
+
 - **2026-08 · [CoRun: Padding is Simple and Efficient for Deterministic LLM Inference](2026-2608.14376-corun-padding-is-simple-and-efficient-for-deterministic-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   再現性が重要なモデル比較や強化学習のロールアウトでは、単なる見かけのゆらぎではなく運用上の問題となる。しかしこれではGPUが入力形状に応じて分割を最適化できず、行列積や注意機構の並列分割を制限する。
@@ -288,6 +292,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/EMCLab-Sinica/WG-KV) ・ リポジトリ内被引用：1  
   KV破棄（追い出し）は容量を制限できる一方、一度書いたKVを後で捨てるため、不要な書込みや一時的なメモリ使用を防ぎにくい。本論文はこの二方式に先立つ第三の操作として、KV受入れ（admission）を明示的に定式化する。
 
+- **2025-12 · [gpu_ext: Extensible OS Policies for GPUs via eBPF](2025-2512.12615-gpu-ext-extensible-os-policies-for-gpus-via-ebpf.md)**  
+  実装：[✓](https://github.com/eunomia-bpf/gpu_ext) ・ リポジトリ内被引用：1  
+  大規模言語モデル（Large Language モデル; LLM）の推論性能は、GPUの演算能力だけでなく、GPUメモリへ何を保持し、何をCPU側へ退避させ、いつ事前読み込みし、複数処理へどのように実行時間を割り当てるかに大きく左右される。
+
 - **2025-12 · [Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics](2025-2512.12602-exact-flow-linear-attention-exact-solution-from-continuous-time-dynamics.md)**  
   実装：[✓](https://github.com/declare-lab/EFLA) ・ リポジトリ内被引用：1  
   厳密流線形注意（Exact Flow Linear 注意機構、EFLA）は、デルタ則更新が、入力を一つのトークン区間で固定した連続時間の微分方程式を前進オイラー法（explicit Euler）で一歩近似したものと解釈できることを示す。
@@ -317,6 +325,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-11 · [CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching](2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   位置を問わない区画キャッシュの再利用へ適応したモデル自身で学習した選択器が、注意得点を使わずに再計算すべき区画を選ぶことで、予算百分の五で規則型二方式を全組で上回り完全な入力処理への相対低下を最大百分の八・三に抑え、初回トークン時間を最大十六・一倍、有効スループットを最大七・八倍にしたと報告した。
+
+- **2026-11 · [Berth: SLO-Preserving GPU Sharing Without New Preemption](2026-2611.25091-berth-slo-preserving-gpu-sharing-without-new-preemption.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  市販GPUの時間分割が持つ横取り能力を外側から活かし、ベストエフォート作業への供給をリクエスト不在時だけに絞り、短い時間スライスで実行中カーネルの費用を抑えることで、カーネルやドライバを変えずにサービス品質目標とGPU利用率を両立させた共有方式。
 
 - **2026-11 · [Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization](2026-2611.03517-ask-don-t-equip-question-driven-coding-agents-for-deep-kernel-optimizati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -553,10 +565,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [FSGen: Agile Fused and Sparse Accelerator Generator with Accurate Power Model for LLM Applications](2026-2608.09252-fsgen-agile-fused-and-sparse-accelerator-generator-with-accurate-power-m.md)**  
   実装：[✓](https://github.com/hkust-zhiyao/FSGen) ・ リポジトリ内被引用：0  
   融合演算データフローと多層の疎性を統一表現で扱い、ChiselによるRTL生成とプリミティブ単位の機械学習電力モデルで広い設計空間を高速に探索するLLMアクセラレータ生成器FSGenを提案し、先行生成器比で最大58倍の性能指標を達成した。
-
-- **2026-08 · [Determinism-Preserving GPU Spatial Sharing with Vitamin-E](2026-2603.15042-determinism-preserving-gpu-spatial-sharing-with-vitamin-e.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Vitamin-Eは、カーネル起動時のバイナリ・グリッド・ブロック・依存順序を固定したまま、各起動を利用可能な物理SM集合へ遅延結合する。2026年8月5日のarXiv v4で題名・方式が更新された同一論文である。v4はH20/H200で実機評価し、固定構造で決定的な処理のビット単位一致を確認した。
 
 - **2026-08 · [Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference](2026-2608.20210-daedalus-150m-a-convolution-attention-hybrid-designed-for-cpu-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -865,10 +873,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-12 · [Magneton: Optimizing Energy Efficiency of ML Systems via Differential Energy Debugging](2025-2512.08365-magneton-optimizing-energy-efficiency-of-ml-systems-via-differential-ene.md)**  
   実装：[✓](https://github.com/uw-syfi/Magneton) ・ リポジトリ内被引用：0  
   同等機能の別実装と演算子単位でエネルギーを比べ、無駄な実装とその原因である設定や呼出し経路まで自動で特定する差分エネルギーデバッグ。9システムで既知15件を診断し未知8件を発見。
-
-- **2025-12 · [gpu_ext: Extensible OS Policies for GPUs via eBPF](2025-2512.12615-gpu-ext-extensible-os-policies-for-gpus-via-ebpf.md)**  
-  実装：[✓](https://github.com/eunomia-bpf/gpu_ext) ・ リポジトリ内被引用：0  
-  大規模言語モデル（Large Language モデル; LLM）の推論性能は、GPUの演算能力だけでなく、GPUメモリへ何を保持し、何をCPU側へ退避させ、いつ事前読み込みし、複数処理へどのように実行時間を割り当てるかに大きく左右される。
 
 - **2025-12 · [GatedFWA: Linear Flash Windowed Attention with Gated Associative Memory](2025-2512.07782-gatedfwa-linear-flash-windowed-attention-with-gated-associative-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

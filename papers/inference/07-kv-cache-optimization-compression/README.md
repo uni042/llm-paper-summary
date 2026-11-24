@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（659本）
+## 自動生成の論文一覧（661本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -77,13 +77,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/hpdps-group/KVServe) ・ リポジトリ内被引用：10  
   KVServeは、実効帯域・負荷・品質制約からKV圧縮プロファイルか無圧縮を選び、分離型LLMの通信待ちと圧縮処理費を同時に抑える。
 
+- **2026-05 · [Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management](2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  PBKVは、複数の言語モデルエージェントが同じ処理を分担する動的ワークフローで、次に使われる可能性が高いキー・値キャッシュ（KVキャッシュ）をGPUに残し、必要に応じてホストメモリから先読みする仕組みである。
+
 - **2026-05 · [RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory](2026-2605.06675-ratequant-optimal-mixed-precision-kv-cache-quantization-via-rate-distort.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   各ヘッドの損失勾配に基づく重要度と、量子化器固有の指数型ビット数・歪み関係を校正し、逆水充填法と整数ビットの限界利得選択で配分を決める。Qwen3/Llama3の5モデルと3種類の量子化器で評価し、平均4ビット時のTurboQuantにおける量子化劣化回復率は5モデル平均75.7%。
-
-- **2026-05 · [Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management](2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  PBKVは、複数の言語モデルエージェントが同じ処理を分担する動的ワークフローで、次に使われる可能性が高いキー・値キャッシュ（KVキャッシュ）をGPUに残し、必要に応じてホストメモリから先読みする仕組みである。
 
 - **2026-02 · [SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning](2026-2602.22603-sidequest-model-driven-kv-cache-management-for-long-horizon-agentic-reas.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -798,6 +798,14 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [Where Should a KV-Cache Repair Budget Go? Distractor Structure and Contextual Compatibility in Non-Prefix Reuse](2026-2611.06397-where-should-a-kv-cache-repair-budget-go-distractor-structure-and-contex.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非プリフィックスKV再利用の損失をディストラクタの出所を変えて分解し、損傷が多数のディストラクタへ分散すること、質問アテンションではターゲットをほとんど見つけられないこと、小さい修復予算は検索器の最上位チャンクを質問の直前へ移して再計算する使い方が有効であることを示した分析論文。
+
+- **2026-11 · [TripleKV: Predict, Prefetch, Protect -- KV Cache Management for AI Agents](2026-2611.25112-triplekv-predict-prefetch-protect-kv-cache-management-for-ai-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ツール実行中に追い出されたエージェントのKVキャッシュについて、完了時刻をツール固有に予測してSSDからホストDRAMへだけ先読みし、保護付き置換で再利用まで残すことで、クリティカルパス上のSSD読みを要するリクエストを45から76パーセントから10パーセント未満へ減らす3階層KV管理。
+
+- **2026-11 · [RoCoKV: Accelerating LLM Inference Serving through Uncertainty and Redundancy Aware KV Cache Compression](2026-2611.25433-rocokv-accelerating-llm-inference-serving-through-uncertainty-and-redund.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論モデルの冗長な推論トレースでKV予算が奪われる問題に対し、モデルの不確実性で枝刈り強度を変え、直近内容と似たトークンを割り引くRoCoKVを提案し、制約付き予算で既存圧縮法より高い精度と、vLLM実測でFull-KV比最大1.43倍の高速化を示した圧縮法。
 
 - **2026-11 · [OPSERVE: Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems](2026-de7f1d0908f4-opserve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-.md)**  
   実装：[✓](https://github.com/sc26-submission/aionhpc-26-adsubmission) ・ リポジトリ内被引用：0  
