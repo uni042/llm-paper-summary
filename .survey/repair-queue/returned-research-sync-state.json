@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c4cb3cd1af7adc0336cca7e2eeb0e05b28469501",
+  "base_commit": "66075a19698de4d29fffa75eb7bf63169712c9cd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1650,11 +1650,16 @@
     "2026-2611.13641-moai-module-optimizing-architecture-for-non-interactive-secure-transformer-inference.json",
     "2026-2611.14051-can-kv-cache-be-reused-across-model-updates-a-deepseek-v4-flash-case-study.json",
     "2026-2611.14399-real-loss-optimizing-real-expected-acceptance-length-for-speculative-decoding.json",
+    "2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-multiplications-and-a-64-byte-table.json",
     "2026-2611.22086-hycoinfer-cloud-edge-collaborative-inference-for-large-language-models-on-heterogeneous-gpu-fpga-architectures.json",
     "2026-2611.22191-risa-recoverable-sparse-attention-for-block-diffusion-language-models.json",
     "2026-2611.22215-communicate-the-change-efficient-expert-parallelism-via-activation-compression.json",
     "2026-2611.22280-xm-sparse-high-throughput-sparse-attention-llm-serving-over-scale-up-memory-pools.json",
     "2026-2611.22296-specsearch-towards-hardware-aware-efficient-speculative-decoding.json",
+    "2026-2611.22746-laflash-capacity-driven-acceleration-for-coding-agent-workflows-via-qlc-hbf.json",
+    "2026-2611.23035-storing-the-gemma-4-k-v-cache-once-exact-global-kv-memory-savings-in-a-paged-serving-engine-with-unchanged-attention-ker.json",
+    "2026-2611.23558-towards-fair-resource-sharing-in-agentic-llm-serving.json",
+    "2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-reasoning-vlms.json",
     "2026-2b611e85a822-layer-wise-heterogeneity-guided-heterogeneous-pruning-an-llm-compression-method.json",
     "2026-30a04bed718a-learning-to-compress-energy-aware-large-language-model-serving-via-adaptive-kv-caching.json",
     "2026-30f6425d9933-lightweight-haar-wavelet-subband-pruning-for-llms.json",
@@ -54558,6 +54563,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.22019": {
+      "order": [
+        "2026-11-24T10:37:42+00:00",
+        "2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-multiplications-and-a-64-byte-table.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.22746": {
+      "order": [
+        "2026-11-24T10:38:38+00:00",
+        "2026-2611.22746-laflash-capacity-driven-acceleration-for-coding-agent-workflows-via-qlc-hbf.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.23035": {
+      "order": [
+        "2026-11-24T10:39:34+00:00",
+        "2026-2611.23035-storing-the-gemma-4-k-v-cache-once-exact-global-kv-memory-savings-in-a-paged-serving-engine-with-unchanged-attention-ker.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.23558": {
+      "order": [
+        "2026-11-24T10:40:30+00:00",
+        "2026-2611.23558-towards-fair-resource-sharing-in-agentic-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.23769": {
+      "order": [
+        "2026-11-24T10:41:26+00:00",
+        "2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-reasoning-vlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69383,6 +69433,21 @@
     "arxiv:2611.22296": [
       "papers/inference/05-speculative-decoding-moe/2026-2611.22296-specsearch-towards-hardware-aware-efficient-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2026-2611.22296-specsearch-towards-hardware-aware-efficient-speculative-decoding.md"
+    ],
+    "arxiv:2611.22019": [
+      "papers/inference/16-weight-quantization-compression/2026-2611.22019-computed-permutation-trellis-coding-near-optimal-quantization-from-two-m.md"
+    ],
+    "arxiv:2611.22746": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.22746-laflash-capacity-driven-acceleration-for-coding-agent-workflows-via-qlc-.md"
+    ],
+    "arxiv:2611.23035": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.23035-storing-the-gemma-4-k-v-cache-once-exact-global-kv-memory-savings-in-a-p.md"
+    ],
+    "arxiv:2611.23558": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2611.23558-towards-fair-resource-sharing-in-agentic-llm-serving.md"
+    ],
+    "arxiv:2611.23769": [
+      "papers/inference/99-other-inference-systems/2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md"
     ]
   }
 }

@@ -108,6 +108,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   PARCELは、視覚トークンの数を16、64、256など異なる予算へ縮めても、空間的な位置関係と画像の細部を両立して保つための、可変予算の視覚表現設計である。27種類の評価課題を横断した全体平均の性能保持率は、視覚トークン256個で95.6%、64個で95.3%、16個で88.3%と報告された。
 
+- **2026-05 · [AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference](2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-model-inf.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚トークンはプリフィル前に学習済みスコアラーで強く枝刈りし、テキストトークンは予算超過時だけエビクションするという非対称な圧縮で、最大54%のFLOPs削減と文書・図表理解での精度向上を両立する視覚言語モデルの推論方式。
+
 - **2026-05 · [Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA](2026-2608.14560-agentic-kernel-optimization-generating-state-of-the-art-gpu-kernels-with.md)**  
   実装：[✓](https://github.com/CodeGandee/flashinfer-bench-starter-kit/tree/main/solution/cuda) ・ リポジトリ内被引用：1  
   正しさを門番とする評価とハッキング禁止の下で複数コードエージェントが計画・実装・プロファイル・統合を分担し、人手のCUDAなしでMoEと疎注意のカーネルを参照実装比最大1101倍まで高速化した事例研究。
@@ -565,10 +569,6 @@
 - **2026-05 · [CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations](2026-2605.07325-csr-infinite-horizon-real-time-policies-with-massive-cached-state-repres.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ロボットの状態履歴を書き換えない静的プリフィックスと小さな動的末尾へ分け、追い出しは別資源で裏側に再計算して差し替えることで、235Bモデルと12万トークン文脈の応答開始遅延を14.67秒から0.56秒へ26倍下げ、想起率でも検索型を上回る枠組み。
-
-- **2026-05 · [AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference](2026-2605.29535-asymvlm-asymmetric-token-pruning-for-efficient-vision-language-model-inf.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  視覚トークンはプリフィル前に学習済みスコアラーで強く枝刈りし、テキストトークンは予算超過時だけエビクションするという非対称な圧縮で、最大54%のFLOPs削減と文書・図表理解での精度向上を両立する視覚言語モデルの推論方式。
 
 - **2026-04 · [TRACES: Tagging Reasoning Steps for Adaptive Cost-Efficient Early-Stopping](2026-2604.21057-traces-tagging-reasoning-steps-for-adaptive-cost-efficient-early-stoppin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

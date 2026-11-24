@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（343本）
+## 自動生成の論文一覧（344本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -293,6 +293,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   厳密流線形注意（Exact Flow Linear 注意機構、EFLA）は、デルタ則更新が、入力を一つのトークン区間で固定した連続時間の微分方程式を前進オイラー法（explicit Euler）で一歩近似したものと解釈できることを示す。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [Storing the Gemma 4 K=V Cache Once: Exact Global-KV Memory Savings in a Paged Serving Engine with Unchanged Attention Kernels](2026-2611.23035-storing-the-gemma-4-k-v-cache-once-exact-global-kv-memory-savings-in-a-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Gemma 4の全体注意層でキーと値が同じ射影から決まる冗長性を使い、640値の行を二つの重なるビューで既存カーネルに読ませてKVキャッシュを一度だけ保存することで、注意カーネル無改変のまま定常デコードのKVメモリを1.34倍から1.40倍小さくするvLLM試作。
 
 - **2026-11 · [LiquidCP: Decoupling Attention Tasks from Communication and Kernel Boundaries in Context Parallelism](2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-bounda.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

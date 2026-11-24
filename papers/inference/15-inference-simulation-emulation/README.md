@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（126本）
+## 自動生成の論文一覧（127本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -129,6 +129,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-11 · [ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration](2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configura.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   カーネル集合ごとに一回だけの短い実測を基準にし、固定費を保つ移転則と離散事象の模擬で他配置の性能を予測する枠組みで、十一の基準実測から百七十二構成のトークン当たり時間を中央値誤差八・一パーセントで予測し、探索を実機試行から予測上の探索へ変えたと報告した。
+
+- **2026-11 · [LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF](2026-2611.22746-laflash-capacity-driven-acceleration-for-coding-agent-workflows-via-qlc-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  コーディングエージェントの休止状態を追い出さず保持する方が再計算より速いことに着目し、大容量のQLC高帯域フラッシュへ状態を置くLaFlashで、SLC方式とバッチ拡大の組み合わせに対し平均7.04倍のスループットと10.96倍のエネルギー効率を得る容量駆動の加速アーキテクチャ。
 
 - **2026-10 · [SimServing: Native-Execution Simulation for Evolution-Resilient LLM Serving Configuration Tuning](2026-4fa7ab93c4a9-simserving-native-execution-simulation-for-evolution-resilient-llm-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

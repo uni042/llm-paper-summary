@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1533本）
+## 自動生成の論文一覧（1534本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1133,6 +1133,10 @@
 - **2026-11 · [Quantizing Recurrent Language Models Is Easier Than You Think](2026-2611.01864-quantizing-recurrent-language-models-is-easier-than-you-think.md)**  
   実装：[✓](https://github.com/camail-official/LoReS) ・ リポジトリ内被引用：0  
   リカレント言語モデルの量子化を状態外と状態内へ分け、減衰型リカレンスは外れ値が弱く量子化しやすいことと、バリュー軸グルーピング・減衰ベース混合精度・確率的丸めからなるLoReSで状態を8ビット化しても大規模ハイブリッドの精度がほぼ保たれることを示す研究。
+
+- **2026-11 · [Keep the Reasoning, Read the Image: On-Demand Visual KV for Multi-Turn Reasoning VLMs](2026-2611.23769-keep-the-reasoning-read-the-image-on-demand-visual-kv-for-multi-turn-rea.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い推論が画像のKVエントリを押し出す問題に対し、全視覚エントリをCPUメモリに退避して削除を防ぎ、各ステップで現在のクエリが必要とする分だけをテキストの低評価スロットと交換して読む、既存の保持方針へ被せる学習不要のオンデマンド読み出し方式。
 
 - **2026-11 · [Direct GPU Energy Measurements of Batch-Level Sharing in Mixture-of-Experts and Recurrent Models](2026-2611.11696-direct-gpu-energy-measurements-of-batch-level-sharing-in-mixture-of-expe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
