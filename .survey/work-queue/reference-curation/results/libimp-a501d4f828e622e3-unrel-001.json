@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a501d4f828e622e3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.26362",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.26362",
+    "identity_tokens": [
+      "arXiv:2605.26362"
+    ],
+    "reason": "線形化された構造化知識に対するLLMの幻覚を、注意の近道的手がかりへの集中とFFN表現の接地失敗として機構的に分析する研究で、対象は推論の信頼性であり推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-24T22:15:35+00:00",
+    "last_checked_at": "2026-11-24T22:15:35+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Why LLMs Hallucinate on Structured Knowledge: A Mechanistic Analysis of Reasoning over Linearized Representations"
+  },
+  "processed_at": "2026-11-24T22:15:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a501d4f828e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

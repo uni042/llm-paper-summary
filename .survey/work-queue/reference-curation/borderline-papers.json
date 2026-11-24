@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-24T22:11:31+00:00",
-  "record_count": 8848,
+  "updated_at": "2026-11-24T22:15:35+00:00",
+  "record_count": 8870,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -135624,6 +135624,336 @@
       ],
       "borderline_recheck_count": 0,
       "title": "When Agents Slow Down: Understanding LLM Agents'Test-Time Strategies via Elo-per-token Analysis"
+    },
+    "arXiv:2410.09637": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.09637",
+      "identity_tokens": [
+        "arXiv:2410.09637"
+      ],
+      "reason": "正規化なしLLMでGELUよりReLUが有利になることをエントロピー過負荷の観点から示す活性化関数の研究で、私的推論の計算・通信複雑度への言及はあるが主結果は学習時の困惑度改善であり推論システム機構の検証は中心ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReLU's Revival: On the Entropic Overload in Normalization-Free Large Language Models"
+    },
+    "arXiv:2412.03621": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.03621",
+      "identity_tokens": [
+        "arXiv:2412.03621"
+      ],
+      "reason": "JPPO++はエッジの小規模モデルでプロンプトを圧縮し深層強化学習で圧縮率と無線送信電力を共同最適化するモバイルLLMサービス向け枠組みで、通信とプロンプト処理の削減は推論効率に触れるが主眼は無線ネットワーク側の電力・伝送最適化である。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "JPPO++: Joint Power and Denoising-Inspired Prompt Optimization for Mobile LLM Services"
+    },
+    "arXiv:2511.22217": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.22217",
+      "identity_tokens": [
+        "arXiv:2511.22217"
+      ],
+      "reason": "NetGPT向けにネットワーク状態を踏まえたスコア方針でクラウド／エッジのエージェントへルーティングし、クラウド応答データでエッジ側を強化学習により自己改善させる相乗枠組みだが、対象は通信ネットワーク向けエージェント基盤という特定応用であり汎用LLMサービングへの寄与は限定的である。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing NetGPT via Routing-Based Synergy and Reinforcement Learning"
+    },
+    "DOI:10.1109/mass66014.2025.00085": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mass66014.2025.00085",
+      "identity_tokens": [
+        "DOI:10.1109/mass66014.2025.00085"
+      ],
+      "reason": "ネットワークエッジでLLMエージェントの推論サブタスクをエッジサーバへオフロードする際のオフロード決定と計算資源配分を二段階で最適化する枠組みだが、主眼は動的ネットワーク条件での遅延・エネルギー管理でありLLM推論機構自体の提案ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Task Offloading for Collaborative Inference of LLM Agents at the Network Edge"
+    },
+    "DOI:10.1145/3486001.3486247": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3486001.3486247",
+      "identity_tokens": [
+        "DOI:10.1145/3486001.3486247"
+      ],
+      "reason": "BERT等のNLPモデルを実運用へ載せるための剪定・量子化・蒸留・パラメータ共有・行列分解等の圧縮手法を概説するチュートリアル的論文で、圧縮による推論効率化に触れるが対象はLLM以前のNLPモデルであり新規の推論機構ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compression of Deep Learning Models for NLP"
+    },
+    "arXiv:2407.12075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.12075",
+      "identity_tokens": [
+        "arXiv:2407.12075"
+      ],
+      "reason": "学習可能な二値ベクトルのタイルを層ごとに再利用して二値重みネットをサブビット圧縮するTiled Bit Networksは推論時の保存・計算削減を狙うが、対象はCNN・MLPを含む汎用ニューラルネットでありLLM推論への適用検証はない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tiled Bit Networks: Sub-Bit Neural Network Compression Through Reuse of Learnable Binary Vectors"
+    },
+    "arXiv:2504.12673": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.12673",
+      "identity_tokens": [
+        "arXiv:2504.12673"
+      ],
+      "reason": "ACoRNはRAGの抽象的文脈圧縮器を検索ノイズに頑健にする学習手法で、文脈圧縮による推論コスト削減を前提としつつも主目的はノイズ下での回答品質の維持であり、推論システムの圧縮機構自体の提案ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ACoRN: Noise-Robust Abstractive Compression in Retrieval-Augmented Language Models"
+    },
+    "arXiv:2609.38066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38066",
+      "identity_tokens": [
+        "arXiv:2609.38066"
+      ],
+      "reason": "AlphaDLMは系列レベルのα損失で離散拡散言語モデルの並列生成の一貫性を改善するが、主貢献は学習目的関数の設計であり、デノイジング歩数削減等の推論効率機構への直接の寄与は示されていない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Alpha Diffusion Language Models: Factorization Alone Is Not the Problem"
+    },
+    "arXiv:2604.00053": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.00053",
+      "identity_tokens": [
+        "arXiv:2604.00053"
+      ],
+      "reason": "環境分析向けRAGワークフローと汎用LLM直接利用の推論時エネルギー消費を実測比較する研究で、LLM推論のエネルギー計測には関係するが、題材は気候・環境ドメインの応用ワークフローに限定される。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Energy Footprint of LLM-Based Environmental Analysis: LLMs and Domain Products"
+    },
+    "arXiv:2605.26256": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26256",
+      "identity_tokens": [
+        "arXiv:2605.26256"
+      ],
+      "reason": "POLARは長期ユーザー対話をマルチモーダル知識グラフとして蓄積し身体化エージェントを個人化するメモリ枠組みだが、主目的は個人化された支援の質であり、エージェントメモリのサービング機構としての貢献は薄い。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Personalizing Embodied Multimodal Large Language Model Agents over Long-term User Interactions"
+    },
+    "arXiv:2602.06470": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.06470",
+      "identity_tokens": [
+        "arXiv:2602.06470"
+      ],
+      "reason": "ユーザー対話ログから継続学習してLLMシステムを改善する枠組みと題するが、要旨の中心はノイズの多い実運用ログからのフィードバック信号抽出とモデル最適化（学習）であり、推論・サービング機構への直接貢献は不明瞭である。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improve Large Language Model Systems with User Logs"
+    },
+    "arXiv:2402.00841": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.00841",
+      "identity_tokens": [
+        "arXiv:2402.00841"
+      ],
+      "reason": "会議要約タスクで微調整した小型LLMと大型LLMを実運用環境で比較し、デプロイコストの観点から小型モデルの代替可能性を検証するが、題材は特定応用タスクの性能比較であり推論システム機構への貢献は薄い。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tiny Titans: Can Smaller Large Language Models Punch Above Their Weight in the Real World for Meeting Summarization?"
+    },
+    "arXiv:2504.01328": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.01328",
+      "identity_tokens": [
+        "arXiv:2504.01328"
+      ],
+      "reason": "動画MLLM向けに圧縮した高速トークンで概要を掴み未圧縮の低速トークンをテキストからクロス注意で参照する二重トークン構成で、限られた計算予算下で入力フレーム数を増やす設計だが、主目的は動画理解の品質と効率の両立であり汎用LLMサービング機構ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Slow-Fast Architecture for Video Multi-Modal Large Language Models"
+    },
+    "arXiv:2506.00396": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00396",
+      "identity_tokens": [
+        "arXiv:2506.00396"
+      ],
+      "reason": "推測的報酬モデルは外部報酬割当器で最適行動を予測し推測的検証で劣る選択肢を剪定してLLMの意思決定探索を安価にする枠組みだが、対象はエージェント的探索戦略の費用対効果でありトークン生成の投機的デコードやサービング機構ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speculative Reward Model Boosts Decision Making Ability of LLMs Cost-Effectively"
+    },
+    "DOI:10.1109/iscas66217.2026.11562843": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas66217.2026.11562843",
+      "identity_tokens": [
+        "DOI:10.1109/iscas66217.2026.11562843"
+      ],
+      "reason": "無限次元ニューラルネットのアーキテクチャ探索と題するが、Crossref・OpenAlexのいずれでも一次要旨を取得できず、探索対象や推論効率への具体的な機構を検証できていない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "InfiNAS: Architecture Search of Infinite-Dimensional Neural Networks"
+    },
+    "DOI:10.1145/3748522.3779745": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748522.3779745",
+      "identity_tokens": [
+        "DOI:10.1145/3748522.3779745"
+      ],
+      "reason": "静的・蒸留したLLM特徴によるエッジ優先の特徴抽出器と題するが、Crossref・OpenAlexのいずれでも一次要旨を取得できず、エッジ推論での計算削減機構を検証できていない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Edge-First Feature Extractor: Enabling Efficient Multilingual NLP with Static and Distilled LLM Features"
+    },
+    "arXiv:2510.19871": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.19871",
+      "identity_tokens": [
+        "arXiv:2510.19871"
+      ],
+      "reason": "ReDiffは視覚言語拡散モデルの並列復号で初期トークン誤りが連鎖する学習・推論乖離に対し、合成誤りの修正を学ばせる二段階学習で自己修正能力を持たせる枠組みで、対処はモデル学習側であり推論時の復号システム機構ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion Model"
+    },
+    "arXiv:2603.26769": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.26769",
+      "identity_tokens": [
+        "arXiv:2603.26769"
+      ],
+      "reason": "4ビット量子化したQwen2.5-VL-7Bと小型FP16モデルを視覚的破損下で比べ、物体盲・意味ドリフト等の失敗様式の分類で圧縮VLMのエッジ信頼性を診断する評価研究であり、圧縮モデル評価ではあるが推論システムの機構提案ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge Reliability Gap in Vision-Language Models: Quantifying Failure Modes of Compressed VLMs Under Visual Corruption"
+    },
+    "arXiv:2604.19781": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19781",
+      "identity_tokens": [
+        "arXiv:2604.19781"
+      ],
+      "reason": "教育評価の自動採点で小規模LMの言語化された信頼度を大規模LMへのエスカレーション信号に使えるかを専門家採点データで検証したカスケード研究だが、対象は採点応用における信頼度の判別力評価であり汎用ルーティング機構の提案ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment"
+    },
+    "arXiv:2610.00296": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00296",
+      "identity_tokens": [
+        "arXiv:2610.00296"
+      ],
+      "reason": "トークンレベル確実性が正しさの代理になるかを、質問単位の正答しやすさと同一質問内の正誤判別とに分けて統制評価した分析であり、確実性を使う推論手法の前提検証ではあるが推論システムの機構自体の提案ではない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Certainty Is Not Just Correctness: Rethinking Token-Level Certainty in LLM Reasoning"
+    },
+    "arXiv:2610.25835": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.25835",
+      "identity_tokens": [
+        "arXiv:2610.25835"
+      ],
+      "reason": "拡散言語モデルについてタスクごとにトークン当たりフォワードパス数が大きく変わり、入力からの新規性や語の希少さで説明できることを分析した研究で、復号コストの特性評価としては有用だが削減機構や評価基盤の提供はない。",
+      "first_checked_at": "2026-11-24T22:15:34+00:00",
+      "last_checked_at": "2026-11-24T22:15:34+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Diffusion Language Models Change Speed Across Tasks and Languages"
+    },
+    "arXiv:2501.19107": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.19107",
+      "identity_tokens": [
+        "arXiv:2501.19107"
+      ],
+      "reason": "脳型トポロジ駆動の動的疎訓練（CHT系）で超疎ネットワークでも全結合並みの性能を狙う研究で、疎化による計算削減には関係するが主対象は疎ネットワークの学習法であり、Transformer/LLM推論への具体的適用は限定的である。",
+      "first_checked_at": "2026-11-24T22:15:35+00:00",
+      "last_checked_at": "2026-11-24T22:15:35+00:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Brain network science modelling of sparse neural networks enables Transformers and LLMs to perform as fully connected"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a501d4f828e622e3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.19107",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.19107",
+    "identity_tokens": [
+      "arXiv:2501.19107"
+    ],
+    "reason": "脳型トポロジ駆動の動的疎訓練（CHT系）で超疎ネットワークでも全結合並みの性能を狙う研究で、疎化による計算削減には関係するが主対象は疎ネットワークの学習法であり、Transformer/LLM推論への具体的適用は限定的である。",
+    "first_checked_at": "2026-11-24T22:15:35+00:00",
+    "last_checked_at": "2026-11-24T22:15:35+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Brain network science modelling of sparse neural networks enables Transformers and LLMs to perform as fully connected"
+  },
+  "processed_at": "2026-11-24T22:15:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a501d4f828e6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

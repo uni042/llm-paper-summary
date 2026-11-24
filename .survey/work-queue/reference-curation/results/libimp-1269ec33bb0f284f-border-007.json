@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1269ec33bb0f284f-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.12673",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.12673",
+    "identity_tokens": [
+      "arXiv:2504.12673"
+    ],
+    "reason": "ACoRNはRAGの抽象的文脈圧縮器を検索ノイズに頑健にする学習手法で、文脈圧縮による推論コスト削減を前提としつつも主目的はノイズ下での回答品質の維持であり、推論システムの圧縮機構自体の提案ではない。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-24T22:15:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ACoRN: Noise-Robust Abstractive Compression in Retrieval-Augmented Language Models"
+  },
+  "processed_at": "2026-11-24T22:15:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1269ec33bb0f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

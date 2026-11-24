@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-13915f7500268c10-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.00841",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.00841",
+    "identity_tokens": [
+      "arXiv:2402.00841"
+    ],
+    "reason": "会議要約タスクで微調整した小型LLMと大型LLMを実運用環境で比較し、デプロイコストの観点から小型モデルの代替可能性を検証するが、題材は特定応用タスクの性能比較であり推論システム機構への貢献は薄い。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-24T22:15:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tiny Titans: Can Smaller Large Language Models Punch Above Their Weight in the Real World for Meeting Summarization?"
+  },
+  "processed_at": "2026-11-24T22:15:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-13915f750026",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

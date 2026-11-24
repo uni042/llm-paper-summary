@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c8a4e44e497cb17-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.00396",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.00396",
+    "identity_tokens": [
+      "arXiv:2506.00396"
+    ],
+    "reason": "推測的報酬モデルは外部報酬割当器で最適行動を予測し推測的検証で劣る選択肢を剪定してLLMの意思決定探索を安価にする枠組みだが、対象はエージェント的探索戦略の費用対効果でありトークン生成の投機的デコードやサービング機構ではない。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-24T22:15:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculative Reward Model Boosts Decision Making Ability of LLMs Cost-Effectively"
+  },
+  "processed_at": "2026-11-24T22:15:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c8a4e44e497",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

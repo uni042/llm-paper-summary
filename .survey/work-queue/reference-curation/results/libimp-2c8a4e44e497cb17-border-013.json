@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c8a4e44e497cb17-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.25835",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.25835",
+    "identity_tokens": [
+      "arXiv:2610.25835"
+    ],
+    "reason": "拡散言語モデルについてタスクごとにトークン当たりフォワードパス数が大きく変わり、入力からの新規性や語の希少さで説明できることを分析した研究で、復号コストの特性評価としては有用だが削減機構や評価基盤の提供はない。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-24T22:15:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Diffusion Language Models Change Speed Across Tasks and Languages"
+  },
+  "processed_at": "2026-11-24T22:15:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c8a4e44e497",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

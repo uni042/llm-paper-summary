@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c8a4e44e497cb17-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.26769",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.26769",
+    "identity_tokens": [
+      "arXiv:2603.26769"
+    ],
+    "reason": "4ビット量子化したQwen2.5-VL-7Bと小型FP16モデルを視覚的破損下で比べ、物体盲・意味ドリフト等の失敗様式の分類で圧縮VLMのエッジ信頼性を診断する評価研究であり、圧縮モデル評価ではあるが推論システムの機構提案ではない。",
+    "first_checked_at": "2026-11-24T22:15:34+00:00",
+    "last_checked_at": "2026-11-24T22:15:34+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Edge Reliability Gap in Vision-Language Models: Quantifying Failure Modes of Compressed VLMs Under Visual Corruption"
+  },
+  "processed_at": "2026-11-24T22:15:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c8a4e44e497",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
