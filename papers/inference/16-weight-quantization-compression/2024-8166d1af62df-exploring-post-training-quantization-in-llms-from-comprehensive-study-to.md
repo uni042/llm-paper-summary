@@ -85,7 +85,7 @@ references:
   arxiv_id: '2205.01068'
 - canonical_id: arXiv:2009.12812
   arxiv_id: '2009.12812'
-references_checked_at: '2026-10-24'
+references_checked_at: '2026-11-24'
 references_source: arxiv-html-reference-section
 references_total: 41
 ---

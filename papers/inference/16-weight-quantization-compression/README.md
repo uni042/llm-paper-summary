@@ -1432,6 +1432,10 @@
   実装：[✓](https://github.com/LOG-postech/rethinking-LLM-pruning) ・ リポジトリ内被引用：1  
   枝刈りの再構成誤差をブロック単位化と大域伝播とブロック間再構成で9割前後削減できる一方、誤差最小化の推し進めは小さい校正データへの過適合を招いて汎化を損なうことを示し、自己生成校正データによる緩和を提示した分析研究。
 
+- **2024-06 · [Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other](2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  事後量子化は、既存の言語モデルの重みや活性を低ビット整数で近似し、メモリ占有量とデータ転送量を削減する。著者は実際のGPUサービング速度を新たに測定していないため、精度改善と高速化を混同しない。
+
 - **2024-05 · [Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models](2024-2405.01943-dependency-aware-semi-structured-sparsity-of-glu-variants-in-large-langu.md)**  
   実装：[✓](https://github.com/guozhiyu/glu_dass) ・ リポジトリ内被引用：1  
   LLaMA2やMistralのMLPでは、入力をGate投影とUp投影に通し、活性化関数と要素積によって中間表現を作り、Down投影で元の隠れ次元へ戻す。通常の重み単位剪定は各線形層の入力活性と重みの大きさを見て独立にゼロ化するため、ある中間ニューロンのDown側の寄与を重視しても、その中間値を作るGate/Up側の重みが多く削られる可能性がある。
@@ -1471,10 +1475,6 @@
 - **2024-08 · [LLM-Barber: Block-Aware Rebuilder for Sparsity Mask in One-Shot for Large Language Models](2024-2408.10631-llm-barber-block-aware-rebuilder-for-sparsity-mask-in-one-shot-for-large.md)**  
   実装：[✓](https://github.com/YupengSu/LLM-Barber) ・ リポジトリ内被引用：0  
   枝刈り後のモデルで重みの重要度が変わることに着目し、ブロック単位の再構成誤差の勾配と重みの積でマスクを作り直して、重要になった重みを復活させ不要になった重みを落とす、再学習なしの一括マスク再構築。
-
-- **2024-06 · [Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other](2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  事後量子化は、既存の言語モデルの重みや活性を低ビット整数で近似し、メモリ占有量とデータ転送量を削減する。著者は実際のGPUサービング速度を新たに測定していないため、精度改善と高速化を混同しない。
 
 - **2024-05 · [On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization](2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
