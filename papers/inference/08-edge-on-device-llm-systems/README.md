@@ -356,6 +356,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
 
+- **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
+  実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：1  
+  大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
+
 - **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
@@ -379,10 +383,6 @@
 - **2025-10 · [ShishuLM: Achieving Optimal and Efficient Parameterization with Low Attention Transformer Models](2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-atten.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   後半層の注意の冗長性に基づき、上位層を全結合だけのブロックへ置き換えて事前学習する効率的な言語モデル。注意を約3分の2残す構成で土台と同等の品質と生成効率の改善を示し、重み共有でさらに容量を削る。
-
-- **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
-  実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：0  
-  大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
 
 - **2025-09 · [Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units](2025-2509.25155-context-driven-performance-modeling-for-causal-inference-operators-on-ne.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

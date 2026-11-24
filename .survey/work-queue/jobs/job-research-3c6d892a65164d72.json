@@ -35,10 +35,15 @@
   "selection_reason": "HEEDはQwen3-VL-8BをMamba-2/注意3:1ハイブリッドへ蒸留して推論を効率化する際、情報密度の高いパッチの残差ドリフトがOCR等で選択的失敗を招くことを特定し、密度重み付き残差アライメントで高密度パッチを保護する、効率的VLM推論向け蒸留手法である。",
   "semantic_scholar_id": "8aca72b0679553b6e458a9d829132fd50d0601d2",
   "source_url": "https://arxiv.org/abs/2605.17093",
-  "status": "ready",
+  "status": "superseded",
   "title": "HEED: Density-Weighted Residual Alignment for Hybrid Vision-Language Model Distillation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T06:04:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2605.17093-heed-density-weighted-residual-alignment-for-hybrid-vision-language-mode.md",
+  "represented_canonical_id": "arXiv:2605.17093",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

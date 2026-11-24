@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1486本）
+## 自動生成の論文一覧（1488本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2314,6 +2314,10 @@
   実装：[✓](https://github.com/mchl-labs/predict-then-diffuse) ・ リポジトリ内被引用：0  
   拡散型言語モデルの固定応答長を、推論前に軽量予測器で入力ごとに見積もって安全余裕を加えることで置き換え、埋め草計算を省いて既定推論比で計算量を99.34パーセント減らす枠組み。
 
+- **2026-05 · [Positional LSH: Binary Block Matrix Approximation for Attention with Linear Biases](2026-2605.09472-positional-lsh-binary-block-matrix-approximation-for-attention-with-line.md)**  
+  実装：[✓](https://github.com/DanielWolfsonTAU/positional_lsh) ・ リポジトリ内被引用：0  
+  ALiBiのバイアス行列を、位置をハッシュするランダムビニングによる二値ブロックマスクの期待値として表し、保証付き近似とほぼ線形時間の長文脈注意への帰着を与える理論研究。
+
 - **2026-05 · [Policy-Guided Stepwise Model Routing for Cost-Effective Reasoning](2026-2605.06116-policy-guided-stepwise-model-routing-for-cost-effective-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   思考連鎖の中間状態ごとに小型モデル継続か大型モデルへの昇格かを決める段階的ルーティングを制約つき決定問題として定式化し、小型制御ポリシーの強化学習と閾値較正を同時に行うことで、過程報酬モデルなしに精度とコストのトレードオフを改善した研究。
@@ -2389,6 +2393,10 @@
 - **2026-05 · [Layer Collapse in Diffusion Language Models](2026-2605.06366-layer-collapse-in-diffusion-language-models.md)**  
   実装：[✓](https://github.com/Conzel/super-outlier-dlm) ・ リポジトリ内被引用：0  
   本論文は、離散拡散型言語モデル（Diffusion Language モデル、DLM）と自己回帰型言語モデル（Autoregressive Language モデル、ARモデル）で、隠れ状態の層間類似性と圧縮耐性がどのように異なるかを調べた実証研究である。
+
+- **2026-05 · [LatentRouter: Can We Choose the Right Multimodal Large Language Model Before Seeing Its Answer?](2026-2605.11301-latentrouter-can-we-choose-the-right-multimodal-large-language-model-bef.md)**  
+  実装：[✓](https://github.com/LabRAI/LatentRouter) ・ リポジトリ内被引用：0  
+  画像と質問から作るルーティングカプセルと、候補モデルの能力トークンを潜在空間で照合して各モデルの反実仮想的な品質を予測するルータで、MMR-BenchとVL-RouterBenchの性能志向と費用条件の全4条件で最良の非オラクル結果を出す。
 
 - **2026-05 · [Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference](2026-2605.02739-latent-bridge-feature-delta-prediction-for-efficient-dual-system-vision-.md)**  
   実装：[✓](https://github.com/1999Lyd/Latent-Bridge) ・ リポジトリ内被引用：0  
@@ -3473,7 +3481,7 @@
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：61  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -3497,7 +3505,7 @@
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
-  実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：41  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
@@ -5533,7 +5541,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：119  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：120  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -5829,7 +5837,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：107  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -5913,7 +5921,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：388  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：389  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

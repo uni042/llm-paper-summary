@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（121本）
+## 自動生成の論文一覧（122本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -266,6 +266,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/dooly-project) ・ リポジトリ内被引用：0  
   しかし従来方式は演算の種類や呼び出し引数を特定のモデル・エンジン向けに手作業で定義し、異なるモデルでも同じ演算を繰り返し測定する。
 
+- **2026-05 · [Charon: A Unified and Fine-Grained Simulator for Large-Scale LLM Training and Inference](2026-2605.17164-charon-a-unified-and-fine-grained-simulator-for-large-scale-llm-training.md)**  
+  実装：[✓](https://github.com/ByteDance-Seed/Charon) ・ リポジトリ内被引用：0  
+  PyTorchモデルを計算グラフ化し並列化をグラフ変換として適用するフロントエンドと、演算子ごとに実測・予測・解析エンジンを使い分けるバックエンドで、学習と推論を統一的に演算子粒度で模擬し、予測誤差5.35パーセント未満を達成する性能シミュレータ。
+
 - **2026-04 · [RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization](2026-2604.23577-routenlp-closed-loop-llm-routing-with-conformal-cascading-and-distillati.md)**  
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
@@ -443,7 +447,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：78  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：79  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
