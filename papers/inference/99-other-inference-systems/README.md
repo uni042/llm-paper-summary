@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1411本）
+## 自動生成の論文一覧（1412本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1922,6 +1922,10 @@
   実装：[✓](https://github.com/Infini-AI-Lab/FlashRT) ・ リポジトリ内被引用：0  
   単体モデルのカーネルを高速化するだけでは、どの段階をどのGPUへ配置し、いつ出力を小分けで次段へ渡し、どの段階の永続状態を共有できるかというアプリケーション全体の最適化は解けない。
 
+- **2026-07 · [Fast and Accurate Fisher-Guided Quantization via Efficient Kronecker Factorization](2026-10cd8299130f-fast-and-accurate-fisher-guided-quantization-via-efficient-kronecker-fac.md)**  
+  実装：[✓](https://github.com/sayankotor/FastKron_QTIP) ・ リポジトリ内被引用：0  
+  ヘッセ行列のクロネッカー因子をランチョス法で速く求めることで、二次の曲率情報を使う量子化の因子計算を最大で約10倍速くし、キャリブレーションのトークンを約96パーセント減らしながら4ビットでほぼ基準並み、2ビットでも小さい劣化に抑える。
+
 - **2026-07 · [Every Time I Hire a Linguist, Inference Costs Go Down: On Linguistic Rules as Effective Prompt Compressors](2026-2607.25335-every-time-i-hire-a-linguist-inference-costs-go-down-on-linguistic-rules.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン採点にLMの順伝播を使う代わりに、語彙・統語・意味・談話の言語規則だけの圧縮器を進化探索で自動発見し、配備時はCPU処理だけでプロンプトを圧縮して推論費用を下げる研究。
@@ -3472,6 +3476,10 @@
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：7  
   新しい注意機構や学習アルゴリズムではなく、ブラウザで効率的な言語モデル実行を成立させるシステム統合が主要な貢献である。ブラウザ版はネイティブ版より遅いが、復号処理率の約71.2～79.6%を保持した。
 
+- **2025-10 · [xLLM Technical Report](2025-2510.14686-xllm-technical-report.md)**  
+  実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：6  
+  原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
+
 - **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
@@ -3491,10 +3499,6 @@
 - **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   大規模モデルでは行列積の後に各GPUの部分結果を集約する必要があり、GPU間の接続帯域が低い環境では、この通信が前段入力処理（プリフィル）の主要な待ち時間になる。提案方式は、活性値を細粒度に量子化して転送量を削減し、リング型の逐次的な集約ではなく、全対全による分散集約とAll-Gatherによる結果配布を二段階で行う。
-
-- **2025-10 · [xLLM Technical Report](2025-2510.14686-xllm-technical-report.md)**  
-  実装：[✓](https://github.com/jd-opensource/xllm) ・ リポジトリ内被引用：5  
-  原著のDeepSeek-R1、プリフィル/デコード分離、入力2048／出力2048トークン、TPOT上限100msの表3では、MindIEが8476.44 トークン/s、xLLMが11351.58 トークン/sとなり、同じ制約下で約33.9%の改善を示した。
 
 - **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
   実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：5  

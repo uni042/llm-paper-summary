@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "ef459011bf40652781d218ea71fd216d0d32e0b1",
+  "base_commit": "57f7c749d1eed77224fb0c1b95debb86a5788828",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -34,6 +34,7 @@
     "0000-09fca0c0140b-speed-without-sacrifice-fine-tuning-language-models-with-medusa-and-knowledge-distillation-in-travel-applications.json",
     "0000-0f876c37e0b4-accelerating-inference-for-pretrained-language-models-by-unified-multi-perspective-early-exiting.json",
     "0000-1015f01478e5-langcompress-language-aware-compression-of-large-language-models.json",
+    "0000-10cd8299130f-fast-and-accurate-fisher-guided-quantization-via-efficient-kronecker-factorization.json",
     "0000-12d4703b0ce4-tailoring-llm-weight-compression-for-pim-architectures.json",
     "0000-14a507fe2936-shaft-secure-handy-accurate-and-fast-transformer-inference.json",
     "0000-14ad8695291c-an-optimized-dataflow-for-mitigating-attention-performance-bottlenecks.json",
@@ -47,6 +48,7 @@
     "0000-29d5f35ac05a-evolving-sparsity-leveraging-token-importance-dynamics-for-efficient-llm-decoding-with-sparse-attention.json",
     "0000-2af879bf02e3-clusterattn-kv-cache-compression-under-intrinsic-attention-clustering.json",
     "0000-3399d40c799e-mlwq-efficient-small-language-model-deployment-via-multi-level-weight-quantization.json",
+    "0000-3b2cb4b6d247-enhancing-quic-quality-of-service-llm-serving-and-masque-proxy-scheduling.json",
     "0000-3b396464dc29-k-un-s-erve-parameter-centric-memory-management-for-efficient-memory-throttling-handling-in-llm-serving.json",
     "0000-47d0d3b8c049-scvq-sparse-compensated-vector-quantization-for-large-language-models.json",
     "0000-4d1a83de7ba2-moe-infinity-offloading-efficient-moe-model-serving.json",
@@ -60,6 +62,7 @@
     "0000-682e6def443e-claro-controlled-attribute-driven-reasoning-optimization-for-efficient-chain-of-thought.json",
     "0000-685f90406825-l-earning-w-hat-m-atters-s-upervising-s-parse-a-ttention-r-outing-with-c-ausal-e-vidence-s-ets.json",
     "0000-7375569eb00f-distributed-llm-serving-on-consumer-grade-gpus-by-reconciling-computation-and-communication.json",
+    "0000-770e9fc7a26c-uva-dare-digital-academic-repository-swiftsnni-optimized-scheduling-for-secure-neural-network-inference-snni-on-multi-co.json",
     "0000-7c4a0355f923-task-aware-block-pruning-with-output-distribution-signals-for-large-language-models.json",
     "0000-8203b84bd016-adaptive-layer-sparsity-for-large-language-models-via-activation-correlation-assessment.json",
     "0000-863c1324e5f3-revisiting-pruning-vs-quantization-for-small-language-models.json",
@@ -68,6 +71,8 @@
     "0000-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.json",
     "0000-a46d04ddafae-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-through-optimal-balance-in-adaptation.json",
     "0000-a4fadb2637c2-hisvd-principled-low-rank-approximation-of-llms-via-hierarchical-modeling-of-information-capacity-and-spectral-structure.json",
+    "0000-a7044071c51b-uva-dare-digital-academic-repository-reward-guided-speculative-decoding-for-efficient-llm-reasoning.json",
+    "0000-a91e8d907724-t-ri-i-nfer-h-ybrid-d-isaggregated-s-cheduling-for-m-ultimodal-l-arge-l-anguage-m-odel-s-erving.json",
     "0000-a9c6d6258692-search-in-context-efficient-multi-hop-qa-over-long-contexts-via-monte-carlo-tree-search-with-dynamic-kv-retrieval.json",
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
@@ -36052,38 +36057,11 @@
     },
     "arXiv:2501.19324": {
       "order": [
-        "2026-10-14T12:33:54+00:00",
-        "retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-.json"
+        "2026-11-24T00:26:50+00:00",
+        "0000-a7044071c51b-uva-dare-digital-academic-repository-reward-guided-speculative-decoding-for-efficient-llm-reasoning.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "3344786e837b017c91f5aa9335d9284f011e13b3e54ca56292e8d95630fa40dd",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3c9ed449d5c9--libfile_bfcf46dfe910819198dd72642e4c1ba0--2025-2501.19324-reward-guided-speculative-decoding-research-20261014-1345-scheduled-chat-45-r01.md",
-        "canonical_id": "arXiv:2501.19324",
-        "worker_completed_at": "2026-10-14T13:50:54+09:00",
-        "worker_run_key": "20261014-1345-scheduled-chat-45/r01",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 7449,
-          "body_paragraphs": 40,
-          "method_chars": 1649,
-          "method_paragraphs": 9,
-          "evaluation_chars": 2626,
-          "limitation_chars": 0,
-          "insufficiency_flags": [
-            "限界説明量 0 < 推奨 120"
-          ]
-        },
-        "failures": [
-          "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md と 26 段落 / 5757文字 (100.0%) が完全一致"
-        ],
-        "processed_at": "2026-10-14T12:33:54+00:00"
-      },
+      "status": "already_represented",
+      "result": null,
       "return_count": 2
     },
     "arXiv:2510.11129": {
@@ -51897,6 +51875,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.18653/v1/2026.acl-long.1805": {
+      "order": [
+        "2026-11-24T00:22:57+00:00",
+        "0000-10cd8299130f-fast-and-accurate-fisher-guided-quantization-via-efficient-kronecker-factorization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:48f59723e4b2817584729baa4e0e2b69793172ab": {
+      "order": [
+        "2026-11-24T00:24:29+00:00",
+        "0000-3b2cb4b6d247-enhancing-quic-quality-of-service-llm-serving-and-masque-proxy-scheduling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1145/3777884.3797005": {
+      "order": [
+        "2026-11-24T00:26:02+00:00",
+        "0000-770e9fc7a26c-uva-dare-digital-academic-repository-swiftsnni-optimized-scheduling-for-secure-neural-network-inference-snni-on-multi-co.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a": {
+      "order": [
+        "2026-11-24T00:28:23+00:00",
+        "0000-a91e8d907724-t-ri-i-nfer-h-ybrid-d-isaggregated-s-cheduling-for-m-ultimodal-l-arge-l-anguage-m-odel-s-erving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65690,6 +65704,18 @@
     "semanticscholar:3525ea7693b1c2b1983a80ef979b72050153570b": [
       "papers/inference/13-sparse-attention/2022-2203.00091-dynamic-n-m-fine-grained-structured-sparse-attention-mechanism.md",
       "papers/inference/13-sparse-attention/2022-2203.00091-dynamic-n-m-fine-grained-structured-sparse-attention-mechanism.md"
+    ],
+    "doi:10.18653/v1/2026.acl-long.1805": [
+      "papers/inference/99-other-inference-systems/2026-10cd8299130f-fast-and-accurate-fisher-guided-quantization-via-efficient-kronecker-fac.md"
+    ],
+    "semanticscholar:48f59723e4b2817584729baa4e0e2b69793172ab": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-3b2cb4b6d247-enhancing-quic-quality-of-service-llm-serving-and-masque-proxy-schedulin.md"
+    ],
+    "doi:10.1145/3777884.3797005": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-7558c762ca4b-swiftsnni-optimized-scheduling-for-secure-neural-network-inference-snni-.md"
+    ],
+    "semanticscholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-a91e8d907724-triinfer-hybrid-disaggregated-scheduling-for-multimodal-large-language-m.md"
     ]
   }
 }
