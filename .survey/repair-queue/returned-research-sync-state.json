@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fbef57f1dcb69895fa087edd7b39573e6f4c5b57",
+  "base_commit": "6bbacc0dfae448751d372a89aac7fdc1aed50d1a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -665,7 +665,9 @@
     "2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-autoregressive-gazing.json",
     "2026-2603.13364-finermoe-dimension-expansion-for-finer-grained-expert-with-its-upcycling-approach.json",
     "2026-2603.13670-secdtd-dynamic-token-drop-for-secure-transformers-inference.json",
+    "2026-2603.14110-svd-contextual-sparsity-predictors-for-fast-llm-inference.json",
     "2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-visual-token-compression-in-vlms.json",
+    "2026-2603.15589-lexi-lossless-exponent-coding-for-efficient-inter-chiplet-communication-in-hybrid-llms.json",
     "2026-2603.15954-mobilellm-flash-latency-guided-on-device-llm-design-for-industry-scale-deployment.json",
     "2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-for-llm-inference.json",
     "2026-2603.16219-specsteer-synergizing-local-context-and-global-reasoning-for-efficient-personalized-generation.json",
@@ -683,11 +685,14 @@
     "2026-2603.22911-forestprune-high-ratio-visual-token-compression-for-video-mllms.json",
     "2026-2603.23198-sparser-faster-lighter-transformer-language-models.json",
     "2026-2603.24680-rediprune-relevance-diversity-pre-projection-token-pruning-for-efficient-multimodal-llms.json",
+    "2026-2603.24787-relope-from-hidden-state-probing-to-a-decision-module-for-multimodal-llm-routing.json",
     "2026-2603.25340-large-language-model-as-token-compressor-and-decompressor.json",
     "2026-2603.25385-glowq-group-shared-low-rank-approximation-for-quantized-llms.json",
     "2026-2603.25926-density-aware-soft-context-compression-with-semi-dynamic-compression-ratio.json",
     "2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficient-llm-agents.json",
+    "2026-2603.26110-turboesm-ultra-efficient-3-bit-kv-cache-quantization-for-protein-language-models-with-orthogonal-rotation-and-qjl-correc.json",
     "2026-2603.26365-dynamic-token-compression-for-efficient-video-understanding-through-reinforcement-learning.json",
+    "2026-2603.26557-memboost-a-memory-boosted-framework-for-cost-aware-llm-inference.json",
     "2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-trade-offs-in-on-device-intelligence.json",
     "2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-and-capacity-constraints.json",
     "2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answering.json",
@@ -53191,6 +53196,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2603.14110": {
+      "order": [
+        "2026-11-24T05:11:14+00:00",
+        "2026-2603.14110-svd-contextual-sparsity-predictors-for-fast-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.15589": {
+      "order": [
+        "2026-11-24T05:12:20+00:00",
+        "2026-2603.15589-lexi-lossless-exponent-coding-for-efficient-inter-chiplet-communication-in-hybrid-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.24787": {
+      "order": [
+        "2026-11-24T05:13:25+00:00",
+        "2026-2603.24787-relope-from-hidden-state-probing-to-a-decision-module-for-multimodal-llm-routing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.26110": {
+      "order": [
+        "2026-11-24T05:14:31+00:00",
+        "2026-2603.26110-turboesm-ultra-efficient-3-bit-kv-cache-quantization-for-protein-language-models-with-orthogonal-rotation-and-qjl-correc.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2603.26557": {
+      "order": [
+        "2026-11-24T05:15:36+00:00",
+        "2026-2603.26557-memboost-a-memory-boosted-framework-for-cost-aware-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67484,6 +67534,21 @@
     "arxiv:2603.12254": [
       "papers/inference/19-inference-evaluation-benchmarking/2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md",
       "papers/inference/19-inference-evaluation-benchmarking/2026-2603.12254-attend-before-attention-efficient-and-scalable-video-understanding-via-a.md"
+    ],
+    "arxiv:2603.14110": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2603.14110-svd-contextual-sparsity-predictors-for-fast-llm-inference.md"
+    ],
+    "arxiv:2603.15589": [
+      "papers/inference/15-inference-simulation-emulation/2026-2603.15589-lexi-lossless-exponent-coding-for-efficient-inter-chiplet-communication-.md"
+    ],
+    "arxiv:2603.24787": [
+      "papers/inference/99-other-inference-systems/2026-2603.24787-relope-kl-regularized-lora-probes-for-multimodal-llm-routing.md"
+    ],
+    "arxiv:2603.26110": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2603.26110-turboesm-ultra-efficient-3-bit-kv-cache-quantization-for-protein-languag.md"
+    ],
+    "arxiv:2603.26557": [
+      "papers/inference/99-other-inference-systems/2026-2603.26557-memboost-a-memory-boosted-framework-for-cost-aware-llm-inference.md"
     ]
   }
 }

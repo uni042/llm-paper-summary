@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（119本）
+## 自動生成の論文一覧（120本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -87,6 +87,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts](2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoot.md)**  
   実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：1  
   これを低ビット化するとGPUメモリ使用量を減らせるものの、活性値や重みに少数の大きな外れ値があると、均一な量子化の刻み幅が粗くなり、特に4ビット級で精度が悪化する。主要評価はPhi-mini-MoE-Instruct、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral 8×7Bを対象とする。
+
+- **2026-03 · [LEXI: Lossless Exponent Coding for Efficient Inter-Chiplet Communication in Hybrid LLMs](2026-2603.15589-lexi-lossless-exponent-coding-for-efficient-inter-chiplet-communication-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  BF16の指数部だけを層ごとのハフマン符号で無損失圧縮し、チップレット間の重み、活性値、ハイブリッドキャッシュの通信を細らせるハードウェア方式で、通信遅延を33から45パーセント、推論全体を30から35パーセント短縮し、面積追加は0.09パーセントにとどまる。
 
 - **2026-03 · [inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference](2026-2603.16054-inference-fleet-sim-a-queueing-theory-grounded-fleet-capacity-planner-fo.md)**  
   実装：[✓](https://github.com/vllm-project/semantic-router) ・ リポジトリ内被引用：1  

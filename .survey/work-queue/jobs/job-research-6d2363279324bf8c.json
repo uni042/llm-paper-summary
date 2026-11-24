@@ -35,10 +35,15 @@
   "selection_reason": "ReGLU型FFNの文脈的スパース性予測器をゲート射影行列の切断対応SVDで学習不要に構築し閾値較正とCUDA・CANN向け条件付き実行器を備え、FFN活性化スパース性90％でデコード時間を最大1.8倍短縮する高速LLM推論フレームワークである。",
   "semantic_scholar_id": "72efc3e244f04eb0eb8a736f9a9b65713affda1f",
   "source_url": "https://arxiv.org/abs/2603.14110",
-  "status": "ready",
+  "status": "superseded",
   "title": "SVD Contextual Sparsity Predictors for Fast LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T05:17:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2603.14110-svd-contextual-sparsity-predictors-for-fast-llm-inference.md",
+  "represented_canonical_id": "arXiv:2603.14110",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（235本）
+## 自動生成の論文一覧（236本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -553,6 +553,10 @@
 - **2026-03 · [Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies](2026-2603.27960-towards-efficient-large-vision-language-models-a-comprehensive-survey-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Surendra PathakとBo Hanによる本サーベイは、大規模視覚言語モデル（LVLM）の推論を高速化・省メモリ化する既存研究を、①視覚トークン圧縮、②KVキャッシュ管理とサービング、③モデル構造と注意計算の最適化、④高度な復号戦略という四つの層に整理する。
+
+- **2026-03 · [SVD Contextual Sparsity Predictors for Fast LLM Inference](2026-2603.14110-svd-contextual-sparsity-predictors-for-fast-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ゲート行列のデータ重み付き特異値分解による低ランク近似を学習不要のスパース性予測器とし、ニューロン別閾値の貪欲較正と逐次実行で、平均90パーセントのスパース性のもとデコードを最大1.8倍高速化する。
 
 - **2026-03 · [Sustainability Is Not Linear: Quantifying Performance, Energy, and Privacy Trade-offs in On-Device Intelligence](2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-.md)**  
   実装：[✓](https://github.com/eziyoo/LLMs-on-Devices) ・ リポジトリ内被引用：0  

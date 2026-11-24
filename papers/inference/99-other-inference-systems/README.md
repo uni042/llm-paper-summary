@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1476本）
+## 自動生成の論文一覧（1478本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -17,7 +17,7 @@
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
-  実装：✓ ・ リポジトリ内被引用：19  
+  実装：✓ ・ リポジトリ内被引用：20  
   著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
 
 - **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
@@ -2750,6 +2750,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   バッチ全体の割当てを整数線形計画で解いて費用と容量を直接守る経路選択の枠組みで、敵対的なバッチ構成では問い単位の方式より最大24パーセント高い精度を示した。
 
+- **2026-03 · [ReLope: KL-Regularized LoRA Probes for Multimodal LLM Routing](2026-2603.24787-relope-kl-regularized-lora-probes-for-multimodal-llm-routing.md)**  
+  実装：[✓](https://github.com/Spinozaaa/ReLope) ・ リポジトリ内被引用：0  
+  画像で弱まる隠れ状態の正解信号を、注意集約とKL正則化付きLoRAで作り直し、マルチモーダルモデルのルーティングAUCを標準プローブから平均4ポイント以上引き上げる。
+
 - **2026-03 · [ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs](2026-2603.24680-rediprune-relevance-diversity-pre-projection-token-pruning-for-efficient.md)**  
   実装：[✓](https://github.com/UA-CVML/ReDiPrune) ・ リポジトリ内被引用：0  
   射影の前の視覚特徴の上で、質問への関連と最大最小の多様性を組み合わせた得点でトークンを貪欲に選ぶ学習なしの間引きにより、動画では保持率一五パーセントで未間引きを二・〇ポイント上回る精度を保ちながら計算量を約六分の一へ減らし、画像でも保持率一〇パーセントで最良級の精度を維持した。
@@ -2777,6 +2781,10 @@
 - **2026-03 · [Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method](2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   4ビット重み・8ビット活性（W4A8）の推論では、活性の少数の極端な値が量子化範囲を支配する。結果として小さな重みの丸め誤差が増え、活性側の改善を重み側の劣化が相殺する。
+
+- **2026-03 · [MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference](2026-2603.26557-memboost-a-memory-boosted-framework-for-cost-aware-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  過去の回答を意味検索で再利用し、不足時だけ大規模モデルへ委ねて、その回答をメモリへ書き戻す三層の提供枠組みで、繰り返しの多い模擬負荷で小さいモデルでもオラクル並み以上の正解率を保ちながら高価な呼び出しを減らす。
 
 - **2026-03 · [MaskLoRA: Low-Rank Subspace-Induced Token Masking for Efficient and Faithful Language Models](2026-0acd4305ac8f-masklora-low-rank-subspace-induced-token-masking-for-efficient-and-faith.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4863,7 +4871,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：119  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：120  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -5493,7 +5501,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：113  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：114  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
