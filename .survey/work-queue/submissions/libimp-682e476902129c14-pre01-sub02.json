@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Prism: Communication-efficient Distributed Inference for Foundation Models at Edge",
+      "source_url": "https://arxiv.org/abs/2507.12145",
+      "year": 2025,
+      "published": "2025-07-16",
+      "venue": "ACM Interational Symposium on Mobile Ad Hoc Networking and Computing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Foundation models (FMs) achieved remarkable success across vision and language tasks but pose significant challenges for deployment at the edge devices. This motivates the need for practical and efficient strategies for distributed inference at the edge. In this work, we propose Prism, a communication-efficient and compute-aware strategy for distributed Transformer inference. Prism leverages a Segment Means representation to approximate intermediate features, substantially reducing inter-device communication. Additionally, we restructure the self-attention to eliminate redundant computations caused by per-device Key/Value calculation in position-wise partitioning and design a partition-aware causal masking scheme tailored for autoregressive models. We evaluate Prism on ViT, BERT, and GPT-2 across diverse datasets, namely CIFAR-10, CIFAR-100, ImageNet-1k, GLUE, and CBT. Our results demonstrate substantial reductions in communication overhead (up to 99.2% for BERT at compression rate CR = 128) and per-device computation (51.24% for BERT at the same setting), with only minor accuracy degradation. This method offers a scalable and practical solution for deploying foundation models in distributed resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:bb8bcd88e229917ab7eb4e7d267fe812e700d256"
+      ],
+      "semantic_scholar_id": "bb8bcd88e229917ab7eb4e7d267fe812e700d256",
+      "canonical_id": "arXiv:2507.12145",
+      "arxiv_id": "2507.12145",
+      "doi": "10.1145/3842721.3850118",
+      "authors": [
+        "Muhammad Azlan Qazi",
+        "Alexandros Iosifidis",
+        "Qi Zhang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PRISMはSegment Means表現による中間特徴の近似でデバイス間通信を最大99.2%削減し、位置分割に伴うKV再計算の冗長性除去と分割対応因果マスクを備えた、エッジデバイス上の分散Transformer推論の具体的機構を提示している。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Comparative Analysis and Optimization of LoRA Adapter Co-serving for Large Language Models",
+      "source_url": "https://doi.org/10.1145/3704440.3704777",
+      "year": 2024,
+      "published": "2024-12-02",
+      "venue": "Middleware Demos/Posters/Doctoral Symposium",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are widely deployed across a range of applications, but their efficient use for serving diverse tasks remains a challenge due to the significant resource demands of running numerous specialized models. Parameter-efficient fine-tuning (PEFT) addresses this by allowing models to be adapted using only a small set of additional parameters, leaving the backbone model unchanged. The objective of this research is to develop a scheduling framework for parameter-efficient adapters that allows for the co-serving of both inference and fine-tuning tasks across multiple adapters, while sharing a single backbone model. By harnessing the benefits of parameter-efficient tuning, this approach minimizes the overhead associated with storing, loading, and running multiple task-specific models, thereby improving overall performance. To achieve this, we propose to conduct a comparative analysis of prior works evaluating their performance and resource management strategies in adapter-based serving. Through experiments, we assess the strengths and limitations of each approach, identifying opportunities for more efficient adapter and task management in future systems. This paper presents the problem, discusses the background of this early-stage project, and outlines a research plan for developing an efficient co-serving framework for LLM systems.",
+      "identifiers": [
+        "SemanticScholar:cb7c7e9904c76eee108f68a8360f8021fa97e625"
+      ],
+      "semantic_scholar_id": "cb7c7e9904c76eee108f68a8360f8021fa97e625",
+      "doi": "10.1145/3704440.3704777",
+      "canonical_id": "DOI:10.1145/3704440.3704777",
+      "authors": [
+        "Jia-Xuan Chen"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 722,
+        "matched_prestigious_venue": null
+      },
+      "reason": "単一バックボーンを共有しながら複数LoRAアダプタの推論とファインチューニングを同時提供するスケジューリング枠組みを比較分析し最適化する研究で、アダプタの保存・ロード・実行のオーバーヘッド削減というLLMサービングの課題へ直接取り組んでいる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-682e47690212",
+    "round": "libimp-682e476902129c14-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-682e476902129c14-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-682e476902129c14-pre01.json",
+    "receipt": "sha256:bd2a8a9b5a72a0de68817f6efe5340666e033b2e929f36a8f81b9c99b03e5574"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-682e47690212",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

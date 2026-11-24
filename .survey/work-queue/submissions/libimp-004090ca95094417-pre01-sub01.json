@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Surprising Effectiveness of Shared Memory in Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2610.02383",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers apply the same layers several times per token, adding compute to improve quality without more parameters. Each recursion, however, writes its own key-value cache, so memory still grows with compute. Inference-time techniques can shrink this cache at a cost in quality. We pretrain looped language models to share memory: only the first recursion writes a cache, and later recursions read it while keeping a short window of their own. Surprisingly, we find that sharing memory does not cost quality and instead improves it. At 150M-1B parameters, our Looped Prediction Transformer (LPT) and its hybrid variant set a new quality-memory frontier for looped models: with five recursions, the hybrid lowers validation perplexity on FineWeb-Edu by 1.12-1.82 relative to a same-size standard Transformer while using 76-79% less context memory. Through an extensive analysis, we investigate why memory sharing helps. Shared and local memory develop different representations, and later recursions attend mostly to the shared memory, which also acts as a gradient highway to the first recursion.",
+      "identifiers": [
+        "SemanticScholar:40ae26ba0e49e04231d0c0f0590f4153aff765fd"
+      ],
+      "semantic_scholar_id": "40ae26ba0e49e04231d0c0f0590f4153aff765fd",
+      "canonical_id": "arXiv:2610.02383",
+      "arxiv_id": "2610.02383",
+      "authors": [
+        "Giovanni Monea",
+        "Keshav Ramji",
+        "Yousef El-Kurdi",
+        "L. Lastras",
+        "Yoav Artzi",
+        "Nathan Godey",
+        "R. Astudillo"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Looped Transformerで最初の再帰だけがKVキャッシュを書き後続再帰がそれを共有する共有メモリ方式を事前学習し、文脈メモリを76〜79％削減しながら品質も改善することを示しており、再帰型モデルの推論時メモリ増大への直接の対策である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EvoCut: Multi-Layer Evolution-Aware Visual Token Compression for Efficient Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.01756",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) achieve strong performance on image and video understanding tasks, but their inference efficiency is constrained by the large number of visual tokens produced by vision encoders. Most existing visual token compression methods estimate token importance from attention scores or representation properties at specific layers, overlooking how visual tokens evolve across the vision encoder. Such layer-specific criteria may provide incomplete importance estimates and limit performance preservation after compression. To address this issue, we analyze layer-wise visual token evolution directions and observe that tokens form multiple group evolution directions across vision-encoder layers. Our analysis further shows that informative tokens tend to exhibit persistent deviations from common group evolution directions. Based on this observation, we propose EvoCut, a training-free and attention-free visual token compression method that estimates token importance from multi-layer evolution deviation. Experimental results show that EvoCut can retain only 11.1\\% of the visual tokens on LLaVA-1.5-7B while preserving 94.4\\% of the average performance, demonstrating its effectiveness in balancing efficiency and accuracy.",
+      "identifiers": [
+        "SemanticScholar:28fcd625dce96ae5d764cb04535ed284ac56600b"
+      ],
+      "semantic_scholar_id": "28fcd625dce96ae5d764cb04535ed284ac56600b",
+      "canonical_id": "arXiv:2606.01756",
+      "arxiv_id": "2606.01756",
+      "doi": "10.48550/arXiv.2606.01756",
+      "authors": [
+        "Hong-Yu Lu",
+        "Feng Zhang",
+        "Wen-Wei Jin",
+        "Hu Hu",
+        "Pengfei Zhang",
+        "Yao Hu",
+        "Jiawei Li",
+        "Shi-Kai Jiang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EvoCutは視覚エンコーダの層間での視覚トークンの進化方向の偏りを重要度推定に用いる学習不要・注意不要の視覚トークン圧縮で、視覚トークンを11.1％まで削減してLVLM推論の計算量を直接削減する手法であり、マルチモーダル推論の効率化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AUE: A Normalized Energy Efficiency Metric for AI Servers Under LLM Workloads",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323149",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Under the rapid advancement of large model-driven artificial intelligence, the surging energy consumption of AI training and inference tasks has created an urgent need for precise and comparable energy efficiency metrics to guide the design and deployment of green computing systems. While existing metrics such as PUE and Green500 metrics focus on infrastructure or traditional numerical computations, they cannot reflect the characteristics of AI workloads. Although applicationoriented metrics like J/response and J/token are designed for LLMs, they remain susceptible to biases induced by model scale and output strategies, lacking cross-model comparability. This paper proposes a novel AI energy efficiency metric, AUE, defined as the energy consumed per thousand tokens per billion activated parameters. By normalizing model size effects, AUE accurately reflects the energy efficiency of underlying computational resources. We theoretically justify the validity of AUE and conduct experiments on a server equipped with $4 \\times$ Ascend NPU 910C accelerators, evaluating dense Transformer and MoE architectures across both training and inference workloads. Experimental results demonstrate that traditional J/token metrics disproportionately favor smaller models, whereas AUE reveals true energy utilization efficiency. For instance, while Qwen3 0.6B shows superior J/token values compared to Qwen3 14B, the 14B model achieves a significantly better AUE of 12.88 J/(KToken GParam) versus 24.35 J/(KToken GParam) for the 0.6 B model, consistent with measured FLOPs where the 14B model outperforms its smaller counterpart. With advantages including simple measurement procedures and compatibility across platforms and model architectures, AUE provides a viable pathway toward establishing a normalized and standardized AI energy efficiency evaluation framework.",
+      "identifiers": [
+        "SemanticScholar:ecc9fcf135cc0bb8122cdb430ef7aad8325b87a2"
+      ],
+      "semantic_scholar_id": "ecc9fcf135cc0bb8122cdb430ef7aad8325b87a2",
+      "doi": "10.1109/ICPADS67057.2025.11323149",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323149",
+      "authors": [
+        "Yijia Zhang",
+        "Dong-Xiang Zhang",
+        "Xianglin Liu",
+        "Qiang Wang",
+        "Bingqiang Wang",
+        "Shi-Xun Zhang",
+        "Yong-Hong Tian"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 345,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AUEは有効化パラメータ10億当たり・千トークン当たりのエネルギー消費で正規化したAIサーバのエネルギー効率指標で、PUEやJ/tokenでは捉えられないモデル規模や出力戦略によるバイアスを排し、LLMワークロード下の推論基盤のエネルギー計測と比較を可能にする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pixel Decodability Is Not a Compression Signal: Causally Evaluating Importance Proxies for Visual KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2609.13012",
+      "year": 2026,
+      "published": "2026-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models retain a substantial amount of pixel-decodable visual content in their visual key-value cache. We show, in our setting, that this retention is task-inert: across our preregistered tests, how much a unit retains never positively tracks whether the computation that answers the question causally relies on it. We measure retention with a learned pixel-inversion decoder and causal use with single-super-patch KV ablation, the teacher-forced drop in gold-answer log-probability, and relate the two within images under a preregistered, sign-calibrated, held-out design. Retention is decoupled from attention and, in a well-powered null, from causal utilization. Utilization is not inert to every proxy: attention weakly but significantly tracks it, the only signal we find that does and the design's positive control. We characterize pixel-decodable retention as an informational axis of the visual KV cache, orthogonal to the functional one. How much task-inert content a cache holds differs by architecture in our model pair: the encoder-free model retains 2.7 times more than the encoder-based one. The engineering consequence is a controlled negative result. At super-patch granularity, deconfounded pixel-decodable retention ranks KV eviction no better than random; at token granularity it acquires only a weak inverse-importance signal at larger budgets, dominated at every budget by attention magnitude. In our setting, pixel-decodable reconstructability is not a competitive KV-compression signal at any granularity we test.",
+      "identifiers": [
+        "SemanticScholar:23b1989a1fc8921f8d32c91503a864db6b3daf46"
+      ],
+      "semantic_scholar_id": "23b1989a1fc8921f8d32c91503a864db6b3daf46",
+      "canonical_id": "arXiv:2609.13012",
+      "arxiv_id": "2609.13012",
+      "doi": "10.48550/arXiv.2609.13012",
+      "authors": [
+        "Chen-Yu Zhou",
+        "Qi-Liang Jiang",
+        "Shu-Ning Wu",
+        "Xu Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚KVキャッシュに残る画素復号可能な情報量が、因果的に課題遂行へ寄与する計算とは追跡しないことを事前登録テストで示し、視覚KVキャッシュのエビクションに用いる重要度プロキシの妥当性を因果的に評価した研究で、KVキャッシュ圧縮の設計判断に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression",
+      "source_url": "https://arxiv.org/abs/2609.02083",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Removing complete transformer layers preserves a standard serving architecture, but existing depth-compression methods can lose substantial quality, and the loss varies unpredictably across models. We introduce XMerge, a post-training method with two components. Cross-axis selection identifies a block with low relative-magnitude and angular hidden-state change, and local boundary reconstruction re-fits the adjacent surviving block to match the original two-block output. XMerge uses no task labels or end-to-end fine-tuning, and it introduces neither architectural changes nor additional inference-time parameters. Across seven Llama and Qwen backbones (0.5B-8B), five published baselines, and three layer-reduction levels, its advantage over baselines is largest at the most aggressive removal: at k=4 it ranks first on six of seven backbones on CORE (a 22-task aggregate) and, separately, on six of seven on MMLU (five of seven on both at once), while avoiding the large perplexity increases of several competing operators. In a task-level bootstrap, the 95% confidence intervals for the three largest CORE margins exclude zero; the remaining margins are consistent with ties. Across the 14 (model, regime) cells it is also the only evaluated operator that never collapses, ranking top-2 in both zero-shot and in-context regimes; on a first calibration probe (one backbone) it is the best-calibrated operator. Ablations show that local reconstruction provides most of the gain, while cross-axis fusion helps when the two selection axes disagree. The additional construction cost is recovered through per-token decode savings after roughly tens of thousands of requests.",
+      "identifiers": [
+        "SemanticScholar:814dcae7d03516a6c8e5320ebd2987a9d02123af"
+      ],
+      "semantic_scholar_id": "814dcae7d03516a6c8e5320ebd2987a9d02123af",
+      "canonical_id": "arXiv:2609.02083",
+      "arxiv_id": "2609.02083",
+      "doi": "10.48550/arXiv.2609.02083",
+      "authors": [
+        "Jun-Hao Hu",
+        "S. Ramachandran"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      },
+      "reason": "XMergeは相対変化の小さいブロックを横軸選択で特定し隣接ブロックを再構成して吸収する学習後深さ圧縮で、標準のサービングアーキテクチャを保ったまま追加の推論時パラメータなしに層削減を行うため、LLMの深さ圧縮による推論効率化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-004090ca9509",
+    "round": "libimp-004090ca95094417-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-004090ca95094417-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-004090ca95094417-pre01.json",
+    "receipt": "sha256:8e02c239668986ad15f793dab71bd7bc03da8165090c233c211fe9260c06c5ab"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-004090ca9509",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

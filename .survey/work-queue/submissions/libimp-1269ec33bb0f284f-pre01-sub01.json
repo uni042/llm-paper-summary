@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Massive Spikes in LLMs are Bias Vectors: Mechanistic Uncovering and Spike-Free Quantization",
+      "source_url": "https://arxiv.org/abs/2606.02288",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Massive activation spikes in Large Language Models (LLMs) severely degrade quantization by stretching dynamic ranges. While prior hypotheses characterize these as high-level scalar biases, we argue that they are merely the scalar intermediates of rigid, structural vector biases in the spike-carrying tokens. We show that these tokens converge to constant vectors after normalization that drive the attention sink and value-state drain mechanisms. We geometrically substantiate this by analyzing the coordination of projection weights: $W_K$ contrastively amplifies the vector, $W_Q$ aligns semantic tokens toward it, and $W_V$ projects it into the spectral null-space. Furthermore, we reveal that the model actively preserves these structural biases against Rotary Positional Embedding (RoPE) perturbations by localizing them in\"zones of rotational stability\"utilizing low-frequency bands and coherent channel pairs. Leveraging this, we propose INSERTQUANT, a post-training quantization (PTQ) framework that clamps spikes and restores their function via pre-computed template vectors. This renders activations strictly spike-free, enabling robust low-bit quantization with high fidelity. INSERTQUANT achieves parity with state-of-the-art per-tensor quantization methods on LLMs and uniquely generalizes beyond text to other modalities such as ViTs.",
+      "identifiers": [
+        "SemanticScholar:c4882a68ed0603a8d178b4174a22a10d3c0d5c73"
+      ],
+      "semantic_scholar_id": "c4882a68ed0603a8d178b4174a22a10d3c0d5c73",
+      "canonical_id": "arXiv:2606.02288",
+      "arxiv_id": "2606.02288",
+      "doi": "10.48550/arXiv.2606.02288",
+      "authors": [
+        "Yung-Chin Chen",
+        "Chung-Peng Lee",
+        "Ze-Wei Liou",
+        "Naveen Verma"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "INSERTQUANTは巨大活性化スパイクが正規化後に残る構造的バイアスベクトルに由来することを機構的に示し、スパイクをクランプして事前計算したテンプレートベクトルで機能を復元することでスパイクのない低ビット学習後量子化を可能にする手法であり、推論向け量子化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Supportive Token Revealing for Fast Diffusion Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2606.04236",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "Volume 1",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models can generate text efficiently by updating multiple masked positions in parallel, but this parallelism introduces a quality-latency trade-off. Aggressive decoding may commit mutually dependent tokens too early, while conservative decoding requires many denoising steps. Existing methods address this tension by deciding which tokens are safe to reveal using confidence or dependency criteria. However, avoiding unsafe commits does not necessarily make the remaining masked sequence easy to decode, since uncertain tokens may depend on masked tokens, creating a bottleneck for denoising steps. We propose AXON, a training-free module that can be added on top of existing parallel decoding strategies for diffusion language models. Rather than replacing the base decoder, AXON monitors the remaining uncertain masked tokens and intervenes only when their current state suggests that additional context is needed. It then shifts the criterion from which tokens are safest to reveal to which confident reveals would best support later denoising. AXON selects anchors, confident masked tokens that uncertain positions attend to, using attention, uncertainty, and confidence signals. Experiments on reasoning and code-generation benchmarks across multiple diffusion language models show that AXON improves the quality-latency trade-off of existing parallel decoders, often reducing the number of function evaluations while maintaining or improving accuracy.",
+      "identifiers": [
+        "SemanticScholar:4de6fb175c8985a57cfed93cd827d936f39efc53"
+      ],
+      "semantic_scholar_id": "4de6fb175c8985a57cfed93cd827d936f39efc53",
+      "canonical_id": "arXiv:2606.04236",
+      "arxiv_id": "2606.04236",
+      "doi": "10.48550/arXiv.2606.04236",
+      "authors": [
+        "Giries Abu Ayoub",
+        "Mario Barbara",
+        "Lluís Pastor-Pérez",
+        "T. Bien",
+        "Aneesh Barthakur",
+        "Alaa Maalouf",
+        "L. Mualem"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AXONは拡散言語モデルの並列復号に載せる学習不要モジュールで、不確かなマスク位置が注意を向ける自信あるトークンをアンカーとして選んで後段の脱ノイズを支え、既存復号器の関数評価回数を減らしつつ品質を保つため、拡散LLMの復号効率化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KV Cache Recycling to Expand Usable Context Capacity in Low Parameter LLMs",
+      "source_url": "https://arxiv.org/abs/2512.11851",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "International journal of research and scientific innovation",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Whether attention key value (KV) states computed for one prompt for a small LLM (not SLM as it is built on LLM architecture) can be reused to accelerate inference on a new similar prompt, giving an increase to the space to its context memory using an approach called token recycling. Using a standard Hugging Face setup with DialoGPT-medium (a 345M parameter GPT-2 style decoder trained on 147M Reddit exchanges, 2005-2017) as the testbed, we build a cache of past activations and get entries by sentence embeddings, then reuse cached past key values when the cached prompt is an exact prefix of the new input. We compare recycled vs. baseline runs on latency and output fidelity, and log reuse depth in tokens. Reproducibility requires no model modifications, cached KVs are serialized to the CPU, reloaded, and supplied to the generate function to continue decoding from the cached prefix. In tests, we observe consistent speedups when prefix overlap exists, with no material degradation in output semantics, and when overlap is absent, behavior matches baseline.",
+      "identifiers": [
+        "SemanticScholar:97f115dcf75fa9f310c56c1135ec4dc74bf12833"
+      ],
+      "semantic_scholar_id": "97f115dcf75fa9f310c56c1135ec4dc74bf12833",
+      "canonical_id": "arXiv:2512.11851",
+      "arxiv_id": "2512.11851",
+      "doi": "10.51244/ijrsi.2025.12120067",
+      "authors": [
+        "Prashant Pandey"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": null
+      },
+      "reason": "過去プロンプトのKV状態を文埋め込みで検索し新しい入力の接頭辞と一致した場合に再利用して生成を続けるKVキャッシュリサイクリングを小規模LLMで実装し、前方重なりがある条件で一貫した高速化と出力忠実度の維持を示しており、KVキャッシュ再利用による推論高速化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SkipHBM: Bridging the Granularity Gap in Sparse LLM Inference",
+      "source_url": "https://doi.org/10.1109/ICCECT68671.2026.11565091",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "2026 IEEE 4th International Conference on Control, Electronics and Computer Technology (ICCECT)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid scaling of LLMs and the widening gap between compute throughput and memory bandwidth, off- chip memory access has become the primary bottleneck for inference. Although pruning reduces the model size, it often fails to speed up inference because random pruning patterns do not match the fixed 32-byte burst of HBM. This mismatch forces the system to fetch useless data, wasting bandwidth. We propose SkipHBM to address this efficiency gap. Algorithmically, our Block-Wanda Pruner enforces Block-16 sparsity, using per- row independent thresholding to maintain high accuracy on dense models (e.g., Qwen-2.5). Physically, we modify the HBM Base Logic Die with a Skip Control Unit (SCU). Rather than transmitting zero-blocks, the SCU signals a compact “Zero-Tag”, which triggers Early Burst Termination at the controller. This mechanism clears the data bus for useful data. Simulations show that SkipHBM achieves a linear $1.22 \\times$ speedup at $18 \\%$ sparsity on Mistral and Qwen models, effectively aligning software sparsity with hardware constraints.",
+      "identifiers": [
+        "SemanticScholar:01dfb5eb22619588c97bda538a149c2c7268b994"
+      ],
+      "semantic_scholar_id": "01dfb5eb22619588c97bda538a149c2c7268b994",
+      "doi": "10.1109/ICCECT68671.2026.11565091",
+      "canonical_id": "DOI:10.1109/ICCECT68671.2026.11565091",
+      "authors": [
+        "Jia-Jie Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SkipHBMはBlock-16疎性を課すBlock-Wanda剪定と、HBMのベースロジックダイに置いたSkip Control Unitで32バイトバースト単位の無駄なフェッチを飛ばす設計を組み合わせ、剪定しても速くならない疎LLM推論のメモリ帯域ボトルネックを解消する機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CPU-GPU Workload Distribution during Throughput-Oriented LLM Inference on Single-GPU Systems",
+      "source_url": "https://doi.org/10.1145/3816433",
+      "year": 2026,
+      "published": "2026-05-23",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have recently achieved remarkable performance in text generation, capturing the attention of a broad audience. This success, driven by the rapid growth in model parameters, comes at the expense of significantly higher operational costs and decreased processing speed. These costs, combined with privacy concerns around cloud-based deployments, have motivated research into running LLMs on commodity hardware. For example, researchers have used the memory hierarchy to boost throughput by increasing the number of batches. These studies, however, tend to overlook or inefficiently utilize the additional computational resources provided by the CPU. In this work, we present a dynamic workload allocation technique that efficiently distributes computation across all available hardware resources. The proposed method targets decoder-based models on standard general-purpose hardware, effectively minimizing idle periods for both the CPU and the GPU. Experiments show that our approach achieves up to 30% higher throughput compared to the state of the art, regardless of model architecture, LLM optimizations, and input batch sizes.",
+      "identifiers": [
+        "SemanticScholar:827a8c9855679fdeea7835e0d4bae3b4b9ee7795"
+      ],
+      "semantic_scholar_id": "827a8c9855679fdeea7835e0d4bae3b4b9ee7795",
+      "doi": "10.1145/3816433",
+      "canonical_id": "DOI:10.1145/3816433",
+      "authors": [
+        "Daon Park",
+        "Bernhard Egger"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      },
+      "reason": "単一GPUシステムでのスループット指向LLM推論について、デコーダモデルの計算をCPUを含む利用可能なハードウェア資源へ動的に割り振るワークロード分配手法を提案し、メモリ階層でバッチを増やす従来法が見落とすCPU計算資源を活用するもので、推論スループット最適化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1269ec33bb0f",
+    "round": "libimp-1269ec33bb0f284f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1269ec33bb0f284f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1269ec33bb0f284f-pre01.json",
+    "receipt": "sha256:4afd33baa42ce4f19e384b9142d17b6bd5afe7f40e3f6473ad98e1d57fa41295"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1269ec33bb0f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

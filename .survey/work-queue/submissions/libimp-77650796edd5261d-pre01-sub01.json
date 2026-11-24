@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Attention at the Theoretical Minimum: A Mathematics of Arrays Framework for Memory-Optimal Transformer Kernels",
+      "source_url": "https://arxiv.org/abs/2606.07713",
+      "year": 2026,
+      "published": "2026-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention mechanism is the dominant computational bottleneck in modern transformer-based AI. Its standard implementation incurs quadratic memory traffic in the sequence length~$n$, and DRAM accesses cost 100--1000$\\times$ more energy than arithmetic operations on contemporary hardware, so any analysis focused solely on FLOP counts fundamentally mischaracterises the bottleneck. We present a Mathematics of Arrays (MoA) reformulation of scaled dot-product attention and its numerically stable softmax, deriving a Denotational Normal Form (DNF) that eliminates all intermediate arrays -- including the implicit transposed-key buffer and every softmax temporary -- by algebraic construction rather than empirical tuning. The DNF achieves $O(n_{dk} + n{_{dv}})$ data movement versus $O(n^2 + n_{dk} + n_{dv})$ for the standard implementation, where $n$ is the sequence length, $dk$ is the key dimensionality and $dv$ the value dimensionality, and is verified numerically against PyTorch at full double-precision floating-point on concrete inputs. Unlike hardware-specific accelerators or empirical tiling schemes such as FlashAttention, MoA simultaneously provides array fusion, shape-transformation correctness, and predictive cost models from a single algebraic framework. Memory minimality is a theorem established before any code is written. A predictive performance model projects $2$--$100\\times$ speedup and $2$--$50\\times$ energy reduction, with the advantage widening at exascale. The derivation establishes a formally verified pipeline from Python specification through (ONF) Operational Normal Form, and dimension-lifted hardware mapping, providing performance-portable AI kernels of direct relevance to DARPA edge-deployment and DOE exascale priorities.",
+      "identifiers": [
+        "SemanticScholar:f2e254e5548fe7fbc295e1bb9452459b56db6925"
+      ],
+      "semantic_scholar_id": "f2e254e5548fe7fbc295e1bb9452459b56db6925",
+      "canonical_id": "arXiv:2606.07713",
+      "arxiv_id": "2606.07713",
+      "doi": "10.48550/arXiv.2606.07713",
+      "authors": [
+        "L. Mullin",
+        "Gaétan Hains"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mathematics of Arraysによる注意機構の再定式化で、中間配列とsoftmax一時バッファを代数的に除去しメモリトラフィックを理論最小水準へ近づけるメモリ最適Transformerカーネルを導出している。注意カーネルのメモリ最適化への直接の技術的貢献が一次要旨で確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Simulator for LLM Inference Systems Exploiting CXL Memory Pools",
+      "source_url": "https://doi.org/10.1109/LCA.2026.3691007",
+      "year": 2026,
+      "published": "2026-01-01",
+      "venue": "IEEE computer architecture letters",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The cost of large language model (LLM) inference is heavily tied to the immense memory capacity required to store model parameters—a challenge exacerbated by current systems that replicate these parameters across multiple servers to scale. To tackle this challenge, we may consider LLM inference systems exploiting a CXL memory pool to store and share model parameters across multiple servers, while keeping server-specific activations and KV-caches within each server’s local memory. Motivated by the lack of existing simulators for such systems, we first develop a simulator that extends LLMServingSim and integrates it with NS-3 and Mess to accurately model the CXL switch and the memory modules within the CXL pool, respectively. Second, we validate this simulator against a system connecting an industry CXL memory pool to two servers running two instances of the same LLM; across separate evaluations for OPT-1.6B and OPT-6.7B, the simulator demonstrates a <inline-formula><tex-math notation=\"LaTeX\">$\\approx$</tex-math><alternatives><mml:math><mml:mo>≈</mml:mo></mml:math><inline-graphic xlink:href=\"huang-ieq1-3691007.gif\"/></alternatives></inline-formula>3% error in inference latency. Lastly, using our simulator, we uncover a significant sensitivity between inference latency and the interconnect bandwidth of the CXL memory pool, demonstrating that adopting an emerging optical interconnect over the traditional electrical counterpart reduces inference latency by 67.9% and 64.4% for OPT-1.6B and OPT-6.7B, respectively.",
+      "identifiers": [
+        "SemanticScholar:42051020be4462b89a18c56c1e77e8444d89b2f2"
+      ],
+      "semantic_scholar_id": "42051020be4462b89a18c56c1e77e8444d89b2f2",
+      "doi": "10.1109/LCA.2026.3691007",
+      "canonical_id": "DOI:10.1109/LCA.2026.3691007",
+      "authors": [
+        "Jinghan Huang",
+        "Hong-Lin Zeng",
+        "Mike Montano",
+        "Jaehong Cho",
+        "Hyunmin Choi",
+        "J. So",
+        "Junhyeok Im",
+        "H. Lee",
+        "Jongse Park",
+        "Nam Sung Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 327,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CXLメモリプールにモデルパラメータを共有配置するLLM推論システムを対象に、LLMServingSimへCXLスイッチとメモリモジュールのモデルを統合したシミュレータを構築している。推論基盤の階層メモリ構成の計測・シミュレーションへの直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SMIDT: High-Performance Inference Framework for MoE Models with Dynamic Top-K Routing",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39403",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To accelerate Mixture-of-Experts (MoE) inference, the hybrid parallelism paradigm is first applying pipeline parallelism (PP) to vertically divide the model into stages, with each stage further divided horizontally using tensor or expert parallelism. On the algorithm side, dynamic Top-K routing reduces computation by activating fewer experts per token on average. \nIn this paper, we explore the application of dynamic Top-K routing to PP-enabled MoE inference, aiming to fully unleash their combined potential. We identify key performance bottlenecks arising from Top-K value variation across layers, which conflicts with PP's typically uniform stage partitioning, as well as opportunities to optimize memory usage through their integration.\n\nTo address these challenges, we present SMIDT, an efficient MoE inference framework tailored for dynamic Top-K routing. \nSMIDT features: (1) an adaptive, module-level uneven partitioning strategy to balance computation across PP stages, (2) a memory-aware expert replication scheme (DPMoE) that reduces communication overhead, and (3) a lightweight search algorithm combining binary search and dynamic programming to generate efficient parallelism plans. \nWe implement SMIDT on SGLang, a state-of-the-art LLM inference framework, evaluate it on 32 A40 GPUs and 16 A100 GPUs, and compare with manually tuned parallelism strategies. \nExperimental results show that, when co-locating prefill and decoding phases, SMIDT achieves 1.20–3.13x throughput improvements for prefill-only tasks and 1.05–1.89x for prefill-decoding tasks. \nWhen disaggregating prefill and decoding tasks, SMIDT improves average and P99 time-to-first-token (TTFT) by 1.10–1.17x and 1.21–1.26x, respectively.",
+      "identifiers": [
+        "SemanticScholar:d4e40dad4c863e3ef94dfc5f807ee253d55815f0"
+      ],
+      "semantic_scholar_id": "d4e40dad4c863e3ef94dfc5f807ee253d55815f0",
+      "doi": "10.1609/aaai.v40i27.39403",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39403",
+      "authors": [
+        "Ze-Wen Jin",
+        "Sheng-Yu Fu",
+        "Chengjie Tang",
+        "You-Hui Bai",
+        "Sheng-Nan Wang",
+        "Ji-Aan Zhu",
+        "Chizheng Fang",
+        "Ping Gong",
+        "Cheng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      },
+      "reason": "動的Top-Kルーティングとパイプライン並列を組み合わせたMoE推論フレームワークであり、層ごとのTop-K変動と均一ステージ分割の競合やメモリ最適化を扱っている。MoE推論の高速化への直接のシステム貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Saliency-Aware Mixed-Precision Block Floating-Point Quantization for Large Language Models",
+      "source_url": "https://doi.org/10.1109/IPAC69021.2026.11542717",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "2026 International Conference on Intelligent Perception and Autonomous Control (IPAC)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block floating-point (BFP) quantization reduces the storage cost of large language models (LLMs) by enabling multiple values to share exponents, thereby preserving a wide dynamic range under low-bit mantissa representations. Existing BFP extensions mainly improve numerical precision through structural refinements; however, they are typically applied uniformly across channels and thus overlook the heterogeneous sensitivity to quantization errors induced by activation variation. In practice, activation magnitudes can vary substantially across channels, and larger activations amplify the effect of weight quantization errors, leading to highly uneven error contributions. To better align precision allocation with channel sensitivity, this paper proposes Saliency-aware Block Floating-Point (SBFP), a mixed-precision BFP scheme guided by activation saliency. SBFP employs a lightweight 1-bit saliency mask to identify error-sensitive channels, assigning higher mantissa precision to activation-salient channels while aggressively compressing the remaining ones. This targeted allocation improves resource efficiency without introducing auxiliary rescaling metadata. Evaluations show that SBFP achieves comparable or better accuracy while requiring only 33% of the weight storage of state-of-the-art W8A8 quantization, demonstrating the effectiveness of saliencyaware precision allocation for efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:d985c49e1a2a824966d29e3c1915754c0329cd09"
+      ],
+      "semantic_scholar_id": "d985c49e1a2a824966d29e3c1915754c0329cd09",
+      "doi": "10.1109/IPAC69021.2026.11542717",
+      "canonical_id": "DOI:10.1109/IPAC69021.2026.11542717",
+      "authors": [
+        "Jun-Yue Pan",
+        "Yi-Nuo Zhou",
+        "Bo-Sheng Liu",
+        "Ji-Gang Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ブロック浮動小数点量子化において活性化のチャネル別感度に応じて精度配分を変える顕著性配慮型の混合精度BFP量子化をLLM向けに提案しており、推論向け量子化への直接の技術的貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LODAR: layered optimization for distributed adaptive LLM routing",
+      "source_url": "https://doi.org/10.1007/s44443-026-01343-9",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": "Journal of King Saud University: Computer and Information Sciences",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving platforms increasingly route requests across heterogeneous backends, transforming query routing from a model-selection task into a system-level load-balancing problem. Centralized routers can become throughput bottlenecks and single points of failure as deployment scale and request volume grow. Distributed routing mitigates these limitations, but it introduces a coupled min–max optimization problem in which multiple routers jointly determine peak backend utilization. This coupling makes routing optimization challenging under dynamic workload conditions. We propose LODAR, a layered optimization framework for distributed LLM routing. LODAR formulates routing as a distributed min–max load-balancing problem and optimizes routing logits directly through robust offline evolutionary search, router-level block-coordinate refinement, and lightweight online adaptation. This design does not require gradient-based credit assignment, yet exploits router-level structure and warm-start information across workload windows. Experiments on synthetic and WildChat-derived trace workloads cover three deployment scales, complemented by evaluation on a real heterogeneous multi-GPU testbed. In the scale-aggregated main comparisons, LODAR achieves the lowest MaxLoad and LoadStd under both workload settings. In trace-driven simulation, LODAR reduces MaxLoad by 16.9% and LoadStd by 40.3% relative to DE, the strongest evolutionary baseline in the simulation comparison. The simulation-optimized LODAR base routing table transfers directly to the physical deployment without deployment-specific offline retraining or tuning. In the real multi-GPU experiments, LODAR reduces MaxLoad by 4.7% and LoadStd by 14.9% relative to CMA-ES. These results demonstrate the effectiveness of LODAR’s layered optimization strategy for distributed load balancing in heterogeneous LLM serving systems.",
+      "identifiers": [
+        "SemanticScholar:983265c60419853bace6294d11cdd8ea4d6fae3f"
+      ],
+      "semantic_scholar_id": "983265c60419853bace6294d11cdd8ea4d6fae3f",
+      "doi": "10.1007/s44443-026-01343-9",
+      "canonical_id": "DOI:10.1007/s44443-026-01343-9",
+      "authors": [
+        "Yuan-Hao Xi",
+        "Xiao-Huan Bing",
+        "Ramin Yahyapour"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種バックエンドへリクエストを振り分けるLLMサービング基盤について、中央集権ルータのボトルネックを避ける分散型ルーティングをmin-max負荷分散として定式化し階層最適化するLODARを提案している。サービングのルーティングと負荷分散への直接のシステム貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-77650796edd5",
+    "round": "libimp-77650796edd5261d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-77650796edd5261d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-77650796edd5261d-pre01.json",
+    "receipt": "sha256:caaa6fe8ace99a0b6815f49ac23f4ebdd4d77a166012922b7dfcd56110c0b9c7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-77650796edd5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

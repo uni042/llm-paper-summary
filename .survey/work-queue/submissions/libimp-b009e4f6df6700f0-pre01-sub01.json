@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Dual-Signal Adaptive KV-Cache Optimization for Long-Form Video Understanding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2602.14236",
+      "year": 2026,
+      "published": "2026-02-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) face a critical memory bottleneck when processing long-form video content due to the linear growth of the Key-Value (KV) cache with sequence length. Existing solutions predominantly employ reactive eviction strategies that compute full attention matrices before discarding tokens, resulting in substantial computational waste. We propose Sali-Cache, a novel a priori optimization framework that implements dual-signal adaptive caching through proactive memory management. By integrating a temporal filter based on optical flow analysis for detecting inter-frame redundancy and a spatial filter leveraging saliency detection for identifying visually significant regions, Sali-Cache intelligently manages memory allocation before entering computationally expensive attention operations. Experimental evaluation on the LLaVA 1.6 architecture demonstrates that our method achieves a 2.20x compression ratio in effective memory usage while maintaining 100% accuracy across BLEU, ROUGE-L, and Exact Match metrics. Furthermore, under identical memory budget constraints, Sali-Cache preserves context-rich features over extended temporal durations without degrading model performance, enabling efficient processing of long-form video content on consumer-grade hardware.",
+      "identifiers": [
+        "SemanticScholar:ac14816f1e7c2d529c0848226681f1669735b36b"
+      ],
+      "semantic_scholar_id": "ac14816f1e7c2d529c0848226681f1669735b36b",
+      "canonical_id": "arXiv:2602.14236",
+      "arxiv_id": "2602.14236",
+      "doi": "10.48550/arXiv.2602.14236",
+      "authors": [
+        "Vishnu Sai",
+        "D. Sai",
+        "B. Srinath",
+        "G. Varma",
+        "P. Shukla"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      },
+      "reason": "光フローによる時間フィルタと顕著性による空間フィルタの二信号で、長尺動画VLMのKVキャッシュを注意計算前に圧縮しメモリ使用量を2.20倍圧縮するKVキャッシュ最適化である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TRINE: A Token-Aware, Runtime-Adaptive FPGA Inference Engine for Multimodal AI",
+      "source_url": "https://arxiv.org/abs/2603.22867",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "Design Automation Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal stacks that mix ViTs, CNNs, GNNs, and transformer NLP strain embedded platforms because their compute/memory patterns diverge and hard real-time targets leave little slack. TRINE is a single-bitstream FPGA accelerator and compiler that executes end-to-end multimodal inference without reconfiguration. Layers are unified as DDMM/SDDMM/SpMM and mapped to a mode-switchable engine that toggles at runtime among weight/output-stationary systolic, 1×CS SIMD, and a routable adder tree (RADT) on a shared PE array. A width-matched, two-stage top-k unit enables in-stream token pruning, while dependency-aware layer offloading (DALO) overlaps independent kernels across reconfigurable processing units to sustain utilization. Evaluated on Alveo U50 and ZCU104, TRINE reduces latency by up to 22.57× vs. RTX 4090 and 6.86× vs. Jetson Orin Nano at 20–21 W; token pruning alone yields up to 7.8× on ViT-heavy pipelines, and DALO contributes up to 79% throughput improvement. With int8 quantization, accuracy drops remain <2.5% across representative tasks, delivering state-of-the-art latency and energy efficiency for unified vision, language, and graph workloads—in one bitstream.",
+      "identifiers": [
+        "SemanticScholar:6065cead209f73f67024888034752c5400ea03a0"
+      ],
+      "semantic_scholar_id": "6065cead209f73f67024888034752c5400ea03a0",
+      "canonical_id": "arXiv:2603.22867",
+      "arxiv_id": "2603.22867",
+      "doi": "10.1145/3770743.3804010",
+      "authors": [
+        "Hyunwoo Oh",
+        "Han-Ning Chen",
+        "Sanggeon Yun",
+        "Yang Ni",
+        "Suyeon Jang",
+        "Behnam Khaleghi",
+        "Fei Wen",
+        "M. Imani"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ViT・CNN・GNN・Transformerを単一ビットストリームで実行するFPGA推論エンジンであり、トークンプルーニングと依存関係を考慮したレイヤオフロードでマルチモーダル推論を低レイテンシ化する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Architecting Long-Context Large Language Model Acceleration With Packing–Prefetch Scheduler and Ultralarge Capacity On-Chip Memories",
+      "source_url": "https://doi.org/10.1109/MM.2026.3669502",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "IEEE Micro",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language model (LLM) inference faces increasing compute bottlenecks as attention calculations scale with context length, primarily due to the growing key-value (KV)-cache transfer overhead that saturates high-bandwidth memory (HBM). While prefetching techniques mitigate cache misses by fetching KV data in advance, their spatial and temporal benefits present new opportunities to exploit. This work proposes a packing–prefetch scheduling architecture with monolithic 3-D back-end-of-line (BEOL)-compatible embedded memories with ultralarge on-chip capacity to accelerate long-context LLM inference. Our optimizations demonstrate 8.06× decode speedup and 1.83× overall latency reduction on Llama3.1-8B using TPUv6e-like hardware with additional 512-MB BEOL memories over the serial execution. Evaluations of multirequest workloads on TPU-like architectures show 1.7×–2.4× throughput improvement and 1.5×–2.4× HBM bandwidth reduction compared to packing-only methods on Llama3.1-8B and Llama3.1-70B models. With the codesign of packing, prefetching, and BEOL memories, our approach alleviates HBM constraints and enables efficient long-context LLM inference.",
+      "identifiers": [
+        "SemanticScholar:b73093546b1f2c68f7513a794cea11b2b2e52488"
+      ],
+      "semantic_scholar_id": "b73093546b1f2c68f7513a794cea11b2b2e52488",
+      "doi": "10.1109/MM.2026.3669502",
+      "canonical_id": "DOI:10.1109/MM.2026.3669502",
+      "authors": [
+        "Ming-Yen Lee",
+        "F. Waqar",
+        "Han-Chen Yang",
+        "Muhammed Ahosan Ul Karim",
+        "H. Simka",
+        "Shi-Meng Yu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": "MICRO"
+      },
+      "reason": "KVキャッシュ転送で飽和するHBM帯域に対し、プリフィル・デコードを重ねるパッキング・プリフェッチスケジューリングとM3D超大容量オンチップメモリを組み合わせ、長コンテキストLLM推論のデコードを8.06倍高速化するアーキテクチャであり、arXiv版の一次要旨で確認した。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MMFlash: Faster Speculative Decoding for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2611.18482",
+      "year": 2026,
+      "published": "2026-11-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates generation by letting a lightweight drafter propose tokens for parallel verification by a target model. Diffusion drafters such as DFlash propose an entire token block in a single forward pass, but mainly focus on text-only tasks, leaving multimodal drafting underexplored. To study this setting, we first introduce a metric of token-level visual dependence based on the KL divergence between next-token distributions with and without visual input. We find that acceptance rates decrease from 46% in the lowest visual-dependence quartile to 22% in the highest, with this disparity persisting after multimodal training. Motivated by this observation, we propose MMFlash, a simple and effective framework that adaptively upweights visually dependent tokens that the drafter predicts poorly. For long video inputs, MMFlash further employs sparse attention to reduce redundant attention computation and improve drafting quality. Across various multimodal benchmarks, MMFlash achieves lossless decoding speedups of up to $3.58\\times$, outperforming EAGLE-3 and DFlash by up to 195.4% and 17.1%, respectively.",
+      "identifiers": [
+        "SemanticScholar:6c75f4459a9353e9cd5eaf12f28cff49d5a3d0a7"
+      ],
+      "semantic_scholar_id": "6c75f4459a9353e9cd5eaf12f28cff49d5a3d0a7",
+      "canonical_id": "arXiv:2611.18482",
+      "arxiv_id": "2611.18482",
+      "authors": [
+        "Si-Cheng Feng",
+        "Zi-Geng Chen",
+        "Song Wang",
+        "Gongfan Fang",
+        "Xin-Chao Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚依存度の高いトークンを適応的に重み付けし疎注意を併用することで、拡散ドラフタによるVLM向け投機的デコードを最大3.58倍高速化した。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b009e4f6df67",
+    "round": "libimp-b009e4f6df6700f0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b009e4f6df6700f0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b009e4f6df6700f0-pre01.json",
+    "receipt": "sha256:7c4205824037dcbbfa0282df3fb0661707ce32fe27013ed9c2768214432bac20"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b009e4f6df67",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

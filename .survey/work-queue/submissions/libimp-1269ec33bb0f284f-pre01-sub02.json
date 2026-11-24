@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reliable Parallel Decoding in Masked Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.36452",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models (MDLMs) can generate text efficiently by predicting multiple masked tokens in parallel, but predictions from the same forward pass are not necessarily reliable when committed together. We study when parallel commitment is reliable. Our diagnostics show that confidence alone does not determine a reliable commitment order: confident predictions near the end of the sequence can fix an answer before its supporting computations are established, and downstream predictions become less reliable as the uncertainty of their upstream context grows. At the same time, a single forward pass can already resolve several masked tokens, and predictions that remain stable across the final layers are more likely to be correct. Based on these findings, we propose Reliable Parallel Decoding (RPD), a training-free method that selects candidates by layerwise prediction stability and final confidence, and commits them under a cumulative entropy budget over their preceding masked positions. RPD defers predictions with uncertain upstream context while committing the remaining candidates in parallel, without relying on a fixed block schedule. Across mathematical reasoning and code generation benchmarks on LLaDA and Dream, RPD achieves the highest decoding throughput among the evaluated methods while maintaining or improving accuracy.",
+      "identifiers": [
+        "SemanticScholar:85bf395956ba940a58e0f5d516db758aae39d92d"
+      ],
+      "semantic_scholar_id": "85bf395956ba940a58e0f5d516db758aae39d92d",
+      "canonical_id": "arXiv:2609.36452",
+      "arxiv_id": "2609.36452",
+      "doi": "10.48550/arXiv.2609.36452",
+      "authors": [
+        "Zheng-Hao He",
+        "Bo-Han Liu",
+        "Guang-Zhi Xiong",
+        "Ai-Dong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Reliable Parallel Decodingはマスク拡散言語モデルで同一フォワードパスの予測をまとめて確定する信頼性を診断し、最終層にかけて安定な予測を選ぶ層方向の予測安定性に基づく学習不要の並列確定法で、拡散LLMの並列復号の効率と信頼性を両立させる機構である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Batched Inference in Conditional Neural Networks",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3445263",
+      "year": 2024,
+      "published": "2024-11-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conditional neural networks (NNs) are networks in which the computations performed vary based on the input. Many NNs of interest (such as autoregressive transformers for sequence generation tasks) are inherently conditional since they process variable-length inputs or produce variable-length outputs. In addition, popular NN optimization techniques, such as early exit, result in the computational footprint varying across inputs. Computational irregularity across inputs presents a challenge to batching, a technique widely used to improve hardware utilization and throughput during NN inference. To address this challenge, we propose BatchCond, an optimized batching framework for Conditional NNs that consists of two key steps: 1) computational similarity-driven batching (SimBatch) and 2) adaptive batch reorganization (ABR). SimBatch utilizes a lightweight DNN predictor to create batches of inputs that are more likely to share similar computational patterns, thereby reducing computational irregularity. Further, ABR addresses residual irregularity by dynamically splitting batches into computationally similar sub-batches in a hardware-aware manner. Our experiments demonstrate that BatchCond improves the overall throughput of batched inference by up to $6.6\\times $ (mean of $2.5\\times $ ) across a suite of diverse Conditional NNs, including early-exit networks, dynamic slimmable networks, and autoregressive transformers. Code is available at https://github.com/surya00060/BatchCond.",
+      "identifiers": [
+        "SemanticScholar:617692312cde5472735ed002d1d0165eacfab3d2"
+      ],
+      "semantic_scholar_id": "617692312cde5472735ed002d1d0165eacfab3d2",
+      "doi": "10.1109/TCAD.2024.3445263",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3445263",
+      "authors": [
+        "Surya Selvam",
+        "Amrit Nagarajan",
+        "A. Raghunathan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 753,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BatchCondは早期終了や可変長処理で入力ごとに計算量が変わる条件付きニューラルネット向けにバッチングを最適化する枠組みで、自己回帰Transformerを含む推論時のハードウェア利用率とスループット改善を扱っており、推論バッチングに直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Hybrid Processing-in-Memory and Computing-in-Memory Architecture for Large Language Model Inference in Edge Devices",
+      "source_url": "https://doi.org/10.1109/ASICON66040.2025.11326469",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "International Conference on ASIC",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on resource-constrained edge devices is critically challenged by the \"memory wall\" bottleneck, where energy-intensive data movement between processors and memory dominates system costs. This paper introduces a hybrid Processing-in-Memory (PIM) and Computing-in-Memory (CIM) architecture that synergistically integrates DRAM-based PIM and SRAM-CIM to accelerate Transformer inference. Our key innovation lies in strategically partitioning the attention computation between the two technologies: SRAM-CIM efficiently handles the dynamic Value (V) cache operations prone to access conflicts in DRAM-PIM, while DRAM-PIM accelerates other linear layers. To maximize efficiency, we co-design a hierarchical channel-bank data mapping scheme and an asymmetry-aware workload assignment. Implemented and verified in 28nm technology, our architecture achieves a 1.51 times speedup and 1.24 times reduction in energy consumption compared to DRAM-PIM-only baselines in the focused Transformer layers for Llama2-7B inference, demonstrating potential for edge deployment.",
+      "identifiers": [
+        "SemanticScholar:7ce287a1a71eff4e423f8803f0980bad405ca8e9"
+      ],
+      "semantic_scholar_id": "7ce287a1a71eff4e423f8803f0980bad405ca8e9",
+      "doi": "10.1109/ASICON66040.2025.11326469",
+      "canonical_id": "DOI:10.1109/ASICON66040.2025.11326469",
+      "authors": [
+        "Yu-Jia Sun",
+        "Rui-chun Zhang",
+        "Yuanfeng Chen",
+        "Qiang Zhou",
+        "Xiao-Yong Xue",
+        "Xiao-Yang Zeng"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 399,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DRAM型PIMとSRAM-CIMを組み合わせ、アクセス競合の起きやすいValueキャッシュ操作をSRAM-CIMへ、他の線形層をDRAM-PIMへ振り分けてTransformer推論を加速するハイブリッド近メモリアーキテクチャであり、エッジLLM推論のメモリ壁対策に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1269ec33bb0f",
+    "round": "libimp-1269ec33bb0f284f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1269ec33bb0f284f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1269ec33bb0f284f-pre01.json",
+    "receipt": "sha256:4afd33baa42ce4f19e384b9142d17b6bd5afe7f40e3f6473ad98e1d57fa41295"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1269ec33bb0f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Learning to Predict Middle-Layer Attention in MLLMs for Visual Token Prunin",
+      "source_url": "https://arxiv.org/abs/2608.06411",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) achieve strong performance across diverse vision-language tasks, but their efficiency is limited by the cost of processing numerous visual tokens. Visual token pruning can reduce this cost, but requires accurate token importance estimates. Recent studies have demonstrated that text-to-vision attention from middle language model layers can effectively guide visual token pruning, typically using attention from a predefined middle layer to select the visual tokens to retain. Two problems therefore remain. First, our analysis shows that the layer whose attention is most responsive to the question varies substantially across samples, making a fixed layer suboptimal. Second, obtaining attention from the appropriate middle layer requires processing numerous visual tokens through several language model layers, by which point considerable computation has already been spent. To address both problems, we propose Middle-layer Attention Prediction (MAP), which uses Question Contrastive Teacher Selection to identify a sample-specific teacher layer by contrasting attention under the original and reference questions, and distills attention from the selected layer into a lightweight predictor that estimates visual token importance from multi-modal input features. During inference, MAP combines the predicted importance scores with a diversity criterion to prune visual tokens before the first language model layer. Thus, MAP requires no attention maps for pruning and remains compatible with existing inference acceleration techniques. Across ten benchmarks on LLaVA-NeXT-7B, MAP retains 97.5% of the unpruned model performance with only 5.56% of the visual tokens, yielding a 3.09x end-to-end speedup.",
+      "identifiers": [
+        "SemanticScholar:76ee3ab6386faaeca1a22c30c05c47d56960184f"
+      ],
+      "semantic_scholar_id": "76ee3ab6386faaeca1a22c30c05c47d56960184f",
+      "canonical_id": "arXiv:2608.06411",
+      "arxiv_id": "2608.06411",
+      "doi": "10.48550/arXiv.2608.06411",
+      "authors": [
+        "Yu-Yao Sun",
+        "Tao Deng",
+        "Shuang-Hua Li",
+        "De-Qing Wang",
+        "Hao Geng",
+        "Min-Jun Yu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      },
+      "reason": "中間層注意の予測（MAP）は、サンプルごとに最適な教師層が異なる問題に対し質問対照型の教師層選択と中間層注意の学習型予測で視覚トークン剪定を行い、多数の視覚トークンを深い層まで処理する無駄を省くMLLM推論の視覚トークン削減手法である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OrigaMI: An LLM Serving System with First-Class Interpretability Apps",
+      "source_url": "https://arxiv.org/abs/2607.22595",
+      "year": 2026,
+      "published": "2026-06-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mechanistic interpretability (MI) enables monitoring and steering LLMs by operating on their internal state during inference. MI applications remain difficult to develop, expensive to execute, and challenging to manage at runtime. We present OrigaMI, a system that integrates MI applications as first-class components of LLM serving, enabling simplified development, efficient execution, and flexible deployment. Guided by a comprehensive analysis of modern MI applications, OrigaMI streamlines the MI applications development via a simple Python-based Domain Specific Language (DSL) for accessing intra- and inter-layer runtime model state at well-defined trigger points during inference. OrigaMI enables efficient access to ephemeral attention scores via a novel FlashInspect kernel that retains the performance benefits of FlashAttention. OrigaMI's compiler integrates multiple MI applications into the performance-optimized inference execution flow while ensuring conflict-free coexistence. OrigaMI's runtime supports dynamic, per-request activation and deactivation of MI applications without service interruption or performance degradation when inactive, leveraging OrigaMI's dynamic memory management and CUDA graph-compatible execution. We integrate OrigaMI with vLLM and evaluate ten MI applications, including sparse autoencoders, steering, and jailbreak detection, across four state-of-the-art LLMs. OrigaMI incurs negligible execution overhead, up to two orders of magnitude lower than existing frameworks, while enabling per-request activation and deactivation up to 1,000 times faster than alternatives. These results demonstrate that OrigaMI makes MI applications practical for deployment in production LLM serving systems.",
+      "identifiers": [
+        "SemanticScholar:78eecaa2babcbd8281ce564cb01d0adf0c7c894c"
+      ],
+      "semantic_scholar_id": "78eecaa2babcbd8281ce564cb01d0adf0c7c894c",
+      "canonical_id": "arXiv:2607.22595",
+      "arxiv_id": "2607.22595",
+      "authors": [
+        "Michael Blum",
+        "M. Silberstein",
+        "Yaniv David"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      },
+      "reason": "xMIx／OrigaMIはメカニスティック解釈可能性アプリをLLMサービングの一級構成要素として統合する実行時プラットフォームで、FlashAttentionの利点を保つFlashInspectカーネルやリクエスト単位の動的有効化を備え、推論実行フローの上での内部状態アクセス基盤としてサービングに直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5293db0f9baa",
+    "round": "libimp-5293db0f9baace9e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5293db0f9baace9e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5293db0f9baace9e-pre01.json",
+    "receipt": "sha256:3def5b825d290d1bdd21987659f82c10b6c8cb6edabbb3b71ab61471b788eea3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5293db0f9baa",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
