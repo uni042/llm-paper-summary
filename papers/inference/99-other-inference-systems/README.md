@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1409本）
+## 自動生成の論文一覧（1411本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -4778,6 +4778,10 @@
   実装：[✓](https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma) ・ リポジトリ内被引用：9  
   SIGMAは関数秘密分散（Function Secret Sharing; FSS）によって複雑な非線形演算を二者間で実現し、事前に作った暗号鍵を使ってオンライン時の通信を抑える。代表結果は、系列長128の二者間オンライン推論において、既存のGPU秘匿計算系CrypTenより12.2～19倍短い実行時間である。
 
+- **2024-10 · [Fast Best-of-N Decoding via Speculative Rejection](2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md)**  
+  実装：[✓](https://github.com/Zanette-Labs/SpeculativeRejection) ・ リポジトリ内被引用：9  
+  部分応答の報酬が最終報酬と相関することを使い、生成途中で見込みの薄い応答を繰り返し打ち切ることで、Best-of-Nを単一GPUで16倍から32倍効率化する推論時アラインメント。
+
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：9  
   大規模言語モデルを多くの下流タスクへ適応させるとき、全パラメータを更新する方式は学習用メモリと計算時間が大きい。著者の概要にある「約30%のトークン計算遅延削減」は、元のMixLoRA実装に対する最適化効果を指す総括値であり、通常LoRAより30%速いという意味ではない。
@@ -4910,6 +4914,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈LLMのKVキャッシュは系列長に比例して大きくなるため、重み量子化とは別にKVの保存精度を下げる必要がある。
 
+- **2024-02 · [Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers](2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  大規模言語モデル（LLM）は多数のTransformer層を積み重ねることで表現能力を獲得する。重要な限定条件は、すべて分類タスク向けに再微調整した後の結果である。
+
 - **2024-02 · [Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers](2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformer.md)**  
   実装：[✓](https://github.com/SamsungLabs/aespa) ・ リポジトリ内被引用：2  
   量子化は層ごとに実行しながら誤差の物差しを注意全体の再構成に置き、目的関数を事前計算可能な形へ変形することで、二ビットでも崩壊せず、ブロック型より桁違いに速い学習後量子化を実現した。
@@ -4993,10 +5001,6 @@
 - **2024-05 · [AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs](2024-2405.13358-adpq-a-zero-shot-calibration-free-adaptive-post-training-quantization-me.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   適応型LASSOのソフトしきい値化で重みだけから外れ値を分離し、較正データなしで完全な低ビット量子化を行う学習後量子化手法。量子化時間は既存手法の10倍以上速い。
-
-- **2024-02 · [Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers](2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  大規模言語モデル（LLM）は多数のTransformer層を積み重ねることで表現能力を獲得する。重要な限定条件は、すべて分類タスク向けに再微調整した後の結果である。
 
 - **2024-02 · [RepQuant: Towards Accurate Post-Training Quantization of Large Transformer Models via Scale Reparameterization](2024-2402.05628-repquant-towards-accurate-post-training-quantization-of-large-transforme.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -5229,6 +5233,10 @@
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
   従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
+
+- **2024-01 · [Dynamic Layer Skipping for Large Language Models on Natural Language Understanding Tasks and Machine Translation Using Reinforcement Learning](2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-und.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各層並列のアダプター型コントローラーが強化学習で次の層を飛ばすか決める動的レイヤースキッピングで、静的スキップより高い品質を保ち、機械翻訳では全層モデルをも上回る。
 
 - **2023-12 · [A Performance Evaluation of a Quantized Large Language Model on Various Smartphones](2023-2312.12472-a-performance-evaluation-of-a-quantized-large-language-model-on-various-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

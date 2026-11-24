@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "dc40c82c5be01cdad1fe1999be42dadbd9991e20",
+  "base_commit": "5c96f74241fa1e83ad4f13a7d2c43033ba6cd832",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -67,6 +67,8 @@
     "0000-b388700aa349-pe-qat-parameter-efficient-quantization-aware-training-for-large-language-models.json",
     "0000-b91ae66e6514-lightmoe-task-aware-expert-availability-management-for-memory-efficient-moe-llm-inference.json",
     "0000-b9a679571edc-sca-selective-compression-attention-for-efficiently-extending-the-context-window-of-large-language-models.json",
+    "0000-bc0dfc0b468d-cachegen-fast-context-loading-for-language-model-applications-via-kv-cache-streaming.json",
+    "0000-bc17c2aed529-accelerating-best-of-n-via-speculative-rejection.json",
     "0000-bdec19301b9e-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-expect.json",
     "0000-c187be9e4f6f-your-reasoning-model-knows-what-counts-self-guided-chain-of-thought-pruning-for-efficient-reasoning.json",
     "0000-c55d2583b27c-unispec-training-free-speculative-decoding-for-robust-llm-acceleration-across-languages-and-hardware.json",
@@ -78,6 +80,7 @@
     "0000-ebb210d8b588-atq-activation-transformation-forweight-activation-quantization-of-large-language-models.json",
     "0000-f88744e972d2-smartcache-context-aware-semantic-cache-for-efficient-multi-turn-llm-inference.json",
     "0000-f8a8760eeca9-sharvet-similarity-aware-parameter-sharing-with-vector-based-tuning-for-efficient-llm-compression.json",
+    "0000-fa1fcbb12370-quantize-what-counts-bit-allocation-insights-informed-by-spectral-gaps-in-keys-and-values.json",
     "0000-fd553e82dd3b-densessm-state-space-models-with-dense-hidden-connection-for-efficient-large-language-models.json",
     "1802.05799-horovod.json",
     "2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.json",
@@ -113,6 +116,7 @@
     "2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-parametric-knowledge-in-language-models.json",
     "2023-4587313dce71-poster-pipellm-pipeline-llm-inference-on-heterogeneous-devices-with-sequence-slicing.json",
     "2023-dfdf93e19be2-improving-computation-and-memory-efficiency-for-real-world-transformer-inference-on-gpus.json",
+    "2024-008c56d1c4fa-navigator-a-decentralized-scheduler-for-latency-sensitive-ai-workflows.json",
     "2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.json",
     "2024-2401.09964-when-neural-code-completion-models-size-up-the-situation-attaining-cheaper-and-faster-completion-through-dynamic-model-i.json",
     "2024-2401.10652-autochunk-automated-activation-chunk-for-memory-efficient-long-sequence-inference.json",
@@ -193,6 +197,7 @@
     "2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json",
     "2024-26667446fd09-cmn-a-co-designed-neural-architecture-search-for-efficient-computing-in-memory-based-mixture-of-experts.json",
     "2024-468b43887ef3-how-speculative-can-speculative-decoding-be.json",
+    "2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-understanding-tasks-and-machine-translation-using-r.json",
     "2024-ce454f0d0a1b-on-the-way-to-lossless-compression-of-language-transformers-exploring-cross-domain-properties-of-quantization.json",
     "2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.json",
     "2024-f2a8773c290e-glitches-gpu-fpga-llm-inference-through-a-collaborative-heterogeneous-system.json",
@@ -51806,6 +51811,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "SemanticScholar:2cc4c4451cd258c6b621ec97870b93887941e8ad": {
+      "order": [
+        "2026-11-24T00:04:32+00:00",
+        "0000-bc0dfc0b468d-cachegen-fast-context-loading-for-language-model-applications-via-kv-cache-streaming.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.20290": {
+      "order": [
+        "2026-11-24T00:06:04+00:00",
+        "0000-bc17c2aed529-accelerating-best-of-n-via-speculative-rejection.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a": {
+      "order": [
+        "2026-11-24T00:06:52+00:00",
+        "0000-fa1fcbb12370-quantize-what-counts-bit-allocation-insights-informed-by-spectral-gaps-in-keys-and-values.json"
+      ],
+      "status": "already_represented",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.54097/wy0g8m89": {
+      "order": [
+        "2026-11-24T00:08:24+00:00",
+        "2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-understanding-tasks-and-machine-translation-using-r.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -65583,6 +65624,12 @@
     "doi:10.18653/v1/2026.acl-industry.83": [
       "papers/inference/99-other-inference-systems/2026-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.md",
       "papers/inference/99-other-inference-systems/2026-9723e70ce878-flowhn-adaptive-token-routing-for-efficient-parallel-hybrid-networks.md"
+    ],
+    "arxiv:2410.20290": [
+      "papers/inference/99-other-inference-systems/2024-2410.20290-fast-best-of-n-decoding-via-speculative-rejection.md"
+    ],
+    "doi:10.54097/wy0g8m89": [
+      "papers/inference/99-other-inference-systems/2024-b333410eff96-dynamic-layer-skipping-for-large-language-models-on-natural-language-und.md"
     ]
   }
 }
