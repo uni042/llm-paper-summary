@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-24T03:44:10+00:00`
+Generated: `2026-11-24T03:59:56+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-11-24T03:44:10+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **205** / 未claim総数: **205** / このworker向け: **68**
+ready総数: **200** / 未claim総数: **200** / このworker向け: **66**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -74,22 +74,20 @@ ready総数: **205** / 未claim総数: **205** / このworker向け: **68**
 | 55 | 10 | research | arXiv:2512.24713 | FPGA Co-Design for Efficient N:M Sparse and Quantized Model Inference | [primary](https://arxiv.org/abs/2512.24713) | `papers/inference/99-other-inference-systems/2025-2512.24713-fpga-co-design-for-efficient-n-m-sparse-and-quantized-model-inference.md` |
 | 56 | 10 | research | arXiv:2310.12818 | Boosting Inference Efficiency: Unleashing the Power of Parameter-Shared Pre-trained Language Models | [primary](https://arxiv.org/abs/2310.12818) | `papers/inference/99-other-inference-systems/2023-2310.12818-boosting-inference-efficiency-unleashing-the-power-of-parameter-shared-pre-trained-language-models.md` |
 | 57 | 7 | research | DOI:10.3390/su172310473 | A Deployment-Aware Framework for Carbon- and Water- Efficient LLM Serving | [primary](https://doi.org/10.3390/su172310473) | `papers/inference/99-other-inference-systems/2025-e7e57b78f540-a-deployment-aware-framework-for-carbon-and-water-efficient-llm-serving.md` |
-| 58 | 4 | research | arXiv:2507.14715 | Exploring the Dynamic Scheduling Space of Real-Time Generative AI Applications on Emerging Heterogeneous Systems | [primary](https://arxiv.org/abs/2507.14715) | `papers/inference/99-other-inference-systems/2025-2507.14715-exploring-the-dynamic-scheduling-space-of-real-time-generative-ai-applications-on-emerging-heterogeneous-systems.md` |
-| 59 | 3 | research | arXiv:2510.01817 | Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction | [primary](https://arxiv.org/abs/2510.01817) | `papers/inference/99-other-inference-systems/2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechanism-with-query-heads-reduction.md` |
-| 60 | 3 | research | DOI:10.1109/ICDEW67478.2025.00020 | LLM-MS: A Multi-Model LLM Search Engine | [primary](https://doi.org/10.1109/ICDEW67478.2025.00020) | `papers/inference/99-other-inference-systems/2025-fa0fa1f7bd52-llm-ms-a-multi-model-llm-search-engine.md` |
-| 61 | 1 | research | arXiv:2510.24390 | Improving LLM Reasoning via Dependency-Aware Query Decomposition and Logic-Parallel Content Expansion | [primary](https://arxiv.org/abs/2510.24390) | `papers/inference/99-other-inference-systems/2025-2510.24390-improving-llm-reasoning-via-dependency-aware-query-decomposition-and-logic-parallel-content-expansion.md` |
-| 62 | 1 | research | arXiv:2508.01540 | MagicVL-2B: Empowering Vision-Language Models on Mobile Devices with Lightweight Visual Encoders via Curriculum Learning | [primary](https://arxiv.org/abs/2508.01540) | `papers/inference/99-other-inference-systems/2025-2508.01540-magicvl-2b-empowering-vision-language-models-on-mobile-devices-with-lightweight-visual-encoders-via-curriculum-learning.md` |
-| 63 | 0 | research | DOI:10.1016/j.compeleceng.2026.111505 | Component-aware self-speculative decoding for hybrid language models: An architectural viability study | [primary](https://doi.org/10.1016/j.compeleceng.2026.111505) | `papers/inference/99-other-inference-systems/2026-component-aware-self-speculative-decoding-hybrid-language-models.md` |
-| 64 | 0 | research | arXiv:2509.22512 | AxLLM: accelerator architecture for large language models with computation reuse capability | [primary](https://arxiv.org/abs/2509.22512) | `papers/inference/99-other-inference-systems/2025-2509.22512-axllm-accelerator-architecture-for-large-language-models-with-computation-reuse-capability.md` |
-| 65 | 0 | research | SemanticScholar:0c3001da91dd77f7b906026bd6f5c4b44a1ec575 | Edinburgh Research Explorer Dynamic memory compression Retrofitting LLMs for accelerated inference | [primary](https://www.semanticscholar.org/paper/0c3001da91dd77f7b906026bd6f5c4b44a1ec575) | `papers/inference/99-other-inference-systems/0000-514f83264c8b-edinburgh-research-explorer-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md` |
-| 66 | 0 | research | SemanticScholar:435390ada7cb1b2e890b34dc036764d5098dee07 | K UN S ERVE : Parameter-centric Memory Management for Efficient Memory Throttling Handling in LLM Serving | [primary](https://www.semanticscholar.org/paper/435390ada7cb1b2e890b34dc036764d5098dee07) | `papers/inference/99-other-inference-systems/0000-3b396464dc29-k-un-s-erve-parameter-centric-memory-management-for-efficient-memory-throttling-handling-in-llm-serving.md` |
-| 67 | 0 | research | SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6 | UvA-DARE (Digital Academic Repository) Reward-Guided Speculative Decoding for Efficient LLM Reasoning | [primary](https://www.semanticscholar.org/paper/acaaa08dba4a23b0b68a2c455ded10f7146674b6) | `papers/inference/99-other-inference-systems/0000-a7044071c51b-uva-dare-digital-academic-repository-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md` |
-| 68 | 0 | research | SemanticScholar:f6b06fd0d5934422f800efe3677bcb209bec91ee | T OWARDS P RIVACY -P RESERVING LLM I NFERENCE VIA C OLLABORATIVE O BFUSCATION (T ECHNICAL R EPORT ) | [primary](https://www.semanticscholar.org/paper/f6b06fd0d5934422f800efe3677bcb209bec91ee) | `papers/inference/99-other-inference-systems/0000-d2ff8abe23fb-t-owards-p-rivacy-p-reserving-llm-i-nference-via-c-ollaborative-o-bfuscation-t-echnical-r-eport.md` |
+| 58 | 4 | research | SemanticScholar:2cc4c4451cd258c6b621ec97870b93887941e8ad | CacheGen: Fast Context Loading for Language Model Applications via KV Cache Streaming | [primary](https://www.semanticscholar.org/paper/2cc4c4451cd258c6b621ec97870b93887941e8ad) | `papers/inference/99-other-inference-systems/0000-bc0dfc0b468d-cachegen-fast-context-loading-for-language-model-applications-via-kv-cache-streaming.md` |
+| 59 | 3 | research | DOI:10.1038/s41467-025-60802-5 | Ubiquitous memory augmentation via mobile multimodal embedding system | [primary](https://doi.org/10.1038/s41467-025-60802-5) | `papers/inference/99-other-inference-systems/2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.md` |
+| 60 | 2 | research | SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a | Quantize What Counts: Bit Allocation Insights Informed by Spectral Gaps in Keys and Values | [primary](https://www.semanticscholar.org/paper/998dca0b69dd0b08495d90530db2352be3a04d4a) | `papers/inference/99-other-inference-systems/0000-fa1fcbb12370-quantize-what-counts-bit-allocation-insights-informed-by-spectral-gaps-in-keys-and-values.md` |
+| 61 | 1 | research | DOI:10.1109/EDGE62653.2024.00015 | Navigator: A Decentralized Scheduler for Latency-Sensitive AI Workflows | [primary](https://doi.org/10.1109/EDGE62653.2024.00015) | `papers/inference/99-other-inference-systems/2024-008c56d1c4fa-navigator-a-decentralized-scheduler-for-latency-sensitive-ai-workflows.md` |
+| 62 | 0 | research | arXiv:2511.19438 | Opt4GPTQ: Co-Optimizing Memory and Computation for 4-bit GPTQ Quantized LLM Inference on Heterogeneous Platforms | [primary](https://arxiv.org/abs/2511.19438) | `papers/inference/99-other-inference-systems/2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-llm-inference-on-heterogeneous-platforms.md` |
+| 63 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
+| 64 | 0 | research | SemanticScholar:3ce4934467503e25801e8bc7ab94425fb2d65380 | Smart Routing: Cost-Effective Multi-LLM Serving in AIOS | [primary](https://www.semanticscholar.org/paper/3ce4934467503e25801e8bc7ab94425fb2d65380) | `papers/inference/99-other-inference-systems/0000-0427ffa977bc-smart-routing-cost-effective-multi-llm-serving-in-aios.md` |
+| 65 | 0 | research | SemanticScholar:8d0525ec83fad54f638ac86ba0d428ae6226d8ad | C HUNK LLM: A L IGHTWEIGHT P LUGGABLE F RAME - WORK FOR A CCELERATING LLM S I NFERENCE | [primary](https://www.semanticscholar.org/paper/8d0525ec83fad54f638ac86ba0d428ae6226d8ad) | `papers/inference/99-other-inference-systems/0000-a1f72e13ea4b-c-hunk-llm-a-l-ightweight-p-luggable-f-rame-work-for-a-ccelerating-llm-s-i-nference.md` |
+| 66 | 0 | research | SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a | A Multi-Engine Dataflow for MoE Decoding on Scratchpad-Based Tensor Accelerators | [primary](https://www.semanticscholar.org/paper/dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a) | `papers/inference/99-other-inference-systems/0000-67a90d0976d5-a-multi-engine-dataflow-for-moe-decoding-on-scratchpad-based-tensor-accelerators.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127116** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **65374** / 監査再投入 **0** / 機械規則適用後 **123483** / 選抜率 **50.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127113** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **65373** / 監査再投入 **0** / 機械規則適用後 **123480** / 選抜率 **50.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|

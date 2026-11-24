@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-24T03:44:10+00:00`
+Generated: `2026-11-24T03:59:56+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-11-24T03:44:10+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **205** / 未claim総数: **205** / このworker向け: **68**
+ready総数: **200** / 未claim総数: **200** / このworker向け: **67**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -75,21 +75,20 @@ ready総数: **205** / 未claim総数: **205** / このworker向け: **68**
 | 56 | 10 | research | arXiv:2601.07839 | Hierarchical Sparse Plus Low Rank Compression of LLM | [primary](https://arxiv.org/abs/2601.07839) | `papers/inference/99-other-inference-systems/2026-2601.07839-hierarchical-sparse-plus-low-rank-compression-of-llm.md` |
 | 57 | 8 | research | SemanticScholar:8c4e2a1c421d91a75961e1a91a378cbaf4289b0f | : Conditional Computation of Transformer Models for Efﬁcient Inference | [primary](https://www.semanticscholar.org/paper/8c4e2a1c421d91a75961e1a91a378cbaf4289b0f) | `papers/inference/99-other-inference-systems/0000-f1582c313b41-conditional-computation-of-transformer-models-for-efficient-inference.md` |
 | 58 | 4 | research | arXiv:2512.07855 | LAPA: Log-Domain Prediction-Driven Dynamic Sparsity Accelerator for Transformer Model | [primary](https://arxiv.org/abs/2512.07855) | `papers/inference/99-other-inference-systems/2025-2512.07855-lapa-log-domain-prediction-driven-dynamic-sparsity-accelerator-for-transformer-model.md` |
-| 59 | 3 | research | arXiv:2510.10448 | RECON: Reasoning with Condensation for Efficient Retrieval-Augmented Generation | [primary](https://arxiv.org/abs/2510.10448) | `papers/inference/99-other-inference-systems/2025-2510.10448-recon-reasoning-with-condensation-for-efficient-retrieval-augmented-generation.md` |
-| 60 | 3 | research | DOI:10.1038/s41467-025-60802-5 | Ubiquitous memory augmentation via mobile multimodal embedding system | [primary](https://doi.org/10.1038/s41467-025-60802-5) | `papers/inference/99-other-inference-systems/2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.md` |
-| 61 | 2 | research | SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a | Quantize What Counts: Bit Allocation Insights Informed by Spectral Gaps in Keys and Values | [primary](https://www.semanticscholar.org/paper/998dca0b69dd0b08495d90530db2352be3a04d4a) | `papers/inference/99-other-inference-systems/0000-fa1fcbb12370-quantize-what-counts-bit-allocation-insights-informed-by-spectral-gaps-in-keys-and-values.md` |
-| 62 | 1 | research | arXiv:2508.12590 | Energy-Efficient Wireless LLM Inference via Uncertainty- and Importance-Aware Speculative Decoding | [primary](https://arxiv.org/abs/2508.12590) | `papers/inference/99-other-inference-systems/2025-2508.12590-energy-efficient-wireless-llm-inference-via-uncertainty-and-importance-aware-speculative-decoding.md` |
-| 63 | 1 | research | DOI:10.1109/EDGE62653.2024.00015 | Navigator: A Decentralized Scheduler for Latency-Sensitive AI Workflows | [primary](https://doi.org/10.1109/EDGE62653.2024.00015) | `papers/inference/99-other-inference-systems/2024-008c56d1c4fa-navigator-a-decentralized-scheduler-for-latency-sensitive-ai-workflows.md` |
-| 64 | 0 | research | arXiv:2511.19438 | Opt4GPTQ: Co-Optimizing Memory and Computation for 4-bit GPTQ Quantized LLM Inference on Heterogeneous Platforms | [primary](https://arxiv.org/abs/2511.19438) | `papers/inference/99-other-inference-systems/2025-2511.19438-opt4gptq-co-optimizing-memory-and-computation-for-4-bit-gptq-quantized-llm-inference-on-heterogeneous-platforms.md` |
-| 65 | 0 | research | arXiv:2406.18173 | UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs | [primary](https://arxiv.org/abs/2406.18173) | `papers/inference/99-other-inference-systems/2024-2406.18173-uio-llms-unbiased-incremental-optimization-for-long-context-llms.md` |
-| 66 | 0 | research | SemanticScholar:3ce4934467503e25801e8bc7ab94425fb2d65380 | Smart Routing: Cost-Effective Multi-LLM Serving in AIOS | [primary](https://www.semanticscholar.org/paper/3ce4934467503e25801e8bc7ab94425fb2d65380) | `papers/inference/99-other-inference-systems/0000-0427ffa977bc-smart-routing-cost-effective-multi-llm-serving-in-aios.md` |
-| 67 | 0 | research | SemanticScholar:8d0525ec83fad54f638ac86ba0d428ae6226d8ad | C HUNK LLM: A L IGHTWEIGHT P LUGGABLE F RAME - WORK FOR A CCELERATING LLM S I NFERENCE | [primary](https://www.semanticscholar.org/paper/8d0525ec83fad54f638ac86ba0d428ae6226d8ad) | `papers/inference/99-other-inference-systems/0000-a1f72e13ea4b-c-hunk-llm-a-l-ightweight-p-luggable-f-rame-work-for-a-ccelerating-llm-s-i-nference.md` |
-| 68 | 0 | research | SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a | A Multi-Engine Dataflow for MoE Decoding on Scratchpad-Based Tensor Accelerators | [primary](https://www.semanticscholar.org/paper/dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a) | `papers/inference/99-other-inference-systems/0000-67a90d0976d5-a-multi-engine-dataflow-for-moe-decoding-on-scratchpad-based-tensor-accelerators.md` |
+| 59 | 3 | research | arXiv:2510.01817 | Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction | [primary](https://arxiv.org/abs/2510.01817) | `papers/inference/99-other-inference-systems/2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechanism-with-query-heads-reduction.md` |
+| 60 | 2 | research | arXiv:2510.15882 | FlexLink: Boosting your NVLink Bandwidth by 27% without accuracy concern | [primary](https://arxiv.org/abs/2510.15882) | `papers/inference/99-other-inference-systems/2025-2510.15882-flexlink-boosting-your-nvlink-bandwidth-by-27-without-accuracy-concern.md` |
+| 61 | 1 | research | arXiv:2510.01585 | ReSSFormer: A Recursive Sparse Structured Transformer for Scalable and Long-Context Reasoning | [primary](https://arxiv.org/abs/2510.01585) | `papers/inference/99-other-inference-systems/2025-2510.01585-ressformer-a-recursive-sparse-structured-transformer-for-scalable-and-long-context-reasoning.md` |
+| 62 | 0 | research | arXiv:2511.18977 | FastForward Pruning: Efficient LLM Pruning via Single-Step Reinforcement Learning | [primary](https://arxiv.org/abs/2511.18977) | `papers/inference/99-other-inference-systems/2025-2511.18977-fastforward-pruning-efficient-llm-pruning-via-single-step-reinforcement-learning.md` |
+| 63 | 0 | research | DOI:10.1145/3769304 | Towards Floating Point-Based AI Acceleration: Hybrid PIM with Non-Uniform Data Format and Reduced Multiplications | [primary](https://doi.org/10.1145/3769304) | `papers/inference/99-other-inference-systems/2025-4b36ce92772b-towards-floating-point-based-ai-acceleration-hybrid-pim-with-non-uniform-data-format-and-reduced-multiplications.md` |
+| 64 | 0 | research | SemanticScholar:1c052dc64b887eb0bc785e5f6518239a0dac95cd | Verification: Exploiting Information Gain for Speculative Decoding | [primary](https://www.semanticscholar.org/paper/1c052dc64b887eb0bc785e5f6518239a0dac95cd) | `papers/inference/99-other-inference-systems/0000-f8c915c11b49-verification-exploiting-information-gain-for-speculative-decoding.md` |
+| 65 | 0 | research | SemanticScholar:8d04f37e5d77bc8a44486282cf8acb80e9563ad8 | L ESS I S M ORE : T RAINING -F REE S PARSE A TTENTION WITH G LOBAL L OCALITY FOR E FFICIENT R EASONING | [primary](https://www.semanticscholar.org/paper/8d04f37e5d77bc8a44486282cf8acb80e9563ad8) | `papers/inference/99-other-inference-systems/0000-e92f51352226-l-ess-i-s-m-ore-t-raining-f-ree-s-parse-a-ttention-with-g-lobal-l-ocality-for-e-fficient-r-easoning.md` |
+| 66 | 0 | research | SemanticScholar:b4bcd75d8f9bd8c78f99e6106169e033c76dd2da | Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices | [primary](https://www.semanticscholar.org/paper/b4bcd75d8f9bd8c78f99e6106169e033c76dd2da) | `papers/inference/99-other-inference-systems/0000-2650e5d02f29-collaborative-lossless-llm-inference-serving-with-offloading-based-pipeline-parallelism-on-edge-devices.md` |
+| 67 | 0 | research | SemanticScholar:f756c328f874e6b0611e64d74dc224bf712d66e5 | O RP Q UANT : G EOMETRIC O RTHOGONAL R ESIDUAL P ROJECTION FOR M ULTIPLIER -F REE P OWER - OF -T WO T RANSFORMER Q UANTIZATION ∗ | [primary](https://www.semanticscholar.org/paper/f756c328f874e6b0611e64d74dc224bf712d66e5) | `papers/inference/99-other-inference-systems/0000-d3d38642ea10-o-rp-q-uant-g-eometric-o-rthogonal-r-esidual-p-rojection-for-m-ultiplier-f-ree-p-ower-of-t-wo-t-ransformer-q-uantization.md` |
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127116** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **65374** / 監査再投入 **0** / 機械規則適用後 **123483** / 選抜率 **50.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127113** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **65373** / 監査再投入 **0** / 機械規則適用後 **123480** / 選抜率 **50.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
