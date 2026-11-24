@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-final-20261124-latest-b",
+  "reference_main_sha": "dcddd106cdf122ba9d495d5928edc5e8b4eff02d",
+  "record_count": 2,
+  "origin": "discovery_latest_search",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27167",
+      "identity_tokens": [
+        "arXiv:2611.27167"
+      ],
+      "title": "BusemannFormer: Horospherical Self-Attention for Hyperbolic Graph Transformers",
+      "reason": "タイトル自体が双曲幾何を用いるグラフTransformerと階層的グラフデータ向けのHorospherical Self-Attentionを明示しており、対象はノード分類等のグラフ学習であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2611.27167",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27855",
+      "identity_tokens": [
+        "arXiv:2611.27855"
+      ],
+      "title": "Anchors That Move Without Collapsing: Exclusive-Region Anchor Routing for Vision Transformers",
+      "reason": "タイトル自体がVision Transformer向けのanchor routingと画像パッチ要約を明示しており、対象はCIFAR等の画像認識タスクであってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2611.27855",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-11-24T02:00:00+00:00",
+      "last_checked_at": "2026-11-24T02:00:00+00:00",
+      "linked_from": [],
+      "origin": "discovery_latest_search"
+    }
+  ]
+}

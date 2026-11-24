@@ -1,0 +1,56 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-final-20261124-latest-a-title",
+ "reference_main_sha": "dcddd106cdf122ba9d495d5928edc5e8b4eff02d",
+ "record_count": 3,
+ "origin": "discovery_latest_search",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.25570",
+   "identity_tokens": [
+    "arXiv:2611.25570"
+   ],
+   "title": "Reinforcement-Aligned Probabilistic Weather Forecasting with Discrete Tokens",
+   "reason": "タイトル自体が離散トークンによる確率的気象予測（天気予報）を主題として明示しており、LLM推論システムへの技術的貢献を示す要素がタイトルにないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2611.25570",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T02:00:00+00:00",
+   "last_checked_at": "2026-11-24T02:00:00+00:00",
+   "linked_from": [],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.25736",
+   "identity_tokens": [
+    "arXiv:2611.25736"
+   ],
+   "title": "An LLM-Driven Traffic-Control xApp for Dynamic 5G RAN Intents",
+   "reason": "タイトル自体が5G RAN向けトラフィック制御xAppという通信ネットワーク制御の応用を明示しており、LLM推論システム技術を主題としていないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2611.25736",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T02:00:00+00:00",
+   "last_checked_at": "2026-11-24T02:00:00+00:00",
+   "linked_from": [],
+   "origin": "discovery_latest_search"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2611.24765",
+   "identity_tokens": [
+    "arXiv:2611.24765"
+   ],
+   "title": "LLM-Guided Cyber-Physical Attack Path Identification in Smart Grids",
+   "reason": "タイトル自体がスマートグリッドにおけるサイバーフィジカル攻撃経路同定という電力系統応用を明示しており、LLM推論システム技術を主題としていないため対象外とした。",
+   "source_url": "https://arxiv.org/abs/2611.24765",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T02:00:00+00:00",
+   "last_checked_at": "2026-11-24T02:00:00+00:00",
+   "linked_from": [],
+   "origin": "discovery_latest_search"
+  }
+ ]
+}
