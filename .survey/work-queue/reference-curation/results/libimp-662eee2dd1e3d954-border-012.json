@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-662eee2dd1e3d954-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.22238",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.22238",
+    "identity_tokens": [
+      "arXiv:2611.22238"
+    ],
+    "reason": "本論文はプレフィックスキャッシュ下でコーディングエージェントのコンテキスト追加・削除が費用に与える影響を2万回超の実行で測定する実証研究であり、キャッシュ経済性の知見はあるが新規システム機構の提案ではないため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-662eee2dd1e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

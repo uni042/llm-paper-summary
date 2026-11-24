@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e486b4017c540cbc-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.23702",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.23702",
+    "identity_tokens": [
+      "arXiv:2611.23702"
+    ],
+    "reason": "KnowMe Paper Radarは研究者の論文発見を支援する軽量な優先度付けツールであり、LLM推論システムとは無関係な学術情報検索の応用のため対象外とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "title": "KnowMe Paper Radar: Lightweight Discovery of Promising Papers in the Age of Autoresearch"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e486b4017c54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

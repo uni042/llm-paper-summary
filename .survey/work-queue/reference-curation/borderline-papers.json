@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-24T00:17:33+00:00",
-  "record_count": 8238,
+  "updated_at": "2026-11-24T00:55:08+00:00",
+  "record_count": 8268,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -126571,6 +126571,396 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Analog-AI Hardware Accelerators for Low-Latency Transformer-Based Language Models (Invited)"
+    },
+    "arXiv:2611.25614": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25614",
+      "identity_tokens": [
+        "arXiv:2611.25614"
+      ],
+      "reason": "LAQはロボット搭載向けWorld Action Modelの重み・活性化・KVキャッシュを4ビット量子化する手法であり、量子化技術は関連するが対象が世界モデルでありLLM推論への直接適用は未確認のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Don't Lose the Future: Latent-Aware 4-Bit Quantization of World Action Models"
+    },
+    "arXiv:2611.24276": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24276",
+      "identity_tokens": [
+        "arXiv:2611.24276"
+      ],
+      "reason": "本論文はシャッフル難読化されたKVキャッシュから入力対称性を利用してトークンを復元できることを示す安全性分析であり、KVキャッシュ共有機構が対象だが推論効率への貢献ではないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "When Shuffling Fails: Token Recovery from Obfuscated KV Caches"
+    },
+    "arXiv:2611.24259": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24259",
+      "identity_tokens": [
+        "arXiv:2611.24259"
+      ],
+      "reason": "LookAwayは長尺ビデオVLMで先にタイムスタンプ付きノートを書かせてからビデオのKVキャッシュを推論エンジンから隠す手法であり、推論時の再読削減が示されるが、機構の中心はモデル側のノート生成戦略のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Do VLMs Need to Keep Looking at Long Videos? Write It Down, Then Look Away"
+    },
+    "arXiv:2611.23570": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23570",
+      "identity_tokens": [
+        "arXiv:2611.23570"
+      ],
+      "reason": "本論文はマルチエージェント間で他者のメッセージ（テキストまたは潜在KV）を省略できる条件を信頼度で認証し遅延を削減する研究であり、対象はエージェント間通信の判断機構で、推論エンジン内部の機構ではないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message"
+    },
+    "arXiv:2611.22356": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22356",
+      "identity_tokens": [
+        "arXiv:2611.22356"
+      ],
+      "reason": "SR-VLAはVLAポリシーの制御停滞を予測入力の先行推論と選択的KVキャッシュ修復で隠す手法であり、KV再利用の機構は関連するがロボット制御実行への応用が主目的のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SR-VLA: Stall-Reduced VLA Execution via Predicted-Input Lookahead and Selective KV Cache Repair"
+    },
+    "arXiv:2611.23339": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23339",
+      "identity_tokens": [
+        "arXiv:2611.23339"
+      ],
+      "reason": "本論文は生成推薦のビームサーチ推論をvLLM上でTree Attentionにより最適化し共有プレフィックスのKV再読を削減するが、主目的が推薦推論という応用ワークロードの最適化のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Optimize the Cob, Then the Kernel: Optimizing Beam Search for Generative Recommendation Inference"
+    },
+    "arXiv:2611.22304": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22304",
+      "identity_tokens": [
+        "arXiv:2611.22304"
+      ],
+      "reason": "StateKV Injectionは複数マルチモーダルLLM間で視覚KV状態を整列・射影して通信する枠組みであり、KV状態の転用という機構は関連するが、ビデオ理解のためのモデル間通信応用が主目的のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:07+00:00",
+      "last_checked_at": "2026-11-24T00:55:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Cross-Modal StateKV Injection for Communication in Multi-LLM Systems across Temporal Segments"
+    },
+    "arXiv:2611.22243": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22243",
+      "identity_tokens": [
+        "arXiv:2611.22243"
+      ],
+      "reason": "本論文はプレフィックスキャッシュで共有されるKVブロックへのビット反転フォールト注入が応答の誤りに与える影響をvLLMで測定する信頼性研究であり、サービング機構の計測だが新規の推論技術ではないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "From Token Changes to Task Failures: Bit Flips in a Shared KV-Cache Block"
+    },
+    "arXiv:2611.22238": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22238",
+      "identity_tokens": [
+        "arXiv:2611.22238"
+      ],
+      "reason": "本論文はプレフィックスキャッシュ下でコーディングエージェントのコンテキスト追加・削除が費用に与える影響を2万回超の実行で測定する実証研究であり、キャッシュ経済性の知見はあるが新規システム機構の提案ではないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching"
+    },
+    "arXiv:2611.27901": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.27901",
+      "identity_tokens": [
+        "arXiv:2611.27901"
+      ],
+      "reason": "QuantStream3Dはストリーミング視覚ジオメトリTransformer向けの低ビットKVキャッシュ量子化であり、幾何感度とキャッシュ不整合という固有課題への対処が中心で、LLM推論への直接適用は要旨から確認できないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "QuantStream3D: Geometry-Aligned Low-Bit KV Cache Quantization for Streaming Visual Geometry Transformers"
+    },
+    "arXiv:2611.26975": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.26975",
+      "identity_tokens": [
+        "arXiv:2611.26975"
+      ],
+      "reason": "ToRAはローカルLLMのデコード行に安全検査モデルを相乗りさせ重みとKVキャッシュを共有するが、主目的はストリーミング安全検査の精度と費用の両立であり、汎用推論機構としての貢献は限定的なため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Run One, Get Two: Near-Free Streaming Safety Checks for Local LLMs"
+    },
+    "arXiv:2611.26334": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.26334",
+      "identity_tokens": [
+        "arXiv:2611.26334"
+      ],
+      "reason": "TRQはビデオ拡散Transformerのデノイジング間KVキャッシュを時間近傍回転で2ビット量子化する手法であり、KV量子化技術自体は関連するが対象がビデオ生成モデルでLLM推論への適用は未確認のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Online Temporal Rotations for 2 Bit KV-Cache Quantization in Video Diffusion Transformers"
+    },
+    "arXiv:2611.25945": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25945",
+      "identity_tokens": [
+        "arXiv:2611.25945"
+      ],
+      "reason": "BlockJackはvLLM等のページ型KVキャッシュのアドレス変換層へのフォールト攻撃を分析する研究であり、サービング機構そのものが対象だが、推論効率への技術的貢献ではなく安全性分析のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BlockJack: Cross-Tenant Redirection Fault Attacks on Paged KV Cache Address Translation in LLM Serving"
+    },
+    "arXiv:2611.25669": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25669",
+      "identity_tokens": [
+        "arXiv:2611.25669"
+      ],
+      "reason": "DP-SPDはダミー拡張シャッフルでクエリを隠す差分プライベートLLM推論フレームワークであり、推論時処理が対象だが主目的はプライバシー保護と精度の両立で、推論効率・システム機構への貢献は限定的なため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Ask in the Crowd: Differentially Private LLM Inference via Dummy-Augmented Shuffling"
+    },
+    "arXiv:2611.22206": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22206",
+      "identity_tokens": [
+        "arXiv:2611.22206"
+      ],
+      "reason": "TAILROLLはRL事後学習のロールアウトをテール認識スケジューリングで高速化する研究であり、生成実行自体は推論ワークロードだが最終目的が学習スループットの改善であるため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TAILROLL: Tail-Aware Rollout Acceleration for RL-Based LLM Post-Training"
+    },
+    "arXiv:2611.27554": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.27554",
+      "identity_tokens": [
+        "arXiv:2611.27554"
+      ],
+      "reason": "本論文は投機的検証やパディングが貪欲デコードの丸めノイズをどう変えるかを測定する数値再現性の分析であり、投機的デコードのサービング挙動に関する計測だが高速化機構の提案ではないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Vega-Fafnir: Is Greedy Decoding the Same Decoding? Where Rounding Noise in Speculative Verification Comes From and What Removing It Costs"
+    },
+    "arXiv:2611.26358": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.26358",
+      "identity_tokens": [
+        "arXiv:2611.26358"
+      ],
+      "reason": "Beamは501BパラメータのスパースMoEモデルの技術報告であり推論計算量の少なさを掲げるが、主題はモデル学習と能力であり、MoE推論システムの機構への具体的貢献は要旨から確認できないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beam Model Technical Report"
+    },
+    "arXiv:2611.23917": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23917",
+      "identity_tokens": [
+        "arXiv:2611.23917"
+      ],
+      "reason": "Vanguardは視覚言語エージェントのステップ単位投機で小モデルのドラフトを信頼できる条件を判定する研究であり、投機の発想は関連するが対象はエージェントの行動ステップと審査器で、トークンデコード機構ではないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Vanguard: Knowing When to Trust the Draft in Speculative Vision-Language Agents"
+    },
+    "arXiv:2611.23807": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23807",
+      "identity_tokens": [
+        "arXiv:2611.23807"
+      ],
+      "reason": "SightlineはSVG生成モデル向けに長い検証ウィンドウの投機的デコードが有効な条件を示す研究であり、投機的デコード技術自体は対象範囲だが検証対象がSVGコード生成という応用に限られるため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sightline: Long-Window Speculative Decoding for Fast SVG Generation"
+    },
+    "arXiv:2611.23463": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23463",
+      "identity_tokens": [
+        "arXiv:2611.23463"
+      ],
+      "reason": "FACTは投機的デコードについてドラフタ学習・候補配分・実行条件が受容率と遅延へ与える影響を固定予算で調べる実験フレームワークであり、高速化手法そのものではなく分析基盤のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "FACT: Fixed-Budget Allocation and Cross-Step Training for Speculative Decoding"
+    },
+    "arXiv:2611.22666": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22666",
+      "identity_tokens": [
+        "arXiv:2611.22666"
+      ],
+      "reason": "VSparkはロボット制御用VLAの自己回帰生成へ投機的デコードを適用し、近似動作トークンの棄却問題へ対処する研究であり、投機的デコードの機構は関連するが応用先がロボティクス制御のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models"
+    },
+    "arXiv:2611.26944": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.26944",
+      "identity_tokens": [
+        "arXiv:2611.26944"
+      ],
+      "reason": "本論文はVLAサービングにおけるバッチングや同時実行といったマルチクライアント推論手法の遅延・スループット・電力トレードオフを特性評価する研究であり、サービング計測として関連するが対象がロボット制御モデルのため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Analysis of Multi-Client Inference Techniques for Vision-Language-Action Models"
+    },
+    "arXiv:2611.22334": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22334",
+      "identity_tokens": [
+        "arXiv:2611.22334"
+      ],
+      "reason": "主目的は量子化LLMのパラメータ効率ファインチューニングであり、1ビット化したLoRAアダプタの汎化理論が中心である。推論時のアダプタ保存量削減とPunica SGMV拡張によるBQ-SGMVのデプロイ検討はあるが研究プロトタイプ段階で、推論システムへの直接貢献は副次的であるためborderlineとした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BQ-LoRA: Binary-Quantized Low-Rank Adapters as Implicit Regularizers for Parameter-Efficient Fine-Tuning"
+    },
+    "arXiv:2611.27951": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.27951",
+      "identity_tokens": [
+        "arXiv:2611.27951"
+      ],
+      "reason": "長文脈向けにhub-and-spoke最適輸送でdense attentionを置き換え、TritonカーネルでFlashAttentionより高速な演算子マイクロベンチマークを示す一方、多層LM実行はunfused経路で学習・検索精度の検証が中心であり、LLM推論システムとしての実運用貢献はまだ限定的なためborderlineとした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed"
+    },
+    "arXiv:2611.22947": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.22947",
+      "identity_tokens": [
+        "arXiv:2611.22947"
+      ],
+      "reason": "kernelized attentionの効率と品質を大規模にベンチマークしFlashAttentionとの比較や蒸留による品質ギャップを示す計測研究であり、推論基盤の計測として関連はあるが、提案するLARA++も計算オーバーヘッドが大きく効率の壁は残ると自ら述べており、新規推論システムへの直接貢献は弱いためborderlineとした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The Kernel Reality Check: Benchmarking and Distilling Efficient Attention at Scale"
+    },
+    "arXiv:2611.25905": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.25905",
+      "identity_tokens": [
+        "arXiv:2611.25905"
+      ],
+      "reason": "本論文はエージェントワークロード向けLLM推論プラットフォームの検証駆動デプロイメントパイプラインを提示するが、主題はライフサイクル検証とサイジングの実証であり、推論エンジン内部の機構への貢献は限定的なため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Validation-driven Deployment of LLM Inference Platforms for Agentic Workloads"
+    },
+    "arXiv:2611.24733": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24733",
+      "identity_tokens": [
+        "arXiv:2611.24733"
+      ],
+      "reason": "CriticNPUはLLM推論向けNPU設計空間探索でシミュレータのスカラーフィードバックを機構的批評へ変える枠組みであり、推論基盤の計測・シミュレーションに隣接するが対象はハードウェア設計探索のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mechanistic Critics for Sample-Efficient NPU Design-Space Exploration"
+    },
+    "arXiv:2611.24496": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24496",
+      "identity_tokens": [
+        "arXiv:2611.24496"
+      ],
+      "reason": "本論文は専門家並列MoE推論で生じるバブル時間に微調整をコロケーションする方式であり、推論サービスの遊休資源活用という観点で関連するが、主目的は微調整側の資源回収のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Harvesting Expert-Parallel Bubbles for Fine-Tuning"
+    },
+    "arXiv:2611.24437": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.24437",
+      "identity_tokens": [
+        "arXiv:2611.24437"
+      ],
+      "reason": "本論文はNVIDIA SASS制御コードの未探索フィールドがバリア免除とワープ優先度を制御することを示すGPUカーネル研究であり、カーネル最適化の基盤知見ではあるがLLM推論への具体的適用は要旨に確認できないため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Dissecting an Unexplored SASS Control-Code Field: Barrier Exemption and Programmable Warp Priority"
+    },
+    "arXiv:2611.23695": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.23695",
+      "identity_tokens": [
+        "arXiv:2611.23695"
+      ],
+      "reason": "MoMoVLはオンデバイスのスパース活性化VLM向けにモダリティ認識適応圧縮を行う研究であり、MoEモデルの混合精度量子化という機構は関連するが対象が視覚言語モデルのエッジ展開応用のため境界とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MoMoVL: Modality-Aware Adaptive Compression for On-Device Sparsely-Activated Vision-Language Models"
     }
   }
 }

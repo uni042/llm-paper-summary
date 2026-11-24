@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8daf151e9d708f5e-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.25669",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.25669",
+    "identity_tokens": [
+      "arXiv:2611.25669"
+    ],
+    "reason": "DP-SPDはダミー拡張シャッフルでクエリを隠す差分プライベートLLM推論フレームワークであり、推論時処理が対象だが主目的はプライバシー保護と精度の両立で、推論効率・システム機構への貢献は限定的なため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Ask in the Crowd: Differentially Private LLM Inference via Dummy-Augmented Shuffling"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8daf151e9d70",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

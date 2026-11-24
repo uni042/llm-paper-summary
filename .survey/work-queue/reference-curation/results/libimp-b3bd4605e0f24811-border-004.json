@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3bd4605e0f24811-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.23917",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.23917",
+    "identity_tokens": [
+      "arXiv:2611.23917"
+    ],
+    "reason": "Vanguardは視覚言語エージェントのステップ単位投機で小モデルのドラフトを信頼できる条件を判定する研究であり、投機の発想は関連するが対象はエージェントの行動ステップと審査器で、トークンデコード機構ではないため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Vanguard: Knowing When to Trust the Draft in Speculative Vision-Language Agents"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3bd4605e0f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

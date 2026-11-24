@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-662eee2dd1e3d954-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.22304",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.22304",
+    "identity_tokens": [
+      "arXiv:2611.22304"
+    ],
+    "reason": "StateKV Injectionは複数マルチモーダルLLM間で視覚KV状態を整列・射影して通信する枠組みであり、KV状態の転用という機構は関連するが、ビデオ理解のためのモデル間通信応用が主目的のため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:07+00:00",
+    "last_checked_at": "2026-11-24T00:55:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Cross-Modal StateKV Injection for Communication in Multi-LLM Systems across Temporal Segments"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-662eee2dd1e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

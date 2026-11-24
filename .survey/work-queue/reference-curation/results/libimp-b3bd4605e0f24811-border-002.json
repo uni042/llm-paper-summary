@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3bd4605e0f24811-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.27554",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.27554",
+    "identity_tokens": [
+      "arXiv:2611.27554"
+    ],
+    "reason": "本論文は投機的検証やパディングが貪欲デコードの丸めノイズをどう変えるかを測定する数値再現性の分析であり、投機的デコードのサービング挙動に関する計測だが高速化機構の提案ではないため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Vega-Fafnir: Is Greedy Decoding the Same Decoding? Where Rounding Noise in Speculative Verification Comes From and What Removing It Costs"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3bd4605e0f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

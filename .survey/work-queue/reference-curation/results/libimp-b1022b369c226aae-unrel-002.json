@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b1022b369c226aae-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.25736",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.25736",
+    "identity_tokens": [
+      "arXiv:2611.25736"
+    ],
+    "reason": "タイトル自体が5G RAN向けトラフィック制御xAppという通信ネットワーク制御の応用を明示しており、LLM推論システム技術を主題としていないため対象外とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "title": "An LLM-Driven Traffic-Control xApp for Dynamic 5G RAN Intents"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b1022b369c22",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

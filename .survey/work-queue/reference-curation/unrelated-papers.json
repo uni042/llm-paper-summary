@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-23T22:46:17+00:00",
-  "record_count": 14395,
+  "updated_at": "2026-11-24T00:55:08+00:00",
+  "record_count": 14412,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -206693,6 +206693,210 @@
         "worker-worklist discovery_review"
       ],
       "title": "HAMoBE: Hierarchical and Adaptive Mixture of Biometric Experts for Video-Based Person ReID"
+    },
+    "arXiv:2611.24619": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.24619",
+      "identity_tokens": [
+        "arXiv:2611.24619"
+      ],
+      "reason": "GateWatchはSAE特徴を使うBoolean回路プローブでLLMの振る舞いを監視する安全性モニタリング手法であり、監視自体の軽量化が主題で、モデル推論・サービング機構への貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits"
+    },
+    "arXiv:2611.23226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.23226",
+      "identity_tokens": [
+        "arXiv:2611.23226"
+      ],
+      "reason": "FastFramesは自己回帰ビデオ拡散モデルの対話的生成を高速化する研究で、VAEデコードやKV更新のプロファイリングを含むが対象はビデオ生成パイプラインであり、LLM推論システムへの貢献は確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "FastFrames: Video Generation at Interactive Latency"
+    },
+    "arXiv:2611.22426": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.22426",
+      "identity_tokens": [
+        "arXiv:2611.22426"
+      ],
+      "reason": "InfuseLoopは並列ループTransformerの深さスケーリングにおける学習損失スパイクと品質向上の逓減を扱う学習・アーキテクチャ研究であり、推論時の機構への貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "InfuseLoop: Cross-Trajectory Latent Injection for Scalable Parallel Looped Transformers"
+    },
+    "arXiv:2611.27317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27317",
+      "identity_tokens": [
+        "arXiv:2611.27317"
+      ],
+      "reason": "本論文はLeave-One-Out Word JSD分析でCoTを誘導する単語の影響を調べる推論過程の解釈可能性研究であり、推論速度・メモリ・サービング機構への技術的貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Do Language Models Know Which Words Steer Their Reasoning?"
+    },
+    "arXiv:2611.27074": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27074",
+      "identity_tokens": [
+        "arXiv:2611.27074"
+      ],
+      "reason": "Hindsight Forcingは自己回帰ビデオ拡散モデルの自己ロールアウト学習で履歴勾配を扱う生成品質の学習手法であり、LLM推論システムへの貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Hindsight Forcing: Learning Better History from the Future in Autoregressive Video Diffusion"
+    },
+    "arXiv:2611.26540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.26540",
+      "identity_tokens": [
+        "arXiv:2611.26540"
+      ],
+      "reason": "AURAは音声駆動トーキングヘッドのビデオ拡散モデルで、ローリングKVキャッシュは拡散生成内部の実装要素にすぎず、LLM推論システムへの技術的貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "AURA: AUdio-dRiven streaming Avatar"
+    },
+    "arXiv:2611.25865": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.25865",
+      "identity_tokens": [
+        "arXiv:2611.25865"
+      ],
+      "reason": "ProSpaceはストリーミングビデオに対する能動的空間推論のベンチマークとVLMの教師あり学習が主題であり、推論システムのメモリ・速度・サービングへの貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Thinking in Streams: Proactive Spatial Reasoning with Vision-Language Models"
+    },
+    "arXiv:2611.27167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27167",
+      "identity_tokens": [
+        "arXiv:2611.27167"
+      ],
+      "reason": "タイトル自体が双曲幾何を用いるグラフTransformerと階層的グラフデータ向けのHorospherical Self-Attentionを明示しており、対象はノード分類等のグラフ学習であってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "BusemannFormer: Horospherical Self-Attention for Hyperbolic Graph Transformers"
+    },
+    "arXiv:2611.27855": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27855",
+      "identity_tokens": [
+        "arXiv:2611.27855"
+      ],
+      "reason": "タイトル自体がVision Transformer向けのanchor routingと画像パッチ要約を明示しており、対象はCIFAR等の画像認識タスクであってLLM推論・サービングではないことがタイトルから明白なため、タイトルscreenでunrelatedとした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Anchors That Move Without Collapsing: Exclusive-Region Anchor Routing for Vision Transformers"
+    },
+    "arXiv:2611.25570": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.25570",
+      "identity_tokens": [
+        "arXiv:2611.25570"
+      ],
+      "reason": "タイトル自体が離散トークンによる確率的気象予測（天気予報）を主題として明示しており、LLM推論システムへの技術的貢献を示す要素がタイトルにないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Reinforcement-Aligned Probabilistic Weather Forecasting with Discrete Tokens"
+    },
+    "arXiv:2611.25736": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.25736",
+      "identity_tokens": [
+        "arXiv:2611.25736"
+      ],
+      "reason": "タイトル自体が5G RAN向けトラフィック制御xAppという通信ネットワーク制御の応用を明示しており、LLM推論システム技術を主題としていないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "An LLM-Driven Traffic-Control xApp for Dynamic 5G RAN Intents"
+    },
+    "arXiv:2611.24765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.24765",
+      "identity_tokens": [
+        "arXiv:2611.24765"
+      ],
+      "reason": "タイトル自体がスマートグリッドにおけるサイバーフィジカル攻撃経路同定という電力系統応用を明示しており、LLM推論システム技術を主題としていないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "LLM-Guided Cyber-Physical Attack Path Identification in Smart Grids"
+    },
+    "arXiv:2611.22115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.22115",
+      "identity_tokens": [
+        "arXiv:2611.22115"
+      ],
+      "reason": "Xing 4の技術報告は国産チップ上のモデルアーキテクチャと大規模事前学習・事後学習基盤が主題であり、投機的デコードへの言及は設計要素の列挙にとどまり推論システムの具体的貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks"
+    },
+    "arXiv:2611.27046": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.27046",
+      "identity_tokens": [
+        "arXiv:2611.27046"
+      ],
+      "reason": "本論文はWeb対話するLLMエージェントの行動的隠れチャネルからプライベート文脈を嗅探する攻撃の研究であり、エージェントのセキュリティ評価であって推論システムへの技術的貢献は要旨にないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Actions Speak Louder than Words: Stateful Privacy Sniffing of LLM Agents via Behavioral Covert Channels in Web Interactions"
+    },
+    "arXiv:2611.25361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.25361",
+      "identity_tokens": [
+        "arXiv:2611.25361"
+      ],
+      "reason": "本論文は議論フレームワークをLLMの意思決定へ組み込む設計選択を討論・事実検証タスクで評価する研究であり、推論システムの速度・メモリ・サービングへの貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "Incorporating argumentation frameworks for LLM decision-making: Task-specific design and evaluation"
+    },
+    "arXiv:2611.24006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.24006",
+      "identity_tokens": [
+        "arXiv:2611.24006"
+      ],
+      "reason": "MARSは産業レコメンダのパイプライン全体の編成をエージェントで個人化する推薦システムの技術報告であり、LLM推論システムの機構への貢献は要旨に確認できないため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "MARS Technical Report"
+    },
+    "arXiv:2611.23702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.23702",
+      "identity_tokens": [
+        "arXiv:2611.23702"
+      ],
+      "reason": "KnowMe Paper Radarは研究者の論文発見を支援する軽量な優先度付けツールであり、LLM推論システムとは無関係な学術情報検索の応用のため対象外とした。",
+      "first_checked_at": "2026-11-24T00:55:08+00:00",
+      "last_checked_at": "2026-11-24T00:55:08+00:00",
+      "linked_from": [],
+      "title": "KnowMe Paper Radar: Lightweight Discovery of Promising Papers in the Age of Autoresearch"
     }
   }
 }

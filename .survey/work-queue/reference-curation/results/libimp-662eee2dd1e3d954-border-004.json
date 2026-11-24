@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-662eee2dd1e3d954-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.24259",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.24259",
+    "identity_tokens": [
+      "arXiv:2611.24259"
+    ],
+    "reason": "LookAwayは長尺ビデオVLMで先にタイムスタンプ付きノートを書かせてからビデオのKVキャッシュを推論エンジンから隠す手法であり、推論時の再読削減が示されるが、機構の中心はモデル側のノート生成戦略のため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:07+00:00",
+    "last_checked_at": "2026-11-24T00:55:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Do VLMs Need to Keep Looking at Long Videos? Write It Down, Then Look Away"
+  },
+  "processed_at": "2026-11-24T00:55:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-662eee2dd1e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

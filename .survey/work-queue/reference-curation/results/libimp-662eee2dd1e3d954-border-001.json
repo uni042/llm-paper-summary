@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-662eee2dd1e3d954-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.25614",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.25614",
+    "identity_tokens": [
+      "arXiv:2611.25614"
+    ],
+    "reason": "LAQはロボット搭載向けWorld Action Modelの重み・活性化・KVキャッシュを4ビット量子化する手法であり、量子化技術は関連するが対象が世界モデルでありLLM推論への直接適用は未確認のため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:07+00:00",
+    "last_checked_at": "2026-11-24T00:55:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Don't Lose the Future: Latent-Aware 4-Bit Quantization of World Action Models"
+  },
+  "processed_at": "2026-11-24T00:55:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-662eee2dd1e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

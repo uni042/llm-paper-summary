@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b3bd4605e0f24811-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.23463",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.23463",
+    "identity_tokens": [
+      "arXiv:2611.23463"
+    ],
+    "reason": "FACTは投機的デコードについてドラフタ学習・候補配分・実行条件が受容率と遅延へ与える影響を固定予算で調べる実験フレームワークであり、高速化手法そのものではなく分析基盤のため境界とした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "FACT: Fixed-Budget Allocation and Cross-Step Training for Speculative Decoding"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b3bd4605e0f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

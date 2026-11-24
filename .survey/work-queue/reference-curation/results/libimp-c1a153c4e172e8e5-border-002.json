@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1a153c4e172e8e5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.27951",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.27951",
+    "identity_tokens": [
+      "arXiv:2611.27951"
+    ],
+    "reason": "長文脈向けにhub-and-spoke最適輸送でdense attentionを置き換え、TritonカーネルでFlashAttentionより高速な演算子マイクロベンチマークを示す一方、多層LM実行はunfused経路で学習・検索精度の検証が中心であり、LLM推論システムとしての実運用貢献はまだ限定的なためborderlineとした。",
+    "first_checked_at": "2026-11-24T00:55:08+00:00",
+    "last_checked_at": "2026-11-24T00:55:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed"
+  },
+  "processed_at": "2026-11-24T00:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1a153c4e172",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
