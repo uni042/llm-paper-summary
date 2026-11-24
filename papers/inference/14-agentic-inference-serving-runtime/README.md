@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（98本）
+## 自動生成の論文一覧（99本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -290,6 +290,10 @@
 - **2026-06 · [Streaming Communication in Multi-Agent Reasoning](2026-2606.05158-streaming-communication-in-multi-agent-reasoning.md)**  
   実装：[✓](https://github.com/EnVision-Research/StreamMA) ・ リポジトリ内被引用：0  
   従来の逐次転送（Serial）は、各エージェントが全推論段階を終えた後に回答全文を渡すため、処理経路が深くなるほど待ち時間が積み上がる。全文を受け取る方式では後期の誤りまで強く条件付けられるが、段階別転送では下流が信頼できる初期部分から独自の推論を始められる。
+
+- **2026-06 · [Ling and Ring 2.6 Technical Report: Efficient and Instant Agentic Intelligence at Trillion-Parameter Scale](2026-2606.15079-ling-and-ring-2-6-technical-report-efficient-and-instant-agentic-intelli.md)**  
+  実装：[✓](https://github.com/inclusionAI/Ling-V2.5) ・ リポジトリ内被引用：0  
+  学習済み1兆モデルを線形注意とMLAの7対1ハイブリッドへ移植し、トークン効率の事後学習とKPopによるエージェント強化学習で、長文脈の推論効率と実務エージェント能力を同時に高めた技術報告。
 
 - **2026-06 · [Libra: Efficient Resource Management for Agentic RL Post-Training](2026-2606.03077-libra-efficient-resource-management-for-agentic-rl-post-training.md)**  
   実装：[✓](https://github.com/NetX-lab/Libra) ・ リポジトリ内被引用：0  

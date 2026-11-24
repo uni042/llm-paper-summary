@@ -35,10 +35,15 @@
   "selection_reason": "35Bのハイブリッド注意MoEモデルを6GB Fermi GPUで動かすため、専門家重みをホストRAMから層単位でストリーミングするprefillと手書きW4A8 GEMVによるCPUデコードを組み合わせた4ビットCUDA推論エンジンを実装し、prefill短縮とデコード高速化を実測している。",
   "semantic_scholar_id": "1dae7f2d9da7c182e64dd5882206054d6b9589b2",
   "source_url": "https://arxiv.org/abs/2606.24031",
-  "status": "ready",
+  "status": "superseded",
   "title": "A 35B Hybrid-Attention Mixture-of-Experts Model on a 6GB 2011 GPU: Hand-Written 4-bit CUDA Inference for Fermi",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-24T06:27:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.24031-a-35b-hybrid-attention-mixture-of-experts-model-on-a-6gb-2011-gpu-hand-w.md",
+  "represented_canonical_id": "arXiv:2606.24031",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

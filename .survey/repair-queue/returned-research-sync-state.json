@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "290a29717aeacf4795f732c94052c6e7b7da3d7c",
+  "base_commit": "a1a3504d3d30bd22ac77c77e1dca5d58b473a9ba",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -884,11 +884,14 @@
     "2026-2606.09937-rksc-reasoning-aware-kv-cache-sharing-and-confident-early-exit.json",
     "2026-2606.11357-tilefuse-a-fused-mixed-precision-kernel-library-for-efficient-quantized-llm-inference.json",
     "2026-2606.12487-phasequant-mitigating-activation-quantization-collapse-via-residual-stream-dynamics.json",
+    "2026-2606.12935-mars-margin-adversarial-risk-controlled-stopping-for-parallel-llm-test-time-scaling.json",
     "2026-2606.13233-reset-accurate-latency-critical-nvfp4-reasoning-via-step-aware-temperature-scaling.json",
     "2026-2606.13361-can-i-buy-your-kv-cache.json",
     "2026-2606.14277-one-layer-s-trash-is-another-layer-s-treasure-adaptive-layer-wise-visual-token-selection-in-lvlms.json",
+    "2026-2606.14711-swarm-llm-collaborative-inference-for-edge-based-small-language-models.json",
     "2026-2606.14782-last-but-not-least-boundary-attention-calibration-for-multimodal-kv-cache-compression.json",
     "2026-2606.15070-stop-when-further-reasoning-won-t-help-attention-state-adaptive-generation-in-reasoning-models.json",
+    "2026-2606.15079-ling-and-ring-2-6-technical-report-efficient-and-instant-agentic-intelligence-at-trillion-parameter-scale.json",
     "2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multimodal-llms-in-cloud-edge-continuum.json",
     "2026-2606.15805-mean-field-parallel-decoding-for-discrete-diffusion-language-models.json",
     "2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.json",
@@ -905,6 +908,7 @@
     "2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-api-serving.json",
     "2026-2606.22976-walk-fast-but-be-careful-understanding-parallel-sampling-in-masked-diffusion.json",
     "2026-2606.23961-forget-without-compromise-nexus-sampling-for-streaming-kv-cache-eviction-under-fixed-budgets.json",
+    "2026-2606.24031-a-35b-hybrid-attention-mixture-of-experts-model-on-a-6gb-2011-gpu-hand-written-4-bit-cuda-inference-for-fermi.json",
     "2026-2606.24156-accelerating-multimodal-large-language-models-with-prior-corrected-token-reduction.json",
     "2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-models.json",
     "2026-2606.24187-towards-fast-and-effective-long-video-understanding-of-multimodal-llms-via-adaptive-quasi-gaussian-sampling.json",
@@ -912,6 +916,7 @@
     "2026-2606.24773-posterior-refinement-fast-language-generation-via-any-order-flow-maps.json",
     "2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branch-routing.json",
     "2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-scoring.json",
+    "2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multimodal-reasoning.json",
     "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json",
     "2026-2606.28361-concise-training-free-conclusion-chain-state-compression-for-cost-efficient-rag.json",
     "2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-robotic-vlms-and-vlas.json",
@@ -53541,6 +53546,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.12935": {
+      "order": [
+        "2026-11-24T06:18:25+00:00",
+        "2026-2606.12935-mars-margin-adversarial-risk-controlled-stopping-for-parallel-llm-test-time-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.14711": {
+      "order": [
+        "2026-11-24T06:20:00+00:00",
+        "2026-2606.14711-swarm-llm-collaborative-inference-for-edge-based-small-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.15079": {
+      "order": [
+        "2026-11-24T06:21:35+00:00",
+        "2026-2606.15079-ling-and-ring-2-6-technical-report-efficient-and-instant-agentic-intelligence-at-trillion-parameter-scale.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.24031": {
+      "order": [
+        "2026-11-24T06:23:10+00:00",
+        "2026-2606.24031-a-35b-hybrid-attention-mixture-of-experts-model-on-a-6gb-2011-gpu-hand-written-4-bit-cuda-inference-for-fermi.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.26631": {
+      "order": [
+        "2026-11-24T06:24:47+00:00",
+        "2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multimodal-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67974,6 +68024,21 @@
     "arxiv:2606.07577": [
       "papers/inference/99-other-inference-systems/2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual.md",
       "papers/inference/99-other-inference-systems/2026-2606.07577-omnimem-perturbation-aware-memory-compression-for-streaming-audio-visual.md"
+    ],
+    "arxiv:2606.12935": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2606.12935-mars-margin-adversarial-risk-controlled-stopping-for-parallel-llm-test-t.md"
+    ],
+    "arxiv:2606.14711": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2606.14711-swarm-llm-collaborative-inference-for-edge-based-small-language-models.md"
+    ],
+    "arxiv:2606.15079": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2606.15079-ling-and-ring-2-6-technical-report-efficient-and-instant-agentic-intelli.md"
+    ],
+    "arxiv:2606.24031": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2606.24031-a-35b-hybrid-attention-mixture-of-experts-model-on-a-6gb-2011-gpu-hand-w.md"
+    ],
+    "arxiv:2606.26631": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.26631-adaptive-visual-kv-cache-reuse-for-efficient-multi-turn-iterative-multim.md"
     ]
   }
 }

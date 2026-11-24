@@ -912,6 +912,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   画像・テキストを統合処理するVision-Language モデル（VLM）を低ビットで推論する際、量子化された重み行列と活性値の積には誤差が生じる。
 
+- **2026-02 · [Optimal Bayesian Stopping for Efficient Inference of Consistent LLM Answers](2026-2602.05395-optimal-bayesian-stopping-for-efficient-inference-of-consistent-llm-answ.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  自己整合性のサンプリング停止に分布形状の事前情報を入れた最適ベイズ停止を定式化し、最頻・第2位・その他の3区分を数える集約事後で漸近最適性が得られることを証明して、呼び出し回数を最大約5割削減する。
+
 - **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
   実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：1  
   本研究は大規模言語モデルの層を丸ごと削る深さ方向の枝刈り（層 枝刈り）が、分類課題と生成型推論課題で異なる品質低下を起こす原因を調べる。主な実験では、層の約25%を除去し、元モデルが生成した回答を教師にして再学習する。
@@ -3058,10 +3062,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   モデルを複数トラックへ分けてGPUごとに独立実行し、一定層ごとにだけ同期することで同期回数を最大16倍減らし、30Bモデルで最初のトークンまでの時間を15から30パーセント短縮するアーキテクチャ。
 
-- **2026-02 · [Optimal Bayesian Stopping for Efficient Inference of Consistent LLM Answers](2026-2602.05395-optimal-bayesian-stopping-for-efficient-inference-of-consistent-llm-answ.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  自己整合性のサンプリング停止に分布形状の事前情報を入れた最適ベイズ停止を定式化し、最頻・第2位・その他の3区分を数える集約事後で漸近最適性が得られることを証明して、呼び出し回数を最大約5割削減する。
-
 - **2026-02 · [On the Importance of a Multi-Scale Calibration for Quantization](2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   固定長キャリブレーションが落とす入力長依存の活性値分布を、複数長の系列を長さ正規化して系列単位で等しく混ぜるMaCaでヘッセ行列へ取り込み、低ビット量子化の精度を同一トークン予算で改善する。
@@ -4935,7 +4935,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：106  
+  実装：✓ ・ リポジトリ内被引用：107  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  

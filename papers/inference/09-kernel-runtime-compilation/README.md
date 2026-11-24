@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（335本）
+## 自動生成の論文一覧（336本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -633,6 +633,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices](2026-2607.08786-moderately-unstructured-sparse-gpu-inference.md)**  
   実装：[✓](https://github.com/moui0/cudac) ・ リポジトリ内被引用：0  
   約50%の非構造疎重みを2:4疎テンソルコア層・差分距離で再配置する補助層・微小残差層へ分解し、疎テンソルコアとCUDAコアを重ねて実行してSpInfer比最大1.64倍を達成する。
+
+- **2026-06 · [A 35B Hybrid-Attention Mixture-of-Experts Model on a 6GB 2011 GPU: Hand-Written 4-bit CUDA Inference for Fermi](2026-2606.24031-a-35b-hybrid-attention-mixture-of-experts-model-on-a-6gb-2011-gpu-hand-w.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  2011年の6GB GPUと旧式ホストで35B級MoEを動かすため、GPUプリフィルとCPU整数デコードへ分割し、再帰状態の位置スナップショットでプリフィックス再利用まで復活させ、プリフィル34パーセント短縮とデコード約3倍を実測する実装研究。
 
 - **2026-05 · [XFP: Quality-Targeted Adaptive Codebook Quantization with Sparse Outlier Separation for LLM Inference](2026-2605.14844-xfp-quality-targeted-adaptive-codebook-quantization-with-sparse-outlier-.md)**  
   実装：[✓](https://github.com/flash7777/vllm/tree/multiquant) ・ リポジトリ内被引用：0  
