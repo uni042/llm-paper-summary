@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "89728b694f9ad0c05e754fa1207d90c47fcaa984",
+  "base_commit": "eb12d78f8ad18cef776ff24845d00121ef02e9ab",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -403,12 +403,16 @@
     "2025-2509.20624-fs-dfm-fast-and-accurate-long-text-generation-with-few-step-diffusion-language-models.json",
     "2025-2509.20979-toward-robust-and-efficient-ml-based-gpu-caching-for-modern-inference.json",
     "2025-2509.21837-semantic-agreement-enables-efficient-open-ended-llm-cascades.json",
+    "2025-2509.22512-axllm-accelerator-architecture-for-large-language-models-with-computation-reuse-capability.json",
     "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
     "2025-2509.23663-hivtp-a-training-free-method-to-improve-vlms-efficiency-via-hierarchical-visual-token-pruning.json",
+    "2025-2509.24257-verillm-a-lightweight-framework-for-publicly-verifiable-decentralized-inference.json",
     "2025-2509.24711-stop-before-you-fail-operational-capability-boundaries-for-mitigating-unproductive.json",
     "2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruct.json",
     "2025-2509.26124-vocabulary-customization-for-efficient-domain-specific-llm-deployment.json",
     "2025-2510.00841-llm-routing-with-dueling-feedback.json",
+    "2025-2510.01585-ressformer-a-recursive-sparse-structured-transformer-for-scalable-and-long-context-reasoning.json",
+    "2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechanism-with-query-heads-reduction.json",
     "2025-2510.02249-explore-briefly-then-decide-mitigating-llm-overthinking-via-cumulative-entropy-regulation.json",
     "2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-low-batch-llm-inference.json",
     "2025-2510.03291-unipruning-unifying-local-metric-and-global-feedback-for-scalable-sparse-llm-inference.json",
@@ -416,6 +420,7 @@
     "2025-2510.05109-tiny-but-mighty-a-software-hardware-co-design-approach-for-efficient-multimodal-inference-on-battery-powered-small-devic.json",
     "2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a-large-language-model.json",
     "2025-2510.08999-sqs-bayesian-dnn-compression-through-sparse-quantized-sub-distributions.json",
+    "2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-transformers.json",
     "2025-2510.09932-automatically-generating-ml-compiler-backends-from-tensor-accelerator-isa-descriptions.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.13860-shishulm-achieving-optimal-and-efficient-parameterization-with-low-attention-transformer-models.json",
@@ -52859,6 +52864,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2509.22512": {
+      "order": [
+        "2026-11-24T03:50:27+00:00",
+        "2025-2509.22512-axllm-accelerator-architecture-for-large-language-models-with-computation-reuse-capability.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2509.24257": {
+      "order": [
+        "2026-11-24T03:51:26+00:00",
+        "2025-2509.24257-verillm-a-lightweight-framework-for-publicly-verifiable-decentralized-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.01585": {
+      "order": [
+        "2026-11-24T03:52:25+00:00",
+        "2025-2510.01585-ressformer-a-recursive-sparse-structured-transformer-for-scalable-and-long-context-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.01817": {
+      "order": [
+        "2026-11-24T03:53:23+00:00",
+        "2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechanism-with-query-heads-reduction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.09017": {
+      "order": [
+        "2026-11-24T03:54:21+00:00",
+        "2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-transformers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67020,6 +67070,21 @@
     "arxiv:2508.17803": [
       "papers/inference/19-inference-evaluation-benchmarking/2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-.md",
       "papers/inference/19-inference-evaluation-benchmarking/2025-2508.17803-drqa-dynamic-reasoning-quota-allocation-for-controlling-overthinking-in-.md"
+    ],
+    "arxiv:2509.22512": [
+      "papers/inference/99-other-inference-systems/2025-2509.22512-axllm-accelerator-architecture-for-large-language-models-with-computatio.md"
+    ],
+    "arxiv:2509.24257": [
+      "papers/inference/99-other-inference-systems/2025-2509.24257-verillm-a-lightweight-framework-for-publicly-verifiable-decentralized-in.md"
+    ],
+    "arxiv:2510.01585": [
+      "papers/inference/99-other-inference-systems/2025-2510.01585-ressformer-a-recursive-sparse-structured-transformer-for-scalable-and-lo.md"
+    ],
+    "arxiv:2510.01817": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechani.md"
+    ],
+    "arxiv:2510.09017": [
+      "papers/inference/99-other-inference-systems/2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-tr.md"
     ]
   }
 }

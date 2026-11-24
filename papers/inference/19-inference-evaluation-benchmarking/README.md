@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（232本）
+## 自動生成の論文一覧（233本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -751,6 +751,10 @@
 - **2025-11 · [Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions](2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   要求ごとの出力長がばらつくと、短い応答と非常に長い応答が混在し、GPUの連続バッチングやスケジューラの資源配分が難しくなる。
+
+- **2025-10 · [Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction](2025-2510.01817-sparse-query-attention-sqa-a-computationally-efficient-attention-mechani.md)**  
+  実装：[✓](https://github.com/RxAI-dev/rxnn-Attention) ・ リポジトリ内被引用：0  
+  キー・バリューではなくクエリヘッドを減らすことで注意スコア計算の演算量そのものをHq/H倍へ削り、計算律速な学習・長文処理で最大約3.4倍の高速化を示した注意アーキテクチャ。
 
 - **2025-10 · [RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model](2025-2510.07782-rcpu-rotation-constrained-error-compensation-for-structured-pruning-of-a.md)**  
   実装：[✓](https://github.com/harutaro/rcpu) ・ リポジトリ内被引用：0  

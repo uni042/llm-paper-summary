@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1461本）
+## 自動生成の論文一覧（1465本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3912,6 +3912,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、大規模LLMで利用される多頭潜在注意（Multi-head Latent 注意機構、MLA）の低ランクKV表現が、数千万〜数億パラメータ規模の小型GPTでも有効かを調べる。
 
+- **2025-06 · [Graph-KV: Breaking Sequence via Injecting Structural Biases into Large Language Models](2025-2506.07334-graph-kv-breaking-sequence-via-injecting-structural-biases-into-large-la.md)**  
+  実装：[✓](https://github.com/Graph-COM/GraphKV) ・ リポジトリ内被引用：1  
+  テキスト片のKVをグラフの辺に沿ってだけ結び位置符号も出典と対象で分けて共有することで、平坦化の位置バイアスと二次計算を避け多段推論で逐次符号化を上回る。
+
 - **2025-06 · [FREE: Fast and Robust Vision Language Models with Early Exits](2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.md)**  
   実装：[✓](https://github.com/Div290/FREE) ・ リポジトリ内被引用：1  
   視覚言語モデルの途中層に、最終層の分類器を共有し敵対的学習で最終層の表現をまねる早期終了口を付け、簡単なトークンを浅い層で確定させることで、NoCapsで品質を保ったまま1.51倍の高速化を示した。
@@ -4096,6 +4100,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの推論で重みと活性を低ビット化すると、転送するデータ量と行列積の計算負荷を減らせる。ただし少数の極端に大きな値（外れ値）に量子化範囲を合わせると、多数の通常値に割り当てられる表現段階が粗くなり、生成品質が損なわれる。主要な評価条件は、重みの80%を4ビット、20%を8ビット、活性を8ビットとするW4.8A8である。
 
+- **2025-10 · [Value-State Gated Attention for Mitigating Extreme-Token Phenomena in Transformers](2025-2510.09017-value-state-gated-attention-for-mitigating-extreme-token-phenomena-in-tr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アテンションシンクと値状態ドレインを生む相互強化サイクルを、値ベクトル自身から計算するゲートで勾配経路ごと断ち、活性値外れ値と量子化劣化を抑える注意機構の改変。
+
 - **2025-10 · [To Compress or Not? Pushing the Frontier of Lossless GenAI Model Weights Compression with Exponent Concentration](2025-2510.02676-to-compress-or-not-pushing-the-frontier-of-lossless-genai-model-weights-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FP8形式は、行列積を低精度で直接計算できるため、LLM推論時の重みメモリと演算費用を抑えられる。ECF8（Exponent-Concentrated FP8）は、この偏りを利用してFP8重みの値そのものは一切変えずに、保存時のビット数を減らす方式である。報告されたメモリ削減率は9.8〜26.9%、固定メモリ予算での処理率改善は11.3〜177.1%である。
@@ -4115,6 +4123,10 @@
 - **2025-10 · [Rewiring Experts on the Fly: Continuous Rerouting for Better Online Adaptation in Mixture-of-Expert models](2025-2510.14853-rewiring-experts-on-the-fly-continuous-rerouting-for-better-online-adapt.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家混合モデルのルータを、外部データなしで生成中の文脈そのものを使って繰り返し直し、コード生成で最大6.7ポイントの改善を外部参照を使う従来法より少ない計算で得るテスト時再ルーティング。
+
+- **2025-10 · [ReSSFormer: A Recursive Sparse Structured Transformer for Scalable and Long-Context Reasoning](2025-2510.01585-ressformer-a-recursive-sparse-structured-transformer-for-scalable-and-lo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単一ブロックの再帰＋階層メモリ、スパース注意と専門家ルーティング、位置符号化なしの構造誘導を組み合わせたトランスフォーマーで、同等計算量のまま長文脈精度と構造汎化を上げるアーキテクチャ提案。
 
 - **2025-10 · [MossNet: Mixture of State-Space Experts is a Multi-Head Attention](2025-2510.26182-mossnet-mixture-of-state-space-experts-is-a-multi-head-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4191,6 +4203,10 @@
 - **2025-09 · [Vocabulary Customization for Efficient Domain-Specific LLM Deployment](2025-2509.26124-vocabulary-customization-for-efficient-domain-specific-llm-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ドメイン固有トークンを語彙へ追加し、マージ操作の末尾追加によりトークン数が決して増えないことを保証しながら、入力系列を最大20パーセント短縮しスループットを20〜30パーセント高める語彙カスタマイズを、電子商取引の実務タスクで検証した研究。
+
+- **2025-09 · [VeriLLM: A Lightweight Framework for Publicly Verifiable Decentralized Inference](2025-2509.24257-verillm-a-lightweight-framework-for-publicly-verifiable-decentralized-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分散推論の出力を誰でも検証できるよう、隠れ状態のMerkleコミットとVRFサンプリング再計算を組み合わせ、検証費用を推論の約1パーセントへ抑えつつ、正直な検証がナッシュ均衡になる報酬設計まで与えた検証プロトコル。
 
 - **2025-09 · [UniPruning: Unifying Local Metric and Global Feedback for Scalable Sparse LLM Inference](2025-2510.03291-unipruning-unifying-local-metric-and-global-feedback-for-scalable-sparse.md)**  
   実装：[✓](https://github.com/RainbowQTT/UniPruning) ・ リポジトリ内被引用：0  
@@ -4275,6 +4291,10 @@
 - **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
+
+- **2025-09 · [AxLLM: accelerator architecture for large language models with computation reuse capability](2025-2509.22512-axllm-accelerator-architecture-for-large-language-models-with-computatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化で重みの値の種類が絞られる点を利用し、重み値ごとの乗算結果をキャッシュして再利用するアクセラレータAxLLMを提案し、再利用率87パーセント以上・平均1.7倍の高速化・消費電力約28パーセント減を、再学習なし・無損失で示した研究。
 
 - **2025-09 · [AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation](2025-2509.17486-attncomp-attention-guided-adaptive-context-compression-for-retrieval-aug.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4439,10 +4459,6 @@
 - **2025-06 · [Hopscotch: Discovering and Skipping Redundancies in Language Models](2025-2506.03303-hopscotch-discovering-and-skipping-redundancies-in-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Hopscotchは、Transformerの注意ブロックを丸ごと除去しながら、残る層の出力を少数のスカラーで再調整する構造圧縮法である。Llama-3.1-8B-InstructとQwen2.5-7B-Instructで検証し、Llamaでは四つの注意ブロックを削除しても平均性能保持率98.65%、七つ削除した場合も97.08%と報告する。
-
-- **2025-06 · [Graph-KV: Breaking Sequence via Injecting Structural Biases into Large Language Models](2025-2506.07334-graph-kv-breaking-sequence-via-injecting-structural-biases-into-large-la.md)**  
-  実装：[✓](https://github.com/Graph-COM/GraphKV) ・ リポジトリ内被引用：0  
-  テキスト片のKVをグラフの辺に沿ってだけ結び位置符号も出典と対象で分けて共有することで、平坦化の位置バイアスと二次計算を避け多段推論で逐次符号化を上回る。
 
 - **2025-06 · [GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching](2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitchin.md)**  
   実装：[✓](https://github.com/Guinan-Su/auto-merge-llm) ・ リポジトリ内被引用：0  
@@ -4819,7 +4835,7 @@
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：70  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：71  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
@@ -5134,6 +5150,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   適応型LASSOのソフトしきい値化で重みだけから外れ値を分離し、較正データなしで完全な低ビット量子化を行う学習後量子化手法。量子化時間は既存手法の10倍以上速い。
 
+- **2024-03 · [QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning](2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  整数のビット幅を小さくすると、重みと活性を低精度で表現でき、メモリや演算資源を節約できる可能性がある。しかし通常の対称一様量子化では、一部の極端に大きい活性値に量子化の最大範囲を合わせると、同じビット数で表現する刻み幅が粗くなる。
+
 - **2024-02 · [RepQuant: Towards Accurate Post-Training Quantization of Large Transformer Models via Scale Reparameterization](2024-2402.05628-repquant-towards-accurate-post-training-quantization-of-large-transforme.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   これらへ単一の量子化尺度や単純な2進対数量子化を直接適用すると、4ビット付近では重要な情報が失われやすい。
@@ -5370,10 +5390,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   粗い粒度と細かい粒度のテイラー重要度推定を層の役割に応じて適応的に融合する構造化枝刈りで、LLaMA-7Bを20パーセント削っても単一粒度方式より平均正解率を保ち、遅延を約1.82倍速くする。
 
-- **2024-03 · [QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning](2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  整数のビット幅を小さくすると、重みと活性を低精度で表現でき、メモリや演算資源を節約できる可能性がある。しかし通常の対称一様量子化では、一部の極端に大きい活性値に量子化の最大範囲を合わせると、同じビット数で表現する刻み幅が粗くなる。
-
 - **2024-03 · [Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA](2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md)**  
   実装：[✓](https://github.com/chiyotsai/MoEfication-with-LoRA) ・ リポジトリ内被引用：0  
   重要な結果は、モデル規模によって高速化の符号が逆転することである。著者の表4では、単一の画像処理用計算機ではなく、エヌビディアのRTX 3090で測った相対推論時間が、小型のT5-smallでは元の135.1%、T5-baseでは101.4%、T5-largeでは88.9%、T5-3Bでは71.1%となった。
@@ -5532,6 +5548,10 @@
   実装：[✓](https://github.com/MohammadrezaBanaei/auto-encoder-based-transformer-compression) ・ リポジトリ内被引用：1  
   本研究は、既に学習されたTransformerの重み行列を、事前学習モデル全体の再訓練や蒸留を行わずに小さくする「オフライン圧縮」を対象とする。
 
+- **2023-01 · [AttMemo: Accelerating Self-Attention with Memoization on Big Memory Systems](2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Transformerの自己注意（self-注意機構）は、入力系列内のトークン間関係を行列として計算する。BERT、RoBERTa、DeBERTa、GPT-2（いずれも約1億パラメータ）を48コアのXeon CPUとDRAM/Optaneの合計最大1.6TBメモリで測定し、著者は平均22%、最大68%の推論速度向上を報告する。
+
 - **2023-11 · [Tessel: Boosting Distributed Execution of Large DNN Models via Flexible Schedule Search](2023-2311.15269-tessel-boosting-distributed-execution-of-large-dnn-models-via-flexible-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   演算子配置を入力に、繰り返し部分であるリピーテンドの構築と前後の時間最適な補完という二段階探索で分散実行スケジュールを自動生成し、学習で最大5.5倍、推論でも遅延とスループットの改善を得るスケジュール探索システム。
@@ -5632,10 +5652,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   検索パッセージの符号化の大半を事前計算メモリへ寄せ、残りの層だけ質問条件付きでその場で仕上げるLUMENにより、FiD並みの質問応答品質をずっと少ない演算で得る。
 
-- **2023-01 · [AttMemo: Accelerating Self-Attention with Memoization on Big Memory Systems](2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Transformerの自己注意（self-注意機構）は、入力系列内のトークン間関係を行列として計算する。BERT、RoBERTa、DeBERTa、GPT-2（いずれも約1億パラメータ）を48コアのXeon CPUとDRAM/Optaneの合計最大1.6TBメモリで測定し、著者は平均22%、最大68%の推論速度向上を報告する。
-
 - **2022-12 · [Gradient-based Intra-attention Pruning on Pre-trained Language Models](2022-2212.07634-gradient-based-intra-attention-pruning-on-pre-trained-language-models.md)**  
   実装：[✓](https://github.com/airaria/GRAIN) ・ リポジトリ内被引用：0  
   注意ヘッド内部の次元を勾配重要度で反復的に落とし、構造正則化と勾配分離つき知識蒸留、埋め込み因数分解を組み合わせて、密度5%で教師の93〜99%の性能と6〜7倍の高速化を得る事前学習言語モデルの構造化枝刈り。
@@ -5643,7 +5659,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：328  
+  実装：✓ ・ リポジトリ内被引用：329  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
