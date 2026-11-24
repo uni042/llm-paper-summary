@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1436本）
+## 自動生成の論文一覧（1439本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3246,6 +3246,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LongCodeOCRは、長大なプログラムの文脈を削除型のテキスト圧縮で短くする代わりに、コード全体を二次元画像へ描画し、視覚言語モデル（Vision-Language モデル; VLM）で読ませる方式である。
 
+- **2026-01 · [Beyond Model Scaling: Test-Time Intervention for Efficient Deep Reasoning](2026-2601.11252-beyond-model-scaling-test-time-intervention-for-efficient-deep-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論中の転換表現の位置で生成を止め、外部評価者の合理性・完全性フィードバックを差し込んで続行と終了を決める対話型推論。AIME24で8K窓のもと正解率を7.19ポイント上げながら推論長を81パーセント削減する。
+
 - **2026-01 · [Attention Needs to Focus: A Unified Perspective on Attention Allocation](2026-2601.00919-attention-needs-to-focus-a-unified-perspective-on-attention-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは前者を注意の過負荷、後者を注意の過少負荷と呼び、両者を注意重みの配分失敗として統一的に扱う。提案手法Lazy 注意機構は二つの機構からなる。340Mパラメータ・150億学習トークンの8課題平均は48.01%で、比較対象のGated DeltaNetの47.68%を上回る。
@@ -3996,9 +4000,17 @@
   実装：[✓](https://github.com/jerry-chee/DiscQuant) ・ リポジトリ内被引用：1  
   DiscQuantは、事前学習済みLLMの重みを低ビット化する際、量子化格子を設計した後の「各重みを上側と下側のどちらへ丸めるか」という問題を解く。原著の代表例では、Phi-3-mini-4k-instructを平均3.25ビットで量子化したGSM8kの正答率が、DiscQuant64%、GPTQ54%、RTN31%、無量子化84%である。
 
+- **2025-11 · [Word Salad Chopper: Reasoning Models Waste A Ton Of Decoding Budget On Useless Repetitions, Self-Knowingly](2025-2511.00536-word-salad-chopper-reasoning-models-waste-a-ton-of-decoding-budget-on-us.md)**  
+  実装：[✓](https://github.com/wenyaxie023/WordSaladChopper) ・ リポジトリ内被引用：0  
+  推論モデルの無意味な反復を区切りトークンの隠れ状態で検出して切り取り再生成させる軽量部品で、生成長を最大57パーセント削り正解率をほぼ保つ。
+
 - **2025-11 · [TwIST: Rigging the Lottery in Transformers with Independent Subnetwork Training](2025-2511.03983-twist-rigging-the-lottery-in-transformers-with-independent-subnetwork-tr.md)**  
   実装：[✓](https://anonymous.4open.science/r/twist2-373F) ・ リポジトリ内被引用：0  
   部分ネットワークの並行学習と定期的な集約・再抽選により、学習後の回復処理なしで取り出せる構造化枝刈り済みモデルを学習過程で作る分散学習の枠組みで、高い疎率で学習後枝刈りを上回った研究。
+
+- **2025-11 · [Thinking While Speaking: Inference-Time Knowledge Transfer for Responsive and Intelligent Conversational Voice Agents](2025-2511.07397-thinking-while-speaking-inference-time-knowledge-transfer-for-responsive.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末の360Mモデルが即座に会話を進めながらクラウドの大規模モデルから流れ込む知識を途中で織り込むConvFillで、正解率を10パーセントから46から52パーセントへ上げつつ応答開始を200ミリ秒未満に保つ。
 
 - **2025-11 · [Test-Time Temporal Sampling for Efficient MLLM Video Understanding](2025-2511.17945-test-time-temporal-sampling-for-efficient-mllm-video-understanding.md)**  
   実装：[✓](https://github.com/kaibinwang3/T3S) ・ リポジトリ内被引用：0  

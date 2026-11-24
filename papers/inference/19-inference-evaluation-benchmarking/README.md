@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（225本）
+## 自動生成の論文一覧（226本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -605,6 +605,10 @@
 - **2026-01 · [EntroCut: Entropy-Guided Adaptive Truncation for Efficient Chain-of-Thought Reasoning in Small-scale Large Reasoning Models](2026-2601.22617-entrocut-entropy-guided-adaptive-truncation-for-efficient-chain-of-thoug.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   反省トークンの地点で探査文字列への続きのエントロピーを測り、確信が十分なら思考を打ち切って応答段階へ移す学習不要の適応的打ち切りで、小規模な推論モデルのトークンを最大約40%削りながら精度をほぼ保つ方式。
+
+- **2025-12 · [Viability and Performance of a Private LLM Server for SMBs: A Benchmark Analysis of Qwen3-30B on Consumer-Grade Hardware](2025-2512.23029-viability-and-performance-of-a-private-llm-server-for-smbs-a-benchmark-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RTX 5090を1基使う自社サーバーで量子化Qwen3-30Bを実測した分析研究。品質はMMLU83パーセントでクラウドに近い一方、同時利用が増えると1人あたり効率が急落し、実用範囲は軽い同時利用に限られることを示す。
 
 - **2025-12 · [Understanding and Harnessing Sparsity in Unified Multimodal Models](2025-2512.02351-understanding-and-harnessing-sparsity-in-unified-multimodal-models.md)**  
   実装：[✓](https://github.com/Shwai-He/SparseUnifiedModel) ・ リポジトリ内被引用：0  

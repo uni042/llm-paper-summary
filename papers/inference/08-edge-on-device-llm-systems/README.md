@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（115本）
+## 自動生成の論文一覧（116本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -285,6 +285,10 @@
 - **2025-12 · [Input-Adaptive Visual Preprocessing for Efficient Fast Vision-Language Model Inference](2025-2512.20839-input-adaptive-visual-preprocessing-for-efficient-fast-vision-language-m.md)**  
   実装：[✓](https://github.com/kmdavidds/mlfastlm) ・ リポジトリ内被引用：0  
   画像の複雑さに応じて解像度と切り抜きを変える前処理をFastVLMの前に置き、モデル無変更で視覚トークンを55パーセント超、画像あたり推論時間を50パーセント超減らす軽量な効率化。
+
+- **2025-12 · [Atom: Efficient On-Device Video-Language Pipelines Through Modular Reuse](2025-2512.17108-atom-efficient-on-device-video-language-pipelines-through-modular-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  動画言語パイプラインをエンコーダと共有言語デコーダのモジュールへ分解し、常駐再利用とクリップ並列で再読込と直列実行を消すことで、スマートフォン上のエンドツーエンド遅延を27〜33%削減しつつピークメモリ増を約40MBに抑えるオンデバイス実行システム。
 
 - **2025-12 · [ActionFlow: A Pipelined Action Acceleration for Vision Language Models on Edge](2025-2512.20276-actionflow-a-pipelined-action-acceleration-for-vision-language-models-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
