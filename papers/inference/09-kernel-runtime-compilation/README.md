@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（330本）
+## 自動生成の論文一覧（331本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -777,6 +777,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-02 · [OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization](2026-2602.12305-optiml-an-end-to-end-framework-for-program-synthesis-and-cuda-kernel-opt.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   OptiMLは、大規模言語モデルによるCUDAカーネルの初期生成と、その後の正しさを保つ性能改善を単一の開発経路へまとめる方式である。
+
+- **2026-02 · [FlashMem: Supporting Modern DNN Workloads on Mobile with GPU Memory Hierarchy Optimizations](2026-2602.15379-flashmem-supporting-modern-dnn-workloads-on-mobile-with-gpu-memory-hiera.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モバイルGPUで全重み事前読み込みをやめ、負荷容量を考慮したオフライン計画で重みの断片を計算と重ねてテクスチャメモリへ流すことで、11モデルでメモリ2.0〜8.4倍削減と初期化込み1.7〜75.0倍高速化を実現する実行枠組み。
 
 - **2026-01 · [Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap](2026-2601.20595-syncopate-efficient-multi-gpu-ai-kernels-via-automatic-chunk-centric-com.md)**  
   実装：[✓](https://github.com/tie-pilot-qxw/syncopate) ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1472本）
+## 自動生成の論文一覧（1475本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2930,6 +2930,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   分離型プリフィル・デコード上で、複数指標による要求ルーティングと実行時適応する投機深度を閉ループ連携し、4×A800評価でテンソル並列vLLM比の平均レイテンシ15.75倍短縮・平均スループット4.4倍を報告する。
 
+- **2026-02 · [Stable Adaptive Thinking via Advantage Shaping and Length-Aware Gradient Regulation](2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  思考の要否を制御トークンで選ぶ適応思考を、正しい長思考を罰しないアドバンテージ整形と長さ配慮型の勾配調整で安定化し、Qwen2.5で正解率を上げながら生成トークンを約4割減らす二段階学習。
+
 - **2026-02 · [SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training](2026-2603.06642-sr-ttt-does-not-learn-retrieval-a-correction-and-mechanistic-post-mortem.md)**  
   実装：[✓](https://github.com/swamynathanvp/Surprisal-Aware-Residual-Test-Time-Training) ・ リポジトリ内被引用：0  
   本論文は、推論時学習（Test-Time 学習; TTT）を用いた長文系列モデルへ、驚き度（surprisal）に応じて選別したトークンを厳密なキー・バリュー（KV）キャッシュへ残す SR-TTT の初版（v1）を訂正し、その失敗を機構ごとに実験で切り分けた研究である。
@@ -2981,6 +2985,14 @@
 - **2026-02 · [Phase transitions in large language model compression](2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md)**  
   実装：[✓](https://github.com/whucs21Mzy/Model-Phase-Transitions) ・ リポジトリ内被引用：0  
   LLMのモデルサイズを削減する方法には、重みを低ビットへ丸める量子化、重要度の低い構造や重みを削除する枝刈り、重み行列を小さい行列の積で近似する低ランク分解がある。代表例はLLaMA-2-7Bの3ビット量子化、35%の非構造的枝刈り、5%の低ランク分解を組み合わせた構成である。
+
+- **2026-02 · [Parallel Track Transformers: Enabling Fast GPU Inference with Reduced Synchronization](2026-2602.07306-parallel-track-transformers-enabling-fast-gpu-inference-with-reduced-syn.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデルを複数トラックへ分けてGPUごとに独立実行し、一定層ごとにだけ同期することで同期回数を最大16倍減らし、30Bモデルで最初のトークンまでの時間を15から30パーセント短縮するアーキテクチャ。
+
+- **2026-02 · [Optimal Bayesian Stopping for Efficient Inference of Consistent LLM Answers](2026-2602.05395-optimal-bayesian-stopping-for-efficient-inference-of-consistent-llm-answ.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  自己整合性のサンプリング停止に分布形状の事前情報を入れた最適ベイズ停止を定式化し、最頻・第2位・その他の3区分を数える集約事後で漸近最適性が得られることを証明して、呼び出し回数を最大約5割削減する。
 
 - **2026-02 · [On the Importance of a Multi-Scale Calibration for Quantization](2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -5913,7 +5925,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：376  
+  実装：✓ ・ リポジトリ内被引用：377  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

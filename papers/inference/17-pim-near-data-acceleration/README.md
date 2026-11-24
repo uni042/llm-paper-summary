@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（41本）
+## 自動生成の論文一覧（42本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -114,6 +114,10 @@
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
+
+- **2026-02 · [Area-Efficient In-Memory Computing for Mixture-of-Experts via Multiplexing and Caching](2026-2602.10254-area-efficient-in-memory-computing-for-mixture-of-experts-via-multiplexi.md)**  
+  実装：[✓](https://github.com/superstarghy/MoEwithPIM) ・ リポジトリ内被引用：0  
+  MoEの疎な活性化を利用してPIMクロスバー間で周辺回路を共有し、負荷ソート型グルーピングと動的スケジューリングで競合を抑え、GOキャッシュでエキスパート選択ルーティングの生成を可能にして、面積効率を最大2.2倍、生成エネルギーを最大10.1倍改善するハードウェア設計。
 
 - **2026-01 · [CD-PIM: A High-Bandwidth and Compute-Efficient LPDDR5-Based PIM for Low-Batch LLM Acceleration on Edge-Device](2026-2601.12298-cd-pim-a-high-bandwidth-and-compute-efficient-lpddr5-based-pim-for-low-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

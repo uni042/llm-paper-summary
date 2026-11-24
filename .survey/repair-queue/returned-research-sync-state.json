@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c606dd82570117e76a19ef646477a5b617c431db",
+  "base_commit": "5e22a9eb1ed83a10943760b25e814a0ba609e032",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -596,11 +596,13 @@
     "2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.json",
     "2026-2602.03359-meki-memory-based-expert-knowledge-injection-for-efficient-llm-scaling.json",
     "2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entropy-for-head-pruning.json",
+    "2026-2602.05395-optimal-bayesian-stopping-for-efficient-inference-of-consistent-llm-answers.json",
     "2026-2602.06127-compressing-llms-with-mop-mixture-of-pruners.json",
     "2026-2602.06412-stopping-computation-for-converged-tokens-in-masked-diffusion-lm-decoding.json",
     "2026-2602.06454-relaygen-intra-generation-model-switching-for-efficient-reasoning.json",
     "2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-with-hypothesis-path-expansion-and-reduction.json",
     "2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-foundation-models.json",
+    "2026-2602.07306-parallel-track-transformers-enabling-fast-gpu-inference-with-reduced-synchronization.json",
     "2026-2602.07375-efficient-post-training-pruning-of-large-language-models-with-statistical-correction.json",
     "2026-2602.07465-on-the-importance-of-a-multi-scale-calibration-for-quantization.json",
     "2026-2602.07849-lqa-a-lightweight-quantized-adaptive-framework-for-vision-language-models-on-the-edge.json",
@@ -608,6 +610,7 @@
     "2026-2602.08798-cryptogen-secure-transformer-generation-with-encrypted-kv-cache-reuse.json",
     "2026-2602.09555-adaptive-test-time-compute-allocation-for-block-diffusion-language-models-in-complex-reasoning.json",
     "2026-2602.10238-learning-to-evict-from-key-value-cache.json",
+    "2026-2602.10254-area-efficient-in-memory-computing-for-mixture-of-experts-via-multiplexing-and-caching.json",
     "2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffusion-language-models.json",
     "2026-2602.11008-rocket-rapid-optimization-via-calibration-guided-knapsack-enhanced-truncation.json",
     "2026-2602.11016-from-buffers-to-registers-unlocking-fine-grained-flashattention-with-hybrid-bonded-3d-npu-co-design.json",
@@ -622,6 +625,7 @@
     "2026-2602.13680-allmem-a-memory-centric-recipe-for-efficient-long-context-modeling.json",
     "2026-2602.14649-gradmap-faster-layer-pruning-with-gradient-metric-and-projection-compensation.json",
     "2026-2602.15200-compot-calibration-optimized-matrix-procrustes-orthogonalization-for-transformers-compression.json",
+    "2026-2602.15379-flashmem-supporting-modern-dnn-workloads-on-mobile-with-gpu-memory-hierarchy-optimizations.json",
     "2026-2602.15521-expertweaver-unlocking-the-inherent-moe-in-dense-llms-with-glu-activation-patterns.json",
     "2026-2602.15563-1-bit-wonder-improving-qat-performance-in-the-low-bit-regime-through-k-means-quantization.json",
     "2026-2602.18846-duet-vlm-dual-stage-unified-efficient-token-reduction-for-vlm-training-and-inference.json",
@@ -631,6 +635,7 @@
     "2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.json",
     "2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.json",
     "2026-2602.21652-sparsity-induction-for-accurate-post-training-pruning-of-large-language-models.json",
+    "2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient-regulation.json",
     "2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-serving.json",
     "2026-2603.00126-quickgrasp-responsive-video-language-querying-service-via-accelerated-tokenization-and-edge-augmented-inference.json",
     "2026-2603.00188-st-lite-training-free-kv-cache-compression-with-spatio-trajectory-guidance-for-long-horizon-gui-agents.json",
@@ -53091,6 +53096,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2602.05395": {
+      "order": [
+        "2026-11-24T04:48:44+00:00",
+        "2026-2602.05395-optimal-bayesian-stopping-for-efficient-inference-of-consistent-llm-answers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.07306": {
+      "order": [
+        "2026-11-24T04:50:18+00:00",
+        "2026-2602.07306-parallel-track-transformers-enabling-fast-gpu-inference-with-reduced-synchronization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.10254": {
+      "order": [
+        "2026-11-24T04:51:52+00:00",
+        "2026-2602.10254-area-efficient-in-memory-computing-for-mixture-of-experts-via-multiplexing-and-caching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.15379": {
+      "order": [
+        "2026-11-24T04:53:26+00:00",
+        "2026-2602.15379-flashmem-supporting-modern-dnn-workloads-on-mobile-with-gpu-memory-hierarchy-optimizations.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2602.22556": {
+      "order": [
+        "2026-11-24T04:55:01+00:00",
+        "2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient-regulation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -67344,6 +67394,21 @@
     "arxiv:2602.04491": [
       "papers/inference/99-other-inference-systems/2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entro.md",
       "papers/inference/99-other-inference-systems/2026-2602.04491-greedy-gnorm-a-gradient-matrix-norm-based-alternative-to-attention-entro.md"
+    ],
+    "arxiv:2602.05395": [
+      "papers/inference/99-other-inference-systems/2026-2602.05395-optimal-bayesian-stopping-for-efficient-inference-of-consistent-llm-answ.md"
+    ],
+    "arxiv:2602.07306": [
+      "papers/inference/99-other-inference-systems/2026-2602.07306-parallel-track-transformers-enabling-fast-gpu-inference-with-reduced-syn.md"
+    ],
+    "arxiv:2602.10254": [
+      "papers/inference/17-pim-near-data-acceleration/2026-2602.10254-area-efficient-in-memory-computing-for-mixture-of-experts-via-multiplexi.md"
+    ],
+    "arxiv:2602.15379": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2602.15379-flashmem-supporting-modern-dnn-workloads-on-mobile-with-gpu-memory-hiera.md"
+    ],
+    "arxiv:2602.22556": [
+      "papers/inference/99-other-inference-systems/2026-2602.22556-stable-adaptive-thinking-via-advantage-shaping-and-length-aware-gradient.md"
     ]
   }
 }
