@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa0c0b914c14487f-border-017",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.15594",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.15594",
+    "identity_tokens": [
+      "arXiv:2310.15594"
+    ],
+    "reason": "LLMの知識を知識ストア経由で1%規模の極小モデルへ転移させる極端な圧縮パラダイムであり、デプロイ時のモデル小型化には関わる。ただし実体は小規模モデルのソフトプロンプト調整と強化学習による知識転移学習であり、推論システムの機構としての貢献は薄い。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Retrieval-based Knowledge Transfer: An Effective Approach for Extreme Large Language Model Compression"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa0c0b914c14",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

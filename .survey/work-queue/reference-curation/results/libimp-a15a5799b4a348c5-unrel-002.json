@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a15a5799b4a348c5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.26200",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.26200",
+    "identity_tokens": [
+      "arXiv:2509.26200"
+    ],
+    "reason": "LLMベースのエージェントによる6Gネットワークのドメイン横断管理という応用がタイトル自体に明示されており、対象は通信ネットワーク運用管理であり、LLM推論システム機構ではない。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Toward an Unbiased Collective Memory for Efficient LLM-Based Agentic 6G Cross-Domain Management"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a15a5799b4a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

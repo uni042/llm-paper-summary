@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b009e4f6df6700f0-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2311.04951",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2311.04951",
+    "identity_tokens": [
+      "arXiv:2311.04951"
+    ],
+    "reason": "OpenVINOにおける投機的サンプリングとKVキャッシュ最適化の併用を紹介する実践記事であり、新規機構の提案ではなく既存最適化の適用例示が中心である。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Leveraging Speculative Sampling and KV-Cache Optimizations Together for Generative AI using OpenVINO"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b009e4f6df67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

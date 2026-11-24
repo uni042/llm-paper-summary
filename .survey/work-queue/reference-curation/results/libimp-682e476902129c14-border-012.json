@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-682e476902129c14-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.02684",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.02684",
+    "identity_tokens": [
+      "arXiv:2404.02684"
+    ],
+    "reason": "XATLは共有部品の重み転移により線形コスト推論アーキテクチャへの移行時の再学習コストを下げるが、貢献自体はアーキテクチャ移行のための転移学習手法であり、推論実行時の機構そのものではない。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cross-Architecture Transfer Learning for Linear-Cost Inference Transformers"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-682e47690212",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

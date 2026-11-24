@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-01fe032ac6b745cd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.17860",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.17860",
+    "identity_tokens": [
+      "arXiv:2508.17860"
+    ],
+    "reason": "AVAMは多画像QA向けに視覚トークンを適応的に圧縮する視覚アンカリングと協調デコードを提案するが、主目的はQA精度の改善であり、推論効率化は圧縮に伴う副次的効果にとどまる。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AVAM: Universal Training-free Adaptive Visual Anchoring Embedded into Multimodal Large Language Model for Multi-image Question Answering"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-01fe032ac6b7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

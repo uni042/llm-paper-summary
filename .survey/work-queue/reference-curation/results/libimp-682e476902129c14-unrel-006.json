@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-682e476902129c14-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.06875",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.06875",
+    "identity_tokens": [
+      "arXiv:2304.06875"
+    ],
+    "reason": "nanoLMとμScalingはμPに基づく事前学習損失の予測と大規模モデルの設計比較のためのベンチマークであり、対象は事前学習の検証コストであって推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "nanoLM: an Affordable LLM Pre-training Benchmark via Accurate Loss Prediction across Scales"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-682e47690212",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

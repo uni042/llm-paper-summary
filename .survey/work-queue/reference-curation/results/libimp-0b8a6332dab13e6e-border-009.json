@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b8a6332dab13e6e-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:6753ed8a416e0d8d7ec7a0557a5663bc45b405fc",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:6753ed8a416e0d8d7ec7a0557a5663bc45b405fc",
+    "identity_tokens": [
+      "SemanticScholar:6753ed8a416e0d8d7ec7a0557a5663bc45b405fc"
+    ],
+    "reason": "二値ニューラルネットワークの代理勾配学習を力学系理論で解析・改善すると題するが、一次要旨を取得できなかったため、学習理論としての内容とLLM推論への具体的な寄与を検証できていない。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Analyzing and Improving Surrogate Gradient Training in Binary Neural Networks Using Dynamical Systems Theory"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b8a6332dab1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-004090ca95094417-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2401.11851",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2401.11851",
+    "identity_tokens": [
+      "arXiv:2401.11851"
+    ],
+    "reason": "二値Transformerのエッジ展開向けに量子化行列積の非効率実行と多精度活性化のエネルギー overhead を解くアクセラレータだが、対象は汎用Transformerの二値推論ハードウェアであり、LLM推論システムへの具体的な適用や評価は要旨で確認できない。",
+    "first_checked_at": "2026-11-24T22:11:28+00:00",
+    "last_checked_at": "2026-11-24T22:11:28+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BETA: Binarized Energy-Efficient Transformer Accelerator at the Edge"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-004090ca9509",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bcb7fb12e67a1b6-unrel-018",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.11243",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.11243",
+    "identity_tokens": [
+      "arXiv:2511.11243"
+    ],
+    "reason": "画像生成向けMamba SSMでブロック間状態を引き継ぐ再帰状態チェーンの提案であり、視覚モデル設計でLLM推論ではない。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Arcee: Differentiable Recurrent State Chain for Generative Vision Modeling with Mamba SSMs"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bcb7fb12e67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

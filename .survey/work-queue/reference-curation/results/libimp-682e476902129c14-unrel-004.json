@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-682e476902129c14-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.08779",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.08779",
+    "identity_tokens": [
+      "arXiv:2606.08779"
+    ],
+    "reason": "学習・推論エンジン間の乖離を制約付きMDPとラグランジュ緩和で扱うRL後学習の最適化定式化であり、推論側の実行効率化やサービング機構への具体的適用はない学習単独の研究である。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Reformulate LLM Reinforcement Learning for Efficient Training under Black-box Discrepancy"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-682e47690212",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

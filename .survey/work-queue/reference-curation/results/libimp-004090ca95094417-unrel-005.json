@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-004090ca95094417-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.06928",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.06928",
+    "identity_tokens": [
+      "arXiv:2506.06928"
+    ],
+    "reason": "画像のみで学習したVideo LLMが時間的推論に予想外に長けることを示す学習データ構成の分析研究で、対象はビデオLLMの学習レシピであり、推論・サービング機構への貢献はない。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "How Important are Videos for Training Video LLMs?"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-004090ca9509",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

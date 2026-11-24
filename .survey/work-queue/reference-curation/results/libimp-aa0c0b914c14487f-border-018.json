@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa0c0b914c14487f-border-018",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/electronics14132718",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/electronics14132718",
+    "identity_tokens": [
+      "DOI:10.3390/electronics14132718"
+    ],
+    "reason": "CNNとLLMについてバッチサイズごとに重みメモリエネルギーと計算エネルギーの支配関係がどう変わるかを比較分析した研究であり、推論時のエネルギー特性の計測・分析には関わる。ただし具体的な推論システム技術や最適化機構の提案はなく、分析にとどまる。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Comparative Study on Energy Consumption of Neural Networks by Scaling of Weight-Memory Energy Versus Computing Energy for Implementing Low-Power Edge Intelligence"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa0c0b914c14",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

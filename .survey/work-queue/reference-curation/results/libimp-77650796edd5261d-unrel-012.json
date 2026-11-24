@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-77650796edd5261d-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/dsaa65442.2025.11416804",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/dsaa65442.2025.11416804",
+    "identity_tokens": [
+      "DOI:10.1109/dsaa65442.2025.11416804"
+    ],
+    "reason": "対照強化学習で事前学習したネットワークにより3D並列（データ・テンソル・パイプライン）の戦略探索を自動化する研究であり、対象は分散学習の並列構成探索である。推論への適用は示されていない。",
+    "first_checked_at": "2026-11-24T22:11:30+00:00",
+    "last_checked_at": "2026-11-24T22:11:30+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Efficient and Automatic 3D Parallelism Strategies Search via Contrastive Reinforcement Learning Pretrained Neural Networks"
+  },
+  "processed_at": "2026-11-24T22:11:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-77650796edd5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bcb7fb12e67a1b6-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427",
+    "identity_tokens": [
+      "SemanticScholar:7ff9dd28fe3a88ea8cc3066f98a8a3e259296427"
+    ],
+    "reason": "自己進化するコーディングエージェントと題するが、要旨を取得できず、推論システムへの機構的貢献を一次要旨で検証できなかった。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Self-Evolving Coding Agents"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bcb7fb12e67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

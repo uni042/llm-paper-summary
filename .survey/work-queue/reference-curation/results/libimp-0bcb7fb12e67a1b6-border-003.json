@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bcb7fb12e67a1b6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:b008787095b50b0ed202a039ec82851f9fb64205",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:b008787095b50b0ed202a039ec82851f9fb64205",
+    "identity_tokens": [
+      "SemanticScholar:b008787095b50b0ed202a039ec82851f9fb64205"
+    ],
+    "reason": "言語・視覚マルチモーダルモデルの統合的サーベイと題するが、要旨を取得できず、推論システムの観点を含むかを一次要旨で検証できなかった。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey of Multimodal Models on Language and Vision: A Unified Modeling Perspective"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bcb7fb12e67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

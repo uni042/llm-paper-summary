@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bcb7fb12e67a1b6-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:b639124771f9c62cd656a24e8e685a456918e0ff",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:b639124771f9c62cd656a24e8e685a456918e0ff",
+    "identity_tokens": [
+      "SemanticScholar:b639124771f9c62cd656a24e8e685a456918e0ff"
+    ],
+    "reason": "質問応答向けS4の文字レベル符号化と題するが、要旨を取得できず、推論効率への具体的適用を一次要旨で検証できなかった。",
+    "first_checked_at": "2026-11-24T22:11:29+00:00",
+    "last_checked_at": "2026-11-24T22:11:29+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Character-Level Encoding with S4 for QA"
+  },
+  "processed_at": "2026-11-24T22:11:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bcb7fb12e67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

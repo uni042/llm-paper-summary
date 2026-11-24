@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d72491d661c6f53e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.14136",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.14136",
+    "identity_tokens": [
+      "arXiv:2505.14136"
+    ],
+    "reason": "TTMMはモデルマージによりテスト時学習を近似し、エキスパート数を桁違いに増やしながらテスト時オーバーヘッドをほぼ回避するが、主目的はプロンプトごとの適応による性能向上であり、推論機構そのものの効率化は enabling な位置づけにとどまる。",
+    "first_checked_at": "2026-11-24T22:11:31+00:00",
+    "last_checked_at": "2026-11-24T22:11:31+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Local Mixtures of Experts: Essentially Free Test-Time Training via Model Merging"
+  },
+  "processed_at": "2026-11-24T22:11:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d72491d661c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
