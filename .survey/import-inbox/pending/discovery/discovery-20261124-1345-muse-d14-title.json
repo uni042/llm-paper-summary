@@ -1,0 +1,147 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-final-20261124-d14-title",
+ "reference_main_sha": "20cbdaeca4786bf4a65092bbab9c6629b5887c79",
+ "record_count": 8,
+ "origin": "discovery_worklist",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1109/ACCESS.2025.3627236",
+   "identity_tokens": [
+    "DOI:10.1109/ACCESS.2025.3627236"
+   ],
+   "title": "An Efficient Lightweight Transformer Framework for Precise Cardiac Segmentation via Frequency-Domain Decomposition",
+   "reason": "タイトル自体が心臓セグメンテーションという医用画像応用を明示しており、LLM推論システムの対象範囲外である。",
+   "source_url": "https://doi.org/10.1109/ACCESS.2025.3627236",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 170
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.48550/arXiv.2212.14246",
+   "identity_tokens": [
+    "DOI:10.48550/arXiv.2212.14246"
+   ],
+   "title": "Unsupervised construction of representations for oil wells via Transformers",
+   "reason": "タイトル自体が油井データの表現学習という石油工学応用を明示しており、LLM推論システムの対象範囲外である。",
+   "source_url": "https://doi.org/10.48550/arXiv.2212.14246",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 174
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2504.16956",
+   "identity_tokens": [
+    "arXiv:2504.16956"
+   ],
+   "title": "GeneMamba: An Efficient and Effective Foundation Model on Single Cell Data",
+   "reason": "タイトル自体が単一細胞データ向け基盤モデルGeneMambaという生物学応用を明示しており、Mambaの応用先が対象範囲外である。",
+   "source_url": "https://arxiv.org/abs/2504.16956",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 175
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2207.07564",
+   "identity_tokens": [
+    "arXiv:2207.07564"
+   ],
+   "title": "Rethinking Attention Mechanism in Time Series Classification",
+   "reason": "タイトル自体が時系列分類における注意機構の再検討であり、対象タスクが時系列分類というLLM推論と無関係の領域である。",
+   "source_url": "https://arxiv.org/abs/2207.07564",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 191
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "DOI:10.1101/2022.06.24.496975",
+   "identity_tokens": [
+    "DOI:10.1101/2022.06.24.496975"
+   ],
+   "title": "Phyloformer: towards fast and accurate phylogeny estimation with self-attention networks",
+   "reason": "タイトル自体が系統樹推定という進化生物学の課題への自己注意ネットワーク応用を明示しており、対象範囲外である。",
+   "source_url": "https://doi.org/10.1101/2022.06.24.496975",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 195
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2202.03163",
+   "identity_tokens": [
+    "arXiv:2202.03163"
+   ],
+   "title": "Patch-Based Stochastic Attention for Image Editing",
+   "reason": "タイトル自体が画像編集向けのパッチベース確率的注意であり、対象応用が画像編集でLLM推論システムとは無関係である。",
+   "source_url": "https://arxiv.org/abs/2202.03163",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 200
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2112.02262",
+   "identity_tokens": [
+    "arXiv:2112.02262"
+   ],
+   "title": "STJLA: A Multi-Context Aware Spatio-Temporal Joint Linear Attention Network for Traffic Forecasting",
+   "reason": "タイトル自体が交通流予測向けの時空間線形注意ネットワークであり、対象応用が交通予測で対象範囲外である。",
+   "source_url": "https://arxiv.org/abs/2112.02262",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 216
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2510.13997",
+   "identity_tokens": [
+    "arXiv:2510.13997"
+   ],
+   "title": "Dynamic SBI: round-free sequential simulation-based inference with adaptive datasets",
+   "reason": "タイトル自体がシミュレーションベース推論（統計的推論手法）の逐次推定法であり、LLMの推論システムとは無関係の統計手法である。",
+   "source_url": "https://arxiv.org/abs/2510.13997",
+   "body_check": "title_screen_only; abstract_not_read; body_not_read",
+   "first_checked_at": "2026-11-24T13:45:00+09:00",
+   "last_checked_at": "2026-11-24T13:45:00+09:00",
+   "linked_from": [
+    "worker-worklist discovery_review"
+   ],
+   "worklist_rank": 217
+  }
+ ]
+}
