@@ -1,18 +1,18 @@
 {
  "schema_version": 1,
  "ok": true,
- "attempt_id": "muse-fwllm-20261124",
+ "attempt_id": "muse-fwllm-20261125",
  "kind": "framework_llm_update",
  "updated_paths": [
   "framework-updates/inference-engines/llama-cpp/README.md",
-  "framework-updates/inference-engines/vllm-omni/README.md",
+  "framework-updates/inference-engines/ollama/README.md",
   "framework-updates/README.md"
  ],
  "created_paths": [],
  "updated_existing_paths": [
   "framework-updates/inference-engines/llama-cpp/README.md",
-  "framework-updates/inference-engines/vllm-omni/README.md",
+  "framework-updates/inference-engines/ollama/README.md",
   "framework-updates/README.md"
  ],
- "summary": "2026-11-23〜11-24: llama.cpp b12635-b12651 dev builds (b12648 OpenCL Q4_K coop-k c8 GEMM for speculative verification, b12642 host-weight full expert copy fix for MoE CPU offload, b12638 token-aware chat parsing, b12644 mtmd audio FFT speedup, b12643 Qwen3-Omni/ASR audio tail fix, b12649/b12651 OpenCL XIELU / WebGPU ROLL); plus missed vLLM-Omni v0.34.0 stable (2026-11-22, rebased on vLLM 0.34.0, Model Runner V2, distributed duplex serving, LMCache CPU offloading) recorded as catch-up. vLLM v0.34.0, SGLang v0.5.23, TensorRT-LLM v1.3.0, Ollama v0.40.17 already recorded or no new release in window; all LLM series: no primary-confirmed important updates in window. Direct-apply per skill section 9 (Phase 1)."
+ "summary": "2026-11-24 to 11-25: llama.cpp b12655-b12682 dev builds (b12669 quantize auto quant-type selection to a size/bpw target, b12679 OpenCL Q6_K coop-k c8 GEMM for spec verify up to n=8, b12675 server prompt-cache entry preserved until restores succeed, b12676 GDN replay instead of rollback, b12670 FLASH_ATTN_EXT compact bias, b12668 Metal BF16/F32 src1 for MUL_MAT/MUL_MAT_ID, b12681 Vulkan ssm_scan state size 96, b12682 range-reduced log1p softplus); Ollama v0.40.18 (2026-11-24, MLX Inkling residual-mixing fusion on Metal, Inkling 2 faster Metal decode/prefill/draft rounds, llama.cpp bump b12651, JetPack 5 dropped) plus missed Ollama v0.40.17 recorded as catch-up (2026-11-10, Inkling 2 Mini Apple-silicon only, concurrent requests on Apple silicon, Vulkan mmap fix for iGPUs, Windows iGPU KV cache allocation fix) - previous run summary said already recorded but the page did not contain it. vLLM v0.34.0, SGLang v0.5.23, TensorRT-LLM v1.3.0, LMDeploy v0.18.0: no new release in window. DeepSpeed v0.20.1 and HF Transformers v5.24.1 (both 2026-11-24) checked and treated as patch-level, below the recording threshold of their pages. GLM-5.4 (reported 2026-11-23 in secondary sources) could not be confirmed from primary sources - conflicting reports and official Z.ai docs still top out at GLM-5.3 - so not recorded. All other LLM series: no primary-confirmed important updates in window. Direct-apply per skill section 9 (Phase 1)."
 }

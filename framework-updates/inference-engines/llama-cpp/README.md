@@ -100,6 +100,22 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-24 — llama.cpp b12655〜b12682（開発ビルド）
+
+b12651の続き。対象期間の開発ビルドはb12655からb12682（2026-11-24 22:11 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。なお b12652〜b12654 / b12656 / b12660 / b12661 / b12663〜b12666 / b12672 / b12673 / b12677 は Releases API の一覧にないため、この範囲表記は「番号の範囲」であって全番号にreleaseがある意味ではない。重要変更だけを拾う。
+
+- **b12669: quantizeに、目標ファイルサイズ／bpwへ到達するための量子化型の自動選択optionを追加**（PR #15550）。低bit化の試行錯誤を自動化するもので、量子化形式そのものの追加ではない。
+- **b12679: OpenCLに Q6_K coop-k c8 GEMMを追加**（最大n=8の投機的検証向け）。b12648の Q4_K 版に続くもので、対象はQualcomm系のOpenCL経路。一般的な生成速度倍率は公表されていない。
+- **b12675: serverで prompt-cache entry を restore 成功まで保持**（PR #32828）。prompt cache（prefix cache相当）の復旧時の正確性・再利用に関わる修正。
+- **b12676: GDNで rollback の代わりに replay を使用**（PR #31669）。recurrent stateの巻き戻し方式の変更で、投機的デコード等でのstate整合性に関わる。
+- **b12670: ggmlの FLASH_ATTN_EXT で bias を compact 化**。Flash Attention経路の中間tensor削減。
+- **b12668: Metalの MUL_MAT / MUL_MAT_ID で BF16 / F32 の src1 に対応**。**b12657: ggml-cudaの few-row MMQ量子化で zero blocks を処理**。いずれもbackend別の演算カバレッジ・正確性の拡張。
+- **b12659: ggml-openvinoの新モデル対応・修正・改善**。**b12662: Metalで iPhone 向け Bonsai の GPU timeout を解消**。
+- **b12681: Vulkanの ssm_scan で state size 96 に対応**。**b12682: ggmlの softplus に range-reduced log1p を導入**（Metal / Vulkan / OpenCL）。負入力での数値精度の修正であり、速度倍率は公表されていない。
+- 小変更として扱い個別には記録しないもの: b12655（cmakeのKleidiAI vendored化）、b12658（rpcのtyped request helpers）、b12667（serverのexec_shell_command説明要求）、b12671（Metalのbatch concat）、b12674（OpenCLのAdreno binary kernel取得、Windows on Snapdragon向け）、b12678（editor config修正）、b12680（OpenCLのGDN QK offsets修正）。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12682 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12679 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12669 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12675
+
 ## 2026-11-23 — llama.cpp b12635〜b12651（開発ビルド）
 
 b12633の続き。対象期間の開発ビルドはb12635からb12651（2026-11-23 08:52 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。なお b12634 / b12636 / b12637 / b12639 は GitHub Release が存在しない（Releases API の一覧になく、tag指定取得も404）ため、この範囲表記は「番号の範囲」であって全番号にreleaseがある意味ではない。重要変更だけを拾う。

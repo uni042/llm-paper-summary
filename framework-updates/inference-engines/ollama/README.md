@@ -25,6 +25,23 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 2026-06-03〜2026-09-03
 
+### 2026-11-24 — Ollama v0.40.18（正式版）
+
+- **MLX経路**: Inkling系のresidual mixingをMetalでfusionし、mlxrunnerのtensor helperとmodel setupをarchitecture間で共有化（いずれもApple系MLX経路の変更）。
+- **Inkling 2**: Metalでのdecode・prefill・draft roundsを高速化。速度倍率は一次資料にないため記録しない。
+- 内蔵llama.cppをb12651へ更新し、JetPack 5 supportを削除。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.18)
+
+### 2026-11-11 — Ollama v0.40.17（正式版、catch-up）
+
+前回分（2026-11-24のresult.json summary）で記録済みとされたが、実ページへ未掲載だったためcatch-upとして記録する。
+
+- 新モデル: Inkling 2 Mini（Thinking Machines、Ollama release表記で26B parameter / 5.4B active、looped layers、約20GBでMac動作、text・image入力、tool call、thinking対応、SWE-Bench Verified 79.2%は配布元報告値）。**このreleaseではApple siliconのみ対応**で、PC対応は今後と明記。
+- **Apple siliconで複数リクエストの同時処理**に対応。
+- Vulkanでintegrated GPUにmmapを使い `Failed to allocate pinned memory` のload失敗を修正。Windows iGPUで部分offload modelのKV cache確保失敗も修正。
+- context shift設定の変更でmodel reloadが不要になったほか、`ollama launch claude`がClaude Codeのdeferred tool loadingに対応。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.17)
+
 ### 2026-11-10 — Ollama v0.40.16（正式版）
 
 - 新モデル: Ripple Preview（Ricursive Intelligence、65B dense、agentic coding向け）をlibraryへ追加（`ollama run ripple-preview`）。
