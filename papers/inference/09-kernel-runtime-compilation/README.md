@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（340本）
+## 自動生成の論文一覧（342本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -782,6 +782,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   キャッシュの容量は有限であり、どの応答を保存すれば推論費用と不一致費用の合計を小さくできるかが問題になる。提案の中心は、近い問い合わせを代表点へまとめるε-netによる離散化と、観測された一部の推論費用から周辺の費用を推定するカーネルリッジ回帰（カーネル ridge regression; KRR）である。
 
+- **2026-04 · [An Empirical Study of LLM Serving in Confidential GPUs](2026-6489368bb8a1-an-empirical-study-of-llm-serving-in-confidential-gpus.md)**  
+  実装：[✓](https://github.com/bearhw/Confidential-GPU-LLM-Serving-Performance-Profiling) ・ リポジトリ内被引用：0  
+  機密GPU上でvLLMとSGLangを2種の機密仮想マシンで実測し、暗号化の上乗せがフレームワークのメモリ管理とスケジューリングで大きく変わり、オンラインでは最大で約4倍へ膨らみ、通常向け最適化が逆効果になり得ることを示した実証研究。
+
 - **2026-04 · [Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores](2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案方式AILFM（Active Imitation Learning for LFMs）は、コアごとの命令実行率、最終段キャッシュのミス率、平均キャッシュ距離、電力予算、温度を観測し、どのカーネルをどのコアに割り当てると温度上限を守りながら実行時間を短縮できるかを判断する。
@@ -841,6 +845,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-01 · [LatencyPrism: Online Non-intrusive Latency Sculpting for SLO-Guaranteed LLM Inference](2026-2601.09258-latencyprism-online-non-intrusive-latency-sculpting-for-slo-guaranteed-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LatencyPrismは、本番の大規模言語モデル（LLM）推論で、ユーザーの体感品質に影響する遅延の一時的な増大を、サービスを止めずに検知し、原因の切り分けに必要な実行情報を取得するシステムである。
+
+- **2026-01 · [A Survey of Quantization in LLM: Unlocking Potential Hardware Efficiency](2026-740889701e27-a-survey-of-quantization-in-llm-unlocking-potential-hardware-efficiency.md)**  
+  実装：[✓](https://github.com/Qcompiler/llm_bench) ・ リポジトリ内被引用：0  
+  LLM量子化を事前学習・微調整・推論の三段階と対象部位で体系化し、数学的基礎、外れ値対策、KVキャッシュ量子化、カーネル生成までを整理したサーベイで、混合精度が低ビットでも精度を保つ鍵だと示す。
 
 - **2025-12 · [Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs](2025-2512.20861-memory-efficient-acceleration-of-block-low-rank-foundation-models-on-res.md)**  
   実装：[✓](https://github.com/pabillam/mem-efficient-blr) ・ リポジトリ内被引用：0  
@@ -1401,7 +1409,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：59  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：60  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-12〜2018-11）

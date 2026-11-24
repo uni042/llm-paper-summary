@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（440本）
+## 自動生成の論文一覧（441本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -963,6 +963,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-06 · [RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving](2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的デコードを応答単位へ粗くしてAPI越しに適用するプロキシ。単純なターンは安いモデルだけで返し、複雑なターンは下書きを高性能モデルが判定し、ツール選択は直行させることで費用を45.8パーセント削減した。
+
+- **2026-06 · [MESO: Memory-Efficient Speculative Offloading for Large Language Model Inference](2026-6929b899bc4d-meso-memory-efficient-speculative-offloading-for-large-language-model-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  下書きモデルをKVキャッシュごとCPUへ完全退避し、注意をCPUへ委譲、エキスパートは必要な分だけ非同期先読みすることで、投機的オフロードのピークGPUメモリを半分以下にし、メモリ効率を平均1.35倍へ上げる枠組み。
 
 - **2026-06 · [Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge](2026-2606.08048-diffusion-language-model-parallel-decoding-via-product-of-experts-bridge.md)**  
   実装：[✓](https://github.com/juntongshi48/poe-bridge) ・ リポジトリ内被引用：0  

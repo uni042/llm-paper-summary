@@ -372,6 +372,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
 
+- **2025-08 · [Camel: Energy-Aware LLM Inference on Resource-Constrained Devices](2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エッジ推論のGPU周波数とバッチサイズの組み合わせを多腕バンディットとして探索し、事後分布の更新で最適構成を素早く見つけることで、Jetson AGX Orin上でエネルギー遅延積を既定構成比12.4から29.9パーセント下げるエネルギー管理の枠組み。
+
 - **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
@@ -403,10 +407,6 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
-
-- **2025-08 · [Camel: Energy-Aware LLM Inference on Resource-Constrained Devices](2025-2508.09173-camel-energy-aware-llm-inference-on-resource-constrained-devices.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  エッジ推論のGPU周波数とバッチサイズの組み合わせを多腕バンディットとして探索し、事後分布の更新で最適構成を素早く見つけることで、Jetson AGX Orin上でエネルギー遅延積を既定構成比12.4から29.9パーセント下げるエネルギー管理の枠組み。
 
 - **2025-06 · [Ubiquitous memory augmentation via mobile multimodal embedding system](2025-5504da64243a-ubiquitous-memory-augmentation-via-mobile-multimodal-embedding-system.md)**  
   実装：[✓](https://github.com/caidongqi/Mobile-Search-Engine/tree/pc) ・ リポジトリ内被引用：0  

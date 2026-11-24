@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fadcdd1ff6f13c73f29d7a368c9ece47afd3a288",
+  "base_commit": "fb41b415967b3f3ee49648b4f6b1d2a28882562e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -1659,9 +1659,14 @@
     "2026-5223769ccd56-tensor-program-superoptimization-through-cost-guided-symbolic-program-synthesis.json",
     "2026-53bf172d8ba2-orion-a-collaborative-edge-inference-framework-for-large-language-models-processing-multi-sensor-data-in-uav-swarms.json",
     "2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generation.json",
+    "2026-6489368bb8a1-an-empirical-study-of-llm-serving-in-confidential-gpus.json",
+    "2026-6929b899bc4d-meso-memory-efficient-speculative-offloading-for-large-language-model-inference.json",
     "2026-6dab97b83788-formal-schedulability-analysis-for-llm-inference-ttft-and-tbt-deadline-guarantees-via-response-time-theory.json",
     "2026-6e8bb6985b9f-sprint-scalable-secure-differentially-private-inference-for-transformers.json",
+    "2026-7076e1d844a5-a-comparative-study-of-kv-cache-quantisation-methods-for-large-language-model-inference.json",
+    "2026-740889701e27-a-survey-of-quantization-in-llm-unlocking-potential-hardware-efficiency.json",
     "2026-74b48e33dfa6-greenscheduler-coordinated-two-tier-energy-optimization-for-disaggregated-llm-serving.json",
+    "2026-7c3882fcb8c1-pruneprivytune-accelerating-language-models-with-pruning-and-differentially-private-fine-tuning.json",
     "2026-7eea80f9c804-bros-efficient-llm-serving-on-hybrid-real-time-and-best-effort-requests.json",
     "2026-93feb35fa88e-energy-efficient-and-dequantization-free-quantization-of-llms-a-spiking-neural-network-approach-to-salient-value-mitigat.json",
     "2026-b05762d80b35-gradient-enhancement-task-aware-post-training-quantization.json",
@@ -54391,6 +54396,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "DOI:10.1109/ISPASS69572.2026.00038": {
+      "order": [
+        "2026-11-24T10:05:26+00:00",
+        "2026-6489368bb8a1-an-empirical-study-of-llm-serving-in-confidential-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1109/IJCNN69854.2026.11729215": {
+      "order": [
+        "2026-11-24T10:07:00+00:00",
+        "2026-6929b899bc4d-meso-memory-efficient-speculative-offloading-for-large-language-model-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.26562/irjcs.2026.v1306.03": {
+      "order": [
+        "2026-11-24T10:08:34+00:00",
+        "2026-7076e1d844a5-a-comparative-study-of-kv-cache-quantisation-methods-for-large-language-model-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1007/s11390-026-5979-1": {
+      "order": [
+        "2026-11-24T10:10:08+00:00",
+        "2026-740889701e27-a-survey-of-quantization-in-llm-unlocking-potential-hardware-efficiency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "DOI:10.1007/s10994-026-07016-y": {
+      "order": [
+        "2026-11-24T10:11:43+00:00",
+        "2026-7c3882fcb8c1-pruneprivytune-accelerating-language-models-with-pruning-and-differentially-private-fine-tuning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -69164,6 +69214,21 @@
     "doi:10.1109/ijcnn69854.2026.11728998": [
       "papers/inference/07-kv-cache-optimization-compression/2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generat.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-61064d66f56b-plug-and-play-kv-cache-reuse-for-low-latency-retrieval-augmented-generat.md"
+    ],
+    "doi:10.1109/ispass69572.2026.00038": [
+      "papers/inference/09-kernel-runtime-compilation/2026-6489368bb8a1-an-empirical-study-of-llm-serving-in-confidential-gpus.md"
+    ],
+    "doi:10.1109/ijcnn69854.2026.11729215": [
+      "papers/inference/05-speculative-decoding-moe/2026-6929b899bc4d-meso-memory-efficient-speculative-offloading-for-large-language-model-in.md"
+    ],
+    "doi:10.26562/irjcs.2026.v1306.03": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-7076e1d844a5-a-comparative-study-of-kv-cache-quantisation-methods-for-large-language-.md"
+    ],
+    "doi:10.1007/s11390-026-5979-1": [
+      "papers/inference/09-kernel-runtime-compilation/2026-740889701e27-a-survey-of-quantization-in-llm-unlocking-potential-hardware-efficiency.md"
+    ],
+    "doi:10.1007/s10994-026-07016-y": [
+      "papers/inference/99-other-inference-systems/2026-7c3882fcb8c1-pruneprivytune-accelerating-language-models-with-pruning-and-differentia.md"
     ]
   }
 }
