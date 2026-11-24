@@ -107,7 +107,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-03 · [Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques](2025-2406.02500-towards-efficient-mixture-of-experts-a-holistic-study-of-compression-tec.md)**  
-  実装：[✓](https://github.com/CASE-Lab-UMD/Unified-MoE-Compression) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/CASE-Lab-UMD/Unified-MoE-Compression) ・ リポジトリ内被引用：34  
   混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンについて多数の専門家から少数を選択することで、総パラメータ数の割に活性化計算量を抑える。例えばMixtral-8×7Bは総計約470億パラメータを持つが、1トークンで活性化するのは約130億パラメータであり、元モデルの重みメモリは原著の環境で87.7GBに達する。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
@@ -127,7 +127,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
 
 - **2025-07 · [MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE](2025-2507.00390-mone-replacing-redundant-experts-with-lightweight-novices-for-structured.md)**  
-  実装：[✓](https://github.com/zxgx/mode-pd) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/zxgx/mode-pd) ・ リポジトリ内被引用：15  
   MoNE（Mixture of Novices and エキスパート）は、混合専門家モデル（Mixture-of-Experts、MoE）における専門家の枝刈りを、単純な削除ではなく軽量な初心者表現（novice）への置換として実装する圧縮方式である。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
@@ -158,6 +158,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：✓ ・ リポジトリ内被引用：1  
   エキスパートの重要度を協力ゲームのシャープレイ値で測り、ルーター誘導のモンテカルロ標本化と早期打ち切りで近似して枝刈りするShapley-MoE。Qwen2-57B-A14Bのエキスパートを25%削ってもパープレキシティ増加0.92で平均精度の96.4%以上を維持する。
 
+- **2025-07 · [Automated Fine-Grained Mixture-of-Experts Quantization](2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md)**  
+  実装：[✓](https://github.com/cei1ing4/Fine-Grained-MoE-Quantization) ・ リポジトリ内被引用：1  
+  エキスパートの重みで外れ値が偏るチャネルと、誤差に弱いダウンプロジェクションを観測し、分散・大きさ・外れ値割合から作る感度スコアでチャネルごとに2ビットと4ビットを自動配分して、MoEの学習後量子化の精度低下を抑える方式。
+
 - **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
   実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：1  
   各専門家に共通する重みを、最適輸送（optimal transport）で整列させたWasserstein重心専門家として共有し、専門家ごとの差分行列だけを圧縮する。
@@ -165,10 +169,6 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2025-11 · [Exploiting the Experts: Unauthorized Compression in MoE-LLMs](2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   疎な実行によって計算量を抑えられる反面、特定課題で頻繁に使われるエキスパートを見分け、不要な部分を除いた小型派生モデルを作れる可能性がある。Mixtral-8x7Bを用いたGLUE分類では、全エキスパートを用いた平均精度86.1%に対し、各層で上位2エキスパートだけを保持すると78.9%、上位1のみでは71.4%となる。
-
-- **2025-07 · [Automated Fine-Grained Mixture-of-Experts Quantization](2025-c17b021f4e80-automated-fine-grained-mixture-of-experts-quantization.md)**  
-  実装：[✓](https://github.com/cei1ing4/Fine-Grained-MoE-Quantization) ・ リポジトリ内被引用：0  
-  エキスパートの重みで外れ値が偏るチャネルと、誤差に弱いダウンプロジェクションを観測し、分散・大きさ・外れ値割合から作る感度スコアでチャネルごとに2ビットと4ビットを自動配分して、MoEの学習後量子化の精度低下を抑える方式。
 
 - **2025-05 · [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](2025-2505.17639-premoe-proactive-inference-for-efficient-mixture-of-experts.md)**  
   実装：[✓](https://github.com/JarvisPei/PreMoe) ・ リポジトリ内被引用：0  

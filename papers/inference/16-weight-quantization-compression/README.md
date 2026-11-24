@@ -1329,7 +1329,7 @@
   大規模言語モデルの重みを4ビットへ圧縮しても、実行時に半精度へ逆量子化してから行列積を計算するなら、重みの保存容量削減がそのまま演算器の省資源化につながるとは限らない。
 
 - **2024-10 · [AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models](2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-.md)**  
-  実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/haiquanlu/AlphaPruning) ・ リポジトリ内被引用：16  
   重み行列の固有値分布の裾の重さで層の学習度を測り、よく学んだ層ほど少なく刈る層別疎率の配分法で、疎率80%のLLaMA-7Bで従来の層別配分より困惑度を304.31下げ、CPU推論3.06倍を実測した。
 
 - **2024-03 · [Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2024-8166d1af62df-exploring-post-training-quantization-in-llms-from-comprehensive-study-to.md)**  
