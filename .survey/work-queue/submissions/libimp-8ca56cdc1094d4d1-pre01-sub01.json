@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Extending Puzzle for Mixture-of-Experts Reasoning Models with Application to GPT-OSS Acceleration",
+      "source_url": "https://arxiv.org/abs/2602.11937",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning-focused LLMs improve answer quality by generating longer reasoning traces, but the additional tokens dramatically increase serving cost, motivating inference optimization. We extend and apply Puzzle, a post-training neural architecture search (NAS) framework, to gpt-oss-120B to produce gpt-oss-puzzle-88B, a deployment-optimized derivative. Our approach combines heterogeneous MoE expert pruning, selective replacement of full-context attention with window attention, FP8 KV-cache quantization with calibrated scales, and post-training reinforcement learning to recover accuracy, while maintaining low generation length. In terms of per-token speeds, on an 8XH100 node we achieve 1.63X and 1.22X throughput speedups in long-context and short-context settings, respectively. gpt-oss-puzzle-88B also delivers throughput speedups of 2.82X on a single NVIDIA H100 GPU. However, because token counts can change with reasoning effort and model variants, per-token throughput (tok/s) and latency (ms/token) do not necessarily lead to end-to-end speedups: a 2X throughput gain is erased if traces grow 2X. Conversely, throughput gains can be spent on more reasoning tokens to improve accuracy; we therefore advocate request-level efficiency metrics that normalize throughput by tokens generated and trace an accuracy--speed frontier across reasoning efforts. We show that gpt-oss-puzzle-88B improves over gpt-oss-120B along the entire frontier, delivering up to 1.29X higher request-level efficiency. Across various benchmarks, gpt-oss-puzzle-88B matches or slightly exceeds the parent on suite-average accuracy across reasoning efforts, with retention ranging from 100.8% (high) to 108.2% (low), showing that post-training architecture search can substantially reduce inference costs without sacrificing quality.",
+      "identifiers": [
+        "SemanticScholar:172b7a007e4f426b02a27b90c5c42f5abb6e6908"
+      ],
+      "semantic_scholar_id": "172b7a007e4f426b02a27b90c5c42f5abb6e6908",
+      "canonical_id": "arXiv:2602.11937",
+      "arxiv_id": "2602.11937",
+      "doi": "10.48550/arXiv.2602.11937",
+      "authors": [
+        "Akhiad Bercovich",
+        "Nir Ailon",
+        "Vladimir Anisimov",
+        "Tomer Asida",
+        "Nave Assaf",
+        "Mohammad Dabbah",
+        "Ido Galil",
+        "Amnon Geifman",
+        "Yonatan Geifman",
+        "Izhak Golan",
+        "Roi Koren",
+        "Itay Levy",
+        "Zach Moshe",
+        "Pavlo Molchanov",
+        "Najeeb Nabwani",
+        "Mostofa Patwari",
+        "Omri Puny",
+        "Tomer Ronen",
+        "Itamar Schen",
+        "Elad Segal",
+        "Ido Shahaf",
+        "Oren Tropp",
+        "Ran Zilberstein",
+        "Ran El-Yaniv"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Puzzleを推論向け神経アーキテクチャ探索としてgpt-oss-120Bへ適用し、MoEエキスパート剪定・窓注意への置換・FP8 KVキャッシュ量子化を組み合わせて88B化し、8×H100で最大1.63倍のスループットとリクエスト単位効率1.29倍を示しており、MoE推論とKVキャッシュの最適化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Variational Linear Attention: Stable Associative Memory for Long-Context Transformers",
+      "source_url": "https://arxiv.org/abs/2605.11196",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention reduces the quadratic cost of softmax attention to $\\mathcal{O}(T)$, but its memory state grows as $\\mathcal{O}(T)$ in Frobenius norm, causing progressive interference between stored associations. We introduce \\textbf{Variational Linear Attention} (VLA), which reframes the memory update as an online regularised least-squares problem with an adaptive penalty matrix maintained via the Sherman-Morrison rank-1 formula. We prove that normalising the write direction to unit length gives the recurrence Jacobian spectral norm exactly $1$ for all sequence lengths and head dimensions (Proposition 2), and that the state norm is self-limiting under bounded inputs (Proposition 1). Empirically, VLA reduces $\\|S_t\\|_F$ by $109\\times$ relative to standard linear attention at $T{=}1{,}000$, achieves near-perfect exact-match accuracy on multi-query associative recall within the effective per-head memory regime ($n_\\text{pairs}<d_h$), maintaining substantially higher retrieval performance than DeltaNet and standard linear attention under increasing memory load, and maintains 62\\% accuracy at the per-head capacity boundary. A Triton-fused kernel achieves $14\\times$ speedup over sequential Python and $\\mathcal{O}(T)$ scaling, crossing below softmax attention latency at approximately 43\\,000 tokens.",
+      "identifiers": [
+        "SemanticScholar:147a2f2ce44cd5346714ee2ba0a69c4278756ce8"
+      ],
+      "semantic_scholar_id": "147a2f2ce44cd5346714ee2ba0a69c4278756ce8",
+      "canonical_id": "arXiv:2605.11196",
+      "arxiv_id": "2605.11196",
+      "doi": "10.48550/arXiv.2605.11196",
+      "authors": [
+        "Vishal Pandey",
+        "Gopal Singh"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Variational Linear Attentionは線形注意のメモリ更新をオンライン正則化最小二乗として定式化し適応ペナルティで状態ノルムの増大を抑え、Triton融合カーネルで逐次実装比14倍・約43,000トークンでsoftmax注意以下のレイテンシを達成しており、長文脈注意の推論効率化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "N-Gram Memories at Two Bits: Quantizing Lookup Tables in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.21810",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Conditional memory expands language-model capacity through selective lookup, but the full embedding table must remain available for every possible input. We introduce Conditional Program (CP), a compressed representation that reconstructs only the rows an input requests. CP represents each row by a short code and a local scale, with a reconstruction program shared across the table. We instantiate this representation with a Gaussian trellis, norm restoration and independently decodable row records. CP's two-bit code lowers output KL by 41--63\\% relative to 2-bit round-to-nearest. Analysis across three trained n-gram memory families shows that Gaussian-like coordinate statistics coexist with learned relationships among rows; at matched storage budgets, the shared trellis outperforms the fitted codebooks and low-rank residual variants we test. For DeepSeek, it reduces table storage from 203GB to 51GB, leaving room for larger workloads when the table is kept on GPU.",
+      "identifiers": [
+        "SemanticScholar:3d05d52ce814ecd610ada3a3de3e6449a3aa7613"
+      ],
+      "semantic_scholar_id": "3d05d52ce814ecd610ada3a3de3e6449a3aa7613",
+      "canonical_id": "arXiv:2610.21810",
+      "arxiv_id": "2610.21810",
+      "authors": [
+        "Donghoon Han",
+        "Minseop Jung",
+        "Dongjin Kwak",
+        "SeungJae Lee",
+        "Junhoo Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Conditional Programはn-gramメモリ等の条件付きメモリの埋め込み表を、入力が要求する行だけを再構成できる2ビット符号と共有再構成プログラムで圧縮し、DeepSeekの表を203GBから51GBへ削減する手法で、GPU上に保持するメモリ表の削減という推論時メモリ最適化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hidden No More: Attacking and Defending Private Third-Party LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "year": 2025,
+      "published": null,
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53"
+      ],
+      "semantic_scholar_id": "df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "canonical_id": "SemanticScholar:df5070ce19b01e11c3d3eab69a7149ba253f0a53",
+      "authors": [
+        "R. Thomas",
+        "Louai Zahran",
+        "Erica Choi",
+        "Akilesh Potti",
+        "Micah Goldblum",
+        "Arka Pal"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "隠れ状態からプロンプトをほぼ完全に再構成できる攻撃を示し、防御として系列次元シャーディングによるマルチパーティ推論方式Cascadeを提案して計算・通信効率を保ちながら安全性を示した研究で、プライベートな第三者LLM推論の実行方式に直接関わる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TagRouter: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks",
+      "source_url": "https://arxiv.org/abs/2506.12473",
+      "year": 2025,
+      "published": "2025-06-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model routing allocates queries to the suitable model, improving system performance while reducing costs. However, existing routing methods face practical limitations that hinder scalability in large-scale applications and struggle to keep up with the rapid growth of the large language model (LLM) ecosystem. To tackle these challenges, we propose TagRouter, a training-free model routing method designed to optimize the synergy among multiple LLMs for open-domain text generation tasks. Experimental results demonstrate that TagRouter outperforms 13 baseline methods, increasing the accept rate of system by 6.15% and reducing costs by 17.20%, achieving optimal cost-efficiency. Our findings provides the LLM community with an efficient and scalable solution for model ensembling, offering users an evolvable\"super model.\"",
+      "identifiers": [
+        "SemanticScholar:536478d9b5cba55783472b17d25c0acb31de5834"
+      ],
+      "semantic_scholar_id": "536478d9b5cba55783472b17d25c0acb31de5834",
+      "canonical_id": "arXiv:2506.12473",
+      "arxiv_id": "2506.12473",
+      "doi": "10.48550/arXiv.2506.12473",
+      "authors": [
+        "Zhou Chen",
+        "Zhiqiang Wei",
+        "Yu-Qi Bai",
+        "Xuehan Xiong",
+        "Jian-Min Wu"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 528,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "TagRouterはタグに基づく学習不要のモデルルーティングでクエリを適切なLLMへ振り分け、受付率を6.15％上げつつコストを17.20％削減する手法であり、LLMサービングのルーティングに直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8ca56cdc1094",
+    "round": "libimp-8ca56cdc1094d4d1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8ca56cdc1094d4d1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8ca56cdc1094d4d1-pre01.json",
+    "receipt": "sha256:43eae96c6a3fbec7a58e493995c43d18f63c8abb2a22a29e67e3af14b9502e12"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8ca56cdc1094",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

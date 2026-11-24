@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ELMER: A Non-Autoregressive Pre-trained Language Model for Efficient and Effective Text Generation",
+      "source_url": "https://arxiv.org/abs/2210.13304",
+      "year": 2022,
+      "published": "2022-10-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study the text generation task under the approach of pre-trained language models (PLMs). Typically, an auto-regressive (AR) method is adopted for generating texts in a token-by-token manner. Despite many advantages of AR generation, it usually suffers from inefficient inference. Therefore, non-autoregressive (NAR) models are proposed to generate all target tokens simultaneously. However, NAR models usually generate texts of lower quality due to the absence of token dependency in the output text. In this paper, we propose ELMER: an efficient and effective PLM for NAR text generation to explicitly model the token dependency during NAR generation. By leveraging the early exit technique, ELMER enables the token generations at different layers, according to their prediction confidence (a more confident token will exit at a lower layer). Besides, we propose a novel pre-training objective, Layer Permutation Language Modeling, to pre-train ELMER by permuting the exit layer for each token in sequences. Experiments on three text generation tasks show that ELMER significantly outperforms NAR models and further narrows the performance gap with AR PLMs (ELMER (29.92) vs BART (30.61) ROUGE-L in XSUM) while achieving over 10 times inference speedup.",
+      "identifiers": [
+        "SemanticScholar:764a616937a5923aaf22288b35f6b991ae41521d"
+      ],
+      "semantic_scholar_id": "764a616937a5923aaf22288b35f6b991ae41521d",
+      "canonical_id": "arXiv:2210.13304",
+      "arxiv_id": "2210.13304",
+      "doi": "10.48550/arXiv.2210.13304",
+      "authors": [
+        "Junyi Li",
+        "Tianyi Tang",
+        "W. Zhao",
+        "Jian-Yun Nie",
+        "Ji-Rong Wen"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1492,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "自己回帰生成の推論非効率に対し、ELMERは明示的・暗黙的両層の識別器で早期信頼度を捉える非自己回帰事前学習モデルにより全トークンの並列生成を高品質化するもので、並列デコードによるテキスト生成推論の高速化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ProcrustesGPT: Compressing LLMs with Structured Matrices and Orthogonal Transformations",
+      "source_url": "https://arxiv.org/abs/2506.02818",
+      "year": 2025,
+      "published": "2025-06-03",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) demonstrate impressive results in natural language processing tasks but require a significant amount of computational and memory resources. Structured matrix representations are a promising way for reducing the number of parameters of these models. However, it seems unrealistic to expect that weight matrices of pretrained models can be accurately represented by structured matrices without any fine-tuning. To overcome this issue, we utilize the fact that LLM output is invariant under certain orthogonal transformations of weight matrices. This insight can be leveraged to identify transformations that significantly improve the compressibility of weights within structured classes. The proposed approach is applicable to various types of structured matrices that support efficient projection operations. Code is available at https://github.com/GrishKate/ProcrustesGPT",
+      "identifiers": [
+        "SemanticScholar:71919e4114241fb0334d55d6706c20b29c985db5"
+      ],
+      "semantic_scholar_id": "71919e4114241fb0334d55d6706c20b29c985db5",
+      "canonical_id": "arXiv:2506.02818",
+      "arxiv_id": "2506.02818",
+      "doi": "10.48550/arXiv.2506.02818",
+      "authors": [
+        "Ekaterina Grishina",
+        "M. Gorbunov",
+        "M. Rakhuba"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 539,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ProcrustesGPTは重み行列の直交変換不変性を利用して構造化行列クラス内での圧縮可能性を高め、LLMのパラメータ数とメモリを削減する構造化圧縮手法であり、推論向けモデル圧縮に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "What Matters in Linearizing Language Models? A Comparative Study of Architecture, Scale, and Task Adaptation",
+      "source_url": "https://arxiv.org/abs/2504.14366",
+      "year": 2025,
+      "published": "2025-04-19",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linearization has emerged as a strategy for developing efficient language models (LMs). Starting from an existing Transformer-based LM, linearization replaces the attention component with computationally efficient subquadratic \\textit{token mixers}. However, as an increasing number of mixers are proposed, it remains unclear which inductive biases are best suited to inherit the original Transformer's capabilities. Furthermore, it is unknown how linearization is affected by parameter and token budget scaling. To address these questions, we propose a unified setup to compare seven representative architectures, including xLSTM, GLA, and Gated DeltaNet. Our findings reveal that performance hierarchies remain stable from 140M to 1.7B parameters, with error-correcting update rules demonstrating superior scaling exponents. We show that performance gaps are established early and persist through asymptotic maturity at 10B tokens, suggesting that state resolution is a more fundamental bottleneck than the distillation budget. Finally, while most models adapt to instruction tuning, only gated delta-rule formulations maintain the precision necessary for long-context retrieval, whereas additive models suffer from irreversible state saturation. These results suggest that for successful linearization, architectural inductive biases remain the primary constraint that cannot be overcome by simply scaling training compute.",
+      "identifiers": [
+        "SemanticScholar:8047b1f11f67464b182d566d2b4a011d08b2a9d3"
+      ],
+      "semantic_scholar_id": "8047b1f11f67464b182d566d2b4a011d08b2a9d3",
+      "canonical_id": "arXiv:2504.14366",
+      "arxiv_id": "2504.14366",
+      "doi": "10.18653/2026.emnlp-main.2648",
+      "authors": [
+        "Patrick Haller",
+        "Jonas Golde",
+        "Alan Akbik"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 584,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Transformerの注意を計算効率の良い劣二次トークンミキサへ置換する線形化について、xLSTM・GLA・Gated DeltaNet等7種のアーキテクチャを統一条件で比較し、スケーリング挙動や長文脈検索での状態飽和の差を明らかにした研究で、線形・回帰型の効率的推論アーキテクチャ選定に直接資する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4ded524d30c2",
+    "round": "libimp-4ded524d30c2415b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4ded524d30c2415b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4ded524d30c2415b-pre01.json",
+    "receipt": "sha256:6d81def89cd08a86da83d586b76e2656717d226c61a154724cd9009e92984b3d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4ded524d30c2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

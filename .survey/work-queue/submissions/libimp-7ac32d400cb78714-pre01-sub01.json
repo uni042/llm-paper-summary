@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CUSUM-Shaped Inference-Time Monitoring and Targeted Re-Decoding for Quantized Small Language Model Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.20129",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantized small reasoning models can enter repetitive or otherwise unproductive trajectories, yet standard decoding does not adapt to the trajectory as it unfolds. We study MGT-B, a fixed, weight-preserving controller that converts overlapping windows of uncertainty, repetition, and local-change features into position-conditional empirical tail probabilities. It accumulates mixture betting factors with a CUSUM-shaped reset, and, after an alarm, restores a coherent earlier token and key-value-cache state before constrained re-decoding. On MATH-500, a paired three-seed evaluation over 1,500 generations per method raises exact-normalized accuracy from 54.73% for vanilla decoding to 56.40% (+1.67 percentage points; problem-clustered bootstrap 95% CI [+0.47, +2.80]), while a prospectively profiled random-intervention control reaches 54.60%. The gain is positive in all three seeds and costs 5.14% more sampled tokens. Seed-0 ablations show that rollback alone does not explain the result and that an isolated repetition penalty is harmful. Five-sample self-consistency reaches 70.0% but uses about 4.84x as many tokens as MGT-B. On the harder, non-overlapping Omni-MATH evaluation, however, MGT-B obtains 16.60% versus 16.67% for vanilla (-0.07 points; clustered 95% CI [-0.33, +0.20]) with 2.10% more sampled tokens. Thus, MGT-B provides a modest, reproducible local improvement on MATH-500 in the studied configuration, but the effect does not transfer to Omni-MATH and should not be interpreted as a general improvement in mathematical reasoning.",
+      "identifiers": [
+        "SemanticScholar:1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb"
+      ],
+      "semantic_scholar_id": "1aa0fa57d3ebbcfee019c7bb0d0a2657ea16bceb",
+      "canonical_id": "arXiv:2607.20129",
+      "arxiv_id": "2607.20129",
+      "doi": "10.48550/arXiv.2607.20129",
+      "authors": [
+        "E. Ettifouri",
+        "Ayoub Belfatmi",
+        "Mahaman Sanoussi Yahaya Alassan",
+        "Walid Dahhane"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 125,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MGT-Bは量子化小型推論モデルのデコード軌跡を不確実性・反復・局所変化の特徴で監視し、CUSUM型リセット付きの賭け因子蓄積で異常を検知したらKVキャッシュ状態を巻き戻して制約付き再デコードを行う推論時制御であり、デコード機構に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Memformer: The Memory-Augmented Transformer",
+      "source_url": "https://doi.org/10.48550/arXiv.2010.06891",
+      "year": 2020,
+      "published": "2020-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:d387600e5150b381a306221a5bc9bd92aa99157b"
+      ],
+      "semantic_scholar_id": "d387600e5150b381a306221a5bc9bd92aa99157b",
+      "doi": "10.48550/arXiv.2010.06891",
+      "canonical_id": "DOI:10.48550/arXiv.2010.06891",
+      "authors": [
+        "Qingyang Wu",
+        "Zhenzhong Lan",
+        "Jing Gu",
+        "Zhou Yu"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2232,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Memformerは外部動的メモリへ過去情報を符号化・検索することで長系列処理を線形時間・定数メモリ空間で実行し、推論で3.2倍高速・8.1倍省メモリを報告するアーキテクチャであり、長文脈推論のメモリ効率化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.991",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:3a2482a4c8834d2faa5a428ceab49816fbbc1077"
+      ],
+      "semantic_scholar_id": "3a2482a4c8834d2faa5a428ceab49816fbbc1077",
+      "doi": "10.18653/v1/2026.findings-acl.991",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.991",
+      "authors": [
+        "Yu-Hua Zhou",
+        "Shi-Chao Weng",
+        "Chang-Hai Zhou",
+        "Yu-Han Wu",
+        "Qian Qiao",
+        "Jun Gao",
+        "Fei Yang",
+        "Ai-Min Pan"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Deputyは各層に軽量な判定モジュールを置き、トークンごとに注意の全計算／低ランク計算とFFNの実行／スキップを動的に選ぶ低ランク置換で、バッチ処理とKVキャッシュ整合を保ちながらLLM推論を高速化する手法であり、条件付き計算による推論加速に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MotionFusion: Fusing Motion and Saliency for Fast Video Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11464991",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:bf2524169c1cd6b92a27907f2623f9d138eaa39c"
+      ],
+      "semantic_scholar_id": "bf2524169c1cd6b92a27907f2623f9d138eaa39c",
+      "doi": "10.1109/icassp55912.2026.11464991",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464991",
+      "authors": [
+        "Chenxi Du",
+        "Ju Ren",
+        "Yao-Xue Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MotionFusionは動画LLM推論で動きスコアと顕著性スコアを統合して視覚トークンを学習不要で選択し、注意の二次計算を抑える差し込み型トークン削減であり、マルチモーダルLLMの推論高速化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Speeding up Transformer Decoding via an Attention Refinement Network",
+      "source_url": "https://www.semanticscholar.org/paper/e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "year": 2022,
+      "published": null,
+      "venue": "International Conference on Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3"
+      ],
+      "semantic_scholar_id": "e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "canonical_id": "SemanticScholar:e327d6794179139d4a3564effa26ab13a7f7b6c3",
+      "authors": [
+        "Kaixin Wu",
+        "Yue Zhang",
+        "Bojie Hu",
+        "Tong Zhang"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1607,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Attention Refinement Networkは層間特徴の再利用で注意を再構成する重み付き残差構造と自己注意・交差注意の統合による並列計算で、ニューラル機械翻訳の自己回帰デコードを平均1.35倍高速化する手法であり、Transformerデコードの高速化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7ac32d400cb7",
+    "round": "libimp-7ac32d400cb78714-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7ac32d400cb78714-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7ac32d400cb78714-pre01.json",
+    "receipt": "sha256:e1cbc7255819aa6abc56ef0cefabd24f9c918c066a788eca1bbe5075c94887f2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7ac32d400cb7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

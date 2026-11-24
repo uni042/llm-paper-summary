@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Synergy-of-Thoughts: Eliciting Efficient Reasoning in Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2402.02563",
+      "year": 2024,
+      "published": "2024-02-04",
+      "venue": null,
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown impressive emergent abilities in a wide range of tasks, but the associated expensive API cost greatly limits the real application. Previous works like chain-of-thought (CoT) and tree-of-thoughts (ToT) have predominately focused on enhancing accuracy, but overlook the rapidly increasing API cost, which could be particularly problematic for open-ended real-world tasks with huge solution spaces. Motivated by the dual process theory of human cognition, we propose\"Synergy of Thoughts\"(SoT) to unleash the synergistic potential of hybrid LLMs with different scales for efficient reasoning. By default, SoT uses smaller-scale language models to generate multiple low-cost intuitive thoughts, which resembles the parallel intuitions produced by System 1. We then design a confidence evaluator where the intuitive thoughts are cross-evaluated and introduce a controllable threshold mechanism to decide their mutual conflict. If these intuitive thoughts exhibit conflicts, SoT will invoke the reflective reasoning of scaled-up language models to emulate the intervention of System 2, which will override the intuitive thoughts and rectify the reasoning results. This framework is model-agnostic and training-free, which can be flexibly implemented with various off-the-shelf LLMs. Experiments on six representative reasoning tasks show that SoT substantially reduces the API cost by 38.3%-75.1%, and simultaneously achieves state-of-the-art reasoning accuracy and solution diversity. Notably, the average token cost reduction on open-ended tasks reaches up to 69.1%.",
+      "identifiers": [
+        "SemanticScholar:c993152d0858584dee2859c21e324ee811ec3991"
+      ],
+      "semantic_scholar_id": "c993152d0858584dee2859c21e324ee811ec3991",
+      "canonical_id": "arXiv:2402.02563",
+      "arxiv_id": "2402.02563",
+      "authors": [
+        "Yu Shang",
+        "Yu Li",
+        "Feng-Li Xu",
+        "Yong Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1024,
+        "matched_prestigious_venue": null
+      },
+      "reason": "小規模モデルに低コストの直観的思考を複数生成させ、信頼度評価器の閾値で競合が検出された場合のみ大規模モデルを介入させるハイブリッドLLM推論枠組みで、APIコストを38.3〜75.1％削減しており、モデルカスケードによる推論コスト削減に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adaptive-VoCo: Complexity-Aware Visual Token Compression for Vision-Language Models",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11465113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:463caa08f6275cf4ac850c64f78424b507add023"
+      ],
+      "semantic_scholar_id": "463caa08f6275cf4ac850c64f78424b507add023",
+      "doi": "10.1109/icassp55912.2026.11465113",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11465113",
+      "authors": [
+        "Xiao-Yang Guo",
+        "Jusheng Zhang",
+        "Ke-Ze Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Adaptive-VoCoは画像の視覚的複雑さをパッチトークンのエントロピーや注意マップ分散から推定する軽量なRate PredictorでVoCoトークン数（1・2・4等）を入力ごとに動的配分し、固定率圧縮より性能保持を高める視覚トークン圧縮であり、VLM推論の計算・メモリ削減に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlashBack: Knowing When to Remember in Streaming Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01192",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming vision-language models must process continuously growing video streams under a bounded compute budget, creating a persistent tension between real-time perception and long-term memory. Retrieving historical information provides a natural remedy, yet historical recall is not uniformly beneficial: unnecessary history may introduce irrelevant context into current reasoning and interfere with native real-time perception. Effective streaming memory should therefore address not only what to remember, but also when and how to access it. To this end, we introduce FlashBack, a training-free framework for selective, multi-level memory in streaming vision-language models. Before retrieving history, FlashBack draws on the semantic understanding of the frozen streaming VLM to infer whether a query calls for historical evidence. This assessment determines whether inference remains on the Native trajectory or invokes an isolated Recall trajectory. The Recall trajectory combines recent context with retrieved long-term memory through a query-local Side-KV pathway, preserving local temporal continuity without modifying the persistent Native state. We instantiate FlashBack on StreamingVLM and Mage-VL-4B and evaluate it on OVO-Bench and StreamingBench. The results show improvements on several long-horizon and memory-dependent tasks while largely preserving real-time perception, with performance competitive with strong training-based streaming methods despite requiring no additional training. Our code will be announced later.",
+      "identifiers": [
+        "SemanticScholar:fff60e3ee05dc24ff75305edfee5d9bc7b712aef"
+      ],
+      "semantic_scholar_id": "fff60e3ee05dc24ff75305edfee5d9bc7b712aef",
+      "canonical_id": "arXiv:2610.01192",
+      "arxiv_id": "2610.01192",
+      "authors": [
+        "Yi Chen",
+        "Ming-Ming Yu",
+        "Rui-Qi Wang",
+        "Bo-Ran Wang",
+        "Xiao-Hang Cao",
+        "Chuning Tang",
+        "Jing-Min Chen",
+        "Jie Gu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FlashBackはストリーミングVLM向けに、履歴参照が要るかを凍結モデルの意味理解で判定し、必要時のみ最近文脈と長期メモリをSide-KV経路で併せる多段メモリにより、有界計算予算下でリアルタイム知覚を保ちながら長期記憶を引く推論機構であり、ストリーミング推論のメモリ管理に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-faf64e8a8887",
+    "round": "libimp-faf64e8a88874688-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-faf64e8a88874688-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-faf64e8a88874688-pre01.json",
+    "receipt": "sha256:5a98de816dfa5de36b5a23f0deed4d50dcfa7cfbc0851a16f96558369143c955"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-faf64e8a8887",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

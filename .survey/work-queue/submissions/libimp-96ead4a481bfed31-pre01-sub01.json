@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Quantitative Analysis of Mamba-2-Based Large Language Model: Study of State Space Duality",
+      "source_url": "https://doi.org/10.1109/LCA.2025.3609283",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "IEEE computer architecture letters",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba is based on a state space model (SSM) to address limitations of attention-based large language models (LLMs) associated with long-context processing. While Mamba achieves accuracy comparable to attention-based LLMs, it introduces recurrent computation that limits efficiency during the prefill phase of inference. To mitigate this, Mamba-2 introduces the state space duality (SSD), which increases parallelism during multi-token processing. However, its workload characteristics remain unexamined from a systems and architectural perspective. This work presents a system-level analysis of SSD in Mamba-2, characterizing its compute and memory behavior on modern hardware. Our findings reveal the computational characteristics of SSD and provide the first architectural insight into its execution. In addition, we identify performance bottlenecks and propose directions for addressing them in future work.",
+      "identifiers": [
+        "SemanticScholar:77f02f9c71e142071a56fe7d39f928522540d807"
+      ],
+      "semantic_scholar_id": "77f02f9c71e142071a56fe7d39f928522540d807",
+      "doi": "10.1109/LCA.2025.3609283",
+      "canonical_id": "DOI:10.1109/LCA.2025.3609283",
+      "authors": [
+        "Gyeongrok Yang",
+        "Jaeha Min",
+        "In Jung",
+        "Joo-Young Kim"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mamba-2の状態空間双対性（SSD）について、推論プリフィルでの計算・メモリ挙動を実ハードウェアでシステムレベルに特性評価し、ボトルネックと今後の対処方向を特定した研究であり、線形回帰型モデルの推論基盤の計測に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-96ead4a481bf",
+    "round": "libimp-96ead4a481bfed31-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-96ead4a481bfed31-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-96ead4a481bfed31-pre01.json",
+    "receipt": "sha256:8dfcb1506da57859e1cc3e900f9bc154566063fae9bcfbc22655a76433db3cb8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-96ead4a481bf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

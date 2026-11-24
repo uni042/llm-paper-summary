@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ANOR: Scaling Sparse Attention with a GPU-PNM Computing Hierarchy",
+      "source_url": "https://arxiv.org/abs/2611.30417",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models with long contexts requires keeping the key-value (KV) cache of every request, which can exceed GPU memory capacity. Sparse attention reads only a small, query-dependent subset of this cache at each decoding step, yet must retain the full cache because later steps may select other entries. Processing-near-memory (PNM) devices attached through Compute Express Link (CXL) can hold the full cache and compute attention where it resides. Prior GPU-PNM systems for sparse attention are PNM-centric, processing most of the attention on the PNM. As existing CXL-PNM devices provide far less memory bandwidth than GPU HBM, this PNM-centric execution makes the PNM the bottleneck and leaves the GPU idle waiting for attention results. We present ANOR, a GPU-PNM joint acceleration system that exploits the selection locality of sparse attention by computing most of the attention on the GPU from a cache of recently selected entries and processing only the misses on the PNM. As the PNM processes cache misses directly, GPU cache updates can be decoupled from current-step execution. We develop a bounded cache-update policy that limits updates to the point where the hit ratio of later steps saturates, reducing GPU-facing link traffic. We add a small on-chip Early Streaming Buffer (ESB) that captures KV data during PNM attention and streams it to the GPU, avoiding most redundant DRAM reads despite the bandwidth mismatch between PNM memory and the GPU-facing link. We also propose an adaptive cache-factor mechanism that adjusts GPU cache size to the serving load, balancing hit ratio and batch size. Across two models and three long-context agentic workloads, ANOR improves decode throughput by 2.3x over HiSparse and 2.0x over a PNM baseline on average. These results show that PNM is most effective not as the primary attention engine but as a computing tier of the GPU memory hierarchy.",
+      "identifiers": [
+        "SemanticScholar:bd8e237fea855dc4dc677787699687559c84e5e4"
+      ],
+      "semantic_scholar_id": "bd8e237fea855dc4dc677787699687559c84e5e4",
+      "canonical_id": "arXiv:2611.30417",
+      "arxiv_id": "2611.30417",
+      "authors": [
+        "Hyunsu Ye",
+        "Hyunmin Choi",
+        "Jaehong Cho",
+        "Jaeseo Lee",
+        "Hyeongseok Gwak",
+        "Joohee Lee",
+        "Donguk Moon",
+        "Woosuk Chung",
+        "Hoshik Kim",
+        "Kiwan Maeng",
+        "Jongse Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ANORはCXL接続のPNMデバイスに全KVキャッシュを保持しつつ、スパース注意の選択局所性を利用して注意計算の大部分をGPU側で処理するGPU-PNM協調の長文脈LLMサービングシステムで、スパース注意と階層メモリによる推論高速化に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Testing Quantized KV-Cache Maintenance: Encoding Layout and Historical Restoration",
+      "source_url": "https://arxiv.org/abs/2611.30720",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Repeating rows then selecting originals retains layout-dependent drift despite equal encoding counts. We measure when existing checks fail to establish preservation contracts in fixed quantized KV-cache implementations. In four-bit HQQ axis zero at sixteen cycles, median paired relative-L2 increases over same-shape re-encoding are 7.22 percentage points for Qwen3-1.7B and 11.59 for SmolLM3-3B. Matched encoded states cover sixteen shared questions per model at one and sixteen cycles. Axis one matches the shape-preserving control; lazy reorders preserve the initial state. On one known input, fixed update counts retain the difference; preserving group members removes it. Our prefix-view extension passes current-prefix checks yet changes history and next logits in six model/codec settings at residual capacities four and 128. Public lookup reaches this boundary, including one of four precommitted project-new GPU inputs; fixed query swaps isolate a conditional old-history effect. Checkpoint/dense rollback is exact. An explicit delayed lookup client admits a supported 129-token path excluded by native AR on one known context. Failed task-harm expansion precludes population failure-rate or general answer-degradation claims. Native MLX-LM fixtures expose stale caller caches; synchronization restores the tested in-place contract with native computations preserved. In rejection tests, stale callers change logits but not greedy tokens.",
+      "identifiers": [
+        "SemanticScholar:2b70f3b0a97536f737e96df836c4791eb735c215"
+      ],
+      "semantic_scholar_id": "2b70f3b0a97536f737e96df836c4791eb735c215",
+      "canonical_id": "arXiv:2611.30720",
+      "arxiv_id": "2611.30720",
+      "authors": [
+        "Zi-Yang Huang",
+        "Song-Wei Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化KVキャッシュの維持について、符号化レイアウトや履歴復元が保存契約を満たすかをQwen3やSmolLM3で実測し、4ビットHQQでのドリフトや接頭辞ビュー拡張が履歴と次トークンlogitsを変える境界を切り分けた研究で、KVキャッシュ量子化の正確性計測に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2611.31105",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Updating an LLM adapter should not require replaying the full interaction history of every active session. Yet reusing key-value (KV) cache entries computed under an earlier version mixes model versions, while full-history re-prefill becomes increasingly costly as histories and session fleets grow. We introduce LiveLora, a model-runtime co-design for exact final-block KV cache migration. Frozen lower decoder blocks and fixed K/V adapter down-projections preserve each token's base projections and low-rank coordinates across adapter versions. The runtime reconstructs candidate K/V, reevaluates the latest token through the final block, and commits the adapter, cache, and next-token logits together. We prove continuation equivalence to full-history re-prefill in exact arithmetic under the stated model assumptions. On Qwen2.5-3B-Instruct, median paired publication speedups over full-history re-prefill average $68.98\\times$ across five runs for 32 active sessions with 8K tokens each. Serving benchmarks show approximately 4.8% decoding overhead relative to native cached decoding. Compared with retained-boundary replay, compact retention gives a $3.42\\times$ reduction in additional session storage at 8K, with similar measured publication-plus-decoding cost. LiveLora allows persistent LLM agents to adopt new adapter versions without replaying their full interaction histories.",
+      "identifiers": [
+        "SemanticScholar:7a975652956b7a07f9b76a0e080bcff93c71ecdc"
+      ],
+      "semantic_scholar_id": "7a975652956b7a07f9b76a0e080bcff93c71ecdc",
+      "canonical_id": "arXiv:2611.31105",
+      "arxiv_id": "2611.31105",
+      "authors": [
+        "Tian-Yi Huang",
+        "Samuel Xu",
+        "Ivy Gu",
+        "Nathan Huang",
+        "Si-Qi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LiveLoRAはLoRAアダプタ更新時に最終ブロックだけを再評価してKVキャッシュを正確に移行するモデル・ランタイム協調設計で、フル履歴リプリフィル比で中央値約69倍の移行高速化を示しており、LLMエージェントのサービングにおけるKVキャッシュ管理へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Look Back, Draft Ahead: Corrective Prefix Attention for Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.31112",
+      "year": 2026,
+      "published": "2026-11-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel speculative decoders propose an entire token block at once, yet one early inconsistency can cause the target to reject its remaining suffix. We introduce Corrective Prefix Attention (CPA), which combines prefix-aware selection with autoregressive supervision to improve these parallel drafts. CPA lets each candidate attend to earlier choices within the block. Fixed candidate shortlists allow all pairwise interactions to be computed before selection, reducing the sequential walk to table lookups, accumulation and lightweight scoring rather than repeated neural evaluations. An auxiliary autoregressive loss trains the shared backbone on clean prefixes without adding an inference pass. Across eight math, code and dialogue benchmarks with Qwen3-4B and Qwen3-8B targets on Ascend NPUs, CPA commits 13--15\\% more tokens per verification round than DSpark and 25--26\\% more than DFlash. Its mean speedups reach $3.35\\times$ and $3.37\\times$ under greedy decoding and $2.86\\times$ under sampling for both targets. Ablations support both components, while capacity sweeps demonstrate that greater acceptance alone does not guarantee faster decoding. These results motivate correcting parallel proposals with causal information while keeping sequential computation inexpensive.",
+      "identifiers": [
+        "SemanticScholar:4529f75c95058f508a28bdb7dae4fd2eb91445df"
+      ],
+      "semantic_scholar_id": "4529f75c95058f508a28bdb7dae4fd2eb91445df",
+      "canonical_id": "arXiv:2611.31112",
+      "arxiv_id": "2611.31112",
+      "authors": [
+        "M. Moradi",
+        "Ali Pourranjbar",
+        "Zong-Zuo Wang",
+        "Ming-Ming Zhu",
+        "Ben Feng",
+        "Bo-Xing Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 1,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Corrective Prefix Attentionは並列投機的デコードについて、ブロック内候補同士を接頭辞認識型注意で相互参照させて早期不整合による後続棄却を減らし、Qwen3ターゲットで検証ラウンド当たりのコミットトークンを13〜15％増やす手法で、投機的デコードへ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d68fe33c7bed",
+    "round": "libimp-d68fe33c7bed28bf-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 14,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d68fe33c7bed28bf-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d68fe33c7bed28bf-pre01.json",
+    "receipt": "sha256:41e403b53a53bbe4e6cb10b6093023ad9bf7b002763df9f2b3f03dcb6fdfae19"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d68fe33c7bed",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

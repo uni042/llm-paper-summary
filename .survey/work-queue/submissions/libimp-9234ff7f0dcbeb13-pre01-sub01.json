@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CCAMoE: Cache-Conditioned Adaptive Inference for Offloaded MoE",
+      "source_url": "https://arxiv.org/abs/2611.28550",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Expert offloading enables Mixture-of-Experts (MoE) inference on memory-constrained GPUs, but expert transfers and CPU execution limit decoding performance. Speculative decoding can mitigate these costs, yet separate draft weights consume scarce GPU memory and longer drafts increase verification demand. In this paper, we present CCAMoE, a unified runtime that coordinates adaptive speculative decoding with concurrent expert-cache updates. Its design has three key features: 1) Cache-only drafting, which reuses resident target experts to generate proposals and routing hints without separate draft weights; 2) Draft-guided cache updates, which anticipate expert demand and overlap transfers with computation to support subsequent drafting and verification; and 3) Cost-aware draft-length control, which balances expected acceptance against execution cost. Together, these mechanisms coordinate proposal generation and cache preparation through a shared evolving cache, improving proposal quality while reducing verification cost. Across various MoE models, GPU platforms, and workloads, CCAMoE consistently achieves the lowest decoding latency, with up to 2.33$\\times$ speedup over state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:f1c5f58c147394dd9bd6404d231e39cb5abcc758"
+      ],
+      "semantic_scholar_id": "f1c5f58c147394dd9bd6404d231e39cb5abcc758",
+      "canonical_id": "arXiv:2611.28550",
+      "arxiv_id": "2611.28550",
+      "authors": [
+        "Xuan Zhang",
+        "Hai-Sheng Tan",
+        "Han Tian",
+        "Jia-Liang Huang",
+        "Yu-Teng Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CCAMoEはオフロード型MoE推論向けに、常駐エキスパートを再利用するキャッシュのみのドラフト、ドラフト誘導のエキスパートキャッシュ更新、コスト配慮型ドラフト長制御を統合したランタイムで、投機的デコードとエキスパート転送の協調によりMoE推論へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "IndexerStage: Staging Indexer-K across Memory Tiers for Sparse-Attention LLM Serving",
+      "source_url": "https://arxiv.org/abs/2611.28625",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context sparse-attention serving can remain limited by graphics processing unit (GPU) memory after attention data is offloaded. DeepSeek Sparse Attention retains Indexer-K state to select the tokens that attention will read. Its indexer scans this growing state in full at every layer and decode step. A full scan requires the current layer's state, however, not simultaneous residency of every layer. We present IndexerStage, a serving runtime that externalizes Indexer-K state while preserving native GPU score, top-k, and attention kernels. It stages completed pages through shared execution buffers and preserves new entries locally. Joint memory-and-transfer admission checks storage and each layer's transfer demand before accepting a growing batch. The backing tier gathers pages; the model-serving GPU controls transfer timing and byte budgets. We implement IndexerStage in SGLang on 16 model-serving and 16 backing H800 GPUs. Across 16K--64K inputs, local streaming storage occupies 0.65--0.70 GiB per model-serving GPU. Relative to host-memory-backed HiSparse, batch size increases by 12.28--23.08% and decode throughput in tokens per second (TPS) reaches 1.08--1.14x. At 64K with the latent-KV backing path fixed, the larger batch achieves 1.10x decode TPS; enabling streaming at batch size 24 adds 2.42% to time per output token. Mixed-length dynamic serving increases mean generating batch size by 12.07% and delivers 1.31x decode TPS.",
+      "identifiers": [
+        "SemanticScholar:18fede023f0ac2161c34db63ee150d23480bfcb2"
+      ],
+      "semantic_scholar_id": "18fede023f0ac2161c34db63ee150d23480bfcb2",
+      "canonical_id": "arXiv:2611.28625",
+      "arxiv_id": "2611.28625",
+      "authors": [
+        "Xin Zhang",
+        "Wei-Feng Zhang",
+        "Xian-Yan Xie",
+        "Hui-Jun Shen",
+        "Xi-Jin Yin",
+        "Zhen He",
+        "Yin-Ben Xia",
+        "Xiang Li",
+        "Ze-Kun He",
+        "Ya-Chen Wang",
+        "Xian-Neng Zou",
+        "Guo Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IndexerStageはDeepSeek Sparse AttentionのIndexer-K状態をメモリ階層へ外部化し、完了ページを共有実行バッファ経由でステージングしながらGPUネイティブのスコア・top-k・注意カーネルを維持するSGLang実装のサービングランタイムで、スパース注意サービングのGPUメモリ削減へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Analytical Modeling and Optimal GPU Provisioning for Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.28760",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present OSplit, an exact analytical method that enables efficient partitioning of a GPU L1 domain into prefill and decode workers, including sharding for classical and advanced GPUs. OSplit takes into consideration model parameters, enabling any inference model to be partitioned into prefill and decode workers with a goal of producing the maximum throughput possible. OSplit is based on a capacity model that takes as inputs the model, the loading scheme (batch size, max sequence length), and models an inference serving framework (vLLM) and computes the efficiency of each GPU. For this, we model H100 and GB300 GPUs, and model a scale-up domain, along with FlashAttention-based kernels. OSplit first computes an optimal collective generation policy, which gives inputs to the capacity model that enables optimal split of prefill and decode GPUs. We evaluate our scheme over H100 (NVL8) and GB300 (NVL72) using vLLM inference serving and show throughput, predicted and measured latency, showing near-perfect theoretical-to-measured values over leading LLMs (Llama and Qwen)",
+      "identifiers": [
+        "SemanticScholar:fac3174f5d29d9952519d67011d41ed59c7f9c31"
+      ],
+      "semantic_scholar_id": "fac3174f5d29d9952519d67011d41ed59c7f9c31",
+      "canonical_id": "arXiv:2611.28760",
+      "arxiv_id": "2611.28760",
+      "authors": [
+        "Akshat Pandey",
+        "Dominic Cheng",
+        "Sidharth Sharma",
+        "A. Gumaste"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OSplitは分離型LLM推論向けに、モデルと負荷条件とvLLMの容量モデルからプリフィル／デコードワーカーへのGPU分割と集団生成方針を解析的に最適化し、H100とGB300で理論値と実測の近さを示した研究で、分離サービングの資源プロビジョニングへ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Consumer-Time Validity in Stateful AI Runtimes: Verifying Recovered State and Deferred Authority",
+      "source_url": "https://arxiv.org/abs/2611.29004",
+      "year": 2026,
+      "published": "2026-11-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Stateful LLM serving engines and agent runtimes reuse execution state and deferred permissions across components and sessions. A cancellation, rollback, or approval is recorded by one component and relied on by another, and recording it does not make the later use valid: a downstream consumer may read state or dispatch an action whose identity, production status, allocation, or target revision has since changed. We call the missing check consumer-time validity and separate two forms. State validity governs what a consumer reads. On vLLM with LMCache, an interrupted KV load leaves unwritten blocks indexed, and a host-only counter rewind desynchronizes the GPU position, so a second tenant generates a schema-valid tool call naming the wrong tenant in 10/10 native-fault runs; the call is recorded and not executed. Authority freshness governs what a consumer executes: on a multi-session approval runtime, an unrevoked deferred grant overwrote a newer revision in one admitted live execution. Output equality cannot test state validity: a fault-free run diverges at token 30 through BF16 batching alone while attended-KV digests match. We therefore specify consumer-bound recovery contracts that, for state recovery, jointly require exclusion, retention, and task completion, and an admissible-witness standard realized as a GPU-free offline trace verifier over scheduler metadata and persisted tool artifacts. On recorded traces the verifier agrees with the reference verdicts in 42/42 frozen GPU-matrix scenarios. An allocation-aware repair satisfies 7/7 triggered vLLM fault predicates on a pinned scheduler-case matrix, where upstream PR 61769 satisfies 2/7, and revision-bound dispatch blocks all 160 deterministic conflicting overwrites in a separate dispatcher cohort. Recovery must be checked where state and authority are consumed, with evidence bound to the consuming request.",
+      "identifiers": [
+        "SemanticScholar:fac018ee00a25d6312c6c558c48b1bffa3129e42"
+      ],
+      "semantic_scholar_id": "fac018ee00a25d6312c6c558c48b1bffa3129e42",
+      "canonical_id": "arXiv:2611.29004",
+      "arxiv_id": "2611.29004",
+      "authors": [
+        "Gui-Jia Zhang",
+        "Hui-Hao Jing",
+        "Bing Li",
+        "Shing-Chi Cheung",
+        "Harry Yang",
+        "Zi-Qi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 3,
+        "matched_prestigious_venue": null
+      },
+      "reason": "statefulなLLMサービングエンジンとエージェントランタイムについて、消費時点での状態有効性という欠けていた検査を定義し、vLLMとLMCacheで中断したKVロードが未書き込みブロックを索引化して別テナントの誤ったツールコールを生む障害等を実証する研究で、サービングランタイムの状態管理へ直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Does Decomposition Help? Empirical Study on Workload-Architecture Affinity in LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2611.29104",
+      "year": 2026,
+      "published": "2026-11-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference can be organized as independent monolithic replicas, tensor- or pipeline-parallel serving groups, or disaggregated prefill and decode services. Although decomposition is often presented as a route to higher efficiency, its benefit depends on workload shape, model fit, and whether phase-specific resources can be independently scaled. Existing comparisons frequently change several of these factors at once. We isolate the architectural effect by evaluating five SGLang serving organizations under the same four-A100-40GB hardware envelope, pinned Qwen3-8B model, software stack, prompts, and arrival schedules. Our evaluation contains 150 audited conditions over short-chat, decode-heavy, and 32K prefill-heavy workloads. Four independent one-GPU replicas achieve the lowest end-to-end latency for short chat and long output and are the only architecture stable in every condition. Pipeline parallelism reduces 32K time to first token by 58-59% at non-stress rates, while hybrid pipeline-based disaggregation achieves the best 32K end-to-end latency at 0.4 requests/s. In contrast, B's single-VM static TP2+TP2 split, without independent phase scaling, does not improve tested latency over replication and collapses at higher 32K load. These results reveal a workload-architecture affinity: pipeline decomposition favors prefill-heavy computation, whereas replication favors decode-heavy and concurrent traffic. More broadly, decomposition is not a monotonic optimization; its value depends on matching parallelism granularity to the dominant phase and preserving queue stability.",
+      "identifiers": [
+        "SemanticScholar:cc006a787e313750952ad786e86b1291b4d7caf8"
+      ],
+      "semantic_scholar_id": "cc006a787e313750952ad786e86b1291b4d7caf8",
+      "canonical_id": "arXiv:2611.29104",
+      "arxiv_id": "2611.29104",
+      "authors": [
+        "Ji-Hui Yang",
+        "Wen-Tai Wu",
+        "Jia-Hua Huang",
+        "Wei-Wei Lin",
+        "Li-Gang He",
+        "Ling-Hong Tsang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論サービングの構成（単独レプリカ、テンソル／パイプライン並列、プリフィル・デコード分離）を同一ハードウェア・同一モデル・同一到着スケジュールでSGLang上に揃えて150条件を実測し、ワークロード形状と構成の親和性を切り分けた研究で、分散・分離サービングの設計判断に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9234ff7f0dcb",
+    "round": "libimp-9234ff7f0dcbeb13-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9234ff7f0dcbeb13-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9234ff7f0dcbeb13-pre01.json",
+    "receipt": "sha256:7b11b449bfa3492e0278d380fb25b5860cfb0fd3a13c7b0168f637ea1b0d66ca"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9234ff7f0dcb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
